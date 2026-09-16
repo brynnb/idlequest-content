@@ -1,5 +1,7 @@
 # IdleQuest Content
 
+<img width="1630" height="1236" alt="image" src="https://github.com/user-attachments/assets/d3cd2e59-6a24-4f41-b407-3bfc7de25f31" />
+
 This repo is a public workspace for the NPCs, spawns, loot, and quests for the idlequest.net game, which is a Classic-to-Velious recreation of classic EverQuest that runs in your browser.
 
 IdleQuest began with a database snapshot from the TAKP project and, over the last couple of years, has been updated to try to match Project 1999 content as closely as reasonably possible. Additionally, it aims to convert all Perl scripts to Lua. TAKP had a mixture of both, but it's messy to maintain both formats, so there has been an ongoing conversion process.
