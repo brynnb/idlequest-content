@@ -1,0 +1,6 @@
+-- Converted from ProjectEQ Perl quest script.
+-- Source: oot/tainted_seafury_cyclops.pl
+
+function event_death_complete(e)
+	eq.spawn2(69142, 0, 0, e.self:GetX(), e.self:GetY(), e.self:GetZ(), e.self:GetHeading())
+end

@@ -1,0 +1,19 @@
+-- Converted from ProjectEQ Perl quest script.
+-- Source: tox/Lanivon_Baxer.pl
+-- items: 6069, 1573
+
+function event_say(e)
+	if e.message:findi("hail") then
+		e.self:Say("Greetings, " .. e.other:GetName() .. ". Safe travels to you.")
+	end
+end
+
+function event_trade(e)
+	local item_lib = require("items")
+	if item_lib.check_turn_in(e.trade, {item1 = 6069}) then
+		e.self:Say("Excellent work! Thank you for delivering this to me. I will get it to the High Council as soon as possible. Take this Ring of the Messenger as an insignia of your service to the city.")
+		e.other:AddEXP(85000)
+		e.other:SummonItem(1573)
+	end
+	item_lib.return_items(e.self, e.other, e.trade)
+end

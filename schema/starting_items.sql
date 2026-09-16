@@ -1,0 +1,22 @@
+CREATE TABLE `starting_items` (
+  `id` int unsigned NOT NULL AUTO_INCREMENT,
+  `class_list` text,
+  `race_list` text,
+  `deity_list` text,
+  `zone_id_list` text,
+  `item_id` int unsigned NOT NULL DEFAULT '0',
+  `item_charges` tinyint unsigned NOT NULL DEFAULT '1',
+  `augment_one` int unsigned NOT NULL DEFAULT '0',
+  `augment_two` int unsigned NOT NULL DEFAULT '0',
+  `augment_three` int unsigned NOT NULL DEFAULT '0',
+  `augment_four` int unsigned NOT NULL DEFAULT '0',
+  `augment_five` int unsigned NOT NULL DEFAULT '0',
+  `augment_six` int unsigned NOT NULL DEFAULT '0',
+  `status` mediumint NOT NULL DEFAULT '0',
+  `inventory_slot` mediumint NOT NULL DEFAULT '-1',
+  `min_expansion` tinyint NOT NULL DEFAULT '-1',
+  `max_expansion` tinyint NOT NULL DEFAULT '-1',
+  `content_flags` varchar(100) DEFAULT NULL,
+  `content_flags_disabled` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;

@@ -1,0 +1,20 @@
+-- Converted from ProjectEQ Perl quest script.
+-- Source: dalnir/Haggle_Baron_Dalnir.pl
+-- items: 13051, 13063, 3888, 3890
+
+function event_say(e)
+	if e.message:findi("hail") then
+		e.self:Say("I have little time to speak. I can feel this facade weakening already. A Scaled Mystic came to me during my time of torment. He spoke to me. He said that a new time was hiding behind the darkness of the horizon. You seek Master Rile's Khukri. I can diagram it for you... Arrrgh! I feel the pull of torment upon me! Return to me with a piece of parchment, a quill, and Rile's Shattered Blade. Use your mirror again to bring me back and I will try to remember the design. Please be quick!")
+	end
+end
+
+function event_trade(e)
+	local item_lib = require("items")
+	if item_lib.check_turn_in(e.trade, {item1 = 13051, item2 = 13063, item3 = 3888}) then
+		e.self:Emote("stares at the broken blade for some time. After a few moments of studying, the apparition begins to draw and scribble on the parchment. He works with amazing speed as the memories from his past flood from his quill. The diagrams and runes that etch the surface of the parchment begin to glow. The legendary Haggle Baron rolls the parchment and hands it to you. Smiling, he bows deeply and quickly fades away.")
+		e.other:SummonItem(3890)
+		e.other:Ding()
+		eq.depop()
+	end
+	item_lib.return_items(e.self, e.other, e.trade)
+end

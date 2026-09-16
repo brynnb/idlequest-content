@@ -1,0 +1,23 @@
+CREATE TABLE `merchantlist` (
+  `merchantid` int NOT NULL DEFAULT '0',
+  `slot` int unsigned NOT NULL DEFAULT '0',
+  `item` int NOT NULL DEFAULT '0',
+  `custom_data` text,
+  `faction_required` smallint NOT NULL DEFAULT '-100',
+  `level_required` tinyint unsigned NOT NULL DEFAULT '0',
+  `min_status` tinyint unsigned NOT NULL DEFAULT '0',
+  `max_status` tinyint unsigned NOT NULL DEFAULT '255',
+  `alt_currency_cost` smallint unsigned NOT NULL DEFAULT '0',
+  `classes_required` int NOT NULL DEFAULT '65535',
+  `probability` int NOT NULL DEFAULT '100',
+  `bucket_name` varchar(100) NOT NULL DEFAULT '',
+  `bucket_value` varchar(100) NOT NULL DEFAULT '',
+  `bucket_comparison` tinyint unsigned DEFAULT '0',
+  `min_expansion` tinyint NOT NULL DEFAULT '-1',
+  `max_expansion` tinyint NOT NULL DEFAULT '-1',
+  `content_flags` varchar(100) DEFAULT NULL,
+  `content_flags_disabled` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`merchantid`,`slot`),
+  UNIQUE KEY `merchantid` (`merchantid`,`item`),
+  KEY `item` (`item`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;

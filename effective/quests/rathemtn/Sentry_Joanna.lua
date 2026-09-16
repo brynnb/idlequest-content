@@ -1,0 +1,23 @@
+-- Converted from ProjectEQ Perl quest script.
+-- Source: rathemtn/Sentry_Joanna.pl
+-- items: 12312, 12302
+
+function event_say(e)
+	if e.message:findi("hail") then
+		e.self:Say("Love and passion to you. my friend.  Seek you the [Gauntlets of Ro]?  If not. then I offer you the safety of this camp.")
+	elseif e.message:findi("gauntlets of ro") then
+		e.self:Say("I will give you the mold. but first you will complete a task in the name of Erollisi Marr.  My fellow Sentry. Alechin. was bitten by a wolf while he journeyed to Qeynos.  He now turns into a werewolf at night. forced to kill innocent travelers.  Go toward Qeynos.  Release him from life and his curse and return his locket to me.")
+	end
+end
+
+function event_trade(e)
+	local item_lib = require("items")
+	if item_lib.check_turn_in(e.trade, {item1 = 12312}) then
+		e.self:Say("Thank you my friend.  It is good to see him free at last.  I shall miss him.  Here now is the mold of gauntlets as promised. Go and speak with Thomas for information about [Lord Searfire].")
+		e.other:SummonItem(12302)
+		e.other:Faction(281, 1, 0)
+		e.other:Faction(330, -1, 0)
+		e.other:Faction(362, 1, 0)
+	end
+	item_lib.return_items(e.self, e.other, e.trade)
+end

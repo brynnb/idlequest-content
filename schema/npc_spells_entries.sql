@@ -1,0 +1,20 @@
+CREATE TABLE `npc_spells_entries` (
+  `id` int unsigned NOT NULL AUTO_INCREMENT,
+  `npc_spells_id` int NOT NULL DEFAULT '0',
+  `spellid` smallint unsigned NOT NULL DEFAULT '0',
+  `type` int unsigned NOT NULL DEFAULT '0',
+  `minlevel` tinyint unsigned NOT NULL DEFAULT '0',
+  `maxlevel` tinyint unsigned NOT NULL DEFAULT '255',
+  `manacost` smallint NOT NULL DEFAULT '-1',
+  `recast_delay` int NOT NULL DEFAULT '-1',
+  `priority` smallint NOT NULL DEFAULT '0',
+  `resist_adjust` int DEFAULT NULL,
+  `min_hp` smallint DEFAULT '0',
+  `max_hp` smallint DEFAULT '0',
+  `min_expansion` tinyint NOT NULL DEFAULT '-1',
+  `max_expansion` tinyint NOT NULL DEFAULT '-1',
+  `content_flags` varchar(100) DEFAULT NULL,
+  `content_flags_disabled` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `spellsid_spellid` (`npc_spells_id`,`spellid`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;

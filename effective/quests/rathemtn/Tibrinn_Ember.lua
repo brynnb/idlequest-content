@@ -1,0 +1,21 @@
+-- Converted from ProjectEQ Perl quest script.
+-- Source: rathemtn/Tibrinn_Ember.pl
+-- items: 4310, 6335, 6364
+
+function event_say(e)
+	if e.message:findi("hail") then
+		e.self:Say("I am Tibrinn Ember, forest friend and Unkempt Druid. Aid us in our [conflict] against the polluters of nature and I will reward you.")
+	elseif e.message:findi("conflict") then
+		e.self:Say("Grazhak the Berzerker is a powerful orc who roams these mountains. Slay him and bring me his Mithril Plated Girth. The gorge tyrant himself, King Xorbb, has plagued my halfling brothers for ages. Dispatch this beast and bring me his Slime Crystal Staff as proof of your deed. After you have brought me these items I will give you a weapon as reward for your feats.")
+	end
+end
+
+function event_trade(e)
+	local item_lib = require("items")
+	if item_lib.check_turn_in(e.trade, {item1 = 4310, item2 = 6335}) then
+		e.self:Say("You have done well. Here is the reward for your deeds.")
+		e.other:SummonItem(6364)
+		e.other:AddEXP(25000)
+	end
+	item_lib.return_items(e.self, e.other, e.trade)
+end

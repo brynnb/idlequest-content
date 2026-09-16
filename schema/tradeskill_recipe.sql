@@ -1,0 +1,21 @@
+CREATE TABLE `tradeskill_recipe` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(64) NOT NULL DEFAULT '',
+  `tradeskill` smallint NOT NULL DEFAULT '0',
+  `skillneeded` smallint NOT NULL DEFAULT '0',
+  `trivial` smallint NOT NULL DEFAULT '0',
+  `nofail` tinyint(1) NOT NULL DEFAULT '0',
+  `replace_container` tinyint(1) NOT NULL DEFAULT '0',
+  `notes` tinytext,
+  `must_learn` tinyint NOT NULL DEFAULT '0',
+  `learned_by_item_id` int NOT NULL DEFAULT '0',
+  `quest` tinyint(1) NOT NULL DEFAULT '0',
+  `enabled` tinyint(1) NOT NULL DEFAULT '1',
+  `show_in_advanced` tinyint(1) NOT NULL DEFAULT '1',
+  `min_expansion` tinyint NOT NULL DEFAULT '-1',
+  `max_expansion` tinyint NOT NULL DEFAULT '-1',
+  `content_flags` varchar(100) DEFAULT NULL,
+  `content_flags_disabled` varchar(100) DEFAULT NULL,
+  `category` varchar(64) DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;

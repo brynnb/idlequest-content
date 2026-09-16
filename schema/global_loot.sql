@@ -1,0 +1,20 @@
+CREATE TABLE `global_loot` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `description` varchar(255) DEFAULT NULL,
+  `loottable_id` int NOT NULL,
+  `enabled` tinyint NOT NULL DEFAULT '1',
+  `min_level` int NOT NULL DEFAULT '0',
+  `max_level` int NOT NULL DEFAULT '0',
+  `rare` tinyint DEFAULT NULL,
+  `raid` tinyint DEFAULT NULL,
+  `race` mediumtext,
+  `class` mediumtext,
+  `bodytype` mediumtext,
+  `zone` mediumtext,
+  `hot_zone` tinyint DEFAULT NULL,
+  `min_expansion` tinyint NOT NULL DEFAULT '-1',
+  `max_expansion` tinyint NOT NULL DEFAULT '-1',
+  `content_flags` varchar(100) DEFAULT NULL,
+  `content_flags_disabled` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;

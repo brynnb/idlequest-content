@@ -1,0 +1,22 @@
+CREATE TABLE `start_zones` (
+  `x` float NOT NULL DEFAULT '0',
+  `y` float NOT NULL DEFAULT '0',
+  `z` float NOT NULL DEFAULT '0',
+  `heading` float NOT NULL DEFAULT '0',
+  `zone_id` int NOT NULL DEFAULT '0',
+  `bind_id` int NOT NULL DEFAULT '0',
+  `player_choice` int NOT NULL DEFAULT '0',
+  `player_class` int NOT NULL DEFAULT '0',
+  `player_deity` int NOT NULL DEFAULT '0',
+  `player_race` int NOT NULL DEFAULT '0',
+  `start_zone` int NOT NULL DEFAULT '0',
+  `bind_x` float NOT NULL DEFAULT '0',
+  `bind_y` float NOT NULL DEFAULT '0',
+  `bind_z` float NOT NULL DEFAULT '0',
+  `select_rank` tinyint unsigned NOT NULL DEFAULT '50',
+  `min_expansion` tinyint NOT NULL DEFAULT '-1',
+  `max_expansion` tinyint NOT NULL DEFAULT '-1',
+  `content_flags` varchar(100) DEFAULT NULL,
+  `content_flags_disabled` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`player_choice`,`player_race`,`player_class`,`player_deity`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;

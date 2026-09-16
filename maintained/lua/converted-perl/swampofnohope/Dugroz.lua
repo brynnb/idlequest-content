@@ -1,0 +1,35 @@
+-- Converted from ProjectEQ Perl quest script.
+-- Source: swampofnohope/Dugroz.pl
+-- items: 7236, 7256, 20600, 7254
+
+local function reward_charasis_key(e)
+	e.self:Say("My thanks to you, " .. e.other:GetName() .. ". Take this key--I know not what door it opens. Now if I can just find that necklace of power that I took from my master's lair!")
+	e.other:SummonItem(20600)
+	e.other:AddEXP(1000)
+	e.other:Ding()
+	eq.set_zone_flag(105)
+end
+
+function event_say(e)
+	if e.message:findi("hail") then
+		e.self:Say("Fffrroaaak!!  Go away!  I don't want to [work for them] anymore! Go find another slave!")
+	elseif e.message:findi("work") then
+		e.self:Emote("looks relieved and eyes you, considering. Finally, he begins to recant his tale. 'I was once the slave of an important Iksar necromancer. I was his Dugroz, his head slave. One night, I heard two other slaves talking about me. I could barely hear them but what I did hear frightened me. My master was going to use me one last time. He was going to sacrifice me to craft a spell component for one of his most powerful spells. Hearing this, I used my privileges as his head slave and made my [escape].'")
+	elseif e.message:findi("escape") then
+		e.self:Say("As the head slave, I was allowed to move freely throughout my master's compound. I came across one of the slavemasters asleep in his chair and carefully relieved him of his [keys]. Then, quietly, I made my escape.")
+	elseif e.message:findi("keys") then
+		e.self:Say("After I escaped, I lost myself in the depths of the swamp. I discarded all the keys but one. I will gladly give it to you if you can do me a [small favor].")
+	elseif e.message:findi("small favor") then
+		e.self:Emote("Dugroz blinks his eyes and leans forward. He whispers so quietly you must strain to hear him, 'I have taken up the same magics as my master. I require two components to complete a spell I have been researching for quite some time. The first is a vampire's fang. I have heard tales of a vampire who haunts the ruins of Kaesora. I also need a jade weapon stained by the blood of a chokidai. Look in the Lake of Ill Omen at the sarnak outpost. The leader used to herd chokidai, or so I am told.'")
+	end
+end
+
+function event_trade(e)
+	local item_lib = require("items")
+	if item_lib.check_turn_in(e.trade, {item1 = 7236, item2 = 7256}) then
+		reward_charasis_key(e)
+	elseif item_lib.check_turn_in(e.trade, {item1 = 7236, item2 = 7254}) then
+		reward_charasis_key(e)
+	end
+	item_lib.return_items(e.self, e.other, e.trade)
+end

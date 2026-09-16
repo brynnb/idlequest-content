@@ -1,0 +1,25 @@
+-- Source: freportn/Gygus_Remnara.lua
+-- P99 audit: Guild Summons - Temple of Marr Paladin
+-- items: 18738, 13554
+function event_say(e)
+	if(e.message:findi("hail")) then
+		e.self:Say("The Temple of Marr welcomes you. I am Gygus Remnara. High Sentinel for the Sentries of Passion. We are the order of paladins within the Priests of Marr and whose charge it is to protect the holy Temple of Marr.");
+	end
+end
+
+function event_trade(e)
+	local item_lib = require("items");
+
+	if(item_lib.check_turn_in(e.trade, {item1 = 18738})) then -- Tattered Note
+		e.self:Say("Welcome to the Sentries of Passion. We are the protectors of the Temple of Marr. Wear our tunic with pride, young knight! Find your wisdom within these walls and in the words of our priests. And remember to aid all who follow the twin deities, Mithaniel and Erollisi Marr.");
+		e.other:SummonItem(13554); -- Faded Purple Tunic*
+		e.other:Ding();
+		e.other:Faction(362,100,0); -- Priests of Marr
+		e.other:Faction(330,-10,0); -- Freeport Militia
+		e.other:Faction(281,15,0); -- Knights of Truth
+		e.other:AddEXP(100);
+	end
+	item_lib.return_items(e.self, e.other, e.trade);
+end
+
+-- END of FILE Zone:freportn  ID:8028 -- Gygus_Remnara

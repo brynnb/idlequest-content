@@ -1,0 +1,16 @@
+-- Converted from ProjectEQ Perl quest script.
+-- Source: steamfont/Charlotte.pl
+
+function event_spawn(e)
+	e.self:SetRunning(true)
+end
+
+function event_signal(e)
+	if e.signal == 1 and (e.self:GetX() == -495 or e.self:GetX() == -734) and (e.self:GetY() == -154 or e.self:GetY() == 114) then
+		e.self:Emote("Beep.. Beep.. Beep..")
+	elseif e.signal == 2 then
+		eq.start(178)
+	elseif e.signal == 3 then
+		eq.start(179)
+	end
+end

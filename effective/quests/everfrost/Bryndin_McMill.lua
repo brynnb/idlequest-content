@@ -1,0 +1,25 @@
+-- Modified from ProjectEQ Lua during P99 quest audit.
+-- P99: https://wiki.project1999.com/Magic_Elixir_for_the_Warriors
+-- items: 13242, 13243
+
+function event_say(e)
+	if(e.message:findi("hail")) then
+		e.self:Say("H-ha.. H-hai.. Hail!! It is v-v-very.. C-cold out here. You sh-sh-should light a c-c-campfire.")
+	end
+end
+
+function event_trade(e)
+	local item_lib = require("items")
+
+	if(item_lib.check_turn_in(e.trade, {item1 = 13242})) then -- One Quarter of Elixir / actually three-quarter-full bottle
+		e.self:Say("Ahhh!! I feel warm all over. Thanks. You should go give Arnis McLish a drink of this elixir. Last time I saw him he was headed toward Blackburrow.")
+		e.other:SummonItem(13243) -- One Half of Elixir
+		e.other:Ding()
+		e.other:Faction(328, 1, 0) -- Merchants of Halas
+		e.other:Faction(327, 1, 0) -- Shaman of Justice
+		e.other:Faction(311, 1, 0) -- Steel Warriors
+		e.other:Faction(320, 1, 0) -- Wolves of the North
+		e.other:AddEXP(150)
+	end
+	item_lib.return_items(e.self, e.other, e.trade)
+end

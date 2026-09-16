@@ -1,0 +1,23 @@
+CREATE TABLE `ground_spawns` (
+  `id` int unsigned NOT NULL AUTO_INCREMENT,
+  `zoneid` int unsigned NOT NULL DEFAULT '0',
+  `version` smallint NOT NULL DEFAULT '0',
+  `max_x` float NOT NULL DEFAULT '2000',
+  `max_y` float NOT NULL DEFAULT '2000',
+  `max_z` float NOT NULL DEFAULT '10000',
+  `min_x` float NOT NULL DEFAULT '-2000',
+  `min_y` float NOT NULL DEFAULT '-2000',
+  `heading` float NOT NULL DEFAULT '0',
+  `name` varchar(16) NOT NULL DEFAULT '',
+  `item` int unsigned NOT NULL DEFAULT '0',
+  `max_allowed` int unsigned NOT NULL DEFAULT '1',
+  `comment` varchar(255) NOT NULL DEFAULT '',
+  `respawn_timer` int unsigned NOT NULL DEFAULT '300',
+  `fix_z` tinyint unsigned NOT NULL DEFAULT '1',
+  `min_expansion` tinyint NOT NULL DEFAULT '-1',
+  `max_expansion` tinyint NOT NULL DEFAULT '-1',
+  `content_flags` varchar(100) DEFAULT NULL,
+  `content_flags_disabled` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `zone` (`zoneid`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;

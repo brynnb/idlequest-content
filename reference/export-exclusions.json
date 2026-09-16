@@ -1,0 +1,13 @@
+{
+  "spawn2_disabled": "Export only records matching reviewed migrations 069, 125 and 141. Other records are omitted as unexplained runtime state.",
+  "object_contents": "Live container contents, potentially deposited by players.",
+  "spawn_condition_values": "Live per-instance condition values.",
+  "respawn_times": "Live respawn timers.",
+  "merchantlist_temp": "Player-sold inventory.",
+  "quest_globals": "Player or live world quest progress.",
+  "quest_runtime_*": "Live state, spawns, overrides, ground items, timers and triggers.",
+  "quest_actor_*": "Live actor state.",
+  "quest_effect_outbox": "Live delivery queue.",
+  "quest_turnin_transactions": "Player transactions.",
+  "*not explicitly allowlisted*": "Excluded by default, including accounts, characters, logs and credentials."
+}
