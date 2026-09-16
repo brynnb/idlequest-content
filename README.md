@@ -1,8 +1,17 @@
-# IdleQuest content review
+# IdleQuest Content
 
-Local review workspace for Classic–Velious NPCs, spawns, loot and quests.
-This snapshot includes later-era reference records. Their presence is **not**
-approval to enable them. IdleQuest's exclusion ledgers remain authoritative.
+This repo is a public workspace for the NPCs, spawns, loot, and quests for the idlequest.net game, which is a Classic-to-Velious recreation of classic EverQuest that runs in your browser.
+
+IdleQuest began with a database snapshot from the TAKP project and, over the last couple of years, has been updated to try to match Project 1999 content as closely as reasonably possible. Additionally, it aims to convert all Perl scripts to Lua. TAKP had a mixture of both, but it's messy to maintain both formats, so there has been an ongoing conversion process.
+
+Much of the work here is disorganized, half-baked, scattered, and incomplete. There have been multiple incomplete rounds of converting and updating content to match P99 wiki pages. Ideally, this project should have a clear record of what's been done, what's partially done, and what remains. As of this writing, it does not.
+
+This snapshot also includes later-era reference records from the original TAKP database. These have not been explicitly cleaned up, but they probably should be. A lot of this stuff has remained so far because, as development progressed, it wasn't clear what the exact cutoffs were going to be for items, tradeskill recipes, etc.
+
+Finally, included is a scrape of all NPC and quest pages from the P99 wiki, with the intention of preventing contributors from having to re-scrape the same content and place unnecessary strain on their server. If anyone at P99 is reading this and wants me to remove it, please let me know. It won't be a problem.
+
+This entire repo, including its documentation and structure, aside from the README content above, was assembled by AI, and there may be some bad or dumb decisions in it. I wanted to get this repo out for anyone who wanted to contribute, and I haven't had time for a more thorough human review. So take it all with a grain of salt. Feedback is encouraged and appreciated!
+
 
 ## Start here
 
