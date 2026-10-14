@@ -127,7 +127,7 @@ func supportsExternalNPCMethod(method string) bool {
 	switch method {
 	case "GetID", "GetNPCTypeID", "GetName", "GetCleanName", "GetX", "GetY", "GetZ", "GetHeading",
 		"GetRace", "GetBaseRace", "GetGender", "GetClass",
-		"Say", "Emote", "Shout", "AddToHateList", "GetHPRatio", "Signal", "Depop", "AddItem", "CastToNPC", "IsNPC", "IsMob", "GetTarget", "GetHateTop", "GetHateRandom", "IsEngaged", "GetGrid":
+		"Say", "Emote", "Shout", "AddToHateList", "GetHPRatio", "Signal", "Depop", "AddItem", "CastToNPC", "IsNPC", "IsMob", "GetTarget", "GetHateTop", "GetHateRandom", "IsEngaged", "IsCombatReserved", "GetGrid":
 		return true
 	}
 	return false

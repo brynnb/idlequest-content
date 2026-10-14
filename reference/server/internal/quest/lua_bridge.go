@@ -2541,6 +2541,9 @@ func (b *LuaBridge) createNPCMetatable(L *lua.LState) *lua.LTable {
 		case "GetHateTop":
 			L.Push(L.NewFunction(func(L *lua.LState) int { return b.pushNPCCombatActor(L, npc, QuestCombatTopHate) }))
 			return 1
+		case "IsCombatReserved":
+			L.Push(L.NewFunction(npc.IsCombatReserved))
+			return 1
 		case "AddToHateList":
 			L.Push(L.NewFunction(npc.AddToHateList))
 			return 1

@@ -13,6 +13,7 @@ const (
 	QuestCombatTopHate       QuestNPCCombatSelection = "top-hate"
 	QuestCombatRandomHate    QuestNPCCombatSelection = "random-hate"
 	QuestCombatEngagement    QuestNPCCombatSelection = "engaged"
+	QuestCombatReservation   QuestNPCCombatSelection = "reserved"
 )
 
 // Actor selections return exactly one actor, or neither for observed emptiness.
@@ -26,10 +27,20 @@ type QuestNPCCombatResult struct {
 }
 
 func (n *NPCProxy) IsEngaged(L *lua.LState) int {
+	return n.readCombatBoolean(L, QuestCombatEngagement)
+}
+
+// IdleQuest admission state includes a newly reserved encounter whose first
+// owner snapshot has not arrived yet. It must not masquerade as a hate lookup.
+func (n *NPCProxy) IsCombatReserved(L *lua.LState) int {
+	return n.readCombatBoolean(L, QuestCombatReservation)
+}
+
+func (n *NPCProxy) readCombatBoolean(L *lua.LState, selection QuestNPCCombatSelection) int {
 	if n.readCombatActor == nil || n.SpawnInstanceID <= 0 || n.ID <= 0 || n.PendingSpawnIndex != 0 || n.missingActor {
 		return n.Capture.rejectActorEffect(L, "NPC engagement requires a scoped reader and an existing concrete actor")
 	}
-	result, err := n.readCombatActor(n.spellActor(), QuestCombatEngagement)
+	result, err := n.readCombatActor(n.spellActor(), selection)
 	if err != nil {
 		return n.Capture.rejectActorEffect(L, fmt.Sprintf("NPC engagement: %v", err))
 	}

@@ -5,35 +5,41 @@ This is a local development content snapshot, not a production backup.
 ## Current synchronized snapshot — October 14, 2026
 
 This refresh starts from public commit `3d2eb497`, preserving the existing
-53-table allowlist, column projections, row filters, and published code paths.
+53-table allowlist, column projections, row filters, and published code-path boundary.
 Updated and new quest scripts stay within the existing quest content areas.
 No additional database tables, schema columns, runtime source files, or
 reference-code areas are included. The public README and review tools are
 unchanged. Broader unpublished local content-repository history is not part of
 this update.
 
-The source checkout is based on `e92f5104` with local changes; individual
-manifest hashes identify the exported file contents. All repository migrations
-were already present in the local database with matching checksums, and the
-quest importer verified 1,446 maintained scripts and one module. Export and
-verification used read-only database snapshots; no migrations or quest imports
-were applied for this refresh.
+The source checkout is based on `ef214ca9` with unrelated local changes;
+individual manifest hashes identify the exported file contents. All repository
+migrations were already present in the local database with matching checksums.
+The accompanying Tunare work imported seven maintained overrides and a shared
+module locally; the importer then verified all 1,453 maintained scripts and two
+modules. Export and independent verification used read-only database snapshots.
+No production database was read or changed for this refresh.
 
-Current snapshot: 53 tables, 2,741,186 rows, 36,295 hashed files. Manifest SHA256:
-`25d9be76c255b3d789927aa062e39afca2569bd8b863595e031311c7eab39535`.
+Current snapshot: 53 tables, 2,741,187 rows, 36,304 hashed files. Manifest SHA256:
+`1fcb9beff89499617374dbe82ca6060246d158a383780df07b488ac7438bea56`.
 
 - Full manifest, row-shape, primary-key and checksum validation passes.
 - Every exported row matches a second read-only query of the local source,
   using the published table, column and filter policy.
 - Seventeen review-tool tests pass; one optional SQL integration test is skipped.
-- Scope checks found no new tables, columns, or reference-code paths.
+- Scope checks found no new tables, columns, filters, or reference-code paths.
+  The retired `classic_kunark_zones.json` reference is removed; its replacement
+  is outside the published path boundary and is not added.
 - This snapshot was not reloaded into another scratch database, and no new
   browser or gameplay verification is claimed for this content refresh.
 
 Existing schema files are retained because the projected schema is unchanged.
 Existing reference files are updated within the published path boundary; they
 remain excerpts, not a buildable copy of the closed-source game. New private
-runtime files and an additional private export table are deliberately omitted.
+runtime files and an additional private export table are deliberately omitted
+(402 files excluded from the wider private export). This refresh is published
+for review on `codex/content-refresh-20261014`, built directly from public main;
+no broader unpublished repository history is included.
 
 ## Previous synchronized snapshot — September 15, 2026
 
@@ -82,4 +88,6 @@ audit records pre-existing missing references without pretending they are all
 in-era defects. Later-era rows remain reference data, not permission to enable
 them. This work does not complete the volunteer's P99 content audit.
 
-No production changes, remote repository, push, or deployment were performed.
+The historical setup stages above made no production changes or deployments.
+The October 14 refresh publishes only the scoped content-review branch; it does
+not deploy the game or merge the review branch into main.
