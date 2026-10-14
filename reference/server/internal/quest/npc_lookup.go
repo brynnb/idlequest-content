@@ -101,6 +101,7 @@ func (b *LuaBridge) npcLookup(L *lua.LState, event *LuaEvent, capture *QuestCapt
 func (b *LuaBridge) pushResolvedNPC(L *lua.LState, event *LuaEvent, capture *QuestCapture, proxy NPCProxy) {
 	proxy.Capture = capture
 	proxy.readCombatActor = event.ReadNPCCombat
+	proxy.readGrid = event.ReadNPCGrid
 	if event.Player != nil {
 		proxy.combatOwnerCharacterID = int64(event.Player.ID)
 		proxy.combatOwner = event.Player
@@ -126,7 +127,7 @@ func supportsExternalNPCMethod(method string) bool {
 	switch method {
 	case "GetID", "GetNPCTypeID", "GetName", "GetCleanName", "GetX", "GetY", "GetZ", "GetHeading",
 		"GetRace", "GetBaseRace", "GetGender", "GetClass",
-		"Signal", "Depop", "AddItem", "CastToNPC", "IsNPC", "IsMob", "GetTarget", "GetHateTop", "GetHateRandom":
+		"Say", "Emote", "Shout", "AddToHateList", "GetHPRatio", "Signal", "Depop", "AddItem", "CastToNPC", "IsNPC", "IsMob", "GetTarget", "GetHateTop", "GetHateRandom", "IsEngaged", "IsCombatReserved", "GetGrid":
 		return true
 	}
 	return false

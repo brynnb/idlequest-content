@@ -1,3 +1,4 @@
+-- IdleQuest epic 1.0 steps have no minimum level; preserve class and item checks.
 -- Source: qcat/Reania_Jukle.pl
 -- Enchanter Epic 1.0: Reania Jukle grants Empty Ink Vial.
 -- Converted from ProjectEQ Perl quest script.
@@ -7,18 +8,10 @@ function event_say(e)
 	if e.message:findi("hail") then
 		e.self:Say("Greetings, " .. e.other:GetName() .. ". What can I help you with?")
 	elseif e.message:findi("ink of the dark") then
-		if e.other:Level() >= 50 then
-			e.self:Say("Ink of the Dark, you say? You are going to need to find your own supply now.")
-		else
-			e.self:Say("Sorry, but your skills just aren't advanced enough for this.")
-		end
+		e.self:Say("Ink of the Dark, you say? You are going to need to find your own supply now.")
 	elseif e.message:findi("supply") then
-		if e.other:Level() >= 50 then
-			e.self:Say("The ink is the blood of a dark scribe. Tempt him and give him this vial.")
-			e.other:SummonItem(10626) -- Empty Ink Vial
-		else
-			e.self:Say("Sorry, but your skills just aren't advanced enough for this.")
-		end
+		e.self:Say("The ink is the blood of a dark scribe. Tempt him and give him this vial.")
+		e.other:SummonItem(10626) -- Empty Ink Vial
 	end
 end
 

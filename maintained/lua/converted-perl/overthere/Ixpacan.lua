@@ -1,3 +1,5 @@
+-- enabled: false
+-- P99 exclusion: see content_exclusions.json quests["overthere/Ixpacan"].
 -- Converted from ProjectEQ Perl quest script.
 -- Source: overthere/Ixpacan.pl
 -- items: 48041, 48044, 4267, 48043, 48042

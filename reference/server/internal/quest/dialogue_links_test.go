@@ -18,10 +18,12 @@ func TestTurnInRetainsAuthoredResponseLink(t *testing.T) {
 	require.NoError(t, err)
 	branches, err := bridge.DiscoverDialogueOptions(string(source), e)
 	require.NoError(t, err)
-	info := &QuestNPCInfo{Greeting: "The NPC remains silent.", AvailableOptions: branches}
+	info := &QuestNPCInfo{Greeting: "The NPC remains silent.", HasTurnIn: true, AvailableOptions: branches}
 	response := strings.Join(capture.Responses, "\n")
 	(&Service{}).applyTurnInDialogue(info, response, capture)
 	require.Equal(t, response, info.Greeting)
+	require.True(t, info.HasDialogue)
+	require.True(t, info.HasTurnIn, "turn-in response preserves independently discovered capabilities")
 	link := DialogueOption{Text: "continue what you have started", Keyword: "continue what I have started"}
 	require.Contains(t, info.AvailableOptions, link)
 	e.Message = link.Keyword
@@ -48,10 +50,11 @@ func TestShamanSrafenUsLinkSurvivesDiscoveryAndRouting(t *testing.T) {
 }
 
 func TestShamanLesserSpiritsExplainWhereToTakeGem(t *testing.T) {
-	for _, zone := range []string{"rathemtn", "fieldofbone", "oot", "oceanoftears", "butcher"} {
+	for _, source := range []struct{ origin, zone string }{{"converted-perl", "rathemtn"}, {"converted-perl", "fieldofbone"}, {"converted-perl", "oot"}, {"converted-perl", "oceanoftears"}, {"modified-upstream", "butcher"}} {
+		zone := source.zone
 		e := progressionEvent(PlayerProxy{ID: 123, Name: "QuestTester", CharClass: "Shaman", CharLevel: 50})
 		e.Message = "know more"
-		capture, err := NewLuaBridge("upstream/projecteq").ExecuteSayFromSource(readOverrideLua(t, "modified-upstream", zone, "a_lesser_spirit"), e)
+		capture, err := NewLuaBridge("upstream/projecteq").ExecuteSayFromSource(readOverrideLua(t, source.origin, source.zone, "a_lesser_spirit"), e)
 		require.NoError(t, err, zone)
 		require.Contains(t, strings.Join(capture.Responses, "\n"), "Some call it a port", zone)
 		require.Equal(t, []QuestReward{{ItemID: 1665, Count: 1}}, capture.Items, zone)

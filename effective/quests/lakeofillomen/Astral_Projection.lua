@@ -1,3 +1,4 @@
+-- IdleQuest epic 1.0 steps have no minimum level; preserve class and item checks.
 -- Source: lakeofillomen/Astral_Projection.pl
 -- Monk Epic 1.0: Astral Projection spawns Vorash and Deep.
 -- Converted from ProjectEQ Perl quest script.
@@ -12,7 +13,7 @@ end
 
 function event_trade(e)
 	local item_lib = require("items")
-	if e.other:GetLevel() >= 46 and e.other:Class() == "Monk" and item_lib.check_turn_in(e.trade, {item1 = 1687}) then
+	if e.other:Class() == "Monk" and item_lib.check_turn_in(e.trade, {item1 = 1687}) then
 		local x = e.self:GetX()
 		local y = e.self:GetY()
 		local z = e.self:GetZ()

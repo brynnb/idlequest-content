@@ -8,6 +8,26 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
+func TestNPCPresenceUsesLiveResolverAndDoesNotHideReadFailures(t *testing.T) {
+	bridge := NewLuaBridge(".")
+	event := progressionEvent(PlayerProxy{})
+	event.VisibleNPCTypeIDs = []int32{9001} // Deliberately stale legacy snapshot.
+	event.ResolveNPC = func(q QuestNPCQuery) (*NPCProxy, error) {
+		if q.NPCTypeID == 9002 {
+			return &NPCProxy{ID: 9002, SpawnInstanceID: 42}, nil
+		}
+		return nil, nil
+	}
+	_, err := bridge.ExecuteSayFromSource(`function event_say(e)
+assert(not eq.get_entity_list():IsMobSpawnedByNpcTypeID(9001))
+assert(eq.get_entity_list():IsMobSpawnedByNpcTypeID(9002))
+end`, event)
+	require.NoError(t, err)
+	event.ResolveNPC = func(QuestNPCQuery) (*NPCProxy, error) { return nil, fmt.Errorf("source generation changed") }
+	_, err = bridge.ExecuteSayFromSource(`function event_say(e) pcall(function() eq.get_entity_list():IsMobSpawnedByNpcTypeID(9002) end);e.other:SummonItem(13005) end`, event)
+	require.ErrorContains(t, err, "NPC presence read failed")
+}
+
 // Exercise the actual source separately from the source-only runtime matrix.
 // Resolving Iceberg does not implement following: strict execution must still
 // reject that deferred effect, not declare this interaction playable.

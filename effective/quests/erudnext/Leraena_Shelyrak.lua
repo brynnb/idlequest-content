@@ -1,6 +1,6 @@
 -- Source: erudnext/Leraena_Shelyrak.lua
 -- P99 audit: Clear Water, Kobold Shaman Paws and Quellious Symbol Quests.
--- Separate Stonebrunt alliance quest remains unaudited/omitted.
+-- Catman Alliance restored from https://wiki.project1999.com/Catman_Alliance.
 -- items: 13989, 18723, 13546, 13883, 15213, 15011, 17090, 14582, 14583, 14585, 1564, 1565, 1566, 1772, 1780, 1781
 function event_spawn(e)
 	local xloc = e.self:GetX();
@@ -49,6 +49,13 @@ function event_trade(e)
 		e.other:Faction(266,25,0); --  High Council of Erudin.
 		e.other:Faction(265,-25,0); --  Heretics.
 		e.other:AddEXP(100); 
+	elseif(item_lib.check_turn_in(e.trade, {item1 = 2049})) then --  rolled up strip of cloth
+		e.self:Say("This is important news indeed. It seems there is a tribe of cat men in the Stonebrunt Mountains that wishes to form an alliance with Erudin. I must alert the High Council of this immediately, thank you for your services."); 
+		e.other:AddMoneyToPP(9, 0, 0, 0, true);
+		e.other:Faction(298,5,0); --  Peace Keepers.
+		e.other:Faction(266,5,0); --  High Council of Erudin.
+		e.other:Faction(265,-5,0); --  Heretics.
+		e.other:AddEXP(1000);
 	elseif(item_lib.check_turn_in(e.trade, {item1 = 13883, item2 = 13883, item3 = 13883})) then
 		e.self:Say("Fine work. These paws prove your service to our temple. Accept this small reward, then help us investigate the [more powerful kobold shamen].");
 		e.other:SummonItem(eq.ChooseRandom(15213, 15011));

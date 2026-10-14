@@ -66,10 +66,12 @@ func (s *Service) ExecuteRuntimeEvent(zoneShortName, npcScriptName string, event
 	}
 	return s.executeEvent(string(event.Type), npcScriptName, event.NPC.ID, zoneShortName, &LuaEvent{
 		NPC: &event.NPC, Player: &event.Player, Globals: event.Globals, Fields: event.Fields,
-		ReadNPCCombat:     npcCombatReaderFromFields(event.Fields),
-		VisibleNPCTypeIDs: visibleNPCTypeIDsFromRuntimeFields(event.Fields),
-		ResolveNPC:        npcResolverFromFields(event.Fields),
-		ListNPCs:          npcEnumeratorFromFields(event.Fields),
+		ReadNPCCombat:       npcCombatReaderFromFields(event.Fields),
+		ReadNPCGrid:         npcGridReaderFromFields(event.Fields),
+		ReadSpawnConditions: spawnConditionReaderFromFields(event.Fields),
+		VisibleNPCTypeIDs:   visibleNPCTypeIDsFromRuntimeFields(event.Fields),
+		ResolveNPC:          npcResolverFromFields(event.Fields),
+		ListNPCs:            npcEnumeratorFromFields(event.Fields),
 	})
 }
 
@@ -81,6 +83,17 @@ func (s *Service) ProcessRuntimeEvent(characterID uint32, npcID int32, spawnInst
 }
 
 func (s *Service) ProcessRuntimeEventWithContext(characterID uint32, npcID int32, spawnInstanceID int64, zoneShortName string, eventType RuntimeEventType, fields map[string]any, npcPosition, playerPosition *QuestActorPosition) (*QuestCapture, RewardSummary, error) {
+	return s.processNPCEventWithContext(characterID, npcID, spawnInstanceID, zoneShortName, eventType, fields, npcPosition, playerPosition, nil)
+}
+
+func (s *Service) ProcessWorldNPCTimer(characterID uint32, npcID int32, spawnID int64, zone string, fields map[string]any, position *QuestActorPosition, clock *QuestWorldTimerEvent) (*QuestCapture, RewardSummary, error) {
+	if clock == nil || clock.PathEpochMs <= 0 || clock.TimerID <= 0 || clock.ExpectedFireAt.IsZero() || clock.PendingFireAt.IsZero() {
+		return nil, RewardSummary{}, fmt.Errorf("invalid world timer firing context")
+	}
+	return s.processNPCEventWithContext(characterID, npcID, spawnID, zone, RuntimeEventTimer, fields, position, nil, clock)
+}
+
+func (s *Service) processNPCEventWithContext(characterID uint32, npcID int32, spawnInstanceID int64, zoneShortName string, eventType RuntimeEventType, fields map[string]any, npcPosition, playerPosition *QuestActorPosition, worldTimer *QuestWorldTimerEvent) (*QuestCapture, RewardSummary, error) {
 	instanceID := 0
 	if npcPosition != nil {
 		instanceID = npcPosition.InstanceID
@@ -117,16 +130,23 @@ func (s *Service) ProcessRuntimeEventWithContext(characterID uint32, npcID int32
 	capture, err := s.executeEvent(string(event.Type), npcName, npcID, zoneShortName, &LuaEvent{
 		ReadTimer: s.questTimerReader(characterID, npcID, zoneShortName, instanceID, spawnInstanceID),
 		NPC:       &event.NPC, Player: &event.Player, Globals: event.Globals, Fields: event.Fields, SpawnInstanceID: spawnInstanceID, ScriptState: scriptState,
-		NPCVitals:         npcVitalsFromFields(event.Fields),
-		ReadNPCCombat:     npcCombatReaderFromFields(event.Fields),
-		VisibleNPCTypeIDs: visibleNPCTypeIDsFromRuntimeFields(event.Fields),
-		ResolveNPC:        npcResolverFromFields(event.Fields),
-		ListNPCs:          npcEnumeratorFromFields(event.Fields),
+		GlobalSnapshot:  readContext.GlobalSnapshot,
+		WorldTimerEvent: worldTimer, InstanceID: instanceID,
+		NPCVitals:           npcVitalsFromFields(event.Fields),
+		ReadNPCCombat:       npcCombatReaderFromFields(event.Fields),
+		ReadNPCGrid:         npcGridReaderFromFields(event.Fields),
+		ReadSpawnConditions: spawnConditionReaderFromFields(event.Fields),
+		VisibleNPCTypeIDs:   visibleNPCTypeIDsFromRuntimeFields(event.Fields),
+		ResolveNPC:          npcResolverFromFields(event.Fields),
+		ListNPCs:            npcEnumeratorFromFields(event.Fields),
 	})
 	if err != nil {
 		return nil, RewardSummary{}, err
 	}
 	if capture == nil {
+		if worldTimer != nil {
+			return nil, RewardSummary{}, ErrWorldTimerScopeChanged
+		}
 		capture = NewQuestCapture()
 	}
 	stageQuestRuntimeState(capture, npcID, spawnInstanceID)
@@ -140,9 +160,14 @@ func (s *Service) ProcessRuntimeEventWithContext(characterID uint32, npcID int32
 		copy := *progress
 		capture.WaypointProgress = &copy
 	}
+	if progress, ok := fields["__quest_signal_progress"].(*QuestSignalProgress); ok && progress != nil && eventType == RuntimeEventSignal {
+		copy := *progress
+		capture.SignalProgress = &copy
+	}
+	capture.GlobalSnapshot = readContext.GlobalSnapshot
 	capture.Responses = formatQuestResponses(capture.Responses, player)
 	rewards, err := s.persistQuestEventCapture(characterID, npcID, zoneID, zoneShortName,
-		QuestTurnInContext{InstanceID: instanceID, SpawnInstanceID: spawnInstanceID}, capture)
+		QuestTurnInContext{InstanceID: instanceID, SpawnInstanceID: spawnInstanceID, NPCVitals: npcVitalsFromFields(fields)}, capture)
 	if err != nil {
 		return nil, RewardSummary{}, err
 	}
@@ -169,11 +194,14 @@ func (s *Service) ProcessPlayerRuntimeEvent(characterID uint32, zoneShortName st
 	capture, err := s.executeEvent(string(eventType), "player", 0, zoneShortName, &LuaEvent{
 		ReadTimer: s.questTimerReader(characterID, 0, zoneShortName, instanceID, PlayerRuntimeSpawnInstanceID),
 		NPC:       &NPCProxy{}, Player: &playerProxy, Globals: globals, Fields: fields,
+		GlobalSnapshot:  readContext.GlobalSnapshot,
 		SpawnInstanceID: PlayerRuntimeSpawnInstanceID, ScriptState: scriptState, SelfIsPlayer: true,
-		VisibleNPCTypeIDs: visibleNPCTypeIDsFromRuntimeFields(fields),
-		ResolveNPC:        npcResolverFromFields(fields),
-		ReadNPCCombat:     npcCombatReaderFromFields(fields),
-		ListNPCs:          npcEnumeratorFromFields(fields),
+		VisibleNPCTypeIDs:   visibleNPCTypeIDsFromRuntimeFields(fields),
+		ResolveNPC:          npcResolverFromFields(fields),
+		ReadNPCCombat:       npcCombatReaderFromFields(fields),
+		ReadNPCGrid:         npcGridReaderFromFields(fields),
+		ReadSpawnConditions: spawnConditionReaderFromFields(fields),
+		ListNPCs:            npcEnumeratorFromFields(fields),
 	})
 	if err != nil {
 		return nil, RewardSummary{}, err
@@ -187,6 +215,7 @@ func (s *Service) ProcessPlayerRuntimeEvent(characterID uint32, zoneShortName st
 		return nil, RewardSummary{}, err
 	}
 	mergeQuestCapture(capture, encounterCapture)
+	capture.GlobalSnapshot = readContext.GlobalSnapshot
 	capture.Responses = formatQuestResponses(capture.Responses, player)
 	rewards, err := s.persistQuestEventCapture(characterID, 0, zoneID, zoneShortName,
 		QuestTurnInContext{InstanceID: instanceID, SpawnInstanceID: PlayerRuntimeSpawnInstanceID}, capture)
@@ -217,10 +246,12 @@ func (s *Service) executeRegisteredEncounterNPCEvents(characterID uint32, npcID 
 			NPC: &event.NPC, Player: &event.Player, Globals: event.Globals, Fields: event.Fields,
 			ReadTimer:       s.questTimerReader(characterID, npcID, zoneShortName, instanceID, spawnInstanceID),
 			SpawnInstanceID: spawnInstanceID, ScriptState: state,
-			VisibleNPCTypeIDs: visibleNPCTypeIDsFromRuntimeFields(event.Fields),
-			ResolveNPC:        npcResolverFromFields(event.Fields),
-			ReadNPCCombat:     npcCombatReaderFromFields(event.Fields),
-			ListNPCs:          npcEnumeratorFromFields(event.Fields),
+			VisibleNPCTypeIDs:   visibleNPCTypeIDsFromRuntimeFields(event.Fields),
+			ResolveNPC:          npcResolverFromFields(event.Fields),
+			ReadNPCCombat:       npcCombatReaderFromFields(event.Fields),
+			ReadNPCGrid:         npcGridReaderFromFields(event.Fields),
+			ReadSpawnConditions: spawnConditionReaderFromFields(event.Fields),
+			ListNPCs:            npcEnumeratorFromFields(event.Fields),
 		}
 		capture, err := s.bridge.ExecuteRegisteredNPCEventFromSource(source, eventType, npcID, luaEvent)
 		if err != nil {
@@ -329,10 +360,12 @@ func (s *Service) executeRegisteredEncounterPlayerEvents(characterID uint32, zon
 			NPC: &NPCProxy{}, Player: player, Globals: globals, Fields: fields,
 			ReadTimer:       s.questTimerReader(characterID, 0, zoneShortName, instanceID, PlayerRuntimeSpawnInstanceID),
 			SpawnInstanceID: PlayerRuntimeSpawnInstanceID, ScriptState: state, SelfIsPlayer: true,
-			VisibleNPCTypeIDs: visibleNPCTypeIDsFromRuntimeFields(fields),
-			ResolveNPC:        npcResolverFromFields(fields),
-			ReadNPCCombat:     npcCombatReaderFromFields(fields),
-			ListNPCs:          npcEnumeratorFromFields(fields),
+			VisibleNPCTypeIDs:   visibleNPCTypeIDsFromRuntimeFields(fields),
+			ResolveNPC:          npcResolverFromFields(fields),
+			ReadNPCCombat:       npcCombatReaderFromFields(fields),
+			ReadNPCGrid:         npcGridReaderFromFields(fields),
+			ReadSpawnConditions: spawnConditionReaderFromFields(fields),
+			ListNPCs:            npcEnumeratorFromFields(fields),
 		}
 		capture, err := s.bridge.ExecuteRegisteredPlayerEventFromSource(source, eventType, luaEvent)
 		if err != nil {
@@ -363,6 +396,7 @@ func mergeQuestCapture(dst, src *QuestCapture) {
 	dst.SayLinks = append(dst.SayLinks, src.SayLinks...)
 	dst.runtimeStateWrites = append(dst.runtimeStateWrites, src.runtimeStateWrites...)
 	dst.Attacks = append(dst.Attacks, src.Attacks...)
+	dst.SpawnConditions = append(dst.SpawnConditions, src.SpawnConditions...)
 	for _, api := range src.DeferredAPIs {
 		seen := false
 		for _, existing := range dst.DeferredAPIs {

@@ -1,3 +1,5 @@
+-- enabled: false
+-- P99 exclusion: see content_exclusions.json quests["cabeast/Klok_Ephmir"].
 -- Converted from ProjectEQ Perl quest script.
 -- Source: cabeast/Klok_Ephmir.pl
 -- items: 12450, 12445

@@ -36,7 +36,7 @@ func selectBundledOverride(scripts []questoverrides.Script, key string) (questov
 }
 
 func runSelectedOverride(ctx context.Context, db *sql.DB, key string, apply bool) error {
-	scripts, err := questoverrides.Scripts()
+	_, scripts, err := maintainedQuestPolicy()
 	if err != nil {
 		return err
 	}

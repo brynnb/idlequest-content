@@ -23,6 +23,7 @@ func (s *Service) applyTurnInDialogue(info *QuestNPCInfo, response string, captu
 	}
 	info.Greeting = response
 	info.AvailableOptions = mergeDialogueOptions(s.captureDialogueOptions(response, capture), info.AvailableOptions)
+	info.HasDialogue = strings.TrimSpace(response) != "" || len(info.AvailableOptions) > 0
 }
 
 // Explicit eq.say_link labels carry an authored response, unlike ordinary

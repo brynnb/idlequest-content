@@ -151,7 +151,7 @@ func cloneDialogueEvent(event *LuaEvent) (*LuaEvent, error) {
 	if event.Fields != nil {
 		copyEvent.Fields = make(map[string]any, len(event.Fields))
 		for key, value := range event.Fields {
-			if key != "__quest_npc_resolver" && key != "__quest_npc_enumerator" && key != "__quest_npc_combat_reader" {
+			if key != "__quest_npc_resolver" && key != "__quest_npc_enumerator" && key != "__quest_npc_combat_reader" && key != "__quest_npc_grid_reader" && key != "__quest_spawn_condition_reader" {
 				copyEvent.Fields[key] = value
 			}
 		}
@@ -164,10 +164,14 @@ func cloneDialogueEvent(event *LuaEvent) (*LuaEvent, error) {
 	err = json.Unmarshal(data, &cloned)
 	// The resolver is a server-owned read capability, not serializable state.
 	// Resolved actors are copied by npcLookup before any Lua code sees them.
+	cloned.GlobalSnapshot = event.GlobalSnapshot
 	cloned.ResolveNPC = event.ResolveNPC
 	cloned.ListNPCs = event.ListNPCs
 	cloned.ReadTimer = event.ReadTimer
+	cloned.ReadWorldTimer = event.ReadWorldTimer
 	cloned.ReadNPCCombat = event.ReadNPCCombat
+	cloned.ReadNPCGrid = event.ReadNPCGrid
+	cloned.ReadSpawnConditions = event.ReadSpawnConditions
 	return &cloned, err
 }
 

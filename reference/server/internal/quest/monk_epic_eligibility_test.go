@@ -8,31 +8,33 @@ import (
 
 func TestMonkEpicEligibilityBeforeConsumption(t *testing.T) {
 	for _, step := range []struct {
-		zone, npc string
-		items     []int
-		reward    int
+		origin, zone, npc string
+		items             []int
+		reward            int
 	}{
-		{"erudnext", "Tomekeeper_Danl", []int{18195}, 1682},
-		{"trakanon", "Kaiaren", []int{1683}, 1683},
-		{"trakanon", "Kaiaren", []int{1684}, 1684},
-		{"trakanon", "#Kaiaren", []int{1683}, 1689},
-		{"trakanon", "#Kaiaren", []int{1684}, 1684},
-		{"trakanon", "#Kaiaren", []int{1688, 1689}, 10652},
-		{"lakerathe", "Deep", []int{1686}, 1686},
-		{"airplane", "a_presence", []int{1684}, 0},
-		{"lakeofillomen", "Astral_Projection", []int{1687}, 0},
+		{"modified-upstream", "erudnext", "Tomekeeper_Danl", []int{18195}, 1682},
+		{"converted-perl", "trakanon", "Kaiaren", []int{1683}, 1683},
+		{"converted-perl", "trakanon", "Kaiaren", []int{1684}, 1684},
+		{"converted-perl", "trakanon", "#Kaiaren", []int{1683}, 1689},
+		{"converted-perl", "trakanon", "#Kaiaren", []int{1684}, 1684},
+		{"converted-perl", "trakanon", "#Kaiaren", []int{1688, 1689}, 10652},
+		{"converted-perl", "lakerathe", "Deep", []int{1686}, 1686},
+		{"modified-upstream", "airplane", "a_presence", []int{1684}, 0},
+		{"converted-perl", "lakeofillomen", "Astral_Projection", []int{1687}, 0},
 	} {
 		for _, player := range []PlayerProxy{
+			{ID: 123, CharClass: "Monk", CharLevel: 1},
 			{ID: 123, CharClass: "Monk", CharLevel: 45},
+			{ID: 123, CharClass: "Warrior", CharLevel: 1},
 			{ID: 123, CharClass: "Warrior", CharLevel: 46},
 			{ID: 123, CharClass: "Monk", CharLevel: 46},
 		} {
 			player.Name = "QuestTester"
 			e := progressionEvent(player)
 			e.Trade = &TradeProxy{Items: append([]int{}, step.items...)}
-			capture, err := NewLuaBridge("upstream/projecteq").ExecuteTradeFromSource(readOverrideLua(t, "modified-upstream", step.zone, step.npc), e)
+			capture, err := NewLuaBridge("upstream/projecteq").ExecuteTradeFromSource(readOverrideLua(t, step.origin, step.zone, step.npc), e)
 			require.NoError(t, err)
-			if player.CharClass == "Monk" && player.CharLevel == 46 {
+			if player.CharClass == "Monk" {
 				require.Empty(t, capture.CurrentTrade.Items)
 				if step.reward != 0 {
 					require.Equal(t, []QuestReward{{ItemID: step.reward, Count: 1}}, capture.Items)
@@ -55,7 +57,7 @@ func TestMonkProjectionDoesNotRequireOptionalDeepVisit(t *testing.T) {
 		e := progressionEvent(PlayerProxy{ID: 123, Name: "QuestTester", CharClass: "Monk", CharLevel: 50})
 		e.Globals = globals
 		e.Trade = &TradeProxy{Items: []int{1686, 1001}}
-		capture, err := NewLuaBridge("upstream/projecteq").ExecuteTradeFromSource(readOverrideLua(t, "modified-upstream", "overthere", "Astral_Projection"), e)
+		capture, err := NewLuaBridge("upstream/projecteq").ExecuteTradeFromSource(readOverrideLua(t, "converted-perl", "overthere", "Astral_Projection"), e)
 		require.NoError(t, err)
 		require.Equal(t, []QuestReward{{ItemID: 1687, Count: 1}}, capture.Items)
 		require.Equal(t, []int{1001}, capture.CurrentTrade.Items)

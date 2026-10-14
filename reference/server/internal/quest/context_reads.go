@@ -3,10 +3,11 @@ package quest
 import "fmt"
 
 type questReadContext struct {
-	Player      PlayerInfo
-	ZoneID      int32
-	Globals     map[string]string
-	ScriptState map[string]any
+	Player         PlayerInfo
+	ZoneID         int32
+	Globals        map[string]string
+	GlobalSnapshot *QuestGlobalSnapshot
+	ScriptState    map[string]any
 }
 
 // All character-backed Lua events use the same eligibility projection. Trade
@@ -34,7 +35,7 @@ func (s *Service) loadQuestReadContext(characterID uint32, npcID int32, zone str
 	if result.ZoneID, err = s.getZoneID(zone); err != nil {
 		return questReadContext{}, fmt.Errorf("load quest zone %s: %w", zone, err)
 	}
-	if result.Globals, err = s.getGlobals(characterID, npcID, result.ZoneID); err != nil {
+	if result.Globals, result.GlobalSnapshot, err = s.getGlobalsWithSnapshot(characterID, npcID, result.ZoneID); err != nil {
 		return questReadContext{}, fmt.Errorf("load quest globals: %w", err)
 	}
 	if result.ScriptState, err = s.loadRuntimeScriptState(characterID, npcID, zone, runtime.InstanceID, runtime.SpawnInstanceID); err != nil {

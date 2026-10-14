@@ -1,3 +1,5 @@
+-- enabled: false
+-- P99 exclusion: see content_exclusions.json quests["skyfire/Zordak_Ragefire"].
 -- Converted from ProjectEQ Perl quest script.
 -- Source: skyfire/Zordak_Ragefire.pl
 

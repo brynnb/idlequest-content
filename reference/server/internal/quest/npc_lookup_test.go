@@ -39,6 +39,19 @@ end`, method), event)
 	}
 }
 
+func TestResolvedNPCShoutPreservesSpeakerWithoutMutatingResolverSnapshot(t *testing.T) {
+	e := progressionEvent(PlayerProxy{})
+	other := &NPCProxy{ID: 9002, SpawnInstanceID: 6002, Name: "Commander_Name"}
+	e.ResolveNPC = func(QuestNPCQuery) (*NPCProxy, error) { return other, nil }
+	b := NewLuaBridge(".")
+	b.RequireImplementedEffects = true
+	c, err := b.ExecuteSayFromSource(`function event_say(e) eq.get_entity_list():GetNPCByNPCTypeID(9002):Shout("Take your positions!") end`, e)
+	require.NoError(t, err)
+	require.Equal(t, []string{"[Shout] Commander_Name says, 'Take your positions!'"}, c.Responses)
+	require.Empty(t, c.NPCSpeech, "a shout is zone-wide, not a nearby Say")
+	require.Nil(t, other.Capture)
+}
+
 func TestDialogueCloneRetainsResolverWithoutSerializingAuthority(t *testing.T) {
 	event := progressionEvent(PlayerProxy{})
 	event.ResolveNPC = func(QuestNPCQuery) (*NPCProxy, error) { return &NPCProxy{ID: 9002, SpawnInstanceID: 6002}, nil }

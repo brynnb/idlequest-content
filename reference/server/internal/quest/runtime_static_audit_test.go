@@ -10,6 +10,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
+	lua "github.com/yuin/gopher-lua"
 )
 
 type luaRuntimeAPICall struct {
@@ -62,17 +63,16 @@ func supportedLuaRuntimeAPIsForAudit(bridgeSource, itemsModuleSource string) map
 		out[api] = true
 	}
 
-	for _, match := range regexp.MustCompile(`L\.SetField\(eq,\s*"([A-Za-z_][A-Za-z0-9_]*)"`).FindAllStringSubmatch(bridgeSource, -1) {
-		out["eq."+match[1]] = true
-	}
-	for _, block := range regexp.MustCompile(`for\s+_,\s*name\s*:=\s*range\s*\[\]string\{([^}]*)\}\s*\{[^}]*L\.SetField\(eq,\s*name,`).FindAllStringSubmatch(bridgeSource, -1) {
-		for _, quoted := range regexp.MustCompile(`"([A-Za-z_][A-Za-z0-9_]*)"`).FindAllStringSubmatch(block[1], -1) {
-			out["eq."+quoted[1]] = true
+	// Inspect actual registered names, including helpers extracted into other Go
+	// files. Registration defines capabilities; it does not execute quest effects.
+	L := lua.NewState()
+	defer L.Close()
+	NewLuaBridge(".").registerEqGlobal(L, NewQuestCapture(), &LuaEvent{})
+	L.GetGlobal("eq").(*lua.LTable).ForEach(func(key, value lua.LValue) {
+		if name, ok := key.(lua.LString); ok && value != lua.LNil {
+			out["eq."+string(name)] = true
 		}
-	}
-	for _, match := range regexp.MustCompile(`function\s+eq\.([A-Za-z_][A-Za-z0-9_]*)\s*\(`).FindAllStringSubmatch(bridgeSource, -1) {
-		out["eq."+match[1]] = true
-	}
+	})
 	for _, match := range regexp.MustCompile(`function\s+items\.([A-Za-z_][A-Za-z0-9_]*)\s*\(`).FindAllStringSubmatch(itemsModuleSource, -1) {
 		out["item_lib."+match[1]] = true
 	}

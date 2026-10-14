@@ -30,7 +30,7 @@ func TestAuditDatabaseDialogueShapes(t *testing.T) {
 	rows, err := database.Query(`SELECT zone, name, lua_content FROM quests WHERE enabled=1 AND lua_content IS NOT NULL AND lua_content != '' ORDER BY zone, name`)
 	require.NoError(t, err)
 	defer rows.Close()
-	zones := ClassicKunarkQuestZoneSet()
+	zones := P99QuestZoneSet()
 	files, handlers, outliers := 0, 0, 0
 	for rows.Next() {
 		var zone, name, source string
@@ -54,7 +54,7 @@ func TestAuditDatabaseDialogueShapes(t *testing.T) {
 	}
 	require.NoError(t, rows.Err())
 	require.Positive(t, files)
-	t.Logf("Enabled Classic/Kunark source: %d files, %d say handlers, %d message-shape outliers; classification only, not gameplay verification", files, handlers, outliers)
+	t.Logf("Enabled Classic–Velious source: %d files, %d say handlers, %d message-shape outliers; classification only, not gameplay verification", files, handlers, outliers)
 }
 
 // Source classification, not execution or P99 certification. Opt-in avoids

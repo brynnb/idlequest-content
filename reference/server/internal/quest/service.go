@@ -251,29 +251,35 @@ func (s *Service) GetNPCQuestInfoWithContext(characterID uint32, npcID int32, zo
 	player, zoneID, globals, scriptState := readContext.Player, readContext.ZoneID, readContext.Globals, readContext.ScriptState
 
 	event := &LuaEvent{
-		NPC:               applyQuestNPCSelfOverride(&NPCProxy{ID: npcID, Name: cleanName, Race: uint16(npcRace), Class: uint8(npcClass), Gender: uint8(npcGender), PrimaryFaction: npcFaction, HP: int64(npcHP), MaxHP: int64(npcHP)}, runtimeContext.NPCSelfOverride),
-		Player:            player.questPlayerProxy(characterID, nil),
-		Message:           "hail",
-		NPCVitals:         runtimeContext.NPCVitals,
-		Globals:           globals,
-		ScriptState:       scriptState,
-		SpawnInstanceID:   runtimeContext.SpawnInstanceID,
-		VisibleNPCTypeIDs: runtimeContext.VisibleNPCTypeIDs,
-		ResolveNPC:        runtimeContext.ResolveNPC,
-		ReadNPCCombat:     runtimeContext.ReadNPCCombat,
-		ListNPCs:          runtimeContext.ListNPCs,
-		ReadTimer:         s.questTimerReader(characterID, npcID, zoneShortName, runtimeContext.InstanceID, runtimeContext.SpawnInstanceID),
+		NPC:                 &NPCProxy{ID: npcID, Name: cleanName, Race: uint16(npcRace), Class: uint8(npcClass), Gender: uint8(npcGender), PrimaryFaction: npcFaction, HP: int64(npcHP), MaxHP: int64(npcHP)},
+		Player:              player.questPlayerProxy(characterID, nil),
+		Message:             "hail",
+		NPCVitals:           runtimeContext.NPCVitals,
+		Globals:             globals,
+		GlobalSnapshot:      readContext.GlobalSnapshot,
+		ScriptState:         scriptState,
+		SpawnInstanceID:     runtimeContext.SpawnInstanceID,
+		InstanceID:          runtimeContext.InstanceID,
+		VisibleNPCTypeIDs:   runtimeContext.VisibleNPCTypeIDs,
+		ResolveNPC:          runtimeContext.ResolveNPC,
+		ReadNPCCombat:       runtimeContext.ReadNPCCombat,
+		ReadNPCGrid:         runtimeContext.ReadNPCGrid,
+		ReadSpawnConditions: runtimeContext.ReadSpawnConditions,
+		ListNPCs:            runtimeContext.ListNPCs,
+		ReadTimer:           s.questTimerReader(characterID, npcID, zoneShortName, runtimeContext.InstanceID, runtimeContext.SpawnInstanceID),
 	}
 
 	// Use the same source for execution and discovery, loaded before effects.
+	applyQuestInteractionPositions(event, runtimeContext)
 	capture, err := s.executeLoadedEvent("say", npcName, zoneShortName, scriptSrc, event)
 	if err != nil {
 		return nil, err
 	}
 	if capture == nil {
 		return &QuestNPCInfo{
-			NPCName:  cleanName,
-			Greeting: "The NPC has nothing to say.",
+			NPCName:     cleanName,
+			HasDialogue: false,
+			Greeting:    "The NPC has nothing to say.",
 		}, nil
 	}
 
@@ -292,6 +298,7 @@ func (s *Service) GetNPCQuestInfoWithContext(characterID uint32, npcID int32, zo
 	}
 
 	greeting := strings.Join(formatQuestResponses(capture.Responses, player), "\n")
+	responseGreeting := greeting
 	if greeting == "" {
 		greeting = "The NPC remains silent."
 	}
@@ -308,7 +315,11 @@ func (s *Service) GetNPCQuestInfoWithContext(characterID uint32, npcID int32, zo
 	}
 
 	return &QuestNPCInfo{
-		NPCName:          cleanName,
+		NPCName:     cleanName,
+		HasDialogue: responseGreeting != "" || len(options) > 0,
+		// A trade-only script can accept items without answering a hail.
+		// Discover this from the same resolved source used for execution.
+		HasTurnIn:        scriptDefinesLuaHandler(scriptSrc, "event_trade"),
 		Greeting:         greeting,
 		AvailableOptions: options,
 		SystemMessages:   rewards.Factions,
@@ -331,6 +342,7 @@ func (s *Service) executeLoadedEvent(eventType, npcName, zoneShortName, source s
 	if source == "" {
 		return nil, nil
 	}
+	event.ReadWorldTimer = s.questWorldTimerReader(event.NPC.ID, zoneShortName, event.InstanceID, event.SpawnInstanceID)
 	handler := "event_" + strings.TrimPrefix(strings.ToLower(eventType), "event_")
 	capture, err := s.bridge.ExecuteEventFromSource(source, handler, event)
 	if err != nil {
@@ -578,20 +590,25 @@ func (s *Service) ProcessKeywordWithContext(characterID uint32, npcID int32, zon
 	player, zoneID, globals, scriptState := readContext.Player, readContext.ZoneID, readContext.Globals, readContext.ScriptState
 
 	event := &LuaEvent{
-		NPC:               applyQuestNPCSelfOverride(&NPCProxy{ID: npcID, Name: cleanName, Race: uint16(npcRace), Class: uint8(npcClass), Gender: uint8(npcGender), PrimaryFaction: npcFaction, HP: int64(npcHP), MaxHP: int64(npcHP)}, runtimeContext.NPCSelfOverride),
-		Player:            player.questPlayerProxy(characterID, nil),
-		Message:           keyword,
-		NPCVitals:         runtimeContext.NPCVitals,
-		Globals:           globals,
-		ScriptState:       scriptState,
-		SpawnInstanceID:   runtimeContext.SpawnInstanceID,
-		VisibleNPCTypeIDs: runtimeContext.VisibleNPCTypeIDs,
-		ResolveNPC:        runtimeContext.ResolveNPC,
-		ReadNPCCombat:     runtimeContext.ReadNPCCombat,
-		ListNPCs:          runtimeContext.ListNPCs,
-		ReadTimer:         s.questTimerReader(characterID, npcID, zoneShortName, runtimeContext.InstanceID, runtimeContext.SpawnInstanceID),
+		NPC:                 &NPCProxy{ID: npcID, Name: cleanName, Race: uint16(npcRace), Class: uint8(npcClass), Gender: uint8(npcGender), PrimaryFaction: npcFaction, HP: int64(npcHP), MaxHP: int64(npcHP)},
+		Player:              player.questPlayerProxy(characterID, nil),
+		Message:             keyword,
+		NPCVitals:           runtimeContext.NPCVitals,
+		Globals:             globals,
+		GlobalSnapshot:      readContext.GlobalSnapshot,
+		ScriptState:         scriptState,
+		SpawnInstanceID:     runtimeContext.SpawnInstanceID,
+		InstanceID:          runtimeContext.InstanceID,
+		VisibleNPCTypeIDs:   runtimeContext.VisibleNPCTypeIDs,
+		ResolveNPC:          runtimeContext.ResolveNPC,
+		ReadNPCCombat:       runtimeContext.ReadNPCCombat,
+		ReadNPCGrid:         runtimeContext.ReadNPCGrid,
+		ReadSpawnConditions: runtimeContext.ReadSpawnConditions,
+		ListNPCs:            runtimeContext.ListNPCs,
+		ReadTimer:           s.questTimerReader(characterID, npcID, zoneShortName, runtimeContext.InstanceID, runtimeContext.SpawnInstanceID),
 	}
 
+	applyQuestInteractionPositions(event, runtimeContext)
 	branchOptions := s.discoverDialogueOptions(scriptSrc, event)
 	event.Message = resolveDialogueKeyword(keyword, branchOptions)
 	capture, err := s.executeLoadedEvent("say", npcName, zoneShortName, scriptSrc, event)
@@ -599,7 +616,7 @@ func (s *Service) ProcessKeywordWithContext(characterID uint32, npcID int32, zon
 		return nil, err
 	}
 	if capture == nil {
-		return unansweredQuestDialogue(cleanName, branchOptions), nil
+		return unansweredQuestDialogue(cleanName, branchOptions, scriptDefinesLuaHandler(scriptSrc, "event_trade")), nil
 	}
 
 	rewardPreview := rewardSummaryFromCapture(capture)
@@ -617,7 +634,7 @@ func (s *Service) ProcessKeywordWithContext(characterID uint32, npcID int32, zon
 	hasSideEffects := captureHasEffects(capture)
 
 	if greeting == "" && !hasSideEffects {
-		return unansweredQuestDialogue(cleanName, branchOptions), nil
+		return unansweredQuestDialogue(cleanName, branchOptions, scriptDefinesLuaHandler(scriptSrc, "event_trade")), nil
 	}
 
 	options := s.captureDialogueOptions(greeting, capture)
@@ -631,6 +648,8 @@ func (s *Service) ProcessKeywordWithContext(characterID uint32, npcID int32, zon
 
 	return &QuestNPCInfo{
 		NPCName:          cleanName,
+		HasDialogue:      greeting != "" || len(options) > 0,
+		HasTurnIn:        scriptDefinesLuaHandler(scriptSrc, "event_trade"),
 		Greeting:         greeting,
 		AvailableOptions: options,
 		SystemMessages:   rewards.Factions,
@@ -639,9 +658,11 @@ func (s *Service) ProcessKeywordWithContext(characterID uint32, npcID int32, zon
 	}, nil
 }
 
-func unansweredQuestDialogue(npcName string, options []DialogueOption) *QuestNPCInfo {
+func unansweredQuestDialogue(npcName string, options []DialogueOption, hasTurnIn bool) *QuestNPCInfo {
 	return &QuestNPCInfo{
 		NPCName:          npcName,
+		HasDialogue:      len(options) > 0,
+		HasTurnIn:        hasTurnIn,
 		Greeting:         npcName + " does not respond to that.",
 		AvailableOptions: options,
 	}
@@ -1035,7 +1056,6 @@ func (s *Service) ProcessTurnInWithContext(
 	currency QuestCurrency,
 	runtimeContext QuestTurnInContext,
 ) (*QuestTurnInResponse, error) {
-	npcPosition, playerPosition := runtimeContext.NPCPosition, runtimeContext.PlayerPosition
 	log.Printf("[Quest-TurnIn] charID=%d npcID=%d zone=%s items=%v currency=%+v", characterID, npcID, zoneShortName, itemIDs, currency)
 	// 1. Get NPC info
 	var npcName string
@@ -1057,20 +1077,7 @@ func (s *Service) ProcessTurnInWithContext(
 	player, zoneID, globals, scriptState := readContext.Player, readContext.ZoneID, readContext.Globals, readContext.ScriptState
 
 	npcProxy := &NPCProxy{ID: npcID, Name: cleanName, Race: uint16(npcRace), Class: uint8(npcClass), Gender: uint8(npcGender), PrimaryFaction: npcFaction, HP: int64(npcHP), MaxHP: int64(npcHP)}
-	if npcPosition != nil {
-		npcProxy.X = npcPosition.X
-		npcProxy.Y = npcPosition.Y
-		npcProxy.Z = npcPosition.Z
-		npcProxy.Heading = npcPosition.Heading
-	}
-	npcProxy = applyQuestNPCSelfOverride(npcProxy, runtimeContext.NPCSelfOverride)
 	playerProxy := player.questPlayerProxy(characterID, itemIDs)
-	if playerPosition != nil {
-		playerProxy.X = playerPosition.X
-		playerProxy.Y = playerPosition.Y
-		playerProxy.Z = playerPosition.Z
-		playerProxy.Heading = playerPosition.Heading
-	}
 
 	event := &LuaEvent{
 		NPC:       npcProxy,
@@ -1083,17 +1090,22 @@ func (s *Service) ProcessTurnInWithContext(
 			Silver:   currency.Silver,
 			Copper:   currency.Copper,
 		},
-		Globals:           globals,
-		ScriptState:       scriptState,
-		SpawnInstanceID:   runtimeContext.SpawnInstanceID,
-		VisibleNPCTypeIDs: runtimeContext.VisibleNPCTypeIDs,
-		ResolveNPC:        runtimeContext.ResolveNPC,
-		ReadNPCCombat:     runtimeContext.ReadNPCCombat,
-		ListNPCs:          runtimeContext.ListNPCs,
-		ReadTimer:         s.questTimerReader(characterID, npcID, zoneShortName, runtimeContext.InstanceID, runtimeContext.SpawnInstanceID),
+		Globals:             globals,
+		GlobalSnapshot:      readContext.GlobalSnapshot,
+		ScriptState:         scriptState,
+		SpawnInstanceID:     runtimeContext.SpawnInstanceID,
+		InstanceID:          runtimeContext.InstanceID,
+		VisibleNPCTypeIDs:   runtimeContext.VisibleNPCTypeIDs,
+		ResolveNPC:          runtimeContext.ResolveNPC,
+		ReadNPCCombat:       runtimeContext.ReadNPCCombat,
+		ReadNPCGrid:         runtimeContext.ReadNPCGrid,
+		ReadSpawnConditions: runtimeContext.ReadSpawnConditions,
+		ListNPCs:            runtimeContext.ListNPCs,
+		ReadTimer:           s.questTimerReader(characterID, npcID, zoneShortName, runtimeContext.InstanceID, runtimeContext.SpawnInstanceID),
 	}
 
 	// 2. Try DB script first, then filesystem
+	applyQuestInteractionPositions(event, runtimeContext)
 	capture, err := s.executeEvent("trade", npcName, npcID, zoneShortName, event)
 	if err != nil {
 		log.Printf("[Quest-TurnIn] executeEvent error: %v", err)
@@ -1239,8 +1251,8 @@ func captureHasEffects(capture *QuestCapture) bool {
 }
 
 func captureHasRuntimeEffects(capture *QuestCapture) bool {
-	return capture != nil && (len(capture.DeferredAPIs) > 0 || len(capture.HateChanges) > 0 || len(capture.ExternalNPCAddedLoot) > 0 || len(capture.Attacks) > 0 || len(capture.Spawns) > 0 || len(capture.Signals) > 0 || len(capture.Timers) > 0 ||
-		len(capture.Depops) > 0 || len(capture.PlayerMoves) > 0 || len(capture.NPCMoves) > 0 || len(capture.Doors) > 0 ||
+	return capture != nil && (len(capture.SpawnConditions) > 0 || len(capture.DeferredAPIs) > 0 || len(capture.HateChanges) > 0 || len(capture.ExternalNPCAddedLoot) > 0 || len(capture.Attacks) > 0 || len(capture.Spawns) > 0 || len(capture.Signals) > 0 || len(capture.Timers) > 0 ||
+		len(capture.Depops) > 0 || len(capture.PlayerMoves) > 0 || len(capture.NPCMoves) > 0 || len(capture.NPCFollows) > 0 || len(capture.Doors) > 0 ||
 		len(capture.Binds) > 0 || len(capture.HPEvents) > 0 || len(capture.GroundItems) > 0 || capture.Proximity != nil || capture.ProximitySayEnabled != nil)
 }
 
@@ -1356,6 +1368,11 @@ func (s *Service) getZoneID(shortName string) (int32, error) {
 }
 
 func (s *Service) getGlobals(charID uint32, npcID int32, zoneID int32) (map[string]string, error) {
+	values, _, err := s.getGlobalsWithSnapshot(charID, npcID, zoneID)
+	return values, err
+}
+
+func (s *Service) getGlobalsWithSnapshot(charID uint32, npcID int32, zoneID int32) (map[string]string, *QuestGlobalSnapshot, error) {
 	var rows []model.QuestGlobals
 	err := SELECT(table.QuestGlobals.AllColumns).
 		FROM(table.QuestGlobals).
@@ -1366,12 +1383,14 @@ func (s *Service) getGlobals(charID uint32, npcID int32, zoneID int32) (map[stri
 				OR(table.QuestGlobals.Zoneid.EQ(Int32(zoneID)), table.QuestGlobals.Zoneid.EQ(Int32(0))),
 			),
 		).
+		ORDER_BY(table.QuestGlobals.Charid.ASC(), table.QuestGlobals.Npcid.ASC(), table.QuestGlobals.Zoneid.ASC()).
 		Query(s.db, &rows)
 
 	if err != nil && err != qrm.ErrNoRows {
-		return nil, err
+		return nil, nil, err
 	}
 
+	snapshot := &QuestGlobalSnapshot{}
 	globals := make(map[string]string)
 	now := time.Now().Unix()
 	for _, r := range rows {
@@ -1379,8 +1398,9 @@ func (s *Service) getGlobals(charID uint32, npcID int32, zoneID int32) (map[stri
 			continue
 		}
 		globals[r.Name] = r.Value
+		snapshot.Rows = append(snapshot.Rows, r)
 	}
-	return globals, nil
+	return globals, snapshot, nil
 }
 
 func questGlobalScopeIDs(charID uint32, npcID int32, zoneID int32, options int) (int32, int32, int32) {
@@ -1403,6 +1423,19 @@ func questGlobalScopeIDs(charID uint32, npcID int32, zoneID int32, options int) 
 		qgZoneID = 0
 	}
 	return qgCharID, qgNPCID, qgZoneID
+}
+
+// Hail, keyword discovery/execution and Give must expose the same live actor
+// coordinates. Applying only Give positions silently routed dialogue moves to
+// zero; explicit test-only self overrides still take precedence afterward.
+func applyQuestInteractionPositions(event *LuaEvent, runtime QuestTurnInContext) {
+	if p := runtime.NPCPosition; p != nil && event.NPC != nil {
+		event.NPC.X, event.NPC.Y, event.NPC.Z, event.NPC.Heading = p.X, p.Y, p.Z, p.Heading
+	}
+	if p := runtime.PlayerPosition; p != nil && event.Player != nil {
+		event.Player.X, event.Player.Y, event.Player.Z, event.Player.Heading = p.X, p.Y, p.Z, p.Heading
+	}
+	event.NPC = applyQuestNPCSelfOverride(event.NPC, runtime.NPCSelfOverride)
 }
 
 func applyQuestNPCSelfOverride(npc *NPCProxy, override *QuestNPCSelfOverride) *NPCProxy {

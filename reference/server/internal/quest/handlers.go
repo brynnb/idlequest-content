@@ -256,6 +256,9 @@ func HandleQuestTurnInRequest(
 		)
 		if res.NewInfo != nil {
 			questService.applyTurnInDialogue(res.NewInfo, res.NPCResponse, res.RuntimeCapture)
+			// Match the ordinary info endpoint: a valid refreshed interaction
+			// must remain usable for another hand-in without a Reset click.
+			res.NewInfo.Success = res.NewInfo.Error == ""
 			res.NewInfo.Rewards = nil
 			res.NewInfo.RuntimeCapture = nil
 		}
@@ -363,7 +366,7 @@ func grantRewards(ses *session.Session, rewards RewardSummary) {
 	if len(rewards.Items) > 0 {
 		charSkills, _ := db_character.GetCharacterSkills(ctx, int64(charData.ID))
 		for _, reward := range rewards.Items {
-			tmpl, err := items.GetItemTemplateByID(int32(reward.ItemID))
+			tmpl, err := items.GetAcquirableItemTemplateByID(int32(reward.ItemID))
 			if err != nil {
 				continue
 			}
@@ -394,7 +397,7 @@ func grantRewards(ses *session.Session, rewards RewardSummary) {
 			}
 			invMap[fmt.Sprintf("%d:%d", k.Bag, k.Slot)] = toMap(item)
 		}
-		ses.SendStreamJSON(invMap, opcodes.CharacterInventory)
+		ses.SendInventorySnapshot(invMap)
 	}
 
 	// Grant EXP
@@ -478,7 +481,18 @@ func validateQuestTurnInCurrency(ses *session.Session, offered QuestCurrency) er
 
 // DeliverRuntimeRewards applies the session/inventory side of rewards whose
 // durable character changes were already persisted by the quest service.
-func DeliverRuntimeRewards(ses *session.Session, rewards RewardSummary) { grantRewards(ses, rewards) }
+func DeliverRuntimeRewards(ses *session.Session, rewards RewardSummary) {
+	// Most patrol/timer events only change NPC or script state. Reusing the
+	// hand-in refresh unconditionally republishes the player's inventory,
+	// skills and character data for every NPC waypoint. Hand-ins still
+	// need that refresh even without rewards because their offered items changed.
+	if len(rewards.Items) == 0 && rewards.Experience == 0 && len(rewards.Factions) == 0 &&
+		rewards.Currency == (QuestCurrency{}) && len(rewards.SkillUpdates) == 0 &&
+		!rewards.LocUpdate && !rewards.Ding {
+		return
+	}
+	grantRewards(ses, rewards)
+}
 
 // PreflightRuntimeRewards verifies inventory capacity and lore conflicts before
 // a world interaction irreversibly consumes or claims its source object.

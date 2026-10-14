@@ -97,7 +97,7 @@ func buildQuestInventoryPlan(
 	}
 
 	for _, reward := range rewards.Items {
-		template, err := dbitems.GetItemTemplateByID(int32(reward.ItemID))
+		template, err := dbitems.GetAcquirableItemTemplateByID(int32(reward.ItemID))
 		if err != nil {
 			return nil, fmt.Errorf("quest reward item %d is unavailable", reward.ItemID)
 		}
@@ -127,14 +127,16 @@ func buildQuestInventoryPlan(
 				return nil, fmt.Errorf("%s", inventoryFullQuestMessage)
 			}
 			key := constants.InventoryKey{Bag: bag, Slot: slot}
+			// Use the ordinary creation defaults: charged quest rewards must receive
+			// the template's full charges, while uncharged items start at zero.
+			instance := dbitems.CreateItemInstanceFromTemplateID(template.ID)
+			if instance == nil {
+				return nil, fmt.Errorf("quest reward item %d could not be created", template.ID)
+			}
+			instance.Quantity = 1
 			item := &constants.ItemWithInstance{
-				Item: template,
-				Instance: constants.ItemInstance{
-					ItemID:    template.ID,
-					Charges:   1,
-					Quantity:  1,
-					OwnerType: constants.OwnerTypeCharacter,
-				},
+				Item:     template,
+				Instance: *instance,
 			}
 			result.final[key] = item
 			result.rewardCreations = append(result.rewardCreations, questRewardCreation{key: key})
@@ -266,6 +268,9 @@ func (s *Service) persistQuestCaptureTx(
 	runtimeContext QuestTurnInContext,
 	capture *QuestCapture,
 ) error {
+	if err := validateQuestGlobalPreimagesTx(ctx, tx, characterID, npcID, zoneID, capture); err != nil {
+		return err
+	}
 	for _, update := range capture.Globals {
 		if update.Delete {
 			if _, err := tx.ExecContext(ctx, deleteQuestGlobalSQL, update.Name, npcID, characterID, zoneID); err != nil {

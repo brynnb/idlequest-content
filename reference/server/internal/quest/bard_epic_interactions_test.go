@@ -9,7 +9,7 @@ import (
 func TestBardForparOptionalIntroductionVariants(t *testing.T) {
 	for _, zone := range []string{"steamfont", "steamfontmts"} {
 		t.Run(zone, func(t *testing.T) {
-			source := readOverrideLua(t, "modified-upstream", zone, "Forpar_Fizfla")
+			source := readOverrideLua(t, "converted-perl", zone, "Forpar_Fizfla")
 			event := progressionEvent(PlayerProxy{ID: 123, Name: "Bard", ClassID: 8, CharLevel: 50})
 			event.Message = "what components"
 			capture, err := NewLuaBridge("upstream/projecteq").ExecuteSayFromSource(source, event)

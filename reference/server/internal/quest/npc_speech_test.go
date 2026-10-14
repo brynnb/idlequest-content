@@ -42,3 +42,38 @@ func TestNPCSayDistance(t *testing.T) {
 	require.False(t, speech.AudibleAt(math.NaN(), 20, 30))
 	require.False(t, speech.AudibleAt(10, math.Inf(1), 30))
 }
+
+func TestResolvedNPCSpeechUsesActualSpeakerWithoutChangingPopulationProxy(t *testing.T) {
+	event := armorEvent()
+	event.SpawnInstanceID = 1
+	other := &NPCProxy{ID: 9002, SpawnInstanceID: 2, Name: "Speaker", X: 90, Y: 20, Z: 30}
+	event.ResolveNPC = func(QuestNPCQuery) (*NPCProxy, error) { return other, nil }
+	capture, err := NewLuaBridge(".").ExecuteSayFromSource(`function event_say(e)
+ local speaker=eq.get_entity_list():GetMobByNpcTypeID(9002)
+ speaker:Say("near")
+ speaker:Emote("nods")
+ end`, event)
+	require.NoError(t, err)
+	require.Equal(t, []string{"near", "Speaker nods"}, capture.Responses)
+	require.Equal(t, NPCSpeech{Name: "Speaker", X: 90, Y: 20, Z: 30}, capture.NPCSpeech[0])
+	require.Equal(t, NPCSpeech{Name: "Speaker", X: 90, Y: 20, Z: 30, Emote: true}, capture.NPCSpeech[1])
+	require.Nil(t, other.Capture)
+	data, err := json.Marshal(capture)
+	require.NoError(t, err)
+	var restored QuestCapture
+	require.NoError(t, json.Unmarshal(data, &restored))
+	require.True(t, restored.NPCSpeech[1].Emote)
+}
+
+func TestMissingResolvedSpeakerCannotFabricateSpeech(t *testing.T) {
+	e := armorEvent()
+	e.ResolveNPC = func(QuestNPCQuery) (*NPCProxy, error) { return nil, nil }
+	c, err := NewLuaBridge(".").ExecuteSayFromSource(`function event_say(e)
+ local absent=eq.get_entity_list():GetMobByNpcTypeID(9002)
+ absent:Say("missing")
+ absent:Emote("missing")
+ end`, e)
+	require.NoError(t, err)
+	require.Empty(t, c.Responses)
+	require.Empty(t, c.NPCSpeech)
+}

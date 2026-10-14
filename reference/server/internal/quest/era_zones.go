@@ -1,28 +1,21 @@
 package quest
 
 import (
-	_ "embed"
-	"encoding/json"
+	"idlequest/internal/contentscope"
 	"strings"
 )
 
-//go:embed classic_kunark_zones.json
-var classicKunarkQuestZonesJSON []byte
-
-// ClassicKunarkQuestZoneNames returns the explicit IdleQuest quest-content
-// scope. Do not infer this from zone.expansion alone; the local PEQ-derived
-// metadata marks some later zones as expansion 0/1.
-func ClassicKunarkQuestZoneNames() []string {
-	var zones []string
-	if err := json.Unmarshal(classicKunarkQuestZonesJSON, &zones); err != nil {
-		panic(err)
-	}
-	return zones
+// P99QuestZoneNames returns the Classic-through-Velious audit scope, including
+// Warrens and Stonebrunt. Inclusion does not enable a zone, quest or NPC: those
+// decisions still require their ordinary availability and content checks.
+// Do not infer scope from zone.expansion: PEQ marks some later zones as 0/1.
+func P99QuestZoneNames() []string {
+	return contentscope.P99ZoneNames()
 }
 
-func ClassicKunarkQuestZoneSet() map[string]bool {
+func P99QuestZoneSet() map[string]bool {
 	zones := make(map[string]bool)
-	for _, zone := range ClassicKunarkQuestZoneNames() {
+	for _, zone := range P99QuestZoneNames() {
 		zone = strings.ToLower(strings.TrimSpace(zone))
 		if zone != "" {
 			zones[zone] = true

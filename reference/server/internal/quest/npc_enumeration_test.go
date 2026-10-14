@@ -73,3 +73,27 @@ end`, event)
 		})
 	}
 }
+
+func TestWorldNPCEnumerationCapturesForeignWalksWithSnapshotSpeed(t *testing.T) {
+	e := progressionEvent(PlayerProxy{})
+	e.ListNPCs = func() ([]NPCProxy, error) {
+		return []NPCProxy{{ID: 9002, SpawnInstanceID: 6002, Running: true}, {ID: 9002, SpawnInstanceID: 6003}}, nil
+	}
+	c, err := NewLuaBridge(".").ExecuteSayFromSource(`-- actors: world
+function event_say(e)
+for npc in eq.get_entity_list():GetNPCEntries() do npc:MoveTo(1,2,3,0,false) end
+end`, e)
+	require.NoError(t, err)
+	require.Len(t, c.NPCMoves, 2)
+	require.Equal(t, int64(6002), c.NPCMoves[0].SpawnInstanceID)
+	require.True(t, c.NPCMoves[0].Running)
+	require.False(t, c.NPCMoves[1].Running)
+	require.False(t, c.NPCMoves[0].SaveGuardSpot)
+	require.Equal(t, 2, c.NPCMoves[1].Order)
+	// World opt-in grants MoveTo, not unrelated cross-actor mutation.
+	_, err = NewLuaBridge(".").ExecuteSayFromSource(`-- actors: world
+function event_say(e)
+for npc in eq.get_entity_list():GetNPCEntries() do npc:GMMove(1,2,3) end
+end`, e)
+	require.ErrorContains(t, err, "cross-NPC method GMMove")
+}

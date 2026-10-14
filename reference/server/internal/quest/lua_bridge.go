@@ -100,12 +100,37 @@ type QuestSkillUpdate struct {
 // QuestCapture tracks all side-effects from a Lua script execution
 // Server event metadata, never populated by Lua or accepted from client JSON.
 type QuestWaypointProgress struct {
-	Waypoint int
-	Depart   bool
+	// Server-issued durable grid callback. Never populated from client fields.
+	DeliveryID  string
+	PublicRoute bool  `json:"-"`
+	PathEpochMs int64 `json:"-"`
+	Waypoint    int
+	Depart      bool
+	// Static actors have no quest_runtime_spawns row. The world supplies this
+	// scoped lease validator while it holds the ordinary population mutation
+	// reservation. It is never accepted from a client or serialized for replay.
+	ValidateLifetime func() error `json:"-"`
+}
+
+// Server-only receipt for a signal delivered through the actor outbox. The
+// receiver's state/rewards and this receipt must commit in one transaction.
+type QuestSignalProgress struct {
+	DeliveryID       string
+	SignalID         int
+	Public           bool
+	PathEpochMs      int64
+	ValidateLifetime func() error `json:"-"`
 }
 
 type QuestCapture struct {
-	WaypointProgress *QuestWaypointProgress `json:"-"`
+	WorldActors                   bool                  `json:"-"`
+	WorldTimers                   bool                  `json:"-"`
+	WorldTimerEvent               *QuestWorldTimerEvent `json:"-"`
+	GlobalSnapshot                *QuestGlobalSnapshot  `json:"-"`
+	SpawnConditions               []QuestSpawnConditionChange
+	RuntimeSpawnConditionsSettled bool                   `json:"-"`
+	WaypointProgress              *QuestWaypointProgress `json:"-"`
+	SignalProgress                *QuestSignalProgress   `json:"-"`
 	// A durable intent ID is not an execution receipt. Set only after commit.
 	RuntimeActorEffectDeliveryID string `json:"-"`
 	RuntimeTriggersSettled       bool   `json:"-"`
@@ -141,6 +166,7 @@ type QuestCapture struct {
 	Depops               []QuestDepopRequest
 	PlayerMoves          []QuestPlayerMoveRequest
 	NPCMoves             []QuestNPCMoveRequest
+	NPCFollows           []QuestNPCFollowRequest
 	Doors                []QuestDoorRequest
 	Binds                []QuestBindRequest
 	GroundItems          []QuestGroundObjectRequest
@@ -220,19 +246,25 @@ func npcAddedLootFromState(state map[string]any) ([]NPCAddedLoot, error) {
 
 // LuaEvent represents the 'e' table passed to Lua events
 type LuaEvent struct {
-	ReadNPCCombat QuestNPCCombatReader `json:"-"`
-	ReadTimer     QuestTimerReader     `json:"-"`
-	NPCVitals     *QuestNPCVitals
-	NPC           *NPCProxy
-	Player        *PlayerProxy
-	SelfIsPlayer  bool
-	Message       string
-	Trade         *TradeProxy
-	Item          *ItemInstProxy
-	Corpse        *CorpseProxy
-	Door          *DoorProxy
-	Globals       map[string]string // Current values of quest_globals for this char/npc
-	Language      int
+	InstanceID          int
+	ReadWorldTimer      QuestTimerReader          `json:"-"`
+	WorldTimerEvent     *QuestWorldTimerEvent     `json:"-"`
+	ReadSpawnConditions QuestSpawnConditionReader `json:"-"`
+	ReadNPCCombat       QuestNPCCombatReader      `json:"-"`
+	ReadNPCGrid         QuestNPCGridReader        `json:"-"`
+	ReadTimer           QuestTimerReader          `json:"-"`
+	NPCVitals           *QuestNPCVitals
+	NPC                 *NPCProxy
+	Player              *PlayerProxy
+	SelfIsPlayer        bool
+	Message             string
+	Trade               *TradeProxy
+	Item                *ItemInstProxy
+	Corpse              *CorpseProxy
+	Door                *DoorProxy
+	GlobalSnapshot      *QuestGlobalSnapshot `json:"-"`
+	Globals             map[string]string    // Current values of quest_globals for this char/npc
+	Language            int
 	// Fields supplies event-specific values such as timer, signal, hp_event,
 	// waypoint, and combat state. Core self/other/message/trade/qglobals fields
 	// remain strongly typed above.
@@ -257,6 +289,7 @@ type NPCProxy struct {
 	Y               float64
 	Z               float64
 	Heading         float64
+	Running         bool
 	Race            uint16
 	Class           uint8
 	Gender          uint8
@@ -269,11 +302,15 @@ type NPCProxy struct {
 	externalActor          bool
 	missingActor           bool
 	readCombatActor        QuestNPCCombatReader
+	readGrid               QuestNPCGridReader
 	combatOwnerCharacterID int64
 	combatOwner            *PlayerProxy
 }
 
 func (n *NPCProxy) Say(L *lua.LState) int {
+	if n.missingActor {
+		return 0
+	}
 	msg := L.CheckString(2)
 	if n.Capture.NPCSpeech == nil {
 		n.Capture.NPCSpeech = make(map[int]NPCSpeech)
@@ -549,8 +586,11 @@ func (n *NPCProxy) ReturnHandinItems(L *lua.LState) int {
 }
 
 func (n *NPCProxy) CastSpell(L *lua.LState) int {
-	n.Capture.recordDeferredAPI(L, "e.self:CastSpell")
 	spellID := L.CheckInt(2)
+	if mechanics.IsNPCSpellDisabled(int32(spellID)) {
+		return 0
+	}
+	n.Capture.recordDeferredAPI(L, "e.self:CastSpell")
 	n.Capture.Spells = append(n.Capture.Spells, spellID)
 	targetID := int64(L.CheckNumber(3))
 	n.Capture.SpellCasts = append(n.Capture.SpellCasts, QuestSpellCast{SpellID: int32(spellID), Caster: n.spellActor(), Target: n.Capture.spellActors[targetID], TargetID: targetID})
@@ -563,7 +603,15 @@ func (n *NPCProxy) GetID(L *lua.LState) int {
 }
 
 func (n *NPCProxy) Emote(L *lua.LState) int {
+	if n.missingActor {
+		return 0
+	}
 	msg := L.CheckString(2)
+	if n.Capture.NPCSpeech == nil {
+		n.Capture.NPCSpeech = make(map[int]NPCSpeech)
+	}
+	// Preserve the resolved speaker's location; an emote is not a zone broadcast.
+	n.Capture.NPCSpeech[len(n.Capture.Responses)] = NPCSpeech{Name: n.Name, X: n.X, Y: n.Y, Z: n.Z, Emote: true}
 	n.Capture.Responses = append(n.Capture.Responses, fmt.Sprintf("%s %s", n.Name, msg))
 	return 0
 }
@@ -684,11 +732,6 @@ func (n *NPCProxy) GetHPRatio(L *lua.LState) int {
 		return n.Capture.rejectActorEffect(L, "NPC health ratio requires a positive maximum HP snapshot")
 	}
 	L.Push(lua.LNumber(float64(n.HP) / float64(n.MaxHP) * 100))
-	return 1
-}
-
-func (n *NPCProxy) GetGrid(L *lua.LState) int {
-	L.Push(lua.LNumber(0))
 	return 1
 }
 
@@ -1508,6 +1551,7 @@ type LuaBridge struct {
 	DataPath         string
 	ExecutionTimeout time.Duration
 	ModuleLoader     func(name string) (string, bool, error)
+	ReadZoneTime     QuestZoneTimeReader
 	// Behavior tests opt in to fail at the first reached compatibility stub.
 	// Production keeps historical behavior until each world effect is wired.
 	RequireImplementedEffects bool
@@ -1616,6 +1660,9 @@ func (b *LuaBridge) ExecuteEventFromSource(source, handler string, event *LuaEve
 
 	fn := L.GetGlobal(handler)
 	if fn.Type() != lua.LTFunction {
+		if event.WorldTimerEvent != nil {
+			return nil, ErrWorldTimerScopeChanged
+		}
 		return cap.checkedResult()
 	}
 	if err := applyLuaScriptState(L, fn.(*lua.LFunction), event.ScriptState); err != nil {
@@ -1734,7 +1781,11 @@ func clearQuestCaptureEffects(capture *QuestCapture) {
 	// Keep diagnostics/errors: resetting effects must not conceal a failed or
 	// unsupported load operation. Userdata still points at this same capture.
 	*capture = QuestCapture{
+		WorldActors:               capture.WorldActors,
+		WorldTimers:               capture.WorldTimers,
+		WorldTimerEvent:           capture.WorldTimerEvent,
 		CurrentTrade:              capture.CurrentTrade,
+		GlobalSnapshot:            capture.GlobalSnapshot,
 		spellActors:               capture.spellActors,
 		requireImplementedEffects: capture.requireImplementedEffects,
 		actorEffectError:          capture.actorEffectError,
@@ -1840,7 +1891,12 @@ func (b *LuaBridge) setupTradeTable(L *lua.LState, eTable *lua.LTable, event *Lu
 	tradeTable := L.NewTable()
 	itemMT := b.createItemMetatable(L)
 	if event.Trade != nil {
-		for i := 0; i < 4; i++ {
+		// TradeProxy contains individual units, not the four Give-window slots.
+		// A gem stack may precede another offered item. Expose every unit so
+		// items.check_turn_in's pairs(trade) count cannot truncate that offer.
+		// Keep four placeholders for scripts that inspect item1..item4 directly;
+		// CheckHandin still consumes against CurrentTrade, preventing reuse.
+		for i := 0; i < max(4, len(event.Trade.Items)); i++ {
 			key := fmt.Sprintf("item%d", i+1)
 			itemUD := L.NewUserData()
 			if i < len(event.Trade.Items) {
@@ -1939,9 +1995,43 @@ func (b *LuaBridge) prepareState(scriptPath string, event *LuaEvent) (*lua.LStat
 }
 
 func (b *LuaBridge) prepareStateFromSource(source string, event *LuaEvent) (*lua.LState, *lua.LTable, *QuestCapture, error) {
-	return b.prepareStateWithLoader(event, func(L *lua.LState) error {
+	actors, err := ScriptUsesWorldActors(source)
+	if err != nil {
+		return nil, nil, nil, err
+	}
+	if actors && (event.SelfIsPlayer || event.NPC == nil || event.NPC.ID <= 0) {
+		return nil, nil, nil, fmt.Errorf("world actors require an NPC source")
+	}
+	world, err := ScriptUsesWorldTimers(source)
+	if err != nil {
+		return nil, nil, nil, err
+	}
+	if event.WorldTimerEvent != nil && !world {
+		return nil, nil, nil, ErrWorldTimerScopeChanged
+	}
+	if world && (event.SelfIsPlayer || event.NPC == nil || event.NPC.ID <= 0) {
+		return nil, nil, nil, fmt.Errorf("world timers require an NPC source")
+	}
+	copyEvent := *event
+	preparedEvent := event
+	if world {
+		copyEvent.ReadTimer = copyEvent.ReadWorldTimer
+		preparedEvent = &copyEvent
+	}
+	L, table, capture, err := b.prepareStateWithLoader(preparedEvent, func(L *lua.LState) error {
 		return L.DoString(normalizeLegacyTurnInCurrencySyntax(source))
 	})
+	// Preserve the established isolated-vitals projection on the caller's event,
+	// while the world reader stays bound to its dedicated copy for later Lua calls.
+	if world {
+		event.NPC = preparedEvent.NPC
+	}
+	if capture != nil {
+		capture.WorldActors = actors
+		capture.WorldTimers = world
+		capture.WorldTimerEvent = event.WorldTimerEvent
+	}
+	return L, table, capture, err
 }
 
 func (b *LuaBridge) prepareStateWithLoader(event *LuaEvent, load func(*lua.LState) error) (*lua.LState, *lua.LTable, *QuestCapture, error) {
@@ -1957,6 +2047,7 @@ func (b *LuaBridge) prepareStateWithLoader(event *LuaEvent, load func(*lua.LStat
 	capture := NewQuestCapture()
 	capture.requireImplementedEffects = b.RequireImplementedEffects
 	capture.CurrentTrade = event.Trade
+	capture.GlobalSnapshot = event.GlobalSnapshot
 	capture.ScriptState = cloneScriptState(event.ScriptState)
 
 	b.registerStringExtensions(L)
@@ -2001,6 +2092,7 @@ func (b *LuaBridge) prepareStateWithLoader(event *LuaEvent, load func(*lua.LStat
 	event.NPC = &npcView
 	event.NPC.Capture = capture
 	event.NPC.readCombatActor = event.ReadNPCCombat
+	event.NPC.readGrid = event.ReadNPCGrid
 	event.NPC.combatOwnerCharacterID = int64(event.Player.ID)
 	event.NPC.combatOwner = event.Player
 	// An NPC method addresses this concrete actor; eq.signal/type selectors
@@ -2165,7 +2257,9 @@ func (b *LuaBridge) registerModuleLoader(L *lua.LState) {
 			L.Push(lua.LString(fmt.Sprintf("no field quest_lua_modules['%s']", name)))
 			return 1
 		}
-		fn, err := L.LoadString(source)
+		// Modules need the same EQEmu iterator/currency normalization as entry
+		// scripts. Otherwise native .entries loops fail only when delegated.
+		fn, err := L.LoadString(normalizeLegacyTurnInCurrencySyntax(source))
 		if err != nil {
 			L.RaiseError("failed to compile quest module %s: %v", name, err)
 			return 0
@@ -2335,7 +2429,7 @@ func (b *LuaBridge) createNPCMetatable(L *lua.LState) *lua.LTable {
 			L.Push(lua.LBool((key == "valid") != npc.missingActor))
 			return 1
 		}
-		if npc.externalActor && !supportsExternalNPCMethod(key) {
+		if npc.externalActor && !supportsExternalNPCMethod(key) && !(key == "MoveTo" && npc.Capture.WorldActors) {
 			return npc.Capture.rejectActorEffect(L, "cross-NPC method "+key)
 		}
 		switch key {
@@ -2447,6 +2541,9 @@ func (b *LuaBridge) createNPCMetatable(L *lua.LState) *lua.LTable {
 		case "GetHateTop":
 			L.Push(L.NewFunction(func(L *lua.LState) int { return b.pushNPCCombatActor(L, npc, QuestCombatTopHate) }))
 			return 1
+		case "IsCombatReserved":
+			L.Push(L.NewFunction(npc.IsCombatReserved))
+			return 1
 		case "AddToHateList":
 			L.Push(L.NewFunction(npc.AddToHateList))
 			return 1
@@ -2539,7 +2636,7 @@ func (b *LuaBridge) createNPCMetatable(L *lua.LState) *lua.LTable {
 			L.Push(L.NewFunction(func(L *lua.LState) int { L.Push(lua.LNumber(0)); return 1 }))
 			return 1
 		case "IsEngaged":
-			L.Push(L.NewFunction(func(L *lua.LState) int { L.Push(lua.LBool(false)); return 1 }))
+			L.Push(L.NewFunction(npc.IsEngaged))
 			return 1
 		case "SetGlobal":
 			L.Push(L.NewFunction(func(L *lua.LState) int {
@@ -3020,7 +3117,7 @@ func (b *LuaBridge) registerEqGlobal(L *lua.LState, capture *QuestCapture, event
 		L.Push(lua.LNumber(parseQuestDurationSeconds(L.CheckString(1))))
 		return 1
 	}))
-	for _, name := range []string{"get_zone_instance_id", "get_zone_instance_version", "get_zone_id", "get_spawn_condition", "get_dz_task_id"} {
+	for _, name := range []string{"get_zone_instance_id", "get_zone_instance_version", "get_zone_id", "get_dz_task_id"} {
 		L.SetField(eq, name, L.NewFunction(func(L *lua.LState) int { L.Push(lua.LNumber(0)); return 1 }))
 	}
 	L.SetField(eq, "get_player_buried_corpse_count", L.NewFunction(func(L *lua.LState) int { L.Push(lua.LNumber(0)); return 1 }))
@@ -3179,6 +3276,16 @@ func (b *LuaBridge) registerEqGlobal(L *lua.LState, capture *QuestCapture, event
 		}))
 		L.SetField(entityList, "IsMobSpawnedByNpcTypeID", L.NewFunction(func(L *lua.LState) int {
 			npcTypeID := int32(L.CheckInt(2))
+			// Predicates and proxy lookup must consult the same live population.
+			// Offline world events have a resolver but no client visibility list.
+			if event.ResolveNPC != nil {
+				actor, err := event.ResolveNPC(QuestNPCQuery{NPCTypeID: npcTypeID})
+				if err != nil {
+					return capture.rejectActorEffect(L, "NPC presence read failed: "+err.Error())
+				}
+				L.Push(lua.LBool(actor != nil))
+				return 1
+			}
 			L.Push(lua.LBool(luaEventHasVisibleNPCTypeID(event, npcTypeID)))
 			return 1
 		}))
@@ -3428,7 +3535,10 @@ func (b *LuaBridge) registerEqGlobal(L *lua.LState, capture *QuestCapture, event
 		return 0
 	}))
 	L.SetField(eq, "self_cast", L.NewFunction(func(L *lua.LState) int {
-		capture.Spells = append(capture.Spells, L.CheckInt(1))
+		spellID := L.CheckInt(1)
+		if !mechanics.IsNPCSpellDisabled(int32(spellID)) {
+			capture.Spells = append(capture.Spells, spellID)
+		}
 		return 0
 	}))
 	L.SetField(eq, "selfcast", L.GetField(eq, "self_cast"))
@@ -3551,6 +3661,7 @@ func (b *LuaBridge) registerEqGlobal(L *lua.LState, capture *QuestCapture, event
 	L.SetField(eq, "is_the_ruins_of_kunark_enabled", L.NewFunction(func(L *lua.LState) int { L.Push(lua.LBool(true)); return 1 }))
 	b.registerDeferredQuestAPIs(L, eq, capture)
 	b.registerQuestGridAPIs(L, eq, capture, event)
+	b.registerQuestFollowAPIs(L, eq, capture, event)
 	b.registerQuestNPCAttackAPI(L, eq, capture, event)
 	L.SetField(eq, "attack", L.NewFunction(func(L *lua.LState) int {
 		name := strings.TrimSpace(L.CheckString(1))
@@ -3566,7 +3677,7 @@ func (b *LuaBridge) registerEqGlobal(L *lua.LState, capture *QuestCapture, event
 		capture.Attacks = append(capture.Attacks, QuestAttackRequest{PlayerName: name})
 		return 0
 	}))
-	L.SetField(eq, "SelfCast", L.NewFunction(func(L *lua.LState) int { capture.Spells = append(capture.Spells, L.CheckInt(1)); return 0 }))
+	L.SetField(eq, "SelfCast", L.GetField(eq, "self_cast"))
 	L.SetField(eq, "local_emote", L.NewFunction(func(L *lua.LState) int {
 		if L.GetTop() >= 4 {
 			capture.Responses = append(capture.Responses, L.CheckString(4))
@@ -3583,15 +3694,8 @@ func (b *LuaBridge) registerEqGlobal(L *lua.LState, capture *QuestCapture, event
 		capture.Tasks = append(capture.Tasks, TaskAction{TaskID: L.CheckInt(1), Action: "step", StepID: L.CheckInt(2)})
 		return 0
 	}))
-	L.SetField(eq, "set_data", L.NewFunction(func(L *lua.LState) int { return 0 }))
-	L.SetField(eq, "get_data", L.NewFunction(func(L *lua.LState) int { L.Push(lua.LString("")); return 1 }))
-	L.SetField(eq, "get_zone_time", L.NewFunction(func(L *lua.LState) int {
-		table := L.NewTable()
-		L.SetField(table, "zone_hour", lua.LNumber(12))
-		L.SetField(table, "zone_minute", lua.LNumber(0))
-		L.Push(table)
-		return 1
-	}))
+	b.registerQuestZoneTime(L, eq, capture)
+	b.registerQuestSpawnConditions(L, eq, capture, event)
 
 	L.SetField(eq, "spawn2", L.NewFunction(captureSpawn(false)))
 	L.SetField(eq, "unique_spawn", L.NewFunction(captureSpawn(true)))

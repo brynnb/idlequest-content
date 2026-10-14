@@ -1,3 +1,5 @@
+-- enabled: false
+-- P99 exclusion: see content_exclusions.json quests["paineel/Faratain"].
 -- Converted from ProjectEQ Perl quest script.
 -- Source: paineel/Faratain.pl
 -- items: 17124, 19636, 19631, 19634, 19632, 19637, 19633, 19635, 20421, 20403, 20404, 20355, 20402, 20416

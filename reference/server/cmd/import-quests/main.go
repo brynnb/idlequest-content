@@ -3,7 +3,6 @@ package main
 import (
 	"context"
 	"database/sql"
-	"encoding/json"
 	"flag"
 	"fmt"
 	"io/ioutil"
@@ -17,6 +16,7 @@ import (
 
 	"idlequest/internal/config"
 	"idlequest/internal/contentscope"
+	"idlequest/internal/quest"
 	questoverrides "idlequest/internal/quest/overrides"
 )
 
@@ -57,6 +57,10 @@ func main() {
 		return
 	}
 
+	if _, _, err := maintainedQuestPolicy(); err != nil {
+		log.Fatal(err)
+	}
+
 	questDir := "internal/quest/upstream/projecteq"
 	absQuestDir, err := filepath.Abs(questDir)
 	if err != nil {
@@ -65,9 +69,9 @@ func main() {
 
 	log.Printf("Importing quests from: %s", absQuestDir)
 
-	entries, err := ioutil.ReadDir(absQuestDir)
+	sources, err := collectQuestSources(absQuestDir)
 	if err != nil {
-		log.Fatalf("failed to read quest dir: %v", err)
+		log.Fatalf("failed to discover quest sources: %v", err)
 	}
 
 	ctx := context.Background()
@@ -89,73 +93,9 @@ func main() {
 		return
 	}
 
-	for _, entry := range entries {
-		if !entry.IsDir() {
-			continue
-		}
-
-		zoneName := entry.Name()
-		if !isQuestSourceDirectory(zoneName) {
-			continue
-		}
-
-		zonePath := filepath.Join(absQuestDir, zoneName)
-		files, err := ioutil.ReadDir(zonePath)
-		if err != nil {
-			log.Fatalf("failed to read zone dir %s: %v", zoneName, err)
-		}
-
-		// Keep track of NPCs in this zone to prefer .lua over .pl
-		npcScripts := make(map[string]string) // name -> path
-
-		for _, file := range files {
-			if file.IsDir() {
-				continue
-			}
-			ext := filepath.Ext(file.Name())
-			if ext != ".lua" {
-				continue
-			}
-
-			npcName := strings.TrimSuffix(file.Name(), ext)
-			filePath := filepath.Join(zonePath, file.Name())
-
-			if npcName == "default" {
-				continue
-			}
-
-			npcScripts[npcName] = filePath
-		}
-
-		for npcName, filePath := range npcScripts {
-			content, err := ioutil.ReadFile(filePath)
-			if err != nil {
-				log.Fatalf("failed to read file %s: %v", filePath, err)
-			}
-
-			sanitizedContent := sanitizeUTF8(string(content))
-			hasSayEvent := strings.Contains(strings.ToLower(sanitizedContent), "event_say") ||
-				strings.Contains(sanitizedContent, "EVENT_SAY")
-
-			// Raw SQL for insert as 'enabled' might not be in Jet model yet
-			_, err = db.ExecContext(ctx, `
-				INSERT INTO quests (zone, name, lua_content, has_say_event, enabled) 
-				VALUES (?, ?, ?, ?, 1) 
-				ON DUPLICATE KEY UPDATE 
-				lua_content = VALUES(lua_content), 
-				has_say_event = VALUES(has_say_event),
-				enabled = 1`,
-				zoneName, npcName, sanitizedContent, hasSayEvent)
-
-			if err != nil {
-				log.Fatalf("failed inserting %s in %s: %v", npcName, zoneName, err)
-			}
-
-			totalImported++
-			if hasSayEvent {
-				dialogueScripts++
-			}
-		}
+	totalImported, dialogueScripts, err = importQuestSources(ctx, db, sources)
+	if err != nil {
+		log.Fatal(err)
 	}
 
 	if err := applyIdleQuestQuestFixups(ctx, db); err != nil {
@@ -166,13 +106,17 @@ func main() {
 }
 
 func applyIdleQuestQuestFixups(ctx context.Context, db *sql.DB) error {
+	policy, scripts, err := maintainedQuestPolicy()
+	if err != nil {
+		return err
+	}
 	if err := disableNonQuestDirectoryRows(ctx, db); err != nil {
 		return err
 	}
 	// Disable out-of-scope upstream scripts before applying IdleQuest's curated
 	// replacements. A maintained Classic/Kunark-only override must take
 	// precedence over a mixed-era upstream script at the same zone/name.
-	if _, err := applyQuestContentExclusions(ctx, db, "internal/quest/content_exclusions.json"); err != nil {
+	if _, err := applyQuestContentExclusions(ctx, db, policy); err != nil {
 		return err
 	}
 	if _, err := db.ExecContext(ctx, `
@@ -233,36 +177,28 @@ WHERE zone = 'airplane'
 	// Text heuristics above classify imported upstream content, including its
 	// comments. Reviewed overrides must run last: a comment explaining removal
 	// of epic 1.5 content must not disable an otherwise valid epic 1.0 quest.
-	if _, err := importBundledLuaOverrides(ctx, db); err != nil {
+	if _, err := writeBundledLuaOverrides(ctx, db, scripts); err != nil {
 		return err
 	}
 	return contentscope.ApplyQuestExclusions(ctx, db)
 }
 
-type questContentExclusionManifest struct {
-	Quests map[string]questContentExclusion `json:"quests"`
-}
-
-type questContentExclusion struct {
-	Reason  string `json:"reason"`
-	Note    string `json:"note"`
-	ItemIDs []int  `json:"item_ids,omitempty"`
-}
-
-func applyQuestContentExclusions(ctx context.Context, db *sql.DB, manifestPath string) (int, error) {
-	content, err := os.ReadFile(manifestPath)
+// Source and policy are validated together before any importer writes.
+func maintainedQuestPolicy() (quest.QuestContentPolicy, []questoverrides.Script, error) {
+	policy, err := quest.LoadQuestContentPolicy()
 	if err != nil {
-		if os.IsNotExist(err) {
-			return 0, nil
-		}
-		return 0, err
+		return policy, nil, err
 	}
-	var manifest questContentExclusionManifest
-	if err := json.Unmarshal(content, &manifest); err != nil {
-		return 0, err
+	scripts, err := questoverrides.Scripts()
+	if err != nil {
+		return policy, nil, err
 	}
+	return policy, scripts, policy.ValidateOverrides(scripts)
+}
+
+func applyQuestContentExclusions(ctx context.Context, db *sql.DB, policy quest.QuestContentPolicy) (int, error) {
 	applied := 0
-	for key := range manifest.Quests {
+	for key := range policy.Quests {
 		zone, name, ok := strings.Cut(key, "/")
 		if !ok || zone == "" || name == "" {
 			return applied, fmt.Errorf("invalid quest content exclusion key %q; expected zone/name", key)
@@ -279,13 +215,13 @@ WHERE zone = ? AND name = ?`, zone, name)
 		}
 	}
 	if applied > 0 {
-		log.Printf("Applied %d quest content exclusions from %s", applied, manifestPath)
+		log.Printf("Applied %d quest content exclusions from the embedded ledger", applied)
 	}
 	return applied, nil
 }
 
 func importBundledLuaOverrides(ctx context.Context, db *sql.DB) (int, error) {
-	scripts, err := questoverrides.Scripts()
+	_, scripts, err := maintainedQuestPolicy()
 	if err != nil {
 		return 0, err
 	}

@@ -29,7 +29,7 @@ func TestMagicianPageDirectionsRetainAllThreeSources(t *testing.T) {
 		event := progressionEvent(PlayerProxy{ID: 123, Name: "Mage", CharClass: "Magician", CharLevel: 50})
 		event.Message = "what task"
 		capture, err := NewLuaBridge("upstream/projecteq").ExecuteSayFromSource(
-			readOverrideLua(t, "modified-upstream", zone, "Jahsohn_Aksot"), event)
+			readOverrideLua(t, "converted-perl", zone, "Jahsohn_Aksot"), event)
 		require.NoError(t, err)
 		for _, clue := range []string{"tainted forest", "haunted estate", "amphibian"} {
 			require.Contains(t, strings.Join(capture.Responses, "\n"), clue, zone)

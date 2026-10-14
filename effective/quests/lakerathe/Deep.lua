@@ -1,3 +1,4 @@
+-- IdleQuest epic 1.0 steps have no minimum level; preserve class and item checks.
 -- Source: lakerathe/Deep.pl
 -- Monk Epic 1.0: Deep grants access to Astral Projection.
 -- Converted from ProjectEQ Perl quest script.
@@ -10,7 +11,7 @@ end
 
 function event_trade(e)
 	local item_lib = require("items")
-	if e.other:GetLevel() >= 46 and e.other:Class() == "Monk" and item_lib.check_turn_in(e.trade, {item1 = 1686}) then
+	if e.other:Class() == "Monk" and item_lib.check_turn_in(e.trade, {item1 = 1686}) then
 		e.self:Emote("slowly opens her eyes and looks up at you.")
 		e.self:Say("Very well, $name, if you wish death so greatly, we will be happy to oblige. Find my master in the Overthere and show him the head.")
 		e.other:SummonItem(1686)

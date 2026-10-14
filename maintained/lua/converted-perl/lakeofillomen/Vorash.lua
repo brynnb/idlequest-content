@@ -1,3 +1,4 @@
+-- IdleQuest epic 1.0 steps have no minimum level; preserve class and item checks.
 -- Converted from ProjectEQ Perl quest script.
 -- Source: lakeofillomen/Vorash.pl
 
@@ -14,7 +15,7 @@ function event_spawn(e)
 end
 
 function event_enter(e)
-	if e.other:Class() == "Monk" and e.other:Level() >= 46 then
+	if e.other:Class() == "Monk" then
 		eq.attack(e.other:GetName())
 	end
 end

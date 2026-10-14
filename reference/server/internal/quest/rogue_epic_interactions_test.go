@@ -11,7 +11,7 @@ func TestRogueEpicRestoredDialogueAndSignal(t *testing.T) {
 	bridge := NewLuaBridge("upstream/projecteq")
 	e := progressionEvent(PlayerProxy{ID: 123, CharClass: "Rogue", CharLevel: 50})
 	e.Message = "Eldreth sent me"
-	capture, err := bridge.ExecuteSayFromSource(readOverrideLua(t, "modified-upstream", "steamfont", "Yendar_Starpyre"), e)
+	capture, err := bridge.ExecuteSayFromSource(readOverrideLua(t, "converted-perl", "steamfont", "Yendar_Starpyre"), e)
 	require.NoError(t, err)
 	require.Contains(t, strings.Join(capture.Responses, " "), "rather shabby Erudite")
 	e.Message = "hail"
@@ -65,7 +65,7 @@ func TestCyanelleDirectionsOnlyWhenEldrethAbsent(t *testing.T) {
 		if present {
 			event.VisibleNPCTypeIDs = []int32{51025}
 		}
-		capture, err := NewLuaBridge("upstream/projecteq").ExecuteSayFromSource(readOverrideLua(t, "modified-upstream", "lakerathe", "Cyanelle"), event)
+		capture, err := NewLuaBridge("upstream/projecteq").ExecuteSayFromSource(readOverrideLua(t, "converted-perl", "lakerathe", "Cyanelle"), event)
 		require.NoError(t, err)
 		if present {
 			require.Empty(t, capture.Responses)
@@ -83,7 +83,7 @@ func TestEldrethDepartsOnlyAfterCompleteTranslationPayment(t *testing.T) {
 		for i := 0; i < milk; i++ {
 			e.Trade.Items = append(e.Trade.Items, 13087)
 		}
-		capture, err := NewLuaBridge("upstream/projecteq").ExecuteTradeFromSource(readOverrideLua(t, "modified-upstream", "lakerathe", "Eldreth"), e)
+		capture, err := NewLuaBridge("upstream/projecteq").ExecuteTradeFromSource(readOverrideLua(t, "converted-perl", "lakerathe", "Eldreth"), e)
 		require.NoError(t, err)
 		if milk == 2 {
 			require.Equal(t, []QuestReward{{ItemID: 28053, Count: 1}}, capture.Items)
@@ -104,7 +104,7 @@ func TestAnsonEligibilityPreservesRejectedPouch(t *testing.T) {
 		class  string
 		level  int
 		accept bool
-	}{{"Rogue", 49, false}, {"Warrior", 50, false}, {"Rogue", 50, true}} {
+	}{{"Rogue", 1, true}, {"Rogue", 9, true}, {"Rogue", 49, true}, {"Warrior", 1, false}, {"Warrior", 50, false}, {"Rogue", 50, true}} {
 		e := progressionEvent(PlayerProxy{ID: 123, CharClass: tc.class, CharLevel: tc.level})
 		e.Trade = &TradeProxy{Items: []int{28014}}
 		capture, err := NewLuaBridge("upstream/projecteq").ExecuteTradeFromSource(readOverrideLua(t, "modified-upstream", "highpass", "Anson_McBale"), e)

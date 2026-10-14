@@ -1,3 +1,5 @@
+-- enabled: false
+-- P99 exclusion: see content_exclusions.json quests["paineel/Sadorno_Chomosh"].
 -- Converted from ProjectEQ Perl quest script.
 -- Source: paineel/Sadorno_Chomosh.pl
 -- items: 17124, 19634, 19631, 19632, 19633, 19635, 19636, 19637, 20419, 20414, 20415, 20355, 20402, 20417

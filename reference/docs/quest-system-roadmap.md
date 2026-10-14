@@ -1,5 +1,10 @@
 # Quest system checkpoint and implementation handoff
 
+Current work: [P99 quest parity implementation plan](p99-quest-parity-plan.md)
+(October 2, 2026). This document retains historical checkpoints. Consult the
+current plan and generated audit results before treating an older pending,
+scope or deployment statement below as current.
+
 Updated September 6, 2026. Read alongside `p99-quest-audit-workflow.md`.
 
 ## Intent and boundaries
@@ -14,6 +19,26 @@ be identifiable and usable.
 
 Do not deploy, alter production data, or push just because a batch passes.
 These require separate authorization. Check dirty state before starting.
+
+### October 3 newly confirmed shared boundaries
+
+The ninth-ring rendered checks expose two further gaps; details and exact
+records are in `coldain-ring-nine-audit.md`:
+
+- `SetAppearance` and `DoAnim` currently do nothing in the Lua bridge. They are
+  not yet represented in the deferred registry. Berradin's adapter records its
+  omitted collapse explicitly. Do not call a source execution or loot pass
+  visual parity; adding these to strict auditing must also consider existing
+  runtime callers rather than suddenly reject unrelated cosmetic quest events.
+- Shared player social assistance now follows server-compiled TAKP primary/
+  directional relationships, verified with Berradin's four bodyguards. Dedicated
+  profiles remove his kill rewards while preserving shared guard data. The
+  remaining Harmony/lull radius gap is separate: the scan does not yet apply
+  buff-modified assist radii. See coldain-ring-nine-audit.md for current receipts
+  and source differences; do not force scripted hate as a substitute.
+
+Juliah's separate incorrect shared court faction is corrected through existing
+content data and has a before-failure/after-pass Docker combat-allowlist test.
 
 ## Current verification summary
 

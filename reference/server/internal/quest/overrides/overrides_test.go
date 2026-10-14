@@ -1,4 +1,4 @@
-package overrides
+package overrides_test
 
 import (
 	"os"
@@ -6,15 +6,16 @@ import (
 	"testing"
 
 	quest "idlequest/internal/quest"
+	"idlequest/internal/quest/overrides"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
 
 func TestScriptsLoadsEmbeddedLuaOverrides(t *testing.T) {
-	scripts, err := Scripts()
+	scripts, err := overrides.Scripts()
 	if err != nil {
-		t.Fatalf("Scripts() error = %v", err)
+		t.Fatalf("overrides.Scripts() error = %v", err)
 	}
 	if len(scripts) == 0 {
 		t.Fatal("expected at least one embedded Lua override")
@@ -30,7 +31,7 @@ func TestScriptsLoadsEmbeddedLuaOverrides(t *testing.T) {
 }
 
 func TestExterminatorQalantirDoesNotAwardInvalidItemZero(t *testing.T) {
-	scripts, err := Scripts()
+	scripts, err := overrides.Scripts()
 	require.NoError(t, err)
 
 	found := map[string]bool{}
@@ -50,9 +51,9 @@ func TestExterminatorQalantirDoesNotAwardInvalidItemZero(t *testing.T) {
 }
 
 func TestScriptsExecuteRuntimeSmoke(t *testing.T) {
-	scripts, err := Scripts()
+	scripts, err := overrides.Scripts()
 	if err != nil {
-		t.Fatalf("Scripts() error = %v", err)
+		t.Fatalf("overrides.Scripts() error = %v", err)
 	}
 	dataDir := t.TempDir()
 	modulesDir := filepath.Join(dataDir, "lua_modules")
@@ -68,6 +69,19 @@ return items
 		t.Fatal(err)
 	}
 	bridge := quest.NewLuaBridge(dataDir)
+	// Maintained scripts share the same embedded modules as the importer.
+	// Keep the empty-trade items fixture, but load real dependencies rather than
+	// making every script self-contained just for this smoke check.
+	modules, err := overrides.Modules()
+	require.NoError(t, err)
+	bridge.ModuleLoader = func(name string) (string, bool, error) {
+		for _, module := range modules {
+			if module.Name == name && module.Enabled {
+				return module.Lua, true, nil
+			}
+		}
+		return "", false, nil
+	}
 	for _, script := range scripts {
 		t.Run(script.Zone+"/"+script.Name, func(t *testing.T) {
 			event := &quest.LuaEvent{
@@ -76,6 +90,9 @@ return items
 				Globals: map[string]string{},
 				Message: "hail",
 				Trade:   &quest.TradeProxy{Items: []int{999999}},
+				// Smoke checks run in an explicitly empty scoped world. Real
+				// cross-actor behavior is covered by the quest/world fixtures.
+				ResolveNPC: func(quest.QuestNPCQuery) (*quest.NPCProxy, error) { return nil, nil },
 			}
 			if _, err := bridge.ExecuteEventFromSource(script.Lua, "event_say", event); err != nil {
 				t.Fatalf("event_say failed: %v", err)
@@ -88,7 +105,7 @@ return items
 }
 
 func TestP99JebLumsedEnchanterEpicTurnIns(t *testing.T) {
-	scripts, err := Scripts()
+	scripts, err := overrides.Scripts()
 	require.NoError(t, err)
 
 	var source string

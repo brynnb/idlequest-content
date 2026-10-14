@@ -1,3 +1,5 @@
+-- enabled: false
+-- P99 exclusion: see content_exclusions.json quests["skyfire/Warder_Cecilia"].
 -- Converted from ProjectEQ Perl quest script.
 -- Source: skyfire/Warder_Cecilia.pl
 -- items: 17175, 24996, 24997, 12509, 28059

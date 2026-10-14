@@ -1,5 +1,11 @@
 {
   "source": "docs/froglok-content-scope.md",
+  "name_patterns": [
+    {
+      "pattern": "^#*The[ _]Fabled[ _]",
+      "reason": "All Fabled NPCs are disabled game-wide by product policy, including future imports and scripted spawns."
+    }
+  ],
   "npcs": [
     {
       "id": 8017,
@@ -1280,6 +1286,248 @@
       "name": "an_expedition_prisoner",
       "zone": "grelleth",
       "reason": "Later-era imported NPC. Retain source definition but prohibit runtime admission, including scripts and saved actors."
+    }
+  ],
+  "additional_npcs": [
+    {
+      "id": 70000,
+      "name": "Praklion_of_the_Cauldron",
+      "zone": "cauldron",
+      "reason": "User-directed removal of this later Berserker epic enemy from supported content. The preserved ProjectEQ cauldron/Treanik_Ireblade.lua identifies the quest. See docs/autolevel-npc-audit-goal.md."
+    },
+    {
+      "id": 29008,
+      "name": "Grots",
+      "zone": "halas",
+      "reason": "All-version spawn audit October 2, 2026: Spawn 10027 is explicitly min_expansion=5; later merchant (class 41), not P99 Klok Grots in Cabilis. See docs/velious-armor-quests.md."
+    },
+    {
+      "id": 48043,
+      "name": "a_living_void",
+      "zone": "cazicthule",
+      "reason": "All-version spawn audit October 2, 2026: Spawn 12138 is explicitly min_expansion=5, a later Cazic Thule population replacement. See docs/velious-armor-quests.md."
+    },
+    {
+      "id": 48095,
+      "name": "a_living_void",
+      "zone": "cazicthule",
+      "reason": "All-version spawn audit October 2, 2026: Second NPC option at later-era spawn 12138 (min_expansion=5). See docs/velious-armor-quests.md."
+    },
+    {
+      "id": 56190,
+      "name": "Inactive_Clockwork",
+      "zone": "steamfont",
+      "reason": "All-version spawn audit October 2, 2026: Yama_Twerik wizard epic prequest uses wiz_epic_pre state and Electrical Charge 5596; post-P99 epic 1.5 content. See docs/velious-armor-quests.md."
+    },
+    {
+      "id": 114274,
+      "name": "Larquin_Fe`Dhar",
+      "zone": "skyshrine",
+      "reason": "All-version spawn audit October 2, 2026: Original Perl explicitly offers Beastlord armor (items 5446-5452); class is post-Velious. See docs/velious-armor-quests.md."
+    },
+    {
+      "id": 114281,
+      "name": "Roagar_Far`Huin",
+      "zone": "skyshrine",
+      "reason": "All-version spawn audit October 2, 2026: Original Perl explicitly offers Berserker armor (items 55324-55330); class is post-Velious. See docs/velious-armor-quests.md."
+    },
+    {
+      "id": 33074,
+      "name": "Rufus",
+      "zone": "misty",
+      "reason": "User-approved removal of the later Rusbek and dogs population; source spawn timeline marks Luclin (https://www.pqdi.cc/zone/33; https://www.eqarchives.com/zones/view/misty)."
+    },
+    {
+      "id": 33075,
+      "name": "Cozy",
+      "zone": "misty",
+      "reason": "User-approved removal of the later Rusbek and dogs population; source spawn timeline marks Luclin (https://www.pqdi.cc/zone/33; https://www.eqarchives.com/zones/view/misty)."
+    },
+    {
+      "id": 33093,
+      "name": "Rusbek_the_Inhospitable",
+      "zone": "misty",
+      "reason": "User-approved removal of the later Rusbek and dogs population; source spawn timeline marks Luclin (https://www.pqdi.cc/zone/33; https://www.eqarchives.com/zones/view/misty)."
+    },
+    {
+      "id": 33118,
+      "name": "Cozy",
+      "zone": "misty",
+      "reason": "User-approved removal of the later Rusbek and dogs population; source spawn timeline marks Luclin (https://www.pqdi.cc/zone/33; https://www.eqarchives.com/zones/view/misty)."
+    },
+    {
+      "id": 33119,
+      "name": "Rufus",
+      "zone": "misty",
+      "reason": "User-approved removal of the later Rusbek and dogs population; source spawn timeline marks Luclin (https://www.pqdi.cc/zone/33; https://www.eqarchives.com/zones/view/misty)."
+    },
+    {
+      "id": 415031,
+      "name": "Rusbek_the_Inhospitable",
+      "zone": "mistythicket",
+      "reason": "User-approved removal of the later Rusbek and dogs population; source spawn timeline marks Luclin (https://www.pqdi.cc/zone/33; https://www.eqarchives.com/zones/view/misty)."
+    },
+    {
+      "id": 415032,
+      "name": "Cozy",
+      "zone": "mistythicket",
+      "reason": "User-approved removal of the later Rusbek and dogs population; source spawn timeline marks Luclin (https://www.pqdi.cc/zone/33; https://www.eqarchives.com/zones/view/misty)."
+    },
+    {
+      "id": 415033,
+      "name": "Rufus",
+      "zone": "mistythicket",
+      "reason": "User-approved removal of the later Rusbek and dogs population; source spawn timeline marks Luclin (https://www.pqdi.cc/zone/33; https://www.eqarchives.com/zones/view/misty)."
+    },
+    {
+      "id": 100125,
+      "name": "Walker_Stormfyre",
+      "zone": "stonebrunt",
+      "reason": "Legacy of Ykesha Brokenskull ship/quest population. Cedric source references Luggald organs and LoY spells."
+    },
+    {
+      "id": 100126,
+      "name": "a_heretic_shiphand",
+      "zone": "stonebrunt",
+      "reason": "Legacy of Ykesha Brokenskull ship/quest population. Cedric source references Luggald organs and LoY spells."
+    },
+    {
+      "id": 100127,
+      "name": "Wejnir_D`Vir",
+      "zone": "stonebrunt",
+      "reason": "Legacy of Ykesha Brokenskull ship/quest population. Cedric source references Luggald organs and LoY spells."
+    },
+    {
+      "id": 100128,
+      "name": "a_scorned_shiphand",
+      "zone": "stonebrunt",
+      "reason": "Legacy of Ykesha Brokenskull ship/quest population. Cedric source references Luggald organs and LoY spells."
+    },
+    {
+      "id": 100129,
+      "name": "Cedric_Trallus",
+      "zone": "stonebrunt",
+      "reason": "Legacy of Ykesha Brokenskull ship/quest population. Cedric source references Luggald organs and LoY spells."
+    },
+    {
+      "id": 100166,
+      "name": "Gnashing_Kobold",
+      "zone": "stonebrunt",
+      "reason": "Gates of Discord Berserker epic Gnashing Kobold Paw."
+    },
+    {
+      "id": 100171,
+      "name": "Scout_Malom",
+      "zone": "stonebrunt",
+      "reason": "Luclin Beastlord epic scout and encounter."
+    },
+    {
+      "id": 100218,
+      "name": "Flighty_Orange_Wisp",
+      "zone": "stonebrunt",
+      "reason": "Later Shakey scarecrow event; source player.pl uses items 52355/52358, absent from P99 content."
+    },
+    {
+      "id": 100220,
+      "name": "The_Spirit_of_Torment",
+      "zone": "stonebrunt",
+      "reason": "Luclin Beastlord epic scout and encounter."
+    },
+    {
+      "id": 100226,
+      "name": "a_dire_panda",
+      "zone": "stonebrunt",
+      "reason": "Bard epic 1.5 encounter, explicitly identified in the original Lua."
+    },
+    {
+      "id": 100227,
+      "name": "#a_mountain_dragon",
+      "zone": "stonebrunt",
+      "reason": "Bard epic 1.5 encounter, explicitly identified in the original Lua."
+    },
+    {
+      "id": 101133,
+      "name": "#Wilslik_Gissu",
+      "zone": "warrens",
+      "reason": "Later epic/event NPC (Warrens Shaman epic 1.5 and herald/portal event)."
+    },
+    {
+      "id": 110102,
+      "name": "Lookout_Larithim",
+      "zone": "iceclad",
+      "reason": "User-approved later-era Iceclad epic removal. Rogue epic 2.0 contact and its Polar Kraken/Krakling encounter. Source: server/internal/quest/upstream/projecteq/iceclad/Lookout_Larithim.lua and #Polar_Kraken.lua; https://www.eqprogression.com/rogue-2-0-epic-nightshade-blade-of-entropy/"
+    },
+    {
+      "id": 110131,
+      "name": "#Polar_Kraken",
+      "zone": "iceclad",
+      "reason": "User-approved later-era Iceclad epic removal. Rogue epic 2.0 contact and its Polar Kraken/Krakling encounter. Source: server/internal/quest/upstream/projecteq/iceclad/Lookout_Larithim.lua and #Polar_Kraken.lua; https://www.eqprogression.com/rogue-2-0-epic-nightshade-blade-of-entropy/"
+    },
+    {
+      "id": 110132,
+      "name": "#Krakling",
+      "zone": "iceclad",
+      "reason": "User-approved later-era Iceclad epic removal. Rogue epic 2.0 contact and its Polar Kraken/Krakling encounter. Source: server/internal/quest/upstream/projecteq/iceclad/Lookout_Larithim.lua and #Polar_Kraken.lua; https://www.eqprogression.com/rogue-2-0-epic-nightshade-blade-of-entropy/"
+    },
+    {
+      "id": 110103,
+      "name": "Fazzle_Thumpkin",
+      "zone": "iceclad",
+      "reason": "User-approved later-era Iceclad epic removal. Warrior epic 2.0 contact, Frozen Pestle hand-in and Fazzle map reward. Source: server/internal/quest/upstream/projecteq/iceclad/Fazzle_Thumpkin.lua; https://www.eqprogression.com/warrior-2-0-epic-guide-kreljnoks-sword-of-eternal-power/"
+    },
+    {
+      "id": 110104,
+      "name": "Giligatabbus_Igglebix",
+      "zone": "iceclad",
+      "reason": "User-approved later-era Iceclad epic removal. Shadow Knight epic 1.5 contact and attack trigger. Source: server/internal/quest/upstream/projecteq/iceclad/Giligatabbus_Igglebix.lua; https://www.eqprogression.com/shadow-knight-1-5-epic-guide-innoruuks-voice/"
+    },
+    {
+      "id": 110108,
+      "name": "#Vas_Thorel",
+      "zone": "iceclad",
+      "reason": "User-approved later-era Iceclad epic removal. Bard epic 1.5 prequest contact and its emissary/escort encounter. Source: server/internal/quest/upstream/projecteq/iceclad/#Vas_Thorel.lua; https://www.eqprogression.com/bard-1-5-epic-pre-quest-guide/"
+    },
+    {
+      "id": 110123,
+      "name": "#Noble_Oldencamp",
+      "zone": "iceclad",
+      "reason": "User-approved later-era Iceclad epic removal. Bard epic 1.5 prequest contact and its emissary/escort encounter. Source: server/internal/quest/upstream/projecteq/iceclad/#Vas_Thorel.lua; https://www.eqprogression.com/bard-1-5-epic-pre-quest-guide/"
+    },
+    {
+      "id": 110125,
+      "name": "#Locis_V`Sek",
+      "zone": "iceclad",
+      "reason": "User-approved later-era Iceclad epic removal. Bard epic 1.5 prequest contact and its emissary/escort encounter. Source: server/internal/quest/upstream/projecteq/iceclad/#Vas_Thorel.lua; https://www.eqprogression.com/bard-1-5-epic-pre-quest-guide/"
+    },
+    {
+      "id": 110126,
+      "name": "#Puella_Opalis",
+      "zone": "iceclad",
+      "reason": "User-approved later-era Iceclad epic removal. Bard epic 1.5 prequest contact and its emissary/escort encounter. Source: server/internal/quest/upstream/projecteq/iceclad/#Vas_Thorel.lua; https://www.eqprogression.com/bard-1-5-epic-pre-quest-guide/"
+    },
+    {
+      "id": 110127,
+      "name": "#Nihilist Xeegarn",
+      "zone": "iceclad",
+      "reason": "User-approved later-era Iceclad epic removal. Bard epic 1.5 prequest contact and its emissary/escort encounter. Source: server/internal/quest/upstream/projecteq/iceclad/#Vas_Thorel.lua; https://www.eqprogression.com/bard-1-5-epic-pre-quest-guide/"
+    },
+    {
+      "id": 110128,
+      "name": "#Amilia_Verisue",
+      "zone": "iceclad",
+      "reason": "User-approved later-era Iceclad epic removal. Bard epic 1.5 prequest contact and its emissary/escort encounter. Source: server/internal/quest/upstream/projecteq/iceclad/#Vas_Thorel.lua; https://www.eqprogression.com/bard-1-5-epic-pre-quest-guide/"
+    },
+    {
+      "id": 110129,
+      "name": "#a_frost_giant_escort",
+      "zone": "iceclad",
+      "reason": "User-approved later-era Iceclad epic removal. Bard epic 1.5 prequest contact and its emissary/escort encounter. Source: server/internal/quest/upstream/projecteq/iceclad/#Vas_Thorel.lua; https://www.eqprogression.com/bard-1-5-epic-pre-quest-guide/"
+    },
+    {
+      "id": 110130,
+      "name": "#a_frost_giant_warrior",
+      "zone": "iceclad",
+      "reason": "User-approved later-era Iceclad epic removal. Bard epic 1.5 prequest contact and its emissary/escort encounter. Source: server/internal/quest/upstream/projecteq/iceclad/#Vas_Thorel.lua; https://www.eqprogression.com/bard-1-5-epic-pre-quest-guide/"
     }
   ]
 }

@@ -14,7 +14,8 @@ function event_trade(e)
 	if item_lib.check_turn_in(e.trade, {item1 = 10295}) then
 		e.self:Emote("grasps the glowing sphere of fireflies from your hands.")
 		eq.spawn2(102123, 0, 0, e.self:GetX(), e.self:GetY(), e.self:GetZ(), e.self:GetHeading())
-		eq.depop()
+		-- Preserve the original Perl's respawn timer after the successful hand-in.
+		eq.depop_with_timer()
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

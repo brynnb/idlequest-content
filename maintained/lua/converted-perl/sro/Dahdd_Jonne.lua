@@ -1,3 +1,5 @@
+-- enabled: false
+-- P99 exclusion: see content_exclusions.json quests["sro/Dahdd_Jonne"].
 -- Source: sro/Dahdd_Jonne.pl
 -- Converted from ProjectEQ Perl quest script.
 -- items: 55272, 55265, 55266, 55267, 40900, 40901
