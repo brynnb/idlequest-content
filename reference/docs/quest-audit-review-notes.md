@@ -801,6 +801,40 @@ The P99 page is for Ghanlin Skyphire, Master Wizard of the Crimson Hands, but it
 
 Decision for now: keep the local Crimson Hands faction reward and treat the P99 faction block as likely copy/paste drift unless another source confirms Craftkeepers is correct.
 
+September 25, 2026 re-audit and interaction fix:
+
+- Preserved quest evidence: July 17 `guild-summons-crimson-hands-7809baa28f.wiki`
+  (SHA256 `0d36fbefd05f81d25d21f7e7f878715c19dfdcb20728a8c8df57b6f60939be0b`);
+  NPC evidence: August 12 `ghanlin-skyphire-b1a66bd075.wiki`
+  (SHA256 `7593ed52654656614d2c1432c713885f308dc3537b6d845c7167e28301e7c482`).
+  Direct live-page retrieval timed out; current indexed P99 NPC/note/item pages
+  corroborate the recipient, location, starting note and reward. Historical
+  cache files were not overwritten.
+- The local starting-items row gives note **18727** to race **3**, class **12**,
+  zone **23**. Enabled `erudnint/Ghanlin_Skyphire` accepts it and rewards item
+  **13550**, **100 XP**, and factions **233 +100, 266 +10, 265 -15, 267 +15**.
+  NPC **23042** spawns at EQ **Y=887, X=712**, matching P99. The completion
+  speech matches; the wiki only specifies gaining XP, not its numeric amount.
+- P99 documents handing in the note, with no prerequisite hail exchange. Lua
+  defines `event_trade`, `event_enter`, and `event_spawn`, but no
+  `event_say`. The broken boundary was the client's dialogue-only opening gate,
+  not a missing trade recipe. The server now advertises `hasTurnIn` from the
+  same resolved script as execution, independently of `hasDialogue`.
+- Separate unresolved item-template mismatch: [Old Used Robe*](https://wiki.project1999.com/Old_Used_Robe%2A)
+  is LORE/NO DROP on P99; the local row has `loregroup=-1` (correct) and
+  `nodrop=1` (tradeable, different). Its AC **2**, weight **7** (0.7), chest
+  slot, Wizard/Erudite masks match. No item-template or quest-content changes
+  were made in this interaction fix. The existing faction decision above stays.
+- Verification: `debug-real-quest-interaction.spec.ts` uses a fresh level-one
+  Wizard's original note, real Hail/slot/Give clicks, and checks consumption,
+  robe and XP. It also delays a real hail reply while changing target, retries
+  the silent NPC, and checks that dialogue-only Chief Adair cannot receive items.
+  Run with `IDLEQUEST_REAL_GAME_E2E=true npm run test:e2e:debug:docker -- debug-real-quest-interaction.spec.ts`.
+  The existing Give-window suite also checks rejection, full inventory and
+  timeout recovery. Screenshots are in `testing/reports/quest-interaction-final/`.
+  This is local test verification, not a production check or a whole
+  starter-quest corpus audit.
+
 ### Gearheart random reward pool
 
 - P99 page: `https://wiki.project1999.com/Gearheart_(Quest)`
@@ -1874,3 +1908,215 @@ Specific decisions from this pass:
 - `Poacher's Head Quest`: disambiguation page only; both Erudin and Surefall Glade target pages are audited separately.
 - `Plane of Sky Quests (Old)`: historical reference for old Sky rewards made impossible by P99's 2011 Sky reward update; current class-specific Sky pages remain the implementation targets.
 - `Kezzek's Fight Strategies for Rogue Epic Quest`: strategy/reference page only; Rogue Epic mechanics are covered by the main Rogue Epic audit and fixture.
+
+## October 3: exclusions overridden by maintained source
+
+A full local read after the canonical import found 18 enabled `quests` rows
+also listed in `content_exclusions.json.quests`. The importer deliberately runs
+maintained overrides after upstream exclusions: this supports valid mixed-era
+replacements, but an old converted script without `-- enabled: false` also
+re-enables itself. `--verify` compares source/header state and therefore confirms
+that row, not the intent in the audit note. The NPC exclusion list under
+`contentscope` is separate and does not repair these quest-only conflicts.
+
+Do not blanket-disable the 18 rows. The supported era now includes Velious and
+Warrens, and some rows explicitly retain valid classic branches:
+
+| Classification | Exact quest keys | Next action |
+| --- | --- | --- |
+| Explicitly approved classic replacement | `burningwood/a_sarnak_imitator`, `kithicor/Kithicor` | Preserve; represent override intent explicitly in the policy reconciliation |
+| Obsolete Classic/Kunark-only exclusion | `kaladima/Buggle_Palkin`, `kaladima/Gretta_Mottle`, `paineel/Keletha_Nightweaver`, `paineel/Royal_Guard_Lilkus`, `paineel/Royal_Guard_Sheltuin` | Reconcile the old exclusion with the reopened Classic–Velious ledger; not a new playability claim |
+| Confirmed and repaired | `steamfont/Cargo_Clockwork` | Existing source header now disables it across full imports |
+| Remaining source review | `cabeast/Klok_Ephmir`, `cabwest/an_Iksar_hermit`, `lakeofillomen/Klok_Foob`, `overthere/Ixpacan`, `paineel/Faratain`, `paineel/Sadorno_Chomosh`, `skyfire/Warder_Cecilia`, `skyfire/Zordak_Ragefire`, `sro/Dahdd_Jonne`, `tox/38139` | Check exact maintained branches against cached P99 evidence before preserving or disabling; mixed-era scripts may contain valid substeps |
+
+The Cargo page is unambiguous: the quest never functions on P99. Cached file
+`data/p99wiki-project1999-api-cache/raw-pages/cargo-clockwork-quest-002139d6b9.wiki`,
+SHA256 `18f57f3ef4b689948fc24593cc5add9cc866b4d66baa97d951f3d2138cd017d0`.
+This retains the old decision; it does not remove the reference script or NPC.
+Two full-fixup SQL passes now assert every bundled script's actual `Enabled`
+value, including false, while preserving valid mixed-era epic replacements.
+Raw audit: `/var/tmp/quest-exclusion-override-conflicts.json`.
+
+Next: finish the ten content reviews and reconcile explicit replacement versus
+whole-script exclusion using the existing source-header/ledger model. Add an
+import regression that rejects contradictory decisions. Avoid a second policy
+list or blindly moving all exclusions after maintained overrides.
+
+## October 3: reconciled import decisions
+
+The 17 outstanding conflicts above are resolved in source/import policy:
+
+- Preserve the two reviewed classic replacements, now explicitly identified in
+  the existing exclusion ledger (`reviewed_override`).
+- Remove five obsolete Warrens-only exclusions. Preserve their old decisions in
+  the four affected page reviews and mark them `needs_review`; this does not
+  assert complete quest parity for Cold Iron, molars or the Kaladim bakery.
+- Keep nine unavailable reference scripts disabled with source headers:
+  Klok Ephmir/Foob, Ixpacan, Faratain, Sadorno, the two Skyfire cleric-epic
+  scripts, Dahdd Jonne and `tox/38139`. Cargo was fixed in the prior commit.
+- Narrow the hermit replacement to the P99-documented repeatable great-sorcerer
+  faction phrase. Rank-eight inputs and unrelated items/currency are returned.
+  P99's NPC page explicitly documents non-necromancer use; the previous
+  level/skullcap gates came from the later completion script. The amount is
+  **+1 Brood of Kotiz as a deliberate conservative IdleQuest approximation**:
+  neither cached P99 page nor the upstream Perl provides the original amount
+  for this phrase. No invented rank-eight reward, dialogue or container.
+- Preserve `tox/abandoned_heretic_pet` for Mining Caps. Actual runtime lookup
+  prefers names before numeric keys. Disabling the mixed-era numeric fallback
+  therefore preserves the already reviewed 100 EXP/eight-gem-pool hand-in.
+  Talrigar's missing spawn remains a separate review item.
+
+Primary cached evidence: Catfish Croak Sandwich's explicit 2013 removal;
+Necromancer Skullcap's impossible eighth rank and documented faction phrase;
+Fell Blade/Templar of Fright `Does Not Exist`; Cleric Epic's Sol B path;
+Mining Caps' cap-to-gem hand-in. Dahdd's vendored Perl names the three LDoN
+components (55265/55266/55267), which are absent locally. Items 40900 and 40901
+are Satchel of Abu-Kar and its Reinforced version; the old ledger incorrectly
+called this AlKabor. The ordinary satchel is unaffected.
+
+Live cross-check of the hermit wording on October 3 agrees with the cache:
+https://wiki.project1999.com/An_iksar_hermit and
+https://wiki.project1999.com/Necromancer_Skullcap_Quests.
+No current-page bytes replace the preserved offline snapshot.
+
+The producing pipeline now validates the embedded ledger before writes and
+verifies all enabled excluded rows afterward. The earlier SQL test launched
+from `cmd/import-quests`, where the relative manifest path did not exist; that
+stage silently did nothing. The revised test starts **all 140 exclusions as
+enabled**, runs two complete fixup passes, checks all 1,341 overrides and every
+exclusion, deliberately re-enables an upstream-only excluded row, and proves
+verification rejects it and the next pass repairs it.
+
+Focused policy/Lua and actual temporary-DB tests pass, including Mining Caps
+through the real service source resolver and Lua bridge, plus the hermit's
+repeated phrase and rejected unavailable hand-in. No new rendered UI result
+is claimed. Receipts: `/var/tmp/quest-policy-focused.log` and
+`/var/tmp/quest-policy-status-tests.log`.
+
+This fixes contradictory admission, not the entire remaining conversion queue.
+A broader scan still finds 55 era-related exclusion records, including genuine
+DNE/later exceptions and in-scope content awaiting implementation. They remain
+listed in `/var/tmp/quest-policy-old-era-review.json`; do not blanket-enable
+these old upstream scripts. The reopened ledger and Coldain continuation remain
+the goal's work queue.
+
+Cached source hashes used for this decision:
+
+- `catfish-croak-sandwich-quest-64c0858fd6.wiki`: `785b5dff7ab12b28ca59723bfb750f2a11f0f45df84fa14214498f6fc687e015`
+- `necromancer-skullcap-quests-1a5e84dd6f.wiki`: `ebe60bdefd86b8e6cfe472e1981fe8d110b1a0a81e6148b5ffedcf5e7ea13610`
+- `fell-blade-quests-7fb9cee24a.wiki`: `edc4f57d0a45e3fc8da47005585efd4bb57f7874e2fa455ce73af57ea5bcec84`
+- `templar-of-fright-quests-c8909c4f32.wiki`: `edc4f57d0a45e3fc8da47005585efd4bb57f7874e2fa455ce73af57ea5bcec84`
+- `cleric-epic-quest-454cc3a3b0.wiki`: `5424c1b56cb783c70649a906bc522872b17992ff1f659e1fa6670f46528f50cd`
+- `mining-caps-f205540f0f.wiki`: `80dd57124ce1557a4fd8e53528d138eca60af7cf1dace6fe1a5ca281cb2a7fb0`
+- `cold-iron-698ade28f0.wiki`: `57b4d5f9de3c113f9e527b2bc689b01325384dc6e4a039df8f2bfe9974c2c39b`
+- `kobold-molars-evil-97778cb0fd.wiki`: `3858061410cd6115a63a027876c2abf559068733dffa2db73982dfc7b96c67ba`
+- `fresh-baked-muffins-kaladim-1aa0ae4afd.wiki`: `81a7439fbaa95c390ca888d04d996b299c3caa42bf9c52e01af5426f65431a63`
+- `gretta-s-baking-supplies-quest-56650dce70.wiki`: `5543746a99520effd801dfca5c655af4a5ba2e54bf183aca1a44a1b1f64a77fd`
+
+## 2026-10-09: normal Venril and remains lifecycle
+
+The earlier migration 069 workaround is retired by migration 196. Normal Venril
+102112 / placement 16786 is enabled at full weight again. The shared population
+now stores the boss/remains dependency and both deadlines, rather than using
+per-player depops to suppress the remains. Successful globe hand-in restarts
+the remains timer; the triggered boss 102126 gets a 20-minute departure timer.
+See [the source decision and implementation](venril-spawn-lifecycle.md).
+
+The Docker GPU test `quest-venril-lifecycle.spec.ts` completed the ordinary boss
+spawn and kill, delayed remains, both actual Give-window hand-ins with zoning
+and a relog between stages, server-confirmed triggered combat, two-stone corpse,
+manual stone pickup, and final relog with the stone retained. Normal Venril's
+actual corpse included Gnarled Staff 14338 and no Pulsing Green Stone. The epic
+corpse contained exactly two 20461 stones and no ordinary-boss gear. Rendered
+screenshots were inspected for the normal boss, remains, and triggered boss.
+
+Receipts and pictures: `testing/reports/venril-lifecycle-review/` and
+`/var/tmp/idlequest-venril-review/`. One initial browser attempt exposed a test
+screenshot taken before the async model load; the test now closes the hand-in
+UI and waits for the positioned model. No gameplay check was weakened.
+
+Focused Go tests cover migration reapplication, saved deadlines through fresh
+population construction, independent timers, blocker return/remains suppression,
+transaction failures, stale depop epochs, and a reserved hand-in crossing a
+respawn boundary. Existing respawn/condition/population regressions and content
+export tests pass. Lua tests exercise the 20-minute expiry callback; the browser
+also observes its actual persisted interval and cleanup on boss death.
+
+Boundaries: authored spawn waits were accelerated to 35 seconds / 30 minutes for
+this local test. Prerequisite globe and scroll were supplied. Test Quest Strike
+shortened already-admitted combat. This is neither a 72-hour natural soak nor
+raid-balance/full-class-epic certification. No expected NPC or dropped stone
+was seeded. Canonical local delays are restored after the isolated stack stops.
+No production data or deployment was changed by this fix.
+
+The final Docker rerun passed again (53.3 seconds plus GPU preflight), including
+expiry-timer cleanup after death. The broader quest-e2e typecheck is blocked by
+a pre-existing dirty change in `quest-public-npc-contact.spec.ts:40` returning
+`boolean | null | undefined` from a predicate that requires `boolean`; this task
+does not modify that unrelated test.
+
+The new Venril spec and its imported helpers pass the focused TypeScript check.
+
+### Di'Zok second ring: Droga script binding repair (October 9, 2026)
+
+P99 authority: [Regal Band of Bathezid Quest](https://wiki.project1999.com/Regal_Band_of_Bathezid_Quest),
+preserved `regal-band-of-bathezid-quest-6e7b5972c0.wiki`, SHA256
+`1d13de10bb6d4c9ab7770595b7c96a1f8bd37898470b4eedbf5d4df6d94ad85e`.
+The classic ProjectEQ sources are `droga/v0/a_goblin_traitor.lua` and
+`droga/v0/an_angry_goblin.lua`; vendored sources remain unchanged.
+
+Production's Droga actors81206/81205 had no matching zone/name scripts. Old rows
+were stored under `zone=v0`; the current importer skipped the nested sources.
+The shared importer now imports all16 original-version Lua sources using their
+parent zone, rejects ambiguous duplicate sources and disables obsolete version
+keys. Later zone versions are not imported. Maintained Droga adapters preserve
+the existing character-scoped first-ring flag across zone changes and relogging.
+Faction uses IdleQuest's shared convenience policy.
+
+The angry goblin's source uses Droga grid134 (12 points, type4) and spawns
+Skargus81126 at zero-based waypoint11, then depops with its authored respawn.
+The first connected browser attempt earned both notes and report, then exposed
+an explicit runtime rejection of type4 grids. The shared finite-grid executor
+now uses the existing authored-spawn respawn transaction at terminal arrival;
+waypoint callbacks can still depop earlier. No grid type, coordinates or spawn
+odds were substituted. Head6476 is already a guaranteed ordinary corpse drop.
+
+Regression: `testing/e2e/quest-dizok-ring-chain.spec.ts` through Docker with both
+`IDLEQUEST_REAL_GAME_E2E=true` and `IDLEQUEST_E2E_CONTENT_AUDIT=true`. Only the first
+ring, ordinary insignia and an unrelated ration are provided; dialogue, notes,
+report, walking boss trigger, real combat-channel test strike, corpse head and
+final ring exchange must be earned. Travel/positioning are assisted. This is
+quest-mechanics verification, not natural rare-spawn timing or boss balance.
+
+Final connected Docker GPU run3 passed both tests (scenario plus renderer) in
+2.3 minutes. All12 real grid arrivals were observed; Skargus actually spawned,
+normal combat/Test Quest Strike produced his corpse, Head6476 was looted through
+the real loot window, the incomplete final offer returned it, and the completed
+exchange earned ring5727, which survived camp/login. Screenshots inspected:
+`testing/reports/dizok-ring-run3-20261009/` (traitor note, corpse head, final ring).
+Logs: `/var/tmp/idlequest-dizok-20261009/browser-run3.log`.
+The second run had already earned the head but its added assertion read the
+latest empty corpse update after pickup; the final spec checks the helper's
+preserved death receipt. No gameplay assertion was removed. Local backup before
+import: `/var/tmp/idlequest-content-update-9c7L1a/before-content-update.sql.gz`.
+No production data changed or deployment performed.
+
+A final database check found the earned ring had only one charge. The shared
+quest reward planner was hardcoding every new reward to one charge. It now uses
+`items.CreateItemInstanceFromTemplateID`, the existing full-template default,
+with quantity remaining separate. Unconsumed offered instances retain their
+original charges. The local reward-planning regression covers charged rewards,
+uncharged equipment and retained spent instances.
+
+Final Docker GPU run (`testing/reports/dizok-ring-final-20261009/`) passes the
+complete chain and real inventory tooltip `Charges: 5` before and after relog,
+2 tests/2.3 minutes. SQL confirms character6025 owns exactly one ring5727 with
+5 charges. Log `/var/tmp/idlequest-dizok-20261009/browser-final.log`.
+Importer/temporary-SQL tests, grid/respawn rollback/replay tests, full world
+package and quest-E2E typecheck pass. The quest package's source-only matrix hit
+its existing 100ms deadline under concurrent browser work; the quiet focused
+rerun passes without changing that deadline. The restart fixture also needed
+its already-required `spawn2_dependencies` table cloned; its existing assertions
+then pass. The separate content-layout command still reports 22 pre-existing
+Ring War source-provenance errors, with no error for either new Droga adapter.
+The temporary test stack was stopped after verification. Changes remain local.

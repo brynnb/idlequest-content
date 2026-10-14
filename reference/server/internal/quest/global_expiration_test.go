@@ -41,6 +41,55 @@ func TestLocalQuestGlobalsExcludeExpiredFlags(t *testing.T) {
 	require.Equal(t, map[string]string{"forever": "1", "future": "1"}, globals)
 }
 
+func TestLocalSharedGlobalClaimRejectsStaleCallerAndRollsBackReward(t *testing.T) {
+	ctx, raw := testutil.LocalTemporaryTables(t, "quest_globals", "quest_runtime_script_state", "character_currency")
+	s := NewService(stmtcache.New(raw).SetCaching(false), ".")
+	expires := time.Now().Unix() + 60
+	_, err := raw.ExecContext(ctx, `INSERT INTO quest_globals(charid,npcid,zoneid,name,value,expdate) VALUES(0,9001,123,'invitation','1',?)`, expires)
+	require.NoError(t, err)
+	_, err = raw.ExecContext(ctx, `INSERT INTO character_currency(id,gold) VALUES(7001,0),(7002,0)`)
+	require.NoError(t, err)
+	bridge := NewLuaBridge("upstream/projecteq")
+	claim := func(owner uint32) *QuestCapture {
+		t.Helper()
+		values, snapshot, err := s.getGlobalsWithSnapshot(owner, 9001, 123)
+		require.NoError(t, err)
+		e := armorEvent()
+		e.Player.ID = owner
+		e.Globals, e.GlobalSnapshot = values, snapshot
+		capture, err := bridge.ExecuteSayFromSource(`function event_say(e)
+if eq.get_qglobals().invitation == "1" then
+  eq.del_global("invitation")
+  e.other:AddMoneyToPP(0,0,1,0,true)
+end
+end`, e)
+		require.NoError(t, err)
+		return capture
+	}
+	// Both callers saw the same live invitation before either settled.
+	first, stale := claim(7001), claim(7002)
+	_, err = s.persistQuestEventCapture(7001, 9001, 123, "testzone", QuestTurnInContext{SpawnInstanceID: 6001}, first)
+	require.NoError(t, err)
+	_, err = s.persistQuestEventCapture(7002, 9001, 123, "testzone", QuestTurnInContext{SpawnInstanceID: 6001}, stale)
+	require.ErrorContains(t, err, "invitation changed or expired")
+	for owner, want := range map[uint32]int{7001: 1, 7002: 0} {
+		var gold int
+		require.NoError(t, raw.QueryRowContext(ctx, "SELECT gold FROM character_currency WHERE id=?", owner).Scan(&gold))
+		require.Equal(t, want, gold)
+	}
+	// Reopening the shared invitation invalidates the old expiry/scope preimage,
+	// even when its string value happens to be identical.
+	_, err = raw.ExecContext(ctx, `INSERT INTO quest_globals(charid,npcid,zoneid,name,value,expdate) VALUES(0,9001,123,'invitation','1',?)`, expires+60)
+	require.NoError(t, err)
+	_, err = s.persistQuestEventCapture(7002, 9001, 123, "testzone", QuestTurnInContext{SpawnInstanceID: 6001}, stale)
+	require.ErrorContains(t, err, "invitation changed or expired")
+	fresh := claim(7002)
+	_, err = raw.ExecContext(ctx, "UPDATE quest_globals SET expdate=? WHERE name='invitation'", time.Now().Unix()-1)
+	require.NoError(t, err)
+	_, err = s.persistQuestEventCapture(7002, 9001, 123, "testzone", QuestTurnInContext{SpawnInstanceID: 6001}, fresh)
+	require.ErrorContains(t, err, "invitation changed or expired")
+}
+
 func TestLocalQuestGlobalWritesPreserveDuration(t *testing.T) {
 	ctx, raw := testutil.LocalTemporaryTables(t, "quest_globals", "quest_runtime_script_state")
 	s := NewService(stmtcache.New(raw).SetCaching(false), ".")

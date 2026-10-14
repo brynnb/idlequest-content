@@ -26,10 +26,10 @@ func TestAllDatabaseQuestRuntimeHandlers(t *testing.T) {
 	if err := database.Ping(); err != nil {
 		t.Skipf("quest runtime matrix database is unavailable: %v", err)
 	}
-	classicKunarkOnly := os.Getenv("IDLEQUEST_QUEST_TEST_CLASSIC_KUNARK_ONLY") != "false"
-	classicKunarkZones := map[string]bool(nil)
-	if classicKunarkOnly {
-		classicKunarkZones = ClassicKunarkQuestZoneSet()
+	p99Only := os.Getenv("IDLEQUEST_QUEST_TEST_P99_ONLY") != "false"
+	p99QuestZones := map[string]bool(nil)
+	if p99Only {
+		p99QuestZones = P99QuestZoneSet()
 	}
 	query := `SELECT zone, name, lua_content FROM quests WHERE enabled=1 AND lua_content IS NOT NULL AND lua_content != '' ORDER BY zone, name`
 	rows, err := database.Query(query)
@@ -39,6 +39,9 @@ func TestAllDatabaseQuestRuntimeHandlers(t *testing.T) {
 	bridge := NewLuaBridge(dataPath)
 	bridge.ModuleLoader = databaseQuestModuleLoader(database)
 	bridge.ExecutionTimeout = 100 * time.Millisecond
+	// Declared source-only daytime fixture. Positive time branches are tested
+	// separately; the production bridge must obtain the actual world clock.
+	bridge.ReadZoneTime = func() (QuestZoneTime, error) { return QuestZoneTime{Hour: 12}, nil }
 	// This source-execution matrix has no live world population. Supply an
 	// explicitly empty snapshot, not an absent capability or a fabricated NPC.
 	// Positive cross-NPC behavior is tested in npc_lookup_content_test.go and
@@ -66,7 +69,7 @@ func TestAllDatabaseQuestRuntimeHandlers(t *testing.T) {
 	for rows.Next() {
 		var zone, npc, source string
 		require.NoError(t, rows.Scan(&zone, &npc, &source))
-		if classicKunarkOnly && !classicKunarkZones[strings.ToLower(strings.TrimSpace(zone))] {
+		if p99Only && !p99QuestZones[strings.ToLower(strings.TrimSpace(zone))] {
 			continue
 		}
 		state := map[string]any{}
@@ -103,8 +106,14 @@ func TestAllDatabaseQuestRuntimeHandlers(t *testing.T) {
 			// no persisted timers exist. Runtime capture still overlays operations
 			// emitted in this event. This is not a live combat/persistence test.
 			event.ReadTimer = func(string) (bool, bool, error) { return false, false, nil }
-			event.ReadNPCCombat = func(QuestSpellActor, QuestNPCCombatSelection) (QuestCombatActor, error) {
-				return QuestCombatActor{Player: event.Player}, nil
+			// Stationary source-inspection fixture, not proof of live grid state.
+			event.ReadNPCGrid = func(QuestSpellActor) (int32, error) { return 0, nil }
+			event.ReadNPCCombat = func(_ QuestSpellActor, selection QuestNPCCombatSelection) (QuestNPCCombatResult, error) {
+				if selection == QuestCombatEngagement {
+					engaged := true
+					return QuestNPCCombatResult{Engaged: &engaged}, nil
+				}
+				return QuestNPCCombatResult{Player: event.Player}, nil
 			}
 			capture, executeErr := bridge.ExecuteEventFromSource(source, handler, event)
 			if executeErr == nil && capture != nil {
@@ -130,7 +139,7 @@ func TestAllDatabaseQuestRuntimeHandlers(t *testing.T) {
 	}
 	require.NoError(t, rows.Err())
 	require.Positive(t, executed)
-	if !classicKunarkOnly {
+	if !p99Only {
 		require.Positive(t, scriptInits)
 		require.Positive(t, loadedEncounters)
 		require.Positive(t, encounterLoads)

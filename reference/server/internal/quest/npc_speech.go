@@ -1,9 +1,10 @@
 package quest
 
-// NPCSpeech describes local speech captured by NPC:Say. Shouts, explicit
+// NPCSpeech describes local speech captured by NPC:Say/Emote. Shouts, explicit
 // player messages and zone emotes deliberately do not have this restriction.
 type NPCSpeech struct {
 	Name    string
+	Emote   bool `json:",omitempty"`
 	X, Y, Z float64
 }
 

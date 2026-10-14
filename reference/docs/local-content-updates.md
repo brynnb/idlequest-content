@@ -6,7 +6,8 @@ and refuses non-loopback hosts or databases other than `eqgo`.
 
 The command checks the existing migration ledger, makes a compressed local
 database backup under `/var/tmp/idlequest-content-update-*`, applies pending
-migrations with the same filename/checksum logic as production, runs the full
+migrations with the same filename/checksum logic as production, invalidates the
+generated `server/data/items.dat` cache, runs the full
 quest importer, and verifies maintained Lua against the resulting database.
 It stops at the first failure. It never guesses a baseline for an untracked DB.
 Backups remain available after failures; it does not attempt automatic rollback

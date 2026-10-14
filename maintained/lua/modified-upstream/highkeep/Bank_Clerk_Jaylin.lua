@@ -1,4 +1,4 @@
--- Source: ProjectEQ highkeep/Assistant_Kiolna.lua, original banker exchanges.
+-- Source: highkeep/Assistant_Kiolna.lua
 -- P99 Bank Clerk Jaylin (NPC6059) replaces Kiolna for these key turn-ins.
 -- Do not copy Kiolna's self-introduction onto Jaylin.
 function event_trade(e)

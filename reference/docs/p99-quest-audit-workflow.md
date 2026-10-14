@@ -20,14 +20,24 @@ NPC consequences. Do not camp rare drops or require natural acquisition of an
 entire epic to validate these interactions. Debug quest say/turnin commands are
 not substitutes for the UI under test. The old acquisition log is historical.
 
+The compact shared regression set and current boundary evidence are documented in
+[Quest mechanics regression set](quest-mechanics-regression.md).
+
 ## Authority and provenance
 
 For IdleQuest Classic/Kunark/Velious quest content, Project 1999 is the gameplay
 authority when its documentation is clear, except for deliberate IdleQuest
 convenience rules below. ProjectEQ is an implementation source and
-compatibility reference, not the final content authority. The older ledger and
-several audit tools still have Classic/Kunark scope; review their exclusions
-before extending them to Velious, rather than enabling all imported content.
+compatibility reference, not the final content authority. The current audit
+scope is `server/internal/contentscope/p99_zones.json`: Classic through Velious,
+including Warrens and Stonebrunt. Inclusion means inspect the content, not enable
+the zone or every imported script. Old era-only exclusions have been reopened
+with provenance; actual later-era and event exclusions still require respect.
+
+Current implementation work is tracked in
+[P99 quest parity plan](p99-quest-parity-plan.md). Run
+`node scripts/quests/quest-status.mjs` against the local database for a derived
+summary, or add `--json /var/tmp/quest-status.json` for individual records.
 
 ### Deliberate quest faction bypass
 
@@ -42,6 +52,16 @@ con, aggression and merchants do not use this quest-only policy. This does not
 bypass required items, class/race/level, or explicit quest-state prerequisites.
 Some historical quests used faction as a progress counter; the faction-only
 gate is intentionally waived, not replaced with a new hidden prerequisite.
+
+### Deliberate epic level exception
+
+As of October 12, 2026, epic 1.0 quest steps have **no minimum character level**.
+Remove their level predicates in the maintained quest sources, including
+speech, hand-ins and encounter triggers. Preserve existing class, item,
+quantity and quest-state prerequisites. Do not fabricate a higher player level
+in the shared Lua runtime or remove level gates from unrelated quests.
+See [Epic level requirements](epic-level-requirements.md) for the audited scope
+and verification. This supersedes older epic-specific notes retaining levels.
 
 Use this order when sources disagree:
 
@@ -62,6 +82,10 @@ Quest source directories describe provenance:
 
 - `server/internal/quest/upstream/projecteq/`: unmodified vendored ProjectEQ
   Lua.
+- `server/internal/quest/upstream/eqmacemu/`: byte-preserved, commit-pinned
+  TAKP implementation references. These are not imported as runtime scripts;
+  reviewed adaptations belong in the maintained overrides. Each added source
+  has its upstream URL/revision and SHA-256 in the relevant content manifest.
 - `server/internal/quest/overrides/lua/converted-perl/`: locally converted
   ProjectEQ Perl, historically including LLM-assisted conversions.
 - `server/internal/quest/overrides/lua/modified-upstream/`: upstream behavior
@@ -138,8 +162,53 @@ runtime simplification remain actionable.
 It also does not mean a continuous chain or rendered playthrough passed. Record
 the exact test and what it observes, not a general claim of E2E coverage.
 
+`scope_reassessment` preserves a previous scope decision and its reason when
+the supported era changes. It does not change the separate runtime `quests`
+exclusion map. `verification.ui` and `verification.connected_chain` hold
+independent evidence, including command/spec, scope, date and durable receipt
+when available. `historical_pass` specifically means a recorded older result,
+not a fresh successful run. Missing evidence is `not_recorded`, never an implied
+pass or proof that no test exists. Lua availability and references to deferred
+APIs are derived from current database scripts by the status tool; do not
+duplicate those mutable facts into each source-review entry.
+
+The source-only runtime matrix now defaults to the P99 audit scope. Its explicit
+all-imported-content opt-in is `IDLEQUEST_QUEST_TEST_P99_ONLY=false`; it is still
+not a world/quest-playability test. The old Classic/Kunark variable and scope file
+have been retired.
+
 Use the tracked notes for decisions too large or uncertain for one ledger row:
 `docs/quest-audit-review-notes.md`.
+
+### Import exclusions and reviewed replacements
+
+`content_exclusions.json.quests` excludes an upstream quest key. A maintained
+replacement may remain enabled only when that same entry explicitly identifies
+`reviewed_override`, for example
+`"reviewed_override": "modified-upstream/burningwood/a_sarnak_imitator.lua"`.
+This is an affirmative content decision, not permission for arbitrary future
+branches. A whole-script exclusion must also use `-- enabled: false` if a
+maintained reference script exists. Preserve that header in proposals.
+
+The importer embeds the existing ledger and validates the whole maintained
+corpus before writing. A missing/disabled/wrong-origin approved replacement,
+duplicate key, or enabled source conflicting with a whole-script exclusion is
+an error. A working-directory mistake can no longer silently omit exclusions.
+`--verify` checks both source equality and excluded enabled database rows,
+including upstream-only rows. `quest-status.mjs` reports those conflicts too.
+The separate NPC content policy still applies; this does not enable an NPC,
+zone, loot source, or a quest that lacks a reviewed implementation.
+
+## Upstream zone versions
+
+The full importer reads both `<zone>/*.lua` and `<zone>/v0/*.lua` into the
+actual `<zone>` key. `v0` denotes the original zone population, never a zone
+called `v0`. Later `v1` sources remain excluded from this import. A duplicate
+root/v0 NPC key fails discovery before any import; resolve the provenance rather
+than silently choosing one. Reviewed bundled overrides still take precedence.
+Legacy rows whose zone is `v<number>` are disabled, and `--verify` rejects them
+if an older import re-enables them. This repairs 16 classic Lua sources in
+Droga, City of Mist, Lavastorm and Splitpaw without enabling later zone revamps.
 
 ## Applying one reviewed override locally
 

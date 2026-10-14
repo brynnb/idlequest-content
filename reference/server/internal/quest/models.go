@@ -1,7 +1,11 @@
 package quest
 
+import "idlequest/internal/session"
+
 type QuestNPCInfo struct {
 	Success           bool                `json:"success"`
+	HasDialogue       bool                `json:"hasDialogue"`
+	HasTurnIn         bool                `json:"hasTurnIn"`
 	Error             string              `json:"error,omitempty"`
 	NPCName           string              `json:"npcName"`
 	Greeting          string              `json:"greeting"`
@@ -81,10 +85,10 @@ type CharacterStateRefreshRequest struct {
 }
 
 type CharacterStateRefreshResponse struct {
-	TransactionID     string                 `json:"transactionId"`
-	InventoryRevision string                 `json:"inventoryRevision"`
-	Inventory         map[string]interface{} `json:"inventory"`
-	Currency          map[string]interface{} `json:"currency"`
+	TransactionID     string                    `json:"transactionId"`
+	InventoryRevision string                    `json:"inventoryRevision"`
+	Inventory         session.InventorySnapshot `json:"inventory"`
+	Currency          map[string]interface{}    `json:"currency"`
 }
 
 type RewardSummary struct {
@@ -119,18 +123,20 @@ type QuestActorPosition struct {
 }
 
 type QuestTurnInContext struct {
-	ReadNPCCombat     QuestNPCCombatReader
-	NPCVitals         *QuestNPCVitals
-	NPCPosition       *QuestActorPosition
-	PlayerPosition    *QuestActorPosition
-	NPCSelfOverride   *QuestNPCSelfOverride
-	SpawnInstanceID   int64
-	InstanceID        int
-	VisibleNPCTypeIDs []int32
-	ResolveNPC        QuestNPCResolver
-	ListNPCs          QuestNPCEnumerator
-	validateRewards   func(consumedItemIDs []int, rewards RewardSummary) error
-	deferPersistence  bool
+	ReadSpawnConditions QuestSpawnConditionReader
+	ReadNPCCombat       QuestNPCCombatReader
+	ReadNPCGrid         QuestNPCGridReader
+	NPCVitals           *QuestNPCVitals
+	NPCPosition         *QuestActorPosition
+	PlayerPosition      *QuestActorPosition
+	NPCSelfOverride     *QuestNPCSelfOverride
+	SpawnInstanceID     int64
+	InstanceID          int
+	VisibleNPCTypeIDs   []int32
+	ResolveNPC          QuestNPCResolver
+	ListNPCs            QuestNPCEnumerator
+	validateRewards     func(consumedItemIDs []int, rewards RewardSummary) error
+	deferPersistence    bool
 }
 
 // World-owned snapshot tied to the exact actor, including a dead actor during
@@ -138,6 +144,7 @@ type QuestTurnInContext struct {
 type QuestNPCVitals struct {
 	NPCTypeID       int32
 	SpawnInstanceID int64
+	PathEpochMs     int64 // Original public source lifetime, before Lua evaluation.
 	HP              int64
 	MaxHP           int64
 }
@@ -208,6 +215,17 @@ type QuestNPCMoveRequest struct {
 	Running           bool
 	Roam              bool
 	GridID            int32
+}
+
+// Following is a continuing relationship, not a fabricated waypoint/MoveTo.
+// The first supported target is the initiating live player; NPC following and
+// native patrol interruption stay explicit runtime gaps.
+type QuestNPCFollowRequest struct {
+	SpawnInstanceID int64
+	NPCTypeID       int32
+	CharacterID     uint32
+	Distance        float64
+	Stop            bool
 }
 
 type QuestDoorRequest struct {

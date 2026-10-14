@@ -74,6 +74,7 @@ func (n *NPCProxy) captureMoveTo(L *lua.LState, api string, kind QuestNPCMoveKin
 		Z:                 z,
 		Heading:           heading,
 		SaveGuardSpot:     saveGuardSpot,
+		Running:           n.Running,
 	})
 	return 0
 }
@@ -88,6 +89,7 @@ func (n *NPCProxy) SetRunning(L *lua.LState) int {
 	if L.GetTop() >= 2 {
 		running = lua.LVAsBool(L.Get(2))
 	}
+	n.Running = running
 	n.Capture.NPCMoves = append(n.Capture.NPCMoves, QuestNPCMoveRequest{Order: n.Capture.nextActorEffectOrder(), Kind: QuestNPCMoveSetRunning, NPCTypeID: n.ID, SpawnInstanceID: n.SpawnInstanceID, PendingSpawnIndex: n.PendingSpawnIndex, Running: running})
 	return 0
 }

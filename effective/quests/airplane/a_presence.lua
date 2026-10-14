@@ -1,3 +1,4 @@
+-- IdleQuest epic 1.0 steps have no minimum level; preserve class and item checks.
 -- Source: airplane/a_presence.lua
 -- Eligibility must precede the consuming hand-in check.
 -- items: 1684
@@ -9,7 +10,7 @@ end
 
 function event_trade(e)
 	local item_lib = require("items");
-	if(e.other:GetLevel() >= 46 and e.other:Class() == "Monk" and item_lib.check_turn_in(e.trade, {item1 = 1684})) then
+	if(e.other:Class() == "Monk" and item_lib.check_turn_in(e.trade, {item1 = 1684})) then
 		e.self:Say("Hahaha! That dolt Eejag fell to the likes of you? Im not surprised. So, I guess this means you are here to challenge me. Normally, I wouldnt waste my time, but since you have defeated my younger brother, I suppose Im obligated.");
 		eq.depop_with_timer();
 		eq.spawn2(71069,0,0,e.self:GetX(),e.self:GetY(),-8,e.self:GetHeading()); -- NPC: Gwan

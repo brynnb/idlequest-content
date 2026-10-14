@@ -2,8 +2,35 @@ package quest
 
 import (
 	"github.com/stretchr/testify/require"
+	"os"
 	"testing"
 )
+
+func TestQuestDeathTouchSuppressedWithoutAbortingDialogue(t *testing.T) {
+	bridge := NewLuaBridge(".")
+	for _, path := range []string{"growthplane/Prince_Thirneg.lua", "mischiefplane/Life.lua"} {
+		source, err := os.ReadFile("upstream/projecteq/" + path)
+		require.NoError(t, err)
+		capture, err := bridge.ExecuteSayFromSource(string(source), &LuaEvent{Message: "phat lewt", NPC: &NPCProxy{ID: 9001}, Player: &PlayerProxy{ID: 101}, SpawnInstanceID: 6001})
+		require.NoError(t, err)
+		require.Empty(t, capture.Spells, path)
+		require.Empty(t, capture.SpellCasts, path)
+		require.Empty(t, capture.DeferredAPIs, path)
+		require.NotEmpty(t, capture.Responses, "dialogue still executes")
+	}
+	capture, err := bridge.ExecuteSayFromSource(`function event_say(e)
+for _, id in ipairs({982,3087,7477,24660,24661,39080,39081,39082,39180,39181,39182}) do
+  e.self:CastSpell(id, e.other:GetID())
+  eq.self_cast(id)
+  eq.selfcast(id)
+  eq.SelfCast(id)
+end
+e.self:CastSpell(17, e.other:GetID())
+end`, &LuaEvent{NPC: &NPCProxy{ID: 9001}, Player: &PlayerProxy{ID: 101}, SpawnInstanceID: 6001})
+	require.NoError(t, err)
+	require.Equal(t, []int{17}, capture.Spells)
+	require.Len(t, capture.SpellCasts, 1)
+}
 
 func TestQuestSpellCaptureRetainsTypedActorsAndConcreteNPCID(t *testing.T) {
 	capture, err := NewLuaBridge(".").ExecuteSayFromSource(`function event_say(e)

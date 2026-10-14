@@ -4,6 +4,25 @@ This replaces natural acquisition/camping as the current verification scope.
 Ordinary spawn/loot data is trusted. Seed prerequisite items, currency, character
 and travel; use actual UI for dialogue, Give, Combine, and check real outcomes.
 
+## NPC interaction capabilities
+
+Quest replies expose `hasDialogue` and `hasTurnIn` independently. Hail opens
+the existing quest window when either is available; Give Items is enabled only
+for a successful reply with an `event_trade` handler. This advertises a hand-in
+interface, not acceptance of any particular offer. All transaction, actor,
+inventory and quest prerequisite checks still run on the server. The sidebar
+includes both kinds under **Quest NPCs**. Hails refresh capability/availability
+even with dialogue history; stale target, spawn, zone and character replies
+cannot reopen the window.
+Refreshed info after a completed hand-in also retains its successful status and
+capabilities, so another Give does not require resetting the conversation.
+
+Focused browser coverage: `debug-real-quest-interaction.spec.ts` (Docker debug
+runner, `IDLEQUEST_REAL_GAME_E2E=true`). It uses Ghanlin's actual starting note
+without injecting prerequisites or issuing debug quest commands. See the
+Crimson Hands entry in `quest-audit-review-notes.md` for P99 evidence and the
+remaining item-template discrepancy.
+
 ## Shared runner
 
 All fourteen `npm run test:e2e:<class>-epic` entry points now select these

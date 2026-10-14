@@ -64,6 +64,8 @@ func requiresAuthoritativeQuestRead(api string) bool {
 		return true
 	case "player.GetItemIDAt", "player.GetInventory.HasItem":
 		return true
+	case "eq.get_data", "eq.get_spawn_condition":
+		return true
 	}
 	return false
 }

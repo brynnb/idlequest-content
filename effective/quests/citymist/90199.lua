@@ -1,4 +1,4 @@
--- Source: ProjectEQ citymist/v0/90199.lua (vendored original).
+-- Source: citymist/v0/90199.lua
 -- Authority: https://wiki.project1999.com/A_black_reaver
 -- Explicit version-0 override: the normal zone loads these NPC IDs, while
 -- the upstream top-level importer deliberately does not merge version folders.

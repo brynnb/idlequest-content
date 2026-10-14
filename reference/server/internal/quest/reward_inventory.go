@@ -152,7 +152,7 @@ func preflightQuestRewards(inv map[constants.InventoryKey]*constants.ItemWithIns
 	}
 
 	for _, reward := range rewards.Items {
-		tmpl, err := items.GetItemTemplateByID(int32(reward.ItemID))
+		tmpl, err := items.GetAcquirableItemTemplateByID(int32(reward.ItemID))
 		if err != nil {
 			return fmt.Errorf("quest reward item %d is unavailable", reward.ItemID)
 		}

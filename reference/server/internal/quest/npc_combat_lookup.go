@@ -12,18 +12,37 @@ const (
 	QuestCombatCurrentTarget QuestNPCCombatSelection = "target"
 	QuestCombatTopHate       QuestNPCCombatSelection = "top-hate"
 	QuestCombatRandomHate    QuestNPCCombatSelection = "random-hate"
+	QuestCombatEngagement    QuestNPCCombatSelection = "engaged"
 )
 
-// Exactly one actor, or neither for an observed empty selection. Failure to
-// obtain a combat snapshot is an error, not an empty hate list or self target.
-type QuestCombatActor struct {
-	NPC    *NPCProxy
-	Player *PlayerProxy
+// Actor selections return exactly one actor, or neither for observed emptiness.
+// Engagement returns an explicit boolean independently of target selection:
+// EQEmu Mob::IsEngaged tests hate-list membership, including pets/companions.
+// Missing state is an error, never a fabricated empty hate list or self target.
+type QuestNPCCombatResult struct {
+	NPC     *NPCProxy
+	Player  *PlayerProxy
+	Engaged *bool
+}
+
+func (n *NPCProxy) IsEngaged(L *lua.LState) int {
+	if n.readCombatActor == nil || n.SpawnInstanceID <= 0 || n.ID <= 0 || n.PendingSpawnIndex != 0 || n.missingActor {
+		return n.Capture.rejectActorEffect(L, "NPC engagement requires a scoped reader and an existing concrete actor")
+	}
+	result, err := n.readCombatActor(n.spellActor(), QuestCombatEngagement)
+	if err != nil {
+		return n.Capture.rejectActorEffect(L, fmt.Sprintf("NPC engagement: %v", err))
+	}
+	if result.Engaged == nil || result.NPC != nil || result.Player != nil {
+		return n.Capture.rejectActorEffect(L, "NPC engagement result is missing or ambiguous")
+	}
+	L.Push(lua.LBool(*result.Engaged))
+	return 1
 }
 
 // The world reader owns scope, current ownership generation, and selection
 // semantics. The Lua bridge never guesses a target from numeric ID overlap.
-type QuestNPCCombatReader func(QuestSpellActor, QuestNPCCombatSelection) (QuestCombatActor, error)
+type QuestNPCCombatReader func(QuestSpellActor, QuestNPCCombatSelection) (QuestNPCCombatResult, error)
 
 func npcCombatReaderFromFields(fields map[string]any) QuestNPCCombatReader {
 	reader, _ := fields["__quest_npc_combat_reader"].(QuestNPCCombatReader)
@@ -41,7 +60,7 @@ func (b *LuaBridge) pushNPCCombatActor(L *lua.LState, source *NPCProxy, selectio
 	if err != nil {
 		return source.Capture.rejectActorEffect(L, fmt.Sprintf("NPC combat lookup %s: %v", selection, err))
 	}
-	if actor.NPC != nil && actor.Player != nil {
+	if actor.Engaged != nil || actor.NPC != nil && actor.Player != nil {
 		return source.Capture.rejectActorEffect(L, "ambiguous NPC combat lookup result")
 	}
 	ud := L.NewUserData()
@@ -69,6 +88,7 @@ func (b *LuaBridge) pushNPCCombatActor(L *lua.LState, source *NPCProxy, selectio
 			npc = *actor.NPC
 			npc.Capture = source.Capture
 			npc.readCombatActor = source.readCombatActor
+			npc.readGrid = source.readGrid
 			npc.combatOwnerCharacterID = source.combatOwnerCharacterID
 			npc.combatOwner = source.combatOwner
 			npc.externalActor = npc.ID != source.ID || npc.SpawnInstanceID != source.SpawnInstanceID || source.externalActor

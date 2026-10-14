@@ -22,17 +22,13 @@ func TestEnchanterSackDialogueStillRequiresSeal(t *testing.T) {
 	}
 }
 
-func TestEnchanterInkVialStillRequiresLevelFifty(t *testing.T) {
+func TestEnchanterInkVialAvailableAtAnyLevel(t *testing.T) {
 	source := readOverrideLua(t, "converted-perl", "qcat", "Reania_Jukle")
-	for _, level := range []int{49, 50} {
+	for _, level := range []int{1, 49, 50} {
 		event := progressionEvent(PlayerProxy{ID: 123, ClassID: 14, CharLevel: level})
 		event.Message = "supply"
 		capture, err := NewLuaBridge("upstream/projecteq").ExecuteSayFromSource(source, event)
 		require.NoError(t, err)
-		if level == 50 {
-			require.Equal(t, []QuestReward{{ItemID: 10626, Count: 1}}, capture.Items)
-		} else {
-			require.Empty(t, capture.Items, "Ally quest faction must not bypass level prerequisites")
-		}
+		require.Equal(t, []QuestReward{{ItemID: 10626, Count: 1}}, capture.Items)
 	}
 }

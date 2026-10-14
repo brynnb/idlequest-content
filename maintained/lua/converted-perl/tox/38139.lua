@@ -1,3 +1,5 @@
+-- enabled: false
+-- P99 exclusion: see content_exclusions.json quests["tox/38139"].
 -- Converted from ProjectEQ Perl quest script.
 -- Source: tox/38139.pl
 -- items: 13894, 10015, 10016, 10017, 10018

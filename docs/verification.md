@@ -1,8 +1,41 @@
-# Export and handoff verification — September 15, 2026
+# Export and handoff verification
 
 This is a local development content snapshot, not a production backup.
 
-## Current synchronized snapshot
+## Current synchronized snapshot — October 14, 2026
+
+This refresh starts from public commit `3d2eb497`, preserving the existing
+53-table allowlist, column projections, row filters, and published code paths.
+Updated and new quest scripts stay within the existing quest content areas.
+No additional database tables, schema columns, runtime source files, or
+reference-code areas are included. The public README and review tools are
+unchanged. Broader unpublished local content-repository history is not part of
+this update.
+
+The source checkout is based on `e92f5104` with local changes; individual
+manifest hashes identify the exported file contents. All repository migrations
+were already present in the local database with matching checksums, and the
+quest importer verified 1,446 maintained scripts and one module. Export and
+verification used read-only database snapshots; no migrations or quest imports
+were applied for this refresh.
+
+Current snapshot: 53 tables, 2,741,186 rows, 36,295 hashed files. Manifest SHA256:
+`25d9be76c255b3d789927aa062e39afca2569bd8b863595e031311c7eab39535`.
+
+- Full manifest, row-shape, primary-key and checksum validation passes.
+- Every exported row matches a second read-only query of the local source,
+  using the published table, column and filter policy.
+- Seventeen review-tool tests pass; one optional SQL integration test is skipped.
+- Scope checks found no new tables, columns, or reference-code paths.
+- This snapshot was not reloaded into another scratch database, and no new
+  browser or gameplay verification is claimed for this content refresh.
+
+Existing schema files are retained because the projected schema is unchanged.
+Existing reference files are updated within the published path boundary; they
+remain excerpts, not a buildable copy of the closed-source game. New private
+runtime files and an additional private export table are deliberately omitted.
+
+## Previous synchronized snapshot — September 15, 2026
 
 The game checkout's combined local update command checked every migration
 filename/checksum, backed up the database, applied 11 unrecorded migrations,

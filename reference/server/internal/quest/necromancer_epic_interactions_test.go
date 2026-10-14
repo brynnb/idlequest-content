@@ -8,7 +8,7 @@ import (
 
 func TestNecromancerTrialReplacementsAttackQuestOwner(t *testing.T) {
 	for _, variant := range []struct{ origin, name string }{
-		{"modified-upstream", "a_failed_apprentice"},
+		{"converted-perl", "a_failed_apprentice"},
 		{"idlequest-authored", "a_tortured_soul"},
 	} {
 		t.Run(variant.name, func(t *testing.T) {
@@ -24,7 +24,7 @@ func TestNecromancerTrialReplacementsAttackQuestOwner(t *testing.T) {
 }
 
 func TestNecromancerReviewedDirectionsDoNotRestoreLaterEpic(t *testing.T) {
-	source := readOverrideLua(t, "modified-upstream", "lakerathe", "Kazen_Fecae")
+	source := readOverrideLua(t, "converted-perl", "lakerathe", "Kazen_Fecae")
 	event := progressionEvent(PlayerProxy{ID: 123, Name: "QuestOwner", ClassID: 11, CharLevel: 60})
 	event.Globals["Soulwhisper"] = "1"
 	event.Message = "hail"
@@ -33,5 +33,5 @@ func TestNecromancerReviewedDirectionsDoNotRestoreLaterEpic(t *testing.T) {
 	require.Empty(t, capture.Items, "Epic 1.5 must stay excluded even with an old later-era flag")
 	require.NotContains(t, source, "SummonItem(9831)")
 	require.Contains(t, source, "give them to my assistant Emkel Kabae")
-	require.Contains(t, readOverrideLua(t, "modified-upstream", "swampofnohope", "Ssessthrass"), "deep in Chardok")
+	require.Contains(t, readOverrideLua(t, "converted-perl", "swampofnohope", "Ssessthrass"), "deep in Chardok")
 }

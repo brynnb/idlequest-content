@@ -1,4 +1,4 @@
--- Source: ProjectEQ paw/v0/Brother_Hayle.lua (original Splitpaw).
+-- Source: paw/v0/Brother_Hayle.lua
 -- The importer visits zone files, not nested version directories. Preserve
 -- the original handler at the playable paw key; quest faction is shared policy.
 function event_say(e)

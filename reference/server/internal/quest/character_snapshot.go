@@ -99,7 +99,7 @@ func questCharacterSnapshot(ses *session.Session) (map[string]interface{}, map[s
 
 func sendQuestCharacterSnapshots(ses *session.Session) string {
 	inventory, currency, revision := questCharacterSnapshot(ses)
-	ses.SendStreamJSON(inventory, opcodes.CharacterInventory)
+	ses.SendInventorySnapshot(inventory)
 	if len(currency) > 0 {
 		ses.SendStreamJSON(currency, opcodes.CharacterCurrency)
 	}
@@ -131,7 +131,7 @@ func HandleCharacterStateRefreshRequest(ses *session.Session, payload []byte) bo
 	ses.SendStreamJSON(CharacterStateRefreshResponse{
 		TransactionID:     req.TransactionID,
 		InventoryRevision: revision,
-		Inventory:         inventory,
+		Inventory:         ses.NewInventorySnapshot(inventory),
 		Currency:          currency,
 	}, opcodes.CharacterStateRefreshResponse)
 	return false

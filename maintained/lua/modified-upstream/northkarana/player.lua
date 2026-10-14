@@ -1,4 +1,7 @@
 -- Source: northkarana/player.lua
+-- enabled: false
+-- Entire source is later-era: Luclin spires and the necromancer epic 1.5
+-- Natimbi lead-in. Preserve it for provenance, never import it enabled for P99.
 
 function event_enter_zone(e)
 	eq.set_timer("spires",10 * 1000);

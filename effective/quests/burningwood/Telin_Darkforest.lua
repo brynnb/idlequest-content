@@ -1,3 +1,5 @@
+-- IdleQuest epic 1.0 steps have no minimum level; preserve class and item checks.
+-- Source: upstream/projecteq/burningwood/Telin_Darkforest.lua
 -- Start of the ranger and druid epic quests
 -- items: 20472, 20447, 20448, 20468, 20477, 20481
 
@@ -18,12 +20,8 @@ function event_say(e)
 		elseif(e.message:findi("innoruuk")) then
 			e.self:Emote("raises his eyebrow slightly and a subtle look of surprise creeps across his face. 'Innoruuk? Perhaps. Aye. It must be. Perhaps I knew and didn't want to consider the possibility. It must be this though, and some action will have to be taken.'");
 		elseif(e.message:findi("action")) then
-			if(e.other:GetLevel() >= 46) then
-				e.self:Emote("looks at you consideringly and then scribbles something quickly on a small, worn paper. 'You seem powerful enough. Perhaps you can help those who seek to protect nature's peace. Take this note. Deliver it only into the hands of Faelin Bloodbriar. Where you will find her, I cannot say. She is a friend of mine and a wanderer. She has been seen from one end of the lands to the other. Seek her out, and quickly.'");
-				e.other:SummonItem(20472); -- Item: Worn Note
-			else
-				e.self:Say("You are not yet powerful enough to complete this task. Return when you have gained more experience.");
-			end
+			e.self:Emote("looks at you consideringly and then scribbles something quickly on a small, worn paper. 'You seem powerful enough. Perhaps you can help those who seek to protect nature's peace. Take this note. Deliver it only into the hands of Faelin Bloodbriar. Where you will find her, I cannot say. She is a friend of mine and a wanderer. She has been seen from one end of the lands to the other. Seek her out, and quickly.'");
+			e.other:SummonItem(20472); -- Item: Worn Note
 		end
 	else
 		e.self:Say("I can not trust you with such important information, yet.");

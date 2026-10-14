@@ -16,6 +16,7 @@ func TestCaptureResetDiscardsEffectsButPreservesExecutionContext(t *testing.T) {
 	capture.registerSpellActor(101, QuestSpellActor{CharacterID: 101})
 	expected := *capture
 	capture.RuntimeActorEffectDeliveryID = "committed-old-event"
+	capture.SignalProgress = &QuestSignalProgress{DeliveryID: "old-signal"}
 	capture.RuntimeTriggersSettled, capture.RuntimeTimersSettled = true, true
 	capture.PlayerMoves = []QuestPlayerMoveRequest{{}}
 	capture.NPCMoves = []QuestNPCMoveRequest{{Order: 1, Kind: QuestNPCMoveWalk}}

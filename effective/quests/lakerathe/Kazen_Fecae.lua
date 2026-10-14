@@ -1,3 +1,4 @@
+-- IdleQuest epic 1.0 steps have no minimum level; preserve class and item checks.
 -- Reviewed P99 Necromancer Epic 1.0: restore omitted quest directions.
 -- Source: lakerathe/Kazen_Fecae.pl
 -- Necromancer Epic 1.0: Kazen Fecae apprentice/test/final chain.
@@ -8,7 +9,7 @@ function event_say(e)
 	if e.message:findi("hail") then
 		e.self:Emote("eyes seem to glow as he turns to you and says, 'Leave me be if you have no reason to be here, mortal!'")
 	elseif e.message:findi("dark arts") then
-		if e.other:Class() == 11 and e.other:Level() >= 50 then
+		if e.other:Class() == 11 then
 			e.self:Emote("looks you up and down, his eyes glowing with a soft red light. 'You wish to study under me? Perhaps, if you prove yourself to follow the twisted path.'")
 		else
 			e.self:Say("Ha! You call yourself a Necromancer? Come back when you have tortured a few more souls!")

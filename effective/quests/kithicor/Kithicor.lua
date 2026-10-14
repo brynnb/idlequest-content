@@ -1,18 +1,12 @@
 -- Converted from ProjectEQ Perl quest script.
 -- Source: kithicor/Kithicor.pl
--- items: 9464, 20877, 20878
-
-local function has_blue_orb_access(e)
-	local qglobals = eq.get_qglobals(e.other)
-	return qglobals["Fatestealer_shak"] == "1" or qglobals["Fatestealer_shak"] == 1 or e.other:HasItem(52355) or e.other:HasItem(52356)
-end
+-- items: 20877, 20878
+-- Retain Call of Flame; omit the later rogue epic 1.5 orb branch.
 
 function event_say(e)
 	if e.message:findi("hail") then
 		e.self:Say("Hello Traveler, I do not see many this deep into the woods.")
-	elseif e.message:findi("blue orb") and has_blue_orb_access(e) then
-		e.self:Emote("fishes a hemisphere of cerulean colored metal from his pocket. You must be referring to this? I recovered it from a charred spot of earth shortly after that fateful battle between the armies led by the Child of Hate and Tunare's Chosen. This abhorrent thing radiates evil and is an affront to nature. I must be rid of it, now. Take it! Please find a way to properly dispose of the hemisphere, " .. e.other:GetName() .. ". While you do not necessarily strike me as the trustworthy type, you do appear capable. I can only pray you make the correct choice.")
-		e.other:SummonItem(9464)
+
 	end
 end
 

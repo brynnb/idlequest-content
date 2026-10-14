@@ -1,3 +1,5 @@
+-- enabled: false
+-- P99 exclusion: see content_exclusions.json quests["lakeofillomen/Klok_Foob"].
 -- Converted from ProjectEQ Perl quest script.
 -- Source: lakeofillomen/Klok_Foob.pl
 -- items: 12451, 12448

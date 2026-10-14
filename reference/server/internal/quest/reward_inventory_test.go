@@ -1,6 +1,7 @@
 package quest
 
 import (
+	"os"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -128,6 +129,27 @@ func TestRuntimeItemPlanDoesNotReturnUnrelatedGiveItems(t *testing.T) {
 	require.Empty(t, plan.quantities)
 	require.Equal(t, inv, plan.final)
 	require.NotSame(t, inv[key], plan.final[key], "Planning must not mutate live inventory")
+}
+
+func TestLocalQuestRewardCreationUsesFullChargesWithoutChangingReturnedInstance(t *testing.T) {
+	if os.Getenv("IDLEQUEST_LOCAL_DB_AUDIT") != "true" {
+		t.Skip("explicit local item-cache check")
+	}
+	_, err := dbitems.InitializeItemsMMF()
+	require.NoError(t, err)
+	returned := questTestItem(60001, 501, 1)
+	returned.Instance.Charges = 2
+	inv := map[constants.InventoryKey]*constants.ItemWithInstance{{Slot: constants.SlotTrade1}: returned}
+	result, err := buildQuestSettlementInventory(inv, nil, RewardSummary{Items: []QuestReward{{ItemID: 5727, Count: 1}, {ItemID: 1001, Count: 1}}})
+	require.NoError(t, err)
+	charges := map[int32]uint8{}
+	for _, item := range result.final {
+		charges[item.Item.ID] = item.Instance.Charges
+	}
+	require.Equal(t, uint8(5), charges[5727], "Regal Band receives its five configured charges")
+	require.Zero(t, charges[1001], "Ordinary equipment is not assigned an invented charge")
+	require.Equal(t, uint8(2), charges[60001], "An unconsumed offer keeps its original charges")
+	require.Equal(t, uint8(2), returned.Instance.Charges, "Planning never mutates the offered instance")
 }
 
 func TestCalculateQuestCurrencySettlementConsumesAndRewardsExactlyOnce(t *testing.T) {

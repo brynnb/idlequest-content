@@ -96,25 +96,39 @@ func LoadPendingQuestEffectIntents(ctx context.Context, database *stmtcache.DB, 
 	return intents, rows.Err()
 }
 
-func LoadNextPendingQuestEffectIntent(ctx context.Context, database *stmtcache.DB, owner uint32, zone string, instance int) (*QuestEffectIntent, error) {
-	if owner == 0 || zone == "" || instance < 0 {
+// Read a bounded, zone-scoped window. The executor preserves ordering for
+// overlapping actors while independent actors may proceed concurrently.
+func LoadPendingQuestEffectIntentsForZone(ctx context.Context, database *stmtcache.DB, owner uint32, zone string, instance, limit int) ([]QuestEffectIntent, error) {
+	if owner == 0 || zone == "" || instance < 0 || limit < 1 || limit > 128 {
 		return nil, fmt.Errorf("invalid quest effect replay scope")
 	}
-	var intent QuestEffectIntent
-	err := database.QueryRowContext(ctx, `SELECT delivery_id,character_id,zone_name,instance_id,payload_version,payload
-		FROM quest_effect_outbox WHERE character_id=? AND zone_name=? AND instance_id=? AND completed_at IS NULL AND cancelled_at IS NULL
-		ORDER BY enqueue_sequence LIMIT 1`, owner, zone, instance).Scan(&intent.DeliveryID, &intent.CharacterID, &intent.ZoneName,
-		&intent.InstanceID, &intent.PayloadVersion, &intent.Payload)
-	if err == sql.ErrNoRows {
-		return nil, nil
-	}
+	rows, err := database.QueryContext(ctx, `SELECT delivery_id,character_id,zone_name,instance_id,payload_version,payload
+ FROM quest_effect_outbox WHERE character_id=? AND zone_name=? AND instance_id=? AND completed_at IS NULL AND cancelled_at IS NULL
+ ORDER BY enqueue_sequence LIMIT ?`, owner, zone, instance, limit)
 	if err != nil {
 		return nil, err
 	}
-	if err := intent.validate(); err != nil {
+	defer rows.Close()
+	var intents []QuestEffectIntent
+	for rows.Next() {
+		var intent QuestEffectIntent
+		if err := rows.Scan(&intent.DeliveryID, &intent.CharacterID, &intent.ZoneName, &intent.InstanceID, &intent.PayloadVersion, &intent.Payload); err != nil {
+			return nil, err
+		}
+		if err := intent.validate(); err != nil {
+			return nil, err
+		}
+		intents = append(intents, intent)
+	}
+	return intents, rows.Err()
+}
+
+func LoadNextPendingQuestEffectIntent(ctx context.Context, database *stmtcache.DB, owner uint32, zone string, instance int) (*QuestEffectIntent, error) {
+	intents, err := LoadPendingQuestEffectIntentsForZone(ctx, database, owner, zone, instance, 1)
+	if err != nil || len(intents) == 0 {
 		return nil, err
 	}
-	return &intent, nil
+	return &intents[0], nil
 }
 
 // Completed authorizations are looked up by exact receipt and authenticated

@@ -16,7 +16,7 @@ func TestEpicDepartureTimerCallbacks(t *testing.T) {
 		interval     int
 		combatPauses bool
 	}{
-		{"overrides/lua/modified-upstream/trakanon/#Kaiaren.lua", 3600000, false},
+		{"overrides/lua/converted-perl/trakanon/#Kaiaren.lua", 3600000, false},
 		{"upstream/projecteq/kaesora/enraged_spectral_librarian.lua", 300000, true},
 		{"upstream/projecteq/airplane/Dirkog_Steelhand.lua", 300000, false},
 		{"overrides/lua/modified-upstream/airplane/Inte_Akera.lua", 300000, false},

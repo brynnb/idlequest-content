@@ -1,5 +1,8 @@
 -- Converted from ProjectEQ Perl quest script.
 -- Source: steamfont/Cargo_Clockwork.pl
+-- enabled: false
+-- P99 documents this quest as nonfunctional. Keep the reference script, but
+-- preserve its exclusion when maintained overrides run after upstream filters.
 
 local delivery = 0
 local bandit1id = 56178
