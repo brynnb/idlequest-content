@@ -1,0 +1,49 @@
+{
+  "format": 1,
+  "id": "freeportwest-lorme-tredore-trades",
+  "summary": "freeportwest/Lorme_Tredore (quests.id 17986): remove the later-era 'trades' / 'second book' dialogue. Before: saying 'trades' or 'second book' summons 51121 Tradeskill Basics : Volume I or 51122 Volume II, neither of which exists in data/items, and the Tattered Note welcome ends with a [trades] prompt. After: event_say is gone (has_say_event 0) and the welcome line ends \"Now, let's get to work.\", the same text and structure as the maintainer's freportw/Lorme_Tredore override. The reviewed Fleshy Orbs hand-in, the Tattered Note hand-in, its rewards and faction, and the proximity greeting are unchanged. Validation: source review, check-proposal, npm test and npm run validate. Not runtime tested.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Lorme_Tredore",
+      "note": "Offline page reference/p99-wiki/npc-pages/lorme-tredore-1b8ebf149b.wiki lists related_quests \"* [[Fleshy Orbs]]\" only. The offline title list reference/p99-wiki/allpages-ns0.json (fetched 2026-07-17T22:59:57.533Z, complete: true) has no 'Tradeskill Basics' title. data/items has neither 51121 nor 51122."
+    },
+    {
+      "url": "https://wiki.project1999.com/Fleshy_Orbs",
+      "note": "Offline page reference/p99-wiki/raw-pages/fleshy-orbs-3191596021.wiki covers only the orb hand-in (line 50 Lorme quote, line 61 \"You receive 5 gold, 12 silver pieces.\"). That code path is untouched. content_exclusions.json review 'Fleshy Orbs' (reviewed_at 2026-07-18) notes only the faction, coin and reward changes."
+    },
+    {
+      "url": "https://github.com/brynnb/idlequest-content",
+      "note": "Repo precedent: maintained/lua/modified-upstream/freportw/Lorme_Tredore.lua already omits event_say and uses the 'Now, let's get to work.' welcome, and 48 other maintained overrides drop the upstream 51121/51122 trades branch. Only four effective scripts still summon 51121: this one, freeportwest/Romiak_Jusathorn, freeportwest/Opal_Darkbriar and freeporteast/Cain_Darkmoore."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 17986,
+        "zone": "freeportwest",
+        "name": "Lorme_Tredore",
+        "lua_content": "-- Source: freeportwest/Lorme_Tredore.lua\n-- P99 audit: Fleshy Orbs\n-- items: 51121, 51122, 18740, 13559, 13951, 5353\n\nfunction event_spawn(e)\n\tlocal xloc = e.self:GetX()\n\tlocal yloc = e.self:GetY()\n\teq.set_proximity(xloc - 50, xloc + 50, yloc - 50, yloc + 50)\nend\n\nfunction event_enter(e)\n\tif e.other:HasItem(18740) then\n\t\te.other:Message(MT.Yellow, \"As you make your way into a small well-lit room, a robed figure turns to greet you. 'Hello there, friend. I am Lorme Tredore, Magician Guild Master. Should you wish to begin your training, read the note in your inventory and then hand it to me'\")\n\tend\nend\n\nfunction event_say(e)\n\tif e.message:findi(\"trades\") then\n\t\te.self:Say(\"I thought you might be one who was interested in the various different trades, but which one would suit you? Ahh, alas, it would be better to let you decide for yourself, perhaps you would even like to master them all! That would be quite a feat. Well, lets not get ahead of ourselves, here, take this book. When you have finished reading it, ask me for the [second book], and I shall give it to you. Inside them you will find the most basic recipes for each trade. These recipes are typically used as a base for more advanced crafting, for instance, if you wished to be a smith, one would need to find some ore and smelt it into something usable. Good luck!\")\n\t\te.other:SummonItem(51121) -- Item: Tradeskill Basics : Volume I\n\telseif e.message:findi(\"second book\") then\n\t\te.self:Say(\"Here is the second volume of the book you requested, may it serve you well!\")\n\t\te.other:SummonItem(51122) -- Item: Tradeskill Basics : Volume II\n\tend\nend\n\nlocal function arcane_newbie_note(e)\n\te.self:Say(string.format(\"Welcome to the Academy of Arcane Sciences. I am Lorme Tredore, Master Magician. Here is our guild robe, wear it with pride and represent us well, young %s. Once you are ready to begin your training please make sure that you see Shana Liskia, he can assist you in developing your hunting and gathering skills. Return to me when you have become more experienced in our art, I will be able to further instruct you on how to progress through your early ranks, as well as in some of the various [trades] you will have available to you.\", e.other:GetName()))\n\te.other:SummonItem(13559) -- Item: Used Violet Robe*\n\te.other:Ding()\n\te.other:Faction(220, 100, 0) -- Arcane Scientists\n\te.other:Faction(281, 25, 0) -- Knights of Truth\n\te.other:Faction(296, -15, 0) -- Opal Dark Briar\n\te.other:Faction(330, -15, 0) -- The Freeport Militia\n\te.other:AddEXP(100)\nend\n\nlocal function fleshy_orb_reward(e)\n\te.self:Say(\"Ah, thank you for bringing this to me! I will make very good use of it. Here, take this small token of my appreciation in return. Guard Jenkins will no longer require it, as he was killed on the training field yesterday. tsk tsk tsk.\")\n\te.other:SummonItem(5353) -- Item: Fine Steel Scimitar\n\te.other:Ding()\n\te.other:Faction(341, 5, 0) -- Priests of Life\n\te.other:Faction(280, 1, 0) -- Knights of Thunder\n\te.other:Faction(262, 2, 0) -- Guards of Qeynos\n\te.other:Faction(219, 1, 0) -- Antonius Bayle\n\te.other:GiveCash(0, 12, 5, 0)\n\te.other:AddEXP(100)\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\n\tif item_lib.check_turn_in(e.trade, {item1 = 18740}) then -- A Tattered Note\n\t\tarcane_newbie_note(e)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 13951}) then -- Fleshy Orb\n\t\tif e.other:GetFaction(e.self) < 5 then\n\t\t\tfleshy_orb_reward(e)\n\t\tend\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 17986,
+        "zone": "freeportwest",
+        "name": "Lorme_Tredore",
+        "lua_content": "-- Source: freeportwest/Lorme_Tredore.lua\n-- P99 audit: Fleshy Orbs\n-- items: 18740, 13559, 13951, 5353\n\nfunction event_spawn(e)\n\tlocal xloc = e.self:GetX()\n\tlocal yloc = e.self:GetY()\n\teq.set_proximity(xloc - 50, xloc + 50, yloc - 50, yloc + 50)\nend\n\nfunction event_enter(e)\n\tif e.other:HasItem(18740) then\n\t\te.other:Message(MT.Yellow, \"As you make your way into a small well-lit room, a robed figure turns to greet you. 'Hello there, friend. I am Lorme Tredore, Magician Guild Master. Should you wish to begin your training, read the note in your inventory and then hand it to me'\")\n\tend\nend\n\nlocal function arcane_newbie_note(e)\n\te.self:Say(string.format(\"Welcome to the Academy of Arcane Sciences. I am Lorme Tredore, Master Magician. Here is our guild robe, wear it with pride and represent us well, young %s. Now, let's get to work.\", e.other:GetName()))\n\te.other:SummonItem(13559) -- Item: Used Violet Robe*\n\te.other:Ding()\n\te.other:Faction(220, 100, 0) -- Arcane Scientists\n\te.other:Faction(281, 25, 0) -- Knights of Truth\n\te.other:Faction(296, -15, 0) -- Opal Dark Briar\n\te.other:Faction(330, -15, 0) -- The Freeport Militia\n\te.other:AddEXP(100)\nend\n\nlocal function fleshy_orb_reward(e)\n\te.self:Say(\"Ah, thank you for bringing this to me! I will make very good use of it. Here, take this small token of my appreciation in return. Guard Jenkins will no longer require it, as he was killed on the training field yesterday. tsk tsk tsk.\")\n\te.other:SummonItem(5353) -- Item: Fine Steel Scimitar\n\te.other:Ding()\n\te.other:Faction(341, 5, 0) -- Priests of Life\n\te.other:Faction(280, 1, 0) -- Knights of Thunder\n\te.other:Faction(262, 2, 0) -- Guards of Qeynos\n\te.other:Faction(219, 1, 0) -- Antonius Bayle\n\te.other:GiveCash(0, 12, 5, 0)\n\te.other:AddEXP(100)\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\n\tif item_lib.check_turn_in(e.trade, {item1 = 18740}) then -- A Tattered Note\n\t\tarcane_newbie_note(e)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 13951}) then -- Fleshy Orb\n\t\tif e.other:GetFaction(e.self) < 5 then\n\t\t\tfleshy_orb_reward(e)\n\t\tend\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/freeportwest/Lorme_Tredore.lua",
+      "beforeSha256": "78c026f8c8855081cef64c6785b7ea5879b7101de090219a3d1c9c5e28a267a9",
+      "proposedFile": "changes/freeportwest-lorme-tredore-trades/Lorme_Tredore.lua",
+      "afterSha256": "f5dd4fa7858fd3c21a589ad3c73cc113148c0e4efe4fa7ae58732ee38e9ea3b7"
+    }
+  ]
+}
