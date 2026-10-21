@@ -1,0 +1,51 @@
+{
+  "format": 1,
+  "id": "felwitheb-rain-caller-factions",
+  "summary": "Restore Keepers of the Art, King Tearis Thex, Faydarks Champions and The Dead faction changes when Kinool awards Rain Caller.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Rain_Caller_Quest",
+      "note": "Cached 2026-07-17T23:29:23.330Z in reference/p99-wiki/raw-pages/rain-caller-quest-c3e57fbab3.wiki, final hand-in faction block. Documents the four directions but no magnitudes."
+    },
+    {
+      "url": "https://github.com/EQMacEmu/quests/blob/df860b6eb90bc11558111663fb61ae1b4493f56d/felwitheb/Kinool_Goldsinger.lua",
+      "note": "Retrieved 2026-10-21. Final branch uses factions 275 +25, 279 +6, 246 +3, 239 -6. Implementation fallback for undocumented P99 magnitudes."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 18719,
+        "zone": "felwitheb",
+        "name": "Kinool_Goldsinger",
+        "lua_content": "-- Source: felwitheb/Kinool_Goldsinger.lua\n-- items: 18778, 13593, 12333, 12334, 8401, 3000, 8402\nfunction event_spawn(e)\n\tlocal xloc = e.self:GetX();\n\tlocal yloc = e.self:GetY();\n\teq.set_proximity(xloc - 50, xloc + 50, yloc - 50, yloc + 50);\nend\n\nfunction event_enter(e)\n\tif(e.other:HasItem(18778)) then\n\t\te.other:Message(MT.Yellow,\"You enter a dimly lit room. In the center of the room, an important looking High Elf stands on a platform. He turns to greet you. 'Welcome young apprentice. I am Kinool Goldsinger, Guild Master of the Enchanters' guild here in Felwithe. Please read teh note in your inventory and when you are ready to begin your training, hand it to me.'\");\n\tend\nend\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Hail and welcome.  I am sure you have much to do, but could I ask a [favor] of you?\");\n\telseif(e.message:findi(\"favor\")) then\n\t\te.self:Say(\"Oh, um, on second thought, never mind.  I should really just do it myself.  Thank you anyway.\"); \n\telseif(e.message:findi(\"enchanted bow\")) then\n  \t\te.self:Say(\"Alas... Another ranger in search of the [Rain Caller]. She is no more\");\n\telseif(e.message:findi(\"rain caller\")) then\n  \t\te.self:Say(\"Rain Caller is the name we give each Trueshot longbow once it is enchanted. Unfortunately, I am unable to enchant them any longer. One of the components is no longer available. Someone would have to strike a [deal with the fairie folk]. Once I have that and the [remaining components] I can create the Rain Caller, a ranger's bow\");\n\telseif(e.message:findi(\"fairie folk\")) then\n  \t\te.self:Say(\"The fairie princess, Joleena, used to have a metal gnome deliver [fairie gold dust] to the Keepers every month. She has stopped this and now refuses to offer it to any nation of Faydwer. What she is angry about, we do not know.\");\n\telseif(e.message:findi(\"gold dust\")) then\n \t \te.self:Say(\"Fairie gold dust is an enchanted powder which only a fairie princess can create.\");\n\telseif(e.message:findi(\"remaining component\")) then\n  \t\te.self:Say(\"The remaining components are the Trueshot longbow and a treant heart. There will also be the guild donation in the amount of 3000 gold coins. These and the [fairie gold dust] will merit a ranger the Rain Caller enchanted bow.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 18778})) then -- Enrollment Letter\n\t\te.self:Say(\"Greetings and welcome aboard!  My name's Kinool. Master Enchanter of the Keepers of the Art.  Here is your guild tunic. Make us proud, young pupil! Once you are ready to begin your training please make sure that you see Yuin Starchaser, he can assist you in developing your hunting and gathering skills.\");\n\t\te.other:SummonItem(13593); -- Torn Training Robe*\n\t\te.other:Ding();\n\t\te.other:Faction(275,100,0); -- Keepers of the Art\n\t\te.other:Faction(279,25,0); -- King Tearis Thex\n\t\te.other:Faction(246,15,0); -- Faydark's Champions\n\t\te.other:Faction(239,-25,0); -- The Dead\n\t\te.other:AddEXP(100);\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 12333,item2 = 12334,item3 = 8401, gold = 3000})) then\n  \t\te.self:Say(\"Fine work!! I now reward you with The Rain Caller.\");\n\t\te.other:Ding();\n  \t\te.other:AddEXP(5000);\n  \t\te.other:SummonItem(8402); -- Item: Rain Caller\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade);\nend\n\n--END of FILE Zone:felwitheb  ID:62020 -- Kinool_Goldsinger \n\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 18719,
+        "zone": "felwitheb",
+        "name": "Kinool_Goldsinger",
+        "lua_content": "-- Source: felwitheb/Kinool_Goldsinger.lua\n-- items: 18778, 13593, 12333, 12334, 8401, 3000, 8402\nfunction event_spawn(e)\n\tlocal xloc = e.self:GetX();\n\tlocal yloc = e.self:GetY();\n\teq.set_proximity(xloc - 50, xloc + 50, yloc - 50, yloc + 50);\nend\n\nfunction event_enter(e)\n\tif(e.other:HasItem(18778)) then\n\t\te.other:Message(MT.Yellow,\"You enter a dimly lit room. In the center of the room, an important looking High Elf stands on a platform. He turns to greet you. 'Welcome young apprentice. I am Kinool Goldsinger, Guild Master of the Enchanters' guild here in Felwithe. Please read teh note in your inventory and when you are ready to begin your training, hand it to me.'\");\n\tend\nend\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Hail and welcome.  I am sure you have much to do, but could I ask a [favor] of you?\");\n\telseif(e.message:findi(\"favor\")) then\n\t\te.self:Say(\"Oh, um, on second thought, never mind.  I should really just do it myself.  Thank you anyway.\");\n\telseif(e.message:findi(\"enchanted bow\")) then\n\t\te.self:Say(\"Alas... Another ranger in search of the [Rain Caller]. She is no more\");\n\telseif(e.message:findi(\"rain caller\")) then\n\t\te.self:Say(\"Rain Caller is the name we give each Trueshot longbow once it is enchanted. Unfortunately, I am unable to enchant them any longer. One of the components is no longer available. Someone would have to strike a [deal with the fairie folk]. Once I have that and the [remaining components] I can create the Rain Caller, a ranger's bow\");\n\telseif(e.message:findi(\"fairie folk\")) then\n\t\te.self:Say(\"The fairie princess, Joleena, used to have a metal gnome deliver [fairie gold dust] to the Keepers every month. She has stopped this and now refuses to offer it to any nation of Faydwer. What she is angry about, we do not know.\");\n\telseif(e.message:findi(\"gold dust\")) then\n\t\te.self:Say(\"Fairie gold dust is an enchanted powder which only a fairie princess can create.\");\n\telseif(e.message:findi(\"remaining component\")) then\n\t\te.self:Say(\"The remaining components are the Trueshot longbow and a treant heart. There will also be the guild donation in the amount of 3000 gold coins. These and the [fairie gold dust] will merit a ranger the Rain Caller enchanted bow.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 18778})) then -- Enrollment Letter\n\t\te.self:Say(\"Greetings and welcome aboard!  My name's Kinool. Master Enchanter of the Keepers of the Art.  Here is your guild tunic. Make us proud, young pupil! Once you are ready to begin your training please make sure that you see Yuin Starchaser, he can assist you in developing your hunting and gathering skills.\");\n\t\te.other:SummonItem(13593); -- Torn Training Robe*\n\t\te.other:Ding();\n\t\te.other:Faction(275,100,0); -- Keepers of the Art\n\t\te.other:Faction(279,25,0); -- King Tearis Thex\n\t\te.other:Faction(246,15,0); -- Faydark's Champions\n\t\te.other:Faction(239,-25,0); -- The Dead\n\t\te.other:AddEXP(100);\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 12333,item2 = 12334,item3 = 8401, gold = 3000})) then\n\t\te.self:Say(\"Fine work!! I now reward you with The Rain Caller.\");\n\t\te.other:Ding();\n\t\te.other:AddEXP(5000);\n\t\te.other:SummonItem(8402); -- Item: Rain Caller\n\t\te.other:Faction(275,25,0); -- Keepers of the Art\n\t\te.other:Faction(279,6,0); -- King Tearis Thex\n\t\te.other:Faction(246,3,0); -- Faydarks Champions\n\t\te.other:Faction(239,-6,0); -- The Dead\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade);\nend\n\n--END of FILE Zone:felwitheb  ID:62020 -- Kinool_Goldsinger\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/felwitheb/Kinool_Goldsinger.lua",
+      "beforeSha256": "3811044ad7d3dea7a84792093c470ae4c3f4b39a08c8011390f2f5e052c78270",
+      "proposedFile": "changes/felwitheb-rain-caller-factions/Kinool_Goldsinger.lua",
+      "afterSha256": "884ed17c16425335bc180e397984a86b1ef73cb93bae16027d83fe8b7fdadf42"
+    },
+    {
+      "target": "reference/server/internal/quest/content_exclusions.json",
+      "beforeSha256": "874b10f289c7507640a73fd4f70d0affa617f31b793f2decc2c606aad869390a",
+      "proposedFile": "changes/felwitheb-rain-caller-factions/content_exclusions.json",
+      "afterSha256": "97d43b9c0a883f8dbdd4797241b6a5a6902c155c751c7d41b4db81317ead6431"
+    }
+  ]
+}
