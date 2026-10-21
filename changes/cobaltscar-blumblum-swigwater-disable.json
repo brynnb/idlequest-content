@@ -1,0 +1,55 @@
+{
+  "format": 1,
+  "id": "cobaltscar-blumblum-swigwater-disable",
+  "summary": "cobaltscar/Blumblum_Swigwater (quests.id 14027): disable the later-era Carved Prexus Totem script. Before: enabled, with dialogue about Ulthork carvings, a 'rumors' line gated on item 62812, and a Carved Prexus Totem (62821) hand-in rewarding Small Trigger Fish (62820). None of these IDs exist in data/items, so the quest can never be completed. P99 lists the totem as non-P99 and ties it to Druid epic 1.5. After: a maintained modified-upstream override with -- enabled: false, the row enabled=0, and a post_kunark_missing_items ledger entry, the same pattern as sro/Dahdd_Jonne and thurgadina/Dardek_Bladewright. The NPC, its spawn and its merchant list are unchanged. Validation: source review, check-proposal, npm test and npm run validate. Not runtime tested.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Carved_Prexus_Totem",
+      "note": "Offline copy reference/p99-wiki/non-p99-items-2026-10-02/non-p99-category.json lists \"Carved Prexus Totem\" (pageid 48571) among P99's non-P99 pages."
+    },
+    {
+      "url": "https://wiki.project1999.com/Ulthork_Raider",
+      "note": "Offline page reference/p99-wiki/npc-pages/ulthork-raider-be08b2c344.wiki (level 66) says: \"Possibly not Velious-era content. Drops an item for Druid epic 1.5.\" and lists Carved Prexus Totem as its ultra rare drop."
+    },
+    {
+      "url": "https://wiki.project1999.com/Blumblum_Swigwater",
+      "note": "Offline page reference/p99-wiki/npc-pages/blumblum-swigwater-9da3c610ac.wiki shows a Shopkeeper with related_quests None. data/items has none of 62812, 62820 or 62821."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 14027,
+        "zone": "cobaltscar",
+        "name": "Blumblum_Swigwater",
+        "lua_content": "-- items: 62821, 62820\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"I am very busy. Thank you for taking the time to speak to me, stranger, but I have no time for talk right now. I'm afraid that your business can not be urgent enough.\");\n\telseif(e.message:findi(\"problem\")) then\n\t\te.self:Say(\"I appreciate your warm concern strange one, but the Othmir will handle this ourselves. I am certain that it would be below you to take on such troubles, especially when I have only a paltry few sentences of information to trade for it. That is, unless this is seems like a [\" .. eq.say_link(\"fair deal\") .. \"] to you, for who am I to judge such a noble, if unusually depilated, creature such as yourself.\");\n\telseif(e.message:findi(\"fair deal\")) then\n\t\te.self:Emote(\"eyes light up and he smiles warmly. 'Such a kind offer! As you may know, we Othmir are exceptional carvers, though it is at brewing that we excel. Our carvings are made from many things, but most commonly of the gruesome teeth of those disgusting Ulthork. We create these beautiful carvings in tribute to our lord Prexus. Turning the ugly teeth of our enemies into items of worship provides several layers of irony and amusement that we can not resist.' \");\n\telseif(e.message:findi(\"carvings\")) then\n\t\te.self:Say(\"The Ulthork raid our homes when they become desperate. We always push them back, of course. But lately there has been one of there kind that is unusually powerful and he has managed to breach our defenses by force or trickery. They steal food and kill our young, as they always do. This one, though, is unusual in that he has taken one of our carvings. This concerns us, for we had not thought the beasts smart enough to recognize the irony in what we have done with their tusks. Our concern is that this one may be able to recognize the carving for what it is and will use it to incite his people to be more trouble that they usually are. If you can recover that carving as evidence that this beastly Ulthork is dispensed with, I will gladly share with you what we have seen of sickness in our waters.\");\t\n\telseif(e.message:findi(\"rumors\") and e.other:HasItem(62812)) then\n\t\te.self:Say(\"I hate to repeat such rudeness, but as you insist. Some of my people witnessed a hairless-one swimming from the grotto just before the first sickness was seen. Of course many of your people come swimming out of the grotto, so I would give it little thought. Some of my people have decided that it must have been that hairless swimmer that cause the illness. They say, and forgive me for repeating this, that the skin of your people is poison in the water, that you expose it because it defends you in such ways. Obvious foolishness, I apologize for repeating it.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 62821})) then --Carved Prexus Totem\n\t\te.self:Say(\"Wonderful! You are indeed a creature of your word. Not only have you defeated an enemy of the Othmir, but you have returned to us this most precious statue. I thank you. It is unfortunate that the only thing I have to give you in return is some information and a small fish.\");\n\t\te.other:SummonItem(62820); --Small Trigger Fish\n\t\te.other:Ding();\n\tend\n\t\n\titem_lib.return_items(e.self, e.other, e.trade)\nend",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 14027,
+        "zone": "cobaltscar",
+        "name": "Blumblum_Swigwater",
+        "lua_content": "-- enabled: false\n-- P99 exclusion: see content_exclusions.json quests[\"cobaltscar/Blumblum_Swigwater\"].\n-- Source: cobaltscar/Blumblum_Swigwater.lua\n-- items: 62821, 62820\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"I am very busy. Thank you for taking the time to speak to me, stranger, but I have no time for talk right now. I'm afraid that your business can not be urgent enough.\");\n\telseif(e.message:findi(\"problem\")) then\n\t\te.self:Say(\"I appreciate your warm concern strange one, but the Othmir will handle this ourselves. I am certain that it would be below you to take on such troubles, especially when I have only a paltry few sentences of information to trade for it. That is, unless this is seems like a [\" .. eq.say_link(\"fair deal\") .. \"] to you, for who am I to judge such a noble, if unusually depilated, creature such as yourself.\");\n\telseif(e.message:findi(\"fair deal\")) then\n\t\te.self:Emote(\"eyes light up and he smiles warmly. 'Such a kind offer! As you may know, we Othmir are exceptional carvers, though it is at brewing that we excel. Our carvings are made from many things, but most commonly of the gruesome teeth of those disgusting Ulthork. We create these beautiful carvings in tribute to our lord Prexus. Turning the ugly teeth of our enemies into items of worship provides several layers of irony and amusement that we can not resist.' \");\n\telseif(e.message:findi(\"carvings\")) then\n\t\te.self:Say(\"The Ulthork raid our homes when they become desperate. We always push them back, of course. But lately there has been one of there kind that is unusually powerful and he has managed to breach our defenses by force or trickery. They steal food and kill our young, as they always do. This one, though, is unusual in that he has taken one of our carvings. This concerns us, for we had not thought the beasts smart enough to recognize the irony in what we have done with their tusks. Our concern is that this one may be able to recognize the carving for what it is and will use it to incite his people to be more trouble that they usually are. If you can recover that carving as evidence that this beastly Ulthork is dispensed with, I will gladly share with you what we have seen of sickness in our waters.\");\t\n\telseif(e.message:findi(\"rumors\") and e.other:HasItem(62812)) then\n\t\te.self:Say(\"I hate to repeat such rudeness, but as you insist. Some of my people witnessed a hairless-one swimming from the grotto just before the first sickness was seen. Of course many of your people come swimming out of the grotto, so I would give it little thought. Some of my people have decided that it must have been that hairless swimmer that cause the illness. They say, and forgive me for repeating this, that the skin of your people is poison in the water, that you expose it because it defends you in such ways. Obvious foolishness, I apologize for repeating it.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 62821})) then --Carved Prexus Totem\n\t\te.self:Say(\"Wonderful! You are indeed a creature of your word. Not only have you defeated an enemy of the Othmir, but you have returned to us this most precious statue. I thank you. It is unfortunate that the only thing I have to give you in return is some information and a small fish.\");\n\t\te.other:SummonItem(62820); --Small Trigger Fish\n\t\te.other:Ding();\n\tend\n\t\n\titem_lib.return_items(e.self, e.other, e.trade)\nend",
+        "has_say_event": 1,
+        "enabled": 0
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/cobaltscar/Blumblum_Swigwater.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/cobaltscar-blumblum-swigwater-disable/Blumblum_Swigwater.lua",
+      "afterSha256": "1041afac39a8d9f9929a1e0dfecbc60c4c1856b617a62f7879355926fb74507f"
+    },
+    {
+      "target": "reference/server/internal/quest/content_exclusions.json",
+      "beforeSha256": "874b10f289c7507640a73fd4f70d0affa617f31b793f2decc2c606aad869390a",
+      "proposedFile": "changes/cobaltscar-blumblum-swigwater-disable/content_exclusions.json",
+      "afterSha256": "42d7545ca128826057ea64624fdb4486ca0b75a73f9ec6f7db762d635c7053c6"
+    }
+  ]
+}
