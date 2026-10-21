@@ -1,5 +1,5 @@
 -- IdleQuest epic 1.0 steps have no minimum level; preserve class and item checks.
--- Source: upstream/projecteq/burningwood/Telin_Darkforest.lua
+-- Source: burningwood/Telin_Darkforest.lua
 -- Start of the ranger and druid epic quests
 -- items: 20472, 20447, 20448, 20468, 20477, 20481
 

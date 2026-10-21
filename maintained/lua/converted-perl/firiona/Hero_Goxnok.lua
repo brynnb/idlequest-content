@@ -2,7 +2,11 @@
 -- Source: firiona/Hero_Goxnok.pl
 
 function event_say(e)
-	if e.message:findi("news of the charasis tome") then
+	if e.message:findi("hail") then
+		-- Azeal's last reply belongs to the despawned disguise. Repeat its
+		-- keyword on the revealed actor so the normal dialogue UI can continue.
+		e.self:Say("I have [news of the Charasis tome].")
+	elseif e.message:findi("news of the charasis tome") then
 		e.self:Say("The Charasis Tome has been scribed and now another copy exists. The traitor obviously wants to keep a copy for himself. I am told you will deliver both copies to Lord Qyzar along with your zealot khukri and you shall be awarded that of a crusader. Let us rest for a minute and then I shall show you the meeting place.")
 		eq.start(215)
 		e.self:SetAppearance(1)

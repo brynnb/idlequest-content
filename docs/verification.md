@@ -2,7 +2,47 @@
 
 This is a local development content snapshot, not a production backup.
 
-## Current synchronized snapshot — October 14, 2026
+## Current synchronized snapshot — October 20, 2026
+
+Refreshed from game commit `bda8ef4b097f46af6ae0bbd0568a2d109e285fa3`,
+starting directly from public main `e4135931`. The broader unpublished content
+repository history is not included.
+
+The public scope is unchanged: **53 tables**, the same column projections and
+row filters, and byte-identical schema files. All **134 published engine-source
+reference files** and the review tools remain unchanged. New and updated Lua is
+quest content within the existing maintained/effective directories. No game
+migrations, additional engine source, new tables, or player/runtime data are
+published.
+
+The source was a consistent copy of the local development database in a private,
+disposable MySQL instance. The canonical migration ledger applied six pending
+migrations there, followed by the normal full Lua import. Verification matched
+all **1,591 maintained scripts and two modules**. Neither the running development
+database nor production was changed by this refresh.
+
+Snapshot: **2,742,014 rows and 36,496 hashed files**. Manifest SHA256:
+`8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205`.
+
+- 339 existing manifest-managed files updated, 192 added, none removed. The
+  additions are 138 maintained Lua scripts, three effective quest scripts,
+  two shards of an existing table, and 49 offline wiki files.
+- Full checksum, row-shape and primary-key validation passes. A separate
+  read-only transaction matched every exported table against the isolated source
+  using the existing public columns and filters.
+- Seventeen review-tool tests pass; the optional SQL proposal suite is skipped.
+  This refresh adds no browser/gameplay evidence and was not loaded into a second
+  scratch database. Existing schema bytes and publication boundaries are checked.
+- Contributor proposals, README, source-code references and tools are preserved.
+  The new data includes the Velious quest restorations, loot/spell corrections and
+  Vulak placement. The private `spawn2_dependencies` table is still excluded, so
+  this snapshot does not describe all encounter activation rules.
+
+Engine references intentionally retain their earlier published version; updated
+quest content does not imply those excerpts reproduce the current game runtime.
+This is a scoped content publication, not a game deployment or production backup.
+
+## Previous synchronized snapshot — October 14, 2026
 
 This refresh starts from public commit `3d2eb497`, preserving the existing
 53-table allowlist, column projections, row filters, and published code-path boundary.

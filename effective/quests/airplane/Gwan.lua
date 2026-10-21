@@ -1,5 +1,5 @@
 -- IdleQuest epic 1.0 steps have no minimum level; preserve class and item checks.
--- Source: upstream/projecteq/airplane/Gwan.lua
+-- Source: airplane/Gwan.lua
 function event_say(e)
 	if(e.message:findi("hail")) then
 		e.self:Emote("ignores you.");

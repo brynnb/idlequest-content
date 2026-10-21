@@ -4,6 +4,10 @@
     {
       "pattern": "^#*The[ _]Fabled[ _]",
       "reason": "All Fabled NPCs are disabled game-wide by product policy, including future imports and scripted spawns."
+    },
+    {
+      "pattern": "^#*Translocator([ _]|$)",
+      "reason": "All Translocator NPCs are disabled game-wide by product request, including Eniela, future imports and scripted spawns. This removes them from supported content, beyond their existing AutoLevel exclusion."
     }
   ],
   "npcs": [

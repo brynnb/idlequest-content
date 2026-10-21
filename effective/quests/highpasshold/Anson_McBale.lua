@@ -1,5 +1,5 @@
 -- IdleQuest epic 1.0 steps have no minimum level; preserve class and item checks.
--- Source: upstream/projecteq/highpasshold/Anson_McBale.lua
+-- Source: highpasshold/Anson_McBale.lua
 -- items: 28014
 function event_say(e)
 	local fac = e.other:GetFaction(e.self);

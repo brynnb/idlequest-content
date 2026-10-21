@@ -21,9 +21,11 @@ end
 
 function event_timer(e)
 	if e.timer == "Patrol" then
+		-- The Perl source starts grid 11 here; the conversion dropped it.
+		eq.start(11)
 		eq.stop_timer("Patrol")
 		eq.set_timer("ZoneTime", 60000)
-	elseif e.timer == "ZoneTime" then
+	elseif e.timer == "ZoneTime" and eq.get_zone_time().zone_hour == 6 then
 		eq.unique_spawn(84277, 0, 0, 2268, -2828, -74.8, 475)
 		eq.stop_timer("ZoneTime")
 		eq.depop()

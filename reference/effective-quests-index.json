@@ -5221,7 +5221,7 @@
     "id": 19372,
     "enabled": 1,
     "file": "effective/quests/airplane/Gwan.lua",
-    "sha256": "af06155c09c144c27a9bf65094c9b2f281c807529447dc3062b264fdad0f8dba",
+    "sha256": "b56bf7a768e69674df4494a50e9c40b50dada82d7d96e265fe50c4fe9b142b5a",
     "preferredSource": "maintained/lua/modified-upstream/airplane/Gwan.lua",
     "candidates": [
       {
@@ -5231,7 +5231,7 @@
       },
       {
         "file": "maintained/lua/modified-upstream/airplane/Gwan.lua",
-        "sha256": "af06155c09c144c27a9bf65094c9b2f281c807529447dc3062b264fdad0f8dba",
+        "sha256": "b56bf7a768e69674df4494a50e9c40b50dada82d7d96e265fe50c4fe9b142b5a",
         "maintained": true
       }
     ],
@@ -9406,7 +9406,7 @@
     "id": 15935,
     "enabled": 1,
     "file": "effective/quests/burningwood/Telin_Darkforest.lua",
-    "sha256": "1a6b0347eb204c416fcee0e170eda2980b7310c6731726380171281098bcbb92",
+    "sha256": "ea43ff6efe7e49646b9277af42743ec7a936713e33a1373348de1df61f80bf1a",
     "preferredSource": "maintained/lua/modified-upstream/burningwood/Telin_Darkforest.lua",
     "candidates": [
       {
@@ -9416,7 +9416,7 @@
       },
       {
         "file": "maintained/lua/modified-upstream/burningwood/Telin_Darkforest.lua",
-        "sha256": "1a6b0347eb204c416fcee0e170eda2980b7310c6731726380171281098bcbb92",
+        "sha256": "ea43ff6efe7e49646b9277af42743ec7a936713e33a1373348de1df61f80bf1a",
         "maintained": true
       }
     ],
@@ -9441,7 +9441,7 @@
   {
     "key": "butcher/#Translocator_Fithop",
     "id": 18266,
-    "enabled": 1,
+    "enabled": 0,
     "file": "effective/quests/butcher/%23Translocator_Fithop.lua",
     "sha256": "8a84910b1f04d42999140ced7e9904da4093666b706ce3790ae199b40b6574ba",
     "preferredSource": "sources/projecteq/butcher/#Translocator_Fithop.lua",
@@ -9457,7 +9457,7 @@
   {
     "key": "butcher/#Translocator_Gethia",
     "id": 18086,
-    "enabled": 1,
+    "enabled": 0,
     "file": "effective/quests/butcher/%23Translocator_Gethia.lua",
     "sha256": "9f60c55eb999f31426e6bc8a3922977a56a7dd090054b6c519a5fc06540130c3",
     "preferredSource": "sources/projecteq/butcher/#Translocator_Gethia.lua",
@@ -9473,7 +9473,7 @@
   {
     "key": "butcher/#Translocator_Stumpeh",
     "id": 11925,
-    "enabled": 1,
+    "enabled": 0,
     "file": "effective/quests/butcher/%23Translocator_Stumpeh.lua",
     "sha256": "c3c76fcf16088b58b86ae8a63c2c9b8a580e3e762eb1d345f78ecf9094803610",
     "preferredSource": "sources/projecteq/butcher/#Translocator_Stumpeh.lua",
@@ -14013,20 +14013,32 @@
     "id": 17288,
     "enabled": 1,
     "file": "effective/quests/cobaltscar/an_outcast_siren.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "159424898d3cb176cf343c3bb4c15b5ea414340676846862538eee72c97b90ec",
+    "preferredSource": "maintained/lua/converted-perl/cobaltscar/an_outcast_siren.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/cobaltscar/an_outcast_siren.lua",
+        "sha256": "159424898d3cb176cf343c3bb4c15b5ea414340676846862538eee72c97b90ec",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "cobaltscar/Bloogy_Shellcracker",
     "id": 13197,
     "enabled": 1,
     "file": "effective/quests/cobaltscar/Bloogy_Shellcracker.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "9b2fce7ff9a34e7f8f0adcb32a4c4ba776cdb14fce5ebcce524326cc2088d901",
+    "preferredSource": "maintained/lua/converted-perl/cobaltscar/Bloogy_Shellcracker.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/cobaltscar/Bloogy_Shellcracker.lua",
+        "sha256": "9b2fce7ff9a34e7f8f0adcb32a4c4ba776cdb14fce5ebcce524326cc2088d901",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "cobaltscar/Blumblum_Swigwater",
@@ -14049,10 +14061,16 @@
     "id": 17269,
     "enabled": 1,
     "file": "effective/quests/cobaltscar/Bungre_Crawcrusher.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "cc231ba31567f077b14528e4a4451bf56f010c6f5259bed0cfa61e62c267e28c",
+    "preferredSource": "maintained/lua/converted-perl/cobaltscar/Bungre_Crawcrusher.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/cobaltscar/Bungre_Crawcrusher.lua",
+        "sha256": "cc231ba31567f077b14528e4a4451bf56f010c6f5259bed0cfa61e62c267e28c",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "cobaltscar/Cedrick",
@@ -14069,10 +14087,16 @@
     "id": 17588,
     "enabled": 1,
     "file": "effective/quests/cobaltscar/Chief_Kalan.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "0c3268dd77bcaa6159d934442d2027d944d039d1768f95aaf63d496065c68996",
+    "preferredSource": "maintained/lua/converted-perl/cobaltscar/Chief_Kalan.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/cobaltscar/Chief_Kalan.lua",
+        "sha256": "0c3268dd77bcaa6159d934442d2027d944d039d1768f95aaf63d496065c68996",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "cobaltscar/Darting_Shark",
@@ -14123,12 +14147,18 @@
   {
     "key": "cobaltscar/Qarrgy_Scallopgobbler",
     "id": 14028,
-    "enabled": 0,
+    "enabled": 1,
     "file": "effective/quests/cobaltscar/Qarrgy_Scallopgobbler.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "ac4bbf3351023d92653242a9504e7d36d2ee308cc36354e6f6ff1d88ce1d5c08",
+    "preferredSource": "maintained/lua/converted-perl/cobaltscar/Qarrgy_Scallopgobbler.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/cobaltscar/Qarrgy_Scallopgobbler.lua",
+        "sha256": "ac4bbf3351023d92653242a9504e7d36d2ee308cc36354e6f6ff1d88ce1d5c08",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "cobaltscar/Yoppa_Greenthumb",
@@ -20310,7 +20340,7 @@
   {
     "key": "eastwastes/#Translocator_Kurione",
     "id": 14302,
-    "enabled": 1,
+    "enabled": 0,
     "file": "effective/quests/eastwastes/%23Translocator_Kurione.lua",
     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "preferredSource": null,
@@ -20584,10 +20614,16 @@
     "id": 14540,
     "enabled": 1,
     "file": "effective/quests/eastwastes/Fjloaren_Icebane.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "32248eeea5758f4b194a9ce3d7eae0b7cee949ee3723de12265ade6372b9b357",
+    "preferredSource": "maintained/lua/converted-perl/eastwastes/Fjloaren_Icebane.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/eastwastes/Fjloaren_Icebane.lua",
+        "sha256": "32248eeea5758f4b194a9ce3d7eae0b7cee949ee3723de12265ade6372b9b357",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "eastwastes/Garadain_Glacierbane",
@@ -20608,12 +20644,18 @@
   {
     "key": "eastwastes/Garath_the_Trader",
     "id": 19560,
-    "enabled": 0,
+    "enabled": 1,
     "file": "effective/quests/eastwastes/Garath_the_Trader.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "b794e948ef67be2a7043635848bfc22b05dc019cc7397f629104874bd282d7dc",
+    "preferredSource": "maintained/lua/converted-perl/eastwastes/Garath_the_Trader.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/eastwastes/Garath_the_Trader.lua",
+        "sha256": "b794e948ef67be2a7043635848bfc22b05dc019cc7397f629104874bd282d7dc",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "eastwastes/Gloradin_Coldheart",
@@ -23052,7 +23094,7 @@
   {
     "key": "erudnext/#Translocator_Eniela",
     "id": 14678,
-    "enabled": 1,
+    "enabled": 0,
     "file": "effective/quests/erudnext/%23Translocator_Eniela.lua",
     "sha256": "4995408b68d5197c5fa58917db418b1e207e4ca2037580f18a79454721c1a38a",
     "preferredSource": "sources/projecteq/erudnext/#Translocator_Eniela.lua",
@@ -24104,7 +24146,7 @@
   {
     "key": "erudsxing/#Translocator_Jempar",
     "id": 19280,
-    "enabled": 1,
+    "enabled": 0,
     "file": "effective/quests/erudsxing/%23Translocator_Jempar.lua",
     "sha256": "aec71de8197685262d73d0cb85ffcc8379dfdd60e4ca34547c4eddac4bede8f1",
     "preferredSource": "sources/projecteq/erudsxing/#Translocator_Jempar.lua",
@@ -26951,7 +26993,7 @@
   {
     "key": "firiona/#Translocator_Drabilt",
     "id": 14330,
-    "enabled": 1,
+    "enabled": 0,
     "file": "effective/quests/firiona/%23Translocator_Drabilt.lua",
     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "preferredSource": null,
@@ -27330,12 +27372,12 @@
     "id": 15244,
     "enabled": 1,
     "file": "effective/quests/firiona/Hero_Goxnok.lua",
-    "sha256": "36975670f73dbd980bb8889b51cb704de8207c9e01054a120cfa57edda6f09bc",
+    "sha256": "f179361ef3ac78a505e61f18c49a737f4b694766942d0cfe7ae514ddd782571d",
     "preferredSource": "maintained/lua/converted-perl/firiona/Hero_Goxnok.lua",
     "candidates": [
       {
         "file": "maintained/lua/converted-perl/firiona/Hero_Goxnok.lua",
-        "sha256": "36975670f73dbd980bb8889b51cb704de8207c9e01054a120cfa57edda6f09bc",
+        "sha256": "f179361ef3ac78a505e61f18c49a737f4b694766942d0cfe7ae514ddd782571d",
         "maintained": true
       }
     ],
@@ -27628,12 +27670,12 @@
     "id": 17277,
     "enabled": 1,
     "file": "effective/quests/firiona/Tracker_Azeal_.lua",
-    "sha256": "fcb3dc9c6c1cb6452e219ea9f665f0090f39fcd94db3e952c8ba27bb50fcb828",
+    "sha256": "12bd1c486c2b59fedb53ed3ae71d9718858fa75cddd1a4d188baa5014865bbae",
     "preferredSource": "maintained/lua/converted-perl/firiona/Tracker_Azeal_.lua",
     "candidates": [
       {
         "file": "maintained/lua/converted-perl/firiona/Tracker_Azeal_.lua",
-        "sha256": "fcb3dc9c6c1cb6452e219ea9f665f0090f39fcd94db3e952c8ba27bb50fcb828",
+        "sha256": "12bd1c486c2b59fedb53ed3ae71d9718858fa75cddd1a4d188baa5014865bbae",
         "maintained": true
       }
     ],
@@ -27678,7 +27720,7 @@
   {
     "key": "freeporteast/#Translocator_Setikan",
     "id": 14951,
-    "enabled": 1,
+    "enabled": 0,
     "file": "effective/quests/freeporteast/%23Translocator_Setikan.lua",
     "sha256": "655ee0c10a594bf1ff85a3a7b16d9ced8acdcc020565164c1ca79c0fe330a237",
     "preferredSource": "sources/projecteq/freeporteast/#Translocator_Setikan.lua",
@@ -30528,7 +30570,7 @@
   {
     "key": "freporte/#Translocator_Setikan",
     "id": 18429,
-    "enabled": 1,
+    "enabled": 0,
     "file": "effective/quests/freporte/%23Translocator_Setikan.lua",
     "sha256": "655ee0c10a594bf1ff85a3a7b16d9ced8acdcc020565164c1ca79c0fe330a237",
     "preferredSource": "sources/projecteq/freporte/#Translocator_Setikan.lua",
@@ -33802,30 +33844,48 @@
     "id": 13136,
     "enabled": 1,
     "file": "effective/quests/frozenshadow/%23a_ghostly_student.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "084e6035fc5512b2623ec7929997d2035af9ed71299c072ab62d9fb2aaa44611",
+    "preferredSource": "maintained/lua/converted-perl/frozenshadow/#a_ghostly_student.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/frozenshadow/#a_ghostly_student.lua",
+        "sha256": "084e6035fc5512b2623ec7929997d2035af9ed71299c072ab62d9fb2aaa44611",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "frozenshadow/#a_shadowbone",
     "id": 14014,
     "enabled": 1,
     "file": "effective/quests/frozenshadow/%23a_shadowbone.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "d06d106bd18e07e15dc4852d99ddca15fd7180570680a3851f4111c019860a9b",
+    "preferredSource": "maintained/lua/converted-perl/frozenshadow/#a_shadowbone.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/frozenshadow/#a_shadowbone.lua",
+        "sha256": "d06d106bd18e07e15dc4852d99ddca15fd7180570680a3851f4111c019860a9b",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "frozenshadow/#a_shrouded_bat",
     "id": 12623,
     "enabled": 1,
     "file": "effective/quests/frozenshadow/%23a_shrouded_bat.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "c359d34d5e52c141d253b3d41681896a828fc4282ecd523368391c24d4cf5cf7",
+    "preferredSource": "maintained/lua/converted-perl/frozenshadow/#a_shrouded_bat.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/frozenshadow/#a_shrouded_bat.lua",
+        "sha256": "c359d34d5e52c141d253b3d41681896a828fc4282ecd523368391c24d4cf5cf7",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "frozenshadow/#Advisor_Svartmane",
@@ -33848,10 +33908,16 @@
     "id": 19344,
     "enabled": 1,
     "file": "effective/quests/frozenshadow/%23Amontehepna.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "4b13adc64375eb2bb4bccbec633a6785f983905bd053e45765ba106dca6cb5e4",
+    "preferredSource": "maintained/lua/converted-perl/frozenshadow/#Amontehepna.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/frozenshadow/#Amontehepna.lua",
+        "sha256": "4b13adc64375eb2bb4bccbec633a6785f983905bd053e45765ba106dca6cb5e4",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "frozenshadow/#an_enraged_vampire",
@@ -33868,20 +33934,32 @@
     "id": 12592,
     "enabled": 1,
     "file": "effective/quests/frozenshadow/%23an_ice_shade.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "03f8c66e7ad6b3c9cdd8e16ed1669e0910f654f66f9dcad9bc75b20098e7376d",
+    "preferredSource": "maintained/lua/converted-perl/frozenshadow/#an_ice_shade.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/frozenshadow/#an_ice_shade.lua",
+        "sha256": "03f8c66e7ad6b3c9cdd8e16ed1669e0910f654f66f9dcad9bc75b20098e7376d",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "frozenshadow/#an_undead_usher",
     "id": 14526,
     "enabled": 1,
     "file": "effective/quests/frozenshadow/%23an_undead_usher.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "e05e2892589e87bc66db258134303665ee7c92e9e67b55bba84e96bef2bbd799",
+    "preferredSource": "maintained/lua/converted-perl/frozenshadow/#an_undead_usher.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/frozenshadow/#an_undead_usher.lua",
+        "sha256": "e05e2892589e87bc66db258134303665ee7c92e9e67b55bba84e96bef2bbd799",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "frozenshadow/#Cara_Omica",
@@ -33898,10 +33976,16 @@
     "id": 13674,
     "enabled": 1,
     "file": "effective/quests/frozenshadow/%23Incoherent_spirit.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "950049511d4fe091431fe5a6c7fb5fcb8e2b59c4a8462cc24fe4fb67d2cbcf07",
+    "preferredSource": "maintained/lua/converted-perl/frozenshadow/#Incoherent_spirit.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/frozenshadow/#Incoherent_spirit.lua",
+        "sha256": "950049511d4fe091431fe5a6c7fb5fcb8e2b59c4a8462cc24fe4fb67d2cbcf07",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "frozenshadow/111154",
@@ -33918,40 +34002,64 @@
     "id": 17970,
     "enabled": 1,
     "file": "effective/quests/frozenshadow/a_ghostly_scholar.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "cc30bce8eea91e86b44f83e03eabfc9659111599b892f67d26c8ba5460616b4b",
+    "preferredSource": "maintained/lua/converted-perl/frozenshadow/a_ghostly_scholar.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/frozenshadow/a_ghostly_scholar.lua",
+        "sha256": "cc30bce8eea91e86b44f83e03eabfc9659111599b892f67d26c8ba5460616b4b",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "frozenshadow/a_ghostly_student",
     "id": 12942,
     "enabled": 1,
     "file": "effective/quests/frozenshadow/a_ghostly_student.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "72697eaba06dfe0edf8a5d9f4492082655193e3a5b662c49c1465decda797726",
+    "preferredSource": "maintained/lua/converted-perl/frozenshadow/a_ghostly_student.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/frozenshadow/a_ghostly_student.lua",
+        "sha256": "72697eaba06dfe0edf8a5d9f4492082655193e3a5b662c49c1465decda797726",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "frozenshadow/a_ghostly_teacher",
     "id": 18735,
     "enabled": 1,
     "file": "effective/quests/frozenshadow/a_ghostly_teacher.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "72208101fa7410df4ac541011c54573a2681d9db6815670be3fef3b14f93c97c",
+    "preferredSource": "maintained/lua/converted-perl/frozenshadow/a_ghostly_teacher.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/frozenshadow/a_ghostly_teacher.lua",
+        "sha256": "72208101fa7410df4ac541011c54573a2681d9db6815670be3fef3b14f93c97c",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "frozenshadow/a_golem_usher",
     "id": 18616,
     "enabled": 1,
     "file": "effective/quests/frozenshadow/a_golem_usher.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "a368b63f45b829e3d3bc69fae28f598cd7631a8da548010410c6d5966fd1d4f4",
+    "preferredSource": "maintained/lua/converted-perl/frozenshadow/a_golem_usher.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/frozenshadow/a_golem_usher.lua",
+        "sha256": "a368b63f45b829e3d3bc69fae28f598cd7631a8da548010410c6d5966fd1d4f4",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "frozenshadow/a_haunting_voice",
@@ -33968,70 +34076,144 @@
     "id": 15896,
     "enabled": 1,
     "file": "effective/quests/frozenshadow/a_shadow_beast.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "d562c3fecf75cd50a8bcd125cfedc34c942babd87333b1cff970a4147b5fb6d0",
+    "preferredSource": "maintained/lua/converted-perl/frozenshadow/a_shadow_beast.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/frozenshadow/a_shadow_beast.lua",
+        "sha256": "d562c3fecf75cd50a8bcd125cfedc34c942babd87333b1cff970a4147b5fb6d0",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "frozenshadow/a_shadow_beast_cook",
     "id": 16358,
     "enabled": 1,
     "file": "effective/quests/frozenshadow/a_shadow_beast_cook.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "effb7b9ed88cc0a70aef6627561ec8784691ed957db42e0787657476f66122ee",
+    "preferredSource": "maintained/lua/converted-perl/frozenshadow/a_shadow_beast_cook.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/frozenshadow/a_shadow_beast_cook.lua",
+        "sha256": "effb7b9ed88cc0a70aef6627561ec8784691ed957db42e0787657476f66122ee",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "frozenshadow/a_shadow_beast_servant",
     "id": 17047,
     "enabled": 1,
     "file": "effective/quests/frozenshadow/a_shadow_beast_servant.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "1fa653c15667cfe2bb314bb7d3ab2cc55ca505ff7d5e9c67233eaef583b8b89c",
+    "preferredSource": "maintained/lua/converted-perl/frozenshadow/a_shadow_beast_servant.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/frozenshadow/a_shadow_beast_servant.lua",
+        "sha256": "1fa653c15667cfe2bb314bb7d3ab2cc55ca505ff7d5e9c67233eaef583b8b89c",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "frozenshadow/a_shadowbone",
     "id": 14733,
     "enabled": 1,
     "file": "effective/quests/frozenshadow/a_shadowbone.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "1f88ea8d3ad650470008e7ac781a43e3712420721fe5200b1f286cdce3688b03",
+    "preferredSource": "maintained/lua/converted-perl/frozenshadow/a_shadowbone.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/frozenshadow/a_shadowbone.lua",
+        "sha256": "1f88ea8d3ad650470008e7ac781a43e3712420721fe5200b1f286cdce3688b03",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "frozenshadow/a_shrouded_bat",
     "id": 18472,
     "enabled": 1,
     "file": "effective/quests/frozenshadow/a_shrouded_bat.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "29bfa6a641988a8e52499d99121fb6eeca240ffc92986b825258774e82c4d6ce",
+    "preferredSource": "maintained/lua/converted-perl/frozenshadow/a_shrouded_bat.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/frozenshadow/a_shrouded_bat.lua",
+        "sha256": "29bfa6a641988a8e52499d99121fb6eeca240ffc92986b825258774e82c4d6ce",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
+  },
+  {
+    "key": "frozenshadow/a_skeleton_sleeper",
+    "id": 238980,
+    "enabled": 1,
+    "file": "effective/quests/frozenshadow/a_skeleton_sleeper.lua",
+    "sha256": "396a62bf0ffffc6ec571b86c18e2f6a5f8ffa782e9562bbaa203b0629f5f7524",
+    "preferredSource": "maintained/lua/idlequest-authored/frozenshadow/a_skeleton_sleeper.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/idlequest-authored/frozenshadow/a_skeleton_sleeper.lua",
+        "sha256": "396a62bf0ffffc6ec571b86c18e2f6a5f8ffa782e9562bbaa203b0629f5f7524",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "frozenshadow/a_zombie_butler",
     "id": 14257,
     "enabled": 1,
     "file": "effective/quests/frozenshadow/a_zombie_butler.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "4602be0fd01ecba8cbc182936f963cae381b12988413c1592758cc9eea4e60e6",
+    "preferredSource": "maintained/lua/converted-perl/frozenshadow/a_zombie_butler.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/frozenshadow/a_zombie_butler.lua",
+        "sha256": "4602be0fd01ecba8cbc182936f963cae381b12988413c1592758cc9eea4e60e6",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "frozenshadow/a_zombie_maid",
     "id": 12694,
     "enabled": 1,
     "file": "effective/quests/frozenshadow/a_zombie_maid.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "3081dbdf012c16b8c935cd6fc0d8a1d905963db9dc514b4eaa4b314077ad2a6e",
+    "preferredSource": "maintained/lua/converted-perl/frozenshadow/a_zombie_maid.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/frozenshadow/a_zombie_maid.lua",
+        "sha256": "3081dbdf012c16b8c935cd6fc0d8a1d905963db9dc514b4eaa4b314077ad2a6e",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
+  },
+  {
+    "key": "frozenshadow/an_armored_shadow",
+    "id": 238983,
+    "enabled": 1,
+    "file": "effective/quests/frozenshadow/an_armored_shadow.lua",
+    "sha256": "126d9df55a6e1c385eac9fdc5d3706526891ed8da4fb3263de7b7f8b54c52c3e",
+    "preferredSource": "maintained/lua/idlequest-authored/frozenshadow/an_armored_shadow.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/idlequest-authored/frozenshadow/an_armored_shadow.lua",
+        "sha256": "126d9df55a6e1c385eac9fdc5d3706526891ed8da4fb3263de7b7f8b54c52c3e",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "frozenshadow/an_enraged_vampire",
@@ -34048,100 +34230,160 @@
     "id": 19316,
     "enabled": 1,
     "file": "effective/quests/frozenshadow/an_undead_bridesmaid.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "fa34b19e77e638bba3cc6adde59ca5db7e8d32727017b9d55a06f4190afa1582",
+    "preferredSource": "maintained/lua/converted-perl/frozenshadow/an_undead_bridesmaid.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/frozenshadow/an_undead_bridesmaid.lua",
+        "sha256": "fa34b19e77e638bba3cc6adde59ca5db7e8d32727017b9d55a06f4190afa1582",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "frozenshadow/an_undead_dancer",
     "id": 16631,
     "enabled": 1,
     "file": "effective/quests/frozenshadow/an_undead_dancer.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "99edeab7f69b81e7d909cec704bd56f620b5cbb4c79337688f48b0e229dd105e",
+    "preferredSource": "maintained/lua/converted-perl/frozenshadow/an_undead_dancer.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/frozenshadow/an_undead_dancer.lua",
+        "sha256": "99edeab7f69b81e7d909cec704bd56f620b5cbb4c79337688f48b0e229dd105e",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "frozenshadow/an_undead_musician",
     "id": 13579,
     "enabled": 1,
     "file": "effective/quests/frozenshadow/an_undead_musician.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "ca85bf0274815dec30feb95de9ca5ad9c033bb8179a518423bbf677150f74ba1",
+    "preferredSource": "maintained/lua/converted-perl/frozenshadow/an_undead_musician.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/frozenshadow/an_undead_musician.lua",
+        "sha256": "ca85bf0274815dec30feb95de9ca5ad9c033bb8179a518423bbf677150f74ba1",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "frozenshadow/Daman",
     "id": 17720,
     "enabled": 1,
     "file": "effective/quests/frozenshadow/Daman.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "a86fca089f0769d114151cb66158efcc2d522e52a562df893c18ccfc118f901e",
+    "preferredSource": "maintained/lua/converted-perl/frozenshadow/Daman.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/frozenshadow/Daman.lua",
+        "sha256": "a86fca089f0769d114151cb66158efcc2d522e52a562df893c18ccfc118f901e",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "frozenshadow/Eugie",
     "id": 12688,
     "enabled": 1,
     "file": "effective/quests/frozenshadow/Eugie.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "056425d7f60af3d11d60d0e0685dfe3ceddec20f694d2b981ab77dbcdb46c7a1",
+    "preferredSource": "maintained/lua/converted-perl/frozenshadow/Eugie.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/frozenshadow/Eugie.lua",
+        "sha256": "056425d7f60af3d11d60d0e0685dfe3ceddec20f694d2b981ab77dbcdb46c7a1",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "frozenshadow/Isopca",
     "id": 12833,
     "enabled": 1,
     "file": "effective/quests/frozenshadow/Isopca.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "f88b4768116d3605563d6ab65f6ed73009ea834493cc0939527be5a9f2d4ca66",
+    "preferredSource": "maintained/lua/converted-perl/frozenshadow/Isopca.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/frozenshadow/Isopca.lua",
+        "sha256": "f88b4768116d3605563d6ab65f6ed73009ea834493cc0939527be5a9f2d4ca66",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "frozenshadow/Lerty",
     "id": 17676,
     "enabled": 1,
     "file": "effective/quests/frozenshadow/Lerty.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "8690cb8ae952348be0bd0eef1ef383741631338ca47dd5ef4d0d3af8cb4ffa36",
+    "preferredSource": "maintained/lua/converted-perl/frozenshadow/Lerty.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/frozenshadow/Lerty.lua",
+        "sha256": "8690cb8ae952348be0bd0eef1ef383741631338ca47dd5ef4d0d3af8cb4ffa36",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "frozenshadow/Librarian",
     "id": 17432,
     "enabled": 1,
     "file": "effective/quests/frozenshadow/Librarian.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "d6291409623a8b2f1245a6594595208a9d92e9ade8eb52475f9eb7838a73a194",
+    "preferredSource": "maintained/lua/converted-perl/frozenshadow/Librarian.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/frozenshadow/Librarian.lua",
+        "sha256": "d6291409623a8b2f1245a6594595208a9d92e9ade8eb52475f9eb7838a73a194",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "frozenshadow/Librarian_assistant",
     "id": 13250,
     "enabled": 1,
     "file": "effective/quests/frozenshadow/Librarian_assistant.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "6076977a1bf3c8a0e87f204558d386407c432ca268390253ffbeddb5cee45d4d",
+    "preferredSource": "maintained/lua/converted-perl/frozenshadow/Librarian_assistant.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/frozenshadow/Librarian_assistant.lua",
+        "sha256": "6076977a1bf3c8a0e87f204558d386407c432ca268390253ffbeddb5cee45d4d",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "frozenshadow/lucid_spirit_of_Abrams",
     "id": 16905,
     "enabled": 1,
     "file": "effective/quests/frozenshadow/lucid_spirit_of_Abrams.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "81fb7520589f4c95c910242c8fbadec7e597cc6057158dfc82a60c214aeb1432",
+    "preferredSource": "maintained/lua/converted-perl/frozenshadow/lucid_spirit_of_Abrams.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/frozenshadow/lucid_spirit_of_Abrams.lua",
+        "sha256": "81fb7520589f4c95c910242c8fbadec7e597cc6057158dfc82a60c214aeb1432",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "frozenshadow/Mirror_Reflection",
@@ -34164,30 +34406,48 @@
     "id": 17772,
     "enabled": 1,
     "file": "effective/quests/frozenshadow/Nosja.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "ee651bac2c8b35ead589b3e768fe86daade73994473127cec2baac15dc8ae722",
+    "preferredSource": "maintained/lua/converted-perl/frozenshadow/Nosja.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/frozenshadow/Nosja.lua",
+        "sha256": "ee651bac2c8b35ead589b3e768fe86daade73994473127cec2baac15dc8ae722",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "frozenshadow/Otdd",
     "id": 15278,
     "enabled": 1,
     "file": "effective/quests/frozenshadow/Otdd.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "04f4b19871e9088b0b20c76a1b4cdacd16d879e61e0fcc2d5b7895be62a166a0",
+    "preferredSource": "maintained/lua/converted-perl/frozenshadow/Otdd.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/frozenshadow/Otdd.lua",
+        "sha256": "04f4b19871e9088b0b20c76a1b4cdacd16d879e61e0fcc2d5b7895be62a166a0",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "frozenshadow/Pelpa",
     "id": 15268,
     "enabled": 1,
     "file": "effective/quests/frozenshadow/Pelpa.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "3f06deb149e78009906e2951d70294e84266f5d5ae87aeb7b99fbfe0917273bc",
+    "preferredSource": "maintained/lua/converted-perl/frozenshadow/Pelpa.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/frozenshadow/Pelpa.lua",
+        "sha256": "3f06deb149e78009906e2951d70294e84266f5d5ae87aeb7b99fbfe0917273bc",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "frozenshadow/player",
@@ -34210,60 +34470,96 @@
     "id": 15833,
     "enabled": 1,
     "file": "effective/quests/frozenshadow/Priest_Majes_Medory.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "6503caf3f5ab16ec8849fe92b801e47b1fea16a08c70713a1278c7957a6d2fa3",
+    "preferredSource": "maintained/lua/converted-perl/frozenshadow/Priest_Majes_Medory.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/frozenshadow/Priest_Majes_Medory.lua",
+        "sha256": "6503caf3f5ab16ec8849fe92b801e47b1fea16a08c70713a1278c7957a6d2fa3",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "frozenshadow/Tihgren",
     "id": 15869,
     "enabled": 1,
     "file": "effective/quests/frozenshadow/Tihgren.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "7fcccda153d6a604a662322eab2846789970ca2e2a50c736786bebc6eb37b804",
+    "preferredSource": "maintained/lua/converted-perl/frozenshadow/Tihgren.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/frozenshadow/Tihgren.lua",
+        "sha256": "7fcccda153d6a604a662322eab2846789970ca2e2a50c736786bebc6eb37b804",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "frozenshadow/Uenlarc",
     "id": 12414,
     "enabled": 1,
     "file": "effective/quests/frozenshadow/Uenlarc.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "909dacb8b0b89b62cb0fe12c577963051ccafb0acf6366539dac0a0f08f36130",
+    "preferredSource": "maintained/lua/converted-perl/frozenshadow/Uenlarc.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/frozenshadow/Uenlarc.lua",
+        "sha256": "909dacb8b0b89b62cb0fe12c577963051ccafb0acf6366539dac0a0f08f36130",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "frozenshadow/Varjie",
     "id": 16371,
     "enabled": 1,
     "file": "effective/quests/frozenshadow/Varjie.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "6c30071cae64620a855afef85c85f295b753753386af8ea07cda2fddf3e8df82",
+    "preferredSource": "maintained/lua/converted-perl/frozenshadow/Varjie.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/frozenshadow/Varjie.lua",
+        "sha256": "6c30071cae64620a855afef85c85f295b753753386af8ea07cda2fddf3e8df82",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "frozenshadow/Voknya",
     "id": 12615,
     "enabled": 1,
     "file": "effective/quests/frozenshadow/Voknya.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "b7a59c80bb6721ec80d49efec99ed7371f27be05bdb5e8efe52b076e351f5049",
+    "preferredSource": "maintained/lua/converted-perl/frozenshadow/Voknya.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/frozenshadow/Voknya.lua",
+        "sha256": "b7a59c80bb6721ec80d49efec99ed7371f27be05bdb5e8efe52b076e351f5049",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "frozenshadow/Vyakna",
     "id": 16732,
     "enabled": 1,
     "file": "effective/quests/frozenshadow/Vyakna.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "109b30d7d4fb902cdec998d2467bf55bd8c46987427e14c133ad06d150427e89",
+    "preferredSource": "maintained/lua/converted-perl/frozenshadow/Vyakna.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/frozenshadow/Vyakna.lua",
+        "sha256": "109b30d7d4fb902cdec998d2467bf55bd8c46987427e14c133ad06d150427e89",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "frozenshadow/You_",
@@ -36708,30 +37004,48 @@
     "id": 19271,
     "enabled": 1,
     "file": "effective/quests/greatdivide/Bekerak_Coldbones.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "2e84ba4a8f6e563fe0289d6d2571320cacc87562916b3f31d5525cd4cce63bca",
+    "preferredSource": "maintained/lua/converted-perl/greatdivide/Bekerak_Coldbones.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/greatdivide/Bekerak_Coldbones.lua",
+        "sha256": "2e84ba4a8f6e563fe0289d6d2571320cacc87562916b3f31d5525cd4cce63bca",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "greatdivide/Bloodmaw",
     "id": 16721,
     "enabled": 1,
     "file": "effective/quests/greatdivide/Bloodmaw.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "f9c8f83e9a7e2cd869580ccaaf4dc3cea1565ad5797051cef7aee4dbca8ca3b4",
+    "preferredSource": "maintained/lua/converted-perl/greatdivide/Bloodmaw.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/greatdivide/Bloodmaw.lua",
+        "sha256": "f9c8f83e9a7e2cd869580ccaaf4dc3cea1565ad5797051cef7aee4dbca8ca3b4",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "greatdivide/bloody_gnome_captive",
     "id": 16126,
     "enabled": 1,
     "file": "effective/quests/greatdivide/bloody_gnome_captive.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "7ac5245ebb67c0b87690043e96c6e271a34dd7e77e1a91307e937d4949e87636",
+    "preferredSource": "maintained/lua/converted-perl/greatdivide/bloody_gnome_captive.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/greatdivide/bloody_gnome_captive.lua",
+        "sha256": "7ac5245ebb67c0b87690043e96c6e271a34dd7e77e1a91307e937d4949e87636",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "greatdivide/Coldain_War_Controller",
@@ -36798,12 +37112,18 @@
   {
     "key": "greatdivide/Relik",
     "id": 12395,
-    "enabled": 0,
+    "enabled": 1,
     "file": "effective/quests/greatdivide/Relik.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "cb3f17b92441b789ca820f946f6782795dfa2faaf61b24475817ab5390eb526b",
+    "preferredSource": "maintained/lua/converted-perl/greatdivide/Relik.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/greatdivide/Relik.lua",
+        "sha256": "cb3f17b92441b789ca820f946f6782795dfa2faaf61b24475817ab5390eb526b",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "greatdivide/script_init",
@@ -38372,7 +38692,7 @@
     "id": 19378,
     "enabled": 1,
     "file": "effective/quests/growthplane/Ail_the_Elder.lua",
-    "sha256": "4ee12b68b7181a93bb7095d147735d26defa7182d7723aec15483e5895aac903",
+    "sha256": "5b4d4f9e4f693cb89ee523be2c3682dc0beb41996f553bba5dbbb0a2c4f25a63",
     "preferredSource": "maintained/lua/modified-upstream/growthplane/Ail_the_Elder.lua",
     "candidates": [
       {
@@ -38382,7 +38702,7 @@
       },
       {
         "file": "maintained/lua/modified-upstream/growthplane/Ail_the_Elder.lua",
-        "sha256": "4ee12b68b7181a93bb7095d147735d26defa7182d7723aec15483e5895aac903",
+        "sha256": "5b4d4f9e4f693cb89ee523be2c3682dc0beb41996f553bba5dbbb0a2c4f25a63",
         "maintained": true
       }
     ],
@@ -38510,7 +38830,7 @@
     "id": 17306,
     "enabled": 1,
     "file": "effective/quests/growthplane/Fayl_Everstrong.lua",
-    "sha256": "81c935c118a7d45f24724b46a7b101e59f528304d9d5b0cc65b742ca17364c43",
+    "sha256": "51bb86fd1b6ba94cc39ffa3ac72deb4b3e156daf2b83ecbe924c9a9e163adc2a",
     "preferredSource": "maintained/lua/modified-upstream/growthplane/Fayl_Everstrong.lua",
     "candidates": [
       {
@@ -38520,7 +38840,7 @@
       },
       {
         "file": "maintained/lua/modified-upstream/growthplane/Fayl_Everstrong.lua",
-        "sha256": "81c935c118a7d45f24724b46a7b101e59f528304d9d5b0cc65b742ca17364c43",
+        "sha256": "51bb86fd1b6ba94cc39ffa3ac72deb4b3e156daf2b83ecbe924c9a9e163adc2a",
         "maintained": true
       }
     ],
@@ -38594,7 +38914,7 @@
     "id": 14305,
     "enabled": 1,
     "file": "effective/quests/growthplane/keeper_of_the_glades.lua",
-    "sha256": "dcf3ca78ad4beb4633a0e1a88519d0b2d13508f4959df9844b901e6cf50bfa37",
+    "sha256": "0dd8e3709a90136d193b7573c571a272969b173eeb9dfd084672233ccc50443c",
     "preferredSource": "maintained/lua/modified-upstream/growthplane/keeper_of_the_glades.lua",
     "candidates": [
       {
@@ -38604,7 +38924,7 @@
       },
       {
         "file": "maintained/lua/modified-upstream/growthplane/keeper_of_the_glades.lua",
-        "sha256": "dcf3ca78ad4beb4633a0e1a88519d0b2d13508f4959df9844b901e6cf50bfa37",
+        "sha256": "0dd8e3709a90136d193b7573c571a272969b173eeb9dfd084672233ccc50443c",
         "maintained": true
       }
     ],
@@ -38673,7 +38993,7 @@
     "id": 18850,
     "enabled": 1,
     "file": "effective/quests/growthplane/Rumbleroot.lua",
-    "sha256": "8d5dd3413872b61a1f01bd1fd95051022326b4e07bf6c03b7baeb0869023604c",
+    "sha256": "6fc4852d80cfd4930ecf2f31e600269462be3a35d0d45ebbec6dcc4ea84e7c14",
     "preferredSource": "maintained/lua/modified-upstream/growthplane/Rumbleroot.lua",
     "candidates": [
       {
@@ -38683,7 +39003,7 @@
       },
       {
         "file": "maintained/lua/modified-upstream/growthplane/Rumbleroot.lua",
-        "sha256": "8d5dd3413872b61a1f01bd1fd95051022326b4e07bf6c03b7baeb0869023604c",
+        "sha256": "6fc4852d80cfd4930ecf2f31e600269462be3a35d0d45ebbec6dcc4ea84e7c14",
         "maintained": true
       }
     ],
@@ -38710,7 +39030,7 @@
     "id": 17649,
     "enabled": 1,
     "file": "effective/quests/growthplane/Treah_Greenroot.lua",
-    "sha256": "d01620136be773f28737ffc87e900040a8928f427afc4227cb2a9cae5020cf3e",
+    "sha256": "9e25924e491e8695a28f02ae26f0f0fe60d7be83f8058281b971758ad5a63460",
     "preferredSource": "maintained/lua/modified-upstream/growthplane/Treah_Greenroot.lua",
     "candidates": [
       {
@@ -38720,7 +39040,7 @@
       },
       {
         "file": "maintained/lua/modified-upstream/growthplane/Treah_Greenroot.lua",
-        "sha256": "d01620136be773f28737ffc87e900040a8928f427afc4227cb2a9cae5020cf3e",
+        "sha256": "9e25924e491e8695a28f02ae26f0f0fe60d7be83f8058281b971758ad5a63460",
         "maintained": true
       }
     ],
@@ -42882,7 +43202,7 @@
     "id": 12821,
     "enabled": 1,
     "file": "effective/quests/highpasshold/Anson_McBale.lua",
-    "sha256": "c85620b8ade8f22583d76a28d3024a8e804a04eb4ce4da6b34b05b80c0a69701",
+    "sha256": "fd92ed6453f91562f22292e519f7b3d4615693f928e660226e4d94b814def8ea",
     "preferredSource": "maintained/lua/modified-upstream/highpasshold/Anson_McBale.lua",
     "candidates": [
       {
@@ -42892,7 +43212,7 @@
       },
       {
         "file": "maintained/lua/modified-upstream/highpasshold/Anson_McBale.lua",
-        "sha256": "c85620b8ade8f22583d76a28d3024a8e804a04eb4ce4da6b34b05b80c0a69701",
+        "sha256": "fd92ed6453f91562f22292e519f7b3d4615693f928e660226e4d94b814def8ea",
         "maintained": true
       }
     ],
@@ -44697,7 +45017,7 @@
   {
     "key": "iceclad/#Translocator_Kurione",
     "id": 16057,
-    "enabled": 1,
+    "enabled": 0,
     "file": "effective/quests/iceclad/%23Translocator_Kurione.lua",
     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "preferredSource": null,
@@ -44735,30 +45055,48 @@
     "id": 17333,
     "enabled": 1,
     "file": "effective/quests/iceclad/a_lost_pirate.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "442b49a0c820b051d8fa6e78523fff61f649fa813ef8bfaf5839c7262f6fd5d3",
+    "preferredSource": "maintained/lua/converted-perl/iceclad/a_lost_pirate.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/iceclad/a_lost_pirate.lua",
+        "sha256": "442b49a0c820b051d8fa6e78523fff61f649fa813ef8bfaf5839c7262f6fd5d3",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "iceclad/Ami",
     "id": 18422,
     "enabled": 1,
     "file": "effective/quests/iceclad/Ami.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "dd54bcaa6801800bc8db0d41297e98ebca1c110f1b4030ca8a26495fa264474b",
+    "preferredSource": "maintained/lua/converted-perl/iceclad/Ami.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/iceclad/Ami.lua",
+        "sha256": "dd54bcaa6801800bc8db0d41297e98ebca1c110f1b4030ca8a26495fa264474b",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "iceclad/an_agitated_snowfang",
     "id": 12679,
     "enabled": 1,
     "file": "effective/quests/iceclad/an_agitated_snowfang.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "0a6d6c840b1a852e5bd226fe3683270954d597458ea75f73169100ceeab7b5a9",
+    "preferredSource": "maintained/lua/converted-perl/iceclad/an_agitated_snowfang.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/iceclad/an_agitated_snowfang.lua",
+        "sha256": "0a6d6c840b1a852e5bd226fe3683270954d597458ea75f73169100ceeab7b5a9",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "iceclad/Avatar_of_Below",
@@ -44775,20 +45113,32 @@
     "id": 19539,
     "enabled": 1,
     "file": "effective/quests/iceclad/Balix_Misteyes.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "79044aee19594c54e66997e836e4d16aca99e11c813403d3188a307fd9c96d95",
+    "preferredSource": "maintained/lua/converted-perl/iceclad/Balix_Misteyes.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/iceclad/Balix_Misteyes.lua",
+        "sha256": "79044aee19594c54e66997e836e4d16aca99e11c813403d3188a307fd9c96d95",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "iceclad/Captain_Nalot",
     "id": 11981,
     "enabled": 1,
     "file": "effective/quests/iceclad/Captain_Nalot.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "bc2042d047f5a2ebdb64742499808472ada3776f607e7d6c053ac7d0b97cb2c5",
+    "preferredSource": "maintained/lua/converted-perl/iceclad/Captain_Nalot.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/iceclad/Captain_Nalot.lua",
+        "sha256": "bc2042d047f5a2ebdb64742499808472ada3776f607e7d6c053ac7d0b97cb2c5",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "iceclad/Commander_Kvarid",
@@ -44815,30 +45165,48 @@
     "id": 12868,
     "enabled": 1,
     "file": "effective/quests/iceclad/Corudoth.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "69be04911ab329d019731d036aafffc0ded42c4986c2033f35d9f2507c17f0a6",
+    "preferredSource": "maintained/lua/converted-perl/iceclad/Corudoth.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/iceclad/Corudoth.lua",
+        "sha256": "69be04911ab329d019731d036aafffc0ded42c4986c2033f35d9f2507c17f0a6",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "iceclad/enraged_walrus",
     "id": 14505,
     "enabled": 1,
     "file": "effective/quests/iceclad/enraged_walrus.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "128eb6597d2666f70629782b5ed292a30d7cd310a699b30b66b485fcab29769d",
+    "preferredSource": "maintained/lua/converted-perl/iceclad/enraged_walrus.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/iceclad/enraged_walrus.lua",
+        "sha256": "128eb6597d2666f70629782b5ed292a30d7cd310a699b30b66b485fcab29769d",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "iceclad/Ergrez_Shortpaw",
     "id": 16581,
-    "enabled": 0,
+    "enabled": 1,
     "file": "effective/quests/iceclad/Ergrez_Shortpaw.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "239b42d778935b5a54244f49df1c1e4bc040ca05281e1843720f8aa6ea9ef99b",
+    "preferredSource": "maintained/lua/converted-perl/iceclad/Ergrez_Shortpaw.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/iceclad/Ergrez_Shortpaw.lua",
+        "sha256": "239b42d778935b5a54244f49df1c1e4bc040ca05281e1843720f8aa6ea9ef99b",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "iceclad/Errgriz",
@@ -44907,20 +45275,32 @@
     "id": 17531,
     "enabled": 1,
     "file": "effective/quests/iceclad/Graktar_Bluehammer.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "50a0ce63bb5c083662d4cfe732ce107eeaf7aa2ae99943a70c17d495b0edfb2a",
+    "preferredSource": "maintained/lua/converted-perl/iceclad/Graktar_Bluehammer.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/iceclad/Graktar_Bluehammer.lua",
+        "sha256": "50a0ce63bb5c083662d4cfe732ce107eeaf7aa2ae99943a70c17d495b0edfb2a",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "iceclad/Grizlin_Bloodfang",
     "id": 18481,
     "enabled": 1,
     "file": "effective/quests/iceclad/Grizlin_Bloodfang.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "adf6010dcac2be29a9a8ebd126c9d35e5007d2647cb95e915ffcf26395b254a8",
+    "preferredSource": "maintained/lua/converted-perl/iceclad/Grizlin_Bloodfang.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/iceclad/Grizlin_Bloodfang.lua",
+        "sha256": "adf6010dcac2be29a9a8ebd126c9d35e5007d2647cb95e915ffcf26395b254a8",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "iceclad/Joshel_the_Large",
@@ -44937,10 +45317,16 @@
     "id": 14262,
     "enabled": 1,
     "file": "effective/quests/iceclad/Keref_Spiritspear.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "1b578c10527da8676f9446533edc6141c48ad3d5ba68fa97e870d74fe9cd064a",
+    "preferredSource": "maintained/lua/converted-perl/iceclad/Keref_Spiritspear.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/iceclad/Keref_Spiritspear.lua",
+        "sha256": "1b578c10527da8676f9446533edc6141c48ad3d5ba68fa97e870d74fe9cd064a",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "iceclad/Lookout_Larithim",
@@ -44973,10 +45359,16 @@
     "id": 16265,
     "enabled": 1,
     "file": "effective/quests/iceclad/Nilham_the_Chef.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "22f52ff31c2625c98e43aad18a92e4a32534879269f573b2c5e08171f801f1b7",
+    "preferredSource": "maintained/lua/converted-perl/iceclad/Nilham_the_Chef.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/iceclad/Nilham_the_Chef.lua",
+        "sha256": "22f52ff31c2625c98e43aad18a92e4a32534879269f573b2c5e08171f801f1b7",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "iceclad/Novyak_the_Lookout",
@@ -45019,30 +45411,48 @@
     "id": 13146,
     "enabled": 1,
     "file": "effective/quests/iceclad/Ritap.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "b0d789822ca59d50d979a2a9b26ec71f9f843922b69893744e31d683d7c92f2e",
+    "preferredSource": "maintained/lua/converted-perl/iceclad/Ritap.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/iceclad/Ritap.lua",
+        "sha256": "b0d789822ca59d50d979a2a9b26ec71f9f843922b69893744e31d683d7c92f2e",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "iceclad/Snowfang_fisher",
     "id": 12326,
     "enabled": 1,
     "file": "effective/quests/iceclad/Snowfang_fisher.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "60db7b47f5cdfa5f0a323271d9347429b886bc3e1b0f07345fff84c0dcd8e769",
+    "preferredSource": "maintained/lua/converted-perl/iceclad/Snowfang_fisher.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/iceclad/Snowfang_fisher.lua",
+        "sha256": "60db7b47f5cdfa5f0a323271d9347429b886bc3e1b0f07345fff84c0dcd8e769",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "iceclad/Sojan_the_Sleepless",
     "id": 18384,
     "enabled": 1,
     "file": "effective/quests/iceclad/Sojan_the_Sleepless.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "940ee45736869501ec747639f37d56bdcd7f9669224efa118b659a2c96ac08bf",
+    "preferredSource": "maintained/lua/converted-perl/iceclad/Sojan_the_Sleepless.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/iceclad/Sojan_the_Sleepless.lua",
+        "sha256": "940ee45736869501ec747639f37d56bdcd7f9669224efa118b659a2c96ac08bf",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "iceclad/Soulbinder_Cubnitskin",
@@ -48533,10 +48943,16 @@
     "id": 18229,
     "enabled": 1,
     "file": "effective/quests/kael/a_kromrif_recruiter.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "13af7161d38b9b6b4f432d23db7475dfd8dca7b1b1b516e456f32a924d775ae3",
+    "preferredSource": "maintained/lua/converted-perl/kael/a_kromrif_recruiter.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/kael/a_kromrif_recruiter.lua",
+        "sha256": "13af7161d38b9b6b4f432d23db7475dfd8dca7b1b1b516e456f32a924d775ae3",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "kael/a_storm_giant_gladiator",
@@ -48617,10 +49033,16 @@
     "id": 12518,
     "enabled": 1,
     "file": "effective/quests/kael/Bjoskhua_Blackfist.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "76667e56dc6045d58816508a37b3bf9a066ac41bff044784d18228a8a9d16261",
+    "preferredSource": "maintained/lua/converted-perl/kael/Bjoskhua_Blackfist.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/kael/Bjoskhua_Blackfist.lua",
+        "sha256": "76667e56dc6045d58816508a37b3bf9a066ac41bff044784d18228a8a9d16261",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "kael/Bygloirn_Omorden",
@@ -48641,22 +49063,34 @@
   {
     "key": "kael/Captain_Bvellos",
     "id": 13421,
-    "enabled": 0,
+    "enabled": 1,
     "file": "effective/quests/kael/Captain_Bvellos.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "0f904142a84fc91b97637baed803b9c03edf1296c4bcc6ec59b8034052b6a903",
+    "preferredSource": "maintained/lua/converted-perl/kael/Captain_Bvellos.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/kael/Captain_Bvellos.lua",
+        "sha256": "0f904142a84fc91b97637baed803b9c03edf1296c4bcc6ec59b8034052b6a903",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "kael/Clrakk_Blackfist",
     "id": 12123,
     "enabled": 1,
     "file": "effective/quests/kael/Clrakk_Blackfist.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "dab5e60c1fb3e2563c0fcae072ac6427842fae99e6bc220508fa25761c31b5a7",
+    "preferredSource": "maintained/lua/converted-perl/kael/Clrakk_Blackfist.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/kael/Clrakk_Blackfist.lua",
+        "sha256": "dab5e60c1fb3e2563c0fcae072ac6427842fae99e6bc220508fa25761c31b5a7",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "kael/Dagron_Stonecutter",
@@ -48693,12 +49127,18 @@
   {
     "key": "kael/Dlammaz_Stormslayer",
     "id": 14070,
-    "enabled": 0,
+    "enabled": 1,
     "file": "effective/quests/kael/Dlammaz_Stormslayer.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "bd0118e34ca6ff83e364182247031ae84e773e5b76df9f2f3f3a7c52bb43cded",
+    "preferredSource": "maintained/lua/converted-perl/kael/Dlammaz_Stormslayer.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/kael/Dlammaz_Stormslayer.lua",
+        "sha256": "bd0118e34ca6ff83e364182247031ae84e773e5b76df9f2f3f3a7c52bb43cded",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "kael/Doldigun_Steinwielder",
@@ -48721,30 +49161,48 @@
     "id": 16456,
     "enabled": 1,
     "file": "effective/quests/kael/Fjokar_Frozenshard.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "83c2a61ef778e751193b2f06b04822d6841b7e0d7065ed01c6bc8cf5a8f1bcac",
+    "preferredSource": "maintained/lua/converted-perl/kael/Fjokar_Frozenshard.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/kael/Fjokar_Frozenshard.lua",
+        "sha256": "83c2a61ef778e751193b2f06b04822d6841b7e0d7065ed01c6bc8cf5a8f1bcac",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "kael/Gkrean_Prophet_of_Tallon",
     "id": 16028,
     "enabled": 1,
     "file": "effective/quests/kael/Gkrean_Prophet_of_Tallon.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "4e750bc52274838c232d8cbd3b01f024f0eb6565a763e59d885d0c26b9807257",
+    "preferredSource": "maintained/lua/converted-perl/kael/Gkrean_Prophet_of_Tallon.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/kael/Gkrean_Prophet_of_Tallon.lua",
+        "sha256": "4e750bc52274838c232d8cbd3b01f024f0eb6565a763e59d885d0c26b9807257",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "kael/Gleed_Dragonhunter",
     "id": 16091,
-    "enabled": 0,
+    "enabled": 1,
     "file": "effective/quests/kael/Gleed_Dragonhunter.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "c0a80fd2584cff4c7ce1efd7bab89331c87ecb270043bbd706e2933d62939e3a",
+    "preferredSource": "maintained/lua/converted-perl/kael/Gleed_Dragonhunter.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/kael/Gleed_Dragonhunter.lua",
+        "sha256": "c0a80fd2584cff4c7ce1efd7bab89331c87ecb270043bbd706e2933d62939e3a",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "kael/Gragek_Mjlorkigar",
@@ -48765,12 +49223,18 @@
   {
     "key": "kael/Grand_Armsmith_Korin",
     "id": 17400,
-    "enabled": 0,
+    "enabled": 1,
     "file": "effective/quests/kael/Grand_Armsmith_Korin.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "acca93f22db00d8e5adaab798f98917c116483d223be9fdbb0383f07678e1052",
+    "preferredSource": "maintained/lua/converted-perl/kael/Grand_Armsmith_Korin.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/kael/Grand_Armsmith_Korin.lua",
+        "sha256": "acca93f22db00d8e5adaab798f98917c116483d223be9fdbb0383f07678e1052",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "kael/Grondon_Zekkin",
@@ -48825,10 +49289,16 @@
     "id": 17783,
     "enabled": 1,
     "file": "effective/quests/kael/Kellek_Felhammer.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "17a1358af117f78781c8ad4b3ef152db88a38d5f548b10b4edb1b0633711329d",
+    "preferredSource": "maintained/lua/converted-perl/kael/Kellek_Felhammer.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/kael/Kellek_Felhammer.lua",
+        "sha256": "17a1358af117f78781c8ad4b3ef152db88a38d5f548b10b4edb1b0633711329d",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "kael/Khalerogg_Dorfenbane",
@@ -48849,15 +49319,20 @@
   {
     "key": "kael/King_Tormax",
     "id": 12655,
-    "enabled": 0,
+    "enabled": 1,
     "file": "effective/quests/kael/King_Tormax.lua",
-    "sha256": "c295c056ef0903d9e0e5840e65767fbd0bb70b1cc9b36f9b90405f53bd2e2c84",
-    "preferredSource": "sources/projecteq/kael/King_Tormax.lua",
+    "sha256": "e166686a86b29c91d42f9590cc43e1b18ddc588877dacb2b54069b06b0bfd6bf",
+    "preferredSource": "maintained/lua/modified-upstream/kael/King_Tormax.lua",
     "candidates": [
       {
         "file": "sources/projecteq/kael/King_Tormax.lua",
         "sha256": "c295c056ef0903d9e0e5840e65767fbd0bb70b1cc9b36f9b90405f53bd2e2c84",
         "maintained": false
+      },
+      {
+        "file": "maintained/lua/modified-upstream/kael/King_Tormax.lua",
+        "sha256": "e166686a86b29c91d42f9590cc43e1b18ddc588877dacb2b54069b06b0bfd6bf",
+        "maintained": true
       }
     ],
     "sourceStatus": "matches-source"
@@ -48899,10 +49374,16 @@
     "id": 17345,
     "enabled": 1,
     "file": "effective/quests/kael/Kyenka.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "39887b29892575ecd84054ccac172a2029aeed1735b75ef419288c482b9e6e69",
+    "preferredSource": "maintained/lua/converted-perl/kael/Kyenka.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/kael/Kyenka.lua",
+        "sha256": "39887b29892575ecd84054ccac172a2029aeed1735b75ef419288c482b9e6e69",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "kael/Mjeldor_Felstorm",
@@ -48933,22 +49414,34 @@
   {
     "key": "kael/Noble_Helssen",
     "id": 18344,
-    "enabled": 0,
+    "enabled": 1,
     "file": "effective/quests/kael/Noble_Helssen.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "62150b4daca9b60a0c165aee54c0f1ad5af1e549d27da270ec2bb3b739fbc969",
+    "preferredSource": "maintained/lua/converted-perl/kael/Noble_Helssen.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/kael/Noble_Helssen.lua",
+        "sha256": "62150b4daca9b60a0c165aee54c0f1ad5af1e549d27da270ec2bb3b739fbc969",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "kael/Nojas_Blackfist",
     "id": 19734,
     "enabled": 1,
     "file": "effective/quests/kael/Nojas_Blackfist.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "2f95be9985e8158ba83399c030f9199c86a7c43711c50c8663457a304bdacba9",
+    "preferredSource": "maintained/lua/converted-perl/kael/Nojas_Blackfist.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/kael/Nojas_Blackfist.lua",
+        "sha256": "2f95be9985e8158ba83399c030f9199c86a7c43711c50c8663457a304bdacba9",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "kael/Pollos_Stormkeeper",
@@ -48975,40 +49468,64 @@
     "id": 14529,
     "enabled": 1,
     "file": "effective/quests/kael/Reivaj_the_Battlerager.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "12cf49e7205dddacce364444b9155de9f9436524801d4cab2e79fcfe87c6ee4a",
+    "preferredSource": "maintained/lua/converted-perl/kael/Reivaj_the_Battlerager.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/kael/Reivaj_the_Battlerager.lua",
+        "sha256": "12cf49e7205dddacce364444b9155de9f9436524801d4cab2e79fcfe87c6ee4a",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "kael/Semkak_Prophet_of_Vallon",
     "id": 18151,
     "enabled": 1,
     "file": "effective/quests/kael/Semkak_Prophet_of_Vallon.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "989f24698f49cfc42151f1f528ba4d4e50f0f055820a07ffb6355a88edaa7775",
+    "preferredSource": "maintained/lua/converted-perl/kael/Semkak_Prophet_of_Vallon.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/kael/Semkak_Prophet_of_Vallon.lua",
+        "sha256": "989f24698f49cfc42151f1f528ba4d4e50f0f055820a07ffb6355a88edaa7775",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "kael/Slaggak_the_Trainer",
     "id": 18956,
     "enabled": 1,
     "file": "effective/quests/kael/Slaggak_the_Trainer.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "bf4d12d74416a205dc808ac7c3290068dfd240f40313da4d26fe989e43732b4d",
+    "preferredSource": "maintained/lua/converted-perl/kael/Slaggak_the_Trainer.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/kael/Slaggak_the_Trainer.lua",
+        "sha256": "bf4d12d74416a205dc808ac7c3290068dfd240f40313da4d26fe989e43732b4d",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "kael/Staff_Sergeant_Drioc",
     "id": 13597,
     "enabled": 1,
     "file": "effective/quests/kael/Staff_Sergeant_Drioc.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "5827a710999d8b5216f9f92c191b648e2bc65add8999cdd095dbdf604e39f895",
+    "preferredSource": "maintained/lua/converted-perl/kael/Staff_Sergeant_Drioc.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/kael/Staff_Sergeant_Drioc.lua",
+        "sha256": "5827a710999d8b5216f9f92c191b648e2bc65add8999cdd095dbdf604e39f895",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "kael/Stoem_Lekbar",
@@ -49047,10 +49564,16 @@
     "id": 16291,
     "enabled": 1,
     "file": "effective/quests/kael/Svekk_Fangbinder.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "20e83c0aa4a93cc4aec41698cc4014f16445e444e16147f5bed9e8c7f73cd1b9",
+    "preferredSource": "maintained/lua/converted-perl/kael/Svekk_Fangbinder.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/kael/Svekk_Fangbinder.lua",
+        "sha256": "20e83c0aa4a93cc4aec41698cc4014f16445e444e16147f5bed9e8c7f73cd1b9",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "kael/The_Avatar_of_War",
@@ -49169,20 +49692,32 @@
     "id": 14653,
     "enabled": 1,
     "file": "effective/quests/kael/Vkjor.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "d50c33130370136685142deb5d8ee11ab99290ac1fbc9e61e233e861a5c59e3e",
+    "preferredSource": "maintained/lua/converted-perl/kael/Vkjor.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/kael/Vkjor.lua",
+        "sha256": "d50c33130370136685142deb5d8ee11ab99290ac1fbc9e61e233e861a5c59e3e",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "kael/Vorken_Iceshard",
     "id": 19160,
-    "enabled": 0,
+    "enabled": 1,
     "file": "effective/quests/kael/Vorken_Iceshard.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "de8f0d9fb180e76b05cb3aecb542133b35d86a3513704a0e7b04a81a1c8ce2d1",
+    "preferredSource": "maintained/lua/converted-perl/kael/Vorken_Iceshard.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/kael/Vorken_Iceshard.lua",
+        "sha256": "de8f0d9fb180e76b05cb3aecb542133b35d86a3513704a0e7b04a81a1c8ce2d1",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "kael/Vylleam_Vyaeltor",
@@ -49219,12 +49754,18 @@
   {
     "key": "kael/Wenglawks_Kkeak",
     "id": 16050,
-    "enabled": 0,
+    "enabled": 1,
     "file": "effective/quests/kael/Wenglawks_Kkeak.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "ec06460a0f4cdfb3c9feb116294c5e4fc328b8a2c33afdb99cbe7ed58e731a2d",
+    "preferredSource": "maintained/lua/converted-perl/kael/Wenglawks_Kkeak.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/kael/Wenglawks_Kkeak.lua",
+        "sha256": "ec06460a0f4cdfb3c9feb116294c5e4fc328b8a2c33afdb99cbe7ed58e731a2d",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "kael/Yeeldan_Spiritcaller",
@@ -49247,10 +49788,16 @@
     "id": 13448,
     "enabled": 1,
     "file": "effective/quests/kael/Yetarr.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "72160eee6b419bbb877096dcab4f1541a841e41615f653bc8c698028cff56285",
+    "preferredSource": "maintained/lua/converted-perl/kael/Yetarr.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/kael/Yetarr.lua",
+        "sha256": "72160eee6b419bbb877096dcab4f1541a841e41615f653bc8c698028cff56285",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "kael/Zlirron_Windchill",
@@ -55141,15 +55688,20 @@
   {
     "key": "mischiefplane/a_white_stallion",
     "id": 16473,
-    "enabled": 0,
+    "enabled": 1,
     "file": "effective/quests/mischiefplane/a_white_stallion.lua",
-    "sha256": "3e561e0183324f9484b3a9766682095411b6ca8d17868542121565295e3f4d26",
-    "preferredSource": "sources/projecteq/mischiefplane/a_white_stallion.lua",
+    "sha256": "bbd70fb956e8cbe7717f7819f6b9b7b819aa7ea6a60e7e221dec0b6c29ff3e89",
+    "preferredSource": "maintained/lua/modified-upstream/mischiefplane/a_white_stallion.lua",
     "candidates": [
       {
         "file": "sources/projecteq/mischiefplane/a_white_stallion.lua",
         "sha256": "3e561e0183324f9484b3a9766682095411b6ca8d17868542121565295e3f4d26",
         "maintained": false
+      },
+      {
+        "file": "maintained/lua/modified-upstream/mischiefplane/a_white_stallion.lua",
+        "sha256": "bbd70fb956e8cbe7717f7819f6b9b7b819aa7ea6a60e7e221dec0b6c29ff3e89",
+        "maintained": true
       }
     ],
     "sourceStatus": "matches-source"
@@ -60543,15 +61095,20 @@
   {
     "key": "northkarana/Fixxin_Followig",
     "id": 13866,
-    "enabled": 0,
+    "enabled": 1,
     "file": "effective/quests/northkarana/Fixxin_Followig.lua",
-    "sha256": "1abfa6e20c67edd4ed57b58923b1171a54639d62c836699cb0b5a1ea0be9272e",
-    "preferredSource": "sources/projecteq/northkarana/Fixxin_Followig.lua",
+    "sha256": "1dec278a2b5b6abd1f39bce08efc7e1f8947fa892d6097f2f0b3a3a9c9228614",
+    "preferredSource": "maintained/lua/modified-upstream/northkarana/Fixxin_Followig.lua",
     "candidates": [
       {
         "file": "sources/projecteq/northkarana/Fixxin_Followig.lua",
         "sha256": "1abfa6e20c67edd4ed57b58923b1171a54639d62c836699cb0b5a1ea0be9272e",
         "maintained": false
+      },
+      {
+        "file": "maintained/lua/modified-upstream/northkarana/Fixxin_Followig.lua",
+        "sha256": "1dec278a2b5b6abd1f39bce08efc7e1f8947fa892d6097f2f0b3a3a9c9228614",
+        "maintained": true
       }
     ],
     "sourceStatus": "matches-source"
@@ -60856,7 +61413,7 @@
   {
     "key": "northro/#Translocator_Ionie",
     "id": 14285,
-    "enabled": 1,
+    "enabled": 0,
     "file": "effective/quests/northro/%23Translocator_Ionie.lua",
     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "preferredSource": null,
@@ -61092,7 +61649,7 @@
   {
     "key": "nro/#Translocator_Ionie",
     "id": 16288,
-    "enabled": 1,
+    "enabled": 0,
     "file": "effective/quests/nro/%23Translocator_Ionie.lua",
     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "preferredSource": null,
@@ -61388,7 +61945,7 @@
   {
     "key": "oasis/#Translocator_Tradil",
     "id": 14237,
-    "enabled": 1,
+    "enabled": 0,
     "file": "effective/quests/oasis/%23Translocator_Tradil.lua",
     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "preferredSource": null,
@@ -61504,7 +62061,7 @@
   {
     "key": "oceanoftears/#Translocator_Narrik",
     "id": 17734,
-    "enabled": 1,
+    "enabled": 0,
     "file": "effective/quests/oceanoftears/%23Translocator_Narrik.lua",
     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "preferredSource": null,
@@ -62243,7 +62800,7 @@
   {
     "key": "oot/#Translocator_Narrik",
     "id": 12540,
-    "enabled": 1,
+    "enabled": 0,
     "file": "effective/quests/oot/%23Translocator_Narrik.lua",
     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "preferredSource": null,
@@ -62520,12 +63077,12 @@
     "id": 17645,
     "enabled": 1,
     "file": "effective/quests/overthere/%23an_undead_marine.lua",
-    "sha256": "a0a223df28c80353ac01044d0f56296b2a965c346fe11212659c39b355dfccd7",
+    "sha256": "c645915c6b8dbb9c547e9a2d6aaea45a82ae68098034de049bea73846dd32742",
     "preferredSource": "maintained/lua/converted-perl/overthere/#an_undead_marine.lua",
     "candidates": [
       {
         "file": "maintained/lua/converted-perl/overthere/#an_undead_marine.lua",
-        "sha256": "a0a223df28c80353ac01044d0f56296b2a965c346fe11212659c39b355dfccd7",
+        "sha256": "c645915c6b8dbb9c547e9a2d6aaea45a82ae68098034de049bea73846dd32742",
         "maintained": true
       }
     ],
@@ -62560,7 +63117,7 @@
   {
     "key": "overthere/#Translocator_Breya",
     "id": 13581,
-    "enabled": 1,
+    "enabled": 0,
     "file": "effective/quests/overthere/%23Translocator_Breya.lua",
     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "preferredSource": null,
@@ -62662,12 +63219,12 @@
     "id": 18285,
     "enabled": 1,
     "file": "effective/quests/overthere/a_glowing_cliff_golem.lua",
-    "sha256": "493b427fe2ec7475fd150c3f08c8971757883bf41ec9514f43baf61ef4b572d3",
+    "sha256": "d3c3f859a93de0a573b7f9521f957f550bcbadd95cd4f49d9480d453bd6851cb",
     "preferredSource": "maintained/lua/converted-perl/overthere/a_glowing_cliff_golem.lua",
     "candidates": [
       {
         "file": "maintained/lua/converted-perl/overthere/a_glowing_cliff_golem.lua",
-        "sha256": "493b427fe2ec7475fd150c3f08c8971757883bf41ec9514f43baf61ef4b572d3",
+        "sha256": "d3c3f859a93de0a573b7f9521f957f550bcbadd95cd4f49d9480d453bd6851cb",
         "maintained": true
       }
     ],
@@ -62678,12 +63235,12 @@
     "id": 13860,
     "enabled": 1,
     "file": "effective/quests/overthere/Alchemist_Granika.lua",
-    "sha256": "5c1878792f0d2e15093a96175b729d46b72357a8ce037c85a7fb246da76960dc",
+    "sha256": "3fb8773ac505cc1524ca8b145cd5a07f05b883c42c1b70f1988f611bc7dde72f",
     "preferredSource": "maintained/lua/converted-perl/overthere/Alchemist_Granika.lua",
     "candidates": [
       {
         "file": "maintained/lua/converted-perl/overthere/Alchemist_Granika.lua",
-        "sha256": "5c1878792f0d2e15093a96175b729d46b72357a8ce037c85a7fb246da76960dc",
+        "sha256": "3fb8773ac505cc1524ca8b145cd5a07f05b883c42c1b70f1988f611bc7dde72f",
         "maintained": true
       }
     ],
@@ -77986,7 +78543,7 @@
   {
     "key": "qeynos/#Translocator_Sedina",
     "id": 15149,
-    "enabled": 1,
+    "enabled": 0,
     "file": "effective/quests/qeynos/%23Translocator_Sedina.lua",
     "sha256": "4995408b68d5197c5fa58917db418b1e207e4ca2037580f18a79454721c1a38a",
     "preferredSource": "sources/projecteq/qeynos/#Translocator_Sedina.lua",
@@ -85136,15 +85693,20 @@
   {
     "key": "rivervale/Gapeers_Johhanis",
     "id": 19437,
-    "enabled": 0,
+    "enabled": 1,
     "file": "effective/quests/rivervale/Gapeers_Johhanis.lua",
-    "sha256": "66e4189513131c4419d562c85bdcef99ed30afa0cb54dc47d4b651495e436d87",
-    "preferredSource": "sources/projecteq/rivervale/Gapeers_Johhanis.lua",
+    "sha256": "5f273ed68d98f0eba9c9c2d670fd1a383df65d96de1d3b34d80275dbc5612cec",
+    "preferredSource": "maintained/lua/modified-upstream/rivervale/Gapeers_Johhanis.lua",
     "candidates": [
       {
         "file": "sources/projecteq/rivervale/Gapeers_Johhanis.lua",
         "sha256": "66e4189513131c4419d562c85bdcef99ed30afa0cb54dc47d4b651495e436d87",
         "maintained": false
+      },
+      {
+        "file": "maintained/lua/modified-upstream/rivervale/Gapeers_Johhanis.lua",
+        "sha256": "5f273ed68d98f0eba9c9c2d670fd1a383df65d96de1d3b34d80275dbc5612cec",
+        "maintained": true
       }
     ],
     "sourceStatus": "matches-source"
@@ -92139,20 +92701,32 @@
     "id": 14709,
     "enabled": 1,
     "file": "effective/quests/skyshrine/%23Ralgyn.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "9d8a081623396d9fded9a7adf6d549b68011c652dca2501e5cb84447439594de",
+    "preferredSource": "maintained/lua/converted-perl/skyshrine/#Ralgyn.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/skyshrine/#Ralgyn.lua",
+        "sha256": "9d8a081623396d9fded9a7adf6d549b68011c652dca2501e5cb84447439594de",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "skyshrine/#Supreme_Laochsmith_Psorin",
     "id": 13100,
-    "enabled": 0,
+    "enabled": 1,
     "file": "effective/quests/skyshrine/%23Supreme_Laochsmith_Psorin.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "5e4fad6aaa7d915fa9f175230cf6ee1cbf1b0ea83068eb978fde62fe7d49d8f9",
+    "preferredSource": "maintained/lua/converted-perl/skyshrine/#Supreme_Laochsmith_Psorin.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/skyshrine/#Supreme_Laochsmith_Psorin.lua",
+        "sha256": "5e4fad6aaa7d915fa9f175230cf6ee1cbf1b0ea83068eb978fde62fe7d49d8f9",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "skyshrine/A_Guardian_of_the_Shrine",
@@ -92247,10 +92821,16 @@
     "id": 13482,
     "enabled": 1,
     "file": "effective/quests/skyshrine/Commander_Leuz.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "57ccc28509ab879789a4416b6652e7cdddd8441e6c3e6db10054707df48d420b",
+    "preferredSource": "maintained/lua/converted-perl/skyshrine/Commander_Leuz.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/skyshrine/Commander_Leuz.lua",
+        "sha256": "57ccc28509ab879789a4416b6652e7cdddd8441e6c3e6db10054707df48d420b",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "skyshrine/Crendatha_Fe-Dhar",
@@ -92401,10 +92981,16 @@
     "id": 12905,
     "enabled": 1,
     "file": "effective/quests/skyshrine/Jualicn.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "377b7f17eb65dcee17e853cfd8cc33d9ea0f72da3da83cdc69bdee16ad6c8d8f",
+    "preferredSource": "maintained/lua/converted-perl/skyshrine/Jualicn.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/skyshrine/Jualicn.lua",
+        "sha256": "377b7f17eb65dcee17e853cfd8cc33d9ea0f72da3da83cdc69bdee16ad6c8d8f",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "skyshrine/Komawin_Fe-Dhar",
@@ -92437,10 +93023,16 @@
     "id": 19076,
     "enabled": 1,
     "file": "effective/quests/skyshrine/Lawyla.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "783c2307a84db57645ac8281bdc6fd28509eedb24d69b33083a8152f3b2594e4",
+    "preferredSource": "maintained/lua/converted-perl/skyshrine/Lawyla.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/skyshrine/Lawyla.lua",
+        "sha256": "783c2307a84db57645ac8281bdc6fd28509eedb24d69b33083a8152f3b2594e4",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "skyshrine/Liason_Dolvak",
@@ -92457,20 +93049,32 @@
     "id": 19481,
     "enabled": 1,
     "file": "effective/quests/skyshrine/Lieutenant_Milven.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "3b006054b5fb42db59399b8faec8390e641c8836b9b30e328d57a4e5fb0728df",
+    "preferredSource": "maintained/lua/converted-perl/skyshrine/Lieutenant_Milven.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/skyshrine/Lieutenant_Milven.lua",
+        "sha256": "3b006054b5fb42db59399b8faec8390e641c8836b9b30e328d57a4e5fb0728df",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "skyshrine/Lord_Yelinak",
     "id": 13107,
     "enabled": 1,
     "file": "effective/quests/skyshrine/Lord_Yelinak.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "aa37df4cd22bb24a2d22555c70b82f14689c355a94cecafd70bde9e3a38605f9",
+    "preferredSource": "maintained/lua/converted-perl/skyshrine/Lord_Yelinak.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/skyshrine/Lord_Yelinak.lua",
+        "sha256": "aa37df4cd22bb24a2d22555c70b82f14689c355a94cecafd70bde9e3a38605f9",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "skyshrine/Lothieder_Fe-Dhar",
@@ -92619,6 +93223,22 @@
     "sourceStatus": "no-lua-body"
   },
   {
+    "key": "skyshrine/Sentry_Emil",
+    "id": 503523,
+    "enabled": 1,
+    "file": "effective/quests/skyshrine/Sentry_Emil.lua",
+    "sha256": "a7158551c269e5a351973d90c6bcdc2b78e4c04345d6a80ae6fe7211f0daff44",
+    "preferredSource": "maintained/lua/idlequest-authored/skyshrine/Sentry_Emil.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/idlequest-authored/skyshrine/Sentry_Emil.lua",
+        "sha256": "a7158551c269e5a351973d90c6bcdc2b78e4c04345d6a80ae6fe7211f0daff44",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
+  },
+  {
     "key": "skyshrine/Sentry_Iglotn",
     "id": 14764,
     "enabled": 1,
@@ -92631,12 +93251,18 @@
   {
     "key": "skyshrine/Sentry_Kale",
     "id": 17491,
-    "enabled": 0,
+    "enabled": 1,
     "file": "effective/quests/skyshrine/Sentry_Kale.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "d83d4695aafdd3de861bb173ddde074678160cd846e064b4d12b4dcd5f4a8dd8",
+    "preferredSource": "maintained/lua/converted-perl/skyshrine/Sentry_Kale.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/skyshrine/Sentry_Kale.lua",
+        "sha256": "d83d4695aafdd3de861bb173ddde074678160cd846e064b4d12b4dcd5f4a8dd8",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "skyshrine/Sentry_Kaop",
@@ -92653,10 +93279,16 @@
     "id": 17804,
     "enabled": 1,
     "file": "effective/quests/skyshrine/Sentry_Kcor.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "8c12fe8f6975e3f5d6e0b9f5b69698b2cf5db3a14d242f54f81b2368f355a9bc",
+    "preferredSource": "maintained/lua/converted-perl/skyshrine/Sentry_Kcor.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/skyshrine/Sentry_Kcor.lua",
+        "sha256": "8c12fe8f6975e3f5d6e0b9f5b69698b2cf5db3a14d242f54f81b2368f355a9bc",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "skyshrine/Sentry_Maof",
@@ -92681,12 +93313,18 @@
   {
     "key": "skyshrine/Sentry_Rotiart",
     "id": 12561,
-    "enabled": 0,
+    "enabled": 1,
     "file": "effective/quests/skyshrine/Sentry_Rotiart.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "5b71488ba00336c0c6d63ab14cdfc7e3b0f9759336d5a4a02985010245865dce",
+    "preferredSource": "maintained/lua/converted-perl/skyshrine/Sentry_Rotiart.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/skyshrine/Sentry_Rotiart.lua",
+        "sha256": "5b71488ba00336c0c6d63ab14cdfc7e3b0f9759336d5a4a02985010245865dce",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "skyshrine/Sentry_Wegylx",
@@ -92769,10 +93407,16 @@
     "id": 17919,
     "enabled": 1,
     "file": "effective/quests/skyshrine/Ziglark_Whisperwing.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "b685591fc31836638962a18bacb0e87b36c3c10853e32af5b91283e0b9861ace",
+    "preferredSource": "maintained/lua/converted-perl/skyshrine/Ziglark_Whisperwing.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/skyshrine/Ziglark_Whisperwing.lua",
+        "sha256": "b685591fc31836638962a18bacb0e87b36c3c10853e32af5b91283e0b9861ace",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "sleeper/#Bittles_the_Lost",
@@ -98932,10 +99576,16 @@
     "id": 12832,
     "enabled": 1,
     "file": "effective/quests/templeveeshan/%23Gozzrem.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "e15622172615348f340dc67ad7df9872a87613a22e7972769c82c25eac0d4dfe",
+    "preferredSource": "maintained/lua/converted-perl/templeveeshan/#Gozzrem.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/templeveeshan/#Gozzrem.lua",
+        "sha256": "e15622172615348f340dc67ad7df9872a87613a22e7972769c82c25eac0d4dfe",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "templeveeshan/#Lady_Mirenilla",
@@ -99016,15 +99666,21 @@
     "id": 12234,
     "enabled": 1,
     "file": "effective/quests/templeveeshan/%23Telkorenar.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "2f671cd5bc049e1e952fbf900543ba07ad4ef015ca3822061c1e2685fa076897",
+    "preferredSource": "maintained/lua/converted-perl/templeveeshan/#Telkorenar.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/templeveeshan/#Telkorenar.lua",
+        "sha256": "2f671cd5bc049e1e952fbf900543ba07ad4ef015ca3822061c1e2685fa076897",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "templeveeshan/#Thylex_of_Veeshan",
     "id": 17115,
-    "enabled": 1,
+    "enabled": 0,
     "file": "effective/quests/templeveeshan/%23Thylex_of_Veeshan.lua",
     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "preferredSource": null,
@@ -99034,7 +99690,7 @@
   {
     "key": "templeveeshan/#Vulak-Aerr",
     "id": 18330,
-    "enabled": 1,
+    "enabled": 0,
     "file": "effective/quests/templeveeshan/%23Vulak-Aerr.lua",
     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "preferredSource": null,
@@ -100992,10 +101648,16 @@
     "id": 18238,
     "enabled": 1,
     "file": "effective/quests/thurgadina/Hakon_Brightsteel.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "82552262294bbf7964cd685c28d340e7bf14192655be058c155ef08f7d51d62b",
+    "preferredSource": "maintained/lua/converted-perl/thurgadina/Hakon_Brightsteel.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/thurgadina/Hakon_Brightsteel.lua",
+        "sha256": "82552262294bbf7964cd685c28d340e7bf14192655be058c155ef08f7d51d62b",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "thurgadina/Horasug",
@@ -101296,10 +101958,16 @@
     "id": 17632,
     "enabled": 1,
     "file": "effective/quests/thurgadina/Normon_Stonetooth.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "b29bbb78ac1874aa42f360b39887bd03a4752b52d14674030d4b0db8e98d1536",
+    "preferredSource": "maintained/lua/converted-perl/thurgadina/Normon_Stonetooth.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/thurgadina/Normon_Stonetooth.lua",
+        "sha256": "b29bbb78ac1874aa42f360b39887bd03a4752b52d14674030d4b0db8e98d1536",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "thurgadina/Pearce_Icefang",
@@ -101506,10 +102174,16 @@
     "id": 18797,
     "enabled": 1,
     "file": "effective/quests/thurgadina/Ungdin.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "f8644476c05efb6958bd359e4c6bec3cc3d917ce90a8dc682e7af082e949bbe2",
+    "preferredSource": "maintained/lua/converted-perl/thurgadina/Ungdin.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/thurgadina/Ungdin.lua",
+        "sha256": "f8644476c05efb6958bd359e4c6bec3cc3d917ce90a8dc682e7af082e949bbe2",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "thurgadina/Valdicar_Shadowfrost",
@@ -101602,12 +102276,18 @@
   {
     "key": "thurgadinb/Chamberlain_Krystorf",
     "id": 18376,
-    "enabled": 0,
+    "enabled": 1,
     "file": "effective/quests/thurgadinb/Chamberlain_Krystorf.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "c4e1e4fbd6898d1c29ee1161bfac8c33c9d20a45abfc89c9d0ff1d5e25a1bfe6",
+    "preferredSource": "maintained/lua/converted-perl/thurgadinb/Chamberlain_Krystorf.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/thurgadinb/Chamberlain_Krystorf.lua",
+        "sha256": "c4e1e4fbd6898d1c29ee1161bfac8c33c9d20a45abfc89c9d0ff1d5e25a1bfe6",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "thurgadinb/Councilor_Amberfeld",
@@ -101758,12 +102438,18 @@
   {
     "key": "thurgadinb/Royal_Armorer_Slade",
     "id": 13965,
-    "enabled": 0,
+    "enabled": 1,
     "file": "effective/quests/thurgadinb/Royal_Armorer_Slade.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "01698e0f4ba200d3ac507c5ecb0435886415ac3f50c17ed535826ce51434aeaa",
+    "preferredSource": "maintained/lua/converted-perl/thurgadinb/Royal_Armorer_Slade.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/thurgadinb/Royal_Armorer_Slade.lua",
+        "sha256": "01698e0f4ba200d3ac507c5ecb0435886415ac3f50c17ed535826ce51434aeaa",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "thurgadinb/Royal_Scribe_Kaavin",
@@ -101878,7 +102564,7 @@
   {
     "key": "timorous/#Translocator_Deela",
     "id": 15860,
-    "enabled": 1,
+    "enabled": 0,
     "file": "effective/quests/timorous/%23Translocator_Deela.lua",
     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "preferredSource": null,
@@ -110116,20 +110802,32 @@
     "id": 18639,
     "enabled": 1,
     "file": "effective/quests/wakening/%23a_storm_giant_architect.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "75b779344aeae42fb1bad4df607074b408bf9e7d5ca14a0c8d7c04f1f192f341",
+    "preferredSource": "maintained/lua/converted-perl/wakening/#a_storm_giant_architect.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/wakening/#a_storm_giant_architect.lua",
+        "sha256": "75b779344aeae42fb1bad4df607074b408bf9e7d5ca14a0c8d7c04f1f192f341",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "wakening/#a_storm_giant_foreman",
     "id": 15348,
-    "enabled": 0,
+    "enabled": 1,
     "file": "effective/quests/wakening/%23a_storm_giant_foreman.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "f7a4f0eafc379aba5284d80dec0383380871c97c4c0da90e3cb909061a597dc2",
+    "preferredSource": "maintained/lua/converted-perl/wakening/#a_storm_giant_foreman.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/wakening/#a_storm_giant_foreman.lua",
+        "sha256": "f7a4f0eafc379aba5284d80dec0383380871c97c4c0da90e3cb909061a597dc2",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "wakening/#Alaurin",
@@ -110166,7 +110864,7 @@
   {
     "key": "wakening/#Lieutenant_Krofer",
     "id": 15977,
-    "enabled": 1,
+    "enabled": 0,
     "file": "effective/quests/wakening/%23Lieutenant_Krofer.lua",
     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "preferredSource": null,
@@ -110176,22 +110874,34 @@
   {
     "key": "wakening/#Lord_Gossimerwind",
     "id": 15397,
-    "enabled": 0,
+    "enabled": 1,
     "file": "effective/quests/wakening/%23Lord_Gossimerwind.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "bfc44b8d49f87ff2e8c9162eda18c6a451928f1a06fb7abd799e763dcf85dab1",
+    "preferredSource": "maintained/lua/converted-perl/wakening/#Lord_Gossimerwind.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/wakening/#Lord_Gossimerwind.lua",
+        "sha256": "bfc44b8d49f87ff2e8c9162eda18c6a451928f1a06fb7abd799e763dcf85dab1",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "wakening/#Lord_Prismwing",
     "id": 12784,
-    "enabled": 0,
+    "enabled": 1,
     "file": "effective/quests/wakening/%23Lord_Prismwing.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "dc9d08c9c5e51d6e47b1a74da1c713ea6d0bb6bf02b868631e1bd9eade2112bf",
+    "preferredSource": "maintained/lua/converted-perl/wakening/#Lord_Prismwing.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/wakening/#Lord_Prismwing.lua",
+        "sha256": "dc9d08c9c5e51d6e47b1a74da1c713ea6d0bb6bf02b868631e1bd9eade2112bf",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "wakening/#Rapticor",
@@ -110232,12 +110942,18 @@
   {
     "key": "wakening/119143",
     "id": 13373,
-    "enabled": 0,
+    "enabled": 1,
     "file": "effective/quests/wakening/119143.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "4fb43b77fefacb59b6b7964920d60271e9b4bc2c36ad92abd47cec6654a76def",
+    "preferredSource": "maintained/lua/converted-perl/wakening/119143.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/wakening/119143.lua",
+        "sha256": "4fb43b77fefacb59b6b7964920d60271e9b4bc2c36ad92abd47cec6654a76def",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "wakening/a_sifaye_defender",
@@ -110272,12 +110988,18 @@
   {
     "key": "wakening/a_troll_mercenary",
     "id": 15918,
-    "enabled": 0,
+    "enabled": 1,
     "file": "effective/quests/wakening/a_troll_mercenary.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "ae5c13f2cc295ed8f2c0405195dfa2a8ac829f70ffc7fc9b7686b8dc7c3e711b",
+    "preferredSource": "maintained/lua/converted-perl/wakening/a_troll_mercenary.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/wakening/a_troll_mercenary.lua",
+        "sha256": "ae5c13f2cc295ed8f2c0405195dfa2a8ac829f70ffc7fc9b7686b8dc7c3e711b",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "wakening/accolyte_of_Zek",
@@ -110292,12 +111014,18 @@
   {
     "key": "wakening/barbarian_mercenary",
     "id": 12029,
-    "enabled": 0,
+    "enabled": 1,
     "file": "effective/quests/wakening/barbarian_mercenary.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "a6f7f4e411285e44e54177524d7363973cae30e60612a6c782627054f1401706",
+    "preferredSource": "maintained/lua/converted-perl/wakening/barbarian_mercenary.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/wakening/barbarian_mercenary.lua",
+        "sha256": "a6f7f4e411285e44e54177524d7363973cae30e60612a6c782627054f1401706",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "wakening/Berzerker_Dolvad",
@@ -110342,12 +111070,18 @@
   {
     "key": "wakening/Countess_Silveana",
     "id": 12003,
-    "enabled": 0,
+    "enabled": 1,
     "file": "effective/quests/wakening/Countess_Silveana.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "424275f818e1d0b10bd6a3f72fa0e2f39221de33ec5559d6a778a0e92d8386fd",
+    "preferredSource": "maintained/lua/converted-perl/wakening/Countess_Silveana.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/wakening/Countess_Silveana.lua",
+        "sha256": "424275f818e1d0b10bd6a3f72fa0e2f39221de33ec5559d6a778a0e92d8386fd",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "wakening/Dark_Disciple_Master",
@@ -110378,42 +111112,66 @@
   {
     "key": "wakening/Eysa_Florawhisper",
     "id": 18355,
-    "enabled": 0,
+    "enabled": 1,
     "file": "effective/quests/wakening/Eysa_Florawhisper.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "1eeedd2b2c1967cb9195966df0b6270a001b9b82d3108dbfa563ab4cdf93d875",
+    "preferredSource": "maintained/lua/converted-perl/wakening/Eysa_Florawhisper.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/wakening/Eysa_Florawhisper.lua",
+        "sha256": "1eeedd2b2c1967cb9195966df0b6270a001b9b82d3108dbfa563ab4cdf93d875",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "wakening/Gnome_Mercenary",
     "id": 18707,
-    "enabled": 0,
+    "enabled": 1,
     "file": "effective/quests/wakening/Gnome_Mercenary.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "a1e12105deefbdfa46d10438f489a2f20c210aa1d3f11bbea3aa6b80b724aa2c",
+    "preferredSource": "maintained/lua/converted-perl/wakening/Gnome_Mercenary.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/wakening/Gnome_Mercenary.lua",
+        "sha256": "a1e12105deefbdfa46d10438f489a2f20c210aa1d3f11bbea3aa6b80b724aa2c",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "wakening/human_mercenary",
     "id": 12108,
-    "enabled": 0,
+    "enabled": 1,
     "file": "effective/quests/wakening/human_mercenary.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "34da0484508bc00a99809cbf3f3a3c73a2624c8a88472a43ec38619b59a15f64",
+    "preferredSource": "maintained/lua/converted-perl/wakening/human_mercenary.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/wakening/human_mercenary.lua",
+        "sha256": "34da0484508bc00a99809cbf3f3a3c73a2624c8a88472a43ec38619b59a15f64",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "wakening/Korzak_Stonehammer",
     "id": 18576,
     "enabled": 1,
     "file": "effective/quests/wakening/Korzak_Stonehammer.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "039e036c53dfb25b4039b3faa025910ce6770628eb4a3f4abfdee29c467ff8ac",
+    "preferredSource": "maintained/lua/converted-perl/wakening/Korzak_Stonehammer.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/wakening/Korzak_Stonehammer.lua",
+        "sha256": "039e036c53dfb25b4039b3faa025910ce6770628eb4a3f4abfdee29c467ff8ac",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "wakening/Lady_Gelistial",
@@ -110428,7 +111186,7 @@
   {
     "key": "wakening/Lieutenant_Krofer",
     "id": 14993,
-    "enabled": 1,
+    "enabled": 0,
     "file": "effective/quests/wakening/Lieutenant_Krofer.lua",
     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "preferredSource": null,
@@ -110438,17 +111196,23 @@
   {
     "key": "wakening/Ogre_Mercenary",
     "id": 17244,
-    "enabled": 0,
+    "enabled": 1,
     "file": "effective/quests/wakening/Ogre_Mercenary.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "783591483431512ecad56112eaffa684db9766605af81164d5151b61f2fd5ecf",
+    "preferredSource": "maintained/lua/converted-perl/wakening/Ogre_Mercenary.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/wakening/Ogre_Mercenary.lua",
+        "sha256": "783591483431512ecad56112eaffa684db9766605af81164d5151b61f2fd5ecf",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "wakening/Phenocryst",
     "id": 12364,
-    "enabled": 1,
+    "enabled": 0,
     "file": "effective/quests/wakening/Phenocryst.lua",
     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "preferredSource": null,
@@ -110476,10 +111240,16 @@
     "id": 15608,
     "enabled": 1,
     "file": "effective/quests/wakening/Rolandal.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "8f8511f0957f6450adfd28e3b9b40540d1d1164c45a36331e9a506f2ccc641d8",
+    "preferredSource": "maintained/lua/converted-perl/wakening/Rolandal.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/wakening/Rolandal.lua",
+        "sha256": "8f8511f0957f6450adfd28e3b9b40540d1d1164c45a36331e9a506f2ccc641d8",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "wakening/Scout_Leader_Plavo",
@@ -110510,32 +111280,50 @@
   {
     "key": "wakening/Teir-Dal_Mercenary",
     "id": 18667,
-    "enabled": 0,
+    "enabled": 1,
     "file": "effective/quests/wakening/Teir-Dal_Mercenary.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "197f6140a0f314ba84d36f4a635a7bebc8c433c7fbd4f19828b4efa67d1108c0",
+    "preferredSource": "maintained/lua/converted-perl/wakening/Teir-Dal_Mercenary.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/wakening/Teir-Dal_Mercenary.lua",
+        "sha256": "197f6140a0f314ba84d36f4a635a7bebc8c433c7fbd4f19828b4efa67d1108c0",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "wakening/Tomekeeper_Bjordnessin",
     "id": 16047,
     "enabled": 1,
     "file": "effective/quests/wakening/Tomekeeper_Bjordnessin.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "32c855e5730af504cacb4ce0db26f86a54ed90475bf93e384ddb1a4288268afa",
+    "preferredSource": "maintained/lua/converted-perl/wakening/Tomekeeper_Bjordnessin.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/wakening/Tomekeeper_Bjordnessin.lua",
+        "sha256": "32c855e5730af504cacb4ce0db26f86a54ed90475bf93e384ddb1a4288268afa",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "wakening/Troll_Mercenary",
     "id": 16048,
-    "enabled": 0,
+    "enabled": 1,
     "file": "effective/quests/wakening/Troll_Mercenary.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "b231e112de7b3bc678a881f2c67d046b54073f47ed2e24fee402f3e5d56a5ae6",
+    "preferredSource": "maintained/lua/converted-perl/wakening/Troll_Mercenary.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/wakening/Troll_Mercenary.lua",
+        "sha256": "b231e112de7b3bc678a881f2c67d046b54073f47ed2e24fee402f3e5d56a5ae6",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "wallofslaughter/#a_mangled_muramite_captain",
@@ -111318,13 +112106,18 @@
     "id": 16095,
     "enabled": 1,
     "file": "effective/quests/westwastes/%23a_Kromzek_Captain.lua",
-    "sha256": "cc63ed486849892cda5bde8b6064f225b834efe9e0ded6c833983ac34e6e94fa",
-    "preferredSource": "sources/projecteq/westwastes/#a_Kromzek_Captain.lua",
+    "sha256": "d9180d075c6fcfbe95a5759eef16ebdc344e49a550281951bbed94cbedd0fe8f",
+    "preferredSource": "maintained/lua/modified-upstream/westwastes/#a_Kromzek_Captain.lua",
     "candidates": [
       {
         "file": "sources/projecteq/westwastes/#a_Kromzek_Captain.lua",
         "sha256": "cc63ed486849892cda5bde8b6064f225b834efe9e0ded6c833983ac34e6e94fa",
         "maintained": false
+      },
+      {
+        "file": "maintained/lua/modified-upstream/westwastes/#a_Kromzek_Captain.lua",
+        "sha256": "d9180d075c6fcfbe95a5759eef16ebdc344e49a550281951bbed94cbedd0fe8f",
+        "maintained": true
       }
     ],
     "sourceStatus": "matches-source"
@@ -111344,10 +112137,16 @@
     "id": 12436,
     "enabled": 1,
     "file": "effective/quests/westwastes/%23Scout_Charisa.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "b11dd73014bbd11e464ac4424507d68a88b7750d84653d6feac2a4eda237ff89",
+    "preferredSource": "maintained/lua/converted-perl/westwastes/#Scout_Charisa.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/westwastes/#Scout_Charisa.lua",
+        "sha256": "b11dd73014bbd11e464ac4424507d68a88b7750d84653d6feac2a4eda237ff89",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "westwastes/#Vohnkare",
@@ -111370,13 +112169,18 @@
     "id": 15922,
     "enabled": 1,
     "file": "effective/quests/westwastes/a_Kromzek_warrior.lua",
-    "sha256": "7b6b722281c6f1dda8e5db74c64bba4fac4e07340e3e7323d1c25e3ae66f4fc9",
-    "preferredSource": "sources/projecteq/westwastes/a_Kromzek_warrior.lua",
+    "sha256": "e4d4084685fb573b5ce5fb0d174cecb31fd24fcf02af6334d16332d0c49ae755",
+    "preferredSource": "maintained/lua/modified-upstream/westwastes/a_Kromzek_warrior.lua",
     "candidates": [
       {
         "file": "sources/projecteq/westwastes/a_Kromzek_warrior.lua",
         "sha256": "7b6b722281c6f1dda8e5db74c64bba4fac4e07340e3e7323d1c25e3ae66f4fc9",
         "maintained": false
+      },
+      {
+        "file": "maintained/lua/modified-upstream/westwastes/a_Kromzek_warrior.lua",
+        "sha256": "e4d4084685fb573b5ce5fb0d174cecb31fd24fcf02af6334d16332d0c49ae755",
+        "maintained": true
       }
     ],
     "sourceStatus": "matches-source"
@@ -111412,20 +112216,32 @@
     "id": 17468,
     "enabled": 1,
     "file": "effective/quests/westwastes/Breezeboot_Swordrattler.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "274cd882660a3a7e01eedec25da692fda6bd3ea17f47b2a70058b283ad59a62d",
+    "preferredSource": "maintained/lua/converted-perl/westwastes/Breezeboot_Swordrattler.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/westwastes/Breezeboot_Swordrattler.lua",
+        "sha256": "274cd882660a3a7e01eedec25da692fda6bd3ea17f47b2a70058b283ad59a62d",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "westwastes/Derasinal",
     "id": 18954,
     "enabled": 1,
     "file": "effective/quests/westwastes/Derasinal.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "117b193c57eddaed54a17d5cec896034a64476f667d1b344af444d83b7511a86",
+    "preferredSource": "maintained/lua/converted-perl/westwastes/Derasinal.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/westwastes/Derasinal.lua",
+        "sha256": "117b193c57eddaed54a17d5cec896034a64476f667d1b344af444d83b7511a86",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "westwastes/Disciple_of_Moon",
@@ -111464,40 +112280,64 @@
     "id": 17201,
     "enabled": 1,
     "file": "effective/quests/westwastes/Draazak.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "9044f81f519a03359f722dbbb99d88d2feb6e56bf726b61c0391086e8d7c0f9a",
+    "preferredSource": "maintained/lua/converted-perl/westwastes/Draazak.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/westwastes/Draazak.lua",
+        "sha256": "9044f81f519a03359f722dbbb99d88d2feb6e56bf726b61c0391086e8d7c0f9a",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "westwastes/Entariz",
     "id": 18798,
     "enabled": 1,
     "file": "effective/quests/westwastes/Entariz.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "03cacb03148640a84a65711594a430c536a086469ed5cc6a25292fa34e3ca586",
+    "preferredSource": "maintained/lua/converted-perl/westwastes/Entariz.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/westwastes/Entariz.lua",
+        "sha256": "03cacb03148640a84a65711594a430c536a086469ed5cc6a25292fa34e3ca586",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "westwastes/Harla_Dar",
     "id": 18336,
     "enabled": 1,
     "file": "effective/quests/westwastes/Harla_Dar.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "6b3a6b13578d56c99fd42ddcff78f3b76c8f1c05a56baa3f2077bb9ee5eb12cf",
+    "preferredSource": "maintained/lua/converted-perl/westwastes/Harla_Dar.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/westwastes/Harla_Dar.lua",
+        "sha256": "6b3a6b13578d56c99fd42ddcff78f3b76c8f1c05a56baa3f2077bb9ee5eb12cf",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "westwastes/Ionat",
     "id": 12045,
     "enabled": 1,
     "file": "effective/quests/westwastes/Ionat.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "ec962d8873da28bffa2fc44b941c0b5b61fd552f522dc86893f1092cac764c1a",
+    "preferredSource": "maintained/lua/converted-perl/westwastes/Ionat.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/westwastes/Ionat.lua",
+        "sha256": "ec962d8873da28bffa2fc44b941c0b5b61fd552f522dc86893f1092cac764c1a",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "westwastes/Julius_Oresko",
@@ -111544,12 +112384,18 @@
   {
     "key": "westwastes/Melalafen",
     "id": 15124,
-    "enabled": 0,
+    "enabled": 1,
     "file": "effective/quests/westwastes/Melalafen.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "f17870123ba20c532ed23f21b6b25c220c40175d404778c33e2c0a990b03447a",
+    "preferredSource": "maintained/lua/converted-perl/westwastes/Melalafen.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/westwastes/Melalafen.lua",
+        "sha256": "f17870123ba20c532ed23f21b6b25c220c40175d404778c33e2c0a990b03447a",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "westwastes/player",
@@ -111620,10 +112466,16 @@
     "id": 13918,
     "enabled": 1,
     "file": "effective/quests/westwastes/The_Dragon_Sage.lua",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "preferredSource": null,
-    "candidates": [],
-    "sourceStatus": "no-lua-body"
+    "sha256": "2dc4c53c85201fbcf0e07f9ddaf1d5171d21a72a58862df28f70930378d918d0",
+    "preferredSource": "maintained/lua/converted-perl/westwastes/The_Dragon_Sage.lua",
+    "candidates": [
+      {
+        "file": "maintained/lua/converted-perl/westwastes/The_Dragon_Sage.lua",
+        "sha256": "2dc4c53c85201fbcf0e07f9ddaf1d5171d21a72a58862df28f70930378d918d0",
+        "maintained": true
+      }
+    ],
+    "sourceStatus": "matches-source"
   },
   {
     "key": "yxtta/#Hexxt_Huntmaster",
