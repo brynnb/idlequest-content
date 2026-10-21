@@ -1,0 +1,51 @@
+{
+  "format": 1,
+  "id": "kerraridge-melixis-dialogue",
+  "summary": "Match Melixis’s eight P99 hail, ring-description and hand-in responses while preserving the exported triggers, item exchanges and rewards.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Shiny_Rings",
+      "note": "Cached raw page reference/p99-wiki/raw-pages/shiny-rings-43d3e5a4f3.wiki, fetched 2026-07-17T23:33:11.009Z, SHA-256 669b233eb626fcb0abb01231a16cf1bec42b20cc7635a13d49e9076dd85f9b8c. The Hail, three ring descriptions and three trade responses provide all eight replacement strings. The walkthrough identifies Melixis and three required drops/reward rings; the proposal does not change these mechanics."
+    },
+    {
+      "url": "https://wiki.project1999.com/Melixis",
+      "note": "Cached NPC page reference/p99-wiki/npc-pages/melixis-a362b78e80.wiki, fetched 2026-08-12T20:07:20.889Z, SHA-256 cc1d12b52d545548529604f3f73936c10cee98dcaef0a43a353c2506a71413ca. It identifies Melixis as NPC 74076 in Kerra Island. Exported dataset identifies quest row 12981 and key kerraridge/Melixis."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 12981,
+        "zone": "kerraridge",
+        "name": "Melixis",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: kerraridge/Melixis.pl\n-- items: 14042, 13733, 14043, 13731, 14044, 13732\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Hello, hairrrrless one.  Welcome to the ourrrrr island. As you browse my wares please tell me if you would like to see my [shiny tings] that I have gathered from all over the world.\")\n\telseif e.message:findi(\"shiny tings\") then\n\t\te.self:Say(\"I thought you looked like one who is would be interested in them.  I have a [dull ring], a [kinda shiny ring] and a [really shiny ring].  These are just a few of the items that I have collected in my jourrrrneies, but I would be willing to parrrrt with them for a prrrrice\")\n\telseif e.message:findi(\"dull ring\") then\n\t\te.self:Say(\"Rrrrrow, I see that you are looking at my dull ring.  I will give it to you if you can bring me a bracket mildew\")\n\telseif e.message:findi(\"kinda shiny ring\") then\n\t\te.self:Say(\"So it is the kinda shiny ring that you want.  So be it, but you must brrrring me faerix spores before I will give it to you\")\n\telseif e.message:findi(\"really shiny ring\") then\n\t\te.self:Say(\"Ah, my favorite one, if I am to part with this one you must get me some degenerated guk weed\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 14042}) then\n\t\te.self:Say(\"Thank you for this item, here is the dull ring\")\n\t\te.other:SummonItem(13733)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 14043}) then\n\t\te.self:Say(\"You have gotten the spores that I asked for, very well, here is the ring as agreed\")\n\t\te.other:SummonItem(13731)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 14044}) then\n\t\te.self:Say(\"Excellent, I will gladly give you the ring for this weed that you have brought me\")\n\t\te.other:SummonItem(13732)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 12981,
+        "zone": "kerraridge",
+        "name": "Melixis",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: kerraridge/Melixis.pl\n-- items: 14042, 13733, 14043, 13731, 14044, 13732\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Welcome to Melixis shop.Rrrr. Feel free to brrrowse through my wares.  Melixis also find some [shiny tings] that she may trade you.\")\n\telseif e.message:findi(\"shiny tings\") then\n\t\te.self:Say(\"In Melixis travels of the Odus, she find a [dull ring], a [kinda shiny ring] and a [really shiny ring]. Maybe you want to trade for those tings. Rrrr.\")\n\telseif e.message:findi(\"dull ring\") then\n\t\te.self:Say(\"For dat ting? You brrring Melixis some bracket mildew. Rarr.\")\n\telseif e.message:findi(\"kinda shiny ring\") then\n\t\te.self:Say(\"Hmm Hamed need faerix spores forrr potion. Rrrrr. You bring some to Melixis and she gives you the kinda shiny ring.\")\n\telseif e.message:findi(\"really shiny ring\") then\n\t\te.self:Say(\"You go find degenerated guk weed. Melixis gives you the really shiny ring.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 14042}) then\n\t\te.self:Say(\"Many thanks.. rrrr.. here is dull ring.\")\n\t\te.other:SummonItem(13733)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 14043}) then\n\t\te.self:Say(\"Melixis thanks you, Hamed will be pleased. A kinda shiny ring is yours.\")\n\t\te.other:SummonItem(13731)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 14044}) then\n\t\te.self:Say(\"You done good job, furless one. Here is really shiny ring. Rarr..\")\n\t\te.other:SummonItem(13732)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/kerraridge/Melixis.lua",
+      "beforeSha256": "c9fc10c81ff7d925fce35d9a63d21a024f9568909257c4eb64e354f10c16bfdc",
+      "proposedFile": "changes/kerraridge-melixis-dialogue/Melixis.lua",
+      "afterSha256": "9c357a0002b75a4b5a419cd7bfb7b0e7414a6ffc01ed120e8a28cc2258809ccd"
+    },
+    {
+      "target": "reference/server/internal/quest/content_exclusions.json",
+      "beforeSha256": "874b10f289c7507640a73fd4f70d0affa617f31b793f2decc2c606aad869390a",
+      "proposedFile": "changes/kerraridge-melixis-dialogue/content_exclusions.json",
+      "afterSha256": "d626b236d71006146c4b429abc0f6f14b4f954d50ccbc68b8c9bb586b5f3ff5d"
+    }
+  ]
+}
