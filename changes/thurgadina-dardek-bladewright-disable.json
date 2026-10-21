@@ -1,0 +1,47 @@
+{
+  "format": 1,
+  "id": "thurgadina-dardek-bladewright-disable",
+  "summary": "thurgadina/Dardek_Bladewright (quests.id 16673): disable the later-era warrior_pre script. Before: enabled, with a coffee hand-in (60289) and a three-item forge hand-in (60285, 60286, 60288) rewarding 60292. None of these IDs exist in data/items, so the quest can never be completed, and the script sends the player to Korbuk Brimblade in Dranik's Scar. After: a maintained modified-upstream override with -- enabled: false, the row enabled=0, and a post_kunark_missing_items ledger entry, the same pattern as sro/Dahdd_Jonne. The NPC and its spawn are unchanged. Validation: source review, check-proposal, npm test and npm run validate. Not runtime tested.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/api.php",
+      "note": "Offline P99 title list reference/p99-wiki/allpages-ns0.json (fetched 2026-07-17T22:59:57.533Z, complete: true). It has no title for Dardek Bladewright, Korbuk Brimblade, Dranik's Scar, Coldain Coffee Blend, The Elegant Shank, Emblazoned Champion's Hilt or Dardek's Forged Blade. data/items has none of 60285, 60286, 60288, 60289 or 60292. The script's own comment at line 29 of sources/projecteq/thurgadina/Dardek_Bladewright.lua says to take the blade back to Korbuk in Dranik's Scar."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 16673,
+        "zone": "thurgadina",
+        "name": "Dardek_Bladewright",
+        "lua_content": "-- items: 60289, 60285, 60286, 60288, 60292\nfunction event_say(e)\n  if (e.message:findi(\"hail\")) then\n    e.self:Say(\"Yeah, I'm Dardek. What d' ye want?! Can't ye see I'm not in t' mood fer talkin'? Bah, t' heck with ye. If'n ye get me a nice hot cup of m' favorite coffee, I might be willin' to talk with ye for a few minutes. Hurry up now, Coldain Coffee! It's t' only thing I'll drink!\");\n  end\nend\n\nfunction event_waypoint_arrive(e)\n  if (e.self:GetX() > -120 and e.self:GetY() < -420) then\n    e.self:Say(\"Alright then, what do ye have fer me? I’m certain ye didn’t wake me up and make me coffee just t’ see my glistening smile! What have ye got fer me?!\");\n  end\nend\n\nfunction event_trade(e)\n  local qglobals = eq.get_qglobals(e.other);\n  local item_lib = require(\"items\");\n\n  if (qglobals[\"warrior_pre\"] == \"4\" and item_lib.check_turn_in(e.trade, {item1 = 60289})) then -- Coldain Coffee Blend\n    e.self:Say(\"Mmm, nothing like a nice hot cup of Thurgadin’s best. Alright then, let’s head over t’ my shop and we can get down t’ business!\");\n    -- Start pathing on Grid 31 to the forge.\n    e.self:AssignWaypoints(31);\n  end\n  -- Hand him the three items:\n  --\n  -- Korbuk’s Weapon Plans      60285\n  -- The Elegant Shank          60286\n  -- Emblazoned Champion’s Hilt 60288\n  --\n  -- He will hand you in return “Dardek’s Forged Blade” (60292) Take it back to Korbuk in Dranik’s scar.\n  --\n  -- This turn in should only be able to be done when Dardek Bladewright is at the forge.\n  -- X > -142 and Y < -402\n  if (e.self:GetX() > -142 and e.self:GetY() < -402) then \n    if (qglobals[\"warrior_pre\"] == \"4\" and item_lib.check_turn_in(e.trade, {item1 = 60285, item2 = 60286, item3 = 60288})) then \n      eq.set_global(\"warrior_pre\",\"5\",5,\"F\");\n      e.self:Say(\"Take this back to Korbuk Brimblade\");\n      e.other:SummonItem(60292); -- Item: Dardek's Forged Blade\n      --e.self:Depop();\n      eq.depop_with_timer(115253);\n    end\n  end\n  item_lib.return_items(e.self, e.other, e.trade);\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 16673,
+        "zone": "thurgadina",
+        "name": "Dardek_Bladewright",
+        "lua_content": "-- enabled: false\n-- P99 exclusion: see content_exclusions.json quests[\"thurgadina/Dardek_Bladewright\"].\n-- Source: thurgadina/Dardek_Bladewright.lua\n-- items: 60289, 60285, 60286, 60288, 60292\nfunction event_say(e)\n  if (e.message:findi(\"hail\")) then\n    e.self:Say(\"Yeah, I'm Dardek. What d' ye want?! Can't ye see I'm not in t' mood fer talkin'? Bah, t' heck with ye. If'n ye get me a nice hot cup of m' favorite coffee, I might be willin' to talk with ye for a few minutes. Hurry up now, Coldain Coffee! It's t' only thing I'll drink!\");\n  end\nend\n\nfunction event_waypoint_arrive(e)\n  if (e.self:GetX() > -120 and e.self:GetY() < -420) then\n    e.self:Say(\"Alright then, what do ye have fer me? I’m certain ye didn’t wake me up and make me coffee just t’ see my glistening smile! What have ye got fer me?!\");\n  end\nend\n\nfunction event_trade(e)\n  local qglobals = eq.get_qglobals(e.other);\n  local item_lib = require(\"items\");\n\n  if (qglobals[\"warrior_pre\"] == \"4\" and item_lib.check_turn_in(e.trade, {item1 = 60289})) then -- Coldain Coffee Blend\n    e.self:Say(\"Mmm, nothing like a nice hot cup of Thurgadin’s best. Alright then, let’s head over t’ my shop and we can get down t’ business!\");\n    -- Start pathing on Grid 31 to the forge.\n    e.self:AssignWaypoints(31);\n  end\n  -- Hand him the three items:\n  --\n  -- Korbuk’s Weapon Plans      60285\n  -- The Elegant Shank          60286\n  -- Emblazoned Champion’s Hilt 60288\n  --\n  -- He will hand you in return “Dardek’s Forged Blade” (60292) Take it back to Korbuk in Dranik’s scar.\n  --\n  -- This turn in should only be able to be done when Dardek Bladewright is at the forge.\n  -- X > -142 and Y < -402\n  if (e.self:GetX() > -142 and e.self:GetY() < -402) then \n    if (qglobals[\"warrior_pre\"] == \"4\" and item_lib.check_turn_in(e.trade, {item1 = 60285, item2 = 60286, item3 = 60288})) then \n      eq.set_global(\"warrior_pre\",\"5\",5,\"F\");\n      e.self:Say(\"Take this back to Korbuk Brimblade\");\n      e.other:SummonItem(60292); -- Item: Dardek's Forged Blade\n      --e.self:Depop();\n      eq.depop_with_timer(115253);\n    end\n  end\n  item_lib.return_items(e.self, e.other, e.trade);\nend\n",
+        "has_say_event": 1,
+        "enabled": 0
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/thurgadina/Dardek_Bladewright.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/thurgadina-dardek-bladewright-disable/Dardek_Bladewright.lua",
+      "afterSha256": "22eef3072932451ac16d08934c570b94d64e0ec36370fad552f83373cba4ab8d"
+    },
+    {
+      "target": "reference/server/internal/quest/content_exclusions.json",
+      "beforeSha256": "874b10f289c7507640a73fd4f70d0affa617f31b793f2decc2c606aad869390a",
+      "proposedFile": "changes/thurgadina-dardek-bladewright-disable/content_exclusions.json",
+      "afterSha256": "0e44bac9ca1c91731c9b7e29ec4bc9a5845c6f835fb11afaf238c0296202b959"
+    }
+  ]
+}
