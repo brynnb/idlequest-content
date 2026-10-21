@@ -1,0 +1,49 @@
+{
+  "format": 1,
+  "id": "freeportwest-opal-darkbriar-trades",
+  "summary": "freeportwest/Opal_Darkbriar (quests.id 15231): remove the later-era 'trades' / 'second book' dialogue. Before: saying 'trades' or 'second book' summons 51121 Tradeskill Basics : Volume I or 51122 Volume II, neither of which exists in data/items, and the Tattered Note welcome ends with a [trades] prompt. After: a new maintained modified-upstream override with no event_say (those two branches were its only content, so has_say_event becomes 0), without 51121/51122 in the items header, and with the welcome ending at the Shana Liskia sentence, as maintained overrides such as felwitheb/Kinool_Goldsinger do. The Tattered Note hand-in, its robe, faction and EXP, and the proximity message are unchanged. The ledger-reviewed The Burning Dead decision (no Opal wand branch) is unaffected. Validation: source review, check-proposal, npm test and npm run validate. Not runtime tested.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Opal_Darkbriar",
+      "note": "Offline page reference/p99-wiki/npc-pages/opal-darkbriar-396a4e5e49.wiki (fetched 2026-08-12T20:21:38.954Z) lists zone 'West Freeport OR East Freeport' and related_quests '* [[The Burning Dead]]' and '* [[Guild Summons - Dismal Rage Necromancer]]'. Neither is a tradeskill book quest. The offline title list reference/p99-wiki/allpages-ns0.json (fetched 2026-07-17T22:59:57.533Z, complete: true, 28488 titles) has no 'Tradeskill Basics' title. data/items has neither 51121 nor 51122."
+    },
+    {
+      "url": "https://wiki.project1999.com/The_Burning_Dead",
+      "note": "content_exclusions.json review 'The Burning Dead' (reviewed_at 2026-07-19) lists freeportwest/Opal_Darkbriar and says no Opal wand-creation branch was added. This change adds none and removes no hand-in. The maintained freeporteast/Opal_Darkbriar override (review 'Guild Summons - Dismal Rage Necromancer', note: 'East Freeport Opal now removes later tradeskill-book prompts') and the freportw/Opal_Darkbriar script (quests.id 13132, has_say_event 0) have no trades dialogue."
+    },
+    {
+      "url": "https://github.com/brynnb/idlequest-content",
+      "note": "Repo precedent: 48 maintained overrides whose ProjectEQ source summons 51121 drop the trades branch. Maintained felwitheb/Kinool_Goldsinger.lua:37, felwitheb/Niola_Impholder.lua:36, felwithea/Yeolarn_Bronzeleaf.lua and rivervale/Sheriff_Roglio.lua keep the 'see <trainer> ... hunting and gathering skills.' sentence and drop only the 'Return to me ... [trades] ...' sentence. Before this change the only effective scripts that still summon 51121/51122 are freeportwest/Lorme_Tredore (separate proposal), freeportwest/Romiak_Jusathorn, freeportwest/Opal_Darkbriar and freeporteast/Cain_Darkmoore."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 15231,
+        "zone": "freeportwest",
+        "name": "Opal_Darkbriar",
+        "lua_content": "-- items: 51121, 51122, 18739, 13558\nfunction event_spawn(e)\n\tlocal xloc = e.self:GetX();\n\tlocal yloc = e.self:GetY();\n\teq.set_proximity(xloc - 50, xloc + 50, yloc - 50, yloc + 50);\nend\n\nfunction event_enter(e)\n\tif e.other:HasItem(18739) then\n\t\te.other:Message(MT.Yellow,\"As you make your way into a small dimly lit room, a robed figure turns to greet you. 'Hello there. friend. I am Opal Darkbriar, Wizard Guild Master. Should you wish to begin your training, read the note in your inventory and then hand it to me.'\");\n\tend\nend\n\nfunction event_say(e)\n\tif(e.message:findi(\"trades\")) then\n\t\te.self:Say(\"I thought you might be one who was interested in the various different trades, but which one would suit you? Ahh, alas, it would be better to let you decide for yourself, perhaps you would even like to master them all! That would be quite a feat. Well, lets not get ahead of ourselves, here, take this book. When you have finished reading it, ask me for the [second book], and I shall give it to you. Inside them you will find the most basic recipes for each trade. These recipes are typically used as a base for more advanced crafting, for instance, if you wished to be a smith, one would need to find some ore and smelt it into something usable. Good luck!\");\n\t\te.other:SummonItem(51121); -- Item: Tradeskill Basics : Volume I\n\telseif(e.message:findi(\"second book\")) then\n\t\te.self:Say(\"Here is the second volume of the book you requested, may it serve you well!\");\n\t\te.other:SummonItem(51122); -- Item: Tradeskill Basics : Volume II\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 18739})) then -- A tattered not\n\t\te.self:Say(\"Welcome to the Academy of Arcane Sciences. Here's one of our guild robes for you to wear. Once you are ready to begin your training please make sure that you see Shana Liskia, he can assist you in developing your hunting and gathering skills. Return to me when you have become more experienced in our art, I will be able to further instruct you on how to progress through your early ranks, as well as in some of the various [trades] you will have available to you.\");\n\t\te.other:SummonItem(13558); -- Patched Violet Robe\n\t\te.other:Ding();\n\t\te.other:Faction(220,100,0); -- Arcane Scientists\n\t\te.other:Faction(281,25,0); -- Knights of Truth\n\t\te.other:Faction(296,-15,0); -- Opal Dark Briar\n\t\te.other:Faction(330,-15,0); -- The Freeport Militia\n\t\te.other:AddEXP(100);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\n-- END of FILE Zone:freeportwest -- Opal_Darkbriar\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 15231,
+        "zone": "freeportwest",
+        "name": "Opal_Darkbriar",
+        "lua_content": "-- Source: freeportwest/Opal_Darkbriar.lua\n-- items: 18739, 13558\nfunction event_spawn(e)\n\tlocal xloc = e.self:GetX();\n\tlocal yloc = e.self:GetY();\n\teq.set_proximity(xloc - 50, xloc + 50, yloc - 50, yloc + 50);\nend\n\nfunction event_enter(e)\n\tif e.other:HasItem(18739) then\n\t\te.other:Message(MT.Yellow,\"As you make your way into a small dimly lit room, a robed figure turns to greet you. 'Hello there. friend. I am Opal Darkbriar, Wizard Guild Master. Should you wish to begin your training, read the note in your inventory and then hand it to me.'\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 18739})) then -- A tattered not\n\t\te.self:Say(\"Welcome to the Academy of Arcane Sciences. Here's one of our guild robes for you to wear. Once you are ready to begin your training please make sure that you see Shana Liskia, he can assist you in developing your hunting and gathering skills.\");\n\t\te.other:SummonItem(13558); -- Patched Violet Robe\n\t\te.other:Ding();\n\t\te.other:Faction(220,100,0); -- Arcane Scientists\n\t\te.other:Faction(281,25,0); -- Knights of Truth\n\t\te.other:Faction(296,-15,0); -- Opal Dark Briar\n\t\te.other:Faction(330,-15,0); -- The Freeport Militia\n\t\te.other:AddEXP(100);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\n-- END of FILE Zone:freeportwest -- Opal_Darkbriar\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/freeportwest/Opal_Darkbriar.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/freeportwest-opal-darkbriar-trades/Opal_Darkbriar.lua",
+      "afterSha256": "34e1a3b3ff6cadbd82882a4165a7d8f50176b6f967735118bfdfd705fecbb716"
+    }
+  ]
+}
