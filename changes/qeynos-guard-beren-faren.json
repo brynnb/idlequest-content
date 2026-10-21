@@ -1,0 +1,45 @@
+{
+  "format": 1,
+  "id": "qeynos-guard-beren-faren",
+  "summary": "qeynos/Guard_Beren (quests.id 12761): add the P99 reply to \"Who is Faren?\". Before: event_say handles hail, dwarf and his kind only, so the P99 question gets no answer. After: a findi(\"faren\") branch says the P99 line \"My brother Faren is a fine fisherman just like our father was. He fishes out there on the East Dock just about every day.\" Nothing else changes. The script moves from the unmodified ProjectEQ copy to a modified-upstream override. Validation: static repro, check-proposal, npm test and npm run validate. Not runtime tested.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Faren%27s_Tacklebox",
+      "note": "Offline page reference/p99-wiki/raw-pages/faren-s-tacklebox-0c11020a0a.wiki line 38: You say, 'Who is Faren?'. Line 40: Guard Beren says 'My brother Faren is a fine fisherman just like our father was. He fishes out there on the East Dock just about every day.'"
+    },
+    {
+      "url": "https://github.com/brynnb/idlequest-content",
+      "note": "sources/projecteq/qeynos/Guard_Beren.lua has no faren branch. Ledger reference/server/internal/quest/content_exclusions.json line 11179 (Faren's Tacklebox, needs_review) lists qeynos/Guard_Beren; its notes cover the reward and the missing tacklebox object, not this dialogue."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 12761,
+        "zone": "qeynos",
+        "name": "Guard_Beren",
+        "lua_content": "function event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"What do you want? Are you friends with that lousy [dwarf]?! You had better not be unless you want to spend the rest of the week bleeding!\");\n\telseif(e.message:findi(\"dwarf\")) then\n\t\te.self:Say(\"That dwarf, Trumpy, who Corshin here thinks is a friend of Commander Bayle's, keeps pestering my poor brother Faren. I have had just about enough of him and [his kind].\");\n\telseif(e.message:findi(\"his kind\")) then\n\t\te.self:Say(\"You know... thieves, drunks and murderers. Decent folk just don't have a chance anymore.\");\n\tend\nend\n\nfunction event_waypoint_arrive(e)\n\tif(e.wp == 5) then\n\t\te.self:Say(\"How are they biting, little brother?\");\n\t\teq.signal(1159,1); -- NPC: Faren\n\tend\nend\n\nfunction event_signal(e)\n\tlocal xloc = e.self:GetX();\n\tlocal yloc = e.self:GetY();\n\tif(e.signal == 1 and xloc == -145 and yloc == -247) then\n\t\te.self:Say(\"Yes, sir!\");\n\telseif(e.signal == 2) then\n\t\te.self:Say(\"Don't you worry about him! I will take care of [Trumpy] Irontoe once and for all!\");\n\telseif(e.signal == 5 and xloc == -145 and yloc == -247) then\n\t\te.self:Say(\"Heh, Speak for yourself, Corshin. That one looks like a troublemaker to me.\");\n\tend\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 12761,
+        "zone": "qeynos",
+        "name": "Guard_Beren",
+        "lua_content": "-- Source: qeynos/Guard_Beren.lua\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"What do you want? Are you friends with that lousy [dwarf]?! You had better not be unless you want to spend the rest of the week bleeding!\");\n\telseif(e.message:findi(\"dwarf\")) then\n\t\te.self:Say(\"That dwarf, Trumpy, who Corshin here thinks is a friend of Commander Bayle's, keeps pestering my poor brother Faren. I have had just about enough of him and [his kind].\");\n\telseif(e.message:findi(\"his kind\")) then\n\t\te.self:Say(\"You know... thieves, drunks and murderers. Decent folk just don't have a chance anymore.\");\n\telseif(e.message:findi(\"faren\")) then\n\t\te.self:Say(\"My brother Faren is a fine fisherman just like our father was. He fishes out there on the East Dock just about every day.\");\n\tend\nend\n\nfunction event_waypoint_arrive(e)\n\tif(e.wp == 5) then\n\t\te.self:Say(\"How are they biting, little brother?\");\n\t\teq.signal(1159,1); -- NPC: Faren\n\tend\nend\n\nfunction event_signal(e)\n\tlocal xloc = e.self:GetX();\n\tlocal yloc = e.self:GetY();\n\tif(e.signal == 1 and xloc == -145 and yloc == -247) then\n\t\te.self:Say(\"Yes, sir!\");\n\telseif(e.signal == 2) then\n\t\te.self:Say(\"Don't you worry about him! I will take care of [Trumpy] Irontoe once and for all!\");\n\telseif(e.signal == 5 and xloc == -145 and yloc == -247) then\n\t\te.self:Say(\"Heh, Speak for yourself, Corshin. That one looks like a troublemaker to me.\");\n\tend\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/qeynos/Guard_Beren.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/qeynos-guard-beren-faren/Guard_Beren.lua",
+      "afterSha256": "770c752134068c23280e3dd5b0c93e314acceda64d15424ca1df66730a805bf1"
+    }
+  ]
+}
