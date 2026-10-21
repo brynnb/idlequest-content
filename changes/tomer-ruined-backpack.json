@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "tomer-ruined-backpack",
+  "summary": "qeynos2/Tomer_Instogle (quests.id 15195): Tomer now hands out and takes back item 13769 Ruined Backpack (lore \"Tomer's Ruined Backpack\") instead of 20459 Bag of Provisions. Before: saying 'backpack' summons 20459 and the final hand-in accepts 20459, which is also the Felwithe Merchant_Nora/Farios_Elianos grocery item. After: both use 13769, as the P99 Tomer's Rescue walkthrough says. Dialogue, quest globals, faction and experience are unchanged. The escort simplification documented in docs/quest-audit-review-notes.md is unchanged. Validation: source review, lua syntax via npm run validate and check-proposal. Not runtime or UI tested.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Tomer%27s_Rescue",
+      "note": "Offline cache reference/p99-wiki/raw-pages/tomer-s-rescue-7c9bb3f8ba.wiki (fetched 2026-07-17 per p99-evidence-index.json, revision not recorded). Line 53: \"'''Receive a [[Ruined Backpack]].'''\" Line 75: \"'''Give Tomer the [[Ruined Backpack]].'''\" data/items has 13769 Name 'Ruined Backpack', lore \"Tomer's Ruined Backpack\"; 20459 is 'Bag of Provisions', lore 'Bag of Groceries'. The ProjectEQ Perl (sources/projecteq/qeynos2/Tomer_Instogle.pl:50,70) uses 20459; P99 takes priority per CONTRIBUTING.md."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 15195,
+        "zone": "qeynos2",
+        "name": "Tomer_Instogle",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: qeynos2/Tomer_Instogle.pl\n-- P99 audit: Tomer's Rescue\n-- Note: IdleQuest currently persists the rescue state but does not physically escort Tomer; eq.follow is a runtime compatibility no-op.\n-- items: 20459\n\nlocal function qglobal(e, key)\n\tlocal qglobals = eq.get_qglobals(e.other)\n\treturn qglobals[key]\nend\n\nfunction event_say(e)\n\tlocal find_tomer = qglobal(e, \"FindTomer\")\n\tif find_tomer == \"1\" or find_tomer == 1 then\n\t\tif e.message:findi(\"hail\") then\n\t\t\te.self:Say(\"Ahhhgggg.. Those mangy [dogs] put up a tough fight.. If I don't make it back to the [Clan House] soon, it'll all be over for me.\")\n\t\telseif e.message:findi(\"dogs\") or e.message:findi(\"mutts\") then\n\t\t\te.self:Say(\"It's those Darkpaws.. They've beat me pretty badly.. but they'll get theirs soon enough!\")\n\t\telseif e.message:findi(\"clan house\") then\n\t\t\te.self:Say(\"I am a new member of the Silent Fist Clan.. I need someone from my guild to help me find my way back.\")\n\t\telseif e.message:findi(\"Seta sent me to find you\") then\n\t\t\te.self:Say(\"Oh.. Thank goodness you found me.. I'm lost and weak, those [mutts] are a vicious lot.. an you carry my [backpack] for me?\")\n\t\telseif e.message:findi(\"backpack\") then\n\t\t\te.self:Say(\"Thank you, friend.. Now, can you [lead me back to Master Seta] of the Silent Fist Clan? \")\n\t\t\te.other:SummonItem(20459)\n\t\telseif e.message:findi(\"lead you back to master seta\") then\n\t\t\te.self:Say(\"Lead the way, and I shall follow. When we make it back, please inform Seta that you have rescued me.\")\n\t\t\teq.set_global(\"SetaTomer\", \"1\", 1, \"M30\")\n\t\t\teq.follow(e.other)\n\t\tend\n\telseif find_tomer == \"2\" or find_tomer == 2 then\n\t\tif e.message:findi(\"hail\") then\n\t\t\te.self:Say(\"Yes, he saved my life.. I owe him much thanks. Please return my pack to me now, good friend.\")\n\t\tend\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif (qglobal(e, \"FindTomer\") == \"2\" or qglobal(e, \"FindTomer\") == 2) and item_lib.check_turn_in(e.trade, {item1 = 20459}) then\n\t\te.other:Ding()\n\t\te.self:Say(\"Oh, you have the makings of a true hero.. The Silent Fist Clan is proud to have you as ally. May your soul guide and protect you through these chaotic times.\")\n\t\te.other:AddEXP(100)\n\t\te.other:Faction(309, 35, 0)\n\t\te.other:Faction(262, 5, 0)\n\t\te.other:Faction(361, 1, 0)\n\t\teq.delete_global(\"FindTomer\")\n\t\teq.stop_follow()\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 15195,
+        "zone": "qeynos2",
+        "name": "Tomer_Instogle",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: qeynos2/Tomer_Instogle.pl\n-- P99 audit: Tomer's Rescue\n-- Note: IdleQuest currently persists the rescue state but does not physically escort Tomer; eq.follow is a runtime compatibility no-op.\n-- items: 13769\n\nlocal function qglobal(e, key)\n\tlocal qglobals = eq.get_qglobals(e.other)\n\treturn qglobals[key]\nend\n\nfunction event_say(e)\n\tlocal find_tomer = qglobal(e, \"FindTomer\")\n\tif find_tomer == \"1\" or find_tomer == 1 then\n\t\tif e.message:findi(\"hail\") then\n\t\t\te.self:Say(\"Ahhhgggg.. Those mangy [dogs] put up a tough fight.. If I don't make it back to the [Clan House] soon, it'll all be over for me.\")\n\t\telseif e.message:findi(\"dogs\") or e.message:findi(\"mutts\") then\n\t\t\te.self:Say(\"It's those Darkpaws.. They've beat me pretty badly.. but they'll get theirs soon enough!\")\n\t\telseif e.message:findi(\"clan house\") then\n\t\t\te.self:Say(\"I am a new member of the Silent Fist Clan.. I need someone from my guild to help me find my way back.\")\n\t\telseif e.message:findi(\"Seta sent me to find you\") then\n\t\t\te.self:Say(\"Oh.. Thank goodness you found me.. I'm lost and weak, those [mutts] are a vicious lot.. an you carry my [backpack] for me?\")\n\t\telseif e.message:findi(\"backpack\") then\n\t\t\te.self:Say(\"Thank you, friend.. Now, can you [lead me back to Master Seta] of the Silent Fist Clan? \")\n\t\t\te.other:SummonItem(13769)\n\t\telseif e.message:findi(\"lead you back to master seta\") then\n\t\t\te.self:Say(\"Lead the way, and I shall follow. When we make it back, please inform Seta that you have rescued me.\")\n\t\t\teq.set_global(\"SetaTomer\", \"1\", 1, \"M30\")\n\t\t\teq.follow(e.other)\n\t\tend\n\telseif find_tomer == \"2\" or find_tomer == 2 then\n\t\tif e.message:findi(\"hail\") then\n\t\t\te.self:Say(\"Yes, he saved my life.. I owe him much thanks. Please return my pack to me now, good friend.\")\n\t\tend\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif (qglobal(e, \"FindTomer\") == \"2\" or qglobal(e, \"FindTomer\") == 2) and item_lib.check_turn_in(e.trade, {item1 = 13769}) then\n\t\te.other:Ding()\n\t\te.self:Say(\"Oh, you have the makings of a true hero.. The Silent Fist Clan is proud to have you as ally. May your soul guide and protect you through these chaotic times.\")\n\t\te.other:AddEXP(100)\n\t\te.other:Faction(309, 35, 0)\n\t\te.other:Faction(262, 5, 0)\n\t\te.other:Faction(361, 1, 0)\n\t\teq.delete_global(\"FindTomer\")\n\t\teq.stop_follow()\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/qeynos2/Tomer_Instogle.lua",
+      "beforeSha256": "7f55a7e64d8414fc6e86fc4a747a13a53a579ca2cb7895e89738300eb1d95bd0",
+      "proposedFile": "changes/tomer-ruined-backpack/Tomer_Instogle.lua",
+      "afterSha256": "2a95430f6381a329e40956984fb75c26c54ea4bef7dad97102bb3870c400f010"
+    }
+  ]
+}
