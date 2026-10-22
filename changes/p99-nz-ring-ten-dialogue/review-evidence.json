@@ -1,0 +1,30 @@
+{
+  "titles": [
+    "10th Coldain Ring Quest"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "partial",
+  "match_status": "partial",
+  "local_quest_keys": [
+    "greatdivide/2000965",
+    "greatdivide/2000966"
+  ],
+  "proposal": "changes/p99-nz-ring-ten-dialogue.json",
+  "notes": [
+    "Restore the documented staging instructions and scout order acknowledgements without changing Ring War mechanics.",
+    "Preserve all 21-wave schedules, population adaptations, role guards, current enabled state, actor lifetimes, survivor rewards and deliberate faction bypass. Required generator synchronization: scripts/quests/coldain-ring-ten.mjs and coldain_ring_ten.json for staging text; coldain-ring-ten-war-content.mjs for shared scout speech. The page\u2019s contaminated Dobbin PoP dialogue is not rewritten or newly copied.",
+    "The module change adds only three exact documented shouts after the existing active-phase guard. Team selection and movement loops are unchanged; no invented Garadain or corrupted Dobbin response is introduced."
+  ],
+  "verification": {
+    "source": "Cached P99 and effective Lua reviewed; exact complete row preimages and source hashes recorded.",
+    "syntax": "pending",
+    "runtime": "Isolated mock regression pending; full game runtime unavailable.",
+    "ui": "not_run",
+    "connected_chain": "not_run"
+  },
+  "unresolved": [
+    "Ordinary source drops/spawns, recipe live behavior and rendered complete quest path not verified.",
+    "Generator inputs must be synchronized downstream before regeneration.",
+    "Existing timing, placement, invasion/population and combat-balance limitations remain; historical connected acceptance is not a fresh test."
+  ]
+}

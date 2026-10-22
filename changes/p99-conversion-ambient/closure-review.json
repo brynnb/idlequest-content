@@ -1,0 +1,1637 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-22",
+  "proposal": "changes/p99-conversion-ambient.json",
+  "proposalSha256": "4e3c4cd857daba035ad285680e7c8fcb51edb8315332b3ddd4e2fd87c35c9f7b",
+  "initialAssignmentCount": 34,
+  "counts": {
+    "translated_source_behavior_not_live_validated": 18,
+    "ambient/world behavior with unsupported runtime": 12,
+    "later-only": 1,
+    "translated_with_cosmetic_runtime_limit": 2,
+    "translated_with_documented_runtime_adaptation": 1
+  },
+  "compatibilityEvidence": "Related implementation inspected privately; no private code or repository provenance is redistributed. Conclusions remain static, not live validation.",
+  "runtimeEvidence": "runtime-evidence.json",
+  "signalUnits": {
+    "decision": "Perl signalwith third argument and signal second argument are milliseconds, not seconds; Lua eq.signal third argument is milliseconds. Perl settimer remains seconds.",
+    "officialSource": "https://github.com/EQEmu/EQEmu/blob/4aceae18b94ffaafc08e2b17bc41cd72c77f795d/zone/questmgr.cpp",
+    "examples": [
+      "Madan signal(110066,100) means eq.signal(110066,0,100).",
+      "Ronodun signalwith(...,8000) means8000ms, not8000000ms.",
+      "Existing Fronden/Doogle delays already use correct millisecond values, but public lifetime/receiving-scope limitations remain."
+    ]
+  },
+  "externalEvidence": [
+    {
+      "url": "https://wiki.project1999.com/Bind_Locations",
+      "retrievedAt": "2026-10-22",
+      "fact": "Soulbinders are excluded from P99; binding requires the player spell."
+    },
+    {
+      "url": "https://wiki.project1999.com/Patch_Notes#Luclin_Era_(Post-Project_1999)",
+      "retrievedAt": "2026-10-22",
+      "fact": "Soulbinders introduction belongs to post-P99 Luclin patch notes."
+    }
+  ],
+  "records": [
+    {
+      "key": "greatdivide/gnomish_captive",
+      "originalSource": "sources/projecteq/greatdivide/gnomish_captive.pl",
+      "originalSourceSha256": "8e2201dc2caedb6df5e77c6893b796f408e218c54d74d5c0286d1f9704417b6c",
+      "originalDisposition": "open_bloodmaw_proximity_lifecycle",
+      "originalQuestId": 13245,
+      "originalEnabled": 1,
+      "npcIdentities": [
+        {
+          "id": 118154,
+          "name": "gnomish_captive"
+        }
+      ],
+      "spawnIdentities": [],
+      "wikiEvidence": [
+        {
+          "title": "Gnomish captive",
+          "url": "https://wiki.project1999.com/Gnomish_captive?action=raw",
+          "fetchedAt": "2026-08-12T18:55:05.124Z",
+          "revision": null,
+          "sha256": "9a040f1f4ad6013538ec300197d7e0b1fd12957e6f847b072319a342494ea34b",
+          "bytes": 773,
+          "source": "npc-pages/gnomish-captive-95900698be.json",
+          "cachePath": "reference/p99-wiki/npc-pages/gnomish-captive-95900698be.wiki"
+        }
+      ],
+      "baselineOriginalReview": "assignment.json contains the complete original resolution-report record.",
+      "itemsAndRewards": "No new item, numeric reward, faction, class/level requirement or NPC row.",
+      "classification": "translated_source_behavior_not_live_validated",
+      "proposedFile": "changes/p99-conversion-ambient/greatdivide/gnomish_captive.lua",
+      "proposedSourceSha256": "8c0c07e98f60c60e0ec1ab11f38b491b245b117b0b841d36f8fd5613b3be7c01",
+      "enabledAfter": 1,
+      "testManifest": "changes/p99-conversion-ambient/runtime-assertions.json",
+      "focusedTests": [
+        "gnomish_captive exact original proximity",
+        "gnomish_captive enter clears before depop with no player required"
+      ],
+      "verification": "Source-bound isolated Lua logic passes; current implementation evidence reviewed. No scratch DB settlement, loaded game, naturally triggered lifecycle, multiplayer or rendered UI validation.",
+      "reason": "Preserves spawn proximity x/y\u00b120, ENTER speech/emote, clear then self-depop using existing owner-scoped engine adaptation. Static implementation shows durable proximity state and normal ENTER dispatch/actor cleanup. No static spawn is added; cannot claim naturally reachable NPC. Bloodmaw creates a different118026 actor, not this118154 script."
+    },
+    {
+      "key": "iceclad/Madan_Eflik",
+      "originalSource": "sources/projecteq/iceclad/Madan_Eflik.pl",
+      "originalSourceSha256": "e7c5fdd37c3069ef4484fc1a0c19344df329374ea145feca39013068078d782d",
+      "originalDisposition": "open_ambient_timer_implementation",
+      "originalQuestId": 12064,
+      "originalEnabled": 1,
+      "npcIdentities": [
+        {
+          "id": 110040,
+          "name": "Madan_Eflik"
+        }
+      ],
+      "spawnIdentities": [
+        {
+          "id": 23453,
+          "zone": "iceclad",
+          "spawngroupID": 14442,
+          "pathgrid": 0
+        }
+      ],
+      "wikiEvidence": [
+        {
+          "title": "Madan Eflik",
+          "url": "https://wiki.project1999.com/Madan_Eflik?action=raw",
+          "fetchedAt": "2026-08-12T20:02:36.938Z",
+          "revision": null,
+          "sha256": "ad7055a45a7b53927f910cb164e9022e1d7b7347de80ac2d09ea9cf778a5cb04",
+          "bytes": 833,
+          "source": "npc-pages/madan-eflik-dcbce5c31f.json",
+          "cachePath": "reference/p99-wiki/npc-pages/madan-eflik-dcbce5c31f.wiki"
+        }
+      ],
+      "baselineOriginalReview": "assignment.json contains the complete original resolution-report record.",
+      "itemsAndRewards": "No new item, numeric reward, faction, class/level requirement or NPC row.",
+      "classification": "ambient/world behavior with unsupported runtime",
+      "proposedFile": null,
+      "reason": "The 3000-second repeating timer emits one of two lines and queues signal0 to Sojan110066 after100ms. World-timer effects require actors:world for signals, but public signal admission rejects nonzero delay. Current Sojan Lua also has no signal receiver. A source-owned one-shot timer would cancel the queued signal when sender dies, unlike the original NPC-ID signal queue; no silent approximation is shipped.",
+      "currentImplementationEvidence": "current world timer compatibility; current public actor/signal compatibility; public EQEmu QuestManager source",
+      "verification": "Full source and current implementation read; no claim that not-tested alone proves unsupported."
+    },
+    {
+      "key": "iceclad/Novyak_the_Lookout",
+      "originalSource": "sources/projecteq/iceclad/Novyak_the_Lookout.pl",
+      "originalSourceSha256": "55bce0c9f0d1048346d79395bce01db2f8c8577a8178cde147198d6e0d180e30",
+      "originalDisposition": "open_ambient_timer_implementation",
+      "originalQuestId": 18491,
+      "originalEnabled": 1,
+      "npcIdentities": [
+        {
+          "id": 110070,
+          "name": "Novyak_the_Lookout"
+        }
+      ],
+      "spawnIdentities": [
+        {
+          "id": 23490,
+          "zone": "iceclad",
+          "spawngroupID": 14472,
+          "pathgrid": 0
+        }
+      ],
+      "wikiEvidence": [],
+      "baselineOriginalReview": "assignment.json contains the complete original resolution-report record.",
+      "itemsAndRewards": "No new item, numeric reward, faction, class/level requirement or NPC row.",
+      "classification": "translated_source_behavior_not_live_validated",
+      "proposedFile": "changes/p99-conversion-ambient/iceclad/Novyak_the_Lookout.lua",
+      "proposedSourceSha256": "065bc1a013dd632f5dc8c6fec073a6ef9fc6c0dc15f58a35d271bb8aff0cead7",
+      "enabledAfter": 1,
+      "testManifest": "changes/p99-conversion-ambient/runtime-assertions.json",
+      "focusedTests": [
+        "Novyak_the_Lookout source seconds converted once to milliseconds",
+        "Novyak_the_Lookout repeated timer 1 source effect capture only"
+      ],
+      "verification": "Source-bound isolated Lua logic passes; current implementation evidence reviewed. No scratch DB settlement, loaded game, naturally triggered lifecycle, multiplayer or rendered UI validation.",
+      "reason": "Complete source repeated timer speech retained with timers:world. Perl seconds converted once to integer milliseconds (Novyak2400000, Kroskain320000, Franchus480000, Tingar480000/840000). No timer stop or restart added, preserving repeat behavior. Source flavor may not be independently documented by P99."
+    },
+    {
+      "key": "iceclad/Ratop",
+      "originalSource": "sources/projecteq/iceclad/Ratop.pl",
+      "originalSourceSha256": "5e271fc64bb7fb06c4f8686a69997c6a5ca78cbc68edb03db9a2fb47b1bd7898",
+      "originalDisposition": "mixed_rum_and_later_shawl",
+      "originalQuestId": 13481,
+      "originalEnabled": 1,
+      "npcIdentities": [
+        {
+          "id": 110052,
+          "name": "Ratop"
+        }
+      ],
+      "spawnIdentities": [
+        {
+          "id": 23473,
+          "zone": "iceclad",
+          "spawngroupID": 14457,
+          "pathgrid": 0
+        }
+      ],
+      "wikiEvidence": [
+        {
+          "title": "Ratop",
+          "url": "https://wiki.project1999.com/Ratop?action=raw",
+          "fetchedAt": "2026-08-12T20:34:19.773Z",
+          "revision": null,
+          "sha256": "e921089acd86aae9cb40b7b8ba232ef614603436f760b1e6cceea47df7e526bf",
+          "bytes": 853,
+          "source": "npc-pages/ratop-1e47033eb9.json",
+          "cachePath": "reference/p99-wiki/npc-pages/ratop-1e47033eb9.wiki"
+        }
+      ],
+      "baselineOriginalReview": "assignment.json contains the complete original resolution-report record.",
+      "itemsAndRewards": "No new item, numeric reward, faction, class/level requirement or NPC row.",
+      "classification": "ambient/world behavior with unsupported runtime",
+      "proposedFile": null,
+      "reason": "Classic signals1/2 require resolving or spawning Ritap110053 then immediately signaling that exact actor. Public spawning is explicitly rejected by public actor admission. Existing Ritap intentionally omits classic timer/signal banter. Changing missing recipient to a no-op or personal clone would drop/change source behavior. Later signal101 is eighth-Shawl and remains excluded.",
+      "currentImplementationEvidence": "current public actor/signal compatibility",
+      "verification": "Full source and current implementation read; no claim that not-tested alone proves unsupported."
+    },
+    {
+      "key": "iceclad/Soulbinder_Cubnitskin",
+      "originalSource": "sources/projecteq/iceclad/Soulbinder_Cubnitskin.pl",
+      "originalSourceSha256": "f85093c3627391fb1635a08da9c54cbcfd4962b6b0ebbb609828786702881a01",
+      "originalDisposition": "open_service_plugin_authority",
+      "originalQuestId": 17171,
+      "originalEnabled": 1,
+      "npcIdentities": [
+        {
+          "id": 110072,
+          "name": "Soulbinder_Cubnitskin"
+        }
+      ],
+      "spawnIdentities": [
+        {
+          "id": 23496,
+          "zone": "iceclad",
+          "spawngroupID": 14475,
+          "pathgrid": 0
+        }
+      ],
+      "wikiEvidence": [],
+      "baselineOriginalReview": "assignment.json contains the complete original resolution-report record.",
+      "itemsAndRewards": "No new item, numeric reward, faction, class/level requirement or NPC row.",
+      "classification": "later-only",
+      "proposedFile": null,
+      "reason": "Read the complete plugin::soulbinder_say implementation in sources/projecteq/plugins/soulbinders.pl. It is only the soulbinding service (hail, animation42, selfcast2049). P99 Bind Locations explicitly excludes soulbinders; the P99 Patch Notes place their introduction in the Luclin section. This is positive era evidence, not a missing-page inference.",
+      "currentImplementationEvidence": "https://wiki.project1999.com/Bind_Locations; https://wiki.project1999.com/Patch_Notes#Luclin_Era_(Post-Project_1999)",
+      "verification": "Full source and current implementation read; no claim that not-tested alone proves unsupported."
+    },
+    {
+      "key": "thurgadina/Avalanche",
+      "originalSource": "sources/projecteq/thurgadina/Avalanche.pl",
+      "originalSourceSha256": "88a8c0fc6c8178450c6f22356802ba8257043066162833272a1b3bf267653380",
+      "originalDisposition": "blocked_npc_target_follow",
+      "originalQuestId": 18234,
+      "originalEnabled": 1,
+      "npcIdentities": [
+        {
+          "id": 115096,
+          "name": "Avalanche"
+        },
+        {
+          "id": 115184,
+          "name": "Avalanche"
+        }
+      ],
+      "spawnIdentities": [
+        {
+          "id": 25624,
+          "zone": "thurgadina",
+          "spawngroupID": 15811,
+          "pathgrid": 0
+        }
+      ],
+      "wikiEvidence": [
+        {
+          "title": "Avalanche (NPC)",
+          "url": "https://wiki.project1999.com/Avalanche_(NPC)?action=raw",
+          "fetchedAt": "2026-08-12T17:51:31.690Z",
+          "revision": null,
+          "sha256": "5b52cb69c72d53fda473c92df27cb2b7f1d46beae184f01d1a74e546c421e2be",
+          "bytes": 1382,
+          "source": "npc-pages/avalanche-npc-b88db67749.json",
+          "cachePath": "reference/p99-wiki/npc-pages/avalanche-npc-b88db67749.wiki"
+        }
+      ],
+      "baselineOriginalReview": "assignment.json contains the complete original resolution-report record.",
+      "itemsAndRewards": "No new item, numeric reward, faction, class/level requirement or NPC row.",
+      "classification": "ambient/world behavior with unsupported runtime",
+      "proposedFile": null,
+      "reason": "The one-second spawn timer resolves NPC115102 and follows that NPC actor. Pinned current follow API requires the initiating Player proxy/ID and explicitly rejects NPC/foreign follow targets. No stationary/no-op replacement or player-follow substitution.",
+      "currentImplementationEvidence": "current follow API",
+      "verification": "Full source and current implementation read; no claim that not-tested alone proves unsupported."
+    },
+    {
+      "key": "thurgadina/Brina_Snowfox",
+      "originalSource": "sources/projecteq/thurgadina/Brina_Snowfox.pl",
+      "originalSourceSha256": "fbbb11119ab264f76d647657defdb71baf13fc1916ef62123704b82c274f1f3a",
+      "originalDisposition": "blocked_corrupt_upstream_dialogue",
+      "originalQuestId": 18154,
+      "originalEnabled": 1,
+      "npcIdentities": [
+        {
+          "id": 115171,
+          "name": "Brina_Snowfox"
+        }
+      ],
+      "spawnIdentities": [
+        {
+          "id": 25697,
+          "zone": "thurgadina",
+          "spawngroupID": 15884,
+          "pathgrid": 0
+        }
+      ],
+      "wikiEvidence": [
+        {
+          "title": "Brina Snowfox",
+          "url": "https://wiki.project1999.com/Brina_Snowfox?action=raw",
+          "fetchedAt": "2026-08-12T18:03:24.085Z",
+          "revision": null,
+          "sha256": "77c4f336081ec13932cbd6d825a7f9e2e1c49313700efc25ba44394a658788fd",
+          "bytes": 2619,
+          "source": "npc-pages/brina-snowfox-03f2d8fbdb.json",
+          "cachePath": "reference/p99-wiki/npc-pages/brina-snowfox-03f2d8fbdb.wiki"
+        }
+      ],
+      "baselineOriginalReview": "assignment.json contains the complete original resolution-report record.",
+      "itemsAndRewards": "No new item, numeric reward, faction, class/level requirement or NPC row.",
+      "classification": "translated_source_behavior_not_live_validated",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadina/Brina_Snowfox.lua",
+      "proposedSourceSha256": "68545ed5c00da556f2a39b7bee78224231890b41d773eac3947c04fa1027c73f",
+      "enabledAfter": 1,
+      "testManifest": "changes/p99-conversion-ambient/runtime-assertions.json",
+      "focusedTests": [
+        "Brina_Snowfox mixed case hail",
+        "Brina_Snowfox unrelated speech inert",
+        "Brina_Snowfox one repaired race-aware greeting"
+      ],
+      "verification": "Source-bound isolated Lua logic passes; current implementation evidence reviewed. No scratch DB settlement, loaded game, naturally triggered lifecycle, multiplayer or rendered UI validation.",
+      "reason": "Bounded template repair: same complete prose duplicated with hardcoded Wood Elf and corrupt %#1472 becomes one greeting with actual player race. This is explicitly an inference/repair of ProjectEQ prose, not verified P99 wording. NPC115171 is independently confirmed; no merchant or reward change."
+    },
+    {
+      "key": "thurgadina/Doriggan",
+      "originalSource": "sources/projecteq/thurgadina/Doriggan.pl",
+      "originalSourceSha256": "607771edcbd7d58fa1c53012735bfd48ddfd7558679cd12ec2b581dc8cd4b35e",
+      "originalDisposition": "open_ambient_waypoint_lifecycle",
+      "originalQuestId": 13915,
+      "originalEnabled": 1,
+      "npcIdentities": [
+        {
+          "id": 115191,
+          "name": "Doriggan"
+        },
+        {
+          "id": 115022,
+          "name": "Doriggan"
+        }
+      ],
+      "spawnIdentities": [
+        {
+          "id": 25545,
+          "zone": "thurgadina",
+          "spawngroupID": 15736,
+          "pathgrid": 0
+        }
+      ],
+      "wikiEvidence": [
+        {
+          "title": "Doriggan",
+          "url": "https://wiki.project1999.com/Doriggan?action=raw",
+          "fetchedAt": "2026-08-12T18:30:21.085Z",
+          "revision": null,
+          "sha256": "947d87ceadd027f316a00a3e49df3191218d9b6e1008324952fb1a2aaf818604",
+          "bytes": 1116,
+          "source": "npc-pages/doriggan-758b595e10.json",
+          "cachePath": "reference/p99-wiki/npc-pages/doriggan-758b595e10.wiki"
+        }
+      ],
+      "baselineOriginalReview": "assignment.json contains the complete original resolution-report record.",
+      "itemsAndRewards": "No new item, numeric reward, faction, class/level requirement or NPC row.",
+      "classification": "ambient/world behavior with unsupported runtime",
+      "proposedFile": null,
+      "reason": "Grid11 exists with type0/pause-policy1 and its exact points are retained in identity-and-path-evidence.json. Grid start/callback APIs alone are not the blocker: source eq.stop on its final waypoint passes the generic effect whitelist but reaches public route admission, which admits only a grid-start batch or single MoveTo. Public grid-stop therefore fails settlement. Source SetAppearance(1) is additionally a no-op in the current bridge; this cosmetic issue alone would not prevent a faithful conversion.",
+      "currentImplementationEvidence": "current public actor/signal compatibility; current public route compatibility; current public callback compatibility; current Lua compatibility",
+      "verification": "Full source and current implementation read; no claim that not-tested alone proves unsupported."
+    },
+    {
+      "key": "thurgadina/Frostpaw",
+      "originalSource": "sources/projecteq/thurgadina/Frostpaw.pl",
+      "originalSourceSha256": "4bbd6a667b193a1296867d4d594f66683bdccc8d5d040072531eef2e729256bb",
+      "originalDisposition": "blocked_npc_target_follow",
+      "originalQuestId": 16191,
+      "originalEnabled": 1,
+      "npcIdentities": [
+        {
+          "id": 115097,
+          "name": "Frostpaw"
+        },
+        {
+          "id": 115183,
+          "name": "Frostpaw"
+        }
+      ],
+      "spawnIdentities": [
+        {
+          "id": 25702,
+          "zone": "thurgadina",
+          "spawngroupID": 15889,
+          "pathgrid": 0
+        }
+      ],
+      "wikiEvidence": [
+        {
+          "title": "Frostpaw",
+          "url": "https://wiki.project1999.com/Frostpaw?action=raw",
+          "fetchedAt": "2026-08-12T18:48:17.399Z",
+          "revision": null,
+          "sha256": "5e9d5766d40ee3e0048fa762cf6abc37a8fc351f392913106eaffed21e2ef916",
+          "bytes": 1024,
+          "source": "npc-pages/frostpaw-dc01f78d9d.json",
+          "cachePath": "reference/p99-wiki/npc-pages/frostpaw-dc01f78d9d.wiki"
+        }
+      ],
+      "baselineOriginalReview": "assignment.json contains the complete original resolution-report record.",
+      "itemsAndRewards": "No new item, numeric reward, faction, class/level requirement or NPC row.",
+      "classification": "ambient/world behavior with unsupported runtime",
+      "proposedFile": null,
+      "reason": "The one-second spawn timer resolves NPC115101 and follows that NPC actor. Pinned current follow API requires the initiating Player proxy/ID and explicitly rejects NPC/foreign follow targets. No stationary/no-op replacement or player-follow substitution.",
+      "currentImplementationEvidence": "current follow API",
+      "verification": "Full source and current implementation read; no claim that not-tested alone proves unsupported."
+    },
+    {
+      "key": "thurgadina/Horasug",
+      "originalSource": "sources/projecteq/thurgadina/Horasug.pl",
+      "originalSourceSha256": "d7054b9672ecb703a6bab4dada44a91eaba0e8faf4c548e5c8c80238718c59f7",
+      "originalDisposition": "blocked_ambient_runtime_lifecycle",
+      "originalQuestId": 19508,
+      "originalEnabled": 1,
+      "npcIdentities": [
+        {
+          "id": 115013,
+          "name": "Horasug"
+        }
+      ],
+      "spawnIdentities": [
+        {
+          "id": 25536,
+          "zone": "thurgadina",
+          "spawngroupID": 15727,
+          "pathgrid": 9
+        }
+      ],
+      "wikiEvidence": [
+        {
+          "title": "Horasug",
+          "url": "https://wiki.project1999.com/Horasug?action=raw",
+          "fetchedAt": "2026-08-12T19:26:44.336Z",
+          "revision": null,
+          "sha256": "8e1535cf4fecc54f84f839ed30fbf515533d5fc3f14414bff5e61f3253327def",
+          "bytes": 2866,
+          "source": "npc-pages/horasug-97f370b7a0.json",
+          "cachePath": "reference/p99-wiki/npc-pages/horasug-97f370b7a0.wiki"
+        }
+      ],
+      "baselineOriginalReview": "assignment.json contains the complete original resolution-report record.",
+      "itemsAndRewards": "No new item, numeric reward, faction, class/level requirement or NPC row.",
+      "classification": "ambient/world behavior with unsupported runtime",
+      "proposedFile": null,
+      "reason": "P99 cached Horasug page independently documents the complete chase/bar exchange. Source relies on native grid9 waypoint initiation, SetRunning and receivers Rumagur/Jorumin/Saramor/Fronden/Doogle. The recipient grids cannot currently settle their public stop; delayed public signals are unsupported; existing Fronden/Doogle lack public receiving scope. The preserved mug exchanges are valid independently, but this choreography is not claimed live. SetAppearance at42 is cosmetic no-op only.",
+      "currentImplementationEvidence": "current public actor/signal compatibility; current public route compatibility; current Lua compatibility",
+      "verification": "Full source and current implementation read; no claim that not-tested alone proves unsupported."
+    },
+    {
+      "key": "thurgadina/Initiate_Corrith",
+      "originalSource": "sources/projecteq/thurgadina/Initiate_Corrith.pl",
+      "originalSourceSha256": "16dc1535ea3536af8a648b682b3bb7fa03138e0226bc2b5f28dff80f78dd8bad",
+      "originalDisposition": "open_animation_timer_effect",
+      "originalQuestId": 18599,
+      "originalEnabled": 1,
+      "npcIdentities": [
+        {
+          "id": 115040,
+          "name": "Initiate_Corrith"
+        },
+        {
+          "id": 115205,
+          "name": "Initiate_Corrith"
+        }
+      ],
+      "spawnIdentities": [
+        {
+          "id": 25563,
+          "zone": "thurgadina",
+          "spawngroupID": 15754,
+          "pathgrid": 0
+        }
+      ],
+      "wikiEvidence": [
+        {
+          "title": "Initiate Corrith",
+          "url": "https://wiki.project1999.com/Initiate_Corrith?action=raw",
+          "fetchedAt": "2026-08-12T19:30:00.802Z",
+          "revision": null,
+          "sha256": "ca9620b20e915d0b49ace1e1dde4952a3796fb2f102b6f63b65335defe5c7ae8",
+          "bytes": 1251,
+          "source": "npc-pages/initiate-corrith-a444583e99.json",
+          "cachePath": "reference/p99-wiki/npc-pages/initiate-corrith-a444583e99.wiki"
+        }
+      ],
+      "baselineOriginalReview": "assignment.json contains the complete original resolution-report record.",
+      "itemsAndRewards": "No new item, numeric reward, faction, class/level requirement or NPC row.",
+      "classification": "translated_with_cosmetic_runtime_limit",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadina/Initiate_Corrith.lua",
+      "proposedSourceSha256": "0446af563ef79a89f7c64cb97b72515b8e1fa2e51ee735811d27745318494b5e",
+      "enabledAfter": 1,
+      "testManifest": "changes/p99-conversion-ambient/runtime-assertions.json",
+      "focusedTests": [
+        "Initiate_Corrith source seconds converted once to milliseconds",
+        "Initiate_Corrith repeated timer 2 source effect capture only"
+      ],
+      "verification": "Source-bound isolated Lua logic passes; current implementation evidence reviewed. No scratch DB settlement, loaded game, naturally triggered lifecycle, multiplayer or rendered UI validation.",
+      "reason": "Preserved source animation2 invocation and every timer action. Pinned DoAnim method is currently a no-op: test proves invocation only, not animation delivery. Sirchthain source random40+10 is10\u2264seconds<50, not inaccurate10\u201340 comment; integer milliseconds use floor and do not invent a distribution."
+    },
+    {
+      "key": "thurgadina/Initiate_Kroskain",
+      "originalSource": "sources/projecteq/thurgadina/Initiate_Kroskain.pl",
+      "originalSourceSha256": "b5e0d76790c675e3af90b3015fd2822a5935cb6ab73ef654792f1b1264e2a777",
+      "originalDisposition": "open_ambient_timer_implementation",
+      "originalQuestId": 15312,
+      "originalEnabled": 1,
+      "npcIdentities": [
+        {
+          "id": 115038,
+          "name": "Initiate_Kroskain"
+        },
+        {
+          "id": 115203,
+          "name": "Initiate_Kroskain"
+        }
+      ],
+      "spawnIdentities": [
+        {
+          "id": 25561,
+          "zone": "thurgadina",
+          "spawngroupID": 15752,
+          "pathgrid": 0
+        }
+      ],
+      "wikiEvidence": [
+        {
+          "title": "Initiate Kroskain",
+          "url": "https://wiki.project1999.com/Initiate_Kroskain?action=raw",
+          "fetchedAt": "2026-08-12T19:30:14.952Z",
+          "revision": null,
+          "sha256": "19b07023e28a4f24566aa333507a1239c9b1394685e568de525891a9e2fa07c8",
+          "bytes": 1253,
+          "source": "npc-pages/initiate-kroskain-83e1a850a5.json",
+          "cachePath": "reference/p99-wiki/npc-pages/initiate-kroskain-83e1a850a5.wiki"
+        }
+      ],
+      "baselineOriginalReview": "assignment.json contains the complete original resolution-report record.",
+      "itemsAndRewards": "No new item, numeric reward, faction, class/level requirement or NPC row.",
+      "classification": "translated_source_behavior_not_live_validated",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadina/Initiate_Kroskain.lua",
+      "proposedSourceSha256": "ada227e2f347f44bcb49c5fda54fe771394ed65354cecd4cb666c08e3007d1ee",
+      "enabledAfter": 1,
+      "testManifest": "changes/p99-conversion-ambient/runtime-assertions.json",
+      "focusedTests": [
+        "Initiate_Kroskain source seconds converted once to milliseconds",
+        "Initiate_Kroskain repeated timer 1 source effect capture only"
+      ],
+      "verification": "Source-bound isolated Lua logic passes; current implementation evidence reviewed. No scratch DB settlement, loaded game, naturally triggered lifecycle, multiplayer or rendered UI validation.",
+      "reason": "Complete source repeated timer speech retained with timers:world. Perl seconds converted once to integer milliseconds (Novyak2400000, Kroskain320000, Franchus480000, Tingar480000/840000). No timer stop or restart added, preserving repeat behavior. Source flavor may not be independently documented by P99."
+    },
+    {
+      "key": "thurgadina/Initiate_Sirchthain",
+      "originalSource": "sources/projecteq/thurgadina/Initiate_Sirchthain.pl",
+      "originalSourceSha256": "d46b99afa8c5bd4cb1fa1c1b206380d787080b69ed443650016e5f55ac9d2207",
+      "originalDisposition": "open_animation_timer_effect",
+      "originalQuestId": 16747,
+      "originalEnabled": 1,
+      "npcIdentities": [],
+      "spawnIdentities": [],
+      "wikiEvidence": [],
+      "baselineOriginalReview": "assignment.json contains the complete original resolution-report record.",
+      "itemsAndRewards": "No new item, numeric reward, faction, class/level requirement or NPC row.",
+      "classification": "translated_with_cosmetic_runtime_limit",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadina/Initiate_Sirchthain.lua",
+      "proposedSourceSha256": "019739f5d1b1ccdaae15a345bc93d40298095f50026b8556a1bdbf37ef01d391",
+      "enabledAfter": 1,
+      "testManifest": "changes/p99-conversion-ambient/runtime-assertions.json",
+      "focusedTests": [
+        "Initiate_Sirchthain randomized timer boundary 0",
+        "Initiate_Sirchthain randomized timer boundary 0.5",
+        "Initiate_Sirchthain randomized timer boundary 0.999999"
+      ],
+      "verification": "Source-bound isolated Lua logic passes; current implementation evidence reviewed. No scratch DB settlement, loaded game, naturally triggered lifecycle, multiplayer or rendered UI validation.",
+      "reason": "Preserved source animation2 invocation and every timer action. Pinned DoAnim method is currently a no-op: test proves invocation only, not animation delivery. Sirchthain source random40+10 is10\u2264seconds<50, not inaccurate10\u201340 comment; integer milliseconds use floor and do not invent a distribution.",
+      "identityLimitation": "Exact imported script key has no NPC row. Source comment115176 refers to differently spelled Initiate_Sircthain; no guessed alias/remap or NPC row added. Conversion preserves inert availability until independently reviewed."
+    },
+    {
+      "key": "thurgadina/Jorumin",
+      "originalSource": "sources/projecteq/thurgadina/Jorumin.pl",
+      "originalSourceSha256": "222918f7bab887e11a82a15305585bcc2dc362da272cbc687ba0584bc22dbb38",
+      "originalDisposition": "blocked_ambient_runtime_lifecycle",
+      "originalQuestId": 13201,
+      "originalEnabled": 1,
+      "npcIdentities": [
+        {
+          "id": 115012,
+          "name": "Jorumin"
+        },
+        {
+          "id": 115188,
+          "name": "Jorumin"
+        }
+      ],
+      "spawnIdentities": [
+        {
+          "id": 25535,
+          "zone": "thurgadina",
+          "spawngroupID": 15726,
+          "pathgrid": 0
+        }
+      ],
+      "wikiEvidence": [
+        {
+          "title": "Jorumin",
+          "url": "https://wiki.project1999.com/Jorumin?action=raw",
+          "fetchedAt": "2026-08-12T19:37:42.447Z",
+          "revision": null,
+          "sha256": "7d2aa8f7b8aa3b9700d4c1dfc36c224213e152b4daa77d5c07aef91f10c8be39",
+          "bytes": 1139,
+          "source": "npc-pages/jorumin-2fceb6b1f2.json",
+          "cachePath": "reference/p99-wiki/npc-pages/jorumin-2fceb6b1f2.wiki"
+        }
+      ],
+      "baselineOriginalReview": "assignment.json contains the complete original resolution-report record.",
+      "itemsAndRewards": "No new item, numeric reward, faction, class/level requirement or NPC row.",
+      "classification": "ambient/world behavior with unsupported runtime",
+      "proposedFile": null,
+      "reason": "Grid8 exists with type0/pause-policy1 and its exact points are retained in identity-and-path-evidence.json. Grid start/callback APIs alone are not the blocker: source eq.stop on its final waypoint passes the generic effect whitelist but reaches public route admission, which admits only a grid-start batch or single MoveTo. Public grid-stop therefore fails settlement. ",
+      "currentImplementationEvidence": "current public actor/signal compatibility; current public route compatibility; current public callback compatibility; current Lua compatibility",
+      "verification": "Full source and current implementation read; no claim that not-tested alone proves unsupported."
+    },
+    {
+      "key": "thurgadina/Lieutenant_Ulfur",
+      "originalSource": "sources/projecteq/thurgadina/Lieutenant_Ulfur.pl",
+      "originalSourceSha256": "082fb9d48e3650e606019a752857fb1e429a74368aa98d98988086de50cf858e",
+      "originalDisposition": "open_ambient_waypoint_lifecycle",
+      "originalQuestId": 18913,
+      "originalEnabled": 1,
+      "npcIdentities": [
+        {
+          "id": 115103,
+          "name": "Lieutenant_Ulfur"
+        }
+      ],
+      "spawnIdentities": [
+        {
+          "id": 25629,
+          "zone": "thurgadina",
+          "spawngroupID": 15816,
+          "pathgrid": 30
+        }
+      ],
+      "wikiEvidence": [
+        {
+          "title": "Lieutenant Ulfur",
+          "url": "https://wiki.project1999.com/Lieutenant_Ulfur?action=raw",
+          "fetchedAt": "2026-08-12T19:56:55.918Z",
+          "revision": null,
+          "sha256": "c442e97e1b036e965eda166a04e48e13148562ebbdc55ca307ff5a71035931c1",
+          "bytes": 1026,
+          "source": "npc-pages/lieutenant-ulfur-546cecb02b.json",
+          "cachePath": "reference/p99-wiki/npc-pages/lieutenant-ulfur-546cecb02b.wiki"
+        }
+      ],
+      "baselineOriginalReview": "assignment.json contains the complete original resolution-report record.",
+      "itemsAndRewards": "No new item, numeric reward, faction, class/level requirement or NPC row.",
+      "classification": "translated_with_documented_runtime_adaptation",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadina/Lieutenant_Ulfur.lua",
+      "proposedSourceSha256": "f1b8354b3fbac02ee4b2dad8d29f19e8c120184d28b8c6fc91b4048e3afdf531",
+      "enabledAfter": 1,
+      "testManifest": "changes/p99-conversion-ambient/runtime-assertions.json",
+      "focusedTests": [
+        "Lieutenant_Ulfur mixed case hail",
+        "Lieutenant_Ulfur unrelated speech inert",
+        "Lieutenant_Ulfur existing exact grid bootstrap",
+        "Lieutenant_Ulfur full dialogue regiment",
+        "Lieutenant_Ulfur full dialogue yes",
+        "Lieutenant_Ulfur full dialogue no",
+        "Lieutenant_Ulfur independent combined text branches in original order",
+        "Lieutenant_Ulfur waypoint15 exact twelve immediate signal0 requests",
+        "Lieutenant_Ulfur unrelated waypoint 1 inert",
+        "Lieutenant_Ulfur unrelated waypoint 14 inert",
+        "Lieutenant_Ulfur unrelated waypoint 16 inert",
+        "Lieutenant_Ulfur unrelated waypoint 24 inert",
+        "Ulfur composed receivers isolated distinct actors and source order",
+        "Ulfur composed receivers isolated one absent target"
+      ],
+      "verification": "Source-bound isolated Lua logic passes; current implementation evidence reviewed. No scratch DB settlement, loaded game, naturally triggered lifecycle, multiplayer or rendered UI validation.",
+      "reason": "Preserves all four independent SAY branches and waypoint15 emote plus twelve immediate signal0 target IDs in original order. New event_spawn eq.start(30) promotes the existing exact24-point circular/pause-policy1 native patrol to durable public route callbacks. Admission serializes actor lifetime and rejects a second active chain, so another observing player cannot restart it. No grid/spawn rows or delays change. This is a documented engine bootstrap adaptation, not P99 timing verification or a live activation claim. Seven existing flavor receiver proposals only gain actors:world metadata; they were already translated and must not be counted as new Lua. See connected-overlay-evidence.json."
+    },
+    {
+      "key": "thurgadina/Ronodun",
+      "originalSource": "sources/projecteq/thurgadina/Ronodun.pl",
+      "originalSourceSha256": "669de25860c53c12b3dfb4b0cdb4bb3b265a6d4c9daad5d27cc6ef0f4314deb6",
+      "originalDisposition": "open_ambient_waypoint_lifecycle",
+      "originalQuestId": 17761,
+      "originalEnabled": 1,
+      "npcIdentities": [
+        {
+          "id": 115019,
+          "name": "Ronodun"
+        }
+      ],
+      "spawnIdentities": [
+        {
+          "id": 25542,
+          "zone": "thurgadina",
+          "spawngroupID": 15733,
+          "pathgrid": 10
+        }
+      ],
+      "wikiEvidence": [
+        {
+          "title": "Ronodun",
+          "url": "https://wiki.project1999.com/Ronodun?action=raw",
+          "fetchedAt": "2026-08-12T20:38:51.897Z",
+          "revision": null,
+          "sha256": "a6d321cf040fae1a89b5e523c168128062b58d315838c50655f40f2758cdc89a",
+          "bytes": 992,
+          "source": "npc-pages/ronodun-1913ad4f8b.json",
+          "cachePath": "reference/p99-wiki/npc-pages/ronodun-1913ad4f8b.wiki"
+        }
+      ],
+      "baselineOriginalReview": "assignment.json contains the complete original resolution-report record.",
+      "itemsAndRewards": "No new item, numeric reward, faction, class/level requirement or NPC row.",
+      "classification": "ambient/world behavior with unsupported runtime",
+      "proposedFile": null,
+      "reason": "Native grid10 arrivals plus signals to Petcas115141 preserve delays8000/4000/3000/7000 milliseconds. Public delayed-signal settlement is rejected. A speech-only conversion would erase the partner exchange; no timer rewrite is made because source disappearance/repeated signals can alter queue behavior. Appearance at spawn and waypoints1/45 is an additional cosmetic no-op.",
+      "currentImplementationEvidence": "current public actor/signal compatibility; current Lua compatibility; public EQEmu QuestManager source",
+      "verification": "Full source and current implementation read; no claim that not-tested alone proves unsupported."
+    },
+    {
+      "key": "thurgadina/Rumagur",
+      "originalSource": "sources/projecteq/thurgadina/Rumagur.pl",
+      "originalSourceSha256": "4101414207aca868cb63c1f4f530511ed1364046f5dc2aba9f43fa193dc2c221",
+      "originalDisposition": "blocked_ambient_runtime_lifecycle",
+      "originalQuestId": 18268,
+      "originalEnabled": 1,
+      "npcIdentities": [
+        {
+          "id": 115011,
+          "name": "Rumagur"
+        },
+        {
+          "id": 115187,
+          "name": "Rumagur"
+        }
+      ],
+      "spawnIdentities": [
+        {
+          "id": 25534,
+          "zone": "thurgadina",
+          "spawngroupID": 15725,
+          "pathgrid": 0
+        }
+      ],
+      "wikiEvidence": [
+        {
+          "title": "Rumagur",
+          "url": "https://wiki.project1999.com/Rumagur?action=raw",
+          "fetchedAt": "2026-08-12T20:40:42.855Z",
+          "revision": null,
+          "sha256": "6c7b0e1dfaed601e3c356ea963ec9c3af4c5da953dbdcfb0bca5f91233964af0",
+          "bytes": 1142,
+          "source": "npc-pages/rumagur-714a57b1fb.json",
+          "cachePath": "reference/p99-wiki/npc-pages/rumagur-714a57b1fb.wiki"
+        }
+      ],
+      "baselineOriginalReview": "assignment.json contains the complete original resolution-report record.",
+      "itemsAndRewards": "No new item, numeric reward, faction, class/level requirement or NPC row.",
+      "classification": "ambient/world behavior with unsupported runtime",
+      "proposedFile": null,
+      "reason": "Grid7 exists with type0/pause-policy1 and its exact points are retained in identity-and-path-evidence.json. Grid start/callback APIs alone are not the blocker: source eq.stop on its final waypoint passes the generic effect whitelist but reaches public route admission, which admits only a grid-start batch or single MoveTo. Public grid-stop therefore fails settlement. Source delayed signals also fail the public immediate-only signal requirement; no queue-dropping one-timer rewrite is substituted.",
+      "currentImplementationEvidence": "current public actor/signal compatibility; current public route compatibility; current public callback compatibility; current Lua compatibility",
+      "verification": "Full source and current implementation read; no claim that not-tested alone proves unsupported."
+    },
+    {
+      "key": "thurgadina/Saramor",
+      "originalSource": "sources/projecteq/thurgadina/Saramor.pl",
+      "originalSourceSha256": "8c4636ca85cbc93886de8212cc695487c052d5aa77c09dd399df5d46c138b724",
+      "originalDisposition": "blocked_ambient_runtime_lifecycle",
+      "originalQuestId": 15764,
+      "originalEnabled": 1,
+      "npcIdentities": [
+        {
+          "id": 115010,
+          "name": "Saramor"
+        }
+      ],
+      "spawnIdentities": [
+        {
+          "id": 25533,
+          "zone": "thurgadina",
+          "spawngroupID": 15724,
+          "pathgrid": 0
+        }
+      ],
+      "wikiEvidence": [
+        {
+          "title": "Saramor",
+          "url": "https://wiki.project1999.com/Saramor?action=raw",
+          "fetchedAt": "2026-08-12T20:42:21.094Z",
+          "revision": null,
+          "sha256": "a803ee54b2a554e8dcbb1543ed321dfc3623566d98fd38b47c4c705d07142499",
+          "bytes": 1005,
+          "source": "npc-pages/saramor-44871364f4.json",
+          "cachePath": "reference/p99-wiki/npc-pages/saramor-44871364f4.wiki"
+        }
+      ],
+      "baselineOriginalReview": "assignment.json contains the complete original resolution-report record.",
+      "itemsAndRewards": "No new item, numeric reward, faction, class/level requirement or NPC row.",
+      "classification": "ambient/world behavior with unsupported runtime",
+      "proposedFile": null,
+      "reason": "Grid6 exists with type0/pause-policy1 and its exact points are retained in identity-and-path-evidence.json. Grid start/callback APIs alone are not the blocker: source eq.stop on its final waypoint passes the generic effect whitelist but reaches public route admission, which admits only a grid-start batch or single MoveTo. Public grid-stop therefore fails settlement. Source delayed signals also fail the public immediate-only signal requirement; no queue-dropping one-timer rewrite is substituted.",
+      "currentImplementationEvidence": "current public actor/signal compatibility; current public route compatibility; current public callback compatibility; current Lua compatibility",
+      "verification": "Full source and current implementation read; no claim that not-tested alone proves unsupported."
+    },
+    {
+      "key": "thurgadina/Templar_Franchus",
+      "originalSource": "sources/projecteq/thurgadina/Templar_Franchus.pl",
+      "originalSourceSha256": "81002aa6b73f281e4678137e7f94f3c501f1d2d2f13f11740643b5dfc5a8393f",
+      "originalDisposition": "open_ambient_timer_implementation",
+      "originalQuestId": 12067,
+      "originalEnabled": 1,
+      "npcIdentities": [
+        {
+          "id": 115039,
+          "name": "Templar_Franchus"
+        },
+        {
+          "id": 115204,
+          "name": "Templar_Franchus"
+        }
+      ],
+      "spawnIdentities": [
+        {
+          "id": 25562,
+          "zone": "thurgadina",
+          "spawngroupID": 15753,
+          "pathgrid": 0
+        }
+      ],
+      "wikiEvidence": [
+        {
+          "title": "Templar Franchus",
+          "url": "https://wiki.project1999.com/Templar_Franchus?action=raw",
+          "fetchedAt": "2026-08-12T21:07:51.585Z",
+          "revision": null,
+          "sha256": "9ea468914ccfe7ad8d55cb06ccc326e2b21b63474e6483dda9b81c8316b86f41",
+          "bytes": 1506,
+          "source": "npc-pages/templar-franchus-0c758bb7b6.json",
+          "cachePath": "reference/p99-wiki/npc-pages/templar-franchus-0c758bb7b6.wiki"
+        }
+      ],
+      "baselineOriginalReview": "assignment.json contains the complete original resolution-report record.",
+      "itemsAndRewards": "No new item, numeric reward, faction, class/level requirement or NPC row.",
+      "classification": "translated_source_behavior_not_live_validated",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadina/Templar_Franchus.lua",
+      "proposedSourceSha256": "3950971abb9a59638bf03d51f4c7d0467b0a2907d63291264926c35aa210f9c4",
+      "enabledAfter": 1,
+      "testManifest": "changes/p99-conversion-ambient/runtime-assertions.json",
+      "focusedTests": [
+        "Templar_Franchus source seconds converted once to milliseconds",
+        "Templar_Franchus repeated timer 1 source effect capture only"
+      ],
+      "verification": "Source-bound isolated Lua logic passes; current implementation evidence reviewed. No scratch DB settlement, loaded game, naturally triggered lifecycle, multiplayer or rendered UI validation.",
+      "reason": "Complete source repeated timer speech retained with timers:world. Perl seconds converted once to integer milliseconds (Novyak2400000, Kroskain320000, Franchus480000, Tingar480000/840000). No timer stop or restart added, preserving repeat behavior. Source flavor may not be independently documented by P99."
+    },
+    {
+      "key": "thurgadina/Templar_Tingar",
+      "originalSource": "sources/projecteq/thurgadina/Templar_Tingar.pl",
+      "originalSourceSha256": "b52421beb10bf05082c3d73bb53cdcb9fd3ec7a6138586a7fda85bdccfabce90",
+      "originalDisposition": "open_ambient_timer_implementation",
+      "originalQuestId": 18642,
+      "originalEnabled": 1,
+      "npcIdentities": [
+        {
+          "id": 115035,
+          "name": "Templar_Tingar"
+        },
+        {
+          "id": 115200,
+          "name": "Templar_Tingar"
+        }
+      ],
+      "spawnIdentities": [
+        {
+          "id": 25558,
+          "zone": "thurgadina",
+          "spawngroupID": 15749,
+          "pathgrid": 0
+        }
+      ],
+      "wikiEvidence": [
+        {
+          "title": "Templar Tingar",
+          "url": "https://wiki.project1999.com/Templar_Tingar?action=raw",
+          "fetchedAt": "2026-08-12T21:07:54.974Z",
+          "revision": null,
+          "sha256": "325f94708b44a8c665774f3fddd7d6d40ba7465ca25accf93104b56558d177ee",
+          "bytes": 1501,
+          "source": "npc-pages/templar-tingar-9c56b9c12a.json",
+          "cachePath": "reference/p99-wiki/npc-pages/templar-tingar-9c56b9c12a.wiki"
+        }
+      ],
+      "baselineOriginalReview": "assignment.json contains the complete original resolution-report record.",
+      "itemsAndRewards": "No new item, numeric reward, faction, class/level requirement or NPC row.",
+      "classification": "translated_source_behavior_not_live_validated",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadina/Templar_Tingar.lua",
+      "proposedSourceSha256": "b5d579492fed33335b3fc2641f6e7244987e60e6660d0a8ab09b4f23f84fb6e2",
+      "enabledAfter": 1,
+      "testManifest": "changes/p99-conversion-ambient/runtime-assertions.json",
+      "focusedTests": [
+        "Templar_Tingar source seconds converted once to milliseconds",
+        "Templar_Tingar repeated timer 1 source effect capture only",
+        "Templar_Tingar repeated timer 2 source effect capture only",
+        "Templar_Tingar unknown timer inert"
+      ],
+      "verification": "Source-bound isolated Lua logic passes; current implementation evidence reviewed. No scratch DB settlement, loaded game, naturally triggered lifecycle, multiplayer or rendered UI validation.",
+      "reason": "Complete source repeated timer speech retained with timers:world. Perl seconds converted once to integer milliseconds (Novyak2400000, Kroskain320000, Franchus480000, Tingar480000/840000). No timer stop or restart added, preserving repeat behavior. Source flavor may not be independently documented by P99."
+    },
+    {
+      "key": "thurgadinb/129097",
+      "originalSource": "sources/projecteq/thurgadinb/129097.pl",
+      "originalSourceSha256": "91f7c3f28905fcd49287e4ca9433f47234b1f56291023f608032159e670f910f",
+      "originalDisposition": "blocked_council_multi_actor_lifecycle",
+      "originalQuestId": 17185,
+      "originalEnabled": 1,
+      "npcIdentities": [
+        {
+          "id": 129097,
+          "name": "#nighttrigger"
+        }
+      ],
+      "spawnIdentities": [
+        {
+          "id": 149615,
+          "zone": "thurgadinb",
+          "spawngroupID": 111127,
+          "pathgrid": 0
+        }
+      ],
+      "wikiEvidence": [],
+      "baselineOriginalReview": "assignment.json contains the complete original resolution-report record.",
+      "itemsAndRewards": "No new item, numeric reward, faction, class/level requirement or NPC row.",
+      "classification": "ambient/world behavior with unsupported runtime",
+      "proposedFile": null,
+      "reason": "Exact numeric key is the exported #nighttrigger actor. Source broadcasts signal1 to24 exact NPC IDs. Aldikar now uses a separately authored court scheduler, so its old signal choreography is superseded. Dain preserves maintained ring9/10 exchange adaptation but lacks its legacy signal movement; this is not missing ring9 reward progression. Chamberlain and Juliah legacy receivers also lack source signal handlers/public receiving scope. The11 councilor movements are translated separately, but restoring this legacy broadcast as if the whole court were supported would be incomplete and could conflict with maintained scheduling. No override of the existing adaptation.",
+      "currentImplementationEvidence": "current public actor/signal compatibility; effective/quests/thurgadinb/Seneschal_Aldikar.lua",
+      "verification": "Full source and current implementation read; no claim that not-tested alone proves unsupported."
+    },
+    {
+      "key": "thurgadinb/129098",
+      "originalSource": "sources/projecteq/thurgadinb/129098.pl",
+      "originalSourceSha256": "72caea8438e7a732e5ec72d8c1f76af7c93cdedbd650cbfac9d997ce48d58e33",
+      "originalDisposition": "blocked_council_multi_actor_lifecycle",
+      "originalQuestId": 12410,
+      "originalEnabled": 1,
+      "npcIdentities": [
+        {
+          "id": 129098,
+          "name": "#daytrigger"
+        }
+      ],
+      "spawnIdentities": [
+        {
+          "id": 157398,
+          "zone": "thurgadinb",
+          "spawngroupID": 117700,
+          "pathgrid": 0
+        }
+      ],
+      "wikiEvidence": [],
+      "baselineOriginalReview": "assignment.json contains the complete original resolution-report record.",
+      "itemsAndRewards": "No new item, numeric reward, faction, class/level requirement or NPC row.",
+      "classification": "ambient/world behavior with unsupported runtime",
+      "proposedFile": null,
+      "reason": "Exact numeric key is the exported #daytrigger actor. Source broadcasts signal2 to24 exact NPC IDs. Aldikar now uses a separately authored court scheduler, so its old signal choreography is superseded. Dain preserves maintained ring9/10 exchange adaptation but lacks its legacy signal movement; this is not missing ring9 reward progression. Chamberlain and Juliah legacy receivers also lack source signal handlers/public receiving scope. The11 councilor movements are translated separately, but restoring this legacy broadcast as if the whole court were supported would be incomplete and could conflict with maintained scheduling. No override of the existing adaptation.",
+      "currentImplementationEvidence": "current public actor/signal compatibility; effective/quests/thurgadinb/Seneschal_Aldikar.lua",
+      "verification": "Full source and current implementation read; no claim that not-tested alone proves unsupported."
+    },
+    {
+      "key": "thurgadinb/Councilor_Amberfeld",
+      "originalSource": "sources/projecteq/thurgadinb/Councilor_Amberfeld.pl",
+      "originalSourceSha256": "c6128e4568c8b12c66d2a01939aeb1a185cd412424c6170a3ddde4827e5cb743",
+      "originalDisposition": "open_council_movement_mapping",
+      "originalQuestId": 13607,
+      "originalEnabled": 1,
+      "npcIdentities": [
+        {
+          "id": 129035,
+          "name": "Councilor_Amberfeld"
+        },
+        {
+          "id": 129073,
+          "name": "Councilor_Amberfeld"
+        }
+      ],
+      "spawnIdentities": [
+        {
+          "id": 25756,
+          "zone": "thurgadinb",
+          "spawngroupID": 15935,
+          "pathgrid": 0
+        }
+      ],
+      "wikiEvidence": [
+        {
+          "title": "Councilor Amberfeld",
+          "url": "https://wiki.project1999.com/Councilor_Amberfeld?action=raw",
+          "fetchedAt": "2026-08-12T18:18:51.150Z",
+          "revision": null,
+          "sha256": "36378c497787ac4885cfd0375444e81071975d518940085459fb056770ae1b27",
+          "bytes": 1114,
+          "source": "npc-pages/councilor-amberfeld-94d788d2bb.json",
+          "cachePath": "reference/p99-wiki/npc-pages/councilor-amberfeld-94d788d2bb.wiki"
+        }
+      ],
+      "baselineOriginalReview": "assignment.json contains the complete original resolution-report record.",
+      "itemsAndRewards": "No new item, numeric reward, faction, class/level requirement or NPC row.",
+      "classification": "translated_source_behavior_not_live_validated",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Amberfeld.lua",
+      "proposedSourceSha256": "9f96b89afdad32905e2803e99680c56e8cd9b484c8c8c977e444988495aa159e",
+      "enabledAfter": 1,
+      "testManifest": "changes/p99-conversion-ambient/runtime-assertions.json",
+      "focusedTests": [
+        "Councilor_Amberfeld signal 1 exact original route and guard flag",
+        "Councilor_Amberfeld signal 2 exact original route and guard flag",
+        "Councilor_Amberfeld unknown signal inert",
+        "Councilor_Amberfeld repeated independent signal movement",
+        "Councilor_Amberfeld mixed case hail",
+        "Councilor_Amberfeld unrelated speech inert"
+      ],
+      "verification": "Source-bound isolated Lua logic passes; current implementation evidence reviewed. No scratch DB settlement, loaded game, naturally triggered lifecycle, multiplayer or rendered UI validation.",
+      "reason": "Complete original SAY and signals1/2 translated; exact MoveTo coordinates/heading and saveGuardSpot=true. Header actors:world selects durable public movement. All matching existing spawn rows have pathgrid0, satisfying no-native-patrol-interruption preflight. P99 cached NPC emu_id matches actual data, not stale ProjectEQ footer IDs. Sender court choreography is not claimed complete."
+    },
+    {
+      "key": "thurgadinb/Councilor_Coldember",
+      "originalSource": "sources/projecteq/thurgadinb/Councilor_Coldember.pl",
+      "originalSourceSha256": "d256824bb077e54d7a5b77170ecdbc2e07caea24141f4e33ffbdd8e65bd69bcc",
+      "originalDisposition": "open_council_movement_mapping",
+      "originalQuestId": 16734,
+      "originalEnabled": 1,
+      "npcIdentities": [
+        {
+          "id": 129075,
+          "name": "Councilor_Coldember"
+        },
+        {
+          "id": 129037,
+          "name": "Councilor_Coldember"
+        }
+      ],
+      "spawnIdentities": [
+        {
+          "id": 25758,
+          "zone": "thurgadinb",
+          "spawngroupID": 15937,
+          "pathgrid": 0
+        }
+      ],
+      "wikiEvidence": [
+        {
+          "title": "Councilor Coldember",
+          "url": "https://wiki.project1999.com/Councilor_Coldember?action=raw",
+          "fetchedAt": "2026-08-12T18:18:54.160Z",
+          "revision": null,
+          "sha256": "aa64c7c87918cef8857a22b4d4b2aad7e3089a5be3a0b5ceb5ebdf3593e2677e",
+          "bytes": 1088,
+          "source": "npc-pages/councilor-coldember-8622d7c3e0.json",
+          "cachePath": "reference/p99-wiki/npc-pages/councilor-coldember-8622d7c3e0.wiki"
+        }
+      ],
+      "baselineOriginalReview": "assignment.json contains the complete original resolution-report record.",
+      "itemsAndRewards": "No new item, numeric reward, faction, class/level requirement or NPC row.",
+      "classification": "translated_source_behavior_not_live_validated",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Coldember.lua",
+      "proposedSourceSha256": "671172ac65b14221266c6814f76cbb3e9612cd7945b225ef74032b1092afb0ee",
+      "enabledAfter": 1,
+      "testManifest": "changes/p99-conversion-ambient/runtime-assertions.json",
+      "focusedTests": [
+        "Councilor_Coldember signal 1 exact original route and guard flag",
+        "Councilor_Coldember signal 2 exact original route and guard flag",
+        "Councilor_Coldember unknown signal inert",
+        "Councilor_Coldember repeated independent signal movement",
+        "Councilor_Coldember mixed case hail",
+        "Councilor_Coldember unrelated speech inert"
+      ],
+      "verification": "Source-bound isolated Lua logic passes; current implementation evidence reviewed. No scratch DB settlement, loaded game, naturally triggered lifecycle, multiplayer or rendered UI validation.",
+      "reason": "Complete original SAY and signals1/2 translated; exact MoveTo coordinates/heading and saveGuardSpot=true. Header actors:world selects durable public movement. All matching existing spawn rows have pathgrid0, satisfying no-native-patrol-interruption preflight. P99 cached NPC emu_id matches actual data, not stale ProjectEQ footer IDs. Sender court choreography is not claimed complete."
+    },
+    {
+      "key": "thurgadinb/Councilor_Darakor",
+      "originalSource": "sources/projecteq/thurgadinb/Councilor_Darakor.pl",
+      "originalSourceSha256": "03b908c5f8a5f3c9e8351754c86741a370c351571b171b833d2e63fde0f4bde0",
+      "originalDisposition": "open_council_movement_mapping",
+      "originalQuestId": 15755,
+      "originalEnabled": 1,
+      "npcIdentities": [
+        {
+          "id": 129043,
+          "name": "Councilor_Darakor"
+        }
+      ],
+      "spawnIdentities": [
+        {
+          "id": 25764,
+          "zone": "thurgadinb",
+          "spawngroupID": 15943,
+          "pathgrid": 0
+        }
+      ],
+      "wikiEvidence": [
+        {
+          "title": "Councilor Darakor",
+          "url": "https://wiki.project1999.com/Councilor_Darakor?action=raw",
+          "fetchedAt": "2026-08-12T18:18:57.409Z",
+          "revision": null,
+          "sha256": "89af0c7971857157830940961e8243c7041312344577faeddf4168ce4f2dc61e",
+          "bytes": 1105,
+          "source": "npc-pages/councilor-darakor-d25908111e.json",
+          "cachePath": "reference/p99-wiki/npc-pages/councilor-darakor-d25908111e.wiki"
+        }
+      ],
+      "baselineOriginalReview": "assignment.json contains the complete original resolution-report record.",
+      "itemsAndRewards": "No new item, numeric reward, faction, class/level requirement or NPC row.",
+      "classification": "translated_source_behavior_not_live_validated",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Darakor.lua",
+      "proposedSourceSha256": "7a366d69f0d52c93b71a212f1f25eae659f91bea9990f3ba2728f3b28da62df8",
+      "enabledAfter": 1,
+      "testManifest": "changes/p99-conversion-ambient/runtime-assertions.json",
+      "focusedTests": [
+        "Councilor_Darakor signal 1 exact original route and guard flag",
+        "Councilor_Darakor signal 2 exact original route and guard flag",
+        "Councilor_Darakor unknown signal inert",
+        "Councilor_Darakor repeated independent signal movement",
+        "Councilor_Darakor mixed case hail",
+        "Councilor_Darakor unrelated speech inert"
+      ],
+      "verification": "Source-bound isolated Lua logic passes; current implementation evidence reviewed. No scratch DB settlement, loaded game, naturally triggered lifecycle, multiplayer or rendered UI validation.",
+      "reason": "Complete original SAY and signals1/2 translated; exact MoveTo coordinates/heading and saveGuardSpot=true. Header actors:world selects durable public movement. All matching existing spawn rows have pathgrid0, satisfying no-native-patrol-interruption preflight. P99 cached NPC emu_id matches actual data, not stale ProjectEQ footer IDs. Sender court choreography is not claimed complete."
+    },
+    {
+      "key": "thurgadinb/Councilor_Darkfrost",
+      "originalSource": "sources/projecteq/thurgadinb/Councilor_Darkfrost.pl",
+      "originalSourceSha256": "fe083f9d40ee4bbd7606271abbba6c9e1a612a31d8f95e96fffe6c13ff01ab0f",
+      "originalDisposition": "open_council_movement_mapping",
+      "originalQuestId": 18502,
+      "originalEnabled": 1,
+      "npcIdentities": [
+        {
+          "id": 129078,
+          "name": "Councilor_Darkfrost"
+        },
+        {
+          "id": 129041,
+          "name": "Councilor_Darkfrost"
+        }
+      ],
+      "spawnIdentities": [
+        {
+          "id": 25762,
+          "zone": "thurgadinb",
+          "spawngroupID": 15941,
+          "pathgrid": 0
+        }
+      ],
+      "wikiEvidence": [
+        {
+          "title": "Councilor Darkfrost",
+          "url": "https://wiki.project1999.com/Councilor_Darkfrost?action=raw",
+          "fetchedAt": "2026-08-12T18:18:59.257Z",
+          "revision": null,
+          "sha256": "526b2512f4553953f2dcbd3afc6deff67a141c536651e7b84be75d999d19d0b8",
+          "bytes": 1091,
+          "source": "npc-pages/councilor-darkfrost-505f353e40.json",
+          "cachePath": "reference/p99-wiki/npc-pages/councilor-darkfrost-505f353e40.wiki"
+        }
+      ],
+      "baselineOriginalReview": "assignment.json contains the complete original resolution-report record.",
+      "itemsAndRewards": "No new item, numeric reward, faction, class/level requirement or NPC row.",
+      "classification": "translated_source_behavior_not_live_validated",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Darkfrost.lua",
+      "proposedSourceSha256": "dda5545f36f4de679466a1844e2bf9008cabea5d6db9fac846a3965e41b46f86",
+      "enabledAfter": 1,
+      "testManifest": "changes/p99-conversion-ambient/runtime-assertions.json",
+      "focusedTests": [
+        "Councilor_Darkfrost signal 1 exact original route and guard flag",
+        "Councilor_Darkfrost signal 2 exact original route and guard flag",
+        "Councilor_Darkfrost unknown signal inert",
+        "Councilor_Darkfrost repeated independent signal movement",
+        "Councilor_Darkfrost mixed case hail",
+        "Councilor_Darkfrost unrelated speech inert"
+      ],
+      "verification": "Source-bound isolated Lua logic passes; current implementation evidence reviewed. No scratch DB settlement, loaded game, naturally triggered lifecycle, multiplayer or rendered UI validation.",
+      "reason": "Complete original SAY and signals1/2 translated; exact MoveTo coordinates/heading and saveGuardSpot=true. Header actors:world selects durable public movement. All matching existing spawn rows have pathgrid0, satisfying no-native-patrol-interruption preflight. P99 cached NPC emu_id matches actual data, not stale ProjectEQ footer IDs. Sender court choreography is not claimed complete."
+    },
+    {
+      "key": "thurgadinb/Councilor_Deynekn",
+      "originalSource": "sources/projecteq/thurgadinb/Councilor_Deynekn.pl",
+      "originalSourceSha256": "dcbba0b4c5dc9d1c2ebcdb9769d439b01b304ea0e55a11efdaa8ac683ec8415e",
+      "originalDisposition": "open_council_movement_mapping",
+      "originalQuestId": 12167,
+      "originalEnabled": 1,
+      "npcIdentities": [
+        {
+          "id": 129036,
+          "name": "Councilor_Deynekn"
+        },
+        {
+          "id": 129074,
+          "name": "Councilor_Deynekn"
+        }
+      ],
+      "spawnIdentities": [
+        {
+          "id": 25757,
+          "zone": "thurgadinb",
+          "spawngroupID": 15936,
+          "pathgrid": 0
+        }
+      ],
+      "wikiEvidence": [
+        {
+          "title": "Councilor Deynekn",
+          "url": "https://wiki.project1999.com/Councilor_Deynekn?action=raw",
+          "fetchedAt": "2026-08-12T18:19:02.519Z",
+          "revision": null,
+          "sha256": "3c70e0d3a001159fad489551de8a18802cfb04792c40a4ca94dfef24b293a014",
+          "bytes": 1080,
+          "source": "npc-pages/councilor-deynekn-bda68eb421.json",
+          "cachePath": "reference/p99-wiki/npc-pages/councilor-deynekn-bda68eb421.wiki"
+        }
+      ],
+      "baselineOriginalReview": "assignment.json contains the complete original resolution-report record.",
+      "itemsAndRewards": "No new item, numeric reward, faction, class/level requirement or NPC row.",
+      "classification": "translated_source_behavior_not_live_validated",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Deynekn.lua",
+      "proposedSourceSha256": "0e155c8a04c7f489dc1dee5fa20e79a4ceee9bd4bccbee7947287f7503e295c3",
+      "enabledAfter": 1,
+      "testManifest": "changes/p99-conversion-ambient/runtime-assertions.json",
+      "focusedTests": [
+        "Councilor_Deynekn signal 1 exact original route and guard flag",
+        "Councilor_Deynekn signal 2 exact original route and guard flag",
+        "Councilor_Deynekn unknown signal inert",
+        "Councilor_Deynekn repeated independent signal movement"
+      ],
+      "verification": "Source-bound isolated Lua logic passes; current implementation evidence reviewed. No scratch DB settlement, loaded game, naturally triggered lifecycle, multiplayer or rendered UI validation.",
+      "reason": "Complete original SAY and signals1/2 translated; exact MoveTo coordinates/heading and saveGuardSpot=true. Header actors:world selects durable public movement. All matching existing spawn rows have pathgrid0, satisfying no-native-patrol-interruption preflight. P99 cached NPC emu_id matches actual data, not stale ProjectEQ footer IDs. Sender court choreography is not claimed complete."
+    },
+    {
+      "key": "thurgadinb/Councilor_Dirkins",
+      "originalSource": "sources/projecteq/thurgadinb/Councilor_Dirkins.pl",
+      "originalSourceSha256": "d914bc0d324be6c50308f9e5b7ea1802f366c72e487dbe64d87e8fbaa91852f2",
+      "originalDisposition": "open_council_movement_mapping",
+      "originalQuestId": 18417,
+      "originalEnabled": 1,
+      "npcIdentities": [
+        {
+          "id": 129077,
+          "name": "Councilor_Dirkins"
+        },
+        {
+          "id": 129040,
+          "name": "Councilor_Dirkins"
+        }
+      ],
+      "spawnIdentities": [
+        {
+          "id": 25761,
+          "zone": "thurgadinb",
+          "spawngroupID": 15940,
+          "pathgrid": 0
+        }
+      ],
+      "wikiEvidence": [
+        {
+          "title": "Councilor Dirkins",
+          "url": "https://wiki.project1999.com/Councilor_Dirkins?action=raw",
+          "fetchedAt": "2026-08-12T18:19:05.237Z",
+          "revision": null,
+          "sha256": "ed77d2cc63561ba56efde4b647da2f47cad60b9681581164231c76fc47f04b05",
+          "bytes": 1103,
+          "source": "npc-pages/councilor-dirkins-738e9f8cac.json",
+          "cachePath": "reference/p99-wiki/npc-pages/councilor-dirkins-738e9f8cac.wiki"
+        }
+      ],
+      "baselineOriginalReview": "assignment.json contains the complete original resolution-report record.",
+      "itemsAndRewards": "No new item, numeric reward, faction, class/level requirement or NPC row.",
+      "classification": "translated_source_behavior_not_live_validated",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Dirkins.lua",
+      "proposedSourceSha256": "aa03a07ec548b824b4cd2d9ed4e8d97e68806cd582d54a5af7bc119e2ac2499a",
+      "enabledAfter": 1,
+      "testManifest": "changes/p99-conversion-ambient/runtime-assertions.json",
+      "focusedTests": [
+        "Councilor_Dirkins signal 1 exact original route and guard flag",
+        "Councilor_Dirkins signal 2 exact original route and guard flag",
+        "Councilor_Dirkins unknown signal inert",
+        "Councilor_Dirkins repeated independent signal movement",
+        "Councilor_Dirkins mixed case hail",
+        "Councilor_Dirkins unrelated speech inert"
+      ],
+      "verification": "Source-bound isolated Lua logic passes; current implementation evidence reviewed. No scratch DB settlement, loaded game, naturally triggered lifecycle, multiplayer or rendered UI validation.",
+      "reason": "Complete original SAY and signals1/2 translated; exact MoveTo coordinates/heading and saveGuardSpot=true. Header actors:world selects durable public movement. All matching existing spawn rows have pathgrid0, satisfying no-native-patrol-interruption preflight. P99 cached NPC emu_id matches actual data, not stale ProjectEQ footer IDs. Sender court choreography is not claimed complete."
+    },
+    {
+      "key": "thurgadinb/Councilor_Glacierbane",
+      "originalSource": "sources/projecteq/thurgadinb/Councilor_Glacierbane.pl",
+      "originalSourceSha256": "ca128462f797edec0caeb33c3c70a9b2626b69acc2155af431de494ef0f3d0da",
+      "originalDisposition": "open_council_movement_mapping",
+      "originalQuestId": 18265,
+      "originalEnabled": 1,
+      "npcIdentities": [
+        {
+          "id": 129039,
+          "name": "Councilor_Glacierbane"
+        },
+        {
+          "id": 129076,
+          "name": "Councilor_Glacierbane"
+        }
+      ],
+      "spawnIdentities": [
+        {
+          "id": 25760,
+          "zone": "thurgadinb",
+          "spawngroupID": 15939,
+          "pathgrid": 0
+        }
+      ],
+      "wikiEvidence": [
+        {
+          "title": "Councilor Glacierbane",
+          "url": "https://wiki.project1999.com/Councilor_Glacierbane?action=raw",
+          "fetchedAt": "2026-08-12T18:19:06.778Z",
+          "revision": null,
+          "sha256": "62c7893b4bfe2a6faafac6f4eb328ff50e5d9ea5c81765ee0fcb95c4a368682d",
+          "bytes": 1100,
+          "source": "npc-pages/councilor-glacierbane-f3132ef424.json",
+          "cachePath": "reference/p99-wiki/npc-pages/councilor-glacierbane-f3132ef424.wiki"
+        }
+      ],
+      "baselineOriginalReview": "assignment.json contains the complete original resolution-report record.",
+      "itemsAndRewards": "No new item, numeric reward, faction, class/level requirement or NPC row.",
+      "classification": "translated_source_behavior_not_live_validated",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Glacierbane.lua",
+      "proposedSourceSha256": "17318db5ca6145f7bd201a3c7f637267fc44802de08ebfaa7176acad7a30d0f1",
+      "enabledAfter": 1,
+      "testManifest": "changes/p99-conversion-ambient/runtime-assertions.json",
+      "focusedTests": [
+        "Councilor_Glacierbane signal 1 exact original route and guard flag",
+        "Councilor_Glacierbane signal 2 exact original route and guard flag",
+        "Councilor_Glacierbane unknown signal inert",
+        "Councilor_Glacierbane repeated independent signal movement",
+        "Councilor_Glacierbane mixed case hail",
+        "Councilor_Glacierbane unrelated speech inert"
+      ],
+      "verification": "Source-bound isolated Lua logic passes; current implementation evidence reviewed. No scratch DB settlement, loaded game, naturally triggered lifecycle, multiplayer or rendered UI validation.",
+      "reason": "Complete original SAY and signals1/2 translated; exact MoveTo coordinates/heading and saveGuardSpot=true. Header actors:world selects durable public movement. All matching existing spawn rows have pathgrid0, satisfying no-native-patrol-interruption preflight. P99 cached NPC emu_id matches actual data, not stale ProjectEQ footer IDs. Sender court choreography is not claimed complete."
+    },
+    {
+      "key": "thurgadinb/Councilor_Icelok",
+      "originalSource": "sources/projecteq/thurgadinb/Councilor_Icelok.pl",
+      "originalSourceSha256": "890c0617785982cdee2ab150a0fb60466cad95baf2acbd962eaf374dfd265832",
+      "originalDisposition": "open_council_movement_mapping",
+      "originalQuestId": 19520,
+      "originalEnabled": 1,
+      "npcIdentities": [
+        {
+          "id": 129038,
+          "name": "Councilor_Icelok"
+        }
+      ],
+      "spawnIdentities": [
+        {
+          "id": 25759,
+          "zone": "thurgadinb",
+          "spawngroupID": 15938,
+          "pathgrid": 0
+        }
+      ],
+      "wikiEvidence": [
+        {
+          "title": "Councilor Icelok",
+          "url": "https://wiki.project1999.com/Councilor_Icelok?action=raw",
+          "fetchedAt": "2026-08-12T18:19:09.906Z",
+          "revision": null,
+          "sha256": "44e91e87a99b41a5a837c13b0f69d1be636ca24b53a0e630f681b6fd2da83e7c",
+          "bytes": 1103,
+          "source": "npc-pages/councilor-icelok-1533bf3bee.json",
+          "cachePath": "reference/p99-wiki/npc-pages/councilor-icelok-1533bf3bee.wiki"
+        }
+      ],
+      "baselineOriginalReview": "assignment.json contains the complete original resolution-report record.",
+      "itemsAndRewards": "No new item, numeric reward, faction, class/level requirement or NPC row.",
+      "classification": "translated_source_behavior_not_live_validated",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Icelok.lua",
+      "proposedSourceSha256": "fd1c762bc0a9ccfe6ba5f30c63251d4dd5320910d758cca183c321fbb39ef1f3",
+      "enabledAfter": 1,
+      "testManifest": "changes/p99-conversion-ambient/runtime-assertions.json",
+      "focusedTests": [
+        "Councilor_Icelok signal 1 exact original route and guard flag",
+        "Councilor_Icelok signal 2 exact original route and guard flag",
+        "Councilor_Icelok unknown signal inert",
+        "Councilor_Icelok repeated independent signal movement",
+        "Councilor_Icelok mixed case hail",
+        "Councilor_Icelok unrelated speech inert"
+      ],
+      "verification": "Source-bound isolated Lua logic passes; current implementation evidence reviewed. No scratch DB settlement, loaded game, naturally triggered lifecycle, multiplayer or rendered UI validation.",
+      "reason": "Complete original SAY and signals1/2 translated; exact MoveTo coordinates/heading and saveGuardSpot=true. Header actors:world selects durable public movement. All matching existing spawn rows have pathgrid0, satisfying no-native-patrol-interruption preflight. P99 cached NPC emu_id matches actual data, not stale ProjectEQ footer IDs. Sender court choreography is not claimed complete."
+    },
+    {
+      "key": "thurgadinb/Councilor_Icepike",
+      "originalSource": "sources/projecteq/thurgadinb/Councilor_Icepike.pl",
+      "originalSourceSha256": "760413d4ee21a39da08ebd8c96900cb93b6e2870fba6467dc4692d25f47bd6ac",
+      "originalDisposition": "open_council_movement_mapping",
+      "originalQuestId": 13591,
+      "originalEnabled": 1,
+      "npcIdentities": [
+        {
+          "id": 129072,
+          "name": "Councilor_Icepike"
+        },
+        {
+          "id": 129034,
+          "name": "Councilor_Icepike"
+        }
+      ],
+      "spawnIdentities": [
+        {
+          "id": 25755,
+          "zone": "thurgadinb",
+          "spawngroupID": 15934,
+          "pathgrid": 0
+        }
+      ],
+      "wikiEvidence": [
+        {
+          "title": "Councilor Icepike",
+          "url": "https://wiki.project1999.com/Councilor_Icepike?action=raw",
+          "fetchedAt": "2026-08-12T18:19:11.371Z",
+          "revision": null,
+          "sha256": "ccdc801ccd5971be631215b11f0df32b0bacec3eb3d4969aba712953e2d8aa0d",
+          "bytes": 1102,
+          "source": "npc-pages/councilor-icepike-c78110539e.json",
+          "cachePath": "reference/p99-wiki/npc-pages/councilor-icepike-c78110539e.wiki"
+        }
+      ],
+      "baselineOriginalReview": "assignment.json contains the complete original resolution-report record.",
+      "itemsAndRewards": "No new item, numeric reward, faction, class/level requirement or NPC row.",
+      "classification": "translated_source_behavior_not_live_validated",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Icepike.lua",
+      "proposedSourceSha256": "dd790626e28c3760e7e5d18d11d94ea87448788e2ea67c996c6e8b91a7759282",
+      "enabledAfter": 1,
+      "testManifest": "changes/p99-conversion-ambient/runtime-assertions.json",
+      "focusedTests": [
+        "Councilor_Icepike signal 1 exact original route and guard flag",
+        "Councilor_Icepike signal 2 exact original route and guard flag",
+        "Councilor_Icepike unknown signal inert",
+        "Councilor_Icepike repeated independent signal movement",
+        "Councilor_Icepike mixed case hail",
+        "Councilor_Icepike unrelated speech inert"
+      ],
+      "verification": "Source-bound isolated Lua logic passes; current implementation evidence reviewed. No scratch DB settlement, loaded game, naturally triggered lifecycle, multiplayer or rendered UI validation.",
+      "reason": "Complete original SAY and signals1/2 translated; exact MoveTo coordinates/heading and saveGuardSpot=true. Header actors:world selects durable public movement. All matching existing spawn rows have pathgrid0, satisfying no-native-patrol-interruption preflight. P99 cached NPC emu_id matches actual data, not stale ProjectEQ footer IDs. Sender court choreography is not claimed complete."
+    },
+    {
+      "key": "thurgadinb/Councilor_Thubins",
+      "originalSource": "sources/projecteq/thurgadinb/Councilor_Thubins.pl",
+      "originalSourceSha256": "3e6e05bbfbbaba8097f9aa0d47edf5b7a57bd338f031521cbedade4d7f0c9344",
+      "originalDisposition": "open_council_movement_mapping",
+      "originalQuestId": 14382,
+      "originalEnabled": 1,
+      "npcIdentities": [
+        {
+          "id": 129080,
+          "name": "Councilor_Thubins"
+        },
+        {
+          "id": 129044,
+          "name": "Councilor_Thubins"
+        }
+      ],
+      "spawnIdentities": [
+        {
+          "id": 25765,
+          "zone": "thurgadinb",
+          "spawngroupID": 15944,
+          "pathgrid": 0
+        }
+      ],
+      "wikiEvidence": [
+        {
+          "title": "Councilor Thubins",
+          "url": "https://wiki.project1999.com/Councilor_Thubins?action=raw",
+          "fetchedAt": "2026-08-12T18:19:15.688Z",
+          "revision": null,
+          "sha256": "24330d0646d22dcf9867b73565c0234a7ee07b47f04f7312531a10463567c338",
+          "bytes": 1081,
+          "source": "npc-pages/councilor-thubins-fa3674a6a8.json",
+          "cachePath": "reference/p99-wiki/npc-pages/councilor-thubins-fa3674a6a8.wiki"
+        }
+      ],
+      "baselineOriginalReview": "assignment.json contains the complete original resolution-report record.",
+      "itemsAndRewards": "No new item, numeric reward, faction, class/level requirement or NPC row.",
+      "classification": "translated_source_behavior_not_live_validated",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Thubins.lua",
+      "proposedSourceSha256": "350c61c57139bbdaaa4a0ff4ba820836be6d122a607023cc1195d38413f562a7",
+      "enabledAfter": 1,
+      "testManifest": "changes/p99-conversion-ambient/runtime-assertions.json",
+      "focusedTests": [
+        "Councilor_Thubins signal 1 exact original route and guard flag",
+        "Councilor_Thubins signal 2 exact original route and guard flag",
+        "Councilor_Thubins unknown signal inert",
+        "Councilor_Thubins repeated independent signal movement",
+        "Councilor_Thubins mixed case hail",
+        "Councilor_Thubins unrelated speech inert"
+      ],
+      "verification": "Source-bound isolated Lua logic passes; current implementation evidence reviewed. No scratch DB settlement, loaded game, naturally triggered lifecycle, multiplayer or rendered UI validation.",
+      "reason": "Complete original SAY and signals1/2 translated; exact MoveTo coordinates/heading and saveGuardSpot=true. Header actors:world selects durable public movement. All matching existing spawn rows have pathgrid0, satisfying no-native-patrol-interruption preflight. P99 cached NPC emu_id matches actual data, not stale ProjectEQ footer IDs. Sender court choreography is not claimed complete."
+    },
+    {
+      "key": "thurgadinb/Councilor_Wintershade",
+      "originalSource": "sources/projecteq/thurgadinb/Councilor_Wintershade.pl",
+      "originalSourceSha256": "e7b40fa375884ca20c35073fd4c4ec21c251ad2e68b5bb1627ffa995043caced",
+      "originalDisposition": "open_council_movement_mapping",
+      "originalQuestId": 15814,
+      "originalEnabled": 1,
+      "npcIdentities": [
+        {
+          "id": 129042,
+          "name": "Councilor_Wintershade"
+        },
+        {
+          "id": 129079,
+          "name": "Councilor_Wintershade"
+        }
+      ],
+      "spawnIdentities": [
+        {
+          "id": 25790,
+          "zone": "thurgadinb",
+          "spawngroupID": 15968,
+          "pathgrid": 0
+        }
+      ],
+      "wikiEvidence": [
+        {
+          "title": "Councilor Wintershade",
+          "url": "https://wiki.project1999.com/Councilor_Wintershade?action=raw",
+          "fetchedAt": "2026-08-12T18:19:17.401Z",
+          "revision": null,
+          "sha256": "c5bec6e4eac0476b3f9323316d919ae5d86b9f92ed3cf391d6a48ba9688e4179",
+          "bytes": 1087,
+          "source": "npc-pages/councilor-wintershade-ad9aec70d8.json",
+          "cachePath": "reference/p99-wiki/npc-pages/councilor-wintershade-ad9aec70d8.wiki"
+        }
+      ],
+      "baselineOriginalReview": "assignment.json contains the complete original resolution-report record.",
+      "itemsAndRewards": "No new item, numeric reward, faction, class/level requirement or NPC row.",
+      "classification": "translated_source_behavior_not_live_validated",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Wintershade.lua",
+      "proposedSourceSha256": "4c2d40a065e8404b90e229fcf9565164a7ddb3f0a1a770ce8f3a984a7f59519e",
+      "enabledAfter": 1,
+      "testManifest": "changes/p99-conversion-ambient/runtime-assertions.json",
+      "focusedTests": [
+        "Councilor_Wintershade signal 1 exact original route and guard flag",
+        "Councilor_Wintershade signal 2 exact original route and guard flag",
+        "Councilor_Wintershade unknown signal inert",
+        "Councilor_Wintershade repeated independent signal movement",
+        "Councilor_Wintershade mixed case hail",
+        "Councilor_Wintershade unrelated speech inert"
+      ],
+      "verification": "Source-bound isolated Lua logic passes; current implementation evidence reviewed. No scratch DB settlement, loaded game, naturally triggered lifecycle, multiplayer or rendered UI validation.",
+      "reason": "Complete original SAY and signals1/2 translated; exact MoveTo coordinates/heading and saveGuardSpot=true. Header actors:world selects durable public movement. All matching existing spawn rows have pathgrid0, satisfying no-native-patrol-interruption preflight. P99 cached NPC emu_id matches actual data, not stale ProjectEQ footer IDs. Sender court choreography is not claimed complete."
+    },
+    {
+      "key": "westwastes/Julius_Oresko",
+      "originalSource": "sources/projecteq/westwastes/Julius_Oresko.pl",
+      "originalSourceSha256": "1cb0d742d1c47b2cd84f80ed58a75fdae0d9550301d8090f7613a55874ec554d",
+      "originalDisposition": "open_flavor_identity",
+      "originalQuestId": 18337,
+      "originalEnabled": 1,
+      "npcIdentities": [
+        {
+          "id": 120031,
+          "name": "Julius_Oresko"
+        }
+      ],
+      "spawnIdentities": [
+        {
+          "id": 26381,
+          "zone": "westwastes",
+          "spawngroupID": 16295,
+          "pathgrid": 0
+        }
+      ],
+      "wikiEvidence": [],
+      "baselineOriginalReview": "assignment.json contains the complete original resolution-report record.",
+      "itemsAndRewards": "No new item, numeric reward, faction, class/level requirement or NPC row.",
+      "classification": "translated_source_behavior_not_live_validated",
+      "proposedFile": "changes/p99-conversion-ambient/westwastes/Julius_Oresko.lua",
+      "proposedSourceSha256": "859d7ae27cc78e6e6bc35be044e4c1ba0c4328db5cc4b229eaaf1960292743b2",
+      "enabledAfter": 1,
+      "testManifest": "changes/p99-conversion-ambient/runtime-assertions.json",
+      "focusedTests": [
+        "Julius_Oresko aggro interpolates race only"
+      ],
+      "verification": "Source-bound isolated Lua logic passes; current implementation evidence reviewed. No scratch DB settlement, loaded game, naturally triggered lifecycle, multiplayer or rendered UI validation.",
+      "reason": "Bounded exact source aggro line with runtime player race; actual NPC120031 and spawn26381 establish exported identity. Missing cached P99 page is an availability/prose uncertainty, not later-era proof. No spawn activated or added."
+    }
+  ],
+  "directDependencyExtensions": [
+    {
+      "key": "iceclad/Ritap",
+      "extension": "Direct receiver inspection authorized by parent, outside initial34. No edits made.",
+      "originalPerlSha256": "1a390bbbe367903002d92d75c568e81cdd43d4dc436fc901785dc36ca48c1686",
+      "baselineLuaSha256": "b0d789822ca59d50d979a2a9b26ec71f9f843922b69893744e31d683d7c92f2e",
+      "existingProposals": [],
+      "finding": "Ritap existing classic hand-in preserved, but hail timer/resolve-or-spawn Ratop/signal1/timersritap2/3 omitted; public fallback spawning unsupported. Do not merge a partial banter restoration."
+    },
+    {
+      "key": "iceclad/Sojan_the_Sleepless",
+      "extension": "Direct receiver inspection authorized by parent, outside initial34. No edits made.",
+      "originalPerlSha256": "8519c5f2bd24330cf4fbea085f74e69ac01ce271f6e97f4670894611e39ac21a",
+      "baselineLuaSha256": "940ee45736869501ec747639f37d56bdcd7f9669224efa118b659a2c96ac08bf",
+      "existingProposals": [
+        "changes/p99-am-nalot-rum.json",
+        "changes/p99-combined-audit.json"
+      ],
+      "finding": "Sojan source signal receiver is a Madan ambient sigh, not eighth-Shawl. Current p99-am-nalot-rum Lua comment calling it later is inaccurate. Full reviewed body must retain all present rum/toolset/hail changes if the receiver is restored. Since Madan public delayed signal is blocked, no unnecessary conflicting proposal emitted."
+    }
+  ],
+  "existingReceiverUpdates": {
+    "count": 7,
+    "artifact": "changes/p99-conversion-ambient/guard-scope-updates.json",
+    "classification": "Existing converted flavor sources: public-scope metadata only, not new Lua conversions.",
+    "composedEvidence": "changes/p99-conversion-ambient/connected-overlay-evidence.json"
+  },
+  "verification": {
+    "proposalCheck": "See validation.log for current proposal check.",
+    "isolatedTests": "See test-receipt.json and runtime-assertions.json for source-bound isolated count; exact assignment/source/identity/zero-native-grid static assertions also run.",
+    "liveGame": "Not run. No deployed database, renderer, navigation mesh or multiplayer execution claim.",
+    "unchangedPolicy": "All original enabled values retained; no NPC/spawn/grid/item changes; no eighth-Shawl branch enabled."
+  }
+}

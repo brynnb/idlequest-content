@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-restraining-trooper_inkin",
+  "summary": "Support documented sign this restraining order phrase alongside existing sign the restraining order, only lore/requirements response. No new reward or itemgrant route; all sequential trade conditions unchanged.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/The_Restraining_Order?action=raw",
+      "note": "Cached 2026-07-17T23:37:55.399Z; revision unavailable; SHA256 e4a24f856e44c7cec752b6501686b06243a9be01bf578245f610362916c467e3. Support documented sign this restraining order phrase alongside existing sign the restraining order, only lore/requirements response. No new reward or itemgrant route; all sequential trade conditions unchanged. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 18157,
+        "zone": "swampofnohope",
+        "name": "Trooper_Inkin",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: swampofnohope/Trooper_Inkin.pl\n-- items: 18243, 12425, 18244\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Many frogloks in here. Beware! They can be a sneaky bunch. I hear tales of a froglok village nearby.\")\n\telseif e.message:findi(\"sign the restraining order\") then\n\t\te.self:Say(\"I have been expecting this. Oh, well... Can't argue with the Baron or he will have both our heads. Keeping that in mind, I will make you a deal. I will sign the order if you bring me one of those grand skipping stones these Frogloks are said to have. Bring me the stone and the order and I shall sign.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 18243, item2 = 12425}) then\n\t\te.self:Say(\"So smooth. I shall be the skipping stone champion! Here. You may have my autograph.\")\n\t\te.other:SummonItem(18244)\n\t\te.other:AddEXP(500)\n\t\te.other:GiveCash(7, 0, 0, 0)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 18243}) then\n\t\te.self:Say(\"No deal! You bring me the legion order and the froglok skipping stone.\")\n\t\te.other:SummonItem(18243)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 12425}) then\n\t\te.self:Say(\"No deal! You bring me the legion order and the froglok skipping stone.\")\n\t\te.other:SummonItem(12425)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 18157,
+        "zone": "swampofnohope",
+        "name": "Trooper_Inkin",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: swampofnohope/Trooper_Inkin.pl\n-- items: 18243, 12425, 18244\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Many frogloks in here. Beware! They can be a sneaky bunch. I hear tales of a froglok village nearby.\")\n\telseif e.message:findi(\"sign the restraining order\") or e.message:findi(\"sign this restraining order\") then\n\t\te.self:Say(\"I have been expecting this. Oh, well... Can't argue with the Baron or he will have both our heads. Keeping that in mind, I will make you a deal. I will sign the order if you bring me one of those grand skipping stones these Frogloks are said to have. Bring me the stone and the order and I shall sign.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 18243, item2 = 12425}) then\n\t\te.self:Say(\"So smooth. I shall be the skipping stone champion! Here. You may have my autograph.\")\n\t\te.other:SummonItem(18244)\n\t\te.other:AddEXP(500)\n\t\te.other:GiveCash(7, 0, 0, 0)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 18243}) then\n\t\te.self:Say(\"No deal! You bring me the legion order and the froglok skipping stone.\")\n\t\te.other:SummonItem(18243)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 12425}) then\n\t\te.self:Say(\"No deal! You bring me the legion order and the froglok skipping stone.\")\n\t\te.other:SummonItem(12425)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/swampofnohope/Trooper_Inkin.lua",
+      "beforeSha256": "00fdd3af141623873f1aa6dd821d23744e18b9ee47bcf57862dfc5ca0839bf76",
+      "proposedFile": "changes/p99-tz-restraining-trooper_inkin/swampofnohope--Trooper_Inkin.lua",
+      "afterSha256": "968035470241194c5ba0214599fef9b0ae83051dacef4ccba9e2a57c680bbd3e"
+    }
+  ]
+}

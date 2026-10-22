@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-frenway-bayle-dialogue",
+  "summary": "Distinguish documented Toe needs the Bayle List request from general property response, restore Antonius childhood lore; no trade/reward changes.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Vengeance_for_Frenway?action=raw",
+      "note": "Cached 2026-07-17T23:40:33.596Z; revision unavailable; SHA256 a3c1ba909f6e8549de2107962264a8fcfec02855c2718f5a47c993af2e2f9dd5. Distinguish documented Toe needs the Bayle List request from general property response, restore Antonius childhood lore; no trade/reward changes. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 16929,
+        "zone": "qrg",
+        "name": "Frenway_Marthank",
+        "lua_content": "-- Source: qrg/Frenway_Marthank.lua\n-- P99 audit: Vengeance for Frenway\n-- items: 18809, 13912\n\nlocal function reward_hide(e)\n\te.self:Say(string.format(\"It is not right to feel satisfied at the sight of Mammoth's hide, but I do. Thank you, %s.\", e.other:GetName()))\n\te.other:Ding()\n\te.other:Faction(302,10,0) -- Protectors of Pine\n\te.other:Faction(272,10,0) -- Jaggedpine Treefolk\n\te.other:Faction(306,-30,0) -- Sabertooths of Blackburrow\n\te.other:Faction(262,10,0) -- Guards of Qeynos\n\te.other:AddEXP(500)\n\te.other:GiveCash(0,6,6,0)\nend\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Greetings. stranger. Please excuse my melancholy state.  I have had some [bad news] that has brought me great sorrow.\")\n\telseif(e.message:findi(\"bayle list\")) then\n\t\te.self:Say(\"The Bayle List is gone. It lies inside the belly of that beast, Mammoth\")\n\telseif(e.message:findi(\"mammoth\")) then\n\t\te.self:Say(\"Mammoth is the great bear which inhabits the caves. It was he that swallowed my son whole. My son was using the scroll case as a play sword when Mammoth approached. I know you need the list but my vows as a Protector of the Pine forbid me to harm the bear. Help me ease my pain. Kill Mammoth and bring me his hide. You will find the list inside the beast.\")\n\telseif(e.message:findi(\"bad news\")) then\n\t\te.self:Say(\"My youngest son was devoured by a grizzly bear while playing near the caves. It was an unfortunate accident. The great bear was just protecting its territory. Now, could you please just leave me be? <sniff>\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\n\tif item_lib.check_turn_in(e.trade, {item1 = 18809, item2 = 13912}) then\n\t\treward_hide(e)\n\t\te.other:SummonItem(18809) -- Bayle List II, returned so The Bayle List chain can continue.\n\telseif item_lib.check_turn_in(e.trade, {item1 = 13912}) then\n\t\treward_hide(e)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 16929,
+        "zone": "qrg",
+        "name": "Frenway_Marthank",
+        "lua_content": "-- Source: qrg/Frenway_Marthank.lua\n-- P99 audit: Vengeance for Frenway\n-- items: 18809, 13912\n\nlocal function reward_hide(e)\n\te.self:Say(string.format(\"It is not right to feel satisfied at the sight of Mammoth's hide, but I do. Thank you, %s.\", e.other:GetName()))\n\te.other:Ding()\n\te.other:Faction(302,10,0) -- Protectors of Pine\n\te.other:Faction(272,10,0) -- Jaggedpine Treefolk\n\te.other:Faction(306,-30,0) -- Sabertooths of Blackburrow\n\te.other:Faction(262,10,0) -- Guards of Qeynos\n\te.other:AddEXP(500)\n\te.other:GiveCash(0,6,6,0)\nend\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Greetings. stranger. Please excuse my melancholy state.  I have had some [bad news] that has brought me great sorrow.\")\n\telseif(e.message:findi(\"toe needs the bayle list\")) then\n\t\te.self:Say(\"The Bayle List is gone. It lies inside the belly of that beast, Mammoth\")\n\telseif(e.message:findi(\"bayle list\")) then\n\t\te.self:Say(\"The Bayle List is my property. Return it to me if you have it. There is no more I can say of the list, but if you have the note and refuse to return it, then I shall let it be known that you betray [Antonius Bayle] himself!\")\n\telseif(e.message:findi(\"antonius bayle\")) then\n\t\te.self:Say(\"Antonius Bayle and I were childhood friends. He entrusted me to watch over the list. What the list is, was never explained to me. It looks like gibberish.\")\n\telseif(e.message:findi(\"mammoth\")) then\n\t\te.self:Say(\"Mammoth is the great bear which inhabits the caves. It was he that swallowed my son whole. My son was using the scroll case as a play sword when Mammoth approached. I know you need the list but my vows as a Protector of the Pine forbid me to harm the bear. Help me ease my pain. Kill Mammoth and bring me his hide. You will find the list inside the beast.\")\n\telseif(e.message:findi(\"bad news\")) then\n\t\te.self:Say(\"My youngest son was devoured by a grizzly bear while playing near the caves. It was an unfortunate accident. The great bear was just protecting its territory. Now, could you please just leave me be? <sniff>\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\n\tif item_lib.check_turn_in(e.trade, {item1 = 18809, item2 = 13912}) then\n\t\treward_hide(e)\n\t\te.other:SummonItem(18809) -- Bayle List II, returned so The Bayle List chain can continue.\n\telseif item_lib.check_turn_in(e.trade, {item1 = 13912}) then\n\t\treward_hide(e)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/qrg/Frenway_Marthank.lua",
+      "beforeSha256": "96bdd3f9850b35e2b1e7bc0709dc7490ae72f42219840d174f78b62fbb8ffaa8",
+      "proposedFile": "changes/p99-tz-frenway-bayle-dialogue/qrg--Frenway_Marthank.lua",
+      "afterSha256": "9732c0e013601621471db3e66e33e459215ba1d80c0e6d6c78c696797f7e3428"
+    }
+  ]
+}

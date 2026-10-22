@@ -1,0 +1,58 @@
+{
+  "format": 1,
+  "id": "p99-nz-piranha-combine",
+  "summary": "Enable the existing documented four-piranha combine so the sack turn-in is obtainable.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Piranha_Hunting?action=raw",
+      "note": "Cached SHA256 15c7a2ad6eba32fdcb557c23e1eca9ac1f5b458ddd6faf6f3bfb2479b0959314. P99 explicitly requires four Fresh Piranha in Empty Fish Sack, combine to Sack of Piranha. Existing recipe10085 has exact input13871x4,container17936,output13872, nofail1,trivial0,must_learn0; only enabled0 blocks it. Enable without inventing item IDs or changing inputs."
+    }
+  ],
+  "rows": [
+    {
+      "table": "tradeskill_recipe",
+      "before": {
+        "id": 10085,
+        "name": "Sack Of Piranha",
+        "tradeskill": 75,
+        "skillneeded": 0,
+        "trivial": 0,
+        "nofail": 1,
+        "replace_container": 1,
+        "notes": null,
+        "must_learn": 0,
+        "learned_by_item_id": 0,
+        "quest": 0,
+        "enabled": 0,
+        "show_in_advanced": 1,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null,
+        "category": null
+      },
+      "after": {
+        "id": 10085,
+        "name": "Sack Of Piranha",
+        "tradeskill": 75,
+        "skillneeded": 0,
+        "trivial": 0,
+        "nofail": 1,
+        "replace_container": 1,
+        "notes": null,
+        "must_learn": 0,
+        "learned_by_item_id": 0,
+        "quest": 0,
+        "enabled": 1,
+        "show_in_advanced": 1,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null,
+        "category": null
+      }
+    }
+  ],
+  "sources": []
+}

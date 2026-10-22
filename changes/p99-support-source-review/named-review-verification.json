@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "checks": {
+    "exactKeyAccounting": 237,
+    "reviewedSourceHashesBound": 237,
+    "existingEvidencePointersResolve": 56,
+    "cachedPageHashesMatch": 77,
+    "immutableBaselineBeforeRows": 21,
+    "sourceRowFileHashesMatch": 21,
+    "originalBodiesPreservedExclusiveDisables": 5,
+    "npcRowsTouched": 0,
+    "isolatedBehaviorCases": 117
+  },
+  "assignmentSha256": "81dfe35480b96b5ddd1f07b5f08b733c0e8523b8460347f173372c32d2d046ff",
+  "dispositionsSha256": "c4bdf1f3d207f6d83ca0454060e6657940be306f260bd67218ffbc67c107e6e2",
+  "proposalSha256": "0cf5e77d57c78a536655c0a26ef1da0639f4e5302fd82d5035773a82d1cab94d",
+  "limitations": [
+    "Source reading and selected semantic evidence reconciliation are not full P99 parity. Unknown numbers, adapted routing and mixed later facets remain explicit.",
+    "Behavior tests mock quest APIs, not the live bridge, inventory settlement or engine timers.",
+    "Proposal CLI validation final receipt recorded separately."
+  ]
+}

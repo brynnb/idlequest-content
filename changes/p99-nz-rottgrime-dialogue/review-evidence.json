@@ -1,0 +1,26 @@
+{
+  "titles": [
+    "Protect the Shipyard"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "partial",
+  "match_status": "partial",
+  "local_quest_keys": [
+    "overthere/Captain_Rottgrime"
+  ],
+  "proposal": "changes/p99-nz-rottgrime-dialogue.json",
+  "notes": [
+    "Accept the documented plural-sarnaks response as well as the displayed singular phrase.",
+    "Four12982SarnakWarBraids->12981GuardOfMarines,VenrilSathir318+5,and1\u20133gold match exact cache. Existing10EXP far below approximate level percentages, but raw amount not documented; do not invent replacement. Faction bypass unchanged."
+  ],
+  "verification": {
+    "source": "Cached P99 and effective Lua reviewed; exact complete row preimages and source hashes recorded.",
+    "syntax": "pending",
+    "runtime": "Isolated mock regression pending; full game runtime unavailable.",
+    "ui": "not_run",
+    "connected_chain": "not_run"
+  },
+  "unresolved": [
+    "Ordinary source drops/spawns, recipe live behavior and rendered complete quest path not verified."
+  ]
+}

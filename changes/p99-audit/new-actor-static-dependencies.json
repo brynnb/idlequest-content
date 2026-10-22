@@ -1,0 +1,851 @@
+{
+  "limits": "Static exported identity/spawn graph only; exclude flag alone is not runtime policy. Exact names use only the documented backtick-to-dash and space normalization. Spawn filtering, inventory, event lifecycle and complete acquisition are not executed. Alternate-zone aliases do not activate those zones.",
+  "records": [
+    {
+      "key": "thurgadina/Adia_Coldbeard",
+      "questId": 503524,
+      "p99Zone": true,
+      "npcCandidates": [
+        {
+          "npcId": 115140,
+          "name": "Adia_Coldbeard",
+          "exclude": 1,
+          "loottableId": 0,
+          "spawnEntries": [
+            {
+              "spawngroupID": 15853,
+              "npcID": 115140,
+              "chance": 100,
+              "condition_value_filter": 1,
+              "min_time": 0,
+              "max_time": 0,
+              "min_expansion": -1,
+              "max_expansion": -1,
+              "content_flags": null,
+              "content_flags_disabled": null
+            }
+          ],
+          "explicitNpcPolicy": [],
+          "inZoneSpawnRows": [
+            {
+              "id": 25666,
+              "spawngroupID": 15853,
+              "zone": "thurgadina",
+              "version": 0,
+              "x": 107,
+              "y": -57,
+              "z": 2.5,
+              "heading": 0,
+              "respawntime": 640,
+              "variance": 0,
+              "pathgrid": 0,
+              "path_when_zone_idle": 0,
+              "_condition": 0,
+              "cond_value": 1,
+              "animation": 0,
+              "min_expansion": -1,
+              "max_expansion": -1,
+              "content_flags": null,
+              "content_flags_disabled": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "thurgadina/Pythic_Urson",
+      "questId": 503525,
+      "p99Zone": true,
+      "npcCandidates": [
+        {
+          "npcId": 115119,
+          "name": "Pythic_Urson",
+          "exclude": 1,
+          "loottableId": 0,
+          "spawnEntries": [
+            {
+              "spawngroupID": 15832,
+              "npcID": 115119,
+              "chance": 100,
+              "condition_value_filter": 1,
+              "min_time": 0,
+              "max_time": 0,
+              "min_expansion": -1,
+              "max_expansion": -1,
+              "content_flags": null,
+              "content_flags_disabled": null
+            }
+          ],
+          "explicitNpcPolicy": [],
+          "inZoneSpawnRows": [
+            {
+              "id": 25645,
+              "spawngroupID": 15832,
+              "zone": "thurgadina",
+              "version": 0,
+              "x": -396,
+              "y": 81,
+              "z": 2.5,
+              "heading": 458,
+              "respawntime": 640,
+              "variance": 0,
+              "pathgrid": 0,
+              "path_when_zone_idle": 0,
+              "_condition": 0,
+              "cond_value": 1,
+              "animation": 0,
+              "min_expansion": -1,
+              "max_expansion": -1,
+              "content_flags": null,
+              "content_flags_disabled": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "greatdivide/gnomish_deserter",
+      "questId": 503526,
+      "p99Zone": true,
+      "npcCandidates": [
+        {
+          "npcId": 118078,
+          "name": "gnomish_deserter",
+          "exclude": 1,
+          "loottableId": 0,
+          "spawnEntries": [
+            {
+              "spawngroupID": 14263,
+              "npcID": 118078,
+              "chance": 100,
+              "condition_value_filter": 1,
+              "min_time": 0,
+              "max_time": 0,
+              "min_expansion": -1,
+              "max_expansion": -1,
+              "content_flags": null,
+              "content_flags_disabled": null
+            }
+          ],
+          "explicitNpcPolicy": [],
+          "inZoneSpawnRows": [
+            {
+              "id": 22929,
+              "spawngroupID": 14263,
+              "zone": "greatdivide",
+              "version": 0,
+              "x": -563,
+              "y": -3918,
+              "z": 796.130005,
+              "heading": 318,
+              "respawntime": 640,
+              "variance": 0,
+              "pathgrid": 0,
+              "path_when_zone_idle": 0,
+              "_condition": 1,
+              "cond_value": 1,
+              "animation": 0,
+              "min_expansion": -1,
+              "max_expansion": -1,
+              "content_flags": null,
+              "content_flags_disabled": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "wakening/mist_panther",
+      "questId": 503527,
+      "p99Zone": true,
+      "npcCandidates": [
+        {
+          "npcId": 119066,
+          "name": "mist_panther",
+          "exclude": 1,
+          "loottableId": 6898,
+          "spawnEntries": [
+            {
+              "spawngroupID": 16178,
+              "npcID": 119066,
+              "chance": 100,
+              "condition_value_filter": 1,
+              "min_time": 0,
+              "max_time": 0,
+              "min_expansion": -1,
+              "max_expansion": -1,
+              "content_flags": null,
+              "content_flags_disabled": null
+            }
+          ],
+          "explicitNpcPolicy": [],
+          "inZoneSpawnRows": [
+            {
+              "id": 26194,
+              "spawngroupID": 16178,
+              "zone": "wakening",
+              "version": 0,
+              "x": -926,
+              "y": 65,
+              "z": -178.25,
+              "heading": 0,
+              "respawntime": 640,
+              "variance": 0,
+              "pathgrid": 0,
+              "path_when_zone_idle": 0,
+              "_condition": 0,
+              "cond_value": 1,
+              "animation": 0,
+              "min_expansion": -1,
+              "max_expansion": -1,
+              "content_flags": null,
+              "content_flags_disabled": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "iceclad/Nelet_Durzit",
+      "questId": 503528,
+      "p99Zone": true,
+      "npcCandidates": [
+        {
+          "npcId": 110059,
+          "name": "Nelet_Durzit",
+          "exclude": 1,
+          "loottableId": 0,
+          "spawnEntries": [
+            {
+              "spawngroupID": 14462,
+              "npcID": 110059,
+              "chance": 100,
+              "condition_value_filter": 1,
+              "min_time": 0,
+              "max_time": 0,
+              "min_expansion": -1,
+              "max_expansion": -1,
+              "content_flags": null,
+              "content_flags_disabled": null
+            }
+          ],
+          "explicitNpcPolicy": [],
+          "inZoneSpawnRows": [
+            {
+              "id": 23478,
+              "spawngroupID": 14462,
+              "zone": "iceclad",
+              "version": 0,
+              "x": 392,
+              "y": 5311,
+              "z": -18,
+              "heading": 431,
+              "respawntime": 640,
+              "variance": 0,
+              "pathgrid": 0,
+              "path_when_zone_idle": 0,
+              "_condition": 0,
+              "cond_value": 1,
+              "animation": 0,
+              "min_expansion": -1,
+              "max_expansion": -1,
+              "content_flags": null,
+              "content_flags_disabled": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "northkarana/Innkeep_James",
+      "questId": 503529,
+      "p99Zone": true,
+      "npcCandidates": [
+        {
+          "npcId": 13074,
+          "name": "Innkeep_James",
+          "exclude": 1,
+          "loottableId": 0,
+          "spawnEntries": [
+            {
+              "spawngroupID": 3192,
+              "npcID": 13074,
+              "chance": 100,
+              "condition_value_filter": 1,
+              "min_time": 0,
+              "max_time": 0,
+              "min_expansion": -1,
+              "max_expansion": -1,
+              "content_flags": null,
+              "content_flags_disabled": null
+            }
+          ],
+          "explicitNpcPolicy": [],
+          "inZoneSpawnRows": [
+            {
+              "id": 5936,
+              "spawngroupID": 3192,
+              "zone": "northkarana",
+              "version": 0,
+              "x": 1379,
+              "y": 156,
+              "z": 0.38,
+              "heading": 208,
+              "respawntime": 640,
+              "variance": 0,
+              "pathgrid": 0,
+              "path_when_zone_idle": 0,
+              "_condition": 0,
+              "cond_value": 1,
+              "animation": 0,
+              "min_expansion": -1,
+              "max_expansion": -1,
+              "content_flags": null,
+              "content_flags_disabled": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "freporte/Innkeep_Nasumi",
+      "questId": 503530,
+      "p99Zone": true,
+      "npcCandidates": [
+        {
+          "npcId": 382121,
+          "name": "Innkeep_Nasumi",
+          "exclude": 1,
+          "loottableId": 0,
+          "spawnEntries": [
+            {
+              "spawngroupID": 67254,
+              "npcID": 382121,
+              "chance": 100,
+              "condition_value_filter": 1,
+              "min_time": 0,
+              "max_time": 0,
+              "min_expansion": -1,
+              "max_expansion": -1,
+              "content_flags": null,
+              "content_flags_disabled": null
+            }
+          ],
+          "explicitNpcPolicy": [],
+          "inZoneSpawnRows": []
+        },
+        {
+          "npcId": 10058,
+          "name": "Innkeep_Nasumi",
+          "exclude": 1,
+          "loottableId": 0,
+          "spawnEntries": [
+            {
+              "spawngroupID": 5756,
+              "npcID": 10058,
+              "chance": 100,
+              "condition_value_filter": 1,
+              "min_time": 0,
+              "max_time": 0,
+              "min_expansion": -1,
+              "max_expansion": -1,
+              "content_flags": null,
+              "content_flags_disabled": null
+            }
+          ],
+          "explicitNpcPolicy": [],
+          "inZoneSpawnRows": [
+            {
+              "id": 2998,
+              "spawngroupID": 5756,
+              "zone": "freporte",
+              "version": 0,
+              "x": -720,
+              "y": -77,
+              "z": -52.130001,
+              "heading": 3,
+              "respawntime": 640,
+              "variance": 0,
+              "pathgrid": 0,
+              "path_when_zone_idle": 0,
+              "_condition": 0,
+              "cond_value": 1,
+              "animation": 0,
+              "min_expansion": -1,
+              "max_expansion": -1,
+              "content_flags": null,
+              "content_flags_disabled": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "freeporteast/Innkeep_Nasumi",
+      "questId": 503531,
+      "p99Zone": false,
+      "npcCandidates": [
+        {
+          "npcId": 382121,
+          "name": "Innkeep_Nasumi",
+          "exclude": 1,
+          "loottableId": 0,
+          "spawnEntries": [
+            {
+              "spawngroupID": 67254,
+              "npcID": 382121,
+              "chance": 100,
+              "condition_value_filter": 1,
+              "min_time": 0,
+              "max_time": 0,
+              "min_expansion": -1,
+              "max_expansion": -1,
+              "content_flags": null,
+              "content_flags_disabled": null
+            }
+          ],
+          "explicitNpcPolicy": [],
+          "inZoneSpawnRows": [
+            {
+              "id": 105420,
+              "spawngroupID": 67254,
+              "zone": "freeporteast",
+              "version": 0,
+              "x": -221,
+              "y": -932,
+              "z": 6.5,
+              "heading": 263,
+              "respawntime": 640,
+              "variance": 0,
+              "pathgrid": 0,
+              "path_when_zone_idle": 0,
+              "_condition": 0,
+              "cond_value": 1,
+              "animation": 0,
+              "min_expansion": -1,
+              "max_expansion": -1,
+              "content_flags": null,
+              "content_flags_disabled": null
+            }
+          ]
+        },
+        {
+          "npcId": 10058,
+          "name": "Innkeep_Nasumi",
+          "exclude": 1,
+          "loottableId": 0,
+          "spawnEntries": [
+            {
+              "spawngroupID": 5756,
+              "npcID": 10058,
+              "chance": 100,
+              "condition_value_filter": 1,
+              "min_time": 0,
+              "max_time": 0,
+              "min_expansion": -1,
+              "max_expansion": -1,
+              "content_flags": null,
+              "content_flags_disabled": null
+            }
+          ],
+          "explicitNpcPolicy": [],
+          "inZoneSpawnRows": []
+        }
+      ]
+    },
+    {
+      "key": "freportn/Gern_Tassel",
+      "questId": 503532,
+      "p99Zone": true,
+      "npcCandidates": [
+        {
+          "npcId": 8014,
+          "name": "Gern_Tassel",
+          "exclude": 1,
+          "loottableId": 0,
+          "spawnEntries": [
+            {
+              "spawngroupID": 1351,
+              "npcID": 8014,
+              "chance": 100,
+              "condition_value_filter": 1,
+              "min_time": 0,
+              "max_time": 0,
+              "min_expansion": -1,
+              "max_expansion": -1,
+              "content_flags": null,
+              "content_flags_disabled": null
+            }
+          ],
+          "explicitNpcPolicy": [],
+          "inZoneSpawnRows": [
+            {
+              "id": 8846,
+              "spawngroupID": 1351,
+              "zone": "freportn",
+              "version": 0,
+              "x": -57,
+              "y": 70,
+              "z": 17.75,
+              "heading": 330,
+              "respawntime": 640,
+              "variance": 0,
+              "pathgrid": 0,
+              "path_when_zone_idle": 0,
+              "_condition": 0,
+              "cond_value": 1,
+              "animation": 0,
+              "min_expansion": -1,
+              "max_expansion": -1,
+              "content_flags": null,
+              "content_flags_disabled": null
+            }
+          ]
+        },
+        {
+          "npcId": 383129,
+          "name": "Gern_Tassel",
+          "exclude": 1,
+          "loottableId": 0,
+          "spawnEntries": [
+            {
+              "spawngroupID": 69334,
+              "npcID": 383129,
+              "chance": 100,
+              "condition_value_filter": 1,
+              "min_time": 0,
+              "max_time": 0,
+              "min_expansion": -1,
+              "max_expansion": -1,
+              "content_flags": null,
+              "content_flags_disabled": null
+            }
+          ],
+          "explicitNpcPolicy": [],
+          "inZoneSpawnRows": []
+        }
+      ]
+    },
+    {
+      "key": "freeportwest/Gern_Tassel",
+      "questId": 503533,
+      "p99Zone": false,
+      "npcCandidates": [
+        {
+          "npcId": 8014,
+          "name": "Gern_Tassel",
+          "exclude": 1,
+          "loottableId": 0,
+          "spawnEntries": [
+            {
+              "spawngroupID": 1351,
+              "npcID": 8014,
+              "chance": 100,
+              "condition_value_filter": 1,
+              "min_time": 0,
+              "max_time": 0,
+              "min_expansion": -1,
+              "max_expansion": -1,
+              "content_flags": null,
+              "content_flags_disabled": null
+            }
+          ],
+          "explicitNpcPolicy": [],
+          "inZoneSpawnRows": []
+        },
+        {
+          "npcId": 383129,
+          "name": "Gern_Tassel",
+          "exclude": 1,
+          "loottableId": 0,
+          "spawnEntries": [
+            {
+              "spawngroupID": 69334,
+              "npcID": 383129,
+              "chance": 100,
+              "condition_value_filter": 1,
+              "min_time": 0,
+              "max_time": 0,
+              "min_expansion": -1,
+              "max_expansion": -1,
+              "content_flags": null,
+              "content_flags_disabled": null
+            }
+          ],
+          "explicitNpcPolicy": [],
+          "inZoneSpawnRows": [
+            {
+              "id": 107500,
+              "spawngroupID": 69334,
+              "zone": "freeportwest",
+              "version": 0,
+              "x": -377,
+              "y": -212,
+              "z": -87.25,
+              "heading": 385,
+              "respawntime": 640,
+              "variance": 0,
+              "pathgrid": 0,
+              "path_when_zone_idle": 0,
+              "_condition": 0,
+              "cond_value": 1,
+              "animation": 0,
+              "min_expansion": -1,
+              "max_expansion": -1,
+              "content_flags": null,
+              "content_flags_disabled": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "nro/Dorn_B-Dynn",
+      "questId": 503534,
+      "p99Zone": true,
+      "npcCandidates": [
+        {
+          "npcId": 34082,
+          "name": "Dorn_B`Dynn",
+          "exclude": 1,
+          "loottableId": 3511,
+          "spawnEntries": [
+            {
+              "spawngroupID": 3340,
+              "npcID": 34082,
+              "chance": 100,
+              "condition_value_filter": 1,
+              "min_time": 0,
+              "max_time": 0,
+              "min_expansion": -1,
+              "max_expansion": -1,
+              "content_flags": null,
+              "content_flags_disabled": null
+            }
+          ],
+          "explicitNpcPolicy": [],
+          "inZoneSpawnRows": [
+            {
+              "id": 474,
+              "spawngroupID": 3340,
+              "zone": "nro",
+              "version": 0,
+              "x": -391,
+              "y": 1311,
+              "z": 6,
+              "heading": 105,
+              "respawntime": 640,
+              "variance": 0,
+              "pathgrid": 0,
+              "path_when_zone_idle": 0,
+              "_condition": 0,
+              "cond_value": 1,
+              "animation": 0,
+              "min_expansion": -1,
+              "max_expansion": -1,
+              "content_flags": null,
+              "content_flags_disabled": null
+            }
+          ]
+        },
+        {
+          "npcId": 392072,
+          "name": "Dorn_B`Dynn",
+          "exclude": 1,
+          "loottableId": 92352,
+          "spawnEntries": [
+            {
+              "spawngroupID": 67688,
+              "npcID": 392072,
+              "chance": 100,
+              "condition_value_filter": 1,
+              "min_time": 0,
+              "max_time": 0,
+              "min_expansion": -1,
+              "max_expansion": -1,
+              "content_flags": null,
+              "content_flags_disabled": null
+            }
+          ],
+          "explicitNpcPolicy": [],
+          "inZoneSpawnRows": []
+        }
+      ]
+    },
+    {
+      "key": "northro/Dorn_B-Dynn",
+      "questId": 503535,
+      "p99Zone": false,
+      "npcCandidates": [
+        {
+          "npcId": 34082,
+          "name": "Dorn_B`Dynn",
+          "exclude": 1,
+          "loottableId": 3511,
+          "spawnEntries": [
+            {
+              "spawngroupID": 3340,
+              "npcID": 34082,
+              "chance": 100,
+              "condition_value_filter": 1,
+              "min_time": 0,
+              "max_time": 0,
+              "min_expansion": -1,
+              "max_expansion": -1,
+              "content_flags": null,
+              "content_flags_disabled": null
+            }
+          ],
+          "explicitNpcPolicy": [],
+          "inZoneSpawnRows": []
+        },
+        {
+          "npcId": 392072,
+          "name": "Dorn_B`Dynn",
+          "exclude": 1,
+          "loottableId": 92352,
+          "spawnEntries": [
+            {
+              "spawngroupID": 67688,
+              "npcID": 392072,
+              "chance": 100,
+              "condition_value_filter": 1,
+              "min_time": 0,
+              "max_time": 0,
+              "min_expansion": -1,
+              "max_expansion": -1,
+              "content_flags": null,
+              "content_flags_disabled": null
+            }
+          ],
+          "explicitNpcPolicy": [],
+          "inZoneSpawnRows": [
+            {
+              "id": 105854,
+              "spawngroupID": 67688,
+              "zone": "northro",
+              "version": 0,
+              "x": -1472,
+              "y": 6371,
+              "z": 10.375,
+              "heading": 337,
+              "respawntime": 640,
+              "variance": 0,
+              "pathgrid": 0,
+              "path_when_zone_idle": 0,
+              "_condition": 0,
+              "cond_value": 1,
+              "animation": 0,
+              "min_expansion": -1,
+              "max_expansion": -1,
+              "content_flags": null,
+              "content_flags_disabled": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "firiona/Guard_Frandan",
+      "questId": 503551,
+      "p99Zone": true,
+      "npcCandidates": [
+        {
+          "npcId": 84141,
+          "name": "Guard_Frandan",
+          "exclude": 1,
+          "loottableId": 103806,
+          "spawnEntries": [
+            {
+              "spawngroupID": 9630,
+              "npcID": 84141,
+              "chance": 100,
+              "condition_value_filter": 1,
+              "min_time": 0,
+              "max_time": 0,
+              "min_expansion": -1,
+              "max_expansion": -1,
+              "content_flags": null,
+              "content_flags_disabled": null
+            }
+          ],
+          "explicitNpcPolicy": [],
+          "inZoneSpawnRows": [
+            {
+              "id": 14679,
+              "spawngroupID": 9630,
+              "zone": "firiona",
+              "version": 0,
+              "x": 3471,
+              "y": -3541,
+              "z": -93.25,
+              "heading": 135,
+              "respawntime": 640,
+              "variance": 0,
+              "pathgrid": 156,
+              "path_when_zone_idle": 0,
+              "_condition": 0,
+              "cond_value": 1,
+              "animation": 0,
+              "min_expansion": -1,
+              "max_expansion": -1,
+              "content_flags": null,
+              "content_flags_disabled": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "qeynos/Dun",
+      "questId": 503552,
+      "p99Zone": true,
+      "npcCandidates": [
+        {
+          "npcId": 1087,
+          "name": "Dun",
+          "exclude": 1,
+          "loottableId": 0,
+          "spawnEntries": [
+            {
+              "spawngroupID": 5634,
+              "npcID": 1087,
+              "chance": 100,
+              "condition_value_filter": 1,
+              "min_time": 0,
+              "max_time": 0,
+              "min_expansion": -1,
+              "max_expansion": -1,
+              "content_flags": null,
+              "content_flags_disabled": null
+            }
+          ],
+          "explicitNpcPolicy": [],
+          "inZoneSpawnRows": [
+            {
+              "id": 10633,
+              "spawngroupID": 5634,
+              "zone": "qeynos",
+              "version": 0,
+              "x": -445,
+              "y": 304,
+              "z": 4.38,
+              "heading": 243,
+              "respawntime": 640,
+              "variance": 0,
+              "pathgrid": 0,
+              "path_when_zone_idle": 0,
+              "_condition": 0,
+              "cond_value": 1,
+              "animation": 0,
+              "min_expansion": -1,
+              "max_expansion": -1,
+              "content_flags": null,
+              "content_flags_disabled": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

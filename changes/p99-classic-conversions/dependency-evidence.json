@@ -1,0 +1,230 @@
+{
+  "npcTypes": [
+    {
+      "id": 56161,
+      "name": "Minotaur_Lord",
+      "level": 30,
+      "class": 1,
+      "race": 53
+    },
+    {
+      "id": 54107,
+      "name": "Sindl_Talonstrike",
+      "level": 61,
+      "class": 20,
+      "race": 4
+    },
+    {
+      "id": 94125,
+      "name": "#tainted_gorilla",
+      "level": 41,
+      "class": 1,
+      "race": 41
+    },
+    {
+      "id": 45068,
+      "name": "Zaen_Kalystir",
+      "level": 61,
+      "class": 24,
+      "race": 1
+    },
+    {
+      "id": 51149,
+      "name": "corrupted_aquagoblin",
+      "level": 36,
+      "class": 1,
+      "race": 40
+    },
+    {
+      "id": 51151,
+      "name": "#tainted_aquagoblin",
+      "level": 36,
+      "class": 1,
+      "race": 40
+    },
+    {
+      "id": 94140,
+      "name": "corrupted_gorilla",
+      "level": 47,
+      "class": 1,
+      "race": 41
+    },
+    {
+      "id": 85224,
+      "name": "corrupted_barracuda",
+      "level": 46,
+      "class": 1,
+      "race": 148
+    },
+    {
+      "id": 85217,
+      "name": "#tainted_barracuda",
+      "level": 46,
+      "class": 1,
+      "race": 148
+    }
+  ],
+  "npcZoneWeights": [
+    {
+      "id": 4430,
+      "zone_name": "qcat",
+      "npc_id": 45068,
+      "npc_name": "Zaen_Kalystir",
+      "level": 61,
+      "weight": 1
+    },
+    {
+      "id": 76772,
+      "zone_name": "emeraldjungle",
+      "npc_id": 94140,
+      "npc_name": "corrupted_gorilla",
+      "level": 41,
+      "weight": 0.05
+    },
+    {
+      "id": 10892,
+      "zone_name": "lakeofillomen",
+      "npc_id": 85217,
+      "npc_name": "#tainted_barracuda",
+      "level": 46,
+      "weight": 0.01
+    },
+    {
+      "id": 1691,
+      "zone_name": "gfaydark",
+      "npc_id": 54107,
+      "npc_name": "Sindl_Talonstrike",
+      "level": 61,
+      "weight": 1
+    },
+    {
+      "id": 84941,
+      "zone_name": "steamfont",
+      "npc_id": 56161,
+      "npc_name": "Minotaur_Lord",
+      "level": 30,
+      "weight": 0.05
+    },
+    {
+      "id": 9615,
+      "zone_name": "emeraldjungle",
+      "npc_id": 94125,
+      "npc_name": "#tainted_gorilla",
+      "level": 41,
+      "weight": 0.01
+    },
+    {
+      "id": 3025,
+      "zone_name": "lakerathe",
+      "npc_id": 51151,
+      "npc_name": "#tainted_aquagoblin",
+      "level": 36,
+      "weight": 0.01
+    },
+    {
+      "id": 68589,
+      "zone_name": "lakerathe",
+      "npc_id": 51149,
+      "npc_name": "corrupted_aquagoblin",
+      "level": 36,
+      "weight": 0.05
+    },
+    {
+      "id": 76737,
+      "zone_name": "lakeofillomen",
+      "npc_id": 85224,
+      "npc_name": "corrupted_barracuda",
+      "level": 46,
+      "weight": 0.05
+    }
+  ],
+  "spawnEntries": [
+    {
+      "spawngroupID": 11107,
+      "npcID": 85217,
+      "chance": 0,
+      "condition_value_filter": 1,
+      "min_time": 0,
+      "max_time": 0,
+      "min_expansion": -1,
+      "max_expansion": -1,
+      "content_flags": null,
+      "content_flags_disabled": null
+    },
+    {
+      "spawngroupID": 2490,
+      "npcID": 51151,
+      "chance": 0,
+      "condition_value_filter": 1,
+      "min_time": 0,
+      "max_time": 0,
+      "min_expansion": -1,
+      "max_expansion": -1,
+      "content_flags": null,
+      "content_flags_disabled": null
+    },
+    {
+      "spawngroupID": 2491,
+      "npcID": 51151,
+      "chance": 0,
+      "condition_value_filter": 1,
+      "min_time": 0,
+      "max_time": 0,
+      "min_expansion": -1,
+      "max_expansion": -1,
+      "content_flags": null,
+      "content_flags_disabled": null
+    },
+    {
+      "spawngroupID": 11079,
+      "npcID": 85217,
+      "chance": 0,
+      "condition_value_filter": 1,
+      "min_time": 0,
+      "max_time": 0,
+      "min_expansion": -1,
+      "max_expansion": -1,
+      "content_flags": null,
+      "content_flags_disabled": null
+    },
+    {
+      "spawngroupID": 3983,
+      "npcID": 45068,
+      "chance": 100,
+      "condition_value_filter": 1,
+      "min_time": 0,
+      "max_time": 0,
+      "min_expansion": -1,
+      "max_expansion": -1,
+      "content_flags": null,
+      "content_flags_disabled": null
+    },
+    {
+      "spawngroupID": 1552,
+      "npcID": 54107,
+      "chance": 100,
+      "condition_value_filter": 1,
+      "min_time": 0,
+      "max_time": 0,
+      "min_expansion": -1,
+      "max_expansion": -1,
+      "content_flags": null,
+      "content_flags_disabled": null
+    },
+    {
+      "spawngroupID": 9292,
+      "npcID": 94125,
+      "chance": 0,
+      "condition_value_filter": 1,
+      "min_time": 0,
+      "max_time": 0,
+      "min_expansion": -1,
+      "max_expansion": -1,
+      "content_flags": null,
+      "content_flags_disabled": null
+    }
+  ],
+  "npcExclusionConflicts": [],
+  "questExclusionConflicts": [],
+  "boundary": "Exported rows only; weight/entry evidence is not the actual BuildSpawnSelection eligibility check. No live world lifecycle verified."
+}

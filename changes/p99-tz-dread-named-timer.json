@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-dread-named-timer",
+  "summary": "Only named shout timer may increment, shout or depop; reset existing count at spawn. Preserve17sec interval and ten-event lifetime as unverified upstream timing. No new P99 duration asserted.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/The_Summoning_of_Dread?action=raw",
+      "note": "Cached 2026-07-17T23:38:08.848Z; revision unavailable; SHA256 5533cdc993c0da616728c796158b51092d46155963ff2a451d86cc795aa294e0. Only named shout timer may increment, shout or depop; reset existing count at spawn. Preserve17sec interval and ten-event lifetime as unverified upstream timing. No new P99 duration asserted. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 15954,
+        "zone": "paineel",
+        "name": "avatar_of_dread",
+        "lua_content": "-- items: 14105, 14107\ncount = 0;\n\nfunction event_spawn(e)\n\teq.set_timer(\"shout\",17000);\nend\n\nfunction event_timer(e)\n\tif(e.timer == \"shout\") then\n\t\tcount = count + 1;\n\tend\n\t\n\tif(count) then\n\t\te.self:Shout(\"Grrrraaaaarrrrrg! The stench of fear permeates the walls of this city! I will forge one item for the faithful of our Lord Cazic-Thule! Make haste!  My time here is short!\");\n\tend\n\t\n\tif(count == 10) then\n\t\teq.depop();\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\t\n\tif(item_lib.check_turn_in(e.trade, {item1 = 14105})) then\n\t\te.self:Say(\"Wear this shield imbued with my very essence. Wear it in honor of your great services to our Lord Cazic-Thule!\");\n\t\te.other:SummonItem(14107); -- Item: Dread Forged Shield\n\t\te.other:Ding();\n\t\te.other:Faction(265,50,0); -- Faction: Heretics\n\t\te.other:Faction(242,-50,0); -- Faction: Deepwater Knights\n\t\te.other:Faction(254,-50,0); -- Faction: Gate Callers\n\t\te.other:Faction(231,-50,0); -- Faction: Craftkeepers\n\t\te.other:Faction(233,-50,0); -- Faction: Crimson Hands\n\t\te.other:AddEXP(1000);\n\t\teq.depop();\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 15954,
+        "zone": "paineel",
+        "name": "avatar_of_dread",
+        "lua_content": "-- items: 14105, 14107\ncount = 0;\n\nfunction event_spawn(e)\n\tcount = 0;\n\teq.set_timer(\"shout\",17000);\nend\n\nfunction event_timer(e)\n\tif e.timer ~= \"shout\" then return end\n\tcount = count + 1;\n\te.self:Shout(\"Grrrraaaaarrrrrg! The stench of fear permeates the walls of this city! I will forge one item for the faithful of our Lord Cazic-Thule! Make haste!  My time here is short!\");\n\tif count == 10 then\n\t\teq.stop_timer(\"shout\");\n\t\teq.depop();\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\t\n\tif(item_lib.check_turn_in(e.trade, {item1 = 14105})) then\n\t\te.self:Say(\"Wear this shield imbued with my very essence. Wear it in honor of your great services to our Lord Cazic-Thule!\");\n\t\te.other:SummonItem(14107); -- Item: Dread Forged Shield\n\t\te.other:Ding();\n\t\te.other:Faction(265,50,0); -- Faction: Heretics\n\t\te.other:Faction(242,-50,0); -- Faction: Deepwater Knights\n\t\te.other:Faction(254,-50,0); -- Faction: Gate Callers\n\t\te.other:Faction(231,-50,0); -- Faction: Craftkeepers\n\t\te.other:Faction(233,-50,0); -- Faction: Crimson Hands\n\t\te.other:AddEXP(1000);\n\t\teq.depop();\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/paineel/avatar_of_dread.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-tz-dread-named-timer/paineel--avatar_of_dread.lua",
+      "afterSha256": "b2247fda94ae2e4df968017745b15b58119efad2d59e4c57b2dd888ed4478c86"
+    }
+  ]
+}

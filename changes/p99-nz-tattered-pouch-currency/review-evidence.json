@@ -1,0 +1,26 @@
+{
+  "titles": [
+    "The Tattered Pouch"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "partial",
+  "match_status": "partial",
+  "local_quest_keys": [
+    "qeynos2/Crow"
+  ],
+  "proposal": "changes/p99-nz-tattered-pouch-currency.json",
+  "notes": [
+    "Constrain Tattered Leather Pouch cash to documented3\u20135gold rather than six gold.",
+    "P99 supplies the range but not probabilities. Equal selection across3,4,5 is an explicit IdleQuest approximation using the established helper; it is not asserted as P99 distribution. Preserve pouch17600, brew13901, factions/experience and unrelated Crow branches."
+  ],
+  "verification": {
+    "source": "Cached P99 and effective Lua reviewed; exact complete row preimages and source hashes recorded.",
+    "syntax": "pending",
+    "runtime": "Isolated mock regression pending; full game runtime unavailable.",
+    "ui": "not_run",
+    "connected_chain": "not_run"
+  },
+  "unresolved": [
+    "Ordinary source drops/spawns, recipe live behavior and rendered complete quest path not verified."
+  ]
+}

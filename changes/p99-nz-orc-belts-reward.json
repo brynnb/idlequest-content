@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-nz-orc-belts-reward",
+  "summary": "Reward one belt per interaction and return surplus, instead of multiplying nine gold by all offered belts.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Orc_Belts?action=raw",
+      "note": "Cached 2026-07-17T23:27:26.416Z; revision unavailable; SHA256 a9d14befb02d7be7625d9241522ece0cbb9ffb3329b384ee7b228053871c482b. P99 explicitly says nine gold regardless number of belts and advises individual turn-ins. One13916Deathfist Slashed Belt gives9gold+13024Tagglefoot Tingle Drink, all five faction directions match. Returning surplus instead of consuming additional unpaid belts is deliberate safe runtime adaptation. Existing faction/EXP numeric magnitudes retained because wiki only approximate percentage EXP samples. Other dialogue remains available for related Wall Squad quest."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 12177,
+        "zone": "misty",
+        "name": "Deputy_Budo",
+        "lua_content": "-- items: 13916\nfunction event_combat(e)\n\tif(e.joined) then\n\t\tlocal cur_target = e.self:GetHateTop();\n\t\tif(cur_target) then\n\t\t\te.self:Say(string.format(\"Time to die %s!\",e.other:GetCleanName()));\n\t\tend\n\tend\nend\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Hail, \" .. e.other:GetName() .. \". I am Deputy Budo Bullnose, the squad leader of the Great Wall Patrol. Be very careful in the lands beyond the wall. They are filled with dangerous beasts, as well as [\" .. eq.say_link(\"Clan Runnyeye\") .. \"].\");\n\telseif(e.message:findi(\"clan Runnyeye\")) then\n\t\te.self:Say(\"Beyond this wall lies Runnyeye, the lair of the goblins of Clan Runnyeye. They have been a nuisance to Rivervale for quite some time. If you wish to join the fight, go to Rivervale and ask Sheriff Roglio about Clan Runnyeye.\");\n\telseif(e.message:findi(\"I am reporting for duty\")) then\n\t\te.self:Say(\"Stand tall then, Deputy \" .. e.other:GetName() .. \". Your orders are to keep the creatures from venturing into the community of Rivervale and to kill many goblins. Check the goblin bodies, if you should find unbroken warrior beads on them, take them to Sheriff Roglio Bruth and should you be lucky enough to find a bizarre grappling device, you are to take it to Marshal Ghobber Truppack immediately! One more thing - should you defeat any orcs in battle, bring me their leather belts and I shall reward you for the great victory. May the power of Underfoot be with you!\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal belt = 0;\n\t\n\tlocal item_lib = require(\"items\");\n\tif(item_lib.check_turn_in(e.trade, {item1 = 13916, item2 = 13916, item3 = 13916, item4 = 13916})) then\n\t\tbelt = 4;\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 13916, item2 = 13916, item3 = 13916})) then\t\n\t\tbelt = 3;\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 13916, item2 = 13916})) then\n\t\tbelt = 2;\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 13916})) then\n\t\tbelt = 1;\n\tend\n\n\t\n\tif(belt > 0) then\n\t\trepeat\n\t\te.self:Say(\"Grand work. Deputy \" .. e.other:GetName() .. \"! You will become a full-fledged deputy in no time. You should check in with Marshal Ghobber from time to time to see if you have earned your squad ring. Just go up to him and ask. 'Am I one with the Wall?' He will know. but you must first show your bravery in many battles against the goblins.\");\n\t\te.other:Faction(263, 5); --Guardians of the Vale\n\t\te.other:Faction(286, 1); --Mayor Gubbin\n\t\te.other:Faction(355, 1); -- Storm Reapers\n\t\te.other:Faction(292, 1); --Merchants of Rivervale\n\t\te.other:Faction(334, -1); -- Dreadguard Outer\n\t\te.other:QuestReward(e.self,0,0,9,0,13024,1000);\n\t\t\tbelt = belt - 1;\n\t\tuntil belt == 0\n\tend\t\t\n\n\t\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 12177,
+        "zone": "misty",
+        "name": "Deputy_Budo",
+        "lua_content": "-- items: 13916\nfunction event_combat(e)\n\tif(e.joined) then\n\t\tlocal cur_target = e.self:GetHateTop();\n\t\tif(cur_target) then\n\t\t\te.self:Say(string.format(\"Time to die %s!\",e.other:GetCleanName()));\n\t\tend\n\tend\nend\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Hail, \" .. e.other:GetName() .. \". I am Deputy Budo Bullnose, the squad leader of the Great Wall Patrol. Be very careful in the lands beyond the wall. They are filled with dangerous beasts, as well as [\" .. eq.say_link(\"Clan Runnyeye\") .. \"].\");\n\telseif(e.message:findi(\"clan Runnyeye\")) then\n\t\te.self:Say(\"Beyond this wall lies Runnyeye, the lair of the goblins of Clan Runnyeye. They have been a nuisance to Rivervale for quite some time. If you wish to join the fight, go to Rivervale and ask Sheriff Roglio about Clan Runnyeye.\");\n\telseif(e.message:findi(\"I am reporting for duty\")) then\n\t\te.self:Say(\"Stand tall then, Deputy \" .. e.other:GetName() .. \". Your orders are to keep the creatures from venturing into the community of Rivervale and to kill many goblins. Check the goblin bodies, if you should find unbroken warrior beads on them, take them to Sheriff Roglio Bruth and should you be lucky enough to find a bizarre grappling device, you are to take it to Marshal Ghobber Truppack immediately! One more thing - should you defeat any orcs in battle, bring me their leather belts and I shall reward you for the great victory. May the power of Underfoot be with you!\");\n\tend\nend\n\nfunction event_trade(e)\n  local item_lib = require(\"items\")\n  if item_lib.check_turn_in(e.trade, {item1 = 13916}) then\n    e.self:Say(\"Grand work. Deputy \" .. e.other:GetName() .. \"! You will become a full-fledged deputy in no time. You should check in with Marshal Ghobber from time to time to see if you have earned your squad ring. Just go up to him and ask. 'Am I one with the Wall?' He will know. but you must first show your bravery in many battles against the goblins.\")\n    e.other:Faction(263, 5)\n    e.other:Faction(286, 1)\n    e.other:Faction(355, 1)\n    e.other:Faction(292, 1)\n    e.other:Faction(334, -1)\n    e.other:QuestReward(e.self, 0, 0, 9, 0, 13024, 1000)\n  end\n  -- P99 pays once per hand-in. Preserve surplus belts rather than consuming them unrewarded.\n  item_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/misty/Deputy_Budo.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-nz-orc-belts-reward/misty--Deputy_Budo.lua",
+      "afterSha256": "cb5649fbb33cc240cca0883f9defbd0462fbac4af9d32779b5788da105933f44"
+    }
+  ]
+}

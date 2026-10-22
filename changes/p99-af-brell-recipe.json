@@ -1,0 +1,58 @@
+{
+  "format": 1,
+  "id": "p99-af-brell-recipe",
+  "summary": "Enable exact four-component Holy Cask combine; preserve all other recipe metadata.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Brell_Serilis_Symbol_Quests?action=raw",
+      "note": "Cached reference/p99-wiki/raw-pages/brell-serilis-symbol-quests-c97a415bae.wiki SHA256 863baba1b98a8637a0f8adba5d2aff17190103ee27e9ab53188267e68a5ef181."
+    }
+  ],
+  "rows": [
+    {
+      "table": "tradeskill_recipe",
+      "before": {
+        "id": 9638,
+        "name": "A Keg Of Brells Blessed Stout",
+        "tradeskill": 75,
+        "skillneeded": 0,
+        "trivial": 0,
+        "nofail": 1,
+        "replace_container": 1,
+        "notes": "Created by Senzo",
+        "must_learn": 0,
+        "learned_by_item_id": 0,
+        "quest": 0,
+        "enabled": 0,
+        "show_in_advanced": 1,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null,
+        "category": null
+      },
+      "after": {
+        "id": 9638,
+        "name": "A Keg Of Brells Blessed Stout",
+        "tradeskill": 75,
+        "skillneeded": 0,
+        "trivial": 0,
+        "nofail": 1,
+        "replace_container": 1,
+        "notes": "Created by Senzo",
+        "must_learn": 0,
+        "learned_by_item_id": 0,
+        "quest": 0,
+        "enabled": 1,
+        "show_in_advanced": 1,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null,
+        "category": null
+      }
+    }
+  ],
+  "sources": []
+}

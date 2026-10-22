@@ -1,0 +1,29 @@
+{
+  "titles": [
+    "Test of the Fire Storm",
+    "Test of Protection",
+    "Test of the Living Flame",
+    "Test of the Tooth"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "partial",
+  "match_status": "partial",
+  "local_quest_keys": [
+    "templeveeshan/#Telkorenar"
+  ],
+  "proposal": "changes/p99-nz-telkorenar-dialogue.json",
+  "notes": [
+    "Accept documented How can I prove my strength? dialogue without removing legacy wish-to-prove alias.",
+    "Eight Gozzrem/Telkorenar component/reward exchanges independently compared with cached P99 and exported item names; all match. Faction magnitudes and200000EXP are ProjectEQ fallback, not asserted as P99 exact. INTEGRATION REQUIRED: synchronize scripts/quests/velious-backlog.mjs and server/internal/quest/velious_backlog_quests.json templeveeshan/#Telkorenar dialogue. All turnins unchanged; no faction/class/metadata55level gate added."
+  ],
+  "verification": {
+    "source": "Cached P99 and effective Lua reviewed; exact complete row preimages and source hashes recorded.",
+    "syntax": "pending",
+    "runtime": "Isolated mock regression pending; full game runtime unavailable.",
+    "ui": "not_run",
+    "connected_chain": "not_run"
+  },
+  "unresolved": [
+    "Ordinary source drops/spawns, recipe live behavior and rendered complete quest path not verified."
+  ]
+}

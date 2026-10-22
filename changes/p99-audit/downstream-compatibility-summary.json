@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-22",
+  "scope": "Minimal compatibility conclusions relevant to content changes; no private source or documents are included.",
+  "findings": {
+    "spawn2Timers": "Respawn and variance values use seconds. This is a compatibility conclusion, not live verification.",
+    "groundTimers": "Ground-item respawn values use seconds. Imported fast values are not assumed to be intentional adaptations.",
+    "questDamage": "The reviewed runtime cannot apply the required damaging player explosion through the legacy quest path. A safe content-only substitute has not been established.",
+    "containers": "Registration and recipe-policy dependencies remain downstream. See runtime-container-evidence.json and container-compatibility.json.",
+    "manualRecipeLearning": "See crafting-runtime-evidence.json."
+  },
+  "limits": [
+    "These compatibility findings do not substitute for independent current runtime review or live gameplay testing.",
+    "Public baseline references remain valid for the exported snapshot only.",
+    "Changing a private runtime requires separate authorization."
+  ]
+}

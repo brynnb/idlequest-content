@@ -1,0 +1,66 @@
+{
+  "format": 1,
+  "id": "p99-am-hehe-meat",
+  "summary": "Restore Cagrek documented three-platinum final reward and Nerbilik Broken Skull Clan loss rather than gain; preserve other shared branches.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/HEHE_Meat_Quest?action=raw",
+      "note": "Cached 2026-07-17T23:20:45.601Z; revision unavailable; SHA256 eeaa2c72a180fe56d8b526fb7d65857e40ff61dd13e94d78d6016ecbd37decb6. HEHE Meat Quest"
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 19690,
+        "zone": "grobb",
+        "name": "Carver_Cagrek",
+        "lua_content": "-- Modified from ProjectEQ Lua during P99 quest audit.\n-- P99: https://wiki.project1999.com/HEHE_Meat_Quest\n-- P99: https://wiki.project1999.com/Help_Hergor_Get_Fatter\n-- items: 13368, 18940, 5413, 12191, 12210, 13409, 12211\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Away from carver Cagrek you get!  Me's a busy troll.  Must punish enmees of Grobb and feeds trolls a plenty.  Trolls complain meats no good.  Dey says dey hears ogres have special meat which taste better den pris'ners of Grobb.  Do you knows name of meat?  What kinda [meat] dat be?  Tell me!\");\n\telseif(e.message:findi(\"hehe meat\")) then\n\t\te.self:Say(\"HEHE meat!! What dat stand for? Mes need some of dis HEHE meat!! Gos and get me some. Cagrek not just want some. Cagrek want more dan twenny!! Cagrek want three HEHE meat and mes want HEHE recipe. You get and me makes \" .. e.other:GetName() .. \" honeraree carver. Me gives you Grobb Cleaver. It cuts skins like dey butter!!\");\n\telseif(e.message:findi(\"hergor wants his fungus dung pie\")) then\n\t\te.self:Say(\"Dat mean ol' Hergor been buggin me fer pie again!! Me busy. You wants make Hergor fatter, you bring me sume spore mushrooms. Be carefuls, dey easy ta bash, but sumtimes yous bash dem too gud and dey fall apparts. Gets me four and me can make pie.\");\n\telseif(e.message:findi(\"oven mittens\")) then\n\t\te.self:Say(\"Oven mittens?! Whut you need for? You no cook! If you be tinkin you a cook me will gives you oven mittens, but first you brings me tree, not wun or too, but tree froglok meats and also gives me ten gold. You do dis den you get Grobb oven mittens.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\tif (item_lib.check_turn_in(e.trade, {item1 = 13368, item2 = 13368, item3 = 13368, item4 = 18940})) then\n\t\te.self:Say(\"Finally!! What takes yous so long? Now carver Cagrek try and makes meat and feeds to trolls. Yous getting to be deputy carver. Mes give you Grobb cleaver!! Make strong and smarts on you it will. Just like carver Cagrek.\");\n\t\te.other:SummonItem(5413); -- Item: Grobb Cleaver\n\t\te.other:Ding();\n\t\te.other:AddEXP(100);\n\t\te.other:Faction(235,30,0); -- Faction: DaBashers\n\t\te.other:Faction(222,-4,0); -- Faction: Broken Skull Clan\n\telseif (item_lib.check_turn_in(e.trade, {item1 = 12191, item2 = 12191, item3 = 12191, item4 = 12191})) then\n\t\te.self:Say(\"Gud werk! Me already made, err, founds dung part of meal. Here we go. One fungus dung pie! Enjoys.\");\n\t\te.other:SummonItem(12210); -- Item: Fungus Spore Pie\n\t\te.other:Ding();\n\t\te.other:AddEXP(145); -- seen at level 1\n\t\te.other:Faction(235,5,0); -- Faction: DaBashers\n\t\te.other:Faction(222,-1,0); -- Faction: Broken Skull Clan\n\t\te.other:GiveCash(0,0,5,0);\n\telseif (item_lib.check_turn_in(e.trade, {item1 = 13409, item2 = 13409, item3 = 13409, gold = 10})) then\n\t\te.self:Say(\"Bouts time you gets everting!! Here is you Grobb Oven Mittens. Dey good to keep you from hot stuff.\")\n\t\te.other:SummonItem(12211); -- Item: Grobb Oven Mittens\n\t\te.other:Ding();\n\t\te.other:AddEXP(145); -- seen at level 1\n\t\te.other:Faction(235,2,0); -- Faction: DaBashers\n\t\te.other:Faction(222,-1,0); -- Faction: Broken Skull Clan\n\tend\n\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 19690,
+        "zone": "grobb",
+        "name": "Carver_Cagrek",
+        "lua_content": "-- Modified from ProjectEQ Lua during P99 quest audit.\n-- P99: https://wiki.project1999.com/HEHE_Meat_Quest\n-- P99: https://wiki.project1999.com/Help_Hergor_Get_Fatter\n-- items: 13368, 18940, 5413, 12191, 12210, 13409, 12211\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Away from carver Cagrek you get!  Me's a busy troll.  Must punish enmees of Grobb and feeds trolls a plenty.  Trolls complain meats no good.  Dey says dey hears ogres have special meat which taste better den pris'ners of Grobb.  Do you knows name of meat?  What kinda [meat] dat be?  Tell me!\");\n\telseif(e.message:findi(\"hehe meat\")) then\n\t\te.self:Say(\"HEHE meat!! What dat stand for? Mes need some of dis HEHE meat!! Gos and get me some. Cagrek not just want some. Cagrek want more dan twenny!! Cagrek want three HEHE meat and mes want HEHE recipe. You get and me makes \" .. e.other:GetName() .. \" honeraree carver. Me gives you Grobb Cleaver. It cuts skins like dey butter!!\");\n\telseif(e.message:findi(\"hergor wants his fungus dung pie\")) then\n\t\te.self:Say(\"Dat mean ol' Hergor been buggin me fer pie again!! Me busy. You wants make Hergor fatter, you bring me sume spore mushrooms. Be carefuls, dey easy ta bash, but sumtimes yous bash dem too gud and dey fall apparts. Gets me four and me can make pie.\");\n\telseif(e.message:findi(\"oven mittens\")) then\n\t\te.self:Say(\"Oven mittens?! Whut you need for? You no cook! If you be tinkin you a cook me will gives you oven mittens, but first you brings me tree, not wun or too, but tree froglok meats and also gives me ten gold. You do dis den you get Grobb oven mittens.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\tif (item_lib.check_turn_in(e.trade, {item1 = 13368, item2 = 13368, item3 = 13368, item4 = 18940})) then\n\t\te.self:Say(\"Finally!! What takes yous so long? Now carver Cagrek try and makes meat and feeds to trolls. Yous getting to be deputy carver. Mes give you Grobb cleaver!! Make strong and smarts on you it will. Just like carver Cagrek.\");\n\t\te.other:SummonItem(5413); -- Item: Grobb Cleaver\n\t\te.other:GiveCash(0,0,0,3); -- P99: three platinum.\n\t\te.other:Ding();\n\t\te.other:AddEXP(100);\n\t\te.other:Faction(235,30,0); -- Faction: DaBashers\n\t\te.other:Faction(222,-4,0); -- Faction: Broken Skull Clan\n\telseif (item_lib.check_turn_in(e.trade, {item1 = 12191, item2 = 12191, item3 = 12191, item4 = 12191})) then\n\t\te.self:Say(\"Gud werk! Me already made, err, founds dung part of meal. Here we go. One fungus dung pie! Enjoys.\");\n\t\te.other:SummonItem(12210); -- Item: Fungus Spore Pie\n\t\te.other:Ding();\n\t\te.other:AddEXP(145); -- seen at level 1\n\t\te.other:Faction(235,5,0); -- Faction: DaBashers\n\t\te.other:Faction(222,-1,0); -- Faction: Broken Skull Clan\n\t\te.other:GiveCash(0,0,5,0);\n\telseif (item_lib.check_turn_in(e.trade, {item1 = 13409, item2 = 13409, item3 = 13409, gold = 10})) then\n\t\te.self:Say(\"Bouts time you gets everting!! Here is you Grobb Oven Mittens. Dey good to keep you from hot stuff.\")\n\t\te.other:SummonItem(12211); -- Item: Grobb Oven Mittens\n\t\te.other:Ding();\n\t\te.other:AddEXP(145); -- seen at level 1\n\t\te.other:Faction(235,2,0); -- Faction: DaBashers\n\t\te.other:Faction(222,-1,0); -- Faction: Broken Skull Clan\n\tend\n\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 14638,
+        "zone": "oot",
+        "name": "Nerbilik",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: oot/Nerbilik.pl\n-- items: 12203\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"What you want?!! Face so ugly you scare fish away!! ..sniff, sniff. Smell so bad, too!! Me sure is hungry. Wish had [grub locker].\")\n\telseif e.message:findi(\"grub locker\") then\n\t\te.self:Say(\"You gots grub locker!! Give to me. Me sick of fish and not many dwarves fall off ship. Me pay a plat to get me grub locker from the Gobbler in Neriak. Go to him and say you [deliver grub locker] if you wants one plat.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 12203}) then\n\t\te.self:Say(\"Oooh!! Grub locker! There is a loud click. He opens the locker and unwraps dwarf pickles. What this dumb wrapper? R, E, C, I, P, E.. Ahh!! It say pickles!! Me read good. Here your plat. Me give you little more. Me was very hungry for pickles.\")\n\t\te.other:Faction(235, 10, 0)\n\t\te.other:Faction(222, 10, 0)\n\t\te.other:AddEXP(150)\n\t\te.other:GiveCash(0, 0, 0, 2)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 14638,
+        "zone": "oot",
+        "name": "Nerbilik",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: oot/Nerbilik.pl\n-- items: 12203\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"What you want?!! Face so ugly you scare fish away!! ..sniff, sniff. Smell so bad, too!! Me sure is hungry. Wish had [grub locker].\")\n\telseif e.message:findi(\"grub locker\") then\n\t\te.self:Say(\"You gots grub locker!! Give to me. Me sick of fish and not many dwarves fall off ship. Me pay a plat to get me grub locker from the Gobbler in Neriak. Go to him and say you [deliver grub locker] if you wants one plat.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 12203}) then\n\t\te.self:Say(\"Oooh!! Grub locker! There is a loud click. He opens the locker and unwraps dwarf pickles. What this dumb wrapper? R, E, C, I, P, E.. Ahh!! It say pickles!! Me read good. Here your plat. Me give you little more. Me was very hungry for pickles.\")\n\t\te.other:Faction(235, 10, 0)\n\t\te.other:Faction(222, -10, 0) -- P99 documents Broken Skull Clan loss.\n\t\te.other:AddEXP(150)\n\t\te.other:GiveCash(0, 0, 0, 2)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/grobb/Carver_Cagrek.lua",
+      "beforeSha256": "f10267544c85c7df1c4a407c0bfcc890fd2324600a73dcffedd16445cd6d316c",
+      "proposedFile": "changes/p99-am-hehe-meat/grobb-Carver_Cagrek.lua",
+      "afterSha256": "35ba243ee8b2d0960fd3869bbde8dca82559cf9f0dec96b63b5765c9e920ab49"
+    },
+    {
+      "target": "maintained/lua/converted-perl/oot/Nerbilik.lua",
+      "beforeSha256": "70ffbaf0df1155ba416a2f2a8133c893fdefd73db729c0162969cfcb35bd3985",
+      "proposedFile": "changes/p99-am-hehe-meat/oot-Nerbilik.lua",
+      "afterSha256": "ae62772c841c31ea725fa3964789c8f392d55363ec72348ede2299dfc531fe81"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "Paladin Epic Quest": {
+    "scope": "classic_kunark",
+    "review_status": "partial",
+    "match_status": "source_facets_reviewed_with_corrections_full_path_open",
+    "p99_source": {
+      "title": "Paladin Epic Quest",
+      "url": "https://wiki.project1999.com/Paladin_Epic_Quest",
+      "raw_cache": "data/p99wiki-project1999-api-cache/raw-pages/paladin-epic-quest-2de752b6f6.wiki"
+    },
+    "local_quest_keys": [
+      "fearplane/Irak_Altil",
+      "erudnext/Reklon_Gnallen",
+      "kaladimb/Jark",
+      "kaladimb/Nella_Stonebraids",
+      "freportw/peasant_woman",
+      "freeporteast/peasant_woman",
+      "freportw/Joshua",
+      "freeporteast/Joshua",
+      "felwithea/Elia_the_Pure",
+      "airplane/Inte_Akera"
+    ],
+    "local_quest_files": [
+      "server/internal/quest/upstream/projecteq/fearplane/Irak_Altil.lua",
+      "server/internal/quest/overrides/lua/modified-upstream/erudnext/Reklon_Gnallen.lua",
+      "server/internal/quest/overrides/lua/converted-perl/kaladimb/Jark.lua",
+      "server/internal/quest/overrides/lua/converted-perl/kaladimb/Nella_Stonebraids.lua",
+      "server/internal/quest/overrides/lua/modified-upstream/freportw/peasant_woman.lua",
+      "server/internal/quest/overrides/lua/modified-upstream/freeporteast/peasant_woman.lua",
+      "server/internal/quest/upstream/projecteq/freportw/Joshua.lua",
+      "server/internal/quest/upstream/projecteq/freeporteast/Joshua.lua",
+      "server/internal/quest/upstream/projecteq/felwithea/Elia_the_Pure.lua",
+      "server/internal/quest/overrides/lua/modified-upstream/airplane/Inte_Akera.lua"
+    ],
+    "local_enabled": true,
+    "notes": [
+      "The core P99 chain is represented: Pure Crystal, Pure Water, shield cleansing, Reklon's three purified artifact hand-ins for Mark of Atonement, Fiery Avenger creation through Inte Akera, and Irak's Mark plus Fiery Avenger final hand-in for Fiery Defender.",
+      "This entry covers the core epic quest mechanics; individual precursor pages such as SoulFire remain tracked by their own audit entries.",
+      "September 7 real-UI run:14 quest scenarios passed, Nella and peasant woman failed. See docs/paladin-epic-ui-verification.md for exact coverage and remaining prerequisites. Nella exposed imported zero-HP scaling sentinels reaching quest validation literally. Shared population, quest-spawn and combat loading now resolve base HP from the existing global scaling table; full relevant Go packages pass, browser rerun pending.",
+      "Peasant woman: upstream generic water matching shadows the displayed take this water to him option. Both Freeport variants now prioritize delivery, preserving typed phrases and Paladin-only eligibility. TestPeasantWaterDeliveryOptions passes; the full September7 rerun below verifies the corrected UI.",
+      "September7 latest full Paladin suite: all33 prepared scenarios pass together, plus GPU preflight, in5.8minutes (/var/tmp/idlequest-paladin-33-full-ui.log). Includes optional Altunic exchanges, summoned Willia dialogue, all3 weapon rewards and Lucan death->undead spawn using the user-approved test-only instant strike through normal combat/server death. Altunic movement and Willia timed escape remain unimplemented/unverified. See docs/paladin-epic-ui-verification.md.",
+      "2026-10-22 full cached epic-page source-facet review: all direct Lua, NPC/item/loot/spawn and precursor-recipe relationships reviewed. See changes/p99-paladin-epic-review/manual-facet-review.json. Two bounded proposals restore Jark's documented some prompt and Reklon's truncated response; all substantive reward branches remain intact.",
+      "45 source-bound strict mocked VM scenarios passed for direct dialogue, exact reward quantities, level1, partial/invalid/extra/repeat trades and Nella spawn arguments. They do not establish live settlement, rollback, rendered UI or a continuous acquired epic. Baseline cases do not count as proposed-file coverage.",
+      "Four existing predecessor source-facet records reused after current source and proposal hashes matched. Their open limits remain. Three precursor recipe structures are pinned in a standard-schema sidecar, including existing Ghoulbane enable proposal.",
+      "Explicit Plane of Hate breastplate fallback preserved, no corpse-spawn odds invented. Exact NPC policy maps checked; exclude1 is not a runtime ban. Keeper/Kirak respawn, Keeper/Nella positions, ambient behavior, multiquest and predecessor acquisition/engine/UI remain open."
+    ],
+    "reviewed_at": "2026-10-22",
+    "verification": {
+      "ui": {
+        "status": "historical_pass",
+        "recorded_at": "2026-09-08",
+        "scenarios": 41,
+        "spec": "testing/e2e/quest-paladin-ui.spec.ts",
+        "evidence": "docs/epic-interaction-closure.md",
+        "artifacts": "temporary_receipts_no_longer_present",
+        "combined_with_focused_reruns": false,
+        "scope": "Seeded prerequisite interactions using real dialogue/Give/Combine and scripted consequences; not a naturally acquired full chain or current rerun."
+      },
+      "source": {
+        "status": "source_facets_reviewed_path_open",
+        "recorded_at": "2026-10-22",
+        "artifact": "changes/p99-paladin-epic-review/manual-facet-review.json"
+      },
+      "isolated_lua": {
+        "status": "passed",
+        "recorded_at": "2026-10-22",
+        "scenarios": 45,
+        "artifact": "changes/p99-paladin-epic-review/isolated-tests.json",
+        "scope": "Strict mocked source simulation, not live engine/UI or continuous chain."
+      }
+    }
+  }
+}

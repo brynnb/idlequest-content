@@ -1,0 +1,206 @@
+{
+  "reviewedAt": "2026-10-22",
+  "evidence": [
+    {
+      "id": "ct-era",
+      "url": "https://forums.everquest.com/index.php?threads%2Ftest-update-03-09-16-patch-notes-and-discussions.231226%2F=",
+      "accessedAt": "2026-10-22",
+      "kind": "web-search-index",
+      "facts": [
+        "Official March 9, 2016 test patch reports a historical review and changes the Temple-to-Accursed Temple transition from Velious to Luclin."
+      ],
+      "limitations": "Search-index excerpt available; direct fetch returned cache miss. No exact February 2002 patch date asserted."
+    },
+    {
+      "id": "ct-catalog",
+      "url": "https://www.takproject.net/allaclone/zone.php?name=cazicthule",
+      "accessedAt": "2026-10-22",
+      "kind": "page-read",
+      "facts": [
+        "Accursed Temple catalog contains Gimlik Cogboggle, a Thul Tae Ew Tracker, the seven named Thul Tae Ew variants, boiling/bubbling/swirling ooze, acidic mass and pool of black ooze. Catalog also retains obsolete classic actors, so catalog membership alone is not used to date an NPC."
+      ]
+    },
+    {
+      "id": "ct-loot",
+      "url": "https://www.raidloot.com/group/cazic",
+      "accessedAt": "2026-10-22",
+      "kind": "web-search-index",
+      "facts": [
+        "Cazic-Thule 2.0 acidic mass loot explicitly includes 27908,27859,27874,27851,27853,27913,27883,27888. Those exact eight IDs match local acidic mass loot table 14204/22598; this positively distinguishes the revamp encounter."
+      ]
+    },
+    {
+      "id": "ct-spawns",
+      "url": "https://eqarchives.com/zones/view/cazicthule",
+      "accessedAt": "2026-10-22",
+      "kind": "web-search-index",
+      "facts": [
+        "Exact Gimlik Cogboggle placement at y254,x-468,z18.6 is marked Luclin. Revamped ooze populations are also Luclin. Used with official historical-review era statement and exact local escort source."
+      ]
+    },
+    {
+      "id": "ct-conflict",
+      "url": "https://www.projectmiragul.org/npcs/view/48040",
+      "accessedAt": "2026-10-22",
+      "kind": "web-search-index",
+      "facts": [
+        "The same Gimlik page labels NPC Vanilla but its spawn Ykesha. These contradictory metadata labels are recorded, not used as the deciding authority."
+      ]
+    },
+    {
+      "id": "sharks",
+      "url": "https://www.tapatalk.com/groups/deadmonarchs/shammy-epic-1-5-walk-through-t1214.html",
+      "accessedAt": "2026-10-22",
+      "kind": "web-search-index",
+      "facts": [
+        "August 8, 2006 Shaman Epic 1.5 firsthand walkthrough gives exact Yoppa Greenthumb dialogue and Darting/Feeder Shark aggro emotes. Matches caller source and all three spawned identities."
+      ]
+    },
+    {
+      "id": "sharks-guide",
+      "url": "https://www.eqprogression.com/shaman-1-5-epic-guide-crafted-talisman-of-fates/",
+      "accessedAt": "2026-10-22",
+      "kind": "web-search-index",
+      "facts": [
+        "Shaman 1.5 step 5 sends player to Yoppa in Cobalt Scar; the elder-spirit phrase spawns three sharks including Gnashing Killer Shark. Used only for later-chain identification, not importing quest values."
+      ]
+    },
+    {
+      "id": "wisp-origin",
+      "url": "https://thesafehouse.org/forums/forum/everquest-wing/quests-of-norrath/15022-fatestealer-epic-1-5-complete-walkthrough",
+      "accessedAt": "2026-10-22",
+      "kind": "web-search-index",
+      "facts": [
+        "October 12, 2004 community quest investigation identifies Shakey replacement-head story as part of Fatestealer Epic 1.5."
+      ]
+    },
+    {
+      "id": "wisp-optional",
+      "url": "https://www.eqprogression.com/rogue-1-5-epic-quest-fatestealer/",
+      "accessedAt": "2026-10-22",
+      "kind": "web-search-index",
+      "facts": [
+        "Step 20 gives two Shakey noggins and explicitly distinguishes their optional scarecrow-illusion use from the epic itself. This is not a claim that the wisp is a required epic step."
+      ]
+    },
+    {
+      "id": "wisp-target",
+      "url": "https://keepersoftheglade.com/forum/the-library/zoneexpansion-library/kunark-/-velious-/-luclin-info/plane-growth-info-here/index.html",
+      "accessedAt": "2026-10-22",
+      "kind": "web-search-index",
+      "facts": [
+        "Contemporaneous 2006 Plane of Growth guide identifies Reflective Viridian Lightstone encounter as only spawned by a rogue flagged for Guise of Horror. Exact local player source requires noggin52355, lacks lightstone52361 and spawns 127105; local loot binds127105 to 52361."
+      ]
+    },
+    {
+      "id": "holiday2006",
+      "url": "https://bonzz.com/nightsofthedead.htm",
+      "accessedAt": "2026-10-22",
+      "kind": "page-read",
+      "facts": [
+        "Lycanthrope's Cure is labeled 2006#3 and uses Wand of the Blood Curse on five fallen werewolves in Kithicor. Find the Black Cat is labeled 2006#4 and names Syxa Jewlborn, her missing cat and Scrumptious Jack-o-Lantern reward."
+      ],
+      "limitations": "Guide calls the wand effect Blood Dose Antidote; exact exported spell 11658 is Blood Curse Antidote. Record this wording difference rather than silently substitute a spell ID."
+    },
+    {
+      "id": "bidils-text",
+      "url": "https://libraryoferudin.com/doc/eq1npc-misty-bidils-the-quickhand",
+      "accessedAt": "2026-10-22",
+      "kind": "web-search-index",
+      "facts": [
+        "Mirrored Verant/SOE Misty Thicket dialogue matches Bidils' tale, merchant past, stolen Bristlebane treasure and Realm of Heroes service. This is the dialogue-only GM herald, not the later same-named raid boss."
+      ],
+      "limitations": "Search-index evidence; direct entity-page request returned cache miss. This is supporting identity/prose evidence, not a verified current P99 Bidils placement."
+    },
+    {
+      "id": "bidils-context",
+      "url": "https://fvproject.com/index.php/The_Realm_of_Heroes_%28West_Cabilis%29_Quest",
+      "accessedAt": "2026-10-22",
+      "kind": "web-search-index",
+      "facts": [
+        "Realm of Heroes page lists Bidils in Misty alongside Lord Nethryn and the other city heralds. The 2017 patch mention describes later presence, not proof of introduction."
+      ]
+    },
+    {
+      "id": "stiggles",
+      "url": "https://everquest.allakhazam.com/db/quest.html?quest=2634",
+      "accessedAt": "2026-10-22",
+      "kind": "delegated-earlier-verification",
+      "facts": [
+        "Prior trade review identifies Note to Stiggle 67053, odd-looking-spider transformation and Stiggles as Reactivate the Portals, tagged Lost Dungeons of Norrath and entered August 29, 2003."
+      ],
+      "limitations": "Inherited public evidence extracted to hash-bound changes/p99-conversion-era-identity/stiggles-delegated-evidence.json from the earlier trade review. This worker did not request the robots-denied domain or claim fresh page access."
+    },
+    {
+      "id": "stiggles-corroboration",
+      "url": "https://mboards.eqtraders.com/eq/forum/tradeskills/quests-requiring-trade-skills/27485-reactivate-the-portals-quest?p=292353",
+      "accessedAt": "2026-10-22",
+      "kind": "web-search-index",
+      "facts": [
+        "July 2006 firsthand thread links quest 2634 and Stiggles in Dragon Necropolis, then resolves the page dropping from a tiny clockwork. This corroborates the exact later chain, not the introduction date."
+      ]
+    },
+    {
+      "id": "boat-route",
+      "url": "https://wiki.project1999.com/Iceclad_Ocean",
+      "accessedAt": "2026-10-22",
+      "kind": "web-search-index",
+      "facts": [
+        "P99 documentation describes North Ro raft to an Iceclad island, followed by a separate Icebreaker trip. Does not establish an always-active invisible proximity teleport or the source marker coordinates."
+      ],
+      "limitations": "Search index accessed on review date, page indexed months earlier. No fresh live page retrieval or server test claimed."
+    },
+    {
+      "id": "realm-cache",
+      "kind": "preserved-P99-cache",
+      "url": "https://wiki.project1999.com/The_Realm_of_Heroes_--_Felwithe?action=raw",
+      "retrievedAt": "2026-07-17T23:37:51.655Z",
+      "revision": null,
+      "path": "reference/p99-wiki/raw-pages/the-realm-of-heroes-felwithe-87f56dbb89.wiki",
+      "sha256": "f4f3a4650a658d8b53bd3df8e1ef049f50acee426d7047840dc896a19e328bb6",
+      "facts": [
+        "Kunark Era. Related Realm of Heroes quest rewards None (GM event); not proof of exact Bidils placement."
+      ]
+    },
+    {
+      "id": "jack-cache",
+      "kind": "preserved-P99-cache",
+      "url": "https://wiki.project1999.com/A_jack_o_lantern?action=raw",
+      "retrievedAt": "2026-08-12T16:52:23.856Z",
+      "revision": null,
+      "path": "reference/p99-wiki/npc-pages/a-jack-o-lantern-7557ccf292.wiki",
+      "sha256": "632b3e3246d224aeecc6a5b4069eb50dd5c8175da674e15594f3c656b03bcc41",
+      "facts": [
+        "Classic jack-o-lantern page explicitly places actor in Unrest, despite emu_id20289 also matching the imported Kithicor holiday NPC. This conflict blocks treating names or emu_id alone as zone authority."
+      ]
+    },
+    {
+      "id": "icebreaker-cache",
+      "kind": "preserved-P99-cache",
+      "url": "https://wiki.project1999.com/Icebreaker?action=raw",
+      "retrievedAt": "2026-08-12T19:28:12.640Z",
+      "revision": null,
+      "path": "reference/p99-wiki/npc-pages/icebreaker-55598963e2.wiki",
+      "sha256": "d3cde35ab1a1ae9c60d1a7fba95cae5f57cba178d2b738511709fd9705abe7ae",
+      "facts": [
+        "Velious non-quest ship traveling from desert island to cougar island. Not an invisible teleport marker."
+      ]
+    }
+  ],
+  "runtimeEvidence": [],
+  "compatibilityReview": [
+    {
+      "id": "numeric-lookup",
+      "conclusion": "Numeric NPC-ID quest lookup is supported; iceclad/110115 is not a missing-name identity blocker."
+    },
+    {
+      "id": "proximity-registration",
+      "conclusion": "Per-character durable proximity is supported, but normal registration for these static boat markers has not been verified. Public world-timer scope does not establish support for their proximity and player-transfer effects."
+    },
+    {
+      "id": "deferred-effects",
+      "conclusion": "A captured movement or roaming request does not demonstrate durable settlement or natural activation."
+    }
+  ],
+  "compatibilityLimit": "Minimal conclusions from a private compatibility review. Raw implementation, private repository metadata and paths are not published. These conclusions are not claimed as publicly reproducible runtime tests."
+}

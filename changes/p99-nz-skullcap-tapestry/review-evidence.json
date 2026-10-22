@@ -1,0 +1,25 @@
+{
+  "titles": [
+    "Necromancer Skullcap Quests"
+  ],
+  "proposal": "changes/p99-nz-skullcap-tapestry.json",
+  "local_quest_keys": [
+    "cabwest/Master_Xydoz"
+  ],
+  "review_status": "partial",
+  "match_status": "partial",
+  "notes": [
+    "Use the Skullcap page\u2019s explicitly quoted tailoring trivial 23 for Mended Tapestry, preserving nofail and all other recipe fields."
+  ],
+  "unresolved": [
+    "P99 failure probability not established. Existing nofail1 is preserved, not endorsed as exact historical behavior. No live tailoring test."
+  ],
+  "verification": {
+    "proposalValidation": "changes/p99-nz-coverage/proposal-validation-67.txt",
+    "isolatedScenarioReceipt": "changes/p99-nz-coverage/isolated-reviewer-tests.json",
+    "isolatedScenarioCount": 229,
+    "scope": "Receipt contains hash-bound scenarios; data-only rows have structural proposal validation, not live gameplay.",
+    "fullGameRuntime": "not_run",
+    "ui": "not_run"
+  }
+}

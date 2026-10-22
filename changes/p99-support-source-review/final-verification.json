@@ -1,0 +1,109 @@
+{
+  "status": "passed",
+  "verifiedAt": "2026-10-22T06:45:50Z",
+  "timestampNote": "UTC tool/context clock captured before this final verification invocation.",
+  "checks": {
+    "assignedKeys": 1079,
+    "distinctReviewedHashes": 884,
+    "correctedAssignedKeys": 90,
+    "extraControllers": 2,
+    "allCorrectedFiles": 92,
+    "disabledSourcesIncludingControllers": 68,
+    "boundedFunctionalCorrections": 24,
+    "centralCompatibleScenarios": 217,
+    "disabledBodyShapeScenarios": 68,
+    "functionalScenarios": 149,
+    "fullCliProposalsPassed": 7,
+    "completeP99ParityClaim": false
+  },
+  "baselineManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "assignmentSha256": "f109322ecb73596fe9ffe8bf2ed7ce6f866434d70b30d31c8704c3a8228eb271",
+  "unifiedReviewSha256": "7064dae35ce1e83b32520b13cf9d2f0761fdbd0aee565f63cfa4c58263a8af76",
+  "runtimeManifestSha256": "55b4d46174dacfeef8561d6e68a4d690d57fa395c4a4c8ab03fbaefdc0cc822d",
+  "runtimeReceiptSha256": "e5b442dd05a61ca58bda06272f14f5a8ef08b76bcd344dc5b2b2867335ce4955",
+  "proposals": [
+    {
+      "file": "changes/p99-support-dialogue-fixes.json",
+      "sha256": "001b265ca77a05c69e4a4e2fea7588e19f18f79c2dadeb9f41f6a304b3a60c77",
+      "rows": 7,
+      "sources": 7,
+      "fullCliValidation": {
+        "status": "passed",
+        "receipt": "changes/p99-support-dialogue-fixes/validation.log",
+        "sha256": "1a6ff321367d511704ef6f4c0a60e3d7fd3a7884378c740afe66fa211a473ad4"
+      }
+    },
+    {
+      "file": "changes/p99-support-lifecycle-scope.json",
+      "sha256": "208309fdd284b61cf922ed9445abd5b0fd907960c8b806602760b58d36f0f7c2",
+      "rows": 22,
+      "sources": 22,
+      "fullCliValidation": {
+        "status": "passed",
+        "receipt": "changes/p99-support-source-review/lifecycle-scope-final-validation.txt",
+        "sha256": "09a08fbac4f92db7dee0a74dd218ae21f9194cdf6de15ccff6de48ee0c45e8c2"
+      }
+    },
+    {
+      "file": "changes/p99-support-lifecycle-values.json",
+      "sha256": "d64ee7526d5547fc0b5a67a7f178c3b2fc06f8a20576c6ec068561b4ad1125b4",
+      "rows": 3,
+      "sources": 3,
+      "fullCliValidation": {
+        "status": "passed",
+        "receipt": "changes/p99-support-source-review/lifecycle-values-final-validation.txt",
+        "sha256": "6fd20a43106026780c0a0edd4cb928bf6ac3b49f45628f1637f847014a81206e"
+      }
+    },
+    {
+      "file": "changes/p99-support-mixed-hints.json",
+      "sha256": "4558677a86317a319a6024796d90b99f6ad19924c8fca461bcde2c76daa5b87b",
+      "rows": 2,
+      "sources": 2,
+      "fullCliValidation": {
+        "status": "passed",
+        "receipt": "changes/p99-support-source-review/mixed-hint-validation.txt",
+        "sha256": "7a56e5c9cdeaa6c19a9227754a5c772b28600c84955fa8efac827b027d937609"
+      }
+    },
+    {
+      "file": "changes/p99-support-named-fixes.json",
+      "sha256": "0cf5e77d57c78a536655c0a26ef1da0639f4e5302fd82d5035773a82d1cab94d",
+      "rows": 21,
+      "sources": 21,
+      "fullCliValidation": {
+        "status": "passed",
+        "receipt": "changes/p99-support-source-review/named-review-proposal-validation.json",
+        "sha256": "f25700fd5e587c9e7ede2480da005b52e40ffd71bc09e79f8df32bbab59166e5"
+      }
+    },
+    {
+      "file": "changes/p99-support-ocean-fishing-scope.json",
+      "sha256": "33be8256cea0855bb08afc6e1ae58e754a80ce1885d67cd46725776ac4e0d434",
+      "rows": 1,
+      "sources": 1,
+      "fullCliValidation": {
+        "status": "passed",
+        "receipt": "changes/p99-support-source-review/ocean-fishing-validation.txt",
+        "sha256": "007adfd69b3acdc03f0c759220d380bf73fde04ca87b0f2d79f3b18e4d60da56"
+      }
+    },
+    {
+      "file": "changes/p99-support-world-scope.json",
+      "sha256": "d5845e3d997e10c12955a0c6ae6a2ca838cf1f12fe1f9c123657cde81b7d7846",
+      "rows": 36,
+      "sources": 36,
+      "fullCliValidation": {
+        "status": "passed",
+        "receipt": "changes/p99-support-source-review/world-proposal-validation.txt",
+        "sha256": "905d7dae451fa46ab2bc7b334c814c20c4f33edf704d8a1d79367908569027fe"
+      }
+    }
+  ],
+  "limits": [
+    "Complete source-body classification is not semantic parity for every quest or numeric/text facet.",
+    "217 isolated current-source scenarios use mocked quest APIs; no live world, UI, inventory settlement or activation claim.",
+    "Explicit unresolved quest evidence remains in exact per-key records and the22-key lifecycle chain list.",
+    "No NPC rows, immutable baseline, central ledger, shared tools, commits, push or PR changed by this support-source work."
+  ]
+}

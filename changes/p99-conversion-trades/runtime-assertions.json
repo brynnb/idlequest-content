@@ -1,0 +1,306 @@
+[
+  {
+    "name": "iceclad/Joshel_the_Large: all trades refunded, unrelated extras and repeat",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-conversion-trades/iceclad--Joshel_the_Large.lua",
+    "sourceSha256": "3849a025cd39a1f0b27df64a0a9de9f32ca751f6a7cf9b0a7ebfeb3bb31b0f58",
+    "setupExtra": "",
+    "assertions": "trade({99999,99999},{gold=350,platinum=2,silver=3,copper=4});equal(remaining[99999],2);equal(remaining.gold,350);equal(remaining.platinum,2);equal(remaining.silver,3);equal(remaining.copper,4);equal(calls.returns,1);equal(next(calls.rewards),nil);equal(next(calls.factions),nil);equal(calls.exp,0);equal(#calls.cash,0);equal(#calls.spells,0);equal(calls.depops,0);trade({99999},{gold=5});equal(remaining.gold,5);equal(calls.returns,2);equal(next(calls.rewards),nil)"
+  },
+  {
+    "name": "iceclad/Joshel_the_Large: hail and unrelated speech",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-conversion-trades/iceclad--Joshel_the_Large.lua",
+    "sourceSha256": "3849a025cd39a1f0b27df64a0a9de9f32ca751f6a7cf9b0a7ebfeb3bb31b0f58",
+    "setupExtra": "",
+    "assertions": "say(\"hail\");assert(#calls.speech>0);local n=#calls.speech;say(\"nonsense with no keyword\");equal(#calls.speech,n);equal(next(calls.rewards),nil)"
+  },
+  {
+    "name": "thurgadina/Fergus_Sawdust: all trades refunded, unrelated extras and repeat",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-conversion-trades/thurgadina--Fergus_Sawdust.lua",
+    "sourceSha256": "5075b3734e21bf981a5560956c4da00f57b2f25a508e78ada152137a03b12799",
+    "setupExtra": "",
+    "assertions": "trade({99999,99999},{gold=350,platinum=2,silver=3,copper=4});equal(remaining[99999],2);equal(remaining.gold,350);equal(remaining.platinum,2);equal(remaining.silver,3);equal(remaining.copper,4);equal(calls.returns,1);equal(next(calls.rewards),nil);equal(next(calls.factions),nil);equal(calls.exp,0);equal(#calls.cash,0);equal(#calls.spells,0);equal(calls.depops,0);trade({99999},{gold=5});equal(remaining.gold,5);equal(calls.returns,2);equal(next(calls.rewards),nil)"
+  },
+  {
+    "name": "thurgadina/Fergus_Sawdust: hail and unrelated speech",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-conversion-trades/thurgadina--Fergus_Sawdust.lua",
+    "sourceSha256": "5075b3734e21bf981a5560956c4da00f57b2f25a508e78ada152137a03b12799",
+    "setupExtra": "",
+    "assertions": "say(\"hail\");assert(#calls.speech>0);local n=#calls.speech;say(\"nonsense with no keyword\");equal(#calls.speech,n);equal(next(calls.rewards),nil)"
+  },
+  {
+    "name": "thurgadina/Guard_Dagur: all trades refunded, unrelated extras and repeat",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-conversion-trades/thurgadina--Guard_Dagur.lua",
+    "sourceSha256": "1f947c808c0cf9a9795c9e373736a267da46e6d17097a6b9d5fed40369b99e51",
+    "setupExtra": "",
+    "assertions": "trade({99999,99999},{gold=350,platinum=2,silver=3,copper=4});equal(remaining[99999],2);equal(remaining.gold,350);equal(remaining.platinum,2);equal(remaining.silver,3);equal(remaining.copper,4);equal(calls.returns,1);equal(next(calls.rewards),nil);equal(next(calls.factions),nil);equal(calls.exp,0);equal(#calls.cash,0);equal(#calls.spells,0);equal(calls.depops,0);trade({99999},{gold=5});equal(remaining.gold,5);equal(calls.returns,2);equal(next(calls.rewards),nil)"
+  },
+  {
+    "name": "thurgadina/Meg_Tucter: all trades refunded, unrelated extras and repeat",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-conversion-trades/thurgadina--Meg_Tucter.lua",
+    "sourceSha256": "3671c443f681d69790c7421942d0e9a8caa464125f2dd130ee56ee335eccaf38",
+    "setupExtra": "",
+    "assertions": "trade({99999,99999},{gold=350,platinum=2,silver=3,copper=4});equal(remaining[99999],2);equal(remaining.gold,350);equal(remaining.platinum,2);equal(remaining.silver,3);equal(remaining.copper,4);equal(calls.returns,1);equal(next(calls.rewards),nil);equal(next(calls.factions),nil);equal(calls.exp,0);equal(#calls.cash,0);equal(#calls.spells,0);equal(calls.depops,0);trade({99999},{gold=5});equal(remaining.gold,5);equal(calls.returns,2);equal(next(calls.rewards),nil)"
+  },
+  {
+    "name": "thurgadina/Meg_Tucter: hail and unrelated speech",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-conversion-trades/thurgadina--Meg_Tucter.lua",
+    "sourceSha256": "3671c443f681d69790c7421942d0e9a8caa464125f2dd130ee56ee335eccaf38",
+    "setupExtra": "",
+    "assertions": "say(\"hail\");assert(#calls.speech>0);local n=#calls.speech;say(\"nonsense with no keyword\");equal(#calls.speech,n);equal(next(calls.rewards),nil)"
+  },
+  {
+    "name": "thurgadinb/Loremaster_Solstrin: all trades refunded, unrelated extras and repeat",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-conversion-trades/thurgadinb--Loremaster_Solstrin.lua",
+    "sourceSha256": "b6f91d4aa248f77fbea72e8214a22c1e7987e44cc58baa53f86da365890f0000",
+    "setupExtra": "",
+    "assertions": "trade({99999,99999},{gold=350,platinum=2,silver=3,copper=4});equal(remaining[99999],2);equal(remaining.gold,350);equal(remaining.platinum,2);equal(remaining.silver,3);equal(remaining.copper,4);equal(calls.returns,1);equal(next(calls.rewards),nil);equal(next(calls.factions),nil);equal(calls.exp,0);equal(#calls.cash,0);equal(#calls.spells,0);equal(calls.depops,0);trade({99999},{gold=5});equal(remaining.gold,5);equal(calls.returns,2);equal(next(calls.rewards),nil)"
+  },
+  {
+    "name": "thurgadinb/Loremaster_Solstrin: hail and unrelated speech",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-conversion-trades/thurgadinb--Loremaster_Solstrin.lua",
+    "sourceSha256": "b6f91d4aa248f77fbea72e8214a22c1e7987e44cc58baa53f86da365890f0000",
+    "setupExtra": "",
+    "assertions": "say(\"hail\");assert(#calls.speech>0);local n=#calls.speech;say(\"nonsense with no keyword\");equal(#calls.speech,n);equal(next(calls.rewards),nil)"
+  },
+  {
+    "name": "skyshrine/Grudash_the_Baker: all trades refunded, unrelated extras and repeat",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-conversion-trades/skyshrine--Grudash_the_Baker.lua",
+    "sourceSha256": "75ce46275529595b38e83580af8c2a2780ddb370ab167d8f47a169856576dace",
+    "setupExtra": "",
+    "assertions": "trade({99999,99999},{gold=350,platinum=2,silver=3,copper=4});equal(remaining[99999],2);equal(remaining.gold,350);equal(remaining.platinum,2);equal(remaining.silver,3);equal(remaining.copper,4);equal(calls.returns,1);equal(next(calls.rewards),nil);equal(next(calls.factions),nil);equal(calls.exp,0);equal(#calls.cash,0);equal(#calls.spells,0);equal(calls.depops,0);trade({99999},{gold=5});equal(remaining.gold,5);equal(calls.returns,2);equal(next(calls.rewards),nil)"
+  },
+  {
+    "name": "skyshrine/Ruru_the_Cook: all trades refunded, unrelated extras and repeat",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-conversion-trades/skyshrine--Ruru_the_Cook.lua",
+    "sourceSha256": "f7fc4f3d5426e878cd36c1fc0f5e582ed7d1bfe9db9cd38bdad78be87bf19e9b",
+    "setupExtra": "",
+    "assertions": "trade({99999,99999},{gold=350,platinum=2,silver=3,copper=4});equal(remaining[99999],2);equal(remaining.gold,350);equal(remaining.platinum,2);equal(remaining.silver,3);equal(remaining.copper,4);equal(calls.returns,1);equal(next(calls.rewards),nil);equal(next(calls.factions),nil);equal(calls.exp,0);equal(#calls.cash,0);equal(#calls.spells,0);equal(calls.depops,0);trade({99999},{gold=5});equal(remaining.gold,5);equal(calls.returns,2);equal(next(calls.rewards),nil)"
+  },
+  {
+    "name": "skyshrine/Ruru_the_Cook: hail and unrelated speech",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-conversion-trades/skyshrine--Ruru_the_Cook.lua",
+    "sourceSha256": "f7fc4f3d5426e878cd36c1fc0f5e582ed7d1bfe9db9cd38bdad78be87bf19e9b",
+    "setupExtra": "",
+    "assertions": "say(\"hail\");assert(#calls.speech>0);local n=#calls.speech;say(\"nonsense with no keyword\");equal(#calls.speech,n);equal(next(calls.rewards),nil)"
+  },
+  {
+    "name": "thurgadina/Petcas_Coldbeard: all trades refunded, unrelated extras and repeat",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-conversion-trades/thurgadina--Petcas_Coldbeard.lua",
+    "sourceSha256": "74b6e7222ec5975bfbb7151b6370bdefdfe58310b4feedbe3bff834b4822f24e",
+    "setupExtra": "",
+    "assertions": "trade({99999,99999},{gold=350,platinum=2,silver=3,copper=4});equal(remaining[99999],2);equal(remaining.gold,350);equal(remaining.platinum,2);equal(remaining.silver,3);equal(remaining.copper,4);equal(calls.returns,1);equal(next(calls.rewards),nil);equal(next(calls.factions),nil);equal(calls.exp,0);equal(#calls.cash,0);equal(#calls.spells,0);equal(calls.depops,0);trade({99999},{gold=5});equal(remaining.gold,5);equal(calls.returns,2);equal(next(calls.rewards),nil)"
+  },
+  {
+    "name": "thurgadina/Petcas_Coldbeard: hail and unrelated speech",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-conversion-trades/thurgadina--Petcas_Coldbeard.lua",
+    "sourceSha256": "74b6e7222ec5975bfbb7151b6370bdefdfe58310b4feedbe3bff834b4822f24e",
+    "setupExtra": "",
+    "assertions": "say(\"hail\");assert(#calls.speech>0);local n=#calls.speech;say(\"nonsense with no keyword\");equal(#calls.speech,n);equal(next(calls.rewards),nil)"
+  },
+  {
+    "name": "iceclad/Joshel_the_Large: bandana branch not activated",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-conversion-trades/iceclad--Joshel_the_Large.lua",
+    "sourceSha256": "3849a025cd39a1f0b27df64a0a9de9f32ca751f6a7cf9b0a7ebfeb3bb31b0f58",
+    "setupExtra": "",
+    "assertions": "say(\"icebreaker\");equal(#calls.speech,0);reward(60333,0);say(\"hail\");assert(string.find(calls.speech[1],\"Icebreaker\",1,true));reward(60333,0)"
+  },
+  {
+    "name": "thurgadina/Meg_Tucter: eighth Shawl tools omitted",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-conversion-trades/thurgadina--Meg_Tucter.lua",
+    "sourceSha256": "3671c443f681d69790c7421942d0e9a8caa464125f2dd130ee56ee335eccaf38",
+    "setupExtra": "",
+    "assertions": "say(\"I need a set of Etching Tools\");equal(#calls.speech,0);reward(8893,0);trade({8893,99999});equal(remaining[8893],1);equal(remaining[99999],1)"
+  },
+  {
+    "name": "thurgadinb/Loremaster_Solstrin: classic lore I am interested",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-conversion-trades/thurgadinb--Loremaster_Solstrin.lua",
+    "sourceSha256": "b6f91d4aa248f77fbea72e8214a22c1e7987e44cc58baa53f86da365890f0000",
+    "setupExtra": "",
+    "assertions": "say(\"I am interested\");assert(#calls.speech>0);equal(next(calls.rewards),nil)"
+  },
+  {
+    "name": "thurgadinb/Loremaster_Solstrin: classic lore what heroes",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-conversion-trades/thurgadinb--Loremaster_Solstrin.lua",
+    "sourceSha256": "b6f91d4aa248f77fbea72e8214a22c1e7987e44cc58baa53f86da365890f0000",
+    "setupExtra": "",
+    "assertions": "say(\"what heroes\");assert(#calls.speech>0);equal(next(calls.rewards),nil)"
+  },
+  {
+    "name": "thurgadinb/Loremaster_Solstrin: classic lore what sacred tomb",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-conversion-trades/thurgadinb--Loremaster_Solstrin.lua",
+    "sourceSha256": "b6f91d4aa248f77fbea72e8214a22c1e7987e44cc58baa53f86da365890f0000",
+    "setupExtra": "",
+    "assertions": "say(\"what sacred tomb\");assert(#calls.speech>0);equal(next(calls.rewards),nil)"
+  },
+  {
+    "name": "thurgadinb/Loremaster_Solstrin: later offers and shawls preserved",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-conversion-trades/thurgadinb--Loremaster_Solstrin.lua",
+    "sourceSha256": "b6f91d4aa248f77fbea72e8214a22c1e7987e44cc58baa53f86da365890f0000",
+    "setupExtra": "",
+    "assertions": "say(\"working with gemstones\");say(\"issue kit\");equal(#calls.speech,0);trade({8896,8895,1199,99999});equal(remaining[8896],1);equal(remaining[8895],1);equal(remaining[1199],1);equal(remaining[99999],1);reward(18610,0);reward(18611,0);reward(17651,0);reward(8895,0)"
+  },
+  {
+    "name": "thurgadina/Guard_Dagur: Baldvin present is distinct speaker",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-conversion-trades/thurgadina--Guard_Dagur.lua",
+    "sourceSha256": "1f947c808c0cf9a9795c9e373736a267da46e6d17097a6b9d5fed40369b99e51",
+    "setupExtra": "foreign_speech={};baldvin={Say=function(_,text) table.insert(foreign_speech,{name=\"Guard Baldvin\",id=115132,text=text}) end};entity_list={IsMobSpawnedByNpcTypeID=function(_,id) equal(id,115132);return character.baldvinPresent end,GetMobByNpcTypeID=function(_,id) equal(id,115132);character.lookups=(character.lookups or 0)+1;return character.lookupNil and nil or baldvin end};eq.get_entity_list=function() return entity_list end",
+    "assertions": "character.baldvinPresent=true;say(\"hail\");equal(#calls.speech,1);assert(string.find(calls.speech[1],\"Reviewer\",1,true));equal(#foreign_speech,1);equal(foreign_speech[1].id,115132);equal(foreign_speech[1].name,\"Guard Baldvin\");assert(string.find(foreign_speech[1].text,\"pit\",1,true));say(\"hail\");equal(#foreign_speech,2);equal(character.lookups,2)"
+  },
+  {
+    "name": "thurgadina/Guard_Dagur: Baldvin absent never looked up",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-conversion-trades/thurgadina--Guard_Dagur.lua",
+    "sourceSha256": "1f947c808c0cf9a9795c9e373736a267da46e6d17097a6b9d5fed40369b99e51",
+    "setupExtra": "foreign_speech={};baldvin={Say=function(_,text) table.insert(foreign_speech,{name=\"Guard Baldvin\",id=115132,text=text}) end};entity_list={IsMobSpawnedByNpcTypeID=function(_,id) equal(id,115132);return character.baldvinPresent end,GetMobByNpcTypeID=function(_,id) equal(id,115132);character.lookups=(character.lookups or 0)+1;return character.lookupNil and nil or baldvin end};eq.get_entity_list=function() return entity_list end",
+    "assertions": "character.baldvinPresent=false;say(\"hail\");equal(#calls.speech,1);equal(#foreign_speech,0);equal(character.lookups,nil);say(\"unrelated\");equal(#calls.speech,1)"
+  },
+  {
+    "name": "thurgadina/Guard_Dagur: missing foreign proxy safely ignored",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-conversion-trades/thurgadina--Guard_Dagur.lua",
+    "sourceSha256": "1f947c808c0cf9a9795c9e373736a267da46e6d17097a6b9d5fed40369b99e51",
+    "setupExtra": "foreign_speech={};baldvin={Say=function(_,text) table.insert(foreign_speech,{name=\"Guard Baldvin\",id=115132,text=text}) end};entity_list={IsMobSpawnedByNpcTypeID=function(_,id) equal(id,115132);return character.baldvinPresent end,GetMobByNpcTypeID=function(_,id) equal(id,115132);character.lookups=(character.lookups or 0)+1;return character.lookupNil and nil or baldvin end};eq.get_entity_list=function() return entity_list end",
+    "assertions": "character.baldvinPresent=true;entity_list.GetMobByNpcTypeID=function() return nil end;say(\"hail\");equal(#calls.speech,1);equal(#foreign_speech,0)"
+  },
+  {
+    "name": "skyshrine/Grudash_the_Baker: non-pie closing signal identity and delay",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-conversion-trades/skyshrine--Grudash_the_Baker.lua",
+    "sourceSha256": "75ce46275529595b38e83580af8c2a2780ddb370ab167d8f47a169856576dace",
+    "setupExtra": "",
+    "assertions": "event_signal({self=npc,signal=2});equal(#calls.speech,1);equal(#calls.signals,1);equal(calls.signals[1][1],114496);equal(calls.signals[1][2],3);equal(calls.signals[1][3],1);assert(not string.find(string.lower(calls.speech[1]),\"pie\",1,true));equal(event_say,nil)"
+  },
+  {
+    "name": "skyshrine/Grudash_the_Baker: removed pie signals do nothing",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-conversion-trades/skyshrine--Grudash_the_Baker.lua",
+    "sourceSha256": "75ce46275529595b38e83580af8c2a2780ddb370ab167d8f47a169856576dace",
+    "setupExtra": "",
+    "assertions": "for _,n in ipairs({1,3,999}) do event_signal({self=npc,signal=n}) end;equal(#calls.speech,0);equal(#calls.signals,0);equal(next(calls.rewards),nil)"
+  },
+  {
+    "name": "skyshrine/Ruru_the_Cook: hail does not trigger removed pie taunt",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-conversion-trades/skyshrine--Ruru_the_Cook.lua",
+    "sourceSha256": "f7fc4f3d5426e878cd36c1fc0f5e582ed7d1bfe9db9cd38bdad78be87bf19e9b",
+    "setupExtra": "",
+    "assertions": "say(\"hail\");equal(#calls.signals,0);equal(next(calls.rewards),nil)"
+  },
+  {
+    "name": "skyshrine/Ruru_the_Cook: non-pie reaction 3",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-conversion-trades/skyshrine--Ruru_the_Cook.lua",
+    "sourceSha256": "f7fc4f3d5426e878cd36c1fc0f5e582ed7d1bfe9db9cd38bdad78be87bf19e9b",
+    "setupExtra": "",
+    "assertions": "event_signal({self=npc,signal=3});equal(#calls.speech,1);equal(#calls.signals,0);assert(not string.find(string.lower(calls.speech[1]),\"pie\",1,true))"
+  },
+  {
+    "name": "skyshrine/Ruru_the_Cook: non-pie reaction 4",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-conversion-trades/skyshrine--Ruru_the_Cook.lua",
+    "sourceSha256": "f7fc4f3d5426e878cd36c1fc0f5e582ed7d1bfe9db9cd38bdad78be87bf19e9b",
+    "setupExtra": "",
+    "assertions": "event_signal({self=npc,signal=4});equal(#calls.speech,1);equal(#calls.signals,0);assert(not string.find(string.lower(calls.speech[1]),\"pie\",1,true))"
+  },
+  {
+    "name": "skyshrine/Ruru_the_Cook: non-pie reaction 5",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-conversion-trades/skyshrine--Ruru_the_Cook.lua",
+    "sourceSha256": "f7fc4f3d5426e878cd36c1fc0f5e582ed7d1bfe9db9cd38bdad78be87bf19e9b",
+    "setupExtra": "",
+    "assertions": "event_signal({self=npc,signal=5});equal(#calls.speech,1);equal(#calls.signals,0);assert(not string.find(string.lower(calls.speech[1]),\"pie\",1,true))"
+  },
+  {
+    "name": "skyshrine/Ruru_the_Cook: pie argument and unknown signals omitted",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-conversion-trades/skyshrine--Ruru_the_Cook.lua",
+    "sourceSha256": "f7fc4f3d5426e878cd36c1fc0f5e582ed7d1bfe9db9cd38bdad78be87bf19e9b",
+    "setupExtra": "",
+    "assertions": "for _,n in ipairs({1,2,999}) do event_signal({self=npc,signal=n}) end;equal(#calls.speech,0);equal(#calls.signals,0)"
+  },
+  {
+    "name": "thurgadina/Petcas_Coldbeard: later coffee and duplicate mug absent",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-conversion-trades/thurgadina--Petcas_Coldbeard.lua",
+    "sourceSha256": "74b6e7222ec5975bfbb7151b6370bdefdfe58310b4feedbe3bff834b4822f24e",
+    "setupExtra": "",
+    "assertions": "say(\"souvenirs\");say(\"special brew\");equal(#calls.speech,0);trade({60290,30145,99999},{gold=350});equal(remaining.gold,350);equal(remaining[60290],1);equal(remaining[30145],1);reward(60290,0);reward(30145,0)"
+  },
+  {
+    "name": "thurgadina/Petcas_Coldbeard: Ronodun response 1",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-conversion-trades/thurgadina--Petcas_Coldbeard.lua",
+    "sourceSha256": "74b6e7222ec5975bfbb7151b6370bdefdfe58310b4feedbe3bff834b4822f24e",
+    "setupExtra": "",
+    "assertions": "event_signal({self=npc,signal=1});equal(#calls.speech,1);equal(#calls.signals,1);equal(calls.signals[1][1],115019);equal(calls.signals[1][2],1);equal(calls.signals[1][3],0);equal(next(calls.rewards),nil)"
+  },
+  {
+    "name": "thurgadina/Petcas_Coldbeard: Ronodun response 2",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-conversion-trades/thurgadina--Petcas_Coldbeard.lua",
+    "sourceSha256": "74b6e7222ec5975bfbb7151b6370bdefdfe58310b4feedbe3bff834b4822f24e",
+    "setupExtra": "",
+    "assertions": "event_signal({self=npc,signal=2});equal(#calls.speech,1);equal(#calls.signals,1);equal(calls.signals[1][1],115019);equal(calls.signals[1][2],2);equal(calls.signals[1][3],0);equal(next(calls.rewards),nil)"
+  },
+  {
+    "name": "thurgadina/Petcas_Coldbeard: Ronodun response 3",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-conversion-trades/thurgadina--Petcas_Coldbeard.lua",
+    "sourceSha256": "74b6e7222ec5975bfbb7151b6370bdefdfe58310b4feedbe3bff834b4822f24e",
+    "setupExtra": "",
+    "assertions": "event_signal({self=npc,signal=3});equal(#calls.speech,0);equal(#calls.signals,1);equal(calls.signals[1][1],115019);equal(calls.signals[1][2],3);equal(calls.signals[1][3],0);equal(next(calls.rewards),nil)"
+  },
+  {
+    "name": "thurgadina/Petcas_Coldbeard: Ronodun response 4",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-conversion-trades/thurgadina--Petcas_Coldbeard.lua",
+    "sourceSha256": "74b6e7222ec5975bfbb7151b6370bdefdfe58310b4feedbe3bff834b4822f24e",
+    "setupExtra": "",
+    "assertions": "event_signal({self=npc,signal=4});equal(#calls.speech,1);equal(#calls.signals,1);equal(calls.signals[1][1],115019);equal(calls.signals[1][2],4);equal(calls.signals[1][3],0);equal(next(calls.rewards),nil)"
+  },
+  {
+    "name": "thurgadina/Petcas_Coldbeard: Ronodun response 5",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-conversion-trades/thurgadina--Petcas_Coldbeard.lua",
+    "sourceSha256": "74b6e7222ec5975bfbb7151b6370bdefdfe58310b4feedbe3bff834b4822f24e",
+    "setupExtra": "",
+    "assertions": "event_signal({self=npc,signal=5});equal(#calls.speech,1);equal(#calls.signals,1);equal(calls.signals[1][1],115019);equal(calls.signals[1][2],5);equal(calls.signals[1][3],0);equal(next(calls.rewards),nil)"
+  },
+  {
+    "name": "thurgadina/Petcas_Coldbeard: Ronodun response 6",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-conversion-trades/thurgadina--Petcas_Coldbeard.lua",
+    "sourceSha256": "74b6e7222ec5975bfbb7151b6370bdefdfe58310b4feedbe3bff834b4822f24e",
+    "setupExtra": "",
+    "assertions": "event_signal({self=npc,signal=6});equal(#calls.speech,1);equal(#calls.signals,0);equal(next(calls.rewards),nil)"
+  },
+  {
+    "name": "thurgadina/Petcas_Coldbeard: unknown signal no-op",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-conversion-trades/thurgadina--Petcas_Coldbeard.lua",
+    "sourceSha256": "74b6e7222ec5975bfbb7151b6370bdefdfe58310b4feedbe3bff834b4822f24e",
+    "setupExtra": "",
+    "assertions": "event_signal({self=npc,signal=999});equal(#calls.speech,0);equal(#calls.signals,0)"
+  }
+]

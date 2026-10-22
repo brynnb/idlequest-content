@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-zenita-cards",
+  "summary": "Replace a truthy-first-table expression with separate losing-card checks; preserve existing seven-card pool and King reward. Page dialogue five-card count does not identify a supported replacement pool.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Telescope_Lenses?action=raw",
+      "note": "Cached 2026-07-17T23:34:43.581Z; revision unavailable; SHA256 d19aaae0bf012f0e39ebfabd1d482dab1d67d52fa33cf0647412a9378af166d8. Replace a truthy-first-table expression with separate losing-card checks; preserve existing seven-card pool and King reward. Page dialogue five-card count does not identify a supported replacement pool. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 15761,
+        "zone": "freporte",
+        "name": "Zenita_D-Rin",
+        "lua_content": "-- items: 22298, 13279, 13121, 22293, 22294, 22295, 22296, 22297, 22299\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Greetings. I would love to chat with you, but I just realized something.. I do not waste time with whelps.\");\n\telseif(e.message:findi(\"lens\")) then\n\t\te.self:Say(\"So you seek the Spare Lens. Yes. I have it. There are only two ways you can obtain it, [fight] the great Zenita or [play a game of chance].\");\n\telseif(e.message:findi(\"play a game of chance\")) then\n\t\te.self:Say(\"Great. It is rather simple. I have five cards and only one is King Naythox. Find it. In order to get one card all you need to do is buy me a bottle of Innoruuks Kiss of Death from the barkeep in Chops N Hops. One bottle for one card. Return the King Naythox card to me and you shall get the Spare Lens.\");\n\telseif(e.message:findi(\"fight\")) then\n\t\te.self:Say(\"Darn!! I was hoping not to hear that word, fight. Oh well.\");\n\t\teq.attack(e.other:GetName());\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 22298})) then\n\t\te.self:Say(\"Why I will be.. You got it!! I thought I took it out of the deck. Very well. You win the Spare Lens fair and square. Here you are. Now get out of my sight.\");\n\t\te.other:SummonItem(13279); -- Phiz's lens\n\t\te.other:Ding();\n\t\te.other:AddEXP(500);\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 13121})) then\n\t\te.self:Say(\"Let see what card you pulled.\");\n\t\te.other:SummonItem(eq.ChooseRandom(22293,22294,22295,22296,22297,22298,22299)); -- Item(s): Castle Card (22293), Beggar Card (22294), Joker Card (22295), Wild Card (22296), Queen Card (22297), King Card (22298), Knight Card (22299)\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 22299} or {item1 = 22297} or {item1 = 22296} or {item1 = 22294} or {item1 = 22293})) then\n\t\te.self:Say(string.format(\"Bad luck must be one of your strong suits. You should have been a beggar because you sure aren't a very good %s. You lose!\",e.other:Class()));\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 22295})) then\n\t\te.self:Say(string.format(\"I see you have drawn the card that best represents a %s such as yourself. You lose!\",e.other:GetRaceName()));\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\n-- END of FILE Zone:freporte  ID:10153 -- Zenita_DRin\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 15761,
+        "zone": "freporte",
+        "name": "Zenita_D-Rin",
+        "lua_content": "-- items: 22298, 13279, 13121, 22293, 22294, 22295, 22296, 22297, 22299\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Greetings. I would love to chat with you, but I just realized something.. I do not waste time with whelps.\");\n\telseif(e.message:findi(\"lens\")) then\n\t\te.self:Say(\"So you seek the Spare Lens. Yes. I have it. There are only two ways you can obtain it, [fight] the great Zenita or [play a game of chance].\");\n\telseif(e.message:findi(\"play a game of chance\")) then\n\t\te.self:Say(\"Great. It is rather simple. I have five cards and only one is King Naythox. Find it. In order to get one card all you need to do is buy me a bottle of Innoruuks Kiss of Death from the barkeep in Chops N Hops. One bottle for one card. Return the King Naythox card to me and you shall get the Spare Lens.\");\n\telseif(e.message:findi(\"fight\")) then\n\t\te.self:Say(\"Darn!! I was hoping not to hear that word, fight. Oh well.\");\n\t\teq.attack(e.other:GetName());\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 22298})) then\n\t\te.self:Say(\"Why I will be.. You got it!! I thought I took it out of the deck. Very well. You win the Spare Lens fair and square. Here you are. Now get out of my sight.\");\n\t\te.other:SummonItem(13279); -- Phiz's lens\n\t\te.other:Ding();\n\t\te.other:AddEXP(500);\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 13121})) then\n\t\te.self:Say(\"Let see what card you pulled.\");\n\t\te.other:SummonItem(eq.ChooseRandom(22293,22294,22295,22296,22297,22298,22299)); -- Item(s): Castle Card (22293), Beggar Card (22294), Joker Card (22295), Wild Card (22296), Queen Card (22297), King Card (22298), Knight Card (22299)\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 22299}) or item_lib.check_turn_in(e.trade, {item1 = 22297}) or item_lib.check_turn_in(e.trade, {item1 = 22296}) or item_lib.check_turn_in(e.trade, {item1 = 22294}) or item_lib.check_turn_in(e.trade, {item1 = 22293})) then\n\t\te.self:Say(string.format(\"Bad luck must be one of your strong suits. You should have been a beggar because you sure aren't a very good %s. You lose!\",e.other:Class()));\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 22295})) then\n\t\te.self:Say(string.format(\"I see you have drawn the card that best represents a %s such as yourself. You lose!\",e.other:GetRaceName()));\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\n-- END of FILE Zone:freporte  ID:10153 -- Zenita_DRin\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/freporte/Zenita_D-Rin.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-tz-zenita-cards/freporte--Zenita_D-Rin.lua",
+      "afterSha256": "3f0fa9e2c1c7c9b5013f944c3571c316d6183c17809959eec24ae79e91407905"
+    }
+  ]
+}

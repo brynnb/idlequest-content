@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-camin-optional-payment",
+  "summary": "Make the documented optional1000pp lore payment optional for potion identification too. Preserve exact14330->14331 identity conversion, paid dialogue/XP/faction path, and existing friendly eligibility; no new charges or XP invented.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Wizard_Epic_Quest?action=raw",
+      "note": "Cached 2026-07-17T23:41:32.344Z; revision unavailable; SHA256 d497903200634474deed52019ed7f8ba518167187dcb469f9e40337b11c2391d. Make the documented optional1000pp lore payment optional for potion identification too. Preserve exact14330->14331 identity conversion, paid dialogue/XP/faction path, and existing friendly eligibility; no new charges or XP invented. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 16704,
+        "zone": "erudnext",
+        "name": "Camin",
+        "lua_content": "-- items: 18088, 14330, 14331, 1000\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Go away! I have no time for you!\");\n\telseif(e.message:findi(\"What are you searching for\")) then\n\t\t-- should check faction here...\n\t\te.self:Say(\"Ah! A smart one, I see! If you really wish to know about such a thing, you will have to help me finance my studies. The knowledge I have acquired and researched did not come cheaply.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\tlocal qglobals = eq.get_qglobals(e.self,e.other);\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 18088})) then\n\t\te.self:Say(\"So you have met Solomen, eh? He is a man with a wealth of knowledge. It is good to hear he is well.\");\n\t\te.other:Ding();\n\t\te.other:AddEXP(500);\n\telseif(qglobals[\"wizepic\"] == \"1\" and item_lib.check_turn_in(e.trade, {item1 = 14330})) then\n\t\te.self:Say(\"Camin says 'Very interesting... I've seen this work before. Yes, yes! It's the work of Arantir Karondor! Give this back to the person you got it from. Maybe he will have a clue to Arantir's location.'\");\n\t\te.other:SummonItem(14331); -- Item: Ro's Breath\n\t\te.other:Faction(404,10,0); -- Truespirit\n\t\te.other:Ding();\n\t\te.other:AddEXP(10000);\n\t\teq.delete_global(\"wizepic\");\n\telseif(item_lib.check_turn_in(e.trade, {platinum = 1000})) then\n\t\te.self:Say(\"Good, good, you show a willingness to learn of this with your offer. What I can tell you is that Solusek Ro had four followers who had shown exceptional aptitude in the arts of wizardry. Solusek Ro himself tutored them. He considered them to be like his own children. I know of one who still exists. He goes by the name of Arantir Karondor. He used to specialize in the storing of magic into physical objects. Arantir has been hiding for many, many years and will most assuredly be going by another name, so keep your eyes open. Anyway, be off, I need to continue my research. Return to me if you ever find Arantir Karondor.\");\n\t\te.other:Ding();\n\t\te.other:Faction(404,10,0); -- Truespirit\n\t\te.other:AddEXP(500);\n\t\teq.delete_global(\"wizepicA\"); -- Delete this global so if a player deletes Arantir's ring they can restart epic again. The only known way to delete this global is to finish the epic. Delete it here instead.\n\t\teq.set_global(\"wizepic\",\"1\",0,\"D30\");\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade);\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 16704,
+        "zone": "erudnext",
+        "name": "Camin",
+        "lua_content": "-- items: 18088, 14330, 14331, 1000\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Go away! I have no time for you!\");\n\telseif(e.message:findi(\"What are you searching for\")) then\n\t\t-- should check faction here...\n\t\te.self:Say(\"Ah! A smart one, I see! If you really wish to know about such a thing, you will have to help me finance my studies. The knowledge I have acquired and researched did not come cheaply.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\tlocal qglobals = eq.get_qglobals(e.self,e.other);\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 18088})) then\n\t\te.self:Say(\"So you have met Solomen, eh? He is a man with a wealth of knowledge. It is good to hear he is well.\");\n\t\te.other:Ding();\n\t\te.other:AddEXP(500);\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 14330})) then\n\t\te.self:Say(\"Camin says 'Very interesting... I've seen this work before. Yes, yes! It's the work of Arantir Karondor! Give this back to the person you got it from. Maybe he will have a clue to Arantir's location.'\");\n\t\te.other:SummonItem(14331); -- Item: Ro's Breath\n\t\te.other:Faction(404,10,0); -- Truespirit\n\t\te.other:Ding();\n\t\te.other:AddEXP(10000);\n\t\teq.delete_global(\"wizepic\");\n\telseif(item_lib.check_turn_in(e.trade, {platinum = 1000})) then\n\t\te.self:Say(\"Good, good, you show a willingness to learn of this with your offer. What I can tell you is that Solusek Ro had four followers who had shown exceptional aptitude in the arts of wizardry. Solusek Ro himself tutored them. He considered them to be like his own children. I know of one who still exists. He goes by the name of Arantir Karondor. He used to specialize in the storing of magic into physical objects. Arantir has been hiding for many, many years and will most assuredly be going by another name, so keep your eyes open. Anyway, be off, I need to continue my research. Return to me if you ever find Arantir Karondor.\");\n\t\te.other:Ding();\n\t\te.other:Faction(404,10,0); -- Truespirit\n\t\te.other:AddEXP(500);\n\t\teq.delete_global(\"wizepicA\"); -- Delete this global so if a player deletes Arantir's ring they can restart epic again. The only known way to delete this global is to finish the epic. Delete it here instead.\n\t\teq.set_global(\"wizepic\",\"1\",0,\"D30\");\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade);\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/erudnext/Camin.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-tz-camin-optional-payment/erudnext--Camin.lua",
+      "afterSha256": "9a47d332bc9fdf541f5f818680c260c08e05a11ba77b50a476155c15cff86524"
+    }
+  ]
+}

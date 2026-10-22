@@ -1,0 +1,66 @@
+{
+  "format": 1,
+  "id": "p99-nz-mischief-faction",
+  "summary": "Correct Debbis reward from unrelated Ivy Etched Gauntlets to Lucky Skunk Foot and correct faction identity to Denizens of Mischief, with both documented hails restored.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Plane_of_Mischief_Faction_Quest?action=raw",
+      "note": "Cached 2026-07-17T23:28:35.284Z; revision unavailable; SHA256 2f2d02cf1325598bff76f3cb5d35c6a18a1a5a95bb8d5c428238f2e44eb481df. Exported item rows resolve 6883 Rabbit Foot, 3190 Ivy Etched Gauntlets, 6876 Lucky Skunk Foot. P99 explicitly requires Debbis to give the foot and Vinny to accept it; Vinny already consumes6876. Preserve imported100/500EXP and all other behavior. Correct Debbis faction391 New Combine to437 Denizens of Mischief: Debbis NPC126232 profile1045 and Vinny NPC126277 profile487 both have primary437; Stomples profile1043 applies kill standing-50 to437. No contrary adaptation note found. Preserve imported+51 magnitude without claiming exact P99 numeric parity. Vinny lacks documented faction gain with unknown magnitude; do not guess from Debbis. Existing TLP-labelled fishing/man dialogue is not established by this page and is left unchanged. Full encounter, loot and connected path untested."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 17942,
+        "zone": "mischiefplane",
+        "name": "Debbis_the_Fish",
+        "lua_content": "--Debbis the Fish (NPCID# 126232)\n--zone:  mischiefplane\n\n--Quest script to handle turn-in of rabbit foot off Stomples to restore Denizens of Mischief Faction\n\n\nfunction event_trade(e)\n    local item_lib = require(\"items\");\n\n    if item_lib.check_turn_in(e.trade, {item1 = 6883}) then -- Item: Rabbit Foot\n        e.self:QuestSay(e.other,\"Oh wow! A rabbits foot!! Thank you so much. Here take this, I won't need this smelly thing any more.\");  \n\t\te.other:QuestReward(e.self,0,0,0,0,3190,100);  --  Item: Ivy Etched Gauntlets\n\t\te.other:Faction(391,51);   -- +51 to Denizens of Mischief Faction\n    end\n\n    item_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 17942,
+        "zone": "mischiefplane",
+        "name": "Debbis_the_Fish",
+        "lua_content": "function event_say(e)\n    if e.message:findi(\"hail\") then\n        e.self:Emote(\"sighs. 'If only I could walk in somebody elses shoes just for a day. It's not easy being a skunk you know.'\");\n    end\nend\n\n--Debbis the Fish (NPCID# 126232)\n--zone:  mischiefplane\n\n--Quest script to handle turn-in of rabbit foot off Stomples to restore Denizens of Mischief Faction\n\n\nfunction event_trade(e)\n    local item_lib = require(\"items\");\n\n    if item_lib.check_turn_in(e.trade, {item1 = 6883}) then -- Item: Rabbit Foot\n        e.self:QuestSay(e.other,\"Oh wow! A rabbits foot!! Thank you so much. Here take this, I won't need this smelly thing any more.\");  \n\t\te.other:QuestReward(e.self,0,0,0,0,6876,100);  --  Item: Lucky Skunk Foot\n\t\te.other:Faction(437,51);   -- +51 to Denizens of Mischief Faction\n    end\n\n    item_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 13041,
+        "zone": "mischiefplane",
+        "name": "Vinny_V._D-vicci",
+        "lua_content": "--[[#Zone: Plane of Mischief\n#Short Name: mischiefplane\n#Zone ID: 126\n#\n#NPC Name: Vinny V. D'vicci\n\nAdditional dialog for fishing and skunk foot turn in noted at: http://everquest.allakhazam.com/db/npc.html?id=6756]]\n\nfunction event_spawn(e)\n\teq.set_timer(\"fishing\",5 * 60 * 1000) -- 5 min timer on repeating text  \nend\n\nfunction event_say(e)\n\tif e.message:findi(\"pot of gold\") then\n\t\te.self:Say(\"Pot o` gold? Bwahahahaha! Only pot around is them ones I warsh my clothes in. Gotta be careful though, one time I dropped one of dem woids of wealth in and BADABING no clothes jus a stinkin coin that wouldn't buy me a fishin grub.\");\n\telseif e.message:findi(\"man\") then  -- BASED ON TLP PROGRESSION SERVERS\n\t\te.self:Say(\"Foist ya gotta help my brudda Bob. Getcherself one of em books 'es talkin about. Den... Ya's gotta find me dem woids of wealth. Well? Watcha standin here gawkin at me for? Get movin!\");\n\tend\nend\n\nfunction event_timer(e)\n\tif e.timer == \"fishing\" then\t  -- BASED ON TLP PROGRESSION SERVERS\n\t\te.self:Say(\"I'm fishing fishing fishing. I fish the whole week through. Just fishing fishing fishing. It's what I always do\");\n\tend\nend\n\nfunction event_trade(e)   -- BASED ON TLP PROGRESSION SERVERS\n    local item_lib = require(\"items\");\n\n    if item_lib.check_turn_in(e.trade, {item1 = 6876}) then -- Item: lucky skunk's foot\n        e.self:QuestSay(e.other,\"Nice work kid. Now I'm feelin lucky. So's ya say ya wanna learn about cards right? Lemme tell ya. Them cards are nice but lets have some REAL fun. Yer resourceful, I like that. What say we take over this joint fer ourselves? Ol' Bristle's gettin soft, ya know? Wadda ya say? [\" .. eq.say_link(\"Man\") .. \"] or mouse?\");\n\t\te.other:AddEXP(500);\n\tend\n\n    item_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 13041,
+        "zone": "mischiefplane",
+        "name": "Vinny_V._D-vicci",
+        "lua_content": "--[[#Zone: Plane of Mischief\n#Short Name: mischiefplane\n#Zone ID: 126\n#\n#NPC Name: Vinny V. D'vicci\n\nAdditional dialog for fishing and skunk foot turn in noted at: http://everquest.allakhazam.com/db/npc.html?id=6756]]\n\nfunction event_spawn(e)\n\teq.set_timer(\"fishing\",5 * 60 * 1000) -- 5 min timer on repeating text  \nend\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n        e.self:Say(\"What? You think I's fishin here to amooze you? Yooz think I'm tha entertainment? I ain't da god who owns this here joint, so's I can't make no farkin hail. Go bother the Pod people kid.\");\n    elseif e.message:findi(\"pot of gold\") then\n\t\te.self:Say(\"Pot o` gold? Bwahahahaha! Only pot around is them ones I warsh my clothes in. Gotta be careful though, one time I dropped one of dem woids of wealth in and BADABING no clothes jus a stinkin coin that wouldn't buy me a fishin grub.\");\n\telseif e.message:findi(\"man\") then  -- BASED ON TLP PROGRESSION SERVERS\n\t\te.self:Say(\"Foist ya gotta help my brudda Bob. Getcherself one of em books 'es talkin about. Den... Ya's gotta find me dem woids of wealth. Well? Watcha standin here gawkin at me for? Get movin!\");\n\tend\nend\n\nfunction event_timer(e)\n\tif e.timer == \"fishing\" then\t  -- BASED ON TLP PROGRESSION SERVERS\n\t\te.self:Say(\"I'm fishing fishing fishing. I fish the whole week through. Just fishing fishing fishing. It's what I always do\");\n\tend\nend\n\nfunction event_trade(e)   -- BASED ON TLP PROGRESSION SERVERS\n    local item_lib = require(\"items\");\n\n    if item_lib.check_turn_in(e.trade, {item1 = 6876}) then -- Item: lucky skunk's foot\n        e.self:QuestSay(e.other,\"Nice work kid. Now I'm feelin lucky. So's ya say ya wanna learn about cards right? Lemme tell ya. Them cards are nice but lets have some REAL fun. Yer resourceful, I like that. What say we take over this joint fer ourselves? Ol' Bristle's gettin soft, ya know? Wadda ya say? [\" .. eq.say_link(\"Man\") .. \"] or mouse?\");\n\t\te.other:AddEXP(500);\n\tend\n\n    item_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/mischiefplane/Debbis_the_Fish.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-nz-mischief-faction/mischiefplane--Debbis_the_Fish.lua",
+      "afterSha256": "3a70b11254bd07bde90e0c66c3bec599ebf4a4fdb8032536f6430520e69939d3"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/mischiefplane/Vinny_V._D-vicci.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-nz-mischief-faction/mischiefplane--Vinny_V._D-vicci.lua",
+      "afterSha256": "4d425752d6ce65a48144347fed21e8fdb5c8b7b5493565c623a60bcb49d0db46"
+    }
+  ]
+}

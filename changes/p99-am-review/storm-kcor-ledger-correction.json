@@ -1,0 +1,45 @@
+{
+  "Storm Giant Toes to Sentry Kcor": {
+    "scope": "velious",
+    "review_status": "partial",
+    "match_status": "missing_documented_branch",
+    "local_quest_keys": [
+      "skyshrine/Sentry_Kcor"
+    ],
+    "local_quest_files": [
+      "maintained/lua/converted-perl/skyshrine/Sentry_Kcor.lua"
+    ],
+    "local_enabled": false,
+    "notes": [
+      "Correction to earlier S-source comparison:29624 is Mercenary Assignments, not Storm Giant Toes29124. Kcor has no29124 handler. Do not replace its Mercenary cash with the Storm Toe example.",
+      "Cached P99 gives one observed2g1s4c payout and speculative CoV likely+5, not a proven fixed payout or distribution. Official TAKP comparison supplies different random money and faction values, but it is external evidence, NOT a retained repository fallback. No guessed numerical Storm Toe branch added. Separate Kcor helmet/Mercenary corrections do not resolve this missing quest branch."
+    ],
+    "p99_source": {
+      "title": "Storm Giant Toes to Sentry Kcor",
+      "url": "https://wiki.project1999.com/Storm_Giant_Toes_to_Sentry_Kcor",
+      "raw_cache": "data/p99wiki-project1999-api-cache/raw-pages/storm-giant-toes-to-sentry-kcor-0ac1b5653f.wiki"
+    },
+    "reviewed_at": "2026-10-22",
+    "scope_reassessment": {
+      "at": "2026-10-02",
+      "status": "reopened",
+      "previous": {
+        "scope": "post_kunark_velious",
+        "review_status": "out_of_scope",
+        "match_status": "not_reviewed_out_of_scope",
+        "reviewed_at": "2026-07-19"
+      },
+      "reason": "Classic-through-Velious audit includes this content; the older era-only exclusion is not a completion or enablement decision."
+    },
+    "verification": {
+      "current_review": {
+        "level": "static_source",
+        "date": "2026-10-22",
+        "exact_item_identity": "29124 Storm Giant Toes vs29624 Mercenary Assignments verified in baseline items",
+        "numeric_rewards": "unresolved, one observed cash example is not a fixed distribution",
+        "runtime": "not_run",
+        "ui": "not_run"
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-taxes-sneed_galliway",
+  "summary": "Remove only tax_collection prerequisites: P99 expressly permits collecting without first speaking to Vicus and bypassing Mira. Preserve all original item/faction effects and unrelated quest branches. Flynn also accepts documented your-feet phrase and uses documented Shout; no numeric values invented.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Taxes?action=raw",
+      "note": "Cached 2026-07-17T23:34:37.004Z; revision unavailable; SHA256 6fc59af937f3b2dfa4313beac8b349112c500bdbff0c89109de222dc34860c9b. Remove only tax_collection prerequisites: P99 expressly permits collecting without first speaking to Vicus and bypassing Mira. Preserve all original item/faction effects and unrelated quest branches. Flynn also accepts documented your-feet phrase and uses documented Shout; no numeric values invented. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 19156,
+        "zone": "qeynos2",
+        "name": "Sneed_Galliway",
+        "lua_content": "-- Modified from ProjectEQ Lua.\n-- Source: qeynos2/Sneed_Galliway.lua\n-- P99 audit: Sneed's Rat Infestation\n-- P99 rewards 4 copper plus a minor item such as Dagger, Water Flask, or Torch.\n-- items: 13172, 13717, 7001, 13006, 13002\n\nfunction event_say(e)\n\tlocal qglobals = eq.get_qglobals(e.other);\n\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(string.format(\"Hello, %s. I am Sneed Galliway, merchant and citizen. I run the only general store in all of Qeynos, serving the needs of the many adventurers who call Qeynos home. If only one of them would take the time to help me with my er... [problem]...\",e.other:GetName()));\n\telseif(e.message:findi(\"problem\")) then\n\t\te.self:Say(\"Shhh.. Keep it down. It seems I have a little rodent problem in my store. A mangy rat keeps digging into my crates of rations. He looks as if he is diseased. If you help me by killing this pest, I will make it worth your while. Bring me his head as proof it is done.\");\n\telseif(e.message:findi(\"ronn castekin\")) then\n\t\te.self:Say(\"Ronn? I saw him a few days ago. He was with someone dressed in black I didn't recognize .. I think I saw them later that day, swimming in the north pond. They really should stay away from the aqueducts. They can be quite dangerous. Full of rats, ya know.\");\n\telseif(e.message:findi(\"tax collection\") and qglobals.tax_collection ~= nil) then\n\t\te.self:Say(string.format(\"Hey, %s, how the heck did Vicus convince you to do his job? He better be paying you well. Here you go.\",e.other:GetName()));\n\t\te.other:SummonItem(13172); -- Galliway's Tax Payment\n\t\te.other:Faction(291,-10,0); -- Merchants of Qeynos\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 13717})) then -- Rat Head\n\t\te.self:Say(\"HA! Good work! I knew you were the person for the job. A regular ratslayer you are. Here is your reward as promised. Be sure you keep this between us.\");\n\t\te.other:SummonItem(eq.ChooseRandom(7001, 13006, 13002)); -- Dagger / Water Flask / Torch\n\t\te.other:Ding();\n\t\te.other:Faction(291,5,0); -- Merchants of Qeynos\n\t\te.other:Faction(223,-10,0); -- Circle of Unseen Hands\n\t\te.other:Faction(219,5,0); -- Antonius Bayle\n\t\te.other:Faction(229,5,0); -- Coalition of Tradefolk\n\t\te.other:Faction(262,5,0); -- Guards of Qeynos\n\t\te.other:AddEXP(250);\n\t\te.other:GiveCash(4,0,0,0);\n\tend\n\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 19156,
+        "zone": "qeynos2",
+        "name": "Sneed_Galliway",
+        "lua_content": "-- Modified from ProjectEQ Lua.\n-- Source: qeynos2/Sneed_Galliway.lua\n-- P99 audit: Sneed's Rat Infestation\n-- P99 rewards 4 copper plus a minor item such as Dagger, Water Flask, or Torch.\n-- items: 13172, 13717, 7001, 13006, 13002\n\nfunction event_say(e)\n\tlocal qglobals = eq.get_qglobals(e.other);\n\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(string.format(\"Hello, %s. I am Sneed Galliway, merchant and citizen. I run the only general store in all of Qeynos, serving the needs of the many adventurers who call Qeynos home. If only one of them would take the time to help me with my er... [problem]...\",e.other:GetName()));\n\telseif(e.message:findi(\"problem\")) then\n\t\te.self:Say(\"Shhh.. Keep it down. It seems I have a little rodent problem in my store. A mangy rat keeps digging into my crates of rations. He looks as if he is diseased. If you help me by killing this pest, I will make it worth your while. Bring me his head as proof it is done.\");\n\telseif(e.message:findi(\"ronn castekin\")) then\n\t\te.self:Say(\"Ronn? I saw him a few days ago. He was with someone dressed in black I didn't recognize .. I think I saw them later that day, swimming in the north pond. They really should stay away from the aqueducts. They can be quite dangerous. Full of rats, ya know.\");\n\telseif(e.message:findi(\"tax collection\") ) then\n\t\te.self:Say(string.format(\"Hey, %s, how the heck did Vicus convince you to do his job? He better be paying you well. Here you go.\",e.other:GetName()));\n\t\te.other:SummonItem(13172); -- Galliway's Tax Payment\n\t\te.other:Faction(291,-10,0); -- Merchants of Qeynos\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 13717})) then -- Rat Head\n\t\te.self:Say(\"HA! Good work! I knew you were the person for the job. A regular ratslayer you are. Here is your reward as promised. Be sure you keep this between us.\");\n\t\te.other:SummonItem(eq.ChooseRandom(7001, 13006, 13002)); -- Dagger / Water Flask / Torch\n\t\te.other:Ding();\n\t\te.other:Faction(291,5,0); -- Merchants of Qeynos\n\t\te.other:Faction(223,-10,0); -- Circle of Unseen Hands\n\t\te.other:Faction(219,5,0); -- Antonius Bayle\n\t\te.other:Faction(229,5,0); -- Coalition of Tradefolk\n\t\te.other:Faction(262,5,0); -- Guards of Qeynos\n\t\te.other:AddEXP(250);\n\t\te.other:GiveCash(4,0,0,0);\n\tend\n\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/qeynos2/Sneed_Galliway.lua",
+      "beforeSha256": "5f707fb2d2ab84523683cc428635df6992d0d3be6d58fd81316b58da3a0ee82b",
+      "proposedFile": "changes/p99-tz-taxes-sneed_galliway/qeynos2--Sneed_Galliway.lua",
+      "afterSha256": "98f361bff3817d35671d5dd62ce0b9574c21921f9aafde174da54cd0f0d93c6e"
+    }
+  ]
+}

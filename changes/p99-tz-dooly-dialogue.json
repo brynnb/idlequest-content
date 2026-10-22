@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-dooly-dialogue",
+  "summary": "Support documented Where is Retlon as well as the longer existing full-name phrase.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Tergon's_Spellbook_Quest?action=raw",
+      "note": "Cached 2026-07-17T23:34:47.100Z; revision unavailable; SHA256 210a4e08ffb524e59cd2ee6f8d5d06e10564b5bcf822b6a159679ef7e13b518a. Support documented Where is Retlon as well as the longer existing full-name phrase. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 13717,
+        "zone": "freportw",
+        "name": "Dooly_Jonkers",
+        "lua_content": "function event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(string.format(\"Greetings, %s! Welcome to the Academy of Arcane Science. Nowhere on Norrath can you find a greater learning center.\",e.other:GetName()));\n\telseif(e.message:findi(\"retlon brenclog\")) then\n\t\te.self:Say(\"I'm very sorry to report that Retlon was kidnapped by some vile orcs from Crushbone. And I haven't seen him since.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\n-- END of FILE Zone:freportw -- Dooly_Jonkers",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 13717,
+        "zone": "freportw",
+        "name": "Dooly_Jonkers",
+        "lua_content": "function event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(string.format(\"Greetings, %s! Welcome to the Academy of Arcane Science. Nowhere on Norrath can you find a greater learning center.\",e.other:GetName()));\n\telseif(e.message:findi(\"retlon\")) then\n\t\te.self:Say(\"I'm very sorry to report that Retlon was kidnapped by some vile orcs from Crushbone. And I haven't seen him since.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\n-- END of FILE Zone:freportw -- Dooly_Jonkers",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/freportw/Dooly_Jonkers.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-tz-dooly-dialogue/freportw--Dooly_Jonkers.lua",
+      "afterSha256": "a2aa89cbbefc603db496148f43fc015aa6d7fca833fadcee59f1cb36797e9ed6"
+    }
+  ]
+}

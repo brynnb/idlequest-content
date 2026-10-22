@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-restraining-trooper_ozlot",
+  "summary": "Support documented sign this restraining order phrase alongside existing sign the restraining order, only lore/requirements response. No new reward or itemgrant route; all sequential trade conditions unchanged.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/The_Restraining_Order?action=raw",
+      "note": "Cached 2026-07-17T23:37:55.399Z; revision unavailable; SHA256 e4a24f856e44c7cec752b6501686b06243a9be01bf578245f610362916c467e3. Support documented sign this restraining order phrase alongside existing sign the restraining order, only lore/requirements response. No new reward or itemgrant route; all sequential trade conditions unchanged. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 19288,
+        "zone": "cabwest",
+        "name": "Trooper_Ozlot",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: cabwest/Trooper_Ozlot.pl\n-- items: 18246, 12670, 18247\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Hail, citizen! If it is a good time you are seeking, you should head toward the tavern. You can't miss it. There is only one. The emperor says we should spend most of our time training, not in revelry. We troopers try.\")\n\telseif e.message:findi(\"sign the restraining order\") then\n\t\te.self:Say(\"I do not believe you were sent by the legion. You do not look as though you could squash a kitten or even a bug. If you truly were sent, then you should be able to hunt down a sabertooth kitten. Tell you what, you bring me two sabertooth kitten canines and the legion order and I shall believe you. Only then will I sign the order for you.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 18246, item2 = 12670, item3 = 12670}) then\n\t\te.self:Say(\"I suppose you were sent by the legion. I will sign. Here is the legion order back. Now, leave, so I can finish my watch.\")\n\t\te.other:SummonItem(18247)\n\t\te.other:Faction(441, 5, 0)\n\t\te.other:Faction(440, 5, 0)\n\t\te.other:Faction(445, 5, 0)\n\t\te.other:Faction(442, 5, 0)\n\t\te.other:Faction(444, 5, 0)\n\t\te.other:AddEXP(800)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 18246}) then\n\t\te.self:Say(\"I told you that I need two sabertooth kitten canines and the legion order.\")\n\t\te.other:SummonItem(18246)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 12670, item2 = 12670}) then\n\t\te.self:Say(\"I told you that I need two sabertooth kitten canines and the legion order.\")\n\t\te.other:SummonItem(12670)\n\t\te.other:SummonItem(12670)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 12670}) then\n\t\te.self:Say(\"I told you that I need two sabertooth kitten canines and the legion order.\")\n\t\te.other:SummonItem(12670)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 19288,
+        "zone": "cabwest",
+        "name": "Trooper_Ozlot",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: cabwest/Trooper_Ozlot.pl\n-- items: 18246, 12670, 18247\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Hail, citizen! If it is a good time you are seeking, you should head toward the tavern. You can't miss it. There is only one. The emperor says we should spend most of our time training, not in revelry. We troopers try.\")\n\telseif e.message:findi(\"sign the restraining order\") or e.message:findi(\"sign this restraining order\") then\n\t\te.self:Say(\"I do not believe you were sent by the legion. You do not look as though you could squash a kitten or even a bug. If you truly were sent, then you should be able to hunt down a sabertooth kitten. Tell you what, you bring me two sabertooth kitten canines and the legion order and I shall believe you. Only then will I sign the order for you.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 18246, item2 = 12670, item3 = 12670}) then\n\t\te.self:Say(\"I suppose you were sent by the legion. I will sign. Here is the legion order back. Now, leave, so I can finish my watch.\")\n\t\te.other:SummonItem(18247)\n\t\te.other:Faction(441, 5, 0)\n\t\te.other:Faction(440, 5, 0)\n\t\te.other:Faction(445, 5, 0)\n\t\te.other:Faction(442, 5, 0)\n\t\te.other:Faction(444, 5, 0)\n\t\te.other:AddEXP(800)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 18246}) then\n\t\te.self:Say(\"I told you that I need two sabertooth kitten canines and the legion order.\")\n\t\te.other:SummonItem(18246)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 12670, item2 = 12670}) then\n\t\te.self:Say(\"I told you that I need two sabertooth kitten canines and the legion order.\")\n\t\te.other:SummonItem(12670)\n\t\te.other:SummonItem(12670)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 12670}) then\n\t\te.self:Say(\"I told you that I need two sabertooth kitten canines and the legion order.\")\n\t\te.other:SummonItem(12670)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/cabwest/Trooper_Ozlot.lua",
+      "beforeSha256": "807ecbf57eaa08597f117accfe9897e0effe437e1a4233fb657d767ec1318f9a",
+      "proposedFile": "changes/p99-tz-restraining-trooper_ozlot/cabwest--Trooper_Ozlot.lua",
+      "afterSha256": "f305d305fe15174b42620c6a901b9ca176c10d3c6d7ecb66006bb7a2bdaa3556"
+    }
+  ]
+}

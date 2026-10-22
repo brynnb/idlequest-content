@@ -1,0 +1,45 @@
+{
+  "format": 1,
+  "id": "p99-tz-toxdil-dialogue",
+  "summary": "Correct snake-venom dialogue, restore identified Gem Case Key2 (12352), and expose only Paladin-chain gem lore outside the Rogue poison dialogue gate. Preserve all cash and XP.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Toxdil's_Poison?action=raw",
+      "note": "Cached 2026-07-17T23:39:40.224Z; revision unavailable; SHA256 017c3a606fdac31d03ee454d3a58248a89c43ee39e3d9646a9204df412bfb8d2. Correct snake-venom dialogue, restore identified Gem Case Key2 (12352), and expose only Paladin-chain gem lore outside the Rogue poison dialogue gate. Preserve all cash and XP. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    },
+    {
+      "url": "https://wiki.project1999.com/Rogue_Redemption",
+      "note": "Gem of Rightousness steps3-5 explicitly Toxdil Key2 and Noresa Key1. Items12351 lore Gem Case Key1;12352 lore Gem Case Key2. Cached full section SHA256 da5d495b42a470e540b8d069efd35efd06d3089fc60ef35537e395ac693900df. NZ owns paired Noresa swap. Bubar still requires both IDs."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 12591,
+        "zone": "freportw",
+        "name": "Toxdil",
+        "lua_content": "-- items: 12353, 12351, 14017, 14016\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Correct. Toxdil is my name. No last name. I swear allegiance to no house nor guild. What brings you down here? Perhaps you seek my [deadly liquid], perhaps not. Whatever your reasons, I warn you to keep an eye out for the militia. They have begun to patrol the sewers.\");\n\telseif(e.other:Class() == \"Rogue\") then\n\t\tif(e.message:findi(\"deadly liquid\")) then\n\t\t\te.self:Say(\"The deadly liquid I offer to rogues is called spider venom. I will be glad to make it for you, but first you must supply me with two snake venom sacs and my fee of 20 gold pieces. You may find the sacs upon the giant snakes of the Commonlands.\");\n\t\telseif(e.message:findi(\"gem of righteousness\")) then\n\t\t\te.self:Say(\"That gem is worthless!! If you want it, you can have it. Oh, but I forgot! I sold it to some gem merchant. I can't seem to remember her name, but she paid highly for it. Ha!! Imagine that. Worthless hunk of crystal. Do not bother looking for it.\");\n\t\tend\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 12353})) then\n\t\te.self:Say(\"The gem!! I would notice it's sparkle anywhere!! I cannot believe you are handing it back to me!! What a fool. Here you are fool. You can have this worthless key now.\");\n\t\te.other:SummonItem(12351); -- A Tiny Key\n\t\te.other:Ding();\n\t\te.other:AddEXP(15000);\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 14017,item2 = 14017,gold = 20})) then\n\t\te.other:SummonItem(14016); -- Snake Venom\n\t\te.other:Ding();\n\t\te.other:AddEXP(100);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\n-- END of FILE Zone:freportw -- Toxdil\n\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 12591,
+        "zone": "freportw",
+        "name": "Toxdil",
+        "lua_content": "-- items: 12353, 12352, 14017, 14016\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Correct. Toxdil is my name. No last name. I swear allegiance to no house nor guild. What brings you down here? Perhaps you seek my [deadly liquid], perhaps not. Whatever your reasons, I warn you to keep an eye out for the militia. They have begun to patrol the sewers.\");\n\telseif(e.message:findi(\"gem of righteousness\")) then\n\t\te.self:Say(\"That gem is worthless!! If you want it, you can have it. Oh, but I forgot! I sold it to some gem merchant. I can't seem to remember her name, but she paid highly for it. Ha!! Imagine that. Worthless hunk of crystal. Do not bother looking for it.\");\n\telseif(e.other:Class() == \"Rogue\") then\n\t\tif(e.message:findi(\"deadly liquid\")) then\n\t\t\te.self:Say(\"The deadly liquid I offer to rogues is called snake venom. I will be glad to make it for you, but first you must supply me with two snake venom sacs and my fee of 20 gold pieces. You may find the sacs upon the giant snakes of the Commonlands.\");\n\n\t\tend\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 12353})) then\n\t\te.self:Say(\"The gem!! I would notice it's sparkle anywhere!! I cannot believe you are handing it back to me!! What a fool. Here you are fool. You can have this worthless key now.\");\n\t\te.other:SummonItem(12352); -- A Tiny Key\n\t\te.other:Ding();\n\t\te.other:AddEXP(15000);\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 14017,item2 = 14017,gold = 20})) then\n\t\te.other:SummonItem(14016); -- Snake Venom\n\t\te.other:Ding();\n\t\te.other:AddEXP(100);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\n-- END of FILE Zone:freportw -- Toxdil\n\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/freportw/Toxdil.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-tz-toxdil-dialogue/freportw--Toxdil.lua",
+      "afterSha256": "59bb8c92b17b41b5071e12879ef3376b905fc4b9cddf80394b2c279fdf8e70f8"
+    }
+  ]
+}

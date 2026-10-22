@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-innothule-skeleton-returns",
+  "summary": "Return partial, unrelated and surplus hand-ins without changing accepted inputs, rewards or depop behavior. Exact world lifecycle remains unverified.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Urako's_Big_Mistake?action=raw",
+      "note": "Cached 2026-07-17T23:40:17.020Z; revision unavailable; SHA256 c7504278e682914a6195eda6f36db21e2b1565fc1f9cfece25911850b253808f. Return partial, unrelated and surplus hand-ins without changing accepted inputs, rewards or depop behavior. Exact world lifecycle remains unverified. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 12843,
+        "zone": "innothule",
+        "name": "a_skeleton",
+        "lua_content": "-- Created by noudess\n-- items: 12218, 12215\n\nfunction event_say(e)\n\tlocal pfaction = e.other:GetFaction(e.self)-1;\n\n\tif(e.message:findi(\"Hail\")) then\n\t\te.self:Say(\"Avast, matey! Captain Bones here. This here island is mine! Raise anchor and ship out\");\n\telseif(e.message:findi(\"come back to the closet\")) then\n\t\tif (pfaction > 5) then\n\t\t\te.self:Say(\"I would like to assist you, but my masters say you are no friend of the Darkones and would rather see you dead.\");\n\t\telseif (pfaction > 4) then\n\t\t\te.self:Say(\"You're going to have to prove yourself a stronger aid to my masters, the Darkones.\");\n\t\telse\n\t\t\te.self:Say(\"I wish I could be leaving this isle of the damned, alas, me boat has gone to Prexus' locker. I'll not be leavin' here until I get meself another ship.\");\n\t\tend\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif (item_lib.check_turn_in(e.trade, {item1 = 12218})) then -- ship in a bottle\n\t\te.self:Say(\"Aye, matey! Ye found me another vessel with which to sail the seven seas? Let's be shoving off then! Come on, hop aboard, swabby! Be sure to pick up the minstrel. His hide was last seen by Basher Avisk. Only he be knowin' [where the minstrel ] be.\");\n\t\te.other:SummonItem(12215); -- Item: The Captain\n\t\teq.depop();\n\tend\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 12843,
+        "zone": "innothule",
+        "name": "a_skeleton",
+        "lua_content": "-- Created by noudess\n-- items: 12218, 12215\n\nfunction event_say(e)\n\tlocal pfaction = e.other:GetFaction(e.self)-1;\n\n\tif(e.message:findi(\"Hail\")) then\n\t\te.self:Say(\"Avast, matey! Captain Bones here. This here island is mine! Raise anchor and ship out\");\n\telseif(e.message:findi(\"come back to the closet\")) then\n\t\tif (pfaction > 5) then\n\t\t\te.self:Say(\"I would like to assist you, but my masters say you are no friend of the Darkones and would rather see you dead.\");\n\t\telseif (pfaction > 4) then\n\t\t\te.self:Say(\"You're going to have to prove yourself a stronger aid to my masters, the Darkones.\");\n\t\telse\n\t\t\te.self:Say(\"I wish I could be leaving this isle of the damned, alas, me boat has gone to Prexus' locker. I'll not be leavin' here until I get meself another ship.\");\n\t\tend\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif (item_lib.check_turn_in(e.trade, {item1 = 12218})) then -- ship in a bottle\n\t\te.self:Say(\"Aye, matey! Ye found me another vessel with which to sail the seven seas? Let's be shoving off then! Come on, hop aboard, swabby! Be sure to pick up the minstrel. His hide was last seen by Basher Avisk. Only he be knowin' [where the minstrel ] be.\");\n\t\te.other:SummonItem(12215); -- Item: The Captain\n\t\teq.depop();\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade); -- Return partial and unrelated offers.\n\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/innothule/a_skeleton.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-tz-innothule-skeleton-returns/innothule--a_skeleton.lua",
+      "afterSha256": "395fe2f7aef405e34dd800a6f31daa92ac31290e813f98492a29c1101e4116c4"
+    }
+  ]
+}

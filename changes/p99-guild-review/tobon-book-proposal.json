@@ -1,0 +1,30 @@
+{
+  "format": 1,
+  "id": "p99-guild-tobon-letter",
+  "summary": "Align non-navigation Tobon starting Registration Letter prose with exact cached Guild Summons Library Mechanimagica Wizard text; item18774 maps via filename AKAWizGM01 to books3150. No item, source behavior, gate or map direction changes.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Guild_Summons_-_Libary_Mechanimagica_Wizard?action=raw",
+      "note": "Guild Summons - Libary Mechanimagica Wizard; cache reference/p99-wiki/raw-pages/guild-summons-libary-mechanimagica-wizard-23bf17cb47.wiki SHA256 b6f18aec1e8f8e550a2f73f1fbc29d8e748b04391c58a8dbec3c38d292a9934d; item18774 filename AKAWizGM01 matches books3150.name; exact book before row SHA256 62db8341c3a6d60de6123ce71bcc0af76220b6d444d15afdc7dd9c51559628c6. books manifest primary key is [id]."
+    }
+  ],
+  "rows": [
+    {
+      "table": "books",
+      "before": {
+        "id": 3150,
+        "name": "AKAWizGM01",
+        "txtfile": "Welcome to the Library Mechanimagica.  Take this Registration Letter to Tobon Starpyre, Master Wizard of the Eldritch Collective.  He will get you started with your new studies and training.^",
+        "language": -1
+      },
+      "after": {
+        "id": 3150,
+        "name": "AKAWizGM01",
+        "txtfile": "Greetings young pupil, your new school awaits you.  Seek out the Eldritch Collective at the Library Mechanimagica.  Give this Registration Letter to master Tobon Starpyre, he will introduce you to your new course of studies.^",
+        "language": -1
+      }
+    }
+  ],
+  "sources": []
+}

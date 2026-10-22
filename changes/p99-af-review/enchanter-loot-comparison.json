@@ -1,0 +1,1333 @@
+{
+  "evidence": {
+    "title": "Enchanter Epic Quest",
+    "url": "https://wiki.project1999.com/Enchanter_Epic_Quest?action=raw",
+    "fetchedAt": "2026-07-17T23:13:58.276Z",
+    "revision": null,
+    "sha256": "f7c386cf985d156a94debb469987b9e390a4cbd5abfd4ecade38d4992d46724f",
+    "bytes": 28720,
+    "source": "raw-pages/enchanter-epic-quest-f79986087a.json",
+    "cachePath": "reference/p99-wiki/raw-pages/enchanter-epic-quest-f79986087a.wiki"
+  },
+  "limits": "Static candidate NPC/loot links for named required drops. No spawn availability, kill credit, loot settlement or probability parity established. Named variants are static candidates only, not certified P99 natural spawns.",
+  "items": {
+    "1360": {
+      "expected_npc_name_fragments": [
+        "magus"
+      ],
+      "candidate_npcs": [
+        {
+          "npc": {
+            "id": 66156,
+            "name": "the_ghoul_arch_magus",
+            "level": 45,
+            "loottable_id": 246
+          },
+          "npc_evidence": {
+            "path": "data/npc_types/5.ndjson",
+            "line": 3613,
+            "sha256": "9f3b06a9578f37b0712df6da029b5f9a13cb786addd6c6ae42a114b86dda2762"
+          },
+          "loottable_entry": {
+            "loottable_id": 246,
+            "lootdrop_id": 575,
+            "multiplier": 1,
+            "droplimit": 1,
+            "mindrop": 1,
+            "probability": 100
+          },
+          "loottable_evidence": {
+            "path": "data/loottable_entries/9.ndjson",
+            "line": 1361,
+            "sha256": "3bb79a6c3d0966ec00985199335037de92c3cd18ec93110f6fd8d4d08208048b"
+          },
+          "lootdrop_entry": {
+            "lootdrop_id": 575,
+            "item_id": 1360,
+            "item_charges": 1,
+            "equip_item": 1,
+            "chance": 25,
+            "disabled_chance": 0,
+            "trivial_min_level": 0,
+            "trivial_max_level": 0,
+            "multiplier": 1,
+            "npc_min_level": 0,
+            "npc_max_level": 0,
+            "min_expansion": -1,
+            "max_expansion": -1,
+            "content_flags": null,
+            "content_flags_disabled": null
+          },
+          "lootdrop_evidence": {
+            "path": "data/lootdrop_entries/7.ndjson",
+            "line": 29043,
+            "sha256": "6726a9e06bb232120768e3ab0127d3c56c85bf7512206fcb068bbd421070d23e"
+          }
+        },
+        {
+          "npc": {
+            "id": 66161,
+            "name": "the_ghoul_arch_magus",
+            "level": 45,
+            "loottable_id": 246
+          },
+          "npc_evidence": {
+            "path": "data/npc_types/4.ndjson",
+            "line": 3686,
+            "sha256": "f9c41a450c9715fedf8a4068f2426c89393918461c112c784a488501f48971ad"
+          },
+          "loottable_entry": {
+            "loottable_id": 246,
+            "lootdrop_id": 575,
+            "multiplier": 1,
+            "droplimit": 1,
+            "mindrop": 1,
+            "probability": 100
+          },
+          "loottable_evidence": {
+            "path": "data/loottable_entries/9.ndjson",
+            "line": 1361,
+            "sha256": "3bb79a6c3d0966ec00985199335037de92c3cd18ec93110f6fd8d4d08208048b"
+          },
+          "lootdrop_entry": {
+            "lootdrop_id": 575,
+            "item_id": 1360,
+            "item_charges": 1,
+            "equip_item": 1,
+            "chance": 25,
+            "disabled_chance": 0,
+            "trivial_min_level": 0,
+            "trivial_max_level": 0,
+            "multiplier": 1,
+            "npc_min_level": 0,
+            "npc_max_level": 0,
+            "min_expansion": -1,
+            "max_expansion": -1,
+            "content_flags": null,
+            "content_flags_disabled": null
+          },
+          "lootdrop_evidence": {
+            "path": "data/lootdrop_entries/7.ndjson",
+            "line": 29043,
+            "sha256": "6726a9e06bb232120768e3ab0127d3c56c85bf7512206fcb068bbd421070d23e"
+          }
+        }
+      ]
+    },
+    "10602": {
+      "expected_npc_name_fragments": [
+        "Thrackin"
+      ],
+      "candidate_npcs": [
+        {
+          "npc": {
+            "id": 12172,
+            "name": "Thrackin_Griften",
+            "level": 55,
+            "loottable_id": 13356
+          },
+          "npc_evidence": {
+            "path": "data/npc_types/8.ndjson",
+            "line": 305,
+            "sha256": "a32cd2154d79f15c796f69b4f62af61710480a9c6abc978d68e967612876dfe9"
+          },
+          "loottable_entry": {
+            "loottable_id": 13356,
+            "lootdrop_id": 22077,
+            "multiplier": 1,
+            "droplimit": 1,
+            "mindrop": 1,
+            "probability": 100
+          },
+          "loottable_evidence": {
+            "path": "data/loottable_entries/c.ndjson",
+            "line": 1080,
+            "sha256": "69e6dfe63148bd93ae1ea3f5b5db03831aaff2c9bb1807bce04f5360503f2b2d"
+          },
+          "lootdrop_entry": {
+            "lootdrop_id": 22077,
+            "item_id": 10602,
+            "item_charges": 1,
+            "equip_item": 0,
+            "chance": 100,
+            "disabled_chance": 0,
+            "trivial_min_level": 0,
+            "trivial_max_level": 0,
+            "multiplier": 1,
+            "npc_min_level": 0,
+            "npc_max_level": 0,
+            "min_expansion": -1,
+            "max_expansion": -1,
+            "content_flags": null,
+            "content_flags_disabled": null
+          },
+          "lootdrop_evidence": {
+            "path": "data/lootdrop_entries/3.ndjson",
+            "line": 27737,
+            "sha256": "f5f7f483c6410976ccae6912ce53ce233d9f91bb9e431b4c13bbe39f769079ab"
+          }
+        }
+      ]
+    },
+    "10606": {
+      "expected_npc_name_fragments": [
+        "Vessel"
+      ],
+      "candidate_npcs": [
+        {
+          "npc": {
+            "id": 106008,
+            "name": "Vessel_Drozlin",
+            "level": 60,
+            "loottable_id": 4414
+          },
+          "npc_evidence": {
+            "path": "data/npc_types/6.ndjson",
+            "line": 81,
+            "sha256": "2b759a6757e50a6c5c707b19c83ad1cc6c3ad9b6aa9a2d0d953518a73631b804"
+          },
+          "loottable_entry": {
+            "loottable_id": 4414,
+            "lootdrop_id": 8437,
+            "multiplier": 1,
+            "droplimit": 1,
+            "mindrop": 1,
+            "probability": 100
+          },
+          "loottable_evidence": {
+            "path": "data/loottable_entries/7.ndjson",
+            "line": 1664,
+            "sha256": "c058558c52df52b5d142e07076b7de1a81b91cac9e6c0fe4143db456cc1f8f68"
+          },
+          "lootdrop_entry": {
+            "lootdrop_id": 8437,
+            "item_id": 10606,
+            "item_charges": 1,
+            "equip_item": 1,
+            "chance": 100,
+            "disabled_chance": 0,
+            "trivial_min_level": 0,
+            "trivial_max_level": 0,
+            "multiplier": 1,
+            "npc_min_level": 0,
+            "npc_max_level": 0,
+            "min_expansion": -1,
+            "max_expansion": -1,
+            "content_flags": null,
+            "content_flags_disabled": null
+          },
+          "lootdrop_evidence": {
+            "path": "data/lootdrop_entries/8.ndjson",
+            "line": 29548,
+            "sha256": "66d1075a8cac8e8e34a220fcc40d5e195957132107bf95b21047a1919a7d80e8"
+          }
+        }
+      ]
+    },
+    "10607": {
+      "expected_npc_name_fragments": [
+        "Verina"
+      ],
+      "candidate_npcs": [
+        {
+          "npc": {
+            "id": 42112,
+            "name": "Verina_Tomb",
+            "level": 60,
+            "loottable_id": 4415
+          },
+          "npc_evidence": {
+            "path": "data/npc_types/a.ndjson",
+            "line": 3021,
+            "sha256": "7032bd4ddd33616036a20706cf5ecd0b11c0c58a0f7d29fafdbe13e26bfc35f0"
+          },
+          "loottable_entry": {
+            "loottable_id": 4415,
+            "lootdrop_id": 8438,
+            "multiplier": 1,
+            "droplimit": 1,
+            "mindrop": 1,
+            "probability": 100
+          },
+          "loottable_evidence": {
+            "path": "data/loottable_entries/4.ndjson",
+            "line": 1687,
+            "sha256": "ec5a042bef1ef23061e70035ba029bb601f1ccc35eda372b996b7723b69156a3"
+          },
+          "lootdrop_entry": {
+            "lootdrop_id": 8438,
+            "item_id": 10607,
+            "item_charges": 1,
+            "equip_item": 1,
+            "chance": 100,
+            "disabled_chance": 0,
+            "trivial_min_level": 0,
+            "trivial_max_level": 0,
+            "multiplier": 1,
+            "npc_min_level": 0,
+            "npc_max_level": 0,
+            "min_expansion": -1,
+            "max_expansion": -1,
+            "content_flags": null,
+            "content_flags_disabled": null
+          },
+          "lootdrop_evidence": {
+            "path": "data/lootdrop_entries/f.ndjson",
+            "line": 29618,
+            "sha256": "4911de4f30e8889a398b7e6eec08d63400462384a61668ccb724a0d54eccd78d"
+          }
+        }
+      ]
+    },
+    "10627": {
+      "expected_npc_name_fragments": [
+        "Prince"
+      ],
+      "candidate_npcs": [
+        {
+          "npc": {
+            "id": 103080,
+            "name": "Prince_Selrach_Di`zok",
+            "level": 61,
+            "loottable_id": 1037
+          },
+          "npc_evidence": {
+            "path": "data/npc_types/b.ndjson",
+            "line": 49,
+            "sha256": "b25083e8ff1eb9b80628f426f8752492f6b72a818d6cdabe290c4d6caef2120d"
+          },
+          "loottable_entry": {
+            "loottable_id": 1037,
+            "lootdrop_id": 22657,
+            "multiplier": 1,
+            "droplimit": 1,
+            "mindrop": 1,
+            "probability": 100
+          },
+          "loottable_evidence": {
+            "path": "data/loottable_entries/7.ndjson",
+            "line": 483,
+            "sha256": "138280af5ba5ec438080bd5d17117fcca524a041eab92578376a66aafe58dbc2"
+          },
+          "lootdrop_entry": {
+            "lootdrop_id": 22657,
+            "item_id": 10627,
+            "item_charges": 1,
+            "equip_item": 0,
+            "chance": 100,
+            "disabled_chance": 0,
+            "trivial_min_level": 0,
+            "trivial_max_level": 0,
+            "multiplier": 1,
+            "npc_min_level": 0,
+            "npc_max_level": 0,
+            "min_expansion": -1,
+            "max_expansion": -1,
+            "content_flags": null,
+            "content_flags_disabled": null
+          },
+          "lootdrop_evidence": {
+            "path": "data/lootdrop_entries/e.ndjson",
+            "line": 27754,
+            "sha256": "55ac3ed98c048b663f7d1c3bb9c126dbdd24a52d77e37cc26a7e9b448b5b78fb"
+          }
+        }
+      ]
+    },
+    "10614": {
+      "expected_npc_name_fragments": [
+        "Cazel"
+      ],
+      "candidate_npcs": [
+        {
+          "npc": {
+            "id": 37157,
+            "name": "Cazel",
+            "level": 51,
+            "loottable_id": 3470
+          },
+          "npc_evidence": {
+            "path": "data/npc_types/2.ndjson",
+            "line": 2512,
+            "sha256": "3501424efbd43364e38a032d88249da8f3b1ea952252612ab87b5171efc04421"
+          },
+          "loottable_entry": {
+            "loottable_id": 3470,
+            "lootdrop_id": 23468,
+            "multiplier": 1,
+            "droplimit": 1,
+            "mindrop": 0,
+            "probability": 100
+          },
+          "loottable_evidence": {
+            "path": "data/loottable_entries/c.ndjson",
+            "line": 1530,
+            "sha256": "152aee582024b884045acbbb240a5b2d93e5bdbe95a2a8a4a88ffca825f57cd9"
+          },
+          "lootdrop_entry": {
+            "lootdrop_id": 23468,
+            "item_id": 10614,
+            "item_charges": 1,
+            "equip_item": 0,
+            "chance": 50,
+            "disabled_chance": 0,
+            "trivial_min_level": 0,
+            "trivial_max_level": 0,
+            "multiplier": 1,
+            "npc_min_level": 0,
+            "npc_max_level": 0,
+            "min_expansion": -1,
+            "max_expansion": -1,
+            "content_flags": null,
+            "content_flags_disabled": null
+          },
+          "lootdrop_evidence": {
+            "path": "data/lootdrop_entries/2.ndjson",
+            "line": 27979,
+            "sha256": "7f0205c443d32240e7d6261ec562bbb1a8a338b92acbd8c6cb181c44ce590c5b"
+          }
+        }
+      ]
+    },
+    "10622": {
+      "expected_npc_name_fragments": [
+        "Shiss"
+      ],
+      "candidate_npcs": [
+        {
+          "npc": {
+            "id": 72107,
+            "name": "Wraith_of_a_Shissir",
+            "level": 55,
+            "loottable_id": 110900
+          },
+          "npc_evidence": {
+            "path": "data/npc_types/4.ndjson",
+            "line": 3800,
+            "sha256": "9ac2123b9f7b535e35fbd4ba7147fda7ca98e8b53ed871a34120707b5d323e7c"
+          },
+          "loottable_entry": {
+            "loottable_id": 110900,
+            "lootdrop_id": 178701,
+            "multiplier": 1,
+            "droplimit": 1,
+            "mindrop": 1,
+            "probability": 100
+          },
+          "loottable_evidence": {
+            "path": "data/loottable_entries/f.ndjson",
+            "line": 828,
+            "sha256": "11300ea5867239bf56678ee1d1552f3ef3144f67fa6a3e9ec75800d065433813"
+          },
+          "lootdrop_entry": {
+            "lootdrop_id": 178701,
+            "item_id": 10622,
+            "item_charges": 1,
+            "equip_item": 0,
+            "chance": 100,
+            "disabled_chance": 0,
+            "trivial_min_level": 0,
+            "trivial_max_level": 0,
+            "multiplier": 1,
+            "npc_min_level": 0,
+            "npc_max_level": 0,
+            "min_expansion": -1,
+            "max_expansion": -1,
+            "content_flags": null,
+            "content_flags_disabled": null
+          },
+          "lootdrop_evidence": {
+            "path": "data/lootdrop_entries/e.ndjson",
+            "line": 26932,
+            "sha256": "d8b4d8b6d08501573111062ea167d96243c47922cff8da3ed6e709f3893a6977"
+          }
+        },
+        {
+          "npc": {
+            "id": 72001,
+            "name": "Wraith_of_a_Shissar",
+            "level": 55,
+            "loottable_id": 983
+          },
+          "npc_evidence": {
+            "path": "data/npc_types/1.ndjson",
+            "line": 3811,
+            "sha256": "de97a6d391f370c28d03e82aacae350df01ca54128a4ea908bd3dfc99131fd17"
+          },
+          "loottable_entry": {
+            "loottable_id": 983,
+            "lootdrop_id": 1986,
+            "multiplier": 1,
+            "droplimit": 1,
+            "mindrop": 1,
+            "probability": 100
+          },
+          "loottable_evidence": {
+            "path": "data/loottable_entries/c.ndjson",
+            "line": 3279,
+            "sha256": "a012b218109f8902cb80fc4fae9b0df77b094b4d995e3d4c84d0d76394fbc516"
+          },
+          "lootdrop_entry": {
+            "lootdrop_id": 1986,
+            "item_id": 10622,
+            "item_charges": 1,
+            "equip_item": 0,
+            "chance": 100,
+            "disabled_chance": 0,
+            "trivial_min_level": 0,
+            "trivial_max_level": 0,
+            "multiplier": 1,
+            "npc_min_level": 0,
+            "npc_max_level": 0,
+            "min_expansion": -1,
+            "max_expansion": -1,
+            "content_flags": null,
+            "content_flags_disabled": null
+          },
+          "lootdrop_evidence": {
+            "path": "data/lootdrop_entries/e.ndjson",
+            "line": 27192,
+            "sha256": "5ff51d277fad6d6c93880b0d135fdb9151645860114fa5b914b0b45d6284df61"
+          }
+        }
+      ]
+    },
+    "10623": {
+      "expected_npc_name_fragments": [
+        "Kindle"
+      ],
+      "candidate_npcs": [
+        {
+          "npc": {
+            "id": 39080,
+            "name": "the_Ghost_of_Kindle",
+            "level": 52,
+            "loottable_id": 4416
+          },
+          "npc_evidence": {
+            "path": "data/npc_types/b.ndjson",
+            "line": 2729,
+            "sha256": "18d3523abc8a182bd6191518153f8683e5e259db4d2922b8a2fd1be53a7c9883"
+          },
+          "loottable_entry": {
+            "loottable_id": 4416,
+            "lootdrop_id": 8440,
+            "multiplier": 1,
+            "droplimit": 1,
+            "mindrop": 1,
+            "probability": 100
+          },
+          "loottable_evidence": {
+            "path": "data/loottable_entries/2.ndjson",
+            "line": 1622,
+            "sha256": "d9de0a06ca088e13084b3dc18797c7b31d6815faf8cf16355a99a9ebfb58b4ff"
+          },
+          "lootdrop_entry": {
+            "lootdrop_id": 8440,
+            "item_id": 10623,
+            "item_charges": 1,
+            "equip_item": 0,
+            "chance": 100,
+            "disabled_chance": 0,
+            "trivial_min_level": 0,
+            "trivial_max_level": 0,
+            "multiplier": 1,
+            "npc_min_level": 0,
+            "npc_max_level": 0,
+            "min_expansion": -1,
+            "max_expansion": -1,
+            "content_flags": null,
+            "content_flags_disabled": null
+          },
+          "lootdrop_evidence": {
+            "path": "data/lootdrop_entries/3.ndjson",
+            "line": 29455,
+            "sha256": "1b25fccefba492b631f5f241b1ceb25247e57c83e4347d3f9403728d65f79b12"
+          }
+        }
+      ]
+    },
+    "10624": {
+      "expected_npc_name_fragments": [
+        "forsaken"
+      ],
+      "candidate_npcs": [
+        {
+          "npc": {
+            "id": 186016,
+            "name": "a_forsaken_revenant",
+            "level": 52,
+            "loottable_id": 90038
+          },
+          "npc_evidence": {
+            "path": "data/npc_types/d.ndjson",
+            "line": 832,
+            "sha256": "f0f2b4cecff6fa3963049fe0fdaf50909ddb72a7760094238bad563a4cd20eb9"
+          },
+          "loottable_entry": {
+            "loottable_id": 90038,
+            "lootdrop_id": 90069,
+            "multiplier": 1,
+            "droplimit": 1,
+            "mindrop": 0,
+            "probability": 100
+          },
+          "loottable_evidence": {
+            "path": "data/loottable_entries/9.ndjson",
+            "line": 2217,
+            "sha256": "1644bbd6eed7d604cc4883fbed25df080e333a2cca51a51c9c8dc7db1e2b0298"
+          },
+          "lootdrop_entry": {
+            "lootdrop_id": 90069,
+            "item_id": 10624,
+            "item_charges": 1,
+            "equip_item": 0,
+            "chance": 2,
+            "disabled_chance": 0,
+            "trivial_min_level": 0,
+            "trivial_max_level": 0,
+            "multiplier": 1,
+            "npc_min_level": 0,
+            "npc_max_level": 0,
+            "min_expansion": -1,
+            "max_expansion": -1,
+            "content_flags": null,
+            "content_flags_disabled": null
+          },
+          "lootdrop_evidence": {
+            "path": "data/lootdrop_entries/2.ndjson",
+            "line": 29685,
+            "sha256": "75909750dcdfcdbe1d147296fc5acaf9216ce7ac8564669bde10f5b127c3c4bf"
+          }
+        },
+        {
+          "npc": {
+            "id": 186003,
+            "name": "a_forsaken_revenant",
+            "level": 53,
+            "loottable_id": 90038
+          },
+          "npc_evidence": {
+            "path": "data/npc_types/b.ndjson",
+            "line": 877,
+            "sha256": "8d395b0de15544c7b722f5c608c910d9181e0b4d22674ec0b8bc3311fdf77cc4"
+          },
+          "loottable_entry": {
+            "loottable_id": 90038,
+            "lootdrop_id": 90069,
+            "multiplier": 1,
+            "droplimit": 1,
+            "mindrop": 0,
+            "probability": 100
+          },
+          "loottable_evidence": {
+            "path": "data/loottable_entries/9.ndjson",
+            "line": 2217,
+            "sha256": "1644bbd6eed7d604cc4883fbed25df080e333a2cca51a51c9c8dc7db1e2b0298"
+          },
+          "lootdrop_entry": {
+            "lootdrop_id": 90069,
+            "item_id": 10624,
+            "item_charges": 1,
+            "equip_item": 0,
+            "chance": 2,
+            "disabled_chance": 0,
+            "trivial_min_level": 0,
+            "trivial_max_level": 0,
+            "multiplier": 1,
+            "npc_min_level": 0,
+            "npc_max_level": 0,
+            "min_expansion": -1,
+            "max_expansion": -1,
+            "content_flags": null,
+            "content_flags_disabled": null
+          },
+          "lootdrop_evidence": {
+            "path": "data/lootdrop_entries/2.ndjson",
+            "line": 29685,
+            "sha256": "75909750dcdfcdbe1d147296fc5acaf9216ce7ac8564669bde10f5b127c3c4bf"
+          }
+        },
+        {
+          "npc": {
+            "id": 186110,
+            "name": "a_forsaken_revenant",
+            "level": 51,
+            "loottable_id": 169
+          },
+          "npc_evidence": {
+            "path": "data/npc_types/a.ndjson",
+            "line": 844,
+            "sha256": "322adb4458b752420d20f0a6ef3e5e62b1208e3e5908927ee04f9e70410723bf"
+          },
+          "loottable_entry": {
+            "loottable_id": 169,
+            "lootdrop_id": 388,
+            "multiplier": 1,
+            "droplimit": 1,
+            "mindrop": 0,
+            "probability": 100
+          },
+          "loottable_evidence": {
+            "path": "data/loottable_entries/8.ndjson",
+            "line": 1229,
+            "sha256": "c353a21fc137bd9b3524687b54152fa3e642f85aeda8b746ddf7531139147367"
+          },
+          "lootdrop_entry": {
+            "lootdrop_id": 388,
+            "item_id": 10624,
+            "item_charges": 1,
+            "equip_item": 0,
+            "chance": 3,
+            "disabled_chance": 0,
+            "trivial_min_level": 0,
+            "trivial_max_level": 0,
+            "multiplier": 1,
+            "npc_min_level": 0,
+            "npc_max_level": 0,
+            "min_expansion": -1,
+            "max_expansion": -1,
+            "content_flags": null,
+            "content_flags_disabled": null
+          },
+          "lootdrop_evidence": {
+            "path": "data/lootdrop_entries/c.ndjson",
+            "line": 28597,
+            "sha256": "59815d336247b8edf43a30285e8f0b0d710c0cf16d6b60288ac7789aa6ddc7dd"
+          }
+        },
+        {
+          "npc": {
+            "id": 186062,
+            "name": "a_forsaken_revenant",
+            "level": 49,
+            "loottable_id": 90038
+          },
+          "npc_evidence": {
+            "path": "data/npc_types/8.ndjson",
+            "line": 849,
+            "sha256": "1e7b5cb2374002ee3d0589e9ab239f58fe990390587b6c709de7685bda235331"
+          },
+          "loottable_entry": {
+            "loottable_id": 90038,
+            "lootdrop_id": 90069,
+            "multiplier": 1,
+            "droplimit": 1,
+            "mindrop": 0,
+            "probability": 100
+          },
+          "loottable_evidence": {
+            "path": "data/loottable_entries/9.ndjson",
+            "line": 2217,
+            "sha256": "1644bbd6eed7d604cc4883fbed25df080e333a2cca51a51c9c8dc7db1e2b0298"
+          },
+          "lootdrop_entry": {
+            "lootdrop_id": 90069,
+            "item_id": 10624,
+            "item_charges": 1,
+            "equip_item": 0,
+            "chance": 2,
+            "disabled_chance": 0,
+            "trivial_min_level": 0,
+            "trivial_max_level": 0,
+            "multiplier": 1,
+            "npc_min_level": 0,
+            "npc_max_level": 0,
+            "min_expansion": -1,
+            "max_expansion": -1,
+            "content_flags": null,
+            "content_flags_disabled": null
+          },
+          "lootdrop_evidence": {
+            "path": "data/lootdrop_entries/2.ndjson",
+            "line": 29685,
+            "sha256": "75909750dcdfcdbe1d147296fc5acaf9216ce7ac8564669bde10f5b127c3c4bf"
+          }
+        },
+        {
+          "npc": {
+            "id": 186087,
+            "name": "a_forsaken_revenant",
+            "level": 50,
+            "loottable_id": 169
+          },
+          "npc_evidence": {
+            "path": "data/npc_types/8.ndjson",
+            "line": 850,
+            "sha256": "6b161e13c8048ea47e77454be2d2eb17f176484c75da61a3a062620a5f0fb308"
+          },
+          "loottable_entry": {
+            "loottable_id": 169,
+            "lootdrop_id": 388,
+            "multiplier": 1,
+            "droplimit": 1,
+            "mindrop": 0,
+            "probability": 100
+          },
+          "loottable_evidence": {
+            "path": "data/loottable_entries/8.ndjson",
+            "line": 1229,
+            "sha256": "c353a21fc137bd9b3524687b54152fa3e642f85aeda8b746ddf7531139147367"
+          },
+          "lootdrop_entry": {
+            "lootdrop_id": 388,
+            "item_id": 10624,
+            "item_charges": 1,
+            "equip_item": 0,
+            "chance": 3,
+            "disabled_chance": 0,
+            "trivial_min_level": 0,
+            "trivial_max_level": 0,
+            "multiplier": 1,
+            "npc_min_level": 0,
+            "npc_max_level": 0,
+            "min_expansion": -1,
+            "max_expansion": -1,
+            "content_flags": null,
+            "content_flags_disabled": null
+          },
+          "lootdrop_evidence": {
+            "path": "data/lootdrop_entries/c.ndjson",
+            "line": 28597,
+            "sha256": "59815d336247b8edf43a30285e8f0b0d710c0cf16d6b60288ac7789aa6ddc7dd"
+          }
+        },
+        {
+          "npc": {
+            "id": 186090,
+            "name": "a_forsaken_revenant",
+            "level": 60,
+            "loottable_id": 90038
+          },
+          "npc_evidence": {
+            "path": "data/npc_types/8.ndjson",
+            "line": 851,
+            "sha256": "37b6d1b3a598d3ccd2ff0ce02ce619c3163fb0607e8c452b874f496fe5312919"
+          },
+          "loottable_entry": {
+            "loottable_id": 90038,
+            "lootdrop_id": 90069,
+            "multiplier": 1,
+            "droplimit": 1,
+            "mindrop": 0,
+            "probability": 100
+          },
+          "loottable_evidence": {
+            "path": "data/loottable_entries/9.ndjson",
+            "line": 2217,
+            "sha256": "1644bbd6eed7d604cc4883fbed25df080e333a2cca51a51c9c8dc7db1e2b0298"
+          },
+          "lootdrop_entry": {
+            "lootdrop_id": 90069,
+            "item_id": 10624,
+            "item_charges": 1,
+            "equip_item": 0,
+            "chance": 2,
+            "disabled_chance": 0,
+            "trivial_min_level": 0,
+            "trivial_max_level": 0,
+            "multiplier": 1,
+            "npc_min_level": 0,
+            "npc_max_level": 0,
+            "min_expansion": -1,
+            "max_expansion": -1,
+            "content_flags": null,
+            "content_flags_disabled": null
+          },
+          "lootdrop_evidence": {
+            "path": "data/lootdrop_entries/2.ndjson",
+            "line": 29685,
+            "sha256": "75909750dcdfcdbe1d147296fc5acaf9216ce7ac8564669bde10f5b127c3c4bf"
+          }
+        },
+        {
+          "npc": {
+            "id": 76004,
+            "name": "a_forsaken_revenant",
+            "level": 51,
+            "loottable_id": 2750004
+          },
+          "npc_evidence": {
+            "path": "data/npc_types/8.ndjson",
+            "line": 3967,
+            "sha256": "e401296f3e62d1b25249b3202a53ce22577cfaa3c33b29613c61ded3b2a5a18c"
+          },
+          "loottable_entry": {
+            "loottable_id": 2750004,
+            "lootdrop_id": 385,
+            "multiplier": 1,
+            "droplimit": 1,
+            "mindrop": 0,
+            "probability": 100
+          },
+          "loottable_evidence": {
+            "path": "data/loottable_entries/7.ndjson",
+            "line": 1408,
+            "sha256": "6af1f07c92499db5a2b0d9009a0c024489c63839775eb8d6b8b218efacc8f8c2"
+          },
+          "lootdrop_entry": {
+            "lootdrop_id": 385,
+            "item_id": 10624,
+            "item_charges": 1,
+            "equip_item": 0,
+            "chance": 20,
+            "disabled_chance": 0,
+            "trivial_min_level": 0,
+            "trivial_max_level": 0,
+            "multiplier": 1,
+            "npc_min_level": 0,
+            "npc_max_level": 0,
+            "min_expansion": -1,
+            "max_expansion": -1,
+            "content_flags": null,
+            "content_flags_disabled": null
+          },
+          "lootdrop_evidence": {
+            "path": "data/lootdrop_entries/5.ndjson",
+            "line": 28502,
+            "sha256": "899e94b7cb4c554b3e56d086cb98b0431bbd967e1436eba77f18d2a4fc866a57"
+          }
+        },
+        {
+          "npc": {
+            "id": 186074,
+            "name": "a_forsaken_revenant",
+            "level": 52,
+            "loottable_id": 169
+          },
+          "npc_evidence": {
+            "path": "data/npc_types/6.ndjson",
+            "line": 846,
+            "sha256": "c6f48d7e6aba6209b61304ea977a41f50b803ef8c32269a5fc87ff523e7fc797"
+          },
+          "loottable_entry": {
+            "loottable_id": 169,
+            "lootdrop_id": 388,
+            "multiplier": 1,
+            "droplimit": 1,
+            "mindrop": 0,
+            "probability": 100
+          },
+          "loottable_evidence": {
+            "path": "data/loottable_entries/8.ndjson",
+            "line": 1229,
+            "sha256": "c353a21fc137bd9b3524687b54152fa3e642f85aeda8b746ddf7531139147367"
+          },
+          "lootdrop_entry": {
+            "lootdrop_id": 388,
+            "item_id": 10624,
+            "item_charges": 1,
+            "equip_item": 0,
+            "chance": 3,
+            "disabled_chance": 0,
+            "trivial_min_level": 0,
+            "trivial_max_level": 0,
+            "multiplier": 1,
+            "npc_min_level": 0,
+            "npc_max_level": 0,
+            "min_expansion": -1,
+            "max_expansion": -1,
+            "content_flags": null,
+            "content_flags_disabled": null
+          },
+          "lootdrop_evidence": {
+            "path": "data/lootdrop_entries/c.ndjson",
+            "line": 28597,
+            "sha256": "59815d336247b8edf43a30285e8f0b0d710c0cf16d6b60288ac7789aa6ddc7dd"
+          }
+        },
+        {
+          "npc": {
+            "id": 186149,
+            "name": "a_forsaken_revenant",
+            "level": 53,
+            "loottable_id": 169
+          },
+          "npc_evidence": {
+            "path": "data/npc_types/5.ndjson",
+            "line": 849,
+            "sha256": "b5fba3dabfe38e95b7f212862fee58daa6197d4ced115475b088bbe49b51a7f8"
+          },
+          "loottable_entry": {
+            "loottable_id": 169,
+            "lootdrop_id": 388,
+            "multiplier": 1,
+            "droplimit": 1,
+            "mindrop": 0,
+            "probability": 100
+          },
+          "loottable_evidence": {
+            "path": "data/loottable_entries/8.ndjson",
+            "line": 1229,
+            "sha256": "c353a21fc137bd9b3524687b54152fa3e642f85aeda8b746ddf7531139147367"
+          },
+          "lootdrop_entry": {
+            "lootdrop_id": 388,
+            "item_id": 10624,
+            "item_charges": 1,
+            "equip_item": 0,
+            "chance": 3,
+            "disabled_chance": 0,
+            "trivial_min_level": 0,
+            "trivial_max_level": 0,
+            "multiplier": 1,
+            "npc_min_level": 0,
+            "npc_max_level": 0,
+            "min_expansion": -1,
+            "max_expansion": -1,
+            "content_flags": null,
+            "content_flags_disabled": null
+          },
+          "lootdrop_evidence": {
+            "path": "data/lootdrop_entries/c.ndjson",
+            "line": 28597,
+            "sha256": "59815d336247b8edf43a30285e8f0b0d710c0cf16d6b60288ac7789aa6ddc7dd"
+          }
+        },
+        {
+          "npc": {
+            "id": 186058,
+            "name": "a_forsaken_revenant",
+            "level": 54,
+            "loottable_id": 169
+          },
+          "npc_evidence": {
+            "path": "data/npc_types/4.ndjson",
+            "line": 901,
+            "sha256": "aa9f2da6cd276b0506b78232a8c4937b5dbd4a5640434818775e298e0dd07469"
+          },
+          "loottable_entry": {
+            "loottable_id": 169,
+            "lootdrop_id": 388,
+            "multiplier": 1,
+            "droplimit": 1,
+            "mindrop": 0,
+            "probability": 100
+          },
+          "loottable_evidence": {
+            "path": "data/loottable_entries/8.ndjson",
+            "line": 1229,
+            "sha256": "c353a21fc137bd9b3524687b54152fa3e642f85aeda8b746ddf7531139147367"
+          },
+          "lootdrop_entry": {
+            "lootdrop_id": 388,
+            "item_id": 10624,
+            "item_charges": 1,
+            "equip_item": 0,
+            "chance": 3,
+            "disabled_chance": 0,
+            "trivial_min_level": 0,
+            "trivial_max_level": 0,
+            "multiplier": 1,
+            "npc_min_level": 0,
+            "npc_max_level": 0,
+            "min_expansion": -1,
+            "max_expansion": -1,
+            "content_flags": null,
+            "content_flags_disabled": null
+          },
+          "lootdrop_evidence": {
+            "path": "data/lootdrop_entries/c.ndjson",
+            "line": 28597,
+            "sha256": "59815d336247b8edf43a30285e8f0b0d710c0cf16d6b60288ac7789aa6ddc7dd"
+          }
+        },
+        {
+          "npc": {
+            "id": 186146,
+            "name": "a_forsaken_revenant",
+            "level": 49,
+            "loottable_id": 169
+          },
+          "npc_evidence": {
+            "path": "data/npc_types/4.ndjson",
+            "line": 904,
+            "sha256": "6a6f668833be70dc6a0d833064a7904ce41187f5a7754b84f796ab6c9620a9ea"
+          },
+          "loottable_entry": {
+            "loottable_id": 169,
+            "lootdrop_id": 388,
+            "multiplier": 1,
+            "droplimit": 1,
+            "mindrop": 0,
+            "probability": 100
+          },
+          "loottable_evidence": {
+            "path": "data/loottable_entries/8.ndjson",
+            "line": 1229,
+            "sha256": "c353a21fc137bd9b3524687b54152fa3e642f85aeda8b746ddf7531139147367"
+          },
+          "lootdrop_entry": {
+            "lootdrop_id": 388,
+            "item_id": 10624,
+            "item_charges": 1,
+            "equip_item": 0,
+            "chance": 3,
+            "disabled_chance": 0,
+            "trivial_min_level": 0,
+            "trivial_max_level": 0,
+            "multiplier": 1,
+            "npc_min_level": 0,
+            "npc_max_level": 0,
+            "min_expansion": -1,
+            "max_expansion": -1,
+            "content_flags": null,
+            "content_flags_disabled": null
+          },
+          "lootdrop_evidence": {
+            "path": "data/lootdrop_entries/c.ndjson",
+            "line": 28597,
+            "sha256": "59815d336247b8edf43a30285e8f0b0d710c0cf16d6b60288ac7789aa6ddc7dd"
+          }
+        },
+        {
+          "npc": {
+            "id": 76005,
+            "name": "a_forsaken_revenant",
+            "level": 49,
+            "loottable_id": 2750005
+          },
+          "npc_evidence": {
+            "path": "data/npc_types/4.ndjson",
+            "line": 4046,
+            "sha256": "f09fe8dba0e97bc234ff40065a99acdab0db47f115c23454101bd59b8fb15737"
+          },
+          "loottable_entry": {
+            "loottable_id": 2750005,
+            "lootdrop_id": 385,
+            "multiplier": 1,
+            "droplimit": 1,
+            "mindrop": 0,
+            "probability": 100
+          },
+          "loottable_evidence": {
+            "path": "data/loottable_entries/6.ndjson",
+            "line": 1342,
+            "sha256": "803cd0d8728244f049c96585678aa5c0343782b13dc3d040c3dfcc04b9f39bef"
+          },
+          "lootdrop_entry": {
+            "lootdrop_id": 385,
+            "item_id": 10624,
+            "item_charges": 1,
+            "equip_item": 0,
+            "chance": 20,
+            "disabled_chance": 0,
+            "trivial_min_level": 0,
+            "trivial_max_level": 0,
+            "multiplier": 1,
+            "npc_min_level": 0,
+            "npc_max_level": 0,
+            "min_expansion": -1,
+            "max_expansion": -1,
+            "content_flags": null,
+            "content_flags_disabled": null
+          },
+          "lootdrop_evidence": {
+            "path": "data/lootdrop_entries/5.ndjson",
+            "line": 28502,
+            "sha256": "899e94b7cb4c554b3e56d086cb98b0431bbd967e1436eba77f18d2a4fc866a57"
+          }
+        },
+        {
+          "npc": {
+            "id": 186000,
+            "name": "a_forsaken_revenant",
+            "level": 55,
+            "loottable_id": 169
+          },
+          "npc_evidence": {
+            "path": "data/npc_types/3.ndjson",
+            "line": 840,
+            "sha256": "692c8fcfa0254e3e5b8cea4dd1e6ea42a36b9cf7135f3cd127d32688a7fbac7c"
+          },
+          "loottable_entry": {
+            "loottable_id": 169,
+            "lootdrop_id": 388,
+            "multiplier": 1,
+            "droplimit": 1,
+            "mindrop": 0,
+            "probability": 100
+          },
+          "loottable_evidence": {
+            "path": "data/loottable_entries/8.ndjson",
+            "line": 1229,
+            "sha256": "c353a21fc137bd9b3524687b54152fa3e642f85aeda8b746ddf7531139147367"
+          },
+          "lootdrop_entry": {
+            "lootdrop_id": 388,
+            "item_id": 10624,
+            "item_charges": 1,
+            "equip_item": 0,
+            "chance": 3,
+            "disabled_chance": 0,
+            "trivial_min_level": 0,
+            "trivial_max_level": 0,
+            "multiplier": 1,
+            "npc_min_level": 0,
+            "npc_max_level": 0,
+            "min_expansion": -1,
+            "max_expansion": -1,
+            "content_flags": null,
+            "content_flags_disabled": null
+          },
+          "lootdrop_evidence": {
+            "path": "data/lootdrop_entries/c.ndjson",
+            "line": 28597,
+            "sha256": "59815d336247b8edf43a30285e8f0b0d710c0cf16d6b60288ac7789aa6ddc7dd"
+          }
+        },
+        {
+          "npc": {
+            "id": 186045,
+            "name": "a_forsaken_revenant",
+            "level": 50,
+            "loottable_id": 90038
+          },
+          "npc_evidence": {
+            "path": "data/npc_types/2.ndjson",
+            "line": 849,
+            "sha256": "8317264a90033dd588df78f20a72d54e3da3172e27251c224fbb6ad58ac4fd5d"
+          },
+          "loottable_entry": {
+            "loottable_id": 90038,
+            "lootdrop_id": 90069,
+            "multiplier": 1,
+            "droplimit": 1,
+            "mindrop": 0,
+            "probability": 100
+          },
+          "loottable_evidence": {
+            "path": "data/loottable_entries/9.ndjson",
+            "line": 2217,
+            "sha256": "1644bbd6eed7d604cc4883fbed25df080e333a2cca51a51c9c8dc7db1e2b0298"
+          },
+          "lootdrop_entry": {
+            "lootdrop_id": 90069,
+            "item_id": 10624,
+            "item_charges": 1,
+            "equip_item": 0,
+            "chance": 2,
+            "disabled_chance": 0,
+            "trivial_min_level": 0,
+            "trivial_max_level": 0,
+            "multiplier": 1,
+            "npc_min_level": 0,
+            "npc_max_level": 0,
+            "min_expansion": -1,
+            "max_expansion": -1,
+            "content_flags": null,
+            "content_flags_disabled": null
+          },
+          "lootdrop_evidence": {
+            "path": "data/lootdrop_entries/2.ndjson",
+            "line": 29685,
+            "sha256": "75909750dcdfcdbe1d147296fc5acaf9216ce7ac8564669bde10f5b127c3c4bf"
+          }
+        },
+        {
+          "npc": {
+            "id": 186134,
+            "name": "a_forsaken_revenant",
+            "level": 51,
+            "loottable_id": 90038
+          },
+          "npc_evidence": {
+            "path": "data/npc_types/2.ndjson",
+            "line": 855,
+            "sha256": "ce326af0bf53683d7bf951ee6e8c197a053caf0a4332beebb584b84e3d784ef7"
+          },
+          "loottable_entry": {
+            "loottable_id": 90038,
+            "lootdrop_id": 90069,
+            "multiplier": 1,
+            "droplimit": 1,
+            "mindrop": 0,
+            "probability": 100
+          },
+          "loottable_evidence": {
+            "path": "data/loottable_entries/9.ndjson",
+            "line": 2217,
+            "sha256": "1644bbd6eed7d604cc4883fbed25df080e333a2cca51a51c9c8dc7db1e2b0298"
+          },
+          "lootdrop_entry": {
+            "lootdrop_id": 90069,
+            "item_id": 10624,
+            "item_charges": 1,
+            "equip_item": 0,
+            "chance": 2,
+            "disabled_chance": 0,
+            "trivial_min_level": 0,
+            "trivial_max_level": 0,
+            "multiplier": 1,
+            "npc_min_level": 0,
+            "npc_max_level": 0,
+            "min_expansion": -1,
+            "max_expansion": -1,
+            "content_flags": null,
+            "content_flags_disabled": null
+          },
+          "lootdrop_evidence": {
+            "path": "data/lootdrop_entries/2.ndjson",
+            "line": 29685,
+            "sha256": "75909750dcdfcdbe1d147296fc5acaf9216ce7ac8564669bde10f5b127c3c4bf"
+          }
+        }
+      ]
+    },
+    "10625": {
+      "expected_npc_name_fragments": [
+        "Tangrin"
+      ],
+      "candidate_npcs": [
+        {
+          "npc": {
+            "id": 78070,
+            "name": "The_Tangrin",
+            "level": 54,
+            "loottable_id": 4417
+          },
+          "npc_evidence": {
+            "path": "data/npc_types/c.ndjson",
+            "line": 3969,
+            "sha256": "44625846f6ef9daae74c0104aca47041c76ff03c185dd1d1131c27f1f7e9a7a6"
+          },
+          "loottable_entry": {
+            "loottable_id": 4417,
+            "lootdrop_id": 8443,
+            "multiplier": 1,
+            "droplimit": 1,
+            "mindrop": 1,
+            "probability": 100
+          },
+          "loottable_evidence": {
+            "path": "data/loottable_entries/c.ndjson",
+            "line": 1655,
+            "sha256": "f04c28b8e4f8f6c1a0675d49622863e5f10cc20c19bf4fddc393eded638d8cca"
+          },
+          "lootdrop_entry": {
+            "lootdrop_id": 8443,
+            "item_id": 10625,
+            "item_charges": 1,
+            "equip_item": 0,
+            "chance": 100,
+            "disabled_chance": 0,
+            "trivial_min_level": 0,
+            "trivial_max_level": 0,
+            "multiplier": 1,
+            "npc_min_level": 0,
+            "npc_max_level": 0,
+            "min_expansion": -1,
+            "max_expansion": -1,
+            "content_flags": null,
+            "content_flags_disabled": null
+          },
+          "lootdrop_evidence": {
+            "path": "data/lootdrop_entries/8.ndjson",
+            "line": 29549,
+            "sha256": "4510d22116018bd0b6590b16a637cef752e712b8985f16aa7ddac9c2fc0ec176"
+          }
+        }
+      ]
+    }
+  }
+}

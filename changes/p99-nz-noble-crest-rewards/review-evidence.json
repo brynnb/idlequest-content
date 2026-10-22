@@ -1,0 +1,26 @@
+{
+  "titles": [
+    "Noble Hunters"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "partial",
+  "match_status": "partial",
+  "local_quest_keys": [
+    "oggok/Guntrik"
+  ],
+  "proposal": "changes/p99-nz-noble-crest-rewards.json",
+  "notes": [
+    "Include both documented bronze two-handed weapons in the Noble Crest reward pool.",
+    "Exported5037BronzeTwoHandedBattleAxe and6021BronzeTwoHandedHammer are named byP99but absent pool. Retain existing fourbronzeweapons and13355CrudeStein because list may not exhaustive; exact weights unknown. This does not implement missing parchment/twoHumanScalp continuation; correct item rows absent, no fabricatedIDs. Guildnote branch unchanged."
+  ],
+  "verification": {
+    "source": "Cached P99 and effective Lua reviewed; exact complete row preimages and source hashes recorded.",
+    "syntax": "pending",
+    "runtime": "Isolated mock regression pending; full game runtime unavailable.",
+    "ui": "not_run",
+    "connected_chain": "not_run"
+  },
+  "unresolved": [
+    "Ordinary source drops/spawns, recipe live behavior and rendered complete quest path not verified."
+  ]
+}

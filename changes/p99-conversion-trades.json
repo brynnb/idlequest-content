@@ -1,0 +1,300 @@
+{
+  "format": 1,
+  "id": "p99-conversion-trades",
+  "summary": "Convert eight bounded P99-era flavor/refund handlers, preserve exact actor identities, exclude unsupported and later reward branches, and retain complete 16-source closure evidence. These are not eight completed progression quests.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Joshel_the_Large?action=raw",
+      "note": "Cached P99 evidence reference/p99-wiki/npc-pages/joshel-the-large-ac0ca16fb1.wiki; SHA256 e9af399403612863c83d28728be5f77ab80a1fcd6bf43e074b9e2524bd14b4f0; retrieval 2026-08-12T19:37:46.612Z; revision None"
+    },
+    {
+      "url": "https://wiki.project1999.com/Crest_of_the_Fauns_Quest?action=raw",
+      "note": "Cached P99 evidence reference/p99-wiki/raw-pages/crest-of-the-fauns-quest-4b7349f7fb.wiki; SHA256 cbce9c579d51a4637ad233b39792ac45279610e2cdb2556f53b1bdfadbfc72e5; retrieval 2026-07-17T23:11:41.326Z; revision None"
+    },
+    {
+      "url": "https://wiki.project1999.com/Hukulk?action=raw",
+      "note": "Cached P99 evidence reference/p99-wiki/npc-pages/hukulk-208c3c98bd.wiki; SHA256 c82c9b4ba4f834bfacaae5e1b40f4eaf43d2191c95087833aaf2bcc007072229; retrieval 2026-08-12T19:27:06.964Z; revision None"
+    },
+    {
+      "url": "https://wiki.project1999.com/Talk%3AFroglok_Skin_Mask_Quest",
+      "note": "Wiki discussion describes troll quest relocation to Neriak with Guktan invasion, but gives an imprecise date and does not establish these exact generic tome-service script versions. Retain uncertainty for exact Neriak identity; do not copy over the separate Grobb quests."
+    },
+    {
+      "url": "https://wiki.project1999.com/Ranjor?action=raw",
+      "note": "Cached P99 evidence reference/p99-wiki/npc-pages/ranjor-5e4b8af666.wiki; SHA256 4f32a6a515d222b7f6a6c6939f2509ffa82698f12c6b641bc80eaf2fe037ccf0; retrieval 2026-08-12T20:33:33.133Z; revision None"
+    },
+    {
+      "url": "https://wiki.project1999.com/Grudash_the_Baker?action=raw",
+      "note": "Cached P99 evidence reference/p99-wiki/npc-pages/grudash-the-baker-8b7f56609c.wiki; SHA256 14903ee2f1f5391a8a32877e5e0da624a9c2f6309eb34967857c62aa9497e259; retrieval 2026-08-12T19:01:10.241Z; revision None"
+    },
+    {
+      "url": "https://wiki.project1999.com/Boysenberry_Pie_Quest?action=raw",
+      "note": "Cached P99 evidence reference/p99-wiki/raw-pages/boysenberry-pie-quest-753a2eb8eb.wiki; SHA256 0533e4c4ece5121602a7c501274a8394e4d2f1ca8760c65bd1126ab9029e5998; retrieval 2026-07-17T23:08:52.192Z; revision None"
+    },
+    {
+      "url": "https://wiki.project1999.com/Ruru_the_Cook?action=raw",
+      "note": "Cached P99 evidence reference/p99-wiki/npc-pages/ruru-the-cook-0e232d729a.wiki; SHA256 a76df290aaab97bcb4ac5a3c2b9b151249a9d39a1397ae0bfff1ef91e8475ff2; retrieval 2026-08-12T20:40:54.326Z; revision None"
+    },
+    {
+      "url": "https://wiki.project1999.com/Guard_Dagur?action=raw",
+      "note": "Cached P99 evidence reference/p99-wiki/npc-pages/guard-dagur-693776e14b.wiki; SHA256 da0c93d03c2f92265e44e0afb19901bf3a7a70b715ad04ce9674a7070f0cae9c; retrieval 2026-08-12T19:04:17.279Z; revision None"
+    },
+    {
+      "url": "https://wiki.project1999.com/Meg_Tucter?action=raw",
+      "note": "Cached P99 evidence reference/p99-wiki/npc-pages/meg-tucter-86b930b4f1.wiki; SHA256 2f786c725bd25eada848948882c74874cbc5042e7c094a44288d2ba45fcdbef8; retrieval 2026-08-12T20:07:01.328Z; revision None"
+    },
+    {
+      "url": "https://wiki.project1999.com/Coldain_Prayer_Shawl_Quests?action=raw",
+      "note": "Cached P99 evidence reference/p99-wiki/raw-pages/coldain-prayer-shawl-quests-0117371b90.wiki; SHA256 1b96e22c683adcc22886266e556b2a0d74c7b68163edbea74b4b9e41d7bbd4c0; retrieval 2026-07-17T23:11:11.547Z; revision None"
+    },
+    {
+      "url": "https://wiki.project1999.com/Petcas_Coldbeard?action=raw",
+      "note": "Cached P99 evidence reference/p99-wiki/npc-pages/petcas-coldbeard-3c5b6d5326.wiki; SHA256 3dee68e0c433785a7caead05ce05e7f93640a14ca50980075c0755bee71cb4c8; retrieval 2026-08-12T20:26:02.591Z; revision None"
+    },
+    {
+      "url": "https://wiki.project1999.com/Souvenir_Mugs?action=raw",
+      "note": "Cached P99 evidence reference/p99-wiki/raw-pages/souvenir-mugs-366e530108.wiki; SHA256 9fa8a7d1454b893b0f957578491f4245204a320cc9ca4aaf0fce68a70578384a; retrieval 2026-07-17T23:33:51.289Z; revision None"
+    },
+    {
+      "url": "https://www.eqprogression.com/warrior-1-5-epic-pre-quest/",
+      "note": "Warrior epic 1.5 prequest step 10 identifies Petcas Special Beans used for Coldain Coffee. Epic 1.5 is later than Classic/Kunark/Velious; this supports excluding the brew offer, not importing its modern payment denomination."
+    },
+    {
+      "url": "https://wiki.project1999.com/Loremaster_Solstrin?action=raw",
+      "note": "Cached P99 evidence reference/p99-wiki/npc-pages/loremaster-solstrin-843315dad7.wiki; SHA256 17ba9c409ad3e017385f3056049034cbaf2907e65d3429367e805476228899ee; retrieval 2026-08-12T20:00:45.096Z; revision None"
+    },
+    {
+      "url": "https://everquest.allakhazam.com/db/quest.html?quest=2634",
+      "note": "Reactivate the Portals explicitly tagged Lost Dungeons of Norrath; entered August 29, 2003. Exact odd-looking-spider note hand-in starts Stiggles clockwork/gnome chain. This is positive later-era identification, not an inference from missing wiki coverage or item numbers."
+    },
+    {
+      "url": "https://mboards.eqtraders.com/eq/forum/tradeskills/general-trade-skill-discussion/12170-patch-message-nov-5-2003",
+      "note": "Contemporaneous November 5, 2003 patch-note reproduction explicitly announces Verrell red-to-green dragon scale conversion."
+    },
+    {
+      "url": "https://eqarchives.com/patch/view/2003-11-05-1",
+      "note": "Independent archive of the November 5, 2003 patch text corroborates the exact named scale-conversion addition."
+    },
+    {
+      "url": "https://www.project1999.com/forums/showthread.php?t=232503",
+      "note": "March 22, 2016 P99 player bug report identifies missing Torm and only 2002+ quest citations; replies describe post-revamp and not-era-appropriate content. These are community accounts, not a quoted staff ruling."
+    },
+    {
+      "url": "https://www.project1999.com/forums/showthread.php?t=317127",
+      "note": "January 2017 posts 4/6/10 discuss Mercutius Draconic instruments and distinguish post-Luclin Draconic/Ancients from late-Velious Garath and Essence Lens. Community historical provenance, not a staff ruling."
+    },
+    {
+      "url": "https://everquest.allakhazam.com/db/quest.html?mid=110702696178364&quest=3031",
+      "note": "Parent reviewer verified Welnik's Picks and Ore is explicitly tagged Planes of Power and entered 2005, including exact Numden four-pick exchange. This worker re-open returned cache miss; parent verification retained as provenance rather than falsely reporting independent fetch success."
+    },
+    {
+      "url": "https://www.project1999.com/forums/showthread.php?t=301249",
+      "note": "June 25, 2018 first-hand P99 bug report says Fergus initial hail is working and reproduces the same carpentry greeting. Additional claimed follow-ups are not introduced by this bounded source conversion."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 15719,
+        "zone": "iceclad",
+        "name": "Joshel_the_Large",
+        "lua_content": null,
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 15719,
+        "zone": "iceclad",
+        "name": "Joshel_the_Large",
+        "lua_content": "-- Converted from sources/projecteq/iceclad/Joshel_the_Large.pl\n-- Original Perl SHA256: 45476e83a8d662a34ad666c00b83c06191d3c532d2056698dc9857122aa51a28\n-- Review: changes/p99-conversion-trades/closure-review.json\n-- Partial: documented P99 hail only; no verified P99 authority for bandana 60333.\n-- The later/unverified Icebreaker reward branch is not activated or replaced with a guessed reward.\n\nfunction event_say(e)\n    if e.message:findi(\"hail\") then\n        e.self:Say(\"That's right. Large, cause that's what I be. If'n ya don't like it, or even if ya do, ya best get to the dock on the other side o' this island. Ya never know when Icebreaker is gonna stop by again and ye not wantin' ta miss it.\")\n    end\nend\n\nfunction event_trade(e)\n    local item_lib = require(\"items\")\n    item_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 12196,
+        "zone": "thurgadina",
+        "name": "Fergus_Sawdust",
+        "lua_content": null,
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 12196,
+        "zone": "thurgadina",
+        "name": "Fergus_Sawdust",
+        "lua_content": "-- Converted from sources/projecteq/thurgadina/Fergus_Sawdust.pl\n-- Original Perl SHA256: 0a12189d421dc1c829045d7012c6e22fe3eae4c54bf5592bcd55bb270b18ce99\n-- Review: changes/p99-conversion-trades/closure-review.json\n-- Full bounded source conversion: hail and return-only trade.\n-- P99 forum t=301249 reports this exact hail working; no guessed follow-up quests.\n\nfunction event_say(e)\n    if e.message:findi(\"hail\") then\n        e.self:Say(\"Can I help you with something? If you want anything to do with carpentry, somethin' I grew up with and was raised on, I can't help ya. Nope.\")\n    end\nend\n\nfunction event_trade(e)\n    local item_lib = require(\"items\")\n    item_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 17684,
+        "zone": "thurgadina",
+        "name": "Guard_Dagur",
+        "lua_content": null,
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 17684,
+        "zone": "thurgadina",
+        "name": "Guard_Dagur",
+        "lua_content": "-- Converted from sources/projecteq/thurgadina/Guard_Dagur.pl\n-- Original Perl SHA256: fa9b923c387a88c33ee212857ac2fe2b8e38d15cc0a4cd5dd1d3c71bbc450464\n-- Review: changes/p99-conversion-trades/closure-review.json\n-- Full source conversion with a boolean presence check, not Perl defined(false).\n-- Guard Baldvin is exact NPC 115132 and remains the speaker of his own line.\n-- Read-only lookup only; no spawn or actor identity changes.\n\nfunction event_say(e)\n    if e.message:findi(\"hail\") then\n        e.self:Say(\"Greetings and welcome to Thurgadin, \" .. e.other:GetCleanName() .. \". Ye best watch yer step on the bridge there, it can be a bit slippery.\")\n        local entities = eq.get_entity_list()\n        if entities:IsMobSpawnedByNpcTypeID(115132) then\n            local baldvin = entities:GetMobByNpcTypeID(115132)\n            if baldvin then\n                baldvin:Say(\"Aye, we wouldn't want ye fallin into the pit now would we.\")\n            end\n        end\n    end\nend\n\nfunction event_trade(e)\n    local item_lib = require(\"items\")\n    item_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 14886,
+        "zone": "thurgadina",
+        "name": "Meg_Tucter",
+        "lua_content": null,
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 14886,
+        "zone": "thurgadina",
+        "name": "Meg_Tucter",
+        "lua_content": "-- Converted from sources/projecteq/thurgadina/Meg_Tucter.pl\n-- Original Perl SHA256: 0e11fa8e629a53cedcdd13802f65107dece1782986f083b0f7912e63236c9ff4\n-- Review: changes/p99-conversion-trades/closure-review.json\n-- Partial: geonid lore and return-only trade.\n-- Etching Tools 8893 and their eighth-Shawl offer are positively outside the P99 seven-Shawl cutoff.\n\nfunction event_say(e)\n    if e.message:findi(\"hail\") then\n        e.self:Say(\"The gems I carry were actually collected by geonids, a race of rock and gem people that communicate with their minds alone. If'n ye haven't had the chance to see one yet I suggest ye journey to the Wakenin' Lands; they've reportedly got a colony somewhere in that area.\")\n    end\nend\n\nfunction event_trade(e)\n    local item_lib = require(\"items\")\n    item_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 18391,
+        "zone": "thurgadinb",
+        "name": "Loremaster_Solstrin",
+        "lua_content": null,
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 18391,
+        "zone": "thurgadinb",
+        "name": "Loremaster_Solstrin",
+        "lua_content": "-- Converted from sources/projecteq/thurgadinb/Loremaster_Solstrin.pl\n-- Original Perl SHA256: 4978c1f261eaacece138378db994f21899328e257ac741ba4db0a8289b771b2d\n-- Review: changes/p99-conversion-trades/closure-review.json\n-- Partial: P99 Hall of Ancestors lore; also recognize documented \"I am interested\".\n-- No eighth-Shawl orders 8896, books 18610/18611, approved shawl 8895 or issue kit 17651.\n-- Return offered 1199/8895/8896 unchanged instead of consuming unsupported later hand-ins.\n\nfunction event_say(e)\n    if e.message:findi(\"hail\") then\n        e.self:Emote(\"bows before you and says, 'Greetings to you as well, \" .. e.other:GetCleanName() .. \". I have recently heard many tales of your people and their glory. I am honored to welcome you to the Hall of Ancestors. Here our people come to pay tribute to the bravest and wisest of our kin who have passed from this life into Brell's holy domain. If you are interested I'd be happy to tell you a little bit about the heroes buried here.\")\n    elseif e.message:findi(\"interested\") or e.message:findi(\"what hero\") then\n        e.self:Emote(\"smiles at you, obviously pleased by your interest.\")\n        e.self:Say(\"This hall contains the bodies of Dain Frostreavers the I, II, and III as well as his grace Grand Historian Nicmar. There is also an empty bier in the back awaiting the next hero of our people. But the most sacred tomb of all lies right behind me here.\")\n    elseif e.message:findi(\"sacred tomb\") then\n        e.self:Say(\"In this block of ice lie the sole remnants of our great father, leader, and founder, Colin Dain. While leading our people to the safety of the mountains following the destruction of our beloved Froststone. Colin came to a grim realization. He knew that there was no way our people could outrun the giants and safely get away. And so he took thirty volunteers and led them in a suicide ambush to halt the giants' chase while the rest of our people got away. Without his sacrifice, the Coldain might very well have been wiped out that day. Once we were safe, scouts were dispatched to the battle with the hope of finding survivors. Amidst the field of bodies they found this crown, axe, and breastplate which belonged to our beloved leader. Of Colin's actual body, no remnant was ever found.\")\n    end\nend\n\nfunction event_trade(e)\n    local item_lib = require(\"items\")\n    item_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 16525,
+        "zone": "skyshrine",
+        "name": "Grudash_the_Baker",
+        "lua_content": null,
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 16525,
+        "zone": "skyshrine",
+        "name": "Grudash_the_Baker",
+        "lua_content": "-- Converted from sources/projecteq/skyshrine/Grudash_the_Baker.pl\n-- Original Perl SHA256: 8a75fe99a53d8054f68a6bb2d93e891c7fa650b6c9fbe308bdcfbb93fee40b27\n-- Review: changes/p99-conversion-trades/closure-review.json\n-- Partial ambient/refund-only conversion, not an implemented Boysenberry Pie quest.\n-- P99 cache says the quest was never implemented and pie references were removed.\n-- Omit both pie say branches and signal 1/3 pie responses. Preserve only non-pie closing signal 2.\n-- Perl signalwith wait_ms and Lua eq.signal delay are milliseconds: preserve the upstream 1 ms, not 1000 ms.\n\nfunction event_signal(e)\n    if e.signal == 2 then\n        e.self:Say(\"Please ignore my friend Ruru here. He is a bit delusional.\")\n        eq.signal(114496, 3, 1)\n    end\nend\n\nfunction event_trade(e)\n    local item_lib = require(\"items\")\n    item_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 13420,
+        "zone": "skyshrine",
+        "name": "Ruru_the_Cook",
+        "lua_content": null,
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 13420,
+        "zone": "skyshrine",
+        "name": "Ruru_the_Cook",
+        "lua_content": "-- Converted from sources/projecteq/skyshrine/Ruru_the_Cook.pl\n-- Original Perl SHA256: 645a762431e7217354837deb89f86a354903f73467f619911fe3c71d826701cd\n-- Review: changes/p99-conversion-trades/closure-review.json\n-- Partial: standalone cooking hail and non-pie reaction signals 3/4/5; return-only trade.\n-- Do not start Grudash's removed pie taunt from hail or continue the removed pie argument via signals 1/2.\n-- No pie, other reward, faction change, XP, or quest progression is introduced.\n\nfunction event_say(e)\n    if e.message:findi(\"hail\") then\n        e.self:Say(\"Hey there stranger, pleased to meet you. I'm Ruru, I do the cooking around here. I'm the best cook around these parts. So, if you get hungry, you'd best be making sure you're coming to see me.\")\n    end\nend\n\nfunction event_signal(e)\n    if e.signal == 3 then\n        e.self:Say(\"Bah!\")\n    elseif e.signal == 4 then\n        e.self:Emote(\"grumbles, 'Bah, this still doesn't settle anything Grudash. This stranger obviously has no taste for fine cuisine.'\")\n    elseif e.signal == 5 then\n        e.self:Emote(\"laughs, 'Don't get me started. You know that my cuisine Is prefered over yours two to one.'\")\n    end\nend\n\nfunction event_trade(e)\n    local item_lib = require(\"items\")\n    item_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 14963,
+        "zone": "thurgadina",
+        "name": "Petcas_Coldbeard",
+        "lua_content": null,
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 14963,
+        "zone": "thurgadina",
+        "name": "Petcas_Coldbeard",
+        "lua_content": "-- Converted from sources/projecteq/thurgadina/Petcas_Coldbeard.pl\n-- Original Perl SHA256: 24b7007971fb26ec3faf5d1e0e3fe3c812571e26c50957f9ed7ce1e90a1e7ab8\n-- Review: changes/p99-conversion-trades/closure-review.json\n-- Partial: bounded Icy Mug greeting and Ronodun signal responses; refunds all trades.\n-- Special Beans 60290 belongs to Warrior epic 1.5 prequest and is excluded.\n-- P99 Souvenir Mugs names Adia, not Petcas, for the 5-gold stein 30145; no duplicate source is invented.\n-- Ronodun 115019 supplies external initiation; this script does not spawn or drive that actor.\n\nfunction event_say(e)\n    if e.message:findi(\"hail\") then\n        e.self:Say(\"Hail to ye as well offlander. I bid you welcome to the Icy Mug, one o' the finest establishments for a drink in Thurgadin.\")\n    end\nend\n\nfunction event_signal(e)\n    if e.signal == 1 then\n        e.self:Say(\"What's the rush there, youngster?\")\n        eq.signal(115019, 1)\n    elseif e.signal == 2 then\n        e.self:Say(\"That's not good, the Grand Historian's mighty protective of his daughter. What he do after he caught ya?\")\n        eq.signal(115019, 2)\n    elseif e.signal == 3 then\n        eq.signal(115019, 3)\n    elseif e.signal == 4 then\n        e.self:Say(\"Well, coulda been worse. A month's worth of sermons is a far sight better than a trip to the bottom of the Dain's well.\")\n        eq.signal(115019, 4)\n    elseif e.signal == 5 then\n        e.self:Say(\"Here ya go, Ronodun, on the house this time. Drink fast, don't need the Grand Historian to come lookin' fer ya...\")\n        eq.signal(115019, 5)\n    elseif e.signal == 6 then\n        e.self:Say(\"My pleasure, son. You just remember to keep me in all those prayers you'll be sayin this month. Hahhahah!\")\n    end\nend\n\nfunction event_trade(e)\n    local item_lib = require(\"items\")\n    item_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/iceclad/Joshel_the_Large.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversion-trades/iceclad--Joshel_the_Large.lua",
+      "afterSha256": "3849a025cd39a1f0b27df64a0a9de9f32ca751f6a7cf9b0a7ebfeb3bb31b0f58"
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Fergus_Sawdust.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversion-trades/thurgadina--Fergus_Sawdust.lua",
+      "afterSha256": "5075b3734e21bf981a5560956c4da00f57b2f25a508e78ada152137a03b12799"
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Guard_Dagur.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversion-trades/thurgadina--Guard_Dagur.lua",
+      "afterSha256": "1f947c808c0cf9a9795c9e373736a267da46e6d17097a6b9d5fed40369b99e51"
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Meg_Tucter.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversion-trades/thurgadina--Meg_Tucter.lua",
+      "afterSha256": "3671c443f681d69790c7421942d0e9a8caa464125f2dd130ee56ee335eccaf38"
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadinb/Loremaster_Solstrin.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversion-trades/thurgadinb--Loremaster_Solstrin.lua",
+      "afterSha256": "b6f91d4aa248f77fbea72e8214a22c1e7987e44cc58baa53f86da365890f0000"
+    },
+    {
+      "target": "maintained/lua/converted-perl/skyshrine/Grudash_the_Baker.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversion-trades/skyshrine--Grudash_the_Baker.lua",
+      "afterSha256": "75ce46275529595b38e83580af8c2a2780ddb370ab167d8f47a169856576dace"
+    },
+    {
+      "target": "maintained/lua/converted-perl/skyshrine/Ruru_the_Cook.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversion-trades/skyshrine--Ruru_the_Cook.lua",
+      "afterSha256": "f7fc4f3d5426e878cd36c1fc0f5e582ed7d1bfe9db9cd38bdad78be87bf19e9b"
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Petcas_Coldbeard.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversion-trades/thurgadina--Petcas_Coldbeard.lua",
+      "afterSha256": "74b6e7222ec5975bfbb7151b6370bdefdfe58310b4feedbe3bff834b4822f24e"
+    }
+  ]
+}

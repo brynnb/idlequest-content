@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-22",
+  "scope": "Global audit artifacts outside the three separately reviewed ambient, world, and era-identity conversion packages. The automated publication gate scans all authored P99 artifacts, including those packages.",
+  "baselinePolicy": "Existing public baseline files are unchanged. Public baseline source and documents remain valid snapshot evidence.",
+  "sanitation": {
+    "artifactsChangedOrRemoved": 42,
+    "artifactCountsByCategory": {
+      "current evidence hash rebound": 4,
+      "generated ledger digest refreshed": 1,
+      "minimal compatibility conclusions": 1,
+      "private document details minimized": 7,
+      "private document excerpt removed": 1,
+      "private registry rows removed": 2,
+      "private source metadata minimized": 28,
+      "public checkout tests": 1,
+      "public checkout tooling": 4,
+      "public compatibility summaries": 1,
+      "raw private code removed": 1,
+      "raw private source dependency removed": 2,
+      "raw private source removed": 1
+    },
+    "rawSourceFilesRemoved": 1,
+    "rawPrivateCodeSnippetObservationsRemoved": 2,
+    "privateDocumentExcerptSectionsRemoved": 2,
+    "privateRegistryDefinitionInstancesRemoved": 128
+  },
+  "retainedEvidence": "Only bounded compatibility conclusions needed to explain content limitations are retained. Private source bodies, registry definitions, private document excerpts, repository links and unnecessary private revision metadata are omitted.",
+  "publicReproduction": "The inventory and content-side recipe checks run from this checkout. Downstream runtime conclusions are explicitly attested summaries, not independently reproducible public-source proof or live playability verification.",
+  "historicalVerification": "Historical test receipts and frozen source/assignment preimage hashes are retained rather than rewritten to claim that different bytes were tested. Where privacy edits change an artifact, an old receipt does not certify its current bytes. A fresh final validation and publication manifest must bind the final sanitized checkout.",
+  "verificationCommands": [
+    "node tools/p99-public-safety.mjs .",
+    "node --test tools/p99-public-safety.test.mjs tools/p99-container-compatibility.test.mjs changes/p99-audit/inventory.test.mjs"
+  ],
+  "publicationLimits": [
+    "Do not include private backup archives or external evidence storage in the public package.",
+    "The publication gate rejects embedded archives and symlinks for separate review.",
+    "Run the gate again after final generation or receipt edits. Pattern checks and normalized source-overlap comparison do not prove absence of arbitrary confidential paraphrases."
+  ],
+  "verificationResult": {
+    "publicCheckoutTestsPassed": 7,
+    "proposalSourceBindingsChecked": 799,
+    "proposalSourceBindingFailures": 0,
+    "historicalReceiptHashPolicy": "Current artifact references were refreshed only for the trades replacement summary, Ranger current decision summary, and support review links to the sanitized named dispositions. Historical verification receipts, source digests and assignment preimages were retained. The generated audit ledger was rebuilt from sanitized inputs.",
+    "pendingRevalidation": "Support review artifact links were refreshed after the listed seven-test sanitation pass. Fresh final validation must certify these current bytes."
+  }
+}

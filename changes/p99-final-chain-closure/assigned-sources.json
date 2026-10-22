@@ -1,0 +1,318 @@
+{
+  "createdAt": "2026-10-22T06:53:52.726Z",
+  "proposalCount": 348,
+  "records": [
+    {
+      "key": "rathemtn/Rambling_Sphinx_Spiritservant",
+      "row": {
+        "id": 15048,
+        "zone": "rathemtn",
+        "name": "Rambling_Sphinx_Spiritservant",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: rathemtn/Rambling_Sphinx_Spiritservant.pl\n\nfunction event_spawn(e)\n\te.self:Emote(\"has a dark glow in its eye as it rushes toward you.\")\nend\n\nfunction event_death_complete(e)\n\te.self:Say(\"babbles incoherently as the glow in its eyes is extinguished\")\n\teq.spawn2(50230, 0, 0, -3241, 3550, 39, 1224)\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "sha256": "bda83cdba9f31ee24af85d4b97b5c75077acf6941d66200e8ea84badc51401a4",
+      "owners": []
+    },
+    {
+      "key": "cazicthule/#Avatar_of_Fear",
+      "row": {
+        "id": 19751,
+        "zone": "cazicthule",
+        "name": "#Avatar_of_Fear",
+        "lua_content": "-- huffdaddy re-vamp\n\nlocal AMYGDALAN_KNIGHT_TYPE = 48248;\nlocal GORGON_TYPE = 48246;\nlocal SHIVERBACK_TYPE = 48247;\nlocal SPINECHILLER_TYPE = 48245;\nlocal TENTACLE_TYPE = 48252;\nlocal wave = 0;\n\nfunction event_spawn(e)\n    wave = 0;\n    eq.zone_emote(MT.White,\"Avatar of Fear shouts, 'Minions of fear hear me now! The temple of the great Cazic Thule has been defiled. I summon you to assist me in its cleansing!\");\n    e.self:SpellFinished(2128, e.self); -- Avatar of Fear\nend\n\nfunction event_waypoint_arrive(e)\n\n    if (e.wp == 5) then\n        wave = wave +1;\n            if wave == 5 then\n                eq.zone_emote(MT.White,\"Avatar of Fear shouts, 'In the name of the fearful one, I call forth from the abyss... DREAD!\");\n                eq.unique_spawn(48237, 0,0, 625, 1090, -94, 388);\n                SpawnWave();\n                e.self:SpellFinished(2128, e.self); -- Avatar of Fear\n            elseif wave == 10 then\n                eq.zone_emote(MT.White,\"Avatar of Fear shouts, 'In the name of the fearful one, I call forth from the abyss... FRIGHT!\");\n                eq.unique_spawn(48239, 0,0, 587, 1128, -94, 254);\n                SpawnWave();\n                e.self:SpellFinished(2128, e.self); -- Avatar of Fear\n            elseif wave == 15 then\n                eq.zone_emote(MT.White,\"Avatar of Fear shouts, 'In the name of the fearful one, I call forth from the abyss... TERROR!\");\n                eq.unique_spawn(48240, 0,0, 550, 1090, -94, 126);\n                SpawnWave();\n                e.self:SpellFinished(2128, e.self); -- Avatar of Fear\n            elseif wave == 20 then\n                eq.signal(48237,1);  --dread\n                SpawnWave();            \n            elseif wave == 22 then\n                eq.signal(48239,1); --fright\n                SpawnWave();\n            elseif wave == 24 then\n                eq.signal(48240,1); --terror\n                SpawnWave();\n            elseif wave == 25 then\n                e.self:SetSpecialAbility(24, 0); -- Will Not Aggro off\n                e.self:SetSpecialAbility(25, 0); -- Immune to Aggro off \n                e.self:SetSpecialAbility(35, 0); -- No Harm from Players off\n                --active avatar of fear\n            else\n                eq.zone_emote(MT.White,\"Avatar of Fear shouts, 'In the name of the faceless, I command you, the minions of fear, ARISE!\");\n                SpawnWave();\n            end\n    end\nend\n\n\nfunction SpawnWave()\n\t\n\tlocal roll = math.random(1, 100);\n\tif ( roll <= 12 ) then\n\t\teq.spawn2(SPINECHILLER_TYPE, 0, 0, 547, 1135, -93, 128);\n\t\teq.spawn2(SPINECHILLER_TYPE, 0, 0, 630, 1090, -93, 128);\n\t\teq.spawn2(SPINECHILLER_TYPE, 0, 0, 630, 1135, -93, 128);\n\t\teq.spawn2(SPINECHILLER_TYPE, 0, 0, 590, 1150, -93, 128);\n\t\teq.spawn2(SPINECHILLER_TYPE, 0, 0, 530, 1090, -93, 128);\n\t\teq.spawn2(SPINECHILLER_TYPE, 0, 0, 630, 1050, -93, 128);\n\t\teq.spawn2(SPINECHILLER_TYPE, 0, 0, 547, 1050, -93, 128);\n\t\teq.spawn2(SPINECHILLER_TYPE, 0, 0, 590, 1035, -93, 128);\n\telseif ( roll <= 23 ) then\n\t\teq.spawn2(TENTACLE_TYPE, 0, 0, 566, 1088, -93, 128);\n\t\teq.spawn2(TENTACLE_TYPE, 0, 0, 587, 1114, -93, 128);\n\t\teq.spawn2(TENTACLE_TYPE, 0, 0, 608, 1091, -93, 128);\n\t\teq.spawn2(TENTACLE_TYPE, 0, 0, 590, 1092, -97, 128);\n\t\teq.spawn2(TENTACLE_TYPE, 0, 0, 588, 1067, -93, 128);\n\telseif ( roll <= 34 ) then\n\t\teq.spawn2(TENTACLE_TYPE, 0, 0, 608, 1090, -92, 128);\n\t\teq.spawn2(TENTACLE_TYPE, 0, 0, 565, 1090, -92, 128);\n\t\teq.spawn2(TENTACLE_TYPE, 0, 0, 600, 1107, -92, 128);\n\t\teq.spawn2(TENTACLE_TYPE, 0, 0, 580, 1073, -92, 128);\n\t\teq.spawn2(TENTACLE_TYPE, 0, 0, 600, 1073, -92, 128);\n\telseif ( roll <= 52 ) then\n\t\teq.spawn2(SHIVERBACK_TYPE, 0, 0, 623, 1130, -93, 128);\n\t\teq.spawn2(SHIVERBACK_TYPE, 0, 0, 590, 1130, -93, 128);\n\t\teq.spawn2(SHIVERBACK_TYPE, 0, 0, 638, 1093, -93, 128);\n\t\teq.spawn2(SHIVERBACK_TYPE, 0, 0, 552, 1130, -93, 128);\n\t\teq.spawn2(SHIVERBACK_TYPE, 0, 0, 537, 1097, -93, 128);\n\telseif ( roll <= 56 ) then\n\t\teq.spawn2(SHIVERBACK_TYPE, 0, 0, 590, 1150, -93, 128);\n\t\teq.spawn2(SHIVERBACK_TYPE, 0, 0, 565, 1015, -93, 128);\n\t\teq.spawn2(SHIVERBACK_TYPE, 0, 0, 610, 1015, -93, 128);\n\telseif ( roll <= 74 ) then\n\t\teq.spawn2(AMYGDALAN_KNIGHT_TYPE, 0, 0, 580, 1055, -91.7, 128);\n\t\teq.spawn2(AMYGDALAN_KNIGHT_TYPE, 0, 0, 595, 1055, -91.7, 128);\n\t\teq.spawn2(AMYGDALAN_KNIGHT_TYPE, 0, 0, 565, 1055, -91.7, 128);\n\t\teq.spawn2(AMYGDALAN_KNIGHT_TYPE, 0, 0, 610, 1055, -91.7, 128);\n\telseif ( roll <= 78 ) then\n\t\teq.spawn2(AMYGDALAN_KNIGHT_TYPE, 0, 0, 645, 1090, -93, 128);\n\t\teq.spawn2(AMYGDALAN_KNIGHT_TYPE, 0, 0, 540, 1090, -93, 128);\n\t\teq.spawn2(AMYGDALAN_KNIGHT_TYPE, 0, 0, 590, 1150, -93, 128);\n\telseif ( roll <= 96 ) then\n\t\teq.spawn2(GORGON_TYPE, 0, 0, 629, 1132, -93, 128);\n\t\teq.spawn2(GORGON_TYPE, 0, 0, 543, 1132, -93, 128);\n\t\teq.spawn2(GORGON_TYPE, 0, 0, 546, 1050, -93, 128);\n\t\teq.spawn2(GORGON_TYPE, 0, 0, 590, 1025, -93, 128);\n\t\teq.spawn2(GORGON_TYPE, 0, 0, 632, 1050, -93, 128);\n\telse\n\t\teq.spawn2(GORGON_TYPE, 0, 0, 630, 1050, -93, 128);\n\t\teq.spawn2(GORGON_TYPE, 0, 0, 547, 1050, -93, 128);\n\t\teq.spawn2(GORGON_TYPE, 0, 0, 590, 1035, -93, 128);\n\tend\t\t\nend\n\nfunction event_death_complete(e)\neq.signal(48030,1); -- tahia signal of victory\neq.depop_all(48253); -- unstable rift\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "sha256": "74920fd49d046246ffc52478321731546ce760e0d99e9214813e67aeffaf3bec",
+      "owners": []
+    },
+    {
+      "key": "warslikswood/Ferocious_Goblin",
+      "row": {
+        "id": 15446,
+        "zone": "warslikswood",
+        "name": "Ferocious_Goblin",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: warslikswood/Ferocious_Goblin.pl\n\nfunction event_spawn(e)\n\teq.set_timer(\"signal_master\", 60000)\nend\n\nfunction event_timer(e)\n\tif e.timer == \"signal_master\" then\n\t\teq.stop_timer(\"signal_master\")\n\t\teq.signal(79127, 1) -- Raving_Goblinmaster\n\tend\nend\n\nfunction event_death_complete(e)\n\teq.signal(79127, 2) -- Raving_Goblinmaster\nend\n\nfunction event_signal(e)\n\teq.depop()\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "sha256": "97df52fec6602a7e8d3f0278c1df8ae8844f0f464925a34cc8a1005c94f5d6af",
+      "owners": []
+    },
+    {
+      "key": "neriakc/Xantis_Ixtax",
+      "row": {
+        "id": 12519,
+        "zone": "neriakc",
+        "name": "Xantis_Ixtax",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: neriakc/Xantis_Ixtax.pl\n-- items: 13394\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Greetings, disciple \" .. e.other:GetName() .. \". Feel free to inspect my wares. I am here to serve all necromancers of the Dead. I can also enchant a [Ring of the Dead] if you have one.\")\n\telseif e.message:findi(\"ring of the dead\") then\n\t\te.self:Say(\"The ring of the Dead is the mark of loyal members of the his house. One can use it to bind his soul to any point, but only once and then the enchantment is gone. It is my duty to enchant the ring of the Dead once it is drained of all power, but only for a loyal member. I believe you to be loyal. I require the drained ring and ten gold coins.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 13394, gold = 10}) then\n\t\te.self:Say(\"Here you are, disciple. I have enchanted your ring once more.\")\n\t\te.other:Ding()\n\t\te.other:SummonItem(13394, 1)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "sha256": "992100ee5b2dcaca62f8755105a2e78598e51a3931228765e64aeb06c945e861",
+      "owners": []
+    },
+    {
+      "key": "befallen/#a_skeletal_foreman",
+      "row": {
+        "id": 12723,
+        "zone": "befallen",
+        "name": "#a_skeletal_foreman",
+        "lua_content": "function event_spawn(e)\n\te.self:Shout(\"Dig! Dig faster, you fools! Our masters say this ghost is all that stands in the way of the great one's return. Uncover his hiding place so that the forces of the Burning Dead might destroy him and recover its legacy!\");\n\teq.set_timer(\"shout\", 5 * 60 * 1000); -- 5 Minutes\nend\n\nfunction event_timer(e)\n\tif e.timer == \"shout\" then\n\t\te.self:Shout(\"Dig! Dig faster, you fools! Our masters say this ghost is all that stands in the way of the great one's return. Uncover his hiding place so that the forces of the Burning Dead might destroy him and recover its legacy!\");\n\tend\nend\n\nfunction event_death_complete(e)\n\teq.unique_spawn(36091,0,0,-43.5,-339.8,-10.9,0); -- NPC: Sir Ariam Arcanum\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "sha256": "4db814a55f0ddfc33183e81ece5b824d5c49bc602fcb82d493e5af01a3b3590f",
+      "owners": []
+    },
+    {
+      "key": "nro/a_lamented_knight",
+      "row": {
+        "id": 14651,
+        "zone": "nro",
+        "name": "a_lamented_knight",
+        "lua_content": "function event_death_complete(e)\n    eq.signal(392057, 0); -- NPC: #a_madman\nend\n\nfunction event_spawn(e)\n\te.self:Say(\"Destroy me, if you must. I cannot hold him alone. We do not blame you for what you do, for you have great need and you seek to save others. Do not allow this to weigh heavily upon you.\");\nend",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "sha256": "49196a5712d661748d22fbcc1edee7b4d0a6c2ac09497f523ead33d973f9119a",
+      "owners": []
+    },
+    {
+      "key": "befallen/a_skeletal_excavator",
+      "row": {
+        "id": 14772,
+        "zone": "befallen",
+        "name": "a_skeletal_excavator",
+        "lua_content": "function event_death_complete(e)\n\tlocal chance_spawn = math.random(100);\n\tif chance_spawn <= 20 then\n\t\teq.unique_spawn(36092,0,0,-43.5,-339.8,-10.9,0);\n\tend\nend",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "sha256": "a36ffb91900f9b8d8f6b454173df61c6fde73321a43824d7261c30ae85d2e240",
+      "owners": []
+    },
+    {
+      "key": "nro/a_guardian_tormentor",
+      "row": {
+        "id": 12433,
+        "zone": "nro",
+        "name": "a_guardian_tormentor",
+        "lua_content": "function event_death_complete(e)\n  eq.spawn2(392107,0,0,e.self:GetX(),e.self:GetY(),e.self:GetZ(),e.self:GetHeading()); -- NPC: a_lamented_knight\nend\n\nfunction event_spawn(e)\n\te.self:Say(\"He is a dangerous creature. Please do not prevent us from doing our work.\");\nend",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "sha256": "b9e91a7485953b39f2ce1d5ef0e9efb5756bff8560be733cc133b925e34c5e8f",
+      "owners": []
+    },
+    {
+      "key": "timorous/Grandmaster_Rinmark",
+      "row": {
+        "id": 15386,
+        "zone": "timorous",
+        "name": "Grandmaster_Rinmark",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: timorous/Grandmaster_Rinmark.pl\n\nfunction event_spawn(e)\n\teq.set_timer(\"Depop1\", 90000)\nend\n\nfunction event_timer(e)\n\tif e.timer == \"Depop1\" then\n\t\te.self:Emote(\"seems to lose a small amount of concentration.\")\n\t\teq.spawn2(96319, 0, 0, e.self:GetX(), e.self:GetY(), e.self:GetZ(), e.self:GetHeading()) -- Master_Rinmark\n\t\teq.stop_timer(\"Depop1\")\n\t\teq.depop()\n\tend\nend\n\nfunction event_combat(e)\n\tif e.joined then\n\t\teq.stop_timer(\"Depop1\")\n\telse\n\t\teq.set_timer(\"Depop1\", 90000)\n\tend\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "sha256": "14d3f899be6cfd55231186a17a6dd5d58f9d1495613fc16695a78ff56c5f5f61",
+      "owners": []
+    },
+    {
+      "key": "kithicor/#Blackened_Treant",
+      "row": {
+        "id": 13429,
+        "zone": "kithicor",
+        "name": "#Blackened_Treant",
+        "lua_content": "function event_death_complete(e)\n\teq.spawn2(20300,0,0, e.self:GetX()+7,e.self:GetY()+7,e.self:GetZ(),0); -- NPC: #Blackened_Tree_Limb\n\teq.spawn2(20300,0,0, e.self:GetX(),e.self:GetY()+7,e.self:GetZ(),0); -- NPC: #Blackened_Tree_Limb\n\teq.spawn2(20300,0,0, e.self:GetX()+7,e.self:GetY(),e.self:GetZ(),0); -- NPC: #Blackened_Tree_Limb\n\teq.spawn2(20300,0,0, e.self:GetX()-7,e.self:GetY()-7,e.self:GetZ(),0); -- NPC: #Blackened_Tree_Limb\n\teq.spawn2(20300,0,0, e.self:GetX()-7,e.self:GetY(),e.self:GetZ(),0); -- NPC: #Blackened_Tree_Limb\n\teq.spawn2(20300,0,0, e.self:GetX(),e.self:GetY()-7,e.self:GetZ(),0); -- NPC: #Blackened_Tree_Limb\n\teq.spawn2(20300,0,0, e.self:GetX()+7,e.self:GetY()-7,e.self:GetZ(),0); -- NPC: #Blackened_Tree_Limb\n\teq.spawn2(20300,0,0, e.self:GetX()-7,e.self:GetY()+7,e.self:GetZ(),0); -- NPC: #Blackened_Tree_Limb\n\teq.spawn2(20300,0,0, e.self:GetX()+14,e.self:GetY()+14,e.self:GetZ(),0); -- NPC: #Blackened_Tree_Limb\n\teq.spawn2(20300,0,0, e.self:GetX()-14,e.self:GetY()-14,e.self:GetZ(),0); -- NPC: #Blackened_Tree_Limb\nend",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "sha256": "a010d86ead65893b62582545afe563398b283fc8be6ae270b3c721d1d5e55cb3",
+      "owners": []
+    },
+    {
+      "key": "qey2hh1/12184",
+      "row": {
+        "id": 15831,
+        "zone": "qey2hh1",
+        "name": "12184",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: qey2hh1/12184.pl\n\nfunction event_spawn(e)\n\teq.set_timer(\"Werewolf2Depop\", 1800000)\n\teq.set_next_hp_event(75)\nend\n\nfunction event_death_complete(e)\n\te.self:Say(\"Your attack was in vain, fool. The staff was stolen from us by a bandit only hours ago.\")\n\teq.spawn2(12185, 186, 0, -11080, -2920, 38, 0) -- Shady Bandit\nend\n\nfunction event_timer(e)\n\teq.stop_timer(\"Werewolf2Depop\")\n\teq.depop()\nend\n\nfunction event_combat(e)\n\tif e.joined then\n\t\te.self:Emote(\"moves to attack.\")\n\telse\n\t\te.self:MoveTo(e.self:GetX(), e.self:GetY(), e.self:GetZ(), e.self:GetHeading(), true)\n\tend\nend\n\nfunction event_hp(e)\n\tif e.hp_event == 75 then\n\t\te.self:ModifyNPCStat(\"max_hit\", \"1400\")\n\t\teq.set_next_hp_event(50)\n\telseif e.hp_event == 50 then\n\t\te.self:ModifyNPCStat(\"max_hit\", \"1600\")\n\t\teq.set_next_hp_event(25)\n\telseif e.hp_event == 25 then\n\t\te.self:ModifyNPCStat(\"max_hit\", \"1800\")\n\tend\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "sha256": "0b746b4227e657b98f6ef233d22fc683f47dd63e14ec6f8a8a3e9d7c4ac26359",
+      "owners": []
+    },
+    {
+      "key": "paineel/Librarian_Kesler",
+      "row": {
+        "id": 15620,
+        "zone": "paineel",
+        "name": "Librarian_Kesler",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: paineel/Librarian_Kesler.pl\n\nfunction event_say(e)\n\tif e.message:findi(\"Hail\") then\n\t\te.self:Say(\"Hello. researcher!  There are many things to be found here.  Our selection grows daily.  Would you [care for any books]?\")\n\telseif e.message:findi(\"i care for any books\") then\n\t\te.self:Say(\"Excellent!  I love to see the young so interested in knowledge.  What subject would you like to research? My most interesting topics today would have to be the Hole. old Paineel. the Underfoot. and the history of Paineel.\")\n\telseif e.message:findi(\"tell me about the history of paineel\") then\n\t\te.self:Say(\"Tis an excellent topic. \" .. e.other:GetName() .. \".  Much can be learned of a civilization if one first understands its history.  I hope you enjoy the book.\")\n\telseif e.message:findi(\"tell me about the hole\") then\n\t\te.self:Say(\"Here you are. \" .. e.other:GetName() .. \".  The book has old bindings and is worthless to most. but the value of knowledge is priceless.\")\n\telseif e.message:findi(\"tell me about the underfoot\") then\n\t\te.self:Say(\"Excellent choice. \" .. e.other:GetName() .. \".  The Underfoot is a mysterious place.  I hope you get as much from the book as I did.\")\n\telseif e.message:findi(\"tell me about the old paineel\") then\n\t\te.self:Say(\"Take this book. \" .. e.other:GetName() .. \".  It contains the history of the ancient city from which we came.\")\n\tend\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "sha256": "63582a2b553ac9b7cc4d57601b9a4f0779d9aca140b15a300110077e31e5296f",
+      "owners": []
+    },
+    {
+      "key": "nro/a_haunt",
+      "row": {
+        "id": 16399,
+        "zone": "nro",
+        "name": "a_haunt",
+        "lua_content": "function event_death_complete(e)\n  eq.spawn2(392105,0,0,e.self:GetX(),e.self:GetY(),e.self:GetZ(),e.self:GetHeading()); -- NPC: a_spirit\nend\n\nfunction event_spawn(e)\n\te.self:Say(\"Please, allow us to continue our work. Do not allow this man to return to his ways.\");\nend",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "sha256": "923a90dcfdf8f80c2a09a455264802c6fee5d4c1f17009437eb53681f8db46a3",
+      "owners": []
+    },
+    {
+      "key": "lakerathe/#Gnoll_Scavenger",
+      "row": {
+        "id": 15205,
+        "zone": "lakerathe",
+        "name": "#Gnoll_Scavenger",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: lakerathe/#Gnoll_Scavenger.pl\n\nfunction event_death_complete(e)\n\teq.signal(51156, 0) -- Worboli / Man-eating Freshwater Shark\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "sha256": "33fb7400f6c4a648da81390d06cec7fcc94c61992c5d972581b13fb7bb02f303",
+      "owners": []
+    },
+    {
+      "key": "frontiermtns/#a_goblin_whipcracker",
+      "row": {
+        "id": 19494,
+        "zone": "frontiermtns",
+        "name": "#a_goblin_whipcracker",
+        "lua_content": "function event_say(e)\nlocal zone_time = eq.get_zone_time();\n\n if(e.language == 14 and e.other:GetLanguageSkill(14) >= 100 and zone_time[\"zone_hour\"]==19 and e.other:FindBuff(5574)) then\n\tif (e.message:findi(\"start the contest\")) then\n\t\te.self:Shout(\"You right! Me want prize! Start contest! King Dronan owe us contest!\");\n\t\teq.unique_spawn(92198, 0, 0, 2436, 3546, 320, 188);  --Goblin King Dronan\n\t\teq.unique_spawn(92199, 0, 0, 2404, 3541, 322, 206); --Whip Cracker Garzul\n\t\teq.unique_spawn(92200, 0, 0, 2470, 3551, 313, 176);  --Earth Seer Hunknort\n\tend\t\n end\n \n if (e.message:findi(\"testquestfile\")) then\n\te.self:Say(\"lang:\" .. e.language)\n\te.self:Say(\"skill:\" .. e.other:GetLanguageSkill(14))\n\te.self:Say(\"zh: \" .. zone_time[\"zone_hour\"]);\n\tif (e.other:FindBuff(5574)) then\n\t\te.self:Say(\"hasbuff\")\n\tend\n end\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "sha256": "d86cb2f02175a26e874c10d6fe35ab31ba53a04f4c3f4e91582b9a5b78fb7ed5",
+      "owners": []
+    },
+    {
+      "key": "timorous/Master_Rinmark",
+      "row": {
+        "id": 17781,
+        "zone": "timorous",
+        "name": "Master_Rinmark",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: timorous/Master_Rinmark.pl\n\nfunction event_spawn(e)\n\teq.set_timer(\"Depop2\", 90000)\nend\n\nfunction event_combat(e)\n\tif e.joined then\n\t\teq.stop_timer(\"Depop2\")\n\telse\n\t\teq.set_timer(\"Depop2\", 90000)\n\tend\nend\n\nfunction event_timer(e)\n\tif e.timer == \"Depop2\" then\n\t\te.self:Emote(\"stares off into the horizon, lost in his thoughts.\")\n\t\teq.spawn2(96320, 0, 0, e.self:GetX(), e.self:GetY(), e.self:GetZ(), e.self:GetHeading()) -- Rinmark\n\t\teq.stop_timer(\"Depop2\")\n\t\teq.depop()\n\tend\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "sha256": "d5f7eb3b9c6ea5d1cd8f1f75fb85c6432025d5ffcfcbdc4a0449655924f6e0c4",
+      "owners": []
+    },
+    {
+      "key": "sebilis/#froglok_krup_knight",
+      "row": {
+        "id": 18104,
+        "zone": "sebilis",
+        "name": "#froglok_krup_knight",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: sebilis/#froglok_krup_knight.pl\n\nfunction event_death_complete(e)\n\tif math.random(10) ~= 1 then\n\t\treturn\n\tend\n\teq.spawn2(89182, 0, 0, 546, -592, -50, 128)\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "sha256": "d1d40980941ef5b2f1f6fa6812f5066644c3a671efdaf012f009564553683fa8",
+      "owners": []
+    },
+    {
+      "key": "lakeofillomen/Impervious_Bloodbeast",
+      "row": {
+        "id": 16001,
+        "zone": "lakeofillomen",
+        "name": "Impervious_Bloodbeast",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: lakeofillomen/Impervious_Bloodbeast.pl\n\nfunction event_death_complete(e)\n\teq.signal(85091, 0) -- Lingering_Axefall\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "sha256": "7b012247293a46a832790f68f231d4cc4600da1c97b8d973913bc4d969dcc6ee",
+      "owners": []
+    },
+    {
+      "key": "qey2hh1/12183",
+      "row": {
+        "id": 19185,
+        "zone": "qey2hh1",
+        "name": "12183",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: qey2hh1/12183.pl\n\nlocal werewolf = 0\n\nfunction event_spawn(e)\n\teq.set_timer(\"Werewolf1Depop\", 1800000)\n\twerewolf = 0\nend\n\nfunction event_death_complete(e)\n\twerewolf = werewolf + 1\n\tif werewolf == 4 then\n\t\te.self:Say(\"Your attack was in vain, fool. The staff was stolen from us by a bandit only hours ago.\")\n\t\teq.spawn2(12185, 186, 0, -11080, -2920, 38, 0) -- Shady Bandit\n\tend\nend\n\nfunction event_timer(e)\n\teq.stop_timer(\"Werewolf1Depop\")\n\teq.depop()\nend\n\nfunction event_combat(e)\n\tif e.joined then\n\t\te.self:Emote(\"moves to attack.\")\n\telse\n\t\te.self:MoveTo(e.self:GetX(), e.self:GetY(), e.self:GetZ(), e.self:GetHeading(), true)\n\tend\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "sha256": "4ea2d25fc6588caad51ad745c147a61927c985e1b0ef195cea4729383c4d649f",
+      "owners": []
+    },
+    {
+      "key": "timorous/Draz_Nurakk",
+      "row": {
+        "id": 17573,
+        "zone": "timorous",
+        "name": "Draz_Nurakk",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: timorous/Draz_Nurakk.pl\n\nfunction event_death_complete(e)\n\teq.spawn2(96322, 0, 0, 1988, -9203, 10, 0)\n\teq.spawn2(96322, 0, 0, 1995, -9219, 10, 0)\n\teq.spawn2(96322, 0, 0, 2013, -9198, 10, 0)\n\teq.spawn2(96322, 0, 0, 1990, -9179, 10, 0)\n\teq.spawn2(96322, 0, 0, 1965, -9202, 11, 0)\n\teq.spawn2(96322, 0, 0, 2001, -9181, 10, 0)\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "sha256": "8016936dda407c8498e2828c550349a94e5704895545509e8cd967c245327820",
+      "owners": []
+    },
+    {
+      "key": "rathemtn/Raving_Sphinx_Spiritservant",
+      "row": {
+        "id": 16853,
+        "zone": "rathemtn",
+        "name": "Raving_Sphinx_Spiritservant",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: rathemtn/Raving_Sphinx_Spiritservant.pl\n\nfunction event_spawn(e)\n\te.self:Emote(\"has a dark glow in its eye as it rushes toward you.\")\nend\n\nfunction event_death_complete(e)\n\te.self:Say(\"babbles incoherently as the glow in its eyes is extinguished\")\n\teq.spawn2(50231, 0, 0, -3304, 3476, 28, 1180)\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "sha256": "462ed67ef5d36287827ff91499358af170d347661c7f553389c090e9d3229735",
+      "owners": []
+    },
+    {
+      "key": "cazicthule/#a_Thul_Tae_Ew_High_Priest",
+      "row": {
+        "id": 18163,
+        "zone": "cazicthule",
+        "name": "#a_Thul_Tae_Ew_High_Priest",
+        "lua_content": "function event_death_complete(e)\n    eq.signal(48057, 1, 5); --Send signal to Tahia Felwah to Wake up and start event\nend\n\nfunction spawn_guards(e)\n\tlocal Khataruss = eq.get_entity_list():GetMobByNpcTypeID(48250);\n\tlocal Thrasciss = eq.get_entity_list():GetMobByNpcTypeID(48249);\n\tlocal Scithiss = eq.get_entity_list():GetMobByNpcTypeID(48251);\n\n\tif not Khataruss.valid then\n\t\teq.unique_spawn(48250, 0, 0, 595, 960, -84, 0):CastToNPC():MoveTo(e.self:GetX(), e.self:GetY(), e.self:GetZ(), 0, true);\n\tend\n\n\tif not Thrasciss.valid then\n\t\teq.unique_spawn(48249, 0, 0, 595, 932, -65, 0):CastToNPC():MoveTo(e.self:GetX(), e.self:GetY(), e.self:GetZ(), 0, true);\n\tend\n\n\tif not Scithiss.valid then\n\t\teq.unique_spawn(48251, 0, 0, 595, 916, -60, 0):CastToNPC():MoveTo(e.self:GetX(), e.self:GetY(), e.self:GetZ(), 0, true);\n\tend\nend\n\nfunction event_spawn(e)\n   eq.unique_spawn(48057, 0, 0, 589, 1071, -93, 0); -- tahia_felwah\n   eq.spawn2(48029, 0, 0, 587, 1055, -94, 0); -- #a_Tae_Ew_Justicar (48029)\n   eq.spawn2(48029, 0, 0, 550, 1090, -94, 130);\n   eq.spawn2(48029, 0, 0, 587, 1128, -94, 254);\n   eq.spawn2(48029, 0, 0, 625, 1090, -94, 388);\n   eq.spawn2(48099, 0, 0, 539, 972, -38, 390); --a_Thul_Tae_Ew_Warder\n   eq.spawn2(48099, 0, 0, 483, 904, -10, 257); --a_Thul_Tae_Ew_Warder\n   eq.spawn2(48099, 0, 0, 484, 927, -10, 257); --a_Thul_Tae_Ew_Warder\n   eq.spawn2(48099, 0, 0, 539, 1024, -38, 259); --a_Thul_Tae_Ew_Warder\nend\n\nfunction event_combat(e)\n\tif e.joined then\n\t\teq.set_timer(\"guards\", 1000);\n\telse\n\t\teq.stop_timer(\"guards\");\n\tend\nend\n\nfunction event_timer(e)\n\tif e.timer == \"guards\" then\n\t\tspawn_guards(e);\n\t\teq.stop_timer(\"guards\");\n\tend\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "sha256": "24d79ef7277e74971b472cfc48d383524bbd8bd67b4bf8dc9cd8603de2c4d647",
+      "owners": []
+    },
+    {
+      "key": "kithicor/#Blackened_Tree_Limb",
+      "row": {
+        "id": 19368,
+        "zone": "kithicor",
+        "name": "#Blackened_Tree_Limb",
+        "lua_content": "function event_death_complete(e)\nlocal num_alive=0;\n\t\tlocal npc_list = eq.get_entity_list():GetNPCList();\n\t\tfor npc in npc_list.entries do\n\t\t\tif (npc.valid and npc:GetNPCTypeID() == 20300) then\n\t\t\t\tnum_alive=num_alive+1;\n\t\t\tend\n\t\tend\n\t\t\n\t\tif (num_alive ==0) then\n\t\t\teq.spawn2(20301,0,0, e.self:GetX()+7,e.self:GetY()+7,e.self:GetZ(),0); -- NPC: #Blackened_Dryad\n\t\tend\nend",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "sha256": "9d9a5c48b4e1074999e91da1382560ae72b6eeb25e53ba18d176e44ef48c0038",
+      "owners": []
+    },
+    {
+      "key": "warslikswood/a_frantic_goblin",
+      "row": {
+        "id": 19547,
+        "zone": "warslikswood",
+        "name": "a_frantic_goblin",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: warslikswood/a_frantic_goblin.pl\n\nfunction event_spawn(e)\n\teq.set_timer(\"signal_master\", 60000)\nend\n\nfunction event_timer(e)\n\tif e.timer == \"signal_master\" then\n\t\teq.stop_timer(\"signal_master\")\n\t\teq.signal(79127, 1) -- Raving_Goblinmaster\n\tend\nend\n\nfunction event_death_complete(e)\n\teq.signal(79127, 2) -- Raving_Goblinmaster\nend\n\nfunction event_signal(e)\n\teq.depop()\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "sha256": "035157961f2d4322c4e2c247b16e7c8bd3b7ffeedc5f10a76e5aa015fb64fef3",
+      "owners": []
+    }
+  ]
+}

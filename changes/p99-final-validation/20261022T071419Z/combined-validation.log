@@ -1,0 +1,10 @@
+file:///tmp/p99-validation-20261022T071419Z/tools/source-policy.mjs:11
+  throw new Error(`Unsupported source target: ${target}`);
+        ^
+
+Error: Unsupported source target: sources/projecteq/butcher/Dapper_Blackhammer.lua
+    at sourceKind (file:///tmp/p99-validation-20261022T071419Z/tools/source-policy.mjs:11:9)
+    at readProposal (file:///tmp/p99-validation-20261022T071419Z/tools/proposal.mjs:64:16)
+    at async file:///tmp/p99-validation-20261022T071419Z/tools/cli.mjs:20:18
+
+Node.js v24.19.0

@@ -1,0 +1,45 @@
+{
+  "format": 1,
+  "id": "p99-am-shilster-factions",
+  "summary": "Correct only explicitly quantified P99 Shilster factions: Qeynos Guards -1 and Corrupt Qeynos Guards +1. Preserve three unquantified gains and five-gold stout exchange. Explicit post_kunark_warrens_era quest exclusion preserved: source correction remains disabled pending policy review.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Guard_Shilster's_Stout?action=raw",
+      "note": "Cached 2026-07-17T23:16:47.581Z; revision unavailable; SHA256 1def82f3a0d4af3816677e736407674c0bce219f0f5753d004315f5099a09153. Guard Shilster's Stout"
+    },
+    {
+      "url": "https://wiki.project1999.com/Guard_Shilster's_Stout?action=raw",
+      "note": "Promote immutable upstream source sources/projecteq/northkarana/Guard_Shilster.lua SHA256 2f72efaf3bae1aa330c6b54fd2d1fbf20adb1647f6bb36a0e3e717431504a032 to maintained modified-upstream override; baseline remains untouched."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 18738,
+        "zone": "northkarana",
+        "name": "Guard_Shilster",
+        "lua_content": "--############\n--# Quest Name: Black Burrow Stout (Northern Karana)\n--# Author: Blaz\n--# Converted to Lua: robregen\n--# NPCs Involved: 1\n--# Items Involved: 5 Gold\n--#################\n-- items: 13107\n\nfunction event_waypoint_arrive(e)\n\tif(e.wp == 2) then\n\t\te.self:Emote(\"stumbles and says, 'Hey fools.  Blackburrow stout for sale five gold.  Load up now 'cause it's going fast!  Just make sure you enjoy it in privacy or you might get arrested, ha haaaa!'\");\n\telseif(e.wp == 3) then\n\t\te.self:Emote(\"burps loudly and says, 'Your loss.  Back to the bridge I go to keep us safe from the enemy or whatever it is I'm supposed to be doing out there.'\");\n\tend\nend\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Hey. hey! I have some Blackburrow Stout for sale. Just hand over five gold and I'll give you a bottle of it. Don't get caught though because it is considered [contraband]. [Antonius] don't like it being smuggled and all that but what does he know. anyway?\");\n\telseif(e.message:findi(\"contraband\")) then\n\t\te.self:Say(\"Well it's brewed by gnolls, ya know. Don't know exactly why it's considered contraband but I think it's because they use the money they get from selling the stout to buy arms. I dunno. I buy low and sell high. Blackburrow Stout is good for you though! It does wonders for me! Now buy some already before someone hears us talking.\");\n\telseif(e.message:findi(\"antonius\")) then\n\t\te.self:Say(\"That man is as clueless as a froglok tad swimming in a keg of dwarven ale! He has no idea what is going on around him. He won't be around for much longer I wager.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {gold = 5})) then\n\t\te.self:Say(\"There you go, sport. If you get caught with that, you didn't get it from me!\");\n\t\te.other:SummonItem(13107); -- Item: Black Burrow Stout\n\t\te.other:Ding();\n\t\te.other:Faction(262,-10,0); -- Guards of Qeynos\n\t\te.other:Faction(273,10,0); -- Kane Bayle\n\t\te.other:Faction(230,10,0); -- Corrupt Qeynos Guards\n\t\te.other:Faction(223,10,0); -- Circle Of Unseen Hands\n\t\te.other:Faction(221,10,0); -- Bloodsabers\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\n-- END of FILE Zone:northkarana  ID:13021 -- Guard_Shilster\n",
+        "has_say_event": 1,
+        "enabled": 0
+      },
+      "after": {
+        "id": 18738,
+        "zone": "northkarana",
+        "name": "Guard_Shilster",
+        "lua_content": "-- enabled: false\n--############\n--# Quest Name: Black Burrow Stout (Northern Karana)\n--# Author: Blaz\n--# Converted to Lua: robregen\n--# NPCs Involved: 1\n--# Items Involved: 5 Gold\n--#################\n-- items: 13107\n\nfunction event_waypoint_arrive(e)\n\tif(e.wp == 2) then\n\t\te.self:Emote(\"stumbles and says, 'Hey fools.  Blackburrow stout for sale five gold.  Load up now 'cause it's going fast!  Just make sure you enjoy it in privacy or you might get arrested, ha haaaa!'\");\n\telseif(e.wp == 3) then\n\t\te.self:Emote(\"burps loudly and says, 'Your loss.  Back to the bridge I go to keep us safe from the enemy or whatever it is I'm supposed to be doing out there.'\");\n\tend\nend\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Hey. hey! I have some Blackburrow Stout for sale. Just hand over five gold and I'll give you a bottle of it. Don't get caught though because it is considered [contraband]. [Antonius] don't like it being smuggled and all that but what does he know. anyway?\");\n\telseif(e.message:findi(\"contraband\")) then\n\t\te.self:Say(\"Well it's brewed by gnolls, ya know. Don't know exactly why it's considered contraband but I think it's because they use the money they get from selling the stout to buy arms. I dunno. I buy low and sell high. Blackburrow Stout is good for you though! It does wonders for me! Now buy some already before someone hears us talking.\");\n\telseif(e.message:findi(\"antonius\")) then\n\t\te.self:Say(\"That man is as clueless as a froglok tad swimming in a keg of dwarven ale! He has no idea what is going on around him. He won't be around for much longer I wager.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {gold = 5})) then\n\t\te.self:Say(\"There you go, sport. If you get caught with that, you didn't get it from me!\");\n\t\te.other:SummonItem(13107); -- Item: Black Burrow Stout\n\t\te.other:Ding();\n\t\te.other:Faction(262,-1,0); -- Guards of Qeynos\n\t\te.other:Faction(273,10,0); -- Kane Bayle\n\t\te.other:Faction(230,1,0); -- Corrupt Qeynos Guards\n\t\te.other:Faction(223,10,0); -- Circle Of Unseen Hands\n\t\te.other:Faction(221,10,0); -- Bloodsabers\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\n-- END of FILE Zone:northkarana  ID:13021 -- Guard_Shilster\n",
+        "has_say_event": 1,
+        "enabled": 0
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/northkarana/Guard_Shilster.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-am-shilster-factions/northkarana-Guard_Shilster.lua",
+      "afterSha256": "468f06e723016ca14998d6c78c502597646710c3f47862160da76710fc1ca811"
+    }
+  ]
+}

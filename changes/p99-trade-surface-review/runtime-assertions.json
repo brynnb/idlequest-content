@@ -1,0 +1,14 @@
+[
+  {
+    "name": "lakeofillomen/Bruiser_Noz disabled source retains refund callback; admission checked statically",
+    "proposedFile": "changes/p99-trade-scope-disables/lakeofillomen--Bruiser_Noz.lua",
+    "sourceSha256": "3d6ad259ce261e2a26237065dce66592bff5e87f9c39b843b981a10b50dae9bd",
+    "assertions": "trade({99999});equal(remaining[99999],1);equal(next(calls.rewards),nil)"
+  },
+  {
+    "name": "qey2hh1/Guard_Gregor disabled source retains refund callback; admission checked statically",
+    "proposedFile": "changes/p99-trade-scope-disables/qey2hh1--Guard_Gregor.lua",
+    "sourceSha256": "2f685e97b734f170a01c224a21bbec7dd93b02036bf186244207fef766d8d30b",
+    "assertions": "trade({99999});equal(remaining[99999],1);equal(next(calls.rewards),nil)"
+  }
+]

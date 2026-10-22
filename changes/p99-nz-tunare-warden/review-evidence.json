@@ -1,0 +1,26 @@
+{
+  "titles": [
+    "Tunare Symbol Quests"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "partial",
+  "match_status": "partial",
+  "local_quest_keys": [
+    "felwithea/Yeolarn_Bronzeleaf"
+  ],
+  "proposal": "changes/p99-nz-tunare-warden.json",
+  "notes": [
+    "Restore Warrens-era Warden Symbol of Tunare dialogue/candlestick and final Disciple Symbol+Powder hand-in; enable its existing no-fail brewing recipe.",
+    "Current scope includes Warrens. Restore only documented continuation from upstream, not tradeskill books. Item1598->Trilani1596; recipe7637 requires1594,1595,1596,16552 and produces1597; Trilani1597->1599; Yeolarn1571+1599->1572. Existing no-minimum-level and faction-bypass policy preserved. Upstream final faction40/40/30 andEXP5000 are documented fallback magnitudes, not P99-proven. First Trilani hand-in still lacks documented faction/experience; exact magnitudes unsupported and left open."
+  ],
+  "verification": {
+    "source": "Cached P99 and effective Lua reviewed; exact complete row preimages and source hashes recorded.",
+    "syntax": "pending",
+    "runtime": "Isolated mock regression pending; full game runtime unavailable.",
+    "ui": "not_run",
+    "connected_chain": "not_run"
+  },
+  "unresolved": [
+    "Ordinary source drops/spawns, recipe live behavior and rendered complete quest path not verified."
+  ]
+}

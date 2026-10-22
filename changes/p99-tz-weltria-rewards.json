@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-weltria-rewards",
+  "summary": "Correct explicitly documented fifty platinum instead of fifty copper, High Council+3 and High Guard+3 instead of+5. Preserve Merchant+5, item, and unsourced XP fallback.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/The_Lorekeeper's_Scrolls?action=raw",
+      "note": "Cached 2026-07-17T23:37:07.775Z; revision unavailable; SHA256 cca4c2121f0f08d2c1b49d7698de1a6fb07522feaa000edde7ff64ea6a79f585. Correct explicitly documented fifty platinum instead of fifty copper, High Council+3 and High Guard+3 instead of+5. Preserve Merchant+5, item, and unsourced XP fallback. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 17564,
+        "zone": "erudnext",
+        "name": "Weltria_Ostriss",
+        "lua_content": "-- items: 17058, 31825\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Good day. \" .. e.other:GetName() .. \". I assist in maintaining an accurate collection of historical tomes here in the great library of Erudin. One of our citizens recently escaped the dungeons of the Kobold warrens and tells of a Kobold lore keeper who keeps a collection of scrolls detailing the history of their kind. Are you capable of obtaining those scrolls for our library?\");\n\telseif(e.message:findi(\"am capable\")) then\n\t\te.self:Say(\"Take this case and return it to me when you have collected all of the scrolls.\");\n\t\te.other:SummonItem(17058); -- Item: Large Scroll Case\n\tend\nend\n \n function event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 31825})) then\n\t\te.self:Say(\"You have my gratitude, \" .. e.other:GetName() .. \"! This will make a valuable addition to our historical volumes and perhaps offer some insight into the workings of Kobold society.\");\n\t\te.other:Ding();\n\t\te.other:Faction(289,5,0); -- Faction: Merchants of Erudin\n\t\te.other:Faction(266,5,0); -- Faction: High Council of Erudin\n\t\te.other:Faction(267,5,0); -- Faction: High Guard of Erudin\n\t\te.other:AddEXP(1500);\n\t\te.other:GiveCash(50,0,0,0);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade);\nend\n\n-- END of FILE Zone:erudnext  ID:98015 -- Weltria_Ostriss\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 17564,
+        "zone": "erudnext",
+        "name": "Weltria_Ostriss",
+        "lua_content": "-- items: 17058, 31825\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Good day. \" .. e.other:GetName() .. \". I assist in maintaining an accurate collection of historical tomes here in the great library of Erudin. One of our citizens recently escaped the dungeons of the Kobold warrens and tells of a Kobold lore keeper who keeps a collection of scrolls detailing the history of their kind. Are you capable of obtaining those scrolls for our library?\");\n\telseif(e.message:findi(\"am capable\")) then\n\t\te.self:Say(\"Take this case and return it to me when you have collected all of the scrolls.\");\n\t\te.other:SummonItem(17058); -- Item: Large Scroll Case\n\tend\nend\n \n function event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 31825})) then\n\t\te.self:Say(\"You have my gratitude, \" .. e.other:GetName() .. \"! This will make a valuable addition to our historical volumes and perhaps offer some insight into the workings of Kobold society.\");\n\t\te.other:Ding();\n\t\te.other:Faction(289,5,0); -- Faction: Merchants of Erudin\n\t\te.other:Faction(266,3,0); -- Faction: High Council of Erudin\n\t\te.other:Faction(267,3,0); -- Faction: High Guard of Erudin\n\t\te.other:AddEXP(1500);\n\t\te.other:GiveCash(0,0,0,50);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade);\nend\n\n-- END of FILE Zone:erudnext  ID:98015 -- Weltria_Ostriss\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/erudnext/Weltria_Ostriss.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-tz-weltria-rewards/erudnext--Weltria_Ostriss.lua",
+      "afterSha256": "7043fb8db37d854300fdf781a25e81816112609837974244efa5c72adfe6c92e"
+    }
+  ]
+}

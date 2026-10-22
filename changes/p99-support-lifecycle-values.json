@@ -1,0 +1,99 @@
+{
+  "format": 1,
+  "id": "p99-support-lifecycle-values",
+  "summary": "Correct three documented ambient lifecycle values only: ancient croc respawn16m30, Moldmaster three sporelings, large tar goo two children. No probability or broader encounter parity claim.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/An_Ancient_Croc",
+      "note": "reference/p99-wiki/npc-pages/an-ancient-croc-c4c95fe90f.wiki description:1–5 simultaneous placeholders,16m30 timer begins after final placeholder dies. Existing random probabilities untouched."
+    },
+    {
+      "url": "https://wiki.project1999.com/The_Sporali_Moldmaster",
+      "note": "reference/p99-wiki/npc-pages/the-sporali-moldmaster-47d5325fae.wiki description explicitly says three sporelings spawn on death. Combat SaveGuardSpot retained."
+    },
+    {
+      "url": "https://wiki.project1999.com/A_Tar_Goo",
+      "note": "reference/p99-wiki/npc-pages/a-tar-goo-4100e5fa89.wiki says larger tar goo splits into two smaller goos. Baseline NPC119017 name a_tar_goo level40 and119122 name a_tar_goo level19 independently resolve exact actor identity; NPC rows are not changed."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 19699,
+        "zone": "guktop",
+        "name": "croc_trigger",
+        "lua_content": "local CrocUp = 0;\n\nfunction event_spawn(e)\n\tcroc_spawns();\nend\n\nfunction croc_spawns()\n\tlocal RandomCroc = eq.ChooseRandom(65068,65069,65094,65095,65134);\n\tlocal RandomNumber = 0;\n\tRandomNumber = math.random(100);\n\t\n\tif(RandomNumber <=45) then\n\t\teq.spawn2(RandomCroc,0,0,470,1661,-70,132);\n\t\teq.spawn2(RandomCroc,0,0,462,1653,-70,132);\n\t\tCrocUp = 2;\n\telseif(RandomNumber > 45 and RandomNumber <= 75) then\n\t\teq.spawn2(RandomCroc,0,0,470,1661,-70,132);\n\t\teq.spawn2(RandomCroc,0,0,462,1653,-70,132);\n\t\teq.spawn2(RandomCroc,0,0,450,1661,-70,132);\n\t\tCrocUp = 3;\n\telseif(RandomNumber > 75 and RandomNumber <= 90) then\n\t\teq.spawn2(RandomCroc,0,0,470,1661,-70,132);\n\t\tCrocUp = 1;\n\telseif(RandomNumber > 90 and RandomNumber <= 95) then\n\t\teq.spawn2(65139,0,0,462,1653,-70,132); -- an ancient croc\n\t\tCrocUp = 1;\n\telseif(RandomNumber > 95 and RandomNumber <= 98) then\n\t\teq.spawn2(RandomCroc,0,0,470,1661,-70,132);\n\t\teq.spawn2(RandomCroc,0,0,462,1653,-70,132);\n\t\teq.spawn2(RandomCroc,0,0,450,1661,-70,132);\n\t\teq.spawn2(RandomCroc,0,0,459,1671,-70,132); -- need exact loc\n\t\tCrocUp = 4;\n\telseif(RandomNumber > 98) then\n\t\teq.spawn2(RandomCroc,0,0,470,1661,-70,132);\n\t\teq.spawn2(RandomCroc,0,0,462,1653,-70,132);\n\t\teq.spawn2(RandomCroc,0,0,450,1661,-70,132);\n\t\teq.spawn2(RandomCroc,0,0,459,1671,-70,132); -- need exact loc\n\t\teq.spawn2(RandomCroc,0,0,480,1667,-70,132); -- need exact loc\n\t\tCrocUp = 5;\n\tend\nend\n\nfunction event_signal(e)\n\tCrocUp = CrocUp - 1;\n\tif(CrocUp == 0) then\n\t\teq.set_timer(\"spawn timer\",795000);\n\tend\nend\n\nfunction event_timer(e)\n\tif(e.timer == \"spawn timer\") then\n\t\tcroc_spawns();\n\t\teq.stop_timer(\"spawn timer\");\n\tend\nend\n\t\t\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 19699,
+        "zone": "guktop",
+        "name": "croc_trigger",
+        "lua_content": "local CrocUp = 0;\n\nfunction event_spawn(e)\n\tcroc_spawns();\nend\n\nfunction croc_spawns()\n\tlocal RandomCroc = eq.ChooseRandom(65068,65069,65094,65095,65134);\n\tlocal RandomNumber = 0;\n\tRandomNumber = math.random(100);\n\t\n\tif(RandomNumber <=45) then\n\t\teq.spawn2(RandomCroc,0,0,470,1661,-70,132);\n\t\teq.spawn2(RandomCroc,0,0,462,1653,-70,132);\n\t\tCrocUp = 2;\n\telseif(RandomNumber > 45 and RandomNumber <= 75) then\n\t\teq.spawn2(RandomCroc,0,0,470,1661,-70,132);\n\t\teq.spawn2(RandomCroc,0,0,462,1653,-70,132);\n\t\teq.spawn2(RandomCroc,0,0,450,1661,-70,132);\n\t\tCrocUp = 3;\n\telseif(RandomNumber > 75 and RandomNumber <= 90) then\n\t\teq.spawn2(RandomCroc,0,0,470,1661,-70,132);\n\t\tCrocUp = 1;\n\telseif(RandomNumber > 90 and RandomNumber <= 95) then\n\t\teq.spawn2(65139,0,0,462,1653,-70,132); -- an ancient croc\n\t\tCrocUp = 1;\n\telseif(RandomNumber > 95 and RandomNumber <= 98) then\n\t\teq.spawn2(RandomCroc,0,0,470,1661,-70,132);\n\t\teq.spawn2(RandomCroc,0,0,462,1653,-70,132);\n\t\teq.spawn2(RandomCroc,0,0,450,1661,-70,132);\n\t\teq.spawn2(RandomCroc,0,0,459,1671,-70,132); -- need exact loc\n\t\tCrocUp = 4;\n\telseif(RandomNumber > 98) then\n\t\teq.spawn2(RandomCroc,0,0,470,1661,-70,132);\n\t\teq.spawn2(RandomCroc,0,0,462,1653,-70,132);\n\t\teq.spawn2(RandomCroc,0,0,450,1661,-70,132);\n\t\teq.spawn2(RandomCroc,0,0,459,1671,-70,132); -- need exact loc\n\t\teq.spawn2(RandomCroc,0,0,480,1667,-70,132); -- need exact loc\n\t\tCrocUp = 5;\n\tend\nend\n\nfunction event_signal(e)\n\tCrocUp = CrocUp - 1;\n\tif(CrocUp == 0) then\n\t\teq.set_timer(\"spawn timer\",990000);\n\tend\nend\n\nfunction event_timer(e)\n\tif(e.timer == \"spawn timer\") then\n\t\tcroc_spawns();\n\t\teq.stop_timer(\"spawn timer\");\n\tend\nend\n\t\t\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 18754,
+        "zone": "runnyeye",
+        "name": "#The_Sporali_Moldmaster",
+        "lua_content": "function event_combat(e)\n\tif not e.joined then\n\t\te.self:SaveGuardSpot(e.self:GetX(),e.self:GetY(), e.self:GetZ(), e.self:GetHeading());\n\tend\nend\n\nfunction event_death_complete(e)\n\teq.spawn2(11164,0,0,e.self:GetX(),e.self:GetY(),e.self:GetZ(),e.self:GetHeading());\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 18754,
+        "zone": "runnyeye",
+        "name": "#The_Sporali_Moldmaster",
+        "lua_content": "function event_combat(e)\n\tif not e.joined then\n\t\te.self:SaveGuardSpot(e.self:GetX(),e.self:GetY(), e.self:GetZ(), e.self:GetHeading());\n\tend\nend\n\nfunction event_death_complete(e)\n\teq.spawn2(11164,0,0,e.self:GetX(),e.self:GetY(),e.self:GetZ(),e.self:GetHeading());\n\teq.spawn2(11164,0,0,e.self:GetX(),e.self:GetY(),e.self:GetZ(),e.self:GetHeading());\n\teq.spawn2(11164,0,0,e.self:GetX(),e.self:GetY(),e.self:GetZ(),e.self:GetHeading());\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 18508,
+        "zone": "wakening",
+        "name": "119017",
+        "lua_content": "function event_death_complete(e)\n    local which = math.random(2);\n    if  (which == 1) then\n      eq.spawn2(119122, 0, 0, e.self:GetX(), e.self:GetY(),  e.self:GetZ(),  e.self:GetHeading()); -- NPC: a_tar_goo\n    elseif (which == 2) then\n      eq.spawn2(119122, 0, 0, e.self:GetX(), e.self:GetY(),  e.self:GetZ(),  e.self:GetHeading()); -- NPC: a_tar_goo\n      eq.spawn2(119122, 0, 0, e.self:GetX(), e.self:GetY(),  e.self:GetZ(),  e.self:GetHeading()); -- NPC: a_tar_goo\n    end\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 18508,
+        "zone": "wakening",
+        "name": "119017",
+        "lua_content": "-- P99 A Tar Goo: the larger goo splits into two smaller goos on death.\nfunction event_death_complete(e)\n      eq.spawn2(119122, 0, 0, e.self:GetX(), e.self:GetY(),  e.self:GetZ(),  e.self:GetHeading()); -- NPC: a_tar_goo\n      eq.spawn2(119122, 0, 0, e.self:GetX(), e.self:GetY(),  e.self:GetZ(),  e.self:GetHeading()); -- NPC: a_tar_goo\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/guktop/croc_trigger.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-lifecycle-values/guktop--croc_trigger.lua",
+      "afterSha256": "20586d714137fa21415132573c4e0effaaa5230bb86459a115d476dfca6d75e3"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/runnyeye/#The_Sporali_Moldmaster.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-lifecycle-values/runnyeye--#The_Sporali_Moldmaster.lua",
+      "afterSha256": "92bed52f8865ead553e1ea50a56dd100772107b0c543268a7c274e37dbf7ff37"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/wakening/119017.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-lifecycle-values/wakening--119017.lua",
+      "afterSha256": "f8fdcf491a62509914afc7ea362ea9cdb40be98d7cf9dcc7afbb569d7a70f1e9"
+    }
+  ]
+}

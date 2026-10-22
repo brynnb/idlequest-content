@@ -1,0 +1,27 @@
+{
+  "titles": [
+    "Rat Pelt Cape Quest",
+    "Rat's Foot Necklace Quest"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "partial",
+  "match_status": "partial",
+  "local_quest_keys": [
+    "qeynos/Menkes_Tabolet"
+  ],
+  "proposal": "changes/p99-nz-menkes-dialogue.json",
+  "notes": [
+    "Restore the documented cape and lucky-necklace completion speech, preserving every recipe and price.",
+    "Cape currently reuses cap completion text; necklace truncates documented response. Three13054pelts+4gold->1051 and13065RatFoot+13071RatWhiskers+13033HoneyMead->1053 unchanged. Two13064fur+3gold->1050 and three13067fangs+2gold->1052 remain untouched."
+  ],
+  "verification": {
+    "source": "Cached P99 and effective Lua reviewed; exact complete row preimages and source hashes recorded.",
+    "syntax": "pending",
+    "runtime": "Isolated mock regression pending; full game runtime unavailable.",
+    "ui": "not_run",
+    "connected_chain": "not_run"
+  },
+  "unresolved": [
+    "Ordinary source drops/spawns, recipe live behavior and rendered complete quest path not verified."
+  ]
+}

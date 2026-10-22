@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-am-faren-faction",
+  "summary": "Wooden Fishing Tackle turn-in grants Merchants of Qeynos faction instead of erroneously granting Bloodsabers faction.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Faren's_Tacklebox?action=raw",
+      "note": "Cached 2026-07-17T23:14:50.510Z; revision unavailable; SHA256 acc086ee7cbdebb8acd71e2e114d018f2fe13845e23ebf9c3249ace2c1ea8650. Faren's Tacklebox"
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 16915,
+        "zone": "qeynos",
+        "name": "Faren",
+        "lua_content": "-- Source: qeynos/Faren.lua\n-- P99: https://wiki.project1999.com/Faren%27s_Tacklebox\n-- items: 13702, 13129\n\nfunction event_spawn(e)\n\teq.set_timer(\"fishing\",300000);\nend\n\nfunction event_timer(e)\n\te.self:Say(\"Whoo!!! I think I got a [bite]! Darn.. Seaweed.\");\nend\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Oh.. Hiya, I'm just out here fishing, since I can't find a job. I hope this [bait] I just bought catches me a big ol' fish.\");\n\telseif(e.message:findi(\"bait\")) then\n\t\te.self:Say(\"I use Captain Rohand's Secret Recipe Super Magic Catch-A-Lot brand bait. I bought my pole from Sneed's up by the north pond.\");\n\telseif(e.message:findi(\"tacklebox\")) then\n\t\te.self:Say(\"Oh. That mean [dwarf], Trumpy, just knocked my tacklebox into the water. Could you please get it for me? I can't swim.\");\n\telseif(e.message:findi(\"dwarf\")) then\n\t\te.self:Say(\"His name is Trumpy. He is one of those [Irontoes] I think. I've seen him hanging out in the Fish's Ale. I don't know why he likes to torment me.\");\n\telseif(e.message:findi(\"irontoes\")) then\n\t\te.self:Say(\"Ah! The Irontoes are a rough bunch of dwarves from Kaladim. The seem to get quite drunk on a frequent basis.\");\n\tend\nend\n\nfunction event_signal(e)\n\tif(e.signal == 1) then\n\t\te.self:Say(\"Oh, hi, Beren. Not too good so far. That [dwarf] keeps bothering me, too.\");\n\t\teq.signal(1090,2); -- NPC: Guard_Beren\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib =require(\"items\");\n\tif(item_lib.check_turn_in(e.trade, {item1 = 13702})) then\n\t\te.self:Say(\"Thank you so much! If you want some free advice, steer clear of those [Irontoes]! They are nothing but trouble. Here. It's not much but I must thank you somehow.\");\n\t\te.other:Ding();\n\t\te.other:SummonItem(13129); -- Hurrieta's Tunic\n\t\te.other:Faction(262,4,0); -- Guards of Qeynos\n\t\te.other:Faction(219,4,0); -- Antonius Bayle\n\t\te.other:Faction(230,-5,0); -- Corrupt Qeynos Guards\n\t\te.other:Faction(223,-5,0); -- Circle Of Unseen Hands\n\t\te.other:Faction(221,4,0); -- Merchants of Qeynos\n\t\te.other:AddEXP(200);\n\t\te.other:GiveCash(9,0,0,0);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 16915,
+        "zone": "qeynos",
+        "name": "Faren",
+        "lua_content": "-- Source: qeynos/Faren.lua\n-- P99: https://wiki.project1999.com/Faren%27s_Tacklebox\n-- items: 13702, 13129\n\nfunction event_spawn(e)\n\teq.set_timer(\"fishing\",300000);\nend\n\nfunction event_timer(e)\n\te.self:Say(\"Whoo!!! I think I got a [bite]! Darn.. Seaweed.\");\nend\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Oh.. Hiya, I'm just out here fishing, since I can't find a job. I hope this [bait] I just bought catches me a big ol' fish.\");\n\telseif(e.message:findi(\"bait\")) then\n\t\te.self:Say(\"I use Captain Rohand's Secret Recipe Super Magic Catch-A-Lot brand bait. I bought my pole from Sneed's up by the north pond.\");\n\telseif(e.message:findi(\"tacklebox\")) then\n\t\te.self:Say(\"Oh. That mean [dwarf], Trumpy, just knocked my tacklebox into the water. Could you please get it for me? I can't swim.\");\n\telseif(e.message:findi(\"dwarf\")) then\n\t\te.self:Say(\"His name is Trumpy. He is one of those [Irontoes] I think. I've seen him hanging out in the Fish's Ale. I don't know why he likes to torment me.\");\n\telseif(e.message:findi(\"irontoes\")) then\n\t\te.self:Say(\"Ah! The Irontoes are a rough bunch of dwarves from Kaladim. The seem to get quite drunk on a frequent basis.\");\n\tend\nend\n\nfunction event_signal(e)\n\tif(e.signal == 1) then\n\t\te.self:Say(\"Oh, hi, Beren. Not too good so far. That [dwarf] keeps bothering me, too.\");\n\t\teq.signal(1090,2); -- NPC: Guard_Beren\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib =require(\"items\");\n\tif(item_lib.check_turn_in(e.trade, {item1 = 13702})) then\n\t\te.self:Say(\"Thank you so much! If you want some free advice, steer clear of those [Irontoes]! They are nothing but trouble. Here. It's not much but I must thank you somehow.\");\n\t\te.other:Ding();\n\t\te.other:SummonItem(13129); -- Hurrieta's Tunic\n\t\te.other:Faction(262,4,0); -- Guards of Qeynos\n\t\te.other:Faction(219,4,0); -- Antonius Bayle\n\t\te.other:Faction(230,-5,0); -- Corrupt Qeynos Guards\n\t\te.other:Faction(223,-5,0); -- Circle Of Unseen Hands\n\t\te.other:Faction(291,4,0); -- Merchants of Qeynos\n\t\te.other:AddEXP(200);\n\t\te.other:GiveCash(9,0,0,0);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/qeynos/Faren.lua",
+      "beforeSha256": "993aed278384596f6410dc60e36713ce37a295531daea7372c469e494031c3b3",
+      "proposedFile": "changes/p99-am-faren-faction/qeynos-Faren.lua",
+      "afterSha256": "10d03ca37371ee7e8d39aa987ff703878d4360bc10ad814f18b37c23f140e94e"
+    }
+  ]
+}

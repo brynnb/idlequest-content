@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-22",
+  "status": "passed",
+  "exactRowFingerprintsVerified": 792,
+  "currentSourceHashesVerified": 35,
+  "runtimeScenariosVerified": 98,
+  "baselineRecipeExpectationsVerified": [
+    8842,
+    9178
+  ],
+  "proposalChecks": [
+    {
+      "command": "node tools/cli.mjs check-proposal . --proposal changes/p99-ranger-epic-dialogue.json",
+      "result": "passed;4 rows,4 sources;4 Lua compilations,0 failures",
+      "proposalSha256": "a926a0b6cd208a67b8b7cd1b556b533caacd4dc083f317ef5eb19299726cc4e7"
+    },
+    {
+      "command": "node tools/cli.mjs check-proposal . --proposal changes/p99-af-druid-progression-dialogue.json",
+      "result": "passed;4 rows,4 sources;4 Lua compilations,0 failures",
+      "proposalSha256": "f4d75e6be0bfca2c846e511a401d12000839bb998aa7d1e1e374bcff824eeebc"
+    }
+  ],
+  "limits": "Static fingerprints, exact recipe structure, normalizer compilation and isolated script behavior only. No DB application, game bridge, acquisition, real combine or UI."
+}

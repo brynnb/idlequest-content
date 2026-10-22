@@ -1,0 +1,58 @@
+{
+  "format": 1,
+  "id": "p99-tz-recipe-9865",
+  "summary": "Enable existing P99 quest combine with exact documented components, container and output; preserve every other recipe field.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/The_Lorekeeper's_Scrolls?action=raw",
+      "note": "Cached 2026-07-17T23:37:07.775Z; SHA256 cca4c2121f0f08d2c1b49d7698de1a6fb07522feaa000edde7ff64ea6a79f585. Full page read confirms {18264: 1, 18265: 1, 18266: 1, 18267: 1, 18268: 1, 18269: 1, 18270: 1} in container 17058 creates one 31825. No probabilities/skill metadata changed. Actual inventory combine UI not tested."
+    }
+  ],
+  "rows": [
+    {
+      "table": "tradeskill_recipe",
+      "before": {
+        "id": 9865,
+        "name": "Kobold History Collection",
+        "tradeskill": 75,
+        "skillneeded": 0,
+        "trivial": 0,
+        "nofail": 1,
+        "replace_container": 0,
+        "notes": "Created by Shadowblade",
+        "must_learn": 0,
+        "learned_by_item_id": 0,
+        "quest": 0,
+        "enabled": 0,
+        "show_in_advanced": 1,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null,
+        "category": null
+      },
+      "after": {
+        "id": 9865,
+        "name": "Kobold History Collection",
+        "tradeskill": 75,
+        "skillneeded": 0,
+        "trivial": 0,
+        "nofail": 1,
+        "replace_container": 0,
+        "notes": "Created by Shadowblade",
+        "must_learn": 0,
+        "learned_by_item_id": 0,
+        "quest": 0,
+        "enabled": 1,
+        "show_in_advanced": 1,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null,
+        "category": null
+      }
+    }
+  ],
+  "sources": []
+}

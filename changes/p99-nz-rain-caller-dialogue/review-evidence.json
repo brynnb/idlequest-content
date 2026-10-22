@@ -1,0 +1,27 @@
+{
+  "titles": [
+    "Rain Caller Quest"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "partial",
+  "match_status": "partial",
+  "local_quest_keys": [
+    "freportw/Ping_Fuzzlecutter",
+    "freeportwest/Ping_Fuzzlecutter"
+  ],
+  "proposal": "changes/p99-nz-rain-caller-dialogue.json",
+  "notes": [
+    "Make Ping\u2019s displayed Mane Attraction lore choice work without shadowing the make request, and target the documented Coalition of Tradefolk III standing reward.",
+    "Bare bracket keyword previously required the full what-is phrase. Keep make request distinct and preserve both hand-ins, coffin components, rewards and currencies. Supporting enabled recipe9634 is exact10x12260 Fuzzlecutter Formula5000 in17979 Crate for Tonics ->12336 Crate of Tonic. Sanfyrd final stage lacks documented EXP/factions, Joleena lacks Fairie gain, Kinool lacks final four gains; magnitudes unknown and not invented. Ping336 Underground is corrected to5015 Coalition of TradeFolk III, explicitly named by P99 and corroborated by the local synthetic-identity note at reference/docs/quest-audit-review-notes.md319-321. Imported+3 magnitude remains unverified. Legacy NPC faction membership is not edited."
+  ],
+  "verification": {
+    "source": "Cached P99 and effective Lua reviewed; exact complete row preimages and source hashes recorded.",
+    "syntax": "pending",
+    "runtime": "Isolated mock regression pending; full game runtime unavailable.",
+    "ui": "not_run",
+    "connected_chain": "not_run"
+  },
+  "unresolved": [
+    "Ordinary source drops/spawns, recipe live behavior and rendered complete quest path not verified."
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "titles": [
+    "Razortooth"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "partial",
+  "match_status": "partial",
+  "local_quest_keys": [
+    "kerraridge/Feren"
+  ],
+  "proposal": "changes/p99-nz-razortooth-dialogue.json",
+  "notes": [
+    "Restore Feren Razor Tooth completion line quoted by P99.",
+    "Input 6348 Razor Tooth, output 1062 Kerran Fishingpole, positive faction 382 Kerra Isle all resolve to exported rows and match. Preserve 18000 EXP and faction magnitude 10 because P99 gives only presence/direction, not exact numbers. Spawn rarity and loot unverified."
+  ],
+  "verification": {
+    "source": "Cached P99 and effective Lua reviewed; exact complete row preimages and source hashes recorded.",
+    "syntax": "pending",
+    "runtime": "Isolated mock regression pending; full game runtime unavailable.",
+    "ui": "not_run",
+    "connected_chain": "not_run"
+  },
+  "unresolved": [
+    "Ordinary source drops/spawns, recipe live behavior and rendered complete quest path not verified."
+  ]
+}

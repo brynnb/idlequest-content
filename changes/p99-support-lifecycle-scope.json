@@ -1,0 +1,584 @@
+{
+  "format": 1,
+  "id": "p99-support-lifecycle-scope",
+  "summary": "Disable twenty-two exclusive positively identified later-era lifecycle hooks and encounter loaders; retain complete historical bodies and every NPC row.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://thesafehouse.org/forums/forum/everquest-wing/quests-of-norrath/14439-rogue-epic-1-5-2-0-walkthrough",
+      "note": "Primary player walkthrough search-index excerpt retrieved2026-10-22 explicitly identifies the package-to-Crow/elite guards as Rogue1.5 prequest. Direct page returned403; no fresh full-page claim. See lifecycle-review-public-evidence.json."
+    },
+    {
+      "url": "https://www.everquest.com/news/imported-eq-enus-62693",
+      "path": "changes/p99-support-source-review/lifecycle-review-public-evidence.json",
+      "note": "Contemporaneous player Druid2.0 checklist explicitly places the crippled wurm in2.0; full upstream Vortix source positively links state5/Moon to Monk1.5. Source-only chain identity, not restored runtime proof."
+    },
+    {
+      "url": "https://www.everquest.com/news/imported-eq-enus-62693",
+      "note": "Official June 30, 2004 Omens development announcement identifies new Epic 2.0 quests; explicit 1.5/2.0 source chains here are not P99 Classic/Kunark/Velious epics. This bounds era only, not item or combat values."
+    },
+    {
+      "url": "https://sony.mediaroom.com/2003-12-17-Sony-Online-Entertainment-Unlocks-the-Gates-of-Discord-for-EverQuest",
+      "note": "Official Gates of Discord announcement introduces Berserker; the exclusive Berserker helper chain is therefore post-Velious."
+    },
+    {
+      "url": "https://www.everquest.com/news/imported-eq-enus-62693",
+      "path": "changes/p99-support-source-review/lifecycle-review-dependencies.json",
+      "note": "Hash-bound complete encounter bodies: enabled loaders resolved, registration IDs and contents inspected. Misty states custom Halloween 2018. No private gameplay execution claimed."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 12870,
+        "zone": "qeynos2",
+        "name": "a_gruff_voice",
+        "lua_content": "--Elite_Guard_Evanet (2031)(roams north of gate) 119,635,3,259 (grid number 108)\n\n--Elite_Guard_Drag (2126)(spawns near eastern south qeynos zoneline, paths up out past north gate and stops, paths near rogue guild) 17,-116,3,386 (grid 109)\n\n--Elite_Guard_Jedis (2160)(stationary at 69,542, 3)\n\n--Elite_Guard_Etter (2161)(patrol outside crow's bar, around pond, down southeast towards priest of discord, 25-30 sec pauses) 342,147,3,254 (grid 110)\n\n--Elite_Guard_Lewot (2125)(stationary north of gate at -84, 425, 3)\n\n--Elite_Guard_Lika (2162)(patrol outside crow's bar, around pond, down southeast towards priest of discord) 343,146,3,256 (grid 111)\n\n--Elite_Guard_Sarve (2128)(patrol outside crow's bar, around pond, down southeast towards priest of discord) 203,16,2,506 (grid 112)\n\n--Elite_Guard_Aterbome (2129)(patrol inside monk guild, will walk out onto ramp near pond and stop, return inside monk guild, walks out near togahn sorast and pauses) 293,286,17,253 (grid 113)\n\n--Elite_Guard_Inski (2130)(spawns outside gate to the west , static)\n\n--Elite_Guard_Vaughn (2132)(patrol first room in crows bar, paths outside right in front of crows bar and stops, goes back in after 30s) 358,78,3,477 (grid 114)\n\n\nlocal event_started = 0;\n\nfunction event_spawn(e)\nevent_started = 0;\nend\n\nfunction event_signal(e)\n    if e.signal == 1 and event_started == 0 then\n        event_started = 1;\n        --do things\n        eq.zone_emote(MT.White, \"a gruff voice shouts, 'Stay alert, men. Word is that the package will be delivered shortly.The smuggler is likely already here.\");\n        eq.unique_spawn(2031, 108, 0, 119, 635, 3, 259);\n        eq.unique_spawn(2126, 109, 0, 17, -116, 3, 386);\n        eq.unique_spawn(2160, 0, 0, 69, 542, 3, 0);\n        eq.unique_spawn(2161, 110, 0, 342, 147, 3, 254);\n        eq.unique_spawn(2125, 0, 0, -84, 425, 3, 259);\n        eq.unique_spawn(2162, 111, 0, 343, 146, 3, 259);\n        eq.unique_spawn(2128, 112, 0, 203, 16, 3, 506);\n        eq.unique_spawn(2129, 113, 0, 293,286,17,253);\n        eq.unique_spawn(2130, 0, 0, 326, 422, 3, 414);\n        eq.unique_spawn(2132, 114, 0, 358, 78, 3, 477);\n\n        eq.set_timer(\"fail\", 7200 * 1000); -- half an hour? so far over 1 hour and no fail\n    elseif e.signal == 2 and event_started == 1 then\n        --signal win from turn in. depop event\n        eq.stop_timer(\"fail\");\n        eq.depop(2031);\n        eq.depop(2126);\n        eq.depop(2160);\n        eq.depop(2161);\n        eq.depop(2125);\n        eq.depop(2162);\n        eq.depop(2128);\n        eq.depop(2129);\n        eq.depop(2130);\n        eq.depop(2132);\n\n        eq.depop_with_timer(); --depop self to reset event\n    end\nend\n\nfunction event_timer(e)\n    if e.timer == \"fail\" then\n        eq.stop_timer(\"fail\");\n        eq.depop(2031);\n        eq.depop(2126);\n        eq.depop(2160);\n        eq.depop(2161);\n        eq.depop(2125);\n        eq.depop(2162);\n        eq.depop(2128);\n        eq.depop(2129);\n        eq.depop(2130);\n        eq.depop(2132);\n        \n\n        eq.depop_with_timer(); --depop self to reset event\n\n    end\nend",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 12870,
+        "zone": "qeynos2",
+        "name": "a_gruff_voice",
+        "lua_content": "-- enabled: false\n-- P99 scope: Only elite-guard event for Sealed Silver Package9816, positively identified as Rogue Epic1.5 prequest by exact player/Crow links and contemporary Safehouse walkthrough. Historical body retained below.\n--Elite_Guard_Evanet (2031)(roams north of gate) 119,635,3,259 (grid number 108)\n\n--Elite_Guard_Drag (2126)(spawns near eastern south qeynos zoneline, paths up out past north gate and stops, paths near rogue guild) 17,-116,3,386 (grid 109)\n\n--Elite_Guard_Jedis (2160)(stationary at 69,542, 3)\n\n--Elite_Guard_Etter (2161)(patrol outside crow's bar, around pond, down southeast towards priest of discord, 25-30 sec pauses) 342,147,3,254 (grid 110)\n\n--Elite_Guard_Lewot (2125)(stationary north of gate at -84, 425, 3)\n\n--Elite_Guard_Lika (2162)(patrol outside crow's bar, around pond, down southeast towards priest of discord) 343,146,3,256 (grid 111)\n\n--Elite_Guard_Sarve (2128)(patrol outside crow's bar, around pond, down southeast towards priest of discord) 203,16,2,506 (grid 112)\n\n--Elite_Guard_Aterbome (2129)(patrol inside monk guild, will walk out onto ramp near pond and stop, return inside monk guild, walks out near togahn sorast and pauses) 293,286,17,253 (grid 113)\n\n--Elite_Guard_Inski (2130)(spawns outside gate to the west , static)\n\n--Elite_Guard_Vaughn (2132)(patrol first room in crows bar, paths outside right in front of crows bar and stops, goes back in after 30s) 358,78,3,477 (grid 114)\n\n\nlocal event_started = 0;\n\nfunction event_spawn(e)\nevent_started = 0;\nend\n\nfunction event_signal(e)\n    if e.signal == 1 and event_started == 0 then\n        event_started = 1;\n        --do things\n        eq.zone_emote(MT.White, \"a gruff voice shouts, 'Stay alert, men. Word is that the package will be delivered shortly.The smuggler is likely already here.\");\n        eq.unique_spawn(2031, 108, 0, 119, 635, 3, 259);\n        eq.unique_spawn(2126, 109, 0, 17, -116, 3, 386);\n        eq.unique_spawn(2160, 0, 0, 69, 542, 3, 0);\n        eq.unique_spawn(2161, 110, 0, 342, 147, 3, 254);\n        eq.unique_spawn(2125, 0, 0, -84, 425, 3, 259);\n        eq.unique_spawn(2162, 111, 0, 343, 146, 3, 259);\n        eq.unique_spawn(2128, 112, 0, 203, 16, 3, 506);\n        eq.unique_spawn(2129, 113, 0, 293,286,17,253);\n        eq.unique_spawn(2130, 0, 0, 326, 422, 3, 414);\n        eq.unique_spawn(2132, 114, 0, 358, 78, 3, 477);\n\n        eq.set_timer(\"fail\", 7200 * 1000); -- half an hour? so far over 1 hour and no fail\n    elseif e.signal == 2 and event_started == 1 then\n        --signal win from turn in. depop event\n        eq.stop_timer(\"fail\");\n        eq.depop(2031);\n        eq.depop(2126);\n        eq.depop(2160);\n        eq.depop(2161);\n        eq.depop(2125);\n        eq.depop(2162);\n        eq.depop(2128);\n        eq.depop(2129);\n        eq.depop(2130);\n        eq.depop(2132);\n\n        eq.depop_with_timer(); --depop self to reset event\n    end\nend\n\nfunction event_timer(e)\n    if e.timer == \"fail\" then\n        eq.stop_timer(\"fail\");\n        eq.depop(2031);\n        eq.depop(2126);\n        eq.depop(2160);\n        eq.depop(2161);\n        eq.depop(2125);\n        eq.depop(2162);\n        eq.depop(2128);\n        eq.depop(2129);\n        eq.depop(2130);\n        eq.depop(2132);\n        \n\n        eq.depop_with_timer(); --depop self to reset event\n\n    end\nend",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 17402,
+        "zone": "southkarana",
+        "name": "#Finnelzi_Springworthy",
+        "lua_content": "--14190\nfunction event_spawn(e)\n\teq.set_timer(\"gate\",6*60*1000);\n\t--eq.set_timer(\"dialog\",5*59*1000);\n\teq.set_timer(\"dialog1\",2*1000)\nend\n\nfunction event_timer(e)\n\tif(e.timer==\"gate\") then\n\t\teq.stop_timer(\"gate\");\n\t\te.self:CastSpell(36, 0); -- Spell: Gate\n\t\teq.set_timer(\"depop\",3000);\n\telseif(e.timer==\"depop\") then\n\t\teq.stop_timer(\"depop\");\n\t\teq.depop_with_timer();\n\telseif(e.timer==\"dialog1\") then\n\t\teq.stop_timer(\"dialog1\");\n\t\te.self:Say(\"I can't believe that we're here waiting for that boy again. You know he should never have been given a spot in the coven, he's too unreliable.\");\n\t\teq.set_timer(\"dialog2\",6*1000);\n\telseif(e.timer==\"dialog2\") then\n\t\teq.stop_timer(\"dialog2\");\n\t\te.self:Emote(\"mutters under his breath\");\n\t\teq.signal(14189,1); -- NPC: #Glenfire_Telzir\n\telseif(e.timer==\"dialog3\") then\n\t\teq.stop_timer(\"dialog3\");\n\t\te.self:Say(\"About that. I know it's importaint to all of you, but. . .\");\n\t\teq.signal(14189,3); -- NPC: #Glenfire_Telzir\n\tend\nend\n\nfunction event_signal(e)\n\tif(e.signal == 2) then\n\t\teq.set_timer(\"dialog2\",6*1000);\n\telseif(e.signal == 3) then\n\t\teq.set_timer(\"dialog3\",6*1000);\t\t\n\tend\nend\t",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 17402,
+        "zone": "southkarana",
+        "name": "#Finnelzi_Springworthy",
+        "lua_content": "-- enabled: false\n-- P99 scope: Only Afflicted coven dialogue/timer support; corrupted_spirit47209 names this actor, and global recipe19888 explicitly identifies that spirit as Druid Epic1.5. Historical body retained below.\n--14190\nfunction event_spawn(e)\n\teq.set_timer(\"gate\",6*60*1000);\n\t--eq.set_timer(\"dialog\",5*59*1000);\n\teq.set_timer(\"dialog1\",2*1000)\nend\n\nfunction event_timer(e)\n\tif(e.timer==\"gate\") then\n\t\teq.stop_timer(\"gate\");\n\t\te.self:CastSpell(36, 0); -- Spell: Gate\n\t\teq.set_timer(\"depop\",3000);\n\telseif(e.timer==\"depop\") then\n\t\teq.stop_timer(\"depop\");\n\t\teq.depop_with_timer();\n\telseif(e.timer==\"dialog1\") then\n\t\teq.stop_timer(\"dialog1\");\n\t\te.self:Say(\"I can't believe that we're here waiting for that boy again. You know he should never have been given a spot in the coven, he's too unreliable.\");\n\t\teq.set_timer(\"dialog2\",6*1000);\n\telseif(e.timer==\"dialog2\") then\n\t\teq.stop_timer(\"dialog2\");\n\t\te.self:Emote(\"mutters under his breath\");\n\t\teq.signal(14189,1); -- NPC: #Glenfire_Telzir\n\telseif(e.timer==\"dialog3\") then\n\t\teq.stop_timer(\"dialog3\");\n\t\te.self:Say(\"About that. I know it's importaint to all of you, but. . .\");\n\t\teq.signal(14189,3); -- NPC: #Glenfire_Telzir\n\tend\nend\n\nfunction event_signal(e)\n\tif(e.signal == 2) then\n\t\teq.set_timer(\"dialog2\",6*1000);\n\telseif(e.signal == 3) then\n\t\teq.set_timer(\"dialog3\",6*1000);\t\t\n\tend\nend\t",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 15120,
+        "zone": "southkarana",
+        "name": "#Glenfire_Telzir",
+        "lua_content": "--14189\nfunction event_spawn(e)\n\teq.set_timer(\"gate\",6*60*1000);\nend\n\nfunction event_timer(e)\n\tif(e.timer==\"dialog1\") then\n\t\teq.stop_timer(\"dialog1\");\n\t\te.self:Emote(\"glares at Finnelzi.\");\n\t\teq.signal(14188,1); -- NPC: #Rendolf_Deathbringer\n\telseif(e.timer==\"dialog2\") then\n\t\teq.stop_timer(\"dialog2\");\n\t\te.self:Say(\"In a few weeks none of that will matter.\");\n\t\teq.signal(14191,2); -- NPC: #Tehana_Elsent\n\telseif(e.timer==\"dialog3\") then\n\t\teq.stop_timer(\"dialog3\");\n\t\te.self:Say(\"Shut up, Fin.\");\n\t\teq.signal(14196,1); -- NPC: #Azibelle_Spavin\n\telseif(e.timer==\"gate\") then\n\t\teq.stop_timer(\"gate\");\n\t\te.self:CastSpell(36, 0); -- Spell: Gate\n\t\teq.set_timer(\"depop\",3000);\n\telseif(e.timer==\"depop\") then\n\t\teq.stop_timer(\"depop\");\n\t\teq.depop_with_timer();\n\tend\nend\n\nfunction event_signal(e)\n\tif(e.signal == 1) then\n\t\teq.set_timer(\"dialog1\",6*1000);\n\telseif(e.signal == 2) then\n\t\teq.set_timer(\"dialog2\",6*1000);\n\telseif(e.signal == 3) then\n\t\teq.set_timer(\"dialog3\",6*1000);\t\t\n\tend\nend\t",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 15120,
+        "zone": "southkarana",
+        "name": "#Glenfire_Telzir",
+        "lua_content": "-- enabled: false\n-- P99 scope: Only Afflicted coven dialogue/timer support; corrupted_spirit47209 names this actor, and global recipe19888 explicitly identifies that spirit as Druid Epic1.5. Historical body retained below.\n--14189\nfunction event_spawn(e)\n\teq.set_timer(\"gate\",6*60*1000);\nend\n\nfunction event_timer(e)\n\tif(e.timer==\"dialog1\") then\n\t\teq.stop_timer(\"dialog1\");\n\t\te.self:Emote(\"glares at Finnelzi.\");\n\t\teq.signal(14188,1); -- NPC: #Rendolf_Deathbringer\n\telseif(e.timer==\"dialog2\") then\n\t\teq.stop_timer(\"dialog2\");\n\t\te.self:Say(\"In a few weeks none of that will matter.\");\n\t\teq.signal(14191,2); -- NPC: #Tehana_Elsent\n\telseif(e.timer==\"dialog3\") then\n\t\teq.stop_timer(\"dialog3\");\n\t\te.self:Say(\"Shut up, Fin.\");\n\t\teq.signal(14196,1); -- NPC: #Azibelle_Spavin\n\telseif(e.timer==\"gate\") then\n\t\teq.stop_timer(\"gate\");\n\t\te.self:CastSpell(36, 0); -- Spell: Gate\n\t\teq.set_timer(\"depop\",3000);\n\telseif(e.timer==\"depop\") then\n\t\teq.stop_timer(\"depop\");\n\t\teq.depop_with_timer();\n\tend\nend\n\nfunction event_signal(e)\n\tif(e.signal == 1) then\n\t\teq.set_timer(\"dialog1\",6*1000);\n\telseif(e.signal == 2) then\n\t\teq.set_timer(\"dialog2\",6*1000);\n\telseif(e.signal == 3) then\n\t\teq.set_timer(\"dialog3\",6*1000);\t\t\n\tend\nend\t",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 13515,
+        "zone": "southkarana",
+        "name": "#Rendolf_Deathbringer",
+        "lua_content": "--14188\nfunction event_spawn(e)\n\teq.set_timer(\"gate\",6*60*1000);\nend\n\nfunction event_timer(e)\n\tif(e.timer==\"dialog1\") then\n\t\teq.stop_timer(\"dialog1\");\n\t\te.self:Say(\"Haven't you heard? One of your Erudite cohorts in Paineel has already done it. Silly, if you ask me. Animating heads? What good is that?\");\n\t\teq.signal(14191,1); -- NPC: #Tehana_Elsent\n\telseif(e.timer==\"gate\") then\n\t\teq.stop_timer(\"gate\");\n\t\te.self:CastSpell(36, 0); -- Spell: Gate\n\t\teq.set_timer(\"depop\",3000);\n\telseif(e.timer==\"depop\") then\n\t\teq.stop_timer(\"depop\");\n\t\teq.depop_with_timer();\n\tend\nend\n\nfunction event_signal(e)\n\tif(e.signal == 1) then\n\t\teq.set_timer(\"dialog1\",6*1000);\t\t\n\tend\nend\t",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 13515,
+        "zone": "southkarana",
+        "name": "#Rendolf_Deathbringer",
+        "lua_content": "-- enabled: false\n-- P99 scope: Only Afflicted coven dialogue/timer support; corrupted_spirit47209 names this actor, and global recipe19888 explicitly identifies that spirit as Druid Epic1.5. Historical body retained below.\n--14188\nfunction event_spawn(e)\n\teq.set_timer(\"gate\",6*60*1000);\nend\n\nfunction event_timer(e)\n\tif(e.timer==\"dialog1\") then\n\t\teq.stop_timer(\"dialog1\");\n\t\te.self:Say(\"Haven't you heard? One of your Erudite cohorts in Paineel has already done it. Silly, if you ask me. Animating heads? What good is that?\");\n\t\teq.signal(14191,1); -- NPC: #Tehana_Elsent\n\telseif(e.timer==\"gate\") then\n\t\teq.stop_timer(\"gate\");\n\t\te.self:CastSpell(36, 0); -- Spell: Gate\n\t\teq.set_timer(\"depop\",3000);\n\telseif(e.timer==\"depop\") then\n\t\teq.stop_timer(\"depop\");\n\t\teq.depop_with_timer();\n\tend\nend\n\nfunction event_signal(e)\n\tif(e.signal == 1) then\n\t\teq.set_timer(\"dialog1\",6*1000);\t\t\n\tend\nend\t",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 17429,
+        "zone": "southkarana",
+        "name": "#Tehana_Elsent",
+        "lua_content": "--14191\nfunction event_spawn(e)\n\teq.set_timer(\"gate\",6*60*1000);\nend\n\nfunction event_timer(e)\n\tif(e.timer==\"dialog1\") then\n\t\teq.stop_timer(\"dialog1\");\n\t\te.self:Say(\"'It doesn't matter if it is any use to you, fathead. It's a matter of being able to do it at all. We've always needed the majority of the body to get it animated properly. The ability to animate parts of the body might lead to some new avenue that we haven't thought of yet.\");\n\t\teq.signal(14189,2); -- NPC: #Glenfire_Telzir\n\telseif(e.timer==\"dialog2\") then\n\t\teq.stop_timer(\"dialog2\");\n\t\te.self:Say(\"That's true!\");\n\t\teq.signal(14190,3); -- NPC: #Finnelzi_Springworthy\n\telseif(e.timer==\"gate\") then\n\t\teq.stop_timer(\"gate\");\n\t\te.self:CastSpell(36, 0); -- Spell: Gate\n\t\teq.set_timer(\"depop\",3000);\n\telseif(e.timer==\"depop\") then\n\t\teq.stop_timer(\"depop\");\n\t\teq.depop_with_timer();\n\tend\nend\n\nfunction event_signal(e)\n\tif(e.signal == 1) then\n\t\teq.set_timer(\"dialog1\",6*1000);\t\t\n\telseif(e.signal == 2) then\n\t\teq.set_timer(\"dialog2\",6*1000);\n\tend\nend\t",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 17429,
+        "zone": "southkarana",
+        "name": "#Tehana_Elsent",
+        "lua_content": "-- enabled: false\n-- P99 scope: Only Afflicted coven dialogue/timer support; corrupted_spirit47209 names this actor, and global recipe19888 explicitly identifies that spirit as Druid Epic1.5. Historical body retained below.\n--14191\nfunction event_spawn(e)\n\teq.set_timer(\"gate\",6*60*1000);\nend\n\nfunction event_timer(e)\n\tif(e.timer==\"dialog1\") then\n\t\teq.stop_timer(\"dialog1\");\n\t\te.self:Say(\"'It doesn't matter if it is any use to you, fathead. It's a matter of being able to do it at all. We've always needed the majority of the body to get it animated properly. The ability to animate parts of the body might lead to some new avenue that we haven't thought of yet.\");\n\t\teq.signal(14189,2); -- NPC: #Glenfire_Telzir\n\telseif(e.timer==\"dialog2\") then\n\t\teq.stop_timer(\"dialog2\");\n\t\te.self:Say(\"That's true!\");\n\t\teq.signal(14190,3); -- NPC: #Finnelzi_Springworthy\n\telseif(e.timer==\"gate\") then\n\t\teq.stop_timer(\"gate\");\n\t\te.self:CastSpell(36, 0); -- Spell: Gate\n\t\teq.set_timer(\"depop\",3000);\n\telseif(e.timer==\"depop\") then\n\t\teq.stop_timer(\"depop\");\n\t\teq.depop_with_timer();\n\tend\nend\n\nfunction event_signal(e)\n\tif(e.signal == 1) then\n\t\teq.set_timer(\"dialog1\",6*1000);\t\t\n\telseif(e.signal == 2) then\n\t\teq.set_timer(\"dialog2\",6*1000);\n\tend\nend\t",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 14823,
+        "zone": "steamfont",
+        "name": "a_decomposing_body",
+        "lua_content": "function event_say(e)\r\n\tif( e.message:findi(\"hail\")) then\r\n\t\te.self:Emote(\"shudders, causing bits of mud to drop from her rotting face. Her voice wheezes out like a rotting accordian. BOoOOo. IAm SURe you Did not exPEcT to see ME here...faTe DEMANDS a REmaTCh...YOU cONtinUe to TaUNt ME here. WHaT can HE poSsiBLY offEr that mAkes you BeHave like a LAPdoG? FoR the LAST TIME...wiLL you tell me wHERe to find StANos?\");\r\n\telseif(e.message:findi(\"yes\") or e.message:findi(\"highpass hold\")) then\t\t\t\r\n\t\te.self:Emote(\"rejoices, flames of anger dancing in her remaining eye. 'Hur hur . . . eXcELLent. STAnos shall meET his end, and SOON. You, hoWEVer, will not LIVe anoTHeR day. Can'T have you wARnINg him, Now cAN I?\");\r\n\t\teq.spawn2(448200,0,0,e.self:GetX(),e.self:GetY(),e.self:GetZ(),e.self:GetHeading()); -- NPC: #Renux_Herkanor\n\t\teq.depop();\r\n\tend\r\nend",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 14823,
+        "zone": "steamfont",
+        "name": "a_decomposing_body",
+        "lua_content": "-- enabled: false\n-- P99 scope: Only decomposing Renux event; Findleznax creates this body under Fatestealer_forge=1, explicitly labelled Rogue1.5 in Yendar source and used by Lirprin Fatestealer reward. Historical body retained below.\nfunction event_say(e)\r\n\tif( e.message:findi(\"hail\")) then\r\n\t\te.self:Emote(\"shudders, causing bits of mud to drop from her rotting face. Her voice wheezes out like a rotting accordian. BOoOOo. IAm SURe you Did not exPEcT to see ME here...faTe DEMANDS a REmaTCh...YOU cONtinUe to TaUNt ME here. WHaT can HE poSsiBLY offEr that mAkes you BeHave like a LAPdoG? FoR the LAST TIME...wiLL you tell me wHERe to find StANos?\");\r\n\telseif(e.message:findi(\"yes\") or e.message:findi(\"highpass hold\")) then\t\t\t\r\n\t\te.self:Emote(\"rejoices, flames of anger dancing in her remaining eye. 'Hur hur . . . eXcELLent. STAnos shall meET his end, and SOON. You, hoWEVer, will not LIVe anoTHeR day. Can'T have you wARnINg him, Now cAN I?\");\r\n\t\teq.spawn2(448200,0,0,e.self:GetX(),e.self:GetY(),e.self:GetZ(),e.self:GetHeading()); -- NPC: #Renux_Herkanor\n\t\teq.depop();\r\n\tend\r\nend",
+        "has_say_event": 1,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 16282,
+        "zone": "burningwood",
+        "name": "player",
+        "lua_content": "function event_enter_zone(e)\n\tlocal qglobals = eq.get_qglobals(e.self);\n\t\n\tif(qglobals[\"druid_epic\"] == \"12\"  and not eq.get_entity_list():IsMobSpawnedByNpcTypeID(87155)) then\n\t\teq.unique_spawn(87155,0,0,0,3000,-259,0); -- NPC: #a_crippled_wurm\n\tend\t\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 16282,
+        "zone": "burningwood",
+        "name": "player",
+        "lua_content": "-- enabled: false\n-- P99 scope: Only druid_epic=12 crippled-wurm trigger; Reyfin sets this state from62885 and the contemporaneous Druid Epic2.0 checklist explicitly requires this Burning Woods wurm. Historical body retained below.\nfunction event_enter_zone(e)\n\tlocal qglobals = eq.get_qglobals(e.self);\n\t\n\tif(qglobals[\"druid_epic\"] == \"12\"  and not eq.get_entity_list():IsMobSpawnedByNpcTypeID(87155)) then\n\t\teq.unique_spawn(87155,0,0,0,3000,-259,0); -- NPC: #a_crippled_wurm\n\tend\t\nend\n",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 14985,
+        "zone": "westwastes",
+        "name": "disciple_of_moon_trap",
+        "lua_content": "function event_spawn(e)\r\n\teq.set_proximity(e.self:GetX() - 40, e.self:GetX() + 40, e.self:GetY() - 40, e.self:GetY() + 40);\r\nend\r\n\r\n--proximity_say is broken at time of writing, just spawn it \r\nfunction event_enter(e)\r\n\tlocal qglobals = eq.get_qglobals(e.self,e.other);\r\n\tlocal el = eq.get_entity_list();\r\n\tif(qglobals[\"monk_epic\"] == \"5\" and not el:IsMobSpawnedByNpcTypeID(120138)) then\r\n\t\teq.spawn2(120138,0,0,e.self:GetX(),e.self:GetY(),e.self:GetZ(),205); -- NPC: Disciple_of_Moon\r\n\t\te.other:Message(MT.LightBlue,\"You hear a faint voice in your mind, 'The Moon guides us as we are in darkness. If the Sun is bright and bold, the Moon will be the reasoning. If you seek to [\" .. eq.say_link(\"prove yourself\") .. \"] to the Order speak it now.'\"); \r\n\t\teq.depop_with_timer();\r\n\tend\t\t\r\nend\r\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 14985,
+        "zone": "westwastes",
+        "name": "disciple_of_moon_trap",
+        "lua_content": "-- enabled: false\n-- P99 scope: Only monk_epic=5 Disciple of Moon trigger; full upstream Vortix source explicitly identifies this state and Moon disciple as Monk Epic1.5. Historical body retained below.\nfunction event_spawn(e)\r\n\teq.set_proximity(e.self:GetX() - 40, e.self:GetX() + 40, e.self:GetY() - 40, e.self:GetY() + 40);\r\nend\r\n\r\n--proximity_say is broken at time of writing, just spawn it \r\nfunction event_enter(e)\r\n\tlocal qglobals = eq.get_qglobals(e.self,e.other);\r\n\tlocal el = eq.get_entity_list();\r\n\tif(qglobals[\"monk_epic\"] == \"5\" and not el:IsMobSpawnedByNpcTypeID(120138)) then\r\n\t\teq.spawn2(120138,0,0,e.self:GetX(),e.self:GetY(),e.self:GetZ(),205); -- NPC: Disciple_of_Moon\r\n\t\te.other:Message(MT.LightBlue,\"You hear a faint voice in your mind, 'The Moon guides us as we are in darkness. If the Sun is bright and bold, the Moon will be the reasoning. If you seek to [\" .. eq.say_link(\"prove yourself\") .. \"] to the Order speak it now.'\"); \r\n\t\teq.depop_with_timer();\r\n\tend\t\t\r\nend\r\n",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 15016,
+        "zone": "fearplane",
+        "name": "Enraged_Imp",
+        "lua_content": "function event_death_complete(e)\n\t\n\teq.spawn2(72069,0,0,e.self:GetX(),e.self:GetY(),e.self:GetZ(),0); -- NPC: Ireblind_Imp\nend\n-------------------------------------------------------------------------------------------------\n-- Converted to .lua using MATLAB converter written by Stryd\n-- Find/replace data for .pl --> .lua conversions provided by Speedz, Stryd, Sorvani and Robregen\n-------------------------------------------------------------------------------------------------\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 15016,
+        "zone": "fearplane",
+        "name": "Enraged_Imp",
+        "lua_content": "-- enabled: false\n-- P99 scope: Exclusive Berserker epic support: Enraged Imp death creates Ireblind Imp. Berserker was introduced with Gates of Discord. Historical body retained below.\nfunction event_death_complete(e)\n\t\n\teq.spawn2(72069,0,0,e.self:GetX(),e.self:GetY(),e.self:GetZ(),0); -- NPC: Ireblind_Imp\nend\n-------------------------------------------------------------------------------------------------\n-- Converted to .lua using MATLAB converter written by Stryd\n-- Find/replace data for .pl --> .lua conversions provided by Speedz, Stryd, Sorvani and Robregen\n-------------------------------------------------------------------------------------------------\n",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 16323,
+        "zone": "fearplane",
+        "name": "Ireblind_Imp",
+        "lua_content": "-- Ireblind_Imp.pl\n\nfunction event_spawn(e)\n\t\n\teq.set_next_hp_event(76);\nend\n\nfunction event_hp(e)\n\t\n\tlocal x_loc = e.self:GetX();\n\tlocal y_loc = e.self:GetY();\n\tlocal z_loc = e.self:GetZ();\n\t\n\tif(e.hp_event == 76) then\n\t\t\n\t\teq.spawn2(72068, 0, 0, x_loc, y_loc, z_loc, 0); -- NPC: Essence_of_Rage\n\t\teq.spawn2(72068, 0, 0, x_loc, y_loc, z_loc, 0); -- NPC: Essence_of_Rage\n\t\teq.spawn2(72068, 0, 0, x_loc, y_loc, z_loc, 0); -- NPC: Essence_of_Rage\n\t\teq.set_next_hp_event(51);\n\tend\n\t\n\tif(e.hp_event == 51) then\n\t\t\n\t\teq.spawn2(72068, 0, 0, x_loc, y_loc, z_loc, 0); -- NPC: Essence_of_Rage\n\t\teq.spawn2(72068, 0, 0, x_loc, y_loc, z_loc, 0); -- NPC: Essence_of_Rage\n\t\teq.spawn2(72068, 0, 0, x_loc, y_loc, z_loc, 0); -- NPC: Essence_of_Rage\n\t\teq.set_next_hp_event(26);\n\tend\n\t\n\tif(e.hp_event == 26) then\n\t\t\n\t\teq.spawn2(72068, 0, 0, x_loc, y_loc, z_loc, 0); -- NPC: Essence_of_Rage\n\t\teq.spawn2(72068, 0, 0, x_loc, y_loc, z_loc, 0); -- NPC: Essence_of_Rage\n\t\teq.spawn2(72068, 0, 0, x_loc, y_loc, z_loc, 0); -- NPC: Essence_of_Rage\n\tend\nend\n-------------------------------------------------------------------------------------------------\n-- Converted to .lua using MATLAB converter written by Stryd\n-- Find/replace data for .pl --> .lua conversions provided by Speedz, Stryd, Sorvani and Robregen\n-------------------------------------------------------------------------------------------------\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 16323,
+        "zone": "fearplane",
+        "name": "Ireblind_Imp",
+        "lua_content": "-- enabled: false\n-- P99 scope: Exclusive Berserker epic support: Ireblind Imp HP events create Essences of Rage. Historical body retained below.\n-- Ireblind_Imp.pl\n\nfunction event_spawn(e)\n\t\n\teq.set_next_hp_event(76);\nend\n\nfunction event_hp(e)\n\t\n\tlocal x_loc = e.self:GetX();\n\tlocal y_loc = e.self:GetY();\n\tlocal z_loc = e.self:GetZ();\n\t\n\tif(e.hp_event == 76) then\n\t\t\n\t\teq.spawn2(72068, 0, 0, x_loc, y_loc, z_loc, 0); -- NPC: Essence_of_Rage\n\t\teq.spawn2(72068, 0, 0, x_loc, y_loc, z_loc, 0); -- NPC: Essence_of_Rage\n\t\teq.spawn2(72068, 0, 0, x_loc, y_loc, z_loc, 0); -- NPC: Essence_of_Rage\n\t\teq.set_next_hp_event(51);\n\tend\n\t\n\tif(e.hp_event == 51) then\n\t\t\n\t\teq.spawn2(72068, 0, 0, x_loc, y_loc, z_loc, 0); -- NPC: Essence_of_Rage\n\t\teq.spawn2(72068, 0, 0, x_loc, y_loc, z_loc, 0); -- NPC: Essence_of_Rage\n\t\teq.spawn2(72068, 0, 0, x_loc, y_loc, z_loc, 0); -- NPC: Essence_of_Rage\n\t\teq.set_next_hp_event(26);\n\tend\n\t\n\tif(e.hp_event == 26) then\n\t\t\n\t\teq.spawn2(72068, 0, 0, x_loc, y_loc, z_loc, 0); -- NPC: Essence_of_Rage\n\t\teq.spawn2(72068, 0, 0, x_loc, y_loc, z_loc, 0); -- NPC: Essence_of_Rage\n\t\teq.spawn2(72068, 0, 0, x_loc, y_loc, z_loc, 0); -- NPC: Essence_of_Rage\n\tend\nend\n-------------------------------------------------------------------------------------------------\n-- Converted to .lua using MATLAB converter written by Stryd\n-- Find/replace data for .pl --> .lua conversions provided by Speedz, Stryd, Sorvani and Robregen\n-------------------------------------------------------------------------------------------------\n",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 13019,
+        "zone": "frontiermtns",
+        "name": "script_init",
+        "lua_content": "eq.load_encounter('druid_1_5');",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 13019,
+        "zone": "frontiermtns",
+        "name": "script_init",
+        "lua_content": "-- enabled: false\n-- P99 scope: Loader resolves the enabled druid_1_5 encounter, whose registrations are Riftseekers Sanctum NPCs (280xxx); it is not a classic Frontier Mountains event. Historical body retained below.\neq.load_encounter('druid_1_5');",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 15238,
+        "zone": "frozenshadow",
+        "name": "You_",
+        "lua_content": "function event_spawn(e)\n  eq.set_timer('delay', 2000);\nend\n\nfunction event_timer(e)\n  eq.stop_timer('delay');\n  eq.set_proximity(e.self:GetX()-15, e.self:GetX()+15, e.self:GetY()-15, e.self:GetY()+15, -999999, 999999, true);\n  eq.enable_proximity_say();\nend\n\nfunction event_proximity_say(e)\n  eq.debug(\"prox_say \" .. e.message .. \" \" .. e.other:GetName());\n  local qglobals = eq.get_qglobals(e.other)\n  local mnk_pre = tonumber(qglobals[\"MnkPre\"]);\n  if (mnk_pre == nil) then mnk_pre = 0; end\n\n  eq.debug(\"mnk_pre \" .. mnk_pre);\n    \n  if (mnk_pre == 2) then\n    if (e.message:findi(\"I am ready to be tested\")) then\n      eq.spawn2(111190, 0, 0, e.self:GetX(), e.self:GetY(), e.self:GetZ(), e.self:GetHeading()); -- NPC: Mirror_Reflection\n      eq.depop_with_timer();\n    end\n  end\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 15238,
+        "zone": "frozenshadow",
+        "name": "You_",
+        "lua_content": "-- enabled: false\n-- P99 scope: Only MnkPre=2 mirror test; the shared MnkPre path is explicitly Monk Epic 1.5/2.0 prequest in qey2hh1/Mystik. Historical body retained below.\nfunction event_spawn(e)\n  eq.set_timer('delay', 2000);\nend\n\nfunction event_timer(e)\n  eq.stop_timer('delay');\n  eq.set_proximity(e.self:GetX()-15, e.self:GetX()+15, e.self:GetY()-15, e.self:GetY()+15, -999999, 999999, true);\n  eq.enable_proximity_say();\nend\n\nfunction event_proximity_say(e)\n  eq.debug(\"prox_say \" .. e.message .. \" \" .. e.other:GetName());\n  local qglobals = eq.get_qglobals(e.other)\n  local mnk_pre = tonumber(qglobals[\"MnkPre\"]);\n  if (mnk_pre == nil) then mnk_pre = 0; end\n\n  eq.debug(\"mnk_pre \" .. mnk_pre);\n    \n  if (mnk_pre == 2) then\n    if (e.message:findi(\"I am ready to be tested\")) then\n      eq.spawn2(111190, 0, 0, e.self:GetX(), e.self:GetY(), e.self:GetZ(), e.self:GetHeading()); -- NPC: Mirror_Reflection\n      eq.depop_with_timer();\n    end\n  end\nend\n",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 12785,
+        "zone": "kithicor",
+        "name": "script_init",
+        "lua_content": "eq.load_encounter(\"cloaked\")\n\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 12785,
+        "zone": "kithicor",
+        "name": "script_init",
+        "lua_content": "-- enabled: false\n-- P99 scope: Only loads cloaked, an explicitly Bard Epic 1.5 encounter. Historical body retained below.\neq.load_encounter(\"cloaked\")\n\n",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 19341,
+        "zone": "lfaydark",
+        "name": "#a_Wayfarer",
+        "lua_content": "function event_death_complete(e)\n\teq.signal(57150,1); -- NPC: Taskmaster_Mirot\nend\n\n ",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 19341,
+        "zone": "lfaydark",
+        "name": "#a_Wayfarer",
+        "lua_content": "-- enabled: false\n-- P99 scope: Only death signal for Taskmaster Mirot cleric_epic>=4 Wayfarer event; Taskmaster source explicitly identifies Cleric Epic 1.5. Historical body retained below.\nfunction event_death_complete(e)\n\teq.signal(57150,1); -- NPC: Taskmaster_Mirot\nend\n\n ",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 18298,
+        "zone": "lfaydark",
+        "name": "#Taskmaster_Mirot",
+        "lua_content": "function event_spawn(e)\n  eq.set_timer(\"depop\",1800000); --Despawn after 30 minutes\nend\n\nfunction event_combat(e)\n  if e.joined then\n    eq.set_timer(\"aggrolink\", 3 * 1000);\n\teq.set_timer(\"distance\", 5 * 1000);\n  else\n    eq.stop_timer(\"aggrolink\");\n\teq.stop_timer(\"distance\");\n  end\nend\n\nfunction event_timer(e)\n\tif (e.timer == \"depop\") then\n\t\teq.stop_timer(\"depop\");\n\t\teq.depop_all(57153);\n\t\teq.depop();\n\t\teq.signal(57150,2); -- NPC: Taskmaster_Mirot\n\telseif (e.timer == \"aggrolink\") then\n\t\tlocal npc_list =  eq.get_entity_list():GetNPCList();\n\t\tfor npc in npc_list.entries do\n\t\tif (npc.valid and not npc:IsEngaged() and (npc:GetNPCTypeID() == 57154) or (npc:GetNPCTypeID() == 57155)) then\n\t\t\tnpc:AddToHateList(e.self:GetHateRandom(),1); -- add Reanimated_Minion to aggro list if alive\n\t\tend\n\t\tend\n\n\telseif e.timer == \"distance\" then\n\t\tlocal npc_list =  eq.get_entity_list():GetNPCList();\n\t\tfor npc in npc_list.entries do\n\t\t\tif npc.valid and (npc:GetNPCTypeID() == 57154 or npc:GetNPCTypeID() == 57155) and (npc:CalculateDistance(e.self:GetX(), e.self:GetY(), e.self:GetZ()) > 200) then\n\t\t\t\tnpc:GMMove(e.self:GetX(), e.self:GetY(), e.self:GetZ(), e.self:GetHeading());\n\t\t\t\te.self:Emote(\"calls the minion back to himself as it starts to get too far.\");\n\t\t\tend\n\t\tend\n\tend\nend\n\nfunction event_death_complete(e)\n    e.self:Emote(\"As Mirot falls to the ground you see a letter in the pocket of his shirt.\");\n\teq.stop_timer(\"depop\");\n\teq.signal(57150,2); -- NPC: Taskmaster_Mirot\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 18298,
+        "zone": "lfaydark",
+        "name": "#Taskmaster_Mirot",
+        "lua_content": "-- enabled: false\n-- P99 scope: Only hostile Taskmaster Mirot/minion event; the initiating Taskmaster source explicitly identifies Cleric Epic 1.5. Historical body retained below.\nfunction event_spawn(e)\n  eq.set_timer(\"depop\",1800000); --Despawn after 30 minutes\nend\n\nfunction event_combat(e)\n  if e.joined then\n    eq.set_timer(\"aggrolink\", 3 * 1000);\n\teq.set_timer(\"distance\", 5 * 1000);\n  else\n    eq.stop_timer(\"aggrolink\");\n\teq.stop_timer(\"distance\");\n  end\nend\n\nfunction event_timer(e)\n\tif (e.timer == \"depop\") then\n\t\teq.stop_timer(\"depop\");\n\t\teq.depop_all(57153);\n\t\teq.depop();\n\t\teq.signal(57150,2); -- NPC: Taskmaster_Mirot\n\telseif (e.timer == \"aggrolink\") then\n\t\tlocal npc_list =  eq.get_entity_list():GetNPCList();\n\t\tfor npc in npc_list.entries do\n\t\tif (npc.valid and not npc:IsEngaged() and (npc:GetNPCTypeID() == 57154) or (npc:GetNPCTypeID() == 57155)) then\n\t\t\tnpc:AddToHateList(e.self:GetHateRandom(),1); -- add Reanimated_Minion to aggro list if alive\n\t\tend\n\t\tend\n\n\telseif e.timer == \"distance\" then\n\t\tlocal npc_list =  eq.get_entity_list():GetNPCList();\n\t\tfor npc in npc_list.entries do\n\t\t\tif npc.valid and (npc:GetNPCTypeID() == 57154 or npc:GetNPCTypeID() == 57155) and (npc:CalculateDistance(e.self:GetX(), e.self:GetY(), e.self:GetZ()) > 200) then\n\t\t\t\tnpc:GMMove(e.self:GetX(), e.self:GetY(), e.self:GetZ(), e.self:GetHeading());\n\t\t\t\te.self:Emote(\"calls the minion back to himself as it starts to get too far.\");\n\t\t\tend\n\t\tend\n\tend\nend\n\nfunction event_death_complete(e)\n    e.self:Emote(\"As Mirot falls to the ground you see a letter in the pocket of his shirt.\");\n\teq.stop_timer(\"depop\");\n\teq.signal(57150,2); -- NPC: Taskmaster_Mirot\nend\n",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 19783,
+        "zone": "misty",
+        "name": "script_init",
+        "lua_content": "eq.load_encounter('Misty');\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 19783,
+        "zone": "misty",
+        "name": "script_init",
+        "lua_content": "-- enabled: false\n-- P99 scope: Only loads Misty, explicitly a custom Halloween event created in 2018, not a documented P99 classic quest. Historical body retained below.\neq.load_encounter('Misty');\n",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 19381,
+        "zone": "necropolis",
+        "name": "#Excavator_Quellin",
+        "lua_content": "-- part of bard 1.5\n-- no pre-reqs to trigger spawn\n\nfunction event_death_complete(e)\n    -- there may be some sort of emote over there, no idea, wasn't in range\n    eq.spawn2(123164, 0, 0, -531, 1514, 9, 86) -- #Tarn_Macklin\n    eq.spawn2(123159, 0, 0, -559, 1510, 9, 4) -- a_mercenary_excavator\n    eq.spawn2(123159, 0, 0, -546, 1544, 9, 436) -- a_mercenary_excavator -- needs_heading_validation\n    eq.spawn2(123159, 0, 0, -517, 1550, 9, 482) -- a_mercenary_excavator\n    eq.spawn2(123165, 0, 0, -580, 1417, 7, 390) -- a_mercenary_guard -- needs_heading_validation\n    eq.spawn2(123165, 0, 0, -553, 1452, 6, 250) -- a_mercenary_guard\n    eq.spawn2(123165, 0, 0, -503, 1463, 2, 150) -- a_mercenary_guard\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 19381,
+        "zone": "necropolis",
+        "name": "#Excavator_Quellin",
+        "lua_content": "-- enabled: false\n-- P99 scope: Exclusive source explicitly identifies Bard Epic 1.5; death creates Tarn and the mercenary event. Historical body retained below.\n-- part of bard 1.5\n-- no pre-reqs to trigger spawn\n\nfunction event_death_complete(e)\n    -- there may be some sort of emote over there, no idea, wasn't in range\n    eq.spawn2(123164, 0, 0, -531, 1514, 9, 86) -- #Tarn_Macklin\n    eq.spawn2(123159, 0, 0, -559, 1510, 9, 4) -- a_mercenary_excavator\n    eq.spawn2(123159, 0, 0, -546, 1544, 9, 436) -- a_mercenary_excavator -- needs_heading_validation\n    eq.spawn2(123159, 0, 0, -517, 1550, 9, 482) -- a_mercenary_excavator\n    eq.spawn2(123165, 0, 0, -580, 1417, 7, 390) -- a_mercenary_guard -- needs_heading_validation\n    eq.spawn2(123165, 0, 0, -553, 1452, 6, 250) -- a_mercenary_guard\n    eq.spawn2(123165, 0, 0, -503, 1463, 2, 150) -- a_mercenary_guard\nend\n",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 15039,
+        "zone": "necropolis",
+        "name": "123167",
+        "lua_content": "-- bard 1.5 first Vesthon fight\n-- #Vesthon`s_Draconic_Abomination (123171)\n\nfunction event_spawn(e)\n    eq.set_timer(\"despawn\", 180000) -- 3 minutes\n    eq.set_timer(\"emote1\", 9000) -- 9 seconds\n    eq.set_timer(\"emote2\", 20000) -- 20 seconds\n    eq.set_next_hp_event(20)\nend\n\nfunction event_hp(e)\n    e.self:Emote(\" cries out in agony as his body staggers to the ground.  In a final act of desperation Vesthon raises his hands and motions to one of the black bones still drifting in the air.\")\n    eq.zone_emote(MT.Yellow, \"The black tendrils retreat back from Hsagra's shade and fade into a benign black fog.  Hsagra's shade fades quietly into the shadows.\")\n    eq.spawn2(123171, 0, 0, e.self:GetX(), e.self:GetY(), e.self:GetZ(), e.self:GetHeading())\n    eq.depop()\nend\n\nfunction event_timer(e)\n    if e.timer == \"despawn\" then\n        eq.depop()\n    elseif e.timer == \"emote1\" then\n        eq.stop_timer(\"emote1\")\n        e.self:Emote(\"holds his left hand out in front of him maintaining an impossibly complex mystic sign with his fingers.  The bones, still dripping with ethereal ooze twist and jerk in the air before him.  His eyes lock with yours for a moment and a cold smirk slithers across his face as he opens his mouth to speak.\")\n        e.self:Say(\"I believe thanks are in order.  I could never have hoped to actually have a chance to control the spirit of Hsagra first hand.  I am in your debt.  Of course that won't keep me from siphoning the life from your tired soul as well.\")\n    elseif e.timer == \"emote2\" then\n        eq.stop_timer(\"emote2\")\n        eq.zone_emote(MT.Yellow, \"Hsagra's spirit snarls and bears down on Vesthon.  Vesthon right hand comes up quickly and makes several quick motions while echoing some dark incantation.  A black vapor appears around him and quickly sepates into a set of ethereal tendrils.\")\n        eq.zone_emote(MT.Yellow, \"The black tendrils reach out and begins snapping at Hsagra's shade.  Several of the tendrils grab hold as her spirit cries out in horror.  You turn back towards Vesthon and notice that several rather angry mercenaries have just entered the room behind him and are charging towards you.\")\n    end\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 15039,
+        "zone": "necropolis",
+        "name": "123167",
+        "lua_content": "-- enabled: false\n-- P99 scope: Exclusive source explicitly identifies Bard Epic 1.5; Vesthon HP/timer event creates the Abomination. Historical body retained below.\n-- bard 1.5 first Vesthon fight\n-- #Vesthon`s_Draconic_Abomination (123171)\n\nfunction event_spawn(e)\n    eq.set_timer(\"despawn\", 180000) -- 3 minutes\n    eq.set_timer(\"emote1\", 9000) -- 9 seconds\n    eq.set_timer(\"emote2\", 20000) -- 20 seconds\n    eq.set_next_hp_event(20)\nend\n\nfunction event_hp(e)\n    e.self:Emote(\" cries out in agony as his body staggers to the ground.  In a final act of desperation Vesthon raises his hands and motions to one of the black bones still drifting in the air.\")\n    eq.zone_emote(MT.Yellow, \"The black tendrils retreat back from Hsagra's shade and fade into a benign black fog.  Hsagra's shade fades quietly into the shadows.\")\n    eq.spawn2(123171, 0, 0, e.self:GetX(), e.self:GetY(), e.self:GetZ(), e.self:GetHeading())\n    eq.depop()\nend\n\nfunction event_timer(e)\n    if e.timer == \"despawn\" then\n        eq.depop()\n    elseif e.timer == \"emote1\" then\n        eq.stop_timer(\"emote1\")\n        e.self:Emote(\"holds his left hand out in front of him maintaining an impossibly complex mystic sign with his fingers.  The bones, still dripping with ethereal ooze twist and jerk in the air before him.  His eyes lock with yours for a moment and a cold smirk slithers across his face as he opens his mouth to speak.\")\n        e.self:Say(\"I believe thanks are in order.  I could never have hoped to actually have a chance to control the spirit of Hsagra first hand.  I am in your debt.  Of course that won't keep me from siphoning the life from your tired soul as well.\")\n    elseif e.timer == \"emote2\" then\n        eq.stop_timer(\"emote2\")\n        eq.zone_emote(MT.Yellow, \"Hsagra's spirit snarls and bears down on Vesthon.  Vesthon right hand comes up quickly and makes several quick motions while echoing some dark incantation.  A black vapor appears around him and quickly sepates into a set of ethereal tendrils.\")\n        eq.zone_emote(MT.Yellow, \"The black tendrils reach out and begins snapping at Hsagra's shade.  Several of the tendrils grab hold as her spirit cries out in horror.  You turn back towards Vesthon and notice that several rather angry mercenaries have just entered the room behind him and are charging towards you.\")\n    end\nend\n",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 15182,
+        "zone": "necropolis",
+        "name": "script_init",
+        "lua_content": "eq.load_encounter(\"vesthon\")\n\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 15182,
+        "zone": "necropolis",
+        "name": "script_init",
+        "lua_content": "-- enabled: false\n-- P99 scope: Only loads vesthon, explicitly the Bard Epic 1.5 Dragon Necropolis encounter. Historical body retained below.\neq.load_encounter(\"vesthon\")\n\n",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 12420,
+        "zone": "northkarana",
+        "name": "a_dire_griffon",
+        "lua_content": "-- bard 1.5\n-- no pre-reqs\nlocal dragon_id = 13130\n\nfunction event_spawn(e)\n    eq.set_next_hp_event(80)\nend\n\nfunction event_hp(e)\n    -- if it's up, do nothing\n    if eq.get_entity_list():IsMobSpawnedByNpcTypeID(dragon_id) then\n        -- lets reset the HP event in case it's not killed and it regens\n        eq.set_next_hp_event(80)\n        return\n    end\n\n    local x = e.self:GetX()\n    local y = e.self:GetY()\n    local z = e.self:GetZ()\n    local h = e.self:GetHeading()\n    eq.spawn2(dragon_id, 0, 0, x, y, z, h)\n    eq.depop_with_timer();\nend\n\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 12420,
+        "zone": "northkarana",
+        "name": "a_dire_griffon",
+        "lua_content": "-- enabled: false\n-- P99 scope: Exclusive source explicitly identifies Bard Epic 1.5; HP event creates the plains dragon. Historical body retained below.\n-- bard 1.5\n-- no pre-reqs\nlocal dragon_id = 13130\n\nfunction event_spawn(e)\n    eq.set_next_hp_event(80)\nend\n\nfunction event_hp(e)\n    -- if it's up, do nothing\n    if eq.get_entity_list():IsMobSpawnedByNpcTypeID(dragon_id) then\n        -- lets reset the HP event in case it's not killed and it regens\n        eq.set_next_hp_event(80)\n        return\n    end\n\n    local x = e.self:GetX()\n    local y = e.self:GetY()\n    local z = e.self:GetZ()\n    local h = e.self:GetHeading()\n    eq.spawn2(dragon_id, 0, 0, x, y, z, h)\n    eq.depop_with_timer();\nend\n\n",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 16706,
+        "zone": "oasis",
+        "name": "script_init",
+        "lua_content": "eq.load_encounter('paladin_epic');\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 16706,
+        "zone": "oasis",
+        "name": "script_init",
+        "lua_content": "-- enabled: false\n-- P99 scope: Only loads paladin_epic, whose sole task generates a paladin epic 2.0 chest and later-era encounter NPCs. Historical body retained below.\neq.load_encounter('paladin_epic');\n",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 17793,
+        "zone": "swampofnohope",
+        "name": "a_dire_leech",
+        "lua_content": "-- bard 1.5\n-- no pre-reqs\nlocal dragon_id = 83249\n\nfunction event_spawn(e)\n    eq.set_next_hp_event(80)\nend\n\nfunction event_hp(e)\n    -- if it's up, do nothing\n    if eq.get_entity_list():IsMobSpawnedByNpcTypeID(dragon_id) then\n        -- lets reset the HP event in case it's not killed and it regens\n        eq.set_next_hp_event(80)\n        return\n    end\n\n    local x = e.self:GetX()\n    local y = e.self:GetY()\n    local z = e.self:GetZ()\n    local h = e.self:GetHeading()\n    eq.spawn2(dragon_id, 0, 0, x, y, z, h)\n    eq.depop_with_timer();\nend\n\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 17793,
+        "zone": "swampofnohope",
+        "name": "a_dire_leech",
+        "lua_content": "-- enabled: false\n-- P99 scope: Exclusive source explicitly identifies Bard Epic 1.5; HP event creates the swamp dragon. Historical body retained below.\n-- bard 1.5\n-- no pre-reqs\nlocal dragon_id = 83249\n\nfunction event_spawn(e)\n    eq.set_next_hp_event(80)\nend\n\nfunction event_hp(e)\n    -- if it's up, do nothing\n    if eq.get_entity_list():IsMobSpawnedByNpcTypeID(dragon_id) then\n        -- lets reset the HP event in case it's not killed and it regens\n        eq.set_next_hp_event(80)\n        return\n    end\n\n    local x = e.self:GetX()\n    local y = e.self:GetY()\n    local z = e.self:GetZ()\n    local h = e.self:GetHeading()\n    eq.spawn2(dragon_id, 0, 0, x, y, z, h)\n    eq.depop_with_timer();\nend\n\n",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/qeynos2/a_gruff_voice.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-lifecycle-scope/qeynos2--a_gruff_voice.lua",
+      "afterSha256": "f9d40f46e709de549cd393ed51510aff3d0165b6b900b4376a91dbdcb26ca6b3"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/southkarana/#Finnelzi_Springworthy.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-lifecycle-scope/southkarana--#Finnelzi_Springworthy.lua",
+      "afterSha256": "e3c80b02eae446a5a76a2def65905376ece84d125f1191fb1942e5f6200d9ed6"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/southkarana/#Glenfire_Telzir.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-lifecycle-scope/southkarana--#Glenfire_Telzir.lua",
+      "afterSha256": "003afe5238b44f7a6d161fbf016bc32c680ac01b02a0e2054e6774f1d851ed94"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/southkarana/#Rendolf_Deathbringer.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-lifecycle-scope/southkarana--#Rendolf_Deathbringer.lua",
+      "afterSha256": "80ae13408d5d84e74976086a2329b965922e001672af714b5ad311ddf25e6fcf"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/southkarana/#Tehana_Elsent.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-lifecycle-scope/southkarana--#Tehana_Elsent.lua",
+      "afterSha256": "52e95ba53a5c163b59a566f07520ec5ce200581b27d0fec273c00a847f089aaf"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/steamfont/a_decomposing_body.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-lifecycle-scope/steamfont--a_decomposing_body.lua",
+      "afterSha256": "e5ebfbf73eb3c3ef2ced8ba4817b26683f5fd781ba2bef2f622d8db494e3f647"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/burningwood/player.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-lifecycle-scope/burningwood--player.lua",
+      "afterSha256": "9b249b6dc897b241429154d8c95c5108498a3845fff4ca6b3970240c5d604717"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/westwastes/disciple_of_moon_trap.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-lifecycle-scope/westwastes--disciple_of_moon_trap.lua",
+      "afterSha256": "79abf6edd134b6505e20fa744e41c342f0a8e4f532f1b0c30a79ecb25dcbecd7"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/fearplane/Enraged_Imp.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-lifecycle-scope/fearplane--Enraged_Imp.lua",
+      "afterSha256": "ed4c63c61fd7d286cf73bb5a4f3d32c96f53a0a3f1a276c9be0fe343ab2c13c4"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/fearplane/Ireblind_Imp.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-lifecycle-scope/fearplane--Ireblind_Imp.lua",
+      "afterSha256": "13cf24d3f61c65645d90cb9e0d12a656cf168f102a8cf2f7ef9495444b648d18"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/frontiermtns/script_init.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-lifecycle-scope/frontiermtns--script_init.lua",
+      "afterSha256": "9968da636348d6cd71ba50f8faa682eac2ae23e20d04bc424efec2bb3c945d2d"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/frozenshadow/You_.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-lifecycle-scope/frozenshadow--You_.lua",
+      "afterSha256": "630c9c10068c0b081a3f163638ed362a86974fa422d3733049b5e3fa7322d4bf"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/kithicor/script_init.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-lifecycle-scope/kithicor--script_init.lua",
+      "afterSha256": "d716d84284bb2ac5de651470f3a66cba1f6c5d48e03191cf536563851ab47660"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/lfaydark/#a_Wayfarer.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-lifecycle-scope/lfaydark--#a_Wayfarer.lua",
+      "afterSha256": "2b7150ce268b257a063077b080fcb2b4c1000322cbef0035f9112f4324c5f88c"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/lfaydark/#Taskmaster_Mirot.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-lifecycle-scope/lfaydark--#Taskmaster_Mirot.lua",
+      "afterSha256": "ad4b0d092be6277850e0238fbd909b5baf138a60f0de16d78eff357df2d7418d"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/misty/script_init.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-lifecycle-scope/misty--script_init.lua",
+      "afterSha256": "e423986779e7944488a7bdf34eef50d18f0d8de955e3acd3b15a3deceefa096c"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/necropolis/#Excavator_Quellin.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-lifecycle-scope/necropolis--#Excavator_Quellin.lua",
+      "afterSha256": "e791dc91d7fc6f84ef5b24246206982e2976280d2ab016cd4cdba6ead8dfa560"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/necropolis/123167.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-lifecycle-scope/necropolis--123167.lua",
+      "afterSha256": "a1699745b87f6bd46fd5a488aae79f7962a25cf5adfae48427c1633c7106d6c5"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/necropolis/script_init.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-lifecycle-scope/necropolis--script_init.lua",
+      "afterSha256": "ebeeadc81a8550f96bfb9a9b18486ca2b88978fc13ab72459b89a626c2543544"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/northkarana/a_dire_griffon.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-lifecycle-scope/northkarana--a_dire_griffon.lua",
+      "afterSha256": "f3caa21bb6514db4d5dc95b324c1bae19c7ffd689f6d4106c9b1089c04e94f8c"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/oasis/script_init.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-lifecycle-scope/oasis--script_init.lua",
+      "afterSha256": "5f956b1b1cd0b73c003c8d6b5e10c65ca06967fc12df648f1e5ee0a60bf86a4a"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/swampofnohope/a_dire_leech.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-lifecycle-scope/swampofnohope--a_dire_leech.lua",
+      "afterSha256": "50dc9f62d49be70070e39638e74632c4ca4dc579410dcecf1d011a6e75d59cd5"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-taxes-flynn_merrington",
+  "summary": "Remove only tax_collection prerequisites: P99 expressly permits collecting without first speaking to Vicus and bypassing Mira. Preserve all original item/faction effects and unrelated quest branches. Flynn also accepts documented your-feet phrase and uses documented Shout; no numeric values invented.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Taxes?action=raw",
+      "note": "Cached 2026-07-17T23:34:37.004Z; revision unavailable; SHA256 6fc59af937f3b2dfa4313beac8b349112c500bdbff0c89109de222dc34860c9b. Remove only tax_collection prerequisites: P99 expressly permits collecting without first speaking to Vicus and bypassing Mira. Preserve all original item/faction effects and unrelated quest branches. Flynn also accepts documented your-feet phrase and uses documented Shout; no numeric values invented. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 16109,
+        "zone": "qeynos2",
+        "name": "Flynn_Merrington",
+        "lua_content": "-- items: 13174, 13122, 13123\nfunction event_say(e)\n\n\tlocal qglobals = eq.get_qglobals(e.other);\n\t\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Oh look.. another gnoll pup. This bar is too rough for the likes of you. Why don't you try Fish's. We don't need any more regulars here, chump!\");\n\telseif(e.message:findi(\"mira sayer's tax\")and qglobals.tax_collection ~= nil) then\n\t\te.self:Say(\"Ha! Yeah, I took their tax money. What are you going to do about it, little gnoll pup? Tell you want.. I will cut you a deal. You tell me you are a [gnoll loving weakling who isn't fit to comb my feet] and I will give you that merchant's tax money.\");\n\telseif(e.message:findi(\"gnoll loving weakling who isn't fit to comb my feet\")and qglobals.tax_collection ~= nil) then\n\t\te.self:Say(string.format(\"BWAH! HA HA HA! Did you all hear that?! %s is a gnoll loving weakling who isn't fit to comb my feet! BWAH HA HA! MY FEET! HA HA HA! Oh.. too rich.. Heh.. HA HA HA! Oh.. Heh heh heh\",e.other:GetName()));\n\t\te.other:SummonItem(13174); -- Item: Sayer's Tax Payment\n\t\te.other:Faction(223,-10,0); -- Faction: Circle of Unseen Hands\n\t\teq.signal(2083,6); -- NPC: Sabnie_Blagard General Supplies\n\t\teq.signal(2063,5); -- NPC: Crow General Supplies\n\tend\n\t\nend\n\nfunction event_trade(e)\n\n\tlocal item_lib = require(\"items\");\n\t\n\tif(item_lib.check_turn_in(e.trade, {item1 = 13122})) then\n\t\te.self:Say(\"Well, now... That's cutting out the middle man. Thanks, chum! Now, beat it!\");\n\t\te.other:Ding();\n\t\te.other:Faction(223,-20,0); -- Faction: Circle of Unseen Hands\n\t\te.other:Faction(291,20,0); -- Faction: Merchants of Qeynos\n\t\te.other:Faction(230,-20,0); -- Faction: Corrupt Qeynos Guards\n\t\te.other:Faction(262,20,0); -- Faction: Guards of Qeynos\n\t\te.other:Faction(273,-20,0); -- Faction: Kane Bayle\n\t\te.other:AddEXP(500);\n\t\te.other:SummonItem(13123); -- Item: Label of Erud's Tonic\n\tend\n\t\n\titem_lib.return_items(e.self, e.other, e.trade)\n\t\nend\n\nfunction event_signal(e)\n\n\te.self:Say(\"HA! You Erudites never could handle your liquor. Go feed the fish.\");\n\teq.signal(2040,1); -- NPC: Moodoro_Finharn\n\t\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 16109,
+        "zone": "qeynos2",
+        "name": "Flynn_Merrington",
+        "lua_content": "-- items: 13174, 13122, 13123\nfunction event_say(e)\n\n\tlocal qglobals = eq.get_qglobals(e.other);\n\t\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Oh look.. another gnoll pup. This bar is too rough for the likes of you. Why don't you try Fish's. We don't need any more regulars here, chump!\");\n\telseif(e.message:findi(\"mira sayer's tax\")) then\n\t\te.self:Say(\"Ha! Yeah, I took their tax money. What are you going to do about it, little gnoll pup? Tell you want.. I will cut you a deal. You tell me you are a [gnoll loving weakling who isn't fit to comb my feet] and I will give you that merchant's tax money.\");\n\telseif((e.message:findi(\"gnoll loving weakling who isn't fit to comb my feet\") or e.message:findi(\"gnoll loving weakling who isn't fit to comb your feet\"))) then\n\t\te.self:Shout(string.format(\"BWAH! HA HA HA! Did you all hear that?! %s is a gnoll loving weakling who isn't fit to comb my feet! BWAH HA HA! MY FEET! HA HA HA! Oh.. too rich.. Heh.. HA HA HA! Oh.. Heh heh heh\",e.other:GetName()));\n\t\te.other:SummonItem(13174); -- Item: Sayer's Tax Payment\n\t\te.other:Faction(223,-10,0); -- Faction: Circle of Unseen Hands\n\t\teq.signal(2083,6); -- NPC: Sabnie_Blagard General Supplies\n\t\teq.signal(2063,5); -- NPC: Crow General Supplies\n\tend\n\t\nend\n\nfunction event_trade(e)\n\n\tlocal item_lib = require(\"items\");\n\t\n\tif(item_lib.check_turn_in(e.trade, {item1 = 13122})) then\n\t\te.self:Say(\"Well, now... That's cutting out the middle man. Thanks, chum! Now, beat it!\");\n\t\te.other:Ding();\n\t\te.other:Faction(223,-20,0); -- Faction: Circle of Unseen Hands\n\t\te.other:Faction(291,20,0); -- Faction: Merchants of Qeynos\n\t\te.other:Faction(230,-20,0); -- Faction: Corrupt Qeynos Guards\n\t\te.other:Faction(262,20,0); -- Faction: Guards of Qeynos\n\t\te.other:Faction(273,-20,0); -- Faction: Kane Bayle\n\t\te.other:AddEXP(500);\n\t\te.other:SummonItem(13123); -- Item: Label of Erud's Tonic\n\tend\n\t\n\titem_lib.return_items(e.self, e.other, e.trade)\n\t\nend\n\nfunction event_signal(e)\n\n\te.self:Say(\"HA! You Erudites never could handle your liquor. Go feed the fish.\");\n\teq.signal(2040,1); -- NPC: Moodoro_Finharn\n\t\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/qeynos2/Flynn_Merrington.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-tz-taxes-flynn_merrington/qeynos2--Flynn_Merrington.lua",
+      "afterSha256": "defcafd4d1670beae3879c602b38f28bdcc757455bb4fd3f676fc843f7c68c47"
+    }
+  ]
+}

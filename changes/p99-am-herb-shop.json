@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-am-herb-shop",
+  "summary": "Make Yvonne advertised Seekers and herbs choices reach existing P99 lore dialogue. No invented reward or completion for lore-only quest.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Herb_Shop?action=raw",
+      "note": "Cached 2026-07-17T23:20:55.979Z; revision unavailable; SHA256 12c6a4bc1afc48791ebf2bd93b1148c25dbf3602dc29a0e56b7f25481f7392f0. Herb Shop"
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 19032,
+        "zone": "paineel",
+        "name": "Yvonne_Ani",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: paineel/Yvonne_Ani.pl\n\nfunction event_say(e)\n\tif e.message:findi(\"Hail\") then\n\t\te.self:Say(\"Welcome to my shop. \" .. e.other:GetName() .. \".  Feel free to purchase whatever you need.  I am sure that I can fill those needs. as [the Seekers of the Dark Truth] generally keep me stocked and on my toes.\")\n\telseif e.message:findi(\"who are the seekers of the dark truth\") then\n\t\te.self:Say(\"Ah. so you wish to know about the Seekers? They are the guild of necromancers here in Paineel.  They are by far the most knowledgeable in the dark arts of all the known world.  They purchase a good many [herbs] from me.\")\n\telseif e.message:findi(\"what herbs\") then\n\t\te.self:Say(\"The herbs the necromancers use typically have properties useful for the preservation of dead flesh.  Who knows what they use them for?\")\n\tend\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 19032,
+        "zone": "paineel",
+        "name": "Yvonne_Ani",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: paineel/Yvonne_Ani.pl\n\nfunction event_say(e)\n\tif e.message:findi(\"Hail\") then\n\t\te.self:Say(\"Welcome to my shop. \" .. e.other:GetName() .. \".  Feel free to purchase whatever you need.  I am sure that I can fill those needs. as [the Seekers of the Dark Truth] generally keep me stocked and on my toes.\")\n\telseif e.message:findi(\"seekers\") then\n\t\te.self:Say(\"Ah. so you wish to know about the Seekers? They are the guild of necromancers here in Paineel.  They are by far the most knowledgeable in the dark arts of all the known world.  They purchase a good many [herbs] from me.\")\n\telseif e.message:findi(\"herbs\") then\n\t\te.self:Say(\"The herbs the necromancers use typically have properties useful for the preservation of dead flesh.  Who knows what they use them for?\")\n\tend\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/paineel/Yvonne_Ani.lua",
+      "beforeSha256": "304a505be976c87ecd23566c9ee07af1ebda8d8894bdf2e6de76d910660da6ed",
+      "proposedFile": "changes/p99-am-herb-shop/paineel-Yvonne_Ani.lua",
+      "afterSha256": "4ea5d821237fc956f725b33e27f78381b0a6604c7c6631ebb70eee5b69babf67"
+    }
+  ]
+}

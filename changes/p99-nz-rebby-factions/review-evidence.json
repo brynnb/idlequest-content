@@ -1,0 +1,27 @@
+{
+  "titles": [
+    "Note for Rebby"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "partial",
+  "match_status": "partial",
+  "local_quest_keys": [
+    "freeporteast/Nestral_TGaza",
+    "freporte/Nestral_TGaza"
+  ],
+  "proposal": "changes/p99-nz-rebby-factions.json",
+  "notes": [
+    "Correct both Tradefolk faction gains from10to7 for Rebby\u2019s Rat Whiskers on both Nestral aliases.",
+    "Cached page explicitly gives+7 Coalition Underground,+7 Coalition of Tradefolk,+1Carson,+1Corrupt Guards,+1Freeport Militia and7copper. Other three deltas and7copper already match. Note18923->whiskers13158 exchange verified in Rebby, no change to EXP amounts absent P99."
+  ],
+  "verification": {
+    "source": "Cached P99 and effective Lua reviewed; exact complete row preimages and source hashes recorded.",
+    "syntax": "pending",
+    "runtime": "Isolated mock regression pending; full game runtime unavailable.",
+    "ui": "not_run",
+    "connected_chain": "not_run"
+  },
+  "unresolved": [
+    "Ordinary source drops/spawns, recipe live behavior and rendered complete quest path not verified."
+  ]
+}

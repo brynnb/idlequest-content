@@ -1,0 +1,70 @@
+{
+  "sourceReceipt": "changes/p99-audit/page-freeze-behavior-snapshot.json",
+  "sourceReceiptSha256": "03459cb53edcfcfb443a0da5c141a53697fbd95552dd2a7d31f9435a0a515f5f",
+  "kind": "explicit-classification-correction-no-behavior-result-change",
+  "originalTotals": {
+    "scenarios": 1802,
+    "proposedSourceScenarios": 1494,
+    "baselineVerifications": 213,
+    "baselineReproductions": 95
+  },
+  "correctedTotals": {
+    "scenarios": 1802,
+    "proposedSourceScenarios": 1484,
+    "baselineVerifications": 223,
+    "baselineReproductions": 95
+  },
+  "casesReclassifiedAsBaselineVerification": [
+    {
+      "name": "Lily letter gate class 1 level 1",
+      "file": "effective/quests/gfaydark/Lily_Ashwood.lua",
+      "sourceSha256": "1e7d8dc788cb7312649f072834b1bf5bf6cec382ab408750b74a385aded2e14a"
+    },
+    {
+      "name": "Lily letter gate class 1 level 49",
+      "file": "effective/quests/gfaydark/Lily_Ashwood.lua",
+      "sourceSha256": "1e7d8dc788cb7312649f072834b1bf5bf6cec382ab408750b74a385aded2e14a"
+    },
+    {
+      "name": "Lily letter gate class 1 level 50",
+      "file": "effective/quests/gfaydark/Lily_Ashwood.lua",
+      "sourceSha256": "1e7d8dc788cb7312649f072834b1bf5bf6cec382ab408750b74a385aded2e14a"
+    },
+    {
+      "name": "Lily letter gate class 1 level 60",
+      "file": "effective/quests/gfaydark/Lily_Ashwood.lua",
+      "sourceSha256": "1e7d8dc788cb7312649f072834b1bf5bf6cec382ab408750b74a385aded2e14a"
+    },
+    {
+      "name": "Lily letter gate class 4 level 1",
+      "file": "effective/quests/gfaydark/Lily_Ashwood.lua",
+      "sourceSha256": "1e7d8dc788cb7312649f072834b1bf5bf6cec382ab408750b74a385aded2e14a"
+    },
+    {
+      "name": "Lily letter gate class 4 level 49",
+      "file": "effective/quests/gfaydark/Lily_Ashwood.lua",
+      "sourceSha256": "1e7d8dc788cb7312649f072834b1bf5bf6cec382ab408750b74a385aded2e14a"
+    },
+    {
+      "name": "Lily letter gate class 4 level 50",
+      "file": "effective/quests/gfaydark/Lily_Ashwood.lua",
+      "sourceSha256": "1e7d8dc788cb7312649f072834b1bf5bf6cec382ab408750b74a385aded2e14a"
+    },
+    {
+      "name": "Lily letter gate class 4 level 60",
+      "file": "effective/quests/gfaydark/Lily_Ashwood.lua",
+      "sourceSha256": "1e7d8dc788cb7312649f072834b1bf5bf6cec382ab408750b74a385aded2e14a"
+    },
+    {
+      "name": "Trilani Warden independent hand-in 1598",
+      "file": "effective/quests/erudnint/Trilani_Parlone.lua",
+      "sourceSha256": "e5e7b221e437a3ac1a7a3233734ec98a6b682773db7d76d5efd1d8f0a84af8bd"
+    },
+    {
+      "name": "Trilani Warden independent hand-in 1597",
+      "file": "effective/quests/erudnint/Trilani_Parlone.lua",
+      "sourceSha256": "e5e7b221e437a3ac1a7a3233734ec98a6b682773db7d76d5efd1d8f0a84af8bd"
+    }
+  ],
+  "reason": "The direct add() helper omitted unchanged-source flags for eight Lily and two Trilani cases. All still passed; no proposed-file coverage was supplied by these cases. The helper is corrected for future runs. Original receipt and log remain intact."
+}

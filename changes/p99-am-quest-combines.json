@@ -1,0 +1,105 @@
+{
+  "format": 1,
+  "id": "p99-am-quest-combines",
+  "summary": "Enable existing P99-documented no-fail Moss Snakes and Testament of Vanear quest combines. Preserve all other recipe metadata and entries.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Moss_Snakes?action=raw",
+      "note": "Cached 2026-07-17T23:26:07.715Z SHA256 b5835d73dee5f75524ff11703dcb04addc260ff7f58a26859b4702a3ef6d72ee; explicit component counts and container/output match recipe 9676."
+    },
+    {
+      "url": "https://wiki.project1999.com/Library_Book?action=raw",
+      "note": "Cached 2026-07-17T23:23:34.053Z SHA256 89c5fa9b8b18a4dffd5fc89f2b907220e8a270ae3d85c12d9b28b3ec13ec111b; explicit component counts and container/output match recipe 10013."
+    }
+  ],
+  "rows": [
+    {
+      "table": "tradeskill_recipe",
+      "before": {
+        "id": 9676,
+        "name": "Bag Of Snake Parts",
+        "tradeskill": 75,
+        "skillneeded": 0,
+        "trivial": 0,
+        "nofail": 1,
+        "replace_container": 1,
+        "notes": "Created by Jaekob",
+        "must_learn": 0,
+        "learned_by_item_id": 0,
+        "quest": 0,
+        "enabled": 0,
+        "show_in_advanced": 1,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null,
+        "category": null
+      },
+      "after": {
+        "id": 9676,
+        "name": "Bag Of Snake Parts",
+        "tradeskill": 75,
+        "skillneeded": 0,
+        "trivial": 0,
+        "nofail": 1,
+        "replace_container": 1,
+        "notes": "Created by Jaekob",
+        "must_learn": 0,
+        "learned_by_item_id": 0,
+        "quest": 0,
+        "enabled": 1,
+        "show_in_advanced": 1,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null,
+        "category": null
+      }
+    },
+    {
+      "table": "tradeskill_recipe",
+      "before": {
+        "id": 10013,
+        "name": "Testament Of Vanear",
+        "tradeskill": 75,
+        "skillneeded": 0,
+        "trivial": 0,
+        "nofail": 1,
+        "replace_container": 1,
+        "notes": "Created by xealblade",
+        "must_learn": 0,
+        "learned_by_item_id": 0,
+        "quest": 1,
+        "enabled": 0,
+        "show_in_advanced": 1,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null,
+        "category": "Quest"
+      },
+      "after": {
+        "id": 10013,
+        "name": "Testament Of Vanear",
+        "tradeskill": 75,
+        "skillneeded": 0,
+        "trivial": 0,
+        "nofail": 1,
+        "replace_container": 1,
+        "notes": "Created by xealblade",
+        "must_learn": 0,
+        "learned_by_item_id": 0,
+        "quest": 1,
+        "enabled": 1,
+        "show_in_advanced": 1,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null,
+        "category": "Quest"
+      }
+    }
+  ],
+  "sources": []
+}

@@ -1,0 +1,28 @@
+{
+  "titles": [
+    "Necromancer Epic Quest"
+  ],
+  "proposal": "changes/p99-nz-necromancer-timers.json",
+  "local_quest_keys": [
+    "lakerathe/Kazen_Fecae",
+    "airplane/a_thunder_spirit_princess"
+  ],
+  "review_status": "partial",
+  "match_status": "partial",
+  "notes": [
+    "Restore documented two-hour Kazen and six-hour Thunder Spirit Princess base respawn timers; preserve all other spawn fields.",
+    "Complete spawnentry export scan confirmed exactly one100percent member for each group."
+  ],
+  "unresolved": [
+    "Princess existing variance64 remains unverified, so effective static range is21536-21664seconds, not certified exact P99 timing.",
+    "Natural kill/depop scheduling, ownership and restart persistence need connected game validation. Raid disruption remains deliberate local approximation."
+  ],
+  "verification": {
+    "proposalValidation": "changes/p99-nz-coverage/proposal-validation-67.txt",
+    "isolatedScenarioReceipt": "changes/p99-nz-coverage/isolated-reviewer-tests.json",
+    "isolatedScenarioCount": 229,
+    "scope": "Receipt contains hash-bound scenarios; data-only rows have structural proposal validation, not live gameplay.",
+    "fullGameRuntime": "not_run",
+    "ui": "not_run"
+  }
+}

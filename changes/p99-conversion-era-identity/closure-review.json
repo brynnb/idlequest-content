@@ -1,0 +1,1579 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-22",
+  "scope": "All 25 exact root_era_identity Perl-only assignments. Full-source disposition closure is distinct from gameplay completion.",
+  "counts": {
+    "positively_later": 21,
+    "true_runtime_block": 2,
+    "event_scope_exclusion": 1,
+    "converted_full": 1
+  },
+  "proposal": "changes/p99-conversion-era-identity.json",
+  "proposalSha256": "4d3a07fa5b125ac439d5645b8d8bdb5313c5953ecc73ab65d220a1379c87b332",
+  "baselineManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "inputBindings": [
+    {
+      "path": "changes/p99-conversion-closure/assignments.json",
+      "sha256": "bb0764c87db12fb32e4e53b2a6c039d171f0fc0011d22919f448501e56f8b517"
+    },
+    {
+      "path": "changes/p99-conversion-era-identity/data-evidence.json",
+      "sha256": "232d637cb7435ac12d60987ac95239427809390f6d7e4ad6e2258e11c777a033"
+    },
+    {
+      "path": "changes/p99-conversion-era-identity/external-evidence.json",
+      "sha256": "f46def836d0ec48370546d395629b9283c4fc73f88ffc3884115fa3c2b83742c"
+    }
+  ],
+  "records": [
+    {
+      "key": "cazicthule/#a_Thul_Tae_Ew_Tracker",
+      "sourcePerl": "sources/projecteq/cazicthule/#a_Thul_Tae_Ew_Tracker.pl",
+      "sourcePerlSha256": "ffb2de461868eae40eac6c3c1e1008e4c1206696fd0eb358aeccb2cf69d07553",
+      "fullSourceReviewed": true,
+      "sourceEvents": [
+        "EVENT_DEATH_COMPLETE",
+        "EVENT_SPAWN"
+      ],
+      "sourceCalls": [
+        "say",
+        "signal"
+      ],
+      "originalQuestId": 13536,
+      "originalEnabled": 1,
+      "questRowBinding": {
+        "table": "quests",
+        "path": "data/quests/c.ndjson",
+        "line": 101,
+        "rowSha256": "98df11f551553a5232c6ce9083d9f7fb1a7dab966caaf91dd4c697cd67ec3b1e",
+        "fileSha256": "cd748cb8792b46d46fea64091a571a21758b2fae3d0b274e782b9cd842592485"
+      },
+      "npcIdentities": [
+        {
+          "id": 48209,
+          "name": "#a_Thul_Tae_Ew_Tracker",
+          "rowSha256": "50f2e9947bc7d1f32e2d8f1a79bb9376f5417537037c1b9816046c0a6769b0ca"
+        }
+      ],
+      "spawnIds": [],
+      "proposedFile": null,
+      "progressionImplemented": false,
+      "status": "positively_later",
+      "sourceDependencies": [
+        {
+          "path": "sources/projecteq/cazicthule/48040.lua",
+          "sha256": "fbe436e0d964f9fa1a2f0df572781d1d3527579b51e8069c09dc986ea7589150"
+        },
+        {
+          "path": "sources/projecteq/cazicthule/48254.lua",
+          "sha256": "42755629c1f7925903519a591ddbfb4c6d53a0948c0d64f5f464ce2044b656af"
+        },
+        {
+          "path": "sources/projecteq/cazicthule/48255.lua",
+          "sha256": "a216aed3f10e5f53954d58ca3090a496b68cf75c4ad5a8746af2e5f1c8c0eaf5"
+        }
+      ],
+      "evidenceIds": [
+        "ct-era",
+        "ct-catalog",
+        "ct-spawns",
+        "ct-conflict"
+      ],
+      "verification": "Full source and exact row/caller/dependency static review. No live game, settlement, natural acquisition, multiplayer or rendered UI test.",
+      "contentDecision": "Do not convert or activate post-Velious Accursed Temple behavior.",
+      "reason": "Exact tracker 48209 is spawned by escort 48254, reached from Gimlik 48040, then quill 8723 is traded to 48255 for cog rewards 8726-8730. This is the revamped Accursed Temple escort, positively identified by official Luclin transition plus exact escort placement and caller. Not a classic lizard tracker inferred from its name.",
+      "chain": [
+        48040,
+        48254,
+        48209,
+        8723,
+        48255,
+        8726,
+        8727,
+        8728,
+        8729,
+        8730
+      ],
+      "uncertainties": [
+        "Imported tracker signals 48040, whereas current escort 48254 has no signal handler. This source defect is not repaired or activated for excluded later content. Conflicting Vanilla/Ykesha metadata is not treated as authority."
+      ]
+    },
+    {
+      "key": "cazicthule/#a_boiling_ooze",
+      "sourcePerl": "sources/projecteq/cazicthule/#a_boiling_ooze.pl",
+      "sourcePerlSha256": "478291ac3554afc469107743ca8915b1f79ff2a07a8418416fdef5181d7167dc",
+      "fullSourceReviewed": true,
+      "sourceEvents": [
+        "EVENT_DEATH_COMPLETE"
+      ],
+      "sourceCalls": [
+        "spawn2"
+      ],
+      "originalQuestId": 12634,
+      "originalEnabled": 1,
+      "questRowBinding": {
+        "table": "quests",
+        "path": "data/quests/f.ndjson",
+        "line": 42,
+        "rowSha256": "2c496ec03d824da90d8d339496560c8e0a0d3df4fac24ba8620d75b845596209",
+        "fileSha256": "103976ace7037698153ce91ad2932c909752bbbbb3a43b9eb0468cbfc883a718"
+      },
+      "npcIdentities": [
+        {
+          "id": 48211,
+          "name": "#a_boiling_ooze",
+          "rowSha256": "ca3a24292d70b9679a93780f32bd04385fce11408c1aa9cc63bb40bb037b767d"
+        }
+      ],
+      "spawnIds": [],
+      "proposedFile": null,
+      "progressionImplemented": false,
+      "status": "positively_later",
+      "sourceDependencies": [
+        {
+          "path": "sources/projecteq/cazicthule/#a_swirling_ooze.pl",
+          "sha256": "287313d7f871cda0ce84682df944b1c5a3d872bf05bc53d5143b8c77c3427b25"
+        },
+        {
+          "path": "sources/projecteq/cazicthule/#a_bubbling_ooze.pl",
+          "sha256": "d7079fc9fdf53532fad1940c11f0cd6f3e7337305a018f966d2d01d320191bcd"
+        },
+        {
+          "path": "sources/projecteq/cazicthule/#a_boiling_ooze.pl",
+          "sha256": "478291ac3554afc469107743ca8915b1f79ff2a07a8418416fdef5181d7167dc"
+        },
+        {
+          "path": "sources/projecteq/cazicthule/#an_acidic_mass.pl",
+          "sha256": "26982e83d009876c4271514d36cf0dab466547ed6eedd4ce19cfd308618cc84a"
+        }
+      ],
+      "evidenceIds": [
+        "ct-era",
+        "ct-catalog",
+        "ct-loot"
+      ],
+      "verification": "Full source and exact row/caller/dependency static review. No live game, settlement, natural acquisition, multiplayer or rendered UI test.",
+      "contentDecision": "Do not convert or activate post-Velious Accursed Temple behavior.",
+      "reason": "Exact encounter chain 48213 ->48212 ->48211 ->48210 culminates in acidic mass HP 66/33 adds and 5400-second timeout. Exact acidic-mass loot table maps to all eight Cazic-Thule 2.0 item IDs. Official historical review dates this Accursed Temple population after Velious; no generic ooze species exclusion is made.",
+      "chain": [
+        48213,
+        48212,
+        48211,
+        48210,
+        48004,
+        48001
+      ]
+    },
+    {
+      "key": "cazicthule/#a_bubbling_ooze",
+      "sourcePerl": "sources/projecteq/cazicthule/#a_bubbling_ooze.pl",
+      "sourcePerlSha256": "d7079fc9fdf53532fad1940c11f0cd6f3e7337305a018f966d2d01d320191bcd",
+      "fullSourceReviewed": true,
+      "sourceEvents": [
+        "EVENT_DEATH_COMPLETE"
+      ],
+      "sourceCalls": [
+        "spawn2"
+      ],
+      "originalQuestId": 12652,
+      "originalEnabled": 1,
+      "questRowBinding": {
+        "table": "quests",
+        "path": "data/quests/2.ndjson",
+        "line": 63,
+        "rowSha256": "3988fdd887fd20edc53d5bdf1e8af97ac83bd2ddb57ab2ebc4fe8f87f1939492",
+        "fileSha256": "d28a148e127c23efc2960f5738086204fca63f144b213a8fcf607927e8a030f5"
+      },
+      "npcIdentities": [
+        {
+          "id": 48212,
+          "name": "#a_bubbling_ooze",
+          "rowSha256": "f90a4182946f1812171e3bcdea829f8768799dbe6481201c8ca12012ac8611ae"
+        }
+      ],
+      "spawnIds": [],
+      "proposedFile": null,
+      "progressionImplemented": false,
+      "status": "positively_later",
+      "sourceDependencies": [
+        {
+          "path": "sources/projecteq/cazicthule/#a_swirling_ooze.pl",
+          "sha256": "287313d7f871cda0ce84682df944b1c5a3d872bf05bc53d5143b8c77c3427b25"
+        },
+        {
+          "path": "sources/projecteq/cazicthule/#a_bubbling_ooze.pl",
+          "sha256": "d7079fc9fdf53532fad1940c11f0cd6f3e7337305a018f966d2d01d320191bcd"
+        },
+        {
+          "path": "sources/projecteq/cazicthule/#a_boiling_ooze.pl",
+          "sha256": "478291ac3554afc469107743ca8915b1f79ff2a07a8418416fdef5181d7167dc"
+        },
+        {
+          "path": "sources/projecteq/cazicthule/#an_acidic_mass.pl",
+          "sha256": "26982e83d009876c4271514d36cf0dab466547ed6eedd4ce19cfd308618cc84a"
+        }
+      ],
+      "evidenceIds": [
+        "ct-era",
+        "ct-catalog",
+        "ct-loot"
+      ],
+      "verification": "Full source and exact row/caller/dependency static review. No live game, settlement, natural acquisition, multiplayer or rendered UI test.",
+      "contentDecision": "Do not convert or activate post-Velious Accursed Temple behavior.",
+      "reason": "Exact encounter chain 48213 ->48212 ->48211 ->48210 culminates in acidic mass HP 66/33 adds and 5400-second timeout. Exact acidic-mass loot table maps to all eight Cazic-Thule 2.0 item IDs. Official historical review dates this Accursed Temple population after Velious; no generic ooze species exclusion is made.",
+      "chain": [
+        48213,
+        48212,
+        48211,
+        48210,
+        48004,
+        48001
+      ]
+    },
+    {
+      "key": "cazicthule/#a_swirling_ooze",
+      "sourcePerl": "sources/projecteq/cazicthule/#a_swirling_ooze.pl",
+      "sourcePerlSha256": "287313d7f871cda0ce84682df944b1c5a3d872bf05bc53d5143b8c77c3427b25",
+      "fullSourceReviewed": true,
+      "sourceEvents": [
+        "EVENT_DEATH_COMPLETE"
+      ],
+      "sourceCalls": [
+        "spawn2"
+      ],
+      "originalQuestId": 19365,
+      "originalEnabled": 1,
+      "questRowBinding": {
+        "table": "quests",
+        "path": "data/quests/8.ndjson",
+        "line": 476,
+        "rowSha256": "1b97626c64ec274f129a2e4b6651438e9ba1d90092d74cc4d2c5bd6cccf14ee7",
+        "fileSha256": "f88fc32d0f24739c3d6a85c1e99d8222ca2c95f1fa253999acd429df7b2e9c60"
+      },
+      "npcIdentities": [
+        {
+          "id": 48213,
+          "name": "#a_swirling_ooze",
+          "rowSha256": "32ad2309bdb9f15d88bfa8c6fdd0c76dd2441b1a5e147739c9fb2e751b840aa5"
+        }
+      ],
+      "spawnIds": [
+        57786
+      ],
+      "proposedFile": null,
+      "progressionImplemented": false,
+      "status": "positively_later",
+      "sourceDependencies": [
+        {
+          "path": "sources/projecteq/cazicthule/#a_swirling_ooze.pl",
+          "sha256": "287313d7f871cda0ce84682df944b1c5a3d872bf05bc53d5143b8c77c3427b25"
+        },
+        {
+          "path": "sources/projecteq/cazicthule/#a_bubbling_ooze.pl",
+          "sha256": "d7079fc9fdf53532fad1940c11f0cd6f3e7337305a018f966d2d01d320191bcd"
+        },
+        {
+          "path": "sources/projecteq/cazicthule/#a_boiling_ooze.pl",
+          "sha256": "478291ac3554afc469107743ca8915b1f79ff2a07a8418416fdef5181d7167dc"
+        },
+        {
+          "path": "sources/projecteq/cazicthule/#an_acidic_mass.pl",
+          "sha256": "26982e83d009876c4271514d36cf0dab466547ed6eedd4ce19cfd308618cc84a"
+        }
+      ],
+      "evidenceIds": [
+        "ct-era",
+        "ct-catalog",
+        "ct-loot"
+      ],
+      "verification": "Full source and exact row/caller/dependency static review. No live game, settlement, natural acquisition, multiplayer or rendered UI test.",
+      "contentDecision": "Do not convert or activate post-Velious Accursed Temple behavior.",
+      "reason": "Exact encounter chain 48213 ->48212 ->48211 ->48210 culminates in acidic mass HP 66/33 adds and 5400-second timeout. Exact acidic-mass loot table maps to all eight Cazic-Thule 2.0 item IDs. Official historical review dates this Accursed Temple population after Velious; no generic ooze species exclusion is made.",
+      "chain": [
+        48213,
+        48212,
+        48211,
+        48210,
+        48004,
+        48001
+      ]
+    },
+    {
+      "key": "cazicthule/#an_acidic_mass",
+      "sourcePerl": "sources/projecteq/cazicthule/#an_acidic_mass.pl",
+      "sourcePerlSha256": "26982e83d009876c4271514d36cf0dab466547ed6eedd4ce19cfd308618cc84a",
+      "fullSourceReviewed": true,
+      "sourceEvents": [
+        "EVENT_DEATH_COMPLETE",
+        "EVENT_HP",
+        "EVENT_SPAWN",
+        "EVENT_TIMER"
+      ],
+      "sourceCalls": [
+        "depop",
+        "setnexthpevent",
+        "settimer",
+        "spawn2",
+        "stoptimer"
+      ],
+      "originalQuestId": 14840,
+      "originalEnabled": 1,
+      "questRowBinding": {
+        "table": "quests",
+        "path": "data/quests/3.ndjson",
+        "line": 186,
+        "rowSha256": "006d912227f887a06b0f06ab0576f38b092d6b7e7179e8a8ffe0b70ce65f04f5",
+        "fileSha256": "36a4c1041d416a8ca7670b33119b88c365a0cc7f70a35a3b9d23f5ac51ca6a9b"
+      },
+      "npcIdentities": [
+        {
+          "id": 48210,
+          "name": "#an_acidic_mass",
+          "rowSha256": "53d1dd693c3398c234968ce5f109949cc00a05b61e010248a758f378b3ab5ce1"
+        }
+      ],
+      "spawnIds": [],
+      "proposedFile": null,
+      "progressionImplemented": false,
+      "status": "positively_later",
+      "sourceDependencies": [
+        {
+          "path": "sources/projecteq/cazicthule/#a_swirling_ooze.pl",
+          "sha256": "287313d7f871cda0ce84682df944b1c5a3d872bf05bc53d5143b8c77c3427b25"
+        },
+        {
+          "path": "sources/projecteq/cazicthule/#a_bubbling_ooze.pl",
+          "sha256": "d7079fc9fdf53532fad1940c11f0cd6f3e7337305a018f966d2d01d320191bcd"
+        },
+        {
+          "path": "sources/projecteq/cazicthule/#a_boiling_ooze.pl",
+          "sha256": "478291ac3554afc469107743ca8915b1f79ff2a07a8418416fdef5181d7167dc"
+        },
+        {
+          "path": "sources/projecteq/cazicthule/#an_acidic_mass.pl",
+          "sha256": "26982e83d009876c4271514d36cf0dab466547ed6eedd4ce19cfd308618cc84a"
+        }
+      ],
+      "evidenceIds": [
+        "ct-era",
+        "ct-catalog",
+        "ct-loot"
+      ],
+      "verification": "Full source and exact row/caller/dependency static review. No live game, settlement, natural acquisition, multiplayer or rendered UI test.",
+      "contentDecision": "Do not convert or activate post-Velious Accursed Temple behavior.",
+      "reason": "Exact encounter chain 48213 ->48212 ->48211 ->48210 culminates in acidic mass HP 66/33 adds and 5400-second timeout. Exact acidic-mass loot table maps to all eight Cazic-Thule 2.0 item IDs. Official historical review dates this Accursed Temple population after Velious; no generic ooze species exclusion is made.",
+      "chain": [
+        48213,
+        48212,
+        48211,
+        48210,
+        48004,
+        48001
+      ]
+    },
+    {
+      "key": "cazicthule/a_Thul_Tae_Ew_bloodcaller",
+      "sourcePerl": "sources/projecteq/cazicthule/a_Thul_Tae_Ew_bloodcaller.pl",
+      "sourcePerlSha256": "e1940257ddf808dd6d449594b893717a169bb7be87c362c90ee848149539ee0b",
+      "fullSourceReviewed": true,
+      "sourceEvents": [
+        "EVENT_DEATH_COMPLETE"
+      ],
+      "sourceCalls": [
+        "spawn2"
+      ],
+      "originalQuestId": 12627,
+      "originalEnabled": 1,
+      "questRowBinding": {
+        "table": "quests",
+        "path": "data/quests/5.ndjson",
+        "line": 55,
+        "rowSha256": "bb88ef911e4aaca401ea73d4fb563cf03f7747c42a098e2d655388c7b447c02a",
+        "fileSha256": "341ca1a71c11cc992a8c762c058c468147dbc492c2296be13251ea6a8f9e8d0c"
+      },
+      "npcIdentities": [
+        {
+          "id": 48010,
+          "name": "a_Thul_Tae_Ew_bloodcaller",
+          "rowSha256": "c3db9439835e145641fa9978240d6861279f3e2ba89bfa66ef54f6575abb1754"
+        },
+        {
+          "id": 48082,
+          "name": "a_Thul_Tae_Ew_bloodcaller",
+          "rowSha256": "cd9fbe3dbdbeac3cb5ba95161e0354c84aa1b83d781549e298251ab972cf6b9e"
+        },
+        {
+          "id": 48103,
+          "name": "a_Thul_Tae_Ew_bloodcaller",
+          "rowSha256": "258fce02f945ef52342f76d35d7bc249902121e920095a72efdc40b0ad2ee3ef"
+        }
+      ],
+      "spawnIds": [
+        12210,
+        12193,
+        12216,
+        11999,
+        12001,
+        12000
+      ],
+      "proposedFile": null,
+      "progressionImplemented": false,
+      "status": "positively_later",
+      "sourceDependencies": [],
+      "evidenceIds": [
+        "ct-era",
+        "ct-catalog"
+      ],
+      "verification": "Full source and exact row/caller/dependency static review. No live game, settlement, natural acquisition, multiplayer or rendered UI test.",
+      "contentDecision": "Do not convert or activate post-Velious Accursed Temple behavior.",
+      "reason": "Exact Thul Tae Ew post-revamp population death handler spawns pool of black ooze48215 at the corpse coordinates. The exported population, source family and Accursed Temple catalog align with the official Luclin-era revamp, distinct from original P99 lizard counterparts. No exclusion is inferred from high NPC IDs, exclude 1 or just missing wiki pages.",
+      "chain": [
+        48010,
+        48082,
+        48103,
+        48215
+      ]
+    },
+    {
+      "key": "cazicthule/a_Thul_Tae_Ew_defender",
+      "sourcePerl": "sources/projecteq/cazicthule/a_Thul_Tae_Ew_defender.pl",
+      "sourcePerlSha256": "e1940257ddf808dd6d449594b893717a169bb7be87c362c90ee848149539ee0b",
+      "fullSourceReviewed": true,
+      "sourceEvents": [
+        "EVENT_DEATH_COMPLETE"
+      ],
+      "sourceCalls": [
+        "spawn2"
+      ],
+      "originalQuestId": 12583,
+      "originalEnabled": 1,
+      "questRowBinding": {
+        "table": "quests",
+        "path": "data/quests/3.ndjson",
+        "line": 44,
+        "rowSha256": "bf9166e452897b0ae84eee4c0a98f393a812431793df62633f304e679804124a",
+        "fileSha256": "36a4c1041d416a8ca7670b33119b88c365a0cc7f70a35a3b9d23f5ac51ca6a9b"
+      },
+      "npcIdentities": [
+        {
+          "id": 48011,
+          "name": "a_Thul_Tae_Ew_defender",
+          "rowSha256": "912d576131f3df1fc09e696333d3a45a779f68499b743e6add2146896ad06eed"
+        },
+        {
+          "id": 48083,
+          "name": "a_Thul_Tae_Ew_defender",
+          "rowSha256": "229dc24290041d178e79fc5d43944a766dcff1a8e9bf2d08238ef7a653d0d858"
+        }
+      ],
+      "spawnIds": [
+        12180,
+        12148,
+        12215,
+        12246,
+        12032,
+        12088,
+        12085,
+        12216,
+        12084,
+        12087,
+        12145,
+        12218,
+        12217,
+        12022,
+        12086,
+        12001,
+        12144,
+        12083
+      ],
+      "proposedFile": null,
+      "progressionImplemented": false,
+      "status": "positively_later",
+      "sourceDependencies": [],
+      "evidenceIds": [
+        "ct-era",
+        "ct-catalog"
+      ],
+      "verification": "Full source and exact row/caller/dependency static review. No live game, settlement, natural acquisition, multiplayer or rendered UI test.",
+      "contentDecision": "Do not convert or activate post-Velious Accursed Temple behavior.",
+      "reason": "Exact Thul Tae Ew post-revamp population death handler spawns pool of black ooze48215 at the corpse coordinates. The exported population, source family and Accursed Temple catalog align with the official Luclin-era revamp, distinct from original P99 lizard counterparts. No exclusion is inferred from high NPC IDs, exclude 1 or just missing wiki pages.",
+      "chain": [
+        48011,
+        48083,
+        48215
+      ]
+    },
+    {
+      "key": "cazicthule/a_Thul_Tae_Ew_fanatic",
+      "sourcePerl": "sources/projecteq/cazicthule/a_Thul_Tae_Ew_fanatic.pl",
+      "sourcePerlSha256": "e1940257ddf808dd6d449594b893717a169bb7be87c362c90ee848149539ee0b",
+      "fullSourceReviewed": true,
+      "sourceEvents": [
+        "EVENT_DEATH_COMPLETE"
+      ],
+      "sourceCalls": [
+        "spawn2"
+      ],
+      "originalQuestId": 13480,
+      "originalEnabled": 1,
+      "questRowBinding": {
+        "table": "quests",
+        "path": "data/quests/a.ndjson",
+        "line": 96,
+        "rowSha256": "c1cb6d8d1be3c42b09a1c3111e41d07abf5d7ce30e1632879df7fd04940b09c8",
+        "fileSha256": "39e2288e666d475ff8adb61ee499eec0782655860456a5dbf52850edb163ac71"
+      },
+      "npcIdentities": [
+        {
+          "id": 48028,
+          "name": "a_Thul_Tae_Ew_fanatic",
+          "rowSha256": "0081c71780b022204a8426116f1f04600ed04ad6bd19292d02633eda5675fc66"
+        },
+        {
+          "id": 48109,
+          "name": "a_Thul_Tae_Ew_fanatic",
+          "rowSha256": "4517711235d128b751b74d234cc1bcfb81efe53da428d5c98782e5e2ab8d7784"
+        }
+      ],
+      "spawnIds": [
+        12219,
+        12089
+      ],
+      "proposedFile": null,
+      "progressionImplemented": false,
+      "status": "positively_later",
+      "sourceDependencies": [],
+      "evidenceIds": [
+        "ct-era",
+        "ct-catalog"
+      ],
+      "verification": "Full source and exact row/caller/dependency static review. No live game, settlement, natural acquisition, multiplayer or rendered UI test.",
+      "contentDecision": "Do not convert or activate post-Velious Accursed Temple behavior.",
+      "reason": "Exact Thul Tae Ew post-revamp population death handler spawns pool of black ooze48215 at the corpse coordinates. The exported population, source family and Accursed Temple catalog align with the official Luclin-era revamp, distinct from original P99 lizard counterparts. No exclusion is inferred from high NPC IDs, exclude 1 or just missing wiki pages.",
+      "chain": [
+        48028,
+        48109,
+        48215
+      ]
+    },
+    {
+      "key": "cazicthule/a_Thul_Tae_Ew_judicator",
+      "sourcePerl": "sources/projecteq/cazicthule/a_Thul_Tae_Ew_judicator.pl",
+      "sourcePerlSha256": "e1940257ddf808dd6d449594b893717a169bb7be87c362c90ee848149539ee0b",
+      "fullSourceReviewed": true,
+      "sourceEvents": [
+        "EVENT_DEATH_COMPLETE"
+      ],
+      "sourceCalls": [
+        "spawn2"
+      ],
+      "originalQuestId": 13599,
+      "originalEnabled": 1,
+      "questRowBinding": {
+        "table": "quests",
+        "path": "data/quests/d.ndjson",
+        "line": 93,
+        "rowSha256": "a16251b9d6c71608fea1ff18b3ad578dc8a9c55919f31e929f8c636d716c2482",
+        "fileSha256": "855e70e27185e25833402e673b7cba66af7c65ac0db87bfa51d52c3247bb1fcf"
+      },
+      "npcIdentities": [
+        {
+          "id": 48054,
+          "name": "a_Thul_Tae_Ew_judicator",
+          "rowSha256": "4fe850ec4ce2314b91eb9be71db3292033069f116dad76b106ab1cf26c6c8af1"
+        }
+      ],
+      "spawnIds": [
+        12220
+      ],
+      "proposedFile": null,
+      "progressionImplemented": false,
+      "status": "positively_later",
+      "sourceDependencies": [],
+      "evidenceIds": [
+        "ct-era",
+        "ct-catalog"
+      ],
+      "verification": "Full source and exact row/caller/dependency static review. No live game, settlement, natural acquisition, multiplayer or rendered UI test.",
+      "contentDecision": "Do not convert or activate post-Velious Accursed Temple behavior.",
+      "reason": "Exact Thul Tae Ew post-revamp population death handler spawns pool of black ooze48215 at the corpse coordinates. The exported population, source family and Accursed Temple catalog align with the official Luclin-era revamp, distinct from original P99 lizard counterparts. No exclusion is inferred from high NPC IDs, exclude 1 or just missing wiki pages.",
+      "chain": [
+        48054,
+        48215
+      ]
+    },
+    {
+      "key": "cazicthule/a_Thul_Tae_Ew_justicar",
+      "sourcePerl": "sources/projecteq/cazicthule/a_Thul_Tae_Ew_justicar.pl",
+      "sourcePerlSha256": "e1940257ddf808dd6d449594b893717a169bb7be87c362c90ee848149539ee0b",
+      "fullSourceReviewed": true,
+      "sourceEvents": [
+        "EVENT_DEATH_COMPLETE"
+      ],
+      "sourceCalls": [
+        "spawn2"
+      ],
+      "originalQuestId": 14775,
+      "originalEnabled": 1,
+      "questRowBinding": {
+        "table": "quests",
+        "path": "data/quests/a.ndjson",
+        "line": 185,
+        "rowSha256": "26a74e458052697c8f103c283a245bf1d523ba91122420490a4ab431ca69908a",
+        "fileSha256": "39e2288e666d475ff8adb61ee499eec0782655860456a5dbf52850edb163ac71"
+      },
+      "npcIdentities": [
+        {
+          "id": 48084,
+          "name": "a_Thul_Tae_Ew_justicar",
+          "rowSha256": "2afbde281ae7206b334c8d984a7b0fbdebacaea1387a744e840c664b2640b8af"
+        },
+        {
+          "id": 48009,
+          "name": "a_Thul_Tae_Ew_justicar",
+          "rowSha256": "5a0e8f47da63acbd42b1b832ec2e04b06cdfe82cd9f63bb88e3ece84c64bd295"
+        }
+      ],
+      "spawnIds": [
+        12215,
+        11998,
+        12025,
+        12220,
+        12022,
+        12113,
+        11997,
+        12146
+      ],
+      "proposedFile": null,
+      "progressionImplemented": false,
+      "status": "positively_later",
+      "sourceDependencies": [],
+      "evidenceIds": [
+        "ct-era",
+        "ct-catalog"
+      ],
+      "verification": "Full source and exact row/caller/dependency static review. No live game, settlement, natural acquisition, multiplayer or rendered UI test.",
+      "contentDecision": "Do not convert or activate post-Velious Accursed Temple behavior.",
+      "reason": "Exact Thul Tae Ew post-revamp population death handler spawns pool of black ooze48215 at the corpse coordinates. The exported population, source family and Accursed Temple catalog align with the official Luclin-era revamp, distinct from original P99 lizard counterparts. No exclusion is inferred from high NPC IDs, exclude 1 or just missing wiki pages.",
+      "chain": [
+        48009,
+        48084,
+        48215
+      ]
+    },
+    {
+      "key": "cazicthule/a_Thul_Tae_Ew_protector",
+      "sourcePerl": "sources/projecteq/cazicthule/a_Thul_Tae_Ew_protector.pl",
+      "sourcePerlSha256": "e1940257ddf808dd6d449594b893717a169bb7be87c362c90ee848149539ee0b",
+      "fullSourceReviewed": true,
+      "sourceEvents": [
+        "EVENT_DEATH_COMPLETE"
+      ],
+      "sourceCalls": [
+        "spawn2"
+      ],
+      "originalQuestId": 18183,
+      "originalEnabled": 1,
+      "questRowBinding": {
+        "table": "quests",
+        "path": "data/quests/c.ndjson",
+        "line": 410,
+        "rowSha256": "59f7b3587f2f917512313663790905fe567be1dc53d4e45ec935023c46ea0080",
+        "fileSha256": "cd748cb8792b46d46fea64091a571a21758b2fae3d0b274e782b9cd842592485"
+      },
+      "npcIdentities": [
+        {
+          "id": 48053,
+          "name": "a_Thul_Tae_Ew_protector",
+          "rowSha256": "0e653c59362b9e6c2bf756180582a5892f488f3370ce1a07930ae1ee49439b85"
+        },
+        {
+          "id": 48108,
+          "name": "a_Thul_Tae_Ew_protector",
+          "rowSha256": "4a45c16789ab0163a0c65b6088b29ebc6874226daadffdb356fa34596ac83194"
+        }
+      ],
+      "spawnIds": [
+        12088,
+        12218,
+        12217
+      ],
+      "proposedFile": null,
+      "progressionImplemented": false,
+      "status": "positively_later",
+      "sourceDependencies": [],
+      "evidenceIds": [
+        "ct-era",
+        "ct-catalog"
+      ],
+      "verification": "Full source and exact row/caller/dependency static review. No live game, settlement, natural acquisition, multiplayer or rendered UI test.",
+      "contentDecision": "Do not convert or activate post-Velious Accursed Temple behavior.",
+      "reason": "Exact Thul Tae Ew post-revamp population death handler spawns pool of black ooze48215 at the corpse coordinates. The exported population, source family and Accursed Temple catalog align with the official Luclin-era revamp, distinct from original P99 lizard counterparts. No exclusion is inferred from high NPC IDs, exclude 1 or just missing wiki pages.",
+      "chain": [
+        48053,
+        48108,
+        48215
+      ]
+    },
+    {
+      "key": "cazicthule/a_Thul_Tae_Ew_zealot",
+      "sourcePerl": "sources/projecteq/cazicthule/a_Thul_Tae_Ew_zealot.pl",
+      "sourcePerlSha256": "55c86596261a9bdae54c08d18a54fd391bcd87078e4a5b425421c0eac010d813",
+      "fullSourceReviewed": true,
+      "sourceEvents": [
+        "EVENT_DEATH_COMPLETE"
+      ],
+      "sourceCalls": [
+        "spawn2"
+      ],
+      "originalQuestId": 19061,
+      "originalEnabled": 1,
+      "questRowBinding": {
+        "table": "quests",
+        "path": "data/quests/c.ndjson",
+        "line": 475,
+        "rowSha256": "cbf2b4d5cbb796323da23b37545d8108142943bb3ab4bd9f529432226dc6c40b",
+        "fileSha256": "cd748cb8792b46d46fea64091a571a21758b2fae3d0b274e782b9cd842592485"
+      },
+      "npcIdentities": [
+        {
+          "id": 48089,
+          "name": "a_Thul_Tae_Ew_zealot",
+          "rowSha256": "4d8f535ab04e93292503b632d070aded66b07db4b83d9c4e42bab0962fe3efa5"
+        },
+        {
+          "id": 48036,
+          "name": "a_Thul_Tae_Ew_zealot",
+          "rowSha256": "5d16ee2b2e68d2d079fa64c3c11ede30f14fc84ca7005785092caa88ce57d9c9"
+        }
+      ],
+      "spawnIds": [
+        12148,
+        12219,
+        12216,
+        12121,
+        12089
+      ],
+      "proposedFile": null,
+      "progressionImplemented": false,
+      "status": "positively_later",
+      "sourceDependencies": [],
+      "evidenceIds": [
+        "ct-era",
+        "ct-catalog"
+      ],
+      "verification": "Full source and exact row/caller/dependency static review. No live game, settlement, natural acquisition, multiplayer or rendered UI test.",
+      "contentDecision": "Do not convert or activate post-Velious Accursed Temple behavior.",
+      "reason": "Exact Thul Tae Ew post-revamp population death handler spawns pool of black ooze48215 at the corpse coordinates. The exported population, source family and Accursed Temple catalog align with the official Luclin-era revamp, distinct from original P99 lizard counterparts. No exclusion is inferred from high NPC IDs, exclude 1 or just missing wiki pages.",
+      "chain": [
+        48036,
+        48089,
+        48215
+      ]
+    },
+    {
+      "key": "cobaltscar/Darting_Shark",
+      "sourcePerl": "sources/projecteq/cobaltscar/Darting_Shark.pl",
+      "sourcePerlSha256": "f07ba78d19bca806870e784174a811fc69e1e171eec14f70e1e1670c0c967844",
+      "fullSourceReviewed": true,
+      "sourceEvents": [
+        "EVENT_AGGRO",
+        "EVENT_DEATH_COMPLETE",
+        "EVENT_SPAWN",
+        "EVENT_TIMER"
+      ],
+      "sourceCalls": [
+        "depop",
+        "emote",
+        "settimer",
+        "stoptimer"
+      ],
+      "originalQuestId": 14112,
+      "originalEnabled": 1,
+      "questRowBinding": {
+        "table": "quests",
+        "path": "data/quests/7.ndjson",
+        "line": 148,
+        "rowSha256": "9db314acd2de368a503b18a2e443f903329424ea79d94aba9d8754daf1d24068",
+        "fileSha256": "9ecda61f413eba15bc07bcbe29f4d0bb3add7a004618ac63ad096a78f0fafdb3"
+      },
+      "npcIdentities": [
+        {
+          "id": 117089,
+          "name": "Darting_Shark",
+          "rowSha256": "3db65426f3290075090fbb91440dccedc093c53c9a702a8e42b3d6e32df7432b"
+        }
+      ],
+      "spawnIds": [],
+      "proposedFile": null,
+      "progressionImplemented": false,
+      "status": "positively_later",
+      "sourceDependencies": [
+        {
+          "path": "sources/projecteq/cobaltscar/Yoppa_Greenthumb.lua",
+          "sha256": "5a389ad51a053d79e2e92dd12d1df969858d83c8146a0d7ddc728ce67f95507b"
+        }
+      ],
+      "evidenceIds": [
+        "sharks",
+        "sharks-guide"
+      ],
+      "verification": "Full source and exact row/caller/dependency static review. No live game, settlement, natural acquisition, multiplayer or rendered UI test.",
+      "reason": "Exact source is a timed combat add from Yoppa Greenthumb's explicitly labeled Shaman Epic 1.5. Caller spawns 117089,117090,117091 on elder-spirit progression. Historical walkthrough matches add names and emotes; this is later epic content, not generic Velious sharks.",
+      "chain": [
+        117088,
+        117089,
+        117090,
+        117091
+      ]
+    },
+    {
+      "key": "cobaltscar/Feeder_Shark",
+      "sourcePerl": "sources/projecteq/cobaltscar/Feeder_Shark.pl",
+      "sourcePerlSha256": "f07ba78d19bca806870e784174a811fc69e1e171eec14f70e1e1670c0c967844",
+      "fullSourceReviewed": true,
+      "sourceEvents": [
+        "EVENT_AGGRO",
+        "EVENT_DEATH_COMPLETE",
+        "EVENT_SPAWN",
+        "EVENT_TIMER"
+      ],
+      "sourceCalls": [
+        "depop",
+        "emote",
+        "settimer",
+        "stoptimer"
+      ],
+      "originalQuestId": 18793,
+      "originalEnabled": 1,
+      "questRowBinding": {
+        "table": "quests",
+        "path": "data/quests/5.ndjson",
+        "line": 413,
+        "rowSha256": "94efca562548ba885f19070239b3af6612d2f270bf6b9bb2eca017e06b417e9a",
+        "fileSha256": "341ca1a71c11cc992a8c762c058c468147dbc492c2296be13251ea6a8f9e8d0c"
+      },
+      "npcIdentities": [
+        {
+          "id": 117090,
+          "name": "Feeder_Shark",
+          "rowSha256": "393b96b17c0d7ab5e9bcd6c7fa8dcc69bc696e5cbad0f79c197b0881e1a07145"
+        }
+      ],
+      "spawnIds": [],
+      "proposedFile": null,
+      "progressionImplemented": false,
+      "status": "positively_later",
+      "sourceDependencies": [
+        {
+          "path": "sources/projecteq/cobaltscar/Yoppa_Greenthumb.lua",
+          "sha256": "5a389ad51a053d79e2e92dd12d1df969858d83c8146a0d7ddc728ce67f95507b"
+        }
+      ],
+      "evidenceIds": [
+        "sharks",
+        "sharks-guide"
+      ],
+      "verification": "Full source and exact row/caller/dependency static review. No live game, settlement, natural acquisition, multiplayer or rendered UI test.",
+      "reason": "Exact source is a timed combat add from Yoppa Greenthumb's explicitly labeled Shaman Epic 1.5. Caller spawns 117089,117090,117091 on elder-spirit progression. Historical walkthrough matches add names and emotes; this is later epic content, not generic Velious sharks.",
+      "chain": [
+        117088,
+        117089,
+        117090,
+        117091
+      ]
+    },
+    {
+      "key": "cobaltscar/Gnashing_Killer_Shark",
+      "sourcePerl": "sources/projecteq/cobaltscar/Gnashing_Killer_Shark.pl",
+      "sourcePerlSha256": "abf22a62fd93e6da6e7e628a33c269fa5057f847711b7d7a0a68a850e5450f9d",
+      "fullSourceReviewed": true,
+      "sourceEvents": [
+        "EVENT_AGGRO",
+        "EVENT_DEATH_COMPLETE",
+        "EVENT_SPAWN",
+        "EVENT_TIMER"
+      ],
+      "sourceCalls": [
+        "depop",
+        "emote",
+        "settimer",
+        "stoptimer"
+      ],
+      "originalQuestId": 18460,
+      "originalEnabled": 1,
+      "questRowBinding": {
+        "table": "quests",
+        "path": "data/quests/d.ndjson",
+        "line": 365,
+        "rowSha256": "1140984d1531adfb14abb8f16ceb7d34ba99fd8cc276abe18753ca23849bf9a0",
+        "fileSha256": "855e70e27185e25833402e673b7cba66af7c65ac0db87bfa51d52c3247bb1fcf"
+      },
+      "npcIdentities": [
+        {
+          "id": 117091,
+          "name": "Gnashing_Killer_Shark",
+          "rowSha256": "5c7ea4b40e9cb190bb847fca20a916dd66d978883a8a309ea609cdd90e3bd8f3"
+        }
+      ],
+      "spawnIds": [],
+      "proposedFile": null,
+      "progressionImplemented": false,
+      "status": "positively_later",
+      "sourceDependencies": [
+        {
+          "path": "sources/projecteq/cobaltscar/Yoppa_Greenthumb.lua",
+          "sha256": "5a389ad51a053d79e2e92dd12d1df969858d83c8146a0d7ddc728ce67f95507b"
+        }
+      ],
+      "evidenceIds": [
+        "sharks",
+        "sharks-guide"
+      ],
+      "verification": "Full source and exact row/caller/dependency static review. No live game, settlement, natural acquisition, multiplayer or rendered UI test.",
+      "reason": "Exact source is a timed combat add from Yoppa Greenthumb's explicitly labeled Shaman Epic 1.5. Caller spawns 117089,117090,117091 on elder-spirit progression. Historical walkthrough matches add names and emotes; this is later epic content, not generic Velious sharks.",
+      "chain": [
+        117088,
+        117089,
+        117090,
+        117091
+      ]
+    },
+    {
+      "key": "growthplane/Flighty_Viridian_Wisp",
+      "sourcePerl": "sources/projecteq/growthplane/Flighty_Viridian_Wisp.pl",
+      "sourcePerlSha256": "952e0ab69675903eb500e38a984bab96fb7dc3a6e59df31028a4d31304ba6b1c",
+      "fullSourceReviewed": true,
+      "sourceEvents": [
+        "EVENT_COMBAT",
+        "EVENT_DEATH_COMPLETE",
+        "EVENT_SPAWN",
+        "EVENT_TIMER"
+      ],
+      "sourceCalls": [
+        "depop",
+        "settimer",
+        "stoptimer"
+      ],
+      "originalQuestId": 15599,
+      "originalEnabled": 1,
+      "questRowBinding": {
+        "table": "quests",
+        "path": "data/quests/c.ndjson",
+        "line": 245,
+        "rowSha256": "ad1295e94c17e667682a955f67efbeb37432ce09af9747ad0fdee1f9a2cdd183",
+        "fileSha256": "cd748cb8792b46d46fea64091a571a21758b2fae3d0b274e782b9cd842592485"
+      },
+      "npcIdentities": [
+        {
+          "id": 127105,
+          "name": "Flighty_Viridian_Wisp",
+          "rowSha256": "251906e4958aa77a4cba5898aef047258591dc8043647177c917f092c3cf846c"
+        }
+      ],
+      "spawnIds": [],
+      "proposedFile": null,
+      "progressionImplemented": false,
+      "status": "positively_later",
+      "sourceDependencies": [
+        {
+          "path": "sources/projecteq/rivervale/Shakey_Scarecrow.lua",
+          "sha256": "67ab81923846650252c2edb2a0f3f33ef773bb537fa730875b67306b5d260535"
+        },
+        {
+          "path": "sources/projecteq/kithicor/Kithicor.pl",
+          "sha256": "310df71b8e3c0aad2caa29a3e87b3d47841f0fe429c9124dadf1190c5f01b3a9"
+        },
+        {
+          "path": "sources/projecteq/growthplane/player.pl",
+          "sha256": "311af64b43bec20226c782713cf539f7547df26edb4a1382c1c2655eefc1d49a"
+        },
+        {
+          "path": "sources/projecteq/growthplane/Flighty_Viridian_Wisp.pl",
+          "sha256": "952e0ab69675903eb500e38a984bab96fb7dc3a6e59df31028a4d31304ba6b1c"
+        }
+      ],
+      "evidenceIds": [
+        "wisp-origin",
+        "wisp-optional",
+        "wisp-target"
+      ],
+      "verification": "Full source and exact row/caller/dependency static review. No live game, settlement, natural acquisition, multiplayer or rendered UI test.",
+      "reason": "Entire exact player trigger / temporary wisp belongs to the later Shakey-noggin Guise of Horror branch linked to Rogue 1.5, not the classic Sack of Writhing Hay exchange. Player requires 52355, checks absence 52361 and creates 127105;127105 loot resolves 52361. Shakey's separate classic 14321 ->13980/14031 branch is preserved and outside this exclusion.",
+      "chain": [
+        11139,
+        52355,
+        127105,
+        52361
+      ],
+      "uncertainties": [
+        "Later item definitions 52355 and 52361 are absent from exported items; preserved source and exact loot edge establish dependency, but missing definitions are not used as era proof."
+      ]
+    },
+    {
+      "key": "growthplane/player",
+      "sourcePerl": "sources/projecteq/growthplane/player.pl",
+      "sourcePerlSha256": "311af64b43bec20226c782713cf539f7547df26edb4a1382c1c2655eefc1d49a",
+      "fullSourceReviewed": true,
+      "sourceEvents": [
+        "EVENT_ENTERZONE"
+      ],
+      "sourceCalls": [
+        "check_hasitem",
+        "unique_spawn"
+      ],
+      "originalQuestId": 16114,
+      "originalEnabled": 1,
+      "questRowBinding": {
+        "table": "quests",
+        "path": "data/quests/b.ndjson",
+        "line": 270,
+        "rowSha256": "97193fbe1d0d97827011e4f21fe954ec015f0e16408df888009fe388c26b52ce",
+        "fileSha256": "2cc535e2fbc510a44e32f49f2c68b7fd0ff04bd82dc9a0cc89afc16c99db2b0b"
+      },
+      "npcIdentities": [],
+      "spawnIds": [],
+      "proposedFile": null,
+      "progressionImplemented": false,
+      "status": "positively_later",
+      "sourceDependencies": [
+        {
+          "path": "sources/projecteq/rivervale/Shakey_Scarecrow.lua",
+          "sha256": "67ab81923846650252c2edb2a0f3f33ef773bb537fa730875b67306b5d260535"
+        },
+        {
+          "path": "sources/projecteq/kithicor/Kithicor.pl",
+          "sha256": "310df71b8e3c0aad2caa29a3e87b3d47841f0fe429c9124dadf1190c5f01b3a9"
+        },
+        {
+          "path": "sources/projecteq/growthplane/player.pl",
+          "sha256": "311af64b43bec20226c782713cf539f7547df26edb4a1382c1c2655eefc1d49a"
+        },
+        {
+          "path": "sources/projecteq/growthplane/Flighty_Viridian_Wisp.pl",
+          "sha256": "952e0ab69675903eb500e38a984bab96fb7dc3a6e59df31028a4d31304ba6b1c"
+        }
+      ],
+      "evidenceIds": [
+        "wisp-origin",
+        "wisp-optional",
+        "wisp-target"
+      ],
+      "verification": "Full source and exact row/caller/dependency static review. No live game, settlement, natural acquisition, multiplayer or rendered UI test.",
+      "reason": "Entire exact player trigger / temporary wisp belongs to the later Shakey-noggin Guise of Horror branch linked to Rogue 1.5, not the classic Sack of Writhing Hay exchange. Player requires 52355, checks absence 52361 and creates 127105;127105 loot resolves 52361. Shakey's separate classic 14321 ->13980/14031 branch is preserved and outside this exclusion.",
+      "chain": [
+        11139,
+        52355,
+        127105,
+        52361
+      ],
+      "uncertainties": [
+        "Later item definitions 52355 and 52361 are absent from exported items; preserved source and exact loot edge establish dependency, but missing definitions are not used as era proof."
+      ]
+    },
+    {
+      "key": "iceclad/110115",
+      "sourcePerl": "sources/projecteq/iceclad/110115.pl",
+      "sourcePerlSha256": "7105435b2d4ba2e993a4cc6c29d5275f99f928eb02f9c6e93f37284cbfc7f6da",
+      "fullSourceReviewed": true,
+      "sourceEvents": [
+        "EVENT_ENTER",
+        "EVENT_SPAWN"
+      ],
+      "sourceCalls": [
+        "movepc",
+        "set_proximity"
+      ],
+      "originalQuestId": 14568,
+      "originalEnabled": 1,
+      "questRowBinding": {
+        "table": "quests",
+        "path": "data/quests/3.ndjson",
+        "line": 171,
+        "rowSha256": "fdec1fc431cf81f5032621fd525983f097832c2dcf8e250fdf16d04913646be2",
+        "fileSha256": "36a4c1041d416a8ca7670b33119b88c365a0cc7f70a35a3b9d23f5ac51ca6a9b"
+      },
+      "npcIdentities": [
+        {
+          "id": 110115,
+          "name": "#_#_6",
+          "rowSha256": "09c2d4250001036b108bb1f2cc0d41161967eafdf3d761c77f99925897465ab4"
+        }
+      ],
+      "spawnIds": [
+        1148,
+        1149
+      ],
+      "proposedFile": null,
+      "progressionImplemented": false,
+      "status": "true_runtime_block",
+      "sourceDependencies": [],
+      "evidenceIds": [
+        "boat-route",
+        "icebreaker-cache"
+      ],
+      "verification": "Full source and exact row/caller/dependency static review. No live game, settlement, natural acquisition, multiplayer or rendered UI test.",
+      "reason": "In-era boat route is documented, but this exact source is an invisible fixed proximity teleport marker, not a reward quest or proven boat simulation. The compatibility review supports per-character proximity, but natural registration and eligibility of these static markers have not been demonstrated. General timer or proxy support does not establish functional boat transport. Shipping enabled Lua without proving normal registration would manufacture apparent coverage.",
+      "compatibilityReviewIds": [
+        "numeric-lookup",
+        "proximity-registration",
+        "deferred-effects"
+      ],
+      "chain": [
+        110115,
+        34
+      ],
+      "sourceParameters": {
+        "radiusXY": 75,
+        "destination": [
+          34,
+          -949.81,
+          801,
+          -5.55
+        ]
+      },
+      "blocker": "Requires verified normal static-marker admission and per-character proximity registration, supported zone-transfer settlement and an explicit P99 boat/convenience adaptation. No new runtime implementation or undocumented coordinates proposed.",
+      "identityNote": "Numeric iceclad/110115 correctly maps via current numeric fallback to NPC 110115 named #_#_6; this is not a missing-name identity blocker."
+    },
+    {
+      "key": "kithicor/#a_jack_o_lantern",
+      "sourcePerl": "sources/projecteq/kithicor/#a_jack_o_lantern.pl",
+      "sourcePerlSha256": "2f5bf6434469eeb29317cd2e5dd5372e2ddda1d9c3fad7d8bf9ab056fce4e52c",
+      "fullSourceReviewed": true,
+      "sourceEvents": [
+        "EVENT_SPAWN",
+        "EVENT_TIMER"
+      ],
+      "sourceCalls": [
+        "RandomRoam",
+        "settimer"
+      ],
+      "originalQuestId": 12642,
+      "originalEnabled": 1,
+      "questRowBinding": {
+        "table": "quests",
+        "path": "data/quests/3.ndjson",
+        "line": 49,
+        "rowSha256": "2d5c55065c697bb4041d46359e1297bd46796abcf34e5604746d3121ca3dc0fe",
+        "fileSha256": "36a4c1041d416a8ca7670b33119b88c365a0cc7f70a35a3b9d23f5ac51ca6a9b"
+      },
+      "npcIdentities": [
+        {
+          "id": 20289,
+          "name": "#a_jack_o_lantern",
+          "rowSha256": "d9f9023ce021865e3557033daa3d4cb98d75304260850f8fc42021e975293986"
+        }
+      ],
+      "spawnIds": [
+        142506,
+        142498,
+        142500,
+        142510,
+        142496,
+        142505,
+        142513,
+        142497,
+        142503,
+        142507,
+        142509,
+        142504,
+        142501,
+        142502,
+        142514,
+        142508,
+        142511,
+        142499,
+        142512
+      ],
+      "proposedFile": null,
+      "progressionImplemented": false,
+      "status": "event_scope_exclusion",
+      "sourceDependencies": [],
+      "evidenceIds": [
+        "jack-cache"
+      ],
+      "verification": "Full source and exact row/caller/dependency static review. No live game, settlement, natural acquisition, multiplayer or rendered UI test.",
+      "reason": "All 19 exact Kithicor placements for NPC 20289 require peq_halloween. This source is only randomized roaming/timer behavior for that seasonal population, not an ordinary quest. P99 cache has a classic Unrest jack-o-lantern with the same emu_id, so species/name and numeric identity are not proof of a later NPC. Preserve event exclusion specifically for Kithicor; do not exclude classic Unrest content or assert a 2006 introduction for this exact actor.",
+      "runtimeLimit": "RandomRoam records a deferred roam request; even a cosmetic Lua stub would not prove bounded roaming or natural holiday activation.",
+      "compatibilityReviewIds": [
+        "deferred-effects"
+      ],
+      "introductionDate": "unestablished; not needed for exact event-scoped exclusion"
+    },
+    {
+      "key": "kithicor/Feign_Death_Trooper",
+      "sourcePerl": "sources/projecteq/kithicor/Feign_Death_Trooper.pl",
+      "sourcePerlSha256": "e9e6e3a2362e0c61e456fa7b99d82c685191212cdc07f72a87a288176e349005",
+      "fullSourceReviewed": true,
+      "sourceEvents": [
+        "EVENT_DEATH_COMPLETE",
+        "EVENT_SPAWN",
+        "EVENT_TIMER"
+      ],
+      "sourceCalls": [
+        "RandomRoam",
+        "settimer",
+        "spawn2"
+      ],
+      "originalQuestId": 15861,
+      "originalEnabled": 1,
+      "questRowBinding": {
+        "table": "quests",
+        "path": "data/quests/a.ndjson",
+        "line": 260,
+        "rowSha256": "6f8f8322322a8482b05be820c0d27b770d26d89cee8ac35e4cdc81790835adfb",
+        "fileSha256": "39e2288e666d475ff8adb61ee499eec0782655860456a5dbf52850edb163ac71"
+      },
+      "npcIdentities": [
+        {
+          "id": 20287,
+          "name": "Feign_Death_Trooper",
+          "rowSha256": "301b8dca2d4be737f1d7dc4265e0c53541efb469b8d5501f101fc885473ce312"
+        }
+      ],
+      "spawnIds": [
+        137427,
+        137428,
+        137426,
+        137431,
+        137417,
+        137419,
+        137424,
+        137430,
+        137422,
+        137420,
+        137421,
+        137423,
+        137418,
+        137425,
+        137432,
+        137429
+      ],
+      "proposedFile": null,
+      "progressionImplemented": false,
+      "status": "positively_later",
+      "sourceDependencies": [
+        {
+          "path": "sources/projecteq/kithicor/Feign_Death_Trooper.pl",
+          "sha256": "e9e6e3a2362e0c61e456fa7b99d82c685191212cdc07f72a87a288176e349005"
+        },
+        {
+          "path": "sources/projecteq/kithicor/a_fallen_werewolf.pl",
+          "sha256": "2c4cc1dd9b7b4422917973f6bc61d051ac41e70b7a4dbc41d2eb76dcd6bf2274"
+        },
+        {
+          "path": "sources/projecteq/kithicor/Syxa_Jewlborn.pl",
+          "sha256": "448a4f80ecd21c7fc4d4ea36b9164dc11bb7b9f5881590d0a8e199f9df5ee29b"
+        }
+      ],
+      "evidenceIds": [
+        "holiday2006"
+      ],
+      "verification": "Full source and exact row/caller/dependency static review. No live game, settlement, natural acquisition, multiplayer or rendered UI test.",
+      "reason": "Feign Death Trooper 20287 spawns fallen werewolf 20286; the latter lies dead and depops only when cast on with spell 11658, exported as Blood Curse Antidote. This exact fallen-werewolf antidote chain matches Lycanthrope's Cure 2006#3. Spell and source identities, rather than names alone, establish later seasonal content.",
+      "chain": [
+        20287,
+        20286,
+        11658
+      ]
+    },
+    {
+      "key": "kithicor/a_black_cat",
+      "sourcePerl": "sources/projecteq/kithicor/a_black_cat.pl",
+      "sourcePerlSha256": "4c723d2f616dc4ab5270b8a22dcc1d23b619f90f31ca5c48ca1906e493f14fdc",
+      "fullSourceReviewed": true,
+      "sourceEvents": [
+        "EVENT_SPAWN",
+        "EVENT_TIMER"
+      ],
+      "sourceCalls": [
+        "RandomRoam",
+        "settimer"
+      ],
+      "originalQuestId": 15228,
+      "originalEnabled": 1,
+      "questRowBinding": {
+        "table": "quests",
+        "path": "data/quests/0.ndjson",
+        "line": 202,
+        "rowSha256": "35d0351194a74b021479057e8b75aa212d5a86867cbfb48f177d66eed10f6c5f",
+        "fileSha256": "26391a5cbfd5376a1c647367121288c71108f84bfb96bc8b09bfb6f5cd3bbeb2"
+      },
+      "npcIdentities": [
+        {
+          "id": 20282,
+          "name": "a_black_cat",
+          "rowSha256": "3a1929dc7c56c7622eb32a905f9657054e3b228e368208690af591016dd88fbe"
+        }
+      ],
+      "spawnIds": [
+        137087
+      ],
+      "proposedFile": null,
+      "progressionImplemented": false,
+      "status": "positively_later",
+      "sourceDependencies": [
+        {
+          "path": "sources/projecteq/kithicor/Feign_Death_Trooper.pl",
+          "sha256": "e9e6e3a2362e0c61e456fa7b99d82c685191212cdc07f72a87a288176e349005"
+        },
+        {
+          "path": "sources/projecteq/kithicor/a_fallen_werewolf.pl",
+          "sha256": "2c4cc1dd9b7b4422917973f6bc61d051ac41e70b7a4dbc41d2eb76dcd6bf2274"
+        },
+        {
+          "path": "sources/projecteq/kithicor/Syxa_Jewlborn.pl",
+          "sha256": "448a4f80ecd21c7fc4d4ea36b9164dc11bb7b9f5881590d0a8e199f9df5ee29b"
+        }
+      ],
+      "evidenceIds": [
+        "holiday2006"
+      ],
+      "verification": "Full source and exact row/caller/dependency static review. No live game, settlement, natural acquisition, multiplayer or rendered UI test.",
+      "reason": "Exact seasonal Kithicor black cat 20282 is part of Syxa Jewlborn's Find the Black Cat 2006 event (task 8278, halloween_black_cat state, Scrumptious Jack-o-Lantern 87311). Event-scoped placement and exact caller/reward identity corroborate later origin, not cat appearance or race alone.",
+      "chain": [
+        20282,
+        8278,
+        87311
+      ]
+    },
+    {
+      "key": "kithicor/a_fallen_werewolf",
+      "sourcePerl": "sources/projecteq/kithicor/a_fallen_werewolf.pl",
+      "sourcePerlSha256": "2c4cc1dd9b7b4422917973f6bc61d051ac41e70b7a4dbc41d2eb76dcd6bf2274",
+      "fullSourceReviewed": true,
+      "sourceEvents": [
+        "EVENT_CAST_ON",
+        "EVENT_SPAWN",
+        "EVENT_TIMER"
+      ],
+      "sourceCalls": [
+        "SetAnim",
+        "depop",
+        "settimer",
+        "stoptimer"
+      ],
+      "originalQuestId": 19386,
+      "originalEnabled": 1,
+      "questRowBinding": {
+        "table": "quests",
+        "path": "data/quests/c.ndjson",
+        "line": 497,
+        "rowSha256": "d8e51127035986576222b766d83b4558a72b166c155787815f8ea94e33ac63b7",
+        "fileSha256": "cd748cb8792b46d46fea64091a571a21758b2fae3d0b274e782b9cd842592485"
+      },
+      "npcIdentities": [
+        {
+          "id": 20286,
+          "name": "a_fallen_werewolf",
+          "rowSha256": "4617307148147daa591142e2128367f490c1646c24ba3d50b606996cd581a166"
+        }
+      ],
+      "spawnIds": [],
+      "proposedFile": null,
+      "progressionImplemented": false,
+      "status": "positively_later",
+      "sourceDependencies": [
+        {
+          "path": "sources/projecteq/kithicor/Feign_Death_Trooper.pl",
+          "sha256": "e9e6e3a2362e0c61e456fa7b99d82c685191212cdc07f72a87a288176e349005"
+        },
+        {
+          "path": "sources/projecteq/kithicor/a_fallen_werewolf.pl",
+          "sha256": "2c4cc1dd9b7b4422917973f6bc61d051ac41e70b7a4dbc41d2eb76dcd6bf2274"
+        },
+        {
+          "path": "sources/projecteq/kithicor/Syxa_Jewlborn.pl",
+          "sha256": "448a4f80ecd21c7fc4d4ea36b9164dc11bb7b9f5881590d0a8e199f9df5ee29b"
+        }
+      ],
+      "evidenceIds": [
+        "holiday2006"
+      ],
+      "verification": "Full source and exact row/caller/dependency static review. No live game, settlement, natural acquisition, multiplayer or rendered UI test.",
+      "reason": "Feign Death Trooper 20287 spawns fallen werewolf 20286; the latter lies dead and depops only when cast on with spell 11658, exported as Blood Curse Antidote. This exact fallen-werewolf antidote chain matches Lycanthrope's Cure 2006#3. Spell and source identities, rather than names alone, establish later seasonal content.",
+      "chain": [
+        20287,
+        20286,
+        11658
+      ]
+    },
+    {
+      "key": "misty/Bidils_the_Quickhand",
+      "sourcePerl": "sources/projecteq/misty/Bidils_the_Quickhand.pl",
+      "sourcePerlSha256": "bb8a9920168c3a20015604b986321f47c793cb716d7dc01a04f74cd0bb33a13d",
+      "fullSourceReviewed": true,
+      "sourceEvents": [
+        "EVENT_SAY"
+      ],
+      "sourceCalls": [
+        "emote",
+        "say"
+      ],
+      "originalQuestId": 14079,
+      "originalEnabled": 1,
+      "questRowBinding": {
+        "table": "quests",
+        "path": "data/quests/e.ndjson",
+        "line": 122,
+        "rowSha256": "aa7e436ac89849d76242c7cf083fae902b2dc3b1353246ec746b494b23066598",
+        "fileSha256": "dffab6f962908505f7059075d9d5a0b9efd3ce6b36bd7bac5c8820ffe7d66540"
+      },
+      "npcIdentities": [
+        {
+          "id": 33076,
+          "name": "Bidils_the_Quickhand",
+          "rowSha256": "5278638ec6672927f8d6999484d7e7959d6f3f9a4f505bfd3ac30b85663f8bda"
+        },
+        {
+          "id": 415015,
+          "name": "Bidils_the_Quickhand",
+          "rowSha256": "1a108ad1698852530f81ef81bfa49750260fc1535954af307300a71e5eebd0f2"
+        }
+      ],
+      "spawnIds": [
+        7603
+      ],
+      "proposedFile": "changes/p99-conversion-era-identity/misty/Bidils_the_Quickhand.lua",
+      "progressionImplemented": false,
+      "status": "converted_full",
+      "sourceDependencies": [],
+      "evidenceIds": [
+        "bidils-text",
+        "bidils-context",
+        "realm-cache"
+      ],
+      "verification": "Full source and exact row/caller/dependency static review. No live game, settlement, natural acquisition, multiplayer or rendered UI test.",
+      "reason": "Fourteen independent dialogue branches faithfully converted with player-name/race substitution and all emotes; added safe refund-only trade handling. Source is a Realm of Heroes GM herald, not a 2024 same-named raid. No coin branch, reward, faction, experience, spawn or NPC policy invented. Existing NPC 33076 Misty placement 7603 and distinct same-name 415015 remain untouched.",
+      "proposedSourceSha256": "62f3461821f1f0b2adedc2b196e90cfb26e268c55cdfb690b90b4fcd5d3c3418",
+      "target": "maintained/lua/converted-perl/misty/Bidils_the_Quickhand.lua",
+      "uncertainties": [
+        "Exact P99 Bidils dialogue/placement not independently documented in preserved cache. Related herald supports in-era GM-event context; prose retained from original source with external matching mirror. No NPC activation or completed GM-event progression claimed."
+      ]
+    },
+    {
+      "key": "necropolis/#Stiggles_Cogswin",
+      "sourcePerl": "sources/projecteq/necropolis/#Stiggles_Cogswin.pl",
+      "sourcePerlSha256": "1497cef20e21428681a3ed1eb93997deef3c733051372b891007fe936d7b3c94",
+      "fullSourceReviewed": true,
+      "sourceEvents": [
+        "EVENT_HP",
+        "EVENT_SPAWN"
+      ],
+      "sourceCalls": [
+        "depop",
+        "setnexthpevent",
+        "spawn2"
+      ],
+      "originalQuestId": 13730,
+      "originalEnabled": 1,
+      "questRowBinding": {
+        "table": "quests",
+        "path": "data/quests/5.ndjson",
+        "line": 114,
+        "rowSha256": "b4566111cd23c4e14d5881ac1fff80eca46de6586e1b5c0ece8bdec206315ae9",
+        "fileSha256": "341ca1a71c11cc992a8c762c058c468147dbc492c2296be13251ea6a8f9e8d0c"
+      },
+      "npcIdentities": [
+        {
+          "id": 123150,
+          "name": "#Stiggles_Cogswin",
+          "rowSha256": "555e881c110a0317ab368fb809fe377efae658a3b5e5bc6cfc9056d0391c42b0"
+        }
+      ],
+      "spawnIds": [],
+      "proposedFile": null,
+      "progressionImplemented": false,
+      "status": "positively_later",
+      "sourceDependencies": [
+        {
+          "path": "sources/projecteq/necropolis/#an_Odd_Looking_Spider.pl",
+          "sha256": "6e314151f3e2fb8b56bf7cb68f72b4e14aba71178e66b796c7a47c337600daae"
+        },
+        {
+          "path": "changes/p99-conversion-era-identity/stiggles-delegated-evidence.json",
+          "sha256": "6fc70063ee43653ad858cb26ccaebe8760f78ca7d089c8434a5149604b1fb081"
+        }
+      ],
+      "evidenceIds": [
+        "stiggles",
+        "stiggles-corroboration"
+      ],
+      "verification": "Full source and exact row/caller/dependency static review. No live game, settlement, natural acquisition, multiplayer or rendered UI test.",
+      "reason": "Exact clockwork Stiggles 123150 is created by odd-looking-spider Note to Stiggle 67053 and at 50%HP transforms into gnome123151. Trade review positively identifies Reactivate the Portals, LDoN quest 2634; firsthand 2006 investigation independently corroborates that exact Necropolis Stiggles chain. Preserve later exclusion, not a generic transformed-actor runtime claim.",
+      "chain": [
+        67053,
+        123150,
+        123151
+      ]
+    },
+    {
+      "key": "nro/#_#_5",
+      "sourcePerl": "sources/projecteq/nro/#_#_5.pl",
+      "sourcePerlSha256": "71e0a40e26f01d6617a9adec99716ad223cf6bf8b8dee40eab0d4baebd74a3cd",
+      "fullSourceReviewed": true,
+      "sourceEvents": [
+        "EVENT_ENTER",
+        "EVENT_SPAWN"
+      ],
+      "sourceCalls": [
+        "movepc",
+        "set_proximity"
+      ],
+      "originalQuestId": 18139,
+      "originalEnabled": 1,
+      "questRowBinding": {
+        "table": "quests",
+        "path": "data/quests/d.ndjson",
+        "line": 343,
+        "rowSha256": "3ea6e3f5067af5b3c6826187cf6b25a15ef2470d49cd389b898b6c2506a7de8c",
+        "fileSha256": "855e70e27185e25833402e673b7cba66af7c65ac0db87bfa51d52c3247bb1fcf"
+      },
+      "npcIdentities": [
+        {
+          "id": 34144,
+          "name": "#_#_5",
+          "rowSha256": "9c2b00c64612fddaf90946245bb4834d90e85fb7f849843e6877d8a7849a88ef"
+        }
+      ],
+      "spawnIds": [
+        1146
+      ],
+      "proposedFile": null,
+      "progressionImplemented": false,
+      "status": "true_runtime_block",
+      "sourceDependencies": [],
+      "evidenceIds": [
+        "boat-route",
+        "icebreaker-cache"
+      ],
+      "verification": "Full source and exact row/caller/dependency static review. No live game, settlement, natural acquisition, multiplayer or rendered UI test.",
+      "reason": "In-era boat route is documented, but this exact source is an invisible fixed proximity teleport marker, not a reward quest or proven boat simulation. The compatibility review supports per-character proximity, but natural registration and eligibility of these static markers have not been demonstrated. General timer or proxy support does not establish functional boat transport. Shipping enabled Lua without proving normal registration would manufacture apparent coverage.",
+      "compatibilityReviewIds": [
+        "numeric-lookup",
+        "proximity-registration",
+        "deferred-effects"
+      ],
+      "chain": [
+        34144,
+        110
+      ],
+      "sourceParameters": {
+        "radiusXY": 55,
+        "destination": [
+          110,
+          -20395.3,
+          3777.7,
+          -34.1
+        ]
+      },
+      "blocker": "Requires verified normal static-marker admission and per-character proximity registration, supported zone-transfer settlement and an explicit P99 boat/convenience adaptation. No new runtime implementation or undocumented coordinates proposed.",
+      "identityNote": "Numeric iceclad/110115 correctly maps via current numeric fallback to NPC 110115 named #_#_6; this is not a missing-name identity blocker."
+    }
+  ],
+  "integrationNotes": [
+    "Only Bidils receives a Format 1 full-row/source conversion here. The 21 positive later sources and 1 exact event-scoped source remain unchanged non-executable Perl-only rows; central reconciliation consumes dispositions without empty disabled Lua or scope-policy edits.",
+    "Both boat sources remain genuine activation/registration blockers, not falsely classified as later content or implemented transport.",
+    "Baseline data, sources, maintained and effective directories untouched. No database import, rendered UI or live gameplay assertion."
+  ]
+}

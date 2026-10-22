@@ -1,0 +1,45 @@
+{
+  "format": 1,
+  "id": "p99-tz-old-sky-ooga",
+  "summary": "Restore only the documented legacy-to-current Sky item exchanges [(11695, 27730)]. Old Sky page names this original quest NPC for upgrades. No corresponding Perl file or existing upgrade branch supplies numeric fallback, so do not invent XP, faction, cash or depop side effects; these are unquantified. Preserve every current multi-item test and all other events.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Shaman_Plane_of_Sky_Tests?action=raw",
+      "note": "Cached 2026-07-17T23:32:41.562Z; revision unavailable; SHA256 d2cf8a9522bfba312b59886ff4968b2699824ca84526006ed5a5fe9b0a624d2a. Restore only the documented legacy-to-current Sky item exchanges [(11695, 27730)]. Old Sky page names this original quest NPC for upgrades. No corresponding Perl file or existing upgrade branch supplies numeric fallback, so do not invent XP, faction, cash or depop side effects; these are unquantified. Preserve every current multi-item test and all other events. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    },
+    {
+      "url": "https://wiki.project1999.com/Plane_of_Sky_Quests_(Old)",
+      "note": "Intro explicitly allows exchanging old rewards at the same NPC; Shadow Knight and Shaman tables map exact old/current named items. Cached SHA256 cdcadb1c440984f769321fa8ede419e777c0386d1a11fef5047aac29135e5ca1. Gina MacStargan spelling resolves to existing Shaman actor Gina_McStargan. Ooga Spiroc Warhammer identity remains unresolved; no inferred replacement ID."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 16764,
+        "zone": "airplane",
+        "name": "Ooga",
+        "lua_content": "-- items: 20845, 20955, 20842, 20841, 27729, 20962, 20843, 20844, 27730, 20846, 20969, 20848, 20847, 11694\nfunction event_spawn(e)\n\teq.set_timer(\"depop\",300000);\nend\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Euh? You come see Ooga about shaman tests? Me can test in shrink, the snake, or witch doctor! What yuz want to test in?\");\n\telseif(e.message:findi(\"shrink\")) then \t\t\t--shaman test of shrink\n\t\te.self:Say(\"Ohh! Dat gud tes, me know cuz me did it. Me had get a Efreeti War Club, Djinni Statuette, sum Corrosive Venom an sum Wooden Bands. Was hard for Ooga, me took long to get dem. Yuz give all to me at sam time me give yuz what me got.\");\n\telseif(e.message:findi(\"snake\")) then \t\t\t--shaman test of the snake\n\t\te.self:Say(\"Mmm, tes of snake not too bad, me did It an still alive. When me did It, me got Emerald Spiroc Feather, Bixie Essence, an Spiritualists Ring. Me get gud stuff for dat. Yuz giv me stuff all at once an me give to yuz what me got.\");\n\telseif(e.message:findi(\"witch doctor\")) then \t--shaman test of the witch doctor\n\t\te.self:Say(\"Oh! Now yuz got In da big mojo, me had big hard time wit dis one. Me got In lot of trouble when me got Efreeti War Maul, Thickened Nectar, Fire Sky Ruby an Symbol Of Veeshan. Yuz giv to me, Me be easy on yuz an giv prize me got.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\tif(item_lib.check_turn_in(e.trade, {item1 = 20845, item2 = 20955, item3 = 20842, item4 = 20841})) then \t\t--shaman test of shrink using efreeti war club, djinni statuette, corrosive venom, wooden bands\n\t\te.other:SummonItem(27729); --warhammer of the wind\n\t\te.other:AddEXP(100000);\n\t\te.self:Say(\"Take dis.\");\n\t\teq.depop();\n\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 20962, item2 = 20843, item3 = 20844})) then \t--shaman test of the snake using emerald spiroc feather, bixie essence, spiritualist's ring\n\t\te.other:SummonItem(27730); --vermilion sky ring\n\t\te.other:AddEXP(100000);\n\t\te.self:Say(\"Take dis.\");\n\t\teq.depop();\n\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 20846, item2 = 20969, item3 = 20848, item4 = 20847})) then \t--shaman test of the witch doctor using efreeti war maul, thickened nectar, fire sky ruby, symbol of veeshan\n\t\te.other:SummonItem(11694); --garduk\n\t\te.other:AddEXP(100000);\n\t\te.self:Say(\"Take dis.\");\n\t\teq.depop();\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\nfunction event_timer(e)\n\teq.stop_timer(\"depop\");\n\teq.depop();\nend\n\n-------------------------------------------------------------------------------------------------\n-- Converted to .lua using MATLAB converter written by Stryd\n-- Find/replace data for .pl --> .lua conversions provided by Speedz, Stryd, Sorvani and Robregen\n-------------------------------------------------------------------------------------------------\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 16764,
+        "zone": "airplane",
+        "name": "Ooga",
+        "lua_content": "-- items: 20845, 20955, 20842, 20841, 27729, 20962, 20843, 20844, 27730, 20846, 20969, 20848, 20847, 11694\nfunction event_spawn(e)\n\teq.set_timer(\"depop\",300000);\nend\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Euh? You come see Ooga about shaman tests? Me can test in shrink, the snake, or witch doctor! What yuz want to test in?\");\n\telseif(e.message:findi(\"shrink\")) then \t\t\t--shaman test of shrink\n\t\te.self:Say(\"Ohh! Dat gud tes, me know cuz me did it. Me had get a Efreeti War Club, Djinni Statuette, sum Corrosive Venom an sum Wooden Bands. Was hard for Ooga, me took long to get dem. Yuz give all to me at sam time me give yuz what me got.\");\n\telseif(e.message:findi(\"snake\")) then \t\t\t--shaman test of the snake\n\t\te.self:Say(\"Mmm, tes of snake not too bad, me did It an still alive. When me did It, me got Emerald Spiroc Feather, Bixie Essence, an Spiritualists Ring. Me get gud stuff for dat. Yuz giv me stuff all at once an me give to yuz what me got.\");\n\telseif(e.message:findi(\"witch doctor\")) then \t--shaman test of the witch doctor\n\t\te.self:Say(\"Oh! Now yuz got In da big mojo, me had big hard time wit dis one. Me got In lot of trouble when me got Efreeti War Maul, Thickened Nectar, Fire Sky Ruby an Symbol Of Veeshan. Yuz giv to me, Me be easy on yuz an giv prize me got.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\tif(item_lib.check_turn_in(e.trade, {item1 = 20845, item2 = 20955, item3 = 20842, item4 = 20841})) then \t\t--shaman test of shrink using efreeti war club, djinni statuette, corrosive venom, wooden bands\n\t\te.other:SummonItem(27729); --warhammer of the wind\n\t\te.other:AddEXP(100000);\n\t\te.self:Say(\"Take dis.\");\n\t\teq.depop();\n\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 20962, item2 = 20843, item3 = 20844})) then \t--shaman test of the snake using emerald spiroc feather, bixie essence, spiritualist's ring\n\t\te.other:SummonItem(27730); --vermilion sky ring\n\t\te.other:AddEXP(100000);\n\t\te.self:Say(\"Take dis.\");\n\t\teq.depop();\n\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 20846, item2 = 20969, item3 = 20848, item4 = 20847})) then \t--shaman test of the witch doctor using efreeti war maul, thickened nectar, fire sky ruby, symbol of veeshan\n\t\te.other:SummonItem(11694); --garduk\n\t\te.other:AddEXP(100000);\n\t\te.self:Say(\"Take dis.\");\n\t\teq.depop();\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 11695})) then\n\t\te.other:SummonItem(27730); -- Documented Old Sky upgrade; no quantified extra rewards.\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\nfunction event_timer(e)\n\teq.stop_timer(\"depop\");\n\teq.depop();\nend\n\n-------------------------------------------------------------------------------------------------\n-- Converted to .lua using MATLAB converter written by Stryd\n-- Find/replace data for .pl --> .lua conversions provided by Speedz, Stryd, Sorvani and Robregen\n-------------------------------------------------------------------------------------------------\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/airplane/Ooga.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-tz-old-sky-ooga/airplane--Ooga.lua",
+      "afterSha256": "a5725f239b9cb62e727246413034c0228c2b6ca9be2146c4a8f929475a97060d"
+    }
+  ]
+}

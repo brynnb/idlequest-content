@@ -1,0 +1,66 @@
+{
+  "format": 1,
+  "id": "p99-nz-glamour-stone-dialogue",
+  "summary": "Restore documented stone-enchantment completion instructions, including return to Temple of Ro with Golden Rod.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Rod_of_Insidious_Glamour_Quest?action=raw",
+      "note": "Cached 2026-07-17T23:30:46.796Z; revision unavailable; SHA256 2d40ef2325e99e4b8a545108754838d56d7b98fe9897feac2feaf05382daf54e. Cynthia10085+50gold->10086 and Tarn10086+50gold->10087 match exact exported names and amounts. Tarn previously explicitly invented completion and omitted the next destination/components. Preserve all Tash and Gleaming Gloves branches and all rewards. Sultin is separately owned by p99-am-incandescent source. Deliberate faction bypass unchanged; raw faction/EXP amounts unspecified; no live chain test."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 14001,
+        "zone": "rathemtn",
+        "name": "Cynthia",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: rathemtn/Cynthia.pl\n-- items: 10085, 10086\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Hello. I am Cynthia.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 10085, gold = 50}) then\n\t\te.self:Say(\"I've done what I can to enchant your stone, but you will need to find Tarn Visilin in Highpass Keep to finish the enchantments.  Don't forget to pay him the same fee you gave me, or he may decide to keep the stone for himself!\")\n\t\te.other:SummonItem(10086)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 14001,
+        "zone": "rathemtn",
+        "name": "Cynthia",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: rathemtn/Cynthia.pl\n-- items: 10085, 10086\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Hello. I am Cynthia.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 10085, gold = 50}) then\n\t\te.self:Say(\"I have enchanted your Shining Stone. To get it further enchanted, take this stone to Tarn Visilin in HighKeep. Tip him 50 golden coins and he will work his magic.\")\n\t\te.other:SummonItem(10086)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 12563,
+        "zone": "highkeep",
+        "name": "Tarn_Visilin",
+        "lua_content": "-- items: 10790, 10791, 10086, 10087, 10019, 2355\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 10790})) then -- Coin of Tash\n\t\te.self:Say(\"The Coin of Tash. Very good. I have laid a basic enhancement on it - to get it further enhanced you must take the coin to Mizn N'Mar in the Library of Neriak.\");\n\t\te.other:SummonItem(10791); -- Glowing Coin of Tash\n\t\te.other:Ding();\n\t\te.other:Faction(5029,10,0); -- Temple of Sol Ro\n\t\te.other:Faction(416,-10,0); -- Shadowed Men\n\t\te.other:AddEXP(1000);\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 10086,gold = 50})) then -- Gold x 50, Glamour Stone\n\t\te.self:Say(\"Here is your stone, fully enchanted.\"); -- Made this text up\n\t\te.other:Ding();\n\t\te.other:SummonItem(10087); -- Glowing Glamour Stone\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 10019})) then -- Bloodstone\n\t\te.self:Say(\"I see that Sultin has sent you to me.  Very well, here are your gloves.\");\n\t\te.other:Ding();\n\t\te.other:SummonItem(2355); -- Gleaming Gloves\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 12563,
+        "zone": "highkeep",
+        "name": "Tarn_Visilin",
+        "lua_content": "-- items: 10790, 10791, 10086, 10087, 10019, 2355\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 10790})) then -- Coin of Tash\n\t\te.self:Say(\"The Coin of Tash. Very good. I have laid a basic enhancement on it - to get it further enhanced you must take the coin to Mizn N'Mar in the Library of Neriak.\");\n\t\te.other:SummonItem(10791); -- Glowing Coin of Tash\n\t\te.other:Ding();\n\t\te.other:Faction(5029,10,0); -- Temple of Sol Ro\n\t\te.other:Faction(416,-10,0); -- Shadowed Men\n\t\te.other:AddEXP(1000);\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 10086,gold = 50})) then -- Gold x 50, Glamour Stone\n\t\te.self:Say(\"Your Glamour Stone has been fully enchanted. Take it and the Golden Rod back to the temple of Ro.\");\n\t\te.other:Ding();\n\t\te.other:SummonItem(10087); -- Glowing Glamour Stone\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 10019})) then -- Bloodstone\n\t\te.self:Say(\"I see that Sultin has sent you to me.  Very well, here are your gloves.\");\n\t\te.other:Ding();\n\t\te.other:SummonItem(2355); -- Gleaming Gloves\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/rathemtn/Cynthia.lua",
+      "beforeSha256": "f87a2213ef6a2c934216dd8b6ffa497dce098da53e0e10384a5dcf2c3a4800f0",
+      "proposedFile": "changes/p99-nz-glamour-stone-dialogue/rathemtn--Cynthia.lua",
+      "afterSha256": "e3e5b2c05162a5135bec073d1828508748b0d8ff2b23b13384596b7b0cb33de3"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/highkeep/Tarn_Visilin.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-nz-glamour-stone-dialogue/highkeep--Tarn_Visilin.lua",
+      "afterSha256": "06088e780b0b6c67f30681e5a9bb4fe82081a7b9185ab0375a5d3c8dda916c6f"
+    }
+  ]
+}

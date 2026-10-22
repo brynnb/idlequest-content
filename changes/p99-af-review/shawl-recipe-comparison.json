@@ -1,0 +1,4185 @@
+{
+  "evidence": {
+    "title": "Coldain Prayer Shawl Quests",
+    "url": "https://wiki.project1999.com/Coldain_Prayer_Shawl_Quests?action=raw",
+    "fetchedAt": "2026-07-17T23:11:11.547Z",
+    "revision": null,
+    "sha256": "1b96e22c683adcc22886266e556b2a0d74c7b68163edbea74b4b9e41d7bbd4c0",
+    "bytes": 60922,
+    "source": "raw-pages/coldain-prayer-shawl-quests-0117371b90.json",
+    "cachePath": "reference/p99-wiki/raw-pages/coldain-prayer-shawl-quests-0117371b90.wiki"
+  },
+  "limits": "Exact component/count and success-output comparison for explicit recipe blocks, not live crafting, full supporting merchant/loot sources or all container-code semantics. Alternate recipes remain unchanged.",
+  "recipes": [
+    {
+      "expected": {
+        "name": "Saucy Bearmeat",
+        "count": 1,
+        "trivial": "26",
+        "skill": "Baking",
+        "components": [
+          [
+            "Jug of Sauces",
+            1
+          ],
+          [
+            "Tundra Kodiak Meat",
+            1
+          ]
+        ],
+        "container_text": "[[Oven]]:"
+      },
+      "matching_recipes": [
+        {
+          "recipe": {
+            "id": 2207,
+            "name": "Saucy Bearmeat",
+            "tradeskill": 60,
+            "skillneeded": 0,
+            "trivial": 26,
+            "nofail": 0,
+            "replace_container": 0,
+            "notes": null,
+            "must_learn": 0,
+            "learned_by_item_id": 0,
+            "quest": 0,
+            "enabled": 1,
+            "show_in_advanced": 1,
+            "min_expansion": 2,
+            "max_expansion": -1,
+            "content_flags": null,
+            "content_flags_disabled": null,
+            "category": "General"
+          },
+          "entries": [
+            {
+              "id": 16575,
+              "recipe_id": 2207,
+              "item_id": 15,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 16573,
+              "recipe_id": 2207,
+              "item_id": 30080,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 1,
+              "salvagecount": 1,
+              "iscontainer": 0
+            },
+            {
+              "id": 16572,
+              "recipe_id": 2207,
+              "item_id": 13427,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 1,
+              "salvagecount": 1,
+              "iscontainer": 0
+            },
+            {
+              "id": 16577,
+              "recipe_id": 2207,
+              "item_id": 17947,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 16576,
+              "recipe_id": 2207,
+              "item_id": 17164,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 16574,
+              "recipe_id": 2207,
+              "item_id": 1451,
+              "successcount": 1,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 0
+            }
+          ],
+          "components_match": true,
+          "enabled": true,
+          "trivial_match": true,
+          "nofail_match": null
+        }
+      ],
+      "candidate_recipe_ids": [
+        2207
+      ]
+    },
+    {
+      "expected": {
+        "name": "Tundrabear Sandwich",
+        "count": 1,
+        "trivial": "51",
+        "skill": "Baking",
+        "components": [
+          [
+            "Loaf of Bread",
+            1
+          ],
+          [
+            "Saucy Bearmeat",
+            1
+          ]
+        ],
+        "container_text": "[[Mixing Bowl]] or [[Oven]]:"
+      },
+      "matching_recipes": [
+        {
+          "recipe": {
+            "id": 2358,
+            "name": "Tundrabear Sandwich",
+            "tradeskill": 60,
+            "skillneeded": 0,
+            "trivial": 51,
+            "nofail": 0,
+            "replace_container": 0,
+            "notes": null,
+            "must_learn": 0,
+            "learned_by_item_id": 0,
+            "quest": 0,
+            "enabled": 1,
+            "show_in_advanced": 1,
+            "min_expansion": 2,
+            "max_expansion": -1,
+            "content_flags": null,
+            "content_flags_disabled": null,
+            "category": "Sandwiches"
+          },
+          "entries": [
+            {
+              "id": 17675,
+              "recipe_id": 2358,
+              "item_id": 1425,
+              "successcount": 1,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 0
+            },
+            {
+              "id": 17674,
+              "recipe_id": 2358,
+              "item_id": 13015,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 1,
+              "salvagecount": 1,
+              "iscontainer": 0
+            },
+            {
+              "id": 17673,
+              "recipe_id": 2358,
+              "item_id": 1451,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 1,
+              "salvagecount": 1,
+              "iscontainer": 0
+            },
+            {
+              "id": 17678,
+              "recipe_id": 2358,
+              "item_id": 17906,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 17677,
+              "recipe_id": 2358,
+              "item_id": 17162,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 17676,
+              "recipe_id": 2358,
+              "item_id": 15,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            }
+          ],
+          "components_match": true,
+          "enabled": true,
+          "trivial_match": true,
+          "nofail_match": null
+        }
+      ],
+      "candidate_recipe_ids": [
+        2358
+      ]
+    },
+    {
+      "expected": {
+        "name": "Saucy Bunnymeat",
+        "count": 1,
+        "trivial": "63",
+        "skill": "Baking",
+        "components": [
+          [
+            "Snow Bunny Meat",
+            2
+          ],
+          [
+            "Jug of Sauces",
+            1
+          ]
+        ],
+        "container_text": "[[Mixing Bowl]]:"
+      },
+      "matching_recipes": [],
+      "candidate_recipe_ids": [
+        2208
+      ],
+      "local_name_correspondence": {
+        "recipe": {
+          "id": 2208,
+          "name": "Saucy Bunnymeat",
+          "tradeskill": 60,
+          "skillneeded": 0,
+          "trivial": 63,
+          "nofail": 0,
+          "replace_container": 0,
+          "notes": null,
+          "must_learn": 0,
+          "learned_by_item_id": 0,
+          "quest": 0,
+          "enabled": 1,
+          "show_in_advanced": 1,
+          "min_expansion": 2,
+          "max_expansion": -1,
+          "content_flags": null,
+          "content_flags_disabled": null,
+          "category": "Buns and Muffins"
+        },
+        "entries": [
+          {
+            "id": 16582,
+            "recipe_id": 2208,
+            "item_id": 17906,
+            "successcount": 0,
+            "failcount": 0,
+            "componentcount": 0,
+            "salvagecount": 0,
+            "iscontainer": 1,
+            "item_name": "Mixing Bowl"
+          },
+          {
+            "id": 16581,
+            "recipe_id": 2208,
+            "item_id": 17162,
+            "successcount": 0,
+            "failcount": 0,
+            "componentcount": 0,
+            "salvagecount": 0,
+            "iscontainer": 1,
+            "item_name": "Collapsible Mixing Bowl"
+          },
+          {
+            "id": 16579,
+            "recipe_id": 2208,
+            "item_id": 13427,
+            "successcount": 0,
+            "failcount": 0,
+            "componentcount": 1,
+            "salvagecount": 1,
+            "iscontainer": 0,
+            "item_name": "Jug of Sauces"
+          },
+          {
+            "id": 16580,
+            "recipe_id": 2208,
+            "item_id": 1452,
+            "successcount": 1,
+            "failcount": 0,
+            "componentcount": 0,
+            "salvagecount": 0,
+            "iscontainer": 0,
+            "item_name": "Saucy Bunnymeat"
+          },
+          {
+            "id": 16578,
+            "recipe_id": 2208,
+            "item_id": 30099,
+            "successcount": 0,
+            "failcount": 0,
+            "componentcount": 2,
+            "salvagecount": 2,
+            "iscontainer": 0,
+            "item_name": "Frost Bunny Meat"
+          }
+        ],
+        "interpretation": "Local Frost Bunny Meat 30099 / Frost Bunny Stew 1426 correspond to the wiki Snow Bunny names through the complete connected recipe and NPC chain. This is a local semantic identity inference, not an exact P99 name or numeric-ID match."
+      }
+    },
+    {
+      "expected": {
+        "name": "Snow Bunny Stew",
+        "count": 1,
+        "trivial": "68",
+        "skill": "Baking",
+        "components": [
+          [
+            "Pot",
+            1
+          ],
+          [
+            "Saucy Bunnymeat",
+            1
+          ],
+          [
+            "Spices",
+            1
+          ],
+          [
+            "Water Flask",
+            2
+          ]
+        ],
+        "container_text": "[[Oven]]:"
+      },
+      "matching_recipes": [],
+      "candidate_recipe_ids": [],
+      "local_name_correspondence": {
+        "recipe": {
+          "id": 1889,
+          "name": "Frost Bunny Stew",
+          "tradeskill": 60,
+          "skillneeded": 0,
+          "trivial": 68,
+          "nofail": 0,
+          "replace_container": 0,
+          "notes": null,
+          "must_learn": 0,
+          "learned_by_item_id": 0,
+          "quest": 0,
+          "enabled": 1,
+          "show_in_advanced": 1,
+          "min_expansion": 2,
+          "max_expansion": -1,
+          "content_flags": null,
+          "content_flags_disabled": null,
+          "category": "Soups and Stews"
+        },
+        "entries": [
+          {
+            "id": 14103,
+            "recipe_id": 1889,
+            "item_id": 13006,
+            "successcount": 0,
+            "failcount": 0,
+            "componentcount": 2,
+            "salvagecount": 2,
+            "iscontainer": 0,
+            "item_name": "Water Flask"
+          },
+          {
+            "id": 14109,
+            "recipe_id": 1889,
+            "item_id": 17164,
+            "successcount": 0,
+            "failcount": 0,
+            "componentcount": 0,
+            "salvagecount": 0,
+            "iscontainer": 1,
+            "item_name": "Collapsible Spit"
+          },
+          {
+            "id": 14107,
+            "recipe_id": 1889,
+            "item_id": 1426,
+            "successcount": 1,
+            "failcount": 0,
+            "componentcount": 0,
+            "salvagecount": 0,
+            "iscontainer": 0,
+            "item_name": "Frost Bunny Stew"
+          },
+          {
+            "id": 14104,
+            "recipe_id": 1889,
+            "item_id": 1452,
+            "successcount": 0,
+            "failcount": 0,
+            "componentcount": 1,
+            "salvagecount": 1,
+            "iscontainer": 0,
+            "item_name": "Saucy Bunnymeat"
+          },
+          {
+            "id": 14108,
+            "recipe_id": 1889,
+            "item_id": 15,
+            "successcount": 0,
+            "failcount": 0,
+            "componentcount": 0,
+            "salvagecount": 0,
+            "iscontainer": 1,
+            "item_name": null
+          },
+          {
+            "id": 14105,
+            "recipe_id": 1889,
+            "item_id": 13425,
+            "successcount": 0,
+            "failcount": 0,
+            "componentcount": 1,
+            "salvagecount": 1,
+            "iscontainer": 0,
+            "item_name": "Spices"
+          },
+          {
+            "id": 14106,
+            "recipe_id": 1889,
+            "item_id": 13432,
+            "successcount": 0,
+            "failcount": 0,
+            "componentcount": 1,
+            "salvagecount": 1,
+            "iscontainer": 0,
+            "item_name": "Pot"
+          },
+          {
+            "id": 14110,
+            "recipe_id": 1889,
+            "item_id": 17947,
+            "successcount": 0,
+            "failcount": 0,
+            "componentcount": 0,
+            "salvagecount": 0,
+            "iscontainer": 1,
+            "item_name": "Spit"
+          }
+        ],
+        "interpretation": "Local Frost Bunny Meat 30099 / Frost Bunny Stew 1426 correspond to the wiki Snow Bunny names through the complete connected recipe and NPC chain. This is a local semantic identity inference, not an exact P99 name or numeric-ID match."
+      }
+    },
+    {
+      "expected": {
+        "name": "Spicy Ulthork Meat",
+        "count": 1,
+        "trivial": "82",
+        "skill": "Baking",
+        "components": [
+          [
+            "Spices",
+            1
+          ],
+          [
+            "Ulthork Meat",
+            2
+          ],
+          [
+            "Vinegar",
+            1
+          ]
+        ],
+        "container_text": "[[Mixing Bowl]]:"
+      },
+      "matching_recipes": [
+        {
+          "recipe": {
+            "id": 2324,
+            "name": "Spicy Ulthork Meat",
+            "tradeskill": 60,
+            "skillneeded": 0,
+            "trivial": 82,
+            "nofail": 0,
+            "replace_container": 0,
+            "notes": null,
+            "must_learn": 0,
+            "learned_by_item_id": 0,
+            "quest": 0,
+            "enabled": 1,
+            "show_in_advanced": 1,
+            "min_expansion": 2,
+            "max_expansion": -1,
+            "content_flags": null,
+            "content_flags_disabled": null,
+            "category": "General"
+          },
+          "entries": [
+            {
+              "id": 17441,
+              "recipe_id": 2324,
+              "item_id": 1453,
+              "successcount": 1,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 0
+            },
+            {
+              "id": 17438,
+              "recipe_id": 2324,
+              "item_id": 30093,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 2,
+              "salvagecount": 2,
+              "iscontainer": 0
+            },
+            {
+              "id": 17440,
+              "recipe_id": 2324,
+              "item_id": 13428,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 1,
+              "salvagecount": 1,
+              "iscontainer": 0
+            },
+            {
+              "id": 17442,
+              "recipe_id": 2324,
+              "item_id": 17162,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 17443,
+              "recipe_id": 2324,
+              "item_id": 17906,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 17439,
+              "recipe_id": 2324,
+              "item_id": 13425,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 1,
+              "salvagecount": 1,
+              "iscontainer": 0
+            }
+          ],
+          "components_match": true,
+          "enabled": true,
+          "trivial_match": true,
+          "nofail_match": null
+        }
+      ],
+      "candidate_recipe_ids": [
+        2324
+      ]
+    },
+    {
+      "expected": {
+        "name": "Ulthork Meat Pie",
+        "count": 1,
+        "trivial": "95",
+        "skill": "Baking",
+        "components": [
+          [
+            "Clump of Dough",
+            1
+          ],
+          [
+            "Pie Tin",
+            1
+          ],
+          [
+            "Spicy Ulthork Meat",
+            1
+          ]
+        ],
+        "container_text": "[[Oven]]:"
+      },
+      "matching_recipes": [
+        {
+          "recipe": {
+            "id": 2359,
+            "name": "Ulthork Meat Pie",
+            "tradeskill": 60,
+            "skillneeded": 0,
+            "trivial": 95,
+            "nofail": 0,
+            "replace_container": 0,
+            "notes": null,
+            "must_learn": 0,
+            "learned_by_item_id": 0,
+            "quest": 0,
+            "enabled": 1,
+            "show_in_advanced": 1,
+            "min_expansion": 2,
+            "max_expansion": -1,
+            "content_flags": null,
+            "content_flags_disabled": null,
+            "category": "Pies"
+          },
+          "entries": [
+            {
+              "id": 17684,
+              "recipe_id": 2359,
+              "item_id": 17164,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 17680,
+              "recipe_id": 2359,
+              "item_id": 13090,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 1,
+              "salvagecount": 1,
+              "iscontainer": 0
+            },
+            {
+              "id": 17683,
+              "recipe_id": 2359,
+              "item_id": 15,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 17681,
+              "recipe_id": 2359,
+              "item_id": 13438,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 1,
+              "salvagecount": 1,
+              "iscontainer": 0
+            },
+            {
+              "id": 17685,
+              "recipe_id": 2359,
+              "item_id": 17947,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 17679,
+              "recipe_id": 2359,
+              "item_id": 1453,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 1,
+              "salvagecount": 1,
+              "iscontainer": 0
+            },
+            {
+              "id": 17682,
+              "recipe_id": 2359,
+              "item_id": 1427,
+              "successcount": 1,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 0
+            }
+          ],
+          "components_match": true,
+          "enabled": true,
+          "trivial_match": true,
+          "nofail_match": null
+        }
+      ],
+      "candidate_recipe_ids": [
+        2359
+      ]
+    },
+    {
+      "expected": {
+        "name": "Snow Griffin Souffle",
+        "count": 1,
+        "trivial": "122",
+        "skill": "Baking",
+        "components": [
+          [
+            "Snow Griffin Egg",
+            4
+          ],
+          [
+            "Spices",
+            1
+          ]
+        ],
+        "container_text": "[[Oven]]:"
+      },
+      "matching_recipes": [
+        {
+          "recipe": {
+            "id": 2279,
+            "name": "Snow Griffin Souffle",
+            "tradeskill": 60,
+            "skillneeded": 0,
+            "trivial": 122,
+            "nofail": 0,
+            "replace_container": 0,
+            "notes": null,
+            "must_learn": 0,
+            "learned_by_item_id": 0,
+            "quest": 0,
+            "enabled": 1,
+            "show_in_advanced": 1,
+            "min_expansion": 2,
+            "max_expansion": -1,
+            "content_flags": null,
+            "content_flags_disabled": null,
+            "category": "General"
+          },
+          "entries": [
+            {
+              "id": 17088,
+              "recipe_id": 2279,
+              "item_id": 17164,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 17084,
+              "recipe_id": 2279,
+              "item_id": 1429,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 4,
+              "salvagecount": 4,
+              "iscontainer": 0
+            },
+            {
+              "id": 17087,
+              "recipe_id": 2279,
+              "item_id": 15,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 17089,
+              "recipe_id": 2279,
+              "item_id": 17947,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 17085,
+              "recipe_id": 2279,
+              "item_id": 13425,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 1,
+              "salvagecount": 1,
+              "iscontainer": 0
+            },
+            {
+              "id": 17086,
+              "recipe_id": 2279,
+              "item_id": 1428,
+              "successcount": 1,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 0
+            }
+          ],
+          "components_match": true,
+          "enabled": true,
+          "trivial_match": true,
+          "nofail_match": null
+        }
+      ],
+      "candidate_recipe_ids": [
+        2279
+      ]
+    },
+    {
+      "expected": {
+        "name": "Unfired Velium Vial",
+        "count": 1,
+        "trivial": "122",
+        "skill": "Pottery",
+        "components": [
+          [
+            "Crystalline Silk",
+            3
+          ],
+          [
+            "Glass Shard",
+            2
+          ],
+          [
+            "Small Brick of Velium",
+            1
+          ]
+        ],
+        "container_text": "[[Pottery Wheel]]:"
+      },
+      "matching_recipes": [
+        {
+          "recipe": {
+            "id": 9572,
+            "name": "Unfired Velium Vial",
+            "tradeskill": 69,
+            "skillneeded": 0,
+            "trivial": 122,
+            "nofail": 0,
+            "replace_container": 0,
+            "notes": null,
+            "must_learn": 0,
+            "learned_by_item_id": 0,
+            "quest": 0,
+            "enabled": 1,
+            "show_in_advanced": 1,
+            "min_expansion": 2,
+            "max_expansion": -1,
+            "content_flags": null,
+            "content_flags_disabled": null,
+            "category": "Base"
+          },
+          "entries": [
+            {
+              "id": 84194,
+              "recipe_id": 9572,
+              "item_id": 25306,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 3,
+              "salvagecount": 3,
+              "iscontainer": 0
+            },
+            {
+              "id": 84196,
+              "recipe_id": 9572,
+              "item_id": 22093,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 1,
+              "salvagecount": 1,
+              "iscontainer": 0
+            },
+            {
+              "id": 84198,
+              "recipe_id": 9572,
+              "item_id": 21,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 84197,
+              "recipe_id": 9572,
+              "item_id": 1562,
+              "successcount": 1,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 0
+            },
+            {
+              "id": 84195,
+              "recipe_id": 9572,
+              "item_id": 16903,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 2,
+              "salvagecount": 2,
+              "iscontainer": 0
+            }
+          ],
+          "components_match": true,
+          "enabled": true,
+          "trivial_match": true,
+          "nofail_match": null
+        }
+      ],
+      "candidate_recipe_ids": [
+        9572
+      ]
+    },
+    {
+      "expected": {
+        "name": "Velium Vial",
+        "count": 1,
+        "trivial": "122",
+        "skill": "Pottery",
+        "components": [
+          [
+            "High Quality Firing Sheet",
+            1
+          ],
+          [
+            "Unfired Velium Vial",
+            1
+          ]
+        ],
+        "container_text": "[[Kiln]]:"
+      },
+      "matching_recipes": [
+        {
+          "recipe": {
+            "id": 9581,
+            "name": "Velium Vial",
+            "tradeskill": 69,
+            "skillneeded": 0,
+            "trivial": 122,
+            "nofail": 0,
+            "replace_container": 0,
+            "notes": null,
+            "must_learn": 0,
+            "learned_by_item_id": 0,
+            "quest": 0,
+            "enabled": 1,
+            "show_in_advanced": 1,
+            "min_expansion": 2,
+            "max_expansion": -1,
+            "content_flags": null,
+            "content_flags_disabled": null,
+            "category": "Base"
+          },
+          "entries": [
+            {
+              "id": 84256,
+              "recipe_id": 9581,
+              "item_id": 16908,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 1,
+              "salvagecount": 1,
+              "iscontainer": 0
+            },
+            {
+              "id": 84257,
+              "recipe_id": 9581,
+              "item_id": 1561,
+              "successcount": 1,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 0
+            },
+            {
+              "id": 84258,
+              "recipe_id": 9581,
+              "item_id": 22,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 84255,
+              "recipe_id": 9581,
+              "item_id": 1562,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 1,
+              "salvagecount": 1,
+              "iscontainer": 0
+            }
+          ],
+          "components_match": true,
+          "enabled": true,
+          "trivial_match": true,
+          "nofail_match": null
+        }
+      ],
+      "candidate_recipe_ids": [
+        9581
+      ]
+    },
+    {
+      "expected": {
+        "name": "Vial of Velium Vapors",
+        "count": 1,
+        "trivial": "No-Fail",
+        "skill": "Non-Tradeskill",
+        "components": [
+          [
+            "Velium Vial",
+            1
+          ],
+          [
+            "Small Piece of Velium",
+            2
+          ]
+        ],
+        "container_text": "[[Velium Purifier]]:"
+      },
+      "matching_recipes": [
+        {
+          "recipe": {
+            "id": 10044,
+            "name": "Vial Of Velium Vapors",
+            "tradeskill": 75,
+            "skillneeded": 0,
+            "trivial": 0,
+            "nofail": 1,
+            "replace_container": 1,
+            "notes": null,
+            "must_learn": 0,
+            "learned_by_item_id": 0,
+            "quest": 0,
+            "enabled": 1,
+            "show_in_advanced": 0,
+            "min_expansion": 2,
+            "max_expansion": -1,
+            "content_flags": null,
+            "content_flags_disabled": null,
+            "category": "Base"
+          },
+          "entries": [
+            {
+              "id": 87597,
+              "recipe_id": 10044,
+              "item_id": 17513,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 87594,
+              "recipe_id": 10044,
+              "item_id": 22569,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 2,
+              "salvagecount": 2,
+              "iscontainer": 0
+            },
+            {
+              "id": 87595,
+              "recipe_id": 10044,
+              "item_id": 1561,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 1,
+              "salvagecount": 1,
+              "iscontainer": 0
+            },
+            {
+              "id": 87596,
+              "recipe_id": 10044,
+              "item_id": 1553,
+              "successcount": 1,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 0
+            }
+          ],
+          "components_match": true,
+          "enabled": true,
+          "trivial_match": null,
+          "nofail_match": true
+        }
+      ],
+      "candidate_recipe_ids": [
+        10044
+      ]
+    },
+    {
+      "expected": {
+        "name": "Crystalline Silk Fiber",
+        "count": 1,
+        "trivial": "51",
+        "skill": "Tailoring",
+        "components": [
+          [
+            "Crystalline Silk Thread",
+            5
+          ]
+        ],
+        "container_text": "[[Loom]]:"
+      },
+      "matching_recipes": [
+        {
+          "recipe": {
+            "id": 2529,
+            "name": "Crystalline Silk Fiber",
+            "tradeskill": 61,
+            "skillneeded": 0,
+            "trivial": 51,
+            "nofail": 0,
+            "replace_container": 0,
+            "notes": null,
+            "must_learn": 0,
+            "learned_by_item_id": 0,
+            "quest": 0,
+            "enabled": 1,
+            "show_in_advanced": 1,
+            "min_expansion": 2,
+            "max_expansion": -1,
+            "content_flags": null,
+            "content_flags_disabled": null,
+            "category": "Basic Components"
+          },
+          "entries": [
+            {
+              "id": 19716,
+              "recipe_id": 2529,
+              "item_id": 17768,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 19718,
+              "recipe_id": 2529,
+              "item_id": 17812,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 19734,
+              "recipe_id": 2529,
+              "item_id": 92880,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 19720,
+              "recipe_id": 2529,
+              "item_id": 17880,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 19730,
+              "recipe_id": 2529,
+              "item_id": 92876,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 19713,
+              "recipe_id": 2529,
+              "item_id": 1830,
+              "successcount": 1,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 0
+            },
+            {
+              "id": 19715,
+              "recipe_id": 2529,
+              "item_id": 17165,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 19723,
+              "recipe_id": 2529,
+              "item_id": 92869,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 19732,
+              "recipe_id": 2529,
+              "item_id": 92878,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 19714,
+              "recipe_id": 2529,
+              "item_id": 16,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 19733,
+              "recipe_id": 2529,
+              "item_id": 92879,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 19725,
+              "recipe_id": 2529,
+              "item_id": 92871,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 19728,
+              "recipe_id": 2529,
+              "item_id": 92874,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 19729,
+              "recipe_id": 2529,
+              "item_id": 92875,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 19712,
+              "recipe_id": 2529,
+              "item_id": 1829,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 5,
+              "salvagecount": 5,
+              "iscontainer": 0
+            },
+            {
+              "id": 19724,
+              "recipe_id": 2529,
+              "item_id": 92870,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 19719,
+              "recipe_id": 2529,
+              "item_id": 17813,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 19717,
+              "recipe_id": 2529,
+              "item_id": 17806,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 19735,
+              "recipe_id": 2529,
+              "item_id": 92881,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 19722,
+              "recipe_id": 2529,
+              "item_id": 92868,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 19726,
+              "recipe_id": 2529,
+              "item_id": 92872,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 19727,
+              "recipe_id": 2529,
+              "item_id": 92873,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 19731,
+              "recipe_id": 2529,
+              "item_id": 92877,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 19721,
+              "recipe_id": 2529,
+              "item_id": 17966,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 19736,
+              "recipe_id": 2529,
+              "item_id": 92882,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            }
+          ],
+          "components_match": true,
+          "enabled": true,
+          "trivial_match": true,
+          "nofail_match": null
+        }
+      ],
+      "candidate_recipe_ids": [
+        2529
+      ]
+    },
+    {
+      "expected": {
+        "name": "Glowing Crystalline Silk Piece",
+        "count": 1,
+        "trivial": "No-Fail",
+        "skill": "Tailoring",
+        "components": [
+          [
+            "Crystalline Silk Fiber",
+            3
+          ],
+          [
+            "Glowing Worm Bile",
+            1
+          ]
+        ],
+        "container_text": "[[Glowing Bile Soaker]]:"
+      },
+      "matching_recipes": [
+        {
+          "recipe": {
+            "id": 8799,
+            "name": "Glowing Crystalline Silk Piece",
+            "tradeskill": 69,
+            "skillneeded": 0,
+            "trivial": 0,
+            "nofail": 1,
+            "replace_container": 0,
+            "notes": null,
+            "must_learn": 0,
+            "learned_by_item_id": 0,
+            "quest": 0,
+            "enabled": 1,
+            "show_in_advanced": 0,
+            "min_expansion": 2,
+            "max_expansion": -1,
+            "content_flags": null,
+            "content_flags_disabled": null,
+            "category": "General"
+          },
+          "entries": [
+            {
+              "id": 79241,
+              "recipe_id": 8799,
+              "item_id": 1830,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 3,
+              "salvagecount": 3,
+              "iscontainer": 0
+            },
+            {
+              "id": 79243,
+              "recipe_id": 8799,
+              "item_id": 1831,
+              "successcount": 1,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 0
+            },
+            {
+              "id": 79244,
+              "recipe_id": 8799,
+              "item_id": 17879,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 79242,
+              "recipe_id": 8799,
+              "item_id": 1828,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 1,
+              "salvagecount": 1,
+              "iscontainer": 0
+            }
+          ],
+          "components_match": true,
+          "enabled": true,
+          "trivial_match": null,
+          "nofail_match": true
+        }
+      ],
+      "candidate_recipe_ids": [
+        8799
+      ]
+    },
+    {
+      "expected": {
+        "name": "Silk Coldain Prayer Shawl",
+        "count": 1,
+        "trivial": "115",
+        "skill": "Tailoring",
+        "components": [
+          [
+            "Glowing Crystalline Silk Piece",
+            5
+          ],
+          [
+            "Fur-Lined Coldain Prayer Shawl",
+            1
+          ]
+        ],
+        "container_text": "[[Sewing Kit]]:"
+      },
+      "matching_recipes": [
+        {
+          "recipe": {
+            "id": 3184,
+            "name": "Silk Coldain Prayer Shawl",
+            "tradeskill": 61,
+            "skillneeded": 0,
+            "trivial": 115,
+            "nofail": 0,
+            "replace_container": 0,
+            "notes": null,
+            "must_learn": 0,
+            "learned_by_item_id": 0,
+            "quest": 0,
+            "enabled": 1,
+            "show_in_advanced": 1,
+            "min_expansion": 2,
+            "max_expansion": -1,
+            "content_flags": null,
+            "content_flags_disabled": null,
+            "category": "Quest Items"
+          },
+          "entries": [
+            {
+              "id": 30286,
+              "recipe_id": 3184,
+              "item_id": 92868,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 30287,
+              "recipe_id": 3184,
+              "item_id": 92869,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 30293,
+              "recipe_id": 3184,
+              "item_id": 92875,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 30278,
+              "recipe_id": 3184,
+              "item_id": 16,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 30279,
+              "recipe_id": 3184,
+              "item_id": 17165,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 30276,
+              "recipe_id": 3184,
+              "item_id": 1178,
+              "successcount": 0,
+              "failcount": 1,
+              "componentcount": 1,
+              "salvagecount": 0,
+              "iscontainer": 0
+            },
+            {
+              "id": 30291,
+              "recipe_id": 3184,
+              "item_id": 92873,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 30299,
+              "recipe_id": 3184,
+              "item_id": 92881,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 30300,
+              "recipe_id": 3184,
+              "item_id": 92882,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 30275,
+              "recipe_id": 3184,
+              "item_id": 1831,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 5,
+              "salvagecount": 5,
+              "iscontainer": 0
+            },
+            {
+              "id": 30295,
+              "recipe_id": 3184,
+              "item_id": 92877,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 30297,
+              "recipe_id": 3184,
+              "item_id": 92879,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 30280,
+              "recipe_id": 3184,
+              "item_id": 17768,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 30290,
+              "recipe_id": 3184,
+              "item_id": 92872,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 30298,
+              "recipe_id": 3184,
+              "item_id": 92880,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 30288,
+              "recipe_id": 3184,
+              "item_id": 92870,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 30289,
+              "recipe_id": 3184,
+              "item_id": 92871,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 30283,
+              "recipe_id": 3184,
+              "item_id": 17813,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 30284,
+              "recipe_id": 3184,
+              "item_id": 17880,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 30277,
+              "recipe_id": 3184,
+              "item_id": 1179,
+              "successcount": 1,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 0
+            },
+            {
+              "id": 30281,
+              "recipe_id": 3184,
+              "item_id": 17806,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 30294,
+              "recipe_id": 3184,
+              "item_id": 92876,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 30282,
+              "recipe_id": 3184,
+              "item_id": 17812,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 30285,
+              "recipe_id": 3184,
+              "item_id": 17966,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 30296,
+              "recipe_id": 3184,
+              "item_id": 92878,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 30292,
+              "recipe_id": 3184,
+              "item_id": 92874,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            }
+          ],
+          "components_match": true,
+          "enabled": true,
+          "trivial_match": true,
+          "nofail_match": null
+        }
+      ],
+      "candidate_recipe_ids": [
+        3184
+      ]
+    },
+    {
+      "expected": {
+        "name": "Spool of Sacred Coldain Thread",
+        "count": 1,
+        "trivial": "162",
+        "skill": "Tailoring",
+        "components": [
+          [
+            "Drakkel Wolf Whisker",
+            2
+          ],
+          [
+            "Manticore Mane",
+            2
+          ],
+          [
+            "Siren Hair",
+            2
+          ],
+          [
+            "Woven Frost Giant Beard",
+            1
+          ]
+        ],
+        "container_text": "[[Sewing Kit]]:"
+      },
+      "matching_recipes": [
+        {
+          "recipe": {
+            "id": 3266,
+            "name": "Spool Of Sacred Coldain Thread",
+            "tradeskill": 61,
+            "skillneeded": 0,
+            "trivial": 162,
+            "nofail": 0,
+            "replace_container": 0,
+            "notes": null,
+            "must_learn": 0,
+            "learned_by_item_id": 0,
+            "quest": 0,
+            "enabled": 1,
+            "show_in_advanced": 1,
+            "min_expansion": 2,
+            "max_expansion": -1,
+            "content_flags": null,
+            "content_flags_disabled": null,
+            "category": null
+          },
+          "entries": [
+            {
+              "id": 32135,
+              "recipe_id": 3266,
+              "item_id": 16,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 32143,
+              "recipe_id": 3266,
+              "item_id": 92868,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 32146,
+              "recipe_id": 3266,
+              "item_id": 92871,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 32153,
+              "recipe_id": 3266,
+              "item_id": 92878,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 32137,
+              "recipe_id": 3266,
+              "item_id": 17768,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 32149,
+              "recipe_id": 3266,
+              "item_id": 92874,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 32144,
+              "recipe_id": 3266,
+              "item_id": 92869,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 32148,
+              "recipe_id": 3266,
+              "item_id": 92873,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 32150,
+              "recipe_id": 3266,
+              "item_id": 92875,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 32155,
+              "recipe_id": 3266,
+              "item_id": 92880,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 32134,
+              "recipe_id": 3266,
+              "item_id": 1832,
+              "successcount": 1,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 0
+            },
+            {
+              "id": 32151,
+              "recipe_id": 3266,
+              "item_id": 92876,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 32157,
+              "recipe_id": 3266,
+              "item_id": 92882,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 32131,
+              "recipe_id": 3266,
+              "item_id": 1835,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 2,
+              "salvagecount": 2,
+              "iscontainer": 0
+            },
+            {
+              "id": 32152,
+              "recipe_id": 3266,
+              "item_id": 92877,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 32141,
+              "recipe_id": 3266,
+              "item_id": 17880,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 32133,
+              "recipe_id": 3266,
+              "item_id": 30106,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 1,
+              "salvagecount": 1,
+              "iscontainer": 0
+            },
+            {
+              "id": 32130,
+              "recipe_id": 3266,
+              "item_id": 1834,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 2,
+              "salvagecount": 2,
+              "iscontainer": 0
+            },
+            {
+              "id": 32132,
+              "recipe_id": 3266,
+              "item_id": 30091,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 2,
+              "salvagecount": 2,
+              "iscontainer": 0
+            },
+            {
+              "id": 32142,
+              "recipe_id": 3266,
+              "item_id": 17966,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 32156,
+              "recipe_id": 3266,
+              "item_id": 92881,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 32138,
+              "recipe_id": 3266,
+              "item_id": 17806,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 32139,
+              "recipe_id": 3266,
+              "item_id": 17812,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 32145,
+              "recipe_id": 3266,
+              "item_id": 92870,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 32147,
+              "recipe_id": 3266,
+              "item_id": 92872,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 32136,
+              "recipe_id": 3266,
+              "item_id": 17165,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 32140,
+              "recipe_id": 3266,
+              "item_id": 17813,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 32154,
+              "recipe_id": 3266,
+              "item_id": 92879,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            }
+          ],
+          "components_match": true,
+          "enabled": true,
+          "trivial_match": true,
+          "nofail_match": null
+        }
+      ],
+      "candidate_recipe_ids": [
+        3266
+      ]
+    },
+    {
+      "expected": {
+        "name": "Embroidered Coldain Prayer Shawl",
+        "count": 1,
+        "trivial": "208",
+        "skill": "Tailoring",
+        "components": [
+          [
+            "Spool of Sacred Coldain Thread",
+            1
+          ],
+          [
+            "Embroidered Shawl Pattern",
+            1
+          ],
+          [
+            "Silk Coldain Prayer Shawl",
+            1
+          ]
+        ],
+        "container_text": "[[Sewing Kit]]:"
+      },
+      "matching_recipes": [
+        {
+          "recipe": {
+            "id": 2583,
+            "name": "Embroidered Coldain Prayer Shawl",
+            "tradeskill": 61,
+            "skillneeded": 0,
+            "trivial": 208,
+            "nofail": 0,
+            "replace_container": 0,
+            "notes": null,
+            "must_learn": 0,
+            "learned_by_item_id": 0,
+            "quest": 0,
+            "enabled": 1,
+            "show_in_advanced": 1,
+            "min_expansion": 2,
+            "max_expansion": -1,
+            "content_flags": null,
+            "content_flags_disabled": null,
+            "category": "Quest Items"
+          },
+          "entries": [
+            {
+              "id": 20920,
+              "recipe_id": 2583,
+              "item_id": 17806,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 20923,
+              "recipe_id": 2583,
+              "item_id": 17880,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 20928,
+              "recipe_id": 2583,
+              "item_id": 92871,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 20935,
+              "recipe_id": 2583,
+              "item_id": 92878,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 20916,
+              "recipe_id": 2583,
+              "item_id": 1198,
+              "successcount": 1,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 0
+            },
+            {
+              "id": 20921,
+              "recipe_id": 2583,
+              "item_id": 17812,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 20914,
+              "recipe_id": 2583,
+              "item_id": 1832,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 1,
+              "salvagecount": 1,
+              "iscontainer": 0
+            },
+            {
+              "id": 20926,
+              "recipe_id": 2583,
+              "item_id": 92869,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 20936,
+              "recipe_id": 2583,
+              "item_id": 92879,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 20922,
+              "recipe_id": 2583,
+              "item_id": 17813,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 20924,
+              "recipe_id": 2583,
+              "item_id": 17966,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 20929,
+              "recipe_id": 2583,
+              "item_id": 92872,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 20915,
+              "recipe_id": 2583,
+              "item_id": 1833,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 1,
+              "salvagecount": 1,
+              "iscontainer": 0
+            },
+            {
+              "id": 20939,
+              "recipe_id": 2583,
+              "item_id": 92882,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 20930,
+              "recipe_id": 2583,
+              "item_id": 92873,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 20938,
+              "recipe_id": 2583,
+              "item_id": 92881,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 20925,
+              "recipe_id": 2583,
+              "item_id": 92868,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 20931,
+              "recipe_id": 2583,
+              "item_id": 92874,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 20933,
+              "recipe_id": 2583,
+              "item_id": 92876,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 20932,
+              "recipe_id": 2583,
+              "item_id": 92875,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 20913,
+              "recipe_id": 2583,
+              "item_id": 1179,
+              "successcount": 0,
+              "failcount": 1,
+              "componentcount": 1,
+              "salvagecount": 0,
+              "iscontainer": 0
+            },
+            {
+              "id": 20917,
+              "recipe_id": 2583,
+              "item_id": 16,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 20918,
+              "recipe_id": 2583,
+              "item_id": 17165,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 20934,
+              "recipe_id": 2583,
+              "item_id": 92877,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 20919,
+              "recipe_id": 2583,
+              "item_id": 17768,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 20927,
+              "recipe_id": 2583,
+              "item_id": 92870,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 20937,
+              "recipe_id": 2583,
+              "item_id": 92880,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            }
+          ],
+          "components_match": true,
+          "enabled": true,
+          "trivial_match": true,
+          "nofail_match": null
+        }
+      ],
+      "candidate_recipe_ids": [
+        2583
+      ]
+    },
+    {
+      "expected": {
+        "name": "Enchanted Velium Powder",
+        "count": 1,
+        "trivial": "No-Fail",
+        "skill": "Baking",
+        "components": [
+          [
+            "Runed Sea Shell (Enduring Breath)",
+            1
+          ],
+          [
+            "Small Brick of Velium",
+            1
+          ]
+        ],
+        "container_text": "[[Mortar and Pestle]]:"
+      },
+      "matching_recipes": [
+        {
+          "recipe": {
+            "id": 10312,
+            "name": "Enchanted Velium Powder",
+            "tradeskill": 60,
+            "skillneeded": 0,
+            "trivial": 0,
+            "nofail": 1,
+            "replace_container": 0,
+            "notes": null,
+            "must_learn": 6,
+            "learned_by_item_id": 0,
+            "quest": 0,
+            "enabled": 1,
+            "show_in_advanced": 1,
+            "min_expansion": 2,
+            "max_expansion": -1,
+            "content_flags": null,
+            "content_flags_disabled": null,
+            "category": "General"
+          },
+          "entries": [
+            {
+              "id": 14026,
+              "recipe_id": 10312,
+              "item_id": 22093,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 1,
+              "salvagecount": 1,
+              "iscontainer": 0
+            },
+            {
+              "id": 14027,
+              "recipe_id": 10312,
+              "item_id": 28521,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 1,
+              "salvagecount": 1,
+              "iscontainer": 0
+            },
+            {
+              "id": 14028,
+              "recipe_id": 10312,
+              "item_id": 1850,
+              "successcount": 1,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 0
+            },
+            {
+              "id": 14029,
+              "recipe_id": 10312,
+              "item_id": 17906,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            }
+          ],
+          "components_match": true,
+          "enabled": true,
+          "trivial_match": null,
+          "nofail_match": true
+        },
+        {
+          "recipe": {
+            "id": 9757,
+            "name": "Enchanted Velium Powder",
+            "tradeskill": 56,
+            "skillneeded": 0,
+            "trivial": 0,
+            "nofail": 1,
+            "replace_container": 0,
+            "notes": null,
+            "must_learn": 6,
+            "learned_by_item_id": 0,
+            "quest": 0,
+            "enabled": 1,
+            "show_in_advanced": 1,
+            "min_expansion": 2,
+            "max_expansion": -1,
+            "content_flags": null,
+            "content_flags_disabled": null,
+            "category": "Poisons"
+          },
+          "entries": [
+            {
+              "id": 1781,
+              "recipe_id": 9757,
+              "item_id": 1850,
+              "successcount": 1,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 0
+            },
+            {
+              "id": 1779,
+              "recipe_id": 9757,
+              "item_id": 22093,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 1,
+              "salvagecount": 1,
+              "iscontainer": 0
+            },
+            {
+              "id": 1780,
+              "recipe_id": 9757,
+              "item_id": 28521,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 1,
+              "salvagecount": 1,
+              "iscontainer": 0
+            },
+            {
+              "id": 1782,
+              "recipe_id": 9757,
+              "item_id": 17904,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            }
+          ],
+          "components_match": true,
+          "enabled": true,
+          "trivial_match": null,
+          "nofail_match": true
+        }
+      ],
+      "candidate_recipe_ids": [
+        10312,
+        9757
+      ]
+    },
+    {
+      "expected": {
+        "name": "Unfired Rune",
+        "count": 1,
+        "trivial": "162",
+        "skill": "Pottery",
+        "components": [
+          [
+            "Enchanted Velium Powder",
+            1
+          ],
+          [
+            "Water Flask",
+            1
+          ]
+        ],
+        "container_text": "[[Pottery Wheel]]:"
+      },
+      "matching_recipes": [
+        {
+          "recipe": {
+            "id": 9539,
+            "name": "Unfired Rune",
+            "tradeskill": 69,
+            "skillneeded": 0,
+            "trivial": 162,
+            "nofail": 0,
+            "replace_container": 0,
+            "notes": null,
+            "must_learn": 6,
+            "learned_by_item_id": 0,
+            "quest": 0,
+            "enabled": 1,
+            "show_in_advanced": 1,
+            "min_expansion": 2,
+            "max_expansion": -1,
+            "content_flags": null,
+            "content_flags_disabled": null,
+            "category": "Unfired"
+          },
+          "entries": [
+            {
+              "id": 83953,
+              "recipe_id": 9539,
+              "item_id": 1851,
+              "successcount": 1,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 0
+            },
+            {
+              "id": 83954,
+              "recipe_id": 9539,
+              "item_id": 21,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 83952,
+              "recipe_id": 9539,
+              "item_id": 13006,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 1,
+              "salvagecount": 1,
+              "iscontainer": 0
+            },
+            {
+              "id": 83951,
+              "recipe_id": 9539,
+              "item_id": 1850,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 1,
+              "salvagecount": 1,
+              "iscontainer": 0
+            }
+          ],
+          "components_match": true,
+          "enabled": true,
+          "trivial_match": true,
+          "nofail_match": null
+        }
+      ],
+      "candidate_recipe_ids": [
+        9539
+      ]
+    },
+    {
+      "expected": {
+        "name": "Blank Rune",
+        "count": 1,
+        "trivial": "15",
+        "skill": "Pottery",
+        "components": [
+          [
+            "Unfired Rune",
+            1
+          ],
+          [
+            "High Quality Firing Sheet",
+            1
+          ],
+          [
+            "Water Flask",
+            1
+          ]
+        ],
+        "container_text": "[[Kiln]]:"
+      },
+      "matching_recipes": [
+        {
+          "recipe": {
+            "id": 8542,
+            "name": "Blank Rune",
+            "tradeskill": 69,
+            "skillneeded": 0,
+            "trivial": 15,
+            "nofail": 0,
+            "replace_container": 0,
+            "notes": null,
+            "must_learn": 6,
+            "learned_by_item_id": 0,
+            "quest": 0,
+            "enabled": 1,
+            "show_in_advanced": 1,
+            "min_expansion": 2,
+            "max_expansion": -1,
+            "content_flags": null,
+            "content_flags_disabled": null,
+            "category": "General"
+          },
+          "entries": [
+            {
+              "id": 78008,
+              "recipe_id": 8542,
+              "item_id": 1851,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 1,
+              "salvagecount": 1,
+              "iscontainer": 0
+            },
+            {
+              "id": 78011,
+              "recipe_id": 8542,
+              "item_id": 1852,
+              "successcount": 1,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 0
+            },
+            {
+              "id": 78009,
+              "recipe_id": 8542,
+              "item_id": 13006,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 1,
+              "salvagecount": 1,
+              "iscontainer": 0
+            },
+            {
+              "id": 78012,
+              "recipe_id": 8542,
+              "item_id": 22,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 78010,
+              "recipe_id": 8542,
+              "item_id": 16908,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 1,
+              "salvagecount": 1,
+              "iscontainer": 0
+            }
+          ],
+          "components_match": true,
+          "enabled": true,
+          "trivial_match": true,
+          "nofail_match": null
+        }
+      ],
+      "candidate_recipe_ids": [
+        8542
+      ]
+    },
+    {
+      "expected": {
+        "name": "Burin",
+        "count": 1,
+        "trivial": "135",
+        "skill": "Fletching ",
+        "components": [
+          [
+            "Ulthork Tusks",
+            1
+          ],
+          [
+            "Swordfish Tooth",
+            1
+          ],
+          [
+            "Molkor Hide",
+            1
+          ]
+        ],
+        "container_text": "[[Fletching Kit]]:"
+      },
+      "matching_recipes": [
+        {
+          "recipe": {
+            "id": 6735,
+            "name": "Burin",
+            "tradeskill": 64,
+            "skillneeded": 0,
+            "trivial": 135,
+            "nofail": 0,
+            "replace_container": 0,
+            "notes": "part of 7th coldain shawl",
+            "must_learn": 0,
+            "learned_by_item_id": 0,
+            "quest": 0,
+            "enabled": 1,
+            "show_in_advanced": 1,
+            "min_expansion": 2,
+            "max_expansion": -1,
+            "content_flags": null,
+            "content_flags_disabled": null,
+            "category": null
+          },
+          "entries": [
+            {
+              "id": 63850,
+              "recipe_id": 6735,
+              "item_id": 17762,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 63849,
+              "recipe_id": 6735,
+              "item_id": 17189,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 63848,
+              "recipe_id": 6735,
+              "item_id": 1854,
+              "successcount": 1,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 0
+            },
+            {
+              "id": 63845,
+              "recipe_id": 6735,
+              "item_id": 1853,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 1,
+              "salvagecount": 1,
+              "iscontainer": 0
+            },
+            {
+              "id": 63851,
+              "recipe_id": 6735,
+              "item_id": 17910,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 63847,
+              "recipe_id": 6735,
+              "item_id": 28518,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 1,
+              "salvagecount": 1,
+              "iscontainer": 0
+            },
+            {
+              "id": 63846,
+              "recipe_id": 6735,
+              "item_id": 24874,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 1,
+              "salvagecount": 1,
+              "iscontainer": 0
+            }
+          ],
+          "components_match": true,
+          "enabled": true,
+          "trivial_match": true,
+          "nofail_match": null
+        }
+      ],
+      "candidate_recipe_ids": [
+        6735,
+        7307
+      ]
+    },
+    {
+      "expected": {
+        "name": "Etched Rune",
+        "count": 1,
+        "trivial": "168",
+        "skill": "Fletching ",
+        "components": [
+          [
+            "Etched Rune Pattern",
+            1
+          ],
+          [
+            "Burin",
+            1
+          ],
+          [
+            "Blank Rune",
+            1
+          ]
+        ],
+        "container_text": "[[Fletching Kit]]:"
+      },
+      "matching_recipes": [
+        {
+          "recipe": {
+            "id": 7307,
+            "name": "Etched Rune",
+            "tradeskill": 64,
+            "skillneeded": 0,
+            "trivial": 168,
+            "nofail": 0,
+            "replace_container": 0,
+            "notes": null,
+            "must_learn": 0,
+            "learned_by_item_id": 0,
+            "quest": 0,
+            "enabled": 1,
+            "show_in_advanced": 1,
+            "min_expansion": 2,
+            "max_expansion": -1,
+            "content_flags": null,
+            "content_flags_disabled": null,
+            "category": null
+          },
+          "entries": [
+            {
+              "id": 69079,
+              "recipe_id": 7307,
+              "item_id": 17762,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 69073,
+              "recipe_id": 7307,
+              "item_id": 1852,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 1,
+              "salvagecount": 1,
+              "iscontainer": 0
+            },
+            {
+              "id": 69080,
+              "recipe_id": 7307,
+              "item_id": 17910,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 69074,
+              "recipe_id": 7307,
+              "item_id": 1855,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 1,
+              "salvagecount": 1,
+              "iscontainer": 0
+            },
+            {
+              "id": 69078,
+              "recipe_id": 7307,
+              "item_id": 17189,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 69081,
+              "recipe_id": 7307,
+              "item_id": 66163,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 69076,
+              "recipe_id": 7307,
+              "item_id": 1856,
+              "successcount": 1,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 0
+            },
+            {
+              "id": 69077,
+              "recipe_id": 7307,
+              "item_id": 17128,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 69072,
+              "recipe_id": 7307,
+              "item_id": 1854,
+              "successcount": 1,
+              "failcount": 1,
+              "componentcount": 1,
+              "salvagecount": 0,
+              "iscontainer": 0
+            }
+          ],
+          "components_match": true,
+          "enabled": true,
+          "trivial_match": true,
+          "nofail_match": null
+        }
+      ],
+      "candidate_recipe_ids": [
+        7307
+      ]
+    },
+    {
+      "expected": {
+        "name": "Cutlassfish Oil",
+        "count": 1,
+        "trivial": "No-Fail",
+        "skill": "Fishing ",
+        "components": [
+          [
+            "Iceclad Cutlassfish",
+            3
+          ]
+        ],
+        "container_text": "[[Fish Oil Extractor]]:"
+      },
+      "matching_recipes": [
+        {
+          "recipe": {
+            "id": 9738,
+            "name": "Cutlassfish Oil",
+            "tradeskill": 75,
+            "skillneeded": 0,
+            "trivial": 0,
+            "nofail": 1,
+            "replace_container": 1,
+            "notes": null,
+            "must_learn": 0,
+            "learned_by_item_id": 0,
+            "quest": 0,
+            "enabled": 1,
+            "show_in_advanced": 0,
+            "min_expansion": 2,
+            "max_expansion": -1,
+            "content_flags": null,
+            "content_flags_disabled": null,
+            "category": null
+          },
+          "entries": [
+            {
+              "id": 85494,
+              "recipe_id": 9738,
+              "item_id": 1886,
+              "successcount": 1,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 0
+            },
+            {
+              "id": 85493,
+              "recipe_id": 9738,
+              "item_id": 22767,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 3,
+              "salvagecount": 3,
+              "iscontainer": 0
+            },
+            {
+              "id": 85495,
+              "recipe_id": 9738,
+              "item_id": 17514,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            }
+          ],
+          "components_match": true,
+          "enabled": true,
+          "trivial_match": null,
+          "nofail_match": true
+        }
+      ],
+      "candidate_recipe_ids": [
+        9738
+      ]
+    },
+    {
+      "expected": {
+        "name": "Liquid Velium",
+        "count": 1,
+        "trivial": "135",
+        "skill": "Brewing ",
+        "components": [
+          [
+            "Rubbing Alcohol",
+            1
+          ],
+          [
+            "Small Piece of Velium",
+            1
+          ]
+        ],
+        "container_text": "[[Brew Barrel]]:"
+      },
+      "matching_recipes": [
+        {
+          "recipe": {
+            "id": 7746,
+            "name": "Liquid Velium",
+            "tradeskill": 65,
+            "skillneeded": 0,
+            "trivial": 135,
+            "nofail": 0,
+            "replace_container": 0,
+            "notes": null,
+            "must_learn": 0,
+            "learned_by_item_id": 0,
+            "quest": 0,
+            "enabled": 1,
+            "show_in_advanced": 1,
+            "min_expansion": 2,
+            "max_expansion": -1,
+            "content_flags": null,
+            "content_flags_disabled": null,
+            "category": "General"
+          },
+          "entries": [
+            {
+              "id": 72359,
+              "recipe_id": 7746,
+              "item_id": 19,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 72357,
+              "recipe_id": 7746,
+              "item_id": 22569,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 1,
+              "salvagecount": 1,
+              "iscontainer": 0
+            },
+            {
+              "id": 72358,
+              "recipe_id": 7746,
+              "item_id": 1857,
+              "successcount": 1,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 0
+            },
+            {
+              "id": 72356,
+              "recipe_id": 7746,
+              "item_id": 12418,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 1,
+              "salvagecount": 1,
+              "iscontainer": 0
+            },
+            {
+              "id": 72360,
+              "recipe_id": 7746,
+              "item_id": 17179,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            }
+          ],
+          "components_match": true,
+          "enabled": true,
+          "trivial_match": true,
+          "nofail_match": null
+        }
+      ],
+      "candidate_recipe_ids": [
+        7746
+      ]
+    },
+    {
+      "expected": {
+        "name": "Sacred Velium Ink",
+        "count": 1,
+        "trivial": "168",
+        "skill": "Brewing ",
+        "components": [
+          [
+            "Liquid Velium",
+            1
+          ],
+          [
+            "Cutlassfish Oil",
+            1
+          ],
+          [
+            "Royal Kromrif blood",
+            1
+          ]
+        ],
+        "container_text": "[[Brew Barrel]]:"
+      },
+      "matching_recipes": [
+        {
+          "recipe": {
+            "id": 7791,
+            "name": "Sacred Velium Ink",
+            "tradeskill": 65,
+            "skillneeded": 0,
+            "trivial": 168,
+            "nofail": 0,
+            "replace_container": 0,
+            "notes": null,
+            "must_learn": 0,
+            "learned_by_item_id": 0,
+            "quest": 0,
+            "enabled": 1,
+            "show_in_advanced": 1,
+            "min_expansion": 2,
+            "max_expansion": -1,
+            "content_flags": null,
+            "content_flags_disabled": null,
+            "category": "General"
+          },
+          "entries": [
+            {
+              "id": 72649,
+              "recipe_id": 7791,
+              "item_id": 1886,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 1,
+              "salvagecount": 1,
+              "iscontainer": 0
+            },
+            {
+              "id": 72650,
+              "recipe_id": 7791,
+              "item_id": 2048,
+              "successcount": 1,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 0
+            },
+            {
+              "id": 72648,
+              "recipe_id": 7791,
+              "item_id": 1858,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 1,
+              "salvagecount": 1,
+              "iscontainer": 0
+            },
+            {
+              "id": 72647,
+              "recipe_id": 7791,
+              "item_id": 1857,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 1,
+              "salvagecount": 1,
+              "iscontainer": 0
+            },
+            {
+              "id": 72651,
+              "recipe_id": 7791,
+              "item_id": 19,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            }
+          ],
+          "components_match": true,
+          "enabled": true,
+          "trivial_match": true,
+          "nofail_match": null
+        }
+      ],
+      "candidate_recipe_ids": [
+        7791
+      ]
+    },
+    {
+      "expected": {
+        "name": "Velium Etched Rune",
+        "count": 1,
+        "trivial": "168",
+        "skill": "Fletching",
+        "components": [
+          [
+            "Sacred Velium Ink",
+            1
+          ],
+          [
+            "Etched Rune",
+            1
+          ]
+        ],
+        "container_text": "[[Fletching Kit]]:"
+      },
+      "matching_recipes": [
+        {
+          "recipe": {
+            "id": 7538,
+            "name": "Velium Etched Rune",
+            "tradeskill": 64,
+            "skillneeded": 0,
+            "trivial": 168,
+            "nofail": 0,
+            "replace_container": 0,
+            "notes": null,
+            "must_learn": 0,
+            "learned_by_item_id": 0,
+            "quest": 0,
+            "enabled": 1,
+            "show_in_advanced": 1,
+            "min_expansion": 2,
+            "max_expansion": -1,
+            "content_flags": null,
+            "content_flags_disabled": null,
+            "category": null
+          },
+          "entries": [
+            {
+              "id": 71032,
+              "recipe_id": 7538,
+              "item_id": 66163,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 71025,
+              "recipe_id": 7538,
+              "item_id": 1856,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 1,
+              "salvagecount": 1,
+              "iscontainer": 0
+            },
+            {
+              "id": 71028,
+              "recipe_id": 7538,
+              "item_id": 17128,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 71027,
+              "recipe_id": 7538,
+              "item_id": 1859,
+              "successcount": 1,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 0
+            },
+            {
+              "id": 71026,
+              "recipe_id": 7538,
+              "item_id": 2048,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 1,
+              "salvagecount": 1,
+              "iscontainer": 0
+            },
+            {
+              "id": 71030,
+              "recipe_id": 7538,
+              "item_id": 17762,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 71029,
+              "recipe_id": 7538,
+              "item_id": 17189,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 71031,
+              "recipe_id": 7538,
+              "item_id": 17910,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            }
+          ],
+          "components_match": true,
+          "enabled": true,
+          "trivial_match": true,
+          "nofail_match": null
+        }
+      ],
+      "candidate_recipe_ids": [
+        7538
+      ]
+    },
+    {
+      "expected": {
+        "name": "Rune Casing",
+        "count": 1,
+        "trivial": "152",
+        "skill": "Jewelcrafting",
+        "components": [
+          [
+            "Rune Casing Pattern",
+            1
+          ],
+          [
+            "Small Piece of Velium",
+            1
+          ],
+          [
+            "Platinum Bar",
+            2
+          ]
+        ],
+        "container_text": "[[Jeweler's Kit]]:"
+      },
+      "matching_recipes": [
+        {
+          "recipe": {
+            "id": 8284,
+            "name": "Rune Casing",
+            "tradeskill": 68,
+            "skillneeded": 0,
+            "trivial": 152,
+            "nofail": 0,
+            "replace_container": 0,
+            "notes": null,
+            "must_learn": 0,
+            "learned_by_item_id": 0,
+            "quest": 0,
+            "enabled": 1,
+            "show_in_advanced": 1,
+            "min_expansion": 2,
+            "max_expansion": -1,
+            "content_flags": null,
+            "content_flags_disabled": null,
+            "category": null
+          },
+          "entries": [
+            {
+              "id": 76213,
+              "recipe_id": 8284,
+              "item_id": 22569,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 1,
+              "salvagecount": 1,
+              "iscontainer": 0
+            },
+            {
+              "id": 76217,
+              "recipe_id": 8284,
+              "item_id": 17912,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 76214,
+              "recipe_id": 8284,
+              "item_id": 1860,
+              "successcount": 1,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 0
+            },
+            {
+              "id": 76212,
+              "recipe_id": 8284,
+              "item_id": 2040,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 1,
+              "salvagecount": 1,
+              "iscontainer": 0
+            },
+            {
+              "id": 76215,
+              "recipe_id": 8284,
+              "item_id": 17187,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 76218,
+              "recipe_id": 8284,
+              "item_id": 62480,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 76211,
+              "recipe_id": 8284,
+              "item_id": 16503,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 2,
+              "salvagecount": 2,
+              "iscontainer": 0
+            },
+            {
+              "id": 76216,
+              "recipe_id": 8284,
+              "item_id": 17764,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            }
+          ],
+          "components_match": true,
+          "enabled": true,
+          "trivial_match": true,
+          "nofail_match": null
+        }
+      ],
+      "candidate_recipe_ids": [
+        8284
+      ]
+    },
+    {
+      "expected": {
+        "name": "Encased Velium Etched Rune",
+        "count": 1,
+        "trivial": "162",
+        "skill": "Jewelcrafting",
+        "components": [
+          [
+            "Rune Casing",
+            1
+          ],
+          [
+            "Velium Etched Rune",
+            1
+          ]
+        ],
+        "container_text": "[[Jeweler's Kit]]:"
+      },
+      "matching_recipes": [
+        {
+          "recipe": {
+            "id": 7976,
+            "name": "Encased Velium Etched Rune",
+            "tradeskill": 68,
+            "skillneeded": 0,
+            "trivial": 162,
+            "nofail": 0,
+            "replace_container": 0,
+            "notes": null,
+            "must_learn": 0,
+            "learned_by_item_id": 0,
+            "quest": 0,
+            "enabled": 1,
+            "show_in_advanced": 1,
+            "min_expansion": 2,
+            "max_expansion": -1,
+            "content_flags": null,
+            "content_flags_disabled": null,
+            "category": "Velium"
+          },
+          "entries": [
+            {
+              "id": 73876,
+              "recipe_id": 7976,
+              "item_id": 62480,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 73874,
+              "recipe_id": 7976,
+              "item_id": 17764,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 73871,
+              "recipe_id": 7976,
+              "item_id": 1860,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 1,
+              "salvagecount": 1,
+              "iscontainer": 0
+            },
+            {
+              "id": 73870,
+              "recipe_id": 7976,
+              "item_id": 1859,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 1,
+              "salvagecount": 1,
+              "iscontainer": 0
+            },
+            {
+              "id": 73872,
+              "recipe_id": 7976,
+              "item_id": 2046,
+              "successcount": 1,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 0
+            },
+            {
+              "id": 73873,
+              "recipe_id": 7976,
+              "item_id": 17187,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 73875,
+              "recipe_id": 7976,
+              "item_id": 17912,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            }
+          ],
+          "components_match": true,
+          "enabled": true,
+          "trivial_match": true,
+          "nofail_match": null
+        }
+      ],
+      "candidate_recipe_ids": [
+        7976
+      ]
+    },
+    {
+      "expected": {
+        "name": "Runed Coldain Prayer Shawl",
+        "count": 1,
+        "trivial": "162",
+        "skill": "Tailoring ",
+        "components": [
+          [
+            "Encased Velium Etched Rune",
+            1
+          ],
+          [
+            "Runed Prayer Shawl Pattern",
+            1
+          ],
+          [
+            "Embroidered Coldain Prayer Shawl",
+            1
+          ]
+        ],
+        "container_text": "[[Sewing Kit]]:"
+      },
+      "matching_recipes": [
+        {
+          "recipe": {
+            "id": 3104,
+            "name": "Runed Coldain Prayer Shawl",
+            "tradeskill": 61,
+            "skillneeded": 0,
+            "trivial": 162,
+            "nofail": 0,
+            "replace_container": 0,
+            "notes": null,
+            "must_learn": 0,
+            "learned_by_item_id": 0,
+            "quest": 0,
+            "enabled": 1,
+            "show_in_advanced": 1,
+            "min_expansion": 2,
+            "max_expansion": -1,
+            "content_flags": null,
+            "content_flags_disabled": null,
+            "category": "Quest Items"
+          },
+          "entries": [
+            {
+              "id": 28746,
+              "recipe_id": 3104,
+              "item_id": 2046,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 1,
+              "salvagecount": 1,
+              "iscontainer": 0
+            },
+            {
+              "id": 28748,
+              "recipe_id": 3104,
+              "item_id": 16,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 28768,
+              "recipe_id": 3104,
+              "item_id": 92880,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 28764,
+              "recipe_id": 3104,
+              "item_id": 92876,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 28749,
+              "recipe_id": 3104,
+              "item_id": 17165,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 28760,
+              "recipe_id": 3104,
+              "item_id": 92872,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 28770,
+              "recipe_id": 3104,
+              "item_id": 92882,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 28756,
+              "recipe_id": 3104,
+              "item_id": 92868,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 28758,
+              "recipe_id": 3104,
+              "item_id": 92870,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 28766,
+              "recipe_id": 3104,
+              "item_id": 92878,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 28745,
+              "recipe_id": 3104,
+              "item_id": 1849,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 1,
+              "salvagecount": 1,
+              "iscontainer": 0
+            },
+            {
+              "id": 28757,
+              "recipe_id": 3104,
+              "item_id": 92869,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 28761,
+              "recipe_id": 3104,
+              "item_id": 92873,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 28767,
+              "recipe_id": 3104,
+              "item_id": 92879,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 28762,
+              "recipe_id": 3104,
+              "item_id": 92874,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 28752,
+              "recipe_id": 3104,
+              "item_id": 17812,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 28755,
+              "recipe_id": 3104,
+              "item_id": 17966,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 28753,
+              "recipe_id": 3104,
+              "item_id": 17813,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 28769,
+              "recipe_id": 3104,
+              "item_id": 92881,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 28750,
+              "recipe_id": 3104,
+              "item_id": 17768,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 28754,
+              "recipe_id": 3104,
+              "item_id": 17880,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 28759,
+              "recipe_id": 3104,
+              "item_id": 92871,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 28763,
+              "recipe_id": 3104,
+              "item_id": 92875,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 28744,
+              "recipe_id": 3104,
+              "item_id": 1198,
+              "successcount": 0,
+              "failcount": 1,
+              "componentcount": 1,
+              "salvagecount": 0,
+              "iscontainer": 0
+            },
+            {
+              "id": 28751,
+              "recipe_id": 3104,
+              "item_id": 17806,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            },
+            {
+              "id": 28747,
+              "recipe_id": 3104,
+              "item_id": 1199,
+              "successcount": 1,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 0
+            },
+            {
+              "id": 28765,
+              "recipe_id": 3104,
+              "item_id": 92877,
+              "successcount": 0,
+              "failcount": 0,
+              "componentcount": 0,
+              "salvagecount": 0,
+              "iscontainer": 1
+            }
+          ],
+          "components_match": true,
+          "enabled": true,
+          "trivial_match": true,
+          "nofail_match": null
+        }
+      ],
+      "candidate_recipe_ids": [
+        3104
+      ]
+    }
+  ],
+  "preserved_heads": {
+    "recipe": {
+      "id": 9922,
+      "name": "Preserved Kromrif Heads",
+      "tradeskill": 75,
+      "skillneeded": 0,
+      "trivial": 0,
+      "nofail": 1,
+      "replace_container": 1,
+      "notes": "Created by ylosh",
+      "must_learn": 0,
+      "learned_by_item_id": 0,
+      "quest": 0,
+      "enabled": 1,
+      "show_in_advanced": 0,
+      "min_expansion": 2,
+      "max_expansion": -1,
+      "content_flags": null,
+      "content_flags_disabled": null,
+      "category": null
+    },
+    "entries": [
+      {
+        "id": 86683,
+        "recipe_id": 9922,
+        "item_id": 1174,
+        "successcount": 1,
+        "failcount": 0,
+        "componentcount": 0,
+        "salvagecount": 0,
+        "iscontainer": 0
+      },
+      {
+        "id": 86684,
+        "recipe_id": 9922,
+        "item_id": 17102,
+        "successcount": 0,
+        "failcount": 0,
+        "componentcount": 0,
+        "salvagecount": 0,
+        "iscontainer": 1
+      },
+      {
+        "id": 86682,
+        "recipe_id": 9922,
+        "item_id": 30082,
+        "successcount": 0,
+        "failcount": 0,
+        "componentcount": 10,
+        "salvagecount": 10,
+        "iscontainer": 0
+      }
+    ],
+    "verified": "10 Kromrif Head 30082 in Preservationists Box 17102 -> Preserved Kromrif Heads 1174; enabled, nofail, replacement set."
+  }
+}

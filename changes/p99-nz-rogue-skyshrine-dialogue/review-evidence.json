@@ -1,0 +1,26 @@
+{
+  "titles": [
+    "Rogue Skyshrine Armor Quests"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "partial",
+  "match_status": "partial",
+  "local_quest_keys": [
+    "skyshrine/Crendatha_Fe-Dhar"
+  ],
+  "proposal": "changes/p99-nz-rogue-skyshrine-dialogue.json",
+  "notes": [
+    "Accept the documented leggings dialogue phrase alongside existing greaves alias for Shadow Greaves requirements.",
+    "All7 armor component/reward sets independently matched P99 checklist. INTEGRATION REQUIRED: synchronize scripts/quests/velious-armor.mjs and its dialogue source/manifest for skyshrine/Crendatha_Fe-Dhar so regeneration preserves leggings alias. This content export permits maintained Lua proposal but lacks generator input targets; do not silently regenerate over fix."
+  ],
+  "verification": {
+    "source": "Cached P99 and effective Lua reviewed; exact complete row preimages and source hashes recorded.",
+    "syntax": "pending",
+    "runtime": "Isolated mock regression pending; full game runtime unavailable.",
+    "ui": "not_run",
+    "connected_chain": "not_run"
+  },
+  "unresolved": [
+    "Ordinary source drops/spawns, recipe live behavior and rendered complete quest path not verified."
+  ]
+}

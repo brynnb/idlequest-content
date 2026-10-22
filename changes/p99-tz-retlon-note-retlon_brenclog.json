@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-retlon-note-retlon_brenclog",
+  "summary": "Use exact item18887, lore Note To Retlon Brenclog, instead of1717 lore Sealed Letter to Wenglawks. This prevents freely generated novice notes from paying out the unrelated Kael quest. Paired Tergon/Retlon correction; Retlon documented get me out/spellbook lines restored.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Tergon's_Spellbook_Quest?action=raw",
+      "note": "Cached 2026-07-17T23:34:47.100Z; revision unavailable; SHA256 210a4e08ffb524e59cd2ee6f8d5d06e10564b5bcf822b6a159679ef7e13b518a. Use exact item18887, lore Note To Retlon Brenclog, instead of1717 lore Sealed Letter to Wenglawks. This prevents freely generated novice notes from paying out the unrelated Kael quest. Paired Tergon/Retlon correction; Retlon documented get me out/spellbook lines restored. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 13134,
+        "zone": "crushbone",
+        "name": "Retlon_Brenclog",
+        "lua_content": "-- Modified from ProjectEQ Lua.\n-- Source: crushbone/Retlon_Brenclog.lua\n-- P99 audit: Slave Keys\n-- items: 20015, 1717\n\nlocal function faction_ok(e)\n\treturn e.other:GetFaction(e.self) <= 7 -- dubious or better\nend\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Oh my word!! A rescuer!! Hurry! Get me out of these chains!! Go find the orc who has the keys!\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {copper = 1})) then\n\t\te.self:Say(\"No, no!! I do not need this!! Get me key number 15!!\");\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 20015})) then\n\t\tif not faction_ok(e) then\n\t\t\te.self:Say(\"The orcs might see you and me talking and slay us both!\")\n\t\t\te.other:SummonItem(20015)\n\t\telse\n\t\t\te.self:Say(\"Good work!! I shall be on my way. Farewell my friend!!\");\n\t\t\te.other:Ding();\n\t\t\te.other:Faction(245,1,0); -- Eldritch Collective\n\t\t\te.other:Faction(238,-1,0); -- Dark Reflection\n\t\t\te.other:Faction(239,-2,0); -- The Dead\n\t\t\te.other:Faction(255,1,0); -- Gem Choppers\n\t\t\te.other:Faction(333,1,0); -- King Ak`Anon\n\t\t\te.other:AddEXP(1000);\n\t\t\te.other:GiveCash(0,3,2,0);\n\t\t\teq.depop_with_timer();\n\t\tend\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 1717})) then\n\t\te.self:Say(\"Ah! A letter from my brother! Mmm... no... no I don't have Tergon's spellbook. The orc's prophet took it and then they locked me in chains! Now why don't you go do something useful and get me key number 15!!\");\n\t\te.other:Faction(333,1,0); -- King Ak`Anon\n\t\te.other:Faction(245,1,0); -- Eldritch Collective\n\t\te.other:Faction(238,-1,0); -- Dark Reflection\n\t\te.other:Faction(255,1,0); -- Gem Choppers\n\t\te.other:Faction(239,-2,0); -- The Dead\n\t\te.other:AddEXP(500);\n\t\teq.depop_with_timer();\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade);\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 13134,
+        "zone": "crushbone",
+        "name": "Retlon_Brenclog",
+        "lua_content": "-- Modified from ProjectEQ Lua.\n-- Source: crushbone/Retlon_Brenclog.lua\n-- P99 audit: Slave Keys\n-- items: 20015, 18887\n\nlocal function faction_ok(e)\n\treturn e.other:GetFaction(e.self) <= 7 -- dubious or better\nend\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Oh my word!! A rescuer!! Hurry! Get me out of these chains!! Go find the orc who has the keys!\");\n\telseif(e.message:findi(\"get me out\")) then\n\t\te.self:Say(\"I am from Ak'Anon! I must return a [spellbook] to the Eldritch Collective.\");\n\telseif(e.message:findi(\"spellbook\")) then\n\t\te.self:Say(\"What?! I am stuck here and you are worried about a spellbook?! Forget that! Just get the keys to my shackles from one of the orcs! HURRY!\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {copper = 1})) then\n\t\te.self:Say(\"No, no!! I do not need this!! Get me key number 15!!\");\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 20015})) then\n\t\tif not faction_ok(e) then\n\t\t\te.self:Say(\"The orcs might see you and me talking and slay us both!\")\n\t\t\te.other:SummonItem(20015)\n\t\telse\n\t\t\te.self:Say(\"Good work!! I shall be on my way. Farewell my friend!!\");\n\t\t\te.other:Ding();\n\t\t\te.other:Faction(245,1,0); -- Eldritch Collective\n\t\t\te.other:Faction(238,-1,0); -- Dark Reflection\n\t\t\te.other:Faction(239,-2,0); -- The Dead\n\t\t\te.other:Faction(255,1,0); -- Gem Choppers\n\t\t\te.other:Faction(333,1,0); -- King Ak`Anon\n\t\t\te.other:AddEXP(1000);\n\t\t\te.other:GiveCash(0,3,2,0);\n\t\t\teq.depop_with_timer();\n\t\tend\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 18887})) then\n\t\te.self:Say(\"Ah! A letter from my brother! Mmm... no... no I don't have Tergon's spellbook. The orc's prophet took it and then they locked me in chains! Now why don't you go do something useful and get me key number 15!!\");\n\t\te.other:Faction(333,1,0); -- King Ak`Anon\n\t\te.other:Faction(245,1,0); -- Eldritch Collective\n\t\te.other:Faction(238,-1,0); -- Dark Reflection\n\t\te.other:Faction(255,1,0); -- Gem Choppers\n\t\te.other:Faction(239,-2,0); -- The Dead\n\t\te.other:AddEXP(500);\n\t\teq.depop_with_timer();\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade);\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/crushbone/Retlon_Brenclog.lua",
+      "beforeSha256": "338125ce759467ec24ff37e6894bdb6c96c67aa2a6c2ee62f25d4349423a7e13",
+      "proposedFile": "changes/p99-tz-retlon-note-retlon_brenclog/crushbone--Retlon_Brenclog.lua",
+      "afterSha256": "1dfe47d1c999bdaf465cdbd8cb4230ce2332c6443d23ec395e9c87f855e5d3fb"
+    }
+  ]
+}

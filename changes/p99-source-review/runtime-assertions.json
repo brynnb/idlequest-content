@@ -1,0 +1,314 @@
+{
+  "scope": "Hash-bound normalized Lua logic with pinned helpers and mocked APIs. Disabled-source cases run historical code deliberately: they test compilation/rejection, NOT runtime admission. Static metadata receipt checks actual disabled row/header. No inventory settlement, world depop, acquisition, UI or numeric-P99 proof.",
+  "cases": [
+    {
+      "name": "Quarg baseline array rewards are silently absent",
+      "sourceSha256": "e2ace57ae8753b545736c50a1317613945c00a9373a830cc7e1d1bacd3175d4e",
+      "assertions": "trade({12735,5142});reward(17035,0);reward(5143,0);equal(calls.exp,100000);equal(remaining[12735],0);equal(remaining[5142],0)",
+      "coverageKind": "baseline_reproduction",
+      "file": "effective/quests/fieldofbone/Crusader_Quarg.lua"
+    },
+    {
+      "name": "Quarg both first-five-stage outputs, extra, existing XP, repeated full offer",
+      "sourceSha256": "9833a30cb5a261096b24ce2d87aa1609b3a3226a8edea9fe0fa44af40b006671",
+      "assertions": "character.level=1;character.class=1;trade({12735,5142,99999});reward(17035,1);reward(5143,1);equal(calls.exp,100000);faction(445,10);faction(441,10);equal(remaining[99999],1);equal(remaining[12735],0);equal(remaining[5142],0);equal(calls.returns,1);trade({5142,12735});reward(17035,2);reward(5143,2);equal(calls.exp,200000);equal(calls.returns,2)",
+      "coverageKind": "isolated_proposed_source",
+      "proposedFile": "changes/p99-sz-quarg-alias/fieldofbone--Crusader_Quarg.lua"
+    },
+    {
+      "name": "Quarg incomplete or wrong offer 12735",
+      "sourceSha256": "9833a30cb5a261096b24ce2d87aa1609b3a3226a8edea9fe0fa44af40b006671",
+      "assertions": "trade({12735});reward(17035,0);reward(5143,0);equal(calls.exp,0);equal(next(calls.factions),nil);equal(calls.returns,1);equal(remaining[12735],1);",
+      "coverageKind": "isolated_proposed_source",
+      "proposedFile": "changes/p99-sz-quarg-alias/fieldofbone--Crusader_Quarg.lua"
+    },
+    {
+      "name": "Quarg incomplete or wrong offer 5142",
+      "sourceSha256": "9833a30cb5a261096b24ce2d87aa1609b3a3226a8edea9fe0fa44af40b006671",
+      "assertions": "trade({5142});reward(17035,0);reward(5143,0);equal(calls.exp,0);equal(next(calls.factions),nil);equal(calls.returns,1);equal(remaining[5142],1);",
+      "coverageKind": "isolated_proposed_source",
+      "proposedFile": "changes/p99-sz-quarg-alias/fieldofbone--Crusader_Quarg.lua"
+    },
+    {
+      "name": "Quarg incomplete or wrong offer 99999",
+      "sourceSha256": "9833a30cb5a261096b24ce2d87aa1609b3a3226a8edea9fe0fa44af40b006671",
+      "assertions": "trade({99999});reward(17035,0);reward(5143,0);equal(calls.exp,0);equal(next(calls.factions),nil);equal(calls.returns,1);equal(remaining[99999],1);",
+      "coverageKind": "isolated_proposed_source",
+      "proposedFile": "changes/p99-sz-quarg-alias/fieldofbone--Crusader_Quarg.lua"
+    },
+    {
+      "name": "Quarg incomplete or wrong offer 12735,99999",
+      "sourceSha256": "9833a30cb5a261096b24ce2d87aa1609b3a3226a8edea9fe0fa44af40b006671",
+      "assertions": "trade({12735,99999});reward(17035,0);reward(5143,0);equal(calls.exp,0);equal(next(calls.factions),nil);equal(calls.returns,1);equal(remaining[12735],1);equal(remaining[99999],1);",
+      "coverageKind": "isolated_proposed_source",
+      "proposedFile": "changes/p99-sz-quarg-alias/fieldofbone--Crusader_Quarg.lua"
+    },
+    {
+      "name": "Quarg incomplete or wrong offer 5142,99999",
+      "sourceSha256": "9833a30cb5a261096b24ce2d87aa1609b3a3226a8edea9fe0fa44af40b006671",
+      "assertions": "trade({5142,99999});reward(17035,0);reward(5143,0);equal(calls.exp,0);equal(next(calls.factions),nil);equal(calls.returns,1);equal(remaining[5142],1);equal(remaining[99999],1);",
+      "coverageKind": "isolated_proposed_source",
+      "proposedFile": "changes/p99-sz-quarg-alias/fieldofbone--Crusader_Quarg.lua"
+    },
+    {
+      "name": "Quarg preserves preceding Zand note reward",
+      "sourceSha256": "9833a30cb5a261096b24ce2d87aa1609b3a3226a8edea9fe0fa44af40b006671",
+      "assertions": "trade({18054,99999});reward(17034,1);reward(17035,0);reward(5143,0);equal(calls.exp,10000);faction(445,10);faction(441,10);equal(remaining[99999],1)",
+      "coverageKind": "isolated_proposed_source",
+      "proposedFile": "changes/p99-sz-quarg-alias/fieldofbone--Crusader_Quarg.lua"
+    },
+    {
+      "name": "Quarg source guard checks eligibility before consumption under injected nonfriendly fixture",
+      "sourceSha256": "9833a30cb5a261096b24ce2d87aa1609b3a3226a8edea9fe0fa44af40b006671",
+      "assertions": "trade({12735,5142});reward(17035,0);reward(5143,0);equal(remaining[12735],1);equal(remaining[5142],1);equal(calls.exp,0);equal(calls.returns,1)",
+      "coverageKind": "isolated_proposed_source",
+      "proposedFile": "changes/p99-sz-quarg-alias/fieldofbone--Crusader_Quarg.lua",
+      "setupExtra": "other.GetFaction=function() return 9 end"
+    },
+    {
+      "name": "Caitiff complete pair keeps existing reward XP and requests depop only on success",
+      "sourceSha256": "17f2d9d4202b8e0aa51222cd0139442cce9acf8b5db7b125d76b748b7dea5801",
+      "assertions": "character.level=1;character.class=1;trade({10179,10178,99999});reward(5408,1);equal(calls.exp,5000);equal(calls.depops,1);equal(remaining[10179],0);equal(remaining[10178],0);equal(remaining[99999],1);equal(calls.returns,1);equal(next(calls.factions),nil)",
+      "coverageKind": "isolated_proposed_source",
+      "proposedFile": "changes/p99-source-caitiff-depop/mistmoore--an_avenging_caitiff.lua"
+    },
+    {
+      "name": "Caitiff rejected offer does not depop 10179",
+      "sourceSha256": "17f2d9d4202b8e0aa51222cd0139442cce9acf8b5db7b125d76b748b7dea5801",
+      "assertions": "trade({10179});reward(5408,0);equal(calls.exp,0);equal(calls.depops,0);equal(calls.returns,1)",
+      "coverageKind": "isolated_proposed_source",
+      "proposedFile": "changes/p99-source-caitiff-depop/mistmoore--an_avenging_caitiff.lua"
+    },
+    {
+      "name": "Caitiff rejected offer does not depop 10178",
+      "sourceSha256": "17f2d9d4202b8e0aa51222cd0139442cce9acf8b5db7b125d76b748b7dea5801",
+      "assertions": "trade({10178});reward(5408,0);equal(calls.exp,0);equal(calls.depops,0);equal(calls.returns,1)",
+      "coverageKind": "isolated_proposed_source",
+      "proposedFile": "changes/p99-source-caitiff-depop/mistmoore--an_avenging_caitiff.lua"
+    },
+    {
+      "name": "Caitiff rejected offer does not depop 99999",
+      "sourceSha256": "17f2d9d4202b8e0aa51222cd0139442cce9acf8b5db7b125d76b748b7dea5801",
+      "assertions": "trade({99999});reward(5408,0);equal(calls.exp,0);equal(calls.depops,0);equal(calls.returns,1)",
+      "coverageKind": "isolated_proposed_source",
+      "proposedFile": "changes/p99-source-caitiff-depop/mistmoore--an_avenging_caitiff.lua"
+    },
+    {
+      "name": "Caitiff rejected offer does not depop 10179,10179",
+      "sourceSha256": "17f2d9d4202b8e0aa51222cd0139442cce9acf8b5db7b125d76b748b7dea5801",
+      "assertions": "trade({10179,10179});reward(5408,0);equal(calls.exp,0);equal(calls.depops,0);equal(calls.returns,1)",
+      "coverageKind": "isolated_proposed_source",
+      "proposedFile": "changes/p99-source-caitiff-depop/mistmoore--an_avenging_caitiff.lua"
+    },
+    {
+      "name": "Caitiff rejected offer does not depop 10178,99999",
+      "sourceSha256": "17f2d9d4202b8e0aa51222cd0139442cce9acf8b5db7b125d76b748b7dea5801",
+      "assertions": "trade({10178,99999});reward(5408,0);equal(calls.exp,0);equal(calls.depops,0);equal(calls.returns,1)",
+      "coverageKind": "isolated_proposed_source",
+      "proposedFile": "changes/p99-source-caitiff-depop/mistmoore--an_avenging_caitiff.lua"
+    },
+    {
+      "name": "Caitiff repeated invalid offers do not advance encounter",
+      "sourceSha256": "17f2d9d4202b8e0aa51222cd0139442cce9acf8b5db7b125d76b748b7dea5801",
+      "assertions": "trade({10179});trade({10178});trade({99999});reward(5408,0);equal(calls.depops,0);equal(calls.exp,0);equal(calls.returns,3)",
+      "coverageKind": "isolated_proposed_source",
+      "proposedFile": "changes/p99-source-caitiff-depop/mistmoore--an_avenging_caitiff.lua"
+    },
+    {
+      "name": "Caitiff repeated complete invocations each request depop; not a world-respawn test",
+      "sourceSha256": "17f2d9d4202b8e0aa51222cd0139442cce9acf8b5db7b125d76b748b7dea5801",
+      "assertions": "trade({10179,10178});trade({10178,10179});reward(5408,2);equal(calls.depops,2);equal(calls.exp,10000)",
+      "coverageKind": "isolated_proposed_source",
+      "proposedFile": "changes/p99-source-caitiff-depop/mistmoore--an_avenging_caitiff.lua"
+    },
+    {
+      "name": "Disabled historical source compiles and unrelated offer returns: maintained/lua/modified-upstream/dalnir/a_coerced_channeler.lua",
+      "sourceSha256": "27be6c56f4d8fffa6cb808c9fa6972918295b072fd3224e4a2e89a4c5be1a961",
+      "assertions": "trade({99999});equal(next(calls.rewards),nil);equal(calls.exp,0);equal(remaining[99999],1);equal(calls.returns,1);equal(calls.depops,0)",
+      "coverageKind": "isolated_proposed_source",
+      "proposedFile": "changes/p99-source-scope-disables/dalnir--a_coerced_channeler.lua"
+    },
+    {
+      "name": "Disabled historical source compiles and unrelated offer returns: maintained/lua/modified-upstream/charasis/An_Iksar_Apparition.lua",
+      "sourceSha256": "f7a5fb0582f1dc3f4626f9bc609c05d4f417288837b4962416035337f6b3f1ab",
+      "assertions": "trade({99999});equal(next(calls.rewards),nil);equal(calls.exp,0);equal(remaining[99999],1);equal(calls.returns,1);equal(calls.depops,0)",
+      "coverageKind": "isolated_proposed_source",
+      "proposedFile": "changes/p99-source-scope-disables/charasis--An_Iksar_Apparition.lua"
+    },
+    {
+      "name": "Disabled historical source compiles and unrelated offer returns: maintained/lua/modified-upstream/charasis/the_spirit_of_Rile.lua",
+      "sourceSha256": "df9f8a5e7dbd213198e09586442d4007a3d0388ea63675c725cea52d724aee1b",
+      "assertions": "trade({99999});equal(next(calls.rewards),nil);equal(calls.exp,0);equal(remaining[99999],1);equal(calls.returns,1);equal(calls.depops,0)",
+      "coverageKind": "isolated_proposed_source",
+      "proposedFile": "changes/p99-source-scope-disables/charasis--the_spirit_of_Rile.lua"
+    },
+    {
+      "name": "Disabled historical source compiles and unrelated offer returns: maintained/lua/modified-upstream/fieldofbone/Oracle_Qulin.lua",
+      "sourceSha256": "8864b2cf02cd48086beae0abee96746609e4abf0d43b2eeb6c8660fb7ae06dbd",
+      "assertions": "trade({99999});equal(next(calls.rewards),nil);equal(calls.exp,0);equal(remaining[99999],1);equal(calls.returns,1);equal(calls.depops,0)",
+      "coverageKind": "isolated_proposed_source",
+      "proposedFile": "changes/p99-source-scope-disables/fieldofbone--Oracle_Qulin.lua"
+    },
+    {
+      "name": "Disabled historical source compiles and unrelated offer returns: maintained/lua/modified-upstream/fieldofbone/Oracle_Vauris.lua",
+      "sourceSha256": "7f74bcc91941d7ec55338a9024e682d151ec9c26fe47852df76a25e9906ebfc9",
+      "assertions": "trade({99999});equal(next(calls.rewards),nil);equal(calls.exp,0);equal(remaining[99999],1);equal(calls.returns,1);equal(calls.depops,0)",
+      "coverageKind": "isolated_proposed_source",
+      "proposedFile": "changes/p99-source-scope-disables/fieldofbone--Oracle_Vauris.lua"
+    },
+    {
+      "name": "Disabled historical source compiles and unrelated offer returns: maintained/lua/converted-perl/gfaydark/Samatansyn_Flamecaller.lua",
+      "sourceSha256": "db7112ce2c505cb3a2d8bafe533c8e0b856ff7602c6a841e9f92290320892f2c",
+      "assertions": "trade({99999});equal(next(calls.rewards),nil);equal(calls.exp,0);equal(remaining[99999],1);equal(calls.returns,1);equal(calls.depops,0)",
+      "coverageKind": "isolated_proposed_source",
+      "proposedFile": "changes/p99-source-scope-disables/gfaydark--Samatansyn_Flamecaller.lua"
+    },
+    {
+      "name": "Disabled historical source compiles and unrelated offer returns: maintained/lua/modified-upstream/qeynos/Dionna.lua",
+      "sourceSha256": "637f055737341234beb9b63b2088ffb121e942d80b0ae207fd0d9ce55d00c65e",
+      "assertions": "trade({99999});equal(next(calls.rewards),nil);equal(calls.exp,0);equal(remaining[99999],1);equal(calls.returns,1);equal(calls.depops,0)",
+      "coverageKind": "isolated_proposed_source",
+      "proposedFile": "changes/p99-source-scope-disables/qeynos--Dionna.lua"
+    },
+    {
+      "name": "Disabled historical source compiles and unrelated offer returns: maintained/lua/converted-perl/dreadlands/Veltar.lua",
+      "sourceSha256": "9e90f6f1dca1cc5272c0e5d8ae7adc311f014cd26b71b97ea8edcea7d1b04c7c",
+      "assertions": "trade({99999});equal(next(calls.rewards),nil);equal(calls.exp,0);equal(remaining[99999],1);equal(calls.returns,1);equal(calls.depops,0)",
+      "coverageKind": "isolated_proposed_source",
+      "proposedFile": "changes/p99-source-scope-disables/dreadlands--Veltar.lua"
+    },
+    {
+      "name": "Disabled historical source compiles and unrelated offer returns: maintained/lua/converted-perl/charasis/Gandan_Tailfist.lua",
+      "sourceSha256": "84394acb04c30e5487e0c2d3a8aad6d46bb75cefbc8fad8b2cf7483bf95d09a9",
+      "assertions": "trade({99999});equal(next(calls.rewards),nil);equal(calls.exp,0);equal(remaining[99999],1);equal(calls.returns,1);equal(calls.depops,0)",
+      "coverageKind": "isolated_proposed_source",
+      "proposedFile": "changes/p99-source-scope-disables/charasis--Gandan_Tailfist.lua"
+    },
+    {
+      "name": "Disabled historical source compiles and unrelated offer returns: maintained/lua/converted-perl/sebilis/a_fallen_monk.lua",
+      "sourceSha256": "b31d369707f0ba666b55fb88c8ba375d71f594e9b24e396ee579e310c8fc5be6",
+      "assertions": "trade({99999});equal(next(calls.rewards),nil);equal(calls.exp,0);equal(remaining[99999],1);equal(calls.returns,1);equal(calls.depops,0)",
+      "coverageKind": "isolated_proposed_source",
+      "proposedFile": "changes/p99-source-scope-disables/sebilis--a_fallen_monk.lua"
+    },
+    {
+      "name": "Unchanged documented substep accepted and repeat firiona/Drake_Mountainstorm",
+      "sourceSha256": "c0f8278feb53d15db5b3f51154dacd860549e058669777ab52e78ceb58c11bd8",
+      "assertions": "trade({10033,99999});reward(10013,1);equal(calls.exp,0);equal(remaining[10033],0);equal(remaining[99999],1);trade({10033});reward(10013,2);equal(calls.exp,0)",
+      "coverageKind": "baseline_reproduction",
+      "file": "effective/quests/firiona/Drake_Mountainstorm.lua"
+    },
+    {
+      "name": "Unchanged documented substep wrong offer firiona/Drake_Mountainstorm",
+      "sourceSha256": "c0f8278feb53d15db5b3f51154dacd860549e058669777ab52e78ceb58c11bd8",
+      "assertions": "trade({99999});equal(next(calls.rewards),nil);equal(remaining[99999],1);equal(calls.exp,0);equal(calls.returns,1)",
+      "coverageKind": "baseline_reproduction",
+      "file": "effective/quests/firiona/Drake_Mountainstorm.lua"
+    },
+    {
+      "name": "Unchanged documented substep accepted and repeat freportw/Janam_Rekish",
+      "sourceSha256": "0540dae32c7705c5ac9768ea6f4bc8e4eafed9df600aabefc7d2f51e131fc619",
+      "assertions": "trade({18015,99999});reward(18016,1);equal(calls.exp,375);equal(remaining[18015],0);equal(remaining[99999],1);trade({18015});reward(18016,2);equal(calls.exp,750)",
+      "coverageKind": "baseline_reproduction",
+      "file": "effective/quests/freportw/Janam_Rekish.lua"
+    },
+    {
+      "name": "Unchanged documented substep wrong offer freportw/Janam_Rekish",
+      "sourceSha256": "0540dae32c7705c5ac9768ea6f4bc8e4eafed9df600aabefc7d2f51e131fc619",
+      "assertions": "trade({99999});equal(next(calls.rewards),nil);equal(remaining[99999],1);equal(calls.exp,0);equal(calls.returns,1)",
+      "coverageKind": "baseline_reproduction",
+      "file": "effective/quests/freportw/Janam_Rekish.lua"
+    },
+    {
+      "name": "Unchanged documented substep accepted and repeat freportw/Rebby_Willend",
+      "sourceSha256": "6dec07b2178d489f1cbdc7f4e5515e6b2c2c7812b4e55d3e25c4371f6a737465",
+      "assertions": "trade({18923,99999});reward(13158,1);equal(calls.exp,50);equal(remaining[18923],0);equal(remaining[99999],1);trade({18923});reward(13158,2);equal(calls.exp,100)",
+      "coverageKind": "baseline_reproduction",
+      "file": "effective/quests/freportw/Rebby_Willend.lua"
+    },
+    {
+      "name": "Unchanged documented substep wrong offer freportw/Rebby_Willend",
+      "sourceSha256": "6dec07b2178d489f1cbdc7f4e5515e6b2c2c7812b4e55d3e25c4371f6a737465",
+      "assertions": "trade({99999});equal(next(calls.rewards),nil);equal(remaining[99999],1);equal(calls.exp,0);equal(calls.returns,1)",
+      "coverageKind": "baseline_reproduction",
+      "file": "effective/quests/freportw/Rebby_Willend.lua"
+    },
+    {
+      "name": "Unchanged documented substep accepted and repeat overthere/Dom_K-Perl",
+      "sourceSha256": "0e0106c7e6f05a23ef19fb038b16ea4ae8a225d6f86a72e68af45f049dd1a312",
+      "assertions": "trade({10029,99999});reward(18068,1);equal(calls.exp,500);equal(remaining[10029],0);equal(remaining[99999],1);trade({10029});reward(18068,2);equal(calls.exp,1000)",
+      "coverageKind": "baseline_reproduction",
+      "file": "effective/quests/overthere/Dom_K-Perl.lua"
+    },
+    {
+      "name": "Unchanged documented substep wrong offer overthere/Dom_K-Perl",
+      "sourceSha256": "0e0106c7e6f05a23ef19fb038b16ea4ae8a225d6f86a72e68af45f049dd1a312",
+      "assertions": "trade({99999});equal(next(calls.rewards),nil);equal(remaining[99999],1);equal(calls.exp,0);equal(calls.returns,1)",
+      "coverageKind": "baseline_reproduction",
+      "file": "effective/quests/overthere/Dom_K-Perl.lua"
+    },
+    {
+      "name": "Unchanged Nallar translation complete pair and repeated offer",
+      "sourceSha256": "74d5765ec8ca9212f0e1d5743650aaad8cdbfd362ddf04876b6e2080a33f16e2",
+      "assertions": "trade({18401,10032,99999});reward(18401,1);equal(remaining[18401],0);equal(remaining[10032],0);equal(remaining[99999],1);equal(calls.exp,53110);trade({10032,18401});reward(18401,2);equal(calls.exp,106220)",
+      "coverageKind": "baseline_reproduction",
+      "file": "effective/quests/neriakc/Nallar_Q-Tentu.lua"
+    },
+    {
+      "name": "Unchanged Nallar incomplete translation 18401",
+      "sourceSha256": "74d5765ec8ca9212f0e1d5743650aaad8cdbfd362ddf04876b6e2080a33f16e2",
+      "assertions": "trade({18401});equal(next(calls.rewards),nil);equal(remaining[18401],1);equal(calls.exp,0)",
+      "coverageKind": "baseline_reproduction",
+      "file": "effective/quests/neriakc/Nallar_Q-Tentu.lua"
+    },
+    {
+      "name": "Unchanged Nallar incomplete translation 10032",
+      "sourceSha256": "74d5765ec8ca9212f0e1d5743650aaad8cdbfd362ddf04876b6e2080a33f16e2",
+      "assertions": "trade({10032});equal(next(calls.rewards),nil);equal(remaining[10032],1);equal(calls.exp,0)",
+      "coverageKind": "baseline_reproduction",
+      "file": "effective/quests/neriakc/Nallar_Q-Tentu.lua"
+    },
+    {
+      "name": "Unchanged Nallar incomplete translation 99999",
+      "sourceSha256": "74d5765ec8ca9212f0e1d5743650aaad8cdbfd362ddf04876b6e2080a33f16e2",
+      "assertions": "trade({99999});equal(next(calls.rewards),nil);equal(remaining[99999],1);equal(calls.exp,0)",
+      "coverageKind": "baseline_reproduction",
+      "file": "effective/quests/neriakc/Nallar_Q-Tentu.lua"
+    },
+    {
+      "name": "Unchanged Paineel key service Guard_Heridion",
+      "sourceSha256": "3115437c38c098d9f27cef9631577cdfd859d88ac6a7f44a88ee4aa3ae19bfe7",
+      "assertions": "character.level=1;character.class=1;say('hail');reward(6378,0);say('need keyz');reward(6378,1);say('need keyz');reward(6378,2);say('unrelated');reward(6378,2)",
+      "coverageKind": "baseline_reproduction",
+      "file": "effective/quests/paineel/Guard_Heridion.lua"
+    },
+    {
+      "name": "Unchanged Paineel key service Guard_Korlack",
+      "sourceSha256": "efcb74dcd8f865f790dee30e1358d7af8407e76099287c3eddd8a6b9cb289ac1",
+      "assertions": "character.level=1;character.class=1;say('hail');reward(6378,0);say('need keyz');reward(6378,1);say('need keyz');reward(6378,2);say('unrelated');reward(6378,2)",
+      "coverageKind": "baseline_reproduction",
+      "file": "effective/quests/paineel/Guard_Korlack.lua"
+    },
+    {
+      "name": "Unchanged Paineel key service Guard_Lecknar",
+      "sourceSha256": "de35167eba056bf212a11b02ef45b3e7967430e1285a32be7e8251a4e8e4ed95",
+      "assertions": "character.level=1;character.class=1;say('hail');reward(6378,0);say('need keyz');reward(6378,1);say('need keyz');reward(6378,2);say('unrelated');reward(6378,2)",
+      "coverageKind": "baseline_reproduction",
+      "file": "effective/quests/paineel/Guard_Lecknar.lua"
+    },
+    {
+      "name": "Unchanged Paineel key service Guard_Menbuknar",
+      "sourceSha256": "ff1ae3e9ce8ff853c1d3fdde5faa4080a947ea219ff241a446292cc103b1d2a7",
+      "assertions": "character.level=1;character.class=1;say('hail');reward(6378,0);say('need keyz');reward(6378,1);say('need keyz');reward(6378,2);say('unrelated');reward(6378,2)",
+      "coverageKind": "baseline_reproduction",
+      "file": "effective/quests/paineel/Guard_Menbuknar.lua"
+    },
+    {
+      "name": "Unchanged Tazgar documented hail penalty, unknown magnitude retained",
+      "sourceSha256": "05acbf3b1a5c17f4007f8bda6f0ade9e4a7fcd134740b0050b57c2860debbb14",
+      "assertions": "say('unrelated');equal(next(calls.factions),nil);say('hail');faction(415,-50);say('hail');faction(415,-100)",
+      "coverageKind": "baseline_reproduction",
+      "file": "effective/quests/soltemple/Tazgar.lua"
+    }
+  ]
+}

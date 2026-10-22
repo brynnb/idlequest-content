@@ -1,0 +1,26 @@
+{
+  "titles": [
+    "Poacher Leader"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "partial",
+  "match_status": "partial",
+  "local_quest_keys": [
+    "erudnext/Jras_Solsier"
+  ],
+  "proposal": "changes/p99-nz-poacher-leader-dialogue.json",
+  "notes": [
+    "Restore the documented Barbarian Head completion dialogue without changing rewards.",
+    "13913 Barbarian Head currently gives Holy Armor15011, while cached page says random low-level spell without naming complete pool. Do not invent a spell distribution. Three faction directions and EXP presence match. Poacher Head13825 branch unchanged."
+  ],
+  "verification": {
+    "source": "Cached P99 and effective Lua reviewed; exact complete row preimages and source hashes recorded.",
+    "syntax": "pending",
+    "runtime": "Isolated mock regression pending; full game runtime unavailable.",
+    "ui": "not_run",
+    "connected_chain": "not_run"
+  },
+  "unresolved": [
+    "Ordinary source drops/spawns, recipe live behavior and rendered complete quest path not verified."
+  ]
+}

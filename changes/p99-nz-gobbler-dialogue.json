@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-nz-gobbler-dialogue",
+  "summary": "Allow the documented pick-up-froglok-legs acceptance to reach its response instead of the generic lore branch.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Preserved_Meat_Delivery?action=raw",
+      "note": "Cached 2026-07-17T23:28:57.959Z; revision unavailable; SHA256 4fd330cfa7f68a0970f1e93bb221254adaf45fc2c6e656f47143ab734e132003. Exact cached acceptance currently shadowed by generic froglok legs. Only guard changes; Dooga issuance, Gobbler13384reward, GrubLocker branch untouched. Existing5percent gloves/20percent cleaver/75percent quartz are undocumented weights, retained;1\u20135gold exact."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 14542,
+        "zone": "neriaka",
+        "name": "The_Gobbler",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: neriaka/The_Gobbler.pl\n-- items: 10021, 12203, 13384, 13385, 13386\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Meat!! You need meat. Me gots meat!! High elf meat, dwarf meat, human meat, [HEHE meat], [froggy legs]. Me got a lot.\")\n\telseif e.message:findi(\"HEHE meat\") then\n\t\te.self:Say(\"HEHE meat? It human, Erudite 'n high elf, mashed together. Mmmm. Very tasty!\")\n\telseif e.message:findi(\"froggy legs\") or e.message:findi(\"froglok legs\") then\n\t\te.self:Say(\"Froggy legs come from far away. Me get from friend, [Chef Dooga]. It not tasty. Trolls like it. Eat it up much. They eat too much froggy. Me glad [Nerbilik] leave Neriak!! He eat way too much froggy.\")\n\telseif e.message:findi(\"chef dooga\") then\n\t\te.self:Say(\"Friend in Oggok is Chef Dooga. Chef she is. Used to work in Neriak. She beautiful. She supply the Gobbler with [froglok legs]. They very low now. Fat trolls eat too many!! Me need to [pick up froglok legs].\")\n\telseif e.message:findi(\"pick up froglok legs\") then\n\t\te.self:Say(\"That good news. Oggok far away. Me got no time to go. If you go speak to Chef Dooga, say you pick up froglok legs. You bring back and me give you coin, maybe even something good.\")\n\telseif e.message:findi(\"nerbilik\") then\n\t\te.self:Say(\"Big and fat troll Nerbilik is. He leave to fish in tearsy ocean. Me promised to deliver him food or he come bak. The Gobbler needs some dumb person to [deliver grub locker] to Nerbilik.\")\n\telseif e.message:findi(\"deliver grub locker\") then\n\t\te.self:Say(\"Good. Me wrap order of dwarf pickles in.. HEY!! Me out of special wrapping paper!! Hmm.. Here. Me use dis. Now, <..click.. Locks grub locker> Here. You take to Nerbilik in tearsy ocean and he pay you. No think of opening locker. Only Nerbilik has key.\")\n\t\te.other:SummonItem(12203) -- Grub Locker\n\tend\nend\n\nlocal function reward(e)\n\te.other:Ding()\n\te.other:Faction(353, 5, 0) -- Neriak Ogre\n\te.other:AddEXP(150)\n\te.other:GiveCash(0, 0, eq.ChooseRandom(1, 2, 3, 4, 5), 0)\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 13384}) then\n\t\te.self:Say(\"Uggh!! Froglok legs!! Me hate smelly legs, but me need it for fat trolls.\")\n\t\tlocal random_chance = math.random(1, 20)\n\t\tif random_chance == 20 then\n\t\t\te.other:SummonItem(13386) -- Ogre Butcher Gloves\n\t\telseif random_chance >= 16 then\n\t\t\te.other:SummonItem(13385) -- Ogre Meat Cleaver\n\t\telse\n\t\t\te.other:SummonItem(10021) -- Star Rose Quartz\n\t\tend\n\t\treward(e)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 14542,
+        "zone": "neriaka",
+        "name": "The_Gobbler",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: neriaka/The_Gobbler.pl\n-- items: 10021, 12203, 13384, 13385, 13386\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Meat!! You need meat. Me gots meat!! High elf meat, dwarf meat, human meat, [HEHE meat], [froggy legs]. Me got a lot.\")\n\telseif e.message:findi(\"HEHE meat\") then\n\t\te.self:Say(\"HEHE meat? It human, Erudite 'n high elf, mashed together. Mmmm. Very tasty!\")\n\telseif (e.message:findi(\"froggy legs\") or e.message:findi(\"froglok legs\")) and not e.message:findi(\"pick up froglok legs\") then\n\t\te.self:Say(\"Froggy legs come from far away. Me get from friend, [Chef Dooga]. It not tasty. Trolls like it. Eat it up much. They eat too much froggy. Me glad [Nerbilik] leave Neriak!! He eat way too much froggy.\")\n\telseif e.message:findi(\"chef dooga\") then\n\t\te.self:Say(\"Friend in Oggok is Chef Dooga. Chef she is. Used to work in Neriak. She beautiful. She supply the Gobbler with [froglok legs]. They very low now. Fat trolls eat too many!! Me need to [pick up froglok legs].\")\n\telseif e.message:findi(\"pick up froglok legs\") then\n\t\te.self:Say(\"That good news. Oggok far away. Me got no time to go. If you go speak to Chef Dooga, say you pick up froglok legs. You bring back and me give you coin, maybe even something good.\")\n\telseif e.message:findi(\"nerbilik\") then\n\t\te.self:Say(\"Big and fat troll Nerbilik is. He leave to fish in tearsy ocean. Me promised to deliver him food or he come bak. The Gobbler needs some dumb person to [deliver grub locker] to Nerbilik.\")\n\telseif e.message:findi(\"deliver grub locker\") then\n\t\te.self:Say(\"Good. Me wrap order of dwarf pickles in.. HEY!! Me out of special wrapping paper!! Hmm.. Here. Me use dis. Now, <..click.. Locks grub locker> Here. You take to Nerbilik in tearsy ocean and he pay you. No think of opening locker. Only Nerbilik has key.\")\n\t\te.other:SummonItem(12203) -- Grub Locker\n\tend\nend\n\nlocal function reward(e)\n\te.other:Ding()\n\te.other:Faction(353, 5, 0) -- Neriak Ogre\n\te.other:AddEXP(150)\n\te.other:GiveCash(0, 0, eq.ChooseRandom(1, 2, 3, 4, 5), 0)\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 13384}) then\n\t\te.self:Say(\"Uggh!! Froglok legs!! Me hate smelly legs, but me need it for fat trolls.\")\n\t\tlocal random_chance = math.random(1, 20)\n\t\tif random_chance == 20 then\n\t\t\te.other:SummonItem(13386) -- Ogre Butcher Gloves\n\t\telseif random_chance >= 16 then\n\t\t\te.other:SummonItem(13385) -- Ogre Meat Cleaver\n\t\telse\n\t\t\te.other:SummonItem(10021) -- Star Rose Quartz\n\t\tend\n\t\treward(e)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/neriaka/The_Gobbler.lua",
+      "beforeSha256": "7b0a3695b036e559f19ccaba21f2249d1ab9c70828f7f5764a6fe7bdee8e5b25",
+      "proposedFile": "changes/p99-nz-gobbler-dialogue/neriaka--The_Gobbler.lua",
+      "afterSha256": "3b7fc853bd08c5912fa96204a06c0cd6cf2ca2745e4b579e96feac50c73281b6"
+    }
+  ]
+}

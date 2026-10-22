@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-sz-sornita-era",
+  "summary": "Remove only post-Velious Water-Stained Ancient Tome continuation explicitly unavailable on P99; preserve20gold Torn Parchment exchange and unknown-item returns.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Shakey_the_Scarecrow's_Head?action=raw",
+      "note": "Cached 2026-07-17T23:32:30.608Z; revision unavailable; SHA256 b6dbd9f19cc790c51d3e27c40d1146333d55fac2b0a153bc8e7e15ed0028d22b. Source-only correction; full runtime and UI not executed. Undocumented numerical values unchanged."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 17426,
+        "zone": "erudnext",
+        "name": "Sornita_Eltern",
+        "lua_content": "-- items: 18030, 12590, 12591\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Greetings, \" .. e.other:GetName() .. \"! Please be do not speak too loudly while inside the library. If you need anything special, feel free to ask me. I am a member of the Crimson ands and my specialty is divination. In my research I have stumbled across many [rare tomes].\");\n\telseif(e.message:findi(\"rare tomes\")) then\n\t\te.self:Say(\"Why, just yesterday I stumbled upon what I believe to be an excerpt from Miragul's own treatise on the origin of the creatures known as scarecrows. Such a work is heresy and would be destroyed if the High Council knew of its existence so I have been tight-lipped about my discovery. If you would like to see it, I will show it to you, for a nominal donation of 20 gold pieces.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {gold = 20})) then\n\t\te.self:Say(\"Oh, yes. Very good friend. Here is the document I mentioned. It would seem to be part of a larger body of work, but this page describes a Teir'Dal who it seems was instrumental in creating the head of the very first scarecrow. You may keep that as it is merely a magical duplicate of the original document which I have carefully hidden.\");\n\t\te.other:Ding();\n\t\te.other:AddEXP(100);\n\t\te.other:SummonItem(18030); -- Torn Parchment\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 12590})) then -- Water-Stained Ancient Tome\n\t\te.self:Say(\"Unbelievable, you located the larger body of work I had been searching for! The text is scribbled in old Teir`Dal, but many of the words have been smeared and blurred. In fact, there are deep claw marks on the bindings and surface of the tome. It looks like the current owner didn't care well for it. Hmm. . . This translation of it may be spotty, but I think I'll be able to convey the general meaning for you. Ah, here you are. A duplicate copy of the writings. I'll hold on to the original as it won't be of much use to you. Many thanks, \" .. e.other:GetName() .. \"!\");\n\t\te.other:Ding();\n\t\te.other:SummonItem(12591); -- Translated Ancient Tome\n\t\te.other:AddEXP(500);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade);\nend\n\n-- END of FILE Zone:erudnext  ID:98016 -- Sornita_Eltern",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 17426,
+        "zone": "erudnext",
+        "name": "Sornita_Eltern",
+        "lua_content": "-- P99: Shakey head remains unfinished through Velious; later rogue epic 1.5 continuation excluded.\n-- items: 18030, 12590, 12591\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Greetings, \" .. e.other:GetName() .. \"! Please be do not speak too loudly while inside the library. If you need anything special, feel free to ask me. I am a member of the Crimson ands and my specialty is divination. In my research I have stumbled across many [rare tomes].\");\n\telseif(e.message:findi(\"rare tomes\")) then\n\t\te.self:Say(\"Why, just yesterday I stumbled upon what I believe to be an excerpt from Miragul's own treatise on the origin of the creatures known as scarecrows. Such a work is heresy and would be destroyed if the High Council knew of its existence so I have been tight-lipped about my discovery. If you would like to see it, I will show it to you, for a nominal donation of 20 gold pieces.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {gold = 20})) then\n\t\te.self:Say(\"Oh, yes. Very good friend. Here is the document I mentioned. It would seem to be part of a larger body of work, but this page describes a Teir'Dal who it seems was instrumental in creating the head of the very first scarecrow. You may keep that as it is merely a magical duplicate of the original document which I have carefully hidden.\");\n\t\te.other:Ding();\n\t\te.other:AddEXP(100);\n\t\te.other:SummonItem(18030); -- Torn Parchment\n\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade);\nend\n\n-- END of FILE Zone:erudnext  ID:98016 -- Sornita_Eltern",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/erudnext/Sornita_Eltern.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-sz-sornita-era/erudnext--Sornita_Eltern.lua",
+      "afterSha256": "b46d1b5ec3437853021a1757769538d320a820c0cae1a1a18cd985dcc0103964"
+    }
+  ]
+}

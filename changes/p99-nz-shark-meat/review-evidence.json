@@ -1,0 +1,26 @@
+{
+  "titles": [
+    "Shark Meat Quest"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "partial",
+  "match_status": "partial",
+  "local_quest_keys": [
+    "gfaydark/Gallin_Woodwind"
+  ],
+  "proposal": "changes/p99-nz-shark-meat.json",
+  "notes": [
+    "Make displayed hunt-for-meat choice and P99 acceptance phrase award the shark pack; correct reward currency from 23 platinum/7 silver to documented 7 gold/23 copper.",
+    "Pack17953 and hand-in12121 to Cast-Iron Rapier7032 preserved. Only documented cash denomination and matching trigger changed; experience/faction magnitudes remain implementation values, not newly asserted P99 values."
+  ],
+  "verification": {
+    "source": "Cached P99 and effective Lua reviewed; exact complete row preimages and source hashes recorded.",
+    "syntax": "pending",
+    "runtime": "Isolated mock regression pending; full game runtime unavailable.",
+    "ui": "not_run",
+    "connected_chain": "not_run"
+  },
+  "unresolved": [
+    "Ordinary source drops/spawns, recipe live behavior and rendered complete quest path not verified."
+  ]
+}

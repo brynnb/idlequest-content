@@ -1,0 +1,1029 @@
+{
+  "method": "Use composed top-level proposals, excluding generated combined artifact, then fall back to baseline database. Never treat zero-length baseline Lua as current missing receiver without checking overlay.",
+  "correction": "Seven Ulfur guards were already translated in prior flavor proposal; this worker adds only public actor scope to existing bodies. Original null database rows are not new rows.",
+  "sources": [
+    {
+      "key": "thurgadina/Lieutenant_Ulfur",
+      "originalDatabaseLua": null,
+      "originalQuestId": 18913,
+      "originalEnabled": 1,
+      "effectiveComposedProposal": "changes/p99-conversion-ambient.json",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadina/Lieutenant_Ulfur.lua",
+      "composedLuaSha256": "f1b8354b3fbac02ee4b2dad8d29f19e8c120184d28b8c6fc91b4048e3afdf531",
+      "handlers": [
+        "event_spawn",
+        "event_say",
+        "event_waypoint_arrive"
+      ],
+      "worldActors": true,
+      "worldTimers": false,
+      "originalPerlSha256": "082fb9d48e3650e606019a752857fb1e429a74368aa98d98988086de50cf858e",
+      "originalHandlers": [
+        "EVENT_SAY",
+        "EVENT_WAYPOINT_ARRIVE"
+      ]
+    },
+    {
+      "key": "thurgadina/Guard_Bjorn",
+      "originalDatabaseLua": null,
+      "originalQuestId": 15295,
+      "originalEnabled": 1,
+      "effectiveComposedProposal": "changes/p99-conversions-velious-flavor.json",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Bjorn.lua",
+      "composedLuaSha256": "15ef19aebf968698f772f2269a5fcdf3c6fced523dfb147623e9244ef46337e2",
+      "handlers": [
+        "event_signal",
+        "event_trade"
+      ],
+      "worldActors": true,
+      "worldTimers": false,
+      "originalPerlSha256": "819f35a111492da3d9eeb1abdd15ad29d8687193154c97cc7a2b1ecf0a9b5d73",
+      "originalHandlers": [
+        "EVENT_SIGNAL"
+      ]
+    },
+    {
+      "key": "thurgadina/Guard_Clorn",
+      "originalDatabaseLua": null,
+      "originalQuestId": 18997,
+      "originalEnabled": 1,
+      "effectiveComposedProposal": "changes/p99-conversions-velious-flavor.json",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Clorn.lua",
+      "composedLuaSha256": "134953e57c7ef04d58a09c16db5161af316bc47083c0852f4718239076925415",
+      "handlers": [
+        "event_signal",
+        "event_trade"
+      ],
+      "worldActors": true,
+      "worldTimers": false,
+      "originalPerlSha256": "819f35a111492da3d9eeb1abdd15ad29d8687193154c97cc7a2b1ecf0a9b5d73",
+      "originalHandlers": [
+        "EVENT_SIGNAL"
+      ]
+    },
+    {
+      "key": "thurgadina/Guard_Dobbs",
+      "originalDatabaseLua": null,
+      "originalQuestId": 18085,
+      "originalEnabled": 1,
+      "effectiveComposedProposal": "changes/p99-conversions-velious-flavor.json",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Dobbs.lua",
+      "composedLuaSha256": "a41e1716520ed53533f38bfc2ffab8010aa44a23ec493ae1900486e9f43824f2",
+      "handlers": [
+        "event_signal",
+        "event_trade"
+      ],
+      "worldActors": true,
+      "worldTimers": false,
+      "originalPerlSha256": "f4dff957ce8c96eb53782017585b324d06ff115daf4d36efc18559de6c624212",
+      "originalHandlers": [
+        "EVENT_SIGNAL"
+      ]
+    },
+    {
+      "key": "thurgadina/Guard_Enre",
+      "originalDatabaseLua": null,
+      "originalQuestId": 16255,
+      "originalEnabled": 1,
+      "effectiveComposedProposal": "changes/p99-conversions-velious-flavor.json",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Enre.lua",
+      "composedLuaSha256": "c078776d2d9d984bfd6b3b88d51edf427bed51ace6de5006519c53736ca463c5",
+      "handlers": [
+        "event_signal",
+        "event_trade"
+      ],
+      "worldActors": true,
+      "worldTimers": false,
+      "originalPerlSha256": "819f35a111492da3d9eeb1abdd15ad29d8687193154c97cc7a2b1ecf0a9b5d73",
+      "originalHandlers": [
+        "EVENT_SIGNAL"
+      ]
+    },
+    {
+      "key": "thurgadina/Guard_Gord",
+      "originalDatabaseLua": null,
+      "originalQuestId": 13291,
+      "originalEnabled": 1,
+      "effectiveComposedProposal": "changes/p99-conversions-velious-flavor.json",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Gord.lua",
+      "composedLuaSha256": "29f325b98fbb79e5c73e13af2a727247ef2063b642a1216f02681718e4a98e37",
+      "handlers": [
+        "event_signal",
+        "event_trade"
+      ],
+      "worldActors": true,
+      "worldTimers": false,
+      "originalPerlSha256": "819f35a111492da3d9eeb1abdd15ad29d8687193154c97cc7a2b1ecf0a9b5d73",
+      "originalHandlers": [
+        "EVENT_SIGNAL"
+      ]
+    },
+    {
+      "key": "thurgadina/Guard_Mason",
+      "originalDatabaseLua": null,
+      "originalQuestId": 16855,
+      "originalEnabled": 1,
+      "effectiveComposedProposal": "changes/p99-conversions-velious-flavor.json",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Mason.lua",
+      "composedLuaSha256": "64f2349b0d7290a947c9b14809d15ba49a2ddf558c61405328805db6a0c74c0b",
+      "handlers": [
+        "event_signal",
+        "event_trade"
+      ],
+      "worldActors": true,
+      "worldTimers": false,
+      "originalPerlSha256": "819f35a111492da3d9eeb1abdd15ad29d8687193154c97cc7a2b1ecf0a9b5d73",
+      "originalHandlers": [
+        "EVENT_SIGNAL"
+      ]
+    },
+    {
+      "key": "thurgadina/Guard_Pert",
+      "originalDatabaseLua": null,
+      "originalQuestId": 16509,
+      "originalEnabled": 1,
+      "effectiveComposedProposal": "changes/p99-conversions-velious-flavor.json",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Pert.lua",
+      "composedLuaSha256": "23791cb99fd7edfc62b16fde58c24fe481c283cfc5a7817a93ba4b7d8939654e",
+      "handlers": [
+        "event_signal",
+        "event_trade"
+      ],
+      "worldActors": true,
+      "worldTimers": false,
+      "originalPerlSha256": "819f35a111492da3d9eeb1abdd15ad29d8687193154c97cc7a2b1ecf0a9b5d73",
+      "originalHandlers": [
+        "EVENT_SIGNAL"
+      ]
+    },
+    {
+      "key": "thurgadina/Loremaster_Fronden",
+      "originalDatabaseLua": null,
+      "originalQuestId": 12244,
+      "originalEnabled": 1,
+      "effectiveComposedProposal": "changes/p99-conversions-velious.json",
+      "proposedFile": "changes/p99-conversions-velious/thurgadina/Loremaster_Fronden.lua",
+      "composedLuaSha256": "587748e834a593b0db2a218567df4ca6be3619b4745eb6f6e4a08bc3bb8cf6ee",
+      "handlers": [
+        "event_trade",
+        "event_signal"
+      ],
+      "worldActors": false,
+      "worldTimers": false,
+      "originalPerlSha256": "efc1cd1aed595f958cb60eac63738abd0fa514324d009b1558e0777948fe6a90",
+      "originalHandlers": [
+        "EVENT_SIGNAL"
+      ]
+    },
+    {
+      "key": "thurgadina/Doogle_McBanick",
+      "originalDatabaseLua": null,
+      "originalQuestId": 17403,
+      "originalEnabled": 1,
+      "effectiveComposedProposal": "changes/p99-conversions-velious.json",
+      "proposedFile": "changes/p99-conversions-velious/thurgadina/Doogle_McBanick.lua",
+      "composedLuaSha256": "9176f081595cd213c9c037b7a0bbacec6811fa2bdab3ac5d552826c750c6a359",
+      "handlers": [
+        "event_say",
+        "event_trade",
+        "event_signal"
+      ],
+      "worldActors": false,
+      "worldTimers": false,
+      "originalPerlSha256": "ee153a2ed6f8dfc518dc7ab8d1869e37444399b1b3d06bd9b3fd6fa0cd31ab82",
+      "originalHandlers": [
+        "EVENT_SAY",
+        "EVENT_ITEM",
+        "EVENT_SIGNAL"
+      ]
+    },
+    {
+      "key": "thurgadina/Petcas_Coldbeard",
+      "originalDatabaseLua": null,
+      "originalQuestId": 14963,
+      "originalEnabled": 1,
+      "effectiveComposedProposal": "changes/p99-conversion-trades.json",
+      "proposedFile": "changes/p99-conversion-trades/thurgadina--Petcas_Coldbeard.lua",
+      "composedLuaSha256": "74b6e7222ec5975bfbb7151b6370bdefdfe58310b4feedbe3bff834b4822f24e",
+      "handlers": [
+        "event_say",
+        "event_signal",
+        "event_trade"
+      ],
+      "worldActors": false,
+      "worldTimers": false,
+      "originalPerlSha256": "24b7007971fb26ec3faf5d1e0e3fe3c812571e26c50957f9ed7ce1e90a1e7ab8",
+      "originalHandlers": [
+        "EVENT_SAY",
+        "EVENT_ITEM",
+        "EVENT_SIGNAL"
+      ]
+    },
+    {
+      "key": "thurgadinb/Seneschal_Aldikar",
+      "originalDatabaseLua": "-- Source: ../eqmacemu/thurgadinb/Seneschal_Aldikar.lua\n-- Generated by scripts/quests/coldain-court.mjs; edit coldain_court.json.\n-- P99 ring9 opening and no-ring request; source choices: coldain-ring-nine-audit.md.\nlocal item_lib = require(\"items\")\nlocal initialized = false\nlocal phase = \"idle\"\nlocal place = \"unknown\"\nlocal destination = nil\nlocal speech = {\n  [15] = \"Please, shut the door behind you. What I am about to share with you must not be overheard.\",\n  [16] = \"My army stands prepared to launch an assault on Kael itself, but one task must be completed before this can happen.\",\n  [17] = \"It seems Rodrick was not alone in his treachery. There is a faction of Coldain who believe that a treaty should be signed with the Kromrif, ending our hostilities with them. This, of course, is impossible. If there is one thing our history here has taught us, it is that the Kromrif simply cannot be trusted.\",\n  [18] = \"These traitors are poisoning the minds of our citizens, promising great rewards to those who will betray the Dain. It will take the unbiased eye of an outlander to flush out the masterminds behind this plan. Once again we turn to you.\",\n  [19] = \"Will you accept this task, outlander?\",\n  [20] = \"Farewell.\",\n}\nlocal function court_open()\n  local hour = eq.get_zone_time().zone_hour\n  return hour >= 8 and hour < 16\nend\nlocal function update_place(e)\n  if phase ~= \"idle\" or e.self:IsEngaged() then return end\n  local wanted = court_open() and \"day\" or \"night\"\n  if place == wanted then return end\n  phase = \"moving\"; destination = wanted\n  if wanted == \"day\" then e.self:MoveTo(-3, 693, 69, 252, true)\n  else e.self:MoveTo(5, 780, 38, 260, true) end\nend\nfunction event_spawn(e)\n  if initialized then return end\n  initialized = true\n  eq.set_timer(\"court\", 5000)\n  update_place(e)\nend\nfunction event_timer(e)\n  if e.timer == \"court\" then update_place(e) end\nend\nfunction event_say(e)\n  if e.message:findi(\"accept this task\") then\n    -- The walkthrough permits the phrase immediately at opening, even while\n    -- Aldikar is walking, and without an eighth ring or a living Dain.\n    if court_open() then\n      e.self:Say(\"In this box, place the accursed dirk of the fallen Rodrick. With it combine the heads of every traitor you dispose of. When this is done give the box and the velium insignia ring to the Dain directly. On behalf of the crown and all good Coldain, I thank you ... May Brell be with you.\")\n      e.other:SummonItem(17055)\n    else e.self:Say(\"Please speak to me while the royal court is in session.\") end\n  elseif e.message:findi(\"hail\") then\n    e.self:Say(\"I am Seneschal Aldikar, Commander of the Armies of Thurgadin. If you will assist the crown, tell me 'I will [accept this task]'.\")\n  end\nend\nfunction event_trade(e)\n  if item_lib.check_turn_in(e.trade, {item1 = 30164}) then\n    -- Showing the ring always returns it; unrelated items/currency are also\n    -- returned through the normal hand-in primitive. Never consume ring8.\n    e.other:SummonItem(30164)\n    if court_open() and phase == \"idle\" and place == \"day\" then\n      e.self:Say(\"Well done, \" .. e.other:GetCleanName() .. \", I have heard of your victory over the Ry'Gorr. If you are willing to assist the crown further please follow me.\")\n      phase = \"tour\"\n      eq.start(27)\n    else e.self:Say(\"I must speak to the Dain before I instruct you further. Please speak to me while the royal court is in session.\") end\n  end\n  item_lib.return_items(e.self, e.other, e.trade)\nend\nfunction event_waypoint_arrive(e)\n  if phase == \"moving\" and e.wp == -2 then\n    place = destination; destination = nil; phase = \"idle\"\n  elseif phase == \"tour\" then\n    if speech[e.wp] then e.self:Say(speech[e.wp]) end\n    if e.wp == 31 then phase = \"idle\"; place = \"day\"; eq.stop() end\n  end\nend\nfunction event_death_complete(e)\n  phase = \"dead\"; eq.stop_timer(\"court\")\nend\n",
+      "originalQuestId": 16470,
+      "originalEnabled": 1,
+      "effectiveComposedProposal": null,
+      "proposedFile": null,
+      "composedLuaSha256": "b7345b1a52e7f63dd7b5bb3c782426a54a53fd3e041588607dd6bb43adcd248e",
+      "handlers": [
+        "event_spawn",
+        "event_timer",
+        "event_say",
+        "event_trade",
+        "event_waypoint_arrive",
+        "event_death_complete"
+      ],
+      "worldActors": false,
+      "worldTimers": false,
+      "originalPerlSha256": "c1b1faf3342cb49e0b52692fb4a93ab821284b50341d1f77b8e88ef6bf731bcc",
+      "originalHandlers": [
+        "EVENT_SIGNAL",
+        "EVENT_SPAWN",
+        "EVENT_SAY",
+        "EVENT_ITEM",
+        "EVENT_TIMER"
+      ]
+    },
+    {
+      "key": "thurgadinb/#Dain_Frostreaver_IV",
+      "originalDatabaseLua": "-- name: #Dain_Frostreaver_IV\n-- Generated by scripts/quests/coldain-rings.mjs; edit coldain_rings.json.\n-- P99: https://wiki.project1999.com/Coldain_Ring_Quests (sha256 4881b2816d5a485629a66855b1a4f44c7048899b5e9240b4bf068a9373384851)\n-- Original: server/internal/quest/upstream/projecteq/thurgadinb/#Dain_Frostreaver_IV.pl (sha256 0deaf61a0f53a296b28548ab57dd5901b6d3ce4e792aba66a13ec1faef9b3423)\n-- First seven rings, eighth-ring orders and ninth-ring final Give; encounter status: docs/coldain-quest-chains.md.\n-- The ninth-ring final exchange, tenth-ring invitation and repeatable Dain blessing exchange are restored. Ring10 war/boss/reward acquisition and other Dain quests remain unfinished; a seeded final ring is not earned-chain evidence.\n-- P99 establishes the two requirements and two rewards; experience and faction amounts retain the preserved ProjectEQ ninth-ring branch. Later eighth-shawl branches are excluded.\n-- The cached P99 page documents a shared, snipable invitation lasting slightly less than one minute. IdleQuest uses an expiring NPC/zone-scoped shared flag with a 60-second upper bound; this small timing approximation is explicit, and atomic flag validation prevents double claims.\n-- Repeatable ring10 blessing follows https://wiki.project1999.com/10th_Coldain_Ring_Quest (cached SHA256 bc93e3ab34ecef5d2d0b8ebce2adc95a0639925f67281f055804e18d46b21add). Return the ring and grant Protection of the Dain. Quest faction is intentionally bypassed; no undocumented XP or faction reward is added.\nlocal item_lib = require(\"items\")\n\nfunction event_say(e)\n  if e.message:findi(\"count on my help\") and eq.get_qglobals()[\"coldain_ring10_invitation\"] == \"1\" then\n    e.self:Say(\"Several of our greatest officers, including a few veterans from the war of Yesterwinter are assembling just outside our city. Gather your army at once and give this parchment and the ninth ring to Sentry Badain. I will remain inside the city with a few of my troops to defend it against any who might penetrate your defense. May Brell be with you, \" .. e.other:GetCleanName() .. \".\")\n    eq.del_global(\"coldain_ring10_invitation\")\n    e.other:SummonItem(1567)\n  end\nend\n\nfunction event_trade(e)\n  if item_lib.check_turn_in(e.trade, { item1 = 1500, item2 = 30164 }) then\n    e.self:Say(\"The people of Thurgadin are in your debt, \" .. e.other:GetCleanName() .. \". Please accept the Coldain Hero's Ring as a token of our gratitude. The curse has been removed from the blade as well. I hope you find it useful against our common foes. When you are interested in assisting me further please show me the blade. Until that day, may Brell bless and protect you.\")\n    e.other:SummonItem(30369)\n    e.other:SummonItem(1465)\n    e.other:Faction(406, 50, 0)\n    e.other:Faction(405, 50, 0)\n    e.other:Faction(419, -50, 0)\n    e.other:Faction(448, -50, 0)\n    e.other:AddEXP(4000000)\n  elseif item_lib.check_turn_in(e.trade, { item1 = 1465 }) then\n    e.self:Say(\"My good \" .. e.other:GetCleanName() .. \", you have served me well. You have flushed out all who sought to oppose me and my people. I am afraid I need to call upon you and your friends one final time. The dissension and treason ran deeper than I had anticipated. Our population has been cleansed, but we lost a full third of our army to the poisonous words of those rebels. In retaliation for your deeds, the Kromrif have made plans to attack us in this, our weakest hour. Can I count on your help, outlander?\")\n    e.other:SummonItem(1465)\n    eq.set_global(\"coldain_ring10_invitation\", \"1\", 2, \"S60\")\n  elseif item_lib.check_turn_in(e.trade, { item1 = 30385 }) then\n    e.self:Say(e.other:GetCleanName() .. \", your deeds have changed the fate of my people forever. Not since the sacrifice of Colin Dain himself has anyone so selflessly risked so much for our well being. Accept this blessing as a token of my gratitude.\")\n    e.other:SummonItem(30385)\n    e.other:SummonItem(1747)\n  end\n  -- Return unrelated and surplus offers on both accepted and rejected trades.\n  item_lib.return_items(e.self, e.other, e.trade)\nend\n",
+      "originalQuestId": 18724,
+      "originalEnabled": 1,
+      "effectiveComposedProposal": "changes/p99-tz-tormax-head-dain.json",
+      "proposedFile": "changes/p99-tz-tormax-head-dain/thurgadinb--#Dain_Frostreaver_IV.lua",
+      "composedLuaSha256": "b6bb533235e121ace127721d6ad26f49184354019757a1e05dbcc3f65d4ea81b",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "worldActors": false,
+      "worldTimers": false,
+      "originalPerlSha256": "0deaf61a0f53a296b28548ab57dd5901b6d3ce4e792aba66a13ec1faef9b3423",
+      "originalHandlers": [
+        "EVENT_SIGNAL",
+        "EVENT_SAY",
+        "EVENT_ITEM"
+      ]
+    },
+    {
+      "key": "thurgadinb/Chamberlain_Krystorf",
+      "originalDatabaseLua": "-- name: Chamberlain_Krystorf\n-- Generated by scripts/quests/velious-simple.mjs; edit server/internal/quest/velious_simple_quests.json.\n-- P99: https://wiki.project1999.com/Giant_Helmets (sha256 0b40346215fe4e199a4414788e828c506d8724e37902ef4ffb7416ead50f69f9)\n-- Original: server/internal/quest/upstream/projecteq/thurgadinb/Chamberlain_Krystorf.pl (sha256 593f03d8add99f8399ad920879d692c3400416a8f94244eac10ccead82d05910)\n-- Reviewed P99 exchanges using existing quest primitives. Quest faction gating remains intentionally bypassed.\n-- Later shawl-8 Dain summoning is deliberately excluded. Weapon pool, money and factions match P99; XP amount is from ProjectEQ.\nlocal item_lib = require(\"items\")\n\nfunction event_say(e)\n  if e.message:findi(\"hail\") then\n    e.self:Say(\"Greetings and welcome to Thurgadin, \" .. e.other:GetCleanName() .. \". I am Chamberlain Krystorf and it is my duty to assist the Dain in the management of Icewell Keep and the Royal Court. One could say that Seneschal Aldikar is the Sword of the Dain while I am the Shield, protecting all of his interests and those of the kingdom.\")\n  end\nend\n\nfunction event_trade(e)\n  if item_lib.check_turn_in(e.trade, { item1 = 29062, item2 = 29062, item3 = 29062, item4 = 29062 }) then\n    e.self:Say(\"Well done, \" .. e.other:GetCleanName() .. \", the Dain is pleased with your efforts. With a few more brave allies like you, we'll soon be tearing down the halls of Kael Drakkel.\")\n    e.other:SummonItem(eq.ChooseRandom(30215, 30219, 30212, 30263))\n    e.other:Faction(406, 50, 0)\n    e.other:Faction(405, 50, 0)\n    e.other:Faction(429, -25, 0)\n    e.other:AddEXP(64000)\n    e.other:AddMoneyToPP(0, 0, 0, 20, true)\n  end\n  -- Return unrelated and surplus offers on both accepted and rejected trades.\n  item_lib.return_items(e.self, e.other, e.trade)\nend\n",
+      "originalQuestId": 18376,
+      "originalEnabled": 1,
+      "effectiveComposedProposal": null,
+      "proposedFile": null,
+      "composedLuaSha256": "c4e1e4fbd6898d1c29ee1161bfac8c33c9d20a45abfc89c9d0ff1d5e25a1bfe6",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "worldActors": false,
+      "worldTimers": false,
+      "originalPerlSha256": "593f03d8add99f8399ad920879d692c3400416a8f94244eac10ccead82d05910",
+      "originalHandlers": [
+        "EVENT_SAY",
+        "EVENT_ITEM",
+        "EVENT_SIGNAL"
+      ]
+    },
+    {
+      "key": "thurgadinb/Councilor_Juliah_Lockheart",
+      "originalDatabaseLua": "-- Source: ../eqmacemu/thurgadinb/Councilor_Juliah_Lockheart.lua\n-- Generated by scripts/quests/coldain-traitors.mjs; edit coldain_traitors.json.\n-- P99 progression, pinned TAKP implementation. Limits: docs/coldain-ring-nine-audit.md.\nlocal item_lib = require(\"items\")\nlocal phase = \"ready\"\nfunction event_say(e)\n  if e.message:findi(\"hail\") then e.self:Say(\"Hello there, my what a nice looking \" .. e.other:Race() .. \" you are, not that I've seen many of your kind mind you. I am Councilor Lockheart, representing the people of Thurgadin. Here is where we aid the Dain by presenting the peoples' will to him in the hopes that laws are made with the good interest of all our people in mind.\") end\nend\nfunction event_trade(e)\n  local replacement = eq.get_entity_list():GetMobByNpcTypeID(129063)\n  if phase == \"ready\" and not replacement.valid and item_lib.check_turn_in(e.trade, {item1 = 1464}) then\n    phase = \"pending\"\n    e.self:Say(\"FOOL! You've ruined everything!\")\n    eq.unique_spawn(129063, 0, 0, e.self:GetX(), e.self:GetY(), e.self:GetZ(), e.self:GetHeading()):AddToHateList(e.other, 1)\n    phase = \"ended\"\n    eq.depop_with_timer()\n  end\n  item_lib.return_items(e.self, e.other, e.trade)\nend\n",
+      "originalQuestId": 12401,
+      "originalEnabled": 1,
+      "effectiveComposedProposal": null,
+      "proposedFile": null,
+      "composedLuaSha256": "66c56a33a74131cf65a0fef1aa682729a2162403c752b7bdfc8c6b42b3e772d4",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "worldActors": false,
+      "worldTimers": false,
+      "originalPerlSha256": "437f81f830941556815cfd11dbd60c200dffabdc848b09161b5213c3062c979c",
+      "originalHandlers": [
+        "EVENT_SAY",
+        "EVENT_ITEM",
+        "EVENT_SIGNAL"
+      ]
+    },
+    {
+      "key": "iceclad/Ritap",
+      "originalDatabaseLua": "-- name: Ritap\n-- Generated by scripts/quests/velious-backlog.mjs; edit server/internal/quest/velious_backlog_quests.json.\n-- P99: https://wiki.project1999.com/The_Mighty_Snowfang_Hero (sha256 269d02a9a06604589d773e2064b2c10a49511a3eac435a02034690343e07264d)\n-- Original: server/internal/quest/upstream/projecteq/iceclad/Ritap.pl (sha256 1a390bbbe367903002d92d75c568e81cdd43d4dc436fc901785dc36ca48c1686)\n-- P99-reviewed Velious content. Quest faction gates deliberately bypassed; actual faction rewards retained.\n-- Ratop timed pirate banter is cosmetic and not restored; the documented beard-to-rope hand-in and dialogue are retained. Later shawl 8 signal omitted.\nlocal item_lib = require(\"items\")\n\nfunction event_say(e)\n  if e.message:findi(\"hail\") then\n    e.self:Say(\"Avast you! Ya best be shoving off if ye knows whats good for you. We be pirate raiders and ya best not be messing with the likes of us!\")\n  elseif e.message:findi(\"tinkered rope\") then\n    e.self:Say(\"Batten down yer yapper! Ahl be doin the talking here. We be needin the rope to tie ye down fer ransom. Now fetch me the beard of a frost giant scout so's I can make some more rope to tie ye up with.\")\n  end\nend\n\nfunction event_trade(e)\n  if item_lib.check_turn_in(e.trade, { item1 = 30048 }) then\n    e.self:Say(\"Arg! By blubberbeards nostril! Ye'v done it!'\")\n    e.self:Emote(\"He braids the beard together into a sturdy rope.\")\n    e.self:Say(\"Now take this here rope and tie yerself up! Come lets go tell the cap'n we've captured us some prisoners!\")\n    e.other:SummonItem(30049)\n    e.other:Faction(447, 30, 0)\n    e.other:AddEXP(1000)\n  end\n  -- Return unrelated and surplus offers on both accepted and rejected trades.\n  item_lib.return_items(e.self, e.other, e.trade)\nend\n",
+      "originalQuestId": 13146,
+      "originalEnabled": 1,
+      "effectiveComposedProposal": null,
+      "proposedFile": null,
+      "composedLuaSha256": "b0d789822ca59d50d979a2a9b26ec71f9f843922b69893744e31d683d7c92f2e",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "worldActors": false,
+      "worldTimers": false,
+      "originalPerlSha256": "1a390bbbe367903002d92d75c568e81cdd43d4dc436fc901785dc36ca48c1686",
+      "originalHandlers": [
+        "EVENT_SAY",
+        "EVENT_SIGNAL",
+        "EVENT_ITEM",
+        "EVENT_TIMER"
+      ]
+    },
+    {
+      "key": "iceclad/Sojan_the_Sleepless",
+      "originalDatabaseLua": "-- name: Sojan_the_Sleepless\n-- Generated by scripts/quests/velious-backlog.mjs; edit server/internal/quest/velious_backlog_quests.json.\n-- P99: https://wiki.project1999.com/Toolset_Delivery (sha256 fd20b796a34adc0afc423986b262b1f29ee75a673874a29774e701f7f92059f5)\n-- Original: server/internal/quest/upstream/projecteq/iceclad/Sojan_the_Sleepless.pl (sha256 8519c5f2bd24330cf4fbea085f74e69ac01ce271f6e97f4670894611e39ac21a)\n-- P99-reviewed Velious content. Quest faction gates deliberately bypassed; actual faction rewards retained.\n-- Later shawl signal banter is not restored.\nlocal item_lib = require(\"items\")\n\nfunction event_trade(e)\n  if item_lib.check_turn_in(e.trade, { item1 = 25104 }) then\n    e.self:Say(\"Uhhh, thank you... Now I can uhh... work on fixing some things around...\")\n    e.self:Emote(\"seems to nod off for a moment as he drops a small note on the ground.\")\n    e.other:SummonItem(20474)\n  end\n  -- Return unrelated and surplus offers on both accepted and rejected trades.\n  item_lib.return_items(e.self, e.other, e.trade)\nend\n",
+      "originalQuestId": 18384,
+      "originalEnabled": 1,
+      "effectiveComposedProposal": "changes/p99-am-nalot-rum.json",
+      "proposedFile": "changes/p99-am-nalot-rum/iceclad-Sojan_the_Sleepless.lua",
+      "composedLuaSha256": "e6d3b1a4740e7b54bac56c3789755eb6d1c188197769f51429036b2cc3587b50",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "worldActors": false,
+      "worldTimers": false,
+      "originalPerlSha256": "8519c5f2bd24330cf4fbea085f74e69ac01ce271f6e97f4670894611e39ac21a",
+      "originalHandlers": [
+        "EVENT_ITEM",
+        "EVENT_SIGNAL"
+      ]
+    }
+  ],
+  "originalSignalEdges": [
+    {
+      "source": "iceclad/Madan_Eflik",
+      "targetNPCID": 110066,
+      "targetExactName": "Sojan_the_Sleepless",
+      "signalID": 0,
+      "delayMS": 100
+    },
+    {
+      "source": "iceclad/Ratop",
+      "targetNPCID": 110053,
+      "targetExactName": "Ritap",
+      "signalID": 101,
+      "delayMS": 5
+    },
+    {
+      "source": "thurgadina/Horasug",
+      "targetNPCID": 115011,
+      "targetExactName": "Rumagur",
+      "signalID": 1,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadina/Horasug",
+      "targetNPCID": 115187,
+      "targetExactName": "Rumagur",
+      "signalID": 1,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadina/Horasug",
+      "targetNPCID": 115011,
+      "targetExactName": "Rumagur",
+      "signalID": 2,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadina/Horasug",
+      "targetNPCID": 115187,
+      "targetExactName": "Rumagur",
+      "signalID": 2,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadina/Horasug",
+      "targetNPCID": 115010,
+      "targetExactName": "Saramor",
+      "signalID": 3,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadina/Horasug",
+      "targetNPCID": 115012,
+      "targetExactName": "Jorumin",
+      "signalID": 2,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadina/Horasug",
+      "targetNPCID": 115188,
+      "targetExactName": "Jorumin",
+      "signalID": 2,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadina/Horasug",
+      "targetNPCID": 115142,
+      "targetExactName": "Doogle_McBanick",
+      "signalID": 1,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadina/Horasug",
+      "targetNPCID": 115010,
+      "targetExactName": "Saramor",
+      "signalID": 1,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadina/Horasug",
+      "targetNPCID": 115014,
+      "targetExactName": "Loremaster_Fronden",
+      "signalID": 1,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadina/Horasug",
+      "targetNPCID": 115010,
+      "targetExactName": "Saramor",
+      "signalID": 2,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadina/Horasug",
+      "targetNPCID": 115012,
+      "targetExactName": "Jorumin",
+      "signalID": 1,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadina/Horasug",
+      "targetNPCID": 115188,
+      "targetExactName": "Jorumin",
+      "signalID": 1,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadina/Horasug",
+      "targetNPCID": 115142,
+      "targetExactName": "Doogle_McBanick",
+      "signalID": 2,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadina/Horasug",
+      "targetNPCID": 115142,
+      "targetExactName": "Doogle_McBanick",
+      "signalID": 3,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadina/Horasug",
+      "targetNPCID": 115142,
+      "targetExactName": "Doogle_McBanick",
+      "signalID": 4,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadina/Lieutenant_Ulfur",
+      "targetNPCID": 115104,
+      "targetExactName": "Guard_Dobbs",
+      "signalID": 0,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadina/Lieutenant_Ulfur",
+      "targetNPCID": 115206,
+      "targetExactName": "Guard_Dobbs",
+      "signalID": 0,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadina/Lieutenant_Ulfur",
+      "targetNPCID": 115105,
+      "targetExactName": "Guard_Enre",
+      "signalID": 0,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadina/Lieutenant_Ulfur",
+      "targetNPCID": 115207,
+      "targetExactName": "Guard_Enre",
+      "signalID": 0,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadina/Lieutenant_Ulfur",
+      "targetNPCID": 115107,
+      "targetExactName": "Guard_Mason",
+      "signalID": 0,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadina/Lieutenant_Ulfur",
+      "targetNPCID": 115208,
+      "targetExactName": "Guard_Mason",
+      "signalID": 0,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadina/Lieutenant_Ulfur",
+      "targetNPCID": 115109,
+      "targetExactName": "Guard_Pert",
+      "signalID": 0,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadina/Lieutenant_Ulfur",
+      "targetNPCID": 115110,
+      "targetExactName": "Guard_Gord",
+      "signalID": 0,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadina/Lieutenant_Ulfur",
+      "targetNPCID": 115209,
+      "targetExactName": "Guard_Gord",
+      "signalID": 0,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadina/Lieutenant_Ulfur",
+      "targetNPCID": 115112,
+      "targetExactName": "Guard_Bjorn",
+      "signalID": 0,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadina/Lieutenant_Ulfur",
+      "targetNPCID": 115113,
+      "targetExactName": "Guard_Clorn",
+      "signalID": 0,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadina/Lieutenant_Ulfur",
+      "targetNPCID": 115211,
+      "targetExactName": "Guard_Clorn",
+      "signalID": 0,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadina/Ronodun",
+      "targetNPCID": 115141,
+      "targetExactName": "Petcas_Coldbeard",
+      "signalID": 1,
+      "delayMS": 8000
+    },
+    {
+      "source": "thurgadina/Ronodun",
+      "targetNPCID": 115141,
+      "targetExactName": "Petcas_Coldbeard",
+      "signalID": 2,
+      "delayMS": 8000
+    },
+    {
+      "source": "thurgadina/Ronodun",
+      "targetNPCID": 115141,
+      "targetExactName": "Petcas_Coldbeard",
+      "signalID": 3,
+      "delayMS": 4000
+    },
+    {
+      "source": "thurgadina/Ronodun",
+      "targetNPCID": 115141,
+      "targetExactName": "Petcas_Coldbeard",
+      "signalID": 4,
+      "delayMS": 3000
+    },
+    {
+      "source": "thurgadina/Ronodun",
+      "targetNPCID": 115141,
+      "targetExactName": "Petcas_Coldbeard",
+      "signalID": 5,
+      "delayMS": 8000
+    },
+    {
+      "source": "thurgadina/Ronodun",
+      "targetNPCID": 115141,
+      "targetExactName": "Petcas_Coldbeard",
+      "signalID": 6,
+      "delayMS": 7000
+    },
+    {
+      "source": "thurgadina/Rumagur",
+      "targetNPCID": 115013,
+      "targetExactName": "Horasug",
+      "signalID": 1,
+      "delayMS": 9000
+    },
+    {
+      "source": "thurgadina/Rumagur",
+      "targetNPCID": 115010,
+      "targetExactName": "Saramor",
+      "signalID": 4,
+      "delayMS": 8000
+    },
+    {
+      "source": "thurgadina/Rumagur",
+      "targetNPCID": 115014,
+      "targetExactName": "Loremaster_Fronden",
+      "signalID": 2,
+      "delayMS": 8000
+    },
+    {
+      "source": "thurgadina/Rumagur",
+      "targetNPCID": 115014,
+      "targetExactName": "Loremaster_Fronden",
+      "signalID": 3,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadina/Rumagur",
+      "targetNPCID": 115014,
+      "targetExactName": "Loremaster_Fronden",
+      "signalID": 4,
+      "delayMS": 50000
+    },
+    {
+      "source": "thurgadina/Rumagur",
+      "targetNPCID": 115014,
+      "targetExactName": "Loremaster_Fronden",
+      "signalID": 5,
+      "delayMS": 50000
+    },
+    {
+      "source": "thurgadina/Rumagur",
+      "targetNPCID": 115014,
+      "targetExactName": "Loremaster_Fronden",
+      "signalID": 6,
+      "delayMS": 8000
+    },
+    {
+      "source": "thurgadina/Rumagur",
+      "targetNPCID": 115014,
+      "targetExactName": "Loremaster_Fronden",
+      "signalID": 7,
+      "delayMS": 8000
+    },
+    {
+      "source": "thurgadina/Saramor",
+      "targetNPCID": 115011,
+      "targetExactName": "Rumagur",
+      "signalID": 4,
+      "delayMS": 8000
+    },
+    {
+      "source": "thurgadina/Saramor",
+      "targetNPCID": 115187,
+      "targetExactName": "Rumagur",
+      "signalID": 4,
+      "delayMS": 8000
+    },
+    {
+      "source": "thurgadina/Saramor",
+      "targetNPCID": 115011,
+      "targetExactName": "Rumagur",
+      "signalID": 3,
+      "delayMS": 8000
+    },
+    {
+      "source": "thurgadina/Saramor",
+      "targetNPCID": 115187,
+      "targetExactName": "Rumagur",
+      "signalID": 3,
+      "delayMS": 8000
+    },
+    {
+      "source": "thurgadinb/129097",
+      "targetNPCID": 129003,
+      "targetExactName": "#Dain_Frostreaver_IV",
+      "signalID": 1,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadinb/129097",
+      "targetNPCID": 129000,
+      "targetExactName": "Seneschal_Aldikar",
+      "signalID": 1,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadinb/129097",
+      "targetNPCID": 129028,
+      "targetExactName": "Chamberlain_Krystorf",
+      "signalID": 1,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadinb/129097",
+      "targetNPCID": 129035,
+      "targetExactName": "Councilor_Amberfeld",
+      "signalID": 1,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadinb/129097",
+      "targetNPCID": 129073,
+      "targetExactName": "Councilor_Amberfeld",
+      "signalID": 1,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadinb/129097",
+      "targetNPCID": 129037,
+      "targetExactName": "Councilor_Coldember",
+      "signalID": 1,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadinb/129097",
+      "targetNPCID": 129075,
+      "targetExactName": "Councilor_Coldember",
+      "signalID": 1,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadinb/129097",
+      "targetNPCID": 129043,
+      "targetExactName": "Councilor_Darakor",
+      "signalID": 1,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadinb/129097",
+      "targetNPCID": 129041,
+      "targetExactName": "Councilor_Darkfrost",
+      "signalID": 1,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadinb/129097",
+      "targetNPCID": 129078,
+      "targetExactName": "Councilor_Darkfrost",
+      "signalID": 1,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadinb/129097",
+      "targetNPCID": 129036,
+      "targetExactName": "Councilor_Deynekn",
+      "signalID": 1,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadinb/129097",
+      "targetNPCID": 129074,
+      "targetExactName": "Councilor_Deynekn",
+      "signalID": 1,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadinb/129097",
+      "targetNPCID": 129040,
+      "targetExactName": "Councilor_Dirkins",
+      "signalID": 1,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadinb/129097",
+      "targetNPCID": 129077,
+      "targetExactName": "Councilor_Dirkins",
+      "signalID": 1,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadinb/129097",
+      "targetNPCID": 129039,
+      "targetExactName": "Councilor_Glacierbane",
+      "signalID": 1,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadinb/129097",
+      "targetNPCID": 129076,
+      "targetExactName": "Councilor_Glacierbane",
+      "signalID": 1,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadinb/129097",
+      "targetNPCID": 129038,
+      "targetExactName": "Councilor_Icelok",
+      "signalID": 1,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadinb/129097",
+      "targetNPCID": 129034,
+      "targetExactName": "Councilor_Icepike",
+      "signalID": 1,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadinb/129097",
+      "targetNPCID": 129072,
+      "targetExactName": "Councilor_Icepike",
+      "signalID": 1,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadinb/129097",
+      "targetNPCID": 129045,
+      "targetExactName": "Councilor_Juliah_Lockheart",
+      "signalID": 1,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadinb/129097",
+      "targetNPCID": 129044,
+      "targetExactName": "Councilor_Thubins",
+      "signalID": 1,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadinb/129097",
+      "targetNPCID": 129080,
+      "targetExactName": "Councilor_Thubins",
+      "signalID": 1,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadinb/129097",
+      "targetNPCID": 129042,
+      "targetExactName": "Councilor_Wintershade",
+      "signalID": 1,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadinb/129097",
+      "targetNPCID": 129079,
+      "targetExactName": "Councilor_Wintershade",
+      "signalID": 1,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadinb/129098",
+      "targetNPCID": 129003,
+      "targetExactName": "#Dain_Frostreaver_IV",
+      "signalID": 2,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadinb/129098",
+      "targetNPCID": 129000,
+      "targetExactName": "Seneschal_Aldikar",
+      "signalID": 2,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadinb/129098",
+      "targetNPCID": 129028,
+      "targetExactName": "Chamberlain_Krystorf",
+      "signalID": 2,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadinb/129098",
+      "targetNPCID": 129035,
+      "targetExactName": "Councilor_Amberfeld",
+      "signalID": 2,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadinb/129098",
+      "targetNPCID": 129073,
+      "targetExactName": "Councilor_Amberfeld",
+      "signalID": 2,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadinb/129098",
+      "targetNPCID": 129037,
+      "targetExactName": "Councilor_Coldember",
+      "signalID": 2,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadinb/129098",
+      "targetNPCID": 129075,
+      "targetExactName": "Councilor_Coldember",
+      "signalID": 2,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadinb/129098",
+      "targetNPCID": 129043,
+      "targetExactName": "Councilor_Darakor",
+      "signalID": 2,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadinb/129098",
+      "targetNPCID": 129041,
+      "targetExactName": "Councilor_Darkfrost",
+      "signalID": 2,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadinb/129098",
+      "targetNPCID": 129078,
+      "targetExactName": "Councilor_Darkfrost",
+      "signalID": 2,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadinb/129098",
+      "targetNPCID": 129036,
+      "targetExactName": "Councilor_Deynekn",
+      "signalID": 2,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadinb/129098",
+      "targetNPCID": 129074,
+      "targetExactName": "Councilor_Deynekn",
+      "signalID": 2,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadinb/129098",
+      "targetNPCID": 129040,
+      "targetExactName": "Councilor_Dirkins",
+      "signalID": 2,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadinb/129098",
+      "targetNPCID": 129077,
+      "targetExactName": "Councilor_Dirkins",
+      "signalID": 2,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadinb/129098",
+      "targetNPCID": 129039,
+      "targetExactName": "Councilor_Glacierbane",
+      "signalID": 2,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadinb/129098",
+      "targetNPCID": 129076,
+      "targetExactName": "Councilor_Glacierbane",
+      "signalID": 2,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadinb/129098",
+      "targetNPCID": 129038,
+      "targetExactName": "Councilor_Icelok",
+      "signalID": 2,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadinb/129098",
+      "targetNPCID": 129034,
+      "targetExactName": "Councilor_Icepike",
+      "signalID": 2,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadinb/129098",
+      "targetNPCID": 129072,
+      "targetExactName": "Councilor_Icepike",
+      "signalID": 2,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadinb/129098",
+      "targetNPCID": 129045,
+      "targetExactName": "Councilor_Juliah_Lockheart",
+      "signalID": 2,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadinb/129098",
+      "targetNPCID": 129044,
+      "targetExactName": "Councilor_Thubins",
+      "signalID": 2,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadinb/129098",
+      "targetNPCID": 129080,
+      "targetExactName": "Councilor_Thubins",
+      "signalID": 2,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadinb/129098",
+      "targetNPCID": 129042,
+      "targetExactName": "Councilor_Wintershade",
+      "signalID": 2,
+      "delayMS": 0
+    },
+    {
+      "source": "thurgadinb/129098",
+      "targetNPCID": 129079,
+      "targetExactName": "Councilor_Wintershade",
+      "signalID": 2,
+      "delayMS": 0
+    }
+  ]
+}

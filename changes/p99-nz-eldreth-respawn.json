@@ -1,0 +1,64 @@
+{
+  "format": 1,
+  "id": "p99-nz-eldreth-respawn",
+  "summary": "Restore the documented eight-hour Eldreth respawn timer without changing his hand-in or any other spawn field.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Rohane's_Rogue_Epic_Guide?action=raw",
+      "note": "Full guide explicitly says eight hours. Cached SHA256 fe6b94692c4e3975720266e0ab46f2763b00ac901f7476362e0c53bbc5e71520."
+    },
+    {
+      "url": "https://wiki.project1999.com/Eldreth?action=raw",
+      "note": "NPC-specific description explicitly says eight hours after completing the hand-in. Cached SHA256 ec0a1135f2b55ce08b0c3ab9a64e24f321001409885f40c5a043d02431afddc7. Canonical NPC51025 is the sole100percent member of group2484, spawn2 row7119 lakerathe."
+    }
+  ],
+  "rows": [
+    {
+      "table": "spawn2",
+      "before": {
+        "id": 7119,
+        "spawngroupID": 2484,
+        "zone": "lakerathe",
+        "version": 0,
+        "x": -551,
+        "y": 2623,
+        "z": 11.88,
+        "heading": 293.25,
+        "respawntime": 400,
+        "variance": 0,
+        "pathgrid": 0,
+        "path_when_zone_idle": 0,
+        "_condition": 0,
+        "cond_value": 1,
+        "animation": 0,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null
+      },
+      "after": {
+        "id": 7119,
+        "spawngroupID": 2484,
+        "zone": "lakerathe",
+        "version": 0,
+        "x": -551,
+        "y": 2623,
+        "z": 11.88,
+        "heading": 293.25,
+        "respawntime": 28800,
+        "variance": 0,
+        "pathgrid": 0,
+        "path_when_zone_idle": 0,
+        "_condition": 0,
+        "cond_value": 1,
+        "animation": 0,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null
+      }
+    }
+  ],
+  "sources": []
+}

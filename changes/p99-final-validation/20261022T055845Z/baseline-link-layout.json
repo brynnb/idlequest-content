@@ -1,0 +1,35 @@
+{
+  "changedAt": "2026-10-22T06:11:02.286150+00:00",
+  "reason": "Dataset safeFile rejects symlink ancestors. No validation bypass; immutable file bytes unchanged.",
+  "directories": [
+    {
+      "directory": "data",
+      "hardlinkedFiles": 778
+    },
+    {
+      "directory": "docs",
+      "hardlinkedFiles": 3
+    },
+    {
+      "directory": "effective",
+      "hardlinkedFiles": 8069
+    },
+    {
+      "directory": "maintained",
+      "hardlinkedFiles": 1595
+    },
+    {
+      "directory": "reference",
+      "hardlinkedFiles": 18027
+    },
+    {
+      "directory": "schema",
+      "hardlinkedFiles": 53
+    },
+    {
+      "directory": "sources",
+      "hardlinkedFiles": 7975
+    }
+  ],
+  "limits": "Hard links are used read-only by task discipline; not kernel read-only mounts. No chmod or baseline writes."
+}

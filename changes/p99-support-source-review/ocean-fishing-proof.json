@@ -1,0 +1,42 @@
+{
+  "key": "oot/player",
+  "reviewedSourceSha256": "43ed9d535b2868cfd04c302bddedd4bba19fabfdb944264b1ad6dac010bb4fc2",
+  "currentSourceSha256": "1fa873bb1ab85f06a929fe305c97cd240af8053223b4797564c3ebd265c6a506",
+  "currentEnabled": 1,
+  "removedFacet": "Entire event_fish_success callback: paladin_epic3 plus fished item69914 creates corrupted Koalindl69141.",
+  "preservedFacet": "Every byte preceding that callback, including complete original event_enter_zone strongbox-global→ground object13860→delete-global logic; all row columns unchanged except lua_content.",
+  "dependencies": [
+    {
+      "file": "sources/projecteq/freporte/Brunar_Rankin.lua",
+      "sha256": "3aaafa52e1714e0425e11123e6dcca8f8b24fd86b750529205c031b4ac265011",
+      "completeBodyRead": true
+    },
+    {
+      "file": "sources/projecteq/hohonora/#Irak_Altil.lua",
+      "sha256": "c7b87f76531de102414b7bb8e676b6c7b74b69a358eb49ede3f29dcd591b1185",
+      "completeBodyRead": true
+    },
+    {
+      "file": "sources/projecteq/oot/#A_Corrupted_Koalindl.lua",
+      "sha256": "a9b9d52762e661774788e483d89830393763fc2abde1dbd6d820bba61d9521a6",
+      "completeBodyRead": true
+    }
+  ],
+  "primaryPeriodEvidence": {
+    "url": "https://www.tapatalk.com/groups/paladinsofnorrath/paladin-epic-1-5-walkthrough-checklist-t1511.html",
+    "accessedAt": "2026-10-22T06:27:35Z",
+    "publicationDate": "2004-10-01",
+    "locator": "Title; opening post; Part I Rithnok soulstone; fishing and Ocean of Tears subsection",
+    "summary": "Original community walkthrough identifies the exact Brunar note, dark-scale fishing and Ocean of Tears Corrupted Koalindl step as Paladin1.5. Separate contemporary thread contains 2004 game logs and the Redemption completion. No combat numbers from these pages are imported.",
+    "corroboratingUrl": "https://www.tapatalk.com/groups/paladinsofnorrath/the-complete-paladin-epic-2-0-t1504.html"
+  },
+  "classicEvidence": {
+    "file": "reference/p99-wiki/raw-pages/journal-strongbox-3824b1b2b4.wiki",
+    "sha256": "b643c97bede77f9ec7bb12fbbf18a75ae687bf79719be2ebd2e419ecb678299f"
+  },
+  "limitations": [
+    "Classic imported strongbox coordinates and3000000ms lifetime preserved, not independently quantified by P99.",
+    "No NPC, loot, fishing-table or ordinary spawn changes; no live runtime or full quest parity claim.",
+    "Corrupted fish source remains a lifetime/combat helper with no ordinary world spawning removed by this patch."
+  ]
+}

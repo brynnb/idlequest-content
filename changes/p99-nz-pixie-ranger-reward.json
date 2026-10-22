@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-nz-pixie-ranger-reward",
+  "summary": "Include the explicitly documented Leather Skullcap in Ran Sunfire\u2019s reward pool.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Pixie_Dust_(Kelethin_Ranger)?action=raw",
+      "note": "Cached 2026-07-17T23:28:24.580Z; revision unavailable; SHA256 12731b76c89eb666c592f5f5ea1e8991435028be510bc3bdf9955421cdfc51a9. Leather Skullcap2001 verified exported item name. Other four documented patchwork pieces already possible. Preserve legacy Patchwork Tunic2104 and20percent item chance because page does not establish exhaustive pool or odds. Existing6copper and five faction directions match; quantities and item handin unchanged."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 15096,
+        "zone": "gfaydark",
+        "name": "Ran_Sunfire",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: gfaydark/Ran_Sunfire.pl\n-- P99 audit: Pixie Dust (Kelethin Ranger)\n-- items: 2104, 2106, 2108, 2111, 2112, 12109, 17957\n\nlocal function do_random_patchwork(e)\n\tif eq.ChooseRandom(1, 2, 3, 4, 5) == 1 then\n\t\te.other:SummonItem(eq.ChooseRandom(2104, 2106, 2108, 2111, 2112))\n\tend\nend\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Hail. \" .. e.other:GetName() .. \"! I trust you are not afraid of heights. Kelethin is a grand city. but it is also a safe haven from predators and evil beings. About the only thing to fear are the [pixie tricksters].\")\n\telseif e.message:findi(\"pixie tricksters\") then\n\t\te.self:Say(\"An irritating lot of fairy folk. They have been starting fires in our great forest. They may just burn our grand community down. We will have to [exterminate the pixies]. It is unfortunate. but it is for the good of the entire forest.\")\n\telseif e.message:findi(\"exterminate the pixies\") then\n\t\te.self:Say(\"Then I give you this pouch. Should you fill and combine it with Pixie Dust, I shall pay you greatly for your deeds. We may even find a use for the dust itself. Careful, small though they may be, many are quite strong. Search for the weak ones for now.\")\n\t\te.other:SummonItem(17957) -- Empty Pouch\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 12109}) then\n\t\te.self:Say(\"We thank you for your deed. Here, then, is a small reward. Nothing more than long forgotten equipment, but it may be useful to a young adventurer.\")\n\t\tdo_random_patchwork(e)\n\t\te.other:GiveCash(6, 0, 0, 0)\n\t\te.other:Faction(246, 10, 0)\n\t\te.other:Faction(279, 2, 0)\n\t\te.other:Faction(226, 2, 0)\n\t\te.other:Faction(310, 2, 0)\n\t\te.other:Faction(234, -5, 0)\n\t\te.other:AddEXP(800)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 15096,
+        "zone": "gfaydark",
+        "name": "Ran_Sunfire",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: gfaydark/Ran_Sunfire.pl\n-- P99 audit: Pixie Dust (Kelethin Ranger)\n-- items: 2104, 2106, 2108, 2111, 2112, 12109, 17957\n\nlocal function do_random_patchwork(e)\n\tif eq.ChooseRandom(1, 2, 3, 4, 5) == 1 then\n\t\te.other:SummonItem(eq.ChooseRandom(2104, 2106, 2108, 2111, 2112, 2001))\n\tend\nend\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Hail. \" .. e.other:GetName() .. \"! I trust you are not afraid of heights. Kelethin is a grand city. but it is also a safe haven from predators and evil beings. About the only thing to fear are the [pixie tricksters].\")\n\telseif e.message:findi(\"pixie tricksters\") then\n\t\te.self:Say(\"An irritating lot of fairy folk. They have been starting fires in our great forest. They may just burn our grand community down. We will have to [exterminate the pixies]. It is unfortunate. but it is for the good of the entire forest.\")\n\telseif e.message:findi(\"exterminate the pixies\") then\n\t\te.self:Say(\"Then I give you this pouch. Should you fill and combine it with Pixie Dust, I shall pay you greatly for your deeds. We may even find a use for the dust itself. Careful, small though they may be, many are quite strong. Search for the weak ones for now.\")\n\t\te.other:SummonItem(17957) -- Empty Pouch\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 12109}) then\n\t\te.self:Say(\"We thank you for your deed. Here, then, is a small reward. Nothing more than long forgotten equipment, but it may be useful to a young adventurer.\")\n\t\tdo_random_patchwork(e)\n\t\te.other:GiveCash(6, 0, 0, 0)\n\t\te.other:Faction(246, 10, 0)\n\t\te.other:Faction(279, 2, 0)\n\t\te.other:Faction(226, 2, 0)\n\t\te.other:Faction(310, 2, 0)\n\t\te.other:Faction(234, -5, 0)\n\t\te.other:AddEXP(800)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/gfaydark/Ran_Sunfire.lua",
+      "beforeSha256": "09c588293910f8a72f287e6d004e804112cebc80d7b643731a81a281e38cf0b6",
+      "proposedFile": "changes/p99-nz-pixie-ranger-reward/gfaydark--Ran_Sunfire.lua",
+      "afterSha256": "7233aacd7e373a33e2e94c6c34dd155ecfc1198dbe5da99eac452e07930eb254"
+    }
+  ]
+}

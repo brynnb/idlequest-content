@@ -1,0 +1,2576 @@
+{
+  "scope": "Current proposed files only, SHA256 bound. Functional assertions use central fixture; disabled sources are force-loaded only with encounter loading inert and callback-shape checks. Header admission and historical body-byte preservation are independently asserted by generator. No activation, live runtime, settlement or complete P99 parity claim.",
+  "sourceCount": 92,
+  "caseCount": 217,
+  "proposalCount": 7,
+  "bindings": [
+    {
+      "proposedFile": "changes/p99-support-dialogue-fixes/lfaydark--Grynnaf_Einoom.lua",
+      "sourceSha256": "1328f8fe3010f9c40512937b3f6c4293f9bba9285f07bea9ac18926ebca88e06",
+      "key": "lfaydark/Grynnaf_Einoom",
+      "enabled": 1,
+      "proposal": "p99-support-dialogue-fixes",
+      "baselineSourceSha256": "a61dfc26057b3df8600cacdbf561f7a8248b2d05f33ba7053bcd0d3517e30baa"
+    },
+    {
+      "proposedFile": "changes/p99-support-dialogue-fixes/cabwest--Jaxxtz.lua",
+      "sourceSha256": "1cc9f089cabc48bbe8fa0e03d1de2956c01e7613f05a0a8f16ee585ae8c6f015",
+      "key": "cabwest/Jaxxtz",
+      "enabled": 1,
+      "proposal": "p99-support-dialogue-fixes",
+      "baselineSourceSha256": "fbd109a5cf6a597a89615091d0de93695e7d539e67333986068471dd88c1cbb6"
+    },
+    {
+      "proposedFile": "changes/p99-support-dialogue-fixes/grobb--Kragia.lua",
+      "sourceSha256": "7cc52f5530d7b014108ab68c94deeecc0800d9eaba90ca8a2ad1d1531eeadbce",
+      "key": "grobb/Kragia",
+      "enabled": 0,
+      "proposal": "p99-support-dialogue-fixes",
+      "baselineSourceSha256": "ce1e93b3d56ecdebb61827fc2174ac1a69f4d47d829c2252d6ed0cdc140b7356"
+    },
+    {
+      "proposedFile": "changes/p99-support-dialogue-fixes/emeraldjungle--The_Spirit_of_Rage.lua",
+      "sourceSha256": "d587348ea709da8f59c9cf1a1a044a77a3cbb82b80b080ce8f36056eed328148",
+      "key": "emeraldjungle/The_Spirit_of_Rage",
+      "enabled": 0,
+      "proposal": "p99-support-dialogue-fixes",
+      "baselineSourceSha256": "277f8a7bfd4f34e3a5acad62ad0cf740f35e30d80992658c9c6d89a215b61c1a"
+    },
+    {
+      "proposedFile": "changes/p99-support-dialogue-fixes/permafrost--The_Icebound_Spirit.lua",
+      "sourceSha256": "3edcc11eaf362cc35f0dcfe60916a0d227c26cc485812877f0904f2b3a0565a7",
+      "key": "permafrost/The_Icebound_Spirit",
+      "enabled": 0,
+      "proposal": "p99-support-dialogue-fixes",
+      "baselineSourceSha256": "827140a9850d9341b9ed4ea61bacff5621cad2c63a07b1652d25597897db87c7"
+    },
+    {
+      "proposedFile": "changes/p99-support-dialogue-fixes/emeraldjungle--Scout_Vyrak.lua",
+      "sourceSha256": "8a1ae3367d66bb39d95811f86f63340250636e27fc20fa719a87da47ecc2f25b",
+      "key": "emeraldjungle/Scout_Vyrak",
+      "enabled": 0,
+      "proposal": "p99-support-dialogue-fixes",
+      "baselineSourceSha256": "0cfd4edfe284043d99e494f028371262e4863093aa85625ea0fe126c4b73e204"
+    },
+    {
+      "proposedFile": "changes/p99-support-dialogue-fixes/permafrost--Scout_Janomin.lua",
+      "sourceSha256": "233a04773ea5fa5241112695e1ae4ef42bc4fe7f0a5085be5b1b1b9f4fe1e9fc",
+      "key": "permafrost/Scout_Janomin",
+      "enabled": 0,
+      "proposal": "p99-support-dialogue-fixes",
+      "baselineSourceSha256": "b14a4dddd8aeb88af480ee040d2cc2aead28ae47c5e4e98831e39f3b0dda3974"
+    },
+    {
+      "proposedFile": "changes/p99-support-lifecycle-scope/qeynos2--a_gruff_voice.lua",
+      "sourceSha256": "f9d40f46e709de549cd393ed51510aff3d0165b6b900b4376a91dbdcb26ca6b3",
+      "key": "qeynos2/a_gruff_voice",
+      "enabled": 0,
+      "proposal": "p99-support-lifecycle-scope",
+      "baselineSourceSha256": "b17b6099ea577a2f2855755cf0cfdb27908b964e6502b50d7d90003e972ea4d9"
+    },
+    {
+      "proposedFile": "changes/p99-support-lifecycle-scope/southkarana--#Finnelzi_Springworthy.lua",
+      "sourceSha256": "e3c80b02eae446a5a76a2def65905376ece84d125f1191fb1942e5f6200d9ed6",
+      "key": "southkarana/#Finnelzi_Springworthy",
+      "enabled": 0,
+      "proposal": "p99-support-lifecycle-scope",
+      "baselineSourceSha256": "6eb13e917ab646b558a57d1eb864212166f297c71c704d72a4d94a83cc05b302"
+    },
+    {
+      "proposedFile": "changes/p99-support-lifecycle-scope/southkarana--#Glenfire_Telzir.lua",
+      "sourceSha256": "003afe5238b44f7a6d161fbf016bc32c680ac01b02a0e2054e6774f1d851ed94",
+      "key": "southkarana/#Glenfire_Telzir",
+      "enabled": 0,
+      "proposal": "p99-support-lifecycle-scope",
+      "baselineSourceSha256": "99dee3865148a1e8d22d1163c7f330348acfcf0041a7c1d8462d5e097ebb1bf8"
+    },
+    {
+      "proposedFile": "changes/p99-support-lifecycle-scope/southkarana--#Rendolf_Deathbringer.lua",
+      "sourceSha256": "80ae13408d5d84e74976086a2329b965922e001672af714b5ad311ddf25e6fcf",
+      "key": "southkarana/#Rendolf_Deathbringer",
+      "enabled": 0,
+      "proposal": "p99-support-lifecycle-scope",
+      "baselineSourceSha256": "3f7cc887bedcd3256b5a8fc2d3732fdb6eeba4c10b6a837fd2ff46d44f043591"
+    },
+    {
+      "proposedFile": "changes/p99-support-lifecycle-scope/southkarana--#Tehana_Elsent.lua",
+      "sourceSha256": "52e95ba53a5c163b59a566f07520ec5ce200581b27d0fec273c00a847f089aaf",
+      "key": "southkarana/#Tehana_Elsent",
+      "enabled": 0,
+      "proposal": "p99-support-lifecycle-scope",
+      "baselineSourceSha256": "1603141c5bb05a5b2874a3c31ae8bdd090dd24a3addc4f53d6c3f333f7eed64a"
+    },
+    {
+      "proposedFile": "changes/p99-support-lifecycle-scope/steamfont--a_decomposing_body.lua",
+      "sourceSha256": "e5ebfbf73eb3c3ef2ced8ba4817b26683f5fd781ba2bef2f622d8db494e3f647",
+      "key": "steamfont/a_decomposing_body",
+      "enabled": 0,
+      "proposal": "p99-support-lifecycle-scope",
+      "baselineSourceSha256": "fbf264831fe7548131faa75bb7f9719ea8b25459d77f42869142c8e23c3ef035"
+    },
+    {
+      "proposedFile": "changes/p99-support-lifecycle-scope/burningwood--player.lua",
+      "sourceSha256": "9b249b6dc897b241429154d8c95c5108498a3845fff4ca6b3970240c5d604717",
+      "key": "burningwood/player",
+      "enabled": 0,
+      "proposal": "p99-support-lifecycle-scope",
+      "baselineSourceSha256": "fa4ac8b2bfa8b8f139dac160e10e2d6ba9323f8111091837fd237df7b54a8033"
+    },
+    {
+      "proposedFile": "changes/p99-support-lifecycle-scope/westwastes--disciple_of_moon_trap.lua",
+      "sourceSha256": "79abf6edd134b6505e20fa744e41c342f0a8e4f532f1b0c30a79ecb25dcbecd7",
+      "key": "westwastes/disciple_of_moon_trap",
+      "enabled": 0,
+      "proposal": "p99-support-lifecycle-scope",
+      "baselineSourceSha256": "20f6d0294187a7c28b7cd9931f11021dcb89f33c4b3433a03649230a015eea44"
+    },
+    {
+      "proposedFile": "changes/p99-support-lifecycle-scope/fearplane--Enraged_Imp.lua",
+      "sourceSha256": "ed4c63c61fd7d286cf73bb5a4f3d32c96f53a0a3f1a276c9be0fe343ab2c13c4",
+      "key": "fearplane/Enraged_Imp",
+      "enabled": 0,
+      "proposal": "p99-support-lifecycle-scope",
+      "baselineSourceSha256": "f77f24b178502193f8fb1d7b0a5faf162fcd340b8d781e0afa637a0440a6f6d8"
+    },
+    {
+      "proposedFile": "changes/p99-support-lifecycle-scope/fearplane--Ireblind_Imp.lua",
+      "sourceSha256": "13cf24d3f61c65645d90cb9e0d12a656cf168f102a8cf2f7ef9495444b648d18",
+      "key": "fearplane/Ireblind_Imp",
+      "enabled": 0,
+      "proposal": "p99-support-lifecycle-scope",
+      "baselineSourceSha256": "46c228a51c85647d0953c7d13fd35d5a85eaecca5b38c1469d8c7c0c6a7c53d7"
+    },
+    {
+      "proposedFile": "changes/p99-support-lifecycle-scope/frontiermtns--script_init.lua",
+      "sourceSha256": "9968da636348d6cd71ba50f8faa682eac2ae23e20d04bc424efec2bb3c945d2d",
+      "key": "frontiermtns/script_init",
+      "enabled": 0,
+      "proposal": "p99-support-lifecycle-scope",
+      "baselineSourceSha256": "6a03fcd459d31b08012f2504daa7b3f29202dc42c6691a247d22f5799121e057"
+    },
+    {
+      "proposedFile": "changes/p99-support-lifecycle-scope/frozenshadow--You_.lua",
+      "sourceSha256": "630c9c10068c0b081a3f163638ed362a86974fa422d3733049b5e3fa7322d4bf",
+      "key": "frozenshadow/You_",
+      "enabled": 0,
+      "proposal": "p99-support-lifecycle-scope",
+      "baselineSourceSha256": "6197dd53b5de21f6e895a062f823169aa8b22bcf292784fd81a187c825a1c4d5"
+    },
+    {
+      "proposedFile": "changes/p99-support-lifecycle-scope/kithicor--script_init.lua",
+      "sourceSha256": "d716d84284bb2ac5de651470f3a66cba1f6c5d48e03191cf536563851ab47660",
+      "key": "kithicor/script_init",
+      "enabled": 0,
+      "proposal": "p99-support-lifecycle-scope",
+      "baselineSourceSha256": "f8336290a0e628d11bdcf1752c06090ce04e642cc2d4dfd23733d5d58837010b"
+    },
+    {
+      "proposedFile": "changes/p99-support-lifecycle-scope/lfaydark--#a_Wayfarer.lua",
+      "sourceSha256": "2b7150ce268b257a063077b080fcb2b4c1000322cbef0035f9112f4324c5f88c",
+      "key": "lfaydark/#a_Wayfarer",
+      "enabled": 0,
+      "proposal": "p99-support-lifecycle-scope",
+      "baselineSourceSha256": "37d0f7250da7bfd2f2082b78608aaf93b772fe168ba42a99ccab05f80178fd76"
+    },
+    {
+      "proposedFile": "changes/p99-support-lifecycle-scope/lfaydark--#Taskmaster_Mirot.lua",
+      "sourceSha256": "ad4b0d092be6277850e0238fbd909b5baf138a60f0de16d78eff357df2d7418d",
+      "key": "lfaydark/#Taskmaster_Mirot",
+      "enabled": 0,
+      "proposal": "p99-support-lifecycle-scope",
+      "baselineSourceSha256": "43ecb771be1ca36ca9a2238ff8cae7901bad31fb089e58e0a281a2c57d8a0b94"
+    },
+    {
+      "proposedFile": "changes/p99-support-lifecycle-scope/misty--script_init.lua",
+      "sourceSha256": "e423986779e7944488a7bdf34eef50d18f0d8de955e3acd3b15a3deceefa096c",
+      "key": "misty/script_init",
+      "enabled": 0,
+      "proposal": "p99-support-lifecycle-scope",
+      "baselineSourceSha256": "5dc6772c926cd64e0f9ffb58c27288ddcad2f2756bdbba19af30b6ef9d5ac956"
+    },
+    {
+      "proposedFile": "changes/p99-support-lifecycle-scope/necropolis--#Excavator_Quellin.lua",
+      "sourceSha256": "e791dc91d7fc6f84ef5b24246206982e2976280d2ab016cd4cdba6ead8dfa560",
+      "key": "necropolis/#Excavator_Quellin",
+      "enabled": 0,
+      "proposal": "p99-support-lifecycle-scope",
+      "baselineSourceSha256": "55528e783bbccf8e9780cb3f95f85bba580eb4fcb7ca66c8f503c86d7a790cdc"
+    },
+    {
+      "proposedFile": "changes/p99-support-lifecycle-scope/necropolis--123167.lua",
+      "sourceSha256": "a1699745b87f6bd46fd5a488aae79f7962a25cf5adfae48427c1633c7106d6c5",
+      "key": "necropolis/123167",
+      "enabled": 0,
+      "proposal": "p99-support-lifecycle-scope",
+      "baselineSourceSha256": "533ccb1e83f19a70d915cb8f5a3a02f0dc114b31444668aaabba68fc9dec44a2"
+    },
+    {
+      "proposedFile": "changes/p99-support-lifecycle-scope/necropolis--script_init.lua",
+      "sourceSha256": "ebeeadc81a8550f96bfb9a9b18486ca2b88978fc13ab72459b89a626c2543544",
+      "key": "necropolis/script_init",
+      "enabled": 0,
+      "proposal": "p99-support-lifecycle-scope",
+      "baselineSourceSha256": "553ec5ca45c60e1bf9fd9ff6fb3097373a3db83bc52a0f55f3fa5fd0742bdad1"
+    },
+    {
+      "proposedFile": "changes/p99-support-lifecycle-scope/northkarana--a_dire_griffon.lua",
+      "sourceSha256": "f3caa21bb6514db4d5dc95b324c1bae19c7ffd689f6d4106c9b1089c04e94f8c",
+      "key": "northkarana/a_dire_griffon",
+      "enabled": 0,
+      "proposal": "p99-support-lifecycle-scope",
+      "baselineSourceSha256": "cdd1aaa32e05a4284d470fe2f7a85acc6ad2f6b9aebdc0b2b89c4d6a6c2f30f0"
+    },
+    {
+      "proposedFile": "changes/p99-support-lifecycle-scope/oasis--script_init.lua",
+      "sourceSha256": "5f956b1b1cd0b73c003c8d6b5e10c65ca06967fc12df648f1e5ee0a60bf86a4a",
+      "key": "oasis/script_init",
+      "enabled": 0,
+      "proposal": "p99-support-lifecycle-scope",
+      "baselineSourceSha256": "484ca3f40d3796d24a1cf9cd49dbe4eccc746ee2d5317132fd0114c77bc825a9"
+    },
+    {
+      "proposedFile": "changes/p99-support-lifecycle-scope/swampofnohope--a_dire_leech.lua",
+      "sourceSha256": "50dc9f62d49be70070e39638e74632c4ca4dc579410dcecf1d011a6e75d59cd5",
+      "key": "swampofnohope/a_dire_leech",
+      "enabled": 0,
+      "proposal": "p99-support-lifecycle-scope",
+      "baselineSourceSha256": "9a4bd919d524446a318a0b2d47f9977dcaf5c8bb5a5de8f088aca954835ca75b"
+    },
+    {
+      "proposedFile": "changes/p99-support-lifecycle-values/guktop--croc_trigger.lua",
+      "sourceSha256": "20586d714137fa21415132573c4e0effaaa5230bb86459a115d476dfca6d75e3",
+      "key": "guktop/croc_trigger",
+      "enabled": 1,
+      "proposal": "p99-support-lifecycle-values",
+      "baselineSourceSha256": "3fbc02d40d168f634969ad397edfe50e4e0faa9df1f502a33239f592059edbce"
+    },
+    {
+      "proposedFile": "changes/p99-support-lifecycle-values/runnyeye--#The_Sporali_Moldmaster.lua",
+      "sourceSha256": "92bed52f8865ead553e1ea50a56dd100772107b0c543268a7c274e37dbf7ff37",
+      "key": "runnyeye/#The_Sporali_Moldmaster",
+      "enabled": 1,
+      "proposal": "p99-support-lifecycle-values",
+      "baselineSourceSha256": "668e7b2e6fa0b904c323219f02b85166dc606b753f5872da6d599c9a5d828ead"
+    },
+    {
+      "proposedFile": "changes/p99-support-lifecycle-values/wakening--119017.lua",
+      "sourceSha256": "f8fdcf491a62509914afc7ea362ea9cdb40be98d7cf9dcc7afbb569d7a70f1e9",
+      "key": "wakening/119017",
+      "enabled": 1,
+      "proposal": "p99-support-lifecycle-values",
+      "baselineSourceSha256": "dbf9f3abc61929e912fa9ffa28b808944d5369a02312113473c3c3a018a1513e"
+    },
+    {
+      "proposedFile": "changes/p99-support-mixed-hints/Guard_Fayfear.lua",
+      "sourceSha256": "1722962551de8705c4081fac0311397b668da2eefe91204947835ed315c91831",
+      "key": "gfaydark/Guard_Fayfear",
+      "enabled": 1,
+      "proposal": "p99-support-mixed-hints",
+      "baselineSourceSha256": "16da9bf48a8885325a49952630f62d6291dcb92045347a09498e94eeb2e9ecce"
+    },
+    {
+      "proposedFile": "changes/p99-support-mixed-hints/Guard_Highmoon.lua",
+      "sourceSha256": "1722962551de8705c4081fac0311397b668da2eefe91204947835ed315c91831",
+      "key": "gfaydark/Guard_Highmoon",
+      "enabled": 1,
+      "proposal": "p99-support-mixed-hints",
+      "baselineSourceSha256": "347b14e6e470738642b726efefaf3c5c53c11daf78ceb1403f773b36a8ff0fe5"
+    },
+    {
+      "proposedFile": "changes/p99-support-named-fixes/akanon--Lyra_Lyrestringer.lua",
+      "sourceSha256": "fb73395c7bfa114de164cc229d7fbf0112502ea3c365627ac1a7713e6e093031",
+      "key": "akanon/Lyra_Lyrestringer",
+      "enabled": 1,
+      "proposal": "p99-support-named-fixes",
+      "baselineSourceSha256": "74cb0ecf933f39aa28f08de75b724993ecdee020fa23d3b7e022152ee7ad9ff4"
+    },
+    {
+      "proposedFile": "changes/p99-support-named-fixes/burningwood--Atheling_Plague.lua",
+      "sourceSha256": "8741f07028e4a137118de56fae42840506908e3452d3ac89bca7b68fef03374c",
+      "key": "burningwood/Atheling_Plague",
+      "enabled": 0,
+      "proposal": "p99-support-named-fixes",
+      "baselineSourceSha256": "d08ea7b57af8b79cdb2d101f0d674e9709ba6d4c536f9a5c917e297d18e9a6a7"
+    },
+    {
+      "proposedFile": "changes/p99-support-named-fixes/burningwood--Clerk_Doval.lua",
+      "sourceSha256": "905ddc813ab2e1e9a62792ffda1cb1e9de099475c51da9cfa9d99573b2ca112a",
+      "key": "burningwood/Clerk_Doval",
+      "enabled": 0,
+      "proposal": "p99-support-named-fixes",
+      "baselineSourceSha256": "a30a9b0b62d20434be00b81bd87e97a606d6538dcfb562d27c603eac07fcf1a6"
+    },
+    {
+      "proposedFile": "changes/p99-support-named-fixes/butcher--Siltria_Marwind.lua",
+      "sourceSha256": "70648534ac1b3b2484427a63ad6a703324362b8003dc73f7b88bc9c5e90fb065",
+      "key": "butcher/Siltria_Marwind",
+      "enabled": 1,
+      "proposal": "p99-support-named-fixes",
+      "baselineSourceSha256": "87b94928725509983869911f3be5d6d44ec843649ec3bef9880547c6b6a9d1a7"
+    },
+    {
+      "proposedFile": "changes/p99-support-named-fixes/erudnext--Ticar_Lorestring.lua",
+      "sourceSha256": "a91104b7c9efda980445a565b3be533c426f5d64a2f36e76ec2a0fd1b33549d1",
+      "key": "erudnext/Ticar_Lorestring",
+      "enabled": 1,
+      "proposal": "p99-support-named-fixes",
+      "baselineSourceSha256": "eb2285692f46dbc90051eb03b5a83be93c919184efa76f3f0b9f30a544f00538"
+    },
+    {
+      "proposedFile": "changes/p99-support-named-fixes/feerrott--Drizda_Tunesinger.lua",
+      "sourceSha256": "8ee53b5b046df59fca6ab46e36711826d6aa847f88a24a4fb187ea99775b9973",
+      "key": "feerrott/Drizda_Tunesinger",
+      "enabled": 1,
+      "proposal": "p99-support-named-fixes",
+      "baselineSourceSha256": "97ac45ba3f6466333b725a94300859e217eecffe2437254761dfb769aacfc03e"
+    },
+    {
+      "proposedFile": "changes/p99-support-named-fixes/freportn--Ton_Twostring.lua",
+      "sourceSha256": "7f47b8eda38f0659cbfca9645f39df0392adf3972461925b691fb508a6f94132",
+      "key": "freportn/Ton_Twostring",
+      "enabled": 1,
+      "proposal": "p99-support-named-fixes",
+      "baselineSourceSha256": "9f10dc06184e359a57b17e5c6b178fd704f72319d232ef59cafba12a7ead354e"
+    },
+    {
+      "proposedFile": "changes/p99-support-named-fixes/gfaydark--Idia.lua",
+      "sourceSha256": "af8733a8c875aeac710a81a80d0facb678f66a646523e8deca83a795a020b129",
+      "key": "gfaydark/Idia",
+      "enabled": 1,
+      "proposal": "p99-support-named-fixes",
+      "baselineSourceSha256": "7adbce8ccd67ee8c81fd5cf7a803003f5337b1ce7f0303e48d7e7856653e302b"
+    },
+    {
+      "proposedFile": "changes/p99-support-named-fixes/halas--Marton_Stringsinger.lua",
+      "sourceSha256": "a20eb14ee9e1251a84a997c48baf88ca79216ba896452789a6b791cfb273d32f",
+      "key": "halas/Marton_Stringsinger",
+      "enabled": 1,
+      "proposal": "p99-support-named-fixes",
+      "baselineSourceSha256": "76491273da1c15f5aea085888e8955200e4e91f92a6c902fad6d0e21b14ae8cf"
+    },
+    {
+      "proposedFile": "changes/p99-support-named-fixes/highkeep--Lislia_Goldtune.lua",
+      "sourceSha256": "82bf68146bd9aecdd977d55a3932597bc5b694cfeed7833048695e9003bb4cca",
+      "key": "highkeep/Lislia_Goldtune",
+      "enabled": 1,
+      "proposal": "p99-support-named-fixes",
+      "baselineSourceSha256": "8f378069fe34e3818e813bed506f08059d40ca16400ab5bb0826e40a1cc5e0fa"
+    },
+    {
+      "proposedFile": "changes/p99-support-named-fixes/innothule--Dark_Deathsinger.lua",
+      "sourceSha256": "a5d4c6fc24e387a511cc99191d2cc9427aa69d3d5636eb5ecfa663e798a25c6a",
+      "key": "innothule/Dark_Deathsinger",
+      "enabled": 1,
+      "proposal": "p99-support-named-fixes",
+      "baselineSourceSha256": "995cc7e4879abf123c0dd0deb25cf2a479598a9ab570ebdebe6eac09ad7bd812"
+    },
+    {
+      "proposedFile": "changes/p99-support-named-fixes/lakeofillomen--Klok_Sargin.lua",
+      "sourceSha256": "2cfa82442b230eb94d497a2da34cddcb14cd276d71fc670812ccc1ea046dc633",
+      "key": "lakeofillomen/Klok_Sargin",
+      "enabled": 0,
+      "proposal": "p99-support-named-fixes",
+      "baselineSourceSha256": "6b661a6fadd9a0e49d09985885e9a49a078f58c6da60c1557d1634804ba99fbf"
+    },
+    {
+      "proposedFile": "changes/p99-support-named-fixes/nektulos--Travis_Two_Tone.lua",
+      "sourceSha256": "d2862d0d1496e4bd5abe1fcdb1c6ab9c992b64da492a8e97b1d152505dc53d68",
+      "key": "nektulos/Travis_Two_Tone",
+      "enabled": 1,
+      "proposal": "p99-support-named-fixes",
+      "baselineSourceSha256": "91352c543e20be2b4a281093c08f4368b1141e00d37c90b22cb211fe61620f9b"
+    },
+    {
+      "proposedFile": "changes/p99-support-named-fixes/oot--#Kaiaren.lua",
+      "sourceSha256": "1272ca7c101471b98046af45d57c07558bf1da9c4219045a9f895df84cd917bc",
+      "key": "oot/#Kaiaren",
+      "enabled": 0,
+      "proposal": "p99-support-named-fixes",
+      "baselineSourceSha256": "c49ca4622e0273de6c6b1b59ce3095074c09d7a1b4058a42df5f9d30e068d055"
+    },
+    {
+      "proposedFile": "changes/p99-support-named-fixes/qey2hh1--Mistrana_Two_Notes.lua",
+      "sourceSha256": "2d1acda0618c89f03323e07a9d022dde421982cac5c70321d6adae61ea885768",
+      "key": "qey2hh1/Mistrana_Two_Notes",
+      "enabled": 1,
+      "proposal": "p99-support-named-fixes",
+      "baselineSourceSha256": "eaf1a6d4cd02003c1b0387f0ee344916bbfed31a50ea381efcdab40715377df1"
+    },
+    {
+      "proposedFile": "changes/p99-support-named-fixes/qeynos--Eve_Marsinger.lua",
+      "sourceSha256": "482ebe989733bd54c073d75b41d68b18b7dc1f164eeb06b3303480223780727c",
+      "key": "qeynos/Eve_Marsinger",
+      "enabled": 1,
+      "proposal": "p99-support-named-fixes",
+      "baselineSourceSha256": "2cfd26c133c528fd3ec55752c02cfe0a224f0670913aa9622c4a04c47952ce1f"
+    },
+    {
+      "proposedFile": "changes/p99-support-named-fixes/qrg--Sivina_Lutewhisper.lua",
+      "sourceSha256": "2d1acda0618c89f03323e07a9d022dde421982cac5c70321d6adae61ea885768",
+      "key": "qrg/Sivina_Lutewhisper",
+      "enabled": 1,
+      "proposal": "p99-support-named-fixes",
+      "baselineSourceSha256": "eaf1a6d4cd02003c1b0387f0ee344916bbfed31a50ea381efcdab40715377df1"
+    },
+    {
+      "proposedFile": "changes/p99-support-named-fixes/rathemtn--Tabien_the_Goodly.lua",
+      "sourceSha256": "bc74742517d39c01849e545d0acb73455eaa76b0ab9453aad9d7563fc17f484c",
+      "key": "rathemtn/Tabien_the_Goodly",
+      "enabled": 1,
+      "proposal": "p99-support-named-fixes",
+      "baselineSourceSha256": "80ea4e59d92cec092d5b3b989cea066758a860d2eeb78f1a910e609861758549"
+    },
+    {
+      "proposedFile": "changes/p99-support-named-fixes/rivervale--Silna_Songsmith.lua",
+      "sourceSha256": "553adecf88834db51715036d48493b27e9ce50d2d29e2288fa5f92f6b9da34f3",
+      "key": "rivervale/Silna_Songsmith",
+      "enabled": 1,
+      "proposal": "p99-support-named-fixes",
+      "baselineSourceSha256": "9bdcd15640be634b27abdae196cc186ba6449a0ecb92610a9525740b6bc57268"
+    },
+    {
+      "proposedFile": "changes/p99-support-named-fixes/everfrost--Granin_O'Gill.lua",
+      "sourceSha256": "1abf37c1f6df61f0adce789833fe087bb0ad32767dc02badd5863d6a7bd89932",
+      "key": "everfrost/Granin_O'Gill",
+      "enabled": 1,
+      "proposal": "p99-support-named-fixes",
+      "baselineSourceSha256": "bda7361339132c0b738a792a9d037e0c3bedf8e208d8ef40aaeb1904043eaeab"
+    },
+    {
+      "proposedFile": "changes/p99-support-named-fixes/southkarana--#Azibelle_Spavin.lua",
+      "sourceSha256": "bb4364e6a99a780422257132dd46ae4e9005e73567f1b45ecac90543b9851a36",
+      "key": "southkarana/#Azibelle_Spavin",
+      "enabled": 0,
+      "proposal": "p99-support-named-fixes",
+      "baselineSourceSha256": "83ca4d04dd77fcbadcd7da3a5c7ac564c6dc8ec4543cca47c4c2d8c246dae34d"
+    },
+    {
+      "proposedFile": "changes/p99-support-ocean-fishing-scope/oot-player.lua",
+      "sourceSha256": "1fa873bb1ab85f06a929fe305c97cd240af8053223b4797564c3ebd265c6a506",
+      "key": "oot/player",
+      "enabled": 1,
+      "proposal": "p99-support-ocean-fishing-scope",
+      "baselineSourceSha256": "43ed9d535b2868cfd04c302bddedd4bba19fabfdb944264b1ad6dac010bb4fc2"
+    },
+    {
+      "proposedFile": "changes/p99-support-world-scope/burningwood--#a_crippled_wurm.lua",
+      "sourceSha256": "f968a6962f0c9061419a914a9050a3c574f0b7fb6c455fd938951d5a79096376",
+      "key": "burningwood/#a_crippled_wurm",
+      "enabled": 0,
+      "proposal": "p99-support-world-scope",
+      "baselineSourceSha256": "7ab1be5d14bab99d24aba4f2fc6cd9619e47b64767789fae9caab431eaf0e72e"
+    },
+    {
+      "proposedFile": "changes/p99-support-world-scope/burningwood--a_sarnak_champion.lua",
+      "sourceSha256": "a9943b142173106c2f4dc13c5ac357d291449a252cc724c34f25f7cba8c3b388",
+      "key": "burningwood/a_sarnak_champion",
+      "enabled": 0,
+      "proposal": "p99-support-world-scope",
+      "baselineSourceSha256": "4e6cabb38bbe9654d8947341d46496d07560369f677442dea770fec640d6e36f"
+    },
+    {
+      "proposedFile": "changes/p99-support-world-scope/crushbone--#Orc_Messenger.lua",
+      "sourceSha256": "e205c7a820d3687959cc96dc1dcb7cbe744beae22ffe69bbab371c8494ea4afe",
+      "key": "crushbone/#Orc_Messenger",
+      "enabled": 0,
+      "proposal": "p99-support-world-scope",
+      "baselineSourceSha256": "673431428ea844dacabe72068088e80a6c8265b226759b80040eea66d9ebf918"
+    },
+    {
+      "proposedFile": "changes/p99-support-world-scope/crushbone--player.lua",
+      "sourceSha256": "6588537a3022c803728835ce8b552d655076c6f6f1645dcfb69d5f6c7d02974c",
+      "key": "crushbone/player",
+      "enabled": 0,
+      "proposal": "p99-support-world-scope",
+      "baselineSourceSha256": "231cdb15cf23f4ac799c813cc9f612dc47df126c2395a8bf7254586bf027fefe"
+    },
+    {
+      "proposedFile": "changes/p99-support-world-scope/dreadlands--#mage_trap.lua",
+      "sourceSha256": "da1fb285ea1e68cc89eccfa3147d4bc7511328122141d79f6358c492a87f3cd4",
+      "key": "dreadlands/#mage_trap",
+      "enabled": 0,
+      "proposal": "p99-support-world-scope",
+      "baselineSourceSha256": "3f246aed878e2d3d470c9d67a7571816cfb488b81b698bd16fe54f14544707a7"
+    },
+    {
+      "proposedFile": "changes/p99-support-world-scope/dreadlands--a_drolvarg_rager.lua",
+      "sourceSha256": "30b45bdecea1f2a63bac51e831308ebd287b528f3bd5ebb215a6626573083d5f",
+      "key": "dreadlands/a_drolvarg_rager",
+      "enabled": 0,
+      "proposal": "p99-support-world-scope",
+      "baselineSourceSha256": "2dbe29bf05a55b5ce73abcd2cf4dd4e97e8f80ca3fd0520899cde0a78fd229f0"
+    },
+    {
+      "proposedFile": "changes/p99-support-world-scope/dreadlands--a_petrifier_cockatrice.lua",
+      "sourceSha256": "8fe273291b35548266e75ddca57479d3fdb4db40655c87626c8aa242ce496b46",
+      "key": "dreadlands/a_petrifier_cockatrice",
+      "enabled": 0,
+      "proposal": "p99-support-world-scope",
+      "baselineSourceSha256": "b44416cc959cf5cfe9ddc8b27b0294205545620f902704308f7a9fe98aa81fda"
+    },
+    {
+      "proposedFile": "changes/p99-support-world-scope/eastkarana--a_crag_spider.lua",
+      "sourceSha256": "690a87d7dbb763df3dbf5558112c8e7ad4ef313af29bbd821746ccce52eab730",
+      "key": "eastkarana/a_crag_spider",
+      "enabled": 0,
+      "proposal": "p99-support-world-scope",
+      "baselineSourceSha256": "d209a075f00c8965261de7106a18b0eb6a17402fe8ec826bed958472c8dc51b6"
+    },
+    {
+      "proposedFile": "changes/p99-support-world-scope/eastwastes--#warr_trap.lua",
+      "sourceSha256": "b05d2a25bc5f939db35d7f1883acc7515fe588a9c27bdc95a7256479829e823d",
+      "key": "eastwastes/#warr_trap",
+      "enabled": 0,
+      "proposal": "p99-support-world-scope",
+      "baselineSourceSha256": "6d91ebe0498b0c7fee9451fb6243b4f21ca74fa229df992b1becd96d789d5d42"
+    },
+    {
+      "proposedFile": "changes/p99-support-world-scope/eastwastes--Larnik_the_Recluse.lua",
+      "sourceSha256": "3d37826ed8f9c5f6f1a0df8f6c749875dd844d52ed96a8c67b5605edb7f15716",
+      "key": "eastwastes/Larnik_the_Recluse",
+      "enabled": 0,
+      "proposal": "p99-support-world-scope",
+      "baselineSourceSha256": "9f880b7782fd8a0c21b3f1b46f8db0f8f284f1d0eb5dcd33eed9d0e1a72045ef"
+    },
+    {
+      "proposedFile": "changes/p99-support-world-scope/eastwastes--player.lua",
+      "sourceSha256": "ec8ca6f5ae3154e49aa1bf05d0032d8d16c99adff261c348defddc166fcf9020",
+      "key": "eastwastes/player",
+      "enabled": 0,
+      "proposal": "p99-support-world-scope",
+      "baselineSourceSha256": "d96b6ff9fc0ec49b0cf1787bf0e07a15cd327730ba915209e7bf87b137f20407"
+    },
+    {
+      "proposedFile": "changes/p99-support-world-scope/emeraldjungle--a_soulsipper.lua",
+      "sourceSha256": "629377fbf1f7e78c7a0cb72934eef579165a2c1db1fd4082f9b0ebe75a1418d7",
+      "key": "emeraldjungle/a_soulsipper",
+      "enabled": 0,
+      "proposal": "p99-support-world-scope",
+      "baselineSourceSha256": "f1286760d051fad4983c4194cdaf9f01e9870fb9a2836a298be15e8c5c07d525"
+    },
+    {
+      "proposedFile": "changes/p99-support-world-scope/fieldofbone--#Berserker-s_Image.lua",
+      "sourceSha256": "e1cb1786eb4693fa0b325ae8086c7f832b7eb3d9fefdfd29d99baa102fa8cc16",
+      "key": "fieldofbone/#Berserker-s_Image",
+      "enabled": 0,
+      "proposal": "p99-support-world-scope",
+      "baselineSourceSha256": "8355b36ef294e70aaf6b5d81bb3817edd06dc7415471eacae63e84bbcd7638ad"
+    },
+    {
+      "proposedFile": "changes/p99-support-world-scope/freportn--#Elder_Spirit_of_Might.lua",
+      "sourceSha256": "ada2933224eec22076c385c023ea78f80f39fcb73254f0479faff3c230eee8f6",
+      "key": "freportn/#Elder_Spirit_of_Might",
+      "enabled": 0,
+      "proposal": "p99-support-world-scope",
+      "baselineSourceSha256": "353464f96bb2b62bdde9bcc5150d865d106cb02f371aadc66d55565add84ec7a"
+    },
+    {
+      "proposedFile": "changes/p99-support-world-scope/freportn--#Elder_Spirit_of_Patience.lua",
+      "sourceSha256": "d3e15ab19edc166044629fe64f416f66a9bb068c5e1f4e5c246d3851aebe94e2",
+      "key": "freportn/#Elder_Spirit_of_Patience",
+      "enabled": 0,
+      "proposal": "p99-support-world-scope",
+      "baselineSourceSha256": "d84131fb5d550604e3dfe96d835fc99e3e16aa15a9e678793fdde8a2d1032056"
+    },
+    {
+      "proposedFile": "changes/p99-support-world-scope/freportn--#Elder_Spirit_of_Perseverance.lua",
+      "sourceSha256": "318615d1045623806b6115a5a9aeebf5ea718e9d217687f9db25ba60202f2f69",
+      "key": "freportn/#Elder_Spirit_of_Perseverance",
+      "enabled": 0,
+      "proposal": "p99-support-world-scope",
+      "baselineSourceSha256": "ff5c28dcf7de6239b63119c4bacbcba156c5018b6ce5c31fa63023c69e33ec24"
+    },
+    {
+      "proposedFile": "changes/p99-support-world-scope/freportn--#Elder_Spirit_of_Wisdom.lua",
+      "sourceSha256": "3348288f0b3f8aedd94e65ee1af3f113065a334a556bfef98e04adec35c47bc8",
+      "key": "freportn/#Elder_Spirit_of_Wisdom",
+      "enabled": 0,
+      "proposal": "p99-support-world-scope",
+      "baselineSourceSha256": "ffed216c6f1fa9c03cdfeef038c375fcff1ae23ec176d0fbd3dce9ef49647d37"
+    },
+    {
+      "proposedFile": "changes/p99-support-world-scope/guktop--a_froglok_gaz_knight.lua",
+      "sourceSha256": "e48181c8cd62795bd585062d1562862606ff4e68a618b93bda25433271ecbd7f",
+      "key": "guktop/a_froglok_gaz_knight",
+      "enabled": 0,
+      "proposal": "p99-support-world-scope",
+      "baselineSourceSha256": "b53323094410c07888739bc7cacef0f89534bd2a658d3969f185f87b0653153c"
+    },
+    {
+      "proposedFile": "changes/p99-support-world-scope/guktop--a_froglok_gaz_shaman.lua",
+      "sourceSha256": "e48181c8cd62795bd585062d1562862606ff4e68a618b93bda25433271ecbd7f",
+      "key": "guktop/a_froglok_gaz_shaman",
+      "enabled": 0,
+      "proposal": "p99-support-world-scope",
+      "baselineSourceSha256": "b53323094410c07888739bc7cacef0f89534bd2a658d3969f185f87b0653153c"
+    },
+    {
+      "proposedFile": "changes/p99-support-world-scope/guktop--a_froglok_gaz_squire.lua",
+      "sourceSha256": "e48181c8cd62795bd585062d1562862606ff4e68a618b93bda25433271ecbd7f",
+      "key": "guktop/a_froglok_gaz_squire",
+      "enabled": 0,
+      "proposal": "p99-support-world-scope",
+      "baselineSourceSha256": "b53323094410c07888739bc7cacef0f89534bd2a658d3969f185f87b0653153c"
+    },
+    {
+      "proposedFile": "changes/p99-support-world-scope/guktop--a_froglok_gaz_warrior.lua",
+      "sourceSha256": "e48181c8cd62795bd585062d1562862606ff4e68a618b93bda25433271ecbd7f",
+      "key": "guktop/a_froglok_gaz_warrior",
+      "enabled": 0,
+      "proposal": "p99-support-world-scope",
+      "baselineSourceSha256": "b53323094410c07888739bc7cacef0f89534bd2a658d3969f185f87b0653153c"
+    },
+    {
+      "proposedFile": "changes/p99-support-world-scope/guktop--a_froglok_ton_warrior.lua",
+      "sourceSha256": "f887266488a84d07517bbe80a74983a74752b5e78a959152746eb9c428736905",
+      "key": "guktop/a_froglok_ton_warrior",
+      "enabled": 0,
+      "proposal": "p99-support-world-scope",
+      "baselineSourceSha256": "7e39f8a90506112629c1054eeb5f112088054f550edb7f284f46178394834286"
+    },
+    {
+      "proposedFile": "changes/p99-support-world-scope/lakeofillomen--#_.lua",
+      "sourceSha256": "30dbeed41ddc8d8b72598b1c5205a61bdca9f94f95402f570cf276b0dcf242e1",
+      "key": "lakeofillomen/#_",
+      "enabled": 0,
+      "proposal": "p99-support-world-scope",
+      "baselineSourceSha256": "8b1286e746a1c44c6345ac5968106bf07029898b4db7fa4b12b036fe6ded7902"
+    },
+    {
+      "proposedFile": "changes/p99-support-world-scope/lakeofillomen--a_bloodgill_goblin.lua",
+      "sourceSha256": "f4e39ca456d6ea183b6d3242cddd7fa24024a87a1679e736bb8000e589fdaf8a",
+      "key": "lakeofillomen/a_bloodgill_goblin",
+      "enabled": 0,
+      "proposal": "p99-support-world-scope",
+      "baselineSourceSha256": "ab18be54e4ad405153354945ac2a6ff12f31791c527a60a4e731c5eff344ec32"
+    },
+    {
+      "proposedFile": "changes/p99-support-world-scope/lakerathe--Vortix.lua",
+      "sourceSha256": "e0c70bf050113988509645e2c4016abeb6fae2a8d7ae0544823875020201c576",
+      "key": "lakerathe/Vortix",
+      "enabled": 0,
+      "proposal": "p99-support-world-scope",
+      "baselineSourceSha256": "661c8fe0461dd343ff477829385d56ca59629a7b4b6c3d237f711f531e3d8d6a"
+    },
+    {
+      "proposedFile": "changes/p99-support-world-scope/lfaydark--Reanimated_Minion.lua",
+      "sourceSha256": "20f472a796d5aafd8d7452a0da102288068917b016e09b0e4f371246ddbbcc45",
+      "key": "lfaydark/Reanimated_Minion",
+      "enabled": 0,
+      "proposal": "p99-support-world-scope",
+      "baselineSourceSha256": "d5d2f1a799e2f2cc2a5cbcef4f058a93f0ae5655ad3e81c12b8b9796128da653"
+    },
+    {
+      "proposedFile": "changes/p99-support-world-scope/misty--Crysta_Tagglefoot.lua",
+      "sourceSha256": "bd19463e6e1cde6f512a95b6bdc776c21f1b012262944e8214e229d6106b767d",
+      "key": "misty/Crysta_Tagglefoot",
+      "enabled": 0,
+      "proposal": "p99-support-world-scope",
+      "baselineSourceSha256": "73b3766eaffb54b218d18f54790e941e455d447ab28742b76e7e04edf46862ed"
+    },
+    {
+      "proposedFile": "changes/p99-support-world-scope/necropolis--a_Chetari_warrior.lua",
+      "sourceSha256": "00bd026f5a7463a8890ca9607ed1668dc0c731c1916c6181828cc910bdc2703b",
+      "key": "necropolis/a_Chetari_warrior",
+      "enabled": 0,
+      "proposal": "p99-support-world-scope",
+      "baselineSourceSha256": "a140450dd3257e783836a79e58ea5efd51130d8e3435147e36e479fe3df31ade"
+    },
+    {
+      "proposedFile": "changes/p99-support-world-scope/necropolis--player.lua",
+      "sourceSha256": "0ce96763f440e08a2e65ff649128b749ff13b196cb3913d08a0a463c4b08e4d9",
+      "key": "necropolis/player",
+      "enabled": 0,
+      "proposal": "p99-support-world-scope",
+      "baselineSourceSha256": "eec273eaadf0aae35bfcc180783be40f9f4b053a7828c5a11710049366644407"
+    },
+    {
+      "proposedFile": "changes/p99-support-world-scope/northkarana--#a_plains_dragon.lua",
+      "sourceSha256": "1b16e27c858a70e2a562574d79999332cdbc75d809e8fd389dbcaa8c4c0fedac",
+      "key": "northkarana/#a_plains_dragon",
+      "enabled": 0,
+      "proposal": "p99-support-world-scope",
+      "baselineSourceSha256": "6150a5ea775216b912116c1e2c6771d39f21a42ca3a35311c195e0f9d6f44477"
+    },
+    {
+      "proposedFile": "changes/p99-support-world-scope/southkarana--an_adult_elephant.lua",
+      "sourceSha256": "bf4274ba19de8926a315d3ab7a36334da5309039452392207e2825c212cc47d1",
+      "key": "southkarana/an_adult_elephant",
+      "enabled": 0,
+      "proposal": "p99-support-world-scope",
+      "baselineSourceSha256": "a6e62fbb7fcf1245c4105d59eb7f19132f826c62b065d07d7c21e5db8ea3a5d2"
+    },
+    {
+      "proposedFile": "changes/p99-support-world-scope/swampofnohope--#a_swamp_dragon.lua",
+      "sourceSha256": "53fde7487e6ecbb60851e5d5b0ee856efd7adda66bb8810d1e214c5042e6d49c",
+      "key": "swampofnohope/#a_swamp_dragon",
+      "enabled": 0,
+      "proposal": "p99-support-world-scope",
+      "baselineSourceSha256": "8159ae5f3b0d1ded384a7e3e83fed979a3abad01824e3f5390351a0d8c3b60af"
+    },
+    {
+      "proposedFile": "changes/p99-support-world-scope/timorous--player.lua",
+      "sourceSha256": "1495dc163e74538d46afbf68bb9abc0bd0d347c4c6c63fe2553de4a996f7b789",
+      "key": "timorous/player",
+      "enabled": 0,
+      "proposal": "p99-support-world-scope",
+      "baselineSourceSha256": "6874805c86e415bff8ea86b700bed618be42d43d881c1af67c6445801fe0103c"
+    },
+    {
+      "proposedFile": "changes/p99-support-world-scope/tox--#Fleshless_Servant.lua",
+      "sourceSha256": "893cc6637b72262566a0df8ed9154d4fdac61e4e5a40bea1a264b96906a0e6bf",
+      "key": "tox/#Fleshless_Servant",
+      "enabled": 0,
+      "proposal": "p99-support-world-scope",
+      "baselineSourceSha256": "1022523394972c7ac2f910111aee843ba830fc9403c096099d6c70196a1eecb3"
+    },
+    {
+      "proposedFile": "changes/p99-support-world-scope/trakanon--sabretooth_tiger.lua",
+      "sourceSha256": "680508d2abded5708d811ec314256a2f8f6c0620cdb3ab846151f8a42b55db7f",
+      "key": "trakanon/sabretooth_tiger",
+      "enabled": 0,
+      "proposal": "p99-support-world-scope",
+      "baselineSourceSha256": "bed01d778fffe8e634e86394c7a8a9ffffdd1450e345e57c1e5e71ce24b5e2de"
+    },
+    {
+      "proposedFile": "changes/p99-support-world-scope/westwastes--Disciple_of_Moon.lua",
+      "sourceSha256": "cc7e91d930d18084d08f30487a6d67439fcbb69c1af7e93d4d0971ddb04509de",
+      "key": "westwastes/Disciple_of_Moon",
+      "enabled": 0,
+      "proposal": "p99-support-world-scope",
+      "baselineSourceSha256": "52e59f733b92cad43ad68a83289caf36d2d43b230369b6bb1f6a12fc9766dd6a"
+    }
+  ],
+  "cases": [
+    {
+      "key": "akanon/Lyra_Lyrestringer",
+      "name": "akanon/Lyra_Lyrestringer delivery kelethin",
+      "assertions": "say(\"kelethin\"); reward(18163,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/akanon--Lyra_Lyrestringer.lua",
+      "sourceSha256": "fb73395c7bfa114de164cc229d7fbf0112502ea3c365627ac1a7713e6e093031",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "akanon/Lyra_Lyrestringer",
+      "name": "akanon/Lyra_Lyrestringer delivery to kelethin",
+      "assertions": "say(\"to kelethin\"); reward(18163,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/akanon--Lyra_Lyrestringer.lua",
+      "sourceSha256": "fb73395c7bfa114de164cc229d7fbf0112502ea3c365627ac1a7713e6e093031",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "akanon/Lyra_Lyrestringer",
+      "name": "akanon/Lyra_Lyrestringer delivery I will deliver mail to kelethin.",
+      "assertions": "say(\"I will deliver mail to kelethin.\"); reward(18163,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/akanon--Lyra_Lyrestringer.lua",
+      "sourceSha256": "fb73395c7bfa114de164cc229d7fbf0112502ea3c365627ac1a7713e6e093031",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "akanon/Lyra_Lyrestringer",
+      "name": "akanon/Lyra_Lyrestringer delivery deliver",
+      "assertions": "say(\"deliver\"); reward(18163,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/akanon--Lyra_Lyrestringer.lua",
+      "sourceSha256": "fb73395c7bfa114de164cc229d7fbf0112502ea3c365627ac1a7713e6e093031",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "akanon/Lyra_Lyrestringer",
+      "name": "akanon/Lyra_Lyrestringer advertised interested link",
+      "assertions": "say(\"interested\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/akanon--Lyra_Lyrestringer.lua",
+      "sourceSha256": "fb73395c7bfa114de164cc229d7fbf0112502ea3c365627ac1a7713e6e093031",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "butcher/Siltria_Marwind",
+      "name": "butcher/Siltria_Marwind delivery kelethin",
+      "assertions": "say(\"kelethin\"); reward(18160,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/butcher--Siltria_Marwind.lua",
+      "sourceSha256": "70648534ac1b3b2484427a63ad6a703324362b8003dc73f7b88bc9c5e90fb065",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "butcher/Siltria_Marwind",
+      "name": "butcher/Siltria_Marwind delivery to kelethin",
+      "assertions": "say(\"to kelethin\"); reward(18160,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/butcher--Siltria_Marwind.lua",
+      "sourceSha256": "70648534ac1b3b2484427a63ad6a703324362b8003dc73f7b88bc9c5e90fb065",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "butcher/Siltria_Marwind",
+      "name": "butcher/Siltria_Marwind delivery I will deliver mail to kelethin.",
+      "assertions": "say(\"I will deliver mail to kelethin.\"); reward(18160,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/butcher--Siltria_Marwind.lua",
+      "sourceSha256": "70648534ac1b3b2484427a63ad6a703324362b8003dc73f7b88bc9c5e90fb065",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "butcher/Siltria_Marwind",
+      "name": "butcher/Siltria_Marwind delivery deliver",
+      "assertions": "say(\"deliver\"); reward(18160,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/butcher--Siltria_Marwind.lua",
+      "sourceSha256": "70648534ac1b3b2484427a63ad6a703324362b8003dc73f7b88bc9c5e90fb065",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "butcher/Siltria_Marwind",
+      "name": "butcher/Siltria_Marwind advertised interested link",
+      "assertions": "say(\"interested\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/butcher--Siltria_Marwind.lua",
+      "sourceSha256": "70648534ac1b3b2484427a63ad6a703324362b8003dc73f7b88bc9c5e90fb065",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "erudnext/Ticar_Lorestring",
+      "name": "erudnext/Ticar_Lorestring delivery qeynos",
+      "assertions": "say(\"qeynos\"); reward(18151,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/erudnext--Ticar_Lorestring.lua",
+      "sourceSha256": "a91104b7c9efda980445a565b3be533c426f5d64a2f36e76ec2a0fd1b33549d1",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "erudnext/Ticar_Lorestring",
+      "name": "erudnext/Ticar_Lorestring delivery to qeynos",
+      "assertions": "say(\"to qeynos\"); reward(18151,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/erudnext--Ticar_Lorestring.lua",
+      "sourceSha256": "a91104b7c9efda980445a565b3be533c426f5d64a2f36e76ec2a0fd1b33549d1",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "erudnext/Ticar_Lorestring",
+      "name": "erudnext/Ticar_Lorestring delivery I will deliver mail to qeynos.",
+      "assertions": "say(\"I will deliver mail to qeynos.\"); reward(18151,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/erudnext--Ticar_Lorestring.lua",
+      "sourceSha256": "a91104b7c9efda980445a565b3be533c426f5d64a2f36e76ec2a0fd1b33549d1",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "erudnext/Ticar_Lorestring",
+      "name": "erudnext/Ticar_Lorestring delivery deliver",
+      "assertions": "say(\"deliver\"); reward(18151,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/erudnext--Ticar_Lorestring.lua",
+      "sourceSha256": "a91104b7c9efda980445a565b3be533c426f5d64a2f36e76ec2a0fd1b33549d1",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "erudnext/Ticar_Lorestring",
+      "name": "erudnext/Ticar_Lorestring advertised interested link",
+      "assertions": "say(\"interested\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/erudnext--Ticar_Lorestring.lua",
+      "sourceSha256": "a91104b7c9efda980445a565b3be533c426f5d64a2f36e76ec2a0fd1b33549d1",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "feerrott/Drizda_Tunesinger",
+      "name": "feerrott/Drizda_Tunesinger delivery freeport",
+      "assertions": "say(\"freeport\"); reward(18157,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/feerrott--Drizda_Tunesinger.lua",
+      "sourceSha256": "8ee53b5b046df59fca6ab46e36711826d6aa847f88a24a4fb187ea99775b9973",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "feerrott/Drizda_Tunesinger",
+      "name": "feerrott/Drizda_Tunesinger delivery to freeport",
+      "assertions": "say(\"to freeport\"); reward(18157,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/feerrott--Drizda_Tunesinger.lua",
+      "sourceSha256": "8ee53b5b046df59fca6ab46e36711826d6aa847f88a24a4fb187ea99775b9973",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "feerrott/Drizda_Tunesinger",
+      "name": "feerrott/Drizda_Tunesinger delivery I will deliver mail to freeport.",
+      "assertions": "say(\"I will deliver mail to freeport.\"); reward(18157,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/feerrott--Drizda_Tunesinger.lua",
+      "sourceSha256": "8ee53b5b046df59fca6ab46e36711826d6aa847f88a24a4fb187ea99775b9973",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "feerrott/Drizda_Tunesinger",
+      "name": "feerrott/Drizda_Tunesinger delivery deliver",
+      "assertions": "say(\"deliver\"); reward(18157,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/feerrott--Drizda_Tunesinger.lua",
+      "sourceSha256": "8ee53b5b046df59fca6ab46e36711826d6aa847f88a24a4fb187ea99775b9973",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "feerrott/Drizda_Tunesinger",
+      "name": "feerrott/Drizda_Tunesinger advertised interested link",
+      "assertions": "say(\"interested\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/feerrott--Drizda_Tunesinger.lua",
+      "sourceSha256": "8ee53b5b046df59fca6ab46e36711826d6aa847f88a24a4fb187ea99775b9973",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "gfaydark/Idia",
+      "name": "gfaydark/Idia delivery freeport",
+      "assertions": "say(\"freeport\"); reward(18166,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/gfaydark--Idia.lua",
+      "sourceSha256": "af8733a8c875aeac710a81a80d0facb678f66a646523e8deca83a795a020b129",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "gfaydark/Idia",
+      "name": "gfaydark/Idia delivery to freeport",
+      "assertions": "say(\"to freeport\"); reward(18166,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/gfaydark--Idia.lua",
+      "sourceSha256": "af8733a8c875aeac710a81a80d0facb678f66a646523e8deca83a795a020b129",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "gfaydark/Idia",
+      "name": "gfaydark/Idia delivery I will deliver mail to freeport.",
+      "assertions": "say(\"I will deliver mail to freeport.\"); reward(18166,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/gfaydark--Idia.lua",
+      "sourceSha256": "af8733a8c875aeac710a81a80d0facb678f66a646523e8deca83a795a020b129",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "gfaydark/Idia",
+      "name": "gfaydark/Idia delivery deliver",
+      "assertions": "say(\"deliver\"); reward(18166,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/gfaydark--Idia.lua",
+      "sourceSha256": "af8733a8c875aeac710a81a80d0facb678f66a646523e8deca83a795a020b129",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "gfaydark/Idia",
+      "name": "gfaydark/Idia advertised interested link",
+      "assertions": "say(\"interested\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/gfaydark--Idia.lua",
+      "sourceSha256": "af8733a8c875aeac710a81a80d0facb678f66a646523e8deca83a795a020b129",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "halas/Marton_Stringsinger",
+      "name": "halas/Marton_Stringsinger delivery qeynos",
+      "assertions": "say(\"qeynos\"); reward(18153,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/halas--Marton_Stringsinger.lua",
+      "sourceSha256": "a20eb14ee9e1251a84a997c48baf88ca79216ba896452789a6b791cfb273d32f",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "halas/Marton_Stringsinger",
+      "name": "halas/Marton_Stringsinger delivery to qeynos",
+      "assertions": "say(\"to qeynos\"); reward(18153,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/halas--Marton_Stringsinger.lua",
+      "sourceSha256": "a20eb14ee9e1251a84a997c48baf88ca79216ba896452789a6b791cfb273d32f",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "halas/Marton_Stringsinger",
+      "name": "halas/Marton_Stringsinger delivery I will deliver mail to qeynos.",
+      "assertions": "say(\"I will deliver mail to qeynos.\"); reward(18153,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/halas--Marton_Stringsinger.lua",
+      "sourceSha256": "a20eb14ee9e1251a84a997c48baf88ca79216ba896452789a6b791cfb273d32f",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "halas/Marton_Stringsinger",
+      "name": "halas/Marton_Stringsinger delivery deliver",
+      "assertions": "say(\"deliver\"); reward(18153,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/halas--Marton_Stringsinger.lua",
+      "sourceSha256": "a20eb14ee9e1251a84a997c48baf88ca79216ba896452789a6b791cfb273d32f",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "halas/Marton_Stringsinger",
+      "name": "halas/Marton_Stringsinger advertised interested link",
+      "assertions": "say(\"interested\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/halas--Marton_Stringsinger.lua",
+      "sourceSha256": "a20eb14ee9e1251a84a997c48baf88ca79216ba896452789a6b791cfb273d32f",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "nektulos/Travis_Two_Tone",
+      "name": "nektulos/Travis_Two_Tone delivery freeport",
+      "assertions": "say(\"freeport\"); reward(18158,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/nektulos--Travis_Two_Tone.lua",
+      "sourceSha256": "d2862d0d1496e4bd5abe1fcdb1c6ab9c992b64da492a8e97b1d152505dc53d68",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "nektulos/Travis_Two_Tone",
+      "name": "nektulos/Travis_Two_Tone delivery to freeport",
+      "assertions": "say(\"to freeport\"); reward(18158,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/nektulos--Travis_Two_Tone.lua",
+      "sourceSha256": "d2862d0d1496e4bd5abe1fcdb1c6ab9c992b64da492a8e97b1d152505dc53d68",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "nektulos/Travis_Two_Tone",
+      "name": "nektulos/Travis_Two_Tone delivery I will deliver mail to freeport.",
+      "assertions": "say(\"I will deliver mail to freeport.\"); reward(18158,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/nektulos--Travis_Two_Tone.lua",
+      "sourceSha256": "d2862d0d1496e4bd5abe1fcdb1c6ab9c992b64da492a8e97b1d152505dc53d68",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "nektulos/Travis_Two_Tone",
+      "name": "nektulos/Travis_Two_Tone delivery deliver",
+      "assertions": "say(\"deliver\"); reward(18158,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/nektulos--Travis_Two_Tone.lua",
+      "sourceSha256": "d2862d0d1496e4bd5abe1fcdb1c6ab9c992b64da492a8e97b1d152505dc53d68",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "nektulos/Travis_Two_Tone",
+      "name": "nektulos/Travis_Two_Tone advertised interested link",
+      "assertions": "say(\"interested\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/nektulos--Travis_Two_Tone.lua",
+      "sourceSha256": "d2862d0d1496e4bd5abe1fcdb1c6ab9c992b64da492a8e97b1d152505dc53d68",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "qey2hh1/Mistrana_Two_Notes",
+      "name": "qey2hh1/Mistrana_Two_Notes delivery qeynos",
+      "assertions": "say(\"qeynos\"); reward(18150,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/qey2hh1--Mistrana_Two_Notes.lua",
+      "sourceSha256": "2d1acda0618c89f03323e07a9d022dde421982cac5c70321d6adae61ea885768",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "qey2hh1/Mistrana_Two_Notes",
+      "name": "qey2hh1/Mistrana_Two_Notes delivery to qeynos",
+      "assertions": "say(\"to qeynos\"); reward(18150,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/qey2hh1--Mistrana_Two_Notes.lua",
+      "sourceSha256": "2d1acda0618c89f03323e07a9d022dde421982cac5c70321d6adae61ea885768",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "qey2hh1/Mistrana_Two_Notes",
+      "name": "qey2hh1/Mistrana_Two_Notes delivery I will deliver mail to qeynos.",
+      "assertions": "say(\"I will deliver mail to qeynos.\"); reward(18150,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/qey2hh1--Mistrana_Two_Notes.lua",
+      "sourceSha256": "2d1acda0618c89f03323e07a9d022dde421982cac5c70321d6adae61ea885768",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "qey2hh1/Mistrana_Two_Notes",
+      "name": "qey2hh1/Mistrana_Two_Notes delivery deliver",
+      "assertions": "say(\"deliver\"); reward(18150,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/qey2hh1--Mistrana_Two_Notes.lua",
+      "sourceSha256": "2d1acda0618c89f03323e07a9d022dde421982cac5c70321d6adae61ea885768",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "qey2hh1/Mistrana_Two_Notes",
+      "name": "qey2hh1/Mistrana_Two_Notes advertised interested link",
+      "assertions": "say(\"interested\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/qey2hh1--Mistrana_Two_Notes.lua",
+      "sourceSha256": "2d1acda0618c89f03323e07a9d022dde421982cac5c70321d6adae61ea885768",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "qeynos/Eve_Marsinger",
+      "name": "qeynos/Eve_Marsinger delivery highpass",
+      "assertions": "say(\"highpass\"); reward(18152,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/qeynos--Eve_Marsinger.lua",
+      "sourceSha256": "482ebe989733bd54c073d75b41d68b18b7dc1f164eeb06b3303480223780727c",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "qeynos/Eve_Marsinger",
+      "name": "qeynos/Eve_Marsinger delivery to highpass",
+      "assertions": "say(\"to highpass\"); reward(18152,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/qeynos--Eve_Marsinger.lua",
+      "sourceSha256": "482ebe989733bd54c073d75b41d68b18b7dc1f164eeb06b3303480223780727c",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "qeynos/Eve_Marsinger",
+      "name": "qeynos/Eve_Marsinger delivery I will deliver mail to highpass.",
+      "assertions": "say(\"I will deliver mail to highpass.\"); reward(18152,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/qeynos--Eve_Marsinger.lua",
+      "sourceSha256": "482ebe989733bd54c073d75b41d68b18b7dc1f164eeb06b3303480223780727c",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "qeynos/Eve_Marsinger",
+      "name": "qeynos/Eve_Marsinger delivery deliver",
+      "assertions": "say(\"deliver\"); reward(18152,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/qeynos--Eve_Marsinger.lua",
+      "sourceSha256": "482ebe989733bd54c073d75b41d68b18b7dc1f164eeb06b3303480223780727c",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "qeynos/Eve_Marsinger",
+      "name": "qeynos/Eve_Marsinger advertised interested link",
+      "assertions": "say(\"interested\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/qeynos--Eve_Marsinger.lua",
+      "sourceSha256": "482ebe989733bd54c073d75b41d68b18b7dc1f164eeb06b3303480223780727c",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "qrg/Sivina_Lutewhisper",
+      "name": "qrg/Sivina_Lutewhisper delivery qeynos",
+      "assertions": "say(\"qeynos\"); reward(18150,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/qrg--Sivina_Lutewhisper.lua",
+      "sourceSha256": "2d1acda0618c89f03323e07a9d022dde421982cac5c70321d6adae61ea885768",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "qrg/Sivina_Lutewhisper",
+      "name": "qrg/Sivina_Lutewhisper delivery to qeynos",
+      "assertions": "say(\"to qeynos\"); reward(18150,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/qrg--Sivina_Lutewhisper.lua",
+      "sourceSha256": "2d1acda0618c89f03323e07a9d022dde421982cac5c70321d6adae61ea885768",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "qrg/Sivina_Lutewhisper",
+      "name": "qrg/Sivina_Lutewhisper delivery I will deliver mail to qeynos.",
+      "assertions": "say(\"I will deliver mail to qeynos.\"); reward(18150,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/qrg--Sivina_Lutewhisper.lua",
+      "sourceSha256": "2d1acda0618c89f03323e07a9d022dde421982cac5c70321d6adae61ea885768",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "qrg/Sivina_Lutewhisper",
+      "name": "qrg/Sivina_Lutewhisper delivery deliver",
+      "assertions": "say(\"deliver\"); reward(18150,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/qrg--Sivina_Lutewhisper.lua",
+      "sourceSha256": "2d1acda0618c89f03323e07a9d022dde421982cac5c70321d6adae61ea885768",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "qrg/Sivina_Lutewhisper",
+      "name": "qrg/Sivina_Lutewhisper advertised interested link",
+      "assertions": "say(\"interested\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/qrg--Sivina_Lutewhisper.lua",
+      "sourceSha256": "2d1acda0618c89f03323e07a9d022dde421982cac5c70321d6adae61ea885768",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "rivervale/Silna_Songsmith",
+      "name": "rivervale/Silna_Songsmith delivery freeport",
+      "assertions": "say(\"freeport\"); reward(18164,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/rivervale--Silna_Songsmith.lua",
+      "sourceSha256": "553adecf88834db51715036d48493b27e9ce50d2d29e2288fa5f92f6b9da34f3",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "rivervale/Silna_Songsmith",
+      "name": "rivervale/Silna_Songsmith delivery to freeport",
+      "assertions": "say(\"to freeport\"); reward(18164,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/rivervale--Silna_Songsmith.lua",
+      "sourceSha256": "553adecf88834db51715036d48493b27e9ce50d2d29e2288fa5f92f6b9da34f3",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "rivervale/Silna_Songsmith",
+      "name": "rivervale/Silna_Songsmith delivery I will deliver mail to freeport.",
+      "assertions": "say(\"I will deliver mail to freeport.\"); reward(18164,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/rivervale--Silna_Songsmith.lua",
+      "sourceSha256": "553adecf88834db51715036d48493b27e9ce50d2d29e2288fa5f92f6b9da34f3",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "rivervale/Silna_Songsmith",
+      "name": "rivervale/Silna_Songsmith delivery deliver",
+      "assertions": "say(\"deliver\"); reward(18164,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/rivervale--Silna_Songsmith.lua",
+      "sourceSha256": "553adecf88834db51715036d48493b27e9ce50d2d29e2288fa5f92f6b9da34f3",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "rivervale/Silna_Songsmith",
+      "name": "rivervale/Silna_Songsmith advertised interested link",
+      "assertions": "say(\"interested\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/rivervale--Silna_Songsmith.lua",
+      "sourceSha256": "553adecf88834db51715036d48493b27e9ce50d2d29e2288fa5f92f6b9da34f3",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "freportn/Ton_Twostring",
+      "name": "freportn/Ton_Twostring delivery kelethin",
+      "assertions": "say(\"kelethin\"); reward(18167,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/freportn--Ton_Twostring.lua",
+      "sourceSha256": "7f47b8eda38f0659cbfca9645f39df0392adf3972461925b691fb508a6f94132",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "freportn/Ton_Twostring",
+      "name": "freportn/Ton_Twostring delivery to kelethin",
+      "assertions": "say(\"to kelethin\"); reward(18167,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/freportn--Ton_Twostring.lua",
+      "sourceSha256": "7f47b8eda38f0659cbfca9645f39df0392adf3972461925b691fb508a6f94132",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "freportn/Ton_Twostring",
+      "name": "freportn/Ton_Twostring delivery I will deliver mail to kelethin.",
+      "assertions": "say(\"I will deliver mail to kelethin.\"); reward(18167,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/freportn--Ton_Twostring.lua",
+      "sourceSha256": "7f47b8eda38f0659cbfca9645f39df0392adf3972461925b691fb508a6f94132",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "freportn/Ton_Twostring",
+      "name": "freportn/Ton_Twostring delivery highpass",
+      "assertions": "say(\"highpass\"); reward(18156,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/freportn--Ton_Twostring.lua",
+      "sourceSha256": "7f47b8eda38f0659cbfca9645f39df0392adf3972461925b691fb508a6f94132",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "freportn/Ton_Twostring",
+      "name": "freportn/Ton_Twostring delivery to highpass",
+      "assertions": "say(\"to highpass\"); reward(18156,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/freportn--Ton_Twostring.lua",
+      "sourceSha256": "7f47b8eda38f0659cbfca9645f39df0392adf3972461925b691fb508a6f94132",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "freportn/Ton_Twostring",
+      "name": "freportn/Ton_Twostring delivery I will deliver mail to highpass.",
+      "assertions": "say(\"I will deliver mail to highpass.\"); reward(18156,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/freportn--Ton_Twostring.lua",
+      "sourceSha256": "7f47b8eda38f0659cbfca9645f39df0392adf3972461925b691fb508a6f94132",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "freportn/Ton_Twostring",
+      "name": "freportn/Ton_Twostring delivery qeynos",
+      "assertions": "say(\"qeynos\"); reward(18165,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/freportn--Ton_Twostring.lua",
+      "sourceSha256": "7f47b8eda38f0659cbfca9645f39df0392adf3972461925b691fb508a6f94132",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "freportn/Ton_Twostring",
+      "name": "freportn/Ton_Twostring delivery to qeynos",
+      "assertions": "say(\"to qeynos\"); reward(18165,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/freportn--Ton_Twostring.lua",
+      "sourceSha256": "7f47b8eda38f0659cbfca9645f39df0392adf3972461925b691fb508a6f94132",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "freportn/Ton_Twostring",
+      "name": "freportn/Ton_Twostring delivery I will deliver mail to qeynos.",
+      "assertions": "say(\"I will deliver mail to qeynos.\"); reward(18165,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/freportn--Ton_Twostring.lua",
+      "sourceSha256": "7f47b8eda38f0659cbfca9645f39df0392adf3972461925b691fb508a6f94132",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "freportn/Ton_Twostring",
+      "name": "freportn/Ton_Twostring advertised interested link",
+      "assertions": "say(\"interested\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/freportn--Ton_Twostring.lua",
+      "sourceSha256": "7f47b8eda38f0659cbfca9645f39df0392adf3972461925b691fb508a6f94132",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "highkeep/Lislia_Goldtune",
+      "name": "highkeep/Lislia_Goldtune delivery freeport",
+      "assertions": "say(\"freeport\"); reward(18164,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/highkeep--Lislia_Goldtune.lua",
+      "sourceSha256": "82bf68146bd9aecdd977d55a3932597bc5b694cfeed7833048695e9003bb4cca",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "highkeep/Lislia_Goldtune",
+      "name": "highkeep/Lislia_Goldtune delivery to freeport",
+      "assertions": "say(\"to freeport\"); reward(18164,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/highkeep--Lislia_Goldtune.lua",
+      "sourceSha256": "82bf68146bd9aecdd977d55a3932597bc5b694cfeed7833048695e9003bb4cca",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "highkeep/Lislia_Goldtune",
+      "name": "highkeep/Lislia_Goldtune delivery I will deliver mail to freeport.",
+      "assertions": "say(\"I will deliver mail to freeport.\"); reward(18164,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/highkeep--Lislia_Goldtune.lua",
+      "sourceSha256": "82bf68146bd9aecdd977d55a3932597bc5b694cfeed7833048695e9003bb4cca",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "highkeep/Lislia_Goldtune",
+      "name": "highkeep/Lislia_Goldtune delivery qeynos",
+      "assertions": "say(\"qeynos\"); reward(18154,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/highkeep--Lislia_Goldtune.lua",
+      "sourceSha256": "82bf68146bd9aecdd977d55a3932597bc5b694cfeed7833048695e9003bb4cca",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "highkeep/Lislia_Goldtune",
+      "name": "highkeep/Lislia_Goldtune delivery to qeynos",
+      "assertions": "say(\"to qeynos\"); reward(18154,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/highkeep--Lislia_Goldtune.lua",
+      "sourceSha256": "82bf68146bd9aecdd977d55a3932597bc5b694cfeed7833048695e9003bb4cca",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "highkeep/Lislia_Goldtune",
+      "name": "highkeep/Lislia_Goldtune delivery I will deliver mail to qeynos.",
+      "assertions": "say(\"I will deliver mail to qeynos.\"); reward(18154,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/highkeep--Lislia_Goldtune.lua",
+      "sourceSha256": "82bf68146bd9aecdd977d55a3932597bc5b694cfeed7833048695e9003bb4cca",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "highkeep/Lislia_Goldtune",
+      "name": "highkeep/Lislia_Goldtune advertised interested link",
+      "assertions": "say(\"interested\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/highkeep--Lislia_Goldtune.lua",
+      "sourceSha256": "82bf68146bd9aecdd977d55a3932597bc5b694cfeed7833048695e9003bb4cca",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "innothule/Dark_Deathsinger",
+      "name": "innothule/Dark_Deathsinger delivery qeynos",
+      "assertions": "say(\"qeynos\"); reward(18154,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/innothule--Dark_Deathsinger.lua",
+      "sourceSha256": "a5d4c6fc24e387a511cc99191d2cc9427aa69d3d5636eb5ecfa663e798a25c6a",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "innothule/Dark_Deathsinger",
+      "name": "innothule/Dark_Deathsinger delivery to qeynos",
+      "assertions": "say(\"to qeynos\"); reward(18154,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/innothule--Dark_Deathsinger.lua",
+      "sourceSha256": "a5d4c6fc24e387a511cc99191d2cc9427aa69d3d5636eb5ecfa663e798a25c6a",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "innothule/Dark_Deathsinger",
+      "name": "innothule/Dark_Deathsinger delivery I will deliver mail to qeynos.",
+      "assertions": "say(\"I will deliver mail to qeynos.\"); reward(18154,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/innothule--Dark_Deathsinger.lua",
+      "sourceSha256": "a5d4c6fc24e387a511cc99191d2cc9427aa69d3d5636eb5ecfa663e798a25c6a",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "innothule/Dark_Deathsinger",
+      "name": "innothule/Dark_Deathsinger delivery freeport",
+      "assertions": "say(\"freeport\"); reward(18155,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/innothule--Dark_Deathsinger.lua",
+      "sourceSha256": "a5d4c6fc24e387a511cc99191d2cc9427aa69d3d5636eb5ecfa663e798a25c6a",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "innothule/Dark_Deathsinger",
+      "name": "innothule/Dark_Deathsinger delivery to freeport",
+      "assertions": "say(\"to freeport\"); reward(18155,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/innothule--Dark_Deathsinger.lua",
+      "sourceSha256": "a5d4c6fc24e387a511cc99191d2cc9427aa69d3d5636eb5ecfa663e798a25c6a",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "innothule/Dark_Deathsinger",
+      "name": "innothule/Dark_Deathsinger delivery I will deliver mail to freeport.",
+      "assertions": "say(\"I will deliver mail to freeport.\"); reward(18155,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/innothule--Dark_Deathsinger.lua",
+      "sourceSha256": "a5d4c6fc24e387a511cc99191d2cc9427aa69d3d5636eb5ecfa663e798a25c6a",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "innothule/Dark_Deathsinger",
+      "name": "innothule/Dark_Deathsinger advertised interested link",
+      "assertions": "say(\"interested\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/innothule--Dark_Deathsinger.lua",
+      "sourceSha256": "a5d4c6fc24e387a511cc99191d2cc9427aa69d3d5636eb5ecfa663e798a25c6a",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "rathemtn/Tabien_the_Goodly",
+      "name": "Tabien interpolates player name",
+      "assertions": "say(\"hail\"); assert(calls.speech[1]:find(\"Reviewer\",1,true)); assert(not calls.speech[1]:find(\"$name\",1,true))",
+      "proposedFile": "changes/p99-support-named-fixes/rathemtn--Tabien_the_Goodly.lua",
+      "sourceSha256": "bc74742517d39c01849e545d0acb73455eaa76b0ab9453aad9d7563fc17f484c",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "freportn/Ton_Twostring",
+      "name": "Ton each independent mail and combined hand-in correct factions",
+      "proposedFile": "changes/p99-support-named-fixes/freportn--Ton_Twostring.lua",
+      "sourceSha256": "7f47b8eda38f0659cbfca9645f39df0392adf3972461925b691fb508a6f94132",
+      "assertions": "trade({18164,18166}); faction(284,10); faction(281,2); faction(262,2); faction(304,-2); faction(285,-2); equal(calls.exp,200); equal(#calls.cash,2); equal(calls.returns,1)"
+    },
+    {
+      "key": "freportn/Ton_Twostring",
+      "name": "Ton incorrect hand-in no reward",
+      "proposedFile": "changes/p99-support-named-fixes/freportn--Ton_Twostring.lua",
+      "sourceSha256": "7f47b8eda38f0659cbfca9645f39df0392adf3972461925b691fb508a6f94132",
+      "assertions": "trade({999}); equal(calls.exp,0); equal(#calls.cash,0); equal(calls.returns,1)"
+    },
+    {
+      "key": "everfrost/Granin_O'Gill",
+      "name": "Granin ration heals once",
+      "proposedFile": "changes/p99-support-named-fixes/everfrost--Granin_O'Gill.lua",
+      "sourceSha256": "1abf37c1f6df61f0adce789833fe087bb0ad32767dc02badd5863d6a7bd89932",
+      "assertions": "trade({13005}); equal(#calls.spells,1); equal(calls.spells[1][1],200); equal(calls.spells[1][2],42); equal(calls.returns,1)"
+    },
+    {
+      "key": "everfrost/Granin_O'Gill",
+      "name": "Granin wrong item returned",
+      "proposedFile": "changes/p99-support-named-fixes/everfrost--Granin_O'Gill.lua",
+      "sourceSha256": "1abf37c1f6df61f0adce789833fe087bb0ad32767dc02badd5863d6a7bd89932",
+      "assertions": "trade({999}); equal(#calls.spells,0); equal(calls.returns,1)"
+    },
+    {
+      "key": "everfrost/Granin_O'Gill",
+      "name": "Granin extra item remains",
+      "proposedFile": "changes/p99-support-named-fixes/everfrost--Granin_O'Gill.lua",
+      "sourceSha256": "1abf37c1f6df61f0adce789833fe087bb0ad32767dc02badd5863d6a7bd89932",
+      "assertions": "trade({13005,999}); equal(#calls.spells,1); equal(remaining[999],1); equal(calls.returns,1)"
+    },
+    {
+      "key": "everfrost/Granin_O'Gill",
+      "name": "Granin repeat ration works",
+      "proposedFile": "changes/p99-support-named-fixes/everfrost--Granin_O'Gill.lua",
+      "sourceSha256": "1abf37c1f6df61f0adce789833fe087bb0ad32767dc02badd5863d6a7bd89932",
+      "assertions": "trade({13005}); trade({13005}); equal(#calls.spells,2); equal(calls.returns,2)"
+    },
+    {
+      "key": "akanon/Lyra_Lyrestringer",
+      "name": "akanon/Lyra_Lyrestringer mail link",
+      "assertions": "say(\"mail\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/akanon--Lyra_Lyrestringer.lua",
+      "sourceSha256": "fb73395c7bfa114de164cc229d7fbf0112502ea3c365627ac1a7713e6e093031",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "akanon/Lyra_Lyrestringer",
+      "name": "akanon/Lyra_Lyrestringer full interested phrase",
+      "assertions": "say(\"I am interested in delivering mail\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/akanon--Lyra_Lyrestringer.lua",
+      "sourceSha256": "fb73395c7bfa114de164cc229d7fbf0112502ea3c365627ac1a7713e6e093031",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "butcher/Siltria_Marwind",
+      "name": "butcher/Siltria_Marwind mail link",
+      "assertions": "say(\"mail\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/butcher--Siltria_Marwind.lua",
+      "sourceSha256": "70648534ac1b3b2484427a63ad6a703324362b8003dc73f7b88bc9c5e90fb065",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "butcher/Siltria_Marwind",
+      "name": "butcher/Siltria_Marwind full interested phrase",
+      "assertions": "say(\"I am interested in delivering mail\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/butcher--Siltria_Marwind.lua",
+      "sourceSha256": "70648534ac1b3b2484427a63ad6a703324362b8003dc73f7b88bc9c5e90fb065",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "erudnext/Ticar_Lorestring",
+      "name": "erudnext/Ticar_Lorestring mail link",
+      "assertions": "say(\"mail\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/erudnext--Ticar_Lorestring.lua",
+      "sourceSha256": "a91104b7c9efda980445a565b3be533c426f5d64a2f36e76ec2a0fd1b33549d1",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "erudnext/Ticar_Lorestring",
+      "name": "erudnext/Ticar_Lorestring full interested phrase",
+      "assertions": "say(\"I am interested in delivering mail\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/erudnext--Ticar_Lorestring.lua",
+      "sourceSha256": "a91104b7c9efda980445a565b3be533c426f5d64a2f36e76ec2a0fd1b33549d1",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "feerrott/Drizda_Tunesinger",
+      "name": "feerrott/Drizda_Tunesinger mail link",
+      "assertions": "say(\"mail\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/feerrott--Drizda_Tunesinger.lua",
+      "sourceSha256": "8ee53b5b046df59fca6ab46e36711826d6aa847f88a24a4fb187ea99775b9973",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "feerrott/Drizda_Tunesinger",
+      "name": "feerrott/Drizda_Tunesinger full interested phrase",
+      "assertions": "say(\"I am interested in delivering mail\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/feerrott--Drizda_Tunesinger.lua",
+      "sourceSha256": "8ee53b5b046df59fca6ab46e36711826d6aa847f88a24a4fb187ea99775b9973",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "freportn/Ton_Twostring",
+      "name": "freportn/Ton_Twostring mail link",
+      "assertions": "say(\"mail\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/freportn--Ton_Twostring.lua",
+      "sourceSha256": "7f47b8eda38f0659cbfca9645f39df0392adf3972461925b691fb508a6f94132",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "freportn/Ton_Twostring",
+      "name": "freportn/Ton_Twostring full interested phrase",
+      "assertions": "say(\"I am interested in delivering mail\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/freportn--Ton_Twostring.lua",
+      "sourceSha256": "7f47b8eda38f0659cbfca9645f39df0392adf3972461925b691fb508a6f94132",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "freportn/Ton_Twostring",
+      "name": "freportn/Ton_Twostring ambiguous deliver shows destinations",
+      "assertions": "say(\"deliver\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/freportn--Ton_Twostring.lua",
+      "sourceSha256": "7f47b8eda38f0659cbfca9645f39df0392adf3972461925b691fb508a6f94132",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "gfaydark/Idia",
+      "name": "gfaydark/Idia mail link",
+      "assertions": "say(\"mail\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/gfaydark--Idia.lua",
+      "sourceSha256": "af8733a8c875aeac710a81a80d0facb678f66a646523e8deca83a795a020b129",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "gfaydark/Idia",
+      "name": "gfaydark/Idia full interested phrase",
+      "assertions": "say(\"I am interested in delivering mail\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/gfaydark--Idia.lua",
+      "sourceSha256": "af8733a8c875aeac710a81a80d0facb678f66a646523e8deca83a795a020b129",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "halas/Marton_Stringsinger",
+      "name": "halas/Marton_Stringsinger mail link",
+      "assertions": "say(\"mail\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/halas--Marton_Stringsinger.lua",
+      "sourceSha256": "a20eb14ee9e1251a84a997c48baf88ca79216ba896452789a6b791cfb273d32f",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "halas/Marton_Stringsinger",
+      "name": "halas/Marton_Stringsinger full interested phrase",
+      "assertions": "say(\"I am interested in delivering mail\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/halas--Marton_Stringsinger.lua",
+      "sourceSha256": "a20eb14ee9e1251a84a997c48baf88ca79216ba896452789a6b791cfb273d32f",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "highkeep/Lislia_Goldtune",
+      "name": "highkeep/Lislia_Goldtune mail link",
+      "assertions": "say(\"mail\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/highkeep--Lislia_Goldtune.lua",
+      "sourceSha256": "82bf68146bd9aecdd977d55a3932597bc5b694cfeed7833048695e9003bb4cca",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "highkeep/Lislia_Goldtune",
+      "name": "highkeep/Lislia_Goldtune full interested phrase",
+      "assertions": "say(\"I am interested in delivering mail\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/highkeep--Lislia_Goldtune.lua",
+      "sourceSha256": "82bf68146bd9aecdd977d55a3932597bc5b694cfeed7833048695e9003bb4cca",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "highkeep/Lislia_Goldtune",
+      "name": "highkeep/Lislia_Goldtune ambiguous deliver shows destinations",
+      "assertions": "say(\"deliver\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/highkeep--Lislia_Goldtune.lua",
+      "sourceSha256": "82bf68146bd9aecdd977d55a3932597bc5b694cfeed7833048695e9003bb4cca",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "innothule/Dark_Deathsinger",
+      "name": "innothule/Dark_Deathsinger mail link",
+      "assertions": "say(\"mail\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/innothule--Dark_Deathsinger.lua",
+      "sourceSha256": "a5d4c6fc24e387a511cc99191d2cc9427aa69d3d5636eb5ecfa663e798a25c6a",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "innothule/Dark_Deathsinger",
+      "name": "innothule/Dark_Deathsinger full interested phrase",
+      "assertions": "say(\"I am interested in delivering mail\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/innothule--Dark_Deathsinger.lua",
+      "sourceSha256": "a5d4c6fc24e387a511cc99191d2cc9427aa69d3d5636eb5ecfa663e798a25c6a",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "innothule/Dark_Deathsinger",
+      "name": "innothule/Dark_Deathsinger ambiguous deliver shows destinations",
+      "assertions": "say(\"deliver\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/innothule--Dark_Deathsinger.lua",
+      "sourceSha256": "a5d4c6fc24e387a511cc99191d2cc9427aa69d3d5636eb5ecfa663e798a25c6a",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "nektulos/Travis_Two_Tone",
+      "name": "nektulos/Travis_Two_Tone mail link",
+      "assertions": "say(\"mail\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/nektulos--Travis_Two_Tone.lua",
+      "sourceSha256": "d2862d0d1496e4bd5abe1fcdb1c6ab9c992b64da492a8e97b1d152505dc53d68",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "nektulos/Travis_Two_Tone",
+      "name": "nektulos/Travis_Two_Tone full interested phrase",
+      "assertions": "say(\"I am interested in delivering mail\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/nektulos--Travis_Two_Tone.lua",
+      "sourceSha256": "d2862d0d1496e4bd5abe1fcdb1c6ab9c992b64da492a8e97b1d152505dc53d68",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "qey2hh1/Mistrana_Two_Notes",
+      "name": "qey2hh1/Mistrana_Two_Notes mail link",
+      "assertions": "say(\"mail\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/qey2hh1--Mistrana_Two_Notes.lua",
+      "sourceSha256": "2d1acda0618c89f03323e07a9d022dde421982cac5c70321d6adae61ea885768",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "qey2hh1/Mistrana_Two_Notes",
+      "name": "qey2hh1/Mistrana_Two_Notes full interested phrase",
+      "assertions": "say(\"I am interested in delivering mail\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/qey2hh1--Mistrana_Two_Notes.lua",
+      "sourceSha256": "2d1acda0618c89f03323e07a9d022dde421982cac5c70321d6adae61ea885768",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "qeynos/Eve_Marsinger",
+      "name": "qeynos/Eve_Marsinger mail link",
+      "assertions": "say(\"mail\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/qeynos--Eve_Marsinger.lua",
+      "sourceSha256": "482ebe989733bd54c073d75b41d68b18b7dc1f164eeb06b3303480223780727c",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "qeynos/Eve_Marsinger",
+      "name": "qeynos/Eve_Marsinger full interested phrase",
+      "assertions": "say(\"I am interested in delivering mail\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/qeynos--Eve_Marsinger.lua",
+      "sourceSha256": "482ebe989733bd54c073d75b41d68b18b7dc1f164eeb06b3303480223780727c",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "qrg/Sivina_Lutewhisper",
+      "name": "qrg/Sivina_Lutewhisper mail link",
+      "assertions": "say(\"mail\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/qrg--Sivina_Lutewhisper.lua",
+      "sourceSha256": "2d1acda0618c89f03323e07a9d022dde421982cac5c70321d6adae61ea885768",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "qrg/Sivina_Lutewhisper",
+      "name": "qrg/Sivina_Lutewhisper full interested phrase",
+      "assertions": "say(\"I am interested in delivering mail\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/qrg--Sivina_Lutewhisper.lua",
+      "sourceSha256": "2d1acda0618c89f03323e07a9d022dde421982cac5c70321d6adae61ea885768",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "rivervale/Silna_Songsmith",
+      "name": "rivervale/Silna_Songsmith mail link",
+      "assertions": "say(\"mail\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/rivervale--Silna_Songsmith.lua",
+      "sourceSha256": "553adecf88834db51715036d48493b27e9ce50d2d29e2288fa5f92f6b9da34f3",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "rivervale/Silna_Songsmith",
+      "name": "rivervale/Silna_Songsmith full interested phrase",
+      "assertions": "say(\"I am interested in delivering mail\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/rivervale--Silna_Songsmith.lua",
+      "sourceSha256": "553adecf88834db51715036d48493b27e9ce50d2d29e2288fa5f92f6b9da34f3",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "name": "grobb/Kragia preserved disabled body, forced load only; no activation",
+      "key": "grobb/Kragia",
+      "proposedFile": "changes/p99-support-dialogue-fixes/grobb--Kragia.lua",
+      "sourceSha256": "7cc52f5530d7b014108ab68c94deeecc0800d9eaba90ca8a2ad1d1531eeadbce",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_say)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "emeraldjungle/The_Spirit_of_Rage preserved disabled body, forced load only; no activation",
+      "key": "emeraldjungle/The_Spirit_of_Rage",
+      "proposedFile": "changes/p99-support-dialogue-fixes/emeraldjungle--The_Spirit_of_Rage.lua",
+      "sourceSha256": "d587348ea709da8f59c9cf1a1a044a77a3cbb82b80b080ce8f36056eed328148",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_death_complete)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "permafrost/The_Icebound_Spirit preserved disabled body, forced load only; no activation",
+      "key": "permafrost/The_Icebound_Spirit",
+      "proposedFile": "changes/p99-support-dialogue-fixes/permafrost--The_Icebound_Spirit.lua",
+      "sourceSha256": "3edcc11eaf362cc35f0dcfe60916a0d227c26cc485812877f0904f2b3a0565a7",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_death_complete)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "emeraldjungle/Scout_Vyrak preserved disabled body, forced load only; no activation",
+      "key": "emeraldjungle/Scout_Vyrak",
+      "proposedFile": "changes/p99-support-dialogue-fixes/emeraldjungle--Scout_Vyrak.lua",
+      "sourceSha256": "8a1ae3367d66bb39d95811f86f63340250636e27fc20fa719a87da47ecc2f25b",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_say)==\"function\");assert(type(event_trade)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "permafrost/Scout_Janomin preserved disabled body, forced load only; no activation",
+      "key": "permafrost/Scout_Janomin",
+      "proposedFile": "changes/p99-support-dialogue-fixes/permafrost--Scout_Janomin.lua",
+      "sourceSha256": "233a04773ea5fa5241112695e1ae4ef42bc4fe7f0a5085be5b1b1b9f4fe1e9fc",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_say)==\"function\");assert(type(event_trade)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "qeynos2/a_gruff_voice preserved disabled body, forced load only; no activation",
+      "key": "qeynos2/a_gruff_voice",
+      "proposedFile": "changes/p99-support-lifecycle-scope/qeynos2--a_gruff_voice.lua",
+      "sourceSha256": "f9d40f46e709de549cd393ed51510aff3d0165b6b900b4376a91dbdcb26ca6b3",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_signal)==\"function\");assert(type(event_spawn)==\"function\");assert(type(event_timer)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "southkarana/#Finnelzi_Springworthy preserved disabled body, forced load only; no activation",
+      "key": "southkarana/#Finnelzi_Springworthy",
+      "proposedFile": "changes/p99-support-lifecycle-scope/southkarana--#Finnelzi_Springworthy.lua",
+      "sourceSha256": "e3c80b02eae446a5a76a2def65905376ece84d125f1191fb1942e5f6200d9ed6",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_signal)==\"function\");assert(type(event_spawn)==\"function\");assert(type(event_timer)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "southkarana/#Glenfire_Telzir preserved disabled body, forced load only; no activation",
+      "key": "southkarana/#Glenfire_Telzir",
+      "proposedFile": "changes/p99-support-lifecycle-scope/southkarana--#Glenfire_Telzir.lua",
+      "sourceSha256": "003afe5238b44f7a6d161fbf016bc32c680ac01b02a0e2054e6774f1d851ed94",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_signal)==\"function\");assert(type(event_spawn)==\"function\");assert(type(event_timer)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "southkarana/#Rendolf_Deathbringer preserved disabled body, forced load only; no activation",
+      "key": "southkarana/#Rendolf_Deathbringer",
+      "proposedFile": "changes/p99-support-lifecycle-scope/southkarana--#Rendolf_Deathbringer.lua",
+      "sourceSha256": "80ae13408d5d84e74976086a2329b965922e001672af714b5ad311ddf25e6fcf",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_signal)==\"function\");assert(type(event_spawn)==\"function\");assert(type(event_timer)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "southkarana/#Tehana_Elsent preserved disabled body, forced load only; no activation",
+      "key": "southkarana/#Tehana_Elsent",
+      "proposedFile": "changes/p99-support-lifecycle-scope/southkarana--#Tehana_Elsent.lua",
+      "sourceSha256": "52e95ba53a5c163b59a566f07520ec5ce200581b27d0fec273c00a847f089aaf",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_signal)==\"function\");assert(type(event_spawn)==\"function\");assert(type(event_timer)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "steamfont/a_decomposing_body preserved disabled body, forced load only; no activation",
+      "key": "steamfont/a_decomposing_body",
+      "proposedFile": "changes/p99-support-lifecycle-scope/steamfont--a_decomposing_body.lua",
+      "sourceSha256": "e5ebfbf73eb3c3ef2ced8ba4817b26683f5fd781ba2bef2f622d8db494e3f647",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_say)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "burningwood/player preserved disabled body, forced load only; no activation",
+      "key": "burningwood/player",
+      "proposedFile": "changes/p99-support-lifecycle-scope/burningwood--player.lua",
+      "sourceSha256": "9b249b6dc897b241429154d8c95c5108498a3845fff4ca6b3970240c5d604717",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_enter_zone)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "westwastes/disciple_of_moon_trap preserved disabled body, forced load only; no activation",
+      "key": "westwastes/disciple_of_moon_trap",
+      "proposedFile": "changes/p99-support-lifecycle-scope/westwastes--disciple_of_moon_trap.lua",
+      "sourceSha256": "79abf6edd134b6505e20fa744e41c342f0a8e4f532f1b0c30a79ecb25dcbecd7",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_enter)==\"function\");assert(type(event_spawn)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "fearplane/Enraged_Imp preserved disabled body, forced load only; no activation",
+      "key": "fearplane/Enraged_Imp",
+      "proposedFile": "changes/p99-support-lifecycle-scope/fearplane--Enraged_Imp.lua",
+      "sourceSha256": "ed4c63c61fd7d286cf73bb5a4f3d32c96f53a0a3f1a276c9be0fe343ab2c13c4",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_death_complete)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "fearplane/Ireblind_Imp preserved disabled body, forced load only; no activation",
+      "key": "fearplane/Ireblind_Imp",
+      "proposedFile": "changes/p99-support-lifecycle-scope/fearplane--Ireblind_Imp.lua",
+      "sourceSha256": "13cf24d3f61c65645d90cb9e0d12a656cf168f102a8cf2f7ef9495444b648d18",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_hp)==\"function\");assert(type(event_spawn)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "frontiermtns/script_init preserved disabled body, forced load only; no activation",
+      "key": "frontiermtns/script_init",
+      "proposedFile": "changes/p99-support-lifecycle-scope/frontiermtns--script_init.lua",
+      "sourceSha256": "9968da636348d6cd71ba50f8faa682eac2ae23e20d04bc424efec2bb3c945d2d",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(#support_inert_loads==1);assert(support_inert_loads[1]==\"druid_1_5\");",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "frozenshadow/You_ preserved disabled body, forced load only; no activation",
+      "key": "frozenshadow/You_",
+      "proposedFile": "changes/p99-support-lifecycle-scope/frozenshadow--You_.lua",
+      "sourceSha256": "630c9c10068c0b081a3f163638ed362a86974fa422d3733049b5e3fa7322d4bf",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_proximity_say)==\"function\");assert(type(event_spawn)==\"function\");assert(type(event_timer)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "kithicor/script_init preserved disabled body, forced load only; no activation",
+      "key": "kithicor/script_init",
+      "proposedFile": "changes/p99-support-lifecycle-scope/kithicor--script_init.lua",
+      "sourceSha256": "d716d84284bb2ac5de651470f3a66cba1f6c5d48e03191cf536563851ab47660",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(#support_inert_loads==1);assert(support_inert_loads[1]==\"cloaked\");",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "lfaydark/#a_Wayfarer preserved disabled body, forced load only; no activation",
+      "key": "lfaydark/#a_Wayfarer",
+      "proposedFile": "changes/p99-support-lifecycle-scope/lfaydark--#a_Wayfarer.lua",
+      "sourceSha256": "2b7150ce268b257a063077b080fcb2b4c1000322cbef0035f9112f4324c5f88c",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_death_complete)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "lfaydark/#Taskmaster_Mirot preserved disabled body, forced load only; no activation",
+      "key": "lfaydark/#Taskmaster_Mirot",
+      "proposedFile": "changes/p99-support-lifecycle-scope/lfaydark--#Taskmaster_Mirot.lua",
+      "sourceSha256": "ad4b0d092be6277850e0238fbd909b5baf138a60f0de16d78eff357df2d7418d",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_combat)==\"function\");assert(type(event_death_complete)==\"function\");assert(type(event_spawn)==\"function\");assert(type(event_timer)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "misty/script_init preserved disabled body, forced load only; no activation",
+      "key": "misty/script_init",
+      "proposedFile": "changes/p99-support-lifecycle-scope/misty--script_init.lua",
+      "sourceSha256": "e423986779e7944488a7bdf34eef50d18f0d8de955e3acd3b15a3deceefa096c",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(#support_inert_loads==1);assert(support_inert_loads[1]==\"Misty\");",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "necropolis/#Excavator_Quellin preserved disabled body, forced load only; no activation",
+      "key": "necropolis/#Excavator_Quellin",
+      "proposedFile": "changes/p99-support-lifecycle-scope/necropolis--#Excavator_Quellin.lua",
+      "sourceSha256": "e791dc91d7fc6f84ef5b24246206982e2976280d2ab016cd4cdba6ead8dfa560",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_death_complete)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "necropolis/123167 preserved disabled body, forced load only; no activation",
+      "key": "necropolis/123167",
+      "proposedFile": "changes/p99-support-lifecycle-scope/necropolis--123167.lua",
+      "sourceSha256": "a1699745b87f6bd46fd5a488aae79f7962a25cf5adfae48427c1633c7106d6c5",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_hp)==\"function\");assert(type(event_spawn)==\"function\");assert(type(event_timer)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "necropolis/script_init preserved disabled body, forced load only; no activation",
+      "key": "necropolis/script_init",
+      "proposedFile": "changes/p99-support-lifecycle-scope/necropolis--script_init.lua",
+      "sourceSha256": "ebeeadc81a8550f96bfb9a9b18486ca2b88978fc13ab72459b89a626c2543544",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(#support_inert_loads==1);assert(support_inert_loads[1]==\"vesthon\");",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "northkarana/a_dire_griffon preserved disabled body, forced load only; no activation",
+      "key": "northkarana/a_dire_griffon",
+      "proposedFile": "changes/p99-support-lifecycle-scope/northkarana--a_dire_griffon.lua",
+      "sourceSha256": "f3caa21bb6514db4d5dc95b324c1bae19c7ffd689f6d4106c9b1089c04e94f8c",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_hp)==\"function\");assert(type(event_spawn)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "oasis/script_init preserved disabled body, forced load only; no activation",
+      "key": "oasis/script_init",
+      "proposedFile": "changes/p99-support-lifecycle-scope/oasis--script_init.lua",
+      "sourceSha256": "5f956b1b1cd0b73c003c8d6b5e10c65ca06967fc12df648f1e5ee0a60bf86a4a",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(#support_inert_loads==1);assert(support_inert_loads[1]==\"paladin_epic\");",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "swampofnohope/a_dire_leech preserved disabled body, forced load only; no activation",
+      "key": "swampofnohope/a_dire_leech",
+      "proposedFile": "changes/p99-support-lifecycle-scope/swampofnohope--a_dire_leech.lua",
+      "sourceSha256": "50dc9f62d49be70070e39638e74632c4ca4dc579410dcecf1d011a6e75d59cd5",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_hp)==\"function\");assert(type(event_spawn)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "burningwood/Atheling_Plague preserved disabled body, forced load only; no activation",
+      "key": "burningwood/Atheling_Plague",
+      "proposedFile": "changes/p99-support-named-fixes/burningwood--Atheling_Plague.lua",
+      "sourceSha256": "8741f07028e4a137118de56fae42840506908e3452d3ac89bca7b68fef03374c",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_death_complete)==\"function\");assert(type(event_say)==\"function\");assert(type(event_signal)==\"function\");assert(type(event_timer)==\"function\");assert(type(event_trade)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "burningwood/Clerk_Doval preserved disabled body, forced load only; no activation",
+      "key": "burningwood/Clerk_Doval",
+      "proposedFile": "changes/p99-support-named-fixes/burningwood--Clerk_Doval.lua",
+      "sourceSha256": "905ddc813ab2e1e9a62792ffda1cb1e9de099475c51da9cfa9d99573b2ca112a",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_death_complete)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "lakeofillomen/Klok_Sargin preserved disabled body, forced load only; no activation",
+      "key": "lakeofillomen/Klok_Sargin",
+      "proposedFile": "changes/p99-support-named-fixes/lakeofillomen--Klok_Sargin.lua",
+      "sourceSha256": "2cfa82442b230eb94d497a2da34cddcb14cd276d71fc670812ccc1ea046dc633",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_say)==\"function\");assert(type(event_timer)==\"function\");assert(type(event_trade)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "oot/#Kaiaren preserved disabled body, forced load only; no activation",
+      "key": "oot/#Kaiaren",
+      "proposedFile": "changes/p99-support-named-fixes/oot--#Kaiaren.lua",
+      "sourceSha256": "1272ca7c101471b98046af45d57c07558bf1da9c4219045a9f895df84cd917bc",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_combat)==\"function\");assert(type(event_death_complete)==\"function\");assert(type(event_say)==\"function\");assert(type(event_spawn)==\"function\");assert(type(event_timer)==\"function\");assert(type(event_trade)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "southkarana/#Azibelle_Spavin preserved disabled body, forced load only; no activation",
+      "key": "southkarana/#Azibelle_Spavin",
+      "proposedFile": "changes/p99-support-named-fixes/southkarana--#Azibelle_Spavin.lua",
+      "sourceSha256": "bb4364e6a99a780422257132dd46ae4e9005e73567f1b45ecac90543b9851a36",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_signal)==\"function\");assert(type(event_spawn)==\"function\");assert(type(event_timer)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "burningwood/#a_crippled_wurm preserved disabled body, forced load only; no activation",
+      "key": "burningwood/#a_crippled_wurm",
+      "proposedFile": "changes/p99-support-world-scope/burningwood--#a_crippled_wurm.lua",
+      "sourceSha256": "f968a6962f0c9061419a914a9050a3c574f0b7fb6c455fd938951d5a79096376",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_combat)==\"function\");assert(type(event_timer)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "burningwood/a_sarnak_champion preserved disabled body, forced load only; no activation",
+      "key": "burningwood/a_sarnak_champion",
+      "proposedFile": "changes/p99-support-world-scope/burningwood--a_sarnak_champion.lua",
+      "sourceSha256": "a9943b142173106c2f4dc13c5ac357d291449a252cc724c34f25f7cba8c3b388",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_killed_merit)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "crushbone/#Orc_Messenger preserved disabled body, forced load only; no activation",
+      "key": "crushbone/#Orc_Messenger",
+      "proposedFile": "changes/p99-support-world-scope/crushbone--#Orc_Messenger.lua",
+      "sourceSha256": "e205c7a820d3687959cc96dc1dcb7cbe744beae22ffe69bbab371c8494ea4afe",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_spawn)==\"function\");assert(type(event_timer)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "crushbone/player preserved disabled body, forced load only; no activation",
+      "key": "crushbone/player",
+      "proposedFile": "changes/p99-support-world-scope/crushbone--player.lua",
+      "sourceSha256": "6588537a3022c803728835ce8b552d655076c6f6f1645dcfb69d5f6c7d02974c",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_enter_zone)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "dreadlands/#mage_trap preserved disabled body, forced load only; no activation",
+      "key": "dreadlands/#mage_trap",
+      "proposedFile": "changes/p99-support-world-scope/dreadlands--#mage_trap.lua",
+      "sourceSha256": "da1fb285ea1e68cc89eccfa3147d4bc7511328122141d79f6358c492a87f3cd4",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_enter)==\"function\");assert(type(event_spawn)==\"function\");assert(type(event_timer)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "dreadlands/a_drolvarg_rager preserved disabled body, forced load only; no activation",
+      "key": "dreadlands/a_drolvarg_rager",
+      "proposedFile": "changes/p99-support-world-scope/dreadlands--a_drolvarg_rager.lua",
+      "sourceSha256": "30b45bdecea1f2a63bac51e831308ebd287b528f3bd5ebb215a6626573083d5f",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_killed_merit)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "dreadlands/a_petrifier_cockatrice preserved disabled body, forced load only; no activation",
+      "key": "dreadlands/a_petrifier_cockatrice",
+      "proposedFile": "changes/p99-support-world-scope/dreadlands--a_petrifier_cockatrice.lua",
+      "sourceSha256": "8fe273291b35548266e75ddca57479d3fdb4db40655c87626c8aa242ce496b46",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_killed_merit)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "eastkarana/a_crag_spider preserved disabled body, forced load only; no activation",
+      "key": "eastkarana/a_crag_spider",
+      "proposedFile": "changes/p99-support-world-scope/eastkarana--a_crag_spider.lua",
+      "sourceSha256": "690a87d7dbb763df3dbf5558112c8e7ad4ef313af29bbd821746ccce52eab730",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_killed_merit)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "eastwastes/#warr_trap preserved disabled body, forced load only; no activation",
+      "key": "eastwastes/#warr_trap",
+      "proposedFile": "changes/p99-support-world-scope/eastwastes--#warr_trap.lua",
+      "sourceSha256": "b05d2a25bc5f939db35d7f1883acc7515fe588a9c27bdc95a7256479829e823d",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_enter)==\"function\");assert(type(event_spawn)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "eastwastes/Larnik_the_Recluse preserved disabled body, forced load only; no activation",
+      "key": "eastwastes/Larnik_the_Recluse",
+      "proposedFile": "changes/p99-support-world-scope/eastwastes--Larnik_the_Recluse.lua",
+      "sourceSha256": "3d37826ed8f9c5f6f1a0df8f6c749875dd844d52ed96a8c67b5605edb7f15716",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_combat)==\"function\");assert(type(event_say)==\"function\");assert(type(event_spawn)==\"function\");assert(type(event_timer)==\"function\");assert(type(event_waypoint_arrive)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "eastwastes/player preserved disabled body, forced load only; no activation",
+      "key": "eastwastes/player",
+      "proposedFile": "changes/p99-support-world-scope/eastwastes--player.lua",
+      "sourceSha256": "ec8ca6f5ae3154e49aa1bf05d0032d8d16c99adff261c348defddc166fcf9020",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_enter_zone)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "emeraldjungle/a_soulsipper preserved disabled body, forced load only; no activation",
+      "key": "emeraldjungle/a_soulsipper",
+      "proposedFile": "changes/p99-support-world-scope/emeraldjungle--a_soulsipper.lua",
+      "sourceSha256": "629377fbf1f7e78c7a0cb72934eef579165a2c1db1fd4082f9b0ebe75a1418d7",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_killed_merit)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "fieldofbone/#Berserker-s_Image preserved disabled body, forced load only; no activation",
+      "key": "fieldofbone/#Berserker-s_Image",
+      "proposedFile": "changes/p99-support-world-scope/fieldofbone--#Berserker-s_Image.lua",
+      "sourceSha256": "e1cb1786eb4693fa0b325ae8086c7f832b7eb3d9fefdfd29d99baa102fa8cc16",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_death_complete)==\"function\");assert(type(event_hp)==\"function\");assert(type(event_spawn)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "freportn/#Elder_Spirit_of_Might preserved disabled body, forced load only; no activation",
+      "key": "freportn/#Elder_Spirit_of_Might",
+      "proposedFile": "changes/p99-support-world-scope/freportn--#Elder_Spirit_of_Might.lua",
+      "sourceSha256": "ada2933224eec22076c385c023ea78f80f39fcb73254f0479faff3c230eee8f6",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_signal)==\"function\");assert(type(event_spawn)==\"function\");assert(type(event_timer)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "freportn/#Elder_Spirit_of_Patience preserved disabled body, forced load only; no activation",
+      "key": "freportn/#Elder_Spirit_of_Patience",
+      "proposedFile": "changes/p99-support-world-scope/freportn--#Elder_Spirit_of_Patience.lua",
+      "sourceSha256": "d3e15ab19edc166044629fe64f416f66a9bb068c5e1f4e5c246d3851aebe94e2",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_spawn)==\"function\");assert(type(event_timer)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "freportn/#Elder_Spirit_of_Perseverance preserved disabled body, forced load only; no activation",
+      "key": "freportn/#Elder_Spirit_of_Perseverance",
+      "proposedFile": "changes/p99-support-world-scope/freportn--#Elder_Spirit_of_Perseverance.lua",
+      "sourceSha256": "318615d1045623806b6115a5a9aeebf5ea718e9d217687f9db25ba60202f2f69",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_signal)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "freportn/#Elder_Spirit_of_Wisdom preserved disabled body, forced load only; no activation",
+      "key": "freportn/#Elder_Spirit_of_Wisdom",
+      "proposedFile": "changes/p99-support-world-scope/freportn--#Elder_Spirit_of_Wisdom.lua",
+      "sourceSha256": "3348288f0b3f8aedd94e65ee1af3f113065a334a556bfef98e04adec35c47bc8",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_signal)==\"function\");assert(type(event_spawn)==\"function\");assert(type(event_timer)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "guktop/a_froglok_gaz_knight preserved disabled body, forced load only; no activation",
+      "key": "guktop/a_froglok_gaz_knight",
+      "proposedFile": "changes/p99-support-world-scope/guktop--a_froglok_gaz_knight.lua",
+      "sourceSha256": "e48181c8cd62795bd585062d1562862606ff4e68a618b93bda25433271ecbd7f",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_killed_merit)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "guktop/a_froglok_gaz_shaman preserved disabled body, forced load only; no activation",
+      "key": "guktop/a_froglok_gaz_shaman",
+      "proposedFile": "changes/p99-support-world-scope/guktop--a_froglok_gaz_shaman.lua",
+      "sourceSha256": "e48181c8cd62795bd585062d1562862606ff4e68a618b93bda25433271ecbd7f",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_killed_merit)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "guktop/a_froglok_gaz_squire preserved disabled body, forced load only; no activation",
+      "key": "guktop/a_froglok_gaz_squire",
+      "proposedFile": "changes/p99-support-world-scope/guktop--a_froglok_gaz_squire.lua",
+      "sourceSha256": "e48181c8cd62795bd585062d1562862606ff4e68a618b93bda25433271ecbd7f",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_killed_merit)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "guktop/a_froglok_gaz_warrior preserved disabled body, forced load only; no activation",
+      "key": "guktop/a_froglok_gaz_warrior",
+      "proposedFile": "changes/p99-support-world-scope/guktop--a_froglok_gaz_warrior.lua",
+      "sourceSha256": "e48181c8cd62795bd585062d1562862606ff4e68a618b93bda25433271ecbd7f",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_killed_merit)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "guktop/a_froglok_ton_warrior preserved disabled body, forced load only; no activation",
+      "key": "guktop/a_froglok_ton_warrior",
+      "proposedFile": "changes/p99-support-world-scope/guktop--a_froglok_ton_warrior.lua",
+      "sourceSha256": "f887266488a84d07517bbe80a74983a74752b5e78a959152746eb9c428736905",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_killed_merit)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "lakeofillomen/#_ preserved disabled body, forced load only; no activation",
+      "key": "lakeofillomen/#_",
+      "proposedFile": "changes/p99-support-world-scope/lakeofillomen--#_.lua",
+      "sourceSha256": "30dbeed41ddc8d8b72598b1c5205a61bdca9f94f95402f570cf276b0dcf242e1",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_combat)==\"function\");assert(type(event_death_complete)==\"function\");assert(type(event_spawn)==\"function\");assert(type(event_timer)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "lakeofillomen/a_bloodgill_goblin preserved disabled body, forced load only; no activation",
+      "key": "lakeofillomen/a_bloodgill_goblin",
+      "proposedFile": "changes/p99-support-world-scope/lakeofillomen--a_bloodgill_goblin.lua",
+      "sourceSha256": "f4e39ca456d6ea183b6d3242cddd7fa24024a87a1679e736bb8000e589fdaf8a",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_killed_merit)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "lakerathe/Vortix preserved disabled body, forced load only; no activation",
+      "key": "lakerathe/Vortix",
+      "proposedFile": "changes/p99-support-world-scope/lakerathe--Vortix.lua",
+      "sourceSha256": "e0c70bf050113988509645e2c4016abeb6fae2a8d7ae0544823875020201c576",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_say)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "lfaydark/Reanimated_Minion preserved disabled body, forced load only; no activation",
+      "key": "lfaydark/Reanimated_Minion",
+      "proposedFile": "changes/p99-support-world-scope/lfaydark--Reanimated_Minion.lua",
+      "sourceSha256": "20f472a796d5aafd8d7452a0da102288068917b016e09b0e4f371246ddbbcc45",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_combat)==\"function\");assert(type(event_timer)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "misty/Crysta_Tagglefoot preserved disabled body, forced load only; no activation",
+      "key": "misty/Crysta_Tagglefoot",
+      "proposedFile": "changes/p99-support-world-scope/misty--Crysta_Tagglefoot.lua",
+      "sourceSha256": "bd19463e6e1cde6f512a95b6bdc776c21f1b012262944e8214e229d6106b767d",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_say)==\"function\");assert(type(event_spawn)==\"function\");assert(type(event_timer)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "necropolis/a_Chetari_warrior preserved disabled body, forced load only; no activation",
+      "key": "necropolis/a_Chetari_warrior",
+      "proposedFile": "changes/p99-support-world-scope/necropolis--a_Chetari_warrior.lua",
+      "sourceSha256": "00bd026f5a7463a8890ca9607ed1668dc0c731c1916c6181828cc910bdc2703b",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_killed_merit)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "necropolis/player preserved disabled body, forced load only; no activation",
+      "key": "necropolis/player",
+      "proposedFile": "changes/p99-support-world-scope/necropolis--player.lua",
+      "sourceSha256": "0ce96763f440e08a2e65ff649128b749ff13b196cb3913d08a0a463c4b08e4d9",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_enter_zone)==\"function\");assert(type(event_loot)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "northkarana/#a_plains_dragon preserved disabled body, forced load only; no activation",
+      "key": "northkarana/#a_plains_dragon",
+      "proposedFile": "changes/p99-support-world-scope/northkarana--#a_plains_dragon.lua",
+      "sourceSha256": "1b16e27c858a70e2a562574d79999332cdbc75d809e8fd389dbcaa8c4c0fedac",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_combat)==\"function\");assert(type(event_timer)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "southkarana/an_adult_elephant preserved disabled body, forced load only; no activation",
+      "key": "southkarana/an_adult_elephant",
+      "proposedFile": "changes/p99-support-world-scope/southkarana--an_adult_elephant.lua",
+      "sourceSha256": "bf4274ba19de8926a315d3ab7a36334da5309039452392207e2825c212cc47d1",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_killed_merit)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "swampofnohope/#a_swamp_dragon preserved disabled body, forced load only; no activation",
+      "key": "swampofnohope/#a_swamp_dragon",
+      "proposedFile": "changes/p99-support-world-scope/swampofnohope--#a_swamp_dragon.lua",
+      "sourceSha256": "53fde7487e6ecbb60851e5d5b0ee856efd7adda66bb8810d1e214c5042e6d49c",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_combat)==\"function\");assert(type(event_timer)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "timorous/player preserved disabled body, forced load only; no activation",
+      "key": "timorous/player",
+      "proposedFile": "changes/p99-support-world-scope/timorous--player.lua",
+      "sourceSha256": "1495dc163e74538d46afbf68bb9abc0bd0d347c4c6c63fe2553de4a996f7b789",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_loot)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "tox/#Fleshless_Servant preserved disabled body, forced load only; no activation",
+      "key": "tox/#Fleshless_Servant",
+      "proposedFile": "changes/p99-support-world-scope/tox--#Fleshless_Servant.lua",
+      "sourceSha256": "893cc6637b72262566a0df8ed9154d4fdac61e4e5a40bea1a264b96906a0e6bf",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_death_complete)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "trakanon/sabretooth_tiger preserved disabled body, forced load only; no activation",
+      "key": "trakanon/sabretooth_tiger",
+      "proposedFile": "changes/p99-support-world-scope/trakanon--sabretooth_tiger.lua",
+      "sourceSha256": "680508d2abded5708d811ec314256a2f8f6c0620cdb3ab846151f8a42b55db7f",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_killed_merit)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "westwastes/Disciple_of_Moon preserved disabled body, forced load only; no activation",
+      "key": "westwastes/Disciple_of_Moon",
+      "proposedFile": "changes/p99-support-world-scope/westwastes--Disciple_of_Moon.lua",
+      "sourceSha256": "cc7e91d930d18084d08f30487a6d67439fcbb69c1af7e93d4d0971ddb04509de",
+      "setupExtra": "support_inert_loads={}; eq.load_encounter=function(name) table.insert(support_inert_loads,name) end",
+      "assertions": "assert(type(event_combat)==\"function\");assert(type(event_timer)==\"function\");assert(#support_inert_loads==0);",
+      "coverageKind": "disabled_body_preservation"
+    },
+    {
+      "name": "croc last-death timer branch 1",
+      "key": "guktop/croc_trigger",
+      "proposedFile": "changes/p99-support-lifecycle-values/guktop--croc_trigger.lua",
+      "sourceSha256": "20586d714137fa21415132573c4e0effaaa5230bb86459a115d476dfca6d75e3",
+      "setupExtra": "spawns={}; timers={}; stops={}; guarded=0\neq={spawn2=function(...) table.insert(spawns,{...}) end, set_timer=function(n,v) timers[n]=v end, stop_timer=function(n) stops[n]=true end, ChooseRandom=function(...) return select(1,...) end}\nmob={GetX=function() return 11 end,GetY=function() return 22 end,GetZ=function() return 33 end,GetHeading=function() return 44 end,SaveGuardSpot=function(self,x,y,z,h) assert(x==11 and y==22 and z==33 and h==44);guarded=guarded+1 end}\n\nmath.random=function() return 1 end",
+      "assertions": "event_spawn({}); assert(#spawns==2); assert(spawns[1][1]==65068)\nfor i=1,1 do event_signal({}); assert(timers[\"spawn timer\"]==nil) end\nevent_signal({}); assert(timers[\"spawn timer\"]==990000)\nevent_timer({timer=\"other\"}); assert(#spawns==2)\nevent_timer({timer=\"spawn timer\"}); assert(#spawns==4); assert(stops[\"spawn timer\"])\n",
+      "coverageKind": "focused_functional"
+    },
+    {
+      "name": "croc last-death timer branch 45",
+      "key": "guktop/croc_trigger",
+      "proposedFile": "changes/p99-support-lifecycle-values/guktop--croc_trigger.lua",
+      "sourceSha256": "20586d714137fa21415132573c4e0effaaa5230bb86459a115d476dfca6d75e3",
+      "setupExtra": "spawns={}; timers={}; stops={}; guarded=0\neq={spawn2=function(...) table.insert(spawns,{...}) end, set_timer=function(n,v) timers[n]=v end, stop_timer=function(n) stops[n]=true end, ChooseRandom=function(...) return select(1,...) end}\nmob={GetX=function() return 11 end,GetY=function() return 22 end,GetZ=function() return 33 end,GetHeading=function() return 44 end,SaveGuardSpot=function(self,x,y,z,h) assert(x==11 and y==22 and z==33 and h==44);guarded=guarded+1 end}\n\nmath.random=function() return 45 end",
+      "assertions": "event_spawn({}); assert(#spawns==2); assert(spawns[1][1]==65068)\nfor i=1,1 do event_signal({}); assert(timers[\"spawn timer\"]==nil) end\nevent_signal({}); assert(timers[\"spawn timer\"]==990000)\nevent_timer({timer=\"other\"}); assert(#spawns==2)\nevent_timer({timer=\"spawn timer\"}); assert(#spawns==4); assert(stops[\"spawn timer\"])\n",
+      "coverageKind": "focused_functional"
+    },
+    {
+      "name": "croc last-death timer branch 46",
+      "key": "guktop/croc_trigger",
+      "proposedFile": "changes/p99-support-lifecycle-values/guktop--croc_trigger.lua",
+      "sourceSha256": "20586d714137fa21415132573c4e0effaaa5230bb86459a115d476dfca6d75e3",
+      "setupExtra": "spawns={}; timers={}; stops={}; guarded=0\neq={spawn2=function(...) table.insert(spawns,{...}) end, set_timer=function(n,v) timers[n]=v end, stop_timer=function(n) stops[n]=true end, ChooseRandom=function(...) return select(1,...) end}\nmob={GetX=function() return 11 end,GetY=function() return 22 end,GetZ=function() return 33 end,GetHeading=function() return 44 end,SaveGuardSpot=function(self,x,y,z,h) assert(x==11 and y==22 and z==33 and h==44);guarded=guarded+1 end}\n\nmath.random=function() return 46 end",
+      "assertions": "event_spawn({}); assert(#spawns==3); assert(spawns[1][1]==65068)\nfor i=1,2 do event_signal({}); assert(timers[\"spawn timer\"]==nil) end\nevent_signal({}); assert(timers[\"spawn timer\"]==990000)\nevent_timer({timer=\"other\"}); assert(#spawns==3)\nevent_timer({timer=\"spawn timer\"}); assert(#spawns==6); assert(stops[\"spawn timer\"])\n",
+      "coverageKind": "focused_functional"
+    },
+    {
+      "name": "croc last-death timer branch 75",
+      "key": "guktop/croc_trigger",
+      "proposedFile": "changes/p99-support-lifecycle-values/guktop--croc_trigger.lua",
+      "sourceSha256": "20586d714137fa21415132573c4e0effaaa5230bb86459a115d476dfca6d75e3",
+      "setupExtra": "spawns={}; timers={}; stops={}; guarded=0\neq={spawn2=function(...) table.insert(spawns,{...}) end, set_timer=function(n,v) timers[n]=v end, stop_timer=function(n) stops[n]=true end, ChooseRandom=function(...) return select(1,...) end}\nmob={GetX=function() return 11 end,GetY=function() return 22 end,GetZ=function() return 33 end,GetHeading=function() return 44 end,SaveGuardSpot=function(self,x,y,z,h) assert(x==11 and y==22 and z==33 and h==44);guarded=guarded+1 end}\n\nmath.random=function() return 75 end",
+      "assertions": "event_spawn({}); assert(#spawns==3); assert(spawns[1][1]==65068)\nfor i=1,2 do event_signal({}); assert(timers[\"spawn timer\"]==nil) end\nevent_signal({}); assert(timers[\"spawn timer\"]==990000)\nevent_timer({timer=\"other\"}); assert(#spawns==3)\nevent_timer({timer=\"spawn timer\"}); assert(#spawns==6); assert(stops[\"spawn timer\"])\n",
+      "coverageKind": "focused_functional"
+    },
+    {
+      "name": "croc last-death timer branch 76",
+      "key": "guktop/croc_trigger",
+      "proposedFile": "changes/p99-support-lifecycle-values/guktop--croc_trigger.lua",
+      "sourceSha256": "20586d714137fa21415132573c4e0effaaa5230bb86459a115d476dfca6d75e3",
+      "setupExtra": "spawns={}; timers={}; stops={}; guarded=0\neq={spawn2=function(...) table.insert(spawns,{...}) end, set_timer=function(n,v) timers[n]=v end, stop_timer=function(n) stops[n]=true end, ChooseRandom=function(...) return select(1,...) end}\nmob={GetX=function() return 11 end,GetY=function() return 22 end,GetZ=function() return 33 end,GetHeading=function() return 44 end,SaveGuardSpot=function(self,x,y,z,h) assert(x==11 and y==22 and z==33 and h==44);guarded=guarded+1 end}\n\nmath.random=function() return 76 end",
+      "assertions": "event_spawn({}); assert(#spawns==1); assert(spawns[1][1]==65068)\nfor i=1,0 do event_signal({}); assert(timers[\"spawn timer\"]==nil) end\nevent_signal({}); assert(timers[\"spawn timer\"]==990000)\nevent_timer({timer=\"other\"}); assert(#spawns==1)\nevent_timer({timer=\"spawn timer\"}); assert(#spawns==2); assert(stops[\"spawn timer\"])\n",
+      "coverageKind": "focused_functional"
+    },
+    {
+      "name": "croc last-death timer branch 90",
+      "key": "guktop/croc_trigger",
+      "proposedFile": "changes/p99-support-lifecycle-values/guktop--croc_trigger.lua",
+      "sourceSha256": "20586d714137fa21415132573c4e0effaaa5230bb86459a115d476dfca6d75e3",
+      "setupExtra": "spawns={}; timers={}; stops={}; guarded=0\neq={spawn2=function(...) table.insert(spawns,{...}) end, set_timer=function(n,v) timers[n]=v end, stop_timer=function(n) stops[n]=true end, ChooseRandom=function(...) return select(1,...) end}\nmob={GetX=function() return 11 end,GetY=function() return 22 end,GetZ=function() return 33 end,GetHeading=function() return 44 end,SaveGuardSpot=function(self,x,y,z,h) assert(x==11 and y==22 and z==33 and h==44);guarded=guarded+1 end}\n\nmath.random=function() return 90 end",
+      "assertions": "event_spawn({}); assert(#spawns==1); assert(spawns[1][1]==65068)\nfor i=1,0 do event_signal({}); assert(timers[\"spawn timer\"]==nil) end\nevent_signal({}); assert(timers[\"spawn timer\"]==990000)\nevent_timer({timer=\"other\"}); assert(#spawns==1)\nevent_timer({timer=\"spawn timer\"}); assert(#spawns==2); assert(stops[\"spawn timer\"])\n",
+      "coverageKind": "focused_functional"
+    },
+    {
+      "name": "croc last-death timer branch 91",
+      "key": "guktop/croc_trigger",
+      "proposedFile": "changes/p99-support-lifecycle-values/guktop--croc_trigger.lua",
+      "sourceSha256": "20586d714137fa21415132573c4e0effaaa5230bb86459a115d476dfca6d75e3",
+      "setupExtra": "spawns={}; timers={}; stops={}; guarded=0\neq={spawn2=function(...) table.insert(spawns,{...}) end, set_timer=function(n,v) timers[n]=v end, stop_timer=function(n) stops[n]=true end, ChooseRandom=function(...) return select(1,...) end}\nmob={GetX=function() return 11 end,GetY=function() return 22 end,GetZ=function() return 33 end,GetHeading=function() return 44 end,SaveGuardSpot=function(self,x,y,z,h) assert(x==11 and y==22 and z==33 and h==44);guarded=guarded+1 end}\n\nmath.random=function() return 91 end",
+      "assertions": "event_spawn({}); assert(#spawns==1); assert(spawns[1][1]==65139)\nfor i=1,0 do event_signal({}); assert(timers[\"spawn timer\"]==nil) end\nevent_signal({}); assert(timers[\"spawn timer\"]==990000)\nevent_timer({timer=\"other\"}); assert(#spawns==1)\nevent_timer({timer=\"spawn timer\"}); assert(#spawns==2); assert(stops[\"spawn timer\"])\n",
+      "coverageKind": "focused_functional"
+    },
+    {
+      "name": "croc last-death timer branch 95",
+      "key": "guktop/croc_trigger",
+      "proposedFile": "changes/p99-support-lifecycle-values/guktop--croc_trigger.lua",
+      "sourceSha256": "20586d714137fa21415132573c4e0effaaa5230bb86459a115d476dfca6d75e3",
+      "setupExtra": "spawns={}; timers={}; stops={}; guarded=0\neq={spawn2=function(...) table.insert(spawns,{...}) end, set_timer=function(n,v) timers[n]=v end, stop_timer=function(n) stops[n]=true end, ChooseRandom=function(...) return select(1,...) end}\nmob={GetX=function() return 11 end,GetY=function() return 22 end,GetZ=function() return 33 end,GetHeading=function() return 44 end,SaveGuardSpot=function(self,x,y,z,h) assert(x==11 and y==22 and z==33 and h==44);guarded=guarded+1 end}\n\nmath.random=function() return 95 end",
+      "assertions": "event_spawn({}); assert(#spawns==1); assert(spawns[1][1]==65139)\nfor i=1,0 do event_signal({}); assert(timers[\"spawn timer\"]==nil) end\nevent_signal({}); assert(timers[\"spawn timer\"]==990000)\nevent_timer({timer=\"other\"}); assert(#spawns==1)\nevent_timer({timer=\"spawn timer\"}); assert(#spawns==2); assert(stops[\"spawn timer\"])\n",
+      "coverageKind": "focused_functional"
+    },
+    {
+      "name": "croc last-death timer branch 96",
+      "key": "guktop/croc_trigger",
+      "proposedFile": "changes/p99-support-lifecycle-values/guktop--croc_trigger.lua",
+      "sourceSha256": "20586d714137fa21415132573c4e0effaaa5230bb86459a115d476dfca6d75e3",
+      "setupExtra": "spawns={}; timers={}; stops={}; guarded=0\neq={spawn2=function(...) table.insert(spawns,{...}) end, set_timer=function(n,v) timers[n]=v end, stop_timer=function(n) stops[n]=true end, ChooseRandom=function(...) return select(1,...) end}\nmob={GetX=function() return 11 end,GetY=function() return 22 end,GetZ=function() return 33 end,GetHeading=function() return 44 end,SaveGuardSpot=function(self,x,y,z,h) assert(x==11 and y==22 and z==33 and h==44);guarded=guarded+1 end}\n\nmath.random=function() return 96 end",
+      "assertions": "event_spawn({}); assert(#spawns==4); assert(spawns[1][1]==65068)\nfor i=1,3 do event_signal({}); assert(timers[\"spawn timer\"]==nil) end\nevent_signal({}); assert(timers[\"spawn timer\"]==990000)\nevent_timer({timer=\"other\"}); assert(#spawns==4)\nevent_timer({timer=\"spawn timer\"}); assert(#spawns==8); assert(stops[\"spawn timer\"])\n",
+      "coverageKind": "focused_functional"
+    },
+    {
+      "name": "croc last-death timer branch 98",
+      "key": "guktop/croc_trigger",
+      "proposedFile": "changes/p99-support-lifecycle-values/guktop--croc_trigger.lua",
+      "sourceSha256": "20586d714137fa21415132573c4e0effaaa5230bb86459a115d476dfca6d75e3",
+      "setupExtra": "spawns={}; timers={}; stops={}; guarded=0\neq={spawn2=function(...) table.insert(spawns,{...}) end, set_timer=function(n,v) timers[n]=v end, stop_timer=function(n) stops[n]=true end, ChooseRandom=function(...) return select(1,...) end}\nmob={GetX=function() return 11 end,GetY=function() return 22 end,GetZ=function() return 33 end,GetHeading=function() return 44 end,SaveGuardSpot=function(self,x,y,z,h) assert(x==11 and y==22 and z==33 and h==44);guarded=guarded+1 end}\n\nmath.random=function() return 98 end",
+      "assertions": "event_spawn({}); assert(#spawns==4); assert(spawns[1][1]==65068)\nfor i=1,3 do event_signal({}); assert(timers[\"spawn timer\"]==nil) end\nevent_signal({}); assert(timers[\"spawn timer\"]==990000)\nevent_timer({timer=\"other\"}); assert(#spawns==4)\nevent_timer({timer=\"spawn timer\"}); assert(#spawns==8); assert(stops[\"spawn timer\"])\n",
+      "coverageKind": "focused_functional"
+    },
+    {
+      "name": "croc last-death timer branch 99",
+      "key": "guktop/croc_trigger",
+      "proposedFile": "changes/p99-support-lifecycle-values/guktop--croc_trigger.lua",
+      "sourceSha256": "20586d714137fa21415132573c4e0effaaa5230bb86459a115d476dfca6d75e3",
+      "setupExtra": "spawns={}; timers={}; stops={}; guarded=0\neq={spawn2=function(...) table.insert(spawns,{...}) end, set_timer=function(n,v) timers[n]=v end, stop_timer=function(n) stops[n]=true end, ChooseRandom=function(...) return select(1,...) end}\nmob={GetX=function() return 11 end,GetY=function() return 22 end,GetZ=function() return 33 end,GetHeading=function() return 44 end,SaveGuardSpot=function(self,x,y,z,h) assert(x==11 and y==22 and z==33 and h==44);guarded=guarded+1 end}\n\nmath.random=function() return 99 end",
+      "assertions": "event_spawn({}); assert(#spawns==5); assert(spawns[1][1]==65068)\nfor i=1,4 do event_signal({}); assert(timers[\"spawn timer\"]==nil) end\nevent_signal({}); assert(timers[\"spawn timer\"]==990000)\nevent_timer({timer=\"other\"}); assert(#spawns==5)\nevent_timer({timer=\"spawn timer\"}); assert(#spawns==10); assert(stops[\"spawn timer\"])\n",
+      "coverageKind": "focused_functional"
+    },
+    {
+      "name": "croc last-death timer branch 100",
+      "key": "guktop/croc_trigger",
+      "proposedFile": "changes/p99-support-lifecycle-values/guktop--croc_trigger.lua",
+      "sourceSha256": "20586d714137fa21415132573c4e0effaaa5230bb86459a115d476dfca6d75e3",
+      "setupExtra": "spawns={}; timers={}; stops={}; guarded=0\neq={spawn2=function(...) table.insert(spawns,{...}) end, set_timer=function(n,v) timers[n]=v end, stop_timer=function(n) stops[n]=true end, ChooseRandom=function(...) return select(1,...) end}\nmob={GetX=function() return 11 end,GetY=function() return 22 end,GetZ=function() return 33 end,GetHeading=function() return 44 end,SaveGuardSpot=function(self,x,y,z,h) assert(x==11 and y==22 and z==33 and h==44);guarded=guarded+1 end}\n\nmath.random=function() return 100 end",
+      "assertions": "event_spawn({}); assert(#spawns==5); assert(spawns[1][1]==65068)\nfor i=1,4 do event_signal({}); assert(timers[\"spawn timer\"]==nil) end\nevent_signal({}); assert(timers[\"spawn timer\"]==990000)\nevent_timer({timer=\"other\"}); assert(#spawns==5)\nevent_timer({timer=\"spawn timer\"}); assert(#spawns==10); assert(stops[\"spawn timer\"])\n",
+      "coverageKind": "focused_functional"
+    },
+    {
+      "name": "moldmaster exactly three sporelings and guard preservation",
+      "key": "runnyeye/#The_Sporali_Moldmaster",
+      "proposedFile": "changes/p99-support-lifecycle-values/runnyeye--#The_Sporali_Moldmaster.lua",
+      "sourceSha256": "92bed52f8865ead553e1ea50a56dd100772107b0c543268a7c274e37dbf7ff37",
+      "setupExtra": "spawns={}; timers={}; stops={}; guarded=0\neq={spawn2=function(...) table.insert(spawns,{...}) end, set_timer=function(n,v) timers[n]=v end, stop_timer=function(n) stops[n]=true end, ChooseRandom=function(...) return select(1,...) end}\nmob={GetX=function() return 11 end,GetY=function() return 22 end,GetZ=function() return 33 end,GetHeading=function() return 44 end,SaveGuardSpot=function(self,x,y,z,h) assert(x==11 and y==22 and z==33 and h==44);guarded=guarded+1 end}\n",
+      "assertions": "event_combat({self=mob,joined=true}); assert(guarded==0); event_combat({self=mob,joined=false}); assert(guarded==1); event_death_complete({self=mob}); assert(#spawns==3); for _,s in ipairs(spawns) do assert(s[1]==11164 and s[4]==11 and s[5]==22 and s[6]==33 and s[7]==44) end",
+      "coverageKind": "focused_functional"
+    },
+    {
+      "name": "tar goo exactly two children with unchanged positions and no random chance",
+      "key": "wakening/119017",
+      "proposedFile": "changes/p99-support-lifecycle-values/wakening--119017.lua",
+      "sourceSha256": "f8fdcf491a62509914afc7ea362ea9cdb40be98d7cf9dcc7afbb569d7a70f1e9",
+      "setupExtra": "spawns={}; timers={}; stops={}; guarded=0\neq={spawn2=function(...) table.insert(spawns,{...}) end, set_timer=function(n,v) timers[n]=v end, stop_timer=function(n) stops[n]=true end, ChooseRandom=function(...) return select(1,...) end}\nmob={GetX=function() return 11 end,GetY=function() return 22 end,GetZ=function() return 33 end,GetHeading=function() return 44 end,SaveGuardSpot=function(self,x,y,z,h) assert(x==11 and y==22 and z==33 and h==44);guarded=guarded+1 end}\n\nmath.random=function() error(\"not stochastic anymore\") end",
+      "assertions": "event_death_complete({self=mob}); assert(#spawns==2); for _,s in ipairs(spawns) do assert(s[1]==119122 and s[4]==11 and s[5]==22 and s[6]==33 and s[7]==44) end",
+      "coverageKind": "focused_functional"
+    },
+    {
+      "name": "Guard_Fayfear combat joined=true",
+      "key": "gfaydark/Guard_Fayfear",
+      "proposedFile": "changes/p99-support-mixed-hints/Guard_Fayfear.lua",
+      "sourceSha256": "1722962551de8705c4081fac0311397b668da2eefe91204947835ed315c91831",
+      "setupExtra": "said={}; mob={Say=function(self,text) table.insert(said,text) end}; client={GetCleanName=function() return \"TestKnight\" end}",
+      "assertions": "assert(event_say==nil); event_combat({self=mob,other=client,joined=true}); assert(#said==1); assert(said[1]==\"Time to die TestKnight.\")",
+      "coverageKind": "focused_functional"
+    },
+    {
+      "name": "Guard_Fayfear combat joined=false",
+      "key": "gfaydark/Guard_Fayfear",
+      "proposedFile": "changes/p99-support-mixed-hints/Guard_Fayfear.lua",
+      "sourceSha256": "1722962551de8705c4081fac0311397b668da2eefe91204947835ed315c91831",
+      "setupExtra": "said={}; mob={Say=function(self,text) table.insert(said,text) end}; client={GetCleanName=function() return \"TestKnight\" end}",
+      "assertions": "assert(event_say==nil); event_combat({self=mob,other=client,joined=false}); assert(#said==0);",
+      "coverageKind": "focused_functional"
+    },
+    {
+      "name": "Guard_Highmoon combat joined=true",
+      "key": "gfaydark/Guard_Highmoon",
+      "proposedFile": "changes/p99-support-mixed-hints/Guard_Highmoon.lua",
+      "sourceSha256": "1722962551de8705c4081fac0311397b668da2eefe91204947835ed315c91831",
+      "setupExtra": "said={}; mob={Say=function(self,text) table.insert(said,text) end}; client={GetCleanName=function() return \"TestKnight\" end}",
+      "assertions": "assert(event_say==nil); event_combat({self=mob,other=client,joined=true}); assert(#said==1); assert(said[1]==\"Time to die TestKnight.\")",
+      "coverageKind": "focused_functional"
+    },
+    {
+      "name": "Guard_Highmoon combat joined=false",
+      "key": "gfaydark/Guard_Highmoon",
+      "proposedFile": "changes/p99-support-mixed-hints/Guard_Highmoon.lua",
+      "sourceSha256": "1722962551de8705c4081fac0311397b668da2eefe91204947835ed315c91831",
+      "setupExtra": "said={}; mob={Say=function(self,text) table.insert(said,text) end}; client={GetCleanName=function() return \"TestKnight\" end}",
+      "assertions": "assert(event_say==nil); event_combat({self=mob,other=client,joined=false}); assert(#said==0);",
+      "coverageKind": "focused_functional"
+    },
+    {
+      "name": "classic strongbox no flag",
+      "key": "oot/player",
+      "proposedFile": "changes/p99-support-ocean-fishing-scope/oot-player.lua",
+      "sourceSha256": "1fa873bb1ab85f06a929fe305c97cd240af8053223b4797564c3ebd265c6a506",
+      "setupExtra": "ground={};deleted={};player={};globals={};eq={get_qglobals=function(self)assert(self==player);return globals end,create_ground_object=function(...)table.insert(ground,{...})end,delete_global=function(g)table.insert(deleted,g)end}",
+      "assertions": "assert(event_fish_success==nil);event_enter_zone({self=player});assert(#ground==0);assert(#deleted==0)",
+      "coverageKind": "focused_functional"
+    },
+    {
+      "name": "classic strongbox string flag",
+      "key": "oot/player",
+      "proposedFile": "changes/p99-support-ocean-fishing-scope/oot-player.lua",
+      "sourceSha256": "1fa873bb1ab85f06a929fe305c97cd240af8053223b4797564c3ebd265c6a506",
+      "setupExtra": "ground={};deleted={};player={};globals={strongbox=\"1\"};eq={get_qglobals=function(self)assert(self==player);return globals end,create_ground_object=function(...)table.insert(ground,{...})end,delete_global=function(g)table.insert(deleted,g)end}",
+      "assertions": "assert(event_fish_success==nil);event_enter_zone({self=player});assert(#ground==1);assert(#deleted==1); assert(deleted[1]==\"strongbox\"); local a=ground[1];assert(#a==6 and a[1]==13860 and a[2]==-9200 and a[3]==-430 and a[4]==-293 and a[5]==0 and a[6]==3000000)",
+      "coverageKind": "focused_functional"
+    },
+    {
+      "name": "classic strongbox false non-nil flag",
+      "key": "oot/player",
+      "proposedFile": "changes/p99-support-ocean-fishing-scope/oot-player.lua",
+      "sourceSha256": "1fa873bb1ab85f06a929fe305c97cd240af8053223b4797564c3ebd265c6a506",
+      "setupExtra": "ground={};deleted={};player={};globals={strongbox=false};eq={get_qglobals=function(self)assert(self==player);return globals end,create_ground_object=function(...)table.insert(ground,{...})end,delete_global=function(g)table.insert(deleted,g)end}",
+      "assertions": "assert(event_fish_success==nil);event_enter_zone({self=player});assert(#ground==1);assert(#deleted==1); assert(deleted[1]==\"strongbox\"); local a=ground[1];assert(#a==6 and a[1]==13860 and a[2]==-9200 and a[3]==-430 and a[4]==-293 and a[5]==0 and a[6]==3000000)",
+      "coverageKind": "focused_functional"
+    },
+    {
+      "name": "classic strongbox later epic flag only",
+      "key": "oot/player",
+      "proposedFile": "changes/p99-support-ocean-fishing-scope/oot-player.lua",
+      "sourceSha256": "1fa873bb1ab85f06a929fe305c97cd240af8053223b4797564c3ebd265c6a506",
+      "setupExtra": "ground={};deleted={};player={};globals={paladin_epic=\"3\"};eq={get_qglobals=function(self)assert(self==player);return globals end,create_ground_object=function(...)table.insert(ground,{...})end,delete_global=function(g)table.insert(deleted,g)end}",
+      "assertions": "assert(event_fish_success==nil);event_enter_zone({self=player});assert(#ground==0);assert(#deleted==0)",
+      "coverageKind": "focused_functional"
+    },
+    {
+      "name": "lfaydark/Grynnaf_Einoom documented/preserved/removed dialogue Hail, Grynnaf_Einoom",
+      "key": "lfaydark/Grynnaf_Einoom",
+      "proposedFile": "changes/p99-support-dialogue-fixes/lfaydark--Grynnaf_Einoom.lua",
+      "sourceSha256": "1328f8fe3010f9c40512937b3f6c4293f9bba9285f07bea9ac18926ebca88e06",
+      "setupExtra": "eq.say_link=function(s) return s end",
+      "assertions": "say(\"Hail, Grynnaf_Einoom\");equal(#calls.speech,1);equal(calls.speech[1],\"looks at Reviewer and wonders if he is looking for the Scalekeeper?\");equal(next(calls.rewards),nil);equal(calls.exp,0);equal(next(calls.factions),nil);equal(#calls.cash,0);equal(#calls.spells,0);equal(#calls.signals,0);equal(calls.depops,0);",
+      "coverageKind": "focused_functional"
+    },
+    {
+      "name": "lfaydark/Grynnaf_Einoom documented/preserved/removed dialogue HAIL",
+      "key": "lfaydark/Grynnaf_Einoom",
+      "proposedFile": "changes/p99-support-dialogue-fixes/lfaydark--Grynnaf_Einoom.lua",
+      "sourceSha256": "1328f8fe3010f9c40512937b3f6c4293f9bba9285f07bea9ac18926ebca88e06",
+      "setupExtra": "eq.say_link=function(s) return s end",
+      "assertions": "say(\"HAIL\");equal(#calls.speech,1);equal(calls.speech[1],\"looks at Reviewer and wonders if he is looking for the Scalekeeper?\");equal(next(calls.rewards),nil);equal(calls.exp,0);equal(next(calls.factions),nil);equal(#calls.cash,0);equal(#calls.spells,0);equal(#calls.signals,0);equal(calls.depops,0);",
+      "coverageKind": "focused_functional"
+    },
+    {
+      "name": "lfaydark/Grynnaf_Einoom documented/preserved/removed dialogue Who is the scalekeeper?",
+      "key": "lfaydark/Grynnaf_Einoom",
+      "proposedFile": "changes/p99-support-dialogue-fixes/lfaydark--Grynnaf_Einoom.lua",
+      "sourceSha256": "1328f8fe3010f9c40512937b3f6c4293f9bba9285f07bea9ac18926ebca88e06",
+      "setupExtra": "eq.say_link=function(s) return s end",
+      "assertions": "say(\"Who is the scalekeeper?\");equal(#calls.speech,1);equal(calls.speech[1],\"Ahh...Ye be lookin' for Nortlav then. Nortlav is a strong fella. Ye dunna want to mess with the likes of him. He's known as a dragonslayer. I heard that he keeps the scales of the dragons he's slain. Yer not impressed eh? All the dragons he's killed have died by the blade of a [rusty weapon].\");equal(next(calls.rewards),nil);equal(calls.exp,0);equal(next(calls.factions),nil);equal(#calls.cash,0);equal(#calls.spells,0);equal(#calls.signals,0);equal(calls.depops,0);",
+      "coverageKind": "focused_functional"
+    },
+    {
+      "name": "lfaydark/Grynnaf_Einoom documented/preserved/removed dialogue What rusty weapon?",
+      "key": "lfaydark/Grynnaf_Einoom",
+      "proposedFile": "changes/p99-support-dialogue-fixes/lfaydark--Grynnaf_Einoom.lua",
+      "sourceSha256": "1328f8fe3010f9c40512937b3f6c4293f9bba9285f07bea9ac18926ebca88e06",
+      "setupExtra": "eq.say_link=function(s) return s end",
+      "assertions": "say(\"What rusty weapon?\");equal(#calls.speech,1);equal(calls.speech[1],\"Aye. I dunno know why he does what he does. But every dragon he's killed died by the likes of a rusty weapon. I dunno where he is now. but I heard he can be found in the depths of Norrath. surrounded by darkness.\");equal(next(calls.rewards),nil);equal(calls.exp,0);equal(next(calls.factions),nil);equal(#calls.cash,0);equal(#calls.spells,0);equal(#calls.signals,0);equal(calls.depops,0);",
+      "coverageKind": "focused_functional"
+    },
+    {
+      "name": "lfaydark/Grynnaf_Einoom documented/preserved/removed dialogue irrelevant",
+      "key": "lfaydark/Grynnaf_Einoom",
+      "proposedFile": "changes/p99-support-dialogue-fixes/lfaydark--Grynnaf_Einoom.lua",
+      "sourceSha256": "1328f8fe3010f9c40512937b3f6c4293f9bba9285f07bea9ac18926ebca88e06",
+      "setupExtra": "eq.say_link=function(s) return s end",
+      "assertions": "say(\"irrelevant\");equal(#calls.speech,0);equal(next(calls.rewards),nil);equal(calls.exp,0);equal(next(calls.factions),nil);equal(#calls.cash,0);equal(#calls.spells,0);equal(#calls.signals,0);equal(calls.depops,0);",
+      "coverageKind": "focused_functional"
+    },
+    {
+      "name": "cabwest/Jaxxtz documented/preserved/removed dialogue Hail",
+      "key": "cabwest/Jaxxtz",
+      "proposedFile": "changes/p99-support-dialogue-fixes/cabwest--Jaxxtz.lua",
+      "sourceSha256": "1cc9f089cabc48bbe8fa0e03d1de2956c01e7613f05a0a8f16ee585ae8c6f015",
+      "setupExtra": "eq.say_link=function(s) return s end",
+      "assertions": "say(\"Hail\");equal(#calls.speech,1);equal(calls.speech[1],\"Greetings, Reviewer, Perhaps you've come to purchase some of my rare supplies? I have a special blend of eleven herbs and spices......oh wait.....I'm sold out of that......anyway. What can I do for you?\");equal(next(calls.rewards),nil);equal(calls.exp,0);equal(next(calls.factions),nil);equal(#calls.cash,0);equal(#calls.spells,0);equal(#calls.signals,0);equal(calls.depops,0);",
+      "coverageKind": "focused_functional"
+    },
+    {
+      "name": "cabwest/Jaxxtz documented/preserved/removed dialogue HAIL",
+      "key": "cabwest/Jaxxtz",
+      "proposedFile": "changes/p99-support-dialogue-fixes/cabwest--Jaxxtz.lua",
+      "sourceSha256": "1cc9f089cabc48bbe8fa0e03d1de2956c01e7613f05a0a8f16ee585ae8c6f015",
+      "setupExtra": "eq.say_link=function(s) return s end",
+      "assertions": "say(\"HAIL\");equal(#calls.speech,1);equal(calls.speech[1],\"Greetings, Reviewer, Perhaps you've come to purchase some of my rare supplies? I have a special blend of eleven herbs and spices......oh wait.....I'm sold out of that......anyway. What can I do for you?\");equal(next(calls.rewards),nil);equal(calls.exp,0);equal(next(calls.factions),nil);equal(#calls.cash,0);equal(#calls.spells,0);equal(#calls.signals,0);equal(calls.depops,0);",
+      "coverageKind": "focused_functional"
+    },
+    {
+      "name": "cabwest/Jaxxtz documented/preserved/removed dialogue Vagnar",
+      "key": "cabwest/Jaxxtz",
+      "proposedFile": "changes/p99-support-dialogue-fixes/cabwest--Jaxxtz.lua",
+      "sourceSha256": "1cc9f089cabc48bbe8fa0e03d1de2956c01e7613f05a0a8f16ee585ae8c6f015",
+      "setupExtra": "eq.say_link=function(s) return s end",
+      "assertions": "say(\"Vagnar\");equal(#calls.speech,0);equal(next(calls.rewards),nil);equal(calls.exp,0);equal(next(calls.factions),nil);equal(#calls.cash,0);equal(#calls.spells,0);equal(#calls.signals,0);equal(calls.depops,0);",
+      "coverageKind": "focused_functional"
+    },
+    {
+      "name": "cabwest/Jaxxtz documented/preserved/removed dialogue Dragon kin",
+      "key": "cabwest/Jaxxtz",
+      "proposedFile": "changes/p99-support-dialogue-fixes/cabwest--Jaxxtz.lua",
+      "sourceSha256": "1cc9f089cabc48bbe8fa0e03d1de2956c01e7613f05a0a8f16ee585ae8c6f015",
+      "setupExtra": "eq.say_link=function(s) return s end",
+      "assertions": "say(\"Dragon kin\");equal(#calls.speech,0);equal(next(calls.rewards),nil);equal(calls.exp,0);equal(next(calls.factions),nil);equal(#calls.cash,0);equal(#calls.spells,0);equal(#calls.signals,0);equal(calls.depops,0);",
+      "coverageKind": "focused_functional"
+    },
+    {
+      "name": "cabwest/Jaxxtz documented/preserved/removed dialogue irrelevant",
+      "key": "cabwest/Jaxxtz",
+      "proposedFile": "changes/p99-support-dialogue-fixes/cabwest--Jaxxtz.lua",
+      "sourceSha256": "1cc9f089cabc48bbe8fa0e03d1de2956c01e7613f05a0a8f16ee585ae8c6f015",
+      "setupExtra": "eq.say_link=function(s) return s end",
+      "assertions": "say(\"irrelevant\");equal(#calls.speech,0);equal(next(calls.rewards),nil);equal(calls.exp,0);equal(next(calls.factions),nil);equal(#calls.cash,0);equal(#calls.spells,0);equal(#calls.signals,0);equal(calls.depops,0);",
+      "coverageKind": "focused_functional"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+import fs from 'node:fs';import path from 'node:path';import os from 'node:os';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';import {execFileSync} from 'node:child_process';
+const root=process.cwd(),read=p=>fs.readFileSync(path.join(root,p),'utf8');
+const records=JSON.parse(read('changes/p99-conversion-world/behavior-cases.json')).cases;
+const setup=read('tools/p99-test-fixture.lua')+'\npackage.preload["items"]=function()\n'+read('sources/projecteq/lua_modules/items.lua')+'\nend\n';
+const cases=records.map(r=>{const source=read(r.proposedFile);assert.equal(createHash('sha256').update(source).digest('hex'),r.sourceSha256);return {name:r.name,source,setup:setup+'\n'+r.setupExtra,assertions:r.assertions}});
+const tmp=fs.mkdtempSync(path.join(os.tmpdir(),'world-quest-test-'));
+try{const binary=path.join(tmp,'runner');execFileSync('go',['build','-o',binary,'../tools/p99-lua-runner.go'],{cwd:path.join(root,'validator')});const output=execFileSync(binary,[],{input:JSON.stringify(cases),encoding:'utf8',maxBuffer:4*1024*1024});process.stdout.write(output);fs.writeFileSync('changes/p99-conversion-world/test-receipt.json',JSON.stringify({kind:'isolated-script-behavior-not-game-runtime',completedAt:new Date().toISOString(),passed:cases.length,cases:records.map(r=>({name:r.name,file:r.proposedFile,sha256:r.sourceSha256}))},null,2)+'\n');}finally{fs.rmSync(tmp,{recursive:true,force:true})}

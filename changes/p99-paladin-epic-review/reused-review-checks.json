@@ -1,0 +1,912 @@
+[
+  {
+    "title": "The Fiery Avenger",
+    "reviewFile": "changes/p99-tz-review/manual-facet-review.json",
+    "reviewFileSha256": "f1c1ec72ce1a098ceebe706fb84c945f4eb9c96c8cf2d70c06c0fcc196a83e81",
+    "reviewRecord": {
+      "title": "The Fiery Avenger",
+      "review_status": "source_facets_reviewed_path_open",
+      "evidence": {
+        "title": "The Fiery Avenger",
+        "url": "https://wiki.project1999.com/The_Fiery_Avenger?action=raw",
+        "fetchedAt": "2026-07-17T23:36:26.688Z",
+        "revision": null,
+        "sha256": "fbd53720ea426aed594745a7a648a8df898fe840990649f9cbdbdd31322f66b3",
+        "bytes": 5544,
+        "source": "raw-pages/the-fiery-avenger-8c625d8bd9.json",
+        "cachePath": "reference/p99-wiki/raw-pages/the-fiery-avenger-8c625d8bd9.wiki"
+      },
+      "sources": [
+        {
+          "key": "neriakb/Rysva_To-Biath",
+          "file": "effective/quests/neriakb/Rysva_To-Biath.lua",
+          "enabled": 1,
+          "sha256": "280001546c686f7d9cfab348d27ff4fd3cb2184abdce990568f3e062204336ea",
+          "maintained": [
+            {
+              "file": "maintained/lua/converted-perl/neriakb/Rysva_To-Biath.lua",
+              "sha256": "280001546c686f7d9cfab348d27ff4fd3cb2184abdce990568f3e062204336ea",
+              "equals_effective": true
+            }
+          ]
+        },
+        {
+          "key": "oot/Oracle_of_K-Arnon",
+          "file": "effective/quests/oot/Oracle_of_K-Arnon.lua",
+          "enabled": 1,
+          "sha256": "58f8edcb96edf98fd06a1cdcde36a2a858eeba0107b2c00ec304860471644ce9",
+          "maintained": [
+            {
+              "file": "maintained/lua/converted-perl/oot/Oracle_of_K-Arnon.lua",
+              "sha256": "58f8edcb96edf98fd06a1cdcde36a2a858eeba0107b2c00ec304860471644ce9",
+              "equals_effective": true
+            }
+          ]
+        },
+        {
+          "key": "everfrost/Lich_of_Miragul",
+          "file": "effective/quests/everfrost/Lich_of_Miragul.lua",
+          "enabled": 1,
+          "sha256": "b776759abd75fe8f1b777a4740028a550277c77b0585c866d99ca3210527b69c",
+          "maintained": []
+        },
+        {
+          "key": "airplane/Dason_Goldblade",
+          "file": "effective/quests/airplane/Dason_Goldblade.lua",
+          "enabled": 1,
+          "sha256": "587fbd2415b43f8e0f3ba698fb08708f648ce24384a410bae454298fe0efc385",
+          "maintained": []
+        },
+        {
+          "key": "airplane/Dirkog_Steelhand",
+          "file": "effective/quests/airplane/Dirkog_Steelhand.lua",
+          "enabled": 1,
+          "sha256": "46f9b6b52741dcef5761186125d5fb050fd120db0e5594b3b5a7e0a3d44b12f1",
+          "maintained": []
+        },
+        {
+          "key": "airplane/Inte_Akera",
+          "file": "effective/quests/airplane/Inte_Akera.lua",
+          "enabled": 1,
+          "sha256": "3e1979069383d76097264cc02848d429411ed776189b2379a0526a4192618676",
+          "maintained": [
+            {
+              "file": "maintained/lua/modified-upstream/airplane/Inte_Akera.lua",
+              "sha256": "3e1979069383d76097264cc02848d429411ed776189b2379a0526a4192618676",
+              "equals_effective": true
+            }
+          ]
+        },
+        {
+          "key": "qeynos2/Rineval_Talyas",
+          "file": "effective/quests/qeynos2/Rineval_Talyas.lua",
+          "sha256": "5e8fc371f7712c488a3530db93414eb3968dd63582408265bb267861850840ef",
+          "review": "Full supplemental source read; no change."
+        }
+      ],
+      "verified_facets": {
+        "book": "Rysva and supplemental Rineval both require19071 Torn Burnt Book+19070 Torn Frost-covered Book+1000pp ->18302 Book of Scale, then Oracle18302->19072 Miragul Phylactery. Exact cash/items match. Rysva documented completion text restored; missing XP on book assembly remains unresolved (Rineval Ding alone is not XP).",
+        "miragul": "Lich19072 spawns NPC30094 Miragul level53 at its own coordinates and depops. Static loot177 links404 and23273, containing1254 Miragul Robe and19073 Miragul Head respectively, each retained chance100; no live drop claim. NPCexclude1/isquest0 preserved.",
+        "sky": "Dason chooses Dirkog71077; Dirkog500pp spawns Inte71091 at -586,767,176 heading128 and depops. Both existing300000ms timers match explicit FIVE minutes; proposed named guards reject unrelated timers.",
+        "final": "SoulFire5504 alone->18033 First Blessing; Ghoulbane5403 alone->18034 Second Blessing; both+19073 Head+1254 Robe->11050 Fiery Avenger. Separate first exchanges and final four-item recipe match, XP100000/100000/1000000 unquantified. No factions/cash at final actor.",
+        "eligibility": "Inte baseline Ally-only1 differs explicit Warmly. Approved proposed<=2 preserves friendly runtime policy and rejects Kindly3 without consumption. No added min-level gate.",
+        "adaptations": "Direct Lich hand-in without charm explicitly retained by quest-audit-review-notes.md1661\u20131670. Dason book-return shortcut explicitly retained in Paladin Sky section1494\u20131503. Existing Oracle dialogue overlay owned here is referenced."
+      },
+      "unresolved": [
+        "Blessing names differ: page Nobility/Sacrifice versus exported First/Second. Correct chain mapping is established, item presentation metadata not corrected.",
+        "Dragon book loot, other sword acquisition, full combat/raid/spawn settlement and pickup remain open; static Miragul loot is not encounter proof.",
+        "Book assembly XP presence mismatch has no sourced magnitude. No Turmoil reward copied.",
+        "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+      ],
+      "verification": {
+        "source": "Full cached quest page and canonical available Lua read; legacy alias sources only hashed unless expressly stated; named item IDs resolved against exported items",
+        "runtime": "not_run",
+        "ui": "not_run",
+        "connected_chain": "not_run"
+      },
+      "adaptation_evidence": {
+        "file": "reference/docs/quest-audit-review-notes.md",
+        "sha256": "8e01fe50d7715d5803fd75f269f812967d89a6f50c2f76c09c100eb18bf826c8",
+        "sections": "Fiery Avenger Lich charm requirement; Paladin Plane of Sky Tests starter book flow"
+      },
+      "finding_scope": "Baseline facets; review referenced_proposals for proposed fixes, not applied changes. Supporting recipes remain separate recipe-review artifact.",
+      "referenced_proposals": [
+        {
+          "file": "changes/p99-tz-rysva-scale-dialogue.json",
+          "sha256": "555603ced6453f2c03703a7b0be02a7e32d0937792470e92839a280a36de7a09",
+          "summary": "Restore exact Book of Scale completion dialogue. Missing documented XP remains unresolved; do not transfer Book of Turmoil numerical reward."
+        },
+        {
+          "file": "changes/p99-tz-inte_akera-timer.json",
+          "sha256": "c47a6b1d7ba4d6c53589f0bae56597faefeeb169cbd90e1d2429a61ced6dad8a",
+          "summary": "Limit depop to named timer, preserving documented five-minute300000ms duration and all trades. Accept documented Warmly-or-better threshold, preserving friendly-faction policy. Full raid/spawn settlement unverified."
+        },
+        {
+          "file": "changes/p99-tz-dirkog_steelhand-timer.json",
+          "sha256": "ce09624d1390c0e6832ac96f8e6227d787ffe51c6cb45c80b4d5574b0d52160c",
+          "summary": "Limit depop to named timer, preserving documented five-minute300000ms duration and all trades. Full raid/spawn settlement unverified."
+        },
+        {
+          "file": "changes/p99-tz-oracle-dialogue.json",
+          "sha256": "a5e7abf6b371d816de5934f427a5af2a47f21ce9b77e790fd013ab75687f983c",
+          "summary": "Accept documented singular Book of Ages question in existing seven-book lore branch, preserve all other branch precedence and leave missing Scale numeric rewards unresolved."
+        }
+      ]
+    },
+    "sourceChecks": [
+      {
+        "key": "neriakb/Rysva_To-Biath",
+        "file": "effective/quests/neriakb/Rysva_To-Biath.lua",
+        "recordedSha256": "280001546c686f7d9cfab348d27ff4fd3cb2184abdce990568f3e062204336ea",
+        "currentSha256": "280001546c686f7d9cfab348d27ff4fd3cb2184abdce990568f3e062204336ea",
+        "matches": true
+      },
+      {
+        "key": "oot/Oracle_of_K-Arnon",
+        "file": "effective/quests/oot/Oracle_of_K-Arnon.lua",
+        "recordedSha256": "58f8edcb96edf98fd06a1cdcde36a2a858eeba0107b2c00ec304860471644ce9",
+        "currentSha256": "58f8edcb96edf98fd06a1cdcde36a2a858eeba0107b2c00ec304860471644ce9",
+        "matches": true
+      },
+      {
+        "key": "everfrost/Lich_of_Miragul",
+        "file": "effective/quests/everfrost/Lich_of_Miragul.lua",
+        "recordedSha256": "b776759abd75fe8f1b777a4740028a550277c77b0585c866d99ca3210527b69c",
+        "currentSha256": "b776759abd75fe8f1b777a4740028a550277c77b0585c866d99ca3210527b69c",
+        "matches": true
+      },
+      {
+        "key": "airplane/Dason_Goldblade",
+        "file": "effective/quests/airplane/Dason_Goldblade.lua",
+        "recordedSha256": "587fbd2415b43f8e0f3ba698fb08708f648ce24384a410bae454298fe0efc385",
+        "currentSha256": "587fbd2415b43f8e0f3ba698fb08708f648ce24384a410bae454298fe0efc385",
+        "matches": true
+      },
+      {
+        "key": "airplane/Dirkog_Steelhand",
+        "file": "effective/quests/airplane/Dirkog_Steelhand.lua",
+        "recordedSha256": "46f9b6b52741dcef5761186125d5fb050fd120db0e5594b3b5a7e0a3d44b12f1",
+        "currentSha256": "46f9b6b52741dcef5761186125d5fb050fd120db0e5594b3b5a7e0a3d44b12f1",
+        "matches": true
+      },
+      {
+        "key": "airplane/Inte_Akera",
+        "file": "effective/quests/airplane/Inte_Akera.lua",
+        "recordedSha256": "3e1979069383d76097264cc02848d429411ed776189b2379a0526a4192618676",
+        "currentSha256": "3e1979069383d76097264cc02848d429411ed776189b2379a0526a4192618676",
+        "matches": true
+      },
+      {
+        "key": "qeynos2/Rineval_Talyas",
+        "file": "effective/quests/qeynos2/Rineval_Talyas.lua",
+        "recordedSha256": "5e8fc371f7712c488a3530db93414eb3968dd63582408265bb267861850840ef",
+        "currentSha256": "5e8fc371f7712c488a3530db93414eb3968dd63582408265bb267861850840ef",
+        "matches": true
+      }
+    ],
+    "proposalChecks": [
+      {
+        "file": "changes/p99-tz-rysva-scale-dialogue.json",
+        "recordedSha256": "555603ced6453f2c03703a7b0be02a7e32d0937792470e92839a280a36de7a09",
+        "currentSha256": "555603ced6453f2c03703a7b0be02a7e32d0937792470e92839a280a36de7a09",
+        "matchesRecordedProposal": true,
+        "currentSources": [
+          {
+            "target": "maintained/lua/converted-perl/neriakb/Rysva_To-Biath.lua",
+            "proposedFile": "changes/p99-tz-rysva-scale-dialogue/neriakb--Rysva_To-Biath.lua",
+            "declaredSha256": "aa2f98204d809438504a0d6cfbedb17a5560d89f135402cd062e16ed3e9828e2",
+            "currentSha256": "aa2f98204d809438504a0d6cfbedb17a5560d89f135402cd062e16ed3e9828e2",
+            "matches": true
+          }
+        ]
+      },
+      {
+        "file": "changes/p99-tz-inte_akera-timer.json",
+        "recordedSha256": "c47a6b1d7ba4d6c53589f0bae56597faefeeb169cbd90e1d2429a61ced6dad8a",
+        "currentSha256": "c47a6b1d7ba4d6c53589f0bae56597faefeeb169cbd90e1d2429a61ced6dad8a",
+        "matchesRecordedProposal": true,
+        "currentSources": [
+          {
+            "target": "maintained/lua/modified-upstream/airplane/Inte_Akera.lua",
+            "proposedFile": "changes/p99-tz-inte_akera-timer/airplane--Inte_Akera.lua",
+            "declaredSha256": "90fc284b4345c8466551eccb7aed098a883222f107a0f8d1f3e3f9b0a7100e30",
+            "currentSha256": "90fc284b4345c8466551eccb7aed098a883222f107a0f8d1f3e3f9b0a7100e30",
+            "matches": true
+          }
+        ]
+      },
+      {
+        "file": "changes/p99-tz-dirkog_steelhand-timer.json",
+        "recordedSha256": "ce09624d1390c0e6832ac96f8e6227d787ffe51c6cb45c80b4d5574b0d52160c",
+        "currentSha256": "ce09624d1390c0e6832ac96f8e6227d787ffe51c6cb45c80b4d5574b0d52160c",
+        "matchesRecordedProposal": true,
+        "currentSources": [
+          {
+            "target": "maintained/lua/modified-upstream/airplane/Dirkog_Steelhand.lua",
+            "proposedFile": "changes/p99-tz-dirkog_steelhand-timer/airplane--Dirkog_Steelhand.lua",
+            "declaredSha256": "8b47ee5327fbcd1be48b8d1621e3bdc363bdf7793239a14f351115443833bb36",
+            "currentSha256": "8b47ee5327fbcd1be48b8d1621e3bdc363bdf7793239a14f351115443833bb36",
+            "matches": true
+          }
+        ]
+      },
+      {
+        "file": "changes/p99-tz-oracle-dialogue.json",
+        "recordedSha256": "a5e7abf6b371d816de5934f427a5af2a47f21ce9b77e790fd013ab75687f983c",
+        "currentSha256": "a5e7abf6b371d816de5934f427a5af2a47f21ce9b77e790fd013ab75687f983c",
+        "matchesRecordedProposal": true,
+        "currentSources": [
+          {
+            "target": "maintained/lua/converted-perl/oot/Oracle_of_K-Arnon.lua",
+            "proposedFile": "changes/p99-tz-oracle-dialogue/oot--Oracle_of_K-Arnon.lua",
+            "declaredSha256": "901a3752935ca97b4f0aed544d10e47d1b05357e1a80b93f7d7d457ca5065345",
+            "currentSha256": "901a3752935ca97b4f0aed544d10e47d1b05357e1a80b93f7d7d457ca5065345",
+            "matches": true
+          }
+        ]
+      }
+    ],
+    "scope": "Reuse only the explicit source facets and unresolved limits of this record. Hash checks establish currency, not source or live-path proof beyond its original scope."
+  },
+  {
+    "title": "The Sword of Nobility",
+    "reviewFile": "changes/p99-tz-review/manual-facet-review.json",
+    "reviewFileSha256": "f1c1ec72ce1a098ceebe706fb84c945f4eb9c96c8cf2d70c06c0fcc196a83e81",
+    "reviewRecord": {
+      "title": "The Sword of Nobility",
+      "review_status": "source_facets_reviewed_path_open",
+      "evidence": {
+        "title": "The Sword of Nobility",
+        "url": "https://wiki.project1999.com/The_Sword_of_Nobility?action=raw",
+        "fetchedAt": "2026-07-17T23:38:21.797Z",
+        "revision": null,
+        "sha256": "75ec79c07c0b26f697eb8d80888fa239454850a2024514bdae012b08cd9aa45d",
+        "bytes": 11621,
+        "source": "raw-pages/the-sword-of-nobility-b0a39c9968.json",
+        "cachePath": "reference/p99-wiki/raw-pages/the-sword-of-nobility-b0a39c9968.wiki"
+      },
+      "sources": [
+        {
+          "key": "qey2hh1/Ryshon_Hunsti",
+          "file": "effective/quests/qey2hh1/Ryshon_Hunsti.lua",
+          "sha256": "d8789f351ddbf3933d1d09dbf8bf3b0725bd6aef4a4b4ca264b57bb6a1b43820",
+          "review": "Full exact actor source read; historical ledger is not a runtime ban."
+        },
+        {
+          "key": "butcher/#Kanthuk_Ogrebane",
+          "file": "effective/quests/butcher/%23Kanthuk_Ogrebane.lua",
+          "sha256": "6ef55049a7c4d272e341b7213bcc526fda501d2c4750b059d200b48fe11aa4d2",
+          "review": "Full exact actor source read; historical ledger is not a runtime ban."
+        },
+        {
+          "key": "cauldron/#Llara",
+          "file": "effective/quests/cauldron/%23Llara.lua",
+          "sha256": "0d99a2b2fa5f5ab4fcd9ad12f7a0b6ea55deb3834dad11ff2f511a4ed1dd33c1",
+          "review": "Full exact actor source read; historical ledger is not a runtime ban."
+        },
+        {
+          "key": "lavastorm/Ruathey",
+          "file": "effective/quests/lavastorm/Ruathey.lua",
+          "sha256": "e74e6d74bbb0a68559bd2081c3cae3095b2ff7284192642e4cbdfeb5fdab9f08",
+          "review": "Full exact actor source read; historical ledger is not a runtime ban."
+        }
+      ],
+      "verified_facets": {
+        "classification": "Full page explicitly Warrens/Fear/Hate Revamp; historical ledger label is not a runtime exclusion, current-scope candidate. Classic Ghoulbane mob drop is separate.",
+        "inputs_rewards": "Ryshon gives2416 Note Kanthuk; Kanthuk consumes2416, conversation gives2414 Pendant; Llara2414 then conversation gives2417 Note Ruathey; Ruathey2417 lore or unrestricted bag phrase gives17878.",
+        "recipe": "Disabled9809 exactly2410 Ghoul Heart,2411 Amstaf Scroll,2412 Blade Nobility,2413 Hilt Nobleman in17878 ->5403 Ghoulbane; recipe remains disabled pending approved enable.",
+        "cash_factions": "None in four NPCs, page unspecified.",
+        "experience": "Kanthuk1000 and Llara500; page only explicitly shows Kanthuk presence.",
+        "dialogue": "All four exact sources fully read. Kanthuk/Llara existing30day quest globals not page-established; optional direct bag path works."
+      },
+      "unresolved": [
+        "Ryshon documented What sword fails looking-for-a-sword predicate; Ruathey missing hail. Dialogue gaps, no activation changes yet.",
+        "Quest globals settlement, component drops and container runtime unverified. Exact XP unspecified.",
+        "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+      ],
+      "verification": {
+        "source": "Full cached quest page and canonical available Lua read; legacy alias sources only hashed unless expressly stated; named item IDs resolved against exported items",
+        "runtime": "not_run",
+        "ui": "not_run",
+        "connected_chain": "not_run"
+      },
+      "finding_scope": "Baseline facets; review referenced_proposals for proposed fixes, not applied changes. Supporting recipes remain separate recipe-review artifact.",
+      "referenced_proposals": [
+        {
+          "file": "changes/p99-tz-ruathey-hail.json",
+          "sha256": "ffdce3bd50fb4c05dcaa4ce36c9b74bb96b960c67241a8b2e45580762ca7c5ce",
+          "summary": "Restore documented personalized hail; preserve note and free-bag branches, no invented rewards."
+        },
+        {
+          "file": "changes/p99-tz-ryshon-sword-phrase.json",
+          "sha256": "e8a8dfa88d51d25a016a457d203c01e662b37fb4c439c7b994f55e98e821c3ad",
+          "summary": "Support documented What sword question without shadowing later sword of nobility note issuance. Preserve original phrase and all progression."
+        },
+        {
+          "file": "changes/p99-tz-recipe-9809.json",
+          "sha256": "122faaad827b6b79a1ac81bcfec2285fc5d3b3dddc0b274161edc3df1d1846db",
+          "summary": "Enable documented exact quest combine, preserving existing failure outputs, probabilities and all other recipe fields."
+        }
+      ]
+    },
+    "sourceChecks": [
+      {
+        "key": "qey2hh1/Ryshon_Hunsti",
+        "file": "effective/quests/qey2hh1/Ryshon_Hunsti.lua",
+        "recordedSha256": "d8789f351ddbf3933d1d09dbf8bf3b0725bd6aef4a4b4ca264b57bb6a1b43820",
+        "currentSha256": "d8789f351ddbf3933d1d09dbf8bf3b0725bd6aef4a4b4ca264b57bb6a1b43820",
+        "matches": true
+      },
+      {
+        "key": "butcher/#Kanthuk_Ogrebane",
+        "file": "effective/quests/butcher/%23Kanthuk_Ogrebane.lua",
+        "recordedSha256": "6ef55049a7c4d272e341b7213bcc526fda501d2c4750b059d200b48fe11aa4d2",
+        "currentSha256": "6ef55049a7c4d272e341b7213bcc526fda501d2c4750b059d200b48fe11aa4d2",
+        "matches": true
+      },
+      {
+        "key": "cauldron/#Llara",
+        "file": "effective/quests/cauldron/%23Llara.lua",
+        "recordedSha256": "0d99a2b2fa5f5ab4fcd9ad12f7a0b6ea55deb3834dad11ff2f511a4ed1dd33c1",
+        "currentSha256": "0d99a2b2fa5f5ab4fcd9ad12f7a0b6ea55deb3834dad11ff2f511a4ed1dd33c1",
+        "matches": true
+      },
+      {
+        "key": "lavastorm/Ruathey",
+        "file": "effective/quests/lavastorm/Ruathey.lua",
+        "recordedSha256": "e74e6d74bbb0a68559bd2081c3cae3095b2ff7284192642e4cbdfeb5fdab9f08",
+        "currentSha256": "e74e6d74bbb0a68559bd2081c3cae3095b2ff7284192642e4cbdfeb5fdab9f08",
+        "matches": true
+      }
+    ],
+    "proposalChecks": [
+      {
+        "file": "changes/p99-tz-ruathey-hail.json",
+        "recordedSha256": "ffdce3bd50fb4c05dcaa4ce36c9b74bb96b960c67241a8b2e45580762ca7c5ce",
+        "currentSha256": "ffdce3bd50fb4c05dcaa4ce36c9b74bb96b960c67241a8b2e45580762ca7c5ce",
+        "matchesRecordedProposal": true,
+        "currentSources": [
+          {
+            "target": "maintained/lua/converted-perl/lavastorm/Ruathey.lua",
+            "proposedFile": "changes/p99-tz-ruathey-hail/lavastorm--Ruathey.lua",
+            "declaredSha256": "6207048e7ea568b0eca3c6b0cceaf7058a93876be11c11e4e665334fd5cc66a6",
+            "currentSha256": "6207048e7ea568b0eca3c6b0cceaf7058a93876be11c11e4e665334fd5cc66a6",
+            "matches": true
+          }
+        ]
+      },
+      {
+        "file": "changes/p99-tz-ryshon-sword-phrase.json",
+        "recordedSha256": "e8a8dfa88d51d25a016a457d203c01e662b37fb4c439c7b994f55e98e821c3ad",
+        "currentSha256": "e8a8dfa88d51d25a016a457d203c01e662b37fb4c439c7b994f55e98e821c3ad",
+        "matchesRecordedProposal": true,
+        "currentSources": [
+          {
+            "target": "maintained/lua/modified-upstream/qey2hh1/Ryshon_Hunsti.lua",
+            "proposedFile": "changes/p99-tz-ryshon-sword-phrase/qey2hh1--Ryshon_Hunsti.lua",
+            "declaredSha256": "7ee562c8d848066feccd7147bb6bdb9d045ad260726ae78160f7933151aa4226",
+            "currentSha256": "7ee562c8d848066feccd7147bb6bdb9d045ad260726ae78160f7933151aa4226",
+            "matches": true
+          }
+        ]
+      },
+      {
+        "file": "changes/p99-tz-recipe-9809.json",
+        "recordedSha256": "122faaad827b6b79a1ac81bcfec2285fc5d3b3dddc0b274161edc3df1d1846db",
+        "currentSha256": "122faaad827b6b79a1ac81bcfec2285fc5d3b3dddc0b274161edc3df1d1846db",
+        "matchesRecordedProposal": true,
+        "currentSources": []
+      }
+    ],
+    "scope": "Reuse only the explicit source facets and unresolved limits of this record. Hash checks establish currency, not source or live-path proof beyond its original scope."
+  },
+  {
+    "title": "Zimel's Blades (SoulFire)",
+    "reviewFile": "changes/p99-tz-review/manual-facet-review.json",
+    "reviewFileSha256": "f1c1ec72ce1a098ceebe706fb84c945f4eb9c96c8cf2d70c06c0fcc196a83e81",
+    "reviewRecord": {
+      "title": "Zimel's Blades (SoulFire)",
+      "review_status": "source_facets_reviewed_path_open",
+      "evidence": {
+        "title": "Zimel's Blades (SoulFire)",
+        "url": "https://wiki.project1999.com/Zimel's_Blades_(SoulFire)?action=raw",
+        "fetchedAt": "2026-07-17T23:42:15.925Z",
+        "revision": null,
+        "sha256": "86a010babe4eab1dec92b5944bef007f3fe0fedc24c1143ca52bdd286d8034b3",
+        "bytes": 17383,
+        "source": "raw-pages/zimel-s-blades-soulfire-f860523073.json",
+        "cachePath": "reference/p99-wiki/raw-pages/zimel-s-blades-soulfire-f860523073.wiki"
+      },
+      "sources": [
+        {
+          "key": "freportn/Guard_Willia",
+          "file": "effective/quests/freportn/Guard_Willia.lua",
+          "sha256": "67b3f609433ce6a640bddb56b2e46868dac25e5c3397f0107f26d1dbac85fa9c",
+          "review": "Full primary body read or byte-identical alias compared; current proposed overlays referenced separately."
+        },
+        {
+          "key": "freportw/Sir_Lucan_D-Lere",
+          "file": "effective/quests/freportw/Sir_Lucan_D-Lere.lua",
+          "sha256": "ea01b91c3dcb4dff316e8adf3a8f5c871115768f7b7f3841eac54cbfd00fde60",
+          "review": "Full primary body read or byte-identical alias compared; current proposed overlays referenced separately."
+        },
+        {
+          "key": "freportn/Valeron_Dushire",
+          "file": "effective/quests/freportn/Valeron_Dushire.lua",
+          "sha256": "e22fca83626ab2236402679551239ba23773ee3b433cb360453ba6ae41841af0",
+          "review": "Full primary body read or byte-identical alias compared; current proposed overlays referenced separately."
+        },
+        {
+          "key": "freportn/Merko_Quetalis",
+          "file": "effective/quests/freportn/Merko_Quetalis.lua",
+          "sha256": "89104003797ab2b15d1302507dcefd9121c8e0c5f1ea5a8b582bda6ea1536538",
+          "review": "Full primary body read or byte-identical alias compared; current proposed overlays referenced separately."
+        },
+        {
+          "key": "freporte/Groflah_Steadirt",
+          "file": "effective/quests/freporte/Groflah_Steadirt.lua",
+          "sha256": "dcc7e19a2f30fd1b1e46ebf03c7e45c6a8adf34dbefc640c95e7057f723f9a7b",
+          "review": "Full primary body read or byte-identical alias compared; current proposed overlays referenced separately."
+        },
+        {
+          "key": "freportn/Rashinda_Elore",
+          "file": "effective/quests/freportn/Rashinda_Elore.lua",
+          "sha256": "cf1766b4ff09d6482a05f061e8657c448b00c2c9d3355d303d9f6e964d505f1b",
+          "review": "Full primary body read or byte-identical alias compared; current proposed overlays referenced separately."
+        },
+        {
+          "key": "freportn/Groflah_Steadirt",
+          "file": "effective/quests/freportn/Groflah_Steadirt.lua",
+          "sha256": "4dafc02b141b0421397d76b569cf042fe283c4fee9762f4818f829fdfd675a62",
+          "review": "Full primary body read or byte-identical alias compared; current proposed overlays referenced separately."
+        },
+        {
+          "key": "freportn/Kalatrina_Plossen",
+          "file": "effective/quests/freportn/Kalatrina_Plossen.lua",
+          "sha256": "4e3d984baee4211585a9457d9c03e22d48ea2b7e0f54ccf5a8ae170c81e5aff9",
+          "review": "Full primary body read or byte-identical alias compared; current proposed overlays referenced separately."
+        },
+        {
+          "key": "highkeep/Bank_Clerk_Jaylin",
+          "file": "effective/quests/highkeep/Bank_Clerk_Jaylin.lua",
+          "sha256": "b9848510d7fd60457b1779cbfcecf54333b107f63c1d063807672c841ca6a188",
+          "review": "Full primary body read or byte-identical alias compared; current proposed overlays referenced separately."
+        },
+        {
+          "key": "freportw/a_prisoner",
+          "file": "effective/quests/freportw/a_prisoner.lua",
+          "sha256": "6acf4d6399beb8813af244a6cf805a5dfc0c599902c5eaa22a0260df2ec5496d",
+          "review": "Full primary body read or byte-identical alias compared; current proposed overlays referenced separately."
+        },
+        {
+          "key": "freportw/Guard_Alayle",
+          "file": "effective/quests/freportw/Guard_Alayle.lua",
+          "sha256": "261da5384c8e86ff832fedb1876ea34b97cb641acffe3530d284dbc86f6fb4c8",
+          "review": "Full primary body read or byte-identical alias compared; current proposed overlays referenced separately."
+        },
+        {
+          "key": "paw/Brother_Hayle",
+          "file": "effective/quests/paw/Brother_Hayle.lua",
+          "sha256": "b767a04739504e0161e0e3eeef1dee1fa0495669849b9eea4d5d8453eb969910",
+          "review": "Full primary body read or byte-identical alias compared; current proposed overlays referenced separately."
+        },
+        {
+          "key": "freporte/Tykar_Renlin",
+          "file": "effective/quests/freporte/Tykar_Renlin.lua",
+          "sha256": "9560e3f9b7055e5a73de19b9d89c895daf3c8122afa22c011c29918bdac34f93",
+          "review": "Full primary body read or byte-identical alias compared; current proposed overlays referenced separately."
+        },
+        {
+          "key": "ecommons/Altunic_Jartin",
+          "file": "effective/quests/ecommons/Altunic_Jartin.lua",
+          "sha256": "da568f5b570a1c3c7a15c88df1f4f1965252b6cd6f51f0094f2216bf927629f0",
+          "review": "Full primary body read or byte-identical alias compared; current proposed overlays referenced separately."
+        },
+        {
+          "key": "southkarana/#Brother_Hayle",
+          "file": "effective/quests/southkarana/%23Brother_Hayle.lua",
+          "sha256": "d703d9423575a2ca8aea7e469fbdae18079bab4f2642866a02e995acddd6acc4",
+          "review": "Full primary body read or byte-identical alias compared; current proposed overlays referenced separately."
+        },
+        {
+          "key": "freportw/Krazen_Loosh",
+          "file": "effective/quests/freportw/Krazen_Loosh.lua",
+          "sha256": "e179a73a53395d1d985c6ed4b1d372b5ad7025d27f4409bcacbdbb8e915faac1",
+          "review": "Full primary body read or byte-identical alias compared; current proposed overlays referenced separately."
+        },
+        {
+          "key": "freeporteast/Tykar_Renlin",
+          "file": "effective/quests/freeporteast/Tykar_Renlin.lua",
+          "sha256": "9560e3f9b7055e5a73de19b9d89c895daf3c8122afa22c011c29918bdac34f93",
+          "review": "Full primary body read or byte-identical alias compared; current proposed overlays referenced separately."
+        },
+        {
+          "key": "freeporteast/a_prisoner",
+          "file": "effective/quests/freeporteast/a_prisoner.lua",
+          "sha256": "6acf4d6399beb8813af244a6cf805a5dfc0c599902c5eaa22a0260df2ec5496d",
+          "review": "Full primary body read or byte-identical alias compared; current proposed overlays referenced separately."
+        }
+      ],
+      "verified_facets": {
+        "inputs_rewards": "Full page and16 primary/supplemental scripts read, plus two byte-identical legacy aliases for proposed fixes. Optional lore: Kalatrina18817->Alayle18818 Flier; both Groflahs return18818. Tykar4x13829 Champagne->12196 Blanket; Zimel12196+16581 BogJuice+13498 Goo->12143 HK102; Jaylin12143->18936 SealedNote. Altunic1004 medium ClothShirt->13865 Generosity; Merko14018 SpiderVenomSac->12144 Bravery, both tokens->Willia8110,13866 Truth->18828 Testimony. Valeron18827 Lucan Testimony->13947 Sword. Hayle18936->18937 ReturnedNote;18937+13947+18828+12197 Hilt->5504 SoulFire. Names and lore disambiguate both testimonies and both notes.",
+        "dialogue": "Optional Kalatrina exact I serve the will of the Truthbringer works; flier consumption intentionally matches page described dead end. Rashinda/Groflah/Zimel/Hayle lore reachable. Tykar only tell me of zimel misses documented mention of Zimel, proposed broadened with legacy compatibility. Prisoner chatter callback proposed restricted to goog while keeping150000ms fallback. Alayle signal/Krazen waypoint8 attack sequence statically exists; Krazen two stone-wall lines are unrelated-looking text, no exact P99 replacement established.",
+        "factions_experience_cash": "Page does not quantify these NPC gains or cash rewards. Preserve Merko five faction directions and100XP each with6gp final, Altunic three directions and7cp head bounty, Tykar10XP, Hayle200XP note/10000XP final with five faction effects. Distinct southkarana/#Brother_Hayle variant has differing numbers; exact magnitudes unverified, not copied across actors.",
+        "eligibility": "All classes may complete required shortcut exchanges; optional Alayle lore/letter branch is Paladin-only. No level50 gate added. Paw Hayle raw faction>=750 is checked after consuming final offer: proposal moves the SAME guard before consumption; friendly adaptation preserved. Alternate South Karana Hayle fac<3 returns rejected inputs explicitly. Non-paladin zero-charge5504 remains explicit runtime capability gap per review-notes1881-1890; item5504 maxcharges5 and SummonItem second parameter is quantity, not charges.",
+        "recipes_loot": "Enabled1858 EdibleGoo:10307 FireBeetleEye+13072 RatEars->13498, baking60 trivial21;7597 BogJuice:13006 Water+13070 Scales+16598 Bottle->16581, brewing65 trivial21, bottle returned on failure. Both match documented components/trivials. Willia8110 loot5689/10706->13866; undead Lucan9147 loot13519/22312->18827; Xicotl59152 loot4882/9363->12197 each stored chance100/probability100. Lucan death explicitly spawns9147. Static loot links are not live encounter proof."
+      },
+      "unresolved": [
+        "NPC world eligibility/spawns and corpse loot remain unverified; inspected Willia, undead Lucan and Xicotl rows have exclude1, no activation changes made. Paw Hayle18147 exclude0 versus SouthKarana14173 exclude1 recorded, not treated as proof of runtime placement.",
+        "Guard Willia20-minute initial timer then hail30-second cry/60-second run and grid14 are implementation fallback; page only says quick timed escape. Lucan seven-hour spawn and Xicotl placeholder schedule are not established by these scripts.",
+        "Non-paladin SoulFire zero-charge behavior cannot be represented by current reward bridge; do not use zero quantity as fake charges.",
+        "Narrative multiquest and physical escort/Alayle death are not validated; all required inputs currently checked in one offer. Altunic requires explicit where is your house to move/spawn Narl rather than immediately on the note.",
+        "Exact XP/factions/cash, recipe failure probabilities, merchant stock, lock/cell interaction and crafting UI remain unverified.",
+        "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+      ],
+      "verification": {
+        "source": "Full cached quest page and canonical available Lua read; legacy alias sources only hashed unless expressly stated; named item IDs resolved against exported items",
+        "runtime": "not_run",
+        "ui": "not_run",
+        "connected_chain": "not_run"
+      },
+      "finding_scope": "Baseline facets; review referenced_proposals for proposed fixes, not applied changes. Supporting recipes remain separate recipe-review artifact.",
+      "referenced_proposals": [
+        {
+          "file": "changes/p99-tz-hayle-offer-safety.json",
+          "sha256": "83c802c3bbf8ac24f1e797a4b68f9670b283f89cdcf620851335ddeb907f7c66",
+          "summary": "Check the existing raw faction>=750 before consuming the four final items. Do not introduce a stricter faction gate or alter intentional friendliness. Preserve accepted rewards, Blessed Oil branch and explicit non-paladin zero-charge capability gap."
+        },
+        {
+          "file": "changes/p99-tz-zimel-timer-freeporteast.json",
+          "sha256": "0907f4e43c7e5bfb5950aca45d5700a5541d34d1c1f89c0aca2d9d10d99d1e91",
+          "summary": "Restrict the existing repeated prisoner chatter to its named goog timer. Preserve unquantified150000ms interval, all hand-ins, and both byte-identical legacy bodies."
+        },
+        {
+          "file": "changes/p99-tz-zimel-timer-freportw.json",
+          "sha256": "1efd98df1e55015931472e5ac09c6f2f36a8210a49d878e08a6f8bba44519886",
+          "summary": "Restrict the existing repeated prisoner chatter to its named goog timer. Preserve unquantified150000ms interval, all hand-ins, and both byte-identical legacy bodies."
+        },
+        {
+          "file": "changes/p99-tz-tykar-zimel-freeporteast.json",
+          "sha256": "0d96ed7add61d85f44011ee615613c57ecd58156fc8a15f25318368b276d3b2f",
+          "summary": "Support the documented mention of Zimel while preserving the old longer phrase and exact four-champagne exchange. Both legacy bodies were compared byte-identical."
+        },
+        {
+          "file": "changes/p99-tz-tykar-zimel-freporte.json",
+          "sha256": "62adb086f7831207a8783baf381d7c84ea5b45ff2c72663dcaf7ec27c8354512",
+          "summary": "Support the documented mention of Zimel while preserving the old longer phrase and exact four-champagne exchange. Both legacy bodies were compared byte-identical."
+        },
+        {
+          "file": "changes/p99-tz-valeron-diggs-freportn.json",
+          "sha256": "206bb8b2cb8ebb5df6ece966edeed401164a53a051eb47d8767f41bee35d2a49",
+          "summary": "Add exact documented Diggs Duggun question and existing lost-hero response, preserving all guild, Lucan and bone branches."
+        },
+        {
+          "file": "changes/p99-tz-weapons-voucher-freportn-groflah_steadirt.json",
+          "sha256": "ab0db64598f32022f92d858c95b4db2cf1a43e6bc329b6767f8228953cddabe6",
+          "summary": "Use exact item18820 lore Voucher and book FRELarn (book row3677), whose text matches cached GROFLAHS FORGE / four raw swords / Larn Brugal. Wrong1717 is Wenglawks letter and enabled cross-quest rewards. Correct both sides and legacy aliases together; preserve actual Kael1717."
+        },
+        {
+          "file": "changes/p99-am-message-intercept.json",
+          "sha256": "f259df6b09abaeb9d15950a06926d3b4eb92157fb787a0976ff033b259aac4ec",
+          "summary": "Restore the P99-documented ten-silver reward for Mojax Note18822 delivery to Sir Lucan in both maintained zone aliases."
+        }
+      ]
+    },
+    "sourceChecks": [
+      {
+        "key": "freportn/Guard_Willia",
+        "file": "effective/quests/freportn/Guard_Willia.lua",
+        "recordedSha256": "67b3f609433ce6a640bddb56b2e46868dac25e5c3397f0107f26d1dbac85fa9c",
+        "currentSha256": "67b3f609433ce6a640bddb56b2e46868dac25e5c3397f0107f26d1dbac85fa9c",
+        "matches": true
+      },
+      {
+        "key": "freportw/Sir_Lucan_D-Lere",
+        "file": "effective/quests/freportw/Sir_Lucan_D-Lere.lua",
+        "recordedSha256": "ea01b91c3dcb4dff316e8adf3a8f5c871115768f7b7f3841eac54cbfd00fde60",
+        "currentSha256": "ea01b91c3dcb4dff316e8adf3a8f5c871115768f7b7f3841eac54cbfd00fde60",
+        "matches": true
+      },
+      {
+        "key": "freportn/Valeron_Dushire",
+        "file": "effective/quests/freportn/Valeron_Dushire.lua",
+        "recordedSha256": "e22fca83626ab2236402679551239ba23773ee3b433cb360453ba6ae41841af0",
+        "currentSha256": "e22fca83626ab2236402679551239ba23773ee3b433cb360453ba6ae41841af0",
+        "matches": true
+      },
+      {
+        "key": "freportn/Merko_Quetalis",
+        "file": "effective/quests/freportn/Merko_Quetalis.lua",
+        "recordedSha256": "89104003797ab2b15d1302507dcefd9121c8e0c5f1ea5a8b582bda6ea1536538",
+        "currentSha256": "89104003797ab2b15d1302507dcefd9121c8e0c5f1ea5a8b582bda6ea1536538",
+        "matches": true
+      },
+      {
+        "key": "freporte/Groflah_Steadirt",
+        "file": "effective/quests/freporte/Groflah_Steadirt.lua",
+        "recordedSha256": "dcc7e19a2f30fd1b1e46ebf03c7e45c6a8adf34dbefc640c95e7057f723f9a7b",
+        "currentSha256": "dcc7e19a2f30fd1b1e46ebf03c7e45c6a8adf34dbefc640c95e7057f723f9a7b",
+        "matches": true
+      },
+      {
+        "key": "freportn/Rashinda_Elore",
+        "file": "effective/quests/freportn/Rashinda_Elore.lua",
+        "recordedSha256": "cf1766b4ff09d6482a05f061e8657c448b00c2c9d3355d303d9f6e964d505f1b",
+        "currentSha256": "cf1766b4ff09d6482a05f061e8657c448b00c2c9d3355d303d9f6e964d505f1b",
+        "matches": true
+      },
+      {
+        "key": "freportn/Groflah_Steadirt",
+        "file": "effective/quests/freportn/Groflah_Steadirt.lua",
+        "recordedSha256": "4dafc02b141b0421397d76b569cf042fe283c4fee9762f4818f829fdfd675a62",
+        "currentSha256": "4dafc02b141b0421397d76b569cf042fe283c4fee9762f4818f829fdfd675a62",
+        "matches": true
+      },
+      {
+        "key": "freportn/Kalatrina_Plossen",
+        "file": "effective/quests/freportn/Kalatrina_Plossen.lua",
+        "recordedSha256": "4e3d984baee4211585a9457d9c03e22d48ea2b7e0f54ccf5a8ae170c81e5aff9",
+        "currentSha256": "4e3d984baee4211585a9457d9c03e22d48ea2b7e0f54ccf5a8ae170c81e5aff9",
+        "matches": true
+      },
+      {
+        "key": "highkeep/Bank_Clerk_Jaylin",
+        "file": "effective/quests/highkeep/Bank_Clerk_Jaylin.lua",
+        "recordedSha256": "b9848510d7fd60457b1779cbfcecf54333b107f63c1d063807672c841ca6a188",
+        "currentSha256": "b9848510d7fd60457b1779cbfcecf54333b107f63c1d063807672c841ca6a188",
+        "matches": true
+      },
+      {
+        "key": "freportw/a_prisoner",
+        "file": "effective/quests/freportw/a_prisoner.lua",
+        "recordedSha256": "6acf4d6399beb8813af244a6cf805a5dfc0c599902c5eaa22a0260df2ec5496d",
+        "currentSha256": "6acf4d6399beb8813af244a6cf805a5dfc0c599902c5eaa22a0260df2ec5496d",
+        "matches": true
+      },
+      {
+        "key": "freportw/Guard_Alayle",
+        "file": "effective/quests/freportw/Guard_Alayle.lua",
+        "recordedSha256": "261da5384c8e86ff832fedb1876ea34b97cb641acffe3530d284dbc86f6fb4c8",
+        "currentSha256": "261da5384c8e86ff832fedb1876ea34b97cb641acffe3530d284dbc86f6fb4c8",
+        "matches": true
+      },
+      {
+        "key": "paw/Brother_Hayle",
+        "file": "effective/quests/paw/Brother_Hayle.lua",
+        "recordedSha256": "b767a04739504e0161e0e3eeef1dee1fa0495669849b9eea4d5d8453eb969910",
+        "currentSha256": "b767a04739504e0161e0e3eeef1dee1fa0495669849b9eea4d5d8453eb969910",
+        "matches": true
+      },
+      {
+        "key": "freporte/Tykar_Renlin",
+        "file": "effective/quests/freporte/Tykar_Renlin.lua",
+        "recordedSha256": "9560e3f9b7055e5a73de19b9d89c895daf3c8122afa22c011c29918bdac34f93",
+        "currentSha256": "9560e3f9b7055e5a73de19b9d89c895daf3c8122afa22c011c29918bdac34f93",
+        "matches": true
+      },
+      {
+        "key": "ecommons/Altunic_Jartin",
+        "file": "effective/quests/ecommons/Altunic_Jartin.lua",
+        "recordedSha256": "da568f5b570a1c3c7a15c88df1f4f1965252b6cd6f51f0094f2216bf927629f0",
+        "currentSha256": "da568f5b570a1c3c7a15c88df1f4f1965252b6cd6f51f0094f2216bf927629f0",
+        "matches": true
+      },
+      {
+        "key": "southkarana/#Brother_Hayle",
+        "file": "effective/quests/southkarana/%23Brother_Hayle.lua",
+        "recordedSha256": "d703d9423575a2ca8aea7e469fbdae18079bab4f2642866a02e995acddd6acc4",
+        "currentSha256": "d703d9423575a2ca8aea7e469fbdae18079bab4f2642866a02e995acddd6acc4",
+        "matches": true
+      },
+      {
+        "key": "freportw/Krazen_Loosh",
+        "file": "effective/quests/freportw/Krazen_Loosh.lua",
+        "recordedSha256": "e179a73a53395d1d985c6ed4b1d372b5ad7025d27f4409bcacbdbb8e915faac1",
+        "currentSha256": "e179a73a53395d1d985c6ed4b1d372b5ad7025d27f4409bcacbdbb8e915faac1",
+        "matches": true
+      },
+      {
+        "key": "freeporteast/Tykar_Renlin",
+        "file": "effective/quests/freeporteast/Tykar_Renlin.lua",
+        "recordedSha256": "9560e3f9b7055e5a73de19b9d89c895daf3c8122afa22c011c29918bdac34f93",
+        "currentSha256": "9560e3f9b7055e5a73de19b9d89c895daf3c8122afa22c011c29918bdac34f93",
+        "matches": true
+      },
+      {
+        "key": "freeporteast/a_prisoner",
+        "file": "effective/quests/freeporteast/a_prisoner.lua",
+        "recordedSha256": "6acf4d6399beb8813af244a6cf805a5dfc0c599902c5eaa22a0260df2ec5496d",
+        "currentSha256": "6acf4d6399beb8813af244a6cf805a5dfc0c599902c5eaa22a0260df2ec5496d",
+        "matches": true
+      }
+    ],
+    "proposalChecks": [
+      {
+        "file": "changes/p99-tz-hayle-offer-safety.json",
+        "recordedSha256": "83c802c3bbf8ac24f1e797a4b68f9670b283f89cdcf620851335ddeb907f7c66",
+        "currentSha256": "83c802c3bbf8ac24f1e797a4b68f9670b283f89cdcf620851335ddeb907f7c66",
+        "matchesRecordedProposal": true,
+        "currentSources": [
+          {
+            "target": "maintained/lua/modified-upstream/paw/Brother_Hayle.lua",
+            "proposedFile": "changes/p99-tz-hayle-offer-safety/paw--Brother_Hayle.lua",
+            "declaredSha256": "1179c163b3f49bff0233f832664cdad4e07539e9e288736e69cd651dfd5093fa",
+            "currentSha256": "1179c163b3f49bff0233f832664cdad4e07539e9e288736e69cd651dfd5093fa",
+            "matches": true
+          }
+        ]
+      },
+      {
+        "file": "changes/p99-tz-zimel-timer-freeporteast.json",
+        "recordedSha256": "0907f4e43c7e5bfb5950aca45d5700a5541d34d1c1f89c0aca2d9d10d99d1e91",
+        "currentSha256": "0907f4e43c7e5bfb5950aca45d5700a5541d34d1c1f89c0aca2d9d10d99d1e91",
+        "matchesRecordedProposal": true,
+        "currentSources": [
+          {
+            "target": "maintained/lua/modified-upstream/freeporteast/a_prisoner.lua",
+            "proposedFile": "changes/p99-tz-zimel-timer-freeporteast/freeporteast--a_prisoner.lua",
+            "declaredSha256": "3c8d2fa406a8170ff90bde2ea9e5ecb9614a28290094e85ba805a347482373a9",
+            "currentSha256": "3c8d2fa406a8170ff90bde2ea9e5ecb9614a28290094e85ba805a347482373a9",
+            "matches": true
+          }
+        ]
+      },
+      {
+        "file": "changes/p99-tz-zimel-timer-freportw.json",
+        "recordedSha256": "1efd98df1e55015931472e5ac09c6f2f36a8210a49d878e08a6f8bba44519886",
+        "currentSha256": "1efd98df1e55015931472e5ac09c6f2f36a8210a49d878e08a6f8bba44519886",
+        "matchesRecordedProposal": true,
+        "currentSources": [
+          {
+            "target": "maintained/lua/modified-upstream/freportw/a_prisoner.lua",
+            "proposedFile": "changes/p99-tz-zimel-timer-freportw/freportw--a_prisoner.lua",
+            "declaredSha256": "3c8d2fa406a8170ff90bde2ea9e5ecb9614a28290094e85ba805a347482373a9",
+            "currentSha256": "3c8d2fa406a8170ff90bde2ea9e5ecb9614a28290094e85ba805a347482373a9",
+            "matches": true
+          }
+        ]
+      },
+      {
+        "file": "changes/p99-tz-tykar-zimel-freeporteast.json",
+        "recordedSha256": "0d96ed7add61d85f44011ee615613c57ecd58156fc8a15f25318368b276d3b2f",
+        "currentSha256": "0d96ed7add61d85f44011ee615613c57ecd58156fc8a15f25318368b276d3b2f",
+        "matchesRecordedProposal": true,
+        "currentSources": [
+          {
+            "target": "maintained/lua/modified-upstream/freeporteast/Tykar_Renlin.lua",
+            "proposedFile": "changes/p99-tz-tykar-zimel-freeporteast/freeporteast--Tykar_Renlin.lua",
+            "declaredSha256": "1759943750558e38dc512cfb102a5749a62b427669b9ab9ddf90f12e91303636",
+            "currentSha256": "1759943750558e38dc512cfb102a5749a62b427669b9ab9ddf90f12e91303636",
+            "matches": true
+          }
+        ]
+      },
+      {
+        "file": "changes/p99-tz-tykar-zimel-freporte.json",
+        "recordedSha256": "62adb086f7831207a8783baf381d7c84ea5b45ff2c72663dcaf7ec27c8354512",
+        "currentSha256": "62adb086f7831207a8783baf381d7c84ea5b45ff2c72663dcaf7ec27c8354512",
+        "matchesRecordedProposal": true,
+        "currentSources": [
+          {
+            "target": "maintained/lua/modified-upstream/freporte/Tykar_Renlin.lua",
+            "proposedFile": "changes/p99-tz-tykar-zimel-freporte/freporte--Tykar_Renlin.lua",
+            "declaredSha256": "1759943750558e38dc512cfb102a5749a62b427669b9ab9ddf90f12e91303636",
+            "currentSha256": "1759943750558e38dc512cfb102a5749a62b427669b9ab9ddf90f12e91303636",
+            "matches": true
+          }
+        ]
+      },
+      {
+        "file": "changes/p99-tz-valeron-diggs-freportn.json",
+        "recordedSha256": "206bb8b2cb8ebb5df6ece966edeed401164a53a051eb47d8767f41bee35d2a49",
+        "currentSha256": "206bb8b2cb8ebb5df6ece966edeed401164a53a051eb47d8767f41bee35d2a49",
+        "matchesRecordedProposal": true,
+        "currentSources": [
+          {
+            "target": "maintained/lua/modified-upstream/freportn/Valeron_Dushire.lua",
+            "proposedFile": "changes/p99-tz-valeron-diggs-freportn/freportn--Valeron_Dushire.lua",
+            "declaredSha256": "b85f92c7b4a6e5c88a091bc0d849683af17eb76a9c848c5351847e8370ca0aab",
+            "currentSha256": "b85f92c7b4a6e5c88a091bc0d849683af17eb76a9c848c5351847e8370ca0aab",
+            "matches": true
+          }
+        ]
+      },
+      {
+        "file": "changes/p99-tz-weapons-voucher-freportn-groflah_steadirt.json",
+        "recordedSha256": "ab0db64598f32022f92d858c95b4db2cf1a43e6bc329b6767f8228953cddabe6",
+        "currentSha256": "ab0db64598f32022f92d858c95b4db2cf1a43e6bc329b6767f8228953cddabe6",
+        "matchesRecordedProposal": true,
+        "currentSources": [
+          {
+            "target": "maintained/lua/modified-upstream/freportn/Groflah_Steadirt.lua",
+            "proposedFile": "changes/p99-tz-weapons-voucher-freportn-groflah_steadirt/freportn--Groflah_Steadirt.lua",
+            "declaredSha256": "2828779516b776eba5d4b3cf198fc6a7424162928f1d5ace17d06ea630758c53",
+            "currentSha256": "2828779516b776eba5d4b3cf198fc6a7424162928f1d5ace17d06ea630758c53",
+            "matches": true
+          }
+        ]
+      },
+      {
+        "file": "changes/p99-am-message-intercept.json",
+        "recordedSha256": "f259df6b09abaeb9d15950a06926d3b4eb92157fb787a0976ff033b259aac4ec",
+        "currentSha256": "f259df6b09abaeb9d15950a06926d3b4eb92157fb787a0976ff033b259aac4ec",
+        "matchesRecordedProposal": true,
+        "currentSources": [
+          {
+            "target": "maintained/lua/modified-upstream/freportw/Sir_Lucan_D-Lere.lua",
+            "proposedFile": "changes/p99-am-message-intercept/freportw-Sir_Lucan_D-Lere.lua",
+            "declaredSha256": "78de4284a6c6abf51879b60287c6b67dc0dbc50b2051d18bd64c6ee7b012a741",
+            "currentSha256": "78de4284a6c6abf51879b60287c6b67dc0dbc50b2051d18bd64c6ee7b012a741",
+            "matches": true
+          },
+          {
+            "target": "maintained/lua/modified-upstream/freeporteast/Sir_Lucan_D-Lere.lua",
+            "proposedFile": "changes/p99-am-message-intercept/freeporteast-Sir_Lucan_D-Lere.lua",
+            "declaredSha256": "7972b7b42e502cf15816916383808cb6f85e1b2ed7888c3d986a278c01c92738",
+            "currentSha256": "7972b7b42e502cf15816916383808cb6f85e1b2ed7888c3d986a278c01c92738",
+            "matches": true
+          }
+        ]
+      }
+    ],
+    "scope": "Reuse only the explicit source facets and unresolved limits of this record. Hash checks establish currency, not source or live-path proof beyond its original scope."
+  },
+  {
+    "title": "Pure Crystal Quest",
+    "reviewFile": "changes/p99-nz-coverage/manual-facet-review.json",
+    "reviewFileSha256": "c4a3d9e216c1836fe9a47ce40e69eddf598381b1ebead68f8ff9aa71c5e9f883",
+    "reviewRecord": {
+      "title": "Pure Crystal Quest",
+      "evidence": {
+        "title": "Pure Crystal Quest",
+        "url": "https://wiki.project1999.com/Pure_Crystal_Quest?action=raw",
+        "fetchedAt": "2026-07-18T00:37:35.648Z",
+        "revision": null,
+        "sha256": "6dcc2ebc0184c8e4d109e81e2be77cb5092b89255e05585b9eb41007a6d628cb",
+        "bytes": 927,
+        "source": "raw-pages/pure-crystal-quest-75c5a976d8.json",
+        "cachePath": "reference/p99-wiki/raw-pages/pure-crystal-quest-75c5a976d8.wiki"
+      },
+      "scripts": [
+        {
+          "key": "kaladimb/Jark",
+          "file": "effective/quests/kaladimb/Jark.lua",
+          "sha256": "d0604abbd42805c6bec7c34a30da1014ef1eac80f6332dc6b1f15d436a23307e"
+        },
+        {
+          "key": "kaladimb/Nella_Stonebraids",
+          "file": "effective/quests/kaladimb/Nella_Stonebraids.lua",
+          "sha256": "12d42fdaafdfac7dc3278191161b48e07ec08553fd9f01d64b10e04c634cd052"
+        }
+      ],
+      "reviewed_facets": {
+        "chain": "Jark dinner phrase spawnsNella;Nella Jark/dinner->29007ColdPlateBeefBread anddepop;Jark29007->29006PureCrystal exact.",
+        "dialogue": "Both quoted responses match substance.",
+        "policy": "No epic min-level requirement added."
+      },
+      "unresolved": [
+        "NPC67090correctspawnrow/zone/path not verified.",
+        "Rest ofPaladinEpic outside this subquest review.",
+        "Full game runtime, transactions, rendered UI and source loot/spawn acquisition not verified."
+      ]
+    },
+    "sourceChecks": [
+      {
+        "key": "kaladimb/Jark",
+        "file": "effective/quests/kaladimb/Jark.lua",
+        "recordedSha256": "d0604abbd42805c6bec7c34a30da1014ef1eac80f6332dc6b1f15d436a23307e",
+        "currentSha256": "d0604abbd42805c6bec7c34a30da1014ef1eac80f6332dc6b1f15d436a23307e",
+        "matches": true
+      },
+      {
+        "key": "kaladimb/Nella_Stonebraids",
+        "file": "effective/quests/kaladimb/Nella_Stonebraids.lua",
+        "recordedSha256": "12d42fdaafdfac7dc3278191161b48e07ec08553fd9f01d64b10e04c634cd052",
+        "currentSha256": "12d42fdaafdfac7dc3278191161b48e07ec08553fd9f01d64b10e04c634cd052",
+        "matches": true
+      }
+    ],
+    "proposalChecks": [],
+    "scope": "Reuse only the explicit source facets and unresolved limits of this record. Hash checks establish currency, not source or live-path proof beyond its original scope."
+  }
+]

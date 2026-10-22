@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-vicus-partial-offer",
+  "summary": "Accept advertised collections and return rejected list-only offer, preserving complete reward and existing box-only return. Missing item reward possibilities and unidentified cash/faction amounts remain unresolved.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Taxes?action=raw",
+      "note": "Cached 2026-07-17T23:34:37.004Z; revision unavailable; SHA256 6fc59af937f3b2dfa4313beac8b349112c500bdbff0c89109de222dc34860c9b. Accept advertised collections and return rejected list-only offer, preserving complete reward and existing box-only return. Missing item reward possibilities and unidentified cash/faction amounts remain unresolved. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 12107,
+        "zone": "qeynos",
+        "name": "Vicus_Nonad",
+        "lua_content": "-- items: 17012, 18009, 13181\nfunction event_spawn(e)\n\teq.set_timer(\"cough\",350000);\nend\n\nfunction event_timer(e)\n\tif(e.timer == \"cough\") then\n\t\te.self:Emote(\"coughs and wheezes.\");\n\tend\nend\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(string.format(\"Greetings, %s.  My name is Vicus Nonad. <cough>  I am the official tax collector for the fine city of Qeynos. <cough>  I serve the will of Antonius Bayle, our glorious leader.  <cough>  <cough>  Please excuse my [cough].  <cough>\",e.other:GetName()));\n\telseif(e.message:findi(\"cough\")) then\n\t\te.self:Say(\"Oh, <cough> I am sorry, but it seems I have fallen a bit ill.  I was caught out in the rain the other day and my chills have gotten the best of me. <cough>  If only someone would [help] me with today's [collections]..  <cough>\");\n\telseif(e.message:findi(\"help\")) then\n\t\te.self:Say(\"Oh thank <cough> you so <cough> <cough> much <cough>..  Here is the official collection box.  Please collect from each merchant on the <cough> [list].  Then bring me back the combined total of all your collections.\");\n\t\te.other:SummonItem(17012); -- Item: Tax Collection Box\n\t\teq.set_global(\"tax_collection\",\"0\",5,\"F\");\n\telseif(e.message:findi(\"list\")) then\n\t\te.self:Say(\"Oh.  <cough>  I am sorry..  I forgot to give it to you.  Here you go.  Be sure to give that back when your job is finished.  <cough>\");\n\t\te.other:SummonItem(18009); -- Item: List of Debtors\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\t\n\tif(item_lib.check_turn_in(e.trade, {item1 = 13181,item2 = 18009})) then\n\t\te.self:Say(\"<cough> Great! Thank you so much. Here is a small gratuity for a job well done. Thank you again. <cough> Antonius Bayle and the People of Qeynos appreciate all yo have done.\");\n\t\teq.delete_global(\"tax_collection\");\n\t\te.other:Ding();\n\t\te.other:Faction(219,10,0); -- Faction: Antonius Bayle\n\t\te.other:Faction(262,10,0); -- Faction: Guards of Qeynos\n\t\te.other:Faction(304,-15,0); -- Faction: Ring of Scale\n\t\te.other:Faction(273,-15,0); -- Faction: Kane Bayle\n\t\te.other:Faction(291,10,0); -- Faction: Merchants of Qeynos\n\t\te.other:AddEXP(500);\n\t\te.other:GiveCash(0,1,2,0);\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 13181})) then\n\t\te.self:Say(\"Very good <cough> work. But I need both the full tax collection box and the list of debtors. You did get the [list] from me before you left, right? <cough>\");\n\t\te.other:SummonItem(13181); -- Item: Full Tax Collection Box\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 18009})) then\n\t\te.self:Say(\"Very good <cough> work. But I need both the full tax collection box and the list of debtors. You did get the [list] from me before you left, right? <cough>\");\n\tend\n\t\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 12107,
+        "zone": "qeynos",
+        "name": "Vicus_Nonad",
+        "lua_content": "-- items: 17012, 18009, 13181\nfunction event_spawn(e)\n\teq.set_timer(\"cough\",350000);\nend\n\nfunction event_timer(e)\n\tif(e.timer == \"cough\") then\n\t\te.self:Emote(\"coughs and wheezes.\");\n\tend\nend\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(string.format(\"Greetings, %s.  My name is Vicus Nonad. <cough>  I am the official tax collector for the fine city of Qeynos. <cough>  I serve the will of Antonius Bayle, our glorious leader.  <cough>  <cough>  Please excuse my [cough].  <cough>\",e.other:GetName()));\n\telseif(e.message:findi(\"cough\")) then\n\t\te.self:Say(\"Oh, <cough> I am sorry, but it seems I have fallen a bit ill.  I was caught out in the rain the other day and my chills have gotten the best of me. <cough>  If only someone would [help] me with today's [collections]..  <cough>\");\n\telseif(e.message:findi(\"help\") or e.message:findi(\"collections\")) then\n\t\te.self:Say(\"Oh thank <cough> you so <cough> <cough> much <cough>..  Here is the official collection box.  Please collect from each merchant on the <cough> [list].  Then bring me back the combined total of all your collections.\");\n\t\te.other:SummonItem(17012); -- Item: Tax Collection Box\n\t\teq.set_global(\"tax_collection\",\"0\",5,\"F\");\n\telseif(e.message:findi(\"list\")) then\n\t\te.self:Say(\"Oh.  <cough>  I am sorry..  I forgot to give it to you.  Here you go.  Be sure to give that back when your job is finished.  <cough>\");\n\t\te.other:SummonItem(18009); -- Item: List of Debtors\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\t\n\tif(item_lib.check_turn_in(e.trade, {item1 = 13181,item2 = 18009})) then\n\t\te.self:Say(\"<cough> Great! Thank you so much. Here is a small gratuity for a job well done. Thank you again. <cough> Antonius Bayle and the People of Qeynos appreciate all yo have done.\");\n\t\teq.delete_global(\"tax_collection\");\n\t\te.other:Ding();\n\t\te.other:Faction(219,10,0); -- Faction: Antonius Bayle\n\t\te.other:Faction(262,10,0); -- Faction: Guards of Qeynos\n\t\te.other:Faction(304,-15,0); -- Faction: Ring of Scale\n\t\te.other:Faction(273,-15,0); -- Faction: Kane Bayle\n\t\te.other:Faction(291,10,0); -- Faction: Merchants of Qeynos\n\t\te.other:AddEXP(500);\n\t\te.other:GiveCash(0,1,2,0);\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 13181})) then\n\t\te.self:Say(\"Very good <cough> work. But I need both the full tax collection box and the list of debtors. You did get the [list] from me before you left, right? <cough>\");\n\t\te.other:SummonItem(13181); -- Item: Full Tax Collection Box\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 18009})) then\n\t\te.self:Say(\"Very good <cough> work. But I need both the full tax collection box and the list of debtors. You did get the [list] from me before you left, right? <cough>\");\n\t\te.other:SummonItem(18009); -- Return this incomplete offer, as for the box-only branch.\n\tend\n\t\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/qeynos/Vicus_Nonad.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-tz-vicus-partial-offer/qeynos--Vicus_Nonad.lua",
+      "afterSha256": "4630ce5166ceca350dc8ff72de2d683761ec32112bf62986605015eae81723a9"
+    }
+  ]
+}

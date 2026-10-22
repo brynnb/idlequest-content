@@ -1,0 +1,28 @@
+{
+  "titles": [
+    "Rogue Redemption"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "partial",
+  "match_status": "partial",
+  "local_quest_keys": [
+    "ecommons/Bubar"
+  ],
+  "proposal": "changes/p99-nz-rogue-redemption-dialogue.json",
+  "notes": [
+    "Restore Bubar missing documented What gem case explanation. All hand-ins/rewards unchanged.",
+    "Toxdil numeric Class versus string comparison is normalized by NormalizeQuestScriptLua to GetClassName and is NOT a proven defect. No Toxdil changes retained; shared source belongs to T-Z reviewer. Full groundspawn, merchant, lockpick, loot and recipe runtime parity remain unverified.",
+    "Enable recipe9710 only: all10 drinks in17984 ->12365, nofail1 and exact counts verified. Supporting9688:4gnollskins13028+2scalps13789+2FierceBrew16585 in17970->12239, already enabled. Recipe7766:cask16580,barley16590,hops16591,malt16595,yeast16596 in brew barrel19 ->2FierceBrew16585,trivial135,already enabled."
+  ],
+  "verification": {
+    "source": "Cached P99 and effective Lua reviewed; exact complete row preimages and source hashes recorded.",
+    "syntax": "pending",
+    "runtime": "Isolated mock regression pending; full game runtime unavailable.",
+    "ui": "not_run",
+    "connected_chain": "not_run"
+  },
+  "unresolved": [
+    "Ordinary source drops/spawns, recipe live behavior and rendered complete quest path not verified.",
+    "Pinned game recipe-container registry does not register Bottle Crate17984. Enabling9710 alone cannot make the live combine work; downstream game registry integration required."
+  ]
+}

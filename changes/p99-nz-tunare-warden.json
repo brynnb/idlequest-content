@@ -1,0 +1,84 @@
+{
+  "format": 1,
+  "id": "p99-nz-tunare-warden",
+  "summary": "Restore Warrens-era Warden Symbol of Tunare dialogue/candlestick and final Disciple Symbol+Powder hand-in; enable its existing no-fail brewing recipe.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Tunare_Symbol_Quests?action=raw",
+      "note": "Cached 2026-07-17T23:40:02.388Z; revision unavailable; SHA256 e7c44586ede40fe7a40d590cdedf528a8cf89facd4f655092e96a7cf6d8d4392. Current scope includes Warrens. Restore only documented continuation from upstream, not tradeskill books. Item1598->Trilani1596; recipe7637 requires1594,1595,1596,16552 and produces1597; Trilani1597->1599; Yeolarn1571+1599->1572. Existing no-minimum-level and faction-bypass policy preserved. Upstream final faction40/40/30 andEXP5000 are documented fallback magnitudes, not P99-proven. First Trilani hand-in still lacks documented faction/experience; exact magnitudes unsupported and left open."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 12557,
+        "zone": "felwithea",
+        "name": "Yeolarn_Bronzeleaf",
+        "lua_content": "-- Source: felwithea/Yeolarn_Bronzeleaf.lua\n-- P99 audit: Tunare Symbol Quests\n-- items: 13073, 15014, 10199, 1570, 12514, 19065, 12513, 1571, 18780, 13590\n-- Note: the Warden Symbol continuation is Warrens-era on P99 and intentionally omitted for Classic/Kunark IdleQuest.\nfunction event_spawn(e)\n\tlocal xloc = e.self:GetX();\n\tlocal yloc = e.self:GetY();\n\teq.set_proximity(xloc - 50, xloc + 50, yloc - 50, yloc + 50);\nend\n\nfunction event_enter(e)\n\tif(e.other:HasItem(18780)) then\n\t\te.other:Message(MT.Yellow,\"As you enter a darkly lit room, a stern, important looking High Elf greets you.  'Welcome to you. I am Yeolarn Bronzeleaf, Guild Master for the Clerics of Tunare here in Felwithe. Read the note in your inventory and when you are ready to begin your training, please hand me your note.'\");\n\tend\nend\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Hail, \" .. e.other:GetName() .. \"! We of Tunare are charged with protecting the Great Mother from the forces of Innoruuk. Even now, the evil minions of this foul deity are despoiling our great forest. Will you help us [protect the Mother]?\");\n\telseif(e.message:findi(\"protect\")) then\n\t\te.self:Say(\"Just outside the gates of Felwithe, the forces of Innoruuk gather in the guise of decaying skeletons. Bring me four sets of bone chips as proof of your vigilance. I assure you, your faith shall not go unrewarded.\");\n\telseif(e.message:findi(\"initiate of tunare\")) then\n\t\te.self:Say(\"The Teir'Dal behind the undead plague in our forest have discovered a means of creating a terrible undead called a Ghast. These Ghasts have been sighted in the Lesser Faydark and must be destroyed. Bring me four of the vile creatures hearts.\");\n\telseif(e.message:findi(\"slay the necromancer\")) then\n\t\te.self:Say(\"The Fier'Dal rangers that inhabit the Lesser Faydark have spotted a courier making deliveries to the Teir'Dal camp near Castle Mistmoore and to a necromancer that lingers near the ancient obelisk. We believe that the crates he carries are supplies needed for the creation of more Ghasts. Another shipment should be arriving soon. Seek out the necromancer at the obelisk and take his head then take the head of the courier and return them to me with the crate that the courier carries and your Initiate Symbol of Tunare.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 13073,item2 = 13073,item3 = 13073,item4 = 13073})) then --Bone Chips x 4\n\t\te.self:Say(\"Praise Tunare! I knew you would be victorious. I reward you with this spell, and pray that it will help you in your fight against the unholy forces of Innoruk. When you are ready you will make a fine [Initiate of Tunare].\");\n\t\te.other:SummonItem(15014); -- Item: Spell: Strike\n\t\te.other:Ding();\n\t\te.other:Faction(226,2,0);  --Clerics of Tunare\n\t\te.other:Faction(279,2,0); --King Tearis Thex\n\t\te.other:Faction(5001,2,0);   --Anti-mage\n\t\te.other:AddEXP(250);\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 10199,item2 = 10199,item3 = 10199,item4 = 10199})) then --Putrescent Heart x 4\n\t\te.self:Say(\"Praise Tunare!! You have done well young Initiate. Here the symbol of your station within our faith. Return to me when you are ready to [slay the necromancer] that has been creating the undead.\");\n\t\te.other:SummonItem(1570); --Initiate Symbol of Tunare\n\t\te.other:Ding();\n\t\te.other:Faction(226,15,0);  --Clerics of Tunare\n\t\te.other:Faction(279,15,0); --King Tearis Thex\n\t\te.other:Faction(5001,15,0);   --Anti-mage\n\t\te.other:AddEXP(3250);\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 1570,item2 = 12514,item3 = 19065,item4 = 12513})) then --Initiate Symbol of Tunare, Larik Z`Vole's Head, Teir`Dal Couriers Head, Teir`Dal Crate\n\t\te.self:Say(\"Praise Tunare! The Mother smiles on you this day Disciple \" .. e.other:GetName() .. \"! I present you with the symbol of your new station among the Priests of Tunare. Serve the Great Mother well.\");\n\t\te.other:SummonItem(1571); -- Disciple Symbol of Tunare\n\t\te.other:Ding();\n\t\te.other:Faction(226,30,0);  --Clerics of Tunare\n\t\te.other:Faction(279,30,0); --King Tearis Thex\n\t\te.other:Faction(5001,22,0);   --Anti-mage\n\t\te.other:AddEXP(4000);\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 18780})) then --Tattered Note\n\t\te.self:Say(\"Welcome, friend, to the Clerics of Tunare. I am Yeolarn Bronzeleaf, head of the guild and devout follower of Tunare. Here is your guild tunic - it will help to protect you against this world's evils. Once you are ready to begin your training please make sure that you see Terren Starwatcher, he can assist you in developing your hunting and gathering skills.\");\n\t\te.other:SummonItem(13590); --Faded Gold Training Tunic*\n\t\te.other:Ding();\n\t\te.other:Faction(226,100,0);  --Clerics of Tunare\n\t\te.other:Faction(279,100,0); --King Tearis Thex\n\t\te.other:Faction(5001,75,0);   --Anti-mage\n\t\te.other:AddEXP(100);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade);\nend\n\n--END of FILE Zone:felwithea  ID:61025 -- Yeolarn_Bronzeleaf.pl\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 12557,
+        "zone": "felwithea",
+        "name": "Yeolarn_Bronzeleaf",
+        "lua_content": "-- Source: felwithea/Yeolarn_Bronzeleaf.lua\n-- P99 audit: Tunare Symbol Quests\n-- items: 13073, 15014, 10199, 1570, 12514, 19065, 12513, 1571, 18780, 13590\n-- P99 Warrens-era Warden continuation restored for current Classic-through-Velious scope.\n-- Warden numeric faction/experience values preserve ProjectEQ implementation provenance.\nfunction event_spawn(e)\n\tlocal xloc = e.self:GetX();\n\tlocal yloc = e.self:GetY();\n\teq.set_proximity(xloc - 50, xloc + 50, yloc - 50, yloc + 50);\nend\n\nfunction event_enter(e)\n\tif(e.other:HasItem(18780)) then\n\t\te.other:Message(MT.Yellow,\"As you enter a darkly lit room, a stern, important looking High Elf greets you.  'Welcome to you. I am Yeolarn Bronzeleaf, Guild Master for the Clerics of Tunare here in Felwithe. Read the note in your inventory and when you are ready to begin your training, please hand me your note.'\");\n\tend\nend\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Hail, \" .. e.other:GetName() .. \"! We of Tunare are charged with protecting the Great Mother from the forces of Innoruuk. Even now, the evil minions of this foul deity are despoiling our great forest. Will you help us [protect the Mother]?\");\n\telseif(e.message:findi(\"protect\")) then\n\t\te.self:Say(\"Just outside the gates of Felwithe, the forces of Innoruuk gather in the guise of decaying skeletons. Bring me four sets of bone chips as proof of your vigilance. I assure you, your faith shall not go unrewarded.\");\n\telseif(e.message:findi(\"initiate of tunare\")) then\n\t\te.self:Say(\"The Teir'Dal behind the undead plague in our forest have discovered a means of creating a terrible undead called a Ghast. These Ghasts have been sighted in the Lesser Faydark and must be destroyed. Bring me four of the vile creatures hearts.\");\n\telseif(e.message:findi(\"slay the necromancer\")) then\n\t\te.self:Say(\"The Fier'Dal rangers that inhabit the Lesser Faydark have spotted a courier making deliveries to the Teir'Dal camp near Castle Mistmoore and to a necromancer that lingers near the ancient obelisk. We believe that the crates he carries are supplies needed for the creation of more Ghasts. Another shipment should be arriving soon. Seek out the necromancer at the obelisk and take his head then take the head of the courier and return them to me with the crate that the courier carries and your Initiate Symbol of Tunare.\");\n\telseif(e.message:findi(\"warden of tunare\")) then\n\t\te.self:Say(\"The crate that the you recovered from the Courier contained this black candlestick that radiates an aura of great magical power. I request that you deliver the candlestick to Lady Trilani who is studying with the High Men in Erudin. Perhaps she can divine the nature of the candlestick and offer aid in defeating its power. The remaining contents of the crate have been given to Crusader Swiftmoon to be delivered to a gnome in steamfont that is purchasing them on behalf of the Eldrich Collective. When you return be sure to present your Disciple Symbol to me with anything that Trilani may ask you to deliver.\");\n\t\te.other:SummonItem(1598); -- Black Stone Candlestick\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 13073,item2 = 13073,item3 = 13073,item4 = 13073})) then --Bone Chips x 4\n\t\te.self:Say(\"Praise Tunare! I knew you would be victorious. I reward you with this spell, and pray that it will help you in your fight against the unholy forces of Innoruk. When you are ready you will make a fine [Initiate of Tunare].\");\n\t\te.other:SummonItem(15014); -- Item: Spell: Strike\n\t\te.other:Ding();\n\t\te.other:Faction(226,2,0);  --Clerics of Tunare\n\t\te.other:Faction(279,2,0); --King Tearis Thex\n\t\te.other:Faction(5001,2,0);   --Anti-mage\n\t\te.other:AddEXP(250);\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 10199,item2 = 10199,item3 = 10199,item4 = 10199})) then --Putrescent Heart x 4\n\t\te.self:Say(\"Praise Tunare!! You have done well young Initiate. Here the symbol of your station within our faith. Return to me when you are ready to [slay the necromancer] that has been creating the undead.\");\n\t\te.other:SummonItem(1570); --Initiate Symbol of Tunare\n\t\te.other:Ding();\n\t\te.other:Faction(226,15,0);  --Clerics of Tunare\n\t\te.other:Faction(279,15,0); --King Tearis Thex\n\t\te.other:Faction(5001,15,0);   --Anti-mage\n\t\te.other:AddEXP(3250);\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 1570,item2 = 12514,item3 = 19065,item4 = 12513})) then --Initiate Symbol of Tunare, Larik Z`Vole's Head, Teir`Dal Couriers Head, Teir`Dal Crate\n\t\te.self:Say(\"Praise Tunare! The Mother smiles on you this day Disciple \" .. e.other:GetName() .. \"! I present you with the symbol of your new station among the Priests of Tunare. Return to me when you are ready to become a [Warden of Tunare].\");\n\t\te.other:SummonItem(1571); -- Disciple Symbol of Tunare\n\t\te.other:Ding();\n\t\te.other:Faction(226,30,0);  --Clerics of Tunare\n\t\te.other:Faction(279,30,0); --King Tearis Thex\n\t\te.other:Faction(5001,22,0);   --Anti-mage\n\t\te.other:AddEXP(4000);\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 1571,item2 = 1599})) then --Disciple Symbol of Tunare, Powder of Unanimation\n\t\te.self:Say(\"Praise Tunare!! I will have our sorcerers examine this powder immediately to see if we can reproduce it in quantities enough to eliminate the undead plague. I award you the rank of Warden of Tunare, the All Mother smiles upon you, \" .. e.other:GetName() .. \"!\");\n\t\te.other:SummonItem(1572); -- Warden Symbol of Tunare\n\t\te.other:Ding();\n\t\te.other:Faction(226,40,0);  --Clerics of Tunare\n\t\te.other:Faction(279,40,0); --King Tearis Thex\n\t\te.other:Faction(5001,30,0);   --Anti-mage\n\t\te.other:AddEXP(5000);\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 18780})) then --Tattered Note\n\t\te.self:Say(\"Welcome, friend, to the Clerics of Tunare. I am Yeolarn Bronzeleaf, head of the guild and devout follower of Tunare. Here is your guild tunic - it will help to protect you against this world's evils. Once you are ready to begin your training please make sure that you see Terren Starwatcher, he can assist you in developing your hunting and gathering skills.\");\n\t\te.other:SummonItem(13590); --Faded Gold Training Tunic*\n\t\te.other:Ding();\n\t\te.other:Faction(226,100,0);  --Clerics of Tunare\n\t\te.other:Faction(279,100,0); --King Tearis Thex\n\t\te.other:Faction(5001,75,0);   --Anti-mage\n\t\te.other:AddEXP(100);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade);\nend\n\n--END of FILE Zone:felwithea  ID:61025 -- Yeolarn_Bronzeleaf.pl\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "tradeskill_recipe",
+      "before": {
+        "id": 7637,
+        "name": "Divinatory Concoction",
+        "tradeskill": 65,
+        "skillneeded": 0,
+        "trivial": 0,
+        "nofail": 1,
+        "replace_container": 0,
+        "notes": null,
+        "must_learn": 5,
+        "learned_by_item_id": 0,
+        "quest": 0,
+        "enabled": 0,
+        "show_in_advanced": 1,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null,
+        "category": "General"
+      },
+      "after": {
+        "id": 7637,
+        "name": "Divinatory Concoction",
+        "tradeskill": 65,
+        "skillneeded": 0,
+        "trivial": 0,
+        "nofail": 1,
+        "replace_container": 0,
+        "notes": null,
+        "must_learn": 0,
+        "learned_by_item_id": 0,
+        "quest": 1,
+        "enabled": 1,
+        "show_in_advanced": 1,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null,
+        "category": "Quest"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/felwithea/Yeolarn_Bronzeleaf.lua",
+      "beforeSha256": "7489c72f36f445f219e2c4cb6e9480a3bdf694fdef1f4df5af5971e26f89da3f",
+      "proposedFile": "changes/p99-nz-tunare-warden/felwithea--Yeolarn_Bronzeleaf.lua",
+      "afterSha256": "a60fb49fbf549c2bfae5abc0acd330e45ec0bebfcdf05685acebbdf518a2c025"
+    }
+  ]
+}

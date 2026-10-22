@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-nz-adjutant-dialogue",
+  "summary": "Restore Adjutant D`kan Sealed Box acceptance dialogue explicitly quoted by P99.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Rogue_Epic_Quest?action=raw",
+      "note": "Cached 2026-07-17T23:30:51.367Z; revision unavailable; SHA256 81b10c82371644b0c6bb652e80b3b84063dca62d52ec3708e4cc6ea85f92a933. Only this named NPC response is documented. Other six aides retain their unverified speech rather than assuming common text.28057acceptance,500EXP,spawn20205andcoordinates unchanged. Disabled recipe9974 is not required: Stanos supplies28057directly; dragon-artifact recipe lacks P99 epic evidence."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 17611,
+        "zone": "kithicor",
+        "name": "#Adjutant_D-kan",
+        "lua_content": "-- Source: kithicor/#Adjutant_D-kan.pl\n-- Rogue Epic: Sealed Box turn-in for General V-ghera aides.\n-- Converted from ProjectEQ Perl quest scripts.\n-- items: 28057\n\nfunction event_say(e)\n\te.self:Emote(\"ignores you.\")\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\n\tif item_lib.check_turn_in(e.trade, {item1 = 28057}) then\n\t\te.self:Say(\"The General will take care of you!\")\n\t\te.other:Ding()\n\t\te.other:AddEXP(500)\n\t\teq.spawn2(20205, 0, 0, 2316, 797, 275, 387) -- NPC: General_V-ghera\n\tend\n\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 17611,
+        "zone": "kithicor",
+        "name": "#Adjutant_D-kan",
+        "lua_content": "-- Source: kithicor/#Adjutant_D-kan.pl\n-- Rogue Epic: Sealed Box turn-in for General V-ghera aides.\n-- Converted from ProjectEQ Perl quest scripts.\n-- items: 28057\n\nfunction event_say(e)\n\te.self:Emote(\"ignores you.\")\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\n\tif item_lib.check_turn_in(e.trade, {item1 = 28057}) then\n\t\te.self:Say(\"The general will want to look at this. Wait here.\")\n\t\te.other:Ding()\n\t\te.other:AddEXP(500)\n\t\teq.spawn2(20205, 0, 0, 2316, 797, 275, 387) -- NPC: General_V-ghera\n\tend\n\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/kithicor/#Adjutant_D-kan.lua",
+      "beforeSha256": "c89c238a36b256401a403fc749ef07ff95deb817bc52556e437e819ea1146d34",
+      "proposedFile": "changes/p99-nz-adjutant-dialogue/kithicor--#Adjutant_D-kan.lua",
+      "afterSha256": "214b05ee9dd3cd927c7181b74c4213d586100acce02600501a729233f7c59b4d"
+    }
+  ]
+}

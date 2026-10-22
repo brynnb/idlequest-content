@@ -1,0 +1,39 @@
+✔ fresh page coverage reconciles all cached titles without claiming full parity (341.839964ms)
+✔ every original missing-Lua key has one explicit reviewed disposition (474.213035ms)
+✔ consolidated ledger preserves all existing exclusions and historical records (99.9275ms)
+✔ all 499 P99-zone empty quest rows reconcile to triage or explicit preserved policy (213.216436ms)
+✖ current source and empty-row reports reconcile every proposed body without activation claims (1564.806559ms)
+✔ enabled P99 scripts avoid the bridge's unsupported multi-item QuestReward table form (3140.745503ms)
+✔ focused existing-Lua review reconciles all assigned sources without promoting uncertain evidence (165.353454ms)
+✔ recipe audit explicitly reconciles downstream container blocks (2020.632666ms)
+✔ P99 proposal merge preserves preimages and rejects conflicts (26.776018ms)
+✔ Proposed and independently reviewed baseline recipes match explicit structures (static only) (3625.171382ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 9
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 6328.450323
+
+✖ failing tests:
+
+test at tools/p99-audit-integration.test.mjs:56:1
+✖ current source and empty-row reports reconcile every proposed body without activation claims (1564.806559ms)
+  AssertionError [ERR_ASSERTION]: airplane/Dugaas_Helpyre
+  + actual - expected
+  
+  + 'bee88ad2cbb933e476db259b2f0fd9114e497d495d71e362f3fff41e66025330'
+  - '6d57a26f7851ee77ec5798461ce0c1183f6bd5fefed8d162ba7490e7bdc6de18'
+  
+      at TestContext.<anonymous> (file:///tmp/idlequest-content-p99/tools/p99-audit-integration.test.mjs:71:10)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'bee88ad2cbb933e476db259b2f0fd9114e497d495d71e362f3fff41e66025330',
+    expected: '6d57a26f7851ee77ec5798461ce0c1183f6bd5fefed8d162ba7490e7bdc6de18',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

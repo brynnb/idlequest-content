@@ -1,0 +1,27 @@
+{
+  "titles": [
+    "Rod of Insidious Glamour Quest"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "partial",
+  "match_status": "partial",
+  "local_quest_keys": [
+    "rathemtn/Cynthia",
+    "highkeep/Tarn_Visilin"
+  ],
+  "proposal": "changes/p99-nz-glamour-stone-dialogue.json",
+  "notes": [
+    "Restore documented stone-enchantment completion instructions, including return to Temple of Ro with Golden Rod.",
+    "Cynthia10085+50gold->10086 and Tarn10086+50gold->10087 match exact exported names and amounts. Tarn previously explicitly invented completion and omitted the next destination/components. Preserve all Tash and Gleaming Gloves branches and all rewards. Sultin is separately owned by p99-am-incandescent source. Deliberate faction bypass unchanged; raw faction/EXP amounts unspecified; no live chain test."
+  ],
+  "verification": {
+    "source": "Cached P99 and effective Lua reviewed; exact complete row preimages and source hashes recorded.",
+    "syntax": "pending",
+    "runtime": "Isolated mock regression pending; full game runtime unavailable.",
+    "ui": "not_run",
+    "connected_chain": "not_run"
+  },
+  "unresolved": [
+    "Ordinary source drops/spawns, recipe live behavior and rendered complete quest path not verified."
+  ]
+}

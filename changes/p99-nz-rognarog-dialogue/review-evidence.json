@@ -1,0 +1,28 @@
+{
+  "titles": [
+    "Rognarog's Head",
+    "Heretic Heads"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "partial",
+  "match_status": "partial",
+  "local_quest_keys": [
+    "stonebrunt/Shazda_Kaekwon"
+  ],
+  "proposal": "changes/p99-nz-rognarog-dialogue.json",
+  "notes": [
+    "Restore the documented Rognarog Head acknowledgement.",
+    "6968KoboldHead ->6982TitanBlessedTanto/6983Tachi/6984Bokken, exported faction473Kejek and298PeaceKeepers positive, match. Page says minor coin but no amount; missing cash remains unresolved. Equal odds,10000XP and+10magnitudes undocumented. HereticHeads branch untouched. Generated source needs same dialogue update in data/reference/odus-p99-restoration.json and scripts/quests/odus-restoration.mjs before regeneration.",
+    "Restore the documented opening sentence for the existing heretic satchel completion; all item, cash, standing, EXP and pool values unchanged. Include this text in the existing required generator synchronization."
+  ],
+  "verification": {
+    "source": "Cached P99 and effective Lua reviewed; exact complete row preimages and source hashes recorded.",
+    "syntax": "pending",
+    "runtime": "Isolated mock regression pending; full game runtime unavailable.",
+    "ui": "not_run",
+    "connected_chain": "not_run"
+  },
+  "unresolved": [
+    "Ordinary source drops/spawns, recipe live behavior and rendered complete quest path not verified."
+  ]
+}

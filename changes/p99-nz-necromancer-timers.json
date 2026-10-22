@@ -1,0 +1,109 @@
+{
+  "format": 1,
+  "id": "p99-nz-necromancer-timers",
+  "summary": "Restore documented two-hour Kazen and six-hour Thunder Spirit Princess base respawn timers; preserve all other spawn fields.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Kazen_Fecae?action=raw",
+      "note": "Cached SHA256 b7a42704bbe00cb199e4f5ccffa8e4e02e12c5d0640e509df7d72399951734ba. Explicit two-hour respawn; row7152 group2456 has sole100percent NPC51048."
+    },
+    {
+      "url": "https://wiki.project1999.com/Necromancer_Epic_Quest?action=raw",
+      "note": "Cached SHA256 19586e201378b7d78764be3f05231c1b2ecbe1dae3d41061124c48d5b51d3a81. Explicit six hours after killed/despawned. Row2666 group2082 has sole100percent NPC71032. Preserve undocumented existing variance64 rather than inventing zero jitter."
+    }
+  ],
+  "rows": [
+    {
+      "table": "spawn2",
+      "before": {
+        "id": 7152,
+        "spawngroupID": 2456,
+        "zone": "lakerathe",
+        "version": 0,
+        "x": -1589,
+        "y": 342,
+        "z": 54.880001,
+        "heading": 187.75,
+        "respawntime": 400,
+        "variance": 0,
+        "pathgrid": 0,
+        "path_when_zone_idle": 0,
+        "_condition": 0,
+        "cond_value": 1,
+        "animation": 0,
+        "min_expansion": 1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null
+      },
+      "after": {
+        "id": 7152,
+        "spawngroupID": 2456,
+        "zone": "lakerathe",
+        "version": 0,
+        "x": -1589,
+        "y": 342,
+        "z": 54.880001,
+        "heading": 187.75,
+        "respawntime": 7200,
+        "variance": 0,
+        "pathgrid": 0,
+        "path_when_zone_idle": 0,
+        "_condition": 0,
+        "cond_value": 1,
+        "animation": 0,
+        "min_expansion": 1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null
+      }
+    },
+    {
+      "table": "spawn2",
+      "before": {
+        "id": 2666,
+        "spawngroupID": 2082,
+        "zone": "airplane",
+        "version": 0,
+        "x": 609,
+        "y": 1372,
+        "z": -658,
+        "heading": 385,
+        "respawntime": 14400,
+        "variance": 64,
+        "pathgrid": 0,
+        "path_when_zone_idle": 0,
+        "_condition": 0,
+        "cond_value": 1,
+        "animation": 0,
+        "min_expansion": 1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null
+      },
+      "after": {
+        "id": 2666,
+        "spawngroupID": 2082,
+        "zone": "airplane",
+        "version": 0,
+        "x": 609,
+        "y": 1372,
+        "z": -658,
+        "heading": 385,
+        "respawntime": 21600,
+        "variance": 64,
+        "pathgrid": 0,
+        "path_when_zone_idle": 0,
+        "_condition": 0,
+        "cond_value": 1,
+        "animation": 0,
+        "min_expansion": 1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null
+      }
+    }
+  ],
+  "sources": []
+}

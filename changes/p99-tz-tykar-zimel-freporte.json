@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-tykar-zimel-freporte",
+  "summary": "Support the documented mention of Zimel while preserving the old longer phrase and exact four-champagne exchange. Both legacy bodies were compared byte-identical.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Zimel's_Blades_(SoulFire)?action=raw",
+      "note": "Cached 2026-07-17T23:42:15.925Z; revision unavailable; SHA256 86a010babe4eab1dec92b5944bef007f3fe0fedc24c1143ca52bdd286d8034b3. Support the documented mention of Zimel while preserving the old longer phrase and exact four-champagne exchange. Both legacy bodies were compared byte-identical. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 17207,
+        "zone": "freporte",
+        "name": "Tykar_Renlin",
+        "lua_content": "-- items: 13829, 12196\nfunction event_say(e)\n\tif(e.message:findi(\"lucan\")) then\n\t\te.self:Say(\"That man is no just ruler. He has jailed me and my friend Zimel for merely begging.\");\n\telseif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Do you have any spare coppers for a thirsty soul?\");\n\telseif(e.message:findi(\"tell me of zimel\")) then\n\t\te.self:Say(\"What?! You know my friend Zimel?! I would like to speak of him, but my mouth is so parched. Maybe a fine grog would loosen my lips. I am uncertain which flavor shall do the trick.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal champagne = 0;\n\tlocal morechampagne = 0;\n\tlocal item_lib =require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 13829,item2 = 13829,item3 = 13829,item4 = 13829})) then\n\t\tmorechampagne = 1;\n\t\tchampagne = 3;\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 13829,item2 = 13829,item3 = 13829})) then\n\t\tchampagne = 3;\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 13829,item2 = 13829})) then\n\t\tchampagne = 2;\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 13829})) then\n\t\tchampagne = 1;\n\tend\n\t\n\tif(champagne > 0) then\n\t\trepeat\n\t\t\te.self:Say(\"Oooh!! That is the taste. My lips are almost loose. Maybe another will do the trick.\");\n\t\t\tchampagne = champagne - 1;\n\t\tuntil champagne == 0\n\tend\n\t\n\tif(morechampagne == 1) then\n\t\te.self:Say(\"Ahh!! That was good. Now where were we?. Oh yes. My friend Zimel is a fellow beggar. He was locked up in the arena. They were going to let him go when the Freeport Militia came for him. Ha!! He is crazy as a troll now. I took this blanket from his cell before I was released. I no longer need it and my guilt has reached its peak. I do not want crazy old Zimel to freeze. Perhaps you can return it to him.\");\n\t\te.other:Ding();\n\t\te.other:SummonItem(12196); -- Bunker Cell #1 (Zimel's Blanket)\n\t\te.other:AddEXP(10);\n\t\tmorechampagne = 0;\n\tend\t\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\n-- END if FILE Zone:freporte -- Tykar_Renlin",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 17207,
+        "zone": "freporte",
+        "name": "Tykar_Renlin",
+        "lua_content": "-- items: 13829, 12196\nfunction event_say(e)\n\tif(e.message:findi(\"lucan\")) then\n\t\te.self:Say(\"That man is no just ruler. He has jailed me and my friend Zimel for merely begging.\");\n\telseif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Do you have any spare coppers for a thirsty soul?\");\n\telseif(e.message:findi(\"zimel\")) then\n\t\te.self:Say(\"What?! You know my friend Zimel?! I would like to speak of him, but my mouth is so parched. Maybe a fine grog would loosen my lips. I am uncertain which flavor shall do the trick.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal champagne = 0;\n\tlocal morechampagne = 0;\n\tlocal item_lib =require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 13829,item2 = 13829,item3 = 13829,item4 = 13829})) then\n\t\tmorechampagne = 1;\n\t\tchampagne = 3;\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 13829,item2 = 13829,item3 = 13829})) then\n\t\tchampagne = 3;\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 13829,item2 = 13829})) then\n\t\tchampagne = 2;\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 13829})) then\n\t\tchampagne = 1;\n\tend\n\t\n\tif(champagne > 0) then\n\t\trepeat\n\t\t\te.self:Say(\"Oooh!! That is the taste. My lips are almost loose. Maybe another will do the trick.\");\n\t\t\tchampagne = champagne - 1;\n\t\tuntil champagne == 0\n\tend\n\t\n\tif(morechampagne == 1) then\n\t\te.self:Say(\"Ahh!! That was good. Now where were we?. Oh yes. My friend Zimel is a fellow beggar. He was locked up in the arena. They were going to let him go when the Freeport Militia came for him. Ha!! He is crazy as a troll now. I took this blanket from his cell before I was released. I no longer need it and my guilt has reached its peak. I do not want crazy old Zimel to freeze. Perhaps you can return it to him.\");\n\t\te.other:Ding();\n\t\te.other:SummonItem(12196); -- Bunker Cell #1 (Zimel's Blanket)\n\t\te.other:AddEXP(10);\n\t\tmorechampagne = 0;\n\tend\t\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\n-- END if FILE Zone:freporte -- Tykar_Renlin",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/freporte/Tykar_Renlin.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-tz-tykar-zimel-freporte/freporte--Tykar_Renlin.lua",
+      "afterSha256": "1759943750558e38dc512cfb102a5749a62b427669b9ab9ddf90f12e91303636"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-wislen-dialogue",
+  "summary": "Prevent generic fish lore from shadowing the documented catfish request.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Wislen_Mamluk's_Catfish?action=raw",
+      "note": "Cached 2026-07-17T23:41:30.745Z; revision unavailable; SHA256 3756fcbbe680e52068621ae81758df353031673ddc14df1e84c135b22e07ac91. Prevent generic fish lore from shadowing the documented catfish request. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 12183,
+        "zone": "kerraridge",
+        "name": "Wislen_Mamluk",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: kerraridge/Wislen_Mamluk.pl\n-- P99 audit: Wislen Mamluk's Catfish\n-- items: 13019, 22748, 46996\n\nfunction event_say(e)\n\tif e.message:findi(\"Hail\") then\n\t\te.self:Say(\"Why you bother Wislen? Wislen trying to get fishies. Leave Wislen alone to get [fish]. please.\")\n\telseif e.message:findi(\"fish\") then\n\t\te.self:Say(\"Fish. Wislen fish. Wislen is mamluk, not just fisher. Mamluk is warrior but they also helps provide for all [Kerran]. This is hadi place in life. We happy doing this. Please, let Wislen fish now.\")\n\telseif e.message:findi(\"kerran\") then\n\t\te.self:Say(\"Mostly they like [catfish], but Wislen not have any luck today.\")\n\telseif e.message:findi(\"catfish\") then\n\t\te.self:Say(\"Kerra Catfish is what Wislen want.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\n\tif item_lib.check_turn_in(e.trade, { item1 = 13019 }) then -- Fresh Fish\n\t\te.self:Say(\"Fish! Fish! Not again Fish! Take it back, I have too many.\")\n\t\te.other:SummonItem(13019)\n\telseif item_lib.check_turn_in(e.trade, { item1 = 22748 }) then -- Kerra Catfish\n\t\te.self:Say(\"You caught catfish? Errr. Wislen thanks you. Here. Take this. It's one of my best fishing poles.\")\n\t\te.other:SummonItem(46996) -- Kerran Fishing Pole\n\t\te.other:Faction(382, 5, 0) -- Kerra Isle\n\t\te.other:AddEXP(500)\n\t\te.other:Ding()\n\tend\n\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 12183,
+        "zone": "kerraridge",
+        "name": "Wislen_Mamluk",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: kerraridge/Wislen_Mamluk.pl\n-- P99 audit: Wislen Mamluk's Catfish\n-- items: 13019, 22748, 46996\n\nfunction event_say(e)\n\tif e.message:findi(\"Hail\") then\n\t\te.self:Say(\"Why you bother Wislen? Wislen trying to get fishies. Leave Wislen alone to get [fish]. please.\")\n\telseif e.message:findi(\"fish\") and not e.message:findi(\"catfish\") then\n\t\te.self:Say(\"Fish. Wislen fish. Wislen is mamluk, not just fisher. Mamluk is warrior but they also helps provide for all [Kerran]. This is hadi place in life. We happy doing this. Please, let Wislen fish now.\")\n\telseif e.message:findi(\"kerran\") then\n\t\te.self:Say(\"Mostly they like [catfish], but Wislen not have any luck today.\")\n\telseif e.message:findi(\"catfish\") then\n\t\te.self:Say(\"Kerra Catfish is what Wislen want.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\n\tif item_lib.check_turn_in(e.trade, { item1 = 13019 }) then -- Fresh Fish\n\t\te.self:Say(\"Fish! Fish! Not again Fish! Take it back, I have too many.\")\n\t\te.other:SummonItem(13019)\n\telseif item_lib.check_turn_in(e.trade, { item1 = 22748 }) then -- Kerra Catfish\n\t\te.self:Say(\"You caught catfish? Errr. Wislen thanks you. Here. Take this. It's one of my best fishing poles.\")\n\t\te.other:SummonItem(46996) -- Kerran Fishing Pole\n\t\te.other:Faction(382, 5, 0) -- Kerra Isle\n\t\te.other:AddEXP(500)\n\t\te.other:Ding()\n\tend\n\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/kerraridge/Wislen_Mamluk.lua",
+      "beforeSha256": "241505b312675adb72675271280077fdad85e4c0651581b485cadf9f99a8d9ea",
+      "proposedFile": "changes/p99-tz-wislen-dialogue/kerraridge--Wislen_Mamluk.lua",
+      "afterSha256": "ee06447dedf1009116f360c0f8d070d1a10a94dd4b73455492a7252682f2ea83"
+    }
+  ]
+}

@@ -1,0 +1,1749 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-22",
+  "scope": "Sixteen assigned original Perl-only trade-handler boundary records; eight bounded flavor/refund conversions, zero progression quests newly completed.",
+  "counts": {
+    "converted_partial": 6,
+    "true_runtime_block": 1,
+    "positively_later": 5,
+    "uncertain_era_identity": 2,
+    "converted_full": 2
+  },
+  "sourceBoundCases": 38,
+  "proposal": "changes/p99-conversion-trades.json",
+  "proposalSha256": "1aed23b8e5b9e4c3d03a8257886ec32c8226008e0a478539531049df0f9aec4a",
+  "baselineManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "inputReviewBindings": [
+    {
+      "path": "changes/p99-audit/resolution-report.json",
+      "sha256": "6b4559b2052a799340f8b4f23abb83f8b9e3c946999997282f89895bb4bb53be"
+    },
+    {
+      "path": "changes/p99-audit/unconverted-boundaries.json",
+      "sha256": "3ecaa9ba8a6ea20f4c4e409cfa248dc1cadb81861d3b667d598921ad9e994231"
+    }
+  ],
+  "records": [
+    {
+      "key": "iceclad/Joshel_the_Large",
+      "status": "converted_partial",
+      "progressionImplemented": false,
+      "sourcePerl": "sources/projecteq/iceclad/Joshel_the_Large.pl",
+      "sourcePerlSha256": "45476e83a8d662a34ad666c00b83c06191d3c532d2056698dc9857122aa51a28",
+      "originalQuestId": 15719,
+      "originalEnabled": 1,
+      "originalPolicy": null,
+      "priorDisposition": {
+        "key": "iceclad/Joshel_the_Large",
+        "disposition": "mixed_flavor_unverified_bandana",
+        "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+      },
+      "priorResolution": {
+        "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+        "record": {
+          "key": "iceclad/Joshel_the_Large",
+          "reviewed_at": "2026-10-22",
+          "source": "sources/projecteq/iceclad/Joshel_the_Large.pl",
+          "source_sha256": "45476e83a8d662a34ad666c00b83c06191d3c532d2056698dc9857122aa51a28",
+          "events": [
+            "EVENT_ITEM",
+            "EVENT_SAY"
+          ],
+          "quest_calls": [
+            "say",
+            "summonitem"
+          ],
+          "npc_evidence": [
+            {
+              "title": "Joshel the Large",
+              "cachePath": "reference/p99-wiki/npc-pages/joshel-the-large-ac0ca16fb1.wiki",
+              "url": "https://wiki.project1999.com/Joshel_the_Large?action=raw",
+              "sha256": "e9af399403612863c83d28728be5f77ab80a1fcd6bf43e074b9e2524bd14b4f0",
+              "eraTags": [
+                "Velious Era"
+              ],
+              "zone": "[[Iceclad Ocean]]",
+              "doesNotExist": false
+            }
+          ],
+          "verification": "Static source/evidence disposition only; not live mechanics or UI.",
+          "outcome": "mixed_flavor_unverified_bandana",
+          "reason": "NPC exists in P99 cache but source gives Joshel's Bandana60333 on Icebreaker phrase with no cached quest corroboration. Preserve as unresolved reward branch, not safe speech-only; low numeric ID not used to infer era.",
+          "evidence": [],
+          "source_anchors": [
+            {
+              "line": 1,
+              "text": "# items: 60333"
+            },
+            {
+              "line": 9,
+              "text": "quest::summonitem(60333); # Item: Joshel's Bandana"
+            },
+            {
+              "line": 14,
+              "text": "plugin::return_items(\\%itemcount);"
+            }
+          ]
+        }
+      },
+      "reason": "Documented P99 hail and safe refunds converted. Original Icebreaker bandana 60333 acquisition omitted because P99 authority for that reward branch remains unverified; no guessed substitute and no progression claim.",
+      "evidence": [
+        {
+          "path": "reference/p99-wiki/npc-pages/joshel-the-large-ac0ca16fb1.wiki",
+          "sha256": "e9af399403612863c83d28728be5f77ab80a1fcd6bf43e074b9e2524bd14b4f0",
+          "url": "https://wiki.project1999.com/Joshel_the_Large?action=raw",
+          "retrievedAt": "2026-08-12T19:37:46.612Z",
+          "revision": null
+        }
+      ],
+      "proposedFile": "changes/p99-conversion-trades/iceclad--Joshel_the_Large.lua",
+      "proposedSourceSha256": "3849a025cd39a1f0b27df64a0a9de9f32ca751f6a7cf9b0a7ebfeb3bb31b0f58",
+      "target": "maintained/lua/converted-perl/iceclad/Joshel_the_Large.lua",
+      "staticIdentityExpectations": [
+        {
+          "npcId": 110038,
+          "name": "Joshel_the_Large",
+          "exclude": 1,
+          "path": "data/npc_types/2.ndjson",
+          "fileSha256": "cf46eaad4198419d94f82d0b20572856c5dc519baf08126eba11b5e3cd54a283",
+          "rowSha256": "b2aecb6fe8d8cbf3bb85fdf9d652f8fb8fc2c610757d5ddafb2511a11f85ac1a"
+        }
+      ],
+      "runtimeCases": [
+        "iceclad/Joshel_the_Large: all trades refunded, unrelated extras and repeat",
+        "iceclad/Joshel_the_Large: hail and unrelated speech",
+        "iceclad/Joshel_the_Large: bandana branch not activated"
+      ],
+      "verification": "Full Perl read; evidence review; see validation.json for actual CLI and isolated mocked-Lua results. No game settlement or rendered UI verification."
+    },
+    {
+      "key": "kael/a_bag_of_supplies",
+      "status": "true_runtime_block",
+      "progressionImplemented": false,
+      "sourcePerl": "sources/projecteq/kael/a_bag_of_supplies.pl",
+      "sourcePerlSha256": "b56b7c2821b40179a9bdbae97483528751911620d6e0ceef0ac0314f1a118e7b",
+      "originalQuestId": 18959,
+      "originalEnabled": 1,
+      "originalPolicy": null,
+      "priorDisposition": {
+        "key": "kael/a_bag_of_supplies",
+        "disposition": "open_faun_exchange_effect",
+        "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+      },
+      "priorResolution": {
+        "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+        "record": {
+          "key": "kael/a_bag_of_supplies",
+          "reviewed_at": "2026-10-22",
+          "source": "sources/projecteq/kael/a_bag_of_supplies.pl",
+          "source_sha256": "b56b7c2821b40179a9bdbae97483528751911620d6e0ceef0ac0314f1a118e7b",
+          "events": [
+            "EVENT_ITEM"
+          ],
+          "quest_calls": [
+            "depop_withtimer",
+            "selfcast",
+            "summonitem"
+          ],
+          "npc_evidence": [],
+          "verification": "Static source/evidence disposition only; not live mechanics or UI.",
+          "outcome": "open_faun_exchange_effect",
+          "reason": "Source trades24860+24861 for22855, selfcasts1644 and depops. Need cached Crest of Faun branch/ID corroboration and spell+inventory+depop atomicity test; do not silently omit damaging selfcast or assume return-only behavior.",
+          "evidence": [],
+          "source_anchors": [
+            {
+              "line": 1,
+              "text": "# crest of the faun"
+            },
+            {
+              "line": 2,
+              "text": "#"
+            },
+            {
+              "line": 3,
+              "text": "# items: 24860, 24861, 22855"
+            },
+            {
+              "line": 6,
+              "text": "if (plugin::check_handin(\\%itemcount, 24860 => 1, 24861 => 1)) {"
+            },
+            {
+              "line": 7,
+              "text": "quest::summonitem(22855); # Item: Pile of Rubble"
+            },
+            {
+              "line": 8,
+              "text": "quest::selfcast(1644); #pillar of fire"
+            },
+            {
+              "line": 9,
+              "text": "quest::depop_withtimer();"
+            },
+            {
+              "line": 11,
+              "text": "plugin::return_items(\\%itemcount);"
+            },
+            {
+              "line": 15,
+              "text": "# EOF zone: kael ID: 113429 NPC: a_bag_of_supplies"
+            }
+          ]
+        }
+      },
+      "reason": "Crest of the Fauns requires an explosion and ground Pile of Rubble. Original Perl instead summons rubble directly, casts damaging selfcast1644, and depops. Current executor rejects legacy selfcast and restricts delivered targeted quest spells to beneficial effects. A no-damage/direct-inventory rewrite is not faithful, so no Lua proposal is added.",
+      "evidence": [
+        {
+          "path": "reference/p99-wiki/raw-pages/crest-of-the-fauns-quest-4b7349f7fb.wiki",
+          "sha256": "cbce9c579d51a4637ad233b39792ac45279610e2cdb2556f53b1bdfadbfc72e5",
+          "url": "https://wiki.project1999.com/Crest_of_the_Fauns_Quest?action=raw",
+          "retrievedAt": "2026-07-17T23:11:41.326Z",
+          "revision": null
+        }
+      ],
+      "proposedFile": null,
+      "proposedSourceSha256": null,
+      "target": null,
+      "staticIdentityExpectations": [
+        {
+          "npcId": 113429,
+          "name": "a_bag_of_supplies",
+          "exclude": 1,
+          "path": "data/npc_types/1.ndjson",
+          "fileSha256": "a6f9003d0749fcc201c0beefcf4fb1efbe2980df49af8d75ff4752aa1c76b9e9",
+          "rowSha256": "c11a98c57a864a390c0596cbfdf5de5e6a05dbc5f9e8d6c1625de1f2b6f49889"
+        }
+      ],
+      "runtimeCases": [],
+      "verification": "Full Perl read; evidence review; see validation.json for actual CLI and isolated mocked-Lua results. No game settlement or rendered UI verification.",
+      "runtimeBlock": {
+        "path": "changes/p99-audit/downstream-compatibility-summary.json",
+        "sha256": "b7620161474054044e891f48c480c6637753fae9dbb1e71bd81f6ecab1c86b2f",
+        "unsupported": "legacy selfcast; non-beneficial targeted quest spells",
+        "required": "Evidence-backed damaging explosion plus ground-rubble creation and hand-in/depop settlement, not silent direct SummonItem approximation.",
+        "verification": "Compatibility conclusion only; raw runtime source is not published and this is not live execution proof."
+      }
+    },
+    {
+      "key": "necropolis/#an_Odd_Looking_Spider",
+      "status": "positively_later",
+      "progressionImplemented": false,
+      "sourcePerl": "sources/projecteq/necropolis/#an_Odd_Looking_Spider.pl",
+      "sourcePerlSha256": "6e314151f3e2fb8b56bf7cb68f72b4e14aba71178e66b796c7a47c337600daae",
+      "originalQuestId": 16824,
+      "originalEnabled": 1,
+      "originalPolicy": null,
+      "priorDisposition": {
+        "key": "necropolis/#an_Odd_Looking_Spider",
+        "disposition": "open_spider_stiggles_era",
+        "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+      },
+      "priorResolution": {
+        "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+        "record": {
+          "key": "necropolis/#an_Odd_Looking_Spider",
+          "reviewed_at": "2026-10-22",
+          "source": "sources/projecteq/necropolis/#an_Odd_Looking_Spider.pl",
+          "source_sha256": "6e314151f3e2fb8b56bf7cb68f72b4e14aba71178e66b796c7a47c337600daae",
+          "events": [
+            "EVENT_ITEM"
+          ],
+          "quest_calls": [
+            "depop_withtimer",
+            "spawn2"
+          ],
+          "npc_evidence": [],
+          "verification": "Static source/evidence disposition only; not live mechanics or UI.",
+          "outcome": "open_spider_stiggles_era",
+          "reason": "Spider item67053 transforms toStiggles123150 then HP50 transforms again123151. No cached NPC identity or quest match. Resolve likely later quest authority and transformed-actor HP/hate/loot lifecycle before conversion; numeric item value is not era proof.",
+          "evidence": [],
+          "source_anchors": [
+            {
+              "line": 1,
+              "text": "# items: 67053"
+            },
+            {
+              "line": 12,
+              "text": "if (plugin::check_handin(\\%itemcount, 67053 => 1)){"
+            },
+            {
+              "line": 13,
+              "text": "quest::spawn2(123150,0,0,$x,$y,$z,$h); # NPC: #Stiggles_Cogswin"
+            },
+            {
+              "line": 14,
+              "text": "quest::depop_withtimer();"
+            }
+          ]
+        }
+      },
+      "reason": "Exact Note to Stiggle 67053 and transformed Stiggles chain identified as Reactivate the Portals, Lost Dungeons of Norrath. No conversion or spawned NPC changes.",
+      "evidence": [
+        {
+          "url": "https://everquest.allakhazam.com/db/quest.html?quest=2634",
+          "verifiedAt": "2026-10-22",
+          "note": "Reactivate the Portals explicitly tagged Lost Dungeons of Norrath; entered August 29, 2003. Exact odd-looking-spider note hand-in starts Stiggles clockwork/gnome chain. This is positive later-era identification, not an inference from missing wiki coverage or item numbers."
+        }
+      ],
+      "proposedFile": null,
+      "proposedSourceSha256": null,
+      "target": null,
+      "staticIdentityExpectations": [
+        {
+          "npcId": 123114,
+          "name": "#an_Odd_Looking_Spider",
+          "exclude": 1,
+          "path": "data/npc_types/f.ndjson",
+          "fileSha256": "1bb121e903c24d4a41b2a5c5c94daaa526bd92b64c3ec57dbc9ec95949411108",
+          "rowSha256": "ce5090f310640d1d44bc093c02c79243beba16cf36682af1608a675868406f3f"
+        },
+        {
+          "npcId": 123022,
+          "name": "#an_Odd_Looking_Spider",
+          "exclude": 1,
+          "path": "data/npc_types/c.ndjson",
+          "fileSha256": "8bfb49fe0f8889c525cc9f4800b58713021b56f5acac444ef95a4e732d71e0ae",
+          "rowSha256": "cbb0850f6a0373980fd8b868baa3d6662ef1cd9118c4cf73d8fa2e59f9ff21e6"
+        }
+      ],
+      "runtimeCases": [],
+      "verification": "Full Perl read; evidence review; see validation.json for actual CLI and isolated mocked-Lua results. No game settlement or rendered UI verification."
+    },
+    {
+      "key": "neriaka/Hukulk",
+      "status": "uncertain_era_identity",
+      "progressionImplemented": false,
+      "sourcePerl": "sources/projecteq/neriaka/Hukulk.pl",
+      "sourcePerlSha256": "cf63e953d7fefaae9aa45df6b3632d138cc2bc684744d67ea6d7050d836ddd37",
+      "originalQuestId": 17435,
+      "originalEnabled": 1,
+      "originalPolicy": null,
+      "priorDisposition": {
+        "key": "neriaka/Hukulk",
+        "disposition": "later-service-or-relocation-reference",
+        "artifact": "changes/p99-audit/manual-linked-dispositions.json"
+      },
+      "priorResolution": {
+        "artifact": "changes/p99-audit/manual-linked-dispositions.json",
+        "record": {
+          "key": "neriaka/Hukulk",
+          "source": "sources/projecteq/neriaka/Hukulk.pl",
+          "sha256": "cf63e953d7fefaae9aa45df6b3632d138cc2bc684744d67ea6d7050d836ddd37",
+          "reviewedAt": "2026-10-22",
+          "disposition": "later-service-or-relocation-reference",
+          "reason": "Exact Neriak sources only generic guild hail and try_tome_handins discipline service. P99 original guild actors and quest links are in Grobb, whose maintained scripts must not be overwritten or conflated with these Neriak records. No P99 evidence for Neriak relocation/tome service; leave reference.",
+          "evidence": [
+            {
+              "title": "Hukulk",
+              "url": "https://wiki.project1999.com/Hukulk?action=raw",
+              "fetchedAt": "2026-08-12T19:27:06.964Z",
+              "revision": null,
+              "sha256": "c82c9b4ba4f834bfacaae5e1b40f4eaf43d2191c95087833aaf2bcc007072229",
+              "bytes": 1006,
+              "source": "npc-pages/hukulk-208c3c98bd.json",
+              "cachePath": "reference/p99-wiki/npc-pages/hukulk-208c3c98bd.wiki"
+            },
+            {
+              "title": "Ranjor",
+              "url": "https://wiki.project1999.com/Ranjor?action=raw",
+              "fetchedAt": "2026-08-12T20:33:33.133Z",
+              "revision": null,
+              "sha256": "4f32a6a515d222b7f6a6c6939f2509ffa82698f12c6b641bc80eaf2fe037ccf0",
+              "bytes": 894,
+              "source": "npc-pages/ranjor-5e4b8af666.json",
+              "cachePath": "reference/p99-wiki/npc-pages/ranjor-5e4b8af666.wiki"
+            }
+          ],
+          "verification": "Full source read and cached evidence inspection; no runtime/world execution."
+        }
+      },
+      "reason": "Neriak generic guildmaster/tome-service body is not the documented Grobb Hukulk quest. Exact Neriak service era remains uncertain; do not introduce this relocation or generic tome handler into P99 on name similarity.",
+      "evidence": [
+        {
+          "path": "reference/p99-wiki/npc-pages/hukulk-208c3c98bd.wiki",
+          "sha256": "c82c9b4ba4f834bfacaae5e1b40f4eaf43d2191c95087833aaf2bcc007072229",
+          "url": "https://wiki.project1999.com/Hukulk?action=raw",
+          "retrievedAt": "2026-08-12T19:27:06.964Z",
+          "revision": null
+        },
+        {
+          "url": "https://wiki.project1999.com/Talk%3AFroglok_Skin_Mask_Quest",
+          "verifiedAt": "2026-10-22",
+          "note": "Wiki discussion describes troll quest relocation to Neriak with Guktan invasion, but gives an imprecise date and does not establish these exact generic tome-service script versions. Retain uncertainty for exact Neriak identity; do not copy over the separate Grobb quests."
+        }
+      ],
+      "proposedFile": null,
+      "proposedSourceSha256": null,
+      "target": null,
+      "staticIdentityExpectations": [
+        {
+          "npcId": 40023,
+          "name": "Hukulk",
+          "exclude": 1,
+          "path": "data/npc_types/e.ndjson",
+          "fileSha256": "3c978e0bcd7d1c083caa049595fa90b1b7454eebfdaf18dcf2671343f73daf7c",
+          "rowSha256": "126d55aad5fe48b363be8edfde5c786eeace909b15ee81930ce0d50d97d07fa8"
+        },
+        {
+          "npcId": 52036,
+          "name": "Hukulk",
+          "exclude": 1,
+          "path": "data/npc_types/8.ndjson",
+          "fileSha256": "8ac39a63330215903fde4da7272e1d10a7bb6fc5c1daa0517ced521b0cb7de9a",
+          "rowSha256": "023bd834034a631cf429e579e749289b0fef18ef95d559f8d19007d8a63395d7"
+        }
+      ],
+      "runtimeCases": [],
+      "verification": "Full Perl read; evidence review; see validation.json for actual CLI and isolated mocked-Lua results. No game settlement or rendered UI verification."
+    },
+    {
+      "key": "neriaka/Ranjor",
+      "status": "uncertain_era_identity",
+      "progressionImplemented": false,
+      "sourcePerl": "sources/projecteq/neriaka/Ranjor.pl",
+      "sourcePerlSha256": "ff1cc4fbc61fbc0345c76bc8056a67ffc1a77e29f5a510fb96ac5d33f8cc7b11",
+      "originalQuestId": 16062,
+      "originalEnabled": 1,
+      "originalPolicy": null,
+      "priorDisposition": {
+        "key": "neriaka/Ranjor",
+        "disposition": "later-service-or-relocation-reference",
+        "artifact": "changes/p99-audit/manual-linked-dispositions.json"
+      },
+      "priorResolution": {
+        "artifact": "changes/p99-audit/manual-linked-dispositions.json",
+        "record": {
+          "key": "neriaka/Ranjor",
+          "source": "sources/projecteq/neriaka/Ranjor.pl",
+          "sha256": "ff1cc4fbc61fbc0345c76bc8056a67ffc1a77e29f5a510fb96ac5d33f8cc7b11",
+          "reviewedAt": "2026-10-22",
+          "disposition": "later-service-or-relocation-reference",
+          "reason": "Exact Neriak sources only generic guild hail and try_tome_handins discipline service. P99 original guild actors and quest links are in Grobb, whose maintained scripts must not be overwritten or conflated with these Neriak records. No P99 evidence for Neriak relocation/tome service; leave reference.",
+          "evidence": [
+            {
+              "title": "Hukulk",
+              "url": "https://wiki.project1999.com/Hukulk?action=raw",
+              "fetchedAt": "2026-08-12T19:27:06.964Z",
+              "revision": null,
+              "sha256": "c82c9b4ba4f834bfacaae5e1b40f4eaf43d2191c95087833aaf2bcc007072229",
+              "bytes": 1006,
+              "source": "npc-pages/hukulk-208c3c98bd.json",
+              "cachePath": "reference/p99-wiki/npc-pages/hukulk-208c3c98bd.wiki"
+            },
+            {
+              "title": "Ranjor",
+              "url": "https://wiki.project1999.com/Ranjor?action=raw",
+              "fetchedAt": "2026-08-12T20:33:33.133Z",
+              "revision": null,
+              "sha256": "4f32a6a515d222b7f6a6c6939f2509ffa82698f12c6b641bc80eaf2fe037ccf0",
+              "bytes": 894,
+              "source": "npc-pages/ranjor-5e4b8af666.json",
+              "cachePath": "reference/p99-wiki/npc-pages/ranjor-5e4b8af666.wiki"
+            }
+          ],
+          "verification": "Full source read and cached evidence inspection; no runtime/world execution."
+        }
+      },
+      "reason": "Neriak generic guildmaster/tome-service body is not the documented Grobb Ranjor quest. Exact Neriak service era remains uncertain; preserve Grobb implementation and do not invent Neriak progression.",
+      "evidence": [
+        {
+          "path": "reference/p99-wiki/npc-pages/ranjor-5e4b8af666.wiki",
+          "sha256": "4f32a6a515d222b7f6a6c6939f2509ffa82698f12c6b641bc80eaf2fe037ccf0",
+          "url": "https://wiki.project1999.com/Ranjor?action=raw",
+          "retrievedAt": "2026-08-12T20:33:33.133Z",
+          "revision": null
+        },
+        {
+          "url": "https://wiki.project1999.com/Talk%3AFroglok_Skin_Mask_Quest",
+          "verifiedAt": "2026-10-22",
+          "note": "Wiki discussion describes troll quest relocation to Neriak with Guktan invasion, but gives an imprecise date and does not establish these exact generic tome-service script versions. Retain uncertainty for exact Neriak identity; do not copy over the separate Grobb quests."
+        }
+      ],
+      "proposedFile": null,
+      "proposedSourceSha256": null,
+      "target": null,
+      "staticIdentityExpectations": [
+        {
+          "npcId": 52048,
+          "name": "Ranjor",
+          "exclude": 1,
+          "path": "data/npc_types/e.ndjson",
+          "fileSha256": "3c978e0bcd7d1c083caa049595fa90b1b7454eebfdaf18dcf2671343f73daf7c",
+          "rowSha256": "b8f403dd7ab175bb047bc785743dcafb1963b4e36f3e1e9016b1e0f7352782bc"
+        },
+        {
+          "npcId": 40024,
+          "name": "Ranjor",
+          "exclude": 1,
+          "path": "data/npc_types/1.ndjson",
+          "fileSha256": "a6f9003d0749fcc201c0beefcf4fb1efbe2980df49af8d75ff4752aa1c76b9e9",
+          "rowSha256": "8019b35faa9c93a1b027a9b9a4dc799538130cb71a318092daec7a678fec1896"
+        }
+      ],
+      "runtimeCases": [],
+      "verification": "Full Perl read; evidence review; see validation.json for actual CLI and isolated mocked-Lua results. No game settlement or rendered UI verification."
+    },
+    {
+      "key": "nro/#Verrell_Cogswin",
+      "status": "positively_later",
+      "progressionImplemented": false,
+      "sourcePerl": "sources/projecteq/nro/#Verrell_Cogswin.pl",
+      "sourcePerlSha256": "e698f9b5c19dccfc810b56a3bb7598063e61699dc6bf28ca5b101c34378714b2",
+      "originalQuestId": 12015,
+      "originalEnabled": 1,
+      "originalPolicy": null,
+      "priorDisposition": {
+        "key": "nro/#Verrell_Cogswin",
+        "disposition": "unresolved-later-scale-alternative",
+        "artifact": "changes/p99-classic-conversions/triage.json"
+      },
+      "priorResolution": {
+        "artifact": "changes/p99-classic-conversions/triage.json",
+        "record": {
+          "key": "nro/#Verrell_Cogswin",
+          "zone": "nro",
+          "version": "root",
+          "eligible": true,
+          "file": "sources/projecteq/nro/#Verrell_Cogswin.pl",
+          "language": "pl",
+          "sha256": "e698f9b5c19dccfc810b56a3bb7598063e61699dc6bf28ca5b101c34378714b2",
+          "p99Zone": true,
+          "classification": "unlinked-missing-lua-review",
+          "luaAvailable": false,
+          "effective": {
+            "enabled": 1,
+            "sourceStatus": "no-lua-body",
+            "file": "effective/quests/nro/%23Verrell_Cogswin.lua"
+          },
+          "maintained": null,
+          "upstreamLua": null,
+          "exclusion": null,
+          "npcExclusions": [],
+          "auditPages": [],
+          "p99PageMentions": [],
+          "reviewClassification": "unresolved-later-scale-alternative",
+          "sourceEvidence": [
+            "##Verrell_Cogswin.pl",
+            "# items: 67387, 67395, 13006, 11622, 67386, 67385, 67396, 67384, 11582",
+            "sub EVENT_SAY {",
+            "if($text=~/hail/i) {",
+            "quest::say(\"Sorry, but I am a very tired gnome. I am returning from a trip to Halas but this desert heat has worn me out and for some reason my gate spell keep failing. If only I had some water then I could make it to the wizard portal and wait for my brother Pellillo to pick me up.\");"
+          ],
+          "decision": "Red-to-green scale exchange via Green_Scale_Quest; no P99 evidence in cache. Do not add an alternative epic scale acquisition route on PEQ alone.",
+          "verification": "Static content/source triage only. No gameplay, transaction or UI claim."
+        }
+      },
+      "reason": "Named red-to-green-scale quest added November 5, 2003. No alternative Warrior epic scale acquisition route activated.",
+      "evidence": [
+        {
+          "url": "https://mboards.eqtraders.com/eq/forum/tradeskills/general-trade-skill-discussion/12170-patch-message-nov-5-2003",
+          "verifiedAt": "2026-10-22",
+          "note": "Contemporaneous November 5, 2003 patch-note reproduction explicitly announces Verrell red-to-green dragon scale conversion."
+        },
+        {
+          "url": "https://eqarchives.com/patch/view/2003-11-05-1",
+          "verifiedAt": "2026-10-22",
+          "note": "Independent archive of the November 5, 2003 patch text corroborates the exact named scale-conversion addition."
+        }
+      ],
+      "proposedFile": null,
+      "proposedSourceSha256": null,
+      "target": null,
+      "staticIdentityExpectations": [
+        {
+          "npcId": 34049,
+          "name": "#Verrell_Cogswin",
+          "exclude": 1,
+          "path": "data/npc_types/7.ndjson",
+          "fileSha256": "9b2bff6a387ec86992e8d2a11dfb12afa0cc7c7c2901053d22f84b289e373a4b",
+          "rowSha256": "e50c7a4255680ab995d7f809155104af6b453c0a009a4b0b7d3745593603ffbf"
+        },
+        {
+          "npcId": 392087,
+          "name": "#Verrell_Cogswin",
+          "exclude": 1,
+          "path": "data/npc_types/4.ndjson",
+          "fileSha256": "489921edeb059f655a15ac4cea3dce1a0fdc945b3c10b52a9ea715c1daac06a7",
+          "rowSha256": "05605d45a3cc2065d71072e5f50e9c0d09337e4d3bc7a3517e417881b8442f73"
+        }
+      ],
+      "runtimeCases": [],
+      "verification": "Full Perl read; evidence review; see validation.json for actual CLI and isolated mocked-Lua results. No game settlement or rendered UI verification."
+    },
+    {
+      "key": "skyshrine/Grudash_the_Baker",
+      "status": "converted_partial",
+      "progressionImplemented": false,
+      "sourcePerl": "sources/projecteq/skyshrine/Grudash_the_Baker.pl",
+      "sourcePerlSha256": "8a75fe99a53d8054f68a6bb2d93e891c7fa650b6c9fbe308bdcfbb93fee40b27",
+      "originalQuestId": 16525,
+      "originalEnabled": 1,
+      "originalPolicy": null,
+      "priorDisposition": {
+        "key": "skyshrine/Grudash_the_Baker",
+        "disposition": "blocked_removed_pie_dialogue_conflict",
+        "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+      },
+      "priorResolution": {
+        "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+        "record": {
+          "key": "skyshrine/Grudash_the_Baker",
+          "reviewed_at": "2026-10-22",
+          "source": "sources/projecteq/skyshrine/Grudash_the_Baker.pl",
+          "source_sha256": "8a75fe99a53d8054f68a6bb2d93e891c7fa650b6c9fbe308bdcfbb93fee40b27",
+          "events": [
+            "EVENT_ITEM",
+            "EVENT_SAY",
+            "EVENT_SIGNAL"
+          ],
+          "quest_calls": [
+            "emote",
+            "say",
+            "signalwith"
+          ],
+          "npc_evidence": [
+            {
+              "title": "Grudash the Baker",
+              "cachePath": "reference/p99-wiki/npc-pages/grudash-the-baker-8b7f56609c.wiki",
+              "url": "https://wiki.project1999.com/Grudash_the_Baker?action=raw",
+              "sha256": "14903ee2f1f5391a8a32877e5e0da624a9c2f6309eb34967857c62aa9497e259",
+              "eraTags": [
+                "Velious Era"
+              ],
+              "zone": "[[Skyshrine]]",
+              "doesNotExist": false
+            }
+          ],
+          "verification": "Static source/evidence disposition only; not live mechanics or UI.",
+          "outcome": "blocked_removed_pie_dialogue_conflict",
+          "review_record": "changes/p99-conversions-velious-flavor/review.json",
+          "reason": "Cached Boysenberry Pie Quest expressly says quest never implemented and NPC pie references removed. Historical transcript conflicts with present warning; cached NPC pages lack active dialogue corroboration. No restoration justified.",
+          "source_anchors": [
+            {
+              "line": 4,
+              "text": "quest::signalwith(114496,1,1); #Ruru the Cook"
+            },
+            {
+              "line": 8,
+              "text": "quest::signalwith(114496,4,1); #Ruru the Cook"
+            },
+            {
+              "line": 13,
+              "text": "plugin::return_items(\\%itemcount);"
+            },
+            {
+              "line": 19,
+              "text": "#quest::signalwith(114496,2,1); #Ruru the Cook"
+            },
+            {
+              "line": 23,
+              "text": "quest::signalwith(114496,3,1); #Ruru the Cook"
+            },
+            {
+              "line": 27,
+              "text": "quest::signalwith(114496,5,1); #Ruru the Cook"
+            },
+            {
+              "line": 30,
+              "text": "#END of FILE Zone:skyshrine  ID:Not_Found -- Grudash_the_Baker"
+            }
+          ],
+          "evidence": []
+        }
+      },
+      "reason": "Only non-pie closing response to signal2 and its Ruru3 signal, plus refund-only trade. Hail, pie offer, and pie replies removed per explicit cached removal warning. This dormant response is not a complete ambient chain or a progression quest.",
+      "evidence": [
+        {
+          "path": "reference/p99-wiki/npc-pages/grudash-the-baker-8b7f56609c.wiki",
+          "sha256": "14903ee2f1f5391a8a32877e5e0da624a9c2f6309eb34967857c62aa9497e259",
+          "url": "https://wiki.project1999.com/Grudash_the_Baker?action=raw",
+          "retrievedAt": "2026-08-12T19:01:10.241Z",
+          "revision": null
+        },
+        {
+          "path": "reference/p99-wiki/raw-pages/boysenberry-pie-quest-753a2eb8eb.wiki",
+          "sha256": "0533e4c4ece5121602a7c501274a8394e4d2f1ca8760c65bd1126ab9029e5998",
+          "url": "https://wiki.project1999.com/Boysenberry_Pie_Quest?action=raw",
+          "retrievedAt": "2026-07-17T23:08:52.192Z",
+          "revision": null
+        }
+      ],
+      "proposedFile": "changes/p99-conversion-trades/skyshrine--Grudash_the_Baker.lua",
+      "proposedSourceSha256": "75ce46275529595b38e83580af8c2a2780ddb370ab167d8f47a169856576dace",
+      "target": "maintained/lua/converted-perl/skyshrine/Grudash_the_Baker.lua",
+      "staticIdentityExpectations": [
+        {
+          "npcId": 114467,
+          "name": "Grudash_the_Baker",
+          "exclude": 1,
+          "path": "data/npc_types/b.ndjson",
+          "fileSha256": "22a4a3b570e974b8411f882e7f0d1f987e57767c5a91d99ccd20264fb15ce39d",
+          "rowSha256": "c24e08d6ced3d775174c8bfff3413bc6f2f5e7bb1ef3c4aaca9649b6ae1a11dd"
+        }
+      ],
+      "runtimeCases": [
+        "skyshrine/Grudash_the_Baker: all trades refunded, unrelated extras and repeat",
+        "skyshrine/Grudash_the_Baker: non-pie closing signal identity and delay",
+        "skyshrine/Grudash_the_Baker: removed pie signals do nothing"
+      ],
+      "verification": "Full Perl read; evidence review; see validation.json for actual CLI and isolated mocked-Lua results. No game settlement or rendered UI verification.",
+      "signalDelayFallback": {
+        "milliseconds": 1,
+        "authority": "original Perl source; official EQEmu units",
+        "p99TimingVerified": false,
+        "targetNpcId": 114496,
+        "targetNpcName": "Ruru_the_Cook"
+      }
+    },
+    {
+      "key": "skyshrine/Mercutius_Del_Torre",
+      "status": "positively_later",
+      "progressionImplemented": false,
+      "sourcePerl": "sources/projecteq/skyshrine/Mercutius_Del_Torre.pl",
+      "sourcePerlSha256": "02f123e32c0872c3478a804ec3550ce84fb4d5ecfa1d5d2d5cbec335a1ab0acf",
+      "originalQuestId": 17944,
+      "originalEnabled": 1,
+      "originalPolicy": null,
+      "priorDisposition": {
+        "key": "skyshrine/Mercutius_Del_Torre",
+        "disposition": "open_draconic_loyalist_era",
+        "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+      },
+      "priorResolution": {
+        "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+        "record": {
+          "key": "skyshrine/Mercutius_Del_Torre",
+          "reviewed_at": "2026-10-22",
+          "source": "sources/projecteq/skyshrine/Mercutius_Del_Torre.pl",
+          "source_sha256": "02f123e32c0872c3478a804ec3550ce84fb4d5ecfa1d5d2d5cbec335a1ab0acf",
+          "events": [
+            "EVENT_ITEM",
+            "EVENT_SAY"
+          ],
+          "quest_calls": [
+            "exp",
+            "faction",
+            "say",
+            "summonitem"
+          ],
+          "npc_evidence": [],
+          "verification": "Static source/evidence disposition only; not live mechanics or UI.",
+          "outcome": "open_draconic_loyalist_era",
+          "reason": "Source contains Draconic Loyalist Fellowship instruments or mercenary bounties, no cached exact NPC match. P99 zone is not proof of these later-looking faction/reward branches. Need authoritative era plus all item/recipe/drop evidence before enabling; no guessed faction/XP values.",
+          "evidence": [],
+          "source_anchors": [
+            {
+              "line": 1,
+              "text": "# Draconic Fellowship Instruments"
+            },
+            {
+              "line": 2,
+              "text": "#"
+            },
+            {
+              "line": 3,
+              "text": "# items: 11655, 11654, 12552, 1834, 11657, 12553, 10036, 11658, 12554"
+            },
+            {
+              "line": 44,
+              "text": "if (plugin::check_handin(\\%itemcount, 11655 => 1, 11654 => 1)) { #drum - kromrif bones, cured bronto hide"
+            },
+            {
+              "line": 46,
+              "text": "quest::summonitem(12552); # Item: Draconic Fellowship Drum"
+            },
+            {
+              "line": 48,
+              "text": "elsif (plugin::check_handin(\\%itemcount, 1834 => 1, 11657 => 1)) { #lute - siren hair, shellacked femur"
+            },
+            {
+              "line": 50,
+              "text": "quest::summonitem(12553); # Item: Draconic Fellowship Lute"
+            },
+            {
+              "line": 52,
+              "text": "elsif (plugin::check_handin(\\%itemcount, 10036 => 1, 11658 => 1)) { #horn - black sapphire, shellacked dragon horn"
+            },
+            {
+              "line": 54,
+              "text": "quest::summonitem(12554); # Item: Draconic Fellowship Horn"
+            },
+            {
+              "line": 57,
+              "text": "plugin::return_items(\\%itemcount);"
+            },
+            {
+              "line": 60,
+              "text": "quest::exp(50000);"
+            },
+            {
+              "line": 61,
+              "text": "quest::faction(430,10); #cov"
+            },
+            {
+              "line": 64,
+              "text": "# EOF zone: skyshrine ID: 114278 NPC: Mercutius_Del_Torre"
+            }
+          ]
+        }
+      },
+      "reason": "Draconic instruments belong to post-Luclin Draconic Loyalist content according to explicit P99 historical discussion. Community provenance is stated; no reward/faction/XP activation.",
+      "evidence": [
+        {
+          "url": "https://www.project1999.com/forums/showthread.php?t=317127",
+          "verifiedAt": "2026-10-22",
+          "note": "January 2017 posts 4/6/10 discuss Mercutius Draconic instruments and distinguish post-Luclin Draconic/Ancients from late-Velious Garath and Essence Lens. Community historical provenance, not a staff ruling."
+        }
+      ],
+      "proposedFile": null,
+      "proposedSourceSha256": null,
+      "target": null,
+      "staticIdentityExpectations": [
+        {
+          "npcId": 114278,
+          "name": "Mercutius_Del_Torre",
+          "exclude": 1,
+          "path": "data/npc_types/2.ndjson",
+          "fileSha256": "cf46eaad4198419d94f82d0b20572856c5dc519baf08126eba11b5e3cd54a283",
+          "rowSha256": "c36c736d4bee784016a49b57f51afc80f13bb7eb988050dd51113b709f52c78b"
+        }
+      ],
+      "runtimeCases": [],
+      "verification": "Full Perl read; evidence review; see validation.json for actual CLI and isolated mocked-Lua results. No game settlement or rendered UI verification."
+    },
+    {
+      "key": "skyshrine/Ruru_the_Cook",
+      "status": "converted_partial",
+      "progressionImplemented": false,
+      "sourcePerl": "sources/projecteq/skyshrine/Ruru_the_Cook.pl",
+      "sourcePerlSha256": "645a762431e7217354837deb89f86a354903f73467f619911fe3c71d826701cd",
+      "originalQuestId": 13420,
+      "originalEnabled": 1,
+      "originalPolicy": null,
+      "priorDisposition": {
+        "key": "skyshrine/Ruru_the_Cook",
+        "disposition": "blocked_removed_pie_dialogue_conflict",
+        "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+      },
+      "priorResolution": {
+        "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+        "record": {
+          "key": "skyshrine/Ruru_the_Cook",
+          "reviewed_at": "2026-10-22",
+          "source": "sources/projecteq/skyshrine/Ruru_the_Cook.pl",
+          "source_sha256": "645a762431e7217354837deb89f86a354903f73467f619911fe3c71d826701cd",
+          "events": [
+            "EVENT_ITEM",
+            "EVENT_SAY",
+            "EVENT_SIGNAL"
+          ],
+          "quest_calls": [
+            "emote",
+            "say",
+            "signalwith"
+          ],
+          "npc_evidence": [
+            {
+              "title": "Ruru the Cook",
+              "cachePath": "reference/p99-wiki/npc-pages/ruru-the-cook-0e232d729a.wiki",
+              "url": "https://wiki.project1999.com/Ruru_the_Cook?action=raw",
+              "sha256": "a76df290aaab97bcb4ac5a3c2b9b151249a9d39a1397ae0bfff1ef91e8475ff2",
+              "eraTags": [
+                "Velious Era"
+              ],
+              "zone": "[[Skyshrine]]",
+              "doesNotExist": false
+            }
+          ],
+          "verification": "Static source/evidence disposition only; not live mechanics or UI.",
+          "outcome": "blocked_removed_pie_dialogue_conflict",
+          "review_record": "changes/p99-conversions-velious-flavor/review.json",
+          "reason": "Cached Boysenberry Pie Quest expressly says quest never implemented and NPC pie references removed. Historical transcript conflicts with present warning; cached NPC pages lack active dialogue corroboration. No restoration justified.",
+          "source_anchors": [
+            {
+              "line": 4,
+              "text": "quest::signalwith(114467,3,1); #Grudash the Baker"
+            },
+            {
+              "line": 9,
+              "text": "plugin::return_items(\\%itemcount);"
+            },
+            {
+              "line": 15,
+              "text": "quest::signalwith(114467,1,1); #Grudash the Baker"
+            },
+            {
+              "line": 19,
+              "text": "quest::signalwith(114467,2,1); #Grudash the Baker"
+            },
+            {
+              "line": 31,
+              "text": "#END of FILE Zone:skyshrine  ID:Not_Found -- Ruru_the_Cook"
+            }
+          ],
+          "evidence": []
+        }
+      },
+      "reason": "Standalone non-pie cooking hail, non-pie reactions3/4/5 and refunds. Omit hail signal initiating Grudash pie taunt and arguments1/2 linked to removed pie exchange. No pie acquisition or quest reward is introduced.",
+      "evidence": [
+        {
+          "path": "reference/p99-wiki/npc-pages/ruru-the-cook-0e232d729a.wiki",
+          "sha256": "a76df290aaab97bcb4ac5a3c2b9b151249a9d39a1397ae0bfff1ef91e8475ff2",
+          "url": "https://wiki.project1999.com/Ruru_the_Cook?action=raw",
+          "retrievedAt": "2026-08-12T20:40:54.326Z",
+          "revision": null
+        },
+        {
+          "path": "reference/p99-wiki/raw-pages/boysenberry-pie-quest-753a2eb8eb.wiki",
+          "sha256": "0533e4c4ece5121602a7c501274a8394e4d2f1ca8760c65bd1126ab9029e5998",
+          "url": "https://wiki.project1999.com/Boysenberry_Pie_Quest?action=raw",
+          "retrievedAt": "2026-07-17T23:08:52.192Z",
+          "revision": null
+        }
+      ],
+      "proposedFile": "changes/p99-conversion-trades/skyshrine--Ruru_the_Cook.lua",
+      "proposedSourceSha256": "f7fc4f3d5426e878cd36c1fc0f5e582ed7d1bfe9db9cd38bdad78be87bf19e9b",
+      "target": "maintained/lua/converted-perl/skyshrine/Ruru_the_Cook.lua",
+      "staticIdentityExpectations": [
+        {
+          "npcId": 114496,
+          "name": "Ruru_the_Cook",
+          "exclude": 1,
+          "path": "data/npc_types/7.ndjson",
+          "fileSha256": "9b2bff6a387ec86992e8d2a11dfb12afa0cc7c7c2901053d22f84b289e373a4b",
+          "rowSha256": "9abb76309c36917b956548f83540ad9bc14503c41158e055ba8fce0b63ff3704"
+        }
+      ],
+      "runtimeCases": [
+        "skyshrine/Ruru_the_Cook: all trades refunded, unrelated extras and repeat",
+        "skyshrine/Ruru_the_Cook: hail and unrelated speech",
+        "skyshrine/Ruru_the_Cook: hail does not trigger removed pie taunt",
+        "skyshrine/Ruru_the_Cook: non-pie reaction 3",
+        "skyshrine/Ruru_the_Cook: non-pie reaction 4",
+        "skyshrine/Ruru_the_Cook: non-pie reaction 5",
+        "skyshrine/Ruru_the_Cook: pie argument and unknown signals omitted"
+      ],
+      "verification": "Full Perl read; evidence review; see validation.json for actual CLI and isolated mocked-Lua results. No game settlement or rendered UI verification."
+    },
+    {
+      "key": "skyshrine/Torm_Wenrar",
+      "status": "positively_later",
+      "progressionImplemented": false,
+      "sourcePerl": "sources/projecteq/skyshrine/Torm_Wenrar.pl",
+      "sourcePerlSha256": "54fc4748d67a081a3a60588f0e34b4439b94b4ccd1deaf4836bc834cdcc3fef5",
+      "originalQuestId": 14536,
+      "originalEnabled": 1,
+      "originalPolicy": null,
+      "priorDisposition": {
+        "key": "skyshrine/Torm_Wenrar",
+        "disposition": "open_draconic_loyalist_era",
+        "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+      },
+      "priorResolution": {
+        "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+        "record": {
+          "key": "skyshrine/Torm_Wenrar",
+          "reviewed_at": "2026-10-22",
+          "source": "sources/projecteq/skyshrine/Torm_Wenrar.pl",
+          "source_sha256": "54fc4748d67a081a3a60588f0e34b4439b94b4ccd1deaf4836bc834cdcc3fef5",
+          "events": [
+            "EVENT_ITEM",
+            "EVENT_SAY"
+          ],
+          "quest_calls": [
+            "exp",
+            "faction",
+            "say",
+            "summonitem"
+          ],
+          "npc_evidence": [],
+          "verification": "Static source/evidence disposition only; not live mechanics or UI.",
+          "outcome": "open_draconic_loyalist_era",
+          "reason": "Source contains Draconic Loyalist Fellowship instruments or mercenary bounties, no cached exact NPC match. P99 zone is not proof of these later-looking faction/reward branches. Need authoritative era plus all item/recipe/drop evidence before enabling; no guessed faction/XP values.",
+          "evidence": [],
+          "source_anchors": [
+            {
+              "line": 1,
+              "text": "# items: 11990, 12555, 11991, 11993, 11992, 12556, 11995, 11994, 11997, 11996, 12557"
+            },
+            {
+              "line": 7,
+              "text": "# Kromzek Mercenary Brooches"
+            },
+            {
+              "line": 11,
+              "text": "# Mercenary Captains"
+            },
+            {
+              "line": 15,
+              "text": "# Notorious Mercenaries"
+            },
+            {
+              "line": 21,
+              "text": "# Handin: Kromzek Mercenary Brooch"
+            },
+            {
+              "line": 22,
+              "text": "if(plugin::check_handin(\\%itemcount, 11990 => 3)){"
+            },
+            {
+              "line": 23,
+              "text": "# Kromzek Mercenary Brooches [End]"
+            },
+            {
+              "line": 25,
+              "text": "quest::faction(430,25);   # +Claws of Veeshan"
+            },
+            {
+              "line": 26,
+              "text": "quest::faction(436,25);  # +Yelinak"
+            },
+            {
+              "line": 27,
+              "text": "quest::faction(448,-25); # -Kromzek"
+            },
+            {
+              "line": 28,
+              "text": "quest::exp(1000);"
+            },
+            {
+              "line": 29,
+              "text": "# Summon: Potion of Draconic Rage"
+            },
+            {
+              "line": 30,
+              "text": "quest::summonitem(12555); # Item: Potion of Draconic Rage"
+            },
+            {
+              "line": 32,
+              "text": "# Handin: Captain Glargs Brooch, Captain Mc'Hershs Brooch, Captain Ulmogs Brooch"
+            },
+            {
+              "line": 33,
+              "text": "elsif(plugin::check_handin(\\%itemcount, 11991 => 1, 11993 => 1, 11992 => 1)){"
+            },
+            {
+              "line": 34,
+              "text": "# Mercenary Captains [End]"
+            },
+            {
+              "line": 36,
+              "text": "quest::faction(430,50);   # +Claws of Veeshan"
+            },
+            {
+              "line": 37,
+              "text": "quest::faction(436,50);  # +Yelinak"
+            }
+          ]
+        }
+      },
+      "reason": "P99 historical discussion identifies post-revamp non-era-appropriate bounty quest, with only 2002+ citations. Preserve reference Perl; do not create bounty rewards or actors.",
+      "evidence": [
+        {
+          "url": "https://www.project1999.com/forums/showthread.php?t=232503",
+          "verifiedAt": "2026-10-22",
+          "note": "March 22, 2016 P99 player bug report identifies missing Torm and only 2002+ quest citations; replies describe post-revamp and not-era-appropriate content. These are community accounts, not a quoted staff ruling."
+        }
+      ],
+      "proposedFile": null,
+      "proposedSourceSha256": null,
+      "target": null,
+      "staticIdentityExpectations": [
+        {
+          "npcId": 114279,
+          "name": "Torm_Wenrar",
+          "exclude": 1,
+          "path": "data/npc_types/f.ndjson",
+          "fileSha256": "1bb121e903c24d4a41b2a5c5c94daaa526bd92b64c3ec57dbc9ec95949411108",
+          "rowSha256": "c94d87cd6b9aa3b061f9269b9f354d80a2532ea9a4dbdccb7b65c7c6f0f6f927"
+        }
+      ],
+      "runtimeCases": [],
+      "verification": "Full Perl read; evidence review; see validation.json for actual CLI and isolated mocked-Lua results. No game settlement or rendered UI verification."
+    },
+    {
+      "key": "steamfont/#Smith_Numden",
+      "status": "positively_later",
+      "progressionImplemented": false,
+      "sourcePerl": "sources/projecteq/steamfont/#Smith_Numden.pl",
+      "sourcePerlSha256": "1337049542deb2b126b9975c6ba3580beece040d1681c01f1bd8209848a6f03f",
+      "originalQuestId": 15169,
+      "originalEnabled": 1,
+      "originalPolicy": null,
+      "priorDisposition": {
+        "key": "steamfont/#Smith_Numden",
+        "disposition": "unresolved-era-reference",
+        "artifact": "changes/p99-classic-conversions/triage.json"
+      },
+      "priorResolution": {
+        "artifact": "changes/p99-classic-conversions/triage.json",
+        "record": {
+          "key": "steamfont/#Smith_Numden",
+          "zone": "steamfont",
+          "version": "root",
+          "eligible": true,
+          "file": "sources/projecteq/steamfont/#Smith_Numden.pl",
+          "language": "pl",
+          "sha256": "1337049542deb2b126b9975c6ba3580beece040d1681c01f1bd8209848a6f03f",
+          "p99Zone": true,
+          "classification": "unlinked-missing-lua-review",
+          "luaAvailable": false,
+          "effective": {
+            "enabled": 1,
+            "sourceStatus": "no-lua-body",
+            "file": "effective/quests/steamfont/%23Smith_Numden.lua"
+          },
+          "maintained": null,
+          "upstreamLua": null,
+          "exclusion": null,
+          "npcExclusions": [],
+          "auditPages": [],
+          "p99PageMentions": [],
+          "reviewClassification": "unresolved-era-reference",
+          "sourceEvidence": [
+            "#Welnik's Picks and Ore by druid64 02/02/2012",
+            "# #Smith_Numden.pl for Welnik's Picks and Ore Quest. This files goes in /quests/steamfont/ or /quests/steamfontmts/ depending on your server",
+            "# items: 54431, 54434, 54432, 54433, 54435",
+            "sub EVENT_ITEM {",
+            "if (plugin::check_handin(\\%itemcount, 54431 => 1, 54434 => 1, 54432 => 1, 54433 => 1)) { # Chipped Cracked, Rusted and Wobbly Pick"
+          ],
+          "decision": "Welnik's Picks and Ore; no matching P99 cache evidence. Do not infer era from IDs or 2012 script date.",
+          "verification": "Static content/source triage only. No gameplay, transaction or UI claim."
+        }
+      },
+      "reason": "Exact four-pick exchange belongs to Welnik's Picks and Ore, Planes of Power. No conversion.",
+      "evidence": [
+        {
+          "url": "https://everquest.allakhazam.com/db/quest.html?mid=110702696178364&quest=3031",
+          "verifiedAt": "2026-10-22",
+          "note": "Parent reviewer verified Welnik's Picks and Ore is explicitly tagged Planes of Power and entered 2005, including exact Numden four-pick exchange. This worker re-open returned cache miss; parent verification retained as provenance rather than falsely reporting independent fetch success."
+        }
+      ],
+      "proposedFile": null,
+      "proposedSourceSha256": null,
+      "target": null,
+      "staticIdentityExpectations": [
+        {
+          "npcId": 448087,
+          "name": "#Smith_Numden",
+          "exclude": 1,
+          "path": "data/npc_types/e.ndjson",
+          "fileSha256": "3c978e0bcd7d1c083caa049595fa90b1b7454eebfdaf18dcf2671343f73daf7c",
+          "rowSha256": "f54cd8fb06c94c3eadeee8aae468670c5addfaffbdda96702372e4bf53210852"
+        },
+        {
+          "npcId": 56187,
+          "name": "#Smith_Numden",
+          "exclude": 1,
+          "path": "data/npc_types/d.ndjson",
+          "fileSha256": "de922baa9d48f3f0217e0113d1b521f3cb2440363bea46792b64a6cdaeb2ba82",
+          "rowSha256": "66a82aa5ba9d830d19e3d591ea833b1f7c1b7db966094af25311c94b119c2058"
+        }
+      ],
+      "runtimeCases": [],
+      "verification": "Full Perl read; evidence review; see validation.json for actual CLI and isolated mocked-Lua results. No game settlement or rendered UI verification."
+    },
+    {
+      "key": "thurgadina/Fergus_Sawdust",
+      "status": "converted_full",
+      "progressionImplemented": false,
+      "sourcePerl": "sources/projecteq/thurgadina/Fergus_Sawdust.pl",
+      "sourcePerlSha256": "0a12189d421dc1c829045d7012c6e22fe3eae4c54bf5592bcd55bb270b18ce99",
+      "originalQuestId": 12196,
+      "originalEnabled": 1,
+      "originalPolicy": null,
+      "priorDisposition": {
+        "key": "thurgadina/Fergus_Sawdust",
+        "disposition": "open_flavor_identity",
+        "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+      },
+      "priorResolution": {
+        "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+        "record": {
+          "key": "thurgadina/Fergus_Sawdust",
+          "reviewed_at": "2026-10-22",
+          "source": "sources/projecteq/thurgadina/Fergus_Sawdust.pl",
+          "source_sha256": "0a12189d421dc1c829045d7012c6e22fe3eae4c54bf5592bcd55bb270b18ce99",
+          "events": [
+            "EVENT_ITEM",
+            "EVENT_SAY"
+          ],
+          "quest_calls": [
+            "say"
+          ],
+          "npc_evidence": [],
+          "verification": "Static source/evidence disposition only; not live mechanics or UI.",
+          "outcome": "open_flavor_identity",
+          "reason": "Simple hail/aggro speech but no cached NPC identity match; no automatic exclusion. Need alias-aware name/zone evidence (Fergus Sawdust; Julius Oresko/Oresco) before enabling a guessed runtime actor.",
+          "evidence": [],
+          "source_anchors": [
+            {
+              "line": 8,
+              "text": "plugin::return_items(\\%itemcount);"
+            },
+            {
+              "line": 10,
+              "text": "#END of FILE Zone:thurgadina  ID:Not_Found -- Fergus_Sawdust"
+            }
+          ]
+        }
+      },
+      "reason": "Complete original hail/refund-only source converted. Positive P99 observation resolves old missing-page identity concern. No progression exists in this source.",
+      "evidence": [
+        {
+          "url": "https://www.project1999.com/forums/showthread.php?t=301249",
+          "verifiedAt": "2026-10-22",
+          "note": "June 25, 2018 first-hand P99 bug report says Fergus initial hail is working and reproduces the same carpentry greeting. Additional claimed follow-ups are not introduced by this bounded source conversion."
+        }
+      ],
+      "proposedFile": "changes/p99-conversion-trades/thurgadina--Fergus_Sawdust.lua",
+      "proposedSourceSha256": "5075b3734e21bf981a5560956c4da00f57b2f25a508e78ada152137a03b12799",
+      "target": "maintained/lua/converted-perl/thurgadina/Fergus_Sawdust.lua",
+      "staticIdentityExpectations": [
+        {
+          "npcId": 115065,
+          "name": "Fergus_Sawdust",
+          "exclude": 1,
+          "path": "data/npc_types/1.ndjson",
+          "fileSha256": "a6f9003d0749fcc201c0beefcf4fb1efbe2980df49af8d75ff4752aa1c76b9e9",
+          "rowSha256": "938ce97e479a79ca8cd55d877325efa771cc3e4e85334d05ccb3a630606eb913"
+        }
+      ],
+      "runtimeCases": [
+        "thurgadina/Fergus_Sawdust: all trades refunded, unrelated extras and repeat",
+        "thurgadina/Fergus_Sawdust: hail and unrelated speech"
+      ],
+      "verification": "Full Perl read; evidence review; see validation.json for actual CLI and isolated mocked-Lua results. No game settlement or rendered UI verification."
+    },
+    {
+      "key": "thurgadina/Guard_Dagur",
+      "status": "converted_full",
+      "progressionImplemented": false,
+      "sourcePerl": "sources/projecteq/thurgadina/Guard_Dagur.pl",
+      "sourcePerlSha256": "fa9b923c387a88c33ee212857ac2fe2b8e38d15cc0a4cd5dd1d3c71bbc450464",
+      "originalQuestId": 17684,
+      "originalEnabled": 1,
+      "originalPolicy": null,
+      "priorDisposition": {
+        "key": "thurgadina/Guard_Dagur",
+        "disposition": "open_cross_actor_speech",
+        "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+      },
+      "priorResolution": {
+        "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+        "record": {
+          "key": "thurgadina/Guard_Dagur",
+          "reviewed_at": "2026-10-22",
+          "source": "sources/projecteq/thurgadina/Guard_Dagur.pl",
+          "source_sha256": "fa9b923c387a88c33ee212857ac2fe2b8e38d15cc0a4cd5dd1d3c71bbc450464",
+          "events": [
+            "EVENT_ITEM",
+            "EVENT_SAY"
+          ],
+          "quest_calls": [
+            "say"
+          ],
+          "npc_evidence": [
+            {
+              "title": "Guard Dagur",
+              "cachePath": "reference/p99-wiki/npc-pages/guard-dagur-693776e14b.wiki",
+              "url": "https://wiki.project1999.com/Guard_Dagur?action=raw",
+              "sha256": "da0c93d03c2f92265e44e0afb19901bf3a7a70b715ad04ce9674a7070f0cae9c",
+              "eraTags": [
+                "Velious Era"
+              ],
+              "zone": "[[Thurgadin]]",
+              "doesNotExist": false
+            }
+          ],
+          "verification": "Static source/evidence disposition only; not live mechanics or UI.",
+          "outcome": "open_cross_actor_speech",
+          "reason": "Hail also resolves Guard Baldvin NPC115132 and makes that actor speak. Perl defined(IsMobSpawnedByNpcTypeID) is not a reliable existence predicate. Need scoped NPC resolution and foreign Say capture test; do not silently replace partner speech with own speech or omit it.",
+          "evidence": [],
+          "source_anchors": [
+            {
+              "line": 5,
+              "text": "$entity_list->GetMobByNpcTypeID(115132)->Say(\"Aye, we wouldn't want ye fallin into the pit now would we.\"); #Make Guard Baldvin also talk."
+            },
+            {
+              "line": 11,
+              "text": "plugin::return_items(\\%itemcount);"
+            },
+            {
+              "line": 13,
+              "text": "#END of FILE Zone:thurgadina  ID:115133 -- Guard_Dagur"
+            }
+          ]
+        }
+      },
+      "reason": "Complete hail/refund source converted with correct distinct Guard Baldvin115132 speaker and safe present/absent lookup. Foreign speech is supported, not a true bridge blocker.",
+      "evidence": [
+        {
+          "path": "reference/p99-wiki/npc-pages/guard-dagur-693776e14b.wiki",
+          "sha256": "da0c93d03c2f92265e44e0afb19901bf3a7a70b715ad04ce9674a7070f0cae9c",
+          "url": "https://wiki.project1999.com/Guard_Dagur?action=raw",
+          "retrievedAt": "2026-08-12T19:04:17.279Z",
+          "revision": null
+        }
+      ],
+      "proposedFile": "changes/p99-conversion-trades/thurgadina--Guard_Dagur.lua",
+      "proposedSourceSha256": "1f947c808c0cf9a9795c9e373736a267da46e6d17097a6b9d5fed40369b99e51",
+      "target": "maintained/lua/converted-perl/thurgadina/Guard_Dagur.lua",
+      "staticIdentityExpectations": [
+        {
+          "npcId": 115133,
+          "name": "Guard_Dagur",
+          "exclude": 1,
+          "path": "data/npc_types/0.ndjson",
+          "fileSha256": "713639bcbddee4e962696494c2841f9282009eb57c374e2964054595bb345910",
+          "rowSha256": "b8ef0be75790a243c4f67fc4a8345e36d7065f960576b956bada7464b65fc085"
+        }
+      ],
+      "runtimeCases": [
+        "thurgadina/Guard_Dagur: all trades refunded, unrelated extras and repeat",
+        "thurgadina/Guard_Dagur: Baldvin present is distinct speaker",
+        "thurgadina/Guard_Dagur: Baldvin absent never looked up",
+        "thurgadina/Guard_Dagur: missing foreign proxy safely ignored"
+      ],
+      "verification": "Full Perl read; evidence review; see validation.json for actual CLI and isolated mocked-Lua results. No game settlement or rendered UI verification.",
+      "runtimeSupport": {
+        "path": "reference/server/internal/quest/lua_bridge.go",
+        "sha256": "dd4ec84cf2450401f60b7f6068c52a0ef174cb15e9b559b0f0250ba2e6093184",
+        "anchors": [
+          "NPCProxy.Say records NPCSpeech name and coordinates",
+          "IsMobSpawnedByNpcTypeID and GetMobByNpcTypeID share the live resolver"
+        ],
+        "foreignActor": [
+          {
+            "npcId": 115132,
+            "name": "Guard_Baldvin",
+            "exclude": 1,
+            "path": "data/npc_types/2.ndjson",
+            "fileSha256": "cf46eaad4198419d94f82d0b20572856c5dc519baf08126eba11b5e3cd54a283",
+            "rowSha256": "656edb856d91b757e59d8d9a0621f8b1ab7949e272efcab6b657927960d9d9da"
+          }
+        ]
+      }
+    },
+    {
+      "key": "thurgadina/Meg_Tucter",
+      "status": "converted_partial",
+      "progressionImplemented": false,
+      "sourcePerl": "sources/projecteq/thurgadina/Meg_Tucter.pl",
+      "sourcePerlSha256": "0e11fa8e629a53cedcdd13802f65107dece1782986f083b0f7912e63236c9ff4",
+      "originalQuestId": 14886,
+      "originalEnabled": 1,
+      "originalPolicy": null,
+      "priorDisposition": {
+        "key": "thurgadina/Meg_Tucter",
+        "disposition": "mixed_in_era_flavor_later_shawl",
+        "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+      },
+      "priorResolution": {
+        "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+        "record": {
+          "key": "thurgadina/Meg_Tucter",
+          "reviewed_at": "2026-10-22",
+          "source": "sources/projecteq/thurgadina/Meg_Tucter.pl",
+          "source_sha256": "0e11fa8e629a53cedcdd13802f65107dece1782986f083b0f7912e63236c9ff4",
+          "events": [
+            "EVENT_ITEM",
+            "EVENT_SAY"
+          ],
+          "quest_calls": [
+            "say",
+            "summonitem"
+          ],
+          "npc_evidence": [
+            {
+              "title": "Meg Tucter",
+              "cachePath": "reference/p99-wiki/npc-pages/meg-tucter-86b930b4f1.wiki",
+              "url": "https://wiki.project1999.com/Meg_Tucter?action=raw",
+              "sha256": "2f786c725bd25eada848948882c74874cbc5042e7c094a44288d2ba45fcdbef8",
+              "eraTags": [
+                "Velious Era"
+              ],
+              "zone": "[[Thurgadin]]",
+              "doesNotExist": false
+            }
+          ],
+          "verification": "Static source/evidence disposition only; not live mechanics or UI.",
+          "outcome": "mixed_in_era_flavor_later_shawl",
+          "reason": "NPC flavor may be in-era, but source includes 8th shawl Royal Orders8896/approved shawl8895/Issue Kit17651 or Etching Tools8893. Cached shawl page excludes8th. Full-source bulk conversion unsafe; separately evidence and preserve only in-era flavor if authored later.",
+          "evidence": [
+            {
+              "path": "reference/p99-wiki/raw-pages/coldain-prayer-shawl-quests-0117371b90.wiki",
+              "sha256": "1b96e22c683adcc22886266e556b2a0d74c7b68163edbea74b4b9e41d7bbd4c0"
+            }
+          ],
+          "source_anchors": [
+            {
+              "line": 1,
+              "text": "# items: 8893"
+            },
+            {
+              "line": 8,
+              "text": "quest::summonitem(8893); # Item: Etching Tools"
+            },
+            {
+              "line": 13,
+              "text": "plugin::return_items(\\%itemcount);"
+            },
+            {
+              "line": 15,
+              "text": "#END of FILE Zone:thurgadina  ID:Not_Found -- Meg_Tucter"
+            }
+          ]
+        }
+      },
+      "reason": "Geonid lore and refunds converted. Etching Tools8893 eighth-Shawl branch is excluded under documented seven-Shawl P99 cutoff.",
+      "evidence": [
+        {
+          "path": "reference/p99-wiki/npc-pages/meg-tucter-86b930b4f1.wiki",
+          "sha256": "2f786c725bd25eada848948882c74874cbc5042e7c094a44288d2ba45fcdbef8",
+          "url": "https://wiki.project1999.com/Meg_Tucter?action=raw",
+          "retrievedAt": "2026-08-12T20:07:01.328Z",
+          "revision": null
+        },
+        {
+          "path": "reference/p99-wiki/raw-pages/coldain-prayer-shawl-quests-0117371b90.wiki",
+          "sha256": "1b96e22c683adcc22886266e556b2a0d74c7b68163edbea74b4b9e41d7bbd4c0",
+          "url": "https://wiki.project1999.com/Coldain_Prayer_Shawl_Quests?action=raw",
+          "retrievedAt": "2026-07-17T23:11:11.547Z",
+          "revision": null
+        }
+      ],
+      "proposedFile": "changes/p99-conversion-trades/thurgadina--Meg_Tucter.lua",
+      "proposedSourceSha256": "3671c443f681d69790c7421942d0e9a8caa464125f2dd130ee56ee335eccaf38",
+      "target": "maintained/lua/converted-perl/thurgadina/Meg_Tucter.lua",
+      "staticIdentityExpectations": [
+        {
+          "npcId": 115161,
+          "name": "Meg_Tucter",
+          "exclude": 1,
+          "path": "data/npc_types/8.ndjson",
+          "fileSha256": "8ac39a63330215903fde4da7272e1d10a7bb6fc5c1daa0517ced521b0cb7de9a",
+          "rowSha256": "6f8a9a4d3b42754882fd05eab44b335440d5afc8cd1f56f46e9782f1435b8be1"
+        }
+      ],
+      "runtimeCases": [
+        "thurgadina/Meg_Tucter: all trades refunded, unrelated extras and repeat",
+        "thurgadina/Meg_Tucter: hail and unrelated speech",
+        "thurgadina/Meg_Tucter: eighth Shawl tools omitted"
+      ],
+      "verification": "Full Perl read; evidence review; see validation.json for actual CLI and isolated mocked-Lua results. No game settlement or rendered UI verification."
+    },
+    {
+      "key": "thurgadina/Petcas_Coldbeard",
+      "status": "converted_partial",
+      "progressionImplemented": false,
+      "sourcePerl": "sources/projecteq/thurgadina/Petcas_Coldbeard.pl",
+      "sourcePerlSha256": "24b7007971fb26ec3faf5d1e0e3fe3c812571e26c50957f9ed7ce1e90a1e7ab8",
+      "originalQuestId": 14963,
+      "originalEnabled": 1,
+      "originalPolicy": null,
+      "priorDisposition": {
+        "key": "thurgadina/Petcas_Coldbeard",
+        "disposition": "mixed_mug_special_beans_ambient",
+        "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+      },
+      "priorResolution": {
+        "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+        "record": {
+          "key": "thurgadina/Petcas_Coldbeard",
+          "reviewed_at": "2026-10-22",
+          "source": "sources/projecteq/thurgadina/Petcas_Coldbeard.pl",
+          "source_sha256": "24b7007971fb26ec3faf5d1e0e3fe3c812571e26c50957f9ed7ce1e90a1e7ab8",
+          "events": [
+            "EVENT_ITEM",
+            "EVENT_SAY",
+            "EVENT_SIGNAL"
+          ],
+          "quest_calls": [
+            "say",
+            "saylink",
+            "signalwith",
+            "summonitem"
+          ],
+          "npc_evidence": [
+            {
+              "title": "Petcas Coldbeard",
+              "cachePath": "reference/p99-wiki/npc-pages/petcas-coldbeard-3c5b6d5326.wiki",
+              "url": "https://wiki.project1999.com/Petcas_Coldbeard?action=raw",
+              "sha256": "3dee68e0c433785a7caead05ce05e7f93640a14ca50980075c0755bee71cb4c8",
+              "eraTags": [
+                "Velious Era"
+              ],
+              "zone": "[[Thurgadin]]",
+              "doesNotExist": false
+            }
+          ],
+          "verification": "Static source/evidence disposition only; not live mechanics or UI.",
+          "outcome": "mixed_mug_special_beans_ambient",
+          "reason": "Source mixes5gold mug30145,350gold Special Beans60290 and Ronodun signal story. Cached Souvenir Mugs documents Adia as Icy Mug giver, not Petcas; no authority for Special Beans. Adia is implemented separately. Resolve Petcas branch timeline and complete ambient pair rather than copy unsupported rewards.",
+          "evidence": [
+            {
+              "path": "reference/p99-wiki/raw-pages/souvenir-mugs-366e530108.wiki",
+              "sha256": "9fa8a7d1454b893b0f957578491f4245204a320cc9ca4aaf0fce68a70578384a"
+            }
+          ],
+          "source_anchors": [
+            {
+              "line": 1,
+              "text": "# items: 60290, 30145"
+            },
+            {
+              "line": 17,
+              "text": "quest::summonitem(60290); # Item: Special Beans"
+            },
+            {
+              "line": 20,
+              "text": "quest::summonitem(30145); #The Icy Mug Souvenir Stein"
+            },
+            {
+              "line": 22,
+              "text": "plugin::return_items(\\%itemcount);"
+            },
+            {
+              "line": 28,
+              "text": "quest::signalwith(115019,1); # NPC: Ronodun"
+            },
+            {
+              "line": 32,
+              "text": "quest::signalwith(115019,2); # NPC: Ronodun"
+            },
+            {
+              "line": 35,
+              "text": "quest::signalwith(115019,3); # NPC: Ronodun"
+            },
+            {
+              "line": 39,
+              "text": "quest::signalwith(115019,4); # NPC: Ronodun"
+            },
+            {
+              "line": 43,
+              "text": "quest::signalwith(115019,5); # NPC: Ronodun"
+            },
+            {
+              "line": 50,
+              "text": "#END of FILE Zone:thurgadina  ID:Not_Found -- Petcas_Coldbeard"
+            }
+          ]
+        }
+      },
+      "reason": "Preserve bounded Icy Mug greeting and all six Ronodun signal responses. All trades refund. Remove later Special Beans60290 and duplicate mug30145 route: P99 identifies Adia as mug seller. Ronodun initiation remains a separate source dependency; no guessed spawns.",
+      "evidence": [
+        {
+          "path": "reference/p99-wiki/npc-pages/petcas-coldbeard-3c5b6d5326.wiki",
+          "sha256": "3dee68e0c433785a7caead05ce05e7f93640a14ca50980075c0755bee71cb4c8",
+          "url": "https://wiki.project1999.com/Petcas_Coldbeard?action=raw",
+          "retrievedAt": "2026-08-12T20:26:02.591Z",
+          "revision": null
+        },
+        {
+          "path": "reference/p99-wiki/raw-pages/souvenir-mugs-366e530108.wiki",
+          "sha256": "9fa8a7d1454b893b0f957578491f4245204a320cc9ca4aaf0fce68a70578384a",
+          "url": "https://wiki.project1999.com/Souvenir_Mugs?action=raw",
+          "retrievedAt": "2026-07-17T23:33:51.289Z",
+          "revision": null
+        },
+        {
+          "url": "https://www.eqprogression.com/warrior-1-5-epic-pre-quest/",
+          "verifiedAt": "2026-10-22",
+          "note": "Warrior epic 1.5 prequest step 10 identifies Petcas Special Beans used for Coldain Coffee. Epic 1.5 is later than Classic/Kunark/Velious; this supports excluding the brew offer, not importing its modern payment denomination."
+        }
+      ],
+      "proposedFile": "changes/p99-conversion-trades/thurgadina--Petcas_Coldbeard.lua",
+      "proposedSourceSha256": "74b6e7222ec5975bfbb7151b6370bdefdfe58310b4feedbe3bff834b4822f24e",
+      "target": "maintained/lua/converted-perl/thurgadina/Petcas_Coldbeard.lua",
+      "staticIdentityExpectations": [
+        {
+          "npcId": 115141,
+          "name": "Petcas_Coldbeard",
+          "exclude": 1,
+          "path": "data/npc_types/3.ndjson",
+          "fileSha256": "98e3002c094c9e95ec9fb768519dd493286545e4e46a2c197773d33aa2024799",
+          "rowSha256": "26829b47bccf7628733ab6f578be5a517965ba8b1584092e2d47914f29478d9b"
+        }
+      ],
+      "runtimeCases": [
+        "thurgadina/Petcas_Coldbeard: all trades refunded, unrelated extras and repeat",
+        "thurgadina/Petcas_Coldbeard: hail and unrelated speech",
+        "thurgadina/Petcas_Coldbeard: later coffee and duplicate mug absent",
+        "thurgadina/Petcas_Coldbeard: Ronodun response 1",
+        "thurgadina/Petcas_Coldbeard: Ronodun response 2",
+        "thurgadina/Petcas_Coldbeard: Ronodun response 3",
+        "thurgadina/Petcas_Coldbeard: Ronodun response 4",
+        "thurgadina/Petcas_Coldbeard: Ronodun response 5",
+        "thurgadina/Petcas_Coldbeard: Ronodun response 6",
+        "thurgadina/Petcas_Coldbeard: unknown signal no-op"
+      ],
+      "verification": "Full Perl read; evidence review; see validation.json for actual CLI and isolated mocked-Lua results. No game settlement or rendered UI verification.",
+      "dependencies": [
+        {
+          "key": "thurgadina/Ronodun",
+          "source": "sources/projecteq/thurgadina/Ronodun.pl",
+          "sha256": "669de25860c53c12b3dfb4b0cdb4bb3b265a6d4c9daad5d27cc6ef0f4314deb6",
+          "actorId": 115019,
+          "role": "External waypoint23 initiates story; separate conversion required for autonomous chain. No NPC spawns or helper edits in this proposal."
+        },
+        {
+          "key": "thurgadina/Adia_Coldbeard",
+          "proposedFile": "changes/p99-conversions-velious/thurgadina/Adia_Coldbeard.lua",
+          "sha256": "f117031ef05ec5086e7407eae679098dfa814bfab4a7d9411c6d54459076caa3",
+          "role": "P99-authoritative five-gold souvenir route already proposed; left untouched."
+        }
+      ]
+    },
+    {
+      "key": "thurgadinb/Loremaster_Solstrin",
+      "status": "converted_partial",
+      "progressionImplemented": false,
+      "sourcePerl": "sources/projecteq/thurgadinb/Loremaster_Solstrin.pl",
+      "sourcePerlSha256": "4978c1f261eaacece138378db994f21899328e257ac741ba4db0a8289b771b2d",
+      "originalQuestId": 18391,
+      "originalEnabled": 1,
+      "originalPolicy": null,
+      "priorDisposition": {
+        "key": "thurgadinb/Loremaster_Solstrin",
+        "disposition": "mixed_in_era_flavor_later_shawl",
+        "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+      },
+      "priorResolution": {
+        "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+        "record": {
+          "key": "thurgadinb/Loremaster_Solstrin",
+          "reviewed_at": "2026-10-22",
+          "source": "sources/projecteq/thurgadinb/Loremaster_Solstrin.pl",
+          "source_sha256": "4978c1f261eaacece138378db994f21899328e257ac741ba4db0a8289b771b2d",
+          "events": [
+            "EVENT_ITEM",
+            "EVENT_SAY"
+          ],
+          "quest_calls": [
+            "emote",
+            "say",
+            "summonitem"
+          ],
+          "npc_evidence": [
+            {
+              "title": "Loremaster Solstrin",
+              "cachePath": "reference/p99-wiki/npc-pages/loremaster-solstrin-843315dad7.wiki",
+              "url": "https://wiki.project1999.com/Loremaster_Solstrin?action=raw",
+              "sha256": "17ba9c409ad3e017385f3056049034cbaf2907e65d3429367e805476228899ee",
+              "eraTags": [
+                "Velious Era"
+              ],
+              "zone": "[[Icewell Keep]]",
+              "doesNotExist": false
+            }
+          ],
+          "verification": "Static source/evidence disposition only; not live mechanics or UI.",
+          "outcome": "mixed_in_era_flavor_later_shawl",
+          "reason": "NPC flavor may be in-era, but source includes 8th shawl Royal Orders8896/approved shawl8895/Issue Kit17651 or Etching Tools8893. Cached shawl page excludes8th. Full-source bulk conversion unsafe; separately evidence and preserve only in-era flavor if authored later.",
+          "evidence": [
+            {
+              "path": "reference/p99-wiki/raw-pages/coldain-prayer-shawl-quests-0117371b90.wiki",
+              "sha256": "1b96e22c683adcc22886266e556b2a0d74c7b68163edbea74b4b9e41d7bbd4c0"
+            }
+          ],
+          "source_anchors": [
+            {
+              "line": 1,
+              "text": "# items: 8896, 18610, 18611, 8895, 1199, 17651"
+            },
+            {
+              "line": 22,
+              "text": "# Royal Coldain Orders"
+            },
+            {
+              "line": 23,
+              "text": "if(plugin::check_handin(\\%itemcount, 8896 => 1)) {"
+            },
+            {
+              "line": 25,
+              "text": "quest::summonitem(18610); # Forge of Icewell Arms (Royal Field Plate Study)"
+            },
+            {
+              "line": 26,
+              "text": "quest::summonitem(18611); # Forge of Icewell Arms (Precious Gem Study)"
+            },
+            {
+              "line": 28,
+              "text": "# Runed Coldain Prayer Shawl (either version)"
+            },
+            {
+              "line": 29,
+              "text": "elsif(plugin::check_handin(\\%itemcount, 8895 => 1) || plugin::check_handin(\\%itemcount, 1199 => 1)) {"
+            },
+            {
+              "line": 31,
+              "text": "quest::summonitem(17651); # Empty Coldain Issue Kit"
+            },
+            {
+              "line": 32,
+              "text": "quest::summonitem(8895); # Runed Coldain Prayer Shawl (approved)"
+            },
+            {
+              "line": 36,
+              "text": "# Quest edited by mystic414"
+            }
+          ]
+        }
+      },
+      "reason": "Documented Hall of Ancestors lore converted, including P99 interested phrase. Eighth-Shawl dialogue and orders/shawl hand-ins omitted; all such offers safely returned. No active progression introduced.",
+      "evidence": [
+        {
+          "path": "reference/p99-wiki/npc-pages/loremaster-solstrin-843315dad7.wiki",
+          "sha256": "17ba9c409ad3e017385f3056049034cbaf2907e65d3429367e805476228899ee",
+          "url": "https://wiki.project1999.com/Loremaster_Solstrin?action=raw",
+          "retrievedAt": "2026-08-12T20:00:45.096Z",
+          "revision": null
+        },
+        {
+          "path": "reference/p99-wiki/raw-pages/coldain-prayer-shawl-quests-0117371b90.wiki",
+          "sha256": "1b96e22c683adcc22886266e556b2a0d74c7b68163edbea74b4b9e41d7bbd4c0",
+          "url": "https://wiki.project1999.com/Coldain_Prayer_Shawl_Quests?action=raw",
+          "retrievedAt": "2026-07-17T23:11:11.547Z",
+          "revision": null
+        }
+      ],
+      "proposedFile": "changes/p99-conversion-trades/thurgadinb--Loremaster_Solstrin.lua",
+      "proposedSourceSha256": "b6f91d4aa248f77fbea72e8214a22c1e7987e44cc58baa53f86da365890f0000",
+      "target": "maintained/lua/converted-perl/thurgadinb/Loremaster_Solstrin.lua",
+      "staticIdentityExpectations": [
+        {
+          "npcId": 129054,
+          "name": "Loremaster_Solstrin",
+          "exclude": 1,
+          "path": "data/npc_types/8.ndjson",
+          "fileSha256": "8ac39a63330215903fde4da7272e1d10a7bb6fc5c1daa0517ced521b0cb7de9a",
+          "rowSha256": "8c2f8f305b5fe1abc0345ac14d92d12917b18d61d2e93e2a24c5050fe8503286"
+        }
+      ],
+      "runtimeCases": [
+        "thurgadinb/Loremaster_Solstrin: all trades refunded, unrelated extras and repeat",
+        "thurgadinb/Loremaster_Solstrin: hail and unrelated speech",
+        "thurgadinb/Loremaster_Solstrin: classic lore I am interested",
+        "thurgadinb/Loremaster_Solstrin: classic lore what heroes",
+        "thurgadinb/Loremaster_Solstrin: classic lore what sacred tomb",
+        "thurgadinb/Loremaster_Solstrin: later offers and shawls preserved"
+      ],
+      "verification": "Full Perl read; evidence review; see validation.json for actual CLI and isolated mocked-Lua results. No game settlement or rendered UI verification."
+    }
+  ],
+  "limits": [
+    "No immutable baseline, NPC row, spawn row, other proposal or central tool edited.",
+    "All source enabled flags and existing policy remain unchanged. NPC exclude=1 is recorded, not changed; scripts do not imply actor activation.",
+    "Mocked VM behavior is not game runtime settlement, signal delivery, world lifecycle, inventory rollback, or rendered UI testing.",
+    "The eight converted trade handlers only refund; no item, cash, XP or faction reward is activated."
+  ],
+  "signalContractEvidence": {
+    "url": "https://github.com/EQEmu/EQEmu/blob/4aceae18b94ffaafc08e2b17bc41cd72c77f795d/zone/questmgr.cpp#L1729-L1741",
+    "commit": "4aceae18b94ffaafc08e2b17bc41cd72c77f795d",
+    "gitBlob": "92de69567b33381d7442e3c91d19f1b0607a43eb",
+    "verifiedAt": "2026-10-22",
+    "provenance": "Parent reviewer verified exact pinned official source through connected GitHub read; native ls-remote resolved the revision.",
+    "contract": "signalwith(npc_id, signal_id, wait_ms) takes milliseconds; signal(npc_id, wait_ms) delegates signalwith(npc_id,0,wait_ms). Lua eq.signal third argument is milliseconds; preserve the numeric wait.",
+    "p99ValueLimit": "Grudash 1ms is an identified upstream fallback, not independently established P99 timing. No numeric correction invented."
+  }
+}

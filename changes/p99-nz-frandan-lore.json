@@ -1,0 +1,34 @@
+{
+  "format": 1,
+  "id": "p99-nz-frandan-lore",
+  "summary": "Restore Guard Frandan\u2019s two documented Odd Items lore responses, without inventing a hand-in.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Odd_Items?action=raw",
+      "note": "Cached SHA256 b6e3f88bf929b671e4d4c2a39e2455ecc6d6390fa64dff24677fc56389ea0fb2. Exact actor NPC84141 Guard_Frandan has positive100% spawnentry9630 and version0 spawn14679 in firiona. No exact quest-policy exclusion is present. No prior quest row/source exists. Reserved quest ID503551. The entire cached page questions whether this is a quest; only two documented dialogue branches are restored. Unsupported trades are returned as the safe runtime convention, not a claim about historical item loss. No reward, experience, faction, NPC or spawn data is invented. Existing NPC exclude=1 is retained; no explicit contentscope NPC exclusion matches ID/name or Fabled/Translocator patterns. Actual runtime availability remains unverified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": null,
+      "after": {
+        "id": 503551,
+        "zone": "firiona",
+        "name": "Guard_Frandan",
+        "lua_content": "-- P99 Odd Items documents lore only; it does not establish a working hand-in.\n-- Existing NPC 84141, spawn group 9630, spawn 14679 in Firiona Vie.\nfunction event_say(e)\n    if e.message:findi(\"hail\") then\n        e.self:Say(\"Glad to see you made it to the outpost in one piece. Now you can test your mettle against the giants of Kunark. They sometimes carry some [odd items] which can fetch a coin or two on the market.\");\n    elseif e.message:findi(\"odd items\") then\n        e.self:Say(\"I once spoke with a ranger who tried to sell me a mountain giant toothpick he recovered. Looked like it would make a fine weapon, but it smelled of decayed flesh!! I do not even care to think of what kind of flesh it was used to pick.\");\n    end\nend\n\nfunction event_trade(e)\n    local item_lib = require(\"items\");\n    item_lib.return_items(e.self, e.other, e.trade);\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/idlequest-authored/firiona/Guard_Frandan.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-nz-frandan-lore/firiona--Guard_Frandan.lua",
+      "afterSha256": "4b4756793e48c4ef2ba0200e508368f546c60b84cfe17a7d70579829254934b8"
+    }
+  ]
+}

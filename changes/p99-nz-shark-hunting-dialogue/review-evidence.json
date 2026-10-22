@@ -1,0 +1,28 @@
+{
+  "titles": [
+    "Shark Hunting",
+    "Paladin Message"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "partial",
+  "match_status": "partial",
+  "local_quest_keys": [
+    "freportn/Theron_Rolius",
+    "freeportwest/Theron_Rolius"
+  ],
+  "proposal": "changes/p99-nz-shark-hunting-dialogue.json",
+  "notes": [
+    "Award the Empty Shark Sack on accepting the hunt, not on asking reef-shark lore; make full hunt phrase reachable before the reef-shark substring.",
+    "Paladin Message explicitly supports preserving retrieve-message/fishing-duties dispatch shared with Shark Hunting. Existing sack hand-in reward, no experience/coin, actual factions, all unrelated hand-ins and quest faction bypass remain unchanged. P99 metadata minimum level is not treated as proof of an enforced gate."
+  ],
+  "verification": {
+    "source": "Cached P99 and effective Lua reviewed; exact complete row preimages and source hashes recorded.",
+    "syntax": "pending",
+    "runtime": "Isolated mock regression pending; full game runtime unavailable.",
+    "ui": "not_run",
+    "connected_chain": "not_run"
+  },
+  "unresolved": [
+    "Ordinary source drops/spawns, recipe live behavior and rendered complete quest path not verified."
+  ]
+}

@@ -1,0 +1,280 @@
+{
+  "snapshot": "/tmp/p99-validation-20261022T082605Z",
+  "steps": [
+    {
+      "name": "regenerate-inventory",
+      "command": [
+        "node",
+        "tools/p99-quest-inventory.mjs",
+        ".",
+        "--write"
+      ],
+      "startedAt": "2026-10-22T08:26:28.270941+00:00",
+      "durationSeconds": 26.192,
+      "exitCode": 0,
+      "log": "regenerate-inventory.log",
+      "logSha256": "1e6cd2d0fd73ab1874b24347c73003ae5a8f181a2dcf782ff35303da5aee9834"
+    },
+    {
+      "name": "regenerate-coverage",
+      "command": [
+        "node",
+        "tools/p99-review-coverage.mjs",
+        "."
+      ],
+      "startedAt": "2026-10-22T08:26:54.465310+00:00",
+      "durationSeconds": 0.536,
+      "exitCode": 0,
+      "log": "regenerate-coverage.log",
+      "logSha256": "ebf77265e3689106e9742cfec8658587e821aa4079720e3589cd3e4b6ae3a5b5"
+    },
+    {
+      "name": "regenerate-ledger",
+      "command": [
+        "node",
+        "tools/p99-build-ledger.mjs",
+        "."
+      ],
+      "startedAt": "2026-10-22T08:26:55.002135+00:00",
+      "durationSeconds": 0.781,
+      "exitCode": 0,
+      "log": "regenerate-ledger.log",
+      "logSha256": "647b7e35f5fa10701abaa71fbdfd9d596c3fdf6549512e40070649f78c4a35a7"
+    },
+    {
+      "name": "regenerate-source-coverage",
+      "command": [
+        "node",
+        "tools/p99-source-coverage.mjs",
+        "."
+      ],
+      "startedAt": "2026-10-22T08:26:55.786566+00:00",
+      "durationSeconds": 5.815,
+      "exitCode": 0,
+      "log": "regenerate-source-coverage.log",
+      "logSha256": "28ca6994474bb890dd46f4d8d170e812c545310a7500c3a649323935c2d39285"
+    },
+    {
+      "name": "regenerate-resolution",
+      "command": [
+        "node",
+        "tools/p99-resolution-report.mjs",
+        "."
+      ],
+      "startedAt": "2026-10-22T08:27:01.602467+00:00",
+      "durationSeconds": 3.927,
+      "exitCode": 0,
+      "log": "regenerate-resolution.log",
+      "logSha256": "2d22dd498a5ff1b4cb828b8d71b41207e0320ba19b2ba35423a4241a855bb133"
+    },
+    {
+      "name": "regenerate-downstream",
+      "command": [
+        "node",
+        "tools/p99-refresh-downstream.mjs",
+        "."
+      ],
+      "startedAt": "2026-10-22T08:27:05.537208+00:00",
+      "durationSeconds": 9.789,
+      "exitCode": 0,
+      "log": "regenerate-downstream.log",
+      "logSha256": "e70057f794d5debfd4ee5dddf8034c7300a0637cbdf385ff822f2a1600e46be5"
+    },
+    {
+      "name": "regenerate-containers",
+      "command": [
+        "node",
+        "tools/p99-container-compatibility.mjs",
+        "."
+      ],
+      "startedAt": "2026-10-22T08:27:15.328232+00:00",
+      "durationSeconds": 10.847,
+      "exitCode": 0,
+      "log": "regenerate-containers.log",
+      "logSha256": "cedfe1adee8fea55d32d178b79d5d4a0c56c624f7ec642d22b1f18acc4e06ccc"
+    },
+    {
+      "name": "regenerate-closure",
+      "command": [
+        "node",
+        "tools/p99-conversion-closure-report.mjs",
+        "."
+      ],
+      "startedAt": "2026-10-22T08:27:26.178594+00:00",
+      "durationSeconds": 2.496,
+      "exitCode": 0,
+      "log": "regenerate-closure.log",
+      "logSha256": "3248de930bd0f5f27bf6eb9619a0e82348b019a2e28b762ecc318fc6ff614e32"
+    },
+    {
+      "name": "regenerate-final-source-closure",
+      "command": [
+        "node",
+        "tools/p99-final-source-closure.mjs",
+        "."
+      ],
+      "startedAt": "2026-10-22T08:27:28.675924+00:00",
+      "durationSeconds": 7.96,
+      "exitCode": 0,
+      "log": "regenerate-final-source-closure.log",
+      "logSha256": "f000d2b768f76a29bd70c5b05849ccecd9c966625156367f3a5ba57c186482a0"
+    },
+    {
+      "name": "regenerate-combined",
+      "command": [
+        "node",
+        "tools/p99-merge-proposals.mjs",
+        "."
+      ],
+      "startedAt": "2026-10-22T08:27:36.638256+00:00",
+      "durationSeconds": 7.1,
+      "exitCode": 0,
+      "log": "regenerate-combined.log",
+      "logSha256": "fcce192ed4e47510970680bb6671856ee44838b1870588bcd069dd24ac1de2a4"
+    },
+    {
+      "name": "bind-prepared-inputs",
+      "command": [
+        "python",
+        "/tmp/p99-bind-prepared-inputs.py"
+      ],
+      "startedAt": "2026-10-22T08:27:43.741637+00:00",
+      "durationSeconds": 1.196,
+      "exitCode": 0,
+      "log": "bind-prepared-inputs.log",
+      "logSha256": "2c68a36cc99788d06639e3f3f9c6252e9e934e6a956f7b86c6173bba36aaf76c"
+    },
+    {
+      "name": "public-safety",
+      "command": [
+        "node",
+        "tools/p99-public-safety.mjs",
+        "."
+      ],
+      "startedAt": "2026-10-22T08:27:44.939155+00:00",
+      "durationSeconds": 10.35,
+      "exitCode": 0,
+      "log": "public-safety.log",
+      "logSha256": "b2a940415b10b71fac3c3f0514b5f802f12e5de0346e762060ba79cb806bfd5c"
+    },
+    {
+      "name": "npm-tests",
+      "command": [
+        "npm",
+        "test",
+        "--",
+        "--test-concurrency=1"
+      ],
+      "startedAt": "2026-10-22T08:27:55.292953+00:00",
+      "durationSeconds": 522.991,
+      "exitCode": 0,
+      "log": "npm-tests.log",
+      "logSha256": "ca4df2d46d12e79ae879ea6b5c1f4501c289ae81108b52e7ff976e6282f3e101"
+    },
+    {
+      "name": "armor-evidence",
+      "command": [
+        "node",
+        "changes/p99-armor-review/verify-evidence.mjs"
+      ],
+      "startedAt": "2026-10-22T08:36:38.294565+00:00",
+      "durationSeconds": 12.182,
+      "exitCode": 0,
+      "log": "armor-evidence.log",
+      "logSha256": "4fad857017b91e7c2013657038eae27c167bddca4559e243c0378a9584ce7b68"
+    },
+    {
+      "name": "armor-runtime",
+      "command": [
+        "node",
+        "changes/p99-armor-review/run-tests.mjs"
+      ],
+      "startedAt": "2026-10-22T08:36:50.478515+00:00",
+      "durationSeconds": 207.808,
+      "exitCode": 0,
+      "log": "armor-runtime.log",
+      "logSha256": "8a2f0f75f6480bc901a9f917de881fe63366302e8abdf6ba92fc648711a918a2"
+    },
+    {
+      "name": "paladin-runtime",
+      "command": [
+        "node",
+        "changes/p99-paladin-epic-review/test-review.mjs"
+      ],
+      "startedAt": "2026-10-22T08:40:18.295279+00:00",
+      "durationSeconds": 4.05,
+      "exitCode": 0,
+      "log": "paladin-runtime.log",
+      "logSha256": "fe2001159e6d42718e30299820d9685a22cbd5d1033cc468408d02904c451a8e"
+    },
+    {
+      "name": "paladin-recipes",
+      "command": [
+        "node",
+        "changes/p99-paladin-epic-review/test-recipes.mjs"
+      ],
+      "startedAt": "2026-10-22T08:40:22.348700+00:00",
+      "durationSeconds": 6.308,
+      "exitCode": 0,
+      "log": "paladin-recipes.log",
+      "logSha256": "4d80fc08853aa367e2b531fa36c63e9995dd1f71911f7bac3f0a4d8f1cf43721"
+    },
+    {
+      "name": "combined-validation",
+      "command": [
+        "node",
+        "tools/cli.mjs",
+        "check-proposal",
+        ".",
+        "--proposal",
+        "changes/p99-combined-audit.json"
+      ],
+      "startedAt": "2026-10-22T08:40:28.657995+00:00",
+      "durationSeconds": 171.672,
+      "exitCode": 0,
+      "log": "combined-validation.log",
+      "logSha256": "a98de91a385e31df630b832b7de4de89caa6e81a52f1f4c346575693666cdbe2"
+    },
+    {
+      "name": "baseline-validation",
+      "command": [
+        "npm",
+        "run",
+        "validate"
+      ],
+      "startedAt": "2026-10-22T08:43:20.332755+00:00",
+      "durationSeconds": 124.252,
+      "exitCode": 0,
+      "log": "baseline-validation.log",
+      "logSha256": "4d419bb904028297d3bb73671d7eb0c202541454feb73e02f7ea0a2d56059e07"
+    },
+    {
+      "name": "reference-integrity",
+      "command": [
+        "node",
+        "tools/p99-reference-check.mjs",
+        "."
+      ],
+      "startedAt": "2026-10-22T08:45:24.591330+00:00",
+      "durationSeconds": 5.642,
+      "exitCode": 0,
+      "log": "reference-integrity.log",
+      "logSha256": "b35d84d1ebab721f47339ad8a5789bc46cf7240c804d339adc0544780ef5bb53"
+    },
+    {
+      "name": "full-lua-compile",
+      "command": [
+        "go",
+        "run",
+        "."
+      ],
+      "cwd": "validator",
+      "scripts": 8885,
+      "durationSeconds": 3.742,
+      "exitCode": 1,
+      "log": "full-lua-compile.log",
+      "logSha256": "570f9d57a4181b9213b9f14c607708be87618f61b2308e305ad364964467310b"
+    }
+  ],
+  "completedAt": "2026-10-22T08:45:34.751926+00:00"
+}

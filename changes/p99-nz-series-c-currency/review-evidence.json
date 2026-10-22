@@ -1,0 +1,26 @@
+{
+  "titles": [
+    "Series C Black Boxes"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "partial",
+  "match_status": "partial",
+  "local_quest_keys": [
+    "akanon/Manik_Compolten"
+  ],
+  "proposal": "changes/p99-nz-series-c-currency.json",
+  "notes": [
+    "Restore documented six-copper reward for handing in all four Series C blackboxes.",
+    "Only successful four-box branch gains6copper; Rusted Black Boxes and Red V Clockwork branches untouched. Complete clockwork keycard acquisition, logs and follow-up quest spawns remain separate unverified chain scope."
+  ],
+  "verification": {
+    "source": "Cached P99 and effective Lua reviewed; exact complete row preimages and source hashes recorded.",
+    "syntax": "pending",
+    "runtime": "Isolated mock regression pending; full game runtime unavailable.",
+    "ui": "not_run",
+    "connected_chain": "not_run"
+  },
+  "unresolved": [
+    "Ordinary source drops/spawns, recipe live behavior and rendered complete quest path not verified."
+  ]
+}

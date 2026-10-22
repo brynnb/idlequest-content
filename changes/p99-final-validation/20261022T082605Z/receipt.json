@@ -1,0 +1,92 @@
+{
+  "status": "qualified_pass_for_exact_frozen_inputs",
+  "capturedAt": "2026-10-22T08:26:08.439618+00:00",
+  "completedAt": "2026-10-22T08:45:34.751926+00:00",
+  "receiptFinalizedAt": "2026-10-22T08:46:57.820318+00:00",
+  "inputSetSha256": "dc632463eac6564c1524b395dad561dcbc7e606fd926f0dfdf309f1efcc9dedd",
+  "preparedInputSetSha256": "46d29da362ca3d1980910daac9d6a3115c1136c46459dc335307577ed3e334c1",
+  "capturedInputFiles": 1879,
+  "postPreparationDrift": [
+    {
+      "file": "changes/p99-armor-review/runtime-receipt.json",
+      "before": "7df55525abe5d097f8cc7f1242118fef08ba7289a41d263c7cad745d9eb628f0",
+      "after": "83c27cc499be719119101bf832c5b9354b76c73c9b2e3638bcd454aa629e3104"
+    }
+  ],
+  "driftExplanation": "Standalone armor runner updates only its own generated receipt in the isolated snapshot; no source or proposal changes.",
+  "liveCapturedInputDrift": [],
+  "rows": 896,
+  "sources": 817,
+  "proposedLuaSources": 816,
+  "npm": {
+    "tests": 89,
+    "pass": 88,
+    "fail": 0,
+    "skipped": 1
+  },
+  "skippedTest": "Real MySQL round trip, preimage conflicts and rollback; no live database transaction validation.",
+  "mainBehavior": {
+    "kind": "isolated-script-behavior-not-game-runtime",
+    "completedAt": "2026-10-22T08:36:37.902Z",
+    "scenarios": 2530,
+    "baselineReproductions": 95,
+    "baselineVerifications": 264,
+    "proposedSourceScenarios": 2171
+  },
+  "flavorCases": 167,
+  "standaloneArmorCases": 368,
+  "standalonePaladinCases": 45,
+  "caseCountWarning": "Separate suite counts overlap and must not be summed as unique scenarios.",
+  "proposedSourceCoverage": "All 816 proposed Lua files have hash-bound main or flavor coverage.",
+  "actualCombinedCLI": "passed 896 rows and 817 sources; all 816 Lua sources compile",
+  "immutableBaseline": {
+    "validatedFiles": 36496,
+    "tables": 53,
+    "manifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+    "gitDiffEmpty": true
+  },
+  "compile": {
+    "checked": 8885,
+    "passed": 8884,
+    "failed": 1,
+    "allProposedPassed": true,
+    "knownUnchangedDisabledBaselineException": "effective/quests/utility/comments-helper-generator.lua",
+    "rawExitCode": 1
+  },
+  "references": {
+    "checked": 5905,
+    "missingCount": 33,
+    "retainedHistoricalCount": 33,
+    "retainedHistoricalSourceKeys": [
+      "cobaltscar/Blumblum_Swigwater",
+      "frozenshadow/#Advisor_Svartmane",
+      "necropolis/#Hsagra-s_Shade",
+      "sirens/a_twitching_swordfish",
+      "thurgadina/Dardek_Bladewright",
+      "wakening/#Alaurin",
+      "wakening/#Lantaric-Dar",
+      "westwastes/#Vohnkare"
+    ],
+    "failureCount": 0,
+    "passed": true,
+    "limits": "Retained historical findings remain visible. Retention requires a disabled owning after-row, matching owner identity, equal literal occurrence counts and the complete original callback body after leading-header/CRLF normalization. Passing does not mean zero missing references."
+  },
+  "rowReferences": {
+    "scope": "Declared static ID links on all proposed after-rows against frozen export plus proposed target changes. No database transaction, dynamic Lua or composite grid proof.",
+    "checked": 45,
+    "missing": []
+  },
+  "sourceMetadata": {
+    "checked": 817,
+    "issues": []
+  },
+  "execution": "Sequential heavyweight commands; npm test -- --test-concurrency=1. No package/source change for execution bound.",
+  "priorAttempts": "Historical diagnostics and transport-lost attempt remain distinct; no retrospective pass claims.",
+  "limits": [
+    "Pinned VM, real source normalization and items module, strict mocked quest APIs; not the actual game bridge.",
+    "No live transaction settlement, rollback, persistence, spawn/world activation, item acquisition, pickup, successful crafting or UI proof.",
+    "Disabled scripts force-loaded for tests do not prove activation; retained fallback reward magnitudes are not newly established P99 facts.",
+    "Baseline verification/reproduction is not proposed-source coverage.",
+    "Public-safety pattern guard passed; independent private-overlap and publication review remain parent-owned."
+  ]
+}

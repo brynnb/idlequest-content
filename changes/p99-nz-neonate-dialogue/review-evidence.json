@@ -1,0 +1,27 @@
+{
+  "titles": [
+    "Neonate Cowardice"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "partial",
+  "match_status": "partial",
+  "local_quest_keys": [
+    "paineel/Davorre_Bloodthorn",
+    "paineel/Auhrik_Siet-ka"
+  ],
+  "proposal": "changes/p99-nz-neonate-dialogue.json",
+  "notes": [
+    "Make displayed cowardice dialogue choice issue the note and replace an unrelated revenge-completion speech with P99 sealed-bag completion text.",
+    "Retain the existing my-phrase alongside displayed your-phrase. Source cache shows8 copper while implementation gives35 copper and additional factions; magnitude and omission questions remain open, not silently declared aligned. Unrelated Davorre revenge quest branches are byte-preserved."
+  ],
+  "verification": {
+    "source": "Cached P99 and effective Lua reviewed; exact complete row preimages and source hashes recorded.",
+    "syntax": "pending",
+    "runtime": "Isolated mock regression pending; full game runtime unavailable.",
+    "ui": "not_run",
+    "connected_chain": "not_run"
+  },
+  "unresolved": [
+    "Ordinary source drops/spawns, recipe live behavior and rendered complete quest path not verified."
+  ]
+}

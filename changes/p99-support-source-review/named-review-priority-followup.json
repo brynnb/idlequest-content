@@ -1,0 +1,141 @@
+{
+  "reviewDate": "2026-10-22",
+  "searchedUniverse": [
+    "All cached raw quest pages and NPC pages",
+    "changes/*review/*, AM/AF/SZ/NZ substantive facets and ledgers, exact names and item terms",
+    "Public P99 targeted web searches; no result absence treated as proof of nonexistence"
+  ],
+  "records": [
+    {
+      "key": "neriakc/Xantis_Ixtax",
+      "reviewedSourceSha256": "992100ee5b2dcaca62f8755105a2e78598e51a3931228765e64aeb06c945e861",
+      "searchedPagesAndAliases": [
+        "Xantis Ixtax",
+        "Piece of Parchment",
+        "Ring of the Dead Quest",
+        "Thex Mallet Quest"
+      ],
+      "existingArtifactReferences": [],
+      "queries": [
+        "site:wiki.project1999.com Xantis Ring",
+        "site:wiki.project1999.com/Xantis_Ixtax recharge"
+      ],
+      "findings": [
+        "Ring of the Dead Quest resolves to Thex Mallet Quest, which documents removal of ring reward in December1999, not recharge. The sole direct search result connecting Xantis to recharge is an unanswered Talk:Ring of the Dead question. It is not evidence of10gold cost or working P99 recharge."
+      ],
+      "remainingEvidenceGap": [
+        "Exact recharge quest, price, charge behavior and whether P99 supports it are undocumented in inspected pages. Direct item page fetch returned502."
+      ],
+      "decision": "Preserve undocumented values; no unsupported P99 parity or absence inference."
+    },
+    {
+      "key": "everfrost/Granin_O'Gill",
+      "reviewedSourceSha256": "bda7361339132c0b738a792a9d037e0c3bedf8e208d8ef40aaeb1904043eaeab",
+      "searchedPagesAndAliases": [
+        "Granin O'Gill",
+        "Head of Granin O'Gill",
+        "Heal Yourself"
+      ],
+      "existingArtifactReferences": [
+        {
+          "file": "changes/p99-am-review/ledger-records.json",
+          "pointer": "/Head of Granin O'Gill",
+          "title": "Head of Granin O'Gill",
+          "binding": "Margyn head-turn-in review only, explicitly not healing proof."
+        }
+      ],
+      "queries": [
+        "site:wiki.project1999.com Granin ration",
+        "site:wiki.project1999.com/Granin_O heal",
+        "Granin Iron Ration"
+      ],
+      "findings": [
+        "Head of Granin is Margyns four-gold head reward, not this heal exchange. Full Granin NPC page has no ration/healing quest. Heal Yourself is Tonmerk Plorsins5gold heal and is not transferable. Public search found only PEQ/Homecoming-derived Iron Ration references, rejected as independent P99 evidence."
+      ],
+      "remainingEvidenceGap": [
+        "P99 ration cost/quantity and spell200 not confirmed. Standard unmatched return is separate safety fix."
+      ],
+      "decision": "Preserve undocumented values; no unsupported P99 parity or absence inference."
+    },
+    {
+      "key": "fearplane/Cazic_Thule",
+      "reviewedSourceSha256": "1e192e822b3f33f9c3ce826e08b7deb30be79e6fe617adfca6fcee438424bcb7",
+      "searchedPagesAndAliases": [
+        "Cazic Thule (God)",
+        "Monk Shackle Quests",
+        "Monk Epic Quest",
+        "The Lost Circle"
+      ],
+      "existingArtifactReferences": [
+        {
+          "file": "changes/p99-source-review/review-records.json",
+          "pointer": "/records/24",
+          "title": "charasis/Gandan_Tailfist source review",
+          "binding": "Related exact dependency18899; not original Cazic source proof."
+        },
+        {
+          "file": "changes/p99-source-review/public-evidence.json",
+          "pointer": "/",
+          "title": "Explicit Shackle of Tynnonium post-Velious evidence",
+          "binding": "Dependency-era evidence, not a new full Cazic mechanics certification."
+        }
+      ],
+      "queries": [
+        "site:wiki.project1999.com Whistling Fists",
+        "site:wiki.project1999.com/Whistling_Fists Whistling Fists",
+        "site:wiki.project1999.com Whistling Fists post-Velious"
+      ],
+      "findings": [
+        "Exact dependency discovered: Cazic requires18899, the Flayed Skin Tome granted by charasis/Gandan_Tailfist. Existing source review /records/24 positively links that actor to post-Velious Shackle of Tynnonium4199 and disables its sole-purpose chain. Cazics mixed classic combat script remains enabled. Monk Shackle text mentions legendary Whistling Fists in lore, but walkthrough ends at Steel; this is not the classic Robe of the Whistling Fists12970 or Celestial Fists."
+      ],
+      "remainingEvidenceGap": [
+        "Exact final weapon7836 page not located; mixed-source branch exclusion needs explicit policy decision/connected item proof, no guessed numbers."
+      ],
+      "decision": "Preserve undocumented values; no unsupported P99 parity or absence inference."
+    },
+    {
+      "key": "qcat/Bruax_Grengar",
+      "reviewedSourceSha256": "f582cf7b7b29aa988eb06bd7b08bf114f495f154a7807d96aeebc34c9eb50c3e",
+      "searchedPagesAndAliases": [
+        "Bruax Grengar",
+        "Varsoon the Undying Quest",
+        "Guild Summons - Shrine of Bertoxxulous Enchanter",
+        "Guild Summons - Shrine of Bertoxxulous Magician",
+        "Guild Summons - Shrine of Bertoxxulous Wizard"
+      ],
+      "existingArtifactReferences": [
+        {
+          "file": "changes/p99-am-review/ledger-records.json",
+          "pointer": "/Guild Summons - Shrine of Bertoxxulous Enchanter",
+          "title": "Guild Summons - Shrine of Bertoxxulous Enchanter",
+          "binding": "Prior explicit later Bruax training referral removal; not this exact source hash."
+        },
+        {
+          "file": "changes/p99-am-review/ledger-records.json",
+          "pointer": "/Guild Summons - Shrine of Bertoxxulous Magician",
+          "title": "Guild Summons - Shrine of Bertoxxulous Magician",
+          "binding": "Prior explicit later Bruax training referral removal; not this exact source hash."
+        },
+        {
+          "file": "changes/p99-am-review/ledger-records.json",
+          "pointer": "/Guild Summons - Shrine of Bertoxxulous Wizard",
+          "title": "Guild Summons - Shrine of Bertoxxulous Wizard",
+          "binding": "Prior explicit later Bruax training referral removal; not this exact source hash."
+        }
+      ],
+      "queries": [
+        "site:wiki.project1999.com Bruax Staff",
+        "site:wiki.project1999.com Staff of Bloodsabers",
+        "site:wiki.project1999.com Scourge Sorcerer",
+        "site:wiki.project1999.com/Bruax_Grengar Bruax"
+      ],
+      "findings": [
+        "Full Bruax NPC page says Description needed and links only Varsoon. Three prior Guild Summons ledger records explicitly removed later Bruax training referrals from Reania, Perkon and Trenon. Their full P99 pages document only original robe initiation, not Scourge armor or Staff of Bloodsabers. This is corroborating later-family evidence, not an exact P99 recipe/award specification."
+      ],
+      "remainingEvidenceGap": [
+        "No matching P99 armor/staff reward walkthrough found. NPC existence/GM role not an authorization to disable NPC or invent classic values."
+      ],
+      "decision": "Preserve undocumented values; no unsupported P99 parity or absence inference."
+    }
+  ]
+}

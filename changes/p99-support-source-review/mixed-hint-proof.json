@@ -1,0 +1,40 @@
+{
+  "records": [
+    {
+      "key": "gfaydark/Guard_Fayfear",
+      "reviewedSourceSha256": "16da9bf48a8885325a49952630f62d6291dcb92045347a09498e94eeb2e9ecce",
+      "currentSourceSha256": "1722962551de8705c4081fac0311397b668da2eefe91204947835ed315c91831",
+      "removedFacet": "Sole event_say handler, guarded entirely by paladin_epic9 and containing only later Vampire/Orc investigation hints",
+      "preservedFacet": "Entire original event_combat callback byte-for-byte, including clean-name taunt and joined guard",
+      "stillEnabled": 1,
+      "metadataUpdate": "has_say_event=0 matches removed sole say handler; all other columns unchanged",
+      "dependency": {
+        "file": "effective/quests/felwithea/%23Galrun_Starforge.lua",
+        "sha256": "8aac872cf12e2d26be70e62a2ed176cbfebf656d7e92a54be7f622a584dcf8aa",
+        "facets": "Header explicitly Paladin Epic2.0; same paladin_epic9 state; same all-Faydwer Vampire investigation."
+      },
+      "limitations": [
+        "No NPC edit; no claim of full guard text/faction/combat parity.",
+        "Disabled later hint does not constitute live runtime verification."
+      ]
+    },
+    {
+      "key": "gfaydark/Guard_Highmoon",
+      "reviewedSourceSha256": "347b14e6e470738642b726efefaf3c5c53c11daf78ceb1403f773b36a8ff0fe5",
+      "currentSourceSha256": "1722962551de8705c4081fac0311397b668da2eefe91204947835ed315c91831",
+      "removedFacet": "Sole event_say handler, guarded entirely by paladin_epic9 and containing only later Vampire/Orc investigation hints",
+      "preservedFacet": "Entire original event_combat callback byte-for-byte, including clean-name taunt and joined guard",
+      "stillEnabled": 1,
+      "metadataUpdate": "has_say_event=0 matches removed sole say handler; all other columns unchanged",
+      "dependency": {
+        "file": "effective/quests/felwithea/%23Galrun_Starforge.lua",
+        "sha256": "8aac872cf12e2d26be70e62a2ed176cbfebf656d7e92a54be7f622a584dcf8aa",
+        "facets": "Header explicitly Paladin Epic2.0; same paladin_epic9 state; same all-Faydwer Vampire investigation."
+      },
+      "limitations": [
+        "No NPC edit; no claim of full guard text/faction/combat parity.",
+        "Disabled later hint does not constitute live runtime verification."
+      ]
+    }
+  ]
+}

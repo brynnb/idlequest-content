@@ -1,0 +1,35 @@
+{
+  "titles": [
+    "Request of the Arcane",
+    "Request of the Strong",
+    "Test of the Ruby Tear",
+    "Test of the Platinum Tear",
+    "Test of the Emerald Tear"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "partial",
+  "match_status": "partial",
+  "local_quest_keys": [
+    "templeveeshan/#Lendiniara_the_Keeper"
+  ],
+  "proposal": "changes/p99-nz-lendiniara-tests.json",
+  "implementation_provenance": {
+    "file": "sources/projecteq/templeveeshan/#Lendiniara_the_Keeper.pl",
+    "sha256": "9bdc76e3f78b92a17b383a2cac3e96527980deaf9784176cc25ff5ec27d4e7b9"
+  },
+  "notes": [
+    "Implement five documented Velious Lendiniara Halls of Testing hand-ins and dialogue at the existing empty Lua quest key; omit later Xygoz letter.",
+    "All five pages establish component sets and rewards. ProjectEQ supplies75/18/-37 faction and200000experience; these are implementation fallback magnitudes, not wiki-established values.",
+    "No minimum-level gate inferred from suggested55 metadata. Faction bypass intentional. No later Xygoz branch.",
+    "NPC world availability and all upstream Halls of Testing drops unverified. UI and game transactions not run."
+  ],
+  "verification": {
+    "syntax": "pending",
+    "isolated_handler": "pending",
+    "ui": "not_run",
+    "connected_chain": "not_run"
+  },
+  "unresolved": [
+    "Spawn availability, Dozekar/other Halls of Testing encounter loot, complete item acquisition chain and real transactional/repeated-turnin UI verification."
+  ]
+}

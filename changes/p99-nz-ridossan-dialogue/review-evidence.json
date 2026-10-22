@@ -1,0 +1,29 @@
+{
+  "titles": [
+    "Ridossan's Spirit"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "partial",
+  "match_status": "partial",
+  "local_quest_keys": [
+    "stonebrunt/a_spirit",
+    "stonebrunt/Ridossan_the_Unliving",
+    "stonebrunt/Disciple_Okarote",
+    "stonebrunt/Ghost_of_Ridossan"
+  ],
+  "proposal": "changes/p99-nz-ridossan-dialogue.json",
+  "notes": [
+    "Restore documented Ridossan quest conversations, transformation and death/ghost acknowledgements.",
+    "Items2100GrimyLance->2297IdolFear->2099SoulfiendLance verified against exported rows. Restore earlier-campaign clue and separate form/revenge response. Preserve existing movement, timers, spawns and one-minute ghost window. Final ghost XP and five faction rewards documented by P99 are missing; upstream Perl also has no values, so no guessed amounts added. Full combat, actual loot, movement and transactions unverified. This is dialogue parity only, not a complete playable-path repair."
+  ],
+  "verification": {
+    "source": "Cached P99 and effective Lua reviewed; exact complete row preimages and source hashes recorded.",
+    "syntax": "pending",
+    "runtime": "Isolated mock regression pending; full game runtime unavailable.",
+    "ui": "not_run",
+    "connected_chain": "not_run"
+  },
+  "unresolved": [
+    "Ordinary source drops/spawns, recipe live behavior and rendered complete quest path not verified."
+  ]
+}

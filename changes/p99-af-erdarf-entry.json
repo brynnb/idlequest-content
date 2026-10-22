@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-af-erdarf-entry",
+  "summary": "Restore two documented Erdarf entry exchanges and four dialogue branches. Preserve upstream XP and conflicting acid-depop fallback explicitly; later chain remains incomplete.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Crystal_Caverns'_Ancient_Artifacts?action=raw",
+      "note": "Cached reference/p99-wiki/raw-pages/crystal-caverns-ancient-artifacts-fd660a754f.wiki SHA256 4d39f1187ac39d6033d1f7ee7a5f8c4ad78e9688603075d9739361acb45da7a8."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 14812,
+        "zone": "thurgadina",
+        "name": "Erdarf_Restil",
+        "lua_content": null,
+        "has_say_event": 1,
+        "enabled": 0
+      },
+      "after": {
+        "id": 14812,
+        "zone": "thurgadina",
+        "name": "Erdarf_Restil",
+        "lua_content": "-- enabled: false\n-- P99 Crystal Caverns entry routes; not a claim that the later pathing/loot chain is restored.\n-- Source: thurgadina/Erdarf_Restil.pl. XP 25000 is unverified upstream fallback.\n-- Acid depop: retained upstream behavior; P99 has a contradictory no-despawn report.\n-- Quest faction gating remains intentionally bypassed under the runtime contract.\nfunction event_say(e)\n  if e.message:findi(\"hail\") then\n    e.self:Say(\"Huh? Don't you know better than to interrupt a Coldain enjoying his ale? I may be a user of priestly magic but that doesnt mean I can't bash your head in.\")\n  end\n  if e.message:findi(\"priestly magic\") then\n    e.self:Say(\"Aye. An old one not much taken with idle chit chat.\")\n  end\n  if e.message:findi(\"old one\") then\n    e.self:Say(\"Very old, very wise, and on and on. You must have some point to bothering me. I'm not a merchant and I don't contract myself out for work. I've performed works for the Dain. There isn't much I haven't done..\")\n  end\n  if e.message:findi(\"haven't done\") then\n    e.self:Emote(\"chuckles at you. 'If you want to impress me, and let me make certain you understand I doubt you can, then you can do what I never was able. For years I adventured and attempted to venture to the bottom of the Crystal Caverns in search of ancient artifacts from my people. Do that, show me that you have, and I will be impressed.'\")\n  end\nend\n\nfunction event_trade(e)\n  local item_lib = require(\"items\")\n  if item_lib.check_turn_in(e.trade, {item1 = 30269}) then\n    e.self:Emote(\"smirks at you. 'Hrm, you again eh? Did you come back to bother me with more...Wait a minute, let me see that. This is... This must be, yes it is. This is one of the ancient coldain priests sceptres of channeling. This is too good to be true. Haha! Oh, what I can do with this. Here, take this gem from the sceptre. If ancient lore proves right it will allow you to persuade beasts of many kinds.' He grins at you strangely and then leaves.\")\n    e.other:SummonItem(30270)\n    e.other:AddEXP(25000)\n    e.other:Ding()\n    eq.depop_with_timer()\n  end\n  if item_lib.check_turn_in(e.trade, {item1 = 30271}) then\n    e.self:Emote(\"turns his head long enough for you to slip the contens of the karsin bottle into his mug. As he drinks heavily his face turns even more pale until he looks as if in pain. He rushes from the bar and as he does a trinket slips from his pocket.\")\n    e.other:SummonItem(30270)\n    e.other:AddEXP(25000)\n    e.other:Ding()\n    eq.depop_with_timer()\n  end\n  item_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 0
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Erdarf_Restil.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-af-erdarf-entry/thurgadina-Erdarf_Restil.lua",
+      "afterSha256": "3bbf09cf9cf818f7972570c506d84381c0fe938ca12c7f6d9ad00a11a8e60e5c"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "titles": [
+    "Respecialization"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "partial",
+  "match_status": "partial",
+  "local_quest_keys": [
+    "soltemple/Ostorm"
+  ],
+  "proposal": "changes/p99-nz-ostorm-dialogue.json",
+  "notes": [
+    "Make displayed specialization-reset lore buttons reachable.",
+    "Bare steal, memories and losing are advertised but existing handlers require full phrases. Retain full phrases and advanced-memory warning. Ruby10035 resets skills43\u201347 to49; separate50gold donation and all Lambent/magnetized-bar branches unchanged. Numeric XP is not documented, no adjustment."
+  ],
+  "verification": {
+    "source": "Cached P99 and effective Lua reviewed; exact complete row preimages and source hashes recorded.",
+    "syntax": "pending",
+    "runtime": "Isolated mock regression pending; full game runtime unavailable.",
+    "ui": "not_run",
+    "connected_chain": "not_run"
+  },
+  "unresolved": [
+    "Ordinary source drops/spawns, recipe live behavior and rendered complete quest path not verified."
+  ]
+}

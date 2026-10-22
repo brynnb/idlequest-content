@@ -1,0 +1,220 @@
+{
+  "note": "Existing and new muffin sources checked against explicit quest exclusions and NPC runtime ID/name-pattern exclusions. NPC exclude field is not itself an admission ban. Quest exclusion for Karn remains authoritative. Matching NPC names in additional zones do not establish local availability.",
+  "sources": [
+    {
+      "proposal": "p99-am-karn-crate",
+      "key": "qeynos/Karn_Tassen",
+      "questExclusion": {
+        "reason": "post_kunark_warrens_era",
+        "note": "Fresh Baked Muffins (Qeynos) is P99 Warrens/Fear-Hate-revamp-era muffin/plague content outside IdleQuest's Classic/Kunark scope."
+      },
+      "proposedEnabled": 0,
+      "npcMatches": [
+        {
+          "id": 1110,
+          "name": "Karn_Tassen",
+          "excludeField": 1,
+          "explicitRuntimeExclusions": []
+        }
+      ]
+    },
+    {
+      "proposal": "p99-am-gretta-dialogue",
+      "key": "kaladima/Gretta_Mottle",
+      "questExclusion": null,
+      "proposedEnabled": 1,
+      "npcMatches": [
+        {
+          "id": 60000,
+          "name": "Gretta_Mottle",
+          "excludeField": 1,
+          "explicitRuntimeExclusions": []
+        }
+      ]
+    },
+    {
+      "proposal": "p99-am-muffin-recipients",
+      "key": "qeynos/Voleen_Tassen",
+      "questExclusion": null,
+      "proposedEnabled": 1,
+      "npcMatches": [
+        {
+          "id": 1111,
+          "name": "Voleen_Tassen",
+          "excludeField": 1,
+          "explicitRuntimeExclusions": []
+        }
+      ]
+    },
+    {
+      "proposal": "p99-am-muffin-recipients",
+      "key": "feerrott/Innkeep_Gub",
+      "questExclusion": null,
+      "proposedEnabled": 1,
+      "npcMatches": [
+        {
+          "id": 700001,
+          "name": "Innkeep_Gub",
+          "excludeField": 1,
+          "explicitRuntimeExclusions": []
+        },
+        {
+          "id": 47144,
+          "name": "Innkeep_Gub",
+          "excludeField": 1,
+          "explicitRuntimeExclusions": []
+        }
+      ]
+    },
+    {
+      "proposal": "p99-am-muffin-recipients",
+      "key": "halas/Hetie_McDonald",
+      "questExclusion": null,
+      "proposedEnabled": 1,
+      "npcMatches": [
+        {
+          "id": 29038,
+          "name": "Hetie_McDonald",
+          "excludeField": 1,
+          "explicitRuntimeExclusions": []
+        }
+      ]
+    },
+    {
+      "proposal": "p99-am-muffin-recipients",
+      "key": "neriaka/Sal_Drana",
+      "questExclusion": null,
+      "proposedEnabled": 1,
+      "npcMatches": [
+        {
+          "id": 40066,
+          "name": "Sal_Drana",
+          "excludeField": 1,
+          "explicitRuntimeExclusions": []
+        }
+      ]
+    },
+    {
+      "proposal": "p99-am-muffin-recipients",
+      "key": "erudnext/Beth_Breadmaker",
+      "questExclusion": null,
+      "proposedEnabled": 1,
+      "npcMatches": [
+        {
+          "id": 24059,
+          "name": "Beth_Breadmaker",
+          "excludeField": 1,
+          "explicitRuntimeExclusions": []
+        }
+      ]
+    },
+    {
+      "proposal": "p99-am-muffin-recipients",
+      "key": "qey2hh1/Innkeep_Rislarn",
+      "questExclusion": null,
+      "proposedEnabled": 1,
+      "npcMatches": [
+        {
+          "id": 12103,
+          "name": "Innkeep_Rislarn",
+          "excludeField": 1,
+          "explicitRuntimeExclusions": []
+        }
+      ]
+    },
+    {
+      "proposal": "p99-am-muffin-new-recipients",
+      "key": "northkarana/Innkeep_James",
+      "questExclusion": null,
+      "proposedEnabled": 1,
+      "npcMatches": [
+        {
+          "id": 13074,
+          "name": "Innkeep_James",
+          "excludeField": 1,
+          "explicitRuntimeExclusions": []
+        }
+      ]
+    },
+    {
+      "proposal": "p99-am-muffin-new-recipients",
+      "key": "freporte/Innkeep_Nasumi",
+      "questExclusion": null,
+      "proposedEnabled": 1,
+      "npcMatches": [
+        {
+          "id": 10058,
+          "name": "Innkeep_Nasumi",
+          "excludeField": 1,
+          "explicitRuntimeExclusions": []
+        },
+        {
+          "id": 382121,
+          "name": "Innkeep_Nasumi",
+          "excludeField": 1,
+          "explicitRuntimeExclusions": []
+        }
+      ]
+    },
+    {
+      "proposal": "p99-am-muffin-new-recipients",
+      "key": "freeporteast/Innkeep_Nasumi",
+      "questExclusion": null,
+      "proposedEnabled": 1,
+      "npcMatches": [
+        {
+          "id": 10058,
+          "name": "Innkeep_Nasumi",
+          "excludeField": 1,
+          "explicitRuntimeExclusions": []
+        },
+        {
+          "id": 382121,
+          "name": "Innkeep_Nasumi",
+          "excludeField": 1,
+          "explicitRuntimeExclusions": []
+        }
+      ]
+    },
+    {
+      "proposal": "p99-am-muffin-new-recipients",
+      "key": "freportn/Gern_Tassel",
+      "questExclusion": null,
+      "proposedEnabled": 1,
+      "npcMatches": [
+        {
+          "id": 383129,
+          "name": "Gern_Tassel",
+          "excludeField": 1,
+          "explicitRuntimeExclusions": []
+        },
+        {
+          "id": 8014,
+          "name": "Gern_Tassel",
+          "excludeField": 1,
+          "explicitRuntimeExclusions": []
+        }
+      ]
+    },
+    {
+      "proposal": "p99-am-muffin-new-recipients",
+      "key": "freeportwest/Gern_Tassel",
+      "questExclusion": null,
+      "proposedEnabled": 1,
+      "npcMatches": [
+        {
+          "id": 383129,
+          "name": "Gern_Tassel",
+          "excludeField": 1,
+          "explicitRuntimeExclusions": []
+        },
+        {
+          "id": 8014,
+          "name": "Gern_Tassel",
+          "excludeField": 1,
+          "explicitRuntimeExclusions": []
+        }
+      ]
+    }
+  ]
+}

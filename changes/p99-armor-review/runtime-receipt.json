@@ -1,0 +1,2259 @@
+{
+  "kind": "isolated-script-behavior-not-game-runtime",
+  "completedAt": "2026-10-22T05:40:55.616Z",
+  "command": "node changes/p99-armor-review/run-tests.mjs",
+  "goVersion": "go version go1.23.12 linux/amd64",
+  "scenarios": 368,
+  "passed": 368,
+  "baselineVerificationCases": 131,
+  "proposedSourceCases": 237,
+  "inputHashes": [
+    {
+      "file": "tools/p99-lua-runner.go",
+      "sha256": "a381643eb50c5891ebbf105e209bd5a1aad5073ce21d1f2b34361d6a3e5b7e58"
+    },
+    {
+      "file": "tools/p99-test-fixture.lua",
+      "sha256": "256b1b239eee071c1e1f591649ada52e93845a769f8653691a4a79e9447fe56d"
+    },
+    {
+      "file": "sources/projecteq/lua_modules/items.lua",
+      "sha256": "7bfcd2948fa69535a070333840e86875c4eb0755a047e77302ca336e7fce1f9a"
+    },
+    {
+      "file": "effective/modules/items.lua",
+      "sha256": "7bfcd2948fa69535a070333840e86875c4eb0755a047e77302ca336e7fce1f9a"
+    },
+    {
+      "file": "validator/go.mod",
+      "sha256": "023321e8912019e862ad0c3c94a92a96f07abf86b2c7c7b95dbb929bcd9efb35"
+    },
+    {
+      "file": "validator/go.sum",
+      "sha256": "62a8d648941f64ebd4d6d4f9d1eb20b1a322ccaad5722d4738d6b167b4601f11"
+    },
+    {
+      "file": "validator/questluasource/source.go",
+      "sha256": "e00525e302e71c79ce8a53e4ff62411505b032355887874440da5d13031530ed"
+    },
+    {
+      "file": "changes/p99-armor-review/runtime-assertions.json",
+      "sha256": "659f48761f22303f835a4c14b7196693ca3b422c12aaa8c2428f7ae03698a604"
+    }
+  ],
+  "cases": [
+    {
+      "name": "kael/Bjarorm_Mjlorn Plague Bearer's Circlet exact quantities, retained values, coin and repeat",
+      "file": "changes/p99-armor-review/kael--Bjarorm_Mjlorn.lua",
+      "sourceSha256": "9da0bc6ebe3ce0f8cd2ac6c000050d6e0906e2bcd372f8afbf3feeeb825f5934",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Bjarorm_Mjlorn Plague Bearer's Circlet two gems plus unrelated item refunded",
+      "file": "changes/p99-armor-review/kael--Bjarorm_Mjlorn.lua",
+      "sourceSha256": "9da0bc6ebe3ce0f8cd2ac6c000050d6e0906e2bcd372f8afbf3feeeb825f5934",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Bjarorm_Mjlorn Plague Bearer's Circlet missing armor refunded",
+      "file": "changes/p99-armor-review/kael--Bjarorm_Mjlorn.lua",
+      "sourceSha256": "9da0bc6ebe3ce0f8cd2ac6c000050d6e0906e2bcd372f8afbf3feeeb825f5934",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Bjarorm_Mjlorn Plague Bearer's Robe exact quantities, retained values, coin and repeat",
+      "file": "changes/p99-armor-review/kael--Bjarorm_Mjlorn.lua",
+      "sourceSha256": "9da0bc6ebe3ce0f8cd2ac6c000050d6e0906e2bcd372f8afbf3feeeb825f5934",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Bjarorm_Mjlorn Plague Bearer's Robe two gems plus unrelated item refunded",
+      "file": "changes/p99-armor-review/kael--Bjarorm_Mjlorn.lua",
+      "sourceSha256": "9da0bc6ebe3ce0f8cd2ac6c000050d6e0906e2bcd372f8afbf3feeeb825f5934",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Bjarorm_Mjlorn Plague Bearer's Robe missing armor refunded",
+      "file": "changes/p99-armor-review/kael--Bjarorm_Mjlorn.lua",
+      "sourceSha256": "9da0bc6ebe3ce0f8cd2ac6c000050d6e0906e2bcd372f8afbf3feeeb825f5934",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Bjarorm_Mjlorn Plague Bearer's Sleeves exact quantities, retained values, coin and repeat",
+      "file": "changes/p99-armor-review/kael--Bjarorm_Mjlorn.lua",
+      "sourceSha256": "9da0bc6ebe3ce0f8cd2ac6c000050d6e0906e2bcd372f8afbf3feeeb825f5934",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Bjarorm_Mjlorn Plague Bearer's Sleeves two gems plus unrelated item refunded",
+      "file": "changes/p99-armor-review/kael--Bjarorm_Mjlorn.lua",
+      "sourceSha256": "9da0bc6ebe3ce0f8cd2ac6c000050d6e0906e2bcd372f8afbf3feeeb825f5934",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Bjarorm_Mjlorn Plague Bearer's Sleeves missing armor refunded",
+      "file": "changes/p99-armor-review/kael--Bjarorm_Mjlorn.lua",
+      "sourceSha256": "9da0bc6ebe3ce0f8cd2ac6c000050d6e0906e2bcd372f8afbf3feeeb825f5934",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Bjarorm_Mjlorn Plague Bearer's Wristguard exact quantities, retained values, coin and repeat",
+      "file": "changes/p99-armor-review/kael--Bjarorm_Mjlorn.lua",
+      "sourceSha256": "9da0bc6ebe3ce0f8cd2ac6c000050d6e0906e2bcd372f8afbf3feeeb825f5934",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Bjarorm_Mjlorn Plague Bearer's Wristguard two gems plus unrelated item refunded",
+      "file": "changes/p99-armor-review/kael--Bjarorm_Mjlorn.lua",
+      "sourceSha256": "9da0bc6ebe3ce0f8cd2ac6c000050d6e0906e2bcd372f8afbf3feeeb825f5934",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Bjarorm_Mjlorn Plague Bearer's Wristguard missing armor refunded",
+      "file": "changes/p99-armor-review/kael--Bjarorm_Mjlorn.lua",
+      "sourceSha256": "9da0bc6ebe3ce0f8cd2ac6c000050d6e0906e2bcd372f8afbf3feeeb825f5934",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Bjarorm_Mjlorn Plague Bearer's Gloves exact quantities, retained values, coin and repeat",
+      "file": "changes/p99-armor-review/kael--Bjarorm_Mjlorn.lua",
+      "sourceSha256": "9da0bc6ebe3ce0f8cd2ac6c000050d6e0906e2bcd372f8afbf3feeeb825f5934",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Bjarorm_Mjlorn Plague Bearer's Gloves two gems plus unrelated item refunded",
+      "file": "changes/p99-armor-review/kael--Bjarorm_Mjlorn.lua",
+      "sourceSha256": "9da0bc6ebe3ce0f8cd2ac6c000050d6e0906e2bcd372f8afbf3feeeb825f5934",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Bjarorm_Mjlorn Plague Bearer's Gloves missing armor refunded",
+      "file": "changes/p99-armor-review/kael--Bjarorm_Mjlorn.lua",
+      "sourceSha256": "9da0bc6ebe3ce0f8cd2ac6c000050d6e0906e2bcd372f8afbf3feeeb825f5934",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Bjarorm_Mjlorn Plague Bearer's Trousers exact quantities, retained values, coin and repeat",
+      "file": "changes/p99-armor-review/kael--Bjarorm_Mjlorn.lua",
+      "sourceSha256": "9da0bc6ebe3ce0f8cd2ac6c000050d6e0906e2bcd372f8afbf3feeeb825f5934",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Bjarorm_Mjlorn Plague Bearer's Trousers two gems plus unrelated item refunded",
+      "file": "changes/p99-armor-review/kael--Bjarorm_Mjlorn.lua",
+      "sourceSha256": "9da0bc6ebe3ce0f8cd2ac6c000050d6e0906e2bcd372f8afbf3feeeb825f5934",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Bjarorm_Mjlorn Plague Bearer's Trousers missing armor refunded",
+      "file": "changes/p99-armor-review/kael--Bjarorm_Mjlorn.lua",
+      "sourceSha256": "9da0bc6ebe3ce0f8cd2ac6c000050d6e0906e2bcd372f8afbf3feeeb825f5934",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Bjarorm_Mjlorn Plague Bearer's Boots exact quantities, retained values, coin and repeat",
+      "file": "changes/p99-armor-review/kael--Bjarorm_Mjlorn.lua",
+      "sourceSha256": "9da0bc6ebe3ce0f8cd2ac6c000050d6e0906e2bcd372f8afbf3feeeb825f5934",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Bjarorm_Mjlorn Plague Bearer's Boots two gems plus unrelated item refunded",
+      "file": "changes/p99-armor-review/kael--Bjarorm_Mjlorn.lua",
+      "sourceSha256": "9da0bc6ebe3ce0f8cd2ac6c000050d6e0906e2bcd372f8afbf3feeeb825f5934",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Bjarorm_Mjlorn Plague Bearer's Boots missing armor refunded",
+      "file": "changes/p99-armor-review/kael--Bjarorm_Mjlorn.lua",
+      "sourceSha256": "9da0bc6ebe3ce0f8cd2ac6c000050d6e0906e2bcd372f8afbf3feeeb825f5934",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Bjarorm_Mjlorn dialogue hail",
+      "file": "changes/p99-armor-review/kael--Bjarorm_Mjlorn.lua",
+      "sourceSha256": "9da0bc6ebe3ce0f8cd2ac6c000050d6e0906e2bcd372f8afbf3feeeb825f5934",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Bjarorm_Mjlorn dialogue I am a necromancer",
+      "file": "changes/p99-armor-review/kael--Bjarorm_Mjlorn.lua",
+      "sourceSha256": "9da0bc6ebe3ce0f8cd2ac6c000050d6e0906e2bcd372f8afbf3feeeb825f5934",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Bjarorm_Mjlorn dialogue I will undertake your tasks",
+      "file": "changes/p99-armor-review/kael--Bjarorm_Mjlorn.lua",
+      "sourceSha256": "9da0bc6ebe3ce0f8cd2ac6c000050d6e0906e2bcd372f8afbf3feeeb825f5934",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Bjarorm_Mjlorn dialogue i am a necromancer",
+      "file": "changes/p99-armor-review/kael--Bjarorm_Mjlorn.lua",
+      "sourceSha256": "9da0bc6ebe3ce0f8cd2ac6c000050d6e0906e2bcd372f8afbf3feeeb825f5934",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Bjarorm_Mjlorn dialogue undertake your tasks",
+      "file": "changes/p99-armor-review/kael--Bjarorm_Mjlorn.lua",
+      "sourceSha256": "9da0bc6ebe3ce0f8cd2ac6c000050d6e0906e2bcd372f8afbf3feeeb825f5934",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Bjarorm_Mjlorn dialogue cap",
+      "file": "changes/p99-armor-review/kael--Bjarorm_Mjlorn.lua",
+      "sourceSha256": "9da0bc6ebe3ce0f8cd2ac6c000050d6e0906e2bcd372f8afbf3feeeb825f5934",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Bjarorm_Mjlorn dialogue robe",
+      "file": "changes/p99-armor-review/kael--Bjarorm_Mjlorn.lua",
+      "sourceSha256": "9da0bc6ebe3ce0f8cd2ac6c000050d6e0906e2bcd372f8afbf3feeeb825f5934",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Bjarorm_Mjlorn dialogue sleeves",
+      "file": "changes/p99-armor-review/kael--Bjarorm_Mjlorn.lua",
+      "sourceSha256": "9da0bc6ebe3ce0f8cd2ac6c000050d6e0906e2bcd372f8afbf3feeeb825f5934",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Bjarorm_Mjlorn dialogue wristband",
+      "file": "changes/p99-armor-review/kael--Bjarorm_Mjlorn.lua",
+      "sourceSha256": "9da0bc6ebe3ce0f8cd2ac6c000050d6e0906e2bcd372f8afbf3feeeb825f5934",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Bjarorm_Mjlorn dialogue gloves",
+      "file": "changes/p99-armor-review/kael--Bjarorm_Mjlorn.lua",
+      "sourceSha256": "9da0bc6ebe3ce0f8cd2ac6c000050d6e0906e2bcd372f8afbf3feeeb825f5934",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Bjarorm_Mjlorn dialogue leggings",
+      "file": "changes/p99-armor-review/kael--Bjarorm_Mjlorn.lua",
+      "sourceSha256": "9da0bc6ebe3ce0f8cd2ac6c000050d6e0906e2bcd372f8afbf3feeeb825f5934",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Bjarorm_Mjlorn dialogue boots",
+      "file": "changes/p99-armor-review/kael--Bjarorm_Mjlorn.lua",
+      "sourceSha256": "9da0bc6ebe3ce0f8cd2ac6c000050d6e0906e2bcd372f8afbf3feeeb825f5934",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Bjarorm_Mjlorn corrected component wording gloves",
+      "file": "changes/p99-armor-review/kael--Bjarorm_Mjlorn.lua",
+      "sourceSha256": "9da0bc6ebe3ce0f8cd2ac6c000050d6e0906e2bcd372f8afbf3feeeb825f5934",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Bjarorm_Mjlorn empty/unrelated offers remain unrewarded",
+      "file": "changes/p99-armor-review/kael--Bjarorm_Mjlorn.lua",
+      "sourceSha256": "9da0bc6ebe3ce0f8cd2ac6c000050d6e0906e2bcd372f8afbf3feeeb825f5934",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "skyshrine/Abudan_Fe-Dhar Rotting Crown exact quantities, retained values, coin and repeat",
+      "file": "effective/quests/skyshrine/Abudan_Fe-Dhar.lua",
+      "sourceSha256": "25a3396f082765a17438af480aa712cbcc3233fc2ac6fcd41be8c91cc5ddb446",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Abudan_Fe-Dhar Rotting Crown two gems plus unrelated item refunded",
+      "file": "effective/quests/skyshrine/Abudan_Fe-Dhar.lua",
+      "sourceSha256": "25a3396f082765a17438af480aa712cbcc3233fc2ac6fcd41be8c91cc5ddb446",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Abudan_Fe-Dhar Rotting Crown missing armor refunded",
+      "file": "effective/quests/skyshrine/Abudan_Fe-Dhar.lua",
+      "sourceSha256": "25a3396f082765a17438af480aa712cbcc3233fc2ac6fcd41be8c91cc5ddb446",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Abudan_Fe-Dhar Rotting Robe exact quantities, retained values, coin and repeat",
+      "file": "effective/quests/skyshrine/Abudan_Fe-Dhar.lua",
+      "sourceSha256": "25a3396f082765a17438af480aa712cbcc3233fc2ac6fcd41be8c91cc5ddb446",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Abudan_Fe-Dhar Rotting Robe two gems plus unrelated item refunded",
+      "file": "effective/quests/skyshrine/Abudan_Fe-Dhar.lua",
+      "sourceSha256": "25a3396f082765a17438af480aa712cbcc3233fc2ac6fcd41be8c91cc5ddb446",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Abudan_Fe-Dhar Rotting Robe missing armor refunded",
+      "file": "effective/quests/skyshrine/Abudan_Fe-Dhar.lua",
+      "sourceSha256": "25a3396f082765a17438af480aa712cbcc3233fc2ac6fcd41be8c91cc5ddb446",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Abudan_Fe-Dhar Rotting Sleeves exact quantities, retained values, coin and repeat",
+      "file": "effective/quests/skyshrine/Abudan_Fe-Dhar.lua",
+      "sourceSha256": "25a3396f082765a17438af480aa712cbcc3233fc2ac6fcd41be8c91cc5ddb446",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Abudan_Fe-Dhar Rotting Sleeves two gems plus unrelated item refunded",
+      "file": "effective/quests/skyshrine/Abudan_Fe-Dhar.lua",
+      "sourceSha256": "25a3396f082765a17438af480aa712cbcc3233fc2ac6fcd41be8c91cc5ddb446",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Abudan_Fe-Dhar Rotting Sleeves missing armor refunded",
+      "file": "effective/quests/skyshrine/Abudan_Fe-Dhar.lua",
+      "sourceSha256": "25a3396f082765a17438af480aa712cbcc3233fc2ac6fcd41be8c91cc5ddb446",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Abudan_Fe-Dhar Rotting Wristguard exact quantities, retained values, coin and repeat",
+      "file": "effective/quests/skyshrine/Abudan_Fe-Dhar.lua",
+      "sourceSha256": "25a3396f082765a17438af480aa712cbcc3233fc2ac6fcd41be8c91cc5ddb446",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Abudan_Fe-Dhar Rotting Wristguard two gems plus unrelated item refunded",
+      "file": "effective/quests/skyshrine/Abudan_Fe-Dhar.lua",
+      "sourceSha256": "25a3396f082765a17438af480aa712cbcc3233fc2ac6fcd41be8c91cc5ddb446",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Abudan_Fe-Dhar Rotting Wristguard missing armor refunded",
+      "file": "effective/quests/skyshrine/Abudan_Fe-Dhar.lua",
+      "sourceSha256": "25a3396f082765a17438af480aa712cbcc3233fc2ac6fcd41be8c91cc5ddb446",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Abudan_Fe-Dhar Rotting Gloves exact quantities, retained values, coin and repeat",
+      "file": "effective/quests/skyshrine/Abudan_Fe-Dhar.lua",
+      "sourceSha256": "25a3396f082765a17438af480aa712cbcc3233fc2ac6fcd41be8c91cc5ddb446",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Abudan_Fe-Dhar Rotting Gloves two gems plus unrelated item refunded",
+      "file": "effective/quests/skyshrine/Abudan_Fe-Dhar.lua",
+      "sourceSha256": "25a3396f082765a17438af480aa712cbcc3233fc2ac6fcd41be8c91cc5ddb446",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Abudan_Fe-Dhar Rotting Gloves missing armor refunded",
+      "file": "effective/quests/skyshrine/Abudan_Fe-Dhar.lua",
+      "sourceSha256": "25a3396f082765a17438af480aa712cbcc3233fc2ac6fcd41be8c91cc5ddb446",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Abudan_Fe-Dhar Rotting Trousers exact quantities, retained values, coin and repeat",
+      "file": "effective/quests/skyshrine/Abudan_Fe-Dhar.lua",
+      "sourceSha256": "25a3396f082765a17438af480aa712cbcc3233fc2ac6fcd41be8c91cc5ddb446",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Abudan_Fe-Dhar Rotting Trousers two gems plus unrelated item refunded",
+      "file": "effective/quests/skyshrine/Abudan_Fe-Dhar.lua",
+      "sourceSha256": "25a3396f082765a17438af480aa712cbcc3233fc2ac6fcd41be8c91cc5ddb446",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Abudan_Fe-Dhar Rotting Trousers missing armor refunded",
+      "file": "effective/quests/skyshrine/Abudan_Fe-Dhar.lua",
+      "sourceSha256": "25a3396f082765a17438af480aa712cbcc3233fc2ac6fcd41be8c91cc5ddb446",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Abudan_Fe-Dhar Rotting Boots exact quantities, retained values, coin and repeat",
+      "file": "effective/quests/skyshrine/Abudan_Fe-Dhar.lua",
+      "sourceSha256": "25a3396f082765a17438af480aa712cbcc3233fc2ac6fcd41be8c91cc5ddb446",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Abudan_Fe-Dhar Rotting Boots two gems plus unrelated item refunded",
+      "file": "effective/quests/skyshrine/Abudan_Fe-Dhar.lua",
+      "sourceSha256": "25a3396f082765a17438af480aa712cbcc3233fc2ac6fcd41be8c91cc5ddb446",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Abudan_Fe-Dhar Rotting Boots missing armor refunded",
+      "file": "effective/quests/skyshrine/Abudan_Fe-Dhar.lua",
+      "sourceSha256": "25a3396f082765a17438af480aa712cbcc3233fc2ac6fcd41be8c91cc5ddb446",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Abudan_Fe-Dhar dialogue hail",
+      "file": "effective/quests/skyshrine/Abudan_Fe-Dhar.lua",
+      "sourceSha256": "25a3396f082765a17438af480aa712cbcc3233fc2ac6fcd41be8c91cc5ddb446",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Abudan_Fe-Dhar dialogue I am a necromancer",
+      "file": "effective/quests/skyshrine/Abudan_Fe-Dhar.lua",
+      "sourceSha256": "25a3396f082765a17438af480aa712cbcc3233fc2ac6fcd41be8c91cc5ddb446",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Abudan_Fe-Dhar dialogue I will undertake your tasks",
+      "file": "effective/quests/skyshrine/Abudan_Fe-Dhar.lua",
+      "sourceSha256": "25a3396f082765a17438af480aa712cbcc3233fc2ac6fcd41be8c91cc5ddb446",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Abudan_Fe-Dhar dialogue i am a necromancer",
+      "file": "effective/quests/skyshrine/Abudan_Fe-Dhar.lua",
+      "sourceSha256": "25a3396f082765a17438af480aa712cbcc3233fc2ac6fcd41be8c91cc5ddb446",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Abudan_Fe-Dhar dialogue undertake your tasks",
+      "file": "effective/quests/skyshrine/Abudan_Fe-Dhar.lua",
+      "sourceSha256": "25a3396f082765a17438af480aa712cbcc3233fc2ac6fcd41be8c91cc5ddb446",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Abudan_Fe-Dhar dialogue cap",
+      "file": "effective/quests/skyshrine/Abudan_Fe-Dhar.lua",
+      "sourceSha256": "25a3396f082765a17438af480aa712cbcc3233fc2ac6fcd41be8c91cc5ddb446",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Abudan_Fe-Dhar dialogue robe",
+      "file": "effective/quests/skyshrine/Abudan_Fe-Dhar.lua",
+      "sourceSha256": "25a3396f082765a17438af480aa712cbcc3233fc2ac6fcd41be8c91cc5ddb446",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Abudan_Fe-Dhar dialogue sleeves",
+      "file": "effective/quests/skyshrine/Abudan_Fe-Dhar.lua",
+      "sourceSha256": "25a3396f082765a17438af480aa712cbcc3233fc2ac6fcd41be8c91cc5ddb446",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Abudan_Fe-Dhar dialogue wristband",
+      "file": "effective/quests/skyshrine/Abudan_Fe-Dhar.lua",
+      "sourceSha256": "25a3396f082765a17438af480aa712cbcc3233fc2ac6fcd41be8c91cc5ddb446",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Abudan_Fe-Dhar dialogue glove",
+      "file": "effective/quests/skyshrine/Abudan_Fe-Dhar.lua",
+      "sourceSha256": "25a3396f082765a17438af480aa712cbcc3233fc2ac6fcd41be8c91cc5ddb446",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Abudan_Fe-Dhar dialogue leggings",
+      "file": "effective/quests/skyshrine/Abudan_Fe-Dhar.lua",
+      "sourceSha256": "25a3396f082765a17438af480aa712cbcc3233fc2ac6fcd41be8c91cc5ddb446",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Abudan_Fe-Dhar dialogue boots",
+      "file": "effective/quests/skyshrine/Abudan_Fe-Dhar.lua",
+      "sourceSha256": "25a3396f082765a17438af480aa712cbcc3233fc2ac6fcd41be8c91cc5ddb446",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Abudan_Fe-Dhar empty/unrelated offers remain unrewarded",
+      "file": "effective/quests/skyshrine/Abudan_Fe-Dhar.lua",
+      "sourceSha256": "25a3396f082765a17438af480aa712cbcc3233fc2ac6fcd41be8c91cc5ddb446",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "thurgadina/Lorekeeper_Zorik Warlock's Crown exact quantities, retained values, coin and repeat",
+      "file": "changes/p99-armor-review/thurgadina--Lorekeeper_Zorik.lua",
+      "sourceSha256": "bc71a30ea20963454ddd6e0d6425f6f9c7fef6c3c65c74d52f85e3686f494cc9",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Lorekeeper_Zorik Warlock's Crown two gems plus unrelated item refunded",
+      "file": "changes/p99-armor-review/thurgadina--Lorekeeper_Zorik.lua",
+      "sourceSha256": "bc71a30ea20963454ddd6e0d6425f6f9c7fef6c3c65c74d52f85e3686f494cc9",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Lorekeeper_Zorik Warlock's Crown missing armor refunded",
+      "file": "changes/p99-armor-review/thurgadina--Lorekeeper_Zorik.lua",
+      "sourceSha256": "bc71a30ea20963454ddd6e0d6425f6f9c7fef6c3c65c74d52f85e3686f494cc9",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Lorekeeper_Zorik Warlock's Robe exact quantities, retained values, coin and repeat",
+      "file": "changes/p99-armor-review/thurgadina--Lorekeeper_Zorik.lua",
+      "sourceSha256": "bc71a30ea20963454ddd6e0d6425f6f9c7fef6c3c65c74d52f85e3686f494cc9",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Lorekeeper_Zorik Warlock's Robe two gems plus unrelated item refunded",
+      "file": "changes/p99-armor-review/thurgadina--Lorekeeper_Zorik.lua",
+      "sourceSha256": "bc71a30ea20963454ddd6e0d6425f6f9c7fef6c3c65c74d52f85e3686f494cc9",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Lorekeeper_Zorik Warlock's Robe missing armor refunded",
+      "file": "changes/p99-armor-review/thurgadina--Lorekeeper_Zorik.lua",
+      "sourceSha256": "bc71a30ea20963454ddd6e0d6425f6f9c7fef6c3c65c74d52f85e3686f494cc9",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Lorekeeper_Zorik Warlock's Sleeves exact quantities, retained values, coin and repeat",
+      "file": "changes/p99-armor-review/thurgadina--Lorekeeper_Zorik.lua",
+      "sourceSha256": "bc71a30ea20963454ddd6e0d6425f6f9c7fef6c3c65c74d52f85e3686f494cc9",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Lorekeeper_Zorik Warlock's Sleeves two gems plus unrelated item refunded",
+      "file": "changes/p99-armor-review/thurgadina--Lorekeeper_Zorik.lua",
+      "sourceSha256": "bc71a30ea20963454ddd6e0d6425f6f9c7fef6c3c65c74d52f85e3686f494cc9",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Lorekeeper_Zorik Warlock's Sleeves missing armor refunded",
+      "file": "changes/p99-armor-review/thurgadina--Lorekeeper_Zorik.lua",
+      "sourceSha256": "bc71a30ea20963454ddd6e0d6425f6f9c7fef6c3c65c74d52f85e3686f494cc9",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Lorekeeper_Zorik Warlock's Wristguard exact quantities, retained values, coin and repeat",
+      "file": "changes/p99-armor-review/thurgadina--Lorekeeper_Zorik.lua",
+      "sourceSha256": "bc71a30ea20963454ddd6e0d6425f6f9c7fef6c3c65c74d52f85e3686f494cc9",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Lorekeeper_Zorik Warlock's Wristguard two gems plus unrelated item refunded",
+      "file": "changes/p99-armor-review/thurgadina--Lorekeeper_Zorik.lua",
+      "sourceSha256": "bc71a30ea20963454ddd6e0d6425f6f9c7fef6c3c65c74d52f85e3686f494cc9",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Lorekeeper_Zorik Warlock's Wristguard missing armor refunded",
+      "file": "changes/p99-armor-review/thurgadina--Lorekeeper_Zorik.lua",
+      "sourceSha256": "bc71a30ea20963454ddd6e0d6425f6f9c7fef6c3c65c74d52f85e3686f494cc9",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Lorekeeper_Zorik Warlock's Gloves exact quantities, retained values, coin and repeat",
+      "file": "changes/p99-armor-review/thurgadina--Lorekeeper_Zorik.lua",
+      "sourceSha256": "bc71a30ea20963454ddd6e0d6425f6f9c7fef6c3c65c74d52f85e3686f494cc9",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Lorekeeper_Zorik Warlock's Gloves two gems plus unrelated item refunded",
+      "file": "changes/p99-armor-review/thurgadina--Lorekeeper_Zorik.lua",
+      "sourceSha256": "bc71a30ea20963454ddd6e0d6425f6f9c7fef6c3c65c74d52f85e3686f494cc9",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Lorekeeper_Zorik Warlock's Gloves missing armor refunded",
+      "file": "changes/p99-armor-review/thurgadina--Lorekeeper_Zorik.lua",
+      "sourceSha256": "bc71a30ea20963454ddd6e0d6425f6f9c7fef6c3c65c74d52f85e3686f494cc9",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Lorekeeper_Zorik Warlock's Pantaloons exact quantities, retained values, coin and repeat",
+      "file": "changes/p99-armor-review/thurgadina--Lorekeeper_Zorik.lua",
+      "sourceSha256": "bc71a30ea20963454ddd6e0d6425f6f9c7fef6c3c65c74d52f85e3686f494cc9",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Lorekeeper_Zorik Warlock's Pantaloons two gems plus unrelated item refunded",
+      "file": "changes/p99-armor-review/thurgadina--Lorekeeper_Zorik.lua",
+      "sourceSha256": "bc71a30ea20963454ddd6e0d6425f6f9c7fef6c3c65c74d52f85e3686f494cc9",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Lorekeeper_Zorik Warlock's Pantaloons missing armor refunded",
+      "file": "changes/p99-armor-review/thurgadina--Lorekeeper_Zorik.lua",
+      "sourceSha256": "bc71a30ea20963454ddd6e0d6425f6f9c7fef6c3c65c74d52f85e3686f494cc9",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Lorekeeper_Zorik Warlock's Boots exact quantities, retained values, coin and repeat",
+      "file": "changes/p99-armor-review/thurgadina--Lorekeeper_Zorik.lua",
+      "sourceSha256": "bc71a30ea20963454ddd6e0d6425f6f9c7fef6c3c65c74d52f85e3686f494cc9",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Lorekeeper_Zorik Warlock's Boots two gems plus unrelated item refunded",
+      "file": "changes/p99-armor-review/thurgadina--Lorekeeper_Zorik.lua",
+      "sourceSha256": "bc71a30ea20963454ddd6e0d6425f6f9c7fef6c3c65c74d52f85e3686f494cc9",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Lorekeeper_Zorik Warlock's Boots missing armor refunded",
+      "file": "changes/p99-armor-review/thurgadina--Lorekeeper_Zorik.lua",
+      "sourceSha256": "bc71a30ea20963454ddd6e0d6425f6f9c7fef6c3c65c74d52f85e3686f494cc9",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Lorekeeper_Zorik dialogue hail",
+      "file": "changes/p99-armor-review/thurgadina--Lorekeeper_Zorik.lua",
+      "sourceSha256": "bc71a30ea20963454ddd6e0d6425f6f9c7fef6c3c65c74d52f85e3686f494cc9",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Lorekeeper_Zorik dialogue I am a necromancer",
+      "file": "changes/p99-armor-review/thurgadina--Lorekeeper_Zorik.lua",
+      "sourceSha256": "bc71a30ea20963454ddd6e0d6425f6f9c7fef6c3c65c74d52f85e3686f494cc9",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Lorekeeper_Zorik dialogue I will undertake your tasks",
+      "file": "changes/p99-armor-review/thurgadina--Lorekeeper_Zorik.lua",
+      "sourceSha256": "bc71a30ea20963454ddd6e0d6425f6f9c7fef6c3c65c74d52f85e3686f494cc9",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Lorekeeper_Zorik dialogue i am a necromancer",
+      "file": "changes/p99-armor-review/thurgadina--Lorekeeper_Zorik.lua",
+      "sourceSha256": "bc71a30ea20963454ddd6e0d6425f6f9c7fef6c3c65c74d52f85e3686f494cc9",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Lorekeeper_Zorik dialogue undertake your tasks",
+      "file": "changes/p99-armor-review/thurgadina--Lorekeeper_Zorik.lua",
+      "sourceSha256": "bc71a30ea20963454ddd6e0d6425f6f9c7fef6c3c65c74d52f85e3686f494cc9",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Lorekeeper_Zorik dialogue cap",
+      "file": "changes/p99-armor-review/thurgadina--Lorekeeper_Zorik.lua",
+      "sourceSha256": "bc71a30ea20963454ddd6e0d6425f6f9c7fef6c3c65c74d52f85e3686f494cc9",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Lorekeeper_Zorik dialogue robe",
+      "file": "changes/p99-armor-review/thurgadina--Lorekeeper_Zorik.lua",
+      "sourceSha256": "bc71a30ea20963454ddd6e0d6425f6f9c7fef6c3c65c74d52f85e3686f494cc9",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Lorekeeper_Zorik dialogue sleeves",
+      "file": "changes/p99-armor-review/thurgadina--Lorekeeper_Zorik.lua",
+      "sourceSha256": "bc71a30ea20963454ddd6e0d6425f6f9c7fef6c3c65c74d52f85e3686f494cc9",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Lorekeeper_Zorik dialogue wristbands",
+      "file": "changes/p99-armor-review/thurgadina--Lorekeeper_Zorik.lua",
+      "sourceSha256": "bc71a30ea20963454ddd6e0d6425f6f9c7fef6c3c65c74d52f85e3686f494cc9",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Lorekeeper_Zorik dialogue leggings",
+      "file": "changes/p99-armor-review/thurgadina--Lorekeeper_Zorik.lua",
+      "sourceSha256": "bc71a30ea20963454ddd6e0d6425f6f9c7fef6c3c65c74d52f85e3686f494cc9",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Lorekeeper_Zorik dialogue boots",
+      "file": "changes/p99-armor-review/thurgadina--Lorekeeper_Zorik.lua",
+      "sourceSha256": "bc71a30ea20963454ddd6e0d6425f6f9c7fef6c3c65c74d52f85e3686f494cc9",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Lorekeeper_Zorik dialogue gloves",
+      "file": "changes/p99-armor-review/thurgadina--Lorekeeper_Zorik.lua",
+      "sourceSha256": "bc71a30ea20963454ddd6e0d6425f6f9c7fef6c3c65c74d52f85e3686f494cc9",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Lorekeeper_Zorik corrected component wording wristbands",
+      "file": "changes/p99-armor-review/thurgadina--Lorekeeper_Zorik.lua",
+      "sourceSha256": "bc71a30ea20963454ddd6e0d6425f6f9c7fef6c3c65c74d52f85e3686f494cc9",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Lorekeeper_Zorik corrected component wording leggings",
+      "file": "changes/p99-armor-review/thurgadina--Lorekeeper_Zorik.lua",
+      "sourceSha256": "bc71a30ea20963454ddd6e0d6425f6f9c7fef6c3c65c74d52f85e3686f494cc9",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Lorekeeper_Zorik empty/unrelated offers remain unrewarded",
+      "file": "changes/p99-armor-review/thurgadina--Lorekeeper_Zorik.lua",
+      "sourceSha256": "bc71a30ea20963454ddd6e0d6425f6f9c7fef6c3c65c74d52f85e3686f494cc9",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Barlek_Stonefist Shining Helm exact quantities, retained values, coin and repeat",
+      "file": "changes/p99-armor-review/kael--Barlek_Stonefist.lua",
+      "sourceSha256": "b0c09036b9ebb4d8af2f2dc26e0d2e325aa64d685777498d2a2d5220de0b7f19",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Barlek_Stonefist Shining Helm two gems plus unrelated item refunded",
+      "file": "changes/p99-armor-review/kael--Barlek_Stonefist.lua",
+      "sourceSha256": "b0c09036b9ebb4d8af2f2dc26e0d2e325aa64d685777498d2a2d5220de0b7f19",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Barlek_Stonefist Shining Helm missing armor refunded",
+      "file": "changes/p99-armor-review/kael--Barlek_Stonefist.lua",
+      "sourceSha256": "b0c09036b9ebb4d8af2f2dc26e0d2e325aa64d685777498d2a2d5220de0b7f19",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Barlek_Stonefist Shining Breastplate exact quantities, retained values, coin and repeat",
+      "file": "changes/p99-armor-review/kael--Barlek_Stonefist.lua",
+      "sourceSha256": "b0c09036b9ebb4d8af2f2dc26e0d2e325aa64d685777498d2a2d5220de0b7f19",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Barlek_Stonefist Shining Breastplate two gems plus unrelated item refunded",
+      "file": "changes/p99-armor-review/kael--Barlek_Stonefist.lua",
+      "sourceSha256": "b0c09036b9ebb4d8af2f2dc26e0d2e325aa64d685777498d2a2d5220de0b7f19",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Barlek_Stonefist Shining Breastplate missing armor refunded",
+      "file": "changes/p99-armor-review/kael--Barlek_Stonefist.lua",
+      "sourceSha256": "b0c09036b9ebb4d8af2f2dc26e0d2e325aa64d685777498d2a2d5220de0b7f19",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Barlek_Stonefist Shining Vambraces exact quantities, retained values, coin and repeat",
+      "file": "changes/p99-armor-review/kael--Barlek_Stonefist.lua",
+      "sourceSha256": "b0c09036b9ebb4d8af2f2dc26e0d2e325aa64d685777498d2a2d5220de0b7f19",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Barlek_Stonefist Shining Vambraces two gems plus unrelated item refunded",
+      "file": "changes/p99-armor-review/kael--Barlek_Stonefist.lua",
+      "sourceSha256": "b0c09036b9ebb4d8af2f2dc26e0d2e325aa64d685777498d2a2d5220de0b7f19",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Barlek_Stonefist Shining Vambraces missing armor refunded",
+      "file": "changes/p99-armor-review/kael--Barlek_Stonefist.lua",
+      "sourceSha256": "b0c09036b9ebb4d8af2f2dc26e0d2e325aa64d685777498d2a2d5220de0b7f19",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Barlek_Stonefist Shining Bracer exact quantities, retained values, coin and repeat",
+      "file": "changes/p99-armor-review/kael--Barlek_Stonefist.lua",
+      "sourceSha256": "b0c09036b9ebb4d8af2f2dc26e0d2e325aa64d685777498d2a2d5220de0b7f19",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Barlek_Stonefist Shining Bracer two gems plus unrelated item refunded",
+      "file": "changes/p99-armor-review/kael--Barlek_Stonefist.lua",
+      "sourceSha256": "b0c09036b9ebb4d8af2f2dc26e0d2e325aa64d685777498d2a2d5220de0b7f19",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Barlek_Stonefist Shining Bracer missing armor refunded",
+      "file": "changes/p99-armor-review/kael--Barlek_Stonefist.lua",
+      "sourceSha256": "b0c09036b9ebb4d8af2f2dc26e0d2e325aa64d685777498d2a2d5220de0b7f19",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Barlek_Stonefist Shining Gauntlets exact quantities, retained values, coin and repeat",
+      "file": "changes/p99-armor-review/kael--Barlek_Stonefist.lua",
+      "sourceSha256": "b0c09036b9ebb4d8af2f2dc26e0d2e325aa64d685777498d2a2d5220de0b7f19",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Barlek_Stonefist Shining Gauntlets two gems plus unrelated item refunded",
+      "file": "changes/p99-armor-review/kael--Barlek_Stonefist.lua",
+      "sourceSha256": "b0c09036b9ebb4d8af2f2dc26e0d2e325aa64d685777498d2a2d5220de0b7f19",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Barlek_Stonefist Shining Gauntlets missing armor refunded",
+      "file": "changes/p99-armor-review/kael--Barlek_Stonefist.lua",
+      "sourceSha256": "b0c09036b9ebb4d8af2f2dc26e0d2e325aa64d685777498d2a2d5220de0b7f19",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Barlek_Stonefist Shining Greaves exact quantities, retained values, coin and repeat",
+      "file": "changes/p99-armor-review/kael--Barlek_Stonefist.lua",
+      "sourceSha256": "b0c09036b9ebb4d8af2f2dc26e0d2e325aa64d685777498d2a2d5220de0b7f19",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Barlek_Stonefist Shining Greaves two gems plus unrelated item refunded",
+      "file": "changes/p99-armor-review/kael--Barlek_Stonefist.lua",
+      "sourceSha256": "b0c09036b9ebb4d8af2f2dc26e0d2e325aa64d685777498d2a2d5220de0b7f19",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Barlek_Stonefist Shining Greaves missing armor refunded",
+      "file": "changes/p99-armor-review/kael--Barlek_Stonefist.lua",
+      "sourceSha256": "b0c09036b9ebb4d8af2f2dc26e0d2e325aa64d685777498d2a2d5220de0b7f19",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Barlek_Stonefist Shining Boots exact quantities, retained values, coin and repeat",
+      "file": "changes/p99-armor-review/kael--Barlek_Stonefist.lua",
+      "sourceSha256": "b0c09036b9ebb4d8af2f2dc26e0d2e325aa64d685777498d2a2d5220de0b7f19",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Barlek_Stonefist Shining Boots two gems plus unrelated item refunded",
+      "file": "changes/p99-armor-review/kael--Barlek_Stonefist.lua",
+      "sourceSha256": "b0c09036b9ebb4d8af2f2dc26e0d2e325aa64d685777498d2a2d5220de0b7f19",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Barlek_Stonefist Shining Boots missing armor refunded",
+      "file": "changes/p99-armor-review/kael--Barlek_Stonefist.lua",
+      "sourceSha256": "b0c09036b9ebb4d8af2f2dc26e0d2e325aa64d685777498d2a2d5220de0b7f19",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Barlek_Stonefist dialogue hail",
+      "file": "changes/p99-armor-review/kael--Barlek_Stonefist.lua",
+      "sourceSha256": "b0c09036b9ebb4d8af2f2dc26e0d2e325aa64d685777498d2a2d5220de0b7f19",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Barlek_Stonefist dialogue I am a paladin",
+      "file": "changes/p99-armor-review/kael--Barlek_Stonefist.lua",
+      "sourceSha256": "b0c09036b9ebb4d8af2f2dc26e0d2e325aa64d685777498d2a2d5220de0b7f19",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Barlek_Stonefist dialogue I wish to partake of your quests",
+      "file": "changes/p99-armor-review/kael--Barlek_Stonefist.lua",
+      "sourceSha256": "b0c09036b9ebb4d8af2f2dc26e0d2e325aa64d685777498d2a2d5220de0b7f19",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Barlek_Stonefist dialogue i am a paladin",
+      "file": "changes/p99-armor-review/kael--Barlek_Stonefist.lua",
+      "sourceSha256": "b0c09036b9ebb4d8af2f2dc26e0d2e325aa64d685777498d2a2d5220de0b7f19",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Barlek_Stonefist dialogue partake of your quests",
+      "file": "changes/p99-armor-review/kael--Barlek_Stonefist.lua",
+      "sourceSha256": "b0c09036b9ebb4d8af2f2dc26e0d2e325aa64d685777498d2a2d5220de0b7f19",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Barlek_Stonefist dialogue helm",
+      "file": "changes/p99-armor-review/kael--Barlek_Stonefist.lua",
+      "sourceSha256": "b0c09036b9ebb4d8af2f2dc26e0d2e325aa64d685777498d2a2d5220de0b7f19",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Barlek_Stonefist dialogue breastplate",
+      "file": "changes/p99-armor-review/kael--Barlek_Stonefist.lua",
+      "sourceSha256": "b0c09036b9ebb4d8af2f2dc26e0d2e325aa64d685777498d2a2d5220de0b7f19",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Barlek_Stonefist dialogue armplate",
+      "file": "changes/p99-armor-review/kael--Barlek_Stonefist.lua",
+      "sourceSha256": "b0c09036b9ebb4d8af2f2dc26e0d2e325aa64d685777498d2a2d5220de0b7f19",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Barlek_Stonefist dialogue bracer",
+      "file": "changes/p99-armor-review/kael--Barlek_Stonefist.lua",
+      "sourceSha256": "b0c09036b9ebb4d8af2f2dc26e0d2e325aa64d685777498d2a2d5220de0b7f19",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Barlek_Stonefist dialogue gauntlet",
+      "file": "changes/p99-armor-review/kael--Barlek_Stonefist.lua",
+      "sourceSha256": "b0c09036b9ebb4d8af2f2dc26e0d2e325aa64d685777498d2a2d5220de0b7f19",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Barlek_Stonefist dialogue greaves",
+      "file": "changes/p99-armor-review/kael--Barlek_Stonefist.lua",
+      "sourceSha256": "b0c09036b9ebb4d8af2f2dc26e0d2e325aa64d685777498d2a2d5220de0b7f19",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Barlek_Stonefist dialogue boots",
+      "file": "changes/p99-armor-review/kael--Barlek_Stonefist.lua",
+      "sourceSha256": "b0c09036b9ebb4d8af2f2dc26e0d2e325aa64d685777498d2a2d5220de0b7f19",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Barlek_Stonefist empty/unrelated offers remain unrewarded",
+      "file": "changes/p99-armor-review/kael--Barlek_Stonefist.lua",
+      "sourceSha256": "b0c09036b9ebb4d8af2f2dc26e0d2e325aa64d685777498d2a2d5220de0b7f19",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "skyshrine/Adwetram_Fe-Dhar Scaled Knight's Helm exact quantities, retained values, coin and repeat",
+      "file": "effective/quests/skyshrine/Adwetram_Fe-Dhar.lua",
+      "sourceSha256": "f441b52559c491d0256c70d015a004cd7310ce29cf270cdc7a306ea51f0f5dff",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Adwetram_Fe-Dhar Scaled Knight's Helm two gems plus unrelated item refunded",
+      "file": "effective/quests/skyshrine/Adwetram_Fe-Dhar.lua",
+      "sourceSha256": "f441b52559c491d0256c70d015a004cd7310ce29cf270cdc7a306ea51f0f5dff",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Adwetram_Fe-Dhar Scaled Knight's Helm missing armor refunded",
+      "file": "effective/quests/skyshrine/Adwetram_Fe-Dhar.lua",
+      "sourceSha256": "f441b52559c491d0256c70d015a004cd7310ce29cf270cdc7a306ea51f0f5dff",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Adwetram_Fe-Dhar Scaled Knight's Breastplate exact quantities, retained values, coin and repeat",
+      "file": "effective/quests/skyshrine/Adwetram_Fe-Dhar.lua",
+      "sourceSha256": "f441b52559c491d0256c70d015a004cd7310ce29cf270cdc7a306ea51f0f5dff",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Adwetram_Fe-Dhar Scaled Knight's Breastplate two gems plus unrelated item refunded",
+      "file": "effective/quests/skyshrine/Adwetram_Fe-Dhar.lua",
+      "sourceSha256": "f441b52559c491d0256c70d015a004cd7310ce29cf270cdc7a306ea51f0f5dff",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Adwetram_Fe-Dhar Scaled Knight's Breastplate missing armor refunded",
+      "file": "effective/quests/skyshrine/Adwetram_Fe-Dhar.lua",
+      "sourceSha256": "f441b52559c491d0256c70d015a004cd7310ce29cf270cdc7a306ea51f0f5dff",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Adwetram_Fe-Dhar Scaled Knight's Vambraces exact quantities, retained values, coin and repeat",
+      "file": "effective/quests/skyshrine/Adwetram_Fe-Dhar.lua",
+      "sourceSha256": "f441b52559c491d0256c70d015a004cd7310ce29cf270cdc7a306ea51f0f5dff",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Adwetram_Fe-Dhar Scaled Knight's Vambraces two gems plus unrelated item refunded",
+      "file": "effective/quests/skyshrine/Adwetram_Fe-Dhar.lua",
+      "sourceSha256": "f441b52559c491d0256c70d015a004cd7310ce29cf270cdc7a306ea51f0f5dff",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Adwetram_Fe-Dhar Scaled Knight's Vambraces missing armor refunded",
+      "file": "effective/quests/skyshrine/Adwetram_Fe-Dhar.lua",
+      "sourceSha256": "f441b52559c491d0256c70d015a004cd7310ce29cf270cdc7a306ea51f0f5dff",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Adwetram_Fe-Dhar Scaled Knight's Bracer exact quantities, retained values, coin and repeat",
+      "file": "effective/quests/skyshrine/Adwetram_Fe-Dhar.lua",
+      "sourceSha256": "f441b52559c491d0256c70d015a004cd7310ce29cf270cdc7a306ea51f0f5dff",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Adwetram_Fe-Dhar Scaled Knight's Bracer two gems plus unrelated item refunded",
+      "file": "effective/quests/skyshrine/Adwetram_Fe-Dhar.lua",
+      "sourceSha256": "f441b52559c491d0256c70d015a004cd7310ce29cf270cdc7a306ea51f0f5dff",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Adwetram_Fe-Dhar Scaled Knight's Bracer missing armor refunded",
+      "file": "effective/quests/skyshrine/Adwetram_Fe-Dhar.lua",
+      "sourceSha256": "f441b52559c491d0256c70d015a004cd7310ce29cf270cdc7a306ea51f0f5dff",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Adwetram_Fe-Dhar Scaled Knight's Gauntlets exact quantities, retained values, coin and repeat",
+      "file": "effective/quests/skyshrine/Adwetram_Fe-Dhar.lua",
+      "sourceSha256": "f441b52559c491d0256c70d015a004cd7310ce29cf270cdc7a306ea51f0f5dff",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Adwetram_Fe-Dhar Scaled Knight's Gauntlets two gems plus unrelated item refunded",
+      "file": "effective/quests/skyshrine/Adwetram_Fe-Dhar.lua",
+      "sourceSha256": "f441b52559c491d0256c70d015a004cd7310ce29cf270cdc7a306ea51f0f5dff",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Adwetram_Fe-Dhar Scaled Knight's Gauntlets missing armor refunded",
+      "file": "effective/quests/skyshrine/Adwetram_Fe-Dhar.lua",
+      "sourceSha256": "f441b52559c491d0256c70d015a004cd7310ce29cf270cdc7a306ea51f0f5dff",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Adwetram_Fe-Dhar Scaled Knight's Greaves exact quantities, retained values, coin and repeat",
+      "file": "effective/quests/skyshrine/Adwetram_Fe-Dhar.lua",
+      "sourceSha256": "f441b52559c491d0256c70d015a004cd7310ce29cf270cdc7a306ea51f0f5dff",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Adwetram_Fe-Dhar Scaled Knight's Greaves two gems plus unrelated item refunded",
+      "file": "effective/quests/skyshrine/Adwetram_Fe-Dhar.lua",
+      "sourceSha256": "f441b52559c491d0256c70d015a004cd7310ce29cf270cdc7a306ea51f0f5dff",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Adwetram_Fe-Dhar Scaled Knight's Greaves missing armor refunded",
+      "file": "effective/quests/skyshrine/Adwetram_Fe-Dhar.lua",
+      "sourceSha256": "f441b52559c491d0256c70d015a004cd7310ce29cf270cdc7a306ea51f0f5dff",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Adwetram_Fe-Dhar Scaled Knight's Boots exact quantities, retained values, coin and repeat",
+      "file": "effective/quests/skyshrine/Adwetram_Fe-Dhar.lua",
+      "sourceSha256": "f441b52559c491d0256c70d015a004cd7310ce29cf270cdc7a306ea51f0f5dff",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Adwetram_Fe-Dhar Scaled Knight's Boots two gems plus unrelated item refunded",
+      "file": "effective/quests/skyshrine/Adwetram_Fe-Dhar.lua",
+      "sourceSha256": "f441b52559c491d0256c70d015a004cd7310ce29cf270cdc7a306ea51f0f5dff",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Adwetram_Fe-Dhar Scaled Knight's Boots missing armor refunded",
+      "file": "effective/quests/skyshrine/Adwetram_Fe-Dhar.lua",
+      "sourceSha256": "f441b52559c491d0256c70d015a004cd7310ce29cf270cdc7a306ea51f0f5dff",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Adwetram_Fe-Dhar dialogue hail",
+      "file": "effective/quests/skyshrine/Adwetram_Fe-Dhar.lua",
+      "sourceSha256": "f441b52559c491d0256c70d015a004cd7310ce29cf270cdc7a306ea51f0f5dff",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Adwetram_Fe-Dhar dialogue I wish to partake of your quests",
+      "file": "effective/quests/skyshrine/Adwetram_Fe-Dhar.lua",
+      "sourceSha256": "f441b52559c491d0256c70d015a004cd7310ce29cf270cdc7a306ea51f0f5dff",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Adwetram_Fe-Dhar dialogue i wish to partake of your quests",
+      "file": "effective/quests/skyshrine/Adwetram_Fe-Dhar.lua",
+      "sourceSha256": "f441b52559c491d0256c70d015a004cd7310ce29cf270cdc7a306ea51f0f5dff",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Adwetram_Fe-Dhar dialogue helm",
+      "file": "effective/quests/skyshrine/Adwetram_Fe-Dhar.lua",
+      "sourceSha256": "f441b52559c491d0256c70d015a004cd7310ce29cf270cdc7a306ea51f0f5dff",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Adwetram_Fe-Dhar dialogue breastplate",
+      "file": "effective/quests/skyshrine/Adwetram_Fe-Dhar.lua",
+      "sourceSha256": "f441b52559c491d0256c70d015a004cd7310ce29cf270cdc7a306ea51f0f5dff",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Adwetram_Fe-Dhar dialogue armplate",
+      "file": "effective/quests/skyshrine/Adwetram_Fe-Dhar.lua",
+      "sourceSha256": "f441b52559c491d0256c70d015a004cd7310ce29cf270cdc7a306ea51f0f5dff",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Adwetram_Fe-Dhar dialogue bracer",
+      "file": "effective/quests/skyshrine/Adwetram_Fe-Dhar.lua",
+      "sourceSha256": "f441b52559c491d0256c70d015a004cd7310ce29cf270cdc7a306ea51f0f5dff",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Adwetram_Fe-Dhar dialogue gauntlet",
+      "file": "effective/quests/skyshrine/Adwetram_Fe-Dhar.lua",
+      "sourceSha256": "f441b52559c491d0256c70d015a004cd7310ce29cf270cdc7a306ea51f0f5dff",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Adwetram_Fe-Dhar dialogue greaves",
+      "file": "effective/quests/skyshrine/Adwetram_Fe-Dhar.lua",
+      "sourceSha256": "f441b52559c491d0256c70d015a004cd7310ce29cf270cdc7a306ea51f0f5dff",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Adwetram_Fe-Dhar dialogue boots",
+      "file": "effective/quests/skyshrine/Adwetram_Fe-Dhar.lua",
+      "sourceSha256": "f441b52559c491d0256c70d015a004cd7310ce29cf270cdc7a306ea51f0f5dff",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Adwetram_Fe-Dhar empty/unrelated offers remain unrewarded",
+      "file": "effective/quests/skyshrine/Adwetram_Fe-Dhar.lua",
+      "sourceSha256": "f441b52559c491d0256c70d015a004cd7310ce29cf270cdc7a306ea51f0f5dff",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "thurgadina/Battlepriest_Daragor Runed Protector's Helm exact quantities, retained values, coin and repeat",
+      "file": "changes/p99-armor-review/thurgadina--Battlepriest_Daragor.lua",
+      "sourceSha256": "5aa462ebd425a634ae1ef6a36317a7025ddb7fc3e943e8da29ed2625b9d23e2a",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Battlepriest_Daragor Runed Protector's Helm two gems plus unrelated item refunded",
+      "file": "changes/p99-armor-review/thurgadina--Battlepriest_Daragor.lua",
+      "sourceSha256": "5aa462ebd425a634ae1ef6a36317a7025ddb7fc3e943e8da29ed2625b9d23e2a",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Battlepriest_Daragor Runed Protector's Helm missing armor refunded",
+      "file": "changes/p99-armor-review/thurgadina--Battlepriest_Daragor.lua",
+      "sourceSha256": "5aa462ebd425a634ae1ef6a36317a7025ddb7fc3e943e8da29ed2625b9d23e2a",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Battlepriest_Daragor Runed Protector's Breastplate exact quantities, retained values, coin and repeat",
+      "file": "changes/p99-armor-review/thurgadina--Battlepriest_Daragor.lua",
+      "sourceSha256": "5aa462ebd425a634ae1ef6a36317a7025ddb7fc3e943e8da29ed2625b9d23e2a",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Battlepriest_Daragor Runed Protector's Breastplate two gems plus unrelated item refunded",
+      "file": "changes/p99-armor-review/thurgadina--Battlepriest_Daragor.lua",
+      "sourceSha256": "5aa462ebd425a634ae1ef6a36317a7025ddb7fc3e943e8da29ed2625b9d23e2a",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Battlepriest_Daragor Runed Protector's Breastplate missing armor refunded",
+      "file": "changes/p99-armor-review/thurgadina--Battlepriest_Daragor.lua",
+      "sourceSha256": "5aa462ebd425a634ae1ef6a36317a7025ddb7fc3e943e8da29ed2625b9d23e2a",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Battlepriest_Daragor Runed Protector's Vambraces exact quantities, retained values, coin and repeat",
+      "file": "changes/p99-armor-review/thurgadina--Battlepriest_Daragor.lua",
+      "sourceSha256": "5aa462ebd425a634ae1ef6a36317a7025ddb7fc3e943e8da29ed2625b9d23e2a",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Battlepriest_Daragor Runed Protector's Vambraces two gems plus unrelated item refunded",
+      "file": "changes/p99-armor-review/thurgadina--Battlepriest_Daragor.lua",
+      "sourceSha256": "5aa462ebd425a634ae1ef6a36317a7025ddb7fc3e943e8da29ed2625b9d23e2a",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Battlepriest_Daragor Runed Protector's Vambraces missing armor refunded",
+      "file": "changes/p99-armor-review/thurgadina--Battlepriest_Daragor.lua",
+      "sourceSha256": "5aa462ebd425a634ae1ef6a36317a7025ddb7fc3e943e8da29ed2625b9d23e2a",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Battlepriest_Daragor Runed Protector's Bracer exact quantities, retained values, coin and repeat",
+      "file": "changes/p99-armor-review/thurgadina--Battlepriest_Daragor.lua",
+      "sourceSha256": "5aa462ebd425a634ae1ef6a36317a7025ddb7fc3e943e8da29ed2625b9d23e2a",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Battlepriest_Daragor Runed Protector's Bracer two gems plus unrelated item refunded",
+      "file": "changes/p99-armor-review/thurgadina--Battlepriest_Daragor.lua",
+      "sourceSha256": "5aa462ebd425a634ae1ef6a36317a7025ddb7fc3e943e8da29ed2625b9d23e2a",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Battlepriest_Daragor Runed Protector's Bracer missing armor refunded",
+      "file": "changes/p99-armor-review/thurgadina--Battlepriest_Daragor.lua",
+      "sourceSha256": "5aa462ebd425a634ae1ef6a36317a7025ddb7fc3e943e8da29ed2625b9d23e2a",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Battlepriest_Daragor Runed Protector's Gauntlets exact quantities, retained values, coin and repeat",
+      "file": "changes/p99-armor-review/thurgadina--Battlepriest_Daragor.lua",
+      "sourceSha256": "5aa462ebd425a634ae1ef6a36317a7025ddb7fc3e943e8da29ed2625b9d23e2a",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Battlepriest_Daragor Runed Protector's Gauntlets two gems plus unrelated item refunded",
+      "file": "changes/p99-armor-review/thurgadina--Battlepriest_Daragor.lua",
+      "sourceSha256": "5aa462ebd425a634ae1ef6a36317a7025ddb7fc3e943e8da29ed2625b9d23e2a",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Battlepriest_Daragor Runed Protector's Gauntlets missing armor refunded",
+      "file": "changes/p99-armor-review/thurgadina--Battlepriest_Daragor.lua",
+      "sourceSha256": "5aa462ebd425a634ae1ef6a36317a7025ddb7fc3e943e8da29ed2625b9d23e2a",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Battlepriest_Daragor Runed Protector's Greaves exact quantities, retained values, coin and repeat",
+      "file": "changes/p99-armor-review/thurgadina--Battlepriest_Daragor.lua",
+      "sourceSha256": "5aa462ebd425a634ae1ef6a36317a7025ddb7fc3e943e8da29ed2625b9d23e2a",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Battlepriest_Daragor Runed Protector's Greaves two gems plus unrelated item refunded",
+      "file": "changes/p99-armor-review/thurgadina--Battlepriest_Daragor.lua",
+      "sourceSha256": "5aa462ebd425a634ae1ef6a36317a7025ddb7fc3e943e8da29ed2625b9d23e2a",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Battlepriest_Daragor Runed Protector's Greaves missing armor refunded",
+      "file": "changes/p99-armor-review/thurgadina--Battlepriest_Daragor.lua",
+      "sourceSha256": "5aa462ebd425a634ae1ef6a36317a7025ddb7fc3e943e8da29ed2625b9d23e2a",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Battlepriest_Daragor Runed Protector's Boots exact quantities, retained values, coin and repeat",
+      "file": "changes/p99-armor-review/thurgadina--Battlepriest_Daragor.lua",
+      "sourceSha256": "5aa462ebd425a634ae1ef6a36317a7025ddb7fc3e943e8da29ed2625b9d23e2a",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Battlepriest_Daragor Runed Protector's Boots two gems plus unrelated item refunded",
+      "file": "changes/p99-armor-review/thurgadina--Battlepriest_Daragor.lua",
+      "sourceSha256": "5aa462ebd425a634ae1ef6a36317a7025ddb7fc3e943e8da29ed2625b9d23e2a",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Battlepriest_Daragor Runed Protector's Boots missing armor refunded",
+      "file": "changes/p99-armor-review/thurgadina--Battlepriest_Daragor.lua",
+      "sourceSha256": "5aa462ebd425a634ae1ef6a36317a7025ddb7fc3e943e8da29ed2625b9d23e2a",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Battlepriest_Daragor dialogue hail",
+      "file": "changes/p99-armor-review/thurgadina--Battlepriest_Daragor.lua",
+      "sourceSha256": "5aa462ebd425a634ae1ef6a36317a7025ddb7fc3e943e8da29ed2625b9d23e2a",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Battlepriest_Daragor dialogue I am a paladin",
+      "file": "changes/p99-armor-review/thurgadina--Battlepriest_Daragor.lua",
+      "sourceSha256": "5aa462ebd425a634ae1ef6a36317a7025ddb7fc3e943e8da29ed2625b9d23e2a",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Battlepriest_Daragor dialogue I wish to partake of your quests",
+      "file": "changes/p99-armor-review/thurgadina--Battlepriest_Daragor.lua",
+      "sourceSha256": "5aa462ebd425a634ae1ef6a36317a7025ddb7fc3e943e8da29ed2625b9d23e2a",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Battlepriest_Daragor dialogue i am a paladin",
+      "file": "changes/p99-armor-review/thurgadina--Battlepriest_Daragor.lua",
+      "sourceSha256": "5aa462ebd425a634ae1ef6a36317a7025ddb7fc3e943e8da29ed2625b9d23e2a",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Battlepriest_Daragor dialogue partake of your quests",
+      "file": "changes/p99-armor-review/thurgadina--Battlepriest_Daragor.lua",
+      "sourceSha256": "5aa462ebd425a634ae1ef6a36317a7025ddb7fc3e943e8da29ed2625b9d23e2a",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Battlepriest_Daragor dialogue helm",
+      "file": "changes/p99-armor-review/thurgadina--Battlepriest_Daragor.lua",
+      "sourceSha256": "5aa462ebd425a634ae1ef6a36317a7025ddb7fc3e943e8da29ed2625b9d23e2a",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Battlepriest_Daragor dialogue breastplate",
+      "file": "changes/p99-armor-review/thurgadina--Battlepriest_Daragor.lua",
+      "sourceSha256": "5aa462ebd425a634ae1ef6a36317a7025ddb7fc3e943e8da29ed2625b9d23e2a",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Battlepriest_Daragor dialogue armplate",
+      "file": "changes/p99-armor-review/thurgadina--Battlepriest_Daragor.lua",
+      "sourceSha256": "5aa462ebd425a634ae1ef6a36317a7025ddb7fc3e943e8da29ed2625b9d23e2a",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Battlepriest_Daragor dialogue bracer",
+      "file": "changes/p99-armor-review/thurgadina--Battlepriest_Daragor.lua",
+      "sourceSha256": "5aa462ebd425a634ae1ef6a36317a7025ddb7fc3e943e8da29ed2625b9d23e2a",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Battlepriest_Daragor dialogue gauntlet",
+      "file": "changes/p99-armor-review/thurgadina--Battlepriest_Daragor.lua",
+      "sourceSha256": "5aa462ebd425a634ae1ef6a36317a7025ddb7fc3e943e8da29ed2625b9d23e2a",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Battlepriest_Daragor dialogue greaves",
+      "file": "changes/p99-armor-review/thurgadina--Battlepriest_Daragor.lua",
+      "sourceSha256": "5aa462ebd425a634ae1ef6a36317a7025ddb7fc3e943e8da29ed2625b9d23e2a",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Battlepriest_Daragor dialogue boots",
+      "file": "changes/p99-armor-review/thurgadina--Battlepriest_Daragor.lua",
+      "sourceSha256": "5aa462ebd425a634ae1ef6a36317a7025ddb7fc3e943e8da29ed2625b9d23e2a",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Battlepriest_Daragor corrected component wording greaves",
+      "file": "changes/p99-armor-review/thurgadina--Battlepriest_Daragor.lua",
+      "sourceSha256": "5aa462ebd425a634ae1ef6a36317a7025ddb7fc3e943e8da29ed2625b9d23e2a",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Battlepriest_Daragor empty/unrelated offers remain unrewarded",
+      "file": "changes/p99-armor-review/thurgadina--Battlepriest_Daragor.lua",
+      "sourceSha256": "5aa462ebd425a634ae1ef6a36317a7025ddb7fc3e943e8da29ed2625b9d23e2a",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Gragek_Mjlorkigar Forest Stalker's Coif exact quantities, retained values, coin and repeat",
+      "file": "changes/p99-armor-review/kael--Gragek_Mjlorkigar.lua",
+      "sourceSha256": "77ea38a181b033e87f071e34fd56273743d2fec6140dcabbbd4889184707a05f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Gragek_Mjlorkigar Forest Stalker's Coif two gems plus unrelated item refunded",
+      "file": "changes/p99-armor-review/kael--Gragek_Mjlorkigar.lua",
+      "sourceSha256": "77ea38a181b033e87f071e34fd56273743d2fec6140dcabbbd4889184707a05f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Gragek_Mjlorkigar Forest Stalker's Coif missing armor refunded",
+      "file": "changes/p99-armor-review/kael--Gragek_Mjlorkigar.lua",
+      "sourceSha256": "77ea38a181b033e87f071e34fd56273743d2fec6140dcabbbd4889184707a05f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Gragek_Mjlorkigar Forest Stalker's Breastplate exact quantities, retained values, coin and repeat",
+      "file": "changes/p99-armor-review/kael--Gragek_Mjlorkigar.lua",
+      "sourceSha256": "77ea38a181b033e87f071e34fd56273743d2fec6140dcabbbd4889184707a05f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Gragek_Mjlorkigar Forest Stalker's Breastplate two gems plus unrelated item refunded",
+      "file": "changes/p99-armor-review/kael--Gragek_Mjlorkigar.lua",
+      "sourceSha256": "77ea38a181b033e87f071e34fd56273743d2fec6140dcabbbd4889184707a05f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Gragek_Mjlorkigar Forest Stalker's Breastplate missing armor refunded",
+      "file": "changes/p99-armor-review/kael--Gragek_Mjlorkigar.lua",
+      "sourceSha256": "77ea38a181b033e87f071e34fd56273743d2fec6140dcabbbd4889184707a05f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Gragek_Mjlorkigar Forest Stalker's Vambraces exact quantities, retained values, coin and repeat",
+      "file": "changes/p99-armor-review/kael--Gragek_Mjlorkigar.lua",
+      "sourceSha256": "77ea38a181b033e87f071e34fd56273743d2fec6140dcabbbd4889184707a05f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Gragek_Mjlorkigar Forest Stalker's Vambraces two gems plus unrelated item refunded",
+      "file": "changes/p99-armor-review/kael--Gragek_Mjlorkigar.lua",
+      "sourceSha256": "77ea38a181b033e87f071e34fd56273743d2fec6140dcabbbd4889184707a05f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Gragek_Mjlorkigar Forest Stalker's Vambraces missing armor refunded",
+      "file": "changes/p99-armor-review/kael--Gragek_Mjlorkigar.lua",
+      "sourceSha256": "77ea38a181b033e87f071e34fd56273743d2fec6140dcabbbd4889184707a05f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Gragek_Mjlorkigar Forest Stalker's Bracer exact quantities, retained values, coin and repeat",
+      "file": "changes/p99-armor-review/kael--Gragek_Mjlorkigar.lua",
+      "sourceSha256": "77ea38a181b033e87f071e34fd56273743d2fec6140dcabbbd4889184707a05f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Gragek_Mjlorkigar Forest Stalker's Bracer two gems plus unrelated item refunded",
+      "file": "changes/p99-armor-review/kael--Gragek_Mjlorkigar.lua",
+      "sourceSha256": "77ea38a181b033e87f071e34fd56273743d2fec6140dcabbbd4889184707a05f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Gragek_Mjlorkigar Forest Stalker's Bracer missing armor refunded",
+      "file": "changes/p99-armor-review/kael--Gragek_Mjlorkigar.lua",
+      "sourceSha256": "77ea38a181b033e87f071e34fd56273743d2fec6140dcabbbd4889184707a05f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Gragek_Mjlorkigar Forest Stalker's Gauntlets exact quantities, retained values, coin and repeat",
+      "file": "changes/p99-armor-review/kael--Gragek_Mjlorkigar.lua",
+      "sourceSha256": "77ea38a181b033e87f071e34fd56273743d2fec6140dcabbbd4889184707a05f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Gragek_Mjlorkigar Forest Stalker's Gauntlets two gems plus unrelated item refunded",
+      "file": "changes/p99-armor-review/kael--Gragek_Mjlorkigar.lua",
+      "sourceSha256": "77ea38a181b033e87f071e34fd56273743d2fec6140dcabbbd4889184707a05f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Gragek_Mjlorkigar Forest Stalker's Gauntlets missing armor refunded",
+      "file": "changes/p99-armor-review/kael--Gragek_Mjlorkigar.lua",
+      "sourceSha256": "77ea38a181b033e87f071e34fd56273743d2fec6140dcabbbd4889184707a05f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Gragek_Mjlorkigar Forest Stalker's Greaves exact quantities, retained values, coin and repeat",
+      "file": "changes/p99-armor-review/kael--Gragek_Mjlorkigar.lua",
+      "sourceSha256": "77ea38a181b033e87f071e34fd56273743d2fec6140dcabbbd4889184707a05f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Gragek_Mjlorkigar Forest Stalker's Greaves two gems plus unrelated item refunded",
+      "file": "changes/p99-armor-review/kael--Gragek_Mjlorkigar.lua",
+      "sourceSha256": "77ea38a181b033e87f071e34fd56273743d2fec6140dcabbbd4889184707a05f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Gragek_Mjlorkigar Forest Stalker's Greaves missing armor refunded",
+      "file": "changes/p99-armor-review/kael--Gragek_Mjlorkigar.lua",
+      "sourceSha256": "77ea38a181b033e87f071e34fd56273743d2fec6140dcabbbd4889184707a05f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Gragek_Mjlorkigar Forest Stalker's Boots exact quantities, retained values, coin and repeat",
+      "file": "changes/p99-armor-review/kael--Gragek_Mjlorkigar.lua",
+      "sourceSha256": "77ea38a181b033e87f071e34fd56273743d2fec6140dcabbbd4889184707a05f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Gragek_Mjlorkigar Forest Stalker's Boots two gems plus unrelated item refunded",
+      "file": "changes/p99-armor-review/kael--Gragek_Mjlorkigar.lua",
+      "sourceSha256": "77ea38a181b033e87f071e34fd56273743d2fec6140dcabbbd4889184707a05f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Gragek_Mjlorkigar Forest Stalker's Boots missing armor refunded",
+      "file": "changes/p99-armor-review/kael--Gragek_Mjlorkigar.lua",
+      "sourceSha256": "77ea38a181b033e87f071e34fd56273743d2fec6140dcabbbd4889184707a05f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Gragek_Mjlorkigar dialogue hail",
+      "file": "changes/p99-armor-review/kael--Gragek_Mjlorkigar.lua",
+      "sourceSha256": "77ea38a181b033e87f071e34fd56273743d2fec6140dcabbbd4889184707a05f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Gragek_Mjlorkigar dialogue I am a ranger",
+      "file": "changes/p99-armor-review/kael--Gragek_Mjlorkigar.lua",
+      "sourceSha256": "77ea38a181b033e87f071e34fd56273743d2fec6140dcabbbd4889184707a05f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Gragek_Mjlorkigar dialogue I am ready to submit to your will",
+      "file": "changes/p99-armor-review/kael--Gragek_Mjlorkigar.lua",
+      "sourceSha256": "77ea38a181b033e87f071e34fd56273743d2fec6140dcabbbd4889184707a05f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Gragek_Mjlorkigar dialogue i am a ranger",
+      "file": "changes/p99-armor-review/kael--Gragek_Mjlorkigar.lua",
+      "sourceSha256": "77ea38a181b033e87f071e34fd56273743d2fec6140dcabbbd4889184707a05f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Gragek_Mjlorkigar dialogue ready to submit to your will",
+      "file": "changes/p99-armor-review/kael--Gragek_Mjlorkigar.lua",
+      "sourceSha256": "77ea38a181b033e87f071e34fd56273743d2fec6140dcabbbd4889184707a05f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Gragek_Mjlorkigar dialogue coif",
+      "file": "changes/p99-armor-review/kael--Gragek_Mjlorkigar.lua",
+      "sourceSha256": "77ea38a181b033e87f071e34fd56273743d2fec6140dcabbbd4889184707a05f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Gragek_Mjlorkigar dialogue breastplate",
+      "file": "changes/p99-armor-review/kael--Gragek_Mjlorkigar.lua",
+      "sourceSha256": "77ea38a181b033e87f071e34fd56273743d2fec6140dcabbbd4889184707a05f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Gragek_Mjlorkigar dialogue sleeves",
+      "file": "changes/p99-armor-review/kael--Gragek_Mjlorkigar.lua",
+      "sourceSha256": "77ea38a181b033e87f071e34fd56273743d2fec6140dcabbbd4889184707a05f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Gragek_Mjlorkigar dialogue bracer",
+      "file": "changes/p99-armor-review/kael--Gragek_Mjlorkigar.lua",
+      "sourceSha256": "77ea38a181b033e87f071e34fd56273743d2fec6140dcabbbd4889184707a05f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Gragek_Mjlorkigar dialogue gauntlets",
+      "file": "changes/p99-armor-review/kael--Gragek_Mjlorkigar.lua",
+      "sourceSha256": "77ea38a181b033e87f071e34fd56273743d2fec6140dcabbbd4889184707a05f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Gragek_Mjlorkigar dialogue leggings",
+      "file": "changes/p99-armor-review/kael--Gragek_Mjlorkigar.lua",
+      "sourceSha256": "77ea38a181b033e87f071e34fd56273743d2fec6140dcabbbd4889184707a05f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Gragek_Mjlorkigar dialogue boots",
+      "file": "changes/p99-armor-review/kael--Gragek_Mjlorkigar.lua",
+      "sourceSha256": "77ea38a181b033e87f071e34fd56273743d2fec6140dcabbbd4889184707a05f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Gragek_Mjlorkigar corrected component wording bracer",
+      "file": "changes/p99-armor-review/kael--Gragek_Mjlorkigar.lua",
+      "sourceSha256": "77ea38a181b033e87f071e34fd56273743d2fec6140dcabbbd4889184707a05f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Gragek_Mjlorkigar empty/unrelated offers remain unrewarded",
+      "file": "changes/p99-armor-review/kael--Gragek_Mjlorkigar.lua",
+      "sourceSha256": "77ea38a181b033e87f071e34fd56273743d2fec6140dcabbbd4889184707a05f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "skyshrine/Nalelin_Fe-Dhar Golden Leaf Helm exact quantities, retained values, coin and repeat",
+      "file": "effective/quests/skyshrine/Nalelin_Fe-Dhar.lua",
+      "sourceSha256": "d24889721fe42296a144daa711f2ef1e2e085008b643ac2953a4b37e4945ec86",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Nalelin_Fe-Dhar Golden Leaf Helm two gems plus unrelated item refunded",
+      "file": "effective/quests/skyshrine/Nalelin_Fe-Dhar.lua",
+      "sourceSha256": "d24889721fe42296a144daa711f2ef1e2e085008b643ac2953a4b37e4945ec86",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Nalelin_Fe-Dhar Golden Leaf Helm missing armor refunded",
+      "file": "effective/quests/skyshrine/Nalelin_Fe-Dhar.lua",
+      "sourceSha256": "d24889721fe42296a144daa711f2ef1e2e085008b643ac2953a4b37e4945ec86",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Nalelin_Fe-Dhar Golden Leaf Breastplate exact quantities, retained values, coin and repeat",
+      "file": "effective/quests/skyshrine/Nalelin_Fe-Dhar.lua",
+      "sourceSha256": "d24889721fe42296a144daa711f2ef1e2e085008b643ac2953a4b37e4945ec86",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Nalelin_Fe-Dhar Golden Leaf Breastplate two gems plus unrelated item refunded",
+      "file": "effective/quests/skyshrine/Nalelin_Fe-Dhar.lua",
+      "sourceSha256": "d24889721fe42296a144daa711f2ef1e2e085008b643ac2953a4b37e4945ec86",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Nalelin_Fe-Dhar Golden Leaf Breastplate missing armor refunded",
+      "file": "effective/quests/skyshrine/Nalelin_Fe-Dhar.lua",
+      "sourceSha256": "d24889721fe42296a144daa711f2ef1e2e085008b643ac2953a4b37e4945ec86",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Nalelin_Fe-Dhar Golden Leaf Vambraces exact quantities, retained values, coin and repeat",
+      "file": "effective/quests/skyshrine/Nalelin_Fe-Dhar.lua",
+      "sourceSha256": "d24889721fe42296a144daa711f2ef1e2e085008b643ac2953a4b37e4945ec86",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Nalelin_Fe-Dhar Golden Leaf Vambraces two gems plus unrelated item refunded",
+      "file": "effective/quests/skyshrine/Nalelin_Fe-Dhar.lua",
+      "sourceSha256": "d24889721fe42296a144daa711f2ef1e2e085008b643ac2953a4b37e4945ec86",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Nalelin_Fe-Dhar Golden Leaf Vambraces missing armor refunded",
+      "file": "effective/quests/skyshrine/Nalelin_Fe-Dhar.lua",
+      "sourceSha256": "d24889721fe42296a144daa711f2ef1e2e085008b643ac2953a4b37e4945ec86",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Nalelin_Fe-Dhar Golden Leaf Bracer exact quantities, retained values, coin and repeat",
+      "file": "effective/quests/skyshrine/Nalelin_Fe-Dhar.lua",
+      "sourceSha256": "d24889721fe42296a144daa711f2ef1e2e085008b643ac2953a4b37e4945ec86",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Nalelin_Fe-Dhar Golden Leaf Bracer two gems plus unrelated item refunded",
+      "file": "effective/quests/skyshrine/Nalelin_Fe-Dhar.lua",
+      "sourceSha256": "d24889721fe42296a144daa711f2ef1e2e085008b643ac2953a4b37e4945ec86",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Nalelin_Fe-Dhar Golden Leaf Bracer missing armor refunded",
+      "file": "effective/quests/skyshrine/Nalelin_Fe-Dhar.lua",
+      "sourceSha256": "d24889721fe42296a144daa711f2ef1e2e085008b643ac2953a4b37e4945ec86",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Nalelin_Fe-Dhar Golden Leaf Gauntlets exact quantities, retained values, coin and repeat",
+      "file": "effective/quests/skyshrine/Nalelin_Fe-Dhar.lua",
+      "sourceSha256": "d24889721fe42296a144daa711f2ef1e2e085008b643ac2953a4b37e4945ec86",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Nalelin_Fe-Dhar Golden Leaf Gauntlets two gems plus unrelated item refunded",
+      "file": "effective/quests/skyshrine/Nalelin_Fe-Dhar.lua",
+      "sourceSha256": "d24889721fe42296a144daa711f2ef1e2e085008b643ac2953a4b37e4945ec86",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Nalelin_Fe-Dhar Golden Leaf Gauntlets missing armor refunded",
+      "file": "effective/quests/skyshrine/Nalelin_Fe-Dhar.lua",
+      "sourceSha256": "d24889721fe42296a144daa711f2ef1e2e085008b643ac2953a4b37e4945ec86",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Nalelin_Fe-Dhar Golden Leaf Greaves exact quantities, retained values, coin and repeat",
+      "file": "effective/quests/skyshrine/Nalelin_Fe-Dhar.lua",
+      "sourceSha256": "d24889721fe42296a144daa711f2ef1e2e085008b643ac2953a4b37e4945ec86",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Nalelin_Fe-Dhar Golden Leaf Greaves two gems plus unrelated item refunded",
+      "file": "effective/quests/skyshrine/Nalelin_Fe-Dhar.lua",
+      "sourceSha256": "d24889721fe42296a144daa711f2ef1e2e085008b643ac2953a4b37e4945ec86",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Nalelin_Fe-Dhar Golden Leaf Greaves missing armor refunded",
+      "file": "effective/quests/skyshrine/Nalelin_Fe-Dhar.lua",
+      "sourceSha256": "d24889721fe42296a144daa711f2ef1e2e085008b643ac2953a4b37e4945ec86",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Nalelin_Fe-Dhar Golden Leaf Boots exact quantities, retained values, coin and repeat",
+      "file": "effective/quests/skyshrine/Nalelin_Fe-Dhar.lua",
+      "sourceSha256": "d24889721fe42296a144daa711f2ef1e2e085008b643ac2953a4b37e4945ec86",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Nalelin_Fe-Dhar Golden Leaf Boots two gems plus unrelated item refunded",
+      "file": "effective/quests/skyshrine/Nalelin_Fe-Dhar.lua",
+      "sourceSha256": "d24889721fe42296a144daa711f2ef1e2e085008b643ac2953a4b37e4945ec86",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Nalelin_Fe-Dhar Golden Leaf Boots missing armor refunded",
+      "file": "effective/quests/skyshrine/Nalelin_Fe-Dhar.lua",
+      "sourceSha256": "d24889721fe42296a144daa711f2ef1e2e085008b643ac2953a4b37e4945ec86",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Nalelin_Fe-Dhar dialogue hail",
+      "file": "effective/quests/skyshrine/Nalelin_Fe-Dhar.lua",
+      "sourceSha256": "d24889721fe42296a144daa711f2ef1e2e085008b643ac2953a4b37e4945ec86",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Nalelin_Fe-Dhar dialogue I am ready to submit to your will",
+      "file": "effective/quests/skyshrine/Nalelin_Fe-Dhar.lua",
+      "sourceSha256": "d24889721fe42296a144daa711f2ef1e2e085008b643ac2953a4b37e4945ec86",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Nalelin_Fe-Dhar dialogue submit to your will",
+      "file": "effective/quests/skyshrine/Nalelin_Fe-Dhar.lua",
+      "sourceSha256": "d24889721fe42296a144daa711f2ef1e2e085008b643ac2953a4b37e4945ec86",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Nalelin_Fe-Dhar dialogue coif",
+      "file": "effective/quests/skyshrine/Nalelin_Fe-Dhar.lua",
+      "sourceSha256": "d24889721fe42296a144daa711f2ef1e2e085008b643ac2953a4b37e4945ec86",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Nalelin_Fe-Dhar dialogue breastplate",
+      "file": "effective/quests/skyshrine/Nalelin_Fe-Dhar.lua",
+      "sourceSha256": "d24889721fe42296a144daa711f2ef1e2e085008b643ac2953a4b37e4945ec86",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Nalelin_Fe-Dhar dialogue sleeves",
+      "file": "effective/quests/skyshrine/Nalelin_Fe-Dhar.lua",
+      "sourceSha256": "d24889721fe42296a144daa711f2ef1e2e085008b643ac2953a4b37e4945ec86",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Nalelin_Fe-Dhar dialogue bracer",
+      "file": "effective/quests/skyshrine/Nalelin_Fe-Dhar.lua",
+      "sourceSha256": "d24889721fe42296a144daa711f2ef1e2e085008b643ac2953a4b37e4945ec86",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Nalelin_Fe-Dhar dialogue gauntlet",
+      "file": "effective/quests/skyshrine/Nalelin_Fe-Dhar.lua",
+      "sourceSha256": "d24889721fe42296a144daa711f2ef1e2e085008b643ac2953a4b37e4945ec86",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Nalelin_Fe-Dhar dialogue leggings",
+      "file": "effective/quests/skyshrine/Nalelin_Fe-Dhar.lua",
+      "sourceSha256": "d24889721fe42296a144daa711f2ef1e2e085008b643ac2953a4b37e4945ec86",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Nalelin_Fe-Dhar dialogue boots",
+      "file": "effective/quests/skyshrine/Nalelin_Fe-Dhar.lua",
+      "sourceSha256": "d24889721fe42296a144daa711f2ef1e2e085008b643ac2953a4b37e4945ec86",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "skyshrine/Nalelin_Fe-Dhar empty/unrelated offers remain unrewarded",
+      "file": "effective/quests/skyshrine/Nalelin_Fe-Dhar.lua",
+      "sourceSha256": "d24889721fe42296a144daa711f2ef1e2e085008b643ac2953a4b37e4945ec86",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "thurgadina/Argash Runed Scout's Helm exact quantities, retained values, coin and repeat",
+      "file": "changes/p99-armor-review/thurgadina--Argash.lua",
+      "sourceSha256": "5398439d6e58daebbda42ac976bb1853f2994828ed9f13a36593cb316f255aa4",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Argash Runed Scout's Helm two gems plus unrelated item refunded",
+      "file": "changes/p99-armor-review/thurgadina--Argash.lua",
+      "sourceSha256": "5398439d6e58daebbda42ac976bb1853f2994828ed9f13a36593cb316f255aa4",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Argash Runed Scout's Helm missing armor refunded",
+      "file": "changes/p99-armor-review/thurgadina--Argash.lua",
+      "sourceSha256": "5398439d6e58daebbda42ac976bb1853f2994828ed9f13a36593cb316f255aa4",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Argash Runed Scout's Breastplate exact quantities, retained values, coin and repeat",
+      "file": "changes/p99-armor-review/thurgadina--Argash.lua",
+      "sourceSha256": "5398439d6e58daebbda42ac976bb1853f2994828ed9f13a36593cb316f255aa4",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Argash Runed Scout's Breastplate two gems plus unrelated item refunded",
+      "file": "changes/p99-armor-review/thurgadina--Argash.lua",
+      "sourceSha256": "5398439d6e58daebbda42ac976bb1853f2994828ed9f13a36593cb316f255aa4",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Argash Runed Scout's Breastplate missing armor refunded",
+      "file": "changes/p99-armor-review/thurgadina--Argash.lua",
+      "sourceSha256": "5398439d6e58daebbda42ac976bb1853f2994828ed9f13a36593cb316f255aa4",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Argash Runed Scout's Vambraces exact quantities, retained values, coin and repeat",
+      "file": "changes/p99-armor-review/thurgadina--Argash.lua",
+      "sourceSha256": "5398439d6e58daebbda42ac976bb1853f2994828ed9f13a36593cb316f255aa4",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Argash Runed Scout's Vambraces two gems plus unrelated item refunded",
+      "file": "changes/p99-armor-review/thurgadina--Argash.lua",
+      "sourceSha256": "5398439d6e58daebbda42ac976bb1853f2994828ed9f13a36593cb316f255aa4",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Argash Runed Scout's Vambraces missing armor refunded",
+      "file": "changes/p99-armor-review/thurgadina--Argash.lua",
+      "sourceSha256": "5398439d6e58daebbda42ac976bb1853f2994828ed9f13a36593cb316f255aa4",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Argash Runed Scout's Bracer exact quantities, retained values, coin and repeat",
+      "file": "changes/p99-armor-review/thurgadina--Argash.lua",
+      "sourceSha256": "5398439d6e58daebbda42ac976bb1853f2994828ed9f13a36593cb316f255aa4",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Argash Runed Scout's Bracer two gems plus unrelated item refunded",
+      "file": "changes/p99-armor-review/thurgadina--Argash.lua",
+      "sourceSha256": "5398439d6e58daebbda42ac976bb1853f2994828ed9f13a36593cb316f255aa4",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Argash Runed Scout's Bracer missing armor refunded",
+      "file": "changes/p99-armor-review/thurgadina--Argash.lua",
+      "sourceSha256": "5398439d6e58daebbda42ac976bb1853f2994828ed9f13a36593cb316f255aa4",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Argash Runed Scout's Gauntlets exact quantities, retained values, coin and repeat",
+      "file": "changes/p99-armor-review/thurgadina--Argash.lua",
+      "sourceSha256": "5398439d6e58daebbda42ac976bb1853f2994828ed9f13a36593cb316f255aa4",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Argash Runed Scout's Gauntlets two gems plus unrelated item refunded",
+      "file": "changes/p99-armor-review/thurgadina--Argash.lua",
+      "sourceSha256": "5398439d6e58daebbda42ac976bb1853f2994828ed9f13a36593cb316f255aa4",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Argash Runed Scout's Gauntlets missing armor refunded",
+      "file": "changes/p99-armor-review/thurgadina--Argash.lua",
+      "sourceSha256": "5398439d6e58daebbda42ac976bb1853f2994828ed9f13a36593cb316f255aa4",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Argash Runed Scout's Greaves exact quantities, retained values, coin and repeat",
+      "file": "changes/p99-armor-review/thurgadina--Argash.lua",
+      "sourceSha256": "5398439d6e58daebbda42ac976bb1853f2994828ed9f13a36593cb316f255aa4",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Argash Runed Scout's Greaves two gems plus unrelated item refunded",
+      "file": "changes/p99-armor-review/thurgadina--Argash.lua",
+      "sourceSha256": "5398439d6e58daebbda42ac976bb1853f2994828ed9f13a36593cb316f255aa4",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Argash Runed Scout's Greaves missing armor refunded",
+      "file": "changes/p99-armor-review/thurgadina--Argash.lua",
+      "sourceSha256": "5398439d6e58daebbda42ac976bb1853f2994828ed9f13a36593cb316f255aa4",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Argash Runed Scout's Boots exact quantities, retained values, coin and repeat",
+      "file": "changes/p99-armor-review/thurgadina--Argash.lua",
+      "sourceSha256": "5398439d6e58daebbda42ac976bb1853f2994828ed9f13a36593cb316f255aa4",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Argash Runed Scout's Boots two gems plus unrelated item refunded",
+      "file": "changes/p99-armor-review/thurgadina--Argash.lua",
+      "sourceSha256": "5398439d6e58daebbda42ac976bb1853f2994828ed9f13a36593cb316f255aa4",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Argash Runed Scout's Boots missing armor refunded",
+      "file": "changes/p99-armor-review/thurgadina--Argash.lua",
+      "sourceSha256": "5398439d6e58daebbda42ac976bb1853f2994828ed9f13a36593cb316f255aa4",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Argash dialogue hail",
+      "file": "changes/p99-armor-review/thurgadina--Argash.lua",
+      "sourceSha256": "5398439d6e58daebbda42ac976bb1853f2994828ed9f13a36593cb316f255aa4",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Argash dialogue coif",
+      "file": "changes/p99-armor-review/thurgadina--Argash.lua",
+      "sourceSha256": "5398439d6e58daebbda42ac976bb1853f2994828ed9f13a36593cb316f255aa4",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Argash dialogue tunic",
+      "file": "changes/p99-armor-review/thurgadina--Argash.lua",
+      "sourceSha256": "5398439d6e58daebbda42ac976bb1853f2994828ed9f13a36593cb316f255aa4",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Argash dialogue sleeves",
+      "file": "changes/p99-armor-review/thurgadina--Argash.lua",
+      "sourceSha256": "5398439d6e58daebbda42ac976bb1853f2994828ed9f13a36593cb316f255aa4",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Argash dialogue bracer",
+      "file": "changes/p99-armor-review/thurgadina--Argash.lua",
+      "sourceSha256": "5398439d6e58daebbda42ac976bb1853f2994828ed9f13a36593cb316f255aa4",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Argash dialogue gauntlets",
+      "file": "changes/p99-armor-review/thurgadina--Argash.lua",
+      "sourceSha256": "5398439d6e58daebbda42ac976bb1853f2994828ed9f13a36593cb316f255aa4",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Argash dialogue leggings",
+      "file": "changes/p99-armor-review/thurgadina--Argash.lua",
+      "sourceSha256": "5398439d6e58daebbda42ac976bb1853f2994828ed9f13a36593cb316f255aa4",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Argash dialogue boots",
+      "file": "changes/p99-armor-review/thurgadina--Argash.lua",
+      "sourceSha256": "5398439d6e58daebbda42ac976bb1853f2994828ed9f13a36593cb316f255aa4",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Argash empty/unrelated offers remain unrewarded",
+      "file": "changes/p99-armor-review/thurgadina--Argash.lua",
+      "sourceSha256": "5398439d6e58daebbda42ac976bb1853f2994828ed9f13a36593cb316f255aa4",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "kael/Kelenek_Bluadfeth Deceiver's Crown exact quantities, retained values, coin and repeat",
+      "file": "effective/quests/kael/Kelenek_Bluadfeth.lua",
+      "sourceSha256": "ed68e82fa29d8b66fb403d2fca1e0f59e525f15ee192f467f7c487f297ac82b1",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "kael/Kelenek_Bluadfeth Deceiver's Crown two gems plus unrelated item refunded",
+      "file": "effective/quests/kael/Kelenek_Bluadfeth.lua",
+      "sourceSha256": "ed68e82fa29d8b66fb403d2fca1e0f59e525f15ee192f467f7c487f297ac82b1",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "kael/Kelenek_Bluadfeth Deceiver's Crown missing armor refunded",
+      "file": "effective/quests/kael/Kelenek_Bluadfeth.lua",
+      "sourceSha256": "ed68e82fa29d8b66fb403d2fca1e0f59e525f15ee192f467f7c487f297ac82b1",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "kael/Kelenek_Bluadfeth Deceiver's Chestguard exact quantities, retained values, coin and repeat",
+      "file": "effective/quests/kael/Kelenek_Bluadfeth.lua",
+      "sourceSha256": "ed68e82fa29d8b66fb403d2fca1e0f59e525f15ee192f467f7c487f297ac82b1",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "kael/Kelenek_Bluadfeth Deceiver's Chestguard two gems plus unrelated item refunded",
+      "file": "effective/quests/kael/Kelenek_Bluadfeth.lua",
+      "sourceSha256": "ed68e82fa29d8b66fb403d2fca1e0f59e525f15ee192f467f7c487f297ac82b1",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "kael/Kelenek_Bluadfeth Deceiver's Chestguard missing armor refunded",
+      "file": "effective/quests/kael/Kelenek_Bluadfeth.lua",
+      "sourceSha256": "ed68e82fa29d8b66fb403d2fca1e0f59e525f15ee192f467f7c487f297ac82b1",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "kael/Kelenek_Bluadfeth Deceiver's Vambraces exact quantities, retained values, coin and repeat",
+      "file": "effective/quests/kael/Kelenek_Bluadfeth.lua",
+      "sourceSha256": "ed68e82fa29d8b66fb403d2fca1e0f59e525f15ee192f467f7c487f297ac82b1",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "kael/Kelenek_Bluadfeth Deceiver's Vambraces two gems plus unrelated item refunded",
+      "file": "effective/quests/kael/Kelenek_Bluadfeth.lua",
+      "sourceSha256": "ed68e82fa29d8b66fb403d2fca1e0f59e525f15ee192f467f7c487f297ac82b1",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "kael/Kelenek_Bluadfeth Deceiver's Vambraces missing armor refunded",
+      "file": "effective/quests/kael/Kelenek_Bluadfeth.lua",
+      "sourceSha256": "ed68e82fa29d8b66fb403d2fca1e0f59e525f15ee192f467f7c487f297ac82b1",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "kael/Kelenek_Bluadfeth Deceiver's Bracer exact quantities, retained values, coin and repeat",
+      "file": "effective/quests/kael/Kelenek_Bluadfeth.lua",
+      "sourceSha256": "ed68e82fa29d8b66fb403d2fca1e0f59e525f15ee192f467f7c487f297ac82b1",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "kael/Kelenek_Bluadfeth Deceiver's Bracer two gems plus unrelated item refunded",
+      "file": "effective/quests/kael/Kelenek_Bluadfeth.lua",
+      "sourceSha256": "ed68e82fa29d8b66fb403d2fca1e0f59e525f15ee192f467f7c487f297ac82b1",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "kael/Kelenek_Bluadfeth Deceiver's Bracer missing armor refunded",
+      "file": "effective/quests/kael/Kelenek_Bluadfeth.lua",
+      "sourceSha256": "ed68e82fa29d8b66fb403d2fca1e0f59e525f15ee192f467f7c487f297ac82b1",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "kael/Kelenek_Bluadfeth Deceiver's Gauntlets exact quantities, retained values, coin and repeat",
+      "file": "effective/quests/kael/Kelenek_Bluadfeth.lua",
+      "sourceSha256": "ed68e82fa29d8b66fb403d2fca1e0f59e525f15ee192f467f7c487f297ac82b1",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "kael/Kelenek_Bluadfeth Deceiver's Gauntlets two gems plus unrelated item refunded",
+      "file": "effective/quests/kael/Kelenek_Bluadfeth.lua",
+      "sourceSha256": "ed68e82fa29d8b66fb403d2fca1e0f59e525f15ee192f467f7c487f297ac82b1",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "kael/Kelenek_Bluadfeth Deceiver's Gauntlets missing armor refunded",
+      "file": "effective/quests/kael/Kelenek_Bluadfeth.lua",
+      "sourceSha256": "ed68e82fa29d8b66fb403d2fca1e0f59e525f15ee192f467f7c487f297ac82b1",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "kael/Kelenek_Bluadfeth Deceiver's Greaves exact quantities, retained values, coin and repeat",
+      "file": "effective/quests/kael/Kelenek_Bluadfeth.lua",
+      "sourceSha256": "ed68e82fa29d8b66fb403d2fca1e0f59e525f15ee192f467f7c487f297ac82b1",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "kael/Kelenek_Bluadfeth Deceiver's Greaves two gems plus unrelated item refunded",
+      "file": "effective/quests/kael/Kelenek_Bluadfeth.lua",
+      "sourceSha256": "ed68e82fa29d8b66fb403d2fca1e0f59e525f15ee192f467f7c487f297ac82b1",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "kael/Kelenek_Bluadfeth Deceiver's Greaves missing armor refunded",
+      "file": "effective/quests/kael/Kelenek_Bluadfeth.lua",
+      "sourceSha256": "ed68e82fa29d8b66fb403d2fca1e0f59e525f15ee192f467f7c487f297ac82b1",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "kael/Kelenek_Bluadfeth Deceiver's Boots exact quantities, retained values, coin and repeat",
+      "file": "effective/quests/kael/Kelenek_Bluadfeth.lua",
+      "sourceSha256": "ed68e82fa29d8b66fb403d2fca1e0f59e525f15ee192f467f7c487f297ac82b1",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "kael/Kelenek_Bluadfeth Deceiver's Boots two gems plus unrelated item refunded",
+      "file": "effective/quests/kael/Kelenek_Bluadfeth.lua",
+      "sourceSha256": "ed68e82fa29d8b66fb403d2fca1e0f59e525f15ee192f467f7c487f297ac82b1",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "kael/Kelenek_Bluadfeth Deceiver's Boots missing armor refunded",
+      "file": "effective/quests/kael/Kelenek_Bluadfeth.lua",
+      "sourceSha256": "ed68e82fa29d8b66fb403d2fca1e0f59e525f15ee192f467f7c487f297ac82b1",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "kael/Kelenek_Bluadfeth dialogue hail",
+      "file": "effective/quests/kael/Kelenek_Bluadfeth.lua",
+      "sourceSha256": "ed68e82fa29d8b66fb403d2fca1e0f59e525f15ee192f467f7c487f297ac82b1",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "kael/Kelenek_Bluadfeth dialogue I am a rogue",
+      "file": "effective/quests/kael/Kelenek_Bluadfeth.lua",
+      "sourceSha256": "ed68e82fa29d8b66fb403d2fca1e0f59e525f15ee192f467f7c487f297ac82b1",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "kael/Kelenek_Bluadfeth dialogue you have my services",
+      "file": "effective/quests/kael/Kelenek_Bluadfeth.lua",
+      "sourceSha256": "ed68e82fa29d8b66fb403d2fca1e0f59e525f15ee192f467f7c487f297ac82b1",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "kael/Kelenek_Bluadfeth dialogue i am a rogue",
+      "file": "effective/quests/kael/Kelenek_Bluadfeth.lua",
+      "sourceSha256": "ed68e82fa29d8b66fb403d2fca1e0f59e525f15ee192f467f7c487f297ac82b1",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "kael/Kelenek_Bluadfeth dialogue coif",
+      "file": "effective/quests/kael/Kelenek_Bluadfeth.lua",
+      "sourceSha256": "ed68e82fa29d8b66fb403d2fca1e0f59e525f15ee192f467f7c487f297ac82b1",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "kael/Kelenek_Bluadfeth dialogue breastplate",
+      "file": "effective/quests/kael/Kelenek_Bluadfeth.lua",
+      "sourceSha256": "ed68e82fa29d8b66fb403d2fca1e0f59e525f15ee192f467f7c487f297ac82b1",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "kael/Kelenek_Bluadfeth dialogue armplate",
+      "file": "effective/quests/kael/Kelenek_Bluadfeth.lua",
+      "sourceSha256": "ed68e82fa29d8b66fb403d2fca1e0f59e525f15ee192f467f7c487f297ac82b1",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "kael/Kelenek_Bluadfeth dialogue bracer",
+      "file": "effective/quests/kael/Kelenek_Bluadfeth.lua",
+      "sourceSha256": "ed68e82fa29d8b66fb403d2fca1e0f59e525f15ee192f467f7c487f297ac82b1",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "kael/Kelenek_Bluadfeth dialogue gauntlets",
+      "file": "effective/quests/kael/Kelenek_Bluadfeth.lua",
+      "sourceSha256": "ed68e82fa29d8b66fb403d2fca1e0f59e525f15ee192f467f7c487f297ac82b1",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "kael/Kelenek_Bluadfeth dialogue greaves",
+      "file": "effective/quests/kael/Kelenek_Bluadfeth.lua",
+      "sourceSha256": "ed68e82fa29d8b66fb403d2fca1e0f59e525f15ee192f467f7c487f297ac82b1",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "kael/Kelenek_Bluadfeth dialogue boots",
+      "file": "effective/quests/kael/Kelenek_Bluadfeth.lua",
+      "sourceSha256": "ed68e82fa29d8b66fb403d2fca1e0f59e525f15ee192f467f7c487f297ac82b1",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "kael/Kelenek_Bluadfeth empty/unrelated offers remain unrewarded",
+      "file": "effective/quests/kael/Kelenek_Bluadfeth.lua",
+      "sourceSha256": "ed68e82fa29d8b66fb403d2fca1e0f59e525f15ee192f467f7c487f297ac82b1",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "thurgadina/Foreman_Felspar Brigand's Circlet exact quantities, retained values, coin and repeat",
+      "file": "changes/p99-armor-review/thurgadina--Foreman_Felspar.lua",
+      "sourceSha256": "70284bb4e6bdef06c044d8d056acae109f0191041eaca81b0384efd5989c516f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Foreman_Felspar Brigand's Circlet two gems plus unrelated item refunded",
+      "file": "changes/p99-armor-review/thurgadina--Foreman_Felspar.lua",
+      "sourceSha256": "70284bb4e6bdef06c044d8d056acae109f0191041eaca81b0384efd5989c516f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Foreman_Felspar Brigand's Circlet missing armor refunded",
+      "file": "changes/p99-armor-review/thurgadina--Foreman_Felspar.lua",
+      "sourceSha256": "70284bb4e6bdef06c044d8d056acae109f0191041eaca81b0384efd5989c516f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Foreman_Felspar Brigand's Chestguard exact quantities, retained values, coin and repeat",
+      "file": "changes/p99-armor-review/thurgadina--Foreman_Felspar.lua",
+      "sourceSha256": "70284bb4e6bdef06c044d8d056acae109f0191041eaca81b0384efd5989c516f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Foreman_Felspar Brigand's Chestguard two gems plus unrelated item refunded",
+      "file": "changes/p99-armor-review/thurgadina--Foreman_Felspar.lua",
+      "sourceSha256": "70284bb4e6bdef06c044d8d056acae109f0191041eaca81b0384efd5989c516f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Foreman_Felspar Brigand's Chestguard missing armor refunded",
+      "file": "changes/p99-armor-review/thurgadina--Foreman_Felspar.lua",
+      "sourceSha256": "70284bb4e6bdef06c044d8d056acae109f0191041eaca81b0384efd5989c516f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Foreman_Felspar Brigand's Vambraces exact quantities, retained values, coin and repeat",
+      "file": "changes/p99-armor-review/thurgadina--Foreman_Felspar.lua",
+      "sourceSha256": "70284bb4e6bdef06c044d8d056acae109f0191041eaca81b0384efd5989c516f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Foreman_Felspar Brigand's Vambraces two gems plus unrelated item refunded",
+      "file": "changes/p99-armor-review/thurgadina--Foreman_Felspar.lua",
+      "sourceSha256": "70284bb4e6bdef06c044d8d056acae109f0191041eaca81b0384efd5989c516f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Foreman_Felspar Brigand's Vambraces missing armor refunded",
+      "file": "changes/p99-armor-review/thurgadina--Foreman_Felspar.lua",
+      "sourceSha256": "70284bb4e6bdef06c044d8d056acae109f0191041eaca81b0384efd5989c516f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Foreman_Felspar Brigand's Bracer exact quantities, retained values, coin and repeat",
+      "file": "changes/p99-armor-review/thurgadina--Foreman_Felspar.lua",
+      "sourceSha256": "70284bb4e6bdef06c044d8d056acae109f0191041eaca81b0384efd5989c516f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Foreman_Felspar Brigand's Bracer two gems plus unrelated item refunded",
+      "file": "changes/p99-armor-review/thurgadina--Foreman_Felspar.lua",
+      "sourceSha256": "70284bb4e6bdef06c044d8d056acae109f0191041eaca81b0384efd5989c516f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Foreman_Felspar Brigand's Bracer missing armor refunded",
+      "file": "changes/p99-armor-review/thurgadina--Foreman_Felspar.lua",
+      "sourceSha256": "70284bb4e6bdef06c044d8d056acae109f0191041eaca81b0384efd5989c516f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Foreman_Felspar Brigand's Gauntlets exact quantities, retained values, coin and repeat",
+      "file": "changes/p99-armor-review/thurgadina--Foreman_Felspar.lua",
+      "sourceSha256": "70284bb4e6bdef06c044d8d056acae109f0191041eaca81b0384efd5989c516f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Foreman_Felspar Brigand's Gauntlets two gems plus unrelated item refunded",
+      "file": "changes/p99-armor-review/thurgadina--Foreman_Felspar.lua",
+      "sourceSha256": "70284bb4e6bdef06c044d8d056acae109f0191041eaca81b0384efd5989c516f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Foreman_Felspar Brigand's Gauntlets missing armor refunded",
+      "file": "changes/p99-armor-review/thurgadina--Foreman_Felspar.lua",
+      "sourceSha256": "70284bb4e6bdef06c044d8d056acae109f0191041eaca81b0384efd5989c516f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Foreman_Felspar Brigand's Greaves exact quantities, retained values, coin and repeat",
+      "file": "changes/p99-armor-review/thurgadina--Foreman_Felspar.lua",
+      "sourceSha256": "70284bb4e6bdef06c044d8d056acae109f0191041eaca81b0384efd5989c516f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Foreman_Felspar Brigand's Greaves two gems plus unrelated item refunded",
+      "file": "changes/p99-armor-review/thurgadina--Foreman_Felspar.lua",
+      "sourceSha256": "70284bb4e6bdef06c044d8d056acae109f0191041eaca81b0384efd5989c516f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Foreman_Felspar Brigand's Greaves missing armor refunded",
+      "file": "changes/p99-armor-review/thurgadina--Foreman_Felspar.lua",
+      "sourceSha256": "70284bb4e6bdef06c044d8d056acae109f0191041eaca81b0384efd5989c516f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Foreman_Felspar Brigand's Boots exact quantities, retained values, coin and repeat",
+      "file": "changes/p99-armor-review/thurgadina--Foreman_Felspar.lua",
+      "sourceSha256": "70284bb4e6bdef06c044d8d056acae109f0191041eaca81b0384efd5989c516f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Foreman_Felspar Brigand's Boots two gems plus unrelated item refunded",
+      "file": "changes/p99-armor-review/thurgadina--Foreman_Felspar.lua",
+      "sourceSha256": "70284bb4e6bdef06c044d8d056acae109f0191041eaca81b0384efd5989c516f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Foreman_Felspar Brigand's Boots missing armor refunded",
+      "file": "changes/p99-armor-review/thurgadina--Foreman_Felspar.lua",
+      "sourceSha256": "70284bb4e6bdef06c044d8d056acae109f0191041eaca81b0384efd5989c516f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Foreman_Felspar dialogue hail",
+      "file": "changes/p99-armor-review/thurgadina--Foreman_Felspar.lua",
+      "sourceSha256": "70284bb4e6bdef06c044d8d056acae109f0191041eaca81b0384efd5989c516f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Foreman_Felspar dialogue What new set of armor?",
+      "file": "changes/p99-armor-review/thurgadina--Foreman_Felspar.lua",
+      "sourceSha256": "70284bb4e6bdef06c044d8d056acae109f0191041eaca81b0384efd5989c516f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Foreman_Felspar dialogue new set of armor",
+      "file": "changes/p99-armor-review/thurgadina--Foreman_Felspar.lua",
+      "sourceSha256": "70284bb4e6bdef06c044d8d056acae109f0191041eaca81b0384efd5989c516f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Foreman_Felspar dialogue coif",
+      "file": "changes/p99-armor-review/thurgadina--Foreman_Felspar.lua",
+      "sourceSha256": "70284bb4e6bdef06c044d8d056acae109f0191041eaca81b0384efd5989c516f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Foreman_Felspar dialogue tunic",
+      "file": "changes/p99-armor-review/thurgadina--Foreman_Felspar.lua",
+      "sourceSha256": "70284bb4e6bdef06c044d8d056acae109f0191041eaca81b0384efd5989c516f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Foreman_Felspar dialogue sleeves",
+      "file": "changes/p99-armor-review/thurgadina--Foreman_Felspar.lua",
+      "sourceSha256": "70284bb4e6bdef06c044d8d056acae109f0191041eaca81b0384efd5989c516f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Foreman_Felspar dialogue bracer",
+      "file": "changes/p99-armor-review/thurgadina--Foreman_Felspar.lua",
+      "sourceSha256": "70284bb4e6bdef06c044d8d056acae109f0191041eaca81b0384efd5989c516f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Foreman_Felspar dialogue gauntlets",
+      "file": "changes/p99-armor-review/thurgadina--Foreman_Felspar.lua",
+      "sourceSha256": "70284bb4e6bdef06c044d8d056acae109f0191041eaca81b0384efd5989c516f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Foreman_Felspar dialogue leggings",
+      "file": "changes/p99-armor-review/thurgadina--Foreman_Felspar.lua",
+      "sourceSha256": "70284bb4e6bdef06c044d8d056acae109f0191041eaca81b0384efd5989c516f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Foreman_Felspar dialogue boots",
+      "file": "changes/p99-armor-review/thurgadina--Foreman_Felspar.lua",
+      "sourceSha256": "70284bb4e6bdef06c044d8d056acae109f0191041eaca81b0384efd5989c516f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "thurgadina/Foreman_Felspar empty/unrelated offers remain unrewarded",
+      "file": "changes/p99-armor-review/thurgadina--Foreman_Felspar.lua",
+      "sourceSha256": "70284bb4e6bdef06c044d8d056acae109f0191041eaca81b0384efd5989c516f",
+      "coverageKind": "proposed_source"
+    }
+  ],
+  "limits": [
+    "Uses pinned Normalize and real unchanged items.lua with strict capture mocks, not the actual game bridge.",
+    "No inventory settlement, rollback, world activation, acquisition, persistent multiquest, rendered UI or full-chain proof.",
+    "Retained numeric XP/faction values are regression expectations, not documented P99 measurements."
+  ]
+}

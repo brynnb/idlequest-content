@@ -1,0 +1,26 @@
+{
+  "titles": [
+    "The Fisherman"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "partial",
+  "match_status": "partial",
+  "local_quest_keys": [
+    "paineel/Antus_Shelbra"
+  ],
+  "proposal": "changes/p99-nz-fisherman-reward.json",
+  "notes": [
+    "Restore documented four-gold nine-copper reward and completion speech for Aglthin\u2019s Fishing Pole.",
+    "Item9969 is Aglthin\u2019s Fishing Pole and13697 is Staff of the Abattoir Initiate in exported items. Unrelated Karran head9967 reward remains unchanged. P99 also promises experience, absent in this branch; exact amount unsupported, left explicitly unresolved instead of inventing it."
+  ],
+  "verification": {
+    "source": "Cached P99 and effective Lua reviewed; exact complete row preimages and source hashes recorded.",
+    "syntax": "pending",
+    "runtime": "Isolated mock regression pending; full game runtime unavailable.",
+    "ui": "not_run",
+    "connected_chain": "not_run"
+  },
+  "unresolved": [
+    "Ordinary source drops/spawns, recipe live behavior and rendered complete quest path not verified."
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "titles": [
+    "Rabid Wolves",
+    "Rabid Grizzlies"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "partial",
+  "match_status": "partial",
+  "local_quest_keys": [
+    "qeynos2/Priestess_Caulria"
+  ],
+  "proposal": "changes/p99-nz-caulria-wolf-reward.json",
+  "notes": [
+    "Use the explicit end-of-Velious wolf no-coin reward and repair the advertised Rodcet service phrase.",
+    "Cached RabidWolves reward section specifically says not giving any coin at end ofVelious, despite older SmallCoin heading. Choose terminalVelious state explicitly; remove only wolf1silver. Bear2platinum1gold1copper, spell15226, CureDisease213,allXP/factions andFleshyOrb unchanged. Advertised serveRodcetNife now reaches service instruction; legacyserve-the form retained. Faction bypass policy preserved."
+  ],
+  "verification": {
+    "source": "Cached P99 and effective Lua reviewed; exact complete row preimages and source hashes recorded.",
+    "syntax": "pending",
+    "runtime": "Isolated mock regression pending; full game runtime unavailable.",
+    "ui": "not_run",
+    "connected_chain": "not_run"
+  },
+  "unresolved": [
+    "Ordinary source drops/spawns, recipe live behavior and rendered complete quest path not verified."
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-poklon-pike-dialogue",
+  "summary": "Accept the advertised Memory of Sebilis and Steelhead gang keywords as well as documented full questions. Preserve unrelated Talon and Sisters branches.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Warrior_Pike_Quests?action=raw",
+      "note": "Cached 2026-07-17T23:40:52.408Z; revision unavailable; SHA256 647599fece23146d400d837b85160dc7db18e33c93b7a4f54dacebcdcab40014. Accept the advertised Memory of Sebilis and Steelhead gang keywords as well as documented full questions. Preserve unrelated Talon and Sisters branches. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 18669,
+        "zone": "cabeast",
+        "name": "Klok_Poklon",
+        "lua_content": "function event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Greetings, thirsty traveler. Pull up a stool and lay yer copper down. Its time to drink and be merry. Just don't get too merry or I will have to call the troopers.\");\n\telseif(e.message:findi(\"talon southpaw\")) then\n\t\te.self:Emote(\"feints with two quick left hooks!! 'Talon Southpaw. He had the fastest hands in the empire. I remember he once beat another lizard in an arm wrestling match. The amazing thing was, while he was gripping the croaks left hand, he left hooked him without losing his hold!! Thats quick!! I hear one of his treasured hands is in the possession of a monk called Master Rinmark.'\");\n\telseif(e.message:findi(\"Sisters of Scale\") and e.other:GetFaction(e.self) < 6) then\n\t\te.self:Say(\"Hmm, yes, the Babble around here is that one of the Kloks in the Lake Garrison has one of the Sisters of Scale Skull up for Auction. The Temple will bury him when they hear of it!\");\n\telseif(e.message:findi(\"What memory of Sebilis?\")) then\n\t\te.self:Emote(\"takes a sip of Legion Lager. 'Puhh...lease!! That's the little trophy the War Baron brought back from Sebilis. He got it stolen from him by some thieves!! I say it was the [Steelhead gang]. They were waltzing in and out of Cabilis like it was a blasted public vomitorium!!'\");\n\telseif(e.message:findi(\"What steelhead gang?\")) then\n\t\te.self:Emote(\"picks some flesh from between his teeth. 'The Steelhead gang were a band of Forsaken thieves. No one knew this!! They used to walk around here like they were rebirthed!! They used to frequent my place and get involved in head butt contests. Whew!! I tell ya, the only way to crack their skulls is with a forging hammer!! Heheh!!'\");\n\tend\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 18669,
+        "zone": "cabeast",
+        "name": "Klok_Poklon",
+        "lua_content": "function event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Greetings, thirsty traveler. Pull up a stool and lay yer copper down. Its time to drink and be merry. Just don't get too merry or I will have to call the troopers.\");\n\telseif(e.message:findi(\"talon southpaw\")) then\n\t\te.self:Emote(\"feints with two quick left hooks!! 'Talon Southpaw. He had the fastest hands in the empire. I remember he once beat another lizard in an arm wrestling match. The amazing thing was, while he was gripping the croaks left hand, he left hooked him without losing his hold!! Thats quick!! I hear one of his treasured hands is in the possession of a monk called Master Rinmark.'\");\n\telseif(e.message:findi(\"Sisters of Scale\") and e.other:GetFaction(e.self) < 6) then\n\t\te.self:Say(\"Hmm, yes, the Babble around here is that one of the Kloks in the Lake Garrison has one of the Sisters of Scale Skull up for Auction. The Temple will bury him when they hear of it!\");\n\telseif(e.message:findi(\"memory of Sebilis\")) then\n\t\te.self:Emote(\"takes a sip of Legion Lager. 'Puhh...lease!! That's the little trophy the War Baron brought back from Sebilis. He got it stolen from him by some thieves!! I say it was the [Steelhead gang]. They were waltzing in and out of Cabilis like it was a blasted public vomitorium!!'\");\n\telseif(e.message:findi(\"steelhead gang\")) then\n\t\te.self:Emote(\"picks some flesh from between his teeth. 'The Steelhead gang were a band of Forsaken thieves. No one knew this!! They used to walk around here like they were rebirthed!! They used to frequent my place and get involved in head butt contests. Whew!! I tell ya, the only way to crack their skulls is with a forging hammer!! Heheh!!'\");\n\tend\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/cabeast/Klok_Poklon.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-tz-poklon-pike-dialogue/cabeast--Klok_Poklon.lua",
+      "afterSha256": "ebef04e0fa6cb2ca0bd19c4fe5ec3cee43e8de3e797dfa476691a70a368ba7d6"
+    }
+  ]
+}

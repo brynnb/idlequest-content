@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-taxes-mar_sedder",
+  "summary": "Remove only tax_collection prerequisites: P99 expressly permits collecting without first speaking to Vicus and bypassing Mira. Preserve all original item/faction effects and unrelated quest branches. Flynn also accepts documented your-feet phrase and uses documented Shout; no numeric values invented.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Taxes?action=raw",
+      "note": "Cached 2026-07-17T23:34:37.004Z; revision unavailable; SHA256 6fc59af937f3b2dfa4313beac8b349112c500bdbff0c89109de222dc34860c9b. Remove only tax_collection prerequisites: P99 expressly permits collecting without first speaking to Vicus and bypassing Mira. Preserve all original item/faction effects and unrelated quest branches. Flynn also accepts documented your-feet phrase and uses documented Shout; no numeric values invented. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 16302,
+        "zone": "qeynos",
+        "name": "Mar_Sedder",
+        "lua_content": "-- items: 13171\nfunction event_say(e)\n\n\tlocal qglobals = eq.get_qglobals(e.other);\n\t\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(string.format(\"Hail, %s.  What brings you to the Tin Soldier?  We have the finest in previously owned weapons and armor.  Feel free to browse.\",e.other:GetName()));\n\telseif(e.message:findi(\"tax collection\") and qglobals.tax_collection ~= nil) then\n\t\te.self:Say(string.format(\"Here are the taxes, %s. Boy, you call the guards and they take their time to show up but be a few days late on your taxes and they send the goons after you. Sheesh!\",e.other:GetName()));\n\t\te.other:Faction(291,-10,0); -- Faction: Merchants of Qeynos\n\t\te.other:SummonItem(13171); -- Item: Sedder's Tax Payment\n\tend\n\t\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 16302,
+        "zone": "qeynos",
+        "name": "Mar_Sedder",
+        "lua_content": "-- items: 13171\nfunction event_say(e)\n\n\tlocal qglobals = eq.get_qglobals(e.other);\n\t\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(string.format(\"Hail, %s.  What brings you to the Tin Soldier?  We have the finest in previously owned weapons and armor.  Feel free to browse.\",e.other:GetName()));\n\telseif(e.message:findi(\"tax collection\") ) then\n\t\te.self:Say(string.format(\"Here are the taxes, %s. Boy, you call the guards and they take their time to show up but be a few days late on your taxes and they send the goons after you. Sheesh!\",e.other:GetName()));\n\t\te.other:Faction(291,-10,0); -- Faction: Merchants of Qeynos\n\t\te.other:SummonItem(13171); -- Item: Sedder's Tax Payment\n\tend\n\t\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/qeynos/Mar_Sedder.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-tz-taxes-mar_sedder/qeynos--Mar_Sedder.lua",
+      "afterSha256": "5b48d8fc1d8fa1983a8ded3c666a3c443fd6937f32c3e8f546df859e53d5daa4"
+    }
+  ]
+}

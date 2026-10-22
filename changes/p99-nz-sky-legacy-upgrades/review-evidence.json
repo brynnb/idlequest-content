@@ -1,0 +1,84 @@
+{
+  "titles": [
+    "Necromancer Plane of Sky Tests",
+    "Paladin Plane of Sky Tests",
+    "Ranger Plane of Sky Tests",
+    "Rogue Plane of Sky Tests",
+    "Plane of Sky Quests (Old)"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "partial",
+  "match_status": "partial",
+  "local_quest_keys": [
+    "airplane/Jzil_GSix",
+    "airplane/Dugaas_Helpyre",
+    "airplane/Gregori_Lightbringer",
+    "airplane/Relinin_Skyrunner",
+    "airplane/Gordon_Treecaller",
+    "airplane/Rayne"
+  ],
+  "proposal": "changes/p99-nz-sky-legacy-upgrades.json",
+  "notes": [
+    "Restore seven explicitly documented old Sky reward upgrades and their trade dialogue; preserve all component tests and summon adaptations.",
+    "Full five cached pages and all twelve class actors read. Seven unambiguous old/new item pairs independently resolved against exported item rows and the Old page explicit mappings. No preserved Perl for these actors and imported Lua has no upgrade numerical fallback; new exchanges implement only documented item replacement, with unknown XP/cash/faction/lifecycle side effects explicitly unresolved. Do not invent Senki or a Bracer of Protection identity from similar names. Preserve all existing component rewards, imported XP, class gates and simplified starter summoning. Limit existing five-minute depop timer to its named event; do not change duration. Jzil bare power reaches its test and Gordon correctly requests Circlet of Brambles."
+  ],
+  "verification": {
+    "source": "Cached P99 and effective Lua reviewed; exact complete row preimages and source hashes recorded.",
+    "syntax": "pending",
+    "runtime": "Isolated mock regression pending; full game runtime unavailable.",
+    "ui": "not_run",
+    "connected_chain": "not_run"
+  },
+  "unresolved": [
+    "Ordinary source drops/spawns, recipe live behavior and rendered complete quest path not verified.",
+    "Upgrade XP, cash, factions and whether the teacher depops after an upgrade are unspecified; only item replacement is implemented.",
+    "Gregori mentions Senki and Rayne mentions Bracer of Protection, but reliable distinct item identities and target mappings were not established; those exchanges are not fabricated.",
+    "Starter tome flow remains a documented simplified direct-summon adaptation; Drakis Jzil accessibility for the epic is preserved."
+  ],
+  "itemUpgrades": [
+    {
+      "actor": "airplane/Jzil_GSix",
+      "input": 2709,
+      "output": 27712
+    },
+    {
+      "actor": "airplane/Dugaas_Helpyre",
+      "input": 14561,
+      "output": 27713
+    },
+    {
+      "actor": "airplane/Gregori_Lightbringer",
+      "input": 11681,
+      "output": 27709
+    },
+    {
+      "actor": "airplane/Relinin_Skyrunner",
+      "input": 2715,
+      "output": 27731
+    },
+    {
+      "actor": "airplane/Gordon_Treecaller",
+      "input": 11697,
+      "output": 27732
+    },
+    {
+      "actor": "airplane/Rayne",
+      "input": 2702,
+      "output": 27702
+    },
+    {
+      "actor": "airplane/Rayne",
+      "input": 11677,
+      "output": 27704
+    }
+  ],
+  "sourceProvenance": {
+    "airplane/Gordon_Treecaller": {
+      "canonicalUtf8Source": "effective/quests/airplane/Gordon_Treecaller.lua",
+      "canonicalSha256": "e207ede88cdbb8a5caa221cd0472e63d34c204fc72715aa24351190d19ed6c08",
+      "upstreamFile": "sources/projecteq/airplane/Gordon_Treecaller.lua",
+      "upstreamByteSha256": "33dd5b3807c0a9cd888da210250016dc436071e2a46d6c46ca7225759a8e0ec8",
+      "note": "Legacy upstream contains CP1252 byte0x92; copy the already-exported canonical UTF-8 Lua and preserve complete database preimage rather than silently decode or edit the immutable upstream."
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "format": 1,
+  "id": "p99-tz-recipe-5381",
+  "summary": "Page explicitly states Legionnaire Mancatcher Crown smithing trivial15; correct17 to15. Components, reusable tool, failed-combine returns and every other field unchanged.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Warrior_Pike_Quests?action=raw",
+      "note": "Page explicitly states Legionnaire Mancatcher Crown smithing trivial15; correct17 to15. Components, reusable tool, failed-combine returns and every other field unchanged. Cached SHA256 647599fece23146d400d837b85160dc7db18e33c93b7a4f54dacebcdcab40014. No world/crafting UI proof. Only documented stages0-5; stages6-8 excluded as page says Gates of Discord."
+    }
+  ],
+  "rows": [
+    {
+      "table": "tradeskill_recipe",
+      "before": {
+        "id": 5381,
+        "name": "Legionnaire Mancatcher Crown",
+        "tradeskill": 63,
+        "skillneeded": 0,
+        "trivial": 17,
+        "nofail": 0,
+        "replace_container": 0,
+        "notes": "Created by Jaekob",
+        "must_learn": 0,
+        "learned_by_item_id": 0,
+        "quest": 0,
+        "enabled": 1,
+        "show_in_advanced": 1,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null,
+        "category": "General"
+      },
+      "after": {
+        "id": 5381,
+        "name": "Legionnaire Mancatcher Crown",
+        "tradeskill": 63,
+        "skillneeded": 0,
+        "trivial": 15,
+        "nofail": 0,
+        "replace_container": 0,
+        "notes": "Created by Jaekob",
+        "must_learn": 0,
+        "learned_by_item_id": 0,
+        "quest": 0,
+        "enabled": 1,
+        "show_in_advanced": 1,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null,
+        "category": "General"
+      }
+    }
+  ],
+  "sources": []
+}

@@ -1,0 +1,3574 @@
+{
+  "scope": "Exact initial snapshot sources only, not final source-closure certification. Main and flavor suites both passed. Case counts across suites may overlap.",
+  "proposedLuaFiles": 509,
+  "missing": [],
+  "mainProposedCasesCorrected": 1484,
+  "mainBaselineVerificationsCorrected": 223,
+  "mainBaselineReproductions": 95,
+  "flavorCases": 167,
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/cabeast/Drill_Master_Dal.lua",
+      "proposedFile": "changes/p99-am-dal-task-dialogue/cabeast-Drill_Master_Dal.lua",
+      "sha256": "7529e53da0af1c79c51d7adff7448363f9ade7e9dcbb82fa04e04a91d29fb7de",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/cabeast/Drill_Master_Vygan.lua",
+      "proposedFile": "changes/p99-am-geozite-dialogue/cabeast-Drill_Master_Vygan.lua",
+      "sha256": "8ffd3f131f44a69d0f546322824cb08a040474e6c1d2d41ae996dbff48a9f7f3",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/cabeast/Grand_Master_Glox.lua",
+      "proposedFile": "changes/p99-tz-glox-trooper/cabeast--Grand_Master_Glox.lua",
+      "sha256": "bd488318bf845f658c55f495594ac2be206235ab09f6dc283c7468e64af73b97",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/cabeast/Klok_Unlar.lua",
+      "proposedFile": "changes/p99-tz-unlar-pie-dialogue/cabeast--Klok_Unlar.lua",
+      "sha256": "5ac041a53297bcbeadf05ea4032b17afbb37e33369251c3f6b282038cc118b1c",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/cabeast/Librarian_Zimor.lua",
+      "proposedFile": "changes/p99-af-greenmist-factions/cabeast-Librarian_Zimor.lua",
+      "sha256": "1d14d4e0709063e3e22ad7360090db3e81b5728e0dbe66dddeac40b117f05aec",
+      "mainCases": 3,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/cabeast/Master_Niska.lua",
+      "proposedFile": "changes/p99-am-shackle-cash/cabeast-Master_Niska.lua",
+      "sha256": "ce2addeff808e760836ca0e7ee1eb6dc5faf34eabef67d057d9549daeef3025c",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/cabeast/Master_Raska.lua",
+      "proposedFile": "changes/p99-am-shackle-cash/cabeast-Master_Raska.lua",
+      "sha256": "8ac74e5f4a4056b327dd007dd1876db280aa7221a8dcb256a7e2d9728c7cb0b0",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/cabeast/Prime_Hierophant_Vek.lua",
+      "proposedFile": "changes/p99-tz-vek-trooper/cabeast--Prime_Hierophant_Vek.lua",
+      "sha256": "5a1a7696edbda05c6c55a56b6822eba0b22c78f80b36c9c1ab37935e113692e0",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/cabeast/Trooper_Fryp.lua",
+      "proposedFile": "changes/p99-tz-restraining-trooper_fryp/cabeast--Trooper_Fryp.lua",
+      "sha256": "6a0ff5868dcbe6f852a5797c61d1c31ca7cc2ee42cf4fcd0c3ae3c943fe5c13b",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/cabeast/Trooper_Nishnish.lua",
+      "proposedFile": "changes/p99-tz-restraining-trooper_nishnish/cabeast--Trooper_Nishnish.lua",
+      "sha256": "094a7b37d72a5989160f671b9423e2558a887305ec06afe173925d215b21f6ac",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/cabeast/War_Historian_Kobl.lua",
+      "proposedFile": "changes/p99-il-parity/cabeast--War_Historian_Kobl.lua",
+      "sha256": "63390568fbf53eddf981325d59946a6169ba87bf98c2f16991f093495d7d4fbd",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/cabeast/Weaponsmith_Grugl.lua",
+      "proposedFile": "changes/p99-tz-grugl-footman-dialogue/cabeast--Weaponsmith_Grugl.lua",
+      "sha256": "0e586380b659303f3e50ae3b77b28b86e4e28b809b2e6eec9bfec55e5b9bb175",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/cabwest/Harbinger_Glosk.lua",
+      "proposedFile": "changes/p99-tz-glosk-trooper-notes/cabwest--Harbinger_Glosk.lua",
+      "sha256": "9ae4f197bca8c5adfba15a295964e8d62688b17db4f520f7c04cefe4816e8105",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/cabwest/Izarod_Fristan.lua",
+      "proposedFile": "changes/p99-nz-izarod-dialogue/cabwest--Izarod_Fristan.lua",
+      "sha256": "868dc063993a53aa132672c4ddb4cff52369e6fd5d29d56c7f4fa6b9e88868fa",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/cabwest/Keeper_Bile.lua",
+      "proposedFile": "changes/p99-nz-necro-components-dialogue/cabwest--Keeper_Bile.lua",
+      "sha256": "7cac28b644ffb9161f8a7dd6f3669487ddc6f48523c36b8a9134caa5ca8e511f",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/cabwest/Master_Kyvix.lua",
+      "proposedFile": "changes/p99-nz-skullcap-steps/cabwest--Master_Kyvix.lua",
+      "sha256": "81c718d5d2058a59551028f440b1461ddfbaa5b40d3cd8055026d2c576034cb1",
+      "mainCases": 5,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/cabwest/Trooper_Ogmire.lua",
+      "proposedFile": "changes/p99-tz-restraining-trooper_ogmire/cabwest--Trooper_Ogmire.lua",
+      "sha256": "95c5c41e1772357f38f18f570a1bf5d01f967ffdc13ce32b22eee810988c2fca",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/cabwest/Trooper_Ozlot.lua",
+      "proposedFile": "changes/p99-tz-restraining-trooper_ozlot/cabwest--Trooper_Ozlot.lua",
+      "sha256": "f305d305fe15174b42620c6a901b9ca176c10d3c6d7ecb66006bb7a2bdaa3556",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/charasis/Gandan_Tailfist.lua",
+      "proposedFile": "changes/p99-source-scope-disables/charasis--Gandan_Tailfist.lua",
+      "sha256": "84394acb04c30e5487e0c2d3a8aad6d46bb75cefbc8fad8b2cf7483bf95d09a9",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/cobaltscar/Bloogy_Shellcracker.lua",
+      "proposedFile": "changes/p99-sz-bloogy-counts/cobaltscar--Bloogy_Shellcracker.lua",
+      "sha256": "f2b790116e7546bfbff1fccaedb8a383dc4ce2afaef20c068fd0eb670f5b6d07",
+      "mainCases": 10,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/cobaltscar/Chief_Kalan.lua",
+      "proposedFile": "changes/p99-am-bulthar-reward/cobaltscar-Chief_Kalan.lua",
+      "sha256": "a48b2df856f9daa9056c6799609a264447bc93667173d80793f391ebc1103737",
+      "mainCases": 31,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/commons/Noresa_Sparkle.lua",
+      "proposedFile": "changes/p99-nz-noresa-key/commons--Noresa_Sparkle.lua",
+      "sha256": "f94a9214596056daa28dae71eb448a4fcf22af4b2dc79a5c8643582e75ded592",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/dreadlands/Veltar.lua",
+      "proposedFile": "changes/p99-source-scope-disables/dreadlands--Veltar.lua",
+      "sha256": "9e90f6f1dca1cc5272c0e5d8ae7adc311f014cd26b71b97ea8edcea7d1b04c7c",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/eastwastes/Garadain_Glacierbane.lua",
+      "proposedFile": "changes/p99-af-garadain-dialogue/eastwastes-Garadain_Glacierbane.lua",
+      "sha256": "5c0f79880705dadc9e5e4da4f82f3cf14711e7ba3b34576f66529b153dd5272f",
+      "mainCases": 3,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/ecommons/Bubar.lua",
+      "proposedFile": "changes/p99-nz-rogue-redemption-dialogue/ecommons--Bubar.lua",
+      "sha256": "87a11fe7da390bf9af81300298af2eab3cb8218b51a88ec4243abb0cebfcb679",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/emeraldjungle/#tainted_gorilla.lua",
+      "proposedFile": "changes/p99-classic-conversions/emeraldjungle--hash-tainted_gorilla.lua",
+      "sha256": "161b415dc14465db8d65581be8adb02b848015397d60d9ce7abac0972ce7e4bf",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/fieldofbone/a_lesser_spirit.lua",
+      "proposedFile": "changes/p99-sz-epic-lesser-fieldofbone/fieldofbone--a_lesser_spirit.lua",
+      "sha256": "677b06fe4112728fe57712984599bf0ba0e90dfc96eac97a665ba89e3ec03dda",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/fieldofbone/Trooper_Gummin.lua",
+      "proposedFile": "changes/p99-tz-restraining-trooper_gummin/fieldofbone--Trooper_Gummin.lua",
+      "sha256": "297e2350d92754aa97579c87e3f35f188457f161ee1471ea14502f017eb7607f",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/fieldofbone/Trooper_Taer.lua",
+      "proposedFile": "changes/p99-tz-restraining-trooper_taer/fieldofbone--Trooper_Taer.lua",
+      "sha256": "ae65e7c228e70242b575aa396c5a7cb0e5cc16988eabcb672f9824a63d67cba1",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/firiona/Alex_McDarnin.lua",
+      "proposedFile": "changes/p99-sz-alex-dialogue/firiona--Alex_McDarnin.lua",
+      "sha256": "cd1d373d05f42860a53e1ca8702f1c9a51b347134aeeccd18e3e1e2c7b30700f",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/firiona/Barnal_Flamehand.lua",
+      "proposedFile": "changes/p99-tz-barnal-dialogue/firiona--Barnal_Flamehand.lua",
+      "sha256": "cb289e89e2fbc0a026bd015af6f094bc59cf26c8549507d15f390785c25707dc",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/firiona/Foloal_Stormforest.lua",
+      "proposedFile": "changes/p99-af-druid-progression-dialogue/firiona-Foloal_Stormforest.lua",
+      "sha256": "25bc081a44724ac83b2dbf36a77f3dd7ca52f0918263403bc4f8183737314c8e",
+      "mainCases": 6,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/firiona/Gearin_Gaxx.lua",
+      "proposedFile": "changes/p99-am-g-dialogue/firiona-Gearin_Gaxx.lua",
+      "sha256": "ded62a7809a7ed98e18c452542ca830e53d7e11bc330a91918d370220fe2098a",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/gfaydark/Devin_Ashwood.lua",
+      "proposedFile": "changes/p99-am-call-of-flame/gfaydark-Devin_Ashwood.lua",
+      "sha256": "fb70556b8bc475f8b35165bc19a3fd269df6bddc4225aaafb4de2b4c6184961b",
+      "mainCases": 8,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/gfaydark/Dill_Fireshine.lua",
+      "proposedFile": "changes/p99-nz-orc-hatchets-rewards/gfaydark--Dill_Fireshine.lua",
+      "sha256": "69cbcc2c3d7c5d4d1177add3a8b7d8828b652af01a2537907f68a80ed8d0eda1",
+      "mainCases": 7,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/gfaydark/Gallin_Woodwind.lua",
+      "proposedFile": "changes/p99-nz-shark-meat/gfaydark--Gallin_Woodwind.lua",
+      "sha256": "30c66f38fa8bb772a25ebdadd86e662b7de716cedfffed0a4213e6266fbecf99",
+      "mainCases": 8,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/gfaydark/Maesyn_Trueshot.lua",
+      "proposedFile": "changes/p99-tz-maesyn-all-class-pack/gfaydark--Maesyn_Trueshot.lua",
+      "sha256": "f8c355bb73c29e3296b1ff52316626af86cfbaf6fa144c2f7c5b7d54ae45eca3",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/gfaydark/Ran_Sunfire.lua",
+      "proposedFile": "changes/p99-nz-pixie-ranger-reward/gfaydark--Ran_Sunfire.lua",
+      "sha256": "7233aacd7e373a33e2e94c6c34dd155ecfc1198dbe5da99eac452e07930eb254",
+      "mainCases": 3,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/gfaydark/Samatansyn_Flamecaller.lua",
+      "proposedFile": "changes/p99-source-scope-disables/gfaydark--Samatansyn_Flamecaller.lua",
+      "sha256": "db7112ce2c505cb3a2d8bafe533c8e0b856ff7602c6a841e9f92290320892f2c",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/gfaydark/Sindl_Talonstrike.lua",
+      "proposedFile": "changes/p99-classic-conversions/gfaydark--Sindl_Talonstrike.lua",
+      "sha256": "94f4006c9c76c9edd381fa3b8671279636c9100d9f7ba85b1ddeeaa4408aa714",
+      "mainCases": 4,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/greatdivide/gnomish_deserter.lua",
+      "proposedFile": "changes/p99-am-nalot-rum/greatdivide-gnomish_deserter.lua",
+      "sha256": "3bb3fadc6ac5cb629afbe331b5bd77a1dcb9f268cf94f72aeade460e0e6df747",
+      "mainCases": 4,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/hole/Jaeil_the_Wretched.lua",
+      "proposedFile": "changes/p99-ranger-epic-dialogue/hole-Jaeil_the_Wretched.lua",
+      "sha256": "c05d013a758abdf7cdc3134fc79f4c1690c10ae19e0fcef45abe81b4ff2f087b",
+      "mainCases": 3,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/iceclad/Balix_Misteyes.lua",
+      "proposedFile": "changes/p99-tz-balix-no-faction/iceclad--Balix_Misteyes.lua",
+      "sha256": "af9b3669169a71608b441ea86966a56912d86739da5a950308b17b85dce9be55",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/iceclad/Captain_Nalot.lua",
+      "proposedFile": "changes/p99-am-nalot-rum/iceclad-Captain_Nalot.lua",
+      "sha256": "7785326cab95c8c6cd5f9d3b58abbf8d4f97204b1c476851e3089bca1876f118",
+      "mainCases": 9,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/iceclad/Corudoth.lua",
+      "proposedFile": "changes/p99-nz-reinforcements-dialogue/iceclad--Corudoth.lua",
+      "sha256": "7a1a7106b7c38c7e9d42a2d86e92b3e3a61d3e4ce07e7ce9cadf7eddf22e26a3",
+      "mainCases": 3,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/iceclad/Errgriz.lua",
+      "proposedFile": "changes/p99-conversions-velious/iceclad/Errgriz.lua",
+      "sha256": "c6b1073a904c48e6efbfa2947e8d5fdd962ee0f6cc3cccfa5cd95c80761a7fcc",
+      "mainCases": 6,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/iceclad/Nelet_Durzit.lua",
+      "proposedFile": "changes/p99-am-nalot-rum/iceclad-Nelet_Durzit.lua",
+      "sha256": "65c0b8cbea8c1c581069a35525804a68831c703d01e82f2f1e479488d09d0354",
+      "mainCases": 4,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/iceclad/Sojan_the_Sleepless.lua",
+      "proposedFile": "changes/p99-am-nalot-rum/iceclad-Sojan_the_Sleepless.lua",
+      "sha256": "e6d3b1a4740e7b54bac56c3789755eb6d1c188197769f51429036b2cc3587b50",
+      "mainCases": 11,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/kael/#Khalerogg_Dorfenbane.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor-extra/kael/#Khalerogg_Dorfenbane.lua",
+      "sha256": "0cdc3f49ca241b232f5bb3599e7f5e4193de263410e970a93efa4a377b98bbad",
+      "mainCases": 0,
+      "flavorCases": 2
+    },
+    {
+      "target": "maintained/lua/converted-perl/kael/#Valorankt_Zekkin.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor-extra/kael/#Valorankt_Zekkin.lua",
+      "sha256": "bd179bf0315a979153c293a9164982c43249ede35d2b925ee70ce690b3bf9ccf",
+      "mainCases": 0,
+      "flavorCases": 2
+    },
+    {
+      "target": "maintained/lua/converted-perl/kael/a_kromrif_recruiter.lua",
+      "proposedFile": "changes/p99-tz-recruiter-factions/kael--a_kromrif_recruiter.lua",
+      "sha256": "f227702a40956e7d15a8c5ef21c907e9937fc9c659da5653ef630e02decfd671",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/kael/a_storm_giant_gladiator.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor-extra/kael/a_storm_giant_gladiator.lua",
+      "sha256": "162fe4599b639ec2737ef204069a6fc97264b06f12e25ae115f1e4ceea3280b4",
+      "mainCases": 0,
+      "flavorCases": 3
+    },
+    {
+      "target": "maintained/lua/converted-perl/kael/Barlek_Stonefist.lua",
+      "proposedFile": "changes/p99-armor-review/kael--Barlek_Stonefist.lua",
+      "sha256": "b0c09036b9ebb4d8af2f2dc26e0d2e325aa64d685777498d2a2d5220de0b7f19",
+      "mainCases": 34,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/kael/Bjarorm_Mjlorn.lua",
+      "proposedFile": "changes/p99-armor-review/kael--Bjarorm_Mjlorn.lua",
+      "sha256": "9da0bc6ebe3ce0f8cd2ac6c000050d6e0906e2bcd372f8afbf3feeeb825f5934",
+      "mainCases": 35,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/kael/Captain_Bvellos.lua",
+      "proposedFile": "changes/p99-am-bvellos-bounties/kael-Captain_Bvellos.lua",
+      "sha256": "704176c82c1e133c47738234799d6ede0d8348a13e7d91717576f9765f432e75",
+      "mainCases": 24,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/kael/Dagron_Stonecutter.lua",
+      "proposedFile": "changes/p99-am-monk-armor-dialogue/kael-Dagron_Stonecutter.lua",
+      "sha256": "e02f1582ef12c3f56972d158b8e9e19c8f19e1dc4d07d76ca5313193b0f17ffd",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/kael/Gragek_Mjlorkigar.lua",
+      "proposedFile": "changes/p99-armor-review/kael--Gragek_Mjlorkigar.lua",
+      "sha256": "77ea38a181b033e87f071e34fd56273743d2fec6140dcabbbd4889184707a05f",
+      "mainCases": 35,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/kael/Kellek_Felhammer.lua",
+      "proposedFile": "changes/p99-nz-reinforcements-dialogue/kael--Kellek_Felhammer.lua",
+      "sha256": "c3620b6d00bcccb84192279e924b7860ab962c602e097bdd4e9e2e09470ad83b",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/kael/Mjeldor_Felstorm.lua",
+      "proposedFile": "changes/p99-am-mage-armor-dialogue/kael-Mjeldor_Felstorm.lua",
+      "sha256": "6974750e94d1960520a3ab2ae3e08f4505e7a83612b523314ad21ed041b5b5fc",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/kael/Noble_Helssen.lua",
+      "proposedFile": "changes/p99-nz-reinforcements-dialogue/kael--Noble_Helssen.lua",
+      "sha256": "04f1c18be7db23dfa065dea1324ae31a109d7528e0473781fed598122f906057",
+      "mainCases": 4,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/kael/Pollos_Stormkeeper.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor-extra/kael/Pollos_Stormkeeper.lua",
+      "sha256": "7278cab95cd63e2e5b519f22144877aeaaac5a1e47b6b0bcfa4e872c5b5c5975",
+      "mainCases": 0,
+      "flavorCases": 3
+    },
+    {
+      "target": "maintained/lua/converted-perl/kael/Semkak_Prophet_of_Vallon.lua",
+      "proposedFile": "changes/p99-sz-semkak-tablet/kael--Semkak_Prophet_of_Vallon.lua",
+      "sha256": "a5f1268448f76c186a3b44e1f5cd6280ad32dade3ae361ed6679399aa8462f8d",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/kael/Staff_Sergeant_Drioc.lua",
+      "proposedFile": "changes/p99-nz-reinforcements-dialogue/kael--Staff_Sergeant_Drioc.lua",
+      "sha256": "100621cd57971635e490c8612d9b29c981e0befe34e0ace58d518690f8304b84",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/kael/Ulkar_Jollkarek.lua",
+      "proposedFile": "changes/p99-tz-ulkar-glove-count/kael--Ulkar_Jollkarek.lua",
+      "sha256": "073401bc277f086fe5f4d20465c153c7cb481447d6ad7d3431242dd6a67fc904",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/kael/Vkjor.lua",
+      "proposedFile": "changes/p99-tz-vkjor-dialogue/kael--Vkjor.lua",
+      "sha256": "e36a35bbb99d202d40ffe58fe09f6a9de13c8f865f224ec49cabf183dec409c4",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/kael/Vorken_Iceshard.lua",
+      "proposedFile": "changes/p99-tz-vorken-ekelng/kael--Vorken_Iceshard.lua",
+      "sha256": "74b07d97bd7f8631525390f63e9275b47e36eaee8daed7a92244b01a643b0147",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/kaladima/Byzar_Bloodforge.lua",
+      "proposedFile": "changes/p99-nz-ogre-heads-dialogue/kaladima--Byzar_Bloodforge.lua",
+      "sha256": "b7c0309316824de88980a29bf9b9c3ab602decf0fafc62fa8413784b02d473d4",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/kaladima/Furtog_Ogrebane.lua",
+      "proposedFile": "changes/p99-tz-furtog-mudtoe-dialogue/kaladima--Furtog_Ogrebane.lua",
+      "sha256": "1f792b57111d220c1d5a694f8c2494aabf7f28cbf2f3240ff39e527c34318a1c",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/kaladima/Gretta_Mottle.lua",
+      "proposedFile": "changes/p99-am-gretta-dialogue/kaladima-Gretta_Mottle.lua",
+      "sha256": "5d8611dfa98a44bff524a2a325a9d0bee2386e30851d849ef86e150243f01e80",
+      "mainCases": 3,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/kaladima/Kilam_Oresinger.lua",
+      "proposedFile": "changes/p99-am-g-dialogue/kaladima-Kilam_Oresinger.lua",
+      "sha256": "ddd57f29ce9e2984e25c2b64f42a64cb7615899897e5f327a44301ad40b12b6e",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/kaladimb/Datur_Nightseer.lua",
+      "proposedFile": "changes/p99-guild-review/kaladimb--Datur_Nightseer.lua",
+      "sha256": "0a8fbc1fb06e5fd0cf1747a49016a187971d1e3c3cd31cc9ddffec28f87bd8db",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/kaladimb/Gunlok_Jure.lua",
+      "proposedFile": "changes/p99-af-cromil-reward/kaladimb-Gunlok_Jure.lua",
+      "sha256": "6b94e176c48d6fe9f44d4f1b9ebc33e206109a50fef3f576057ae981aa39c4a5",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/kaladimb/Jark.lua",
+      "proposedFile": "changes/p99-paladin-jark-some/kaladimb--Jark.lua",
+      "sha256": "884580e59e8a6a892ae8d34d5343bb91aa7cf89c96c319e6f0e24d0668527aa3",
+      "mainCases": 5,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/kaladimb/Kinlo_Strongarm.lua",
+      "proposedFile": "changes/p99-ranger-epic-dialogue/kaladimb-Kinlo_Strongarm.lua",
+      "sha256": "55816ae113869c2a68d25ef95643b6dd2d621da58e19484f5511a4a8d48dd042",
+      "mainCases": 13,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/kaladimb/Usbak_the_Old.lua",
+      "proposedFile": "changes/p99-ranger-epic-dialogue/kaladimb-Usbak_the_Old.lua",
+      "sha256": "c3c4602fdad7f12655393078f8132fc980c6394da8c4fe5f75853476d3a33507",
+      "mainCases": 3,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/kerraridge/a_banished_Kerran.lua",
+      "proposedFile": "changes/p99-tz-banished-kerran-dialogue/kerraridge--a_banished_Kerran.lua",
+      "sha256": "4c26294c7eb0b51faaf0cca2e5bf09e0210acda39a45191bc657031681333f88",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/kerraridge/Feren.lua",
+      "proposedFile": "changes/p99-nz-razortooth-dialogue/kerraridge--Feren.lua",
+      "sha256": "fd8edecd0873f4946d8f8ed85fde46fb7fc5099f921cdfb604c155ffacdcfc5b",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/kerraridge/Wislen_Mamluk.lua",
+      "proposedFile": "changes/p99-tz-wislen-dialogue/kerraridge--Wislen_Mamluk.lua",
+      "sha256": "ee06447dedf1009116f360c0f8d070d1a10a94dd4b73455492a7252682f2ea83",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/kithicor/#Adjutant_D-kan.lua",
+      "proposedFile": "changes/p99-nz-adjutant-dialogue/kithicor--#Adjutant_D-kan.lua",
+      "sha256": "214b05ee9dd3cd927c7181b74c4213d586100acce02600501a729233f7c59b4d",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/kithicor/Ged_Twigborn.lua",
+      "proposedFile": "changes/p99-nz-ged-glove-dialogue/kithicor--Ged_Twigborn.lua",
+      "sha256": "e17ac6d48353da6755e035ccafd4d301353f2d6a83b5288ef006cb1b8a5830c9",
+      "mainCases": 4,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/kithicor/Giz_X-Tin.lua",
+      "proposedFile": "changes/p99-ranger-epic-dialogue/kithicor-Giz_X-Tin.lua",
+      "sha256": "3ebcddda3e447c610fa70efba37ffc03ae6e05e8e8c3051a1b4556f1b0403ffc",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/kithicor/Kithicor.lua",
+      "proposedFile": "changes/p99-am-call-of-flame/kithicor-Kithicor.lua",
+      "sha256": "3263913a0b888f7d436c52c5859d4457212533d5d8f641cd4b9b09e881aa93af",
+      "mainCases": 6,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/lakeofillomen/#tainted_barracuda.lua",
+      "proposedFile": "changes/p99-classic-conversions/lakeofillomen--hash-tainted_barracuda.lua",
+      "sha256": "a5622b62707d9b40af9b9f2e8ac46fcd7d2e263e7f5c4a0ebe3a7409cb8b5ff3",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/lakeofillomen/Astral_Projection.lua",
+      "proposedFile": "changes/p99-am-monk-epic-dialogue/lakeofillomen-Astral_Projection.lua",
+      "sha256": "771362071ff9f578b5a2d191c48472b360546653e97b52e089ffe2872d1d8604",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/lakeofillomen/Trooper_Frogzin.lua",
+      "proposedFile": "changes/p99-tz-restraining-trooper_frogzin/lakeofillomen--Trooper_Frogzin.lua",
+      "sha256": "302ceb07e760327d932ec57779f8e71a831fc2a89cc0d6b1a96f344bb0a0bb9c",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/lakeofillomen/Trooper_Selbat.lua",
+      "proposedFile": "changes/p99-tz-restraining-trooper_selbat/lakeofillomen--Trooper_Selbat.lua",
+      "sha256": "41f14ce10589717aeb2f06b967a3926b01ee03850d91500262be81953bd0a585",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/lakeofillomen/Trooper_Vaurk.lua",
+      "proposedFile": "changes/p99-af-vaurk-exclusion/lakeofillomen-Trooper_Vaurk.lua",
+      "sha256": "a5a74a502901eb44173e20b44eb4a6531a3ce1ae365b391728e58ba5b5387bbe",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/lakerathe/#tainted_aquagoblin.lua",
+      "proposedFile": "changes/p99-classic-conversions/lakerathe--hash-tainted_aquagoblin.lua",
+      "sha256": "b88ea40d4fd090b95d81e0f5411a3b613d820067be3a8a81845153c64ccd6d8a",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/lakerathe/Deep.lua",
+      "proposedFile": "changes/p99-am-monk-epic-dialogue/lakerathe-Deep.lua",
+      "sha256": "63579074ae9c47a47795bba2bfcde2267112773e5ddab647f53f2bde793bcb23",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/lakerathe/Eldreth.lua",
+      "proposedFile": "changes/p99-nz-eldreth-faction/lakerathe--Eldreth.lua",
+      "sha256": "9351fcea529ef9a1d1ba606b253a86cf40096da3861707aa4490e3e0edcb87a5",
+      "mainCases": 3,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/lakerathe/Kazen_Fecae.lua",
+      "proposedFile": "changes/p99-nz-necromancer-directions/lakerathe--Kazen_Fecae.lua",
+      "sha256": "f203d7852ff2abbc970f465bc88a9fc079788f4fe7104d3571357713ecdf6a61",
+      "mainCases": 7,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/lakerathe/Shmendrik_Lavawalker.lua",
+      "proposedFile": "changes/p99-af-cleric-spirit-lifecycle/lakerathe-Shmendrik_Lavawalker.lua",
+      "sha256": "a36e0551ed2c2f93f1f18f3b8230cdab454fa0593e15ae4212875eb3f78fb5af",
+      "mainCases": 3,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/lavastorm/Ruathey.lua",
+      "proposedFile": "changes/p99-tz-ruathey-hail/lavastorm--Ruathey.lua",
+      "sha256": "6207048e7ea568b0eca3c6b0cceaf7058a93876be11c11e4e665334fd5cc66a6",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/lfaydark/a_dark_elf_courier.lua",
+      "proposedFile": "changes/p99-tz-tunare-courier-timer/lfaydark--a_dark_elf_courier.lua",
+      "sha256": "e6fc23626cedf5be2a47b59ea6cd1324bcaa2e3be5d5e6391652e64d75221f9d",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/mistmoore/an_avenging_caitiff.lua",
+      "proposedFile": "changes/p99-source-caitiff-depop/mistmoore--an_avenging_caitiff.lua",
+      "sha256": "17f2d9d4202b8e0aa51222cd0139442cce9acf8b5db7b125d76b748b7dea5801",
+      "mainCases": 8,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/misty/Bronin_Higginsbot.lua",
+      "proposedFile": "changes/p99-af-bronin-dialogue/misty-Bronin_Higginsbot.lua",
+      "sha256": "7cbc4efd9ebb525221edd2225ccaaf35dded351e35d7d4b3f95eed3ab6dcbbbd",
+      "mainCases": 3,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/misty/Ella_Foodcrafter.lua",
+      "proposedFile": "changes/p99-af-druid-progression-dialogue/misty-Ella_Foodcrafter.lua",
+      "sha256": "8e5ab9e78ea7b14cb105f10277b122eb2b6e215339f2278498d490d91d94cd49",
+      "mainCases": 8,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/misty/Joogl_Honeybugger.lua",
+      "proposedFile": "changes/p99-am-honey-jum-faction/misty-Joogl_Honeybugger.lua",
+      "sha256": "8cffdf7f06b01db3b21c3d7ae0e680dd56bb1a354183bc77726cfce76d0139ba",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/mistythicket/Bronin_Higginsbot.lua",
+      "proposedFile": "changes/p99-af-bronin-dialogue/mistythicket-Bronin_Higginsbot.lua",
+      "sha256": "6ccd61326a63bfb565e5d4d74c87f4f790110c67d683701a79c0092f21e49115",
+      "mainCases": 3,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/mistythicket/Ella_Foodcrafter.lua",
+      "proposedFile": "changes/p99-af-druid-progression-dialogue/mistythicket-Ella_Foodcrafter.lua",
+      "sha256": "dfa95747eeae4e4bc81b13ef6a96972eea09d0883ff2acb2a576a33d3fa8e2a5",
+      "mainCases": 8,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/najena/a_visiting_priestess.lua",
+      "proposedFile": "changes/p99-tz-visiting-priestess/najena--a_visiting_priestess.lua",
+      "sha256": "4a69dc1c53eb295f8f980db901440bf6941ca66acd1580a42e842b1963441427",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/necropolis/Jaled_Dar-s_shade.lua",
+      "proposedFile": "changes/p99-jaled-lua/Jaled_Dar-s_shade.lua",
+      "sha256": "56f2418b8c3f5ad6d2c64d4cafa19e9fa671ebe175ce427b2031f79b3278c0bc",
+      "mainCases": 31,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/necropolis/Neb.lua",
+      "proposedFile": "changes/p99-neb-lua/Neb.lua",
+      "sha256": "ee98b4d2511ddf68e41c8dc8adecc12e0202a7b568c2d1765d5ed566e3284ea3",
+      "mainCases": 12,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/nektulos/Venenzi_Oberzendi.lua",
+      "proposedFile": "changes/p99-nz-necromancer-directions/nektulos--Venenzi_Oberzendi.lua",
+      "sha256": "6465d23ab7e11e0827d2ba361d8c8b6f15d9b1ac2bd9c9f5a92227f8b1d5c94c",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/neriaka/Dran_-slug-_Rembor.lua",
+      "proposedFile": "changes/p99-il-parity/neriaka--Dran_-slug-_Rembor.lua",
+      "sha256": "f05851b07922065b2b275395908ccc033084ec9b214dc89fe66c9e9dfd98f4cc",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/neriaka/Sal_Drana.lua",
+      "proposedFile": "changes/p99-am-muffin-recipients/neriaka-Sal_Drana.lua",
+      "sha256": "81a578b213287ed53d0b2967aa13bd9bcfece1fb1a773efdcf488ead16268f37",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/neriaka/Smaka.lua",
+      "proposedFile": "changes/p99-sz-smaka-factions/neriaka--Smaka.lua",
+      "sha256": "84dba6f7adc5a09439dfa4ebb9ef367a1f688ba792f4004d73e158617092780d",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/neriaka/The_Gobbler.lua",
+      "proposedFile": "changes/p99-nz-gobbler-dialogue/neriaka--The_Gobbler.lua",
+      "sha256": "3b7fc853bd08c5912fa96204a06c0cd6cf2ca2745e4b579e96feac50c73281b6",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/neriaka/X-Ta_Tempi.lua",
+      "proposedFile": "changes/p99-nz-necromancer-words-dialogue/neriaka--X-Ta_Tempi.lua",
+      "sha256": "e96b5f9033c0f3207e259347c3d3b6876aa43035115179e46f3dcaa3b0e51d7b",
+      "mainCases": 6,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/neriaka/X-Ta_Timpi.lua",
+      "proposedFile": "changes/p99-nz-necromancer-words-dialogue/neriaka--X-Ta_Timpi.lua",
+      "sha256": "22c68b739fb119a42c22ec1f99002e25ed24fc79555642096050f43ed339c67f",
+      "mainCases": 7,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/neriaka/X-Ta_Tompi.lua",
+      "proposedFile": "changes/p99-nz-necromancer-words-dialogue/neriaka--X-Ta_Tompi.lua",
+      "sha256": "9c8454949ad11f33c4c85ba8a7377dfafae2929436884781e0f08ebdd34f1185",
+      "mainCases": 7,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/neriakb/Rysva_To-Biath.lua",
+      "proposedFile": "changes/p99-tz-rysva-scale-dialogue/neriakb--Rysva_To-Biath.lua",
+      "sha256": "aa2f98204d809438504a0d6cfbedb17a5560d89f135402cd062e16ed3e9828e2",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/neriakb/Seloxia_Punox.lua",
+      "proposedFile": "changes/p99-guild-review/neriakb--Seloxia_Punox.lua",
+      "sha256": "b5222022dbd38a9a73cc24f9744f0571eb5327036bcd41185fb961219d46911f",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/neriakb/vengeful_spirit.lua",
+      "proposedFile": "changes/p99-tz-vengeful-spirit-timer/neriakb--vengeful_spirit.lua",
+      "sha256": "6a98fe254007c7d04f5831f8e7c2bc77467dbc74f39a5c5dde8e637997247203",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/neriakb/Zanotix_Ixtaz.lua",
+      "proposedFile": "changes/p99-tz-zanotix-hail/neriakb--Zanotix_Ixtaz.lua",
+      "sha256": "7be786d7c77fd57d2ae30b0f69d8da2f0a6316acbaf0239def9aa5cf436d9a53",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/neriakc/Lokar_To-Biath.lua",
+      "proposedFile": "changes/p99-af-red-wine/neriakc-Lokar_To-Biath.lua",
+      "sha256": "eebb543a54d2b24d788994dcada43c1d6d1328ee727648a143b63c86d8fefbfb",
+      "mainCases": 7,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/neriakc/Loveal_S-Nez.lua",
+      "proposedFile": "changes/p99-am-neriak-dialogue/neriakc-Loveal_S-Nez.lua",
+      "sha256": "52062d9ba22ef125ec5922ee96e2edb50e0d52789ec26b8af5291a17b0c408a1",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/neriakc/Noxhil_V-Sek.lua",
+      "proposedFile": "changes/p99-af-noxhil-phrase/neriakc-Noxhil_V-Sek.lua",
+      "sha256": "d2b890136ca9b4d145c95b519791b8c8cb3442466dbb85ca44460151541bf102",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/neriakc/Perrir_Zexus.lua",
+      "proposedFile": "changes/p99-il-parity/neriakc--Perrir_Zexus.lua",
+      "sha256": "10b057f064000245135d040c016b8783578b55310b82b47d092d9ccf89ee071e",
+      "mainCases": 3,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/oceanoftears/Denken_Strongpick.lua",
+      "proposedFile": "changes/p99-tz-denken-find-oceanoftears/oceanoftears--Denken_Strongpick.lua",
+      "sha256": "7a849532b755031022ab1894054821411d97206a16baf3326cfc6fe8872c9658",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/oggok/Bonlarg.lua",
+      "proposedFile": "changes/p99-am-g-dialogue/oggok-Bonlarg.lua",
+      "sha256": "3a314a84af90e5e1b57bf0559afad8ccc032deb1613c307701904c97ad3a30e2",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/oggok/Emissary_Glib.lua",
+      "proposedFile": "changes/p99-nz-emissary-currency/oggok--Emissary_Glib.lua",
+      "sha256": "33a8d9ca9d17c04d368a8327ed58408cab0782feb38d8cbda51d0b03ab0124d9",
+      "mainCases": 14,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/oggok/Grevak.lua",
+      "proposedFile": "changes/p99-am-lizard-dialogue/oggok-Grevak.lua",
+      "sha256": "c900cc90a0814169db04caccedf1c7a39ee371d7639585b157c272b6a1ef6ce5",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/oggok/Guntrik.lua",
+      "proposedFile": "changes/p99-nz-noble-crest-rewards/oggok--Guntrik.lua",
+      "sha256": "997c28aff938b81ce230fba1d4ed7291d021207b12e3ff8bab5b82f84746e50b",
+      "mainCases": 4,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/oggok/Kogna.lua",
+      "proposedFile": "changes/p99-am-lizard-dialogue/oggok-Kogna.lua",
+      "sha256": "d973512a989f4710eaf29d036fb5ef463fa6902014568d28bd400001e373c9f4",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/oot/a_lesser_spirit.lua",
+      "proposedFile": "changes/p99-sz-epic-lesser-oot/oot--a_lesser_spirit.lua",
+      "sha256": "32f007a70b9b045f6a260377909b00211718984b4957b185dce49524c32c688c",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/oot/Denken_Strongpick.lua",
+      "proposedFile": "changes/p99-tz-denken-find-oot/oot--Denken_Strongpick.lua",
+      "sha256": "e51b7b1957c04a9f9efbc867dd34db7f4d392bf50055d26c709ee78c4bb5a39d",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/oot/Nerbilik.lua",
+      "proposedFile": "changes/p99-am-hehe-meat/oot-Nerbilik.lua",
+      "sha256": "ae62772c841c31ea725fa3964789c8f392d55363ec72348ede2299dfc531fe81",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/oot/Oracle_of_K-Arnon.lua",
+      "proposedFile": "changes/p99-tz-oracle-dialogue/oot--Oracle_of_K-Arnon.lua",
+      "sha256": "901a3752935ca97b4f0aed544d10e47d1b05357e1a80b93f7d7d457ca5065345",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/overthere/93182.lua",
+      "proposedFile": "changes/p99-nz-skullcap-steps/overthere--93182.lua",
+      "sha256": "894edc741375ddcaa4520d4a5ffec1b9fd8ba61c53255c383a390125936439e2",
+      "mainCases": 3,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/overthere/Captain_Rottgrime.lua",
+      "proposedFile": "changes/p99-nz-rottgrime-dialogue/overthere--Captain_Rottgrime.lua",
+      "sha256": "1760bcd2d3e95833899ae5f68be33dbbb0815e9917d1b7a3ad88397953c46771",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/overthere/Drixiv_Arcut.lua",
+      "proposedFile": "changes/p99-tz-drixiv_arcut-trooper/overthere--Drixiv_Arcut.lua",
+      "sha256": "30264776b8b9690433024b66dbd5b6c8d4ed566143925fc4712edc7bcae8224b",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/overthere/Slicia_J-Singe.lua",
+      "proposedFile": "changes/p99-am-magician-scroll-dialogue/overthere-Slicia_J-Singe.lua",
+      "sha256": "b800eda6798b765707e52655cbe90b39b5c5e884b2a775f6c1c2582429a39068",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/overthere/Tin_Banker_Assistant.lua",
+      "proposedFile": "changes/p99-nz-skullcap-steps/overthere--Tin_Banker_Assistant.lua",
+      "sha256": "6ba58a0fbe8aa71769c8b557b33a8533375edaa30d5c8253323a549a02eff899",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/overthere/Xlixinar_Arcut.lua",
+      "proposedFile": "changes/p99-tz-xlixinar_arcut-trooper/overthere--Xlixinar_Arcut.lua",
+      "sha256": "a55b6909c7e83f6ff4d818622cc6ef5cc1dbb268fcdf3fe9fb389d23e1c9f1f3",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/paineel/#Avatar_of_Terror.lua",
+      "proposedFile": "changes/p99-tz-terror-avatar-hail/paineel--#Avatar_of_Terror.lua",
+      "sha256": "50abb441c8e600f1e3f204d4b19f8c4726a24fa5ff254d7b2caded92e6647a82",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/paineel/Antus_Shelbra.lua",
+      "proposedFile": "changes/p99-nz-fisherman-reward/paineel--Antus_Shelbra.lua",
+      "sha256": "683feb8865e62bca69e3654add437c6ed333655c8ab3ab78f5da22f0e2ec08e3",
+      "mainCases": 4,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/paineel/Auhrik_Siet-ka.lua",
+      "proposedFile": "changes/p99-nz-neonate-dialogue/paineel--Auhrik_Siet-ka.lua",
+      "sha256": "559205c347c323c0b17589cb232726958666d50a09378303f853312372a3fca0",
+      "mainCases": 5,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/paineel/Davorre_Bloodthorn.lua",
+      "proposedFile": "changes/p99-nz-neonate-dialogue/paineel--Davorre_Bloodthorn.lua",
+      "sha256": "1d0534a402da9eedd30434b4deefe3d8abfecc808f1a9aaea074dc529089c360",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/paineel/Duriek_Bloodpool.lua",
+      "proposedFile": "changes/p99-sz-duriek-factions/paineel--Duriek_Bloodpool.lua",
+      "sha256": "a2fd08775c45423ad322dbaa586fe37d4295b3976f1c8b00cdf048bf4c63fce9",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/paineel/Royal_Guard_Lilkus.lua",
+      "proposedFile": "changes/p99-il-parity/paineel--Royal_Guard_Lilkus.lua",
+      "sha256": "6217ba0572035b575be36ab0dbd87bd041d4dd8d0f0d6c60c785da590ff5cca5",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/paineel/Shevra_Kollintar.lua",
+      "proposedFile": "changes/p99-tz-shevra-dialogue/paineel--Shevra_Kollintar.lua",
+      "sha256": "bde725c7352b1fe65bf064c161293d4fe4ebf30881d449bdba8122313dd0dad7",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/paineel/Taralani_Rahnta.lua",
+      "proposedFile": "changes/p99-tz-taralani-tools/paineel--Taralani_Rahnta.lua",
+      "sha256": "e7cfd947a7638b801255a2bfba51986c23636362b0e742926fb4f477327c990d",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/paineel/Yvonne_Ani.lua",
+      "proposedFile": "changes/p99-am-herb-shop/paineel-Yvonne_Ani.lua",
+      "sha256": "4ea5d821237fc956f725b33e27f78381b0a6604c7c6631ebb70eee5b69babf67",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/qcat/Garuc_Anehm.lua",
+      "proposedFile": "changes/p99-nz-paladin-hunting-dialogue/qcat--Garuc_Anehm.lua",
+      "sha256": "faf4e732e7f5d381a4b7fd675fe417dd161eff6a79c9db89684747a2cd582890",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/qcat/Sragg_Bloodheart.lua",
+      "proposedFile": "changes/p99-guild-review/qcat--Sragg_Bloodheart.lua",
+      "sha256": "cef2f7f06a73d77ccaf6cabb4b69fdfd4042dd3822ff403a6f4e6e276abc2185",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/qcat/Vin_Moltor.lua",
+      "proposedFile": "changes/p99-nz-paw-opolla/qcat--Vin_Moltor.lua",
+      "sha256": "0f189c93aabe447760666d3c0a198d63f53d2d314bbdbb7e8a63c63c911ca5c9",
+      "mainCases": 3,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/qcat/Zaen_Kalystir.lua",
+      "proposedFile": "changes/p99-classic-conversions/qcat--Zaen_Kalystir.lua",
+      "sha256": "fa71202ffd7072a4c85b4edefee0cf9d56dde820541770c0540009dba7094627",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/qeynos2/Seta_Bakindo.lua",
+      "proposedFile": "changes/p99-tz-seta-rescue-precedence/qeynos2--Seta_Bakindo.lua",
+      "sha256": "6f5f51ead26f8be69928c04f81c1cfd76c5bd15199957981b0880032590bfde2",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/qeynos2/Tomer_Instogle.lua",
+      "proposedFile": "changes/p99-tz-tomer-backpack-identity/qeynos2--Tomer_Instogle.lua",
+      "sha256": "2a95430f6381a329e40956984fb75c26c54ea4bef7dad97102bb3870c400f010",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/rathemtn/a_lesser_spirit.lua",
+      "proposedFile": "changes/p99-sz-epic-lesser-rathemtn/rathemtn--a_lesser_spirit.lua",
+      "sha256": "07edae6896fbb76bb4081b6d49a07464487748b542a57231e4b1a77016b5ccaa",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/rathemtn/Brother_Zephyl.lua",
+      "proposedFile": "changes/p99-am-monk-dialogue/rathemtn-Brother_Zephyl.lua",
+      "sha256": "8dd91ee099307035c8dfbc411e2bf948135a883f12104a25b810e0a96ba53ab5",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/rathemtn/Cynthia.lua",
+      "proposedFile": "changes/p99-nz-glamour-stone-dialogue/rathemtn--Cynthia.lua",
+      "sha256": "e3e5b2c05162a5135bec073d1828508748b0d8ff2b23b13384596b7b0cb33de3",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/sebilis/a_fallen_monk.lua",
+      "proposedFile": "changes/p99-source-scope-disables/sebilis--a_fallen_monk.lua",
+      "sha256": "b31d369707f0ba666b55fb88c8ba375d71f594e9b24e396ee579e310c8fc5be6",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/skyshrine/#Ralgyn.lua",
+      "proposedFile": "changes/p99-nz-ralgyn-dialogue/skyshrine--#Ralgyn.lua",
+      "sha256": "1eaac0da2b70e896f0cdee0f3e307b6301e72f03dac705fe5ffcbfa5a9bcc747",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/skyshrine/a_kromzek_spy.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor/skyshrine/a_kromzek_spy.lua",
+      "sha256": "252ac15c96026ae74c1803494199ece9be09225e45ddad0a16f519807968e0c2",
+      "mainCases": 0,
+      "flavorCases": 2
+    },
+    {
+      "target": "maintained/lua/converted-perl/skyshrine/Anex.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor/skyshrine/Anex.lua",
+      "sha256": "4f7ff0c68e2109a16a2341f7b3c172bdfb34a169c7014dd5242914fc3d50cd11",
+      "mainCases": 0,
+      "flavorCases": 3
+    },
+    {
+      "target": "maintained/lua/converted-perl/skyshrine/Commander_Leuz.lua",
+      "proposedFile": "changes/p99-il-parity/skyshrine--Commander_Leuz.lua",
+      "sha256": "c9e49ab2584ab75057fa549d0f7287177299fd0310b4fcac216b6416eaab74f6",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/skyshrine/Crendatha_Fe-Dhar.lua",
+      "proposedFile": "changes/p99-nz-rogue-skyshrine-dialogue/skyshrine--Crendatha_Fe-Dhar.lua",
+      "sha256": "358bc36172c469f67a31234069000b0c13b1f927112a23ddce49084336cb96fb",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/skyshrine/Guardian_Elgoyr.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor/skyshrine/Guardian_Elgoyr.lua",
+      "sha256": "d29487f492da9c5e1ed6abf4384f4cac6a9cc4775833719dc95eff61fd6ab52e",
+      "mainCases": 0,
+      "flavorCases": 3
+    },
+    {
+      "target": "maintained/lua/converted-perl/skyshrine/Guardian_Olgax.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor/skyshrine/Guardian_Olgax.lua",
+      "sha256": "3d5d42b053c9a1726c10a1f4a48bb4c594f2e298cd2bfdf10e7658f06cfae2c9",
+      "mainCases": 0,
+      "flavorCases": 3
+    },
+    {
+      "target": "maintained/lua/converted-perl/skyshrine/Jaylorx.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor/skyshrine/Jaylorx.lua",
+      "sha256": "079b2a7e7dc6a5f9c971843af61790c2f190545ed1575f71ce3dd7c6036170d0",
+      "mainCases": 0,
+      "flavorCases": 3
+    },
+    {
+      "target": "maintained/lua/converted-perl/skyshrine/Jualicn.lua",
+      "proposedFile": "changes/p99-am-hsagra-dialogue/skyshrine-Jualicn.lua",
+      "sha256": "3bf536601099be22240c0498cbeaa81362a77ab1cf62ac3a220cbf6fef1873ba",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/skyshrine/Lawyla.lua",
+      "proposedFile": "changes/p99-am-hsagra-dialogue/skyshrine-Lawyla.lua",
+      "sha256": "2b1acf7968d188f4d099ea28e2fbccf11353e70791fa0df3f982f2d04d4dcca5",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/skyshrine/Lieutenant_Milven.lua",
+      "proposedFile": "changes/p99-am-milven-disable/skyshrine-Lieutenant_Milven.lua",
+      "sha256": "7e5de838a9925ef1674bcbfc841d962db85851b754c35a0271ad54fb92218425",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/skyshrine/Pyrox.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor/skyshrine/Pyrox.lua",
+      "sha256": "8a03acf9f7ddee679aaed05b4ef28b5a972fb7828bcc8e9f1777308a9fcba452",
+      "mainCases": 0,
+      "flavorCases": 5
+    },
+    {
+      "target": "maintained/lua/converted-perl/skyshrine/Sentry_Drahs.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor/skyshrine/Sentry_Drahs.lua",
+      "sha256": "9b733d315e469d076cc0bd5c98ebed09851bc26470259f05270af4a918bc1a12",
+      "mainCases": 0,
+      "flavorCases": 3
+    },
+    {
+      "target": "maintained/lua/converted-perl/skyshrine/Sentry_Iglotn.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor/skyshrine/Sentry_Iglotn.lua",
+      "sha256": "32f66ca23f3f5ccd61601445f6f199ab3da6a718a6440e71660d8679c3e69598",
+      "mainCases": 0,
+      "flavorCases": 3
+    },
+    {
+      "target": "maintained/lua/converted-perl/skyshrine/Sentry_Kaop.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor/skyshrine/Sentry_Kaop.lua",
+      "sha256": "666be9710a1e6dae6187bbc3b4e0fc61016af02203df4d6774ecaf820ac6246d",
+      "mainCases": 0,
+      "flavorCases": 3
+    },
+    {
+      "target": "maintained/lua/converted-perl/skyshrine/Sentry_Kcor.lua",
+      "proposedFile": "changes/p99-am-kcor-rewards/skyshrine-Sentry_Kcor.lua",
+      "sha256": "dc65b3c199394d5d0b4ff20684a2ab2389f207ffbbc8950502c982fe20bdf710",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/skyshrine/Sentry_Maof.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor/skyshrine/Sentry_Maof.lua",
+      "sha256": "9c9a4bc0f2c0d698fe2fd63bf3f0b5059ffe3ca5e6a070de2248791c55f712ec",
+      "mainCases": 0,
+      "flavorCases": 3
+    },
+    {
+      "target": "maintained/lua/converted-perl/skyshrine/Sentry_Nalox.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor/skyshrine/Sentry_Nalox.lua",
+      "sha256": "a6a04e3974504279c8394c63513c31958a60760e40a20286392bf7517acfbc90",
+      "mainCases": 0,
+      "flavorCases": 3
+    },
+    {
+      "target": "maintained/lua/converted-perl/skyshrine/Sentry_Wegylx.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor/skyshrine/Sentry_Wegylx.lua",
+      "sha256": "306c6d0c380329cbe8f090c0d460a5de4cdb56aeb802263b24bacadd69636420",
+      "mainCases": 0,
+      "flavorCases": 3
+    },
+    {
+      "target": "maintained/lua/converted-perl/skyshrine/Sentry_Zalgoty.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor/skyshrine/Sentry_Zalgoty.lua",
+      "sha256": "250f1777bfa136fed8cd58886d5e771533468a122a076aae950e9c16877c8cce",
+      "mainCases": 0,
+      "flavorCases": 3
+    },
+    {
+      "target": "maintained/lua/converted-perl/skyshrine/Suez.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor/skyshrine/Suez.lua",
+      "sha256": "84c7ac9625adb244e77befcc4674ffa185bd6814e4049532adc40d2587f02586",
+      "mainCases": 0,
+      "flavorCases": 3
+    },
+    {
+      "target": "maintained/lua/converted-perl/skyshrine/Telnaq.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor/skyshrine/Telnaq.lua",
+      "sha256": "8a5627d3a761fc3e4e582318cdddf6c6108333d466db77af31b0b20d76a55161",
+      "mainCases": 0,
+      "flavorCases": 3
+    },
+    {
+      "target": "maintained/lua/converted-perl/skyshrine/Ziglark_Whisperwing.lua",
+      "proposedFile": "changes/p99-il-parity/skyshrine--Ziglark_Whisperwing.lua",
+      "sha256": "4f606e80da4e5fe4761e8c039f1726c929d358b6c8fa10fd731e801923cfd1e5",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/sleeper/an_ancient_sentry.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor-extra/sleeper/an_ancient_sentry.lua",
+      "sha256": "9ea7d5432936afa756969d3a46c8fed841ca498a3c9fe46c01adb8aaa39d6634",
+      "mainCases": 0,
+      "flavorCases": 2
+    },
+    {
+      "target": "maintained/lua/converted-perl/soltemple/Gardern.lua",
+      "proposedFile": "changes/p99-sz-gardern-dialogue/soltemple--Gardern.lua",
+      "sha256": "66a299f5f235fbee7fde3dddd990e9cc38f977c885ce84576fb488b7dfaff592",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/soltemple/Ostorm.lua",
+      "proposedFile": "changes/p99-nz-ostorm-dialogue/soltemple--Ostorm.lua",
+      "sha256": "8245a63625e8f0c0e995d2503f7fc760b4dc9abcfab46b7e66f1abfd52733bf7",
+      "mainCases": 7,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/soltemple/Sultin.lua",
+      "proposedFile": "changes/p99-am-incandescent-wand/soltemple-Sultin.lua",
+      "sha256": "3fc3bf62f9ff603ecd62e1fbd0a466a87acdea63d33b064def7135e2a217f311",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/soltemple/Vilissia.lua",
+      "proposedFile": "changes/p99-tz-vilissia-dialogue/soltemple--Vilissia.lua",
+      "sha256": "1cc9d9b9d730ba04de2fc9285a82a5a9171b2c6b932127e4bb10b544b1941a5c",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/steamfont/Forpar_Fizfla.lua",
+      "proposedFile": "changes/p99-af-forpar-dialogue/steamfont-Forpar_Fizfla.lua",
+      "sha256": "3d8df6f4e58c8a82d659eeb2403e371582e75e131b7a09e4aa69ed43c99282b0",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/steamfont/Minotaur_Lord.lua",
+      "proposedFile": "changes/p99-classic-conversions/steamfont--Minotaur_Lord.lua",
+      "sha256": "2305cfd8e757bb99db066d7e58ab9d9b69e3333b6dc4d6d8a569a764e3ec842e",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/steamfontmts/Forpar_Fizfla.lua",
+      "proposedFile": "changes/p99-af-forpar-dialogue/steamfontmts-Forpar_Fizfla.lua",
+      "sha256": "02de18bdf8e32d54adf9ac9f83f030e9aa991919ad8363b9b0d325d605918774",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/stonebrunt/a_spirit.lua",
+      "proposedFile": "changes/p99-nz-ridossan-dialogue/stonebrunt--a_spirit.lua",
+      "sha256": "fc7fc6a46d8701d895195f54f088d4282b062e739efad0a7bf283efff5ccd2c0",
+      "mainCases": 5,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/stonebrunt/Disciple_Okarote.lua",
+      "proposedFile": "changes/p99-nz-ridossan-dialogue/stonebrunt--Disciple_Okarote.lua",
+      "sha256": "159cebfa2c11e00e290370d9b39cc3186c016e8822dc08c5b9fbc27d3c053555",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/stonebrunt/Ghost_of_Ridossan.lua",
+      "proposedFile": "changes/p99-nz-ridossan-dialogue/stonebrunt--Ghost_of_Ridossan.lua",
+      "sha256": "81fb48988e7c70bb57de3d253572d3dd58fee6e9f0d763f589ff6bd5aebfd249",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/stonebrunt/Ridossan_the_Unliving.lua",
+      "proposedFile": "changes/p99-nz-ridossan-dialogue/stonebrunt--Ridossan_the_Unliving.lua",
+      "sha256": "9d48a80f4c8c1bd7b1e4d4da18b2d4f9b6ceb3c765835a08a05da117e1029d1e",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/stonebrunt/Shazda_Kaekwon.lua",
+      "proposedFile": "changes/p99-nz-rognarog-dialogue/stonebrunt--Shazda_Kaekwon.lua",
+      "sha256": "a3aab5f4fe09f5c13e41bbcfcc8ef104236e5389851d16ca3caacc96cffe4934",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/swampofnohope/Trooper_Inkin.lua",
+      "proposedFile": "changes/p99-tz-restraining-trooper_inkin/swampofnohope--Trooper_Inkin.lua",
+      "sha256": "968035470241194c5ba0214599fef9b0ae83051dacef4ccba9e2a57c680bbd3e",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/swampofnohope/Warlord_Hikyg.lua",
+      "proposedFile": "changes/p99-am-geozite-dialogue/swampofnohope-Warlord_Hikyg.lua",
+      "sha256": "6a5f76bd1ff1589106827d672442049f8cda604e06324ad1cac81838dab0da57",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/templeveeshan/#Gozzrem.lua",
+      "proposedFile": "changes/p99-tz-gozzrem-wisdom-text/templeveeshan--#Gozzrem.lua",
+      "sha256": "95d50d231a4bcf2240e981b6f16d199acb0334d647ac85c0915a88865bea637f",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/templeveeshan/#Telkorenar.lua",
+      "proposedFile": "changes/p99-nz-telkorenar-dialogue/templeveeshan--#Telkorenar.lua",
+      "sha256": "8de9eaea779bd3cde9e63fd0de41e207f4201e12a95091d8f5f4835cd8264946",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/templeveeshan/Lendiniara_the_Keeper.lua",
+      "proposedFile": "changes/p99-nz-lendiniara-tests/Lendiniara_the_Keeper.lua",
+      "sha256": "fbe5e860166de78919e21ba71d78b0160b5eea4b28758ca0861f2eea49bb8051",
+      "mainCases": 45,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Agar.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Agar.lua",
+      "sha256": "92f957e15bcbd8419c45dddeac43ac7b2ad1dad78c2c439a60851fa74b9ac361",
+      "mainCases": 0,
+      "flavorCases": 3
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Argash.lua",
+      "proposedFile": "changes/p99-armor-review/thurgadina--Argash.lua",
+      "sha256": "5398439d6e58daebbda42ac976bb1853f2994828ed9f13a36593cb316f255aa4",
+      "mainCases": 30,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Arikain.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Arikain.lua",
+      "sha256": "a28ee7870f81aee0414847a0c33dc79184d1716c68911a4f013884595a9ddd4b",
+      "mainCases": 0,
+      "flavorCases": 2
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Battlepriest_Daragor.lua",
+      "proposedFile": "changes/p99-armor-review/thurgadina--Battlepriest_Daragor.lua",
+      "sha256": "5aa462ebd425a634ae1ef6a36317a7025ddb7fc3e943e8da29ed2625b9d23e2a",
+      "mainCases": 35,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Bintain.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Bintain.lua",
+      "sha256": "b9eb986fa1bafabed14715afd611cb91d8e9656fe899722030eeb09c3d340627",
+      "mainCases": 0,
+      "flavorCases": 2
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Boris.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Boris.lua",
+      "sha256": "d9f31f79f97d22da1c525615b2d99a90f57377af2a7e57e1e28f4510a801d57e",
+      "mainCases": 0,
+      "flavorCases": 3
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Brimgald_Brightsteel.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Brimgald_Brightsteel.lua",
+      "sha256": "572c71ffc7b070433f910493ab51158fd7e030442263f01479f678446f2244a3",
+      "mainCases": 0,
+      "flavorCases": 3
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Clifus.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Clifus.lua",
+      "sha256": "be0fbe3c9c5aa45089d9f5288dbfc76d64bee2c4bb48312e0a93f3930656cd07",
+      "mainCases": 0,
+      "flavorCases": 3
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Doogle_McBanick.lua",
+      "proposedFile": "changes/p99-conversions-velious/thurgadina/Doogle_McBanick.lua",
+      "sha256": "9176f081595cd213c9c037b7a0bbacec6811fa2bdab3ac5d552826c750c6a359",
+      "mainCases": 10,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Durfa.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Durfa.lua",
+      "sha256": "d3dbb1481592e4977bf76244c40fba953822a9924001ed2e86503aaca861ea38",
+      "mainCases": 0,
+      "flavorCases": 2
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Durgan_Bottlenip.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Durgan_Bottlenip.lua",
+      "sha256": "aef201bd6cc6b18eded54ca83460f18d51df44977ab0b79f95233c361589417f",
+      "mainCases": 0,
+      "flavorCases": 3
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Elder_Reevis.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Elder_Reevis.lua",
+      "sha256": "7e8e24f8702286490a336dd6fcd21859d8207a9e6c6ca84f87eb4a80e0b3ad55",
+      "mainCases": 0,
+      "flavorCases": 3
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Erdarf_Restil.lua",
+      "proposedFile": "changes/p99-af-erdarf-entry/thurgadina-Erdarf_Restil.lua",
+      "sha256": "f112719191636c75a642942cbadae39c3ce92f2fd9ad0f9554ac2f656f991201",
+      "mainCases": 4,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Foreman_Felspar.lua",
+      "proposedFile": "changes/p99-armor-review/thurgadina--Foreman_Felspar.lua",
+      "sha256": "70284bb4e6bdef06c044d8d056acae109f0191041eaca81b0384efd5989c516f",
+      "mainCases": 32,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Guard_Baldvin.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Baldvin.lua",
+      "sha256": "10be4726c9dae7e209455851f2c5551e06f414a839e150f6f8ec0ff33b680c1a",
+      "mainCases": 0,
+      "flavorCases": 3
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Guard_Bjorn.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Bjorn.lua",
+      "sha256": "60fedc7e6bd073a1dcf89d4b4cb4d225687302499bf6503e3117dc622a197b53",
+      "mainCases": 0,
+      "flavorCases": 2
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Guard_Clorn.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Clorn.lua",
+      "sha256": "e5a321ece66d21cf429f68a224d7817e95f9fcb259253a49ed4ed8da82d1dbb2",
+      "mainCases": 0,
+      "flavorCases": 2
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Guard_Dobbs.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Dobbs.lua",
+      "sha256": "2d107463c1e0c7002f54437b3e09480d9df70e51004f51d916534aaa1b9758ef",
+      "mainCases": 0,
+      "flavorCases": 2
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Guard_Enre.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Enre.lua",
+      "sha256": "16ab39f7ced7c3a2effc53f93cd45b1f1a4568a8cd01eca89dd21563992afe33",
+      "mainCases": 0,
+      "flavorCases": 2
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Guard_Eyvindur.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Eyvindur.lua",
+      "sha256": "3d190d3edeeaa87e2dd1bda24b02fb13e32defaffdef0437a9f4a5f261baee2e",
+      "mainCases": 0,
+      "flavorCases": 3
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Guard_Gord.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Gord.lua",
+      "sha256": "e695fad47a505d0640b84b97fbe8379909fd7ca96030877cfc183ae52f9e0fd3",
+      "mainCases": 0,
+      "flavorCases": 2
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Guard_Mason.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Mason.lua",
+      "sha256": "68cd76fb39bf281a563ae6cee62d4c4c882b2e4bb8bb9ff588c4e46ff99a4b77",
+      "mainCases": 0,
+      "flavorCases": 2
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Guard_Pert.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Pert.lua",
+      "sha256": "70aec48a4c0aca2f99ef6997262a0f745b4837936452b1f9be4a86419c3651e4",
+      "mainCases": 0,
+      "flavorCases": 2
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Hunter_Tarvin.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Hunter_Tarvin.lua",
+      "sha256": "a4eb852134fa5ed8446c503f1e737e1d1ed4e47806cf113b3645c59fbe678c9e",
+      "mainCases": 0,
+      "flavorCases": 4
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Karey.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Karey.lua",
+      "sha256": "a9d5c12e21546e519d8ae30a9bfed681c871f0cc1572e91156a15fa61aab6c9a",
+      "mainCases": 0,
+      "flavorCases": 3
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Kyla_Frostbeard.lua",
+      "proposedFile": "changes/p99-am-mage-armor-dialogue/thurgadina-Kyla_Frostbeard.lua",
+      "sha256": "696499192d5016230904007de46ca073d327b435540460699a0c08fb8ecc4422",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Lieutenant_Grimur.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Lieutenant_Grimur.lua",
+      "sha256": "ee39a1767e2e0be32694b79de8976973b4c13c9b8533ae539e9e93007f951b00",
+      "mainCases": 0,
+      "flavorCases": 3
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Lorekeeper_Derrin.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Lorekeeper_Derrin.lua",
+      "sha256": "5a7e67267cfef4d3ef9f864c774ae77a81f7a315c7c4e756ab544fe62b687db8",
+      "mainCases": 0,
+      "flavorCases": 3
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Lorekeeper_Einar.lua",
+      "proposedFile": "changes/p99-am-monk-armor-dialogue/thurgadina-Lorekeeper_Einar.lua",
+      "sha256": "ba8f5c515444095cff2e14804d4f9b98204bb29a9b59a219d0d46d32ada4ce5f",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Lorekeeper_Gundlt.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Lorekeeper_Gundlt.lua",
+      "sha256": "f4074db8c7f5ea2a3f8d399d9b35d49b63bc15e32d818bf912c9a513289801b4",
+      "mainCases": 0,
+      "flavorCases": 5
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Lorekeeper_Zorik.lua",
+      "proposedFile": "changes/p99-armor-review/thurgadina--Lorekeeper_Zorik.lua",
+      "sha256": "bc71a30ea20963454ddd6e0d6425f6f9c7fef6c3c65c74d52f85e3686f494cc9",
+      "mainCases": 36,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Loremaster_Fronden.lua",
+      "proposedFile": "changes/p99-conversions-velious/thurgadina/Loremaster_Fronden.lua",
+      "sha256": "587748e834a593b0db2a218567df4ca6be3619b4745eb6f6e4a08bc3bb8cf6ee",
+      "mainCases": 12,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Mandla_Klolp.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Mandla_Klolp.lua",
+      "sha256": "a668e4f34f2d94af817ff362b4ad1c5f7851c2312137ce6e50fe5a54483b958e",
+      "mainCases": 0,
+      "flavorCases": 3
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Nimren_Stonecutter.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Nimren_Stonecutter.lua",
+      "sha256": "ad34d392d544ba44295e258a078a1b568afbc315961a898212b358e4595dd099",
+      "mainCases": 0,
+      "flavorCases": 3
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Perkins_Doughbeard.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Perkins_Doughbeard.lua",
+      "sha256": "5f0cf34f830addefbd5356680d532683f35da473bab47ed6569b2aafbebceb15",
+      "mainCases": 0,
+      "flavorCases": 3
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Pythic_Urson.lua",
+      "proposedFile": "changes/p99-am-nalot-rum/thurgadina-Pythic_Urson.lua",
+      "sha256": "2820b415a7caddd321159667d58ce857a5c86315dc58c1fd267651d9c732240c",
+      "mainCases": 5,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Tavir.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Tavir.lua",
+      "sha256": "3f32baedc8830cf9e71360447d329623d6765c1a11b43f10daa92a8220b2d5e9",
+      "mainCases": 0,
+      "flavorCases": 3
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Thermin_Wandereye.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Thermin_Wandereye.lua",
+      "sha256": "1075d7fd89b8882adb8475d5c93d1ac9e8ca7291538a7438be9c316d73edb9ba",
+      "mainCases": 0,
+      "flavorCases": 3
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Tobart_Dirkins.lua",
+      "proposedFile": "changes/p99-conversions-velious/thurgadina/Tobart_Dirkins.lua",
+      "sha256": "7df24af26a5e756f579f4afae76e689c474f408e61af887272e208693c720dc8",
+      "mainCases": 5,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Travit_Conwil.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Travit_Conwil.lua",
+      "sha256": "0a9bd8f6b2a999c98d3879bde195df778432722d87410a55d27caeb52d9af001",
+      "mainCases": 0,
+      "flavorCases": 3
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Valdicar_Shadowfrost.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Valdicar_Shadowfrost.lua",
+      "sha256": "bcac74c430e19d29a1a803c0ef2493d1fec6eec3e04769431a539e5ab0fb0697",
+      "mainCases": 0,
+      "flavorCases": 3
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Yates_the_Butler.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Yates_the_Butler.lua",
+      "sha256": "1a87f3aaaa23986f666b7c0cdac17ad315ff2cc227c6211b4cb3f135727791cc",
+      "mainCases": 0,
+      "flavorCases": 3
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadinb/#Dain_Frostreaver_IV.lua",
+      "proposedFile": "changes/p99-tz-tormax-head-dain/thurgadinb--#Dain_Frostreaver_IV.lua",
+      "sha256": "b6bb533235e121ace127721d6ad26f49184354019757a1e05dbcc3f65d4ea81b",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadinb/Grand_Huntsman_Darral.lua",
+      "proposedFile": "changes/p99-conversions-velious/thurgadinb/Grand_Huntsman_Darral.lua",
+      "sha256": "a8d089bc04dd62bc1506f6e3693f73aca8f5bbe535d48e3637ade6780ae52f61",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadinb/Royal_Scribe_Kaavin.lua",
+      "proposedFile": "changes/p99-conversions-velious/thurgadinb/Royal_Scribe_Kaavin.lua",
+      "sha256": "bfa5872061d911e081b023fe50544b04def36fe22d3af70c3f93c53262e7a1f0",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadinb/Sentinel_Paxin.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadinb/Sentinel_Paxin.lua",
+      "sha256": "f8cbebbbf011dabb4b880409053b01e064d3cfb5f713e0913329dda609375e3d",
+      "mainCases": 0,
+      "flavorCases": 5
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadinb/Watcher_Devin.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadinb/Watcher_Devin.lua",
+      "sha256": "e1d3221f466e6c16577bbd917456c5afcf097c77699b48a8b8f0ee7bfa928e4e",
+      "mainCases": 0,
+      "flavorCases": 3
+    },
+    {
+      "target": "maintained/lua/converted-perl/timorous/a_dancing_skeleton.lua",
+      "proposedFile": "changes/p99-am-monk-dialogue/timorous-a_dancing_skeleton.lua",
+      "sha256": "3c5234e671f6f8b78b08c67f56e1adc122ded648d154bc4cbdb0f0571142292a",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/timorous/Alrik_Farsight.lua",
+      "proposedFile": "changes/p99-af-druid-progression-dialogue/timorous-Alrik_Farsight.lua",
+      "sha256": "365704dbc93ad8408d189ebfb6a47532ecb6bb4d80dea135858a003ff4fd82bc",
+      "mainCases": 7,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/timorous/Drendico_Metalbones.lua",
+      "proposedFile": "changes/p99-nz-necromancer-directions/timorous--Drendico_Metalbones.lua",
+      "sha256": "eca16b47003a8297d3a2f8c80d501573c2d570d7f519a39f1fd551f2c128f314",
+      "mainCases": 3,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/timorous/Lheao.lua",
+      "proposedFile": "changes/p99-am-monk-epic-dialogue/timorous-Lheao.lua",
+      "sha256": "14a72e535c752950c9bc7c7b853aaef7bd5de1be7c45f7a74da479ccc636ea8a",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/timorous/The_Great_Oowomp.lua",
+      "proposedFile": "changes/p99-am-oowomp-payment/timorous-The_Great_Oowomp.lua",
+      "sha256": "6cc790ca90f0f1c27b807e4861c25496ce9f36eb6d6ec4287fd197b80060b833",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/trakanon/#Kaiaren.lua",
+      "proposedFile": "changes/p99-am-monk-epic-dialogue/trakanon-#Kaiaren.lua",
+      "sha256": "9d50cd006a3af7cbf55b4902720c0948c90359ec3582326553ecafb9cde2dbe1",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/trakanon/Kaiaren.lua",
+      "proposedFile": "changes/p99-am-monk-epic-dialogue/trakanon-Kaiaren.lua",
+      "sha256": "419b07b1f65de8173be86fa63f2f14c251289cbceb2431704e935e8fcdb8d209",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/wakening/#a_storm_giant_architect.lua",
+      "proposedFile": "changes/p99-am-living-granite/wakening-#a_storm_giant_architect.lua",
+      "sha256": "ae54966c24d32d567315d7ee3f2e598e67e44e364bb2c78580a61c9e93f23bcd",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/wakening/#Rapticor.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor/wakening/#Rapticor.lua",
+      "sha256": "e50075b3db17fa0f96df07608ac9c9a98ba98ff38777a4008a269faf3d632969",
+      "mainCases": 0,
+      "flavorCases": 3
+    },
+    {
+      "target": "maintained/lua/converted-perl/wakening/a_tigeraptor.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor/wakening/a_tigeraptor.lua",
+      "sha256": "e8a25c9db3d268dec737b8a50c743107ce8d6ffc4a930d9096e2a29e79a29144",
+      "mainCases": 0,
+      "flavorCases": 3
+    },
+    {
+      "target": "maintained/lua/converted-perl/wakening/a_tigesaurous.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor/wakening/a_tigesaurous.lua",
+      "sha256": "8722e5e9be6583da9496afcdb134d0345cb4900787a439c884b6048cfb36d941",
+      "mainCases": 0,
+      "flavorCases": 3
+    },
+    {
+      "target": "maintained/lua/converted-perl/wakening/Lady_Gelistial.lua",
+      "proposedFile": "changes/p99-conversions-velious-flavor/wakening/Lady_Gelistial.lua",
+      "sha256": "4b06ece9b323607bfe6e629d55a7dba09a5bbe456c7c0d97ef1e6057893b8555",
+      "mainCases": 2,
+      "flavorCases": 6
+    },
+    {
+      "target": "maintained/lua/converted-perl/wakening/mist_panther.lua",
+      "proposedFile": "changes/p99-am-nalot-rum/wakening-mist_panther.lua",
+      "sha256": "bd014e60c18448401e3f6b59b86715a60b4ccbce07e354131877bed4cfa41039",
+      "mainCases": 7,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/converted-perl/warslikswood/Trooper_Roklon.lua",
+      "proposedFile": "changes/p99-tz-restraining-trooper_roklon/warslikswood--Trooper_Roklon.lua",
+      "sha256": "f22c0b6668a63583acf7625c0d30eba979de3f8a3c514880a55b6e74c8256db3",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/idlequest-authored/firiona/Guard_Frandan.lua",
+      "proposedFile": "changes/p99-nz-frandan-lore/firiona--Guard_Frandan.lua",
+      "sha256": "4b4756793e48c4ef2ba0200e508368f546c60b84cfe17a7d70579829254934b8",
+      "mainCases": 3,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/idlequest-authored/freeporteast/Innkeep_Nasumi.lua",
+      "proposedFile": "changes/p99-am-muffin-new-recipients/freeporteast-Innkeep_Nasumi.lua",
+      "sha256": "122c566a07da2967319023c593204cdc90864568e15c6c1e1620e7b75d1a6e2d",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/idlequest-authored/freeportwest/Gern_Tassel.lua",
+      "proposedFile": "changes/p99-am-muffin-new-recipients/freeportwest-Gern_Tassel.lua",
+      "sha256": "0dc7b746d9c3454ff73c00d836e2ba854cf7b187734edc6aecf049cff1e979bc",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/idlequest-authored/freporte/Innkeep_Nasumi.lua",
+      "proposedFile": "changes/p99-am-muffin-new-recipients/freporte-Innkeep_Nasumi.lua",
+      "sha256": "122c566a07da2967319023c593204cdc90864568e15c6c1e1620e7b75d1a6e2d",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/idlequest-authored/freportn/Gern_Tassel.lua",
+      "proposedFile": "changes/p99-am-muffin-new-recipients/freportn-Gern_Tassel.lua",
+      "sha256": "0dc7b746d9c3454ff73c00d836e2ba854cf7b187734edc6aecf049cff1e979bc",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/idlequest-authored/lakerathe/#Natasha_Whitewater.lua",
+      "proposedFile": "changes/p99-af-cleric-spirit-lifecycle/lakerathe-%23Natasha_Whitewater.lua",
+      "sha256": "8f09e87a3febda4dda1e25df29175542c9440b7a13e3b1fb46e26435afba54cb",
+      "mainCases": 4,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/idlequest-authored/nektulos/Master_Whoopal.lua",
+      "proposedFile": "changes/p99-il-parity/nektulos--Master_Whoopal.lua",
+      "sha256": "f3831dbed54b6c45b7f2be10ceb4cf56301d9f632b52521fe72d625f4d563353",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/idlequest-authored/northkarana/Innkeep_James.lua",
+      "proposedFile": "changes/p99-am-muffin-new-recipients/northkarana-Innkeep_James.lua",
+      "sha256": "d6682a11ad16fc6c80251a18a390ac86e0ac81cfd1fc392e9a5fb7226f709475",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/idlequest-authored/northro/Dorn_B-Dynn.lua",
+      "proposedFile": "changes/p99-am-dorn-dialogue/northro-Dorn_B-Dynn.lua",
+      "sha256": "a2f289281da52cbcdd387dfbab05f4a9d2fa63d70a8627f7819e28954de48ddd",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/idlequest-authored/nro/Dorn_B-Dynn.lua",
+      "proposedFile": "changes/p99-am-dorn-dialogue/nro-Dorn_B-Dynn.lua",
+      "sha256": "a2f289281da52cbcdd387dfbab05f4a9d2fa63d70a8627f7819e28954de48ddd",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/idlequest-authored/nurga/Trunt.lua",
+      "proposedFile": "changes/p99-am-trunt-replacement/nurga-Trunt.lua",
+      "sha256": "10bf81c017f978cc7d5de5433336572af0251d7a9f43c17272d03248989e4f0b",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/idlequest-authored/thurgadina/Adia_Coldbeard.lua",
+      "proposedFile": "changes/p99-conversions-velious/thurgadina/Adia_Coldbeard.lua",
+      "sha256": "f117031ef05ec5086e7407eae679098dfa814bfab4a7d9411c6d54459076caa3",
+      "mainCases": 4,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/airplane/Abec_Ianor.lua",
+      "proposedFile": "changes/p99-tz-sky-abec_ianor/airplane--Abec_Ianor.lua",
+      "sha256": "8b3231a454bd8c097effafb4af29299e8ff9f2246aa4e59cebd0662a675224ec",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/airplane/Alan_Harten.lua",
+      "proposedFile": "changes/p99-af-sky-upgrades/airplane-Alan_Harten.lua",
+      "sha256": "dd6780653e52e5e662c25066351240cb06aaa48014eec74ba89e5267adc2377a",
+      "mainCases": 5,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/airplane/Denise_Songweaver.lua",
+      "proposedFile": "changes/p99-af-sky-upgrades/airplane-Denise_Songweaver.lua",
+      "sha256": "1fa1437fa33a9c6d2d814d61fa2f617b7e16083bddaeb30e86676b2cb7763842",
+      "mainCases": 6,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/airplane/Deric_Lennox.lua",
+      "proposedFile": "changes/p99-af-sky-upgrades/airplane-Deric_Lennox.lua",
+      "sha256": "d26c05bf53663b5adc74f6172a0f26f345c9e83d2ee7072be655bd05c75da940",
+      "mainCases": 4,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/airplane/Dirkog_Steelhand.lua",
+      "proposedFile": "changes/p99-tz-dirkog_steelhand-timer/airplane--Dirkog_Steelhand.lua",
+      "sha256": "8b47ee5327fbcd1be48b8d1621e3bdc363bdf7793239a14f351115443833bb36",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/airplane/Dugaas_Helpyre.lua",
+      "proposedFile": "changes/p99-nz-sky-legacy-upgrades/airplane--Dugaas_Helpyre.lua",
+      "sha256": "6d57a26f7851ee77ec5798461ce0c1183f6bd5fefed8d162ba7490e7bdc6de18",
+      "mainCases": 6,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/airplane/Enderbite.lua",
+      "proposedFile": "changes/p99-af-sky-upgrades/airplane-Enderbite.lua",
+      "sha256": "008bcd624f67e6a747d3b55838ec23e5f20d2d6d33e1c9e5af9e0c45ac51b639",
+      "mainCases": 4,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/airplane/Falorn.lua",
+      "proposedFile": "changes/p99-tz-sky-falorn/airplane--Falorn.lua",
+      "sha256": "24fbc5d4640ae581a798b3913f044e5329f0729f6e9401d4e5b0aef86be52caf",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/airplane/Fenalla_Moonshadow.lua",
+      "proposedFile": "changes/p99-af-sky-upgrades/airplane-Fenalla_Moonshadow.lua",
+      "sha256": "21053e5a93d3054540c0c435932a332f88cba6f1242e5a15cc795c2629dbffc1",
+      "mainCases": 4,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/airplane/Frederic_Calermin.lua",
+      "proposedFile": "changes/p99-am-frederic-dialogue/airplane-Frederic_Calermin.lua",
+      "sha256": "f001a4640fc403366a41cff462b57abdd50b98d0e30732d381765fe8bb747c95",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/airplane/Gina_McStargan.lua",
+      "proposedFile": "changes/p99-tz-old-sky-gina_mcstargan/airplane--Gina_McStargan.lua",
+      "sha256": "afbc11fb70b079854146c483576cef9b635106b5247b254b4bc675eaee48d224",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/airplane/Gordon_Treecaller.lua",
+      "proposedFile": "changes/p99-nz-sky-legacy-upgrades/airplane--Gordon_Treecaller.lua",
+      "sha256": "790f3415a84ead2e4a5abc9547f96d52f659b254d670031ff41bde47fb6d353b",
+      "mainCases": 7,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/airplane/Gragrot.lua",
+      "proposedFile": "changes/p99-tz-old-sky-gragrot/airplane--Gragrot.lua",
+      "sha256": "d8e6a20858bfd4c6d9b604952b3cc95ba1ecbace648f98bab50e13f35a9b3d66",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/airplane/Gregori_Lightbringer.lua",
+      "proposedFile": "changes/p99-nz-sky-legacy-upgrades/airplane--Gregori_Lightbringer.lua",
+      "sha256": "00668c84a4e92e59d5ca49854eedd8b40a1f09b73926780fccb9c4d3b2f5ab68",
+      "mainCases": 6,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/airplane/Inte_Akera.lua",
+      "proposedFile": "changes/p99-tz-inte_akera-timer/airplane--Inte_Akera.lua",
+      "sha256": "90fc284b4345c8466551eccb7aed098a883222f107a0f8d1f3e3f9b0a7100e30",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/airplane/Jzil_GSix.lua",
+      "proposedFile": "changes/p99-nz-sky-legacy-upgrades/airplane--Jzil_GSix.lua",
+      "sha256": "e5f0743078675f5bb40726e9f6e651d2764dd0f98822c7d61f605b8a57a3de69",
+      "mainCases": 7,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/airplane/Neasin_Leornic.lua",
+      "proposedFile": "changes/p99-tz-sky-neasin_leornic/airplane--Neasin_Leornic.lua",
+      "sha256": "e94c26c21ea9f5845f3ca6e27574e14f4da8b7cbeb7a85d0b9902c353bfb83e2",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/airplane/Ogog.lua",
+      "proposedFile": "changes/p99-tz-sky-ogog/airplane--Ogog.lua",
+      "sha256": "03baa356f2fa37f5d7656378d8768ee921e01576db5c60cc9f2a99c43962008b",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/airplane/Ooga.lua",
+      "proposedFile": "changes/p99-tz-old-sky-ooga/airplane--Ooga.lua",
+      "sha256": "a5725f239b9cb62e727246413034c0228c2b6ca9be2146c4a8f929475a97060d",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/airplane/Rayne.lua",
+      "proposedFile": "changes/p99-nz-sky-legacy-upgrades/airplane--Rayne.lua",
+      "sha256": "8ce48179844f6986d42238edfc07c1d38f4b1bbb5b2ad92d97dcdebb154957ce",
+      "mainCases": 8,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/airplane/Relinin_Skyrunner.lua",
+      "proposedFile": "changes/p99-nz-sky-legacy-upgrades/airplane--Relinin_Skyrunner.lua",
+      "sha256": "cfa58a9d1143d72fad0f44375a682b10a648d302c0d4839393e57418d7d7037d",
+      "mainCases": 6,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/airplane/Sarkis_Ebonblade.lua",
+      "proposedFile": "changes/p99-sz-sarkis_ebonblade-class/airplane--Sarkis_Ebonblade.lua",
+      "sha256": "378b44ae3c565eefb9db26dc53279ac364d6654c74293933910c5a266f1b9da3",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/airplane/Sirran_the_Lunatic.lua",
+      "proposedFile": "changes/p99-nz-sirran-wall/airplane--Sirran_the_Lunatic.lua",
+      "sha256": "247f8717a39c4e5d1af02a0e7413a9ef2a6ced9a5c7a1bd694f4cd1e3e5b152d",
+      "mainCases": 6,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/airplane/Ton_Po.lua",
+      "proposedFile": "changes/p99-am-monk-sky-upgrades/airplane-Ton_Po.lua",
+      "sha256": "d8fe202e461135d3f180aa1a00d09947e0671e98ac1a067b6e3546a2f4b6acc2",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/airplane/Tynicon_DLin.lua",
+      "proposedFile": "changes/p99-tz-old-sky-tynicon_dlin/airplane--Tynicon_DLin.lua",
+      "sha256": "89246653140482fdfbe9ccf2c5fb8c29b524bc75b9b0e1543d6eef2de2cc8683",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/airplane/Wizard_Schrock.lua",
+      "proposedFile": "changes/p99-tz-schrock-great-wizard/airplane--Wizard_Schrock.lua",
+      "sha256": "2ec474813e2eb1598f841b540b957fa8b0d9cc10e75354617115ad2a31f0a346",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/airplane/Wu_the_Enlightened.lua",
+      "proposedFile": "changes/p99-am-monk-sky-upgrades/airplane-Wu_the_Enlightened.lua",
+      "sha256": "d860ae7e59d1258b42a92a53154ce82b847542a4176b1dafb52326b8e4b669e7",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/akanon/Baxok_Curhunter.lua",
+      "proposedFile": "changes/p99-am-gearheart-reward/akanon-Baxok_Curhunter.lua",
+      "sha256": "256cfffd065961ef24c0cff7af4a394cc6d981d925925254b381145d52b382d0",
+      "mainCases": 6,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/akanon/Manik_Compolten.lua",
+      "proposedFile": "changes/p99-nz-series-c-currency/akanon--Manik_Compolten.lua",
+      "sha256": "f9cf3c45e33b84389341262811e25b362be371298fa029a5385a2d75e5d770e2",
+      "mainCases": 7,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/akanon/Tergon_Brenclog.lua",
+      "proposedFile": "changes/p99-tz-retlon-note-tergon_brenclog/akanon--Tergon_Brenclog.lua",
+      "sha256": "80a3f713cffe2fca1bcd1cb63b52c37e37d9591be2883820d146bd79985a0058",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/butcher/a_lesser_spirit.lua",
+      "proposedFile": "changes/p99-sz-epic-lesser-butcher/butcher--a_lesser_spirit.lua",
+      "sha256": "6e161793a446953122b89eb38b415f18d84e371f28f9f7380b97cd46b4fbb9f7",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/butcher/Glorin_Binfurr.lua",
+      "proposedFile": "changes/p99-am-miner-directions/butcher-Glorin_Binfurr.lua",
+      "sha256": "da5faa646909c4b461ecf42d9373d23651cd2a4acbd4ec77c1aa698f616fc5e0",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/butcher/Kandin_Firepot.lua",
+      "proposedFile": "changes/p99-tz-kandin-legacy-exchanges/butcher--Kandin_Firepot.lua",
+      "sha256": "db57d99378cb44e551f8354e78521c82d65b7c17efae57a9880a5720a9d4e641",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/cabeast/Hierophant_Oxyn.lua",
+      "proposedFile": "changes/p99-af-greenmist-factions/cabeast-Hierophant_Oxyn.lua",
+      "sha256": "791057f2a7de5af65466e957455effc831cd82eae1ea3512738bbfc76816cc11",
+      "mainCases": 4,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/cabeast/Hierophant_Zand.lua",
+      "proposedFile": "changes/p99-sz-zand-alias/cabeast--Hierophant_Zand.lua",
+      "sha256": "36b90b75628a7d4539866e553ab0a1fead197167cb14138e31a16b294e0f011b",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/cabeast/Klok_Poklon.lua",
+      "proposedFile": "changes/p99-tz-poklon-pike-dialogue/cabeast--Klok_Poklon.lua",
+      "sha256": "ebef04e0fa6cb2ca0bd19c4fe5ec3cee43e8de3e797dfa476691a70a368ba7d6",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/charasis/An_Iksar_Apparition.lua",
+      "proposedFile": "changes/p99-source-scope-disables/charasis--An_Iksar_Apparition.lua",
+      "sha256": "f7a5fb0582f1dc3f4626f9bc609c05d4f417288837b4962416035337f6b3f1ab",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/charasis/the_spirit_of_Rile.lua",
+      "proposedFile": "changes/p99-source-scope-disables/charasis--the_spirit_of_Rile.lua",
+      "sha256": "df9f8a5e7dbd213198e09586442d4007a3d0388ea63675c725cea52d724aee1b",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/crushbone/Retlon_Brenclog.lua",
+      "proposedFile": "changes/p99-tz-retlon-note-retlon_brenclog/crushbone--Retlon_Brenclog.lua",
+      "sha256": "1dfe47d1c999bdaf465cdbd8cb4230ce2332c6443d23ec395e9c87f855e5d3fb",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/crystal/Ghost_of_Burdael.lua",
+      "proposedFile": "changes/p99-tz-garzicor-burdael/crystal--Ghost_of_Burdael.lua",
+      "sha256": "d5a391fcbc63fb8f8ab0080cc1771bda85b2fd19dcd76dcd1d919ae0c20d07af",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/crystal/Historian_Baenek.lua",
+      "proposedFile": "changes/p99-tz-baenek-faction/crystal--Historian_Baenek.lua",
+      "sha256": "4efeb5ca9ad135432cc4ab480b14647eb19cc8ffb38b52801a98f5e100709bd5",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/dalnir/a_coerced_channeler.lua",
+      "proposedFile": "changes/p99-source-scope-disables/dalnir--a_coerced_channeler.lua",
+      "sha256": "27be6c56f4d8fffa6cb808c9fa6972918295b072fd3224e4a2e89a4c5be1a961",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/droga/Warlord_Skargus.lua",
+      "proposedFile": "changes/p99-nz-skargus-dialogue/droga--Warlord_Skargus.lua",
+      "sha256": "3cad0a3ae9157c3ae1cb0bbb0f93cc917079b87fc3250c05fae64fcfb50c39bf",
+      "mainCases": 4,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/emeraldjungle/Spirit_Sentinel.lua",
+      "proposedFile": "changes/p99-sz-epic-tower/emeraldjungle--Spirit_Sentinel.lua",
+      "sha256": "1e579c527ddab24286ce29e6af09f7e6860d58a04ae4659b9aaa235ad201ca7d",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/erudnext/Beth_Breadmaker.lua",
+      "proposedFile": "changes/p99-am-muffin-recipients/erudnext-Beth_Breadmaker.lua",
+      "sha256": "43b0661dd892b87e9e79f2f13657b85164222e5451bf180919cc44400163af31",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/erudnext/Camin.lua",
+      "proposedFile": "changes/p99-tz-camin-optional-payment/erudnext--Camin.lua",
+      "sha256": "9a47d332bc9fdf541f5f818680c260c08e05a11ba77b50a476155c15cff86524",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/erudnext/Collier.lua",
+      "proposedFile": "changes/p99-am-collier-reward/erudnext-Collier.lua",
+      "sha256": "7be374763a86b831df0c881e524c69536c48081588465f9ea8ef4e1892210cde",
+      "mainCases": 8,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/erudnext/Depnar_Bulrious.lua",
+      "proposedFile": "changes/p99-guild-review/erudnext--Depnar_Bulrious.lua",
+      "sha256": "999a93ec08ef989cc70f1000594fa31148f34d9ff40031e6dee7aff04cfc6fdf",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/erudnext/Gans_Paust.lua",
+      "proposedFile": "changes/p99-tz-gans-no-final-xp/erudnext--Gans_Paust.lua",
+      "sha256": "8722e125b181186ca963595f189e532085e71047316a6f1852f84b9e3a8ee952",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/erudnext/Jras_Solsier.lua",
+      "proposedFile": "changes/p99-nz-poacher-leader-dialogue/erudnext--Jras_Solsier.lua",
+      "sha256": "7b25a580f1dfd9931a2cd6ada0cd512ef4e903aea25167e8f9132e63c401a11e",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/erudnext/Leraena_Shelyrak.lua",
+      "proposedFile": "changes/p99-guild-review/erudnext--Leraena_Shelyrak.lua",
+      "sha256": "0198c2ea1b836b1dcce9e4f5a799e5fc822ee0affa1db73ce01dae8d90f51bcf",
+      "mainCases": 12,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/erudnext/Nolusia_Finharn.lua",
+      "proposedFile": "changes/p99-tz-nolusia-dialogue/erudnext--Nolusia_Finharn.lua",
+      "sha256": "0697a4c24aa5c4711d1d7abfa9fd3e26f8197c8d15fe093e364f4d5bb5091c35",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/erudnext/Reklon_Gnallen.lua",
+      "proposedFile": "changes/p99-paladin-reklon-dialogue/erudnext--Reklon_Gnallen.lua",
+      "sha256": "30b32cad7765322e555669c17c43c875722b1829ec66f5a1f3f5b027cfe57d0f",
+      "mainCases": 14,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/erudnext/Sornita_Eltern.lua",
+      "proposedFile": "changes/p99-sz-sornita-era/erudnext--Sornita_Eltern.lua",
+      "sha256": "b46d1b5ec3437853021a1757769538d320a820c0cae1a1a18cd985dcc0103964",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/erudnext/Tiam_Khonsir.lua",
+      "proposedFile": "changes/p99-il-parity/erudnext--Tiam_Khonsir.lua",
+      "sha256": "0c35301369c827ffd9cf8f2873e0bd1c7467fc0b1eb4f154e1339eec029ccacc",
+      "mainCases": 5,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/erudnext/Weligon_Steelherder.lua",
+      "proposedFile": "changes/p99-nz-odus-pearls/erudnext--Weligon_Steelherder.lua",
+      "sha256": "5fff211922a3fd8d56620856f0ad115a23d2b863f36e49322202dc8d100c8ff9",
+      "mainCases": 12,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/erudnext/Weltria_Ostriss.lua",
+      "proposedFile": "changes/p99-tz-weltria-rewards/erudnext--Weltria_Ostriss.lua",
+      "sha256": "7043fb8db37d854300fdf781a25e81816112609837974244efa5c72adfe6c92e",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/erudnint/Markus_Jaevins.lua",
+      "proposedFile": "changes/p99-am-heretic-dialogue/erudnint-Markus_Jaevins.lua",
+      "sha256": "bca4d81c8da8af1c16584fd607cda45107cc77535c45a2be383a2fb74f9d0c5b",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/erudnint/Slansin.lua",
+      "proposedFile": "changes/p99-il-parity/erudnint--Slansin.lua",
+      "sha256": "2294ba064d7f32ba726576bb467206991239d437bae914ade0f675b3487143d7",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/erudnint/Toresian_Fhabel.lua",
+      "proposedFile": "changes/p99-il-parity/erudnint--Toresian_Fhabel.lua",
+      "sha256": "3ec98b051752d231dc33de58c5524eb46623c66303f08d0c53a2c9618abf4210",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/erudnint/Warden_Lius.lua",
+      "proposedFile": "changes/p99-am-heretic-dialogue/erudnint-Warden_Lius.lua",
+      "sha256": "2b037b19fc42958dd4d62355f10ba1f462a45d6df5b94a78bd5ebe611135ed2a",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/everfrost/Sulgar.lua",
+      "proposedFile": "changes/p99-tz-sulgar-dialogue/everfrost--Sulgar.lua",
+      "sha256": "123d293231284e6a8376903d41b6d42b0b538c42b51995100b31cd811139233f",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/feerrott/Innkeep_Gub.lua",
+      "proposedFile": "changes/p99-am-muffin-recipients/feerrott-Innkeep_Gub.lua",
+      "sha256": "53bf6e590879cd23113cde103a36f4fd7161715ae24887f29efbcea7216949f7",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/felwithea/General_Jyleel.lua",
+      "proposedFile": "changes/p99-nz-jyleel-dialogue/felwithea--General_Jyleel.lua",
+      "sha256": "e3d78fb55a4b281afbb47dca10b8101dc0e56beed2b5f6fa51bdb6e6f2d2c86e",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/felwithea/Yeolarn_Bronzeleaf.lua",
+      "proposedFile": "changes/p99-nz-tunare-warden/felwithea--Yeolarn_Bronzeleaf.lua",
+      "sha256": "a60fb49fbf549c2bfae5abc0acd330e45ec0bebfcdf05685acebbdf518a2c025",
+      "mainCases": 7,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/fieldofbone/Crusader_Quarg.lua",
+      "proposedFile": "changes/p99-sz-quarg-alias/fieldofbone--Crusader_Quarg.lua",
+      "sha256": "9833a30cb5a261096b24ce2d87aa1609b3a3226a8edea9fe0fa44af40b006671",
+      "mainCases": 9,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/fieldofbone/Oracle_Qulin.lua",
+      "proposedFile": "changes/p99-source-scope-disables/fieldofbone--Oracle_Qulin.lua",
+      "sha256": "8864b2cf02cd48086beae0abee96746609e4abf0d43b2eeb6c8660fb7ae06dbd",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/fieldofbone/Oracle_Vauris.lua",
+      "proposedFile": "changes/p99-source-scope-disables/fieldofbone--Oracle_Vauris.lua",
+      "sha256": "7f74bcc91941d7ec55338a9024e682d151ec9c26fe47852df76a25e9906ebfc9",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freeporteast/a_prisoner.lua",
+      "proposedFile": "changes/p99-tz-zimel-timer-freeporteast/freeporteast--a_prisoner.lua",
+      "sha256": "3c8d2fa406a8170ff90bde2ea9e5ecb9614a28290094e85ba805a347482373a9",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freeporteast/Giz_Dinree.lua",
+      "proposedFile": "changes/p99-af-giz-dialogue/freeporteast-Giz_Dinree.lua",
+      "sha256": "385680af576a3530ea081e263e9bd77ab363b81facf4408bd0f0be8969379848",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freeporteast/Larn_Brugal.lua",
+      "proposedFile": "changes/p99-tz-weapons-voucher-freeporteast-larn_brugal/freeporteast--Larn_Brugal.lua",
+      "sha256": "f30e78e1ffa395ee11f5c4f65403b2cfbb36c3a744eb71770d8c8dd57398a205",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freeporteast/Lenka_Stoutheart.lua",
+      "proposedFile": "changes/p99-am-lenka-pouch/freeporteast-Lenka_Stoutheart.lua",
+      "sha256": "8da0e28eb8779e0b0b712117526c6fb1a74b56e8195093ffed18a36e850ba953",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freeporteast/Lozani.lua",
+      "proposedFile": "changes/p99-il-parity/freeporteast--Lozani.lua",
+      "sha256": "4c2ed2b672d6f44246c8d8517f96e4b75ebfa64534d88d14ca145d062fd273aa",
+      "mainCases": 5,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freeporteast/Nestral_TGaza.lua",
+      "proposedFile": "changes/p99-nz-rebby-factions/freeporteast--Nestral_TGaza.lua",
+      "sha256": "50bfe78bbf999a70668f45b0a137652ec3c995bee7f1db55852f3d2c07abae23",
+      "mainCases": 5,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freeporteast/Netuk_Phenzon.lua",
+      "proposedFile": "changes/p99-am-g-dialogue/freeporteast-Netuk_Phenzon.lua",
+      "sha256": "f51010d1b587b242c1119b1290a76424fa3c6e134e89663e65c16cbb0c6a9eb8",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freeporteast/Olunea_Miltin.lua",
+      "proposedFile": "changes/p99-am-lenka-pouch/freeporteast-Olunea_Miltin.lua",
+      "sha256": "c2384b77f138622bc9e8426d72f9951a86508bc9e5b5688792dac0d46c34ee63",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freeporteast/Pietro_Zarn.lua",
+      "proposedFile": "changes/p99-tz-bayle-freeporteast-pietro_zarn/freeporteast--Pietro_Zarn.lua",
+      "sha256": "e10ff7ea1bda40b11add9a5de71b626ea87b6923b97c3e6cf5b626e87270eb77",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freeporteast/Plagus_Ladeson.lua",
+      "proposedFile": "changes/p99-am-plagus-note/freeporteast-Plagus_Ladeson.lua",
+      "sha256": "4b8b25a6192b15ed8eb26df43a97005f1d923307bcf672b6345a1896c02663d0",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freeporteast/Sir_Lucan_D-Lere.lua",
+      "proposedFile": "changes/p99-am-message-intercept/freeporteast-Sir_Lucan_D-Lere.lua",
+      "sha256": "7972b7b42e502cf15816916383808cb6f85e1b2ed7888c3d986a278c01c92738",
+      "mainCases": 5,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freeporteast/Tykar_Renlin.lua",
+      "proposedFile": "changes/p99-tz-tykar-zimel-freeporteast/freeporteast--Tykar_Renlin.lua",
+      "sha256": "1759943750558e38dc512cfb102a5749a62b427669b9ab9ddf90f12e91303636",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freeportwest/Dooly_Jonkers.lua",
+      "proposedFile": "changes/p99-tz-dooly-alias-dialogue/freeportwest--Dooly_Jonkers.lua",
+      "sha256": "a2aa89cbbefc603db496148f43fc015aa6d7fca833fadcee59f1cb36797e9ed6",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freeportwest/Eestyana_Naestra.lua",
+      "proposedFile": "changes/p99-af-eestyana-note/freeportwest-Eestyana_Naestra.lua",
+      "sha256": "fed6b0e2f6991d1577ba6d459adec314d195262e50cbaec0c47e5d95ff9fa00c",
+      "mainCases": 4,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freeportwest/Glyssa_Sonshaw.lua",
+      "proposedFile": "changes/p99-nz-quellious-dialogue/freeportwest--Glyssa_Sonshaw.lua",
+      "sha256": "a86a03c69630f809838ff12f064fe20d00dd73a9a8a3190061d394d0d2089633",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freeportwest/Groflah_Steadirt.lua",
+      "proposedFile": "changes/p99-tz-weapons-voucher-freeportwest-groflah_steadirt/freeportwest--Groflah_Steadirt.lua",
+      "sha256": "6632d5b2f89708d4eb21f5b6b9928dee07df6a49ea16b6da90de5a6ec8dc4184",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freeportwest/Jemoz_Lerkarson.lua",
+      "proposedFile": "changes/p99-af-jemoz-faction/freeportwest-Jemoz_Lerkarson.lua",
+      "sha256": "a8bd8d17aa77875bd63bcbaa58dc54b6d8228605b18e08b594e28d3975efcc83",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freeportwest/Lady_Shae.lua",
+      "proposedFile": "changes/p99-am-hogcaller-faction/freeportwest-Lady_Shae.lua",
+      "sha256": "5c9b0dc63aad508e115ffc6026202fc2ce9e642cc70db71b4a4d9a3e3ec08ce9",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freeportwest/Ping_Fuzzlecutter.lua",
+      "proposedFile": "changes/p99-nz-rain-caller-dialogue/freeportwest--Ping_Fuzzlecutter.lua",
+      "sha256": "c8f41dcce11473f46b03b6eddfdceccf67bb095eaef11491a30b3275de39d654",
+      "mainCases": 5,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freeportwest/Puab_Closk.lua",
+      "proposedFile": "changes/p99-tz-puab-dialogue-freeportwest/freeportwest--Puab_Closk.lua",
+      "sha256": "d7a787594045353bfca74789fdc720a1b8029e4ca475ee1d1ac5c98489f446af",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freeportwest/Reyia_Beslin.lua",
+      "proposedFile": "changes/p99-am-monk-dialogue/freeportwest-Reyia_Beslin.lua",
+      "sha256": "126cff035dbde2e6d9ac26d4357452df376e19f8427d8971cab6c040291ec530",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freeportwest/Theron_Rolius.lua",
+      "proposedFile": "changes/p99-nz-shark-hunting-dialogue/freeportwest--Theron_Rolius.lua",
+      "sha256": "2ff7fe92b23dd6b9d7288542fc74c8136a07c4d4aaf3c68061eb5d25243555a6",
+      "mainCases": 10,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freeportwest/Valeron_Dushire.lua",
+      "proposedFile": "changes/p99-tz-valeron-diggs-freeportwest/freeportwest--Valeron_Dushire.lua",
+      "sha256": "762666fbf5ae7fa417814e624e5bdf7a830d014dedce3335b6acbc89b2382c8e",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freeportwest/Velan_Torresk.lua",
+      "proposedFile": "changes/p99-am-monk-dialogue/freeportwest-Velan_Torresk.lua",
+      "sha256": "e380e76bf1f8d7f5c5dc75490b2cc297ce4fece42025273eda11dde15adf2a4b",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freporte/Giz_Dinree.lua",
+      "proposedFile": "changes/p99-af-giz-dialogue/freporte-Giz_Dinree.lua",
+      "sha256": "8c0dabc31539e2d2199bf3e243c1263e8a9a06784cb99c209c38aef0e03a9115",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freporte/Lenka_Stoutheart.lua",
+      "proposedFile": "changes/p99-am-lenka-pouch/freporte-Lenka_Stoutheart.lua",
+      "sha256": "2d477ab84b5fdeffd35a38d12fd0057b038eaadbe7f45c85fc4902bbfbf6b802",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freporte/Lozani.lua",
+      "proposedFile": "changes/p99-il-parity/freporte--Lozani.lua",
+      "sha256": "4c2ed2b672d6f44246c8d8517f96e4b75ebfa64534d88d14ca145d062fd273aa",
+      "mainCases": 5,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freporte/Nestral_TGaza.lua",
+      "proposedFile": "changes/p99-nz-rebby-factions/freporte--Nestral_TGaza.lua",
+      "sha256": "50bfe78bbf999a70668f45b0a137652ec3c995bee7f1db55852f3d2c07abae23",
+      "mainCases": 5,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freporte/Netuk_Phenzon.lua",
+      "proposedFile": "changes/p99-am-g-dialogue/freporte-Netuk_Phenzon.lua",
+      "sha256": "841981c7fda6382aaaf975aba84fc31f50231355999ee030b269d5f19672e3c0",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freporte/Olunea_Miltin.lua",
+      "proposedFile": "changes/p99-am-lenka-pouch/freporte-Olunea_Miltin.lua",
+      "sha256": "c2384b77f138622bc9e8426d72f9951a86508bc9e5b5688792dac0d46c34ee63",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freporte/Pietro_Zarn.lua",
+      "proposedFile": "changes/p99-tz-bayle-freporte-pietro_zarn/freporte--Pietro_Zarn.lua",
+      "sha256": "257a7871b15e620028bd9ac521ce65ba5a0a0cb75aed06c021465e3583e640be",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freporte/Tykar_Renlin.lua",
+      "proposedFile": "changes/p99-tz-tykar-zimel-freporte/freporte--Tykar_Renlin.lua",
+      "sha256": "1759943750558e38dc512cfb102a5749a62b427669b9ab9ddf90f12e91303636",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freporte/Wenden_Blackhammer.lua",
+      "proposedFile": "changes/p99-tz-wenden-damaged-hilt-lore/freporte--Wenden_Blackhammer.lua",
+      "sha256": "ee9acc5fc3b8280e084a58a84309e6b301412381ac803d8997d2fc68380f847e",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freporte/Zenita_D-Rin.lua",
+      "proposedFile": "changes/p99-tz-zenita-cards/freporte--Zenita_D-Rin.lua",
+      "sha256": "3f0fa9e2c1c7c9b5013f944c3571c316d6183c17809959eec24ae79e91407905",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freportn/a_greater_spirit_.lua",
+      "proposedFile": "changes/p99-sz-epic-a_greater_spirit_/freportn--a_greater_spirit_.lua",
+      "sha256": "6ad1713c22f5e51c2c3985e1789b4fcb69b7c7beb29659552d01d30046418dba",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freportn/a_greater_spirit.lua",
+      "proposedFile": "changes/p99-sz-epic-a_greater_spirit/freportn--a_greater_spirit.lua",
+      "sha256": "5350d8b29a15b6d0cfdadf3fabbc9133fa9365dd33ec1eebe0d9de1638a16fab",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freportn/Eestyana_Naestra.lua",
+      "proposedFile": "changes/p99-af-eestyana-note/freportn-Eestyana_Naestra.lua",
+      "sha256": "ddcb1b98cd1e0d2ee96ed7c45c2342100823730a3133fd275b596f2c6443fda5",
+      "mainCases": 4,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freportn/Groflah_Steadirt.lua",
+      "proposedFile": "changes/p99-tz-weapons-voucher-freportn-groflah_steadirt/freportn--Groflah_Steadirt.lua",
+      "sha256": "2828779516b776eba5d4b3cf198fc6a7424162928f1d5ace17d06ea630758c53",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freportn/Jemoz_Lerkarson.lua",
+      "proposedFile": "changes/p99-af-jemoz-faction/freportn-Jemoz_Lerkarson.lua",
+      "sha256": "5c7a3ec37da176a5a2278cf3d0f743bfae1e89942e0e32237fa8de32421a8f5b",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freportn/Sentry_Andlin.lua",
+      "proposedFile": "changes/p99-sz-sentry-andlin/freportn--Sentry_Andlin.lua",
+      "sha256": "2c5cadaa9171e323b9c33fca607f6a6ce60cf3e0f10fd9b1dcc5f9b823ef0823",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freportn/Sentry_Boris.lua",
+      "proposedFile": "changes/p99-sz-sentry-boris/freportn--Sentry_Boris.lua",
+      "sha256": "b74a1e3ef28428aaaac12d346ecd9ecc80b952b8a39287252502ca35a672ef65",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freportn/Sentry_Gallius.lua",
+      "proposedFile": "changes/p99-sz-sentry-gallius/freportn--Sentry_Gallius.lua",
+      "sha256": "53581585c225efcd2067fe53a9aeb4bcf3c5f0a114db929a9aebe48255765f19",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freportn/Sentry_Janeal.lua",
+      "proposedFile": "changes/p99-sz-sentry-janeal/freportn--Sentry_Janeal.lua",
+      "sha256": "e9796c10e9d464c49a054e7a227f0eb0ada8e5182fb35f1ab4e9f5bee16835f1",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freportn/Sentry_Meighan.lua",
+      "proposedFile": "changes/p99-sz-sentry-meighan/freportn--Sentry_Meighan.lua",
+      "sha256": "1521c7a44d6a99de844b6cf8e53cd97e8a134dfa679420147169b1b13b76abf5",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freportn/Sentry_Theo.lua",
+      "proposedFile": "changes/p99-sz-sentry-theo/freportn--Sentry_Theo.lua",
+      "sha256": "71d1e2fffd61b35c4f92ac3f481f41d7c4531c8c305ca5a18aaa8c962413a5e3",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freportn/Sentry_Warren.lua",
+      "proposedFile": "changes/p99-sz-sentry-warren/freportn--Sentry_Warren.lua",
+      "sha256": "8b9534adebe9e914b00e1bfa43f42809e2ad12c37d61ece3292b575377c53cc5",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freportn/Theron_Rolius.lua",
+      "proposedFile": "changes/p99-nz-shark-hunting-dialogue/freportn--Theron_Rolius.lua",
+      "sha256": "f67630beb2fb61973a0f9bf55c2a40947bfe3047dc5b5b9d8876d18fbe6d6ae6",
+      "mainCases": 10,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freportn/Valeron_Dushire.lua",
+      "proposedFile": "changes/p99-tz-valeron-diggs-freportn/freportn--Valeron_Dushire.lua",
+      "sha256": "b85f92c7b4a6e5c88a091bc0d849683af17eb76a9c848c5351847e8370ca0aab",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freportw/a_prisoner.lua",
+      "proposedFile": "changes/p99-tz-zimel-timer-freportw/freportw--a_prisoner.lua",
+      "sha256": "3c8d2fa406a8170ff90bde2ea9e5ecb9614a28290094e85ba805a347482373a9",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freportw/Cain_Darkmoore.lua",
+      "proposedFile": "changes/p99-am-cain-note/freportw-Cain_Darkmoore.lua",
+      "sha256": "9e29139edef7e3ef5193bff85d61a6de4fe7f60b601b247a5f2c6e848fbe7731",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freportw/Dooly_Jonkers.lua",
+      "proposedFile": "changes/p99-tz-dooly-dialogue/freportw--Dooly_Jonkers.lua",
+      "sha256": "a2aa89cbbefc603db496148f43fc015aa6d7fca833fadcee59f1cb36797e9ed6",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freportw/Glyssa_Sonshaw.lua",
+      "proposedFile": "changes/p99-nz-quellious-dialogue/freportw--Glyssa_Sonshaw.lua",
+      "sha256": "f06c130eee499642670652210b681a2b130c2bb73e110c779d04535c14054de7",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freportw/Lady_Shae.lua",
+      "proposedFile": "changes/p99-am-hogcaller-faction/freportw-Lady_Shae.lua",
+      "sha256": "5460ea42c3c15c4d26e70044cbbe52f74d91d1a25c661f3c95f875beeca26457",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freportw/Larn_Brugal.lua",
+      "proposedFile": "changes/p99-tz-weapons-voucher-freportw-larn_brugal/freportw--Larn_Brugal.lua",
+      "sha256": "e6ba04cf1059839de9c50a4e014f5568760a7fbd1077bc200e74df8f4743606f",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freportw/Ping_Fuzzlecutter.lua",
+      "proposedFile": "changes/p99-nz-rain-caller-dialogue/freportw--Ping_Fuzzlecutter.lua",
+      "sha256": "c8f41dcce11473f46b03b6eddfdceccf67bb095eaef11491a30b3275de39d654",
+      "mainCases": 5,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freportw/Plagus_Ladeson.lua",
+      "proposedFile": "changes/p99-am-plagus-note/freportw-Plagus_Ladeson.lua",
+      "sha256": "4b8b25a6192b15ed8eb26df43a97005f1d923307bcf672b6345a1896c02663d0",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freportw/Puab_Closk.lua",
+      "proposedFile": "changes/p99-tz-puab-dialogue-freportw/freportw--Puab_Closk.lua",
+      "sha256": "d7a787594045353bfca74789fdc720a1b8029e4ca475ee1d1ac5c98489f446af",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freportw/Reyia_Beslin.lua",
+      "proposedFile": "changes/p99-am-monk-dialogue/freportw-Reyia_Beslin.lua",
+      "sha256": "2b0637cf55d361af2a0b230f500d72176adffaca27ad532b91d8f420b31d03f0",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freportw/Sir_Lucan_D-Lere.lua",
+      "proposedFile": "changes/p99-am-message-intercept/freportw-Sir_Lucan_D-Lere.lua",
+      "sha256": "78de4284a6c6abf51879b60287c6b67dc0dbc50b2051d18bd64c6ee7b012a741",
+      "mainCases": 5,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freportw/Toxdil.lua",
+      "proposedFile": "changes/p99-tz-toxdil-dialogue/freportw--Toxdil.lua",
+      "sha256": "59bb8c92b17b41b5071e12879ef3376b905fc4b9cddf80394b2c279fdf8e70f8",
+      "mainCases": 3,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/greatdivide/Seneschal_Aldikar.lua",
+      "proposedFile": "changes/p99-nz-ring-ten-dialogue/greatdivide--2000965.lua",
+      "sha256": "45bf68e1ec961511b78e7ad4ff054a4c132153c7cd4e47db9cda7f9d0f6b3fd1",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/greatdivide/Zrelik_the_Scout.lua",
+      "proposedFile": "changes/p99-nz-ring-ten-dialogue/greatdivide--2000966.lua",
+      "sha256": "d5a9e866b57994d97a9ca97ac253f7a548493bb5123f7d7ef496021c49b79fb2",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/grobb/a_skeleton.lua",
+      "proposedFile": "changes/p99-tz-grobb-skeleton-returns/grobb--a_skeleton.lua",
+      "sha256": "d6d660a4ba48099ec337f3ad87582d12d7e11bfa69675d25e12c2ba68de6b4bb",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/grobb/Basher_Avisk.lua",
+      "proposedFile": "changes/p99-tz-avisk-dialogue/grobb--Basher_Avisk.lua",
+      "sha256": "9408c653b3d9e6694fdfebbb209f04b92d5217953c8d355ac546d5c445fa1e93",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/grobb/Basher_Nanrum.lua",
+      "proposedFile": "changes/p99-tz-nanrum-dialogue/grobb--Basher_Nanrum.lua",
+      "sha256": "1c4a3a2dd93944d0df65e866dfd15ce496c381a371a238503580133e793d6e1a",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/grobb/Carver_Cagrek.lua",
+      "proposedFile": "changes/p99-am-hehe-meat/grobb-Carver_Cagrek.lua",
+      "sha256": "35ba243ee8b2d0960fd3869bbde8dca82559cf9f0dec96b63b5765c9e920ab49",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/grobb/Hukulk.lua",
+      "proposedFile": "changes/p99-am-hukulk-faction/grobb-Hukulk.lua",
+      "sha256": "6603aad6c71ebe6b71261c4d8e47356a2ba5aa323933557ddf90948913774d57",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/grobb/Kaglari.lua",
+      "proposedFile": "changes/p99-am-innoruuk-faction/grobb-Kaglari.lua",
+      "sha256": "f87faf8339f3aa656fc2f9aa6c83a9bccc303ffab8b351227d9f93dd9c0ebb08",
+      "mainCases": 6,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/grobb/Ranjor.lua",
+      "proposedFile": "changes/p99-nz-ranjor-dialogue/grobb--Ranjor.lua",
+      "sha256": "749a9367dbbf5e999fa04c4582f683aa17bb251673e45dc1a8939c65b4b243b5",
+      "mainCases": 3,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/halas/Hetie_McDonald.lua",
+      "proposedFile": "changes/p99-am-muffin-recipients/halas-Hetie_McDonald.lua",
+      "sha256": "9c2ff4dc0f23063edb6b8cba19bd0d08202950d81482f86749520cb39d08210a",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/halas/Holana_Oleary.lua",
+      "proposedFile": "changes/p99-am-karana-clovers/halas-Holana_Oleary.lua",
+      "sha256": "1827d8084d266ad9be5fb17ae79e89347063bd59e3d68f794e541cec1dfddd3e",
+      "mainCases": 11,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/halas/Jinkus_Felligan.lua",
+      "proposedFile": "changes/p99-tz-jinkus-dun-direction/halas--Jinkus_Felligan.lua",
+      "sha256": "3d2bc8f51b4ce4729f7f6daa918957faca70eb4387009e26f2d1519d42a9bddb",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/halas/Lysbith_McNaff.lua",
+      "proposedFile": "changes/p99-tz-lysbith-dialogue/halas--Lysbith_McNaff.lua",
+      "sha256": "6d0c46ea6d0bc3381eb847919c0b723ad5715c356c820816a2dde1162483e95f",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/halas/Renth_McLanis.lua",
+      "proposedFile": "changes/p99-am-renth-dialogue/halas-Renth_McLanis.lua",
+      "sha256": "134f297debaecdcd4f1bf3b3b1a2cc1bc5c60d2eb76140b2b34c6f9e3aa84ea9",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/halas/Shamus_Felligan.lua",
+      "proposedFile": "changes/p99-am-shamus-reward/halas-Shamus_Felligan.lua",
+      "sha256": "668dd4f4ad5ec76202bbee2cd4e780f3ec4dcdbd8f95553b62d10242ac2560ce",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/halas/Thadres_Thyme.lua",
+      "proposedFile": "changes/p99-tz-thadres-diary-dialogue/halas--Thadres_Thyme.lua",
+      "sha256": "0def033b07978d5d273a220b425c62cb7c945502e3eabed412884bb2d0a781dc",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/halas/Waltor_Felligan.lua",
+      "proposedFile": "changes/p99-nz-wooly-fungus-faction/halas--Waltor_Felligan.lua",
+      "sha256": "4d5a17f503f7eab3025f948d8ec7c37c32c58cc53f347f53ba9ee776b58ad682",
+      "mainCases": 18,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/halas/Ysanna_MacGibbon.lua",
+      "proposedFile": "changes/p99-am-gnoll-guard-factions/halas-Ysanna_MacGibbon.lua",
+      "sha256": "afa5ca5dd3386e3ba281af10bd1c4c204e7e440c626bb0b14d67cbd769f67bd5",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/highkeep/Jail_Clerk_Maryl.lua",
+      "proposedFile": "changes/p99-tz-lottery-jail_clerk_maryl/highkeep--Jail_Clerk_Maryl.lua",
+      "sha256": "394af4feaac3d8e1706a31cd4fc57a17b81fbf8d11fb4c8023bf5904d535d6c9",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/highkeep/Lozani.lua",
+      "proposedFile": "changes/p99-il-parity/highkeep--Lozani.lua",
+      "sha256": "4c2ed2b672d6f44246c8d8517f96e4b75ebfa64534d88d14ca145d062fd273aa",
+      "mainCases": 5,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/highkeep/Tarn_Visilin.lua",
+      "proposedFile": "changes/p99-nz-glamour-stone-dialogue/highkeep--Tarn_Visilin.lua",
+      "sha256": "06088e780b0b6c67f30681e5a9bb4fe82081a7b9185ab0375a5d3c8dda916c6f",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/highkeep/Treasurer_Lynn.lua",
+      "proposedFile": "changes/p99-tz-lottery-treasurer_lynn/highkeep--Treasurer_Lynn.lua",
+      "sha256": "df2c81e3e8ab537f38c0215a308910f7624ec1c498b4c15c11f78229b239f888",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/highpass/Captain_Orben.lua",
+      "proposedFile": "changes/p99-am-gnoll-guard-factions/highpass-Captain_Orben.lua",
+      "sha256": "29e5caa373e2413022448f09cf892963e36df81c7fcb6983aee16e2393400dfd",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/highpasshold/Captain_Orben.lua",
+      "proposedFile": "changes/p99-am-gnoll-guard-factions/highpasshold-Captain_Orben.lua",
+      "sha256": "f038435b399f2348148aa4a415ba78f94c643a626c6f2e4c04baa509681069f5",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/innothule/a_skeleton.lua",
+      "proposedFile": "changes/p99-tz-innothule-skeleton-returns/innothule--a_skeleton.lua",
+      "sha256": "395fe2f7aef405e34dd800a6f31daa92ac31290e813f98492a29c1101e4116c4",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/innothule/Basher_Sklama.lua",
+      "proposedFile": "changes/p99-tz-sklama-dialogue/innothule--Basher_Sklama.lua",
+      "sha256": "ec8bc922ebc97d0f69967672e7ab7eb65f0c4ead8c2f93fdb6777444c44419b2",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/innothule/Forager_Grik.lua",
+      "proposedFile": "changes/p99-am-grik-faction/innothule-Forager_Grik.lua",
+      "sha256": "025161dff1e259aeb90b5a99cb4ebab98336703f6089cf6f581c7a41580bfe0d",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/innothuleb/Forager_Grik.lua",
+      "proposedFile": "changes/p99-am-grik-faction/innothuleb-Forager_Grik.lua",
+      "sha256": "025161dff1e259aeb90b5a99cb4ebab98336703f6089cf6f581c7a41580bfe0d",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/kael/King_Tormax.lua",
+      "proposedFile": "changes/p99-tz-yelinak-head/kael--King_Tormax.lua",
+      "sha256": "c788fa5c134a08e98a426c9fc00b46ae12976acf4383db60a33a87eb9e75a739",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/lakeofillomen/Bruiser_Noz.lua",
+      "proposedFile": "changes/p99-trade-scope-disables/lakeofillomen--Bruiser_Noz.lua",
+      "sha256": "3d6ad259ce261e2a26237065dce66592bff5e87f9c39b843b981a10b50dae9bd",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/mischiefplane/Debbis_the_Fish.lua",
+      "proposedFile": "changes/p99-nz-mischief-faction/mischiefplane--Debbis_the_Fish.lua",
+      "sha256": "3a70b11254bd07bde90e0c66c3bec599ebf4a4fdb8032536f6430520e69939d3",
+      "mainCases": 3,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/mischiefplane/Vinny_V._D-vicci.lua",
+      "proposedFile": "changes/p99-nz-mischief-faction/mischiefplane--Vinny_V._D-vicci.lua",
+      "sha256": "4d425752d6ce65a48144347fed21e8fdb5c8b7b5493565c623a60bcb49d0db46",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/misty/Deputy_Budo.lua",
+      "proposedFile": "changes/p99-nz-orc-belts-reward/misty--Deputy_Budo.lua",
+      "sha256": "cb5649fbb33cc240cca0883f9defbd0462fbac4af9d32779b5788da105933f44",
+      "mainCases": 5,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/necropolis/#a_ghostly_presence.lua",
+      "proposedFile": "changes/p99-tz-garzicor-ghostly-presence/necropolis--#a_ghostly_presence.lua",
+      "sha256": "481afcb4979eee7f7f46307074486179689ed19dbae531640dd24aa212d5a208",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/necropolis/#Garzicor-s_Corpse.lua",
+      "proposedFile": "changes/p99-tz-garzicor-corpse-spawn/necropolis--#Garzicor-s_Corpse.lua",
+      "sha256": "3867c42089c050a36a7af5e1ebd4b1e35481038fa955a32e98c4e0e71fcd89d7",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/necropolis/#Spirit_of_Garzicor_.lua",
+      "proposedFile": "changes/p99-tz-garzicor-contented-spirit/necropolis--#Spirit_of_Garzicor_.lua",
+      "sha256": "25d1d1142344b206d49f62499af0686424d3c68ca85f3c8ec7f8632ed5fb2c9e",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/necropolis/#Spirit_of_Garzicor.lua",
+      "proposedFile": "changes/p99-tz-garzicor-vengeful-spirit/necropolis--#Spirit_of_Garzicor.lua",
+      "sha256": "8b6a579562563d4bfa8b96376caae8c2f7ee6f0e3cd4587c97b4015142b7941e",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/northkarana/Cordelia_Minster.lua",
+      "proposedFile": "changes/p99-tz-cordelia-factions/northkarana--Cordelia_Minster.lua",
+      "sha256": "289419b146edb673ddd619523e58bf75af369efef216a7c0c46b93b9600405a2",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/northkarana/Guard_Shilster.lua",
+      "proposedFile": "changes/p99-am-shilster-factions/northkarana-Guard_Shilster.lua",
+      "sha256": "468f06e723016ca14998d6c78c502597646710c3f47862160da76710fc1ca811",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/northkarana/Watchman_Dexlin.lua",
+      "proposedFile": "changes/p99-tz-dexlin-timer/northkarana--Watchman_Dexlin.lua",
+      "sha256": "d260e43133380cc04458289126d58a213969f213920527fda8928f8ac7a79bc9",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/nurga/a_sleeping_ogre.lua",
+      "proposedFile": "changes/p99-am-trunt-replacement/nurga-a_sleeping_ogre.lua",
+      "sha256": "f2e805abf1fab323aeba4d4d7545b12b47a1ff5b91c4a22f4dddb9d62f035fad",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/oasis/Taldrik_Stumpystout.lua",
+      "proposedFile": "changes/p99-af-taldrik-note/oasis-Taldrik_Stumpystout.lua",
+      "sha256": "00a804ffbe02aeea01c6f7f5495b42e32cead1ec9fe3496fca6798995cab1216",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/oceanoftears/Styria_Fearnon.lua",
+      "proposedFile": "changes/p99-nz-pirate-earrings-dialogue/oceanoftears--Styria_Fearnon.lua",
+      "sha256": "198d51832c354a437ebc13f0da233ecb38213ef398296bd81531ad24da7426d5",
+      "mainCases": 3,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/oot/Sentry_Xyrin.lua",
+      "proposedFile": "changes/p99-sz-sentry-xyrin/oot--Sentry_Xyrin.lua",
+      "sha256": "f1f24bef35571632681d4977c888186fc79a31ae39fe506ad8d4940a68effff8",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/oot/Styria_Fearnon.lua",
+      "proposedFile": "changes/p99-nz-pirate-earrings-dialogue/oot--Styria_Fearnon.lua",
+      "sha256": "8a0f9f6e62b55de39e30ed5bf824e72c9da2b414c70fdd44fc8679526509cdbc",
+      "mainCases": 3,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/paineel/avatar_of_dread.lua",
+      "proposedFile": "changes/p99-tz-dread-named-timer/paineel--avatar_of_dread.lua",
+      "sha256": "b2247fda94ae2e4df968017745b15b58119efad2d59e4c57b2dd888ed4478c86",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/paineel/Nivold_Predd.lua",
+      "proposedFile": "changes/p99-tz-nivold-safe-eligibility/paineel--Nivold_Predd.lua",
+      "sha256": "c304668acdb046f709add9efb82c5e32e31151eb05fadcf81fe36c379642d93d",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/paw/Brother_Hayle.lua",
+      "proposedFile": "changes/p99-tz-hayle-offer-safety/paw--Brother_Hayle.lua",
+      "sha256": "1179c163b3f49bff0233f832664cdad4e07539e9e288736e69cd651dfd5093fa",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qey2hh1/Caninel.lua",
+      "proposedFile": "changes/p99-nz-paw-opolla/qey2hh1--Caninel.lua",
+      "sha256": "a9442626b32e2303bc7ce20f96801bf05069b68cfa25b89b602cacfa4d90761b",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qey2hh1/Frostbite.lua",
+      "proposedFile": "changes/p99-af-frostbite-tonic/qey2hh1-Frostbite.lua",
+      "sha256": "980ac1248c7127946f50c4c053f0b265d1733dead43504c8cfc9c9f8d532a9db",
+      "mainCases": 3,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qey2hh1/Guard_Gregor.lua",
+      "proposedFile": "changes/p99-trade-scope-disables/qey2hh1--Guard_Gregor.lua",
+      "sha256": "2f685e97b734f170a01c224a21bbec7dd93b02036bf186244207fef766d8d30b",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qey2hh1/Innkeep_Rislarn.lua",
+      "proposedFile": "changes/p99-am-muffin-recipients/qey2hh1-Innkeep_Rislarn.lua",
+      "sha256": "4147cd1a5f1fce3d227d2429b93c512900f486029399d5ffe9a80ff67ed867ee",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qey2hh1/Ryshon_Hunsti.lua",
+      "proposedFile": "changes/p99-tz-ryshon-sword-phrase/qey2hh1--Ryshon_Hunsti.lua",
+      "sha256": "7ee562c8d848066feccd7147bb6bdb9d045ad260726ae78160f7933151aa4226",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qeynos/Belious_Naliedin.lua",
+      "proposedFile": "changes/p99-guild-review/qeynos--Belious_Naliedin.lua",
+      "sha256": "fb99b7ff2332e6bee607bd5e0a5aecaa0a0892a3da4d0ef8591029c50255fe45",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qeynos/Captain_Rohand.lua",
+      "proposedFile": "changes/p99-tz-taxes-captain_rohand/qeynos--Captain_Rohand.lua",
+      "sha256": "f12f0c354ac9044bbc4c08172e663963f0e4d41bcbf934448b912eb2dedfbff4",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qeynos/Chesgard_Sydwen.lua",
+      "proposedFile": "changes/p99-af-bandit-sashes/qeynos-Chesgard_Sydwen.lua",
+      "sha256": "1dc39649e1d6417fcb0c721ee0665f4e9f37a844cf1ac706aa2530f3ee219b35",
+      "mainCases": 9,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qeynos/Daedet_Losaren.lua",
+      "proposedFile": "changes/p99-am-holy-armor-guard/qeynos-Daedet_Losaren.lua",
+      "sha256": "2bf793db50e53e7e914b858c19db06e2d0640ea4f78ea19292b2a7ab9f0916ad",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qeynos/Dionna.lua",
+      "proposedFile": "changes/p99-source-scope-disables/qeynos--Dionna.lua",
+      "sha256": "637f055737341234beb9b63b2088ffb121e942d80b0ae207fd0d9ce55d00c65e",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qeynos/Dun.lua",
+      "proposedFile": "changes/p99-tz-dun-poster/qeynos--Dun.lua",
+      "sha256": "dd28ac137d23ff8968074d3855a8b3420de4700dcbf1adf5775a8fc8c24a4901",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qeynos/Faren.lua",
+      "proposedFile": "changes/p99-am-faren-faction/qeynos-Faren.lua",
+      "sha256": "10d03ca37371ee7e8d39aa987ff703878d4360bc10ad814f18b37c23f140e94e",
+      "mainCases": 6,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qeynos/Fhara_Semhart.lua",
+      "proposedFile": "changes/p99-tz-taxes-fhara_semhart/qeynos--Fhara_Semhart.lua",
+      "sha256": "f5acbff68e2a0df94238b6a3b57e8ee0549dd43231cad90b88e0c6a896ca5227",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qeynos/Fish_Ranamer.lua",
+      "proposedFile": "changes/p99-tz-taxes-fish_ranamer/qeynos--Fish_Ranamer.lua",
+      "sha256": "ca301a8bdcab3803cbc98ece83b1c4e1ad20a07c1f55612f1c4399290cf4df45",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qeynos/Gahlith_Wrannstad.lua",
+      "proposedFile": "changes/p99-guild-review/qeynos--Gahlith_Wrannstad.lua",
+      "sha256": "ba4582a80587b40371d32959403613e9206b83bf76444ed8ca270b087e56810c",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qeynos/Indaria.lua",
+      "proposedFile": "changes/p99-am-indaria-dialogue/qeynos-Indaria.lua",
+      "sha256": "d5cc3dbd1f9932110626498ad430272f9e10217178dc08b37518ba6cc0d89c4b",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qeynos/Karn_Tassen.lua",
+      "proposedFile": "changes/p99-am-karn-crate/qeynos-Karn_Tassen.lua",
+      "sha256": "7bd141848d614e6a1bd09cc931229b3edfd98ac89c72f9e69ddcce5070b610d9",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qeynos/Mar_Sedder.lua",
+      "proposedFile": "changes/p99-tz-taxes-mar_sedder/qeynos--Mar_Sedder.lua",
+      "sha256": "5b48d8fc1d8fa1983a8ded3c666a3c443fd6937f32c3e8f546df859e53d5daa4",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qeynos/Menkes_Tabolet.lua",
+      "proposedFile": "changes/p99-nz-menkes-dialogue/qeynos--Menkes_Tabolet.lua",
+      "sha256": "30e6f9fe5e63dd6d96fe0088a2c291a6ec11362e00686fb906efad77857b6c4f",
+      "mainCases": 4,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qeynos/Mespha_Tevalian.lua",
+      "proposedFile": "changes/p99-guild-review/qeynos--Mespha_Tevalian.lua",
+      "sha256": "d5b8aebc458dc259ee68fcbb132a69f7b8ee28b8f8a52b58df8a30645700fb77",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qeynos/Nesiff_Tallaherd.lua",
+      "proposedFile": "changes/p99-tz-taxes-nesiff_tallaherd/qeynos--Nesiff_Tallaherd.lua",
+      "sha256": "62ebd9e74ebab21cc73258696e66d3dcf3ddca89dd43305df61a6bb61d867b60",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qeynos/Runethar_Hamest.lua",
+      "proposedFile": "changes/p99-guild-review/qeynos--Runethar_Hamest.lua",
+      "sha256": "4df4c12fc67f513f2982602fe3e3a318d8dba6bf21ee251dce6d49994b173bde",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qeynos/Tabure_Ahendle.lua",
+      "proposedFile": "changes/p99-am-hall-steel-note/qeynos-Tabure_Ahendle.lua",
+      "sha256": "755e631e828e8a99e4fe88359ed79fe7c2252b7347b9906a27f363bfc4d4d4b9",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qeynos/Tasya_Huntlan.lua",
+      "proposedFile": "changes/p99-tz-taxes-tasya_huntlan/qeynos--Tasya_Huntlan.lua",
+      "sha256": "31f5ed2396480df004893c94fd1481093bc5c880d26f97ef0b39306e67ba5b95",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qeynos/Ton_Firepride.lua",
+      "proposedFile": "changes/p99-tz-taxes-ton_firepride/qeynos--Ton_Firepride.lua",
+      "sha256": "396e1b6bea343d8811933a00381d9058b1db0c575e4bc4c83ab0b776f7b30ffe",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qeynos/Trumpy_Irontoe.lua",
+      "proposedFile": "changes/p99-am-honey-mead-dialogue/qeynos-Trumpy_Irontoe.lua",
+      "sha256": "69a47f01ac6a1005ea7bc02ecfe8f5184887155a66011509acd4ae59451b94dd",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qeynos/Vicus_Nonad.lua",
+      "proposedFile": "changes/p99-tz-vicus-partial-offer/qeynos--Vicus_Nonad.lua",
+      "sha256": "4630ce5166ceca350dc8ff72de2d683761ec32112bf62986605015eae81723a9",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qeynos/Voleen_Tassen.lua",
+      "proposedFile": "changes/p99-am-muffin-recipients/qeynos-Voleen_Tassen.lua",
+      "sha256": "23a9e82bddd5c31178fe24c4b82622a0eca4113bec9ef139b9ec56a0dbcba80b",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qeynos/Wolten_Grafe.lua",
+      "proposedFile": "changes/p99-am-qeynos-dialogue/qeynos-Wolten_Grafe.lua",
+      "sha256": "99174abe2e8bff2facb07338aa68c1001a5f63bc456721561448e24767ea2e2e",
+      "mainCases": 7,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qeynos2/Astaed_Wemor.lua",
+      "proposedFile": "changes/p99-tz-astaed-safe-eligibility/qeynos2--Astaed_Wemor.lua",
+      "sha256": "c29aa301f641564a31975a8c0dc64944b977ee00ece9924fd14766a6c5ff6b7d",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qeynos2/Camlend_Serbold.lua",
+      "proposedFile": "changes/p99-af-aegis-dialogue/qeynos2-Camlend_Serbold.lua",
+      "sha256": "a1b63ca5e3e356928e5ffdaf9d67fcffeed645a38790560f3afffdc3b8c9d428",
+      "mainCases": 3,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qeynos2/Crow.lua",
+      "proposedFile": "changes/p99-nz-tattered-pouch-currency/qeynos2--Crow.lua",
+      "sha256": "2a2508c733dd45637fde347d38524bccc256d425cdb4499cde13e7c0b1a181af",
+      "mainCases": 7,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qeynos2/Flynn_Merrington.lua",
+      "proposedFile": "changes/p99-tz-taxes-flynn_merrington/qeynos2--Flynn_Merrington.lua",
+      "sha256": "defcafd4d1670beae3879c602b38f28bdcc757455bb4fd3f676fc843f7c68c47",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qeynos2/Guard_Weleth.lua",
+      "proposedFile": "changes/p99-tz-weleth-crate-dialogue/qeynos2--Guard_Weleth.lua",
+      "sha256": "8ebb255e1c69ac480b903cd139b174557f15c02de09f6854e77f98187a55a402",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qeynos2/Jracol_Brestiage.lua",
+      "proposedFile": "changes/p99-nz-rogue-errands/qeynos2--Jracol_Brestiage.lua",
+      "sha256": "2c5d445e78c3f6c140cd47c3fab35e3c2b9f8b3175028e55d3c4bf8f80f43915",
+      "mainCases": 4,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qeynos2/Phin_Esrinap.lua",
+      "proposedFile": "changes/p99-am-qeynos-dialogue/qeynos2-Phin_Esrinap.lua",
+      "sha256": "48956aa5ee1c73457b2f50880c911141283633b51f03a5e101d9e7cb7a64ac7c",
+      "mainCases": 6,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qeynos2/Priestess_Caulria.lua",
+      "proposedFile": "changes/p99-nz-caulria-wolf-reward/qeynos2--Priestess_Caulria.lua",
+      "sha256": "d53f81705a6d0e36083eb2d95d9004d718a913125f7a610a3375ebfe9a303e6c",
+      "mainCases": 4,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qeynos2/Renux_Herkanor.lua",
+      "proposedFile": "changes/p99-nz-lomarc-dialogue/qeynos2--Renux_Herkanor.lua",
+      "sha256": "858e880b887b84cf2da4d58af05493e14e7c37db1b76be3ca6bf27824a354368",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qeynos2/Rodgar_the_Tall.lua",
+      "proposedFile": "changes/p99-nz-peacekeeper-faction/qeynos2--Rodgar_the_Tall.lua",
+      "sha256": "037a793d33a4b2b955a9912f5362ee44c202b5936fede5ca2948477be243da22",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qeynos2/Sneed_Galliway.lua",
+      "proposedFile": "changes/p99-tz-taxes-sneed_galliway/qeynos2--Sneed_Galliway.lua",
+      "sha256": "98f361bff3817d35671d5dd62ce0b9574c21921f9aafde174da54cd0f0d93c6e",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qeynos2/Suuspa_Clanim.lua",
+      "proposedFile": "changes/p99-nz-suuspa-dialogue/qeynos2--Suuspa_Clanim.lua",
+      "sha256": "6401879ea7584488480705e2e345eb63d9f32f5a82eee3726f459d71f534c6ea",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qeynos2/Tyokan_Mekase.lua",
+      "proposedFile": "changes/p99-nz-prayer-beads-dialogue/qeynos2--Tyokan_Mekase.lua",
+      "sha256": "edde94d52ee7ac90847de99b4a3e65ed417a976b22c47ab56acd36a5101de975",
+      "mainCases": 5,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qeynos2/Vegalys_Keldrane.lua",
+      "proposedFile": "changes/p99-nz-badge-safety/qeynos2--Vegalys_Keldrane.lua",
+      "sha256": "fdb723bac9dcee8de02308a3992743010ab00878b9efc9d2fd77118343a8b2fe",
+      "mainCases": 10,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qeynos2/Zannsin_Resdinet.lua",
+      "proposedFile": "changes/p99-nz-rogue-errands/qeynos2--Zannsin_Resdinet.lua",
+      "sha256": "e610a2835e67b1a8d9c7ae57dd9343d21bc8ed0fdde9e160188cbc28c52bbb50",
+      "mainCases": 3,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qeytoqrg/Guard_Cheslin.lua",
+      "proposedFile": "changes/p99-af-cheslin-state/qeytoqrg-Guard_Cheslin.lua",
+      "sha256": "6bbf84ebab3cce11394f6a607091d6c224bd0b1ac5aa0681bca6de8929c01535",
+      "mainCases": 3,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qeytoqrg/Mira_Sayer.lua",
+      "proposedFile": "changes/p99-tz-taxes-mira_sayer/qeytoqrg--Mira_Sayer.lua",
+      "sha256": "728327d123db80ed208d3ca9c03ea575a6d32068e3b2e3a0e1830e370379b679",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qrg/Corun_Finisc.lua",
+      "proposedFile": "changes/p99-am-gnoll-paw-faction/qrg-Corun_Finisc.lua",
+      "sha256": "7915254ac86ddedd95c81c30ed4e3d2dc85d4f1ab69db3c50c7ab92c34378e26",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qrg/Frenway_Marthank.lua",
+      "proposedFile": "changes/p99-tz-frenway-bayle-dialogue/qrg--Frenway_Marthank.lua",
+      "sha256": "9732c0e013601621471db3e66e33e459215ba1d80c0e6d6c78c696797f7e3428",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qrg/Gerael_Woodone.lua",
+      "proposedFile": "changes/p99-tz-gerael-returned-contract/qrg--Gerael_Woodone.lua",
+      "sha256": "c6c98da737f93b76d13c75e7c757234545d04c596a995feb96c968647d3f1b22",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qrg/Vesteri_Nomanoi.lua",
+      "proposedFile": "changes/p99-nz-nesiff-statue-currency/qrg--Vesteri_Nomanoi.lua",
+      "sha256": "eb6daf2ba369997d18d43f7338d72b59b618b3b671b202085c3252c4b78c1ab6",
+      "mainCases": 4,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/rivervale/Fiddy_Bobick.lua",
+      "proposedFile": "changes/p99-tz-fiddy-dialogue/rivervale--Fiddy_Bobick.lua",
+      "sha256": "74dc1daaf269277eeb863ba80781d63c4eb55819ec87383e80d38c7d6057b916",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/rivervale/Marshal_Anrey.lua",
+      "proposedFile": "changes/p99-il-parity/rivervale--Marshal_Anrey.lua",
+      "sha256": "c92e2ccb22606630a7e16476073b6deb383a471a9b1b7ef58597492169b1d949",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/rivervale/Marshal_Ghobber.lua",
+      "proposedFile": "changes/p99-tz-ghobber-dialogue/rivervale--Marshal_Ghobber.lua",
+      "sha256": "6089107cc145addad98bd2cc624234035d6b4ee3bd1f0e98378bd15c05f9c4a2",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/rivervale/Marshal_Lanena.lua",
+      "proposedFile": "changes/p99-tz-lanena-dialogue/rivervale--Marshal_Lanena.lua",
+      "sha256": "6dfff7a470ff86089d18ea1cffed6f2c3baa3f7d9ec05adebc02256a8326e662",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/rivervale/Reebo_Leafsway.lua",
+      "proposedFile": "changes/p99-nz-nillipuss-currency/rivervale--Reebo_Leafsway.lua",
+      "sha256": "413157f150a1f3c52836fc8a8a9edd8390df1dd8105f310bfb7594d31097e4b1",
+      "mainCases": 23,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/skyshrine/#Eldriaks_Fe-Dhar.lua",
+      "proposedFile": "changes/p99-tz-garzicor-no-round-robin/skyshrine--#Eldriaks_Fe-Dhar.lua",
+      "sha256": "8338b647f8899a0ad5f467ba6817fcbbea65132bc922590d49f8a6fa1e2c0482",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/southkarana/#Theodore_Exanthem.lua",
+      "proposedFile": "changes/p99-nz-badge-safety/southkarana--#Theodore_Exanthem.lua",
+      "sha256": "ae3fe3c095d8ff9a957ccdafbdce73d6c9b4bed91f2edeb2d27eabaf37b18755",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/southkarana/a_hermit.lua",
+      "proposedFile": "changes/p99-tz-hermit-dialogue/southkarana--a_hermit.lua",
+      "sha256": "b22656047ab131b6fdeb8201408bd8f165caa6819d17ccaccdfb8a0d82055234",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/southkarana/an_interrogator.lua",
+      "proposedFile": "changes/p99-nz-badge-safety/southkarana--an_interrogator.lua",
+      "sha256": "5146e2e48dc767489f79a0538065243e2d220daabe8d963d05403271a9a4bcc6",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/southkarana/Vhalen_Nostrolo.lua",
+      "proposedFile": "changes/p99-tz-vhalen-factions/southkarana--Vhalen_Nostrolo.lua",
+      "sha256": "336bd868bb826b50b25754f5666a466146ae7d474b80a7dca01d854b47ed89e2",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/southro/Rathmana_Allin.lua",
+      "proposedFile": "changes/p99-tz-bayle-southro-rathmana_allin/southro--Rathmana_Allin.lua",
+      "sha256": "8a24c1afe993704eab8afd6be3c80e0e42d8db7861dd3ef0c13663829005a71a",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/southro/Taldrik_Stumpystout.lua",
+      "proposedFile": "changes/p99-af-taldrik-note/southro-Taldrik_Stumpystout.lua",
+      "sha256": "00a804ffbe02aeea01c6f7f5495b42e32cead1ec9fe3496fca6798995cab1216",
+      "mainCases": 2,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/sro/Rathmana_Allin.lua",
+      "proposedFile": "changes/p99-tz-bayle-sro-rathmana_allin/sro--Rathmana_Allin.lua",
+      "sha256": "11b99a55cdb23333951e49c755f7d85587ad84337834a4d809357243444a1aca",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/lua/modified-upstream/swampofnohope/Mystic_Dovan.lua",
+      "proposedFile": "changes/p99-sz-dovan-alias/swampofnohope--Mystic_Dovan.lua",
+      "sha256": "2730bdb472dbcd6f30fcd57861fa047b39650d96201721fe63eaa1039353b7ae",
+      "mainCases": 1,
+      "flavorCases": 0
+    },
+    {
+      "target": "maintained/modules/coldain_ring_war.lua",
+      "proposedFile": "changes/p99-nz-ring-ten-dialogue/coldain_ring_war.lua",
+      "sha256": "67656e95d751188579542fc9eb01f87ebdcf03dbf6c41483418abe5307398e3a",
+      "mainCases": 7,
+      "flavorCases": 0
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "normalizer": "reference/server/internal/questluasource/source.go",
+  "normalizerSha256": "e00525e302e71c79ce8a53e4ff62411505b032355887874440da5d13031530ed",
+  "limits": "Baseline isolated mock diagnostics, not proposed coverage or live bridge test.",
+  "cases": [
+    {
+      "name": "AF baseline normalized Cilin_Spellsinger",
+      "file": "sources/projecteq/airplane/Cilin_Spellsinger.lua",
+      "sourceSha256": "6ec5e43a7bb36c4de7ec0847772d64d2d962cc1286333e301015a8dcf3b23d6c",
+      "assertions": "other.GetClassName=function()return 'Warrior'end;say('Denise');say('Clarisa');equal(#calls.spawns,0);other.GetClassName=function()return 'Bard'end;say('Denise');say('Clarisa');equal(#calls.spawns,2);equal(calls.spawns[1],71082);equal(calls.spawns[2],71081);equal(calls.depops,2)"
+    },
+    {
+      "name": "AF baseline normalized Josin_Faithbringer",
+      "file": "sources/projecteq/airplane/Josin_Faithbringer.lua",
+      "sourceSha256": "4716ffb6a4c138748296410bc3d96b2d6c6a3f0b8d50d79d45f3435ec214556b",
+      "assertions": "other.GetClassName=function()return 'Warrior'end;say('Alan');say('Deric');equal(#calls.spawns,0);other.GetClassName=function()return 'Cleric'end;say('Alan');say('Deric');equal(#calls.spawns,2);equal(calls.spawns[1],71080);equal(calls.spawns[2],71083);equal(calls.depops,2)"
+    },
+    {
+      "name": "AF baseline normalized Strandar_Pinemist",
+      "file": "sources/projecteq/airplane/Strandar_Pinemist.lua",
+      "sourceSha256": "8ba359a2ee585f73d8f2a027aa3cb166ca8056760a9f4e199c9881b90b5535da",
+      "assertions": "other.GetClassName=function()return 'Warrior'end;say('Will');say('Fenalla');equal(#calls.spawns,0);other.GetClassName=function()return 'Druid'end;say('Will');say('Fenalla');equal(#calls.spawns,2);equal(calls.spawns[1],71099);equal(calls.spawns[2],71086);equal(calls.depops,2)"
+    },
+    {
+      "name": "AF baseline normalized Enchanter_Jolas",
+      "file": "sources/projecteq/airplane/Enchanter_Jolas.lua",
+      "sourceSha256": "4f532d223b81638b5b99b8e9f002bda781f2d67d3735a4b7705db15c9289a4db",
+      "assertions": "other.GetClassName=function()return 'Warrior'end;say('Lelulean');say('Enderbite');equal(#calls.spawns,0);other.GetClassName=function()return 'Enchanter'end;say('Lelulean');say('Enderbite');equal(#calls.spawns,2);equal(calls.spawns[1],71104);equal(calls.spawns[2],71085);equal(calls.depops,2)"
+    }
+  ]
+}

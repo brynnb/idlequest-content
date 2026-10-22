@@ -1,0 +1,91 @@
+{
+  "format": 1,
+  "id": "p99-nz-skullcap-steps",
+  "summary": "Restore exact fifth-rank Skullcap cash, correct the occultist hint item, and validate the retained Ryx level condition before consuming its four-item offer.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Necromancer_Skullcap_Quests?action=raw",
+      "note": "Cached 2026-07-17T23:26:29.114Z; revision unavailable; SHA256 ebe60bdefd86b8e6cfe472e1981fe8d110b1a0a81e6148b5ffedcf5e7ea13610. Full page and all ten mapped Lua scripts reviewed. Tin Banker exact6copper6silver6gold and Kyvix exact5gold are explicit. Item4246 resolves to Rhino Hide Skullcap, while4264 is Occultist Skullcap. Dusty Tome55978 is coherently used on both sides and upstream calls the same branch a journal; no speculative item substitution. Ryx retains imported greater-than20 threshold because the page conflicting level anecdotes concern banker, not proof of Ryx threshold; low-level complete offers now fall through to safe returned Spectacle lore and return all other items rather than destroy them. Existing simultaneous-four-item adaptation is retained; sequential P99 deposit handling remains open. Preserve faction bypass, eighth-rank exclusion, existing XP and unrelated branches."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 16725,
+        "zone": "cabwest",
+        "name": "Master_Kyvix",
+        "lua_content": "-- Source: cabwest/Master_Kyvix.pl\n-- Converted from ProjectEQ Perl quest script.\n-- items: 17024, 12848, 12420, 4262, 4263, 55978, 4264, 12853, 12852, 4265\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Quite busy!! Quite busy!! Things must be done. New components to be collected!!\")\n\t\tif e.other:HasItem(4246) then\n\t\t\te.self:Say(\"So you are expecting to earn your way to rank of revenant, eh? You shall when I have the base and stem of the candle your occultist skullcap.\")\n\t\tend\n\telseif e.message:findi(\"new components\") then\n\t\te.self:Say(\"Yes, yes!! I will need components from beyond the gates. I must find an apprentice of the third rank.\")\n\telseif e.message:findi(\"apprentice of the third rank\") then\n\t\te.self:Say(\"If you truly be an apprentice of the third circle, then there is a Dark Binder skullcap to be earned. Take this sack and fill it with a creeper cabbage, a heartsting telson with venom, brutling choppers and a scalebone femur. When they are combined within the sack, you may return it to me with your third rank skullcap and and we shall bid farewell to the title, apprentice.\")\n\t\te.other:SummonItem(17024) -- Brood Sack\n\telseif e.message:findi(\"true mission\") then\n\t\te.self:Say(\"I have been waiting for a Nihilist to return. His name was Ryx and I fear his love of ale and the high seas has kept him from his mission. All I want you to do is find him. He should be disguised as a worker and he will give you a tome to bring to me. Return it with your Dark Binder Cap. I am sure that is simple enough for one as simple as you. Be sure to give him this.\")\n\t\te.other:SummonItem(12848) -- Spectacle\n\telseif e.message:findi(\"kor sha candlestick\") then\n\t\te.self:Say(\"I need the foot and stem of my candlestick. The Stem comes from Sarnaks. The foot has been stolen by Gripe, in East Cabilis.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 12420, item2 = 4262}) then\n\t\te.self:Say(\"Well done, here's your fourth rank skull cap. You can now start your true mission.\")\n\t\te.other:AddEXP(200)\n\t\te.other:SummonItem(4263) -- Dark Binder Skullcap\n\t\te.other:Faction(441, 20)\n\t\te.other:Faction(443, 20)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 55978, item2 = 4263}) then\n\t\te.self:Say(\"Well done, here's your fifth rank skull cap. You can now track down the Kor Sha Candlestick.\")\n\t\te.other:AddEXP(200)\n\t\te.other:SummonItem(4264) -- Occultist Skullcap\n\t\te.other:Faction(441, 20)\n\t\te.other:Faction(443, 20)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 12853, item2 = 12852, item3 = 4264}) then\n\t\te.self:Emote(\"grabs the candle parts and puts them in an odd pouch, then takes your cap which disintegrates in his palm. He hands you another cap.\")\n\t\te.self:Say(\"Welcome, Revenant \" .. e.other:GetName() .. \". You have done well. The Harbinger awaits you. He seeks a new revenant.\")\n\t\te.other:AddEXP(200)\n\t\te.other:SummonItem(4265) -- Revenant Skullcap\n\t\te.other:Faction(441, 20)\n\t\te.other:Faction(443, 20)\n\t\te.other:GiveCash(0, 0, 6, 0)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 16725,
+        "zone": "cabwest",
+        "name": "Master_Kyvix",
+        "lua_content": "-- Source: cabwest/Master_Kyvix.pl\n-- Converted from ProjectEQ Perl quest script.\n-- items: 17024, 12848, 12420, 4262, 4263, 55978, 4264, 12853, 12852, 4265\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Quite busy!! Quite busy!! Things must be done. [New components] to be collected!!\")\n\t\tif e.other:HasItem(4264) then\n\t\t\te.self:Say(\"So you are expecting to earn your way to rank of revenant, eh? You shall when I have the base and stem of the candle your occultist skullcap.\")\n\t\tend\n\telseif e.message:findi(\"new components\") then\n\t\te.self:Say(\"Yes, yes!! I will need components from beyond the gates. I must find an [apprentice of the third rank].\")\n\telseif e.message:findi(\"apprentice of the third rank\") then\n\t\te.self:Say(\"If you truly be an apprentice of the third circle, then there is a Dark Binder skullcap to be earned. Take this sack and fill it with a creeper cabbage, a heartsting telson with venom, brutling choppers and a scalebone femur. When they are combined within the sack, you may return it to me with your third rank skullcap and and we shall bid farewell to the title, apprentice.\")\n\t\te.other:SummonItem(17024) -- Brood Sack\n\telseif e.message:findi(\"true mission\") then\n\t\te.self:Say(\"I have been waiting for a Nihilist to return. His name was Ryx and I fear his love of ale and the high seas has kept him from his mission. All I want you to do is find him. He should be disguised as a worker and he will give you a tome to bring to me. Return it with your Dark Binder Cap. I am sure that is simple enough for one as simple as you. Be sure to give him this.\")\n\t\te.other:SummonItem(12848) -- Spectacle\n\telseif e.message:findi(\"kor sha candlestick\") then\n\t\te.self:Say(\"I need the foot and stem of my candlestick. The Stem comes from Sarnaks. The foot has been stolen by Grype, in East Cabilis.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 12420, item2 = 4262}) then\n\t\te.self:Say(\"Well done, here's your fourth rank skull cap. You can now start your [true mission].\")\n\t\te.other:AddEXP(200)\n\t\te.other:SummonItem(4263) -- Dark Binder Skullcap\n\t\te.other:Faction(441, 20)\n\t\te.other:Faction(443, 20)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 55978, item2 = 4263}) then\n\t\te.self:Say(\"Well done, here's your fifth rank skull cap. You can now track down the [Kor Sha Candlestick].\")\n\t\te.other:AddEXP(200)\n\t\te.other:SummonItem(4264) -- Occultist Skullcap\n\t\te.other:GiveCash(0, 0, 5, 0)\n\t\te.other:Faction(441, 20)\n\t\te.other:Faction(443, 20)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 12853, item2 = 12852, item3 = 4264}) then\n\t\te.self:Emote(\"grabs the candle parts and puts them in an odd pouch, then takes your cap which disintegrates in his palm. He hands you another cap.\")\n\t\te.self:Say(\"Welcome, Revenant \" .. e.other:GetName() .. \". You have done well. The Harbinger awaits you. He seeks a new revenant.\")\n\t\te.other:AddEXP(200)\n\t\te.other:SummonItem(4265) -- Revenant Skullcap\n\t\te.other:Faction(441, 20)\n\t\te.other:Faction(443, 20)\n\t\te.other:GiveCash(0, 0, 6, 0)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 16310,
+        "zone": "overthere",
+        "name": "Tin_Banker_Assistant",
+        "lua_content": "-- Source: overthere/Tin_Banker_Assistant.pl\n-- Converted from ProjectEQ Perl quest script.\n-- items: 12849, 55978\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Insert Metal Key *whirrrr*.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 12849}) then -- Metal Key\n\t\te.self:Say(\"*Whirrrr*\")\n\t\te.other:SummonItem(55978) -- Dusty Tome\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 16310,
+        "zone": "overthere",
+        "name": "Tin_Banker_Assistant",
+        "lua_content": "-- Source: overthere/Tin_Banker_Assistant.pl\n-- Converted from ProjectEQ Perl quest script.\n-- items: 12849, 55978\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Insert Metal Key *whirrrr*.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 12849}) then -- Metal Key\n\t\te.self:Say(\"*Whirrrr*\")\n\t\te.other:SummonItem(55978) -- Dusty Tome\n\t\te.other:GiveCash(6, 6, 6, 0)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 17584,
+        "zone": "overthere",
+        "name": "93182",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: overthere/93182.pl\n-- items: 12848, 12850, 12851, 12610, 12849\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 12848, item2 = 12850, item3 = 12851, item4 = 12610}) then\n\t\tif e.other:GetLevel() > 20 then\n\t\t\te.other:SummonItem(12849)\n\t\telse\n\t\t\te.self:Say(\"You will have to be more skilled to complete that quest.\")\n\t\tend\n\telseif item_lib.check_turn_in(e.trade, {item1 = 12848}) then\n\t\te.self:Emote(\"a skeleton worker stops working and begins to open his creaking jaw.\")\n\t\te.self:Say(\"I live to study and quench my thirst. I live to Bash the Faces of Pariah and entangle myself in the ivy of evergreen. I live. I want to remember.\")\n\t\te.other:SummonItem(12848)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 17584,
+        "zone": "overthere",
+        "name": "93182",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: overthere/93182.pl\n-- items: 12848, 12850, 12851, 12610, 12849\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif e.other:GetLevel() > 20 and item_lib.check_turn_in(e.trade, {item1 = 12848, item2 = 12850, item3 = 12851, item4 = 12610}) then\n\t\te.other:SummonItem(12849)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 12848}) then\n\t\te.self:Emote(\"a skeleton worker stops working and begins to open his creaking jaw.\")\n\t\te.self:Say(\"I live to study and quench my thirst. I live to Bash the Faces of Pariah and entangle myself in the ivy of evergreen. I live. I want to remember.\")\n\t\te.other:SummonItem(12848)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/cabwest/Master_Kyvix.lua",
+      "beforeSha256": "2edbd791be3fb96894efeeaf5ee1083d022c4a2bfedd20b892f22292be2eb4ec",
+      "proposedFile": "changes/p99-nz-skullcap-steps/cabwest--Master_Kyvix.lua",
+      "afterSha256": "81c718d5d2058a59551028f440b1461ddfbaa5b40d3cd8055026d2c576034cb1"
+    },
+    {
+      "target": "maintained/lua/converted-perl/overthere/Tin_Banker_Assistant.lua",
+      "beforeSha256": "b0d562f3ccc9ea401b3359db144a18f50336ff6120a0c940a13534aaf120a002",
+      "proposedFile": "changes/p99-nz-skullcap-steps/overthere--Tin_Banker_Assistant.lua",
+      "afterSha256": "6ba58a0fbe8aa71769c8b557b33a8533375edaa30d5c8253323a549a02eff899"
+    },
+    {
+      "target": "maintained/lua/converted-perl/overthere/93182.lua",
+      "beforeSha256": "78aec8c1fbe853dffd7f67f3a9aa5e89d5e91e5b530c9def688848a97d297e47",
+      "proposedFile": "changes/p99-nz-skullcap-steps/overthere--93182.lua",
+      "afterSha256": "894edc741375ddcaa4520d4a5ffec1b9fd8ba61c53255c383a390125936439e2"
+    }
+  ]
+}

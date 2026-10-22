@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-taralani-tools",
+  "summary": "Restore the checklist explicitly documented hand-in of 1,000 platinum for Kejekan Tool Kit17062, not a merchant-price inference. No unsupported XP or faction effects are added; preserve existing speech and refund excess currency/items.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/The_Spirit_of_Garzicor?action=raw",
+      "note": "Cached 2026-07-17T23:38:05.956Z; revision unavailable; SHA256 df0f4c209df4cd12720a5a70d0ac0a6f78e33e658a422caf07d146ae921274be. Restore the checklist explicitly documented hand-in of 1,000 platinum for Kejekan Tool Kit17062, not a merchant-price inference. No unsupported XP or faction effects are added; preserve existing speech and refund excess currency/items. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 13125,
+        "zone": "paineel",
+        "name": "Taralani_Rahnta",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: paineel/Taralani_Rahnta.pl\n\nfunction event_say(e)\n\tif e.message:findi(\"Hail\") then\n\t\te.self:Say(\"Greetings. \" .. e.other:GetName() .. \".  You have found the only place to purchase liquor in this fine city.  It seems that many of my countrymen do not appreciate liquor as I do.  Fear not if you spill. I have plenty of [skeletal servants] to clean up the mess.\")\n\telseif e.message:findi(\"what skeletal servants\") then\n\t\te.self:Say(\"Can't you see. child?  These dead servants of mine are bussing tables and dancing!  They work incredibly cheaply.  Heh.  Don't try to harm them. though. they don't like that very much. Say. would you like to see something interesting?\")\n\tend\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 13125,
+        "zone": "paineel",
+        "name": "Taralani_Rahnta",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: paineel/Taralani_Rahnta.pl\n\nfunction event_say(e)\n\tif e.message:findi(\"Hail\") then\n\t\te.self:Say(\"Greetings. \" .. e.other:GetName() .. \".  You have found the only place to purchase liquor in this fine city.  It seems that many of my countrymen do not appreciate liquor as I do.  Fear not if you spill. I have plenty of [skeletal servants] to clean up the mess.\")\n\telseif e.message:findi(\"what skeletal servants\") then\n\t\te.self:Say(\"Can't you see. child?  These dead servants of mine are bussing tables and dancing!  They work incredibly cheaply.  Heh.  Don't try to harm them. though. they don't like that very much. Say. would you like to see something interesting?\")\n\tend\nend\nfunction event_trade(e)\n    local item_lib = require(\"items\");\n    if item_lib.check_turn_in(e.trade, {platinum = 1000}) then\n        e.other:SummonItem(17062); -- Kejekan Tool Kit, lore Koajin's Tools\n    end\n    item_lib.return_items(e.self, e.other, e.trade);\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/paineel/Taralani_Rahnta.lua",
+      "beforeSha256": "2e87838d1d2e69d5689786eada034311fb951a32bdcb3b22017c9078e57b283d",
+      "proposedFile": "changes/p99-tz-taralani-tools/paineel--Taralani_Rahnta.lua",
+      "afterSha256": "e7cfd947a7638b801255a2bfba51986c23636362b0e742926fb4f477327c990d"
+    }
+  ]
+}

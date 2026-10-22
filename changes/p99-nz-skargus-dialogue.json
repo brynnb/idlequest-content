@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-nz-skargus-dialogue",
+  "summary": "Restore Skargus\u2019s documented arrival line and limit his existing depop handler to its named timer.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Regal_Band_of_Bathezid_Quest?action=raw",
+      "note": "Cached 2026-07-17T23:30:24.882Z; revision unavailable; SHA256 1d13de10bb6d4c9ab7770595b7c96a1f8bd37898470b4eedbf5d4df6d94ad85e. Only canonical classic Droga actor81126 changed. Existing600000ms timeout retained as unverified imported duration, not invented P99 value. Other timer names now cannot trigger accidental depop; unsupported trades still returned. Entire six-actor chain read; all item identities, character-scoped global and final five-charge ring match local definitions. Prior October9 notes document actual grid/type4 and full-template-charge fixes; do not regress them or claim fresh connected tests. Modern Frontier Mountains copies left untouched."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 207954,
+        "zone": "droga",
+        "name": "Warlord_Skargus",
+        "lua_content": "-- Second part of the chardok quest, initiated by Herald Telcha\n-- Regal Band of Bathezid\n-- global RegalBandBathezid, needed to be sure players won't jump to the last part of the quest\n--   at 1 : you gave the Signet of Service to the goblin traitor\nfunction event_spawn(e)\n\teq.set_timer(\"depop\",600000);\nend\n\nfunction event_timer(e)\n\teq.depop();\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 207954,
+        "zone": "droga",
+        "name": "Warlord_Skargus",
+        "lua_content": "-- Second part of the chardok quest, initiated by Herald Telcha\n-- Regal Band of Bathezid\n-- global RegalBandBathezid, needed to be sure players won't jump to the last part of the quest\n--   at 1 : you gave the Signet of Service to the goblin traitor\nfunction event_spawn(e)\n\te.self:Say(\"I've gotta stop Gragbar before he turns in that report!\");\n\teq.set_timer(\"depop\",600000);\nend\n\nfunction event_timer(e)\n\tif e.timer == \"depop\" then\n\t\teq.stop_timer(\"depop\");\n\t\teq.depop();\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/droga/Warlord_Skargus.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-nz-skargus-dialogue/droga--Warlord_Skargus.lua",
+      "afterSha256": "3cad0a3ae9157c3ae1cb0bbb0f93cc917079b87fc3250c05fae64fcfb50c39bf"
+    }
+  ]
+}

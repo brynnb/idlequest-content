@@ -1,0 +1,74 @@
+{
+  "format": 1,
+  "id": "p99-am-lizard-dialogue",
+  "summary": "Make advertised Kogna and Grevak dialogue choices reachable without requiring unadvertised sentence prefixes; preserve all trade branches and eligibility policy.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Lizard_Meat_Quest?action=raw",
+      "note": "Cached 2026-07-17T23:23:52.649Z; revision unavailable; SHA256 18c540c21d4cfc4f01af3227aea6be51029161e78bb5386363c8375f6a3a816e. Lizard Meat Quest"
+    },
+    {
+      "url": "https://wiki.project1999.com/Lizard_Tails_No_2?action=raw",
+      "note": "Cached 2026-07-17T23:23:57.300Z; revision unavailable; SHA256 5737f8ab65291e71f438aa5b67ecbdd6d2fdf01e31b8b52ceccb526d07190c8d. Lizard Tails No 2"
+    },
+    {
+      "url": "https://wiki.project1999.com/Lizard_Dolls?action=raw",
+      "note": "Cached 2026-07-17T23:23:47.127Z; revision unavailable; SHA256 6e9c07ad78b98089e75ae6e14d6b68bfb6af8fe6d85155caf2c949586990332e. Lizard Dolls"
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 16165,
+        "zone": "oggok",
+        "name": "Kogna",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: oggok/Kogna.pl\n-- P99: https://wiki.project1999.com/Lizard_Meat_Quest\n-- items: 13410, 5025\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"You be tinking you be [real tuff Craknek]?\")\n\telseif e.message:findi(\"i am a real tuff craknek\") then\n\t\te.self:Say(\"Me not tinking so. but maybe me wrongs.. no.. me neber wrongs.  You no tuff. only liddle Craknek is you.  You tink you be tuff Craknek. you bringed me four lizard meats.  Me like lizard meats.  You no tuff.  You bringed me lizard [meats].  I make you tuffer Craknek.  Me bestest Craknek.\")\n\telseif e.message:findi(\"meats\") then\n\t\te.self:Say(\"Yup, meats.  You brings me four, me gives you sumting.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 13410, item2 = 13410, item3 = 13410, item4 = 13410}) then\n\t\tif e.other:GetFaction(e.self) <= 4 then\n\t\t\te.self:Say(\"Yous really did it. Mebbe you tuff Craknek after all.\")\n\t\t\te.other:SummonItem(5025)\n\t\t\te.other:Faction(228, 15, 0)\n\t\t\te.other:Faction(232, 15, 0)\n\t\t\te.other:Faction(261, -15, 0)\n\t\t\te.other:AddEXP(500)\n\t\t\te.other:Ding()\n\t\telse\n\t\t\te.self:Say(\"You no tuff Craknek yet. Go prove youself first.\")\n\t\t\te.other:SummonItem(13410)\n\t\t\te.other:SummonItem(13410)\n\t\t\te.other:SummonItem(13410)\n\t\t\te.other:SummonItem(13410)\n\t\tend\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 16165,
+        "zone": "oggok",
+        "name": "Kogna",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: oggok/Kogna.pl\n-- P99: https://wiki.project1999.com/Lizard_Meat_Quest\n-- items: 13410, 5025\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"You be tinking you be [real tuff Craknek]?\")\n\telseif e.message:findi(\"real tuff craknek\") then\n\t\te.self:Say(\"Me not tinking so. but maybe me wrongs.. no.. me neber wrongs.  You no tuff. only liddle Craknek is you.  You tink you be tuff Craknek. you bringed me four lizard meats.  Me like lizard meats.  You no tuff.  You bringed me lizard [meats].  I make you tuffer Craknek.  Me bestest Craknek.\")\n\telseif e.message:findi(\"meats\") then\n\t\te.self:Say(\"Yup, meats.  You brings me four, me gives you sumting.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 13410, item2 = 13410, item3 = 13410, item4 = 13410}) then\n\t\tif e.other:GetFaction(e.self) <= 4 then\n\t\t\te.self:Say(\"Yous really did it. Mebbe you tuff Craknek after all.\")\n\t\t\te.other:SummonItem(5025)\n\t\t\te.other:Faction(228, 15, 0)\n\t\t\te.other:Faction(232, 15, 0)\n\t\t\te.other:Faction(261, -15, 0)\n\t\t\te.other:AddEXP(500)\n\t\t\te.other:Ding()\n\t\telse\n\t\t\te.self:Say(\"You no tuff Craknek yet. Go prove youself first.\")\n\t\t\te.other:SummonItem(13410)\n\t\t\te.other:SummonItem(13410)\n\t\t\te.other:SummonItem(13410)\n\t\t\te.other:SummonItem(13410)\n\t\tend\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 19548,
+        "zone": "oggok",
+        "name": "Grevak",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: oggok/Grevak.pl\n-- P99: https://wiki.project1999.com/Lizard_Tails_No_2\n-- P99: https://wiki.project1999.com/Lizard_Dolls\n-- items: 13354, 13367, 17005, 15340, 15235, 15491, 2129, 2131, 2133, 2134\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Need new members we do not. Powerful enough are we with Grevak. Still. peons needed. Are you a [new peon] or are you an [outsider]? Speak up!! Fool!! No time Grevak has!!\")\n\telseif e.message:findi(\"i am a new peon\") then\n\t\te.self:Say(\"So you think you can be greater than Grevak!! Touch you not and still I can smash you. I am a Greenblood shadowknight!! Peon are you. Peons go to swamps and slay lizardmen. You return with four lizardmen tails and a reward is yours. You return with two lizardman shaman dolls and a great reward is yours.\")\n\telseif e.message:findi(\"i am an outsider\") then\n\t\te.self:Say(\"Go away or soon your pain will find you.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 13354, item2 = 13354, item3 = 13354, item4 = 13354}) then\n\t\te.self:Say(\"Hmph! You still not as great as Grevak!! But you do gud. Here.\")\n\t\te.other:SummonItem(eq.ChooseRandom(2129, 2131, 2133, 2134))\n\t\te.other:GiveCash(0, 6, 0, 0)\n\t\te.other:AddEXP(500)\n\t\te.other:Faction(228, 10, 0)\n\t\te.other:Faction(261, 20, 0)\n\t\te.other:Faction(274, -10, 0)\n\t\te.other:Faction(308, -20, 0)\n\t\te.other:Ding()\n\telseif item_lib.check_turn_in(e.trade, {item1 = 13367, item2 = 13367}) then\n\t\te.self:Say(\"You no getting big head!! Me still bash you gud! You no longer peon....you BIG peon now! Har! Har!......ok den, here great reward.\")\n\t\te.other:SummonItem(eq.ChooseRandom(17005, 15340, 15235, 15491))\n\t\te.other:GiveCash(0, 0, 4, 0)\n\t\te.other:AddEXP(500)\n\t\te.other:Faction(228, 10, 0)\n\t\te.other:Faction(261, 20, 0)\n\t\te.other:Faction(274, -10, 0)\n\t\te.other:Faction(308, -20, 0)\n\t\te.other:Ding()\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 19548,
+        "zone": "oggok",
+        "name": "Grevak",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: oggok/Grevak.pl\n-- P99: https://wiki.project1999.com/Lizard_Tails_No_2\n-- P99: https://wiki.project1999.com/Lizard_Dolls\n-- items: 13354, 13367, 17005, 15340, 15235, 15491, 2129, 2131, 2133, 2134\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Need new members we do not. Powerful enough are we with Grevak. Still. peons needed. Are you a [new peon] or are you an [outsider]? Speak up!! Fool!! No time Grevak has!!\")\n\telseif e.message:findi(\"new peon\") then\n\t\te.self:Say(\"So you think you can be greater than Grevak!! Touch you not and still I can smash you. I am a Greenblood shadowknight!! Peon are you. Peons go to swamps and slay lizardmen. You return with four lizardmen tails and a reward is yours. You return with two lizardman shaman dolls and a great reward is yours.\")\n\telseif e.message:findi(\"outsider\") then\n\t\te.self:Say(\"Go away or soon your pain will find you.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 13354, item2 = 13354, item3 = 13354, item4 = 13354}) then\n\t\te.self:Say(\"Hmph! You still not as great as Grevak!! But you do gud. Here.\")\n\t\te.other:SummonItem(eq.ChooseRandom(2129, 2131, 2133, 2134))\n\t\te.other:GiveCash(0, 6, 0, 0)\n\t\te.other:AddEXP(500)\n\t\te.other:Faction(228, 10, 0)\n\t\te.other:Faction(261, 20, 0)\n\t\te.other:Faction(274, -10, 0)\n\t\te.other:Faction(308, -20, 0)\n\t\te.other:Ding()\n\telseif item_lib.check_turn_in(e.trade, {item1 = 13367, item2 = 13367}) then\n\t\te.self:Say(\"You no getting big head!! Me still bash you gud! You no longer peon....you BIG peon now! Har! Har!......ok den, here great reward.\")\n\t\te.other:SummonItem(eq.ChooseRandom(17005, 15340, 15235, 15491))\n\t\te.other:GiveCash(0, 0, 4, 0)\n\t\te.other:AddEXP(500)\n\t\te.other:Faction(228, 10, 0)\n\t\te.other:Faction(261, 20, 0)\n\t\te.other:Faction(274, -10, 0)\n\t\te.other:Faction(308, -20, 0)\n\t\te.other:Ding()\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/oggok/Kogna.lua",
+      "beforeSha256": "a9e98b92dff380ea47baccf8c15f8c2b072562ab4557a796fb5574affd9f92e0",
+      "proposedFile": "changes/p99-am-lizard-dialogue/oggok-Kogna.lua",
+      "afterSha256": "d973512a989f4710eaf29d036fb5ef463fa6902014568d28bd400001e373c9f4"
+    },
+    {
+      "target": "maintained/lua/converted-perl/oggok/Grevak.lua",
+      "beforeSha256": "208fe32ffaef0eedee1cee1a56d525e8c85a5016d41331caa77f81ddc56860a8",
+      "proposedFile": "changes/p99-am-lizard-dialogue/oggok-Grevak.lua",
+      "afterSha256": "c900cc90a0814169db04caccedf1c7a39ee371d7639585b157c272b6a1ef6ce5"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-af-cromil-reward",
+  "summary": "Replace unsupported Flash of Light15201 with Spook the Dead15209 named by the P99 completion report. Retain unresolved conflicting Hammer of Wrath heading; evidence-selected correction, not full parity. Bone Chips branch unchanged.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Cromil's_Remains?action=raw",
+      "note": "Cached 2026-07-17T23:11:51.414Z; revision unavailable; SHA256 1a5ef9fb0e3df376411d975c26e0a763d92a782d98986150c5d0716c0f00cf52. Completion says Received Spook the Dead spell; header Hammer of Wrath conflicts."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 19686,
+        "zone": "kaladimb",
+        "name": "Gunlok_Jure",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: kaladimb/Gunlok_Jure.pl\n-- items: 13073, 2116, 2122, 5013, 5014, 5016, 5023, 6011, 13002, 13003, 13332, 15201\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Hail, \" .. e.other:GetName() .. \"!  Bow before the greatness of the Clerics of Underfoot!  It is good to be a paladin in such an order as ours - to fight the good fight and defend Kaladim from the evil and undead.  If you be a paladin, then I pray you find the [courage to battle the undead].\")\n\telseif e.message:findi(\"courage\") then\n\t\te.self:Say(\"Yes!!  To battle the undead is our greatest call.  There has been a rise in the number of dwarven skeletons seen in the Butcherblocks.  If you are a true member of this order, I shall reward you for the return of four bone chips.  We shall defend our land from evil!\")\n\telseif e.message:findi(\"remains of cromil\") then\n\t\tif e.other:GetFaction(e.self) <= 4 then\n\t\t\te.self:Say(\"My brother Cromil ventured to the Plains of Karana on the continent of Antonica. He never returned. Rumor has it that his undead skeleton is now part of an undead army in the plains. To end this curse, I ask all good paladins of this temple to return his bones to me. Nothing less than a spell is my reward for such a deed.\")\n\t\telse\n\t\t\te.self:Say(\"The Clerics of Underfoot have yet to see your faith directed towards our wills. Perhaps you should assist Master Gunlok Jure in the crusade against the undead.\")\n\t\tend\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 13073, item2 = 13073, item3 = 13073, item4 = 13073}) then\n\t\te.self:Say(\"You have done well. We thank you for your deed with this humble reward. The power behind the raising of our dead shall soon be found. You will earn more respect with more bone chips. I only wish you could assist in the return of the [remains of Cromil].\")\n\t\te.other:SummonItem(eq.ChooseRandom(2113, 2114, 2115, 2116, 2117, 2118, 2119, 2120, 2121, 2122, 2123, 2124, 5014, 5016, 5023, 6011, 13002, 13003))\n\t\te.other:Ding()\n\t\te.other:GiveCash(6, 15, 0, 0)\n\t\te.other:Faction(227, 10, 0)\n\t\te.other:Faction(274, 10, 0)\n\t\te.other:Faction(293, 7, 0)\n\t\te.other:AddEXP(250)\n\telseif e.other:GetFaction(e.self) <= 4 and item_lib.check_turn_in(e.trade, {item1 = 13332}) then\n\t\te.self:Say(\"Many thanks, my friend. Now my brother can rest in peace. Please take this spell. May it serve you well.\")\n\t\te.other:Ding()\n\t\te.other:Faction(227, 25, 0)\n\t\te.other:Faction(274, 25, 0)\n\t\te.other:Faction(293, 25, 0)\n\t\te.other:AddEXP(10000)\n\t\te.other:GiveCash(0, 0, 2, 0)\n\t\te.other:SummonItem(15201)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 19686,
+        "zone": "kaladimb",
+        "name": "Gunlok_Jure",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: kaladimb/Gunlok_Jure.pl\n-- items: 13073, 2116, 2122, 5013, 5014, 5016, 5023, 6011, 13002, 13003, 13332, 15209\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Hail, \" .. e.other:GetName() .. \"!  Bow before the greatness of the Clerics of Underfoot!  It is good to be a paladin in such an order as ours - to fight the good fight and defend Kaladim from the evil and undead.  If you be a paladin, then I pray you find the [courage to battle the undead].\")\n\telseif e.message:findi(\"courage\") then\n\t\te.self:Say(\"Yes!!  To battle the undead is our greatest call.  There has been a rise in the number of dwarven skeletons seen in the Butcherblocks.  If you are a true member of this order, I shall reward you for the return of four bone chips.  We shall defend our land from evil!\")\n\telseif e.message:findi(\"remains of cromil\") then\n\t\tif e.other:GetFaction(e.self) <= 4 then\n\t\t\te.self:Say(\"My brother Cromil ventured to the Plains of Karana on the continent of Antonica. He never returned. Rumor has it that his undead skeleton is now part of an undead army in the plains. To end this curse, I ask all good paladins of this temple to return his bones to me. Nothing less than a spell is my reward for such a deed.\")\n\t\telse\n\t\t\te.self:Say(\"The Clerics of Underfoot have yet to see your faith directed towards our wills. Perhaps you should assist Master Gunlok Jure in the crusade against the undead.\")\n\t\tend\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 13073, item2 = 13073, item3 = 13073, item4 = 13073}) then\n\t\te.self:Say(\"You have done well. We thank you for your deed with this humble reward. The power behind the raising of our dead shall soon be found. You will earn more respect with more bone chips. I only wish you could assist in the return of the [remains of Cromil].\")\n\t\te.other:SummonItem(eq.ChooseRandom(2113, 2114, 2115, 2116, 2117, 2118, 2119, 2120, 2121, 2122, 2123, 2124, 5014, 5016, 5023, 6011, 13002, 13003))\n\t\te.other:Ding()\n\t\te.other:GiveCash(6, 15, 0, 0)\n\t\te.other:Faction(227, 10, 0)\n\t\te.other:Faction(274, 10, 0)\n\t\te.other:Faction(293, 7, 0)\n\t\te.other:AddEXP(250)\n\telseif e.other:GetFaction(e.self) <= 4 and item_lib.check_turn_in(e.trade, {item1 = 13332}) then\n\t\te.self:Say(\"Many thanks, my friend. Now my brother can rest in peace. Please take this spell. May it serve you well.\")\n\t\te.other:Ding()\n\t\te.other:Faction(227, 25, 0)\n\t\te.other:Faction(274, 25, 0)\n\t\te.other:Faction(293, 25, 0)\n\t\te.other:AddEXP(10000)\n\t\te.other:GiveCash(0, 0, 2, 0)\n\t\t-- P99 completion report says Spook the Dead; header says Hammer of Wrath.\n\t\t-- Prefer observed completion; previous Flash of Light was unsupported by either.\n\t\te.other:SummonItem(15209)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/kaladimb/Gunlok_Jure.lua",
+      "beforeSha256": "21882288e24ba9a661a9a57fd2fa04d96f488e3a9e08217a1debbeb8a4e47065",
+      "proposedFile": "changes/p99-af-cromil-reward/kaladimb-Gunlok_Jure.lua",
+      "afterSha256": "6b94e176c48d6fe9f44d4f1b9ebc33e206109a50fef3f576057ae981aa39c4a5"
+    }
+  ]
+}

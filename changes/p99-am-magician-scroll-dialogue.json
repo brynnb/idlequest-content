@@ -1,0 +1,45 @@
+{
+  "format": 1,
+  "id": "p99-am-magician-scroll-dialogue",
+  "summary": "Restore Slicia documented question and advertised pronoun-specific scroll request while preserving original phrase and four-scroll exchange.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Magician_Spells_(Evil_Version)?action=raw",
+      "note": "Cached 2026-07-17T23:24:28.786Z; revision unavailable; SHA256 fe507c3d3897d2557a4404ef89714a721008889223dc9157060efdae3954f596. Magician Spells (Evil Version)"
+    },
+    {
+      "url": "https://wiki.project1999.com/Magician_Spells_(Evil)?action=raw",
+      "note": "Cached 2026-07-17T23:24:30.461Z; revision unavailable; SHA256 d53fd4e142f5d219aa1ebc3aef2686cbe35d432f76f3ebc8a5c5e5fa5fc77036. Magician Spells (Evil)"
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 13821,
+        "zone": "overthere",
+        "name": "Slicia_J-Singe",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: overthere/Slicia_J-Singe.pl\n-- items: 19351, 19347, 19354, 19358, 19368, 19346, 19355, 19357\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Why is it that you have come to this place? If you are coming here to search for [magical scrolls], just get back on that so-called ship you came here on and forget everything you thought you heard.\")\n\telseif e.message:findi(\"magical scrolls\") then\n\t\te.self:Say(\"Is your hearing failing you!? Unless you [have something I need]. be gone!\")\n\telseif e.message:findi(\"i have something you need\") then\n\t\te.self:Say(\"I must have the scrolls of Gift of Xev. Bristlebane's Bundle. Quiver of Marr. and the Scars of Sigil. If you don't have one of these. leave my sight!  If you do. I think we can work up a fair trade.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 19351}) or item_lib.check_turn_in(e.trade, {item1 = 19347}) or item_lib.check_turn_in(e.trade, {item1 = 19354}) or item_lib.check_turn_in(e.trade, {item1 = 19358}) then\n\t\te.self:Say(\"Here is the scroll that I promised. We have both gained much knowledge today. I hope to do business with you again soon. Farewell!\")\n\t\te.other:SummonItem(eq.ChooseRandom(19368, 19346, 19355, 19357))\n\t\te.other:AddEXP(1000)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 13821,
+        "zone": "overthere",
+        "name": "Slicia_J-Singe",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: overthere/Slicia_J-Singe.pl\n-- items: 19351, 19347, 19354, 19358, 19368, 19346, 19355, 19357\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Why is it that you have come to this place? If you are coming here to search for [magical scrolls], just get back on that so-called ship you came here on and forget everything you thought you heard.\")\n\telseif e.message:findi(\"magical scrolls\") then\n\t\te.self:Say(\"Is your hearing failing you!? Unless you [have something I need]. be gone!\")\n\telseif e.message:findi(\"have something you need\") or e.message:findi(\"have something i need\") or e.message:findi(\"something do you need\") then\n\t\te.self:Say(\"I must have the scrolls of Gift of Xev. Bristlebane's Bundle. Quiver of Marr. and the Scars of Sigil. If you don't have one of these. leave my sight!  If you do. I think we can work up a fair trade.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 19351}) or item_lib.check_turn_in(e.trade, {item1 = 19347}) or item_lib.check_turn_in(e.trade, {item1 = 19354}) or item_lib.check_turn_in(e.trade, {item1 = 19358}) then\n\t\te.self:Say(\"Here is the scroll that I promised. We have both gained much knowledge today. I hope to do business with you again soon. Farewell!\")\n\t\te.other:SummonItem(eq.ChooseRandom(19368, 19346, 19355, 19357))\n\t\te.other:AddEXP(1000)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/overthere/Slicia_J-Singe.lua",
+      "beforeSha256": "b6dd596bf7f10de039efa03cd55feb907072f43f09ce52cba26f77401e11b233",
+      "proposedFile": "changes/p99-am-magician-scroll-dialogue/overthere-Slicia_J-Singe.lua",
+      "afterSha256": "b800eda6798b765707e52655cbe90b39b5c5e884b2a775f6c1c2582429a39068"
+    }
+  ]
+}

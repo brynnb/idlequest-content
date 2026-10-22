@@ -1,0 +1,27 @@
+{
+  "titles": [
+    "Rogue Errands"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "partial",
+  "match_status": "partial",
+  "local_quest_keys": [
+    "qeynos2/Zannsin_Resdinet",
+    "qeynos2/Jracol_Brestiage"
+  ],
+  "proposal": "changes/p99-nz-rogue-errands.json",
+  "notes": [
+    "Route exact Hanns-to-Prak acceptance before generic lore and check Jracol proof before consuming card.",
+    "The documented Hanns wants you to send some of your men to Prak in Highpass was shadowed by generic Hanns lore. Jracol evaluated consuming check_turn_in before local proof; reorder retains rejected cards. Preserve local proof state: lua_bridge.go1668\u20131681 and1798\u20131840 explicitly apply/capture serializable closure upvalues, so fresh VM creation does NOT itself erase this state. Exact Jracol completion restored. All item/faction/cash/EXP values unchanged; full runtime state integration and NPC night schedule untested."
+  ],
+  "verification": {
+    "source": "Cached P99 and effective Lua reviewed; exact complete row preimages and source hashes recorded.",
+    "syntax": "pending",
+    "runtime": "Isolated mock regression pending; full game runtime unavailable.",
+    "ui": "not_run",
+    "connected_chain": "not_run"
+  },
+  "unresolved": [
+    "Ordinary source drops/spawns, recipe live behavior and rendered complete quest path not verified."
+  ]
+}

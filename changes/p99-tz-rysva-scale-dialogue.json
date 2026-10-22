@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-rysva-scale-dialogue",
+  "summary": "Restore exact Book of Scale completion dialogue. Missing documented XP remains unresolved; do not transfer Book of Turmoil numerical reward.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/The_Fiery_Avenger?action=raw",
+      "note": "Cached 2026-07-17T23:36:26.688Z; revision unavailable; SHA256 fbd53720ea426aed594745a7a648a8df898fe840990649f9cbdbdd31322f66b3. Restore exact Book of Scale completion dialogue. Missing documented XP remains unresolved; do not transfer Book of Turmoil numerical reward. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 13097,
+        "zone": "neriakb",
+        "name": "Rysva_To-Biath",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: neriakb/Rysva_To-Biath.pl\n-- items: 18200, 18201, 13846, 18202, 19071, 19070, 18302\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Hello.  Let me know if I can get you a drink.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 18200}) then\n\t\te.self:Say(\"Take this note and be gone with you.\")\n\t\te.other:SummonItem(18201)\n\t\te.other:Faction(370, 10, 0)\n\t\te.other:Faction(334, 10, 0)\n\t\te.other:Faction(236, 10, 0)\n\t\te.other:AddEXP(100)\n\t\te.other:Ding()\n\telseif item_lib.check_turn_in(e.trade, {item1 = 13846, item2 = 18201}) then\n\t\te.self:Say(\"Take this book and be gone with you.\")\n\t\te.other:SummonItem(18202)\n\t\te.other:Faction(370, 10, 0)\n\t\te.other:Faction(334, 10, 0)\n\t\te.other:Faction(236, 10, 0)\n\t\te.other:AddEXP(72900)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 19071, item2 = 19070, platinum = 1000}) then\n\t\te.other:SummonItem(18302)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 13097,
+        "zone": "neriakb",
+        "name": "Rysva_To-Biath",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: neriakb/Rysva_To-Biath.pl\n-- items: 18200, 18201, 13846, 18202, 19071, 19070, 18302\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Hello.  Let me know if I can get you a drink.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 18200}) then\n\t\te.self:Say(\"Take this note and be gone with you.\")\n\t\te.other:SummonItem(18201)\n\t\te.other:Faction(370, 10, 0)\n\t\te.other:Faction(334, 10, 0)\n\t\te.other:Faction(236, 10, 0)\n\t\te.other:AddEXP(100)\n\t\te.other:Ding()\n\telseif item_lib.check_turn_in(e.trade, {item1 = 13846, item2 = 18201}) then\n\t\te.self:Say(\"Take this book and be gone with you.\")\n\t\te.other:SummonItem(18202)\n\t\te.other:Faction(370, 10, 0)\n\t\te.other:Faction(334, 10, 0)\n\t\te.other:Faction(236, 10, 0)\n\t\te.other:AddEXP(72900)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 19071, item2 = 19070, platinum = 1000}) then\n\t\te.self:Say(\"Take this book quickly and tell no one about this.\")\n\t\te.other:SummonItem(18302)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/neriakb/Rysva_To-Biath.lua",
+      "beforeSha256": "280001546c686f7d9cfab348d27ff4fd3cb2184abdce990568f3e062204336ea",
+      "proposedFile": "changes/p99-tz-rysva-scale-dialogue/neriakb--Rysva_To-Biath.lua",
+      "afterSha256": "aa2f98204d809438504a0d6cfbedb17a5560d89f135402cd062e16ed3e9828e2"
+    }
+  ]
+}

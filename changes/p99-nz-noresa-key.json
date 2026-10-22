@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-nz-noresa-key",
+  "summary": "Give Noresa\u2019s documented Gem Case Key 1 rather than Key 2, paired with the separate Toxdil correction.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Rogue_Redemption?action=raw",
+      "note": "Cached 2026-07-17T23:31:02.613Z; revision unavailable; SHA256 da5d495b42a470e540b8d069efd35efd06d3089fc60ef35537e395ac693900df. Cached Rogue Redemption explicitly identifies Noresa purse reward as Gem Case Key 1 and Toxdil sapphire reward as Key 2. Exported items 12351/12352 are both named Tiny Key but their lore fields identify Key 1/Key 2 respectively. Preserve input17931 Sparkle,15000EXP and all dialogue. Paired Toxdil change is owned by p99-tz-toxdil-dialogue. Modern commonlands/Noresa_Sparkle has an empty Lua body and no source candidate; commonlands is absent from recovered P99 zone scope, so it is not converted or presumed a runtime alias."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 13701,
+        "zone": "commons",
+        "name": "Noresa_Sparkle",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: commons/Noresa_Sparkle.pl\n-- items: 17931, 12352\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"He.. Hello. Wou.. would you like to buy something? Be quick or [Kizdean] will return!\")\n\telseif e.message:findi(\"Kizdean\") then\n\t\te.self:Say(\"Sshhh..Please..save me. Get..rid..of..him.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 17931}) then\n\t\te.self:Say(\"Oh!!! Thank you. You are my hero. I have been held captive by that horrid dark elf for weeks. Please take this. It was the key to a gem case which was stolen from me by an unseen rogue. If you find the gem case you can take it and the key to the original craftsman. He can open it with only two keys.\")\n\t\te.other:Ding()\n\t\te.other:AddEXP(15000)\n\t\te.other:SummonItem(12352)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 13701,
+        "zone": "commons",
+        "name": "Noresa_Sparkle",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: commons/Noresa_Sparkle.pl\n-- items: 17931, 12351\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"He.. Hello. Wou.. would you like to buy something? Be quick or [Kizdean] will return!\")\n\telseif e.message:findi(\"Kizdean\") then\n\t\te.self:Say(\"Sshhh..Please..save me. Get..rid..of..him.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 17931}) then\n\t\te.self:Say(\"Oh!!! Thank you. You are my hero. I have been held captive by that horrid dark elf for weeks. Please take this. It was the key to a gem case which was stolen from me by an unseen rogue. If you find the gem case you can take it and the key to the original craftsman. He can open it with only two keys.\")\n\t\te.other:Ding()\n\t\te.other:AddEXP(15000)\n\t\te.other:SummonItem(12351)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/commons/Noresa_Sparkle.lua",
+      "beforeSha256": "4e281aa4d2d65e589f55fda5ef54ab0153287e6e5dfd748fedb0a2d5a4c82b14",
+      "proposedFile": "changes/p99-nz-noresa-key/commons--Noresa_Sparkle.lua",
+      "afterSha256": "f94a9214596056daa28dae71eb448a4fcf22af4b2dc79a5c8643582e75ded592"
+    }
+  ]
+}

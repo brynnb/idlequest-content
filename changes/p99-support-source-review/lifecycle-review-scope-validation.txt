@@ -1,0 +1,10 @@
+Go: Unknown option: run
+file:///tmp/idlequest-content-p99/tools/syntax.mjs:10
+  catch(error) { throw new Error(`Runtime Lua syntax validation failed: ${error.stdout??error.message}`); }
+                       ^
+
+Error: Runtime Lua syntax validation failed: 
+    at checkProposalSyntax (file:///tmp/idlequest-content-p99/tools/syntax.mjs:10:24)
+    at file:///tmp/idlequest-content-p99/tools/cli.mjs:21:15
+
+Node.js v24.19.0

@@ -1,0 +1,23 @@
+{
+  "format": 1,
+  "id": "p99-af-chalice-shovel-pickup",
+  "summary": "Allowlist the documented existing Abandoned Orc Shovel pickup1658 only. Preserve imported placement and timer; the wiki/imported y-coordinate sign conflict remains unresolved.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Chalice_of_Conquest_Quest?action=raw",
+      "note": "Cached reference/p99-wiki/raw-pages/chalice-of-conquest-quest-e32e07de38.wiki SHA256 255b116a76c696a75e48632a06c7d74345cb0b962ac10e4c37c21b9aa7248dd8."
+    }
+  ],
+  "rows": [
+    {
+      "table": "idlequest_enabled_ground_spawns",
+      "before": null,
+      "after": {
+        "ground_spawn_id": 1658,
+        "note": "P99 Chalice of Conquest - Abandoned Orc Shovel; retain imported position/timer, unresolved wiki coordinate sign"
+      }
+    }
+  ],
+  "sources": []
+}

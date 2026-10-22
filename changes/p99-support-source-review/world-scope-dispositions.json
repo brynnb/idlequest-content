@@ -1,0 +1,1152 @@
+{
+  "reviewedAt": "2026-10-22T06:08:09.496Z",
+  "records": [
+    {
+      "key": "burningwood/#a_crippled_wurm",
+      "kind": "exclusive_later_epic_hook",
+      "reason": "Only combat kick ability of87155 spawned at druid_epic12. Exact abysmal/Reyfin_Malakwa.pl advances this state from Synched Leather Bag62885, part of later2.0 chain. Disable only this quest source and retain the complete historical body; no NPC/world exclusion is inferred.",
+      "proof": [
+        {
+          "file": "effective/quests/burningwood/%23a_crippled_wurm.lua",
+          "sha256": "7ab1be5d14bab99d24aba4f2fc6cd9619e47b64767789fae9caab431eaf0e72e",
+          "detail": "Only combat kick ability of87155 spawned at druid_epic12. Exact abysmal/Reyfin_Malakwa.pl advances this state from Synched Leather Bag62885, part of later2.0 chain."
+        },
+        {
+          "file": "effective/quests/burningwood/player.lua",
+          "sha256": "fa4ac8b2bfa8b8f139dac160e10e2d6ba9323f8111091837fd237df7b54a8033",
+          "scope": "Exact state/item/target dependency, not whole quest parity"
+        },
+        {
+          "file": "sources/projecteq/abysmal/Reyfin_Malakwa.pl",
+          "sha256": "1672194f364290f4d498da050125d93574543c8c6fdde4afb9099a02bb26bf6e",
+          "scope": "Exact state/item/target dependency, not whole quest parity"
+        }
+      ],
+      "evidenceRefs": [
+        "repository-era-scope",
+        "official-epic-two"
+      ],
+      "questId": 18397,
+      "baselineSourceSha256": "7ab1be5d14bab99d24aba4f2fc6cd9619e47b64767789fae9caab431eaf0e72e",
+      "currentSourceSha256": "f968a6962f0c9061419a914a9050a3c574f0b7fb6c455fd938951d5a79096376",
+      "proposedFile": "changes/p99-support-world-scope/burningwood--#a_crippled_wurm.lua",
+      "target": "maintained/lua/modified-upstream/burningwood/#a_crippled_wurm.lua",
+      "enabledBefore": 1,
+      "enabledAfter": 0,
+      "bodyPreservedByteForByte": true,
+      "limitations": [
+        "Only Lua row/import admission changed. No claim that the prior hook was executable or naturally reachable in the live runtime.",
+        "No NPC spawn, faction, loot, item, ordinary combat or other quest rows modified.",
+        "Source classification and static admission checks are not gameplay/UI validation."
+      ]
+    },
+    {
+      "key": "burningwood/a_sarnak_champion",
+      "kind": "exclusive_later_task_hook",
+      "reason": "Entire source only advances later impression-book tasks. The official EverQuest guide dates the task system to Omens of War, outside Classic through Velious; ordinary NPC and loot data remain unchanged.",
+      "proof": [
+        {
+          "file": "effective/quests/burningwood/a_sarnak_champion.lua",
+          "sha256": "4e6cabb38bbe9654d8947341d46496d07560369f677442dea770fec640d6e36f",
+          "detail": "Full source contains only event_killed_merit, IsTaskActive, randomized impression-book HasItem check, UpdateTaskActivity and failure message."
+        }
+      ],
+      "evidenceRefs": [
+        "official-task-system",
+        "repository-era-scope"
+      ],
+      "questId": 16568,
+      "baselineSourceSha256": "4e6cabb38bbe9654d8947341d46496d07560369f677442dea770fec640d6e36f",
+      "currentSourceSha256": "a9943b142173106c2f4dc13c5ac357d291449a252cc724c34f25f7cba8c3b388",
+      "proposedFile": "changes/p99-support-world-scope/burningwood--a_sarnak_champion.lua",
+      "target": "maintained/lua/modified-upstream/burningwood/a_sarnak_champion.lua",
+      "enabledBefore": 1,
+      "enabledAfter": 0,
+      "bodyPreservedByteForByte": true,
+      "limitations": [
+        "Only Lua row/import admission changed. No claim that the prior hook was executable or naturally reachable in the live runtime.",
+        "No NPC spawn, faction, loot, item, ordinary combat or other quest rows modified.",
+        "Source classification and static admission checks are not gameplay/UI validation."
+      ]
+    },
+    {
+      "key": "crushbone/#Orc_Messenger",
+      "kind": "exclusive_later_epic_hook",
+      "reason": "Only fifteen-minute lifecycle callback belongs to source-created Orc Messenger58060, explicitly summoned by the later paladin_epic9 player hook. Disable only this quest source and retain the complete historical body; no NPC/world exclusion is inferred.",
+      "proof": [
+        {
+          "file": "effective/quests/crushbone/%23Orc_Messenger.lua",
+          "sha256": "673431428ea844dacabe72068088e80a6c8265b226759b80040eea66d9ebf918",
+          "detail": "Only fifteen-minute lifecycle callback belongs to source-created Orc Messenger58060, explicitly summoned by the later paladin_epic9 player hook."
+        },
+        {
+          "file": "effective/quests/crushbone/player.lua",
+          "sha256": "231cdb15cf23f4ac799c813cc9f612dc47df126c2395a8bf7254586bf027fefe",
+          "scope": "Exact state/item/target dependency, not whole quest parity"
+        },
+        {
+          "file": "effective/quests/felwithea/%23Galrun_Starforge.lua",
+          "sha256": "8aac872cf12e2d26be70e62a2ed176cbfebf656d7e92a54be7f622a584dcf8aa",
+          "scope": "Exact state/item/target dependency, not whole quest parity"
+        }
+      ],
+      "evidenceRefs": [
+        "repository-era-scope",
+        "official-epic-two"
+      ],
+      "questId": 17037,
+      "baselineSourceSha256": "673431428ea844dacabe72068088e80a6c8265b226759b80040eea66d9ebf918",
+      "currentSourceSha256": "e205c7a820d3687959cc96dc1dcb7cbe744beae22ffe69bbab371c8494ea4afe",
+      "proposedFile": "changes/p99-support-world-scope/crushbone--#Orc_Messenger.lua",
+      "target": "maintained/lua/modified-upstream/crushbone/#Orc_Messenger.lua",
+      "enabledBefore": 1,
+      "enabledAfter": 0,
+      "bodyPreservedByteForByte": true,
+      "limitations": [
+        "Only Lua row/import admission changed. No claim that the prior hook was executable or naturally reachable in the live runtime.",
+        "No NPC spawn, faction, loot, item, ordinary combat or other quest rows modified.",
+        "Source classification and static admission checks are not gameplay/UI validation."
+      ]
+    },
+    {
+      "key": "crushbone/player",
+      "kind": "exclusive_later_epic_hook",
+      "reason": "Only zone entry callback creates Orc Messenger58060 for paladin_epic9. Exact felwithea/#Galrun_Starforge source labels this same Vampire investigation flag Paladin Epic2.0. Disable only this quest source and retain the complete historical body; no NPC/world exclusion is inferred.",
+      "proof": [
+        {
+          "file": "effective/quests/crushbone/player.lua",
+          "sha256": "231cdb15cf23f4ac799c813cc9f612dc47df126c2395a8bf7254586bf027fefe",
+          "detail": "Only zone entry callback creates Orc Messenger58060 for paladin_epic9. Exact felwithea/#Galrun_Starforge source labels this same Vampire investigation flag Paladin Epic2.0."
+        },
+        {
+          "file": "effective/quests/felwithea/%23Galrun_Starforge.lua",
+          "sha256": "8aac872cf12e2d26be70e62a2ed176cbfebf656d7e92a54be7f622a584dcf8aa",
+          "scope": "Exact state/item/target dependency, not whole quest parity"
+        },
+        {
+          "file": "effective/quests/hohonora/%23Irak_Altil.lua",
+          "sha256": "c7b87f76531de102414b7bb8e676b6c7b74b69a358eb49ede3f29dcd591b1185",
+          "scope": "Exact state/item/target dependency, not whole quest parity"
+        }
+      ],
+      "evidenceRefs": [
+        "repository-era-scope",
+        "official-epic-two"
+      ],
+      "questId": 13901,
+      "baselineSourceSha256": "231cdb15cf23f4ac799c813cc9f612dc47df126c2395a8bf7254586bf027fefe",
+      "currentSourceSha256": "6588537a3022c803728835ce8b552d655076c6f6f1645dcfb69d5f6c7d02974c",
+      "proposedFile": "changes/p99-support-world-scope/crushbone--player.lua",
+      "target": "maintained/lua/modified-upstream/crushbone/player.lua",
+      "enabledBefore": 1,
+      "enabledAfter": 0,
+      "bodyPreservedByteForByte": true,
+      "limitations": [
+        "Only Lua row/import admission changed. No claim that the prior hook was executable or naturally reachable in the live runtime.",
+        "No NPC spawn, faction, loot, item, ordinary combat or other quest rows modified.",
+        "Source classification and static admission checks are not gameplay/UI validation."
+      ]
+    },
+    {
+      "key": "dreadlands/#mage_trap",
+      "kind": "exclusive_later_epic_hook",
+      "reason": "Full body only triggers Chaos Elemental86174 at mage_epic10. Exact consumer poknowledge/202328 identifies earlier reward19092 as epic1.5 and next stage reward19839 as epic2.0. Disable only this quest source and retain the complete historical body; no NPC/world exclusion is inferred.",
+      "proof": [
+        {
+          "file": "effective/quests/dreadlands/%23mage_trap.lua",
+          "sha256": "3f246aed878e2d3d470c9d67a7571816cfb488b81b698bd16fe54f14544707a7",
+          "detail": "Full body only triggers Chaos Elemental86174 at mage_epic10. Exact consumer poknowledge/202328 identifies earlier reward19092 as epic1.5 and next stage reward19839 as epic2.0."
+        },
+        {
+          "file": "effective/quests/poknowledge/202328.lua",
+          "sha256": "f9b00ab8d785875b6081d0edda13d80b466923f4e863f4f6c268a777d88933a3",
+          "scope": "Exact state/item/target dependency, not whole quest parity"
+        }
+      ],
+      "evidenceRefs": [
+        "repository-era-scope",
+        "official-epic-two"
+      ],
+      "questId": 14925,
+      "baselineSourceSha256": "3f246aed878e2d3d470c9d67a7571816cfb488b81b698bd16fe54f14544707a7",
+      "currentSourceSha256": "da1fb285ea1e68cc89eccfa3147d4bc7511328122141d79f6358c492a87f3cd4",
+      "proposedFile": "changes/p99-support-world-scope/dreadlands--#mage_trap.lua",
+      "target": "maintained/lua/modified-upstream/dreadlands/#mage_trap.lua",
+      "enabledBefore": 1,
+      "enabledAfter": 0,
+      "bodyPreservedByteForByte": true,
+      "limitations": [
+        "Only Lua row/import admission changed. No claim that the prior hook was executable or naturally reachable in the live runtime.",
+        "No NPC spawn, faction, loot, item, ordinary combat or other quest rows modified.",
+        "Source classification and static admission checks are not gameplay/UI validation."
+      ]
+    },
+    {
+      "key": "dreadlands/a_drolvarg_rager",
+      "kind": "exclusive_later_task_hook",
+      "reason": "Entire source only advances later impression-book tasks. The official EverQuest guide dates the task system to Omens of War, outside Classic through Velious; ordinary NPC and loot data remain unchanged.",
+      "proof": [
+        {
+          "file": "effective/quests/dreadlands/a_drolvarg_rager.lua",
+          "sha256": "2dbe29bf05a55b5ce73abcd2cf4dd4e97e8f80ca3fd0520899cde0a78fd229f0",
+          "detail": "Full source contains only event_killed_merit, IsTaskActive, randomized impression-book HasItem check, UpdateTaskActivity and failure message."
+        }
+      ],
+      "evidenceRefs": [
+        "official-task-system",
+        "repository-era-scope"
+      ],
+      "questId": 19353,
+      "baselineSourceSha256": "2dbe29bf05a55b5ce73abcd2cf4dd4e97e8f80ca3fd0520899cde0a78fd229f0",
+      "currentSourceSha256": "30b45bdecea1f2a63bac51e831308ebd287b528f3bd5ebb215a6626573083d5f",
+      "proposedFile": "changes/p99-support-world-scope/dreadlands--a_drolvarg_rager.lua",
+      "target": "maintained/lua/modified-upstream/dreadlands/a_drolvarg_rager.lua",
+      "enabledBefore": 1,
+      "enabledAfter": 0,
+      "bodyPreservedByteForByte": true,
+      "limitations": [
+        "Only Lua row/import admission changed. No claim that the prior hook was executable or naturally reachable in the live runtime.",
+        "No NPC spawn, faction, loot, item, ordinary combat or other quest rows modified.",
+        "Source classification and static admission checks are not gameplay/UI validation."
+      ]
+    },
+    {
+      "key": "dreadlands/a_petrifier_cockatrice",
+      "kind": "exclusive_later_task_hook",
+      "reason": "Entire source only advances later impression-book tasks. The official EverQuest guide dates the task system to Omens of War, outside Classic through Velious; ordinary NPC and loot data remain unchanged.",
+      "proof": [
+        {
+          "file": "effective/quests/dreadlands/a_petrifier_cockatrice.lua",
+          "sha256": "b44416cc959cf5cfe9ddc8b27b0294205545620f902704308f7a9fe98aa81fda",
+          "detail": "Full source contains only event_killed_merit, IsTaskActive, randomized impression-book HasItem check, UpdateTaskActivity and failure message."
+        }
+      ],
+      "evidenceRefs": [
+        "official-task-system",
+        "repository-era-scope"
+      ],
+      "questId": 17939,
+      "baselineSourceSha256": "b44416cc959cf5cfe9ddc8b27b0294205545620f902704308f7a9fe98aa81fda",
+      "currentSourceSha256": "8fe273291b35548266e75ddca57479d3fdb4db40655c87626c8aa242ce496b46",
+      "proposedFile": "changes/p99-support-world-scope/dreadlands--a_petrifier_cockatrice.lua",
+      "target": "maintained/lua/modified-upstream/dreadlands/a_petrifier_cockatrice.lua",
+      "enabledBefore": 1,
+      "enabledAfter": 0,
+      "bodyPreservedByteForByte": true,
+      "limitations": [
+        "Only Lua row/import admission changed. No claim that the prior hook was executable or naturally reachable in the live runtime.",
+        "No NPC spawn, faction, loot, item, ordinary combat or other quest rows modified.",
+        "Source classification and static admission checks are not gameplay/UI validation."
+      ]
+    },
+    {
+      "key": "eastkarana/a_crag_spider",
+      "kind": "exclusive_later_task_hook",
+      "reason": "Entire source only advances later impression-book tasks. The official EverQuest guide dates the task system to Omens of War, outside Classic through Velious; ordinary NPC and loot data remain unchanged.",
+      "proof": [
+        {
+          "file": "effective/quests/eastkarana/a_crag_spider.lua",
+          "sha256": "d209a075f00c8965261de7106a18b0eb6a17402fe8ec826bed958472c8dc51b6",
+          "detail": "Full source contains only event_killed_merit, IsTaskActive, randomized impression-book HasItem check, UpdateTaskActivity and failure message."
+        }
+      ],
+      "evidenceRefs": [
+        "official-task-system",
+        "repository-era-scope"
+      ],
+      "questId": 16697,
+      "baselineSourceSha256": "d209a075f00c8965261de7106a18b0eb6a17402fe8ec826bed958472c8dc51b6",
+      "currentSourceSha256": "690a87d7dbb763df3dbf5558112c8e7ad4ef313af29bbd821746ccce52eab730",
+      "proposedFile": "changes/p99-support-world-scope/eastkarana--a_crag_spider.lua",
+      "target": "maintained/lua/modified-upstream/eastkarana/a_crag_spider.lua",
+      "enabledBefore": 1,
+      "enabledAfter": 0,
+      "bodyPreservedByteForByte": true,
+      "limitations": [
+        "Only Lua row/import admission changed. No claim that the prior hook was executable or naturally reachable in the live runtime.",
+        "No NPC spawn, faction, loot, item, ordinary combat or other quest rows modified.",
+        "Source classification and static admission checks are not gameplay/UI validation."
+      ]
+    },
+    {
+      "key": "eastwastes/#warr_trap",
+      "kind": "exclusive_later_epic_hook",
+      "reason": "Full source explicitly labels Warrior Epic 2.0 and only triggers Larnik through Fazzle map60324 at night. Disable only this quest source and retain the complete historical body; no NPC/world exclusion is inferred.",
+      "proof": [
+        {
+          "file": "effective/quests/eastwastes/%23warr_trap.lua",
+          "sha256": "6d91ebe0498b0c7fee9451fb6243b4f21ca74fa229df992b1becd96d789d5d42",
+          "detail": "Full source explicitly labels Warrior Epic 2.0 and only triggers Larnik through Fazzle map60324 at night."
+        }
+      ],
+      "evidenceRefs": [
+        "repository-era-scope",
+        "official-epic-two"
+      ],
+      "questId": 19262,
+      "baselineSourceSha256": "6d91ebe0498b0c7fee9451fb6243b4f21ca74fa229df992b1becd96d789d5d42",
+      "currentSourceSha256": "b05d2a25bc5f939db35d7f1883acc7515fe588a9c27bdc95a7256479829e823d",
+      "proposedFile": "changes/p99-support-world-scope/eastwastes--#warr_trap.lua",
+      "target": "maintained/lua/modified-upstream/eastwastes/#warr_trap.lua",
+      "enabledBefore": 1,
+      "enabledAfter": 0,
+      "bodyPreservedByteForByte": true,
+      "limitations": [
+        "Only Lua row/import admission changed. No claim that the prior hook was executable or naturally reachable in the live runtime.",
+        "No NPC spawn, faction, loot, item, ordinary combat or other quest rows modified.",
+        "Source classification and static admission checks are not gameplay/UI validation."
+      ]
+    },
+    {
+      "key": "eastwastes/Larnik_the_Recluse",
+      "kind": "exclusive_later_epic_hook",
+      "reason": "Full source explicitly labels Warrior Epic 2.0; all dialogue/combat/lifetime branches serve warrior_epic18. Disable only this quest source and retain the complete historical body; no NPC/world exclusion is inferred.",
+      "proof": [
+        {
+          "file": "effective/quests/eastwastes/Larnik_the_Recluse.lua",
+          "sha256": "9f880b7782fd8a0c21b3f1b46f8db0f8f284f1d0eb5dcd33eed9d0e1a72045ef",
+          "detail": "Full source explicitly labels Warrior Epic 2.0; all dialogue/combat/lifetime branches serve warrior_epic18."
+        }
+      ],
+      "evidenceRefs": [
+        "repository-era-scope",
+        "official-epic-two"
+      ],
+      "questId": 17673,
+      "baselineSourceSha256": "9f880b7782fd8a0c21b3f1b46f8db0f8f284f1d0eb5dcd33eed9d0e1a72045ef",
+      "currentSourceSha256": "3d37826ed8f9c5f6f1a0df8f6c749875dd844d52ed96a8c67b5605edb7f15716",
+      "proposedFile": "changes/p99-support-world-scope/eastwastes--Larnik_the_Recluse.lua",
+      "target": "maintained/lua/modified-upstream/eastwastes/Larnik_the_Recluse.lua",
+      "enabledBefore": 1,
+      "enabledAfter": 0,
+      "bodyPreservedByteForByte": true,
+      "limitations": [
+        "Only Lua row/import admission changed. No claim that the prior hook was executable or naturally reachable in the live runtime.",
+        "No NPC spawn, faction, loot, item, ordinary combat or other quest rows modified.",
+        "Source classification and static admission checks are not gameplay/UI validation."
+      ]
+    },
+    {
+      "key": "eastwastes/player",
+      "kind": "exclusive_later_epic_hook",
+      "reason": "Full body only starts the commented druid1.5 Ulthork raid at druid_epic1 with Waterproof Collection Bag62812. Disable only this quest source and retain the complete historical body; no NPC/world exclusion is inferred.",
+      "proof": [
+        {
+          "file": "effective/quests/eastwastes/player.lua",
+          "sha256": "d96b6ff9fc0ec49b0cf1787bf0e07a15cd327730ba915209e7bf87b137f20407",
+          "detail": "Full body only starts the commented druid1.5 Ulthork raid at druid_epic1 with Waterproof Collection Bag62812."
+        }
+      ],
+      "evidenceRefs": [
+        "repository-era-scope",
+        "official-epic-two"
+      ],
+      "questId": 14625,
+      "baselineSourceSha256": "d96b6ff9fc0ec49b0cf1787bf0e07a15cd327730ba915209e7bf87b137f20407",
+      "currentSourceSha256": "ec8ca6f5ae3154e49aa1bf05d0032d8d16c99adff261c348defddc166fcf9020",
+      "proposedFile": "changes/p99-support-world-scope/eastwastes--player.lua",
+      "target": "maintained/lua/modified-upstream/eastwastes/player.lua",
+      "enabledBefore": 1,
+      "enabledAfter": 0,
+      "bodyPreservedByteForByte": true,
+      "limitations": [
+        "Only Lua row/import admission changed. No claim that the prior hook was executable or naturally reachable in the live runtime.",
+        "No NPC spawn, faction, loot, item, ordinary combat or other quest rows modified.",
+        "Source classification and static admission checks are not gameplay/UI validation."
+      ]
+    },
+    {
+      "key": "emeraldjungle/a_soulsipper",
+      "kind": "exclusive_later_task_hook",
+      "reason": "Entire source only advances later impression-book tasks. The official EverQuest guide dates the task system to Omens of War, outside Classic through Velious; ordinary NPC and loot data remain unchanged.",
+      "proof": [
+        {
+          "file": "effective/quests/emeraldjungle/a_soulsipper.lua",
+          "sha256": "f1286760d051fad4983c4194cdaf9f01e9870fb9a2836a298be15e8c5c07d525",
+          "detail": "Full source contains only event_killed_merit, IsTaskActive, randomized impression-book HasItem check, UpdateTaskActivity and failure message."
+        }
+      ],
+      "evidenceRefs": [
+        "official-task-system",
+        "repository-era-scope"
+      ],
+      "questId": 18745,
+      "baselineSourceSha256": "f1286760d051fad4983c4194cdaf9f01e9870fb9a2836a298be15e8c5c07d525",
+      "currentSourceSha256": "629377fbf1f7e78c7a0cb72934eef579165a2c1db1fd4082f9b0ebe75a1418d7",
+      "proposedFile": "changes/p99-support-world-scope/emeraldjungle--a_soulsipper.lua",
+      "target": "maintained/lua/modified-upstream/emeraldjungle/a_soulsipper.lua",
+      "enabledBefore": 1,
+      "enabledAfter": 0,
+      "bodyPreservedByteForByte": true,
+      "limitations": [
+        "Only Lua row/import admission changed. No claim that the prior hook was executable or naturally reachable in the live runtime.",
+        "No NPC spawn, faction, loot, item, ordinary combat or other quest rows modified.",
+        "Source classification and static admission checks are not gameplay/UI validation."
+      ]
+    },
+    {
+      "key": "fieldofbone/#Berserker-s_Image",
+      "kind": "exclusive_later_class_epic_hook",
+      "reason": "Full source explicitly labels Berserker1.0 and only maintains bersolo/death signal and encounter speech. Berserker is introduced by Gates of Discord, not the original14 P99 classes. Disable only this quest source and retain the complete historical body; no NPC/world exclusion is inferred.",
+      "proof": [
+        {
+          "file": "effective/quests/fieldofbone/%23Berserker-s_Image.lua",
+          "sha256": "8355b36ef294e70aaf6b5d81bb3817edd06dc7415471eacae63e84bbcd7638ad",
+          "detail": "Full source explicitly labels Berserker1.0 and only maintains bersolo/death signal and encounter speech. Berserker is introduced by Gates of Discord, not the original14 P99 classes."
+        }
+      ],
+      "evidenceRefs": [
+        "repository-era-scope",
+        "official-berserker-announcement"
+      ],
+      "questId": 15242,
+      "baselineSourceSha256": "8355b36ef294e70aaf6b5d81bb3817edd06dc7415471eacae63e84bbcd7638ad",
+      "currentSourceSha256": "e1cb1786eb4693fa0b325ae8086c7f832b7eb3d9fefdfd29d99baa102fa8cc16",
+      "proposedFile": "changes/p99-support-world-scope/fieldofbone--#Berserker-s_Image.lua",
+      "target": "maintained/lua/modified-upstream/fieldofbone/#Berserker-s_Image.lua",
+      "enabledBefore": 1,
+      "enabledAfter": 0,
+      "bodyPreservedByteForByte": true,
+      "limitations": [
+        "Only Lua row/import admission changed. No claim that the prior hook was executable or naturally reachable in the live runtime.",
+        "No NPC spawn, faction, loot, item, ordinary combat or other quest rows modified.",
+        "Source classification and static admission checks are not gameplay/UI validation."
+      ]
+    },
+    {
+      "key": "freportn/#Elder_Spirit_of_Might",
+      "kind": "exclusive_later_epic_hook",
+      "reason": "Only one-second pose and ceremony signal reply. Excluded Elder_Spirit_of_Enlightenment explicitly Shaman1.5/2.0 summons8124 and signals this ceremony helper. Disable only this quest source and retain the complete historical body; no NPC/world exclusion is inferred.",
+      "proof": [
+        {
+          "file": "effective/quests/freportn/%23Elder_Spirit_of_Might.lua",
+          "sha256": "353464f96bb2b62bdde9bcc5150d865d106cb02f371aadc66d55565add84ec7a",
+          "detail": "Only one-second pose and ceremony signal reply. Excluded Elder_Spirit_of_Enlightenment explicitly Shaman1.5/2.0 summons8124 and signals this ceremony helper."
+        },
+        {
+          "file": "effective/quests/freportn/%23Elder_Spirit_of_Enlightenment.lua",
+          "sha256": "a01d92cb4f3d5d6fcfdf716f48dfd349b52ae5c747b58f8d2f6efa8d755cdbe6",
+          "scope": "Exact state/item/target dependency, not whole quest parity"
+        },
+        {
+          "file": "reference/server/internal/quest/content_exclusions.json",
+          "sha256": "874b10f289c7507640a73fd4f70d0affa617f31b793f2decc2c606aad869390a",
+          "scope": "Exact state/item/target dependency, not whole quest parity"
+        }
+      ],
+      "evidenceRefs": [
+        "repository-era-scope",
+        "official-epic-two"
+      ],
+      "questId": 15457,
+      "baselineSourceSha256": "353464f96bb2b62bdde9bcc5150d865d106cb02f371aadc66d55565add84ec7a",
+      "currentSourceSha256": "ada2933224eec22076c385c023ea78f80f39fcb73254f0479faff3c230eee8f6",
+      "proposedFile": "changes/p99-support-world-scope/freportn--#Elder_Spirit_of_Might.lua",
+      "target": "maintained/lua/modified-upstream/freportn/#Elder_Spirit_of_Might.lua",
+      "enabledBefore": 1,
+      "enabledAfter": 0,
+      "bodyPreservedByteForByte": true,
+      "limitations": [
+        "Only Lua row/import admission changed. No claim that the prior hook was executable or naturally reachable in the live runtime.",
+        "No NPC spawn, faction, loot, item, ordinary combat or other quest rows modified.",
+        "Source classification and static admission checks are not gameplay/UI validation."
+      ]
+    },
+    {
+      "key": "freportn/#Elder_Spirit_of_Patience",
+      "kind": "exclusive_later_epic_hook",
+      "reason": "Only one-second pose. Excluded Elder_Spirit_of_Enlightenment explicitly Shaman1.5/2.0 summons8126 as the returned spirit. Disable only this quest source and retain the complete historical body; no NPC/world exclusion is inferred.",
+      "proof": [
+        {
+          "file": "effective/quests/freportn/%23Elder_Spirit_of_Patience.lua",
+          "sha256": "d84131fb5d550604e3dfe96d835fc99e3e16aa15a9e678793fdde8a2d1032056",
+          "detail": "Only one-second pose. Excluded Elder_Spirit_of_Enlightenment explicitly Shaman1.5/2.0 summons8126 as the returned spirit."
+        },
+        {
+          "file": "effective/quests/freportn/%23Elder_Spirit_of_Enlightenment.lua",
+          "sha256": "a01d92cb4f3d5d6fcfdf716f48dfd349b52ae5c747b58f8d2f6efa8d755cdbe6",
+          "scope": "Exact state/item/target dependency, not whole quest parity"
+        },
+        {
+          "file": "reference/server/internal/quest/content_exclusions.json",
+          "sha256": "874b10f289c7507640a73fd4f70d0affa617f31b793f2decc2c606aad869390a",
+          "scope": "Exact state/item/target dependency, not whole quest parity"
+        }
+      ],
+      "evidenceRefs": [
+        "repository-era-scope",
+        "official-epic-two"
+      ],
+      "questId": 19070,
+      "baselineSourceSha256": "d84131fb5d550604e3dfe96d835fc99e3e16aa15a9e678793fdde8a2d1032056",
+      "currentSourceSha256": "d3e15ab19edc166044629fe64f416f66a9bb068c5e1f4e5c246d3851aebe94e2",
+      "proposedFile": "changes/p99-support-world-scope/freportn--#Elder_Spirit_of_Patience.lua",
+      "target": "maintained/lua/modified-upstream/freportn/#Elder_Spirit_of_Patience.lua",
+      "enabledBefore": 1,
+      "enabledAfter": 0,
+      "bodyPreservedByteForByte": true,
+      "limitations": [
+        "Only Lua row/import admission changed. No claim that the prior hook was executable or naturally reachable in the live runtime.",
+        "No NPC spawn, faction, loot, item, ordinary combat or other quest rows modified.",
+        "Source classification and static admission checks are not gameplay/UI validation."
+      ]
+    },
+    {
+      "key": "freportn/#Elder_Spirit_of_Perseverance",
+      "kind": "exclusive_later_epic_hook",
+      "reason": "Entire source is the sole signal1 Ruchu ceremony response. Excluded Elder_Spirit_of_Enlightenment explicitly Shaman1.5/2.0 summons8119 and sends this exact signal. Disable only this quest source and retain the complete historical body; no NPC/world exclusion is inferred.",
+      "proof": [
+        {
+          "file": "effective/quests/freportn/%23Elder_Spirit_of_Perseverance.lua",
+          "sha256": "ff5c28dcf7de6239b63119c4bacbcba156c5018b6ce5c31fa63023c69e33ec24",
+          "detail": "Entire source is the sole signal1 Ruchu ceremony response. Excluded Elder_Spirit_of_Enlightenment explicitly Shaman1.5/2.0 summons8119 and sends this exact signal."
+        },
+        {
+          "file": "effective/quests/freportn/%23Elder_Spirit_of_Enlightenment.lua",
+          "sha256": "a01d92cb4f3d5d6fcfdf716f48dfd349b52ae5c747b58f8d2f6efa8d755cdbe6",
+          "scope": "Exact state/item/target dependency, not whole quest parity"
+        },
+        {
+          "file": "reference/server/internal/quest/content_exclusions.json",
+          "sha256": "874b10f289c7507640a73fd4f70d0affa617f31b793f2decc2c606aad869390a",
+          "scope": "Exact state/item/target dependency, not whole quest parity"
+        }
+      ],
+      "evidenceRefs": [
+        "repository-era-scope",
+        "official-epic-two"
+      ],
+      "questId": 15143,
+      "baselineSourceSha256": "ff5c28dcf7de6239b63119c4bacbcba156c5018b6ce5c31fa63023c69e33ec24",
+      "currentSourceSha256": "318615d1045623806b6115a5a9aeebf5ea718e9d217687f9db25ba60202f2f69",
+      "proposedFile": "changes/p99-support-world-scope/freportn--#Elder_Spirit_of_Perseverance.lua",
+      "target": "maintained/lua/modified-upstream/freportn/#Elder_Spirit_of_Perseverance.lua",
+      "enabledBefore": 1,
+      "enabledAfter": 0,
+      "bodyPreservedByteForByte": true,
+      "limitations": [
+        "Only Lua row/import admission changed. No claim that the prior hook was executable or naturally reachable in the live runtime.",
+        "No NPC spawn, faction, loot, item, ordinary combat or other quest rows modified.",
+        "Source classification and static admission checks are not gameplay/UI validation."
+      ]
+    },
+    {
+      "key": "freportn/#Elder_Spirit_of_Wisdom",
+      "kind": "exclusive_later_epic_hook",
+      "reason": "Only one-second pose and ceremony signal reply. Excluded Elder_Spirit_of_Enlightenment explicitly Shaman1.5/2.0 summons8125 and signals this ceremony helper. Disable only this quest source and retain the complete historical body; no NPC/world exclusion is inferred.",
+      "proof": [
+        {
+          "file": "effective/quests/freportn/%23Elder_Spirit_of_Wisdom.lua",
+          "sha256": "ffed216c6f1fa9c03cdfeef038c375fcff1ae23ec176d0fbd3dce9ef49647d37",
+          "detail": "Only one-second pose and ceremony signal reply. Excluded Elder_Spirit_of_Enlightenment explicitly Shaman1.5/2.0 summons8125 and signals this ceremony helper."
+        },
+        {
+          "file": "effective/quests/freportn/%23Elder_Spirit_of_Enlightenment.lua",
+          "sha256": "a01d92cb4f3d5d6fcfdf716f48dfd349b52ae5c747b58f8d2f6efa8d755cdbe6",
+          "scope": "Exact state/item/target dependency, not whole quest parity"
+        },
+        {
+          "file": "reference/server/internal/quest/content_exclusions.json",
+          "sha256": "874b10f289c7507640a73fd4f70d0affa617f31b793f2decc2c606aad869390a",
+          "scope": "Exact state/item/target dependency, not whole quest parity"
+        }
+      ],
+      "evidenceRefs": [
+        "repository-era-scope",
+        "official-epic-two"
+      ],
+      "questId": 19482,
+      "baselineSourceSha256": "ffed216c6f1fa9c03cdfeef038c375fcff1ae23ec176d0fbd3dce9ef49647d37",
+      "currentSourceSha256": "3348288f0b3f8aedd94e65ee1af3f113065a334a556bfef98e04adec35c47bc8",
+      "proposedFile": "changes/p99-support-world-scope/freportn--#Elder_Spirit_of_Wisdom.lua",
+      "target": "maintained/lua/modified-upstream/freportn/#Elder_Spirit_of_Wisdom.lua",
+      "enabledBefore": 1,
+      "enabledAfter": 0,
+      "bodyPreservedByteForByte": true,
+      "limitations": [
+        "Only Lua row/import admission changed. No claim that the prior hook was executable or naturally reachable in the live runtime.",
+        "No NPC spawn, faction, loot, item, ordinary combat or other quest rows modified.",
+        "Source classification and static admission checks are not gameplay/UI validation."
+      ]
+    },
+    {
+      "key": "guktop/a_froglok_gaz_knight",
+      "kind": "exclusive_later_task_hook",
+      "reason": "Entire source only advances later impression-book tasks. The official EverQuest guide dates the task system to Omens of War, outside Classic through Velious; ordinary NPC and loot data remain unchanged.",
+      "proof": [
+        {
+          "file": "effective/quests/guktop/a_froglok_gaz_knight.lua",
+          "sha256": "b53323094410c07888739bc7cacef0f89534bd2a658d3969f185f87b0653153c",
+          "detail": "Full source contains only event_killed_merit, IsTaskActive, randomized impression-book HasItem check, UpdateTaskActivity and failure message."
+        }
+      ],
+      "evidenceRefs": [
+        "official-task-system",
+        "repository-era-scope"
+      ],
+      "questId": 15880,
+      "baselineSourceSha256": "b53323094410c07888739bc7cacef0f89534bd2a658d3969f185f87b0653153c",
+      "currentSourceSha256": "e48181c8cd62795bd585062d1562862606ff4e68a618b93bda25433271ecbd7f",
+      "proposedFile": "changes/p99-support-world-scope/guktop--a_froglok_gaz_knight.lua",
+      "target": "maintained/lua/modified-upstream/guktop/a_froglok_gaz_knight.lua",
+      "enabledBefore": 1,
+      "enabledAfter": 0,
+      "bodyPreservedByteForByte": true,
+      "limitations": [
+        "Only Lua row/import admission changed. No claim that the prior hook was executable or naturally reachable in the live runtime.",
+        "No NPC spawn, faction, loot, item, ordinary combat or other quest rows modified.",
+        "Source classification and static admission checks are not gameplay/UI validation."
+      ]
+    },
+    {
+      "key": "guktop/a_froglok_gaz_shaman",
+      "kind": "exclusive_later_task_hook",
+      "reason": "Entire source only advances later impression-book tasks. The official EverQuest guide dates the task system to Omens of War, outside Classic through Velious; ordinary NPC and loot data remain unchanged.",
+      "proof": [
+        {
+          "file": "effective/quests/guktop/a_froglok_gaz_shaman.lua",
+          "sha256": "b53323094410c07888739bc7cacef0f89534bd2a658d3969f185f87b0653153c",
+          "detail": "Full source contains only event_killed_merit, IsTaskActive, randomized impression-book HasItem check, UpdateTaskActivity and failure message."
+        }
+      ],
+      "evidenceRefs": [
+        "official-task-system",
+        "repository-era-scope"
+      ],
+      "questId": 16283,
+      "baselineSourceSha256": "b53323094410c07888739bc7cacef0f89534bd2a658d3969f185f87b0653153c",
+      "currentSourceSha256": "e48181c8cd62795bd585062d1562862606ff4e68a618b93bda25433271ecbd7f",
+      "proposedFile": "changes/p99-support-world-scope/guktop--a_froglok_gaz_shaman.lua",
+      "target": "maintained/lua/modified-upstream/guktop/a_froglok_gaz_shaman.lua",
+      "enabledBefore": 1,
+      "enabledAfter": 0,
+      "bodyPreservedByteForByte": true,
+      "limitations": [
+        "Only Lua row/import admission changed. No claim that the prior hook was executable or naturally reachable in the live runtime.",
+        "No NPC spawn, faction, loot, item, ordinary combat or other quest rows modified.",
+        "Source classification and static admission checks are not gameplay/UI validation."
+      ]
+    },
+    {
+      "key": "guktop/a_froglok_gaz_squire",
+      "kind": "exclusive_later_task_hook",
+      "reason": "Entire source only advances later impression-book tasks. The official EverQuest guide dates the task system to Omens of War, outside Classic through Velious; ordinary NPC and loot data remain unchanged.",
+      "proof": [
+        {
+          "file": "effective/quests/guktop/a_froglok_gaz_squire.lua",
+          "sha256": "b53323094410c07888739bc7cacef0f89534bd2a658d3969f185f87b0653153c",
+          "detail": "Full source contains only event_killed_merit, IsTaskActive, randomized impression-book HasItem check, UpdateTaskActivity and failure message."
+        }
+      ],
+      "evidenceRefs": [
+        "official-task-system",
+        "repository-era-scope"
+      ],
+      "questId": 17462,
+      "baselineSourceSha256": "b53323094410c07888739bc7cacef0f89534bd2a658d3969f185f87b0653153c",
+      "currentSourceSha256": "e48181c8cd62795bd585062d1562862606ff4e68a618b93bda25433271ecbd7f",
+      "proposedFile": "changes/p99-support-world-scope/guktop--a_froglok_gaz_squire.lua",
+      "target": "maintained/lua/modified-upstream/guktop/a_froglok_gaz_squire.lua",
+      "enabledBefore": 1,
+      "enabledAfter": 0,
+      "bodyPreservedByteForByte": true,
+      "limitations": [
+        "Only Lua row/import admission changed. No claim that the prior hook was executable or naturally reachable in the live runtime.",
+        "No NPC spawn, faction, loot, item, ordinary combat or other quest rows modified.",
+        "Source classification and static admission checks are not gameplay/UI validation."
+      ]
+    },
+    {
+      "key": "guktop/a_froglok_gaz_warrior",
+      "kind": "exclusive_later_task_hook",
+      "reason": "Entire source only advances later impression-book tasks. The official EverQuest guide dates the task system to Omens of War, outside Classic through Velious; ordinary NPC and loot data remain unchanged.",
+      "proof": [
+        {
+          "file": "effective/quests/guktop/a_froglok_gaz_warrior.lua",
+          "sha256": "b53323094410c07888739bc7cacef0f89534bd2a658d3969f185f87b0653153c",
+          "detail": "Full source contains only event_killed_merit, IsTaskActive, randomized impression-book HasItem check, UpdateTaskActivity and failure message."
+        }
+      ],
+      "evidenceRefs": [
+        "official-task-system",
+        "repository-era-scope"
+      ],
+      "questId": 17110,
+      "baselineSourceSha256": "b53323094410c07888739bc7cacef0f89534bd2a658d3969f185f87b0653153c",
+      "currentSourceSha256": "e48181c8cd62795bd585062d1562862606ff4e68a618b93bda25433271ecbd7f",
+      "proposedFile": "changes/p99-support-world-scope/guktop--a_froglok_gaz_warrior.lua",
+      "target": "maintained/lua/modified-upstream/guktop/a_froglok_gaz_warrior.lua",
+      "enabledBefore": 1,
+      "enabledAfter": 0,
+      "bodyPreservedByteForByte": true,
+      "limitations": [
+        "Only Lua row/import admission changed. No claim that the prior hook was executable or naturally reachable in the live runtime.",
+        "No NPC spawn, faction, loot, item, ordinary combat or other quest rows modified.",
+        "Source classification and static admission checks are not gameplay/UI validation."
+      ]
+    },
+    {
+      "key": "guktop/a_froglok_ton_warrior",
+      "kind": "exclusive_later_task_hook",
+      "reason": "Entire source only advances later impression-book tasks. The official EverQuest guide dates the task system to Omens of War, outside Classic through Velious; ordinary NPC and loot data remain unchanged.",
+      "proof": [
+        {
+          "file": "effective/quests/guktop/a_froglok_ton_warrior.lua",
+          "sha256": "7e39f8a90506112629c1054eeb5f112088054f550edb7f284f46178394834286",
+          "detail": "Full source contains only event_killed_merit, IsTaskActive, randomized impression-book HasItem check, UpdateTaskActivity and failure message."
+        }
+      ],
+      "evidenceRefs": [
+        "official-task-system",
+        "repository-era-scope"
+      ],
+      "questId": 13516,
+      "baselineSourceSha256": "7e39f8a90506112629c1054eeb5f112088054f550edb7f284f46178394834286",
+      "currentSourceSha256": "f887266488a84d07517bbe80a74983a74752b5e78a959152746eb9c428736905",
+      "proposedFile": "changes/p99-support-world-scope/guktop--a_froglok_ton_warrior.lua",
+      "target": "maintained/lua/modified-upstream/guktop/a_froglok_ton_warrior.lua",
+      "enabledBefore": 1,
+      "enabledAfter": 0,
+      "bodyPreservedByteForByte": true,
+      "limitations": [
+        "Only Lua row/import admission changed. No claim that the prior hook was executable or naturally reachable in the live runtime.",
+        "No NPC spawn, faction, loot, item, ordinary combat or other quest rows modified.",
+        "Source classification and static admission checks are not gameplay/UI validation."
+      ]
+    },
+    {
+      "key": "lakeofillomen/#_",
+      "kind": "exclusive_later_epic_hook",
+      "reason": "Full body only creates Cursed Talisman16675 scorpion contest under wiz_epic_pre2. Exact consumer v1/Talwyn_Flamecaller labels this pre1.5 and moves16675 to stage3. Disable only this quest source and retain the complete historical body; no NPC/world exclusion is inferred.",
+      "proof": [
+        {
+          "file": "effective/quests/lakeofillomen/%23_.lua",
+          "sha256": "8b1286e746a1c44c6345ac5968106bf07029898b4db7fa4b12b036fe6ded7902",
+          "detail": "Full body only creates Cursed Talisman16675 scorpion contest under wiz_epic_pre2. Exact consumer v1/Talwyn_Flamecaller labels this pre1.5 and moves16675 to stage3."
+        },
+        {
+          "file": "effective/quests/v1/Talwyn_Flamecaller.lua",
+          "sha256": "203c74056df9614a3025b556a46c43d2c0c82d930d198113f89f182bc22785ef",
+          "scope": "Exact state/item/target dependency, not whole quest parity"
+        }
+      ],
+      "evidenceRefs": [
+        "repository-era-scope",
+        "official-epic-two"
+      ],
+      "questId": 18843,
+      "baselineSourceSha256": "8b1286e746a1c44c6345ac5968106bf07029898b4db7fa4b12b036fe6ded7902",
+      "currentSourceSha256": "30dbeed41ddc8d8b72598b1c5205a61bdca9f94f95402f570cf276b0dcf242e1",
+      "proposedFile": "changes/p99-support-world-scope/lakeofillomen--#_.lua",
+      "target": "maintained/lua/converted-perl/lakeofillomen/#_.lua",
+      "enabledBefore": 1,
+      "enabledAfter": 0,
+      "bodyPreservedByteForByte": true,
+      "limitations": [
+        "Only Lua row/import admission changed. No claim that the prior hook was executable or naturally reachable in the live runtime.",
+        "No NPC spawn, faction, loot, item, ordinary combat or other quest rows modified.",
+        "Source classification and static admission checks are not gameplay/UI validation."
+      ]
+    },
+    {
+      "key": "lakeofillomen/a_bloodgill_goblin",
+      "kind": "exclusive_later_task_hook",
+      "reason": "Entire source only advances later impression-book tasks. The official EverQuest guide dates the task system to Omens of War, outside Classic through Velious; ordinary NPC and loot data remain unchanged.",
+      "proof": [
+        {
+          "file": "effective/quests/lakeofillomen/a_bloodgill_goblin.lua",
+          "sha256": "ab18be54e4ad405153354945ac2a6ff12f31791c527a60a4e731c5eff344ec32",
+          "detail": "Full source contains only event_killed_merit, IsTaskActive, randomized impression-book HasItem check, UpdateTaskActivity and failure message."
+        }
+      ],
+      "evidenceRefs": [
+        "official-task-system",
+        "repository-era-scope"
+      ],
+      "questId": 16918,
+      "baselineSourceSha256": "ab18be54e4ad405153354945ac2a6ff12f31791c527a60a4e731c5eff344ec32",
+      "currentSourceSha256": "f4e39ca456d6ea183b6d3242cddd7fa24024a87a1679e736bb8000e589fdaf8a",
+      "proposedFile": "changes/p99-support-world-scope/lakeofillomen--a_bloodgill_goblin.lua",
+      "target": "maintained/lua/modified-upstream/lakeofillomen/a_bloodgill_goblin.lua",
+      "enabledBefore": 1,
+      "enabledAfter": 0,
+      "bodyPreservedByteForByte": true,
+      "limitations": [
+        "Only Lua row/import admission changed. No claim that the prior hook was executable or naturally reachable in the live runtime.",
+        "No NPC spawn, faction, loot, item, ordinary combat or other quest rows modified.",
+        "Source classification and static admission checks are not gameplay/UI validation."
+      ]
+    },
+    {
+      "key": "lakerathe/Vortix",
+      "kind": "exclusive_later_epic_hook",
+      "reason": "Only diary dialogue advances monk_epic4 and directs the player to the Plane of Tranquility; no classic Celestial Fists trade or reward branch. Disable only this quest source and retain the complete historical body; no NPC/world exclusion is inferred.",
+      "proof": [
+        {
+          "file": "effective/quests/lakerathe/Vortix.lua",
+          "sha256": "661c8fe0461dd343ff477829385d56ca59629a7b4b6c3d237f711f531e3d8d6a",
+          "detail": "Only diary dialogue advances monk_epic4 and directs the player to the Plane of Tranquility; no classic Celestial Fists trade or reward branch."
+        }
+      ],
+      "evidenceRefs": [
+        "repository-era-scope",
+        "official-epic-two"
+      ],
+      "questId": 14908,
+      "baselineSourceSha256": "661c8fe0461dd343ff477829385d56ca59629a7b4b6c3d237f711f531e3d8d6a",
+      "currentSourceSha256": "e0c70bf050113988509645e2c4016abeb6fae2a8d7ae0544823875020201c576",
+      "proposedFile": "changes/p99-support-world-scope/lakerathe--Vortix.lua",
+      "target": "maintained/lua/converted-perl/lakerathe/Vortix.lua",
+      "enabledBefore": 1,
+      "enabledAfter": 0,
+      "bodyPreservedByteForByte": true,
+      "limitations": [
+        "Only Lua row/import admission changed. No claim that the prior hook was executable or naturally reachable in the live runtime.",
+        "No NPC spawn, faction, loot, item, ordinary combat or other quest rows modified.",
+        "Source classification and static admission checks are not gameplay/UI validation."
+      ]
+    },
+    {
+      "key": "lfaydark/Reanimated_Minion",
+      "kind": "exclusive_later_epic_hook",
+      "reason": "Only combat assist links57151/57154/57155. Exact spawning Taskmaster_Mirot source explicitly identifies Cleric1.5 and summons these minions under cleric_epic4. Disable only this quest source and retain the complete historical body; no NPC/world exclusion is inferred.",
+      "proof": [
+        {
+          "file": "effective/quests/lfaydark/Reanimated_Minion.lua",
+          "sha256": "d5d2f1a799e2f2cc2a5cbcef4f058a93f0ae5655ad3e81c12b8b9796128da653",
+          "detail": "Only combat assist links57151/57154/57155. Exact spawning Taskmaster_Mirot source explicitly identifies Cleric1.5 and summons these minions under cleric_epic4."
+        },
+        {
+          "file": "effective/quests/lfaydark/Taskmaster_Mirot.lua",
+          "sha256": "037bad30fe6697bd61109f9c529ed89b647f76a1baf3182ad2d097b1c5d37067",
+          "scope": "Exact state/item/target dependency, not whole quest parity"
+        }
+      ],
+      "evidenceRefs": [
+        "repository-era-scope",
+        "official-epic-two"
+      ],
+      "questId": 14945,
+      "baselineSourceSha256": "d5d2f1a799e2f2cc2a5cbcef4f058a93f0ae5655ad3e81c12b8b9796128da653",
+      "currentSourceSha256": "20f472a796d5aafd8d7452a0da102288068917b016e09b0e4f371246ddbbcc45",
+      "proposedFile": "changes/p99-support-world-scope/lfaydark--Reanimated_Minion.lua",
+      "target": "maintained/lua/modified-upstream/lfaydark/Reanimated_Minion.lua",
+      "enabledBefore": 1,
+      "enabledAfter": 0,
+      "bodyPreservedByteForByte": true,
+      "limitations": [
+        "Only Lua row/import admission changed. No claim that the prior hook was executable or naturally reachable in the live runtime.",
+        "No NPC spawn, faction, loot, item, ordinary combat or other quest rows modified.",
+        "Source classification and static admission checks are not gameplay/UI validation."
+      ]
+    },
+    {
+      "key": "misty/Crysta_Tagglefoot",
+      "kind": "exclusive_later_event_hook",
+      "reason": "Full source explicitly Halloween2018; all states, dialogue and spawn chain belong to Halloween2018 globals, not a classic delivery quest. Disable only this quest source and retain the complete historical body; no NPC/world exclusion is inferred.",
+      "proof": [
+        {
+          "file": "effective/quests/misty/Crysta_Tagglefoot.lua",
+          "sha256": "73b3766eaffb54b218d18f54790e941e455d447ab28742b76e7e04edf46862ed",
+          "detail": "Full source explicitly Halloween2018; all states, dialogue and spawn chain belong to Halloween2018 globals, not a classic delivery quest."
+        }
+      ],
+      "evidenceRefs": [
+        "repository-era-scope"
+      ],
+      "questId": 15953,
+      "baselineSourceSha256": "73b3766eaffb54b218d18f54790e941e455d447ab28742b76e7e04edf46862ed",
+      "currentSourceSha256": "bd19463e6e1cde6f512a95b6bdc776c21f1b012262944e8214e229d6106b767d",
+      "proposedFile": "changes/p99-support-world-scope/misty--Crysta_Tagglefoot.lua",
+      "target": "maintained/lua/modified-upstream/misty/Crysta_Tagglefoot.lua",
+      "enabledBefore": 1,
+      "enabledAfter": 0,
+      "bodyPreservedByteForByte": true,
+      "limitations": [
+        "Only Lua row/import admission changed. No claim that the prior hook was executable or naturally reachable in the live runtime.",
+        "No NPC spawn, faction, loot, item, ordinary combat or other quest rows modified.",
+        "Source classification and static admission checks are not gameplay/UI validation."
+      ]
+    },
+    {
+      "key": "necropolis/a_Chetari_warrior",
+      "kind": "exclusive_later_task_hook",
+      "reason": "Entire source only advances later impression-book tasks. The official EverQuest guide dates the task system to Omens of War, outside Classic through Velious; ordinary NPC and loot data remain unchanged.",
+      "proof": [
+        {
+          "file": "effective/quests/necropolis/a_Chetari_warrior.lua",
+          "sha256": "a140450dd3257e783836a79e58ea5efd51130d8e3435147e36e479fe3df31ade",
+          "detail": "Full source contains only event_killed_merit, IsTaskActive, randomized impression-book HasItem check, UpdateTaskActivity and failure message."
+        }
+      ],
+      "evidenceRefs": [
+        "official-task-system",
+        "repository-era-scope"
+      ],
+      "questId": 16351,
+      "baselineSourceSha256": "a140450dd3257e783836a79e58ea5efd51130d8e3435147e36e479fe3df31ade",
+      "currentSourceSha256": "00bd026f5a7463a8890ca9607ed1668dc0c731c1916c6181828cc910bdc2703b",
+      "proposedFile": "changes/p99-support-world-scope/necropolis--a_Chetari_warrior.lua",
+      "target": "maintained/lua/modified-upstream/necropolis/a_Chetari_warrior.lua",
+      "enabledBefore": 1,
+      "enabledAfter": 0,
+      "bodyPreservedByteForByte": true,
+      "limitations": [
+        "Only Lua row/import admission changed. No claim that the prior hook was executable or naturally reachable in the live runtime.",
+        "No NPC spawn, faction, loot, item, ordinary combat or other quest rows modified.",
+        "Source classification and static admission checks are not gameplay/UI validation."
+      ]
+    },
+    {
+      "key": "necropolis/player",
+      "kind": "exclusive_later_epic_hook",
+      "reason": "Both complete handlers explicitly bard1.5: flagged Hsagra/Vesthon spawns and item77613 chest progression, no classic hook. Disable only this quest source and retain the complete historical body; no NPC/world exclusion is inferred.",
+      "proof": [
+        {
+          "file": "effective/quests/necropolis/player.lua",
+          "sha256": "eec273eaadf0aae35bfcc180783be40f9f4b053a7828c5a11710049366644407",
+          "detail": "Both complete handlers explicitly bard1.5: flagged Hsagra/Vesthon spawns and item77613 chest progression, no classic hook."
+        }
+      ],
+      "evidenceRefs": [
+        "repository-era-scope",
+        "official-epic-two"
+      ],
+      "questId": 16814,
+      "baselineSourceSha256": "eec273eaadf0aae35bfcc180783be40f9f4b053a7828c5a11710049366644407",
+      "currentSourceSha256": "0ce96763f440e08a2e65ff649128b749ff13b196cb3913d08a0a463c4b08e4d9",
+      "proposedFile": "changes/p99-support-world-scope/necropolis--player.lua",
+      "target": "maintained/lua/modified-upstream/necropolis/player.lua",
+      "enabledBefore": 1,
+      "enabledAfter": 0,
+      "bodyPreservedByteForByte": true,
+      "limitations": [
+        "Only Lua row/import admission changed. No claim that the prior hook was executable or naturally reachable in the live runtime.",
+        "No NPC spawn, faction, loot, item, ordinary combat or other quest rows modified.",
+        "Source classification and static admission checks are not gameplay/UI validation."
+      ]
+    },
+    {
+      "key": "northkarana/#a_plains_dragon",
+      "kind": "exclusive_later_epic_hook",
+      "reason": "Full source explicitly bard1.5 and only repairs the associated dire spawn after its combat/expiry lifecycle. Disable only this quest source and retain the complete historical body; no NPC/world exclusion is inferred.",
+      "proof": [
+        {
+          "file": "effective/quests/northkarana/%23a_plains_dragon.lua",
+          "sha256": "6150a5ea775216b912116c1e2c6771d39f21a42ca3a35311c195e0f9d6f44477",
+          "detail": "Full source explicitly bard1.5 and only repairs the associated dire spawn after its combat/expiry lifecycle."
+        }
+      ],
+      "evidenceRefs": [
+        "repository-era-scope",
+        "official-epic-two"
+      ],
+      "questId": 15742,
+      "baselineSourceSha256": "6150a5ea775216b912116c1e2c6771d39f21a42ca3a35311c195e0f9d6f44477",
+      "currentSourceSha256": "1b16e27c858a70e2a562574d79999332cdbc75d809e8fd389dbcaa8c4c0fedac",
+      "proposedFile": "changes/p99-support-world-scope/northkarana--#a_plains_dragon.lua",
+      "target": "maintained/lua/modified-upstream/northkarana/#a_plains_dragon.lua",
+      "enabledBefore": 1,
+      "enabledAfter": 0,
+      "bodyPreservedByteForByte": true,
+      "limitations": [
+        "Only Lua row/import admission changed. No claim that the prior hook was executable or naturally reachable in the live runtime.",
+        "No NPC spawn, faction, loot, item, ordinary combat or other quest rows modified.",
+        "Source classification and static admission checks are not gameplay/UI validation."
+      ]
+    },
+    {
+      "key": "southkarana/an_adult_elephant",
+      "kind": "exclusive_later_task_hook",
+      "reason": "Entire source only advances later impression-book tasks. The official EverQuest guide dates the task system to Omens of War, outside Classic through Velious; ordinary NPC and loot data remain unchanged.",
+      "proof": [
+        {
+          "file": "effective/quests/southkarana/an_adult_elephant.lua",
+          "sha256": "a6e62fbb7fcf1245c4105d59eb7f19132f826c62b065d07d7c21e5db8ea3a5d2",
+          "detail": "Full source contains only event_killed_merit, IsTaskActive, randomized impression-book HasItem check, UpdateTaskActivity and failure message."
+        }
+      ],
+      "evidenceRefs": [
+        "official-task-system",
+        "repository-era-scope"
+      ],
+      "questId": 12408,
+      "baselineSourceSha256": "a6e62fbb7fcf1245c4105d59eb7f19132f826c62b065d07d7c21e5db8ea3a5d2",
+      "currentSourceSha256": "bf4274ba19de8926a315d3ab7a36334da5309039452392207e2825c212cc47d1",
+      "proposedFile": "changes/p99-support-world-scope/southkarana--an_adult_elephant.lua",
+      "target": "maintained/lua/modified-upstream/southkarana/an_adult_elephant.lua",
+      "enabledBefore": 1,
+      "enabledAfter": 0,
+      "bodyPreservedByteForByte": true,
+      "limitations": [
+        "Only Lua row/import admission changed. No claim that the prior hook was executable or naturally reachable in the live runtime.",
+        "No NPC spawn, faction, loot, item, ordinary combat or other quest rows modified.",
+        "Source classification and static admission checks are not gameplay/UI validation."
+      ]
+    },
+    {
+      "key": "swampofnohope/#a_swamp_dragon",
+      "kind": "exclusive_later_epic_hook",
+      "reason": "Full source explicitly bard1.5 and only repairs the associated dire spawn after its combat/expiry lifecycle. Disable only this quest source and retain the complete historical body; no NPC/world exclusion is inferred.",
+      "proof": [
+        {
+          "file": "effective/quests/swampofnohope/%23a_swamp_dragon.lua",
+          "sha256": "8159ae5f3b0d1ded384a7e3e83fed979a3abad01824e3f5390351a0d8c3b60af",
+          "detail": "Full source explicitly bard1.5 and only repairs the associated dire spawn after its combat/expiry lifecycle."
+        }
+      ],
+      "evidenceRefs": [
+        "repository-era-scope",
+        "official-epic-two"
+      ],
+      "questId": 16278,
+      "baselineSourceSha256": "8159ae5f3b0d1ded384a7e3e83fed979a3abad01824e3f5390351a0d8c3b60af",
+      "currentSourceSha256": "53fde7487e6ecbb60851e5d5b0ee856efd7adda66bb8810d1e214c5042e6d49c",
+      "proposedFile": "changes/p99-support-world-scope/swampofnohope--#a_swamp_dragon.lua",
+      "target": "maintained/lua/modified-upstream/swampofnohope/#a_swamp_dragon.lua",
+      "enabledBefore": 1,
+      "enabledAfter": 0,
+      "bodyPreservedByteForByte": true,
+      "limitations": [
+        "Only Lua row/import admission changed. No claim that the prior hook was executable or naturally reachable in the live runtime.",
+        "No NPC spawn, faction, loot, item, ordinary combat or other quest rows modified.",
+        "Source classification and static admission checks are not gameplay/UI validation."
+      ]
+    },
+    {
+      "key": "timorous/player",
+      "kind": "exclusive_later_epic_hook",
+      "reason": "Only handler gates item56014/corpse96368 on cleric20>=3 and creates epic2.0 chest893. Disable only this quest source and retain the complete historical body; no NPC/world exclusion is inferred.",
+      "proof": [
+        {
+          "file": "effective/quests/timorous/player.lua",
+          "sha256": "6874805c86e415bff8ea86b700bed618be42d43d881c1af67c6445801fe0103c",
+          "detail": "Only handler gates item56014/corpse96368 on cleric20>=3 and creates epic2.0 chest893."
+        }
+      ],
+      "evidenceRefs": [
+        "repository-era-scope",
+        "official-epic-two"
+      ],
+      "questId": 14773,
+      "baselineSourceSha256": "6874805c86e415bff8ea86b700bed618be42d43d881c1af67c6445801fe0103c",
+      "currentSourceSha256": "1495dc163e74538d46afbf68bb9abc0bd0d347c4c6c63fe2553de4a996f7b789",
+      "proposedFile": "changes/p99-support-world-scope/timorous--player.lua",
+      "target": "maintained/lua/modified-upstream/timorous/player.lua",
+      "enabledBefore": 1,
+      "enabledAfter": 0,
+      "bodyPreservedByteForByte": true,
+      "limitations": [
+        "Only Lua row/import admission changed. No claim that the prior hook was executable or naturally reachable in the live runtime.",
+        "No NPC spawn, faction, loot, item, ordinary combat or other quest rows modified.",
+        "Source classification and static admission checks are not gameplay/UI validation."
+      ]
+    },
+    {
+      "key": "tox/#Fleshless_Servant",
+      "kind": "exclusive_excluded_chain_hook",
+      "reason": "Only death callback sets grisk1. The exact consumer freportw/Taxonomist_Darwin_Grisk is explicitly excluded in current quest policy as later Luggald/Nadox content. Disable only this quest source and retain the complete historical body; no NPC/world exclusion is inferred.",
+      "proof": [
+        {
+          "file": "effective/quests/tox/%23Fleshless_Servant.lua",
+          "sha256": "1022523394972c7ac2f910111aee843ba830fc9403c096099d6c70196a1eecb3",
+          "detail": "Only death callback sets grisk1. The exact consumer freportw/Taxonomist_Darwin_Grisk is explicitly excluded in current quest policy as later Luggald/Nadox content."
+        },
+        {
+          "file": "effective/quests/freportw/Taxonomist_Darwin_Grisk.lua",
+          "sha256": "cc2954fee6bb18ed44db3d19845a9231d4e8eb887bef3297ba13a2a81cc1c014",
+          "scope": "Exact state/item/target dependency, not whole quest parity"
+        },
+        {
+          "file": "reference/server/internal/quest/content_exclusions.json",
+          "sha256": "874b10f289c7507640a73fd4f70d0affa617f31b793f2decc2c606aad869390a",
+          "scope": "Exact state/item/target dependency, not whole quest parity"
+        }
+      ],
+      "evidenceRefs": [
+        "repository-era-scope"
+      ],
+      "questId": 19179,
+      "baselineSourceSha256": "1022523394972c7ac2f910111aee843ba830fc9403c096099d6c70196a1eecb3",
+      "currentSourceSha256": "893cc6637b72262566a0df8ed9154d4fdac61e4e5a40bea1a264b96906a0e6bf",
+      "proposedFile": "changes/p99-support-world-scope/tox--#Fleshless_Servant.lua",
+      "target": "maintained/lua/converted-perl/tox/#Fleshless_Servant.lua",
+      "enabledBefore": 1,
+      "enabledAfter": 0,
+      "bodyPreservedByteForByte": true,
+      "limitations": [
+        "Only Lua row/import admission changed. No claim that the prior hook was executable or naturally reachable in the live runtime.",
+        "No NPC spawn, faction, loot, item, ordinary combat or other quest rows modified.",
+        "Source classification and static admission checks are not gameplay/UI validation."
+      ]
+    },
+    {
+      "key": "trakanon/sabretooth_tiger",
+      "kind": "exclusive_later_task_hook",
+      "reason": "Entire source only advances later impression-book tasks. The official EverQuest guide dates the task system to Omens of War, outside Classic through Velious; ordinary NPC and loot data remain unchanged.",
+      "proof": [
+        {
+          "file": "effective/quests/trakanon/sabretooth_tiger.lua",
+          "sha256": "bed01d778fffe8e634e86394c7a8a9ffffdd1450e345e57c1e5e71ce24b5e2de",
+          "detail": "Full source contains only event_killed_merit, IsTaskActive, randomized impression-book HasItem check, UpdateTaskActivity and failure message."
+        }
+      ],
+      "evidenceRefs": [
+        "official-task-system",
+        "repository-era-scope"
+      ],
+      "questId": 17102,
+      "baselineSourceSha256": "bed01d778fffe8e634e86394c7a8a9ffffdd1450e345e57c1e5e71ce24b5e2de",
+      "currentSourceSha256": "680508d2abded5708d811ec314256a2f8f6c0620cdb3ab846151f8a42b55db7f",
+      "proposedFile": "changes/p99-support-world-scope/trakanon--sabretooth_tiger.lua",
+      "target": "maintained/lua/modified-upstream/trakanon/sabretooth_tiger.lua",
+      "enabledBefore": 1,
+      "enabledAfter": 0,
+      "bodyPreservedByteForByte": true,
+      "limitations": [
+        "Only Lua row/import admission changed. No claim that the prior hook was executable or naturally reachable in the live runtime.",
+        "No NPC spawn, faction, loot, item, ordinary combat or other quest rows modified.",
+        "Source classification and static admission checks are not gameplay/UI validation."
+      ]
+    },
+    {
+      "key": "westwastes/Disciple_of_Moon",
+      "kind": "exclusive_later_epic_hook",
+      "reason": "Only combat expiry of120138 created by disciple_of_moon_trap at monk_epic5. Exact potranquility/Vortix.pl labels Monk Epic1.5 and sets this state after two Kaiaren diary halves. Disable only this quest source and retain the complete historical body; no NPC/world exclusion is inferred.",
+      "proof": [
+        {
+          "file": "effective/quests/westwastes/Disciple_of_Moon.lua",
+          "sha256": "52e59f733b92cad43ad68a83289caf36d2d43b230369b6bb1f6a12fc9766dd6a",
+          "detail": "Only combat expiry of120138 created by disciple_of_moon_trap at monk_epic5. Exact potranquility/Vortix.pl labels Monk Epic1.5 and sets this state after two Kaiaren diary halves."
+        },
+        {
+          "file": "effective/quests/westwastes/disciple_of_moon_trap.lua",
+          "sha256": "20f6d0294187a7c28b7cd9931f11021dcb89f33c4b3433a03649230a015eea44",
+          "scope": "Exact state/item/target dependency, not whole quest parity"
+        },
+        {
+          "file": "sources/projecteq/potranquility/Vortix.pl",
+          "sha256": "c5f6932dc87375b08e3729cdf0e5ffd4972a94607b6805b0380de0e6577c1150",
+          "scope": "Exact state/item/target dependency, not whole quest parity"
+        }
+      ],
+      "evidenceRefs": [
+        "repository-era-scope",
+        "official-epic-two"
+      ],
+      "questId": 19052,
+      "baselineSourceSha256": "52e59f733b92cad43ad68a83289caf36d2d43b230369b6bb1f6a12fc9766dd6a",
+      "currentSourceSha256": "cc7e91d930d18084d08f30487a6d67439fcbb69c1af7e93d4d0971ddb04509de",
+      "proposedFile": "changes/p99-support-world-scope/westwastes--Disciple_of_Moon.lua",
+      "target": "maintained/lua/modified-upstream/westwastes/Disciple_of_Moon.lua",
+      "enabledBefore": 1,
+      "enabledAfter": 0,
+      "bodyPreservedByteForByte": true,
+      "limitations": [
+        "Only Lua row/import admission changed. No claim that the prior hook was executable or naturally reachable in the live runtime.",
+        "No NPC spawn, faction, loot, item, ordinary combat or other quest rows modified.",
+        "Source classification and static admission checks are not gameplay/UI validation."
+      ]
+    }
+  ]
+}

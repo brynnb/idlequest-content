@@ -1,0 +1,3560 @@
+[
+  {
+    "title": "Sarnak Hatchling Brains",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Sarnak Hatchling Brains",
+      "url": "https://wiki.project1999.com/Sarnak_Hatchling_Brains?action=raw",
+      "fetchedAt": "2026-07-17T23:31:31.684Z",
+      "revision": null,
+      "sha256": "b5a77312e8d34aeff447158a8cdd413e36226831872d2bfacbda1d9d769bfcd6",
+      "bytes": 1600,
+      "source": "raw-pages/sarnak-hatchling-brains-884a0ff9cb.json",
+      "cachePath": "reference/p99-wiki/raw-pages/sarnak-hatchling-brains-884a0ff9cb.wiki"
+    },
+    "sources": [
+      {
+        "key": "lakeofillomen/Warlord_Geot",
+        "file": "effective/quests/lakeofillomen/Warlord_Geot.lua",
+        "enabled": 1,
+        "sha256": "6591fd18c36c67c8e07cfad4cd7eb3fda29835f061e04c7752e1ec32094f8143",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/lakeofillomen/Warlord_Geot.lua",
+            "sha256": "6591fd18c36c67c8e07cfad4cd7eb3fda29835f061e04c7752e1ec32094f8143",
+            "equals_effective": true
+          }
+        ]
+      }
+    ],
+    "verified_facets": {
+      "inputs": "Four Sarnak Hatchling Brains 12408",
+      "reward": "Dried Froglok Leg 12614; 1 silver",
+      "factions": "441/440/445/442/444 all positive, matching five documented Cabilis factions",
+      "experience": "AddEXP(3000), XP presence matches",
+      "dialogue": "Hail and hand-in messages describe matching four-brain turn-in"
+    },
+    "unresolved": [
+      "P99 table says minimum level 2 / All (Iksar), Lua has no level/race gate; table alone does not establish enforced prerequisites.",
+      "Exact XP/faction deltas not established by page; level-percent reports do not establish raw XP.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Scorpion Pincers",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Scorpion Pincers",
+      "url": "https://wiki.project1999.com/Scorpion_Pincers?action=raw",
+      "fetchedAt": "2026-07-17T23:31:43.216Z",
+      "revision": null,
+      "sha256": "412d9715b3c8bef970c8dae95cdfcbae917db548afcaaf4f1f429af841bdef0e",
+      "bytes": 2031,
+      "source": "raw-pages/scorpion-pincers-386a34422d.json",
+      "cachePath": "reference/p99-wiki/raw-pages/scorpion-pincers-386a34422d.wiki"
+    },
+    "sources": [
+      {
+        "key": "fieldofbone/Warlord_Zyzz",
+        "file": "effective/quests/fieldofbone/Warlord_Zyzz.lua",
+        "enabled": 1,
+        "sha256": "77e7ff6ddd85c6873c0a8ad25585a98ca357f03734c31efd1708d1d14a2fa652",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/fieldofbone/Warlord_Zyzz.lua",
+            "sha256": "77e7ff6ddd85c6873c0a8ad25585a98ca357f03734c31efd1708d1d14a2fa652",
+            "equals_effective": true
+          }
+        ]
+      }
+    ],
+    "verified_facets": {
+      "inputs": "Four Scorpion Pincers 12650",
+      "reward": "2 silver, no item",
+      "factions": "441 +3, 440/445/442/444 +1 match documented positive directions",
+      "experience": "AddEXP(2500), XP presence matches",
+      "dialogue": "Hail -> tiny invaders -> four pincers"
+    },
+    "unresolved": [
+      "Exact XP/faction magnitudes not established by page; raw-XP comparison unresolved.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Shiny Rings",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Shiny Rings",
+      "url": "https://wiki.project1999.com/Shiny_Rings?action=raw",
+      "fetchedAt": "2026-07-17T23:33:11.009Z",
+      "revision": null,
+      "sha256": "669b233eb626fcb0abb01231a16cf1bec42b20cc7635a13d49e9076dd85f9b8c",
+      "bytes": 2440,
+      "source": "raw-pages/shiny-rings-43d3e5a4f3.json",
+      "cachePath": "reference/p99-wiki/raw-pages/shiny-rings-43d3e5a4f3.wiki"
+    },
+    "sources": [
+      {
+        "key": "kerraridge/Melixis",
+        "file": "effective/quests/kerraridge/Melixis.lua",
+        "enabled": 1,
+        "sha256": "c9fc10c81ff7d925fce35d9a63d21a024f9568909257c4eb64e354f10c16bfdc",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/kerraridge/Melixis.lua",
+            "sha256": "c9fc10c81ff7d925fce35d9a63d21a024f9568909257c4eb64e354f10c16bfdc",
+            "equals_effective": true
+          }
+        ]
+      }
+    ],
+    "verified_facets": {
+      "inputs_rewards": "Guk Bracket Mildew 14042 -> Copper Ring 13733; Faerix Spores 14043 -> Silver Ring 13731; Degenerated Guk Weed 14044 -> Gold Ring 13732, each one-for-one",
+      "dialogue": "All three advertised ring phrases reach matching trade descriptions; wording differs",
+      "eligibility": "No level/class/race/faction predicates in source"
+    },
+    "unresolved": [
+      "Defect: every P99 turn-in shows {{exp}} but all three Lua branches lack any XP grant. Exact XP amount undocumented; do not fabricate.",
+      "P99 minimum-level 25 table is not sufficient proof of enforced gate.",
+      "Page explicitly requests missing faction details; faction absence cannot be certified.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Shondo and the Tonic",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Shondo and the Tonic",
+      "url": "https://wiki.project1999.com/Shondo_and_the_Tonic?action=raw",
+      "fetchedAt": "2026-07-17T23:33:15.966Z",
+      "revision": null,
+      "sha256": "b7afaa43b4eab6464dba8a542313e2abb1a5573bee00d82b6ca55f166630bd4c",
+      "bytes": 1669,
+      "source": "raw-pages/shondo-and-the-tonic-66b79fc61b.json",
+      "cachePath": "reference/p99-wiki/raw-pages/shondo-and-the-tonic-66b79fc61b.wiki"
+    },
+    "sources": [
+      {
+        "key": "erudnint/Shondo_Billin",
+        "file": "effective/quests/erudnint/Shondo_Billin.lua",
+        "enabled": 1,
+        "sha256": "7e6aa34d5ebdfcaf3e50a0c17461f60da92836c6112c7eebd9ffea341fb7b287",
+        "maintained": [
+          {
+            "file": "maintained/lua/modified-upstream/erudnint/Shondo_Billin.lua",
+            "sha256": "7e6aa34d5ebdfcaf3e50a0c17461f60da92836c6112c7eebd9ffea341fb7b287",
+            "equals_effective": true
+          }
+        ]
+      }
+    ],
+    "verified_facets": {
+      "inputs": "One Vasty Deep Ale 13126",
+      "factions": "Gem Choppers 255 +10; Merchants of AkAnon 288 +2; King AkAnon 333 +2; Dark Reflection 238 -2; Clan Grikbar 1604 -1 exactly match documented deltas",
+      "experience": "AddEXP(100), XP presence matches",
+      "dialogue": "Hail/tonic and ale response match; extra where-is-heretic hint supports acquisition",
+      "eligibility": "No gate; no item/cash reward"
+    },
+    "unresolved": [
+      "Exact XP undocumented.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Sifaye Abominations",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Sifaye Abominations",
+      "url": "https://wiki.project1999.com/Sifaye_Abominations?action=raw",
+      "fetchedAt": "2026-07-17T23:33:21.916Z",
+      "revision": null,
+      "sha256": "114544266062fe2e6c8817b2fe924c92088841a25be64ae63cc29f582c7ed0db",
+      "bytes": 1727,
+      "source": "raw-pages/sifaye-abominations-6ca64891dd.json",
+      "cachePath": "reference/p99-wiki/raw-pages/sifaye-abominations-6ca64891dd.wiki"
+    },
+    "sources": [
+      {
+        "key": "kael/Nojas_Blackfist",
+        "file": "effective/quests/kael/Nojas_Blackfist.lua",
+        "enabled": 1,
+        "sha256": "2f95be9985e8158ba83399c030f9199c86a7c43711c50c8663457a304bdacba9",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/kael/Nojas_Blackfist.lua",
+            "sha256": "2f95be9985e8158ba83399c030f9199c86a7c43711c50c8663457a304bdacba9",
+            "equals_effective": true
+          }
+        ]
+      }
+    ],
+    "verified_facets": {
+      "inputs": "Wings of a Sifaye Knight 25112 x1 plus Sifaye Head 25113 x3; correctly not generic Sifaye Wing",
+      "reward": "Silver Dragon Tattoo 25056 x1",
+      "dialogue": "Hail -> serve -> minor task matches P99 requested wing and three heads",
+      "eligibility": "No faction gating, intentional bypass"
+    },
+    "unresolved": [
+      "P99 minimum-level 50 table does not prove enforced gate; source has none.",
+      "No XP/cash/faction documented and source grants none; completeness of wiki reward documentation unproven.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Skunk Hunting",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Skunk Hunting",
+      "url": "https://wiki.project1999.com/Skunk_Hunting?action=raw",
+      "fetchedAt": "2026-07-17T23:33:31.709Z",
+      "revision": null,
+      "sha256": "063494359a8d82fff04b9f174d283b6e792806d636b7557c56bf3059c1948b66",
+      "bytes": 2726,
+      "source": "raw-pages/skunk-hunting-a8a017b286.json",
+      "cachePath": "reference/p99-wiki/raw-pages/skunk-hunting-a8a017b286.wiki"
+    },
+    "sources": [
+      {
+        "key": "kaladimb/Nultal_Malfoot",
+        "file": "effective/quests/kaladimb/Nultal_Malfoot.lua",
+        "enabled": 1,
+        "sha256": "65c70fdcbd29489625ef39b16035c8137f368034524edaf06ee0f0529a681369",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/kaladimb/Nultal_Malfoot.lua",
+            "sha256": "65c70fdcbd29489625ef39b16035c8137f368034524edaf06ee0f0529a681369",
+            "equals_effective": true
+          }
+        ]
+      }
+    ],
+    "verified_facets": {
+      "inputs": "Skunk Scent Gland 14030 x4",
+      "reward": "One random spell from exact nine documented names: Cure Poison, Divine Aura, Fear, Flash of Light, Furor, Gate, Holy Armor, Lull, Stun; 5 silver",
+      "factions": "Clerics of Underfoot 227, Kazon Stormhammer 274, Miners Guild 249 293 all +5, matching directions",
+      "experience": "AddEXP(2000), XP presence matches",
+      "eligibility": "Faction >=5 rejection deliberately bypassed by runtime Ally policy"
+    },
+    "unresolved": [
+      "Exact XP, faction magnitudes and nine-spell probabilities undocumented.",
+      "Table level2/class list not proof of enforced gates; source has neither.",
+      "Healing cash branch precedes glands; mixed cash+item settlement requires runtime test.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Snake Fang Necklace Quest",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Snake Fang Necklace Quest",
+      "url": "https://wiki.project1999.com/Snake_Fang_Necklace_Quest?action=raw",
+      "fetchedAt": "2026-07-17T23:33:38.744Z",
+      "revision": null,
+      "sha256": "5b549abe3b8c32b31ef50b25fc81f0b9560c0e9b95815b55830f7ab53dab09a1",
+      "bytes": 1718,
+      "source": "raw-pages/snake-fang-necklace-quest-adb19037ce.json",
+      "cachePath": "reference/p99-wiki/raw-pages/snake-fang-necklace-quest-adb19037ce.wiki"
+    },
+    "sources": [
+      {
+        "key": "qeynos/Menkes_Tabolet",
+        "file": "effective/quests/qeynos/Menkes_Tabolet.lua",
+        "enabled": 1,
+        "sha256": "e9423104e6834e7259af28cefff7de1b13734cf3677d06955a7977fb7ae199b1",
+        "maintained": [
+          {
+            "file": "maintained/lua/modified-upstream/qeynos/Menkes_Tabolet.lua",
+            "sha256": "e9423104e6834e7259af28cefff7de1b13734cf3677d06955a7977fb7ae199b1",
+            "equals_effective": true
+          }
+        ]
+      }
+    ],
+    "verified_facets": {
+      "inputs": "Snake Fang 13067 x3 plus 2 gold",
+      "reward": "Snake Fang Necklace 1052 x1",
+      "factions": "Qeynos Citizen 121 +5 matches positive direction",
+      "experience": "AddEXP(200), XP presence matches",
+      "dialogue": "Hail advertises snake fang necklace; phrase gives exact required items and cash"
+    },
+    "unresolved": [
+      "Exact XP and faction magnitude undocumented.",
+      "Success flavor text differs from P99 transcript, mechanics otherwise match documented facets.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Spiderling Silks",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Spiderling Silks",
+      "url": "https://wiki.project1999.com/Spiderling_Silks?action=raw",
+      "fetchedAt": "2026-07-17T23:34:02.321Z",
+      "revision": null,
+      "sha256": "bafb3d74626a08908c77f3c5b4e5fc9e2412ad9430f23827e20fe49cc27b7776",
+      "bytes": 1556,
+      "source": "raw-pages/spiderling-silks-bc34bf5097.json",
+      "cachePath": "reference/p99-wiki/raw-pages/spiderling-silks-bc34bf5097.wiki"
+    },
+    "sources": [
+      {
+        "key": "gfaydark/Sylia_Windlehands",
+        "file": "effective/quests/gfaydark/Sylia_Windlehands.lua",
+        "enabled": 1,
+        "sha256": "dee62c68cdf6e15966ff1888545fd76aee1276e8f932b66fc1bd7749dccacb73",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/gfaydark/Sylia_Windlehands.lua",
+            "sha256": "dee62c68cdf6e15966ff1888545fd76aee1276e8f932b66fc1bd7749dccacb73",
+            "equals_effective": true
+          }
+        ]
+      }
+    ],
+    "verified_facets": {
+      "inputs": "Spiderling Silk 13099 x4",
+      "reward": "Hand Drum 13000 x1 plus 1 gold",
+      "factions": "Song Weavers 401 +5 matches positive direction",
+      "experience": "AddEXP(500), XP presence matches",
+      "dialogue": "Hail -> fetch spiderling silk, hand-in response match",
+      "eligibility": "Amiable quest faction requirement intentionally bypassed"
+    },
+    "unresolved": [
+      "Exact XP and faction magnitude undocumented.",
+      "P99 Bard class table does not establish enforced class gate; Lua has none.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Wenbie's Muffins",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Wenbie's Muffins",
+      "url": "https://wiki.project1999.com/Wenbie's_Muffins?action=raw",
+      "fetchedAt": "2026-07-17T23:41:10.002Z",
+      "revision": null,
+      "sha256": "57572868efbc9f8ca50b5b11a7a10125ad45079981ec15cd6496a47906cc64a5",
+      "bytes": 2386,
+      "source": "raw-pages/wenbie-s-muffins-5168a95cca.json",
+      "cachePath": "reference/p99-wiki/raw-pages/wenbie-s-muffins-5168a95cca.wiki"
+    },
+    "sources": [
+      {
+        "key": "qeynos/Guard_Wenbie",
+        "file": "effective/quests/qeynos/Guard_Wenbie.lua",
+        "enabled": 1,
+        "sha256": "2a6aa39a26fbe56aa1aa7d148d4d713747b4ee1345921f0a09640d68bd7c45e1",
+        "maintained": [
+          {
+            "file": "maintained/lua/modified-upstream/qeynos/Guard_Wenbie.lua",
+            "sha256": "2a6aa39a26fbe56aa1aa7d148d4d713747b4ee1345921f0a09640d68bd7c45e1",
+            "equals_effective": true
+          }
+        ]
+      }
+    ],
+    "verified_facets": {
+      "inputs": "1,2,3,4 Muffin 13014 branches; per-muffin loop",
+      "reward": "3-5 copper per muffin and Brass Ring 13053 with math.random(10)==1 matches documented approx1/10",
+      "factions": "Guards of Qeynos 262 +1; Antonius Bayle 219 +1; Merchants 291 +1; Corrupt Guards 230 -1; Circle of Unseen Hands 223 -1 match directions",
+      "experience": "75 per muffin, XP presence matches",
+      "dialogue": "Hail/bakery hint matches; no escort implemented, wiki reports escort nonworking"
+    },
+    "unresolved": [
+      "Exact XP/faction magnitudes undocumented.",
+      "Daytime-only spawn and actual 6am replacement not verified.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Shaman Spells (Evil)",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Shaman Spells (Evil)",
+      "url": "https://wiki.project1999.com/Shaman_Spells_(Evil)?action=raw",
+      "fetchedAt": "2026-07-17T23:32:51.528Z",
+      "revision": null,
+      "sha256": "c8e502433b8370f0853f948c2c62c8da1fc8deb5a48b6b5c60664e283ffd2aa1",
+      "bytes": 1689,
+      "source": "raw-pages/shaman-spells-evil-c39daf8f50.json",
+      "cachePath": "reference/p99-wiki/raw-pages/shaman-spells-evil-c39daf8f50.wiki"
+    },
+    "sources": [
+      {
+        "key": "overthere/Bukuku_Wolffeetz",
+        "file": "effective/quests/overthere/Bukuku_Wolffeetz.lua",
+        "enabled": 1,
+        "sha256": "02365b5df979b5febb5e336cb0f4357c5ccb023e5fa868c56c6167cf278836d8",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/overthere/Bukuku_Wolffeetz.lua",
+            "sha256": "02365b5df979b5febb5e336cb0f4357c5ccb023e5fa868c56c6167cf278836d8",
+            "equals_effective": true
+          }
+        ]
+      }
+    ],
+    "verified_facets": {
+      "inputs": "Any ONE of Cripple19269, Spirit of Scale19238, Talisman of Jasinth19264, Cannibalize III19272",
+      "rewards": "Random one of Talisman of Shadoo19267, Shroud of the Spirits19271, Torrent of Poison19274, Insidious Decay19266; four-name pool matches",
+      "cash_factions": "None",
+      "experience": "1000 XP present but not documented in page"
+    },
+    "unresolved": [
+      "Exact random odds and XP undocumented; table Shaman/51+ not sufficient proof of enforced gates.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Shaman Spells (Evil - Iksar)",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Shaman Spells (Evil - Iksar)",
+      "url": "https://wiki.project1999.com/Shaman_Spells_(Evil_-_Iksar)?action=raw",
+      "fetchedAt": "2026-07-17T23:32:49.120Z",
+      "revision": null,
+      "sha256": "e370836d7ee3327c6a00509ee0a4943883ff87dbcbf856501e7c355f5189e4e5",
+      "bytes": 1567,
+      "source": "raw-pages/shaman-spells-evil-iksar-e0d1373db1.json",
+      "cachePath": "reference/p99-wiki/raw-pages/shaman-spells-evil-iksar-e0d1373db1.wiki"
+    },
+    "sources": [
+      {
+        "key": "cabeast/Himart_Kichith",
+        "file": "effective/quests/cabeast/Himart_Kichith.lua",
+        "enabled": 1,
+        "sha256": "d92bde0131011487db2aba898e6d8f17f255f0283711a8a96f2a933f454173f7",
+        "maintained": [
+          {
+            "file": "maintained/lua/idlequest-authored/cabeast/Himart_Kichith.lua",
+            "sha256": "d92bde0131011487db2aba898e6d8f17f255f0283711a8a96f2a933f454173f7",
+            "equals_effective": true
+          }
+        ]
+      }
+    ],
+    "verified_facets": {
+      "inputs": "Any ONE of Cripple19269, Spirit of Scale19238, Talisman of Jasinth19264, Cannibalize III19272",
+      "rewards": "Random one of Talisman of Shadoo19267, Shroud of the Spirits19271, Torrent of Poison19274, Insidious Decay19266; four-name pool matches",
+      "cash_factions": "None",
+      "experience": "1000 XP present but not documented in page"
+    },
+    "unresolved": [
+      "Exact random odds and XP undocumented; table Shaman/51+ not sufficient proof of enforced gates.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Shaman Spells (Good)",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Shaman Spells (Good)",
+      "url": "https://wiki.project1999.com/Shaman_Spells_(Good)?action=raw",
+      "fetchedAt": "2026-07-17T23:32:54.817Z",
+      "revision": null,
+      "sha256": "c3c9a7043941b234cf1b9146c66a0570ec8c339fa3acffe8f8bae3db2558688c",
+      "bytes": 2213,
+      "source": "raw-pages/shaman-spells-good-9362ed90c2.json",
+      "cachePath": "reference/p99-wiki/raw-pages/shaman-spells-good-9362ed90c2.wiki"
+    },
+    "sources": [
+      {
+        "key": "firiona/Alex_McDarnin",
+        "file": "effective/quests/firiona/Alex_McDarnin.lua",
+        "enabled": 1,
+        "sha256": "554a5eeecd4efdb17fcb1336efcdb795fb34399cc220a34a6e1b7c859003ca76",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/firiona/Alex_McDarnin.lua",
+            "sha256": "554a5eeecd4efdb17fcb1336efcdb795fb34399cc220a34a6e1b7c859003ca76",
+            "equals_effective": true
+          }
+        ]
+      }
+    ],
+    "verified_facets": {
+      "inputs": "Any ONE of Cripple19269, Spirit of Scale19238, Talisman of Jasinth19264, Cannibalize III19272",
+      "rewards": "Random one of Talisman of Shadoo19267, Shroud of the Spirits19271, Torrent of Poison19274, Insidious Decay19266; four-name pool matches",
+      "cash_factions": "None",
+      "experience": "1000 XP present but not documented in page"
+    },
+    "unresolved": [
+      "Exact random odds and XP undocumented; table Shaman/51+ not sufficient proof of enforced gates.",
+      "Dialogue defect: advertised [you want to help] fails sole i want to help predicate.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Shovel Of Ponz Quest",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Shovel Of Ponz Quest",
+      "url": "https://wiki.project1999.com/Shovel_Of_Ponz_Quest?action=raw",
+      "fetchedAt": "2026-07-17T23:33:18.608Z",
+      "revision": null,
+      "sha256": "583d602d8298aa63aecd44945b3dd8290ca70260f1826422207a061ae10fb19d",
+      "bytes": 2532,
+      "source": "raw-pages/shovel-of-ponz-quest-c9fb96af1a.json",
+      "cachePath": "reference/p99-wiki/raw-pages/shovel-of-ponz-quest-c9fb96af1a.wiki"
+    },
+    "sources": [
+      {
+        "key": "soltemple/Vira",
+        "file": "effective/quests/soltemple/Vira.lua",
+        "enabled": 1,
+        "sha256": "6af9f843d94be720dcf94deb07957cdaff182f3b83c94a9c29568d15339e9522",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/soltemple/Vira.lua",
+            "sha256": "6af9f843d94be720dcf94deb07957cdaff182f3b83c94a9c29568d15339e9522",
+            "equals_effective": true
+          }
+        ]
+      }
+    ],
+    "verified_facets": {
+      "inputs": "Ruby10035, Gargoyle Eye10014, Shovel16545, Hill Giant Toes16539 one each",
+      "rewards": "Shovel of Ponz6361",
+      "factions": "Temple415 +15, Shadowed Men416 -15 match directions",
+      "experience": "1000 XP, presence matches",
+      "dialogue": "All exposed full interested-in-shovel button phrases route; no level gate consistent with reported level6 completion"
+    },
+    "unresolved": [
+      "Exact XP/faction magnitudes undocumented; item acquisition not checked.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Stein Of Ulissa Quest",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Stein Of Ulissa Quest",
+      "url": "https://wiki.project1999.com/Stein_Of_Ulissa_Quest?action=raw",
+      "fetchedAt": "2026-07-17T23:34:19.233Z",
+      "revision": null,
+      "sha256": "fdb27bfd59381ab93d2c0cd1820adf22b6bd036fa543da9410755e1cb4307cb4",
+      "bytes": 2562,
+      "source": "raw-pages/stein-of-ulissa-quest-0cc98a7c4b.json",
+      "cachePath": "reference/p99-wiki/raw-pages/stein-of-ulissa-quest-0cc98a7c4b.wiki"
+    },
+    "sources": [
+      {
+        "key": "soltemple/Vira",
+        "file": "effective/quests/soltemple/Vira.lua",
+        "enabled": 1,
+        "sha256": "6af9f843d94be720dcf94deb07957cdaff182f3b83c94a9c29568d15339e9522",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/soltemple/Vira.lua",
+            "sha256": "6af9f843d94be720dcf94deb07957cdaff182f3b83c94a9c29568d15339e9522",
+            "equals_effective": true
+          }
+        ]
+      }
+    ],
+    "verified_facets": {
+      "inputs": "Ice Giant Toes16540, Mermaid Scale16542, Sapphire10034, Stein16547 one each",
+      "rewards": "Stein of Ulissa6363",
+      "factions": "Temple415 +15, Shadowed Men416 -15 match directions",
+      "experience": "1000 XP, presence matches",
+      "dialogue": "All exposed full interested-in-stein button phrases route; no level gate consistent with reported level10 completion"
+    },
+    "unresolved": [
+      "Exact XP/faction magnitudes undocumented; item acquisition not checked.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Staff of Temperate Flux Quest",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Staff of Temperate Flux Quest",
+      "url": "https://wiki.project1999.com/Staff_of_Temperate_Flux_Quest?action=raw",
+      "fetchedAt": "2026-07-17T23:34:12.019Z",
+      "revision": null,
+      "sha256": "54d292c082bb6411c1d0bad2a616efe1c90c96a37ad605416d816cfcf2c2f4af",
+      "bytes": 4341,
+      "source": "raw-pages/staff-of-temperate-flux-quest-c10ee15d27.json",
+      "cachePath": "reference/p99-wiki/raw-pages/staff-of-temperate-flux-quest-c10ee15d27.wiki"
+    },
+    "sources": [
+      {
+        "key": "soltemple/Gardern",
+        "file": "effective/quests/soltemple/Gardern.lua",
+        "enabled": 1,
+        "sha256": "0fffa3b9b6ec30b5ebeec4e190724d5cd2bba18d56d70f1b80f98995637385d6",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/soltemple/Gardern.lua",
+            "sha256": "0fffa3b9b6ec30b5ebeec4e190724d5cd2bba18d56d70f1b80f98995637385d6",
+            "equals_effective": true
+          }
+        ]
+      }
+    ],
+    "verified_facets": {
+      "inputs": "Heart of Fire10548, Heart of Frost10549, Rod of Bone10550, Darkwood Staff6048 one each",
+      "rewards": "Staff of Temperate Flux6342",
+      "experience": "1000 XP, presence matches",
+      "dialogue": "Current staff-of-temperate-flux button routes; P99 lore-to-the-staff phrase absent"
+    },
+    "unresolved": [
+      "Faction415+15/416-15 not documented on this page; exact XP undocumented.",
+      "Documented multiquest not established by check_turn_in source; runtime shared state unverified.",
+      "Darkwood Staff creation by Romar and acquisition chain not reviewed.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Saucy Salted Seadragon Steak",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Saucy Salted Seadragon Steak",
+      "url": "https://wiki.project1999.com/Saucy_Salted_Seadragon_Steak?action=raw",
+      "fetchedAt": "2026-07-17T23:31:33.703Z",
+      "revision": null,
+      "sha256": "443a84802740efe2c918a5eeaad8ccfe0c1be9e2043ee07fefe2539835c6b4dd",
+      "bytes": 2531,
+      "source": "raw-pages/saucy-salted-seadragon-steak-b07502a7ae.json",
+      "cachePath": "reference/p99-wiki/raw-pages/saucy-salted-seadragon-steak-b07502a7ae.wiki"
+    },
+    "sources": [
+      {
+        "key": "cobaltscar/Bloogy_Shellcracker",
+        "file": "effective/quests/cobaltscar/Bloogy_Shellcracker.lua",
+        "enabled": 1,
+        "sha256": "9b2fce7ff9a34e7f8f0adcb32a4c4ba776cdb14fce5ebcce524326cc2088d901",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/cobaltscar/Bloogy_Shellcracker.lua",
+            "sha256": "9b2fce7ff9a34e7f8f0adcb32a4c4ba776cdb14fce5ebcce524326cc2088d901",
+            "equals_effective": true
+          }
+        ]
+      }
+    ],
+    "verified_facets": {
+      "reward": "Othmir Prexus Totem28514",
+      "factions": "Othmir432 +30, Ulthork431 -60 match documented directions",
+      "dialogue": "Hail/ingredients text matches"
+    },
+    "unresolved": [
+      "Defect: P99 explicit confirmed recipe is Sea Dragon Meat22813 x1 + Saltwater Seaweed19113 x2 + Fish Eggs16498 x1; both Lua alternatives reverse seaweed and egg counts.",
+      "Water Dragon Meat22812 accepted as alternative, supported by dialogue but walkthrough explicitly specifies Sea Dragon Meat.",
+      "XP15000 and exact faction magnitudes undocumented; fish-egg recipe and acquisition not verified.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Scrap Metal Quest",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Scrap Metal Quest",
+      "url": "https://wiki.project1999.com/Scrap_Metal_Quest?action=raw",
+      "fetchedAt": "2026-07-17T23:31:54.974Z",
+      "revision": null,
+      "sha256": "231d20e65e4f32c02da77c68f3f63041a6ebe469ecd8f795dcd3e4875524e34b",
+      "bytes": 1665,
+      "source": "raw-pages/scrap-metal-quest-94fd910a4b.json",
+      "cachePath": "reference/p99-wiki/raw-pages/scrap-metal-quest-94fd910a4b.wiki"
+    },
+    "sources": [
+      {
+        "key": "akanon/Sanfyrd_Featherhead",
+        "file": "effective/quests/akanon/Sanfyrd_Featherhead.lua",
+        "enabled": 1,
+        "sha256": "5589bc44343ff506ec47c129912f7e4c611f88408337254ccc4ddd058e7d875a",
+        "maintained": [
+          {
+            "file": "maintained/lua/modified-upstream/akanon/Sanfyrd_Featherhead.lua",
+            "sha256": "5589bc44343ff506ec47c129912f7e4c611f88408337254ccc4ddd058e7d875a",
+            "equals_effective": true
+          }
+        ]
+      }
+    ],
+    "verified_facets": {
+      "inputs": "Scrap Metal13198 x4",
+      "reward": "Pool six rusty weapons5013/5014/5015/5016/5019/5020 weighted3 each, Gnome Glow Rod12340 weighted2, Earring of Fire Reflection10303 and Small Scarab Helm2175 weighted1; all named rewards represented; obsolete Compactor omitted",
+      "factions": "King AkAnon333+3, Merchants288+3, Gem Choppers255+3, Dark Reflection238-3, Clan Grikbar1604-3 match directions",
+      "experience_cash": "XP1000 and 1gold5silver4copper, documented presence only",
+      "dialogue": "Hail matches four scrap, no microservos/blackbox"
+    },
+    "unresolved": [
+      "Precise pool probabilities, money, XP and faction amounts not documented.",
+      "Other NPC quest branches not certified by this page.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Scroll of G'han",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Scroll of G'han",
+      "url": "https://wiki.project1999.com/Scroll_of_G'han?action=raw",
+      "fetchedAt": "2026-07-17T23:31:59.336Z",
+      "revision": null,
+      "sha256": "16aeaae421fc54d071d1bee2ab4755a395d86d57c8f0640b61385af4a37e6cda",
+      "bytes": 1380,
+      "source": "raw-pages/scroll-of-g-han-bb15b376f5.json",
+      "cachePath": "reference/p99-wiki/raw-pages/scroll-of-g-han-bb15b376f5.wiki"
+    },
+    "sources": [
+      {
+        "key": "neriakc/Noxhil_V-Sek",
+        "file": "effective/quests/neriakc/Noxhil_V-Sek.lua",
+        "enabled": 1,
+        "sha256": "a1172c7ff4c2fdc7ccd5803b91be59531722afdb7ba80f9c917206bc4de353bf",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/neriakc/Noxhil_V-Sek.lua",
+            "sha256": "a1172c7ff4c2fdc7ccd5803b91be59531722afdb7ba80f9c917206bc4de353bf",
+            "equals_effective": true
+          }
+        ]
+      }
+    ],
+    "verified_facets": {
+      "scope": "Full page explicitly unfinished/not implemented until later; classic flavor only, no new quest implementation warranted",
+      "dialogue": "Innoruuk and scroll-of-ghan branches match; quest faction gate intentionally waived"
+    },
+    "unresolved": [
+      "Hail text differs because shared NPC supports other quests; no change proposed.",
+      "Other shared-script trades unrelated to this page not certified.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Solusek's Flower",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Solusek's Flower",
+      "url": "https://wiki.project1999.com/Solusek's_Flower?action=raw",
+      "fetchedAt": "2026-07-17T23:33:46.563Z",
+      "revision": null,
+      "sha256": "3581bf5656f37455f12003141c27aabd5356046f9da55a9c03f65828ce0d5fed",
+      "bytes": 2479,
+      "source": "raw-pages/solusek-s-flower-16da37842d.json",
+      "cachePath": "reference/p99-wiki/raw-pages/solusek-s-flower-16da37842d.wiki"
+    },
+    "sources": [
+      {
+        "key": "mistmoore/Ssynthi",
+        "file": "effective/quests/mistmoore/Ssynthi.lua",
+        "enabled": 1,
+        "sha256": "38de74a6a5fad735f1c68a958dbeb2a6769d32bfc391325388031dc4ccf57c04",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/mistmoore/Ssynthi.lua",
+            "sha256": "38de74a6a5fad735f1c68a958dbeb2a6769d32bfc391325388031dc4ccf57c04",
+            "equals_effective": true
+          }
+        ]
+      }
+    ],
+    "verified_facets": {
+      "inputs": "Flower14362 x1",
+      "reward": "Scepter14364, corresponding Scepter of Sorrow",
+      "factions": "Temple415 +20, Shadowed Men416 -20; directions match; +20 approximately supported by player estimate",
+      "experience": "1000 XP, presence matches",
+      "dialogue": "Hail/warder/service and response substantively match"
+    },
+    "unresolved": [
+      "Exact XP and negative faction magnitude undocumented; positive faction estimate not exact proof.",
+      "Ground spawn coordinates and one-minute respawn not verified.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Strategies of the Ancient Dragons",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Strategies of the Ancient Dragons",
+      "url": "https://wiki.project1999.com/Strategies_of_the_Ancient_Dragons?action=raw",
+      "fetchedAt": "2026-07-17T23:34:23.058Z",
+      "revision": null,
+      "sha256": "17633e3df158643e4c7001b99e058ee85ed11657e245ef5bf762063f86b68db7",
+      "bytes": 3095,
+      "source": "raw-pages/strategies-of-the-ancient-dragons-d6ace59dcf.json",
+      "cachePath": "reference/p99-wiki/raw-pages/strategies-of-the-ancient-dragons-d6ace59dcf.wiki"
+    },
+    "sources": [
+      {
+        "key": "kael/Semkak_Prophet_of_Vallon",
+        "file": "effective/quests/kael/Semkak_Prophet_of_Vallon.lua",
+        "enabled": 1,
+        "sha256": "989f24698f49cfc42151f1f528ba4d4e50f0f055820a07ffb6355a88edaa7775",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/kael/Semkak_Prophet_of_Vallon.lua",
+            "sha256": "989f24698f49cfc42151f1f528ba4d4e50f0f055820a07ffb6355a88edaa7775",
+            "equals_effective": true
+          }
+        ]
+      }
+    ],
+    "verified_facets": {
+      "inputs": "Golden Tablet24986 OR Scroll of Scaled Tactics24985, one each independently",
+      "factions": "Kromrif419 +20, Kromzek448 +20, King Tormax429 +10, Claws430 -30 match directions",
+      "dialogue": "Hail/teach/serve routes match"
+    },
+    "unresolved": [
+      "Defect: Golden Tablet branch returns random Steel Wristband25036/Shield25040/Circlet25034/Book25035 and scroll response; page specifically documents Book of Strategy and distinct tablet response.",
+      "Scroll reward pool mapping/probabilities explicitly uncertain in wiki.",
+      "XP1750000 and exact faction magnitudes not documented; no arbitrary numerical correction warranted.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Strife to the Coldain",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Strife to the Coldain",
+      "url": "https://wiki.project1999.com/Strife_to_the_Coldain?action=raw",
+      "fetchedAt": "2026-07-17T23:34:24.719Z",
+      "revision": null,
+      "sha256": "a862dbfd055bcf3989c82425dc74dd1220c042483ac38092b91bc19b53403307",
+      "bytes": 2741,
+      "source": "raw-pages/strife-to-the-coldain-6bf6c91874.json",
+      "cachePath": "reference/p99-wiki/raw-pages/strife-to-the-coldain-6bf6c91874.wiki"
+    },
+    "sources": [
+      {
+        "key": "kael/Clrakk_Blackfist",
+        "file": "effective/quests/kael/Clrakk_Blackfist.lua",
+        "enabled": 1,
+        "sha256": "dab5e60c1fb3e2563c0fcae072ac6427842fae99e6bc220508fa25761c31b5a7",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/kael/Clrakk_Blackfist.lua",
+            "sha256": "dab5e60c1fb3e2563c0fcae072ac6427842fae99e6bc220508fa25761c31b5a7",
+            "equals_effective": true
+          }
+        ]
+      }
+    ],
+    "verified_facets": {
+      "inputs_rewards": "Hand of Deaen25115 -> Mask of Malediction25054; Legs25114 -> Dark Spear of Venom25051; one each",
+      "factions": "Kromrif419+10, Kromzek448+10, Coldain406-20, Claws430-20 match directions",
+      "dialogue": "Hail/bring strife and reward response match",
+      "eligibility": "Faction requirement intentionally waived; no cash/XP documented or granted"
+    },
+    "unresolved": [
+      "Exact faction deltas undocumented; ordinary Deaen spawn/drop not verified.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Sylvani Leaf Quest",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Sylvani Leaf Quest",
+      "url": "https://wiki.project1999.com/Sylvani_Leaf_Quest?action=raw",
+      "fetchedAt": "2026-07-17T23:34:26.625Z",
+      "revision": null,
+      "sha256": "be2a29f29d7bf8d2b01c823bf3c8087ea570e0350341b56cf72862b2c4acb21d",
+      "bytes": 1883,
+      "source": "raw-pages/sylvani-leaf-quest-b90b830c3f.json",
+      "cachePath": "reference/p99-wiki/raw-pages/sylvani-leaf-quest-b90b830c3f.wiki"
+    },
+    "sources": [
+      {
+        "key": "kerraridge/Urkath_Greyface",
+        "file": "effective/quests/kerraridge/Urkath_Greyface.lua",
+        "enabled": 1,
+        "sha256": "9e7fc38687e7532b39a56f9caa029998275980c40d9698c66bf8e9c87a1de39a",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/kerraridge/Urkath_Greyface.lua",
+            "sha256": "9e7fc38687e7532b39a56f9caa029998275980c40d9698c66bf8e9c87a1de39a",
+            "equals_effective": true
+          }
+        ]
+      }
+    ],
+    "verified_facets": {
+      "inputs_rewards": "Sylvani Leaf1155 x1 -> Worn Leather Shoulderpads2045",
+      "factions": "Kerra Isle382+5 matches direction",
+      "dialogue": "Hail/favor/Sylvani Leaf matches",
+      "eligibility": "Faction restriction intentionally waived; no XP/cash granted or documented"
+    },
+    "unresolved": [
+      "Exact faction delta undocumented; Ivie Bramblefoot spawn/drop not verified.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Sir Morgan's Armor",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Sir Morgan's Armor",
+      "url": "https://wiki.project1999.com/Sir_Morgan's_Armor?action=raw",
+      "fetchedAt": "2026-07-17T23:33:27.712Z",
+      "revision": null,
+      "sha256": "8e6f0efa31244188f11648c068c0c0d24f13bbd759b44c49690ae6929ccdae0c",
+      "bytes": 2593,
+      "source": "raw-pages/sir-morgan-s-armor-ac938f9867.json",
+      "cachePath": "reference/p99-wiki/raw-pages/sir-morgan-s-armor-ac938f9867.wiki"
+    },
+    "sources": [
+      {
+        "key": "eastkarana/Sir_Morgan",
+        "file": "effective/quests/eastkarana/Sir_Morgan.lua",
+        "enabled": 1,
+        "sha256": "0cef9ab8675a5b7a00b60cc9ba498aaabc8807f705a2b143897a66a3a9434e59",
+        "maintained": [
+          {
+            "file": "maintained/lua/modified-upstream/eastkarana/Sir_Morgan.lua",
+            "sha256": "0cef9ab8675a5b7a00b60cc9ba498aaabc8807f705a2b143897a66a3a9434e59",
+            "equals_effective": true
+          }
+        ]
+      }
+    ],
+    "verified_facets": {
+      "inputs": "5 gold donation",
+      "rewards": "Random20-entry item pool; no XP or faction, correctly matching explicit P99 removal",
+      "dialogue": "Hail/escort/travel-alone/donation match"
+    },
+    "unresolved": [
+      "Reward-name/pool completeness requires further item-by-item verification, especially listed first-level spell.",
+      "Patrol route, escort schedule and runtime waypoint behavior unverified.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Skeleton Killing",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Skeleton Killing",
+      "url": "https://wiki.project1999.com/Skeleton_Killing?action=raw",
+      "fetchedAt": "2026-07-17T23:33:29.507Z",
+      "revision": null,
+      "sha256": "24505a8e8c3a44cbf32794b3d6f95be4f6f38e1a7e8ef2dc9f2dc67e0564433f",
+      "bytes": 3004,
+      "source": "raw-pages/skeleton-killing-a257fe98ef.json",
+      "cachePath": "reference/p99-wiki/raw-pages/skeleton-killing-a257fe98ef.wiki"
+    },
+    "sources": [
+      {
+        "key": "erudnext/Lumi_Stergnon",
+        "file": "effective/quests/erudnext/Lumi_Stergnon.lua",
+        "enabled": 1,
+        "sha256": "ad79d6d1c804b0e581b9f791f05fc959ed93f15479ee3b599fb16c169b2e604c",
+        "maintained": [
+          {
+            "file": "maintained/lua/modified-upstream/erudnext/Lumi_Stergnon.lua",
+            "sha256": "ad79d6d1c804b0e581b9f791f05fc959ed93f15479ee3b599fb16c169b2e604c",
+            "equals_effective": true
+          }
+        ]
+      }
+    ],
+    "verified_facets": {
+      "inputs": "battle the undead grants Box for Bones17941; completed A Box of Bones13882 accepted",
+      "cash": "3 gold matches",
+      "factions": "Peace Keepers298 +10, High Council266 +2, Heretics265 -2 match directions",
+      "experience": "500 XP, presence matches",
+      "dialogue": "Hail/new-acolyte/battle-undead and turn-in match"
+    },
+    "unresolved": [
+      "Reward discrepancy: bones branch returns only8 spells, while page lists17 items. Other9 nonspells are in separate Peacekeeper Staff13816 branch; possible wiki merged pool needs second evidence, not arbitrary expansion.",
+      "Six-bone container recipe not checked; faction intentionally bypassed; class table not proof of enforced cleric gate.",
+      "Exact XP and faction deltas not documented.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Slaggak's Bounty",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Slaggak's Bounty",
+      "url": "https://wiki.project1999.com/Slaggak's_Bounty?action=raw",
+      "fetchedAt": "2026-07-17T23:33:33.536Z",
+      "revision": null,
+      "sha256": "a116070ba95810b27e03324cbf58dd8fc56f59f73d909d5edbb67b571b0782da",
+      "bytes": 2745,
+      "source": "raw-pages/slaggak-s-bounty-f70832ffa6.json",
+      "cachePath": "reference/p99-wiki/raw-pages/slaggak-s-bounty-f70832ffa6.wiki"
+    },
+    "sources": [
+      {
+        "key": "kael/Slaggak_the_Trainer",
+        "file": "effective/quests/kael/Slaggak_the_Trainer.lua",
+        "enabled": 1,
+        "sha256": "bf4d12d74416a205dc808ac7c3290068dfd240f40313da4d26fe989e43732b4d",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/kael/Slaggak_the_Trainer.lua",
+            "sha256": "bf4d12d74416a205dc808ac7c3290068dfd240f40313da4d26fe989e43732b4d",
+            "equals_effective": true
+          }
+        ]
+      }
+    ],
+    "verified_facets": {
+      "inputs_rewards": "Shard Wurm Fang25100 x4 -> Cerulean Greaves25071; Ice Wyvern Stinger25101 x4 -> Cerulean Vambraces25070",
+      "factions": "Kromrif419+20, Kromzek448+20, Coldain406-60, Claws430-60 match directions",
+      "experience": "100 XP, presence matches",
+      "dialogue": "Hail/serve/shard wurm/bounty describe matching four-item exchanges"
+    },
+    "unresolved": [
+      "Exact XP/faction values undocumented; P99 response flavor missing from hand-in branches.",
+      "Class/level40 table not proof of enforced gates; faction intentionally waived.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Sneed's Rat Infestation",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Sneed's Rat Infestation",
+      "url": "https://wiki.project1999.com/Sneed's_Rat_Infestation?action=raw",
+      "fetchedAt": "2026-07-17T23:33:40.234Z",
+      "revision": null,
+      "sha256": "6150c5355ce3f60010c0b720c5495f645144d1fe5c438d29f9f0020494c9a33a",
+      "bytes": 2092,
+      "source": "raw-pages/sneed-s-rat-infestation-e79df686d2.json",
+      "cachePath": "reference/p99-wiki/raw-pages/sneed-s-rat-infestation-e79df686d2.wiki"
+    },
+    "sources": [
+      {
+        "key": "qeynos2/Sneed_Galliway",
+        "file": "effective/quests/qeynos2/Sneed_Galliway.lua",
+        "enabled": 1,
+        "sha256": "5f707fb2d2ab84523683cc428635df6992d0d3be6d58fd81316b58da3a0ee82b",
+        "maintained": [
+          {
+            "file": "maintained/lua/modified-upstream/qeynos2/Sneed_Galliway.lua",
+            "sha256": "5f707fb2d2ab84523683cc428635df6992d0d3be6d58fd81316b58da3a0ee82b",
+            "equals_effective": true
+          }
+        ]
+      }
+    ],
+    "verified_facets": {
+      "inputs_rewards": "Rat Head13717 -> random Dagger7001/Water Flask13006/Torch13002",
+      "cash": "4 copper matches",
+      "factions": "Merchants291+5, Circle223-10, Antonius219+5, Coalition229+5, Guards262+5 match directions",
+      "experience": "250 XP, presence matches",
+      "dialogue": "Hail/problem and turn-in match"
+    },
+    "unresolved": [
+      "Exact XP/faction values and reward odds undocumented; upstairs rat spawn/drop unverified.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Soil of Underfoot",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Soil of Underfoot",
+      "url": "https://wiki.project1999.com/Soil_of_Underfoot?action=raw",
+      "fetchedAt": "2026-07-17T23:33:42.012Z",
+      "revision": null,
+      "sha256": "e399aabc540670ffff947b1a31cbdadd4fb28605ee07e0cdf159c89862e5ab28",
+      "bytes": 2384,
+      "source": "raw-pages/soil-of-underfoot-3bae8ea97b.json",
+      "cachePath": "reference/p99-wiki/raw-pages/soil-of-underfoot-3bae8ea97b.wiki"
+    },
+    "sources": [
+      {
+        "key": "kaladimb/Priestess_Ghalea",
+        "file": "effective/quests/kaladimb/Priestess_Ghalea.lua",
+        "enabled": 1,
+        "sha256": "213b53bad80bf5f1cfefe2af784ae4920afacc05a63c0aa6914674456b27f53c",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/kaladimb/Priestess_Ghalea.lua",
+            "sha256": "213b53bad80bf5f1cfefe2af784ae4920afacc05a63c0aa6914674456b27f53c",
+            "equals_effective": true
+          }
+        ]
+      }
+    ],
+    "verified_facets": {
+      "inputs_rewards": "Fairy Dust12106 x4 -> Soil of Underfoot12282",
+      "cash": "4 gold matches dedicated Quest page",
+      "factions": "Clerics227+2, Kazon274+2, Miners293+2 match directions",
+      "experience": "500 XP, presence matches",
+      "dialogue": "Hail/soil and hand-in match; faction intentionally waived"
+    },
+    "unresolved": [
+      "Evidence conflict: mixed item/quest page Soil of Underfoot reports both4gold and1platinum; dedicated Quest page only4gold. Retain4gold, do not invent combined payout.",
+      "Conflicting minimum-level/class tables not evidence of hard gating; exact XP/faction values undocumented.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Soil of Underfoot Quest",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Soil of Underfoot Quest",
+      "url": "https://wiki.project1999.com/Soil_of_Underfoot_Quest?action=raw",
+      "fetchedAt": "2026-07-17T23:33:44.461Z",
+      "revision": null,
+      "sha256": "50c8c868de73518f91c6545ada0ee13501e0955bb3a687ebc26ab3ed0b99a11b",
+      "bytes": 2073,
+      "source": "raw-pages/soil-of-underfoot-quest-771c084f87.json",
+      "cachePath": "reference/p99-wiki/raw-pages/soil-of-underfoot-quest-771c084f87.wiki"
+    },
+    "sources": [
+      {
+        "key": "kaladimb/Priestess_Ghalea",
+        "file": "effective/quests/kaladimb/Priestess_Ghalea.lua",
+        "enabled": 1,
+        "sha256": "213b53bad80bf5f1cfefe2af784ae4920afacc05a63c0aa6914674456b27f53c",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/kaladimb/Priestess_Ghalea.lua",
+            "sha256": "213b53bad80bf5f1cfefe2af784ae4920afacc05a63c0aa6914674456b27f53c",
+            "equals_effective": true
+          }
+        ]
+      }
+    ],
+    "verified_facets": {
+      "inputs_rewards": "Fairy Dust12106 x4 -> Soil of Underfoot12282",
+      "cash": "4 gold matches dedicated Quest page",
+      "factions": "Clerics227+2, Kazon274+2, Miners293+2 match directions",
+      "experience": "500 XP, presence matches",
+      "dialogue": "Hail/soil and hand-in match; faction intentionally waived"
+    },
+    "unresolved": [
+      "Evidence conflict: mixed item/quest page Soil of Underfoot reports both4gold and1platinum; dedicated Quest page only4gold. Retain4gold, do not invent combined payout.",
+      "Conflicting minimum-level/class tables not evidence of hard gating; exact XP/faction values undocumented.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Solvedi Scimitar Quest",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Solvedi Scimitar Quest",
+      "url": "https://wiki.project1999.com/Solvedi_Scimitar_Quest?action=raw",
+      "fetchedAt": "2026-07-17T23:33:49.323Z",
+      "revision": null,
+      "sha256": "a17d78bca7358c967ea76e92731fd0c3c0aa34cf2cc0e13f453fa4e35b1fb79d",
+      "bytes": 2009,
+      "source": "raw-pages/solvedi-scimitar-quest-34b96ef9e7.json",
+      "cachePath": "reference/p99-wiki/raw-pages/solvedi-scimitar-quest-34b96ef9e7.wiki"
+    },
+    "sources": [
+      {
+        "key": "rathemtn/Solvedi_Aldeberan",
+        "file": "effective/quests/rathemtn/Solvedi_Aldeberan.lua",
+        "enabled": 1,
+        "sha256": "ba0147d35ded6c1916da6b8bb5256448636982de18b9f6e89e7f3121e2012db4",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/rathemtn/Solvedi_Aldeberan.lua",
+            "sha256": "ba0147d35ded6c1916da6b8bb5256448636982de18b9f6e89e7f3121e2012db4",
+            "equals_effective": true
+          }
+        ]
+      }
+    ],
+    "verified_facets": {
+      "inputs_rewards": "Giant Laceless Sandal9352 and Lionhide Backpack17350 -> Solvedi Scimitar5378",
+      "experience": "25000 XP, presence matches",
+      "dialogue": "Hail/defilers and success match substantively"
+    },
+    "unresolved": [
+      "Prerequisite discrepancy: page emphatically warns prior dialogue required, Lua has no state tracking or speech prerequisite. No unproven state change invented.",
+      "Exact XP undocumented; original acquisition and single-item consumption behavior unverified.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Shield of the Devout Quest",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Shield of the Devout Quest",
+      "url": "https://wiki.project1999.com/Shield_of_the_Devout_Quest?action=raw",
+      "fetchedAt": "2026-07-17T23:33:08.639Z",
+      "revision": null,
+      "sha256": "381fa9fc82abcb0ae61439be0fc6e1d2ea9e36687b3a7c1b8ab19c85d25dd65c",
+      "bytes": 1047,
+      "source": "raw-pages/shield-of-the-devout-quest-a0b3f71132.json",
+      "cachePath": "reference/p99-wiki/raw-pages/shield-of-the-devout-quest-a0b3f71132.wiki"
+    },
+    "sources": [
+      {
+        "key": "soltemple/Gavel_the_Temperant",
+        "file": "effective/quests/soltemple/Gavel_the_Temperant.lua",
+        "enabled": 1,
+        "sha256": "2b56eb514eb9d30048b6dbc7144f02a2451394a5d979910b98d43598d56006df",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/soltemple/Gavel_the_Temperant.lua",
+            "sha256": "2b56eb514eb9d30048b6dbc7144f02a2451394a5d979910b98d43598d56006df",
+            "equals_effective": true
+          }
+        ]
+      },
+      {
+        "key": "soltemple/Vilissia",
+        "file": "effective/quests/soltemple/Vilissia.lua",
+        "enabled": 1,
+        "sha256": "bdc132d026aee5c5c3e605095f816f522987735671df57964dd9b7affed61bbe",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/soltemple/Vilissia.lua",
+            "sha256": "bdc132d026aee5c5c3e605095f816f522987735671df57964dd9b7affed61bbe",
+            "equals_effective": true
+          }
+        ]
+      }
+    ],
+    "verified_facets": {
+      "inputs_rewards": "Gavel accepts Vulcanized Platinum Bar19048 x2 + Ingot19013 + Icon19014 -> Shield of Devout9427; Vilissia accepts Enchanted Platinum16507 -> Vulcanized Platinum19048",
+      "dialogue": "Gavel devout describes exact requirement and correct Vilissia transformation"
+    },
+    "unresolved": [
+      "Page does not document XP1000, factions415+15/416-15 granted by Gavel.",
+      "Documented multiquest, loot sources and crafted Enchanted Platinum acquisition not verified.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Shiny Robe of the Underfoot Quest",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Shiny Robe of the Underfoot Quest",
+      "url": "https://wiki.project1999.com/Shiny_Robe_of_the_Underfoot_Quest?action=raw",
+      "fetchedAt": "2026-07-17T23:33:13.575Z",
+      "revision": null,
+      "sha256": "9a2e038b1215efcb163aa437f3150052b05796ae0df9dcfe03df938c2cea82ae",
+      "bytes": 1125,
+      "source": "raw-pages/shiny-robe-of-the-underfoot-quest-57b2d9248b.json",
+      "cachePath": "reference/p99-wiki/raw-pages/shiny-robe-of-the-underfoot-quest-57b2d9248b.wiki"
+    },
+    "sources": [
+      {
+        "key": "hole/Kejar_the_Mighty",
+        "file": "effective/quests/hole/Kejar_the_Mighty.lua",
+        "enabled": 1,
+        "sha256": "333cb5c714eba4d4d25a9085c7c0fe73d33adfadbcc24f8e25ca344927ef82af",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/hole/Kejar_the_Mighty.lua",
+            "sha256": "333cb5c714eba4d4d25a9085c7c0fe73d33adfadbcc24f8e25ca344927ef82af",
+            "equals_effective": true
+          }
+        ]
+      }
+    ],
+    "verified_facets": {
+      "inputs_rewards": "Shining Metallic Robes1360 -> Hunk of Metal8961 or Shiny Robe8960",
+      "probabilities": "3 Hunk entries and1 Robe entry; satisfies more-common-metal direction, exact odds unsupported",
+      "eligibility": "No faction gate, intentional convenience"
+    },
+    "unresolved": [
+      "XP5000 undocumented; 25percent robe probability is implementation choice, sample2of8 not exact probability proof.",
+      "Charming requirement uncertain in wiki and not enforced by Lua; world aggression independent.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Spirit Wracked Cord Quest",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Spirit Wracked Cord Quest",
+      "url": "https://wiki.project1999.com/Spirit_Wracked_Cord_Quest?action=raw",
+      "fetchedAt": "2026-07-17T23:34:08.644Z",
+      "revision": null,
+      "sha256": "75e29bb01122d339f2ecb9bbd25c20dd3cffa358a7506e54c5a479a59dec14cf",
+      "bytes": 2635,
+      "source": "raw-pages/spirit-wracked-cord-quest-6a316423d1.json",
+      "cachePath": "reference/p99-wiki/raw-pages/spirit-wracked-cord-quest-6a316423d1.wiki"
+    },
+    "sources": [
+      {
+        "key": "chardok/Queen_Velazul_Di-zok",
+        "file": "effective/quests/chardok/Queen_Velazul_Di-zok.lua",
+        "enabled": 1,
+        "sha256": "c41472ef6f9afb80f31ffd343eb2df6d39f41febc9d26a20db07365cf66e1890",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/chardok/Queen_Velazul_Di-zok.lua",
+            "sha256": "c41472ef6f9afb80f31ffd343eb2df6d39f41febc9d26a20db07365cf66e1890",
+            "equals_effective": true
+          }
+        ]
+      }
+    ],
+    "verified_facets": {
+      "inputs_rewards": "Spirit Wracked Urn6477, Undead Dragon Sinew6478, Regal Band5727 -> returned Regal Band5727 plus Spirit Wracked Cord5723",
+      "dialogue": "Hail/service/additional-components and success match",
+      "eligibility": "Ally quest gate intentionally waived; no level gate consistent with documented level10 MQ"
+    },
+    "unresolved": [
+      "XP100000 and faction451+3/307+3/259-1 not documented on page.",
+      "Prior ring chain, drops, multiquest and worn AoB effect not verified.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Staff of Dark Reflections Quest",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Staff of Dark Reflections Quest",
+      "url": "https://wiki.project1999.com/Staff_of_Dark_Reflections_Quest?action=raw",
+      "fetchedAt": "2026-07-18T00:39:00.549Z",
+      "revision": null,
+      "sha256": "7ff3932f5a9f5b966e3938d789cd779826fe2f9cae51cf67f250dc7beacaf0be",
+      "bytes": 143,
+      "source": "raw-pages/staff-of-dark-reflections-quest-aa27b4c764.json",
+      "cachePath": "reference/p99-wiki/raw-pages/staff-of-dark-reflections-quest-aa27b4c764.wiki"
+    },
+    "sources": [
+      {
+        "key": "akanon/Tilkzog_Mournunder",
+        "file": "effective/quests/akanon/Tilkzog_Mournunder.lua",
+        "enabled": 0,
+        "sha256": "385a55c0036d6891ae81f90e5044a83f3ae0b5b97442172ea4db19e09d5d9853",
+        "maintained": []
+      }
+    ],
+    "verified_facets": {
+      "scope": "Entire page explicitly says does not exist in era and NPC absent; do not implement or enable"
+    },
+    "unresolved": [
+      "Existing effective script availability is not scope authorization; separate exclusion/enable state requires ledger reconciliation.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Shaman Spells (Quest)",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Shaman Spells (Quest)",
+      "url": "https://wiki.project1999.com/Shaman_Spells_(Quest)?action=raw",
+      "fetchedAt": "2026-07-18T00:38:37.614Z",
+      "revision": null,
+      "sha256": "68d1e2d47d6b9493030eeeb9ebfdb51522c021fe70d2dc4695b033c7afe036de",
+      "bytes": 220,
+      "source": "raw-pages/shaman-spells-quest-b68234763b.json",
+      "cachePath": "reference/p99-wiki/raw-pages/shaman-spells-quest-b68234763b.wiki"
+    },
+    "sources": [],
+    "verified_facets": {
+      "scope": "Entire page is two-link index to Good/Evil quests; no independent quest path"
+    },
+    "unresolved": [
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Skyshrine Armor Quests",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Skyshrine Armor Quests",
+      "url": "https://wiki.project1999.com/Skyshrine_Armor_Quests?action=raw",
+      "fetchedAt": "2026-07-18T00:38:50.952Z",
+      "revision": null,
+      "sha256": "0431419bf09272a34c4242732b3b309d662cd232c1277424488cedc9eb1a3b94",
+      "bytes": 560,
+      "source": "raw-pages/skyshrine-armor-quests-806de6bc3e.json",
+      "cachePath": "reference/p99-wiki/raw-pages/skyshrine-armor-quests-806de6bc3e.wiki"
+    },
+    "sources": [],
+    "verified_facets": {
+      "scope": "Entire page is14-class armor-quest index; no independent path"
+    },
+    "unresolved": [
+      "See dedicated class reviews; index alone does not prove armor parity.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Scouts Cape Quest",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Scouts Cape Quest",
+      "url": "https://wiki.project1999.com/Scouts_Cape_Quest?action=raw",
+      "fetchedAt": "2026-07-17T23:31:49.720Z",
+      "revision": null,
+      "sha256": "5d23f99ec94e9f364e08b2de6c6fa2ff0bc2944ecf73087441d0e0dacb541655",
+      "bytes": 2744,
+      "source": "raw-pages/scouts-cape-quest-6e14913db6.json",
+      "cachePath": "reference/p99-wiki/raw-pages/scouts-cape-quest-6e14913db6.wiki"
+    },
+    "sources": [
+      {
+        "key": "gfaydark/Geeda",
+        "file": "effective/quests/gfaydark/Geeda.lua",
+        "enabled": 1,
+        "sha256": "6c68bb43cb3225f0b84e373fdb92d6fabcf335795f94a87cfeb21857758ace87",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/gfaydark/Geeda.lua",
+            "sha256": "6c68bb43cb3225f0b84e373fdb92d6fabcf335795f94a87cfeb21857758ace87",
+            "equals_effective": true
+          }
+        ]
+      },
+      {
+        "key": "crushbone/Kelynn",
+        "file": "effective/quests/crushbone/Kelynn.lua",
+        "enabled": 1,
+        "sha256": "0736cf9308f10a707b9aae28f2aac96f32681722494a8fdf64bfd3db2d8b8dc8",
+        "maintained": []
+      }
+    ],
+    "verified_facets": {
+      "inputs_rewards": "Geeda contribution phrase grants Useless Token12184; Kelynn token -> Crushbone Information12183; Geeda information -> Scouts Cape2914",
+      "factions": "Final Tunare Scouts316+10 matches direction",
+      "experience": "Final5000 XP matches presence; intermediate500 XP not documented",
+      "dialogue": "All documented full spoken phrases route"
+    },
+    "unresolved": [
+      "Geeda removes P99 bracket hints and predicates require will-assist/i-have-contributed; discoverability/button UX incomplete.",
+      "Sealed Note wiki label differs from actual Crushbone Information12183; identify-lore crosscheck outstanding.",
+      "Exact XP/faction amounts and Kelynn spawn weights unverified.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Scouts Leggings",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Scouts Leggings",
+      "url": "https://wiki.project1999.com/Scouts_Leggings?action=raw",
+      "fetchedAt": "2026-07-17T23:31:53.064Z",
+      "revision": null,
+      "sha256": "e3080f2a174955bd8122812ea6e2e987cafddcbdaf5d3d9e2216a14931473618",
+      "bytes": 3288,
+      "source": "raw-pages/scouts-leggings-e6578a1c05.json",
+      "cachePath": "reference/p99-wiki/raw-pages/scouts-leggings-e6578a1c05.wiki"
+    },
+    "sources": [
+      {
+        "key": "gfaydark/Tylfon",
+        "file": "effective/quests/gfaydark/Tylfon.lua",
+        "enabled": 1,
+        "sha256": "844db30fcc03554b40bdc2f563c81ed64fee2be7fd417e1489b8f320016b5a1e",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/gfaydark/Tylfon.lua",
+            "sha256": "844db30fcc03554b40bdc2f563c81ed64fee2be7fd417e1489b8f320016b5a1e",
+            "equals_effective": true
+          }
+        ]
+      },
+      {
+        "key": "cauldron/Elmion_Hendrys",
+        "file": "effective/quests/cauldron/Elmion_Hendrys.lua",
+        "enabled": 1,
+        "sha256": "81da2dfa0bfdd532a296df19892cec2d1e66efffff669ef7062d20acc9217ef8",
+        "maintained": []
+      },
+      {
+        "key": "qeynos2/Faldor_Hendrys",
+        "file": "effective/quests/qeynos2/Faldor_Hendrys.lua",
+        "enabled": 1,
+        "sha256": "feafbcd98c2a7bf2b8527390037e0b1ff295a474e38bb79dc24b4310128387f7",
+        "maintained": []
+      }
+    ],
+    "verified_facets": {
+      "inputs_rewards": "Emerald Shard13322 -> Silvermesh Leggings3315",
+      "dialogue": "Tylfon leggings/willing/gem/Elmion hints and Elmion Faldor hint match; optional Elmion detour not required"
+    },
+    "unresolved": [
+      "Faldor ordinary loot/pickpocket acquisition unverified.",
+      "XP1000 and faction316+10 undocumented; no enforced class/level gate.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Second Test of Kejaar",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Second Test of Kejaar",
+      "url": "https://wiki.project1999.com/Second_Test_of_Kejaar?action=raw",
+      "fetchedAt": "2026-07-17T23:32:06.691Z",
+      "revision": null,
+      "sha256": "42246852a3710929e35759d65e6b7db894f1f61ba9b3609aa776a80a49745b00",
+      "bytes": 3384,
+      "source": "raw-pages/second-test-of-kejaar-343e757236.json",
+      "cachePath": "reference/p99-wiki/raw-pages/second-test-of-kejaar-343e757236.wiki"
+    },
+    "sources": [
+      {
+        "key": "kerraridge/Shazda_Asad",
+        "file": "effective/quests/kerraridge/Shazda_Asad.lua",
+        "enabled": 1,
+        "sha256": "6c14baf9fb3a29a27bc4bff298be280e82fb5c2f2a7306f67dce0ded19079673",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/kerraridge/Shazda_Asad.lua",
+            "sha256": "6c14baf9fb3a29a27bc4bff298be280e82fb5c2f2a7306f67dce0ded19079673",
+            "equals_effective": true
+          }
+        ]
+      },
+      {
+        "key": "tox/Sentinel_Creot",
+        "file": "effective/quests/tox/Sentinel_Creot.lua",
+        "enabled": 1,
+        "sha256": "e3b735ec758b652ed0972ab46edc31a4ad8509084aea086517ae177e61b48064",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/tox/Sentinel_Creot.lua",
+            "sha256": "e3b735ec758b652ed0972ab46edc31a4ad8509084aea086517ae177e61b48064",
+            "equals_effective": true
+          }
+        ]
+      }
+    ],
+    "verified_facets": {
+      "inputs_rewards": "Sentinel Creot Head12438 -> Sejah Ghulam Bracer3147",
+      "factions": "Turn-in Kerra Isle382+30 matches positive direction; death-faction list is separate, not turn-in rewards",
+      "experience": "6500 XP, presence matches",
+      "dialogue": "Hail/sejah and success match"
+    },
+    "unresolved": [
+      "First Test narrative does not establish mandatory stored prerequisite; source allows direct head turn-in.",
+      "Creot death factions, spawn and loot unverified; exact turn-in XP/delta undocumented.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Stanos' Head",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Stanos' Head",
+      "url": "https://wiki.project1999.com/Stanos'_Head?action=raw",
+      "fetchedAt": "2026-07-17T23:34:13.451Z",
+      "revision": null,
+      "sha256": "d925338df839a041fdc189f4397c9366396a3fe047a8e70d1755c0011ab16021",
+      "bytes": 3835,
+      "source": "raw-pages/stanos-head-f7c273f674.json",
+      "cachePath": "reference/p99-wiki/raw-pages/stanos-head-f7c273f674.wiki"
+    },
+    "sources": [
+      {
+        "key": "kithicor/General_V-ghera",
+        "file": "effective/quests/kithicor/General_V-ghera.lua",
+        "enabled": 1,
+        "sha256": "ae116fd8af11d3d40523e47bfbd460bb105e536f7fbcd9034108a26cf3dc48b1",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/kithicor/General_V-ghera.lua",
+            "sha256": "ae116fd8af11d3d40523e47bfbd460bb105e536f7fbcd9034108a26cf3dc48b1",
+            "equals_effective": true
+          }
+        ]
+      }
+    ],
+    "verified_facets": {
+      "inputs_rewards": "Head of Stanos28058 -> Guise of Coercer2475",
+      "dialogue": "Stanos and reward text match",
+      "lifecycle": "eq.depop after successful reward corresponds documented despawn",
+      "eligibility": "No level gate consistent with deliberate epic exception"
+    },
+    "unresolved": [
+      "Full rogue-epic prerequisite chain not reviewed here; only final hand-in facets.",
+      "XP500000 and faction420+20 undocumented on page; despawn settlement not executed.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Scarab Armor Quests",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Scarab Armor Quests",
+      "url": "https://wiki.project1999.com/Scarab_Armor_Quests?action=raw",
+      "fetchedAt": "2026-07-17T23:31:38.403Z",
+      "revision": null,
+      "sha256": "a2e662df1a6e17fc0aa986813895380f9fb6ff1f2cc130c545865a4ce5f08100",
+      "bytes": 5045,
+      "source": "raw-pages/scarab-armor-quests-d3a7af643f.json",
+      "cachePath": "reference/p99-wiki/raw-pages/scarab-armor-quests-d3a7af643f.wiki"
+    },
+    "sources": [
+      {
+        "key": "kaladima/Vacto_Molunel",
+        "file": "effective/quests/kaladima/Vacto_Molunel.lua",
+        "enabled": 1,
+        "sha256": "b45fc38720119f1152ed1cb1435219b763a660e6dcc01d864e69cc381a5cba7a",
+        "maintained": [
+          {
+            "file": "maintained/lua/modified-upstream/kaladima/Vacto_Molunel.lua",
+            "sha256": "b45fc38720119f1152ed1cb1435219b763a660e6dcc01d864e69cc381a5cba7a",
+            "equals_effective": true
+          }
+        ]
+      }
+    ],
+    "verified_facets": {
+      "inputs_rewards": "Scarab Carapace13849 x2+5gold -> Helm2175; Pristine Giant Carapace13133+23gold -> Breastplate2176; Cracked Giant Carapace13132+Scarab Legs13848 x2+17gold -> Boots2177",
+      "factions": "Storm312+5, Kazon274+1, Miners293+1, Merchants290+1, Craknek232-1 match directions",
+      "experience": "5000 per branch, presence matches",
+      "dialogue": "Hail/rare-talent/three armor hints and success describe correct branches",
+      "eligibility": "Quest faction checks deliberately waived"
+    },
+    "unresolved": [
+      "Exact XP/faction amounts undocumented.",
+      "Contradictory player reports of wrong/random rewards later attributed to partial multiquest leftovers; no reason to replace deterministic pairs.",
+      "Partial mixed item/cash settlement and recipes/acquisition not run.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "ShadowBound Armor Quests",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "ShadowBound Armor Quests",
+      "url": "https://wiki.project1999.com/ShadowBound_Armor_Quests?action=raw",
+      "fetchedAt": "2026-07-17T23:32:20.965Z",
+      "revision": null,
+      "sha256": "6ddf3ea709e1547abe52b5b8ccd8f1eb9c65ba01bb449eb45a587c55e830ee84",
+      "bytes": 4773,
+      "source": "raw-pages/shadowbound-armor-quests-68ba6816a3.json",
+      "cachePath": "reference/p99-wiki/raw-pages/shadowbound-armor-quests-68ba6816a3.wiki"
+    },
+    "sources": [
+      {
+        "key": "soltemple/Syllina",
+        "file": "effective/quests/soltemple/Syllina.lua",
+        "enabled": 1,
+        "sha256": "778f717b0c3201d72e8db7f210fefc1672fd457f9c8e1a9d7428382e22fc6118",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/soltemple/Syllina.lua",
+            "sha256": "778f717b0c3201d72e8db7f210fefc1672fd457f9c8e1a9d7428382e22fc6118",
+            "equals_effective": true
+          }
+        ]
+      },
+      {
+        "key": "mistmoore/Ssynthi",
+        "file": "effective/quests/mistmoore/Ssynthi.lua",
+        "enabled": 1,
+        "sha256": "38de74a6a5fad735f1c68a958dbeb2a6769d32bfc391325388031dc4ccf57c04",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/mistmoore/Ssynthi.lua",
+            "sha256": "38de74a6a5fad735f1c68a958dbeb2a6769d32bfc391325388031dc4ccf57c04",
+            "equals_effective": true
+          }
+        ]
+      }
+    ],
+    "verified_facets": {
+      "inputs_rewards": "Robe: Large Shadow Silk16484/Werebat Wing13239/Mask2309/Globe10535 ->1355; Gloves: Scepter14363/Finger13234/Hand10534/Inky Silk16485 ->3318; Boots: Scepter14364/Toe13180/Eye10533/Shadow Silk16483 ->3317",
+      "dialogue": "All three armor/component hints match;50gold silk explanation correctly describes base/+pelt/+scroll variants",
+      "subquest": "Ssynthi flower14362 -> Scepter14364 read separately"
+    },
+    "unresolved": [
+      "Tailoring recipes/trivials, groundspawn14363 and loot unverified.",
+      "XP1000 and faction415+15/416-15 per armor not documented;50gold hint faction deltas also undocumented.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Sad Klandicar",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Sad Klandicar",
+      "url": "https://wiki.project1999.com/Sad_Klandicar?action=raw",
+      "fetchedAt": "2026-07-17T23:31:28.436Z",
+      "revision": null,
+      "sha256": "7f97dd7ac7738a9ce1fe9598f84d5dbe26a45f53df82a887ac100674102dd613",
+      "bytes": 3667,
+      "source": "raw-pages/sad-klandicar-b7c517a15a.json",
+      "cachePath": "reference/p99-wiki/raw-pages/sad-klandicar-b7c517a15a.wiki"
+    },
+    "sources": [
+      {
+        "key": "westwastes/Klandicar",
+        "file": "effective/quests/westwastes/Klandicar.lua",
+        "sha256": "9398ddf8f4ced4d2730ebdc3ad230e83b61b9c473c9e9fe9d7f5d22fe4c91fcf",
+        "maintained": []
+      }
+    ],
+    "verified_facets": {
+      "scope": "Unsolved flavor page explicitly says no known continuation/reward",
+      "dialogue": "Full eight-step hail/flood/around/free/long-past/shackles/Kromzek/Coldain conversation present in Klandicar Lua",
+      "eligibility": "Faction dialogue check intentionally bypassed"
+    },
+    "unresolved": [
+      "No quest completion or invented reward warranted; actual rendered dialogue navigation not run.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Scrolls of the Ancient Totem",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Scrolls of the Ancient Totem",
+      "url": "https://wiki.project1999.com/Scrolls_of_the_Ancient_Totem?action=raw",
+      "fetchedAt": "2026-07-17T23:32:02.671Z",
+      "revision": null,
+      "sha256": "ae9022d234ff3158da5b6b4be1a01737b2c8a3142b84c83b04e5c154cebf83ab",
+      "bytes": 1743,
+      "source": "raw-pages/scrolls-of-the-ancient-totem-3a068d2a1d.json",
+      "cachePath": "reference/p99-wiki/raw-pages/scrolls-of-the-ancient-totem-3a068d2a1d.wiki"
+    },
+    "sources": [
+      {
+        "key": "growthplane/Ancient_Totem",
+        "file": "effective/quests/growthplane/Ancient_Totem.lua",
+        "sha256": "a029c6b52e777f234886b68a4ddbc62a2da875799c70ad4af83e7ca73fdf8f12",
+        "maintained": [
+          {
+            "file": "maintained/lua/modified-upstream/growthplane/Ancient_Totem.lua",
+            "sha256": "a029c6b52e777f234886b68a4ddbc62a2da875799c70ad4af83e7ca73fdf8f12",
+            "equals_effective": true
+          }
+        ]
+      }
+    ],
+    "verified_facets": {
+      "inputs_rewards": "Scrolls Enlightenment31440/Insight31442/Knowledge31441/Power31439 -> Visage of Life1324",
+      "dialogue": "Hail/magic/scroll transcript matches",
+      "eligibility": "Level55 predicate on speech/trade matches table but hard enforcement not proven beyond table"
+    },
+    "unresolved": [
+      "XP2500 undocumented; class not gated; named-rat drops and ambient Tunare signal lifecycle unverified.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Shaman's Velium Sleeves",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Shaman's Velium Sleeves",
+      "url": "https://wiki.project1999.com/Shaman's_Velium_Sleeves?action=raw",
+      "fetchedAt": "2026-07-17T23:32:59.133Z",
+      "revision": null,
+      "sha256": "47dc45618fca1a5e37a3eb96d0bb9722d909c5f551c676d4993eae88a5eaed9f",
+      "bytes": 1850,
+      "source": "raw-pages/shaman-s-velium-sleeves-da1fad1ddc.json",
+      "cachePath": "reference/p99-wiki/raw-pages/shaman-s-velium-sleeves-da1fad1ddc.wiki"
+    },
+    "sources": [
+      {
+        "key": "thurgadina/Terman_Underbelly",
+        "file": "effective/quests/thurgadina/Terman_Underbelly.lua",
+        "sha256": "8726567aeb64c3a6ef90d7c6b3c6a6acf17cd51c71796e02b761aece2f0f3417",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/thurgadina/Terman_Underbelly.lua",
+            "sha256": "8726567aeb64c3a6ef90d7c6b3c6a6acf17cd51c71796e02b761aece2f0f3417",
+            "equals_effective": true
+          }
+        ]
+      }
+    ],
+    "verified_facets": {
+      "inputs_rewards": "Corroded Chain Sleeves24937 + Jaundice Gem25815 x3 -> Rune Crafter Vambraces31009",
+      "factions": "Coldain406+20,Dain405+20,Kromrif419-60,Kromzek448-60 match directions",
+      "dialogue": "Hail/I-am-shaman/armor/sleeves matching requirement",
+      "eligibility": "Faction intentionally waived; no class/level hand-in gates"
+    },
+    "unresolved": [
+      "XP100000 and exact faction values undocumented; other armor branches not verified by this page.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Storm Giant Toes to Sentry Kcor",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Storm Giant Toes to Sentry Kcor",
+      "url": "https://wiki.project1999.com/Storm_Giant_Toes_to_Sentry_Kcor?action=raw",
+      "fetchedAt": "2026-07-17T23:34:21.559Z",
+      "revision": null,
+      "sha256": "c4a235836342f723998c318921a302ca1d8f551cecc465fd87dff570fb795210",
+      "bytes": 2699,
+      "source": "raw-pages/storm-giant-toes-to-sentry-kcor-0ac1b5653f.json",
+      "cachePath": "reference/p99-wiki/raw-pages/storm-giant-toes-to-sentry-kcor-0ac1b5653f.wiki"
+    },
+    "sources": [
+      {
+        "key": "skyshrine/Sentry_Kcor",
+        "file": "effective/quests/skyshrine/Sentry_Kcor.lua",
+        "sha256": "8c12fe8f6975e3f5d6e0b9f5b69698b2cf5db3a14d242f54f81b2368f355a9bc",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/skyshrine/Sentry_Kcor.lua",
+            "sha256": "8c12fe8f6975e3f5d6e0b9f5b69698b2cf5db3a14d242f54f81b2368f355a9bc",
+            "equals_effective": true
+          }
+        ]
+      }
+    ],
+    "verified_facets": {
+      "mapping": "Resolved skyshrine/Sentry_Kcor; its two trades accept Giant Warrior Helmet29062 and Mercenary Assignments29624, neither is Storm Giant Toes",
+      "documented": "One Storm Giant Toes ->2gold1silver4copper+XP, CoV/Yelinak positive and Kromzek negative"
+    },
+    "unresolved": [
+      "Missing Storm Giant Toes hand-in branch; unrelated existing branches must be preserved.",
+      "Missing documented Kcor/Enots conversation; generic hail differs.",
+      "Exact XP/faction amounts not documented; +5 CoV explicitly only likely.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Souvenir Mugs",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Souvenir Mugs",
+      "url": "https://wiki.project1999.com/Souvenir_Mugs?action=raw",
+      "fetchedAt": "2026-07-17T23:33:51.289Z",
+      "revision": null,
+      "sha256": "9fa8a7d1454b893b0f957578491f4245204a320cc9ca4aaf0fce68a70578384a",
+      "bytes": 2649,
+      "source": "raw-pages/souvenir-mugs-366e530108.json",
+      "cachePath": "reference/p99-wiki/raw-pages/souvenir-mugs-366e530108.wiki"
+    },
+    "sources": [
+      {
+        "key": "thurgadina/Tobart_Dirkins",
+        "file": "effective/quests/thurgadina/Tobart_Dirkins.lua",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "maintained": []
+      },
+      {
+        "key": "thurgadina/Doogle_McBanick",
+        "file": "effective/quests/thurgadina/Doogle_McBanick.lua",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "maintained": []
+      },
+      {
+        "key": "thurgadina/Loremaster_Fronden",
+        "file": "effective/quests/thurgadina/Loremaster_Fronden.lua",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "maintained": []
+      }
+    ],
+    "verified_facets": {
+      "proposal_overlay": "All4current p99-conversions-velious source rows read: Tobart1plat->30146;Fronden1plat->30146;Doogle3gold->30147;Adia5gold->30145. Matches documented unusual Fronden reward and cash amounts; no invented XP/factions."
+    },
+    "unresolved": [
+      "Baseline empty/missing sources replaced by current proposal, not an outstanding implementation gap.",
+      "Further mug uses explicitly unknown; ambient movement/signals and full runtime/UI remain unverified."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Scholar Darnath's Help",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Scholar Darnath's Help",
+      "url": "https://wiki.project1999.com/Scholar_Darnath's_Help?action=raw",
+      "fetchedAt": "2026-07-17T23:31:40.469Z",
+      "revision": null,
+      "sha256": "3af3e9601a5819f67ea4f13dfa7eed37a3401a633f758a30d9593f37d0d2d88c",
+      "bytes": 9412,
+      "source": "raw-pages/scholar-darnath-s-help-e11caf3bbe.json",
+      "cachePath": "reference/p99-wiki/raw-pages/scholar-darnath-s-help-e11caf3bbe.wiki"
+    },
+    "sources": [],
+    "verified_facets": {
+      "scope": "Full page explicitly labels GM Event The Cracking of the Icestar; exclude from ordinary Classic/Kunark/Velious restoration"
+    },
+    "unresolved": [
+      "No ordinary-era completion claim; preserve event exclusion.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Scaled Mystic Armor Quests",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Scaled Mystic Armor Quests",
+      "url": "https://wiki.project1999.com/Scaled_Mystic_Armor_Quests?action=raw",
+      "fetchedAt": "2026-07-17T23:31:35.357Z",
+      "revision": null,
+      "sha256": "0ef2fe4bda1cc55f84d11da3a1d5d8dd4779b533b5ec018858b0db39fa69e154",
+      "bytes": 6838,
+      "source": "raw-pages/scaled-mystic-armor-quests-9169f0e065.json",
+      "cachePath": "reference/p99-wiki/raw-pages/scaled-mystic-armor-quests-9169f0e065.wiki"
+    },
+    "sources": [
+      {
+        "key": "cabeast/Shezlie_Furscale",
+        "file": "effective/quests/cabeast/Shezlie_Furscale.lua",
+        "enabled": 1,
+        "sha256": "e90b32d71237506faaf4b59d078134988d8d570f20c4101f5675253737180ea9",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/cabeast/Shezlie_Furscale.lua",
+            "sha256": "e90b32d71237506faaf4b59d078134988d8d570f20c4101f5675253737180ea9",
+            "equals_effective": true
+          }
+        ]
+      },
+      {
+        "key": "cabeast/Zazlan_Furscale",
+        "file": "effective/quests/cabeast/Zazlan_Furscale.lua",
+        "enabled": 1,
+        "sha256": "25a45088ab5679bf51be3ec381e526bcd279b08bdaf1451efef2456a1a2b5269",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/cabeast/Zazlan_Furscale.lua",
+            "sha256": "25a45088ab5679bf51be3ec381e526bcd279b08bdaf1451efef2456a1a2b5269",
+            "equals_effective": true
+          }
+        ]
+      }
+    ],
+    "verified_facets": {
+      "turnins": "All eight4-component branches read: Shezlie breastplate3056/10032/14777/14778->4989, gloves3062/10035/14773/14774->4985, legs3063/10033/14775/14776->4987, helm3053/10034/14771/14772->4990; Zazlan boots3064/10033/14767/14768->4984, bracer3061/10035/14769/14770->4988, cloak3058/10032/14765/14766->4991, arms3060/10034/14763/14764->4986",
+      "dialogue": "Component descriptions match named requirements for8pieces"
+    },
+    "unresolved": [
+      "P99 Oxyn-sent-me and final Payment instruction not represented: neither phrase nor state predicate exists. Requires evidence reconciliation before adding state.",
+      "XP1000/2000 and faction445+10/441+5/440+5 undocumented; supporting drop/vendor/armor-stat path unverified.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Scout Blade",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Scout Blade",
+      "url": "https://wiki.project1999.com/Scout_Blade?action=raw",
+      "fetchedAt": "2026-07-17T23:31:45.558Z",
+      "revision": null,
+      "sha256": "f5fbfbf674dce6d5fe90adfa5f9b798ab318f88e117fa732bb2b66dba006c225",
+      "bytes": 5793,
+      "source": "raw-pages/scout-blade-d4e8df43ab.json",
+      "cachePath": "reference/p99-wiki/raw-pages/scout-blade-d4e8df43ab.wiki"
+    },
+    "sources": [
+      {
+        "key": "gfaydark/Laren",
+        "file": "effective/quests/gfaydark/Laren.lua",
+        "enabled": 1,
+        "sha256": "486e055045d2608761b84a1a962933ccef267e72e8bf9986acc52db7941c3b02",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/gfaydark/Laren.lua",
+            "sha256": "486e055045d2608761b84a1a962933ccef267e72e8bf9986acc52db7941c3b02",
+            "equals_effective": true
+          }
+        ]
+      },
+      {
+        "key": "highkeep/Fenn_Kaedrick",
+        "file": "effective/quests/highkeep/Fenn_Kaedrick.lua",
+        "enabled": 1,
+        "sha256": "2d1a3ae2f36bbdf9b1160fa33edc4ff55d0bc260bced9645885c884e10be8a3d",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/highkeep/Fenn_Kaedrick.lua",
+            "sha256": "2d1a3ae2f36bbdf9b1160fa33edc4ff55d0bc260bced9645885c884e10be8a3d",
+            "equals_effective": true
+          }
+        ]
+      },
+      {
+        "key": "highkeep/Xentil_Herkanon",
+        "file": "effective/quests/highkeep/Xentil_Herkanon.lua",
+        "enabled": 1,
+        "sha256": "eebe5e381da01af0d6fbc62586f3a8b355a56ad40010823146e70dfe64eced21",
+        "maintained": []
+      }
+    ],
+    "verified_facets": {
+      "inputs_rewards": "Laren avenge-craftsman grants Token12185; Fenn token sets FennKaedrick=1 and grants2000XP; Laren Half Elf Head12186 ->Scouts Blade7321+20000XP+TunareScouts316+10",
+      "dialogue": "Laren full path and Fenn Xentil response match; Fenn despawns after Xentil phrase",
+      "lifecycle": "Fenn spawns Xentil6185 and bodyguards6186/6187; Rodrick extra source read shows fenn-kaedrick phrase spawns Fenn6184; Maryl hint read matches"
+    },
+    "unresolved": [
+      "Full spawn/death/loot/timer execution unverified; Xentil source lacks documented hail/combat/death flavor.",
+      "Rodrick coordinates differ from wiki location; rendered placement not inferred wrong from coordinates alone.",
+      "Exact XP/delta and NPC loot/pickpocket path unverified.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Screaming Mace Quest",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Screaming Mace Quest",
+      "url": "https://wiki.project1999.com/Screaming_Mace_Quest?action=raw",
+      "fetchedAt": "2026-07-17T23:31:57.708Z",
+      "revision": null,
+      "sha256": "a7d14e74755a717537886d7cddedbd9c5556815d94d73680fe5ff65186437073",
+      "bytes": 4786,
+      "source": "raw-pages/screaming-mace-quest-0add57d81a.json",
+      "cachePath": "reference/p99-wiki/raw-pages/screaming-mace-quest-0add57d81a.wiki"
+    },
+    "sources": [
+      {
+        "key": "crushbone/a_dwarven_slave",
+        "file": "effective/quests/crushbone/a_dwarven_slave.lua",
+        "enabled": 1,
+        "sha256": "8089ccdae14b33f8a4e08861a3215c733a8a3d5634f2adce3347fa6a49abb383",
+        "maintained": [
+          {
+            "file": "maintained/lua/modified-upstream/crushbone/a_dwarven_slave.lua",
+            "sha256": "8089ccdae14b33f8a4e08861a3215c733a8a3d5634f2adce3347fa6a49abb383",
+            "equals_effective": true
+          }
+        ]
+      },
+      {
+        "key": "crushbone/a_dwarven_smith",
+        "file": "effective/quests/crushbone/a_dwarven_smith.lua",
+        "enabled": 1,
+        "sha256": "1ca514790cf0e2f5ce5aa32e128a64ea2a7b420de16e9dfe5ba48ca049971835",
+        "maintained": []
+      },
+      {
+        "key": "crushbone/an_elven_priest",
+        "file": "effective/quests/crushbone/an_elven_priest.lua",
+        "enabled": 1,
+        "sha256": "d10bc039b82fce0c654ce65457667eea4c064c8c2d6333bea0077ecac0fa6c2f",
+        "maintained": []
+      }
+    ],
+    "verified_facets": {
+      "inputs_rewards": "Smith Brass Earring10351->Unfinished Blade Mold13850; Shield9307->Unfinished Sledge Mold13851; Ringmail3301->Dwarven Mace6315; Priest Bracers2301->Prayer Cloth1900; Mace6315+Cloth1900->Screaming Mace6305",
+      "dialogue": "Ringmail/interest and king-is-dead responses match; initial earring/shield optional as wiki states",
+      "experience": "All5trades grant XP, matching presence; Smith no faction grant matches explicit note",
+      "lifecycle": "Smith depop_with_timer on ringmail hand-in"
+    },
+    "unresolved": [
+      "Exact XP values5000/6000/10000 undocumented; acquisition, smith respawn and mace combat effect unverified.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Sebilis and Veeshan's Peak Key Quest",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Sebilis and Veeshan's Peak Key Quest",
+      "url": "https://wiki.project1999.com/Sebilis_and_Veeshan's_Peak_Key_Quest?action=raw",
+      "fetchedAt": "2026-07-17T23:32:05.115Z",
+      "revision": null,
+      "sha256": "40d24b683eff6b096d50aec11104878f6a972303de895306f153a9f04392e493",
+      "bytes": 7596,
+      "source": "raw-pages/sebilis-and-veeshan-s-peak-key-quest-43013e0645.json",
+      "cachePath": "reference/p99-wiki/raw-pages/sebilis-and-veeshan-s-peak-key-quest-43013e0645.wiki"
+    },
+    "sources": [
+      {
+        "key": "trakanon/Emperor_Ganak",
+        "file": "effective/quests/trakanon/Emperor_Ganak.lua",
+        "enabled": 1,
+        "sha256": "db52a3e66049db6596abd9317787eb2578f8430d94f6c822b1306f0c7dd5866d",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/trakanon/Emperor_Ganak.lua",
+            "sha256": "db52a3e66049db6596abd9317787eb2578f8430d94f6c822b1306f0c7dd5866d",
+            "equals_effective": true
+          }
+        ]
+      }
+    ],
+    "verified_facets": {
+      "inputs_rewards": "Ganak Kunzar19951+Nathsar19952->Trakanon Idol20883; Trakanon Tooth7276+Kylong19953+Obulus19954+Jarsath19955->Key of Veeshan20884",
+      "dialogue": "Hail/veeshans-peak/key/medallions/task transcript matches",
+      "eligibility": "No hand-in level requirement; zone flags89/108 granted"
+    },
+    "unresolved": [
+      "Only final Ganak branches verified: nine fragments, three medallion exchanges, groundspawn timing and full linked chain not yet reviewed.",
+      "Documented multiquest unsupported by static all-at-once check; runtime behavior unverified.",
+      "10000 Sebilis XP and zone-entry/minimum-level behavior not documented/tested here.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Sir Lindeal's Testimony",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Sir Lindeal's Testimony",
+      "url": "https://wiki.project1999.com/Sir_Lindeal's_Testimony?action=raw",
+      "fetchedAt": "2026-07-17T23:33:24.463Z",
+      "revision": null,
+      "sha256": "1e8acd656daf8e8ffe72cb9fbfb5af67a790bd0cc2b3c481809e0fbafc84559f",
+      "bytes": 3812,
+      "source": "raw-pages/sir-lindeal-s-testimony-c4a1c0b91f.json",
+      "cachePath": "reference/p99-wiki/raw-pages/sir-lindeal-s-testimony-c4a1c0b91f.wiki"
+    },
+    "sources": [
+      {
+        "key": "neriakc/Loveal_S-Nez",
+        "file": "effective/quests/neriakc/Loveal_S-Nez.lua",
+        "enabled": 1,
+        "sha256": "0db3a24baf77b8eda1b37135fcd3f91484b5b434c908bce184708062bf8f98b7",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/neriakc/Loveal_S-Nez.lua",
+            "sha256": "0db3a24baf77b8eda1b37135fcd3f91484b5b434c908bce184708062bf8f98b7",
+            "equals_effective": true
+          }
+        ]
+      },
+      {
+        "key": "lavastorm/#Sir_Lindeal",
+        "file": "effective/quests/lavastorm/%23Sir_Lindeal.lua",
+        "enabled": 1,
+        "sha256": "7129668f97353408b0c3310c0eed2c47749cbc6b5a39ff73d57fa15248c5da7e",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/lavastorm/#Sir_Lindeal.lua",
+            "sha256": "7129668f97353408b0c3310c0eed2c47749cbc6b5a39ff73d57fa15248c5da7e",
+            "equals_effective": true
+          }
+        ]
+      }
+    ],
+    "verified_facets": {
+      "inputs_rewards": "Testimony18828 ->Cloak Undead Eye2317;14gold matches approximate wiki14gold",
+      "factions": "239+25,303+3,278-3,275-3,245-3,1522-50 equal listed numbers but page cautions these may be Allakhazam rather than P99",
+      "dialogue": "Loveal hail/delegated/perform-test/appointed-tasks match",
+      "eligibility": "Quest faction intentionally waived"
+    },
+    "unresolved": [
+      "33750XP undocumented; caution on faction-number provenance retained.",
+      "Sir Lindeal only mapped lavastorm/#Sir_Lindeal source is v1 provenance and starts path500; exact in-era actor/spawn/drop/death-faction mapping needs further verification.",
+      "Other Loveal tasks reviewed separately; baseline source retained here, parent merging messages-for-Neriak proposal.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Sentry Xyrin Quest",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Sentry Xyrin Quest",
+      "url": "https://wiki.project1999.com/Sentry_Xyrin_Quest?action=raw",
+      "fetchedAt": "2026-07-17T23:32:08.976Z",
+      "revision": null,
+      "sha256": "b074004955675583ee63fde3fdbcf46ada74a9aad96e48c47a1adf345a9489fe",
+      "bytes": 11704,
+      "source": "raw-pages/sentry-xyrin-quest-d41232e4e6.json",
+      "cachePath": "reference/p99-wiki/raw-pages/sentry-xyrin-quest-d41232e4e6.wiki"
+    },
+    "sources": [
+      {
+        "key": "freportn/Serna_Tasknon",
+        "file": "effective/quests/freportn/Serna_Tasknon.lua",
+        "enabled": 1,
+        "sha256": "9a48362b35432c00acfa87ad54787c98ff86be98ea58dcc0551b2641ec2acc0c",
+        "maintained": [
+          {
+            "file": "maintained/lua/modified-upstream/freportn/Serna_Tasknon.lua",
+            "sha256": "9a48362b35432c00acfa87ad54787c98ff86be98ea58dcc0551b2641ec2acc0c",
+            "equals_effective": true
+          }
+        ]
+      },
+      {
+        "key": "freportn/Sentry_Andlin",
+        "file": "effective/quests/freportn/Sentry_Andlin.lua",
+        "enabled": 1,
+        "sha256": "208db29190c3fcf4d5a53003d3191dc46957bf40fce0c9c74204fd0f55d82021",
+        "maintained": []
+      },
+      {
+        "key": "freportn/Sentry_Boris",
+        "file": "effective/quests/freportn/Sentry_Boris.lua",
+        "enabled": 1,
+        "sha256": "8598458a72913c512c0f4c86be727f75e8540c33c76d5c962cf6e6ad40dcd955",
+        "maintained": []
+      },
+      {
+        "key": "freportn/Sentry_Gallius",
+        "file": "effective/quests/freportn/Sentry_Gallius.lua",
+        "enabled": 1,
+        "sha256": "789e597e2fe4f807dd83ff1ce0b69c41930b66a34a1d9913b886c77e591fb6b3",
+        "maintained": []
+      },
+      {
+        "key": "freportn/Sentry_Janeal",
+        "file": "effective/quests/freportn/Sentry_Janeal.lua",
+        "enabled": 1,
+        "sha256": "16429638e1da590ae394182c7ad66b5a64454a02bb50c46b44b1c3fce5a8313d",
+        "maintained": []
+      },
+      {
+        "key": "freportn/Sentry_Meighan",
+        "file": "effective/quests/freportn/Sentry_Meighan.lua",
+        "enabled": 1,
+        "sha256": "f4d283b3090c29cbccb4eab5d0cfe4e69ef895f66f7ae8ba42111ba2d7424594",
+        "maintained": []
+      },
+      {
+        "key": "freportn/Sentry_Theo",
+        "file": "effective/quests/freportn/Sentry_Theo.lua",
+        "enabled": 1,
+        "sha256": "50d5be71dfd17a2dfca64cedcc997947551c25c31f96d95e1484290b81102bfe",
+        "maintained": []
+      },
+      {
+        "key": "freportn/Sentry_Warren",
+        "file": "effective/quests/freportn/Sentry_Warren.lua",
+        "enabled": 1,
+        "sha256": "95bbd0ecc6d0f25a60793df214956a6d635bf8dc0ccc7eb28f351ed55b6225cc",
+        "maintained": []
+      },
+      {
+        "key": "oot/Styria_Fearnon",
+        "file": "effective/quests/oot/Styria_Fearnon.lua",
+        "enabled": 1,
+        "sha256": "4fed42d2125e2296422706f4193e013e98d47c3406c57b1298985913bfe50206",
+        "maintained": []
+      },
+      {
+        "key": "oot/Sentry_Xyrin",
+        "file": "effective/quests/oot/Sentry_Xyrin.lua",
+        "enabled": 1,
+        "sha256": "e33a90096af0b9e6df84bd4aa89243b7d384324e66bd559be2318ddbdaec13fc",
+        "maintained": [
+          {
+            "file": "maintained/lua/modified-upstream/oot/Sentry_Xyrin.lua",
+            "sha256": "e33a90096af0b9e6df84bd4aa89243b7d384324e66bd559be2318ddbdaec13fc",
+            "equals_effective": true
+          }
+        ]
+      }
+    ],
+    "verified_facets": {
+      "inputs_rewards": "Serna assist grants Full Potion12127;7sentries consume consecutive12127..12133 and return12128..12134;Xyrin12134->EmptyPotion12135;Harpoon5414",
+      "dialogue": "All10mapped sources and full page read; Styria sentry-xyrin spawns69132; Xyrin boat/potion dialogue and final thanks match",
+      "factions": "P99 explicitly1/-1/1 each step; baseline5/-10/5 corrected in p99-sz-sentry-factions for all8sentries",
+      "lifecycle_proposal": "Supported360000ms escorttimer drops5414atcurrentNPCcoordinates exactlyonce usingpersistedscalarclosure stage; removeswaypointreward, ignorespremature/repeatedcompletion/repeatedpotion. Original1800000decay preservedasundocumentedfallback. Referencebridge apply/captureLuaScriptState andTestLuaHelperStateAcrossFreshEvents establishstatepersistence; isolatedtests doNOTprovelivescheduler/route."
+    },
+    "unresolved": [
+      "Xyrin lacks documented XP; exact raw XP not documented. Seven Freeport100XP values not independently proven.",
+      "Refill-after-Warren prose conflicts with later direct-delivery walkthrough; no refill behavior invented.",
+      "Potion names share labels across IDs, actual chained circulation and encounter unexecuted.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Sparring Armor",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Sparring Armor",
+      "url": "https://wiki.project1999.com/Sparring_Armor?action=raw",
+      "fetchedAt": "2026-07-17T23:33:54.125Z",
+      "revision": null,
+      "sha256": "7437c94a629207e0cf2eb7baa2aeb85f7c05142d7fa9fbd9a7e00f4293c67bbf",
+      "bytes": 5425,
+      "source": "raw-pages/sparring-armor-745665819b.json",
+      "cachePath": "reference/p99-wiki/raw-pages/sparring-armor-745665819b.wiki"
+    },
+    "sources": [
+      {
+        "key": "cabeast/Master_Bain",
+        "file": "effective/quests/cabeast/Master_Bain.lua",
+        "enabled": 1,
+        "sha256": "f6e0b0669300fd24a72c2af0eb084c4a31e9cf7eaca27e11a1f870f28389fc88",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/cabeast/Master_Bain.lua",
+            "sha256": "f6e0b0669300fd24a72c2af0eb084c4a31e9cf7eaca27e11a1f870f28389fc88",
+            "equals_effective": true
+          }
+        ]
+      },
+      {
+        "key": "cabeast/Klok_Mugruk",
+        "file": "effective/quests/cabeast/Klok_Mugruk.lua",
+        "enabled": 1,
+        "sha256": "f23c25987eef94f694c765e0ca5cd1571bc3518f08ed471fa44ae752d8a529a4",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/cabeast/Klok_Mugruk.lua",
+            "sha256": "f23c25987eef94f694c765e0ca5cd1571bc3518f08ed471fa44ae752d8a529a4",
+            "equals_effective": true
+          }
+        ]
+      },
+      {
+        "key": "cabeast/The_Toilmaster",
+        "file": "effective/quests/cabeast/The_Toilmaster.lua",
+        "enabled": 1,
+        "sha256": "aabedee9188a9407af4a4e490628cc617d008c1018680f2151b0180650ff4726",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/cabeast/The_Toilmaster.lua",
+            "sha256": "aabedee9188a9407af4a4e490628cc617d008c1018680f2151b0180650ff4726",
+            "equals_effective": true
+          }
+        ]
+      }
+    ],
+    "verified_facets": {
+      "inputs_rewards": "Bain grants17998; Mugruk FullPouch12685->TrainingBagHusk12687; Toilmaster12660x2->12689Pebbles; Bain MonkTrainingBag12688->one of4350..4359",
+      "cash": "Final1gold matches",
+      "factions": "MugrukResidents440+/Legion441+ and BainSwiftTails444+/Legion441+ match",
+      "dialogue": "All recipe directions provided, but hand-in flavor abbreviated"
+    },
+    "unresolved": [
+      "LeechHusk4x container and3pebble tailoring combine/skill success not checked; ten armor names require exported item mapping crosscheck.",
+      "Exact XP500/1000 and faction magnitudes undocumented.",
+      "Bain hail advertises [sent] but only Grand Master Glox predicate matches, discovery/button gap.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Spirit Aid",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Spirit Aid",
+      "url": "https://wiki.project1999.com/Spirit_Aid?action=raw",
+      "fetchedAt": "2026-07-17T23:34:05.627Z",
+      "revision": null,
+      "sha256": "5d6bff07e8630b455924c66b24db45de0a2532310e709588381168b373a06509",
+      "bytes": 10719,
+      "source": "raw-pages/spirit-aid-f94f1553ee.json",
+      "cachePath": "reference/p99-wiki/raw-pages/spirit-aid-f94f1553ee.wiki"
+    },
+    "sources": [
+      {
+        "key": "stonebrunt/Emylie_Steelclaws",
+        "file": "effective/quests/stonebrunt/Emylie_Steelclaws.lua",
+        "enabled": 1,
+        "sha256": "5f09ce0e95b27396a67f26927d944ec510085a396c596261bc14ab271a02104d",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/stonebrunt/Emylie_Steelclaws.lua",
+            "sha256": "5f09ce0e95b27396a67f26927d944ec510085a396c596261bc14ab271a02104d",
+            "equals_effective": true
+          }
+        ]
+      },
+      {
+        "key": "stonebrunt/#Giang_Yin",
+        "file": "effective/quests/stonebrunt/%23Giang_Yin.lua",
+        "enabled": 1,
+        "sha256": "ce41c8813b754d3f97fdb3ec64abb5380787463ffe67003df94e2f6b1ff4bc51",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/stonebrunt/#Giang_Yin.lua",
+            "sha256": "ce41c8813b754d3f97fdb3ec64abb5380787463ffe67003df94e2f6b1ff4bc51",
+            "equals_effective": true
+          }
+        ]
+      },
+      {
+        "key": "stonebrunt/Saemey_Wirewhisker",
+        "file": "effective/quests/stonebrunt/Saemey_Wirewhisker.lua",
+        "enabled": 1,
+        "sha256": "299dd8b13bd4d8cd65ffa7f78f4c0de83ca795a20ca5ba715730e55a155dbcb7",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/stonebrunt/Saemey_Wirewhisker.lua",
+            "sha256": "299dd8b13bd4d8cd65ffa7f78f4c0de83ca795a20ca5ba715730e55a155dbcb7",
+            "equals_effective": true
+          }
+        ]
+      },
+      {
+        "key": "stonebrunt/Mrowro_Wirewhisker",
+        "file": "effective/quests/stonebrunt/Mrowro_Wirewhisker.lua",
+        "enabled": 1,
+        "sha256": "8522bf7932805ae5822f8bd7fb428f8e7a9cb6ecace5bebd5f7651f8990300bf",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/stonebrunt/Mrowro_Wirewhisker.lua",
+            "sha256": "8522bf7932805ae5822f8bd7fb428f8e7a9cb6ecace5bebd5f7651f8990300bf",
+            "equals_effective": true
+          }
+        ]
+      },
+      {
+        "key": "stonebrunt/a_fading_erudite_apparition",
+        "file": "effective/quests/stonebrunt/a_fading_erudite_apparition.lua",
+        "enabled": 1,
+        "sha256": "f52cd2d180d8a44bcb0b5b436f77467e115e028d03267f4409a9cd4cbb09997f",
+        "maintained": [
+          {
+            "file": "maintained/lua/idlequest-authored/stonebrunt/a_fading_erudite_apparition.lua",
+            "sha256": "f52cd2d180d8a44bcb0b5b436f77467e115e028d03267f4409a9cd4cbb09997f",
+            "equals_effective": true
+          }
+        ]
+      },
+      {
+        "key": "stonebrunt/a_heretic_apparition",
+        "file": "effective/quests/stonebrunt/a_heretic_apparition.lua",
+        "enabled": 1,
+        "sha256": "a8a6af45408f326e733e7c9604f4f5307c6f950c39df8aff4c3638e0de7e69ab",
+        "maintained": [
+          {
+            "file": "maintained/lua/idlequest-authored/stonebrunt/a_heretic_apparition.lua",
+            "sha256": "a8a6af45408f326e733e7c9604f4f5307c6f950c39df8aff4c3638e0de7e69ab",
+            "equals_effective": true
+          }
+        ]
+      }
+    ],
+    "verified_facets": {
+      "inputs_rewards": "Emylie10469ore+10456shaft->6981SmithyHammer; Giang6981->6979Soulforge; Saemey6970/6971/6972->1to4Powder6980; Powder+SoulOrb6977->Shattered2576; MrowroPowder+FadingOrb6978->Shattered2577",
+      "factions": "All4hammer/orb hand-insKejek473+/PeaceKeepers298+ match directions; powder has no undocumented XP/faction",
+      "lifecycle": "Orb branches spawn apparition100225/100223; scripts depop after60seconds explicitly authored approximation"
+    },
+    "unresolved": [
+      "Smithing recipes, hammer return, nofail/trivial15, weapon/armor rewards and all acquisition not checked.",
+      "Apparitions should path out of town per P99; timer cleanup is not route parity.",
+      "Hand-in flavor abridged; exactXP1000/10000/50000 and faction10 undocumented; later use explicitly unsolved.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Steel Warrior Initiation",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Steel Warrior Initiation",
+      "url": "https://wiki.project1999.com/Steel_Warrior_Initiation?action=raw",
+      "fetchedAt": "2026-07-17T23:34:15.842Z",
+      "revision": null,
+      "sha256": "1ed7d790dc25909187830fb2f315e56b706139d0c57cd322bc95e7ddacb3a151",
+      "bytes": 6752,
+      "source": "raw-pages/steel-warrior-initiation-b5de11595c.json",
+      "cachePath": "reference/p99-wiki/raw-pages/steel-warrior-initiation-b5de11595c.wiki"
+    },
+    "sources": [
+      {
+        "key": "qeynos/Brin_Stolunger",
+        "file": "effective/quests/qeynos/Brin_Stolunger.lua",
+        "enabled": 1,
+        "sha256": "1c595db363caad6e1bcd2237a38461a764d25f5115610ccb31f1c22b3edb6b94",
+        "maintained": []
+      },
+      {
+        "key": "qeytoqrg/Axe_Broadsmith",
+        "file": "effective/quests/qeytoqrg/Axe_Broadsmith.lua",
+        "enabled": 1,
+        "sha256": "4992c67c2ff9837e0ebbed3a1c04eabd7b39072fc2281258cadbaeb59d40fada",
+        "maintained": [
+          {
+            "file": "maintained/lua/modified-upstream/qeytoqrg/Axe_Broadsmith.lua",
+            "sha256": "4992c67c2ff9837e0ebbed3a1c04eabd7b39072fc2281258cadbaeb59d40fada",
+            "equals_effective": true
+          }
+        ]
+      },
+      {
+        "key": "qeynos/Grahan_Rothkar",
+        "file": "effective/quests/qeynos/Grahan_Rothkar.lua",
+        "enabled": 1,
+        "sha256": "bbe2e16e27253cd5505e047d2f2507302057f4d634fd0d9753de56b1604df66e",
+        "maintained": []
+      }
+    ],
+    "verified_facets": {
+      "inputs_rewards": "Brin grants17935;FullSack13399->AxeLetter18893;AxeLetter spawns4192;Skull13397->Recommendation18895;BrinRecommendation->GrahanLetter18894;GrahanLetter->PenKey20029 and lion1303;LionSkin13398->Bracer13229",
+      "dialogue": "All3NPC sources and full page read; quest prompts/responses match",
+      "factions": "Five documented directions at each step match",
+      "eligibility": "Quest faction intentionally waived"
+    },
+    "unresolved": [
+      "BatWing5+SnakeScale5 container recipe, letter lore/books, skeleton and lion loot/door key and lifecycle not checked.",
+      "Cash7c at intermediate Brin/Axe steps undocumented; exact XP/faction amounts also undocumented.",
+      "Grahan final-letter branch grants2000XP although wiki shows no XP message, not enough evidence to delete it.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Shakey's Stuffing",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Shakey's Stuffing",
+      "url": "https://wiki.project1999.com/Shakey's_Stuffing?action=raw",
+      "fetchedAt": "2026-07-17T23:32:34.001Z",
+      "revision": null,
+      "sha256": "870f0afa0d4b53e913bc4c3f75cbc239d6dd6f15d40dc53685356ca1ebbd6611",
+      "bytes": 7370,
+      "source": "raw-pages/shakey-s-stuffing-9710c00f7f.json",
+      "cachePath": "reference/p99-wiki/raw-pages/shakey-s-stuffing-9710c00f7f.wiki"
+    },
+    "sources": [
+      {
+        "key": "rivervale/Shakey_Scarecrow",
+        "file": "effective/quests/rivervale/Shakey_Scarecrow.lua",
+        "enabled": 1,
+        "sha256": "75fa918e4638d771969987373478bfef01f54acb9e8de42511f6d6435813a535",
+        "maintained": [
+          {
+            "file": "maintained/lua/modified-upstream/rivervale/Shakey_Scarecrow.lua",
+            "sha256": "75fa918e4638d771969987373478bfef01f54acb9e8de42511f6d6435813a535",
+            "equals_effective": true
+          }
+        ]
+      },
+      {
+        "key": "rivervale/Reebo_Leafsway",
+        "file": "effective/quests/rivervale/Reebo_Leafsway.lua",
+        "enabled": 1,
+        "sha256": "9e450f75214b9fc2f7d9a8c585aaaed28b34415fa2975fc41df127e1892039dd",
+        "maintained": [
+          {
+            "file": "maintained/lua/modified-upstream/rivervale/Reebo_Leafsway.lua",
+            "sha256": "9e450f75214b9fc2f7d9a8c585aaaed28b34415fa2975fc41df127e1892039dd",
+            "equals_effective": true
+          }
+        ]
+      },
+      {
+        "key": "qeynos2/Nomsoe_Jusagta",
+        "file": "effective/quests/qeynos2/Nomsoe_Jusagta.lua",
+        "enabled": 1,
+        "sha256": "7ee0800095cda72c462609b89344de4ebedffb73c1becc34930c69475d38934b",
+        "maintained": []
+      },
+      {
+        "key": "feerrott/#Roror",
+        "file": "effective/quests/feerrott/%23Roror.lua",
+        "enabled": 1,
+        "sha256": "7be3bafbd08c3a6576a819ba72f45a459a438f460e0b7c173a4bb0d1dc510704",
+        "maintained": []
+      },
+      {
+        "key": "qey2hh1/Henina_Miller",
+        "file": "effective/quests/qey2hh1/Henina_Miller.lua",
+        "enabled": 1,
+        "sha256": "fb1cd76428d895c89b952b33322e39b62baf4668bcee7d1d1908144b6bdc244d",
+        "maintained": [
+          {
+            "file": "maintained/lua/modified-upstream/qey2hh1/Henina_Miller.lua",
+            "sha256": "fb1cd76428d895c89b952b33322e39b62baf4668bcee7d1d1908144b6bdc244d",
+            "equals_effective": true
+          }
+        ]
+      }
+    ],
+    "verified_facets": {
+      "inputs_rewards": "Nomsoe deliver-flask->13910BlessedOil; Roror13990Hay+66gold->14320CursedHay; Shakey14321WrithingHay->WeeHarvester13980/Belt14031",
+      "experience": "Shakey500XP matches presence",
+      "eligibility": "No enforced level/class/faction gates"
+    },
+    "unresolved": [
+      "Shakey missing documented cash and4faction changes; amounts unspecified, no invented grants.",
+      "CursedHay+BlessedOil forge combine, nofail and acquisition not checked.",
+      "2to1 reward weights and Roror300XP/BetaNeutral+10 not independently documented.",
+      "Shakey signal triggers Reebo despite Stuffing page claiming no signal onP99; Head page explicitlydocuments signal, evidence conflict retained.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Shakey the Scarecrow's Head",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Shakey the Scarecrow's Head",
+      "url": "https://wiki.project1999.com/Shakey_the_Scarecrow's_Head?action=raw",
+      "fetchedAt": "2026-07-17T23:32:30.608Z",
+      "revision": null,
+      "sha256": "b6dbd9f19cc790c51d3e27c40d1146333d55fac2b0a153bc8e7e15ed0028d22b",
+      "bytes": 4036,
+      "source": "raw-pages/shakey-the-scarecrow-s-head-95dbf2a708.json",
+      "cachePath": "reference/p99-wiki/raw-pages/shakey-the-scarecrow-s-head-95dbf2a708.wiki"
+    },
+    "sources": [
+      {
+        "key": "rivervale/Shakey_Scarecrow",
+        "file": "effective/quests/rivervale/Shakey_Scarecrow.lua",
+        "enabled": 1,
+        "sha256": "75fa918e4638d771969987373478bfef01f54acb9e8de42511f6d6435813a535",
+        "maintained": [
+          {
+            "file": "maintained/lua/modified-upstream/rivervale/Shakey_Scarecrow.lua",
+            "sha256": "75fa918e4638d771969987373478bfef01f54acb9e8de42511f6d6435813a535",
+            "equals_effective": true
+          }
+        ]
+      },
+      {
+        "key": "rivervale/Reebo_Leafsway",
+        "file": "effective/quests/rivervale/Reebo_Leafsway.lua",
+        "enabled": 1,
+        "sha256": "9e450f75214b9fc2f7d9a8c585aaaed28b34415fa2975fc41df127e1892039dd",
+        "maintained": [
+          {
+            "file": "maintained/lua/modified-upstream/rivervale/Reebo_Leafsway.lua",
+            "sha256": "9e450f75214b9fc2f7d9a8c585aaaed28b34415fa2975fc41df127e1892039dd",
+            "equals_effective": true
+          }
+        ]
+      },
+      {
+        "key": "erudnext/Sornita_Eltern",
+        "file": "effective/quests/erudnext/Sornita_Eltern.lua",
+        "enabled": 1,
+        "sha256": "1ec6f3cd285edf1663034ce99f31834a85d7066c6787831984a1ccd2a8307792",
+        "maintained": []
+      }
+    ],
+    "verified_facets": {
+      "scope": "Page explicitly incomplete onP99, resolved only post-Velious RogueEpic1.5; no final reward should be implemented",
+      "inputs_rewards": "Sornita20gold->TornParchment18030 and all dialogue match",
+      "proposal": "p99-sz-sornita-era removes only later12590->12591 branch; preserves documented exchange"
+    },
+    "unresolved": [
+      "Sornita100XP undocumented; no other completion inferred.",
+      "Reebo signal text matches but movement towardShakey not implemented/proven.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Spider Legs Quest",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Spider Legs Quest",
+      "url": "https://wiki.project1999.com/Spider_Legs_Quest?action=raw",
+      "fetchedAt": "2026-07-17T23:33:58.923Z",
+      "revision": null,
+      "sha256": "2654dd4205c082c284770ad1b15bfee86ae299af1b1b6bf005b2c58260d7ce1d",
+      "bytes": 1939,
+      "source": "raw-pages/spider-legs-quest-f3914ddb8f.json",
+      "cachePath": "reference/p99-wiki/raw-pages/spider-legs-quest-f3914ddb8f.wiki"
+    },
+    "sources": [],
+    "verified_facets": {
+      "source": "Read full skyshrine/Sentry_Kale: Friend of Kin/Velium Retrieval only, no spider-leg branch.",
+      "documented_inputs_rewards": "Four Velium Spider Legs29080, possible Ring of Chameleon29063 and0\u20134pp, XP, CoV/Yelinak positive andKromzeknegative."
+    },
+    "unresolved": [
+      "Missing documented spider-leg turn-in; reward chance, exactXP and faction deltas unspecified, no invented branch.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Shadow Knight Plane of Sky Tests",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Shadow Knight Plane of Sky Tests",
+      "url": "https://wiki.project1999.com/Shadow_Knight_Plane_of_Sky_Tests?action=raw",
+      "fetchedAt": "2026-07-17T23:32:18.835Z",
+      "revision": null,
+      "sha256": "cf18b1c0020b061190578b1c9a4c0f9e5017be8cdd9092e34b7d18ba9c4e49d2",
+      "bytes": 9912,
+      "source": "raw-pages/shadow-knight-plane-of-sky-tests-f528b9a00a.json",
+      "cachePath": "reference/p99-wiki/raw-pages/shadow-knight-plane-of-sky-tests-f528b9a00a.wiki"
+    },
+    "sources": [
+      {
+        "key": "airplane/Sarkis_Ebonblade",
+        "file": "effective/quests/airplane/Sarkis_Ebonblade.lua",
+        "enabled": 1,
+        "sha256": "c081b13006d12704fc0742df0d727dbb2c47bac4cdaa9cdcda4c3215d181d75b",
+        "maintained": []
+      },
+      {
+        "key": "airplane/Gragrot",
+        "file": "effective/quests/airplane/Gragrot.lua",
+        "enabled": 1,
+        "sha256": "c7ef90a34f075368f2571347652c4e9cf62a48e73da9e97eb8c5d553e9740343",
+        "maintained": [
+          {
+            "file": "maintained/lua/modified-upstream/airplane/Gragrot.lua",
+            "sha256": "c7ef90a34f075368f2571347652c4e9cf62a48e73da9e97eb8c5d553e9740343",
+            "equals_effective": true
+          }
+        ]
+      },
+      {
+        "key": "airplane/Tynicon_DLin",
+        "file": "effective/quests/airplane/Tynicon_DLin.lua",
+        "enabled": 1,
+        "sha256": "9f23d2da57bad437ad84b1769ebf2b082914e01a35cfa6f82eee33fd2247ccd7",
+        "maintained": [
+          {
+            "file": "maintained/lua/modified-upstream/airplane/Tynicon_DLin.lua",
+            "sha256": "9f23d2da57bad437ad84b1769ebf2b082914e01a35cfa6f82eee33fd2247ccd7",
+            "equals_effective": true
+          }
+        ]
+      }
+    ],
+    "verified_facets": {
+      "inputs_rewards": "All3NPCs fullyread. Gragrot3matches:20929+20997+20998->27705;20936+20999+20700->27706;20943+20701+20702->2704. Tynicon4matches:20950+20703+20704->4322;20705+20957+20706->11678;20707+20708+20709+20710->11699;20711+20964+20713+20712->27707. All names resolved againstitems.",
+      "eligibility": "Runtime Normalize correctly rewrites Class string comparisons to GetClassName; NOT a generic numeric API defect. Sarkis distinct Shadowknight vsactual Shadow Knight spelling corrected toID5 inproposal, baseline mismatch reproduced throughNormalize.",
+      "lifecycle": "Sarkis directlyspawns testNPCs, tester hand-ins depop."
+    },
+    "unresolved": [
+      "P99 book-request/return step absent; directspawn simplification not completeparity.",
+      "Old-item upgrade exchanges missing, not implemented without exact IDs and era verification.",
+      "All100000XP and300000ms tester timer undocumented. Acquisition, itemstats and live lifecycle unresolved.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Shaman Plane of Sky Tests",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Shaman Plane of Sky Tests",
+      "url": "https://wiki.project1999.com/Shaman_Plane_of_Sky_Tests?action=raw",
+      "fetchedAt": "2026-07-17T23:32:41.562Z",
+      "revision": null,
+      "sha256": "d2cf8a9522bfba312b59886ff4968b2699824ca84526006ed5a5fe9b0a624d2a",
+      "bytes": 8826,
+      "source": "raw-pages/shaman-plane-of-sky-tests-55529c2980.json",
+      "cachePath": "reference/p99-wiki/raw-pages/shaman-plane-of-sky-tests-55529c2980.wiki"
+    },
+    "sources": [
+      {
+        "key": "airplane/Medicine_Man_Veetra",
+        "file": "effective/quests/airplane/Medicine_Man_Veetra.lua",
+        "enabled": 1,
+        "sha256": "9db907425a83d35a1ed5eec0d681e19ecba0c0d6013d4983cdfb6371a763cae3",
+        "maintained": []
+      },
+      {
+        "key": "airplane/Gina_McStargan",
+        "file": "effective/quests/airplane/Gina_McStargan.lua",
+        "enabled": 1,
+        "sha256": "4f9b74f65d24c0af3ac23f02bff39bc7f4ec5cab622245f7730a719b0f1b98ab",
+        "maintained": [
+          {
+            "file": "maintained/lua/modified-upstream/airplane/Gina_McStargan.lua",
+            "sha256": "4f9b74f65d24c0af3ac23f02bff39bc7f4ec5cab622245f7730a719b0f1b98ab",
+            "equals_effective": true
+          }
+        ]
+      },
+      {
+        "key": "airplane/Ooga",
+        "file": "effective/quests/airplane/Ooga.lua",
+        "enabled": 1,
+        "sha256": "8403f8fdbc5c0c3c346589ae9985868399736a4813dd5e116d38a5b0005d7503",
+        "maintained": []
+      }
+    ],
+    "verified_facets": {
+      "inputs_rewards": "All3NPCs fullyread. Gina3matches:20934+20834+20835->27726;20940+20836+20837+20838->27727;20947+20839+20840->27728. Ooga3matches:20845+20955+20842+20841->27729;20962+20843+20844->27730;20846+20969+20848+20847->11694. Allnamesverified, FireSkyRuby20848weight120 matches12.0version.",
+      "eligibility": "Veetra Shaman class predicate normalized byactualbridge toGetClassName and isvalid; redundant numeric-gateproposal retracted.",
+      "lifecycle": "DirectGina/Oogaspawn andtester hand-in depop."
+    },
+    "unresolved": [
+      "Bookreturn step absent; no source change.",
+      "Olditem upgradeexchanges absent. All100000XP and300000ms timers undocumented.",
+      "Acquisition, itemstats and live lifecycle unresolved.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Shadow Knight Epic Quest",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Shadow Knight Epic Quest",
+      "url": "https://wiki.project1999.com/Shadow_Knight_Epic_Quest?action=raw",
+      "fetchedAt": "2026-07-17T23:32:15.536Z",
+      "revision": null,
+      "sha256": "c292187a82bfc78a0051c33c15a64b072225f3b6dedce48db2449c46b67dd3aa",
+      "bytes": 44814,
+      "source": "raw-pages/shadow-knight-epic-quest-ee3595791b.json",
+      "cachePath": "reference/p99-wiki/raw-pages/shadow-knight-epic-quest-ee3595791b.wiki"
+    },
+    "sources": [
+      {
+        "key": "overthere/Kurron_Ni",
+        "file": "effective/quests/overthere/Kurron_Ni.lua",
+        "enabled": 1,
+        "sha256": "38b11e88fba4c2581205792f28bf9bea2b774da8fd5c37ad1258740f5ea9f226",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/overthere/Kurron_Ni.lua",
+            "sha256": "38b11e88fba4c2581205792f28bf9bea2b774da8fd5c37ad1258740f5ea9f226",
+            "equals_effective": true
+          }
+        ]
+      },
+      {
+        "key": "paineel/Duriek_Bloodpool",
+        "file": "effective/quests/paineel/Duriek_Bloodpool.lua",
+        "enabled": 1,
+        "sha256": "b6835baafae3968b231ba3b0ef45d693f9f61143d9b44d17c2d1203e578449db",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/paineel/Duriek_Bloodpool.lua",
+            "sha256": "b6835baafae3968b231ba3b0ef45d693f9f61143d9b44d17c2d1203e578449db",
+            "equals_effective": true
+          }
+        ]
+      },
+      {
+        "key": "hole/Caradon",
+        "file": "effective/quests/hole/Caradon.lua",
+        "enabled": 1,
+        "sha256": "1bb0a5e7ccc81b4308bf9716a1d427d6ccbdd021ba3fb3738b2c8335b2f305b1",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/hole/Caradon.lua",
+            "sha256": "1bb0a5e7ccc81b4308bf9716a1d427d6ccbdd021ba3fb3738b2c8335b2f305b1",
+            "equals_effective": true
+          }
+        ]
+      },
+      {
+        "key": "hole/Kyrenna",
+        "file": "effective/quests/hole/Kyrenna.lua",
+        "enabled": 1,
+        "sha256": "fb32bceeed7cce59624657c864b0af4eecaf948d29f4a4ed73f53652e7e6011f",
+        "maintained": [
+          {
+            "file": "maintained/lua/idlequest-authored/hole/Kyrenna.lua",
+            "sha256": "fb32bceeed7cce59624657c864b0af4eecaf948d29f4a4ed73f53652e7e6011f",
+            "equals_effective": true
+          }
+        ]
+      },
+      {
+        "key": "hole/#Ghost_of_Glohnor",
+        "file": "effective/quests/hole/%23Ghost_of_Glohnor.lua",
+        "enabled": 1,
+        "sha256": "6f890171a348c4b9d542bb183905ca9e19457552dedde7e4606c072228f15b8b",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/hole/#Ghost_of_Glohnor.lua",
+            "sha256": "6f890171a348c4b9d542bb183905ca9e19457552dedde7e4606c072228f15b8b",
+            "equals_effective": true
+          }
+        ]
+      },
+      {
+        "key": "kerraridge/Marl_Kastane",
+        "file": "effective/quests/kerraridge/Marl_Kastane.lua",
+        "enabled": 1,
+        "sha256": "35759e1836d6990e9aea50241c49ee14207e859df72cf3ed2b8b7eb56a9e6b4e",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/kerraridge/Marl_Kastane.lua",
+            "sha256": "35759e1836d6990e9aea50241c49ee14207e859df72cf3ed2b8b7eb56a9e6b4e",
+            "equals_effective": true
+          }
+        ]
+      },
+      {
+        "key": "paineel/Gerot_Kastane",
+        "file": "effective/quests/paineel/Gerot_Kastane.lua",
+        "enabled": 1,
+        "sha256": "3e3c951902b6ed58e69e87ccd16a2deff92557a7cd9ac8b751ca72ae0245652f",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/paineel/Gerot_Kastane.lua",
+            "sha256": "3e3c951902b6ed58e69e87ccd16a2deff92557a7cd9ac8b751ca72ae0245652f",
+            "equals_effective": true
+          }
+        ]
+      },
+      {
+        "key": "citymist/Lhranc",
+        "file": "effective/quests/citymist/Lhranc.lua",
+        "enabled": 1,
+        "sha256": "7f8eb465a33fb33fabb27312b5cbb2ca1d5badf3453e4fcdea07bd8acd31a252",
+        "maintained": [
+          {
+            "file": "maintained/lua/modified-upstream/citymist/Lhranc.lua",
+            "sha256": "7f8eb465a33fb33fabb27312b5cbb2ca1d5badf3453e4fcdea07bd8acd31a252",
+            "equals_effective": true
+          }
+        ]
+      }
+    ],
+    "verified_facets": {
+      "inputs_rewards": "EightmappedNPCs plusSmaka/Teydar/Knarthenne fullyread. Kurron DarkforgeBreast3141/Greaves3145/Helm3140+900pp->Letter18099;Smaka1000pp->Elixir14365;Teydar14372+14371+16507->Sheath14366;Duriek5403+11609+5430+14366->Corrupted14367;CaradonKey14373spawnsKyrenna;MarlBlood14381->Shroud14377,Wrappings14379->Will14370;GlohnorShroudspawnsMummy;GerotSeal14375->Note14376,Head14378->Valiant14369;Lhranc14367/14368/14369/14370spawnsHuman90187.",
+      "factions": "Proposals correctDuriek first3documentedsteps404+3, preservefinal+7;Smaka236+3/334+1/370+1. OtherTrueSpirit directions present; raw amounts notall independentlyproven.",
+      "supporting_recipe": "HeartInnocent9825 alreadyenabled:HeartKyrenna14380 inSoulcase17051->HeartInnocent14368, nofail/replacecontainer1.",
+      "eligibility": "TrueSpirit gates intentionallywaived underprojectpolicy; nolevelgate added."
+    },
+    "unresolved": [
+      "Fullencounters, timers, spawnpopulation, drops andweaponstats notproven.",
+      "Longwalkthrough saysCoin-toMarl butshortquicksummary sayscurseonhumanLhranc; currentdirecthumanloot approach requires independentNPC/lootverification beforecertification.",
+      "MostrawXP/factionnumbers notspecified. Darkforge/OgreCanopic acquisition andphylactery-relatedpaths notfullyverified.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Slave Keys",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Slave Keys",
+      "url": "https://wiki.project1999.com/Slave_Keys?action=raw",
+      "fetchedAt": "2026-07-17T23:33:35.534Z",
+      "revision": null,
+      "sha256": "abc960ca1676d0b99a13d4b54ce2cd3f244d4e686e9c2483cb485e742822d650",
+      "bytes": 5980,
+      "source": "raw-pages/slave-keys-7ffe85b302.json",
+      "cachePath": "reference/p99-wiki/raw-pages/slave-keys-7ffe85b302.wiki"
+    },
+    "sources": [
+      {
+        "key": "crushbone/Retlon_Brenclog",
+        "file": "effective/quests/crushbone/Retlon_Brenclog.lua",
+        "enabled": 1,
+        "sha256": "338125ce759467ec24ff37e6894bdb6c96c67aa2a6c2ee62f25d4349423a7e13",
+        "maintained": [
+          {
+            "file": "maintained/lua/modified-upstream/crushbone/Retlon_Brenclog.lua",
+            "sha256": "338125ce759467ec24ff37e6894bdb6c96c67aa2a6c2ee62f25d4349423a7e13",
+            "equals_effective": true
+          }
+        ]
+      },
+      {
+        "key": "crushbone/a_dwarven_slave",
+        "file": "effective/quests/crushbone/a_dwarven_slave.lua",
+        "enabled": 1,
+        "sha256": "8089ccdae14b33f8a4e08861a3215c733a8a3d5634f2adce3347fa6a49abb383",
+        "maintained": [
+          {
+            "file": "maintained/lua/modified-upstream/crushbone/a_dwarven_slave.lua",
+            "sha256": "8089ccdae14b33f8a4e08861a3215c733a8a3d5634f2adce3347fa6a49abb383",
+            "equals_effective": true
+          }
+        ]
+      },
+      {
+        "key": "crushbone/an_elven_slave",
+        "file": "effective/quests/crushbone/an_elven_slave.lua",
+        "enabled": 1,
+        "sha256": "fa0e92e3fa8c2673e5938fef5f0667bfe176c2675824ebd6b34c69d39168caaf",
+        "maintained": [
+          {
+            "file": "maintained/lua/modified-upstream/crushbone/an_elven_slave.lua",
+            "sha256": "fa0e92e3fa8c2673e5938fef5f0667bfe176c2675824ebd6b34c69d39168caaf",
+            "equals_effective": true
+          }
+        ]
+      }
+    ],
+    "verified_facets": {
+      "inputs_rewards": "All3scripts fullyread. Retlon20015->2g3s. Dwarfmale20016->5g,female20017->11s. HighElfmale20020->3g,female20021->2p2g2s. WoodElfmale20018->4s,female20019->6s. Race/gender-specific mappings match.",
+      "factions": "All7documented sets anddirections match, including WoodElfmale IndigoBrotherhoodpositive, female270negative; magnitudesunknown.",
+      "lifecycle": "Slavesdepop_with_timer success; factioneligibilitywaived asintended."
+    },
+    "unresolved": [
+      "ExactXP1000Retlon/800slaves and factionmagnitudes undocumented.",
+      "Hailhint differs, Retlon1c hint exists althoughpage calls himexception; no fabricatedtext/behavior correction.",
+      "Race/genderplacement, actualkeys/respawn/settlement unresolved.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Shaman Skull Quests",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Shaman Skull Quests",
+      "url": "https://wiki.project1999.com/Shaman_Skull_Quests?action=raw",
+      "fetchedAt": "2026-07-17T23:32:43.944Z",
+      "revision": null,
+      "sha256": "58e529950f5736a98c7deac45fbf8897833cae17bfcf08706222406a34ab791c",
+      "bytes": 15510,
+      "source": "raw-pages/shaman-skull-quests-b63ed30880.json",
+      "cachePath": "reference/p99-wiki/raw-pages/shaman-skull-quests-b63ed30880.wiki"
+    },
+    "sources": [
+      {
+        "key": "cabeast/Hierophant_Oxyn",
+        "file": "effective/quests/cabeast/Hierophant_Oxyn.lua",
+        "enabled": 1,
+        "sha256": "72f75e33cfc15d9c07808428e16b0aa3931e84154d051f3f6c2c6cce2fec498b",
+        "maintained": []
+      },
+      {
+        "key": "cabeast/Hierophant_Zand",
+        "file": "effective/quests/cabeast/Hierophant_Zand.lua",
+        "enabled": 1,
+        "sha256": "63ca0d69ab2899bd89827a27c651aec3bfdc4c59d3cad3f5feaa1d8802e7369d",
+        "maintained": [
+          {
+            "file": "maintained/lua/modified-upstream/cabeast/Hierophant_Zand.lua",
+            "sha256": "63ca0d69ab2899bd89827a27c651aec3bfdc4c59d3cad3f5feaa1d8802e7369d",
+            "equals_effective": true
+          }
+        ]
+      },
+      {
+        "key": "fieldofbone/Crusader_Quarg",
+        "file": "effective/quests/fieldofbone/Crusader_Quarg.lua",
+        "enabled": 1,
+        "sha256": "e2ace57ae8753b545736c50a1317613945c00a9373a830cc7e1d1bacd3175d4e",
+        "maintained": []
+      },
+      {
+        "key": "swampofnohope/Mystic_Dovan",
+        "file": "effective/quests/swampofnohope/Mystic_Dovan.lua",
+        "enabled": 1,
+        "sha256": "deb408dbc09e3f267e7d8b1dafb9f6cd2ff235f4d3a11a2f3165e91ee92dd914",
+        "maintained": []
+      },
+      {
+        "key": "overthere/Galdon_Vok_Nir",
+        "file": "effective/quests/overthere/Galdon_Vok_Nir.lua",
+        "enabled": 1,
+        "sha256": "f393318541e4ca92f616181ca8bf7064e0fa1ed79dc00a9fe264b72f5bc95313",
+        "maintained": []
+      },
+      {
+        "key": "cabeast/Hierophant_Dexl",
+        "file": "effective/quests/cabeast/Hierophant_Dexl.lua",
+        "enabled": 0,
+        "sha256": "3f4edb2ae64b494ce58c2d2ebbcdcfec40994ba0e10aa545ad5261272343b50b",
+        "maintained": []
+      },
+      {
+        "key": "cabeast/Hierophant_Granix",
+        "file": "effective/quests/cabeast/Hierophant_Granix.lua",
+        "enabled": 0,
+        "sha256": "fbb019d66d5b2ba06992416ab0177d18835f35f1918fc42bdcfeaf265bca5446",
+        "maintained": []
+      }
+    ],
+    "verified_facets": {
+      "inputs_rewards": "All7sources fullyread. Oxyn12721/22/23+5140->5141;12724/25+5141->5142;Zand12734->18054+5pp;Quarg18054->17034;12735+5142->17035+5143;Dovan12736+5143->5144;Zand12741+12740+5144->5145;Galdon12743+12744+12742+400gold->12740.",
+      "era": "Dexl/Granix latersteps disabled;Zand stopsatChanneler5145, matchingP99firstfiveonly.",
+      "factions": "ScaledMystics445+/Legion441+ matchdocumented directions; exactdeltasunknown.",
+      "supporting_data": "Exact4recipes inspected:9235SkullII,9351Totem,9766COBB,9767CORN allbaseline disabled. Components/counts/container/outputmatch.9235failure returnsJawlessSkull.9351nofail0 contradictsexplicitP99nofail.",
+      "proposals": "p99-sz-skull-recipes enables9235/9351/9766/9767 andsets9351nofail1; exactcomponentsunchanged. Zand saviouralias, Quarg/Dovan punctuation-free advertisedphrases corrected; actualbridge findi literalContains confirmed."
+    },
+    "unresolved": [
+      "Quarg/Dovan lackdocumentedminorcoin, amountsunknown; exactXP/deltas undocumented.",
+      "NighttimeDovan9pm/CaptainNedar replacement, allloot andlivecrafting unverified.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace.",
+      "Exact9235trivial17 and9351trivial109 preserved, not independentlyproven; nofail overrides9351failure behavior."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  },
+  {
+    "title": "Shaman Epic Quest",
+    "review_status": "source_facets_reviewed_path_open",
+    "evidence": {
+      "title": "Shaman Epic Quest",
+      "url": "https://wiki.project1999.com/Shaman_Epic_Quest?action=raw",
+      "fetchedAt": "2026-07-17T23:32:36.817Z",
+      "revision": null,
+      "sha256": "980bbec1be2843071e4ef2e6681257cb331c33337519392918e13c63964e3e06",
+      "bytes": 73964,
+      "source": "raw-pages/shaman-epic-quest-33bc181dd2.json",
+      "cachePath": "reference/p99-wiki/raw-pages/shaman-epic-quest-33bc181dd2.wiki"
+    },
+    "sources": [
+      {
+        "key": "butcher/a_lesser_spirit",
+        "file": "effective/quests/butcher/a_lesser_spirit.lua",
+        "enabled": 1,
+        "sha256": "867ebd0d1099d45c501d1ff5173f7c884970d8a1413cc0cd48caf512a32c32fe",
+        "maintained": [
+          {
+            "file": "maintained/lua/modified-upstream/butcher/a_lesser_spirit.lua",
+            "sha256": "867ebd0d1099d45c501d1ff5173f7c884970d8a1413cc0cd48caf512a32c32fe",
+            "equals_effective": true
+          }
+        ]
+      },
+      {
+        "key": "fieldofbone/a_lesser_spirit",
+        "file": "effective/quests/fieldofbone/a_lesser_spirit.lua",
+        "enabled": 1,
+        "sha256": "3c3cedc6faa2e2623ce07fb51156406366ec196600fd4fe2996bfa94166df619",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/fieldofbone/a_lesser_spirit.lua",
+            "sha256": "3c3cedc6faa2e2623ce07fb51156406366ec196600fd4fe2996bfa94166df619",
+            "equals_effective": true
+          }
+        ]
+      },
+      {
+        "key": "oot/a_lesser_spirit",
+        "file": "effective/quests/oot/a_lesser_spirit.lua",
+        "enabled": 1,
+        "sha256": "bfec9945e992362fefce964a2eff5be1dd91c821a52fbaa9e335f41d9c7de636",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/oot/a_lesser_spirit.lua",
+            "sha256": "bfec9945e992362fefce964a2eff5be1dd91c821a52fbaa9e335f41d9c7de636",
+            "equals_effective": true
+          }
+        ]
+      },
+      {
+        "key": "rathemtn/a_lesser_spirit",
+        "file": "effective/quests/rathemtn/a_lesser_spirit.lua",
+        "enabled": 1,
+        "sha256": "c3fd98be8f4c55c0f15fbe660baa852a32779face20cf22f4fc0eaf9b36c108c",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/rathemtn/a_lesser_spirit.lua",
+            "sha256": "c3fd98be8f4c55c0f15fbe660baa852a32779face20cf22f4fc0eaf9b36c108c",
+            "equals_effective": true
+          }
+        ]
+      },
+      {
+        "key": "freportn/Bondl_Felligan",
+        "file": "effective/quests/freportn/Bondl_Felligan.lua",
+        "enabled": 1,
+        "sha256": "dcf79940dd7efdc0e5ed6ef2c41dc46fa185d458a7e992c418d3e27c4f29446a",
+        "maintained": [
+          {
+            "file": "maintained/lua/modified-upstream/freportn/Bondl_Felligan.lua",
+            "sha256": "dcf79940dd7efdc0e5ed6ef2c41dc46fa185d458a7e992c418d3e27c4f29446a",
+            "equals_effective": true
+          }
+        ]
+      },
+      {
+        "key": "freportn/a_greater_spirit",
+        "file": "effective/quests/freportn/a_greater_spirit.lua",
+        "enabled": 1,
+        "sha256": "85b54e99e2aee3aafd205d8e174ddf3b8909bddc4bbc1d2a2a97ec54a3cf8571",
+        "maintained": [
+          {
+            "file": "maintained/lua/modified-upstream/freportn/a_greater_spirit.lua",
+            "sha256": "85b54e99e2aee3aafd205d8e174ddf3b8909bddc4bbc1d2a2a97ec54a3cf8571",
+            "equals_effective": true
+          }
+        ]
+      },
+      {
+        "key": "freportn/a_greater_spirit_",
+        "file": "effective/quests/freportn/a_greater_spirit_.lua",
+        "enabled": 1,
+        "sha256": "7d93ae0c4ddf22c850b5612d2b1ba8b1bb83c850da76b442020ca40dbc353931",
+        "maintained": [
+          {
+            "file": "maintained/lua/modified-upstream/freportn/a_greater_spirit_.lua",
+            "sha256": "7d93ae0c4ddf22c850b5612d2b1ba8b1bb83c850da76b442020ca40dbc353931",
+            "equals_effective": true
+          }
+        ]
+      },
+      {
+        "key": "emeraldjungle/Spirit_Sentinel",
+        "file": "effective/quests/emeraldjungle/Spirit_Sentinel.lua",
+        "enabled": 1,
+        "sha256": "a529397c70d454847380375a9a61bf17ca9f679ced88b53eb67ae4b52e9da8fe",
+        "maintained": []
+      },
+      {
+        "key": "mistmoore/Black_Dire",
+        "file": "effective/quests/mistmoore/Black_Dire.lua",
+        "enabled": 1,
+        "sha256": "753abf469050120d94cedd65f16eb4b4b708023717a0a86c7dfa3d9faa393e1a",
+        "maintained": [
+          {
+            "file": "maintained/lua/converted-perl/mistmoore/Black_Dire.lua",
+            "sha256": "753abf469050120d94cedd65f16eb4b4b708023717a0a86c7dfa3d9faa393e1a",
+            "equals_effective": true
+          }
+        ]
+      },
+      {
+        "key": "citymist/#Lord_Rak-Ashiir",
+        "file": "effective/quests/citymist/%23Lord_Rak-Ashiir.lua",
+        "enabled": 1,
+        "sha256": "7fb53a379dbdb70884a91821e993cfc49aaeb2de1add1d72994186d9b1c086e2",
+        "maintained": []
+      }
+    ],
+    "verified_facets": {
+      "review_scope": "Full 939-line cached page, ten mapped Lua and twelve extra chain sources read. All named core hand-in items resolved against exported item rows.",
+      "inputs_rewards": "Lesser spirits give Tiny Gem1665; Bondl accepts it and spawns8117/8118. Greater Heyokah gives Opaque Gem1666. Ooglyn accepts1666; final ocean spirit gives Small Gem1667 and depops. Wandering spirit accepts1667 and MarrPromise1675/Woe1676/Envy1677; dialogue grants ShieldFalsehood1679 and SparklingGem1668. Tower accepts1668, BlackDirePelt1672->BlackFurBoots1678, CompletedReport3599; gives AncientJournal17805. Correct pond accepts books18456/57/58, Diary18459, IksarScale1674->SpearFate10651. Kirn Icon1671 spawns39083, Neh EngravedRing1681 spawns90181; RakChildTear1673 spawns90183.",
+      "supporting_recipe": "Already enabled9727: six distinct reports18450 through18455, one each inAncientJournal17805->CompletedReport3599; nofail andreplacecontainer1.",
+      "eligibility": "No epic minimum level added. TrueSpirit gates intentionallywaived under projectpolicy. BlackDire Shaman predicates correctly normalized.",
+      "proposals": "Seven-source p99-sz-shaman-epic: lesser whoalias and repeatgem until expiry, Butcher expiry5minutes, other original10minute fallback preserved; greater completion beforegenericHeyokah; tower rejects books, pond unchanged.",
+      "npc_identity": "Tower94052 spawn13703 x283/y1235 vspond94141 spawn13704 x-640/y3680 corroborates distinctP99locations.",
+      "patience": "All six Ooglyn/Srafen/Dillon/Froham/Abe/oceanspirit sources read. Timed, movement-independent adaptations preserved; rawpage itself warns timing estimates inaccurate. BrokenArrow1680 granted, no futureuse invented."
+    },
+    "unresolved": [
+      "Patience exact timing, spawn overlap, repeated starts, route and player presence not live-tested; no claim of route fidelity.",
+      "Wandering Spirit grants shield/gem from dialogue based only on faction, no per-character hand-in history. Under deliberate always-Ally policy this permits shortcuts; no new gate invented.",
+      "Kirn trigger lacks documented positiveTrueSpirit faction; exactamount unknown. Pond final-2000 and most rawXP/factionmagnitudes undocumented; notdeleted on absencealone.",
+      "Spear granted immediately onscale rather than after final lore conversation. Final lorepresent but receipt ordering differs.",
+      "Other greater-spirit religion buttons require full I-follow phrases; Honor is extra post-era flavor, not independentlyjustified.",
+      "Loot, equipment stats/equip46, encounters, NPC death replacement, groundIcon and all spawn/zone acquisition remain unverified.",
+      "Runtime settlement, repeated/partial/extra offers, actual NPC/loot acquisition and rendered UI not verified in this source-only workspace."
+    ],
+    "verification": {
+      "source": "full cached quest page and listed effective Lua read; named item IDs resolved against exported items",
+      "runtime": "not_run",
+      "ui": "not_run",
+      "connected_chain": "not_run"
+    }
+  }
+]

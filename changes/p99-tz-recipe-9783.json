@@ -1,0 +1,81 @@
+{
+  "format": 1,
+  "id": "p99-tz-recipe-9783",
+  "summary": "Full cached Warrior Pike page confirms exact components and output. Only enabled flag changed; all existing failure/odds metadata retained. Correct wrong Four Warbeads12912 to documented Four Crushed Shields12913, required by Hikyg. Four12910 in17043 are unchanged.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Warrior_Pike_Quests?action=raw",
+      "note": "Full cached Warrior Pike page confirms exact components and output. Only enabled flag changed; all existing failure/odds metadata retained. Correct wrong Four Warbeads12912 to documented Four Crushed Shields12913, required by Hikyg. Four12910 in17043 are unchanged. Cached SHA256 647599fece23146d400d837b85160dc7db18e33c93b7a4f54dacebcdcab40014. No world/crafting UI proof. Only documented stages0-5; stages6-8 excluded as page says Gates of Discord."
+    }
+  ],
+  "rows": [
+    {
+      "table": "tradeskill_recipe",
+      "before": {
+        "id": 9783,
+        "name": "Full Krup Shield Pack",
+        "tradeskill": 75,
+        "skillneeded": 0,
+        "trivial": 0,
+        "nofail": 1,
+        "replace_container": 1,
+        "notes": "Created by Jaekob",
+        "must_learn": 0,
+        "learned_by_item_id": 0,
+        "quest": 0,
+        "enabled": 0,
+        "show_in_advanced": 1,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null,
+        "category": null
+      },
+      "after": {
+        "id": 9783,
+        "name": "Full Krup Shield Pack",
+        "tradeskill": 75,
+        "skillneeded": 0,
+        "trivial": 0,
+        "nofail": 1,
+        "replace_container": 1,
+        "notes": "Created by Jaekob",
+        "must_learn": 0,
+        "learned_by_item_id": 0,
+        "quest": 0,
+        "enabled": 1,
+        "show_in_advanced": 1,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null,
+        "category": null
+      }
+    },
+    {
+      "table": "tradeskill_recipe_entries",
+      "before": {
+        "id": 85746,
+        "recipe_id": 9783,
+        "item_id": 12912,
+        "successcount": 1,
+        "failcount": 0,
+        "componentcount": 0,
+        "salvagecount": 0,
+        "iscontainer": 0
+      },
+      "after": {
+        "id": 85746,
+        "recipe_id": 9783,
+        "item_id": 12913,
+        "successcount": 1,
+        "failcount": 0,
+        "componentcount": 0,
+        "salvagecount": 0,
+        "iscontainer": 0
+      }
+    }
+  ],
+  "sources": []
+}

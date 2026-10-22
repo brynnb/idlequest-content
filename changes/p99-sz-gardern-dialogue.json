@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-sz-gardern-dialogue",
+  "summary": "Accept documented P99 lore-to-the-staff phrase while preserving existing staff button and unrelated trades.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Staff_of_Temperate_Flux_Quest?action=raw",
+      "note": "Cached 2026-07-17T23:34:12.019Z; revision unavailable; SHA256 54d292c082bb6411c1d0bad2a616efe1c90c96a37ad605416d816cfcf2c2f4af. Source-only correction; full runtime and UI not executed. Undocumented numerical values unchanged."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 13470,
+        "zone": "soltemple",
+        "name": "Gardern",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: soltemple/Gardern.pl\n-- items: 6342, 6341, 10119\n\nlocal function temple_faction(e)\n\te.other:Faction(415, 15, 0)\n\te.other:Faction(416, -15, 0)\n\te.other:AddEXP(1000)\nend\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"I am Gardern, listed among the chosen of Solusek Ro. I hold the lore to the [Staff of Temperate Flux] and the [Weeping Wand] - items coveted by my Wizardly brethren.\")\n\telseif e.message:findi(\"staff of temperate flux\") then\n\t\te.self:Say(\"The Staff of Temperate Flux is a boon to those who dabble in the elemental arts, for it can increase the susceptibility of a creature to both fire and cold. Are you [interested in the staff]?\")\n\telseif e.message:findi(\"interested in the staff\") then\n\t\te.self:Say(\"I will craft you a Staff of Temperate Flux, but you must bring me the components which I require to make it. I will need a Heart of Fire from an Inferno Goblin Wizard in the Caverns of Solusek, a Heart of Frost from a Goblin Wizard in the Caverns of Permafrost, a Rod of Bone from a Stone Skeleton by the shores of Lake Rathe and a Staff of Ro. Bring me these items, and I will make you your staff.\")\n\telseif e.message:findi(\"weeping wand\") then\n\t\te.self:Say(\"The Weeping Wand is a fine item for a Wizard - it can aid as a focus for concentration, and, if needed, be used to parry as well. Are you [interested in the wand]?\")\n\telseif e.message:findi(\"interested in the wand\") then\n\t\te.self:Say(\"I can make you a Weeping Wand, but you will need to bring me certain components. I will need a Silver Wand from a Silvered Guard in the Temple Cazic Thule, A Bloodblack Wand from the Mountains of Rathe, Twice-Woven Silk from a Faerie Guard in Faydark and a Scepter of Sorrow from the Tomb in Castle Mistmoore. Bring me these items and I will make for you a Weeping Wand.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 10548, item2 = 10549, item3 = 10550, item4 = 6048}) then\n\t\te.self:Say(\"Well done, \" .. e.other:GetName() .. \". Now I will craft your Staff of Temperate Flux, as promised.\")\n\t\te.other:SummonItem(6342)\n\t\ttemple_faction(e)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 10551, item2 = 6338, item3 = 10557, item4 = 14364}) then\n\t\te.self:Say(\"Well done, \" .. e.other:GetName() .. \". Now I will craft your Weeping Wand, as promised.\")\n\t\te.other:SummonItem(6341)\n\t\ttemple_faction(e)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 10034, item2 = 10034, item3 = 10000}) then\n\t\te.self:Say(\"Ahh, Genni must have sent you to me.  Very well, here is your Lambent Sapphire.\")\n\t\te.other:SummonItem(10119)\n\t\ttemple_faction(e)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 13470,
+        "zone": "soltemple",
+        "name": "Gardern",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: soltemple/Gardern.pl\n-- items: 6342, 6341, 10119\n\nlocal function temple_faction(e)\n\te.other:Faction(415, 15, 0)\n\te.other:Faction(416, -15, 0)\n\te.other:AddEXP(1000)\nend\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"I am Gardern, listed among the chosen of Solusek Ro. I hold the lore to the [Staff of Temperate Flux] and the [Weeping Wand] - items coveted by my Wizardly brethren.\")\n\telseif e.message:findi(\"staff of temperate flux\") or e.message:findi(\"lore to the staff\") then\n\t\te.self:Say(\"The Staff of Temperate Flux is a boon to those who dabble in the elemental arts, for it can increase the susceptibility of a creature to both fire and cold. Are you [interested in the staff]?\")\n\telseif e.message:findi(\"interested in the staff\") then\n\t\te.self:Say(\"I will craft you a Staff of Temperate Flux, but you must bring me the components which I require to make it. I will need a Heart of Fire from an Inferno Goblin Wizard in the Caverns of Solusek, a Heart of Frost from a Goblin Wizard in the Caverns of Permafrost, a Rod of Bone from a Stone Skeleton by the shores of Lake Rathe and a Staff of Ro. Bring me these items, and I will make you your staff.\")\n\telseif e.message:findi(\"weeping wand\") then\n\t\te.self:Say(\"The Weeping Wand is a fine item for a Wizard - it can aid as a focus for concentration, and, if needed, be used to parry as well. Are you [interested in the wand]?\")\n\telseif e.message:findi(\"interested in the wand\") then\n\t\te.self:Say(\"I can make you a Weeping Wand, but you will need to bring me certain components. I will need a Silver Wand from a Silvered Guard in the Temple Cazic Thule, A Bloodblack Wand from the Mountains of Rathe, Twice-Woven Silk from a Faerie Guard in Faydark and a Scepter of Sorrow from the Tomb in Castle Mistmoore. Bring me these items and I will make for you a Weeping Wand.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 10548, item2 = 10549, item3 = 10550, item4 = 6048}) then\n\t\te.self:Say(\"Well done, \" .. e.other:GetName() .. \". Now I will craft your Staff of Temperate Flux, as promised.\")\n\t\te.other:SummonItem(6342)\n\t\ttemple_faction(e)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 10551, item2 = 6338, item3 = 10557, item4 = 14364}) then\n\t\te.self:Say(\"Well done, \" .. e.other:GetName() .. \". Now I will craft your Weeping Wand, as promised.\")\n\t\te.other:SummonItem(6341)\n\t\ttemple_faction(e)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 10034, item2 = 10034, item3 = 10000}) then\n\t\te.self:Say(\"Ahh, Genni must have sent you to me.  Very well, here is your Lambent Sapphire.\")\n\t\te.other:SummonItem(10119)\n\t\ttemple_faction(e)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/soltemple/Gardern.lua",
+      "beforeSha256": "0fffa3b9b6ec30b5ebeec4e190724d5cd2bba18d56d70f1b80f98995637385d6",
+      "proposedFile": "changes/p99-sz-gardern-dialogue/soltemple--Gardern.lua",
+      "afterSha256": "66a299f5f235fbee7fde3dddd990e9cc38f977c885ce84576fb488b7dfaff592"
+    }
+  ]
+}

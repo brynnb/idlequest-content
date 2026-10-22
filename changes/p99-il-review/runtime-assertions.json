@@ -1,0 +1,200 @@
+[
+  {
+    "name": "highkeep Lozani partial offers are not consumed",
+    "proposedFile": "changes/p99-il-parity/highkeep--Lozani.lua",
+    "sourceSha256": "4c2ed2b672d6f44246c8d8517f96e4b75ebfa64534d88d14ca145d062fd273aa",
+    "assertions": "trade({13225,99999},{gold=3});equal(remaining[13225],1);equal(remaining.gold,3);equal(remaining[99999],1);equal(next(calls.rewards),nil);trade({13845,99999});equal(remaining[13845],1);equal(remaining[99999],1);equal(calls.exp,0)"
+  },
+  {
+    "name": "highkeep Lozani documented spell 15351",
+    "proposedFile": "changes/p99-il-parity/highkeep--Lozani.lua",
+    "sourceSha256": "4c2ed2b672d6f44246c8d8517f96e4b75ebfa64534d88d14ca145d062fd273aa",
+    "assertions": "character.choice=1;trade({13225,99999},{gold=5});reward(15351,1);equal(remaining.gold,1);equal(remaining[99999],1);trade({13845,13845,99999});reward(15351,2);equal(remaining[13845],0);equal(remaining[99999],1);equal(calls.exp,200);equal(calls.returns,2)"
+  },
+  {
+    "name": "highkeep Lozani documented spell 15212",
+    "proposedFile": "changes/p99-il-parity/highkeep--Lozani.lua",
+    "sourceSha256": "4c2ed2b672d6f44246c8d8517f96e4b75ebfa64534d88d14ca145d062fd273aa",
+    "assertions": "character.choice=2;trade({13225,99999},{gold=5});reward(15212,1);equal(remaining.gold,1);equal(remaining[99999],1);trade({13845,13845,99999});reward(15212,2);equal(remaining[13845],0);equal(remaining[99999],1);equal(calls.exp,200);equal(calls.returns,2)"
+  },
+  {
+    "name": "highkeep Lozani documented spell 15079",
+    "proposedFile": "changes/p99-il-parity/highkeep--Lozani.lua",
+    "sourceSha256": "4c2ed2b672d6f44246c8d8517f96e4b75ebfa64534d88d14ca145d062fd273aa",
+    "assertions": "character.choice=3;trade({13225,99999},{gold=5});reward(15079,1);equal(remaining.gold,1);equal(remaining[99999],1);trade({13845,13845,99999});reward(15079,2);equal(remaining[13845],0);equal(remaining[99999],1);equal(calls.exp,200);equal(calls.returns,2)"
+  },
+  {
+    "name": "highkeep Lozani documented spell 15277",
+    "proposedFile": "changes/p99-il-parity/highkeep--Lozani.lua",
+    "sourceSha256": "4c2ed2b672d6f44246c8d8517f96e4b75ebfa64534d88d14ca145d062fd273aa",
+    "assertions": "character.choice=4;trade({13225,99999},{gold=5});reward(15277,1);equal(remaining.gold,1);equal(remaining[99999],1);trade({13845,13845,99999});reward(15277,2);equal(remaining[13845],0);equal(remaining[99999],1);equal(calls.exp,200);equal(calls.returns,2)"
+  },
+  {
+    "name": "freporte Lozani partial offers are not consumed",
+    "proposedFile": "changes/p99-il-parity/freporte--Lozani.lua",
+    "sourceSha256": "4c2ed2b672d6f44246c8d8517f96e4b75ebfa64534d88d14ca145d062fd273aa",
+    "assertions": "trade({13225,99999},{gold=3});equal(remaining[13225],1);equal(remaining.gold,3);equal(remaining[99999],1);equal(next(calls.rewards),nil);trade({13845,99999});equal(remaining[13845],1);equal(remaining[99999],1);equal(calls.exp,0)"
+  },
+  {
+    "name": "freporte Lozani documented spell 15351",
+    "proposedFile": "changes/p99-il-parity/freporte--Lozani.lua",
+    "sourceSha256": "4c2ed2b672d6f44246c8d8517f96e4b75ebfa64534d88d14ca145d062fd273aa",
+    "assertions": "character.choice=1;trade({13225,99999},{gold=5});reward(15351,1);equal(remaining.gold,1);equal(remaining[99999],1);trade({13845,13845,99999});reward(15351,2);equal(remaining[13845],0);equal(remaining[99999],1);equal(calls.exp,200);equal(calls.returns,2)"
+  },
+  {
+    "name": "freporte Lozani documented spell 15212",
+    "proposedFile": "changes/p99-il-parity/freporte--Lozani.lua",
+    "sourceSha256": "4c2ed2b672d6f44246c8d8517f96e4b75ebfa64534d88d14ca145d062fd273aa",
+    "assertions": "character.choice=2;trade({13225,99999},{gold=5});reward(15212,1);equal(remaining.gold,1);equal(remaining[99999],1);trade({13845,13845,99999});reward(15212,2);equal(remaining[13845],0);equal(remaining[99999],1);equal(calls.exp,200);equal(calls.returns,2)"
+  },
+  {
+    "name": "freporte Lozani documented spell 15079",
+    "proposedFile": "changes/p99-il-parity/freporte--Lozani.lua",
+    "sourceSha256": "4c2ed2b672d6f44246c8d8517f96e4b75ebfa64534d88d14ca145d062fd273aa",
+    "assertions": "character.choice=3;trade({13225,99999},{gold=5});reward(15079,1);equal(remaining.gold,1);equal(remaining[99999],1);trade({13845,13845,99999});reward(15079,2);equal(remaining[13845],0);equal(remaining[99999],1);equal(calls.exp,200);equal(calls.returns,2)"
+  },
+  {
+    "name": "freporte Lozani documented spell 15277",
+    "proposedFile": "changes/p99-il-parity/freporte--Lozani.lua",
+    "sourceSha256": "4c2ed2b672d6f44246c8d8517f96e4b75ebfa64534d88d14ca145d062fd273aa",
+    "assertions": "character.choice=4;trade({13225,99999},{gold=5});reward(15277,1);equal(remaining.gold,1);equal(remaining[99999],1);trade({13845,13845,99999});reward(15277,2);equal(remaining[13845],0);equal(remaining[99999],1);equal(calls.exp,200);equal(calls.returns,2)"
+  },
+  {
+    "name": "freeporteast Lozani partial offers are not consumed",
+    "proposedFile": "changes/p99-il-parity/freeporteast--Lozani.lua",
+    "sourceSha256": "4c2ed2b672d6f44246c8d8517f96e4b75ebfa64534d88d14ca145d062fd273aa",
+    "assertions": "trade({13225,99999},{gold=3});equal(remaining[13225],1);equal(remaining.gold,3);equal(remaining[99999],1);equal(next(calls.rewards),nil);trade({13845,99999});equal(remaining[13845],1);equal(remaining[99999],1);equal(calls.exp,0)"
+  },
+  {
+    "name": "freeporteast Lozani documented spell 15351",
+    "proposedFile": "changes/p99-il-parity/freeporteast--Lozani.lua",
+    "sourceSha256": "4c2ed2b672d6f44246c8d8517f96e4b75ebfa64534d88d14ca145d062fd273aa",
+    "assertions": "character.choice=1;trade({13225,99999},{gold=5});reward(15351,1);equal(remaining.gold,1);equal(remaining[99999],1);trade({13845,13845,99999});reward(15351,2);equal(remaining[13845],0);equal(remaining[99999],1);equal(calls.exp,200);equal(calls.returns,2)"
+  },
+  {
+    "name": "freeporteast Lozani documented spell 15212",
+    "proposedFile": "changes/p99-il-parity/freeporteast--Lozani.lua",
+    "sourceSha256": "4c2ed2b672d6f44246c8d8517f96e4b75ebfa64534d88d14ca145d062fd273aa",
+    "assertions": "character.choice=2;trade({13225,99999},{gold=5});reward(15212,1);equal(remaining.gold,1);equal(remaining[99999],1);trade({13845,13845,99999});reward(15212,2);equal(remaining[13845],0);equal(remaining[99999],1);equal(calls.exp,200);equal(calls.returns,2)"
+  },
+  {
+    "name": "freeporteast Lozani documented spell 15079",
+    "proposedFile": "changes/p99-il-parity/freeporteast--Lozani.lua",
+    "sourceSha256": "4c2ed2b672d6f44246c8d8517f96e4b75ebfa64534d88d14ca145d062fd273aa",
+    "assertions": "character.choice=3;trade({13225,99999},{gold=5});reward(15079,1);equal(remaining.gold,1);equal(remaining[99999],1);trade({13845,13845,99999});reward(15079,2);equal(remaining[13845],0);equal(remaining[99999],1);equal(calls.exp,200);equal(calls.returns,2)"
+  },
+  {
+    "name": "freeporteast Lozani documented spell 15277",
+    "proposedFile": "changes/p99-il-parity/freeporteast--Lozani.lua",
+    "sourceSha256": "4c2ed2b672d6f44246c8d8517f96e4b75ebfa64534d88d14ca145d062fd273aa",
+    "assertions": "character.choice=4;trade({13225,99999},{gold=5});reward(15277,1);equal(remaining.gold,1);equal(remaining[99999],1);trade({13845,13845,99999});reward(15277,2);equal(remaining[13845],0);equal(remaining[99999],1);equal(calls.exp,200);equal(calls.returns,2)"
+  },
+  {
+    "name": "Dran complete and partial steel boning",
+    "proposedFile": "changes/p99-il-parity/neriaka--Dran_-slug-_Rembor.lua",
+    "sourceSha256": "f05851b07922065b2b275395908ccc033084ec9b214dc89fe66c9e9dfd98f4cc",
+    "assertions": "trade({12073,99999});equal(remaining[12073],1);reward(19030,0);trade({12073,12073,99999});reward(19030,1);equal(remaining[12073],0);equal(remaining[99999],1);trade({12073,12073});reward(19030,2)"
+  },
+  {
+    "name": "Illweed keyword chain",
+    "proposedFile": "changes/p99-il-parity/cabeast--War_Historian_Kobl.lua",
+    "sourceSha256": "63390568fbf53eddf981325d59946a6169ba87bf98c2f16991f093495d7d4fbd",
+    "assertions": "say('unique writing materials');say('blood ink');say('illweed parchment');equal(#calls.speech,3);trade({12389,12389,12389});reward(12385,0);trade({12389,12389,12389,12389});reward(12385,1)"
+  },
+  {
+    "name": "Slansin role 14",
+    "proposedFile": "changes/p99-il-parity/erudnint--Slansin.lua",
+    "sourceSha256": "2294ba064d7f32ba726576bb467206991239d437bae914ade0f675b3487143d7",
+    "assertions": "Class={ENCHANTER=14,MERCHANT=41};npc.GetClass=function() return 14 end;eq.depop=function() calls.depops=calls.depops+1 end;trade({13983,99999});equal(remaining[99999],1);equal(calls.exp,300);faction(336,1);faction(229,1);faction(329,1);faction(230,1);faction(330,1);equal(calls.depops,0);trade({13983});faction(336,2);equal(calls.depops,0)"
+  },
+  {
+    "name": "Slansin role 41",
+    "proposedFile": "changes/p99-il-parity/erudnint--Slansin.lua",
+    "sourceSha256": "2294ba064d7f32ba726576bb467206991239d437bae914ade0f675b3487143d7",
+    "assertions": "Class={ENCHANTER=14,MERCHANT=41};npc.GetClass=function() return 41 end;eq.depop=function() calls.depops=calls.depops+1 end;trade({13983,99999});equal(remaining[99999],1);equal(calls.exp,300);faction(231,-5);faction(266,-5);faction(265,1);faction(267,-5);equal(calls.depops,1)"
+  },
+  {
+    "name": "Toresian both documented and clicked study",
+    "proposedFile": "changes/p99-il-parity/erudnint--Toresian_Fhabel.lua",
+    "sourceSha256": "3ec98b051752d231dc33de58c5524eb46623c66303f08d0c53a2c9618abf4210",
+    "assertions": "local spawned=0;eq.get_entity_list=function() return {IsMobSpawnedByNpcTypeID=function() return false end} end;eq.unique_spawn=function(id) equal(id,23080);spawned=spawned+1 end;say('study');say('I will study enchantment');equal(spawned,2);say('assist Toresian');reward(13983,1)"
+  },
+  {
+    "name": "Perrir note branch 18148",
+    "proposedFile": "changes/p99-il-parity/neriakc--Perrir_Zexus.lua",
+    "sourceSha256": "10b057f064000245135d040c016b8783578b55310b82b47d092d9ccf89ee071e",
+    "assertions": "trade({18148,99999});equal(remaining[99999],1);equal(calls.exp,100);faction(340,200);faction(278,30);faction(362,-70);faction(226,-50);faction(341,-30);faction(1522,-800);reward(13585,0);"
+  },
+  {
+    "name": "Perrir note branch 18756",
+    "proposedFile": "changes/p99-il-parity/neriakc--Perrir_Zexus.lua",
+    "sourceSha256": "10b057f064000245135d040c016b8783578b55310b82b47d092d9ccf89ee071e",
+    "assertions": "trade({18756,99999});equal(remaining[99999],1);equal(calls.exp,100);faction(340,100);faction(278,15);faction(362,-35);faction(226,-25);faction(341,-15);faction(1522,-400);reward(13585,1);"
+  },
+  {
+    "name": "Perrir symbol and skullcap untouched",
+    "proposedFile": "changes/p99-il-parity/neriakc--Perrir_Zexus.lua",
+    "sourceSha256": "10b057f064000245135d040c016b8783578b55310b82b47d092d9ccf89ee071e",
+    "assertions": "trade({14550,14550,14550});reward(1369,0);trade({14550,14550,14550,14550});reward(1369,1);faction(340,50);faction(278,7);faction(226,-12);faction(341,-7);faction(362,-17);faction(1522,-200);trade({13113,99999});faction(340,60);faction(1522,-240);equal(remaining[99999],1)"
+  },
+  {
+    "name": "Lilkus explicit Heretics and gold",
+    "proposedFile": "changes/p99-il-parity/paineel--Royal_Guard_Lilkus.lua",
+    "sourceSha256": "6217ba0572035b575be36ab0dbd87bd041d4dd8d0f0d6c60c785da590ff5cca5",
+    "assertions": "trade({1761,99999});faction(265,10);equal(calls.cash[1][3],1);equal(calls.cash[1][2],2);equal(calls.cash[1][1],8);equal(remaining[99999],1);trade({1761});faction(265,20);equal(calls.exp,4000)"
+  },
+  {
+    "name": "Disabled Tiam source handles 1 molars",
+    "proposedFile": "changes/p99-il-parity/erudnext--Tiam_Khonsir.lua",
+    "sourceSha256": "dc6c477fca77f4803fa3b5e7540ea2ed64b03d7696002eb8ee6f5be628a539a5",
+    "assertions": "trade({1761});equal(remaining[1761],0);faction(242,5);equal(calls.exp,2000);equal(#calls.cash,1);equal(calls.returns,1)"
+  },
+  {
+    "name": "Disabled Tiam source handles 2 molars",
+    "proposedFile": "changes/p99-il-parity/erudnext--Tiam_Khonsir.lua",
+    "sourceSha256": "dc6c477fca77f4803fa3b5e7540ea2ed64b03d7696002eb8ee6f5be628a539a5",
+    "assertions": "trade({1761,1761});equal(remaining[1761],0);faction(242,10);equal(calls.exp,4000);equal(#calls.cash,2);equal(calls.returns,1)"
+  },
+  {
+    "name": "Disabled Tiam source handles 3 molars",
+    "proposedFile": "changes/p99-il-parity/erudnext--Tiam_Khonsir.lua",
+    "sourceSha256": "dc6c477fca77f4803fa3b5e7540ea2ed64b03d7696002eb8ee6f5be628a539a5",
+    "assertions": "trade({1761,1761,1761});equal(remaining[1761],0);faction(242,15);equal(calls.exp,6000);equal(#calls.cash,3);equal(calls.returns,1)"
+  },
+  {
+    "name": "Disabled Tiam source handles 4 molars",
+    "proposedFile": "changes/p99-il-parity/erudnext--Tiam_Khonsir.lua",
+    "sourceSha256": "dc6c477fca77f4803fa3b5e7540ea2ed64b03d7696002eb8ee6f5be628a539a5",
+    "assertions": "trade({1761,1761,1761,1761});equal(remaining[1761],0);faction(242,20);equal(calls.exp,8000);equal(#calls.cash,4);equal(calls.returns,1)"
+  },
+  {
+    "name": "Disabled Tiam rejects unrelated and preserves extra",
+    "proposedFile": "changes/p99-il-parity/erudnext--Tiam_Khonsir.lua",
+    "sourceSha256": "dc6c477fca77f4803fa3b5e7540ea2ed64b03d7696002eb8ee6f5be628a539a5",
+    "assertions": "trade({99999});equal(remaining[99999],1);equal(calls.exp,0);trade({1761,1761,99999});equal(remaining[99999],1);equal(calls.exp,4000)"
+  },
+  {
+    "name": "Whoopal one silver not gold",
+    "proposedFile": "changes/p99-il-parity/nektulos--Master_Whoopal.lua",
+    "sourceSha256": "f3831dbed54b6c45b7f2be10ceb4cf56301d9f632b52521fe72d625f4d563353",
+    "assertions": "trade({18957,99999});equal(calls.cash[1][1],0);equal(calls.cash[1][2],1);equal(calls.cash[1][3],0);equal(calls.cash[1][4],0);equal(remaining[99999],1);trade({18957});equal(calls.cash[2][2],1)"
+  },
+  {
+    "name": "Leuz accept task is not swallowed",
+    "proposedFile": "changes/p99-il-parity/skyshrine--Commander_Leuz.lua",
+    "sourceSha256": "c9e49ab2584ab75057fa549d0f7287177299fd0310b4fcac216b6416eaab74f6",
+    "assertions": "say('What task?');reward(29683,0);say('I will accept this task');reward(29683,1);trade({29688,99999});faction(430,20);faction(436,5);faction(448,-20);equal(calls.exp,10000);equal(remaining[99999],1)"
+  },
+  {
+    "name": "Ziglark P99 worthy immediately issues message",
+    "proposedFile": "changes/p99-il-parity/skyshrine--Ziglark_Whisperwing.lua",
+    "sourceSha256": "4f606e80da4e5fe4761e8c039f1726c929d358b6c8fa10fd731e801923cfd1e5",
+    "assertions": "say('What mundane trivial tasks');equal(#calls.speech,1);say('I am worthy');reward(28600,1);say('deliver');reward(28600,2);trade({28601,99999});reward(28602,1);equal(calls.exp,500);equal(remaining[99999],1)"
+  },
+  {
+    "name": "Anrey clicked choices and two skin stages",
+    "proposedFile": "changes/p99-il-parity/rivervale--Marshal_Anrey.lua",
+    "sourceSha256": "c92e2ccb22606630a7e16476073b6deb383a471a9b1b7ef58597492169b1d949",
+    "assertions": "say('Leatherfoot Raider');say('from');equal(#calls.speech,2);trade({13761,13756,13075});reward(13941,0);trade({13761,13756,13075,13749});reward(13941,1);trade({13941,13942,99999});reward(12259,1);equal(remaining[99999],1)"
+  }
+]

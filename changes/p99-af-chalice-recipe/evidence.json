@@ -1,0 +1,75 @@
+{
+  "evidence": {
+    "title": "Chalice of Conquest Quest",
+    "url": "https://wiki.project1999.com/Chalice_of_Conquest_Quest?action=raw",
+    "fetchedAt": "2026-07-17T23:10:10.437Z",
+    "revision": null,
+    "sha256": "255b116a76c696a75e48632a06c7d74345cb0b962ac10e4c37c21b9aa7248dd8",
+    "bytes": 13056,
+    "source": "raw-pages/chalice-of-conquest-quest-e32e07de38.json",
+    "cachePath": "reference/p99-wiki/raw-pages/chalice-of-conquest-quest-e32e07de38.wiki"
+  },
+  "recipe": {
+    "id": 13000,
+    "name": "Chalice of Conquest",
+    "tradeskill": 75,
+    "skillneeded": 0,
+    "trivial": 0,
+    "nofail": 1,
+    "replace_container": 1,
+    "notes": "",
+    "must_learn": 48,
+    "learned_by_item_id": 0,
+    "quest": 0,
+    "enabled": 0,
+    "show_in_advanced": 1,
+    "min_expansion": -1,
+    "max_expansion": -1,
+    "content_flags": null,
+    "content_flags_disabled": null,
+    "category": null
+  },
+  "entries": [
+    {
+      "id": 152103,
+      "recipe_id": 13000,
+      "item_id": 12279,
+      "successcount": 1,
+      "failcount": 0,
+      "componentcount": 0,
+      "salvagecount": 0,
+      "iscontainer": 0
+    },
+    {
+      "id": 152105,
+      "recipe_id": 13000,
+      "item_id": 12277,
+      "successcount": 0,
+      "failcount": 0,
+      "componentcount": 1,
+      "salvagecount": 1,
+      "iscontainer": 0
+    },
+    {
+      "id": 152102,
+      "recipe_id": 13000,
+      "item_id": 17976,
+      "successcount": 0,
+      "failcount": 0,
+      "componentcount": 0,
+      "salvagecount": 0,
+      "iscontainer": 1
+    },
+    {
+      "id": 152104,
+      "recipe_id": 13000,
+      "item_id": 12274,
+      "successcount": 0,
+      "failcount": 0,
+      "componentcount": 1,
+      "salvagecount": 1,
+      "iscontainer": 0
+    }
+  ],
+  "scope": "Enabled-only proposal. Existing must_learn, nofail, replacement and component/success/failure policies preserved. Not a live crafting test."
+}

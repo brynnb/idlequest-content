@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-restraining-trooper_ogmire",
+  "summary": "Support documented sign this restraining order phrase alongside existing sign the restraining order, only lore/requirements response. No new reward or itemgrant route; all sequential trade conditions unchanged.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/The_Restraining_Order?action=raw",
+      "note": "Cached 2026-07-17T23:37:55.399Z; revision unavailable; SHA256 e4a24f856e44c7cec752b6501686b06243a9be01bf578245f610362916c467e3. Support documented sign this restraining order phrase alongside existing sign the restraining order, only lore/requirements response. No new reward or itemgrant route; all sequential trade conditions unchanged. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 15106,
+        "zone": "cabwest",
+        "name": "Trooper_Ogmire",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: cabwest/Trooper_Ogmire.pl\n-- items: 18245, 18246\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Greetings, citizen. Looking for healing or other such services? If so, then I urge you to seek out the Temple of Terror. The hierophants will see to it for you.\")\n\telseif e.message:findi(\"sign the restraining order\") then\n\t\te.self:Say(\"I knew my wicked ways would eventually come to an end. Very well, then. Hand me the legion order and I shall sign it.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 18245}) then\n\t\te.self:Emote(\"signs the order and hands it back to you.\")\n\t\te.other:SummonItem(18246)\n\t\te.other:AddEXP(200)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 15106,
+        "zone": "cabwest",
+        "name": "Trooper_Ogmire",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: cabwest/Trooper_Ogmire.pl\n-- items: 18245, 18246\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Greetings, citizen. Looking for healing or other such services? If so, then I urge you to seek out the Temple of Terror. The hierophants will see to it for you.\")\n\telseif e.message:findi(\"sign the restraining order\") or e.message:findi(\"sign this restraining order\") then\n\t\te.self:Say(\"I knew my wicked ways would eventually come to an end. Very well, then. Hand me the legion order and I shall sign it.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 18245}) then\n\t\te.self:Emote(\"signs the order and hands it back to you.\")\n\t\te.other:SummonItem(18246)\n\t\te.other:AddEXP(200)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/cabwest/Trooper_Ogmire.lua",
+      "beforeSha256": "2596a86700929738a323a250a4b9a7aec5596a7d0f24ba44d23574e10e5cd96d",
+      "proposedFile": "changes/p99-tz-restraining-trooper_ogmire/cabwest--Trooper_Ogmire.lua",
+      "afterSha256": "95c5c41e1772357f38f18f570a1bf5d01f967ffdc13ce32b22eee810988c2fca"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-gans-no-final-xp",
+  "summary": "Page explicitly says no final experience is awarded. Remove2500XP from existing reports turn-in, preserving intermediate XP and all other branches. Historical out-of-scope ledger alone is not an authoritative exclusion; current121-zone scope includes Warrens. Activation state unchanged, acquisition remains unverified.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/The_Geologist's_Purloined_Tools?action=raw",
+      "note": "Cached 2026-07-17T23:36:49.513Z; revision unavailable; SHA256 a6a3bfea37321c10e66de93139aa446724a31d03dffeb7c9852936f5520246ca. Page explicitly says no final experience is awarded. Remove2500XP from existing reports turn-in, preserving intermediate XP and all other branches. Historical out-of-scope ledger alone is not an authoritative exclusion; current121-zone scope includes Warrens. Activation state unchanged, acquisition remains unverified. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 17024,
+        "zone": "erudnext",
+        "name": "Gans_Paust",
+        "lua_content": "-- Source: erudnext/Gans_Paust.lua\n-- items: 18173, 18724, 13544, 1771, 1763\nfunction event_spawn(e)\n\tlocal xloc = e.self:GetX();\n\tlocal yloc = e.self:GetY();\n\teq.set_proximity(xloc - 50, xloc + 50, yloc - 50, yloc + 50);\nend\n\nfunction event_enter(e)\n\tif(e.other:HasItem(18724)) then\n\t\te.other:Message(MT.Yellow,\"A commanding, yet kind looking Erudite turns towards you as you attempt to get your bearings. 'Do not be startled. I am Gans Paust, Guild Master of the Deepwater Knights and you are to become one of us. Read the note in your inventory and hand it to me when you are ready to begin your training. I look forward to working with you.'\");\n\tend\nend\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Emote(\"glances at you and hurriedly makes a gesture of religious meaning before you and says, 'Yes, yes, I hereby bless you in the name of Prexus. May your catch be plentiful and your nets never snag. Are there any other fishermen seeking a blessing? I'm very busy.'\");\n\telseif(e.message:findi(\"your brother\")) then\n\t\te.self:Say(\"What? How do you know fo my brother? Ahh I assume Breya told you. He's been gone for quite some time with no word sent on his progress or his wellbeing. I need to find someone to [check on him].\");\n\telseif(e.message:findi(\"check on him\")) then\n\t\te.self:Say(\"Thank you, \" .. e.other:GetName() .. \". He's one of our people's most knowledgeable geologists and has left to survey an island out in Erud's Crossing. He was sending monthly reports until two weeks ago when his report never showed up. I'm worried something may have happened to him. Take this note to Yelesom and bring back something to assure me of his safety. A reward fitting a Deepwater Knight shall be yours upon your success.\");\n\t\te.other:SummonItem(18173); -- Item: Gans's note to Yelesom\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 18724})) then -- Tattered Note\n\t\te.self:Say(\"Yes, welcome friend! Here is your guild tunic. You'll make a fine addition to the Deepwater Knights.\");\n\t\te.other:SummonItem(13544); -- Old Blue Tunic*\n\t\te.other:Ding();\n\t\te.other:Faction(242,100,0); -- Deepwater Knights\n\t\te.other:Faction(266,15,0); -- High Council of Erudin\n\t\te.other:Faction(265,-15,0); -- Heretics\n\t\te.other:AddEXP(20);\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 1771})) then\n\t\te.self:Say(\"Excellent! Thank you for checking on my brother, I am glad to hear that he is well.  Here is something that shall help you on your way.\");\n\t\te.other:SummonItem(1763); -- Item: Midnight Sea Mail Sleeves\n\t\te.other:Ding();\n\t\te.other:Faction(242,25,0); -- Deepwater Knights\n\t\te.other:Faction(266,3,0); -- High Council of Erudin\n\t\te.other:Faction(265,-3,0); -- Heretics\n\t\te.other:AddEXP(2500);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade);\nend\n\n-- END of FILE Zone:erudnext  ID:98061 -- Gans_Paust\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 17024,
+        "zone": "erudnext",
+        "name": "Gans_Paust",
+        "lua_content": "-- Source: erudnext/Gans_Paust.lua\n-- items: 18173, 18724, 13544, 1771, 1763\nfunction event_spawn(e)\n\tlocal xloc = e.self:GetX();\n\tlocal yloc = e.self:GetY();\n\teq.set_proximity(xloc - 50, xloc + 50, yloc - 50, yloc + 50);\nend\n\nfunction event_enter(e)\n\tif(e.other:HasItem(18724)) then\n\t\te.other:Message(MT.Yellow,\"A commanding, yet kind looking Erudite turns towards you as you attempt to get your bearings. 'Do not be startled. I am Gans Paust, Guild Master of the Deepwater Knights and you are to become one of us. Read the note in your inventory and hand it to me when you are ready to begin your training. I look forward to working with you.'\");\n\tend\nend\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Emote(\"glances at you and hurriedly makes a gesture of religious meaning before you and says, 'Yes, yes, I hereby bless you in the name of Prexus. May your catch be plentiful and your nets never snag. Are there any other fishermen seeking a blessing? I'm very busy.'\");\n\telseif(e.message:findi(\"your brother\")) then\n\t\te.self:Say(\"What? How do you know fo my brother? Ahh I assume Breya told you. He's been gone for quite some time with no word sent on his progress or his wellbeing. I need to find someone to [check on him].\");\n\telseif(e.message:findi(\"check on him\")) then\n\t\te.self:Say(\"Thank you, \" .. e.other:GetName() .. \". He's one of our people's most knowledgeable geologists and has left to survey an island out in Erud's Crossing. He was sending monthly reports until two weeks ago when his report never showed up. I'm worried something may have happened to him. Take this note to Yelesom and bring back something to assure me of his safety. A reward fitting a Deepwater Knight shall be yours upon your success.\");\n\t\te.other:SummonItem(18173); -- Item: Gans's note to Yelesom\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 18724})) then -- Tattered Note\n\t\te.self:Say(\"Yes, welcome friend! Here is your guild tunic. You'll make a fine addition to the Deepwater Knights.\");\n\t\te.other:SummonItem(13544); -- Old Blue Tunic*\n\t\te.other:Ding();\n\t\te.other:Faction(242,100,0); -- Deepwater Knights\n\t\te.other:Faction(266,15,0); -- High Council of Erudin\n\t\te.other:Faction(265,-15,0); -- Heretics\n\t\te.other:AddEXP(20);\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 1771})) then\n\t\te.self:Say(\"Excellent! Thank you for checking on my brother, I am glad to hear that he is well.  Here is something that shall help you on your way.\");\n\t\te.other:SummonItem(1763); -- Item: Midnight Sea Mail Sleeves\n\t\te.other:Ding();\n\t\te.other:Faction(242,25,0); -- Deepwater Knights\n\t\te.other:Faction(266,3,0); -- High Council of Erudin\n\t\te.other:Faction(265,-3,0); -- Heretics\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade);\nend\n\n-- END of FILE Zone:erudnext  ID:98061 -- Gans_Paust\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/erudnext/Gans_Paust.lua",
+      "beforeSha256": "d84e6d1587211882d25e64eba8a1a188c4aeb10f1a735c117eed73adb984911c",
+      "proposedFile": "changes/p99-tz-gans-no-final-xp/erudnext--Gans_Paust.lua",
+      "afterSha256": "8722e125b181186ca963595f189e532085e71047316a6f1852f84b9e3a8ee952"
+    }
+  ]
+}

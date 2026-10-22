@@ -1,0 +1,975 @@
+[
+  {
+    "name": "Dexlin timer one finite batch",
+    "assertions": "local active=false;local count=0;eq.set_timer=function(n,d) equal(n,'spawns');equal(d,10000);active=true end;eq.stop_timer=function(n) equal(n,'spawns');active=false end;eq.spawn2=function(id,...) equal(id,13120);count=count+1 end;say('brave fighter');reward(17986,1);assert(active);event_timer({timer='unrelated'});equal(count,0);assert(active);event_timer({timer='spawns'});equal(count,5);assert(not active);say('brave fighter');assert(active);event_timer({timer='spawns'});equal(count,10);assert(not active)",
+    "proposedFile": "changes/p99-tz-dexlin-timer/northkarana--Watchman_Dexlin.lua",
+    "sourceSha256": "d260e43133380cc04458289126d58a213969f213920527fda8928f8ac7a79bc9",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Toxdil snake terminology and hand-in",
+    "assertions": "character.class=9;other.GetClassName=function()return'Rogue'end;say('deadly liquid');assert(string.find(calls.speech[1],'called snake venom',1,true));trade({14017,14017,99999},{gold=21});reward(14016,1);equal(remaining.gold,1);equal(remaining[99999],1);equal(calls.exp,100)",
+    "proposedFile": "changes/p99-tz-toxdil-dialogue/freportw--Toxdil.lua",
+    "sourceSha256": "59bb8c92b17b41b5071e12879ef3376b905fc4b9cddf80394b2c279fdf8e70f8",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Toxdil partial rejected",
+    "assertions": "trade({14017,99999},{gold=20});reward(14016,0);equal(remaining.gold,20);equal(remaining[14017],1)",
+    "proposedFile": "changes/p99-tz-toxdil-dialogue/freportw--Toxdil.lua",
+    "sourceSha256": "59bb8c92b17b41b5071e12879ef3376b905fc4b9cddf80394b2c279fdf8e70f8",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Recruiter precise factions and retained extra",
+    "assertions": "trade({30081,99999});faction(419,10);faction(448,8);faction(406,-17);faction(430,-30);equal(remaining[99999],1);equal(calls.exp,5000);trade({30081});faction(448,16)",
+    "proposedFile": "changes/p99-tz-recruiter-factions/kael--a_kromrif_recruiter.lua",
+    "sourceSha256": "f227702a40956e7d15a8c5ef21c907e9937fc9c659da5653ef630e02decfd671",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Vkjor losses and old alias",
+    "assertions": "say('What losses?');assert(string.find(calls.speech[1],'youngest son',1,true));say('losers');equal(calls.speech[1],calls.speech[2])",
+    "proposedFile": "changes/p99-tz-vkjor-dialogue/kael--Vkjor.lua",
+    "sourceSha256": "e36a35bbb99d202d40ffe58fe09f6a9de13c8f865f224ec49cabf183dec409c4",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Hermit full promise and generic lore",
+    "assertions": "say('I will help the unkempt druids');assert(string.find(calls.speech[1],'Linaya Sowlin',1,true));say('What unkempt druids');assert(string.find(calls.speech[2],'voices of the trees',1,true));trade({13854,99999});reward(13116,1);equal(remaining[99999],1);faction(324,10);equal(calls.exp,1000)",
+    "proposedFile": "changes/p99-tz-hermit-dialogue/southkarana--a_hermit.lua",
+    "sourceSha256": "b22656047ab131b6fdeb8201408bd8f165caa6819d17ccaccdfb8a0d82055234",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Wislen specific fish branch",
+    "assertions": "say('catfish');assert(string.find(calls.speech[1],'Kerra Catfish',1,true));say('fish');assert(string.find(calls.speech[2],'Mamluk',1,true))",
+    "proposedFile": "changes/p99-tz-wislen-dialogue/kerraridge--Wislen_Mamluk.lua",
+    "sourceSha256": "ee06447dedf1009116f360c0f8d070d1a10a94dd4b73455492a7252682f2ea83",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Barnal advertised phrase",
+    "assertions": "say('aid me in my duty');assert(#calls.speech==1);say('aid you in your duty');equal(calls.speech[1],calls.speech[2])",
+    "proposedFile": "changes/p99-tz-barnal-dialogue/firiona--Barnal_Flamehand.lua",
+    "sourceSha256": "cb289e89e2fbc0a026bd015af6f094bc59cf26c8549507d15f390785c25707dc",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Shevra advertised phrase",
+    "assertions": "say('make yourself useful');assert(#calls.speech==1);say('make myself useful');equal(calls.speech[1],calls.speech[2])",
+    "proposedFile": "changes/p99-tz-shevra-dialogue/paineel--Shevra_Kollintar.lua",
+    "sourceSha256": "bde725c7352b1fe65bf064c161293d4fe4ebf30881d449bdba8122313dd0dad7",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Lanena ally path",
+    "assertions": "say('new deputy');assert(string.find(calls.speech[1],'small problem',1,true));trade({13870,99999});reward(17968,1);equal(remaining[99999],1);equal(calls.returns,1);trade({99999});equal(calls.returns,2);reward(17968,1)",
+    "proposedFile": "changes/p99-tz-lanena-dialogue/rivervale--Marshal_Lanena.lua",
+    "sourceSha256": "6dfff7a470ff86089d18ea1cffed6f2c3baa3f7d9ec05adebc02256a8326e662",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Ghobber ally path and ring cost",
+    "assertions": "say('new to the squad');assert(string.find(calls.speech[1],'Deputy Budo',1,true));say('one with the wall');reward(13936,1);faction(263,-500)",
+    "proposedFile": "changes/p99-tz-ghobber-dialogue/rivervale--Marshal_Ghobber.lua",
+    "sourceSha256": "6089107cc145addad98bd2cc624234035d6b4ee3bd1f0e98378bd15c05f9c4a2",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Fiddy known phrase and single return",
+    "assertions": "say('Wickystick sent me');assert(string.find(calls.speech[1],'piranha',1,true));trade({13870,99999});equal(remaining[99999],1);equal(calls.returns,1);faction(292,5);equal(calls.exp,15);trade({99999});equal(calls.returns,2);equal(calls.exp,15)",
+    "proposedFile": "changes/p99-tz-fiddy-dialogue/rivervale--Fiddy_Bobick.lua",
+    "sourceSha256": "74dc1daaf269277eeb863ba80781d63c4eb55819ec87383e80d38c7d6057b916",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Lysbith short phrases",
+    "assertions": "say('orc troopers');assert(string.find(calls.speech[1],'wristbands',1,true));say('Seax');assert(string.find(calls.speech[2],'piercing weapon',1,true));say('Langseax');equal(#calls.speech,2);say('ice goblins');say('what ice goblins');equal(calls.speech[3],calls.speech[4])",
+    "proposedFile": "changes/p99-tz-lysbith-dialogue/halas--Lysbith_McNaff.lua",
+    "sourceSha256": "6d0c46ea6d0bc3381eb847919c0b723ad5715c356c820816a2dde1162483e95f",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Zenita all losing cards and king",
+    "assertions": "other.GetRaceName=function()return'Human'end;for _,id in ipairs({22299,22297,22296,22294,22293,22295})do trade({id,99999});equal(remaining[id],0);equal(remaining[99999],1)end;equal(#calls.speech,6);trade({22298});reward(13279,1);equal(calls.returns,7)",
+    "proposedFile": "changes/p99-tz-zenita-cards/freporte--Zenita_D-Rin.lua",
+    "sourceSha256": "3f0fa9e2c1c7c9b5013f944c3571c316d6183c17809959eec24ae79e91407905",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Nanrum documented and retained spawn phrases",
+    "assertions": "local n=0;eq.unique_spawn=function(id,...)equal(id,52118);n=n+1 end;say('wheres the skeleton');say('where the skeleton');say('where is the skeleton');equal(n,3)",
+    "proposedFile": "changes/p99-tz-nanrum-dialogue/grobb--Basher_Nanrum.lua",
+    "sourceSha256": "1c4a3a2dd93944d0df65e866dfd15ce496c381a371a238503580133e793d6e1a",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Sklama documented phrase",
+    "assertions": "local n=0;eq.unique_spawn=function(id,...)equal(id,46108);n=n+1 end;say('Have you seen the captain?');say('where the captain');equal(n,2)",
+    "proposedFile": "changes/p99-tz-sklama-dialogue/innothule--Basher_Sklama.lua",
+    "sourceSha256": "ec8bc922ebc97d0f69967672e7ab7eb65f0c4ead8c2f93fdb6777444c44419b2",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Avisk documented phrase",
+    "assertions": "local n=0;eq.unique_spawn=function(id,...)equal(id,52119);n=n+1 end;say('what tune');say('where the minstrel');equal(n,2)",
+    "proposedFile": "changes/p99-tz-avisk-dialogue/grobb--Basher_Avisk.lua",
+    "sourceSha256": "9408c653b3d9e6694fdfebbb209f04b92d5217953c8d355ac546d5c445fa1e93",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Grobb skeleton partial extra returns",
+    "assertions": "local id=52119;npc.GetNPCTypeID=function()return id end;eq.depop=function()calls.depops=calls.depops+1 end;trade({12198,12198,99999});reward(12216,0);equal(remaining[12198],2);equal(calls.returns,1);trade({12198,12198,12198,12198});reward(12216,1);equal(calls.returns,2);id=52056;trade({12211,99999});reward(12213,1);equal(remaining[99999],1);equal(calls.returns,3);id=52118;trade({12217,99999});reward(12214,1);equal(calls.returns,4);equal(calls.depops,3)",
+    "proposedFile": "changes/p99-tz-grobb-skeleton-returns/grobb--a_skeleton.lua",
+    "sourceSha256": "d6d660a4ba48099ec337f3ad87582d12d7e11bfa69675d25e12c2ba68de6b4bb",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Captain skeleton complete and rejected returns",
+    "assertions": "eq.depop=function()calls.depops=calls.depops+1 end;trade({99999});equal(calls.returns,1);reward(12215,0);trade({12218,99999});reward(12215,1);equal(remaining[99999],1);equal(calls.returns,2);equal(calls.depops,1)",
+    "proposedFile": "changes/p99-tz-innothule-skeleton-returns/innothule--a_skeleton.lua",
+    "sourceSha256": "395fe2f7aef405e34dd800a6f31daa92ac31290e813f98492a29c1101e4116c4",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Nolusia documented brother",
+    "assertions": "say('Who is your brother?');assert(string.find(calls.speech[1],'Moodoro Finharn',1,true))",
+    "proposedFile": "changes/p99-tz-nolusia-dialogue/erudnext--Nolusia_Finharn.lua",
+    "sourceSha256": "0697a4c24aa5c4711d1d7abfa9fd3e26f8197c8d15fe093e364f4d5bb5091c35",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Tergon cannot create Wenglawks letter",
+    "assertions": "say('travel abroad');reward(18887,1);reward(1717,0)",
+    "proposedFile": "changes/p99-tz-retlon-note-tergon_brenclog/akanon--Tergon_Brenclog.lua",
+    "sourceSha256": "80a3f713cffe2fca1bcd1cb63b52c37e37d9591be2883820d146bd79985a0058",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Retlon rejects wrong letter and keeps right chain",
+    "assertions": "trade({1717});equal(remaining[1717],1);equal(calls.exp,0);trade({18887,99999});equal(remaining[18887],0);equal(remaining[99999],1);equal(calls.exp,500);say('get me out');say('spellbook');assert(string.find(calls.speech[#calls.speech],'HURRY',1,true))",
+    "proposedFile": "changes/p99-tz-retlon-note-retlon_brenclog/crushbone--Retlon_Brenclog.lua",
+    "sourceSha256": "1dfe47d1c999bdaf465cdbd8cb4230ce2332c6443d23ec395e9c87f855e5d3fb",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Larn correct voucher freportw",
+    "assertions": "say('get our shipment');reward(18820,1);reward(1717,0);trade({12241,12242,12243,12244});reward(13919,1)",
+    "proposedFile": "changes/p99-tz-weapons-voucher-freportw-larn_brugal/freportw--Larn_Brugal.lua",
+    "sourceSha256": "e6ba04cf1059839de9c50a4e014f5568760a7fbd1077bc200e74df8f4743606f",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Larn correct voucher freeporteast",
+    "assertions": "say('get our shipment');reward(18820,1);reward(1717,0);trade({12241,12242,12243,12244});reward(13919,1)",
+    "proposedFile": "changes/p99-tz-weapons-voucher-freeporteast-larn_brugal/freeporteast--Larn_Brugal.lua",
+    "sourceSha256": "f30e78e1ffa395ee11f5c4f65403b2cfbb36c3a744eb71770d8c8dd57398a205",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Groflah rejects Wenglawks letter freportn",
+    "assertions": "trade({1717});equal(remaining[1717],1);equal(calls.exp,0);trade({18820,99999});equal(calls.exp,100);equal(remaining[99999],1);trade({13919});reward(5418,1)",
+    "proposedFile": "changes/p99-tz-weapons-voucher-freportn-groflah_steadirt/freportn--Groflah_Steadirt.lua",
+    "sourceSha256": "2828779516b776eba5d4b3cf198fc6a7424162928f1d5ace17d06ea630758c53",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Groflah rejects Wenglawks letter freeportwest",
+    "assertions": "trade({1717});equal(remaining[1717],1);equal(calls.exp,0);trade({18820,99999});equal(calls.exp,100);equal(remaining[99999],1);trade({13919});reward(5418,1)",
+    "proposedFile": "changes/p99-tz-weapons-voucher-freeportwest-groflah_steadirt/freeportwest--Groflah_Steadirt.lua",
+    "sourceSha256": "6632d5b2f89708d4eb21f5b6b9928dee07df6a49ea16b6da90de5a6ec8dc4184",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Dooly short name freportw",
+    "assertions": "say('Where is Retlon?');equal(#calls.speech,1)",
+    "proposedFile": "changes/p99-tz-dooly-dialogue/freportw--Dooly_Jonkers.lua",
+    "sourceSha256": "a2aa89cbbefc603db496148f43fc015aa6d7fca833fadcee59f1cb36797e9ed6",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Dooly short name freeportwest",
+    "assertions": "say('Where is Retlon?');equal(#calls.speech,1)",
+    "proposedFile": "changes/p99-tz-dooly-alias-dialogue/freeportwest--Dooly_Jonkers.lua",
+    "sourceSha256": "a2aa89cbbefc603db496148f43fc015aa6d7fca833fadcee59f1cb36797e9ed6",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Weltria exact currency faction and returns",
+    "assertions": "say('I am capable of obtaining the scrolls');reward(17058,1);trade({31825,99999});equal(calls.cash[1][1],0);equal(calls.cash[1][4],50);faction(289,5);faction(266,3);faction(267,3);equal(remaining[99999],1);trade({99999});equal(#calls.cash,1)",
+    "proposedFile": "changes/p99-tz-weltria-rewards/erudnext--Weltria_Ostriss.lua",
+    "sourceSha256": "7043fb8db37d854300fdf781a25e81816112609837974244efa5c72adfe6c92e",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Yelinak head branch and Dain branch preserved",
+    "assertions": "trade({24984,99999});reward(25857,1);faction(436,-250);faction(405,-250);faction(448,500);faction(429,500);equal(remaining[99999],1);trade({30501});reward(25858,1);trade({99999});equal(calls.exp,500000)",
+    "proposedFile": "changes/p99-tz-yelinak-head/kael--King_Tormax.lua",
+    "sourceSha256": "c788fa5c134a08e98a426c9fc00b46ae12976acf4383db60a33a87eb9e75a739",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Dain Tormax head and blessing preserved",
+    "assertions": "npc.Shout=npc.Say;trade({30516,99999});reward(30502,1);faction(406,100);faction(405,100);faction(429,-100);equal(remaining[99999],1);equal(calls.exp,0);trade({30385});reward(30385,1);reward(1747,1);trade({99999});equal(calls.exp,0)",
+    "proposedFile": "changes/p99-tz-tormax-head-dain/thurgadinb--#Dain_Frostreaver_IV.lua",
+    "sourceSha256": "b6bb533235e121ace127721d6ad26f49184354019757a1e05dbcc3f65d4ea81b",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Hermit Talym exact factions and Winds alias",
+    "assertions": "say('Do you have the Winds of Karana?');assert(string.find(calls.speech[1],'two song sheets',1,true));trade({13913,99999});reward(13310,1);faction(324,20);faction(262,-5);faction(272,-15);faction(343,10);equal(remaining[99999],1)",
+    "proposedFile": "changes/p99-tz-hermit-dialogue/southkarana--a_hermit.lua",
+    "sourceSha256": "b22656047ab131b6fdeb8201408bd8f165caa6819d17ccaccdfb8a0d82055234",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Cordelia exact flute factions",
+    "assertions": "trade({13310,99999});reward(13119,1);faction(284,5);faction(281,1);faction(262,1);faction(304,-1);faction(285,-1);equal(calls.cash[1][2],1);equal(remaining[99999],1)",
+    "proposedFile": "changes/p99-tz-cordelia-factions/northkarana--Cordelia_Minster.lua",
+    "sourceSha256": "289419b146edb673ddd619523e58bf75af369efef216a7c0c46b93b9600405a2",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Vhalen final factions and incomplete return",
+    "assertions": "trade({13116});equal(remaining[13116],1);reward(15722,0);trade({13116,13119,99999});reward(15722,1);faction(284,30);faction(281,4);faction(262,4);faction(304,-1);faction(285,-1);equal(remaining[99999],1);trade({13114});reward(18803,1);faction(284,50);faction(281,7)",
+    "proposedFile": "changes/p99-tz-vhalen-factions/southkarana--Vhalen_Nostrolo.lua",
+    "sourceSha256": "336bd868bb826b50b25754f5666a466146ae7d474b80a7dca01d854b47ed89e2",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Rathmana identity priority and refunds southro",
+    "assertions": "trade({18808,18809},{gold=20});equal(remaining[18808],1);equal(remaining.gold,20);reward(18825,0);trade({18808,18809,18810,99999},{gold=35});reward(18825,1);reward(18961,0);equal(remaining.gold,15);equal(remaining[99999],1);trade({},{gold=30});equal(calls.exp,100)",
+    "proposedFile": "changes/p99-tz-bayle-southro-rathmana_allin/southro--Rathmana_Allin.lua",
+    "sourceSha256": "8a24c1afe993704eab8afd6be3c80e0e42d8db7861dd3ef0c13663829005a71a",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Rathmana identity priority and refunds sro",
+    "assertions": "trade({18808,18809},{gold=20});equal(remaining[18808],1);equal(remaining.gold,20);reward(18825,0);trade({18808,18809,18810,99999},{gold=35});reward(18825,1);reward(18961,0);equal(remaining.gold,15);equal(remaining[99999],1);trade({},{gold=30});equal(calls.exp,100)",
+    "proposedFile": "changes/p99-tz-bayle-sro-rathmana_allin/sro--Rathmana_Allin.lua",
+    "sourceSha256": "11b99a55cdb23333951e49c755f7d85587ad84337834a4d809357243444a1aca",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Pietro rejects Rogue letter freporte",
+    "assertions": "trade({18961});equal(remaining[18961],1);reward(12153,0);trade({18825,99999});reward(12153,1);equal(remaining[99999],1);trade({18743});reward(13561,1)",
+    "proposedFile": "changes/p99-tz-bayle-freporte-pietro_zarn/freporte--Pietro_Zarn.lua",
+    "sourceSha256": "257a7871b15e620028bd9ac521ce65ba5a0a0cb75aed06c021465e3583e640be",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Pietro rejects Rogue letter freeporteast",
+    "assertions": "trade({18961});equal(remaining[18961],1);reward(12153,0);trade({18825,99999});reward(12153,1);equal(remaining[99999],1);trade({18743});reward(13561,1)",
+    "proposedFile": "changes/p99-tz-bayle-freeporteast-pietro_zarn/freeporteast--Pietro_Zarn.lua",
+    "sourceSha256": "e10ff7ea1bda40b11add9a5de71b626ea87b6923b97c3e6cf5b626e87270eb77",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Vilissia apostrophe prompt",
+    "assertions": "say(\"What Tishan's kilt?\");assert(string.find(calls.speech[1],'Shadowed Ball',1,true));say('tishans kilt');equal(#calls.speech,2)",
+    "proposedFile": "changes/p99-tz-vilissia-dialogue/soltemple--Vilissia.lua",
+    "sourceSha256": "1cc9d9b9d730ba04de2fc9285a82a5a9171b2c6b932127e4bb10b544b1941a5c",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Oracle singular Book of Ages",
+    "assertions": "say('What about the Book of Ages?');assert(string.find(calls.speech[1],'seven books',1,true));trade({18302,99999});reward(19072,1);equal(remaining[99999],1)",
+    "proposedFile": "changes/p99-tz-oracle-dialogue/oot--Oracle_of_K-Arnon.lua",
+    "sourceSha256": "901a3752935ca97b4f0aed544d10e47d1b05357e1a80b93f7d7d457ca5065345",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Trooper old and documented phrase lakeofillomen/Trooper_Frogzin",
+    "assertions": "say('sign the restraining order');local n=#calls.speech;say('sign this restraining order');assert(n>0);equal(#calls.speech,2*n);equal(calls.exp,0);trade({99999});equal(remaining[99999],1)",
+    "proposedFile": "changes/p99-tz-restraining-trooper_frogzin/lakeofillomen--Trooper_Frogzin.lua",
+    "sourceSha256": "302ceb07e760327d932ec57779f8e71a831fc2a89cc0d6b1a96f344bb0a0bb9c",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Trooper old and documented phrase cabeast/Trooper_Fryp",
+    "assertions": "say('sign the restraining order');local n=#calls.speech;say('sign this restraining order');assert(n>0);equal(#calls.speech,2*n);equal(calls.exp,0);trade({99999});equal(remaining[99999],1)",
+    "proposedFile": "changes/p99-tz-restraining-trooper_fryp/cabeast--Trooper_Fryp.lua",
+    "sourceSha256": "6a0ff5868dcbe6f852a5797c61d1c31ca7cc2ee42cf4fcd0c3ae3c943fe5c13b",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Trooper old and documented phrase fieldofbone/Trooper_Gummin",
+    "assertions": "say('sign the restraining order');local n=#calls.speech;say('sign this restraining order');assert(n>0);equal(#calls.speech,2*n);equal(calls.exp,0);trade({99999});equal(remaining[99999],1)",
+    "proposedFile": "changes/p99-tz-restraining-trooper_gummin/fieldofbone--Trooper_Gummin.lua",
+    "sourceSha256": "297e2350d92754aa97579c87e3f35f188457f161ee1471ea14502f017eb7607f",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Trooper old and documented phrase swampofnohope/Trooper_Inkin",
+    "assertions": "say('sign the restraining order');local n=#calls.speech;say('sign this restraining order');assert(n>0);equal(#calls.speech,2*n);equal(calls.exp,0);trade({99999});equal(remaining[99999],1)",
+    "proposedFile": "changes/p99-tz-restraining-trooper_inkin/swampofnohope--Trooper_Inkin.lua",
+    "sourceSha256": "968035470241194c5ba0214599fef9b0ae83051dacef4ccba9e2a57c680bbd3e",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Trooper old and documented phrase cabeast/Trooper_Nishnish",
+    "assertions": "say('sign the restraining order');local n=#calls.speech;say('sign this restraining order');assert(n>0);equal(#calls.speech,2*n);equal(calls.exp,0);trade({99999});equal(remaining[99999],1)",
+    "proposedFile": "changes/p99-tz-restraining-trooper_nishnish/cabeast--Trooper_Nishnish.lua",
+    "sourceSha256": "094a7b37d72a5989160f671b9423e2558a887305ec06afe173925d215b21f6ac",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Trooper old and documented phrase cabwest/Trooper_Ogmire",
+    "assertions": "say('sign the restraining order');local n=#calls.speech;say('sign this restraining order');assert(n>0);equal(#calls.speech,2*n);equal(calls.exp,0);trade({99999});equal(remaining[99999],1)",
+    "proposedFile": "changes/p99-tz-restraining-trooper_ogmire/cabwest--Trooper_Ogmire.lua",
+    "sourceSha256": "95c5c41e1772357f38f18f570a1bf5d01f967ffdc13ce32b22eee810988c2fca",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Trooper old and documented phrase cabwest/Trooper_Ozlot",
+    "assertions": "say('sign the restraining order');local n=#calls.speech;say('sign this restraining order');assert(n>0);equal(#calls.speech,2*n);equal(calls.exp,0);trade({99999});equal(remaining[99999],1)",
+    "proposedFile": "changes/p99-tz-restraining-trooper_ozlot/cabwest--Trooper_Ozlot.lua",
+    "sourceSha256": "f305d305fe15174b42620c6a901b9ca176c10d3c6d7ecb66006bb7a2bdaa3556",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Trooper old and documented phrase warslikswood/Trooper_Roklon",
+    "assertions": "say('sign the restraining order');local n=#calls.speech;say('sign this restraining order');assert(n>0);equal(#calls.speech,2*n);equal(calls.exp,0);trade({99999});equal(remaining[99999],1)",
+    "proposedFile": "changes/p99-tz-restraining-trooper_roklon/warslikswood--Trooper_Roklon.lua",
+    "sourceSha256": "f22c0b6668a63583acf7625c0d30eba979de3f8a3c514880a55b6e74c8256db3",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Trooper old and documented phrase lakeofillomen/Trooper_Selbat",
+    "assertions": "say('sign the restraining order');local n=#calls.speech;say('sign this restraining order');assert(n>0);equal(#calls.speech,2*n);equal(calls.exp,0);trade({99999});equal(remaining[99999],1)",
+    "proposedFile": "changes/p99-tz-restraining-trooper_selbat/lakeofillomen--Trooper_Selbat.lua",
+    "sourceSha256": "41f14ce10589717aeb2f06b967a3926b01ee03850d91500262be81953bd0a585",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Trooper old and documented phrase fieldofbone/Trooper_Taer",
+    "assertions": "say('sign the restraining order');local n=#calls.speech;say('sign this restraining order');assert(n>0);equal(#calls.speech,2*n);equal(calls.exp,0);trade({99999});equal(remaining[99999],1)",
+    "proposedFile": "changes/p99-tz-restraining-trooper_taer/fieldofbone--Trooper_Taer.lua",
+    "sourceSha256": "ae65e7c228e70242b575aa396c5a7cb0e5cc16988eabcb672f9824a63d67cba1",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Lottery old and documented phrase highkeep/Jail_Clerk_Maryl",
+    "assertions": "say('highpass lottery');say('highkeep lottery');equal(#calls.speech,2);assert(string.find(calls.speech[1],'Lottery',1,true) or string.find(calls.speech[1],'lotter',1,true));equal(calls.exp,0)",
+    "proposedFile": "changes/p99-tz-lottery-jail_clerk_maryl/highkeep--Jail_Clerk_Maryl.lua",
+    "sourceSha256": "394af4feaac3d8e1706a31cd4fc57a17b81fbf8d11fb4c8023bf5904d535d6c9",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Lottery old and documented phrase highkeep/Treasurer_Lynn",
+    "assertions": "say('highpass lottery');say('highkeep lottery');equal(#calls.speech,2);assert(string.find(calls.speech[1],'Lottery',1,true) or string.find(calls.speech[1],'lotter',1,true));equal(calls.exp,0)",
+    "proposedFile": "changes/p99-tz-lottery-treasurer_lynn/highkeep--Treasurer_Lynn.lua",
+    "sourceSha256": "df2c81e3e8ab537f38c0215a308910f7624ec1c498b4c15c11f78229b239f888",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Priestess lore and ground scroll only",
+    "assertions": "local ground=0;npc.GetX=function()return 10 end;npc.GetY=function()return 20 end;npc.GetZ=function()return 30 end;npc.GetHeading=function()return 40 end;eq.create_ground_object=function(id,x,y,z,h)equal(id,18401);equal(x,10);equal(y,20);equal(z,30);equal(h,40);ground=ground+1 end;eq.depop_with_timer=function()calls.depops=calls.depops+1 end;say('I am the champion');say('I have not heard of this relic');say('I have heard of this relic');equal(#calls.speech,3);assert(string.find(calls.speech[3],'Hazeg',1,true));trade({6323,6324,6335});equal(ground,0);equal(remaining[6323],1);trade({6323,6324,6335,6336},{gold=7});equal(ground,1);reward(18401,0);equal(remaining.gold,7);trade({99999});equal(ground,1)",
+    "proposedFile": "changes/p99-tz-visiting-priestess/najena--a_visiting_priestess.lua",
+    "sourceSha256": "4a69dc1c53eb295f8f980db901440bf6941ca66acd1580a42e842b1963441427",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Zanotix documented hail",
+    "assertions": "say('Hail');assert(string.find(calls.speech[1],'indigo sabres',1,true));trade({99999});equal(remaining[99999],1)",
+    "proposedFile": "changes/p99-tz-zanotix-hail/neriakb--Zanotix_Ixtaz.lua",
+    "sourceSha256": "7be786d7c77fd57d2ae30b0f69d8da2f0a6316acbaf0239def9aa5cf436d9a53",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Spirit named timer and reward",
+    "assertions": "eq.depop=function()calls.depops=calls.depops+1 end;eq.stop_timer=function(n)equal(n,'despawn')end;event_timer({timer='unrelated'});equal(calls.depops,0);event_timer({timer='despawn'});equal(calls.depops,1);trade({18401,99999});reward(6403,1);equal(remaining[99999],1)",
+    "proposedFile": "changes/p99-tz-vengeful-spirit-timer/neriakb--vengeful_spirit.lua",
+    "sourceSha256": "6a98fe254007c7d04f5831f8e7c2bc77467dbc74f39a5c5dde8e637997247203",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Balix no faction and hunt alias",
+    "assertions": "say('I will hunt it for you');assert(string.find(calls.speech[1],'talisman',1,true));trade({30055});reward(30056,0);equal(remaining[30055],1);trade({30055,30032,99999});reward(30056,1);faction(439,0);equal(remaining[99999],1);trade({99999});reward(30056,1)",
+    "proposedFile": "changes/p99-tz-balix-no-faction/iceclad--Balix_Misteyes.lua",
+    "sourceSha256": "af9b3669169a71608b441ea86966a56912d86739da5a950308b17b85dce9be55",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Frenway distinct Bayle lore",
+    "assertions": "say('Toe needs the Bayle List');assert(string.find(calls.speech[1],'belly',1,true));say('What is the Bayle List');assert(string.find(calls.speech[2],'property',1,true));say('How do you know Antonius Bayle');assert(string.find(calls.speech[3],'childhood',1,true));trade({13912,18809,99999});reward(18809,1);equal(remaining[99999],1);equal(calls.exp,500);faction(302,10);trade({18809});equal(remaining[18809],1);equal(calls.exp,500)",
+    "proposedFile": "changes/p99-tz-frenway-bayle-dialogue/qrg--Frenway_Marthank.lua",
+    "sourceSha256": "9732c0e013601621471db3e66e33e459215ba1d80c0e6d6c78c696797f7e3428",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Thadres documented diary alias",
+    "assertions": "say('What about his diary?');say('What diary');equal(#calls.speech,2);equal(calls.speech[1],calls.speech[2]);trade({18136,18137});reward(18139,0);equal(remaining[18136],1);trade({18136,18137,18138,99999});reward(18139,1);equal(remaining[99999],1)",
+    "proposedFile": "changes/p99-tz-thadres-diary-dialogue/halas--Thadres_Thyme.lua",
+    "sourceSha256": "0def033b07978d5d273a220b425c62cb7c945502e3eabed412884bb2d0a781dc",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Gozzrem wisdom prompt",
+    "assertions": "say('I seek wisdom');assert(string.find(calls.speech[1],'long battle?',1,true));say('I seek the long battle');assert(string.find(calls.speech[2],'runed tear',1,true));trade({31267,31263,31251});reward(31467,0);trade({31267,31263,31251,31260});reward(31467,1)",
+    "proposedFile": "changes/p99-tz-gozzrem-wisdom-text/templeveeshan--#Gozzrem.lua",
+    "sourceSha256": "95d50d231a4bcf2240e981b6f16d199acb0334d647ac85c0915a88865bea637f",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Weleth specific crate request",
+    "assertions": "say('What crate');reward(13925,0);say('I will take the crate of arrows');reward(13925,1);say('arrows');reward(13925,2);trade({99999});equal(remaining[99999],1)",
+    "proposedFile": "changes/p99-tz-weleth-crate-dialogue/qeynos2--Guard_Weleth.lua",
+    "sourceSha256": "8ebb255e1c69ac480b903cd139b174557f15c02de09f6854e77f98187a55a402",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Tomer correct backpack identity",
+    "assertions": "local g={FindTomer='1'};eq.get_qglobals=function()return g end;eq.delete_global=function(k)g[k]=nil end;eq.stop_follow=function()end;say('I will carry your backpack');reward(13769,1);reward(20459,0);trade({13769});equal(remaining[13769],1);equal(calls.exp,0);g.FindTomer='2';trade({20459});equal(remaining[20459],1);equal(calls.exp,0);trade({13769,99999});equal(calls.exp,100);equal(remaining[99999],1);assert(g.FindTomer==nil)",
+    "proposedFile": "changes/p99-tz-tomer-backpack-identity/qeynos2--Tomer_Instogle.lua",
+    "sourceSha256": "2a95430f6381a329e40956984fb75c26c54ea4bef7dad97102bb3870c400f010",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Seta complete rescue phrase precedence",
+    "assertions": "local g={SetaTomer='1'};eq.get_qglobals=function()return g end;eq.set_global=function(k,v)g[k]=v end;eq.delete_global=function(k)g[k]=nil end;say('I have rescued Tomer Instogle');equal(g.FindTomer,'2');assert(g.SetaTomer==nil);assert(string.find(calls.speech[1],'Great work',1,true));g.FindTomer=nil;say('I found Tomer');assert(g.FindTomer==nil)",
+    "proposedFile": "changes/p99-tz-seta-rescue-precedence/qeynos2--Seta_Bakindo.lua",
+    "sourceSha256": "6f5f51ead26f8be69928c04f81c1cfd76c5bd15199957981b0880032590bfde2",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Astaed checks faction before consuming",
+    "assertions": "other.GetFaction=function()return character.faction end;character.faction=5;trade({18862,13952,99999});equal(remaining[18862],1);equal(remaining[13952],1);equal(remaining[99999],1);equal(calls.exp,0);character.faction=1;trade({18862,99999});reward(6022,1);equal(calls.exp,4000);equal(remaining[99999],1);trade({13952,99999});reward(13954,1);equal(calls.exp,5000);equal(remaining[99999],1);trade({99999});equal(calls.exp,5000)",
+    "proposedFile": "changes/p99-tz-astaed-safe-eligibility/qeynos2--Astaed_Wemor.lua",
+    "sourceSha256": "c29aa301f641564a31975a8c0dc64944b977ee00ece9924fd14766a6c5ff6b7d",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Furtog specific Mudtoe pledge",
+    "assertions": "say('Who are the Mudtoes');assert(string.find(calls.speech[1],'small but mighty',1,true));say('I will go searching for the Mudtoes');assert(string.find(calls.speech[2],'both',1,true));trade({13316});reward(6302,0);equal(remaining[13316],1);trade({13316,13317,99999});reward(6302,1);equal(remaining[99999],1)",
+    "proposedFile": "changes/p99-tz-furtog-mudtoe-dialogue/kaladima--Furtog_Ogrebane.lua",
+    "sourceSha256": "1f792b57111d220c1d5a694f8c2494aabf7f28cbf2f3240ff39e527c34318a1c",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Gans documented final branch no XP",
+    "assertions": "trade({1771,99999});reward(1763,1);equal(calls.exp,0);faction(242,25);equal(remaining[99999],1);trade({18724});reward(13544,1);equal(calls.exp,20);trade({99999});reward(1763,1)",
+    "proposedFile": "changes/p99-tz-gans-no-final-xp/erudnext--Gans_Paust.lua",
+    "sourceSha256": "8722e125b181186ca963595f189e532085e71047316a6f1852f84b9e3a8ee952",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Gerael returns distinct examined contract",
+    "assertions": "trade({18911,99999});reward(18912,1);reward(18911,0);equal(remaining[99999],1);trade({18912});reward(18912,1);equal(remaining[18912],1);trade({12141});reward(18912,1);trade({99999});reward(18912,1)",
+    "proposedFile": "changes/p99-tz-gerael-returned-contract/qrg--Gerael_Woodone.lua",
+    "sourceSha256": "c6c98da737f93b76d13c75e7c757234545d04c596a995feb96c968647d3f1b22",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Vorken Ekelng restored with Blizzent preserved",
+    "assertions": "say('I seek power and wealth');say('What story?');say('Who is Beleveios Thunderstone?');say('Murder?');say('What family?');equal(#calls.speech,5);assert(string.find(calls.speech[5],'head as proof',1,true));trade({25116,99999});reward(25048,1);equal(remaining[99999],1);faction(419,30);faction(448,30);faction(406,-30);faction(430,-30);trade({25117});reward(25049,1);trade({99999});reward(25048,1);reward(25049,1);trade({});reward(25048,1)",
+    "proposedFile": "changes/p99-tz-vorken-ekelng/kael--Vorken_Iceshard.lua",
+    "sourceSha256": "74b07d97bd7f8631525390f63e9275b47e36eaee8daed7a92244b01a643b0147",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Valeron Diggs lore freportn",
+    "assertions": "say('Who is Diggs Duggun?');assert(string.find(calls.speech[1],'Paladin [Hero]',1,true));trade({6701,99999});reward(6701,1);equal(remaining[99999],1);trade({18827});reward(13947,1)",
+    "proposedFile": "changes/p99-tz-valeron-diggs-freportn/freportn--Valeron_Dushire.lua",
+    "sourceSha256": "b85f92c7b4a6e5c88a091bc0d849683af17eb76a9c848c5351847e8370ca0aab",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Valeron Diggs lore freeportwest",
+    "assertions": "say('Who is Diggs Duggun?');assert(string.find(calls.speech[1],'Paladin [Hero]',1,true));trade({6701,99999});reward(6701,1);equal(remaining[99999],1);trade({18827});reward(13947,1)",
+    "proposedFile": "changes/p99-tz-valeron-diggs-freeportwest/freeportwest--Valeron_Dushire.lua",
+    "sourceSha256": "762666fbf5ae7fa417814e624e5bdf7a830d014dedce3335b6acbc89b2382c8e",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Nivold denied full offer returned intact",
+    "assertions": "local spawned=0;eq.unique_spawn=function(id,...)equal(id,75164);spawned=spawned+1 end;other.GetFaction=function()return 5 end;trade({16540,13739,14111,14112});reward(14105,0);for _,id in ipairs({16540,13739,14111,14112})do equal(remaining[id],1)end;other.GetFaction=function()return 1 end;trade({16540,13739,14111});reward(14105,0);trade({16540,13739,14111,14112},{copper=1});reward(14105,1);equal(calls.cash[1][4],6);equal(remaining.copper,1)",
+    "proposedFile": "changes/p99-tz-nivold-safe-eligibility/paineel--Nivold_Predd.lua",
+    "sourceSha256": "c304668acdb046f709add9efb82c5e32e31151eb05fadcf81fe36c379642d93d",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Dread timer ignores unrelated names",
+    "assertions": "local shouts=0;eq.depop=function()calls.depops=calls.depops+1 end;npc.Shout=function(_,text)shouts=shouts+1 end;eq.set_timer=function(n,d)equal(n,'shout');equal(d,17000)end;eq.stop_timer=function(n)equal(n,'shout')end;event_spawn({self=npc});event_timer({self=npc,timer='other'});equal(shouts,0);equal(calls.depops,0);for i=1,10 do event_timer({self=npc,timer='shout'})end;equal(shouts,10);equal(calls.depops,1);event_spawn({self=npc});event_timer({self=npc,timer='shout'});equal(calls.depops,1)",
+    "proposedFile": "changes/p99-tz-dread-named-timer/paineel--avatar_of_dread.lua",
+    "sourceSha256": "b2247fda94ae2e4df968017745b15b58119efad2d59e4c57b2dd888ed4478c86",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Terror avatar documented hail",
+    "assertions": "eq.depop=function()calls.depops=calls.depops+1 end;eq.stop_timer=function()end;say('Hail');assert(string.find(calls.speech[1],'Do you bring Terror?',1,true));trade({14106,99999});reward(14108,1);equal(remaining[99999],1)",
+    "proposedFile": "changes/p99-tz-terror-avatar-hail/paineel--#Avatar_of_Terror.lua",
+    "sourceSha256": "50abb441c8e600f1e3f204d4b19f8c4726a24fa5ff254d7b2caded92e6647a82",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Toxdil Paladin gem route and Rogue poison gate",
+    "assertions": "other.GetClassName=function()return 'Paladin'end;say('gem of righteousness');assert(string.find(calls.speech[1],'worthless',1,true));say('deadly liquid');equal(#calls.speech,1);trade({12353,99999});reward(12352,1);reward(12351,0);equal(remaining[99999],1);trade({12351});equal(remaining[12351],1);other.GetClassName=function()return 'Rogue'end;say('deadly liquid');assert(string.find(calls.speech[#calls.speech],'snake venom',1,true));say('gem of righteousness');assert(string.find(calls.speech[#calls.speech],'worthless',1,true))",
+    "proposedFile": "changes/p99-tz-toxdil-dialogue/freportw--Toxdil.lua",
+    "sourceSha256": "59bb8c92b17b41b5071e12879ef3376b905fc4b9cddf80394b2c279fdf8e70f8",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Puab documented and old pledges freportw",
+    "assertions": "say('Hail');assert(string.find(calls.speech[1],'[treant fist]',1,true));say('What treant fist');say('Who is Clawfist');assert(string.find(calls.speech[3],'Kerran',1,true));say('I am a monk of great skill');reward(12369,1);say('skilled monk of the Ashen House');reward(12369,2);trade({28055,99999});reward(12344,1);equal(remaining[99999],1);trade({18746});reward(13507,1)",
+    "proposedFile": "changes/p99-tz-puab-dialogue-freportw/freportw--Puab_Closk.lua",
+    "sourceSha256": "d7a787594045353bfca74789fdc720a1b8029e4ca475ee1d1ac5c98489f446af",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Puab documented and old pledges freeportwest",
+    "assertions": "say('Hail');assert(string.find(calls.speech[1],'[treant fist]',1,true));say('What treant fist');say('Who is Clawfist');assert(string.find(calls.speech[3],'Kerran',1,true));say('I am a monk of great skill');reward(12369,1);say('skilled monk of the Ashen House');reward(12369,2);trade({28055,99999});reward(12344,1);equal(remaining[99999],1);trade({18746});reward(13507,1)",
+    "proposedFile": "changes/p99-tz-puab-dialogue-freeportwest/freeportwest--Puab_Closk.lua",
+    "sourceSha256": "d7a787594045353bfca74789fdc720a1b8029e4ca475ee1d1ac5c98489f446af",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Kerran proof and complete component lore",
+    "assertions": "say('Puab sent me');assert(string.find(calls.speech[1],'prrroof',1,true));say('remains of Thipt');assert(string.find(calls.speech[2],'Fractured Femur',1,true));trade({12369,99999});reward(17985,1);equal(remaining[99999],1);trade({12371});reward(28055,1);trade({12372,12373});reward(28055,1);equal(remaining[12372],1)",
+    "proposedFile": "changes/p99-tz-banished-kerran-dialogue/kerraridge--a_banished_Kerran.lua",
+    "sourceSha256": "4c26294c7eb0b51faaf0cca2e5bf09e0210acda39a45191bc657031681333f88",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Dun exact poster exchange and rejection",
+    "assertions": "trade({12620,99999});reward(12622,1);equal(remaining[99999],1);faction(5002,20);equal(calls.exp,0);trade({12622});equal(remaining[12622],1);reward(12622,1);trade({});reward(12622,1)",
+    "proposedFile": "changes/p99-tz-dun-poster/qeynos--Dun.lua",
+    "sourceSha256": "dd28ac137d23ff8968074d3855a8b3420de4700dcbf1adf5775a8fc8c24a4901",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Jinkus sends poster to Dun",
+    "assertions": "trade({12621});reward(12620,0);equal(remaining[12621],1);trade({12621,12619,99999});reward(12620,1);assert(string.find(calls.speech[#calls.speech],'Dun',1,true));equal(remaining[99999],1);trade({12622});reward(1376,1)",
+    "proposedFile": "changes/p99-tz-jinkus-dun-direction/halas--Jinkus_Felligan.lua",
+    "sourceSha256": "3d2bc8f51b4ce4729f7f6daa918957faca70eb4387009e26f2d1519d42a9bddb",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Tunare courier named timer only",
+    "assertions": "local runs=0;local stopped=0;eq.stop_timer=function(n)equal(n,'CourierDepop');stopped=stopped+1 end;eq.depop=function()calls.depops=calls.depops+1 end;npc.GetX=function()return 1150 end;npc.GetY=function()return -885 end;npc.SetRunning=function(_,v)assert(v);runs=runs+1 end;event_timer({self=npc,timer='unrelated'});equal(calls.depops,0);equal(runs,0);event_timer({self=npc,timer='CourierDepop'});equal(calls.depops,1);equal(stopped,1);equal(runs,1)",
+    "proposedFile": "changes/p99-tz-tunare-courier-timer/lfaydark--a_dark_elf_courier.lua",
+    "sourceSha256": "e6fc23626cedf5be2a47b59ea6cd1324bcaa2e3be5d5e6391652e64d75221f9d",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Glox exactly two star rubies and guild preserved",
+    "assertions": "trade({14788,99999});reward(18980,1);equal(remaining[99999],1);trade({14782,10032});reward(14783,0);equal(remaining[14782],1);equal(remaining[10032],1);trade({14782,10032,10032,99999});reward(14783,1);equal(remaining[99999],1);equal(calls.exp,0);trade({18204});reward(4190,1);equal(calls.exp,100)",
+    "proposedFile": "changes/p99-tz-glox-trooper/cabeast--Grand_Master_Glox.lua",
+    "sourceSha256": "bd488318bf845f658c55f495594ac2be206235ab09f6dc283c7468e64af73b97",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Glosk returned-note referrals and existing skullcap",
+    "assertions": "trade({14794,99999});reward(14794,1);equal(remaining[99999],1);trade({14793});reward(14793,1);equal(calls.exp,0);trade({12874,4265});reward(4266,1);trade({99999});equal(remaining[99999],1)",
+    "proposedFile": "changes/p99-tz-glosk-trooper-notes/cabwest--Harbinger_Glosk.lua",
+    "sourceSha256": "9ae4f197bca8c5adfba15a295964e8d62688b17db4f520f7c04cefe4816e8105",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Vek exact armor references and no invented XP",
+    "assertions": "say('special potion');assert(string.find(calls.speech[1],'2 fire emeralds',1,true));say('gray ice');say('pondfish spines');say('unique weapon');trade({14790,99999});reward(14784,1);equal(remaining[99999],1);trade({14784,14785,10034});reward(14786,0);equal(remaining[14784],1);trade({14784,14785,10034,10030});reward(14786,1);trade({14805,10033});reward(14787,0);trade({14805,10033,10033,99999});reward(14787,1);equal(remaining[99999],1);trade({14795});equal(calls.exp,0);trade({18206});reward(5140,1);equal(calls.exp,500)",
+    "proposedFile": "changes/p99-tz-vek-trooper/cabeast--Prime_Hierophant_Vek.lua",
+    "sourceSha256": "5a1a7696edbda05c6c55a56b6822eba0b22c78f80b36c9c1ab37935e113692e0",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Xlixinar pauldron restored and other trades retained",
+    "assertions": "say('What curse?');say('redemption');say('ancient armor');say('virtue');say('What pauldron?');reward(14795,1);trade({14787});reward(4978,0);trade({14787,3057,99999});reward(4978,1);equal(remaining[99999],1);equal(calls.exp,0);trade({14783,3053});reward(4976,1);trade({14786,3060});reward(4979,1);trade({14783,3056});reward(4977,1)",
+    "proposedFile": "changes/p99-tz-xlixinar_arcut-trooper/overthere--Xlixinar_Arcut.lua",
+    "sourceSha256": "a55b6909c7e83f6ff4d818622cc6ef5cc1dbb268fcdf3fe9fb389d23e1c9f1f3",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Drixiv lore and all four exchanges",
+    "assertions": "say('curse');say('redemption');say('ancient armor');say('virtue');equal(#calls.speech,4);for _,r in ipairs({{14813,3064,4983},{14808,3061,4980},{14831,3063,4982},{14809,3062,4981}})do trade({r[1]});reward(r[3],0);trade({r[1],r[2],99999});reward(r[3],1);equal(remaining[99999],1)end",
+    "proposedFile": "changes/p99-tz-drixiv_arcut-trooper/overthere--Drixiv_Arcut.lua",
+    "sourceSha256": "30264776b8b9690433024b66dbd5b6c8d4ed566143925fc4712edc7bcae8224b",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Maesyn non-ranger pack with existing faction policy",
+    "assertions": "other.GetClassName=function()return 'Warrior'end;say('gather materials');reward(17951,1);other.GetFaction=function()return 5 end;say('gather materials');reward(17951,1);trade({12112,99999});reward(8091,1);equal(calls.cash[1][3],6);equal(remaining[99999],1);trade({18785});reward(13536,1)",
+    "proposedFile": "changes/p99-tz-maesyn-all-class-pack/gfaydark--Maesyn_Trueshot.lua",
+    "sourceSha256": "f8c355bb73c29e3296b1ff52316626af86cfbaf6fa144c2f7c5b7d54ae45eca3",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Ryshon question does not shadow progression",
+    "assertions": "say('What sword?');say('looking for a sword');equal(calls.speech[1],calls.speech[2]);say('sword of nobility');reward(2416,1)",
+    "proposedFile": "changes/p99-tz-ryshon-sword-phrase/qey2hh1--Ryshon_Hunsti.lua",
+    "sourceSha256": "7ee562c8d848066feccd7147bb6bdb9d045ad260726ae78160f7933151aa4226",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Ruathey hail and documented bag path",
+    "assertions": "say('Hail Ruathey');assert(string.find(calls.speech[1],'Hello',1,true));say('bag');reward(17878,1);trade({2417,99999});equal(remaining[99999],1);trade({99999});equal(remaining[99999],1)",
+    "proposedFile": "changes/p99-tz-ruathey-hail/lavastorm--Ruathey.lua",
+    "sourceSha256": "6207048e7ea568b0eca3c6b0cceaf7058a93876be11c11e4e665334fd5cc66a6",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Ulkar glove quantity and seven exact recipes",
+    "assertions": "say('gloves');assert(string.find(calls.speech[1],'three crushed topaz',1,true));for _,r in ipairs({{24926,25837,25405},{24921,25807,25406},{24923,25818,25407},{24925,25841,25408},{24927,25832,25409},{24922,25816,25410},{24924,25829,25411}})do trade({r[1],r[2],r[2]});reward(r[3],0);equal(remaining[r[1]],1);trade({r[1],r[2],r[2],r[2]},{gold=1});reward(r[3],1);equal(remaining.gold,1)end;equal(calls.exp,1050000);faction(448,140)",
+    "proposedFile": "changes/p99-tz-ulkar-glove-count/kael--Ulkar_Jollkarek.lua",
+    "sourceSha256": "073401bc277f086fe5f4d20465c153c7cb481447d6ad7d3431242dd6a67fc904",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Falorn named depop only",
+    "assertions": "eq.depop=function()calls.depops=calls.depops+1 end;local stops=0;eq.stop_timer=function(n)equal(n,'depop');stops=stops+1 end;event_timer({timer='unrelated'});equal(calls.depops,0);equal(stops,0);event_timer({timer='depop'});equal(calls.depops,1);equal(stops,1);trade({99999});equal(remaining[99999],1);say('I have an old trinket to trade in');assert(string.find(calls.speech[1],'Pauldrons of the Blue Sky',1,true));trade({4321,99999});reward(27701,1);equal(remaining[99999],1);trade({20928,20795,20971});reward(14551,0);equal(remaining[20795],1);trade({20928,20970,20971,99999});reward(14551,1);equal(remaining[99999],1);trade({20935,20972,20973});reward(14569,1);trade({20942,20974,20975});reward(4321,1)",
+    "proposedFile": "changes/p99-tz-sky-falorn/airplane--Falorn.lua",
+    "sourceSha256": "24fbc5d4640ae581a798b3913f044e5329f0729f6e9401d4e5b0aef86be52caf",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Ogog named depop only",
+    "assertions": "eq.depop=function()calls.depops=calls.depops+1 end;local stops=0;eq.stop_timer=function(n)equal(n,'depop');stops=stops+1 end;event_timer({timer='unrelated'});equal(calls.depops,0);equal(stops,0);event_timer({timer='depop'});equal(calls.depops,1);equal(stops,1);trade({99999});equal(remaining[99999],1);trade({20983,20963,20981,20982});reward(11675,1);trade({20980,20979,20956,99999});reward(11674,1);equal(remaining[99999],1);trade({20976,20949,20977,20978});reward(11673,1)",
+    "proposedFile": "changes/p99-tz-sky-ogog/airplane--Ogog.lua",
+    "sourceSha256": "03baa356f2fa37f5d7656378d8768ee921e01576db5c60cc9f2a99c43962008b",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Abec_Ianor named depop only",
+    "assertions": "eq.depop=function()calls.depops=calls.depops+1 end;local stops=0;eq.stop_timer=function(n)equal(n,'depop');stops=stops+1 end;event_timer({timer='unrelated'});equal(calls.depops,0);equal(stops,0);event_timer({timer='depop'});equal(calls.depops,1);equal(stops,1);trade({99999});equal(remaining[99999],1);trade({20951,20747,20748});reward(11686,1);trade({20958,20749,20750});reward(27710,1);trade({14556});reward(27710,2);trade({20753,20965,20751,20752});reward(11685,1)",
+    "proposedFile": "changes/p99-tz-sky-abec_ianor/airplane--Abec_Ianor.lua",
+    "sourceSha256": "8b3231a454bd8c097effafb4af29299e8ff9f2246aa4e59cebd0662a675224ec",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Neasin_Leornic named depop only",
+    "assertions": "eq.depop=function()calls.depops=calls.depops+1 end;local stops=0;eq.stop_timer=function(n)equal(n,'depop');stops=stops+1 end;event_timer({timer='unrelated'});equal(calls.depops,0);equal(stops,0);event_timer({timer='depop'});equal(calls.depops,1);equal(stops,1);trade({99999});equal(remaining[99999],1);say('hail');say('I wish to test my powers');equal(#calls.speech,2);trade({20930,20741});reward(1272,0);trade({20930,20741,20742,99999});reward(1272,1);equal(remaining[99999],1);trade({20937,20743,20744});reward(1271,1);trade({20944,20745,20746});reward(1273,1)",
+    "proposedFile": "changes/p99-tz-sky-neasin_leornic/airplane--Neasin_Leornic.lua",
+    "sourceSha256": "e94c26c21ea9f5845f3ca6e27574e14f4da8b7cbeb7a85d0b9902c353bfb83e2",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Schrock exact and retained great wizard phrases",
+    "assertions": "say('I am a great and powerful wizard');say('I am a great wizard');equal(calls.speech[1],calls.speech[2]);assert(string.find(calls.speech[1],'apprentices',1,true))",
+    "proposedFile": "changes/p99-tz-schrock-great-wizard/airplane--Wizard_Schrock.lua",
+    "sourceSha256": "2ec474813e2eb1598f841b540b957fa8b0d9cc10e75354617115ad2a31f0a346",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Dirkog_Steelhand documented five-minute timer",
+    "assertions": "eq.depop=function()calls.depops=calls.depops+1 end;local active=false;eq.set_timer=function(n,t)equal(n,'depop');equal(t,300000);active=true end;eq.stop_timer=function(n)equal(n,'depop');active=false end;event_spawn({});assert(active);event_timer({timer='unrelated'});assert(active);equal(calls.depops,0);event_timer({timer='depop'});assert(not active);equal(calls.depops,1);trade({99999});equal(remaining[99999],1);local spawned=0;eq.spawn2=function(id,...)equal(id,71091);spawned=spawned+1 end;trade({99999},{platinum=499});equal(spawned,0);equal(remaining.platinum,499);trade({99999},{platinum=501});equal(spawned,1);equal(remaining.platinum,1);equal(remaining[99999],1);trade({20943,20869,20868});reward(2716,1)",
+    "proposedFile": "changes/p99-tz-dirkog_steelhand-timer/airplane--Dirkog_Steelhand.lua",
+    "sourceSha256": "8b47ee5327fbcd1be48b8d1621e3bdc363bdf7793239a14f351115443833bb36",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Inte_Akera documented five-minute timer",
+    "assertions": "eq.depop=function()calls.depops=calls.depops+1 end;local active=false;eq.set_timer=function(n,t)equal(n,'depop');equal(t,300000);active=true end;eq.stop_timer=function(n)equal(n,'depop');active=false end;event_spawn({});assert(active);event_timer({timer='unrelated'});assert(active);equal(calls.depops,0);event_timer({timer='depop'});assert(not active);equal(calls.depops,1);trade({99999});equal(remaining[99999],1);trade({5504,99999});reward(18033,1);equal(remaining[99999],1);trade({5403});reward(18034,1);trade({18033,18034,19073});reward(11050,0);trade({18033,18034,19073,1254},{gold=1});reward(11050,1);equal(remaining.gold,1);other.GetFaction=function()return 5 end;trade({5504});reward(18033,1);equal(remaining[5504],1);other.GetFaction=function()return 2 end;trade({5504});reward(18033,2);other.GetFaction=function()return 3 end;trade({5403});reward(18034,1);equal(remaining[5403],1)",
+    "proposedFile": "changes/p99-tz-inte_akera-timer/airplane--Inte_Akera.lua",
+    "sourceSha256": "90fc284b4345c8466551eccb7aed098a883222f107a0f8d1f3e3f9b0a7100e30",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Rysva Book of Scale exact cash and text",
+    "assertions": "trade({19071,19070},{platinum=999});reward(18302,0);equal(remaining.platinum,999);trade({19071,19070,99999},{platinum=1001});reward(18302,1);equal(remaining.platinum,1);equal(remaining[99999],1);assert(string.find(calls.speech[1],'tell no one',1,true));equal(calls.exp,0);trade({18200});reward(18201,1);equal(calls.exp,100)",
+    "proposedFile": "changes/p99-tz-rysva-scale-dialogue/neriakb--Rysva_To-Biath.lua",
+    "sourceSha256": "aa2f98204d809438504a0d6cfbedb17a5560d89f135402cd062e16ed3e9828e2",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Baenek exact documented faction and rejected offer",
+    "assertions": "local spawned=0;eq.spawn2=function(id,...)equal(id,121088);spawned=spawned+1 end;eq.depop_with_timer=function()end;trade({99999});equal(spawned,0);trade({18237,99999});equal(spawned,1);faction(460,10);equal(remaining[99999],1);equal(calls.exp,1000)",
+    "proposedFile": "changes/p99-tz-baenek-faction/crystal--Historian_Baenek.lua",
+    "sourceSha256": "4efeb5ca9ad135432cc4ab480b14647eb19cc8ffb38b52801a98f5e100709bd5",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Garzicor burdael scoped duration",
+    "assertions": "local active=false;eq.set_timer=function(n,t)equal(n,'depop');equal(t,300000);active=true end;eq.stop_timer=function(n)equal(n,'depop');active=false end;eq.depop=function()calls.depops=calls.depops+1 end;event_spawn({});assert(active);event_timer({timer='unrelated'});equal(calls.depops,0);assert(active);event_timer({timer='depop'});equal(calls.depops,1);assert(not active);local paused=false;eq.is_paused_timer=function()return paused end;eq.pause_timer=function()paused=true end;eq.resume_timer=function()paused=false end;event_combat({joined=true});assert(paused);event_combat({joined=false});assert(not paused)",
+    "proposedFile": "changes/p99-tz-garzicor-burdael/crystal--Ghost_of_Burdael.lua",
+    "sourceSha256": "d5a391fcbc63fb8f8ab0080cc1771bda85b2fd19dcd76dcd1d919ae0c20d07af",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Garzicor ghostly-presence scoped duration",
+    "assertions": "local active=false;eq.set_timer=function(n,t)equal(n,'depop');equal(t,60000);active=true end;eq.stop_timer=function(n)equal(n,'depop');active=false end;eq.depop=function()calls.depops=calls.depops+1 end;event_spawn({});assert(active);event_timer({timer='unrelated'});equal(calls.depops,0);assert(active);event_timer({timer='depop'});equal(calls.depops,1);assert(not active);npc.GetX=function()return 1 end;npc.GetY=function()return 2 end;npc.GetZ=function()return 3 end;local spawned=0;eq.spawn2=function(id,...)equal(id,123194);spawned=spawned+1;return nil end;trade({99999});equal(spawned,0);trade({2063,99999});equal(spawned,1);equal(remaining[99999],1)",
+    "proposedFile": "changes/p99-tz-garzicor-ghostly-presence/necropolis--#a_ghostly_presence.lua",
+    "sourceSha256": "481afcb4979eee7f7f46307074486179689ed19dbae531640dd24aa212d5a208",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Garzicor vengeful-spirit scoped duration",
+    "assertions": "local active=false;eq.set_timer=function(n,t)equal(n,'depop');equal(t,900000);active=true end;eq.stop_timer=function(n)equal(n,'depop');active=false end;eq.depop=function()calls.depops=calls.depops+1 end;event_spawn({});assert(active);event_timer({timer='unrelated'});equal(calls.depops,0);assert(active);event_timer({timer='depop'});equal(calls.depops,1);assert(not active);trade({99999});reward(2090,0);trade({25814,99999});reward(2090,1);equal(remaining[99999],1);equal(calls.exp,5000)",
+    "proposedFile": "changes/p99-tz-garzicor-vengeful-spirit/necropolis--#Spirit_of_Garzicor.lua",
+    "sourceSha256": "8b6a579562563d4bfa8b96376caae8c2f7ee6f0e3cd4587c97b4015142b7941e",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Garzicor contented-spirit scoped duration",
+    "assertions": "local active=false;eq.set_timer=function(n,t)equal(n,'depop');equal(t,900000);active=true end;eq.stop_timer=function(n)equal(n,'depop');active=false end;eq.depop=function()calls.depops=calls.depops+1 end;event_spawn({});assert(active);event_timer({timer='unrelated'});equal(calls.depops,0);assert(active);event_timer({timer='depop'});equal(calls.depops,1);assert(not active);trade({99999});reward(2091,0);trade({25814,99999});reward(2091,1);equal(remaining[99999],1);equal(calls.exp,5000)",
+    "proposedFile": "changes/p99-tz-garzicor-contented-spirit/necropolis--#Spirit_of_Garzicor_.lua",
+    "sourceSha256": "25d1d1142344b206d49f62499af0686424d3c68ca85f3c8ec7f8632ed5fb2c9e",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Eldriaks one-way rewards and every prior exchange",
+    "assertions": "other.GetRaceName=function()return 'Human'end;trade({2064,99999});reward(2097,0);equal(remaining[2064],1);equal(remaining[99999],1);trade({2053});reward(2054,1);trade({2055,1868});reward(2426,0);equal(remaining[2055],1);trade({2055,1868,2056,99999});reward(2426,1);reward(2063,1);equal(remaining[99999],1);trade({1728});reward(2097,1);trade({2097});reward(2065,1);trade({2065});reward(2064,1);trade({2064});reward(2097,1);equal(remaining[2064],1);other.GetFaction=function()return 2 end;trade({2097});reward(2065,1);equal(remaining[2097],1)",
+    "proposedFile": "changes/p99-tz-garzicor-no-round-robin/skyshrine--#Eldriaks_Fe-Dhar.lua",
+    "sourceSha256": "8338b647f8899a0ad5f467ba6817fcbbea65132bc922590d49f8a6fa1e2c0482",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Taralani exact paid kit without invented rewards",
+    "assertions": "say('hail');assert(#calls.speech==1);trade({99999},{platinum=999});reward(17062,0);equal(remaining.platinum,999);equal(remaining[99999],1);trade({99999},{platinum=1001});reward(17062,1);equal(remaining.platinum,1);equal(remaining[99999],1);trade({},{platinum=1000});reward(17062,2);equal(calls.exp,0);equal(#calls.factions,0);trade({17062});reward(17062,2);equal(remaining[17062],1)",
+    "proposedFile": "changes/p99-tz-taralani-tools/paineel--Taralani_Rahnta.lua",
+    "sourceSha256": "e7cfd947a7638b801255a2bfba51986c23636362b0e742926fb4f477327c990d",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Tykar freporte Zimel and exact four drinks",
+    "assertions": "say('Zimel');say('tell me of Zimel');equal(calls.speech[1],calls.speech[2]);trade({13829,13829,13829});reward(12196,0);trade({13829,13829,13829,13829},{gold=1});reward(12196,1);equal(remaining.gold,1);equal(calls.exp,10);trade({99999});equal(remaining[99999],1)",
+    "proposedFile": "changes/p99-tz-tykar-zimel-freporte/freporte--Tykar_Renlin.lua",
+    "sourceSha256": "1759943750558e38dc512cfb102a5749a62b427669b9ab9ddf90f12e91303636",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Tykar freeporteast Zimel and exact four drinks",
+    "assertions": "say('Zimel');say('tell me of Zimel');equal(calls.speech[1],calls.speech[2]);trade({13829,13829,13829});reward(12196,0);trade({13829,13829,13829,13829},{gold=1});reward(12196,1);equal(remaining.gold,1);equal(calls.exp,10);trade({99999});equal(remaining[99999],1)",
+    "proposedFile": "changes/p99-tz-tykar-zimel-freeporteast/freeporteast--Tykar_Renlin.lua",
+    "sourceSha256": "1759943750558e38dc512cfb102a5749a62b427669b9ab9ddf90f12e91303636",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Zimel freportw named chatter and exact recipe",
+    "assertions": "event_timer({timer='unrelated'});equal(#calls.speech,0);event_timer({timer='goog',self=npc});equal(#calls.speech,1);trade({12196,16581});reward(12143,0);equal(remaining[12196],1);trade({12196,16581,13498,99999});reward(12143,1);equal(remaining[99999],1);equal(calls.exp,0)",
+    "proposedFile": "changes/p99-tz-zimel-timer-freportw/freportw--a_prisoner.lua",
+    "sourceSha256": "3c8d2fa406a8170ff90bde2ea9e5ecb9614a28290094e85ba805a347482373a9",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Zimel freeporteast named chatter and exact recipe",
+    "assertions": "event_timer({timer='unrelated'});equal(#calls.speech,0);event_timer({timer='goog',self=npc});equal(#calls.speech,1);trade({12196,16581});reward(12143,0);equal(remaining[12196],1);trade({12196,16581,13498,99999});reward(12143,1);equal(remaining[99999],1);equal(calls.exp,0)",
+    "proposedFile": "changes/p99-tz-zimel-timer-freeporteast/freeporteast--a_prisoner.lua",
+    "sourceSha256": "3c8d2fa406a8170ff90bde2ea9e5ecb9614a28290094e85ba805a347482373a9",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Hayle rejected final offer intact and accepted path unchanged",
+    "assertions": "npc.GetPrimaryFaction=function()return 341 end;local standing=749;other.GetModCharacterFactionLevel=function()return standing end;trade({18937,13947,18828,12197},{gold=1});reward(5504,0);for _,id in ipairs({18937,13947,18828,12197})do equal(remaining[id],1)end;equal(remaining.gold,1);standing=750;trade({18937,13947,18828});reward(5504,0);trade({18937,13947,18828,12197},{gold=1});reward(5504,1);equal(remaining.gold,1);equal(calls.exp,10000);faction(341,100);trade({18936,99999});reward(18937,1);equal(remaining[99999],1);trade({18927});reward(13306,1);equal(calls.exp,11200);trade({99999});equal(remaining[99999],1)",
+    "proposedFile": "changes/p99-tz-hayle-offer-safety/paw--Brother_Hayle.lua",
+    "sourceSha256": "1179c163b3f49bff0233f832664cdad4e07539e9e288736e69cd651dfd5093fa",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Denken oceanoftears exact phrase and two rebreathers",
+    "assertions": "say('What did you find?');say('one thing');equal(calls.speech[1],calls.speech[2]);trade({16889,20665,20664});reward(20667,0);equal(remaining[16889],1);trade({16889,16889,20665,20664},{gold=1});reward(20667,1);equal(remaining.gold,1);equal(calls.exp,50000);trade({99999});equal(remaining[99999],1)",
+    "proposedFile": "changes/p99-tz-denken-find-oceanoftears/oceanoftears--Denken_Strongpick.lua",
+    "sourceSha256": "7a849532b755031022ab1894054821411d97206a16baf3326cfc6fe8872c9658",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Denken oot exact phrase and two rebreathers",
+    "assertions": "say('What did you find?');say('one thing');equal(calls.speech[1],calls.speech[2]);trade({16889,20665,20664});reward(20667,0);equal(remaining[16889],1);trade({16889,16889,20665,20664},{gold=1});reward(20667,1);equal(remaining.gold,1);equal(calls.exp,50000);trade({99999});equal(remaining[99999],1)",
+    "proposedFile": "changes/p99-tz-denken-find-oot/oot--Denken_Strongpick.lua",
+    "sourceSha256": "e51b7b1957c04a9f9efbc867dd34db7f4d392bf50055d26c709ee78c4bb5a39d",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Wenden complete clues and exact hilt alternatives",
+    "assertions": "character.class=1;say('I have a Severely Damaged Dragon Head Hilt');assert(string.find(calls.speech[1],'rejesiam',1,true));say('What kind of golems?');say('What is rejesiam ore?');equal(#calls.speech,3);trade({20669});reward(20669,1);trade({20669,20666,20677,99999});reward(20672,1);equal(remaining[99999],1);trade({20668,10037,10036});reward(20671,0);trade({20668,10037,10036,10053},{gold=1});reward(20671,1);equal(remaining.gold,1);equal(calls.exp,2000)",
+    "proposedFile": "changes/p99-tz-wenden-damaged-hilt-lore/freporte--Wenden_Blackhammer.lua",
+    "sourceSha256": "ee9acc5fc3b8280e084a58a84309e6b301412381ac803d8997d2fc68380f847e",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Camin potion does not require optional payment",
+    "assertions": "local state={};eq.get_qglobals=function()return state end;eq.set_global=function(k,v,...)state[k]=v end;eq.delete_global=function(k)state[k]=nil end;trade({14330,99999},{platinum=1000});reward(14331,1);equal(remaining.platinum,1000);equal(remaining[99999],1);faction(404,10);equal(calls.exp,10000);trade({},{platinum=999});equal(remaining.platinum,999);trade({99999},{platinum=1001});equal(remaining.platinum,1);equal(remaining[99999],1);equal(state.wizepic,'1');faction(404,20);trade({18088});equal(calls.exp,11000);trade({14331});reward(14331,1);equal(remaining[14331],1)",
+    "proposedFile": "changes/p99-tz-camin-optional-payment/erudnext--Camin.lua",
+    "sourceSha256": "9a47d332bc9fdf541f5f818680c260c08e05a11ba77b50a476155c15cff86524",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Kandin separate legacy exchanges and unchanged optional oil",
+    "assertions": "local state={};eq.get_qglobals=function()return state end;eq.set_global=function(k,v,...)state[k]=v end;eq.delete_global=function(k)state[k]=nil end;say('what oil?');reward(14319,1);trade({14349,99999});reward(14339,1);reward(18168,1);equal(remaining[99999],1);faction(404,30);trade({14332});reward(14336,0);equal(remaining[14332],1);trade({18169});equal(state.wizepicK,'1');trade({14332,14332,99999});reward(14336,1);equal(remaining[14332],1);equal(remaining[99999],1);trade({14333,99999});reward(14339,2);reward(18168,1);equal(remaining[99999],1);equal(state.wizepicK,'1');faction(404,70);trade({14336,99999});reward(18168,2);equal(remaining[99999],1);assert(state.wizepicK==nil);trade({99999});equal(remaining[99999],1);equal(calls.exp,0)",
+    "proposedFile": "changes/p99-tz-kandin-legacy-exchanges/butcher--Kandin_Firepot.lua",
+    "sourceSha256": "db57d99378cb44e551f8354e78521c82d65b7c17efae57a9880a5720a9d4e641",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Grugl apostrophe and original Footman Pike",
+    "assertions": "say(\"What footman's pike?\");say('footmans pike');say('footman pike');equal(#calls.speech,3);equal(calls.speech[1],calls.speech[2]);equal(calls.speech[2],calls.speech[3]);trade({99999});equal(remaining[99999],1)",
+    "proposedFile": "changes/p99-tz-grugl-footman-dialogue/cabeast--Weaponsmith_Grugl.lua",
+    "sourceSha256": "0e586380b659303f3e50ae3b77b28b86e4e28b809b2e6eec9bfec55e5b9bb175",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Poklon exact and clickable clues",
+    "assertions": "say('What memory of Sebilis?');say('memory of Sebilis');equal(#calls.speech,2);equal(calls.speech[1],calls.speech[2]);say('What steelhead gang?');say('steelhead gang');equal(#calls.speech,4);equal(calls.speech[3],calls.speech[4]);say('Talon Southpaw');equal(#calls.speech,5)",
+    "proposedFile": "changes/p99-tz-poklon-pike-dialogue/cabeast--Klok_Poklon.lua",
+    "sourceSha256": "ebef04e0fa6cb2ca0bd19c4fe5ec3cee43e8de3e797dfa476691a70a368ba7d6",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Unlar hail and exact pie spawn hand-in",
+    "assertions": "local n=0;eq.spawn2=function(id,...)equal(id,106302);n=n+1 end;say('hail');assert(string.find(calls.speech[2],'rare pies',1,true));say('what bixie berry pie');say('bixie berry pie');equal(calls.speech[3],calls.speech[4]);trade({99999});equal(n,0);equal(remaining[99999],1);trade({12676,99999});equal(n,1);equal(remaining[99999],1);equal(calls.exp,0)",
+    "proposedFile": "changes/p99-tz-unlar-pie-dialogue/cabeast--Klok_Unlar.lua",
+    "sourceSha256": "5ac041a53297bcbeadf05ea4032b17afbb37e33369251c3f6b282038cc118b1c",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "qeynos/Ton_Firepride collects before Vicus",
+    "assertions": "local state={};eq.get_qglobals=function()return state end;say(\"I'm here about your tax collection\");reward(13170,1);faction(230,-10);state.tax_collection='0';say('tax collection');reward(13170,2);faction(230,-20);equal(calls.exp,0)",
+    "proposedFile": "changes/p99-tz-taxes-ton_firepride/qeynos--Ton_Firepride.lua",
+    "sourceSha256": "396e1b6bea343d8811933a00381d9058b1db0c575e4bc4c83ab0b776f7b30ffe",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "qeynos/Mar_Sedder collects before Vicus",
+    "assertions": "local state={};eq.get_qglobals=function()return state end;say(\"I'm here about your tax collection\");reward(13171,1);faction(291,-10);state.tax_collection='0';say('tax collection');reward(13171,2);faction(291,-20);equal(calls.exp,0)",
+    "proposedFile": "changes/p99-tz-taxes-mar_sedder/qeynos--Mar_Sedder.lua",
+    "sourceSha256": "5b48d8fc1d8fa1983a8ded3c666a3c443fd6937f32c3e8f546df859e53d5daa4",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "qeynos/Nesiff_Tallaherd collects before Vicus",
+    "assertions": "local state={};eq.get_qglobals=function()return state end;say(\"I'm here about your tax collection\");reward(13173,1);faction(291,-10);state.tax_collection='0';say('tax collection');reward(13173,2);faction(291,-20);equal(calls.exp,0)",
+    "proposedFile": "changes/p99-tz-taxes-nesiff_tallaherd/qeynos--Nesiff_Tallaherd.lua",
+    "sourceSha256": "62ebd9e74ebab21cc73258696e66d3dcf3ddca89dd43305df61a6bb61d867b60",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "qeynos/Fhara_Semhart collects before Vicus",
+    "assertions": "local state={};eq.get_qglobals=function()return state end;say(\"I'm here about your tax collection\");reward(13175,1);faction(291,-10);state.tax_collection='0';say('tax collection');reward(13175,2);faction(291,-20);equal(calls.exp,0)",
+    "proposedFile": "changes/p99-tz-taxes-fhara_semhart/qeynos--Fhara_Semhart.lua",
+    "sourceSha256": "f5acbff68e2a0df94238b6a3b57e8ee0549dd43231cad90b88e0c6a896ca5227",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "qeynos/Tasya_Huntlan collects before Vicus",
+    "assertions": "local state={};eq.get_qglobals=function()return state end;say(\"I'm here about your tax collection\");reward(13176,1);faction(291,-10);state.tax_collection='0';say('tax collection');reward(13176,2);faction(291,-20);equal(calls.exp,0)",
+    "proposedFile": "changes/p99-tz-taxes-tasya_huntlan/qeynos--Tasya_Huntlan.lua",
+    "sourceSha256": "31f5ed2396480df004893c94fd1481093bc5c880d26f97ef0b39306e67ba5b95",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "qeynos/Captain_Rohand collects before Vicus",
+    "assertions": "local state={};eq.get_qglobals=function()return state end;say(\"I'm here about your tax collection\");reward(13177,1);faction(291,-10);state.tax_collection='0';say('tax collection');reward(13177,2);faction(291,-20);equal(calls.exp,0)",
+    "proposedFile": "changes/p99-tz-taxes-captain_rohand/qeynos--Captain_Rohand.lua",
+    "sourceSha256": "f12f0c354ac9044bbc4c08172e663963f0e4d41bcbf934448b912eb2dedfbff4",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "qeynos/Fish_Ranamer collects before Vicus",
+    "assertions": "local state={};eq.get_qglobals=function()return state end;say(\"I'm here about your tax collection\");reward(13178,1);faction(291,-10);state.tax_collection='0';say('tax collection');reward(13178,2);faction(291,-20);equal(calls.exp,0)",
+    "proposedFile": "changes/p99-tz-taxes-fish_ranamer/qeynos--Fish_Ranamer.lua",
+    "sourceSha256": "ca301a8bdcab3803cbc98ece83b1c4e1ad20a07c1f55612f1c4399290cf4df45",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "qeynos2/Sneed_Galliway collects before Vicus",
+    "assertions": "local state={};eq.get_qglobals=function()return state end;say(\"I'm here about your tax collection\");reward(13172,1);faction(291,-10);state.tax_collection='0';say('tax collection');reward(13172,2);faction(291,-20);equal(calls.exp,0)",
+    "proposedFile": "changes/p99-tz-taxes-sneed_galliway/qeynos2--Sneed_Galliway.lua",
+    "sourceSha256": "98f361bff3817d35671d5dd62ce0b9574c21921f9aafde174da54cd0f0d93c6e",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Flynn documented insult and original alias before Vicus",
+    "assertions": "eq.get_qglobals=function()return{}end;local shouts=0;npc.Shout=function(self,text)shouts=shouts+1;table.insert(calls.speech,text)end;say(\"Did you steal Mira Sayer's taxes?\");say(\"I am a gnoll loving weakling who isn't fit to comb your feet\");reward(13174,1);equal(shouts,1);equal(#calls.signals,2);say(\"gnoll loving weakling who isn't fit to comb my feet\");reward(13174,2);equal(shouts,2);faction(223,-20);trade({13122,99999});reward(13123,1);equal(remaining[99999],1);equal(calls.exp,500)",
+    "proposedFile": "changes/p99-tz-taxes-flynn_merrington/qeynos2--Flynn_Merrington.lua",
+    "sourceSha256": "defcafd4d1670beae3879c602b38f28bdcc757455bb4fd3f676fc843f7c68c47",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Mira optional clue before Vicus",
+    "assertions": "eq.get_qglobals=function()return{}end;say('tax collection');say('why are you crying?');equal(#calls.speech,2);assert(string.find(calls.speech[2],'Flynn',1,true));equal(calls.exp,0);faction(291,0)",
+    "proposedFile": "changes/p99-tz-taxes-mira_sayer/qeytoqrg--Mira_Sayer.lua",
+    "sourceSha256": "728327d123db80ed208d3ca9c03ea575a6d32068e3b2e3a0e1830e370379b679",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Vicus complete and rejected single offers",
+    "assertions": "eq.set_global=function()end;eq.delete_global=function()end;say('collections');reward(17012,1);say('list');reward(18009,1);trade({18009,99999});reward(18009,2);equal(remaining[99999],1);equal(calls.exp,0);trade({13181,99999});reward(13181,1);equal(remaining[99999],1);trade({13181,18009,99999},{gold=1});reward(13181,1);reward(18009,2);equal(remaining[99999],1);equal(remaining.gold,1);equal(calls.exp,500);faction(291,10);trade({99999});equal(remaining[99999],1)",
+    "proposedFile": "changes/p99-tz-vicus-partial-offer/qeynos--Vicus_Nonad.lua",
+    "sourceSha256": "4630ce5166ceca350dc8ff72de2d683761ec32112bf62986605015eae81723a9",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Voleen tax access preserves proposed Muffin reward",
+    "assertions": "eq.get_qglobals=function()return{}end;say('tax collection');reward(13179,1);faction(291,-10);trade({1839,99999});equal(calls.cash[1][3],6);faction(291,-5);equal(remaining[99999],1);equal(calls.exp,0)",
+    "proposedFile": "changes/p99-am-muffin-recipients/qeynos-Voleen_Tassen.lua",
+    "sourceSha256": "23a9e82bddd5c31178fe24c4b82622a0eca4113bec9ef139b9ec56a0dbcba80b",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Sulgar documented aliases and unchanged wheel trade",
+    "assertions": "say('what reward');say('runes');equal(calls.speech[1],calls.speech[2]);say('I am interested');reward(18031,1);say('wheel');reward(18031,2);say('wheel case');reward(17510,1);trade({14360,99999});equal(remaining[14360],1);reward(11880,0);trade({14360,14361,99999});reward(11880,1);reward(11881,1);equal(remaining[99999],1);equal(calls.exp,100000)",
+    "proposedFile": "changes/p99-tz-sulgar-dialogue/everfrost--Sulgar.lua",
+    "sourceSha256": "123d293231284e6a8376903d41b6d42b0b538c42b51995100b31cd811139233f",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Garzicor corpse owner attack and preserved death successor",
+    "assertions": "local target=nil;eq.attack=function(n)target=n end;event_spawn({other=other,self=npc});equal(target,other:GetName());npc.GetX=function()return 1 end;npc.GetY=function()return 2 end;npc.GetZ=function()return 3 end;npc.GetHeading=function()return 4 end;local spawned=0;eq.spawn2=function(id,grid,u,x,y,z,h)equal(id,123195);equal(x,1);equal(y,2);equal(z,3);equal(h,4);spawned=spawned+1;return{AddToHateList=function(self,who,n)equal(who,other);equal(n,1)end}end;event_death_complete({other=other,self=npc});equal(spawned,1)",
+    "proposedFile": "changes/p99-tz-garzicor-corpse-spawn/necropolis--#Garzicor-s_Corpse.lua",
+    "sourceSha256": "3867c42089c050a36a7af5e1ebd4b1e35481038fa955a32e98c4e0e71fcd89d7",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Gragrot exact old Sky upgrades",
+    "assertions": "trade({14554,14554,99999});reward(27705,1);equal(remaining[14554],1);equal(remaining[99999],1);trade({27705});equal(remaining[27705],1);trade({14554});reward(27705,2);trade({14553,14553,99999});reward(27706,1);equal(remaining[14553],1);equal(remaining[99999],1);trade({27706});equal(remaining[27706],1);trade({14553});reward(27706,2);trade({99999});equal(remaining[99999],1);equal(calls.exp,0);equal(calls.depops,0)",
+    "proposedFile": "changes/p99-tz-old-sky-gragrot/airplane--Gragrot.lua",
+    "sourceSha256": "d8e6a20858bfd4c6d9b604952b3cc95ba1ecbace648f98bab50e13f35a9b3d66",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Tynicon_DLin exact old Sky upgrades",
+    "assertions": "trade({11679,11679,99999});reward(27707,1);equal(remaining[11679],1);equal(remaining[99999],1);trade({27707});equal(remaining[27707],1);trade({11679});reward(27707,2);trade({99999});equal(remaining[99999],1);equal(calls.exp,0);equal(calls.depops,0)",
+    "proposedFile": "changes/p99-tz-old-sky-tynicon_dlin/airplane--Tynicon_DLin.lua",
+    "sourceSha256": "89246653140482fdfbe9ccf2c5fb8c29b524bc75b9b0e1543d6eef2de2cc8683",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Gina_McStargan exact old Sky upgrades",
+    "assertions": "trade({14566,14566,99999});reward(27726,1);equal(remaining[14566],1);equal(remaining[99999],1);trade({27726});equal(remaining[27726],1);trade({14566});reward(27726,2);trade({2713,2713,99999});reward(27727,1);equal(remaining[2713],1);equal(remaining[99999],1);trade({27727});equal(remaining[27727],1);trade({2713});reward(27727,2);trade({2712,2712,99999});reward(27728,1);equal(remaining[2712],1);equal(remaining[99999],1);trade({27728});equal(remaining[27728],1);trade({2712});reward(27728,2);trade({99999});equal(remaining[99999],1);equal(calls.exp,0);equal(calls.depops,0)",
+    "proposedFile": "changes/p99-tz-old-sky-gina_mcstargan/airplane--Gina_McStargan.lua",
+    "sourceSha256": "afbc11fb70b079854146c483576cef9b635106b5247b254b4bc675eaee48d224",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Ooga exact old Sky upgrades",
+    "assertions": "trade({11695,11695,99999});reward(27730,1);equal(remaining[11695],1);equal(remaining[99999],1);trade({27730});equal(remaining[27730],1);trade({11695});reward(27730,2);trade({99999});equal(remaining[99999],1);equal(calls.exp,0);equal(calls.depops,0)",
+    "proposedFile": "changes/p99-tz-old-sky-ooga/airplane--Ooga.lua",
+    "sourceSha256": "a5725f239b9cb62e727246413034c0228c2b6ca9be2146c4a8f929475a97060d",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Falorn legacy pauldron upgrade preserved",
+    "assertions": "eq.depop=function()calls.depops=calls.depops+1 end;trade({4321,99999});reward(27701,1);equal(remaining[99999],1);equal(calls.exp,100000);trade({27701});equal(remaining[27701],1);reward(27701,1)",
+    "proposedFile": "changes/p99-tz-sky-falorn/airplane--Falorn.lua",
+    "sourceSha256": "24fbc5d4640ae581a798b3913f044e5329f0729f6e9401d4e5b0aef86be52caf",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Gragrot existing multi-item tests preserved",
+    "assertions": "eq.depop=function()calls.depops=calls.depops+1 end;trade({20929,20997});reward(27705,0);equal(remaining[20929],1);trade({20929,20997,20998},{copper=3});reward(27705,1);equal(remaining.copper,3);trade({20936,20999});reward(27706,0);equal(remaining[20936],1);trade({20936,20999,20700},{copper=3});reward(27706,1);equal(remaining.copper,3);trade({20943,20701});reward(2704,0);equal(remaining[20943],1);trade({20943,20701,20702},{copper=3});reward(2704,1);equal(remaining.copper,3);equal(calls.exp,300000);equal(calls.depops,3)",
+    "proposedFile": "changes/p99-tz-old-sky-gragrot/airplane--Gragrot.lua",
+    "sourceSha256": "d8e6a20858bfd4c6d9b604952b3cc95ba1ecbace648f98bab50e13f35a9b3d66",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Tynicon_DLin existing multi-item tests preserved",
+    "assertions": "eq.depop=function()calls.depops=calls.depops+1 end;trade({20950,20703});reward(4322,0);equal(remaining[20950],1);trade({20950,20703,20704},{copper=3});reward(4322,1);equal(remaining.copper,3);trade({20705,20957});reward(11678,0);equal(remaining[20705],1);trade({20705,20957,20706},{copper=3});reward(11678,1);equal(remaining.copper,3);trade({20707,20708,20709});reward(11699,0);equal(remaining[20707],1);trade({20707,20708,20709,20710},{copper=3});reward(11699,1);equal(remaining.copper,3);trade({20711,20964,20713});reward(27707,0);equal(remaining[20711],1);trade({20711,20964,20713,20712},{copper=3});reward(27707,1);equal(remaining.copper,3);equal(calls.exp,400000);equal(calls.depops,4)",
+    "proposedFile": "changes/p99-tz-old-sky-tynicon_dlin/airplane--Tynicon_DLin.lua",
+    "sourceSha256": "89246653140482fdfbe9ccf2c5fb8c29b524bc75b9b0e1543d6eef2de2cc8683",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Gina_McStargan existing multi-item tests preserved",
+    "assertions": "eq.depop=function()calls.depops=calls.depops+1 end;trade({20934,20834});reward(27726,0);equal(remaining[20934],1);trade({20934,20834,20835},{copper=3});reward(27726,1);equal(remaining.copper,3);trade({20940,20836,20837});reward(27727,0);equal(remaining[20940],1);trade({20940,20836,20837,20838},{copper=3});reward(27727,1);equal(remaining.copper,3);trade({20947,20839});reward(27728,0);equal(remaining[20947],1);trade({20947,20839,20840},{copper=3});reward(27728,1);equal(remaining.copper,3);equal(calls.exp,300000);equal(calls.depops,3)",
+    "proposedFile": "changes/p99-tz-old-sky-gina_mcstargan/airplane--Gina_McStargan.lua",
+    "sourceSha256": "afbc11fb70b079854146c483576cef9b635106b5247b254b4bc675eaee48d224",
+    "coverage": "proposed_source_mock_only"
+  },
+  {
+    "name": "Ooga existing multi-item tests preserved",
+    "assertions": "eq.depop=function()calls.depops=calls.depops+1 end;trade({20845,20955,20842});reward(27729,0);equal(remaining[20845],1);trade({20845,20955,20842,20841},{copper=3});reward(27729,1);equal(remaining.copper,3);trade({20962,20843});reward(27730,0);equal(remaining[20962],1);trade({20962,20843,20844},{copper=3});reward(27730,1);equal(remaining.copper,3);trade({20846,20969,20848});reward(11694,0);equal(remaining[20846],1);trade({20846,20969,20848,20847},{copper=3});reward(11694,1);equal(remaining.copper,3);equal(calls.exp,300000);equal(calls.depops,3)",
+    "proposedFile": "changes/p99-tz-old-sky-ooga/airplane--Ooga.lua",
+    "sourceSha256": "a5725f239b9cb62e727246413034c0228c2b6ca9be2146c4a8f929475a97060d",
+    "coverage": "proposed_source_mock_only"
+  }
+]

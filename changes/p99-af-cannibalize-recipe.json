@@ -1,0 +1,58 @@
+{
+  "format": 1,
+  "id": "p99-af-cannibalize-recipe",
+  "summary": "Enable the exact P99-documented existing combine; preserve all other recipe fields and component/success/failure entries.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Cannibalize_II_(Good)?action=raw",
+      "note": "Cached reference/p99-wiki/raw-pages/cannibalize-ii-good-86f0e7b0dd.wiki SHA256 484db8975602ec2d596f299d065b5b9520a1ee0c675954b7b4871d4cf10ad228."
+    }
+  ],
+  "rows": [
+    {
+      "table": "tradeskill_recipe",
+      "before": {
+        "id": 1248,
+        "name": "Crushed Dread Diamond",
+        "tradeskill": 59,
+        "skillneeded": 0,
+        "trivial": 70,
+        "nofail": 0,
+        "replace_container": 0,
+        "notes": "Cannibalize II quest recipe",
+        "must_learn": 0,
+        "learned_by_item_id": 0,
+        "quest": 0,
+        "enabled": 0,
+        "show_in_advanced": 1,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null,
+        "category": "Potions"
+      },
+      "after": {
+        "id": 1248,
+        "name": "Crushed Dread Diamond",
+        "tradeskill": 59,
+        "skillneeded": 0,
+        "trivial": 70,
+        "nofail": 0,
+        "replace_container": 0,
+        "notes": "Cannibalize II quest recipe",
+        "must_learn": 0,
+        "learned_by_item_id": 0,
+        "quest": 0,
+        "enabled": 1,
+        "show_in_advanced": 1,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null,
+        "category": "Potions"
+      }
+    }
+  ],
+  "sources": []
+}

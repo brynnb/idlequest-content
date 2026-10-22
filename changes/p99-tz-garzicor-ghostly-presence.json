@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-garzicor-ghostly-presence",
+  "summary": "Use 60 seconds for the page approximately one-minute ghostly presence; this is approximate evidence, not an exact measured duration. Restrict depop to its named timer; preserve other events and unknown numerical rewards. Baseline body is database-only Lua where no maintained source exists.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/The_Spirit_of_Garzicor?action=raw",
+      "note": "Cached 2026-07-17T23:38:05.956Z; revision unavailable; SHA256 df0f4c209df4cd12720a5a70d0ac0a6f78e33e658a422caf07d146ae921274be. Use 60 seconds for the page approximately one-minute ghostly presence; this is approximate evidence, not an exact measured duration. Restrict depop to its named timer; preserve other events and unknown numerical rewards. Baseline body is database-only Lua where no maintained source exists. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 13541,
+        "zone": "necropolis",
+        "name": "#a_ghostly_presence",
+        "lua_content": "-- items: 2063\nfunction event_spawn(e)\n\teq.set_timer(\"depop\",600000);\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\t\n\tif(item_lib.check_turn_in(e.trade, {item1 = 2063})) then\n\t\te.self:Say(\"Graaahhhh!' as the air about you begins to shudder violently. The blood from the vial is held suspended in mid air, swirling about the chamber. It begins swirling faster and faster until the blood is spattered upon some discarded dragon bones. All is then quiet, and suddenly the bones spring to life in vigorous animation. They form a great dragon skeleton and immediately attack you!\");\n\t\teq.spawn2(123194,0,0,e.self:GetX(),e.self:GetY(),e.self:GetZ(),0):AddToHateList(e.other,1); --#Garzicor`s_Corpse (123194)\n\t\teq.depop();\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\nfunction event_timer(e)\n\teq.depop();\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 13541,
+        "zone": "necropolis",
+        "name": "#a_ghostly_presence",
+        "lua_content": "-- items: 2063\nfunction event_spawn(e)\n\teq.set_timer(\"depop\",60000);\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\t\n\tif(item_lib.check_turn_in(e.trade, {item1 = 2063})) then\n\t\te.self:Say(\"Graaahhhh!' as the air about you begins to shudder violently. The blood from the vial is held suspended in mid air, swirling about the chamber. It begins swirling faster and faster until the blood is spattered upon some discarded dragon bones. All is then quiet, and suddenly the bones spring to life in vigorous animation. They form a great dragon skeleton and immediately attack you!\");\n\t\teq.spawn2(123194,0,0,e.self:GetX(),e.self:GetY(),e.self:GetZ(),0); -- Initial owner hostility runs in the corpse event_spawn callback.\n\t\teq.depop();\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\nfunction event_timer(e)\n\tif e.timer == \"depop\" then\n\t\teq.stop_timer(\"depop\");\n\t\teq.depop();\n\tend\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/necropolis/#a_ghostly_presence.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-tz-garzicor-ghostly-presence/necropolis--#a_ghostly_presence.lua",
+      "afterSha256": "481afcb4979eee7f7f46307074486179689ed19dbae531640dd24aa212d5a208"
+    }
+  ]
+}

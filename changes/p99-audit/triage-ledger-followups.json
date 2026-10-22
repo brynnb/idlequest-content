@@ -1,0 +1,22 @@
+{
+  "Ancient Dragon Tome": {
+    "reviewed_at": "2026-10-22",
+    "scope": "post_velious_luclin",
+    "review_status": "out_of_scope",
+    "match_status": "explicit_luclin_evidence_no_conversion",
+    "local_enabled": true,
+    "local_source_available": false,
+    "local_quest_keys": [
+      "skyshrine/Evreth_Menesez"
+    ],
+    "p99_source": {
+      "title": "Ancient Dragon Tome",
+      "url": "https://wiki.project1999.com/Ancient_Dragon_Tome?action=raw",
+      "raw_cache": "reference/p99-wiki/raw-pages/ancient-dragon-tome-d4c84d616c.wiki",
+      "sha256": "3b3f6f122c0334afa2e424ef3f294620b9fb1d353abd26e74efbea26f70e904d"
+    },
+    "notes": [
+      "Final triage reconciliation: the older parallel-conversion placeholder is resolved by the explicit Luclin page evidence. The exported quest row is enabled=1 with no Lua body and no actual .quests policy entry; the historical page-level out-of-scope label is not a runtime exclusion. No conversion or activation claim."
+    ]
+  }
+}

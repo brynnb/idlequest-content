@@ -1,0 +1,29 @@
+{
+  "titles": [
+    "Plane of Mischief Faction Quest"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "partial",
+  "match_status": "partial",
+  "local_quest_keys": [
+    "mischiefplane/Debbis_the_Fish",
+    "mischiefplane/Vinny_V._D-vicci"
+  ],
+  "proposal": "changes/p99-nz-mischief-faction.json",
+  "notes": [
+    "Correct Debbis reward from unrelated Ivy Etched Gauntlets to Lucky Skunk Foot and correct faction identity to Denizens of Mischief, with both documented hails restored.",
+    "Exported item rows resolve 6883 Rabbit Foot, 3190 Ivy Etched Gauntlets, 6876 Lucky Skunk Foot. P99 explicitly requires Debbis to give the foot and Vinny to accept it; Vinny already consumes6876. Preserve imported100/500EXP and all other behavior. Correct Debbis faction391 New Combine to437 Denizens of Mischief: Debbis NPC126232 profile1045 and Vinny NPC126277 profile487 both have primary437; Stomples profile1043 applies kill standing-50 to437. No contrary adaptation note found. Preserve imported+51 magnitude without claiming exact P99 numeric parity. Vinny lacks documented faction gain with unknown magnitude; do not guess from Debbis. Existing TLP-labelled fishing/man dialogue is not established by this page and is left unchanged. Full encounter, loot and connected path untested."
+  ],
+  "verification": {
+    "source": "Cached P99 and effective Lua reviewed; exact complete row preimages and source hashes recorded.",
+    "syntax": "pending",
+    "runtime": "Isolated mock regression pending; full game runtime unavailable.",
+    "ui": "not_run",
+    "connected_chain": "not_run"
+  },
+  "unresolved": [
+    "Ordinary source drops/spawns, recipe live behavior and rendered complete quest path not verified.",
+    "Imported Debbis+51 magnitude is not quantified by cached P99; net reset claim not verified.",
+    "Vinny documented positive standing absent; exact target mapping and magnitude unresolved."
+  ]
+}

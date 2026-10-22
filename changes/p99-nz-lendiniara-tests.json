@@ -1,0 +1,57 @@
+{
+  "format": 1,
+  "id": "p99-nz-lendiniara-tests",
+  "summary": "Implement five documented Velious Lendiniara Halls of Testing hand-ins and dialogue at the existing empty Lua quest key; omit later Xygoz letter.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Request_of_the_Arcane?action=raw",
+      "note": "Cached 2026-07-17T23:30:32.481Z; SHA256 f543f1a67c9597262b46cc2bb431a81938e12152d620164fa437d8912367f443; exact four component names and reward verified against exported item IDs."
+    },
+    {
+      "url": "https://wiki.project1999.com/Request_of_the_Strong?action=raw",
+      "note": "Cached 2026-07-17T23:30:34.932Z; SHA256 7dd2f45432e8aa2809f3ba04f03d8b2bec47a9d1a4f2aa4e77e4e823cdc42fb3; exact four component names and reward verified against exported item IDs."
+    },
+    {
+      "url": "https://wiki.project1999.com/Test_of_the_Ruby_Tear?action=raw",
+      "note": "Cached 2026-07-17T23:35:08.355Z; SHA256 8ec2eeb507d0f5d917549a3328549fee6ead272c25369d75877531d893fba755; exact four component names and reward verified against exported item IDs."
+    },
+    {
+      "url": "https://wiki.project1999.com/Test_of_the_Platinum_Tear?action=raw",
+      "note": "Cached 2026-07-17T23:35:05.072Z; SHA256 36f90f241d8ddb8f64f171352259730b06ad4118c1d8ab6c4e06da6e80834ef6; exact four component names and reward verified against exported item IDs."
+    },
+    {
+      "url": "https://wiki.project1999.com/Test_of_the_Emerald_Tear?action=raw",
+      "note": "Cached 2026-07-17T23:34:56.103Z; SHA256 bf6b6ef8aa78e09226fca55905b053fe393b3844f4562fcbfa9f037816b19044; exact four component names and reward verified against exported item IDs."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 17330,
+        "zone": "templeveeshan",
+        "name": "#Lendiniara_the_Keeper",
+        "lua_content": null,
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 17330,
+        "zone": "templeveeshan",
+        "name": "#Lendiniara_the_Keeper",
+        "lua_content": "-- name: #Lendiniara_the_Keeper\n-- P99 Velious: five Halls of Testing quests; cached July 17, 2026.\n-- Adapted from preserved ProjectEQ Perl; later Xygoz letter is not included.\n-- Quest-only faction gates intentionally bypassed. No evidenced enforced level/class gate.\n-- Faction and experience magnitudes retain implementation provenance, not P99 proof.\nlocal item_lib = require(\"items\")\n\nfunction event_say(e)\n  if e.message:findi(\"hail\") then\n    e.self:Say(\"Greetings, \" .. e.other:GetName() .. \". I am the keeper of relics. If you are brave I have [tasks] to test your might and perhaps [rewards].\")\n  elseif e.message:findi(\"rewards\") then\n    e.self:Say(\"One should ask of the tasks before worrying about rewards.\")\n  elseif e.message:findi(\"tasks\") then\n    e.self:Say(\"Enter into the halls of testing to complete these tasks. Seek out the ancient ones inside and see if your might is as great as theirs and fear not, those who you slay will be returned to the temple by the gift of Veeshan's great power. I have three tasks, which any may complete, as well as a request of both the arcane and the strong. Ask about [request of the arcane], [request of the strong] or [request of the three].\")\n  elseif e.message:findi(\"request of the arcane\") then\n    e.self:Say(\"Those who seek knowledge, will seek this task out for its reward is great. Three tears and a glowing orb will garner one an ancient mask. The White tear and the black tear for balance the runed tear to hold the balance and a glowing orb to return raw energy to the ancient mask.\")\n  elseif e.message:findi(\"request of the strong\") then\n    e.self:Say(\"Those who believe they are strong may be surprised after such a task. Seek out the cursed one and slay him, return to me when you have gathered a silver tear, a poison tear, a flame kissed tear and a serrated tear. End the cursed ones torment for a short time, before the high priest raises him to continue his suffering for eternity.\")\n  elseif e.message:findi(\"request of the three\") then\n    e.self:Say(\"Tears from the cursed you much seek for each task. The [test of the Ruby Tear], the [test of the Platinum Tear] and the [test of the Emerald Tear] await all who wish to partake of them.\")\n  elseif e.message:findi(\"test of the ruby tear\") then\n    e.self:Say(\"The test of the ruby tear sounds simple enough, enter the halls of testing, secure a ruby tear, a white symbol, a silver symbol and a ruby symbol. I warn you mortal, those who walk the halls will rend your body and mind if you are not worthy.\")\n  elseif e.message:findi(\"test of the platinum tear\") then\n    e.self:Say(\"Seek the platinum tear and three symbols to bind its powers to a bracelet. The black symbol to add raw power, the serrated symbol to enchant its powers and the runed symbol to hold the powers to the bracelet.\")\n  elseif e.message:findi(\"test of the emerald tear\") then\n    e.self:Say(\"The emerald tear of Veeshan entrusted to the cursed one. Return this tear to me so I may return the powers of an ancient shield. Three symbols you must also seek. Emerald like the tear, one kissed by the flames of the elder wurms and one made of the ancient wyverns venomous poison.\")\n  end\nend\n\nfunction event_trade(e)\n  local reward\n  if item_lib.check_turn_in(e.trade, { item1 = 31262, item2 = 31261, item3 = 31263, item4 = 31260 }) then\n    reward = 31463\n  elseif item_lib.check_turn_in(e.trade, { item1 = 31267, item2 = 31266, item3 = 31265, item4 = 31264 }) then\n    reward = 31464\n  elseif item_lib.check_turn_in(e.trade, { item1 = 31259, item2 = 31270, item3 = 31253, item4 = 31250 }) then\n    reward = 31460\n  elseif item_lib.check_turn_in(e.trade, { item1 = 31251, item2 = 31269, item3 = 31252, item4 = 31254 }) then\n    reward = 31461\n  elseif item_lib.check_turn_in(e.trade, { item1 = 31257, item2 = 31268, item3 = 31256, item4 = 31255 }) then\n    reward = 31462\n  end\n  if reward then\n    e.other:SummonItem(reward)\n    e.self:Say(\"You have done well. You have proven that you are strong, but do you dare enter those halls again?\")\n    e.other:Faction(430, 75, 0)\n    e.other:Faction(436, 18, 0)\n    e.other:Faction(448, -37, 0)\n    e.other:AddEXP(200000)\n  end\n  item_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/templeveeshan/Lendiniara_the_Keeper.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-nz-lendiniara-tests/Lendiniara_the_Keeper.lua",
+      "afterSha256": "fbe5e860166de78919e21ba71d78b0160b5eea4b28758ca0861f2eea49bb8051"
+    }
+  ]
+}

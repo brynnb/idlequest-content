@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-taxes-fish_ranamer",
+  "summary": "Remove only tax_collection prerequisites: P99 expressly permits collecting without first speaking to Vicus and bypassing Mira. Preserve all original item/faction effects and unrelated quest branches. Flynn also accepts documented your-feet phrase and uses documented Shout; no numeric values invented.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Taxes?action=raw",
+      "note": "Cached 2026-07-17T23:34:37.004Z; revision unavailable; SHA256 6fc59af937f3b2dfa4313beac8b349112c500bdbff0c89109de222dc34860c9b. Remove only tax_collection prerequisites: P99 expressly permits collecting without first speaking to Vicus and bypassing Mira. Preserve all original item/faction effects and unrelated quest branches. Flynn also accepts documented your-feet phrase and uses documented Shout; no numeric values invented. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 12048,
+        "zone": "qeynos",
+        "name": "Fish_Ranamer",
+        "lua_content": "-- items: 13178\nfunction event_say(e)\n\n\tlocal qglobals = eq.get_qglobals(e.other);\n\t\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(string.format(\"Hail, %s!  Welcome to Fish's Ale. I am Fish Ranamer, owner of the joint.  Come in and have some brew but don't be startin' no trouble or Bruno will bust you open!\",e.other:GetName()));\n\telseif(e.message:findi(\"tax collection\") and qglobals.tax_collection ~= nil) then\n\t\te.self:Say(\"Taxes?! Taxes?! Tax me right out of business is what you folks are doing! Take your taxes and get out of my pub! Unless, of course, you care to buy some drinks...?\");\n\t\te.other:SummonItem(13178); -- Item: Ranamer's Tax Payment\n\t\te.other:Faction(291,-10,0); -- Faction: Merchants of Qeynos\n\tend\n\t\nend\n\nfunction event_trade(e)\n\n\tlocal item_lib = require(\"items\");\n\titem_lib.return_items(e.self, e.other, e.trade)\n\t\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 12048,
+        "zone": "qeynos",
+        "name": "Fish_Ranamer",
+        "lua_content": "-- items: 13178\nfunction event_say(e)\n\n\tlocal qglobals = eq.get_qglobals(e.other);\n\t\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(string.format(\"Hail, %s!  Welcome to Fish's Ale. I am Fish Ranamer, owner of the joint.  Come in and have some brew but don't be startin' no trouble or Bruno will bust you open!\",e.other:GetName()));\n\telseif(e.message:findi(\"tax collection\") ) then\n\t\te.self:Say(\"Taxes?! Taxes?! Tax me right out of business is what you folks are doing! Take your taxes and get out of my pub! Unless, of course, you care to buy some drinks...?\");\n\t\te.other:SummonItem(13178); -- Item: Ranamer's Tax Payment\n\t\te.other:Faction(291,-10,0); -- Faction: Merchants of Qeynos\n\tend\n\t\nend\n\nfunction event_trade(e)\n\n\tlocal item_lib = require(\"items\");\n\titem_lib.return_items(e.self, e.other, e.trade)\n\t\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/qeynos/Fish_Ranamer.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-tz-taxes-fish_ranamer/qeynos--Fish_Ranamer.lua",
+      "afterSha256": "ca301a8bdcab3803cbc98ece83b1c4e1ad20a07c1f55612f1c4399290cf4df45"
+    }
+  ]
+}

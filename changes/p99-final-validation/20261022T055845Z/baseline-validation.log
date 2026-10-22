@@ -1,0 +1,15 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> idlequest-content-review@0.1.0 validate
+> node tools/cli.mjs validate .
+
+file:///tmp/p99-validation-20261022T055845Z/tools/dataset.mjs:22
+    if ((await fs.lstat(file)).isSymbolicLink()) throw new Error(`Dataset symlink: ${relative}`);
+                                                       ^
+
+Error: Dataset symlink: data/books/0.ndjson
+    at safeFile (file:///tmp/p99-validation-20261022T055845Z/tools/dataset.mjs:22:56)
+    at async validateDataset (file:///tmp/p99-validation-20261022T055845Z/tools/dataset.mjs:61:43)
+    at async file:///tmp/p99-validation-20261022T055845Z/tools/cli.mjs:16:18
+
+Node.js v24.19.0

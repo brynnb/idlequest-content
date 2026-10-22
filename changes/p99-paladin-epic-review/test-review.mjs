@@ -1,0 +1,18 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
+import {execFileSync} from 'node:child_process';
+import {fileURLToPath} from 'node:url';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
+const read=p=>fs.readFileSync(path.join(root,p),'utf8');
+const hash=s=>crypto.createHash('sha256').update(s).digest('hex');
+const fixture=read('tools/p99-test-fixture.lua')+'\npackage.preload["items"]=function()\n'+read('sources/projecteq/lua_modules/items.lua')+'\nend\n';
+const manifest='changes/p99-paladin-epic-review/runtime-assertions.json';
+const records=JSON.parse(read(manifest)).cases;
+const scenarios=records.map(r=>{const file=r.proposedFile??r.file;const source=read(file);assert.equal(hash(source),r.sourceSha256,'Stale source '+file);return {name:(r.coverageKind??'proposed_source')+': '+r.name,source,setup:fixture+'\n'+(r.setupExtra??''),assertions:r.assertions};});
+const env={...process.env,GOCACHE:'/tmp/p99-go-cache',GOPATH:'/tmp/p99-go-path'};
+const log=execFileSync('/tmp/p99-go-toolchain/go/bin/go',['run','../tools/p99-lua-runner.go'],{cwd:path.join(root,'validator'),env,input:JSON.stringify(scenarios),encoding:'utf8',maxBuffer:10*1024*1024});
+fs.writeFileSync(path.join(root,'changes/p99-paladin-epic-review/isolated-tests.log'),log);
+fs.writeFileSync(path.join(root,'changes/p99-paladin-epic-review/isolated-tests.json'),JSON.stringify({status:'passed',kind:'isolated_pinned_normalizer_mock_simulation',count:records.length,manifest,manifestSha256:hash(read(manifest)),fixtureSha256:hash(read('tools/p99-test-fixture.lua')),runnerSha256:hash(read('tools/p99-lua-runner.go')),scenarios:records.map(r=>({name:r.name,file:r.proposedFile??r.file,sourceSha256:r.sourceSha256,coverageKind:r.coverageKind??'proposed_source'})),limits:'Not actual engine settlement, rollback, spawn/death, loot, rendering, or full acquisition.'},null,2)+'\n');
+process.stdout.write(log);

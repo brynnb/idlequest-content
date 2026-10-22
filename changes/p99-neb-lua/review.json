@@ -1,0 +1,103 @@
+{
+  "page": "Key to Jaled Dar's Lair (Neb)",
+  "reviewedAt": "2026-10-22",
+  "evidence": {
+    "title": "Key to Jaled Dar's Lair (Neb)",
+    "url": "https://wiki.project1999.com/Key_to_Jaled_Dar's_Lair_(Neb)?action=raw",
+    "fetchedAt": "2026-07-17T23:22:44.893Z",
+    "revision": null,
+    "sha256": "d24be302d2fb59e55539403ac86d16307254c4629edd165c7e61d43fea0f969e",
+    "bytes": 5007,
+    "source": "raw-pages/key-to-jaled-dar-s-lair-neb-d3aa861c4e.json",
+    "cachePath": "reference/p99-wiki/raw-pages/key-to-jaled-dar-s-lair-neb-d3aa861c4e.wiki"
+  },
+  "npcIds": [
+    123045
+  ],
+  "questKeys": [
+    "necropolis/Neb"
+  ],
+  "proposal": "changes/p99-neb-lua/proposal.json",
+  "before": "Enabled exported row has null Lua; preserved Perl contains only partial dialogue and also later-era Nexona branch.",
+  "after": "P99 hail plus six lore/help topics; Vaniki heart26033 and Zlandicar heart26009 yield Warbone26040 and Tomb Key28060; return unmatched items; omit Nexona item69341 branch.",
+  "preservedApproximations": [
+    "250000 XP and faction463:+100,462:-10,464:-10 retained from ProjectEQ. P99 documents XP/faction directions but no amounts.",
+    "Direct documented hail instead of ProjectEQ relay via123105. P99 does not require the relay.",
+    "Minimum-level55 infobox treated as recommendation, not proven hard gate; no added level check."
+  ],
+  "dependencies": {
+    "items": {
+      "26033": "Vaniki\u2019s Heart",
+      "26009": "Zlandicar\u2019s Heart",
+      "26040": "Neb\u2019s Warbone",
+      "28060": "Jaled Dar\u2019s Tomb Key"
+    },
+    "neb": {
+      "npc": 123045,
+      "spawngroup": 17080,
+      "spawn2": 38112,
+      "position": {
+        "x": 751.099976,
+        "y": 504
+      },
+      "p99Position": "p504,p751 matches baseline x/y convention"
+    },
+    "vaniki": {
+      "npc": 123149,
+      "lootTable": 991050,
+      "lootdrop": 22217,
+      "heartChance": 100,
+      "tableProbability": 100,
+      "mindrop": 1,
+      "droplimit": 1,
+      "spawnGroup": 13618,
+      "spawnWeight": 10,
+      "spawn2": [
+        38103,
+        151619,
+        151616,
+        151617,
+        151618
+      ]
+    },
+    "zlandicar": {
+      "npc": 123115,
+      "lootTable": 6503,
+      "lootdrop": 175134,
+      "heartChance": 100,
+      "tableProbability": 100,
+      "mindrop": 1,
+      "droplimit": 1,
+      "spawnGroup": 15007,
+      "spawn2": 24432
+    },
+    "limitations": [
+      "All three NPC records carry exclude=1 in exported reference. Actual game content-scope/population filtering was not executed; static row presence does not establish live spawn availability.",
+      "No changes made to existing spawn/loot timers or chances, which have not been audited against complete P99 spawn sources."
+    ]
+  },
+  "verification": {
+    "syntax": "check-proposal passed for1 Lua source",
+    "isolated": "Existing tools/p99-content-behavior.test.mjs covers dialogue, complete/partial/extra/repeat offers, reward captures, no artificial gate and rejected later-era item.",
+    "database": "not_run",
+    "runtimeSettlement": "not_run",
+    "renderedUI": "not_run",
+    "connectedChain": "not_run"
+  },
+  "ledgerUpdate": {
+    "review_status": "partial",
+    "match_status": "converted_lua_static_handin_parity_runtime_unverified",
+    "local_quest_keys": [
+      "necropolis/Neb"
+    ],
+    "local_quest_files": [
+      "server/internal/quest/overrides/lua/converted-perl/necropolis/Neb.lua"
+    ],
+    "local_enabled": true,
+    "reviewed_at": "2026-10-22",
+    "notes": [
+      "Converted documented Neb Velious dialogue and two-heart turn-in to Lua; original later-era Nexona branch omitted. P99 exact XP/faction magnitudes are unknown; upstream values retained explicitly.",
+      "Source and isolated mocked Lua behavior verified; baseline item IDs and spawn/loot links resolved. Live population eligibility, inventory settlement, full acquisition and rendered chain remain unverified. Earlier Classic/Kunark-only note is historical and superseded by current Classic\u2013Velious scope."
+    ]
+  }
+}

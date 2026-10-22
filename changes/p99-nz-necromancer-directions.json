@@ -1,0 +1,91 @@
+{
+  "format": 1,
+  "id": "p99-nz-necromancer-directions",
+  "summary": "Repair the exact Apprentice Symbol prompt and essential next-step discovery while preserving intentional condensed epic prose.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Necromancer_Epic_Quest?action=raw",
+      "note": "Cached 2026-07-17T23:26:21.631Z; revision unavailable; SHA256 19586e201378b7d78764be3f05231c1b2ecbe1dae3d41061124c48d5b51d3a81. Pinned review notes explicitly preserve condensed Necromancer dialogue. Do not expand unrelated text. Add master/task links for Venenzi, exact symbol-of-the-apprentice alias and advance prompt for Kazen, and documented return-to-Kazen direction for Drendico. Every item, reward, class check, inventory requirement and no-minimum-level policy is unchanged; raid-side-effect adaptations remain."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 13836,
+        "zone": "nektulos",
+        "name": "Venenzi_Oberzendi",
+        "lua_content": "-- Source: nektulos/Venenzi_Oberzendi.pl\n-- Necromancer Epic 1.0: Venenzi Oberzendi reagent chain.\n-- Converted from ProjectEQ Perl quest script.\n-- items: 20642, 20643, 1320, 20649\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"What is it you want! Can't you see I am gathering reagents for my master?\")\n\telseif e.message:findi(\"master\") then\n\t\te.self:Say(\"The great Kazen Fecae! If you fancy yourself a necromancer, travel to Lake Rathetear and tell Kazen you wish to study the dark arts.\")\n\telseif e.message:findi(\"reagents\") then\n\t\te.self:Say(\"My master is working on some great project.\")\n\telseif e.message:findi(\"task\") then\n\t\te.self:Emote(\"looks down at her robes and back at you. 'Slay Najena and bring me her robe, and I will give you my hard earned reagents.'\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 20642}) then\n\t\te.self:Say(\"I see you serve my master as well now. I might consider giving you these reagents, if only you do a small task for me.\")\n\t\te.other:Ding()\n\t\te.other:AddEXP(500)\n\t\te.other:SummonItem(20643) -- Twisted Symbol of the Apprentice\n\telseif e.other:HasItem(20643) and item_lib.check_turn_in(e.trade, {item1 = 1320}) then\n\t\te.self:Say(\"Thank you. Don't forget to give his lapdog that symbol with the reagents.\")\n\t\te.other:Ding()\n\t\te.other:AddEXP(500)\n\t\te.other:SummonItem(20649) -- Rolling Stone Moss\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 13836,
+        "zone": "nektulos",
+        "name": "Venenzi_Oberzendi",
+        "lua_content": "-- Source: nektulos/Venenzi_Oberzendi.pl\n-- Necromancer Epic 1.0: Venenzi Oberzendi reagent chain.\n-- Converted from ProjectEQ Perl quest script.\n-- items: 20642, 20643, 1320, 20649\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"What is it you want! Can't you see I am gathering reagents for my [master]?\")\n\telseif e.message:findi(\"master\") then\n\t\te.self:Say(\"The great Kazen Fecae! If you fancy yourself a necromancer, travel to Lake Rathetear and tell Kazen you wish to study the dark arts.\")\n\telseif e.message:findi(\"reagents\") then\n\t\te.self:Say(\"My master is working on some great project.\")\n\telseif e.message:findi(\"task\") then\n\t\te.self:Emote(\"looks down at her robes and back at you. 'Slay Najena and bring me her robe, and I will give you my hard earned reagents.'\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 20642}) then\n\t\te.self:Say(\"I see you serve my master as well now. I might consider giving you these reagents, if only you do a small [task] for me.\")\n\t\te.other:Ding()\n\t\te.other:AddEXP(500)\n\t\te.other:SummonItem(20643) -- Twisted Symbol of the Apprentice\n\telseif e.other:HasItem(20643) and item_lib.check_turn_in(e.trade, {item1 = 1320}) then\n\t\te.self:Say(\"Thank you. Don't forget to give his lapdog that symbol with the reagents.\")\n\t\te.other:Ding()\n\t\te.other:AddEXP(500)\n\t\te.other:SummonItem(20649) -- Rolling Stone Moss\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 19584,
+        "zone": "lakerathe",
+        "name": "Kazen_Fecae",
+        "lua_content": "-- IdleQuest epic 1.0 steps have no minimum level; preserve class and item checks.\n-- Reviewed P99 Necromancer Epic 1.0: restore omitted quest directions.\n-- Source: lakerathe/Kazen_Fecae.pl\n-- Necromancer Epic 1.0: Kazen Fecae apprentice/test/final chain.\n-- Converted from ProjectEQ Perl quest script, limited to Epic 1.0 behavior.\n-- items: 20641, 20642, 20647, 20653, 18087, 20652, 20544\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Emote(\"eyes seem to glow as he turns to you and says, 'Leave me be if you have no reason to be here, mortal!'\")\n\telseif e.message:findi(\"dark arts\") then\n\t\tif e.other:Class() == 11 then\n\t\t\te.self:Emote(\"looks you up and down, his eyes glowing with a soft red light. 'You wish to study under me? Perhaps, if you prove yourself to follow the twisted path.'\")\n\t\telse\n\t\t\te.self:Say(\"Ha! You call yourself a Necromancer? Come back when you have tortured a few more souls!\")\n\t\tend\n\telseif e.message:findi(\"prove\") then\n\t\te.self:Say(\"The wandering knight, Sir Edwin Motte, recently slew one of my lesser servants. This foolish knave travels from town to town pretending to be good. Separate his head from his body and return it to me so I may work my magics upon it. This fool will become another plaything for me, even in death.\")\n\telseif e.message:findi(\"advance\") then\n\t\te.self:Say(\"I share great secrets with my more powerful servants who show me they are willing to serve without question. Tell my servant the name of any symbol he gives you and he will instruct you. If I give you a symbol, speak its name to me so I may instruct you.\")\n\telseif e.message:findi(\"symbol of apprentice\") then\n\t\te.self:Say(\"You have a long way to go before I teach you the true secrets of life and death. Visit Venenzi Oberendi in the Nektulos Forest and show her the symbol. She is collecting reagents for one of my experiments and is taking far too long. I do not wish her dead, yet, I simply need the reagents soon. Retrieve the reagents and give them to my assistant Emkel Kabae. I do not wish to handle them myself.\")\n\telseif e.message:findi(\"reagents\") then\n\t\te.self:Say(\"The reagents are the same types the great sorcerer Miragul used to cheat death and become a lich.\")\n\telseif e.message:findi(\"symbol of testing\") then\n\t\te.self:Say(\"Show me that you can overcome larger obstacles and manipulate servants. Gather a force for of mercenaries if you like, or so-called friends, if you desire, and prepare for battle, my promising young student. Return to me with the symbol of testing when you are prepared for battle with my creations. Have no fear, I will not slay you myself. If you do live, tell me the name of the symbol you receive.\")\n\telseif e.message:findi(\"symbol of insanity\") then\n\t\te.self:Say(\"It is time for you to meet my partner, so to speak. Drendico Metalbones is his name and I assure you he is quite mad. His mind has been rended by fright, dread, and terror in his trips to the planes and his heart is full of hatred now. He has a tome which I wish you to use. Show him your symbol slowly and listen to his rantings well, they hide great knowledge.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 20641}) then\n\t\te.self:Say(\"Excellent! You have done well, my new apprentice.\")\n\t\te.other:AddEXP(5000)\n\t\te.other:SummonItem(20642) -- Symbol of the Apprentice\n\telseif item_lib.check_turn_in(e.trade, {item1 = 20647}) then\n\t\te.self:Say(\"Good luck, my student!\")\n\t\teq.spawn2(51153, 0, 0, -1498.9, 283.8, 58.4, 115.2) -- a_bone_golem\n\telseif item_lib.check_turn_in(e.trade, {item1 = 20653}) then\n\t\te.self:Emote(\"stares through you at the horizon, then hands you a tome.\")\n\t\te.other:AddEXP(10000)\n\t\te.other:SummonItem(18087) -- Tome of Instruction\n\telseif item_lib.check_turn_in(e.trade, {item1 = 20652}) then\n\t\te.self:Emote(\"grins wildly and his eyes flare a deep red. The scythe he promised you flies through the air and into your hand.\")\n\t\te.other:AddEXP(10000)\n\t\te.other:SummonItem(20544) -- Scythe of the Shadowed Soul\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\nfunction event_death_complete(e)\n\teq.spawn2(51153, 0, 0, -1498.9, 283.8, 58.4, 115.2) -- a_bone_golem\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 19584,
+        "zone": "lakerathe",
+        "name": "Kazen_Fecae",
+        "lua_content": "-- IdleQuest epic 1.0 steps have no minimum level; preserve class and item checks.\n-- Reviewed P99 Necromancer Epic 1.0: restore omitted quest directions.\n-- Source: lakerathe/Kazen_Fecae.pl\n-- Necromancer Epic 1.0: Kazen Fecae apprentice/test/final chain.\n-- Converted from ProjectEQ Perl quest script, limited to Epic 1.0 behavior.\n-- items: 20641, 20642, 20647, 20653, 18087, 20652, 20544\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Emote(\"eyes seem to glow as he turns to you and says, 'Leave me be if you have no reason to be here, mortal!'\")\n\telseif e.message:findi(\"dark arts\") then\n\t\tif e.other:Class() == 11 then\n\t\t\te.self:Emote(\"looks you up and down, his eyes glowing with a soft red light. 'You wish to study under me? Perhaps, if you prove yourself to follow the twisted path.'\")\n\t\telse\n\t\t\te.self:Say(\"Ha! You call yourself a Necromancer? Come back when you have tortured a few more souls!\")\n\t\tend\n\telseif e.message:findi(\"prove\") then\n\t\te.self:Say(\"The wandering knight, Sir Edwin Motte, recently slew one of my lesser servants. This foolish knave travels from town to town pretending to be good. Separate his head from his body and return it to me so I may work my magics upon it. This fool will become another plaything for me, even in death.\")\n\telseif e.message:findi(\"advance\") then\n\t\te.self:Say(\"I share great secrets with my more powerful servants who show me they are willing to serve without question. Tell my servant the name of any symbol he gives you and he will instruct you. If I give you a symbol, speak its name to me so I may instruct you.\")\n\telseif e.message:findi(\"symbol of apprentice\") or e.message:findi(\"symbol of the apprentice\") then\n\t\te.self:Say(\"You have a long way to go before I teach you the true secrets of life and death. Visit Venenzi Oberendi in the Nektulos Forest and show her the symbol. She is collecting reagents for one of my experiments and is taking far too long. I do not wish her dead, yet, I simply need the reagents soon. Retrieve the reagents and give them to my assistant Emkel Kabae. I do not wish to handle them myself.\")\n\telseif e.message:findi(\"reagents\") then\n\t\te.self:Say(\"The reagents are the same types the great sorcerer Miragul used to cheat death and become a lich.\")\n\telseif e.message:findi(\"symbol of testing\") then\n\t\te.self:Say(\"Show me that you can overcome larger obstacles and manipulate servants. Gather a force for of mercenaries if you like, or so-called friends, if you desire, and prepare for battle, my promising young student. Return to me with the symbol of testing when you are prepared for battle with my creations. Have no fear, I will not slay you myself. If you do live, tell me the name of the symbol you receive.\")\n\telseif e.message:findi(\"symbol of insanity\") then\n\t\te.self:Say(\"It is time for you to meet my partner, so to speak. Drendico Metalbones is his name and I assure you he is quite mad. His mind has been rended by fright, dread, and terror in his trips to the planes and his heart is full of hatred now. He has a tome which I wish you to use. Show him your symbol slowly and listen to his rantings well, they hide great knowledge.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 20641}) then\n\t\te.self:Say(\"Excellent! You have done well, my new apprentice. Take this [symbol of the apprentice] and know that you can do other tasks to [advance] within my apprentice ranks.\")\n\t\te.other:AddEXP(5000)\n\t\te.other:SummonItem(20642) -- Symbol of the Apprentice\n\telseif item_lib.check_turn_in(e.trade, {item1 = 20647}) then\n\t\te.self:Say(\"Good luck, my student!\")\n\t\teq.spawn2(51153, 0, 0, -1498.9, 283.8, 58.4, 115.2) -- a_bone_golem\n\telseif item_lib.check_turn_in(e.trade, {item1 = 20653}) then\n\t\te.self:Emote(\"stares through you at the horizon, then hands you a tome.\")\n\t\te.other:AddEXP(10000)\n\t\te.other:SummonItem(18087) -- Tome of Instruction\n\telseif item_lib.check_turn_in(e.trade, {item1 = 20652}) then\n\t\te.self:Emote(\"grins wildly and his eyes flare a deep red. The scythe he promised you flies through the air and into your hand.\")\n\t\te.other:AddEXP(10000)\n\t\te.other:SummonItem(20544) -- Scythe of the Shadowed Soul\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\nfunction event_death_complete(e)\n\teq.spawn2(51153, 0, 0, -1498.9, 283.8, 58.4, 115.2) -- a_bone_golem\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 14991,
+        "zone": "timorous",
+        "name": "Drendico_Metalbones",
+        "lua_content": "-- Source: timorous/Drendico_Metalbones.pl\n-- Necromancer Epic 1.0: Drendico Metalbones reagent box chain.\n-- Converted from ProjectEQ Perl quest script.\n-- items: 20648, 18086, 1278, 20656, 20655, 20653\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"The hills ears keep spinning the wonders of wells. Twisting twisting fly in water scar hot horses. Teach me! Bring floating water islands of doom!\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 20648}) then\n\t\te.self:Emote(\"throws a book over his shoulder. 'Bring back book! Bring back reagents three!!'\")\n\t\te.other:Ding()\n\t\te.other:AddEXP(1000)\n\t\te.other:SummonItem(18086) -- Journal of Drendico\n\telseif item_lib.check_turn_in(e.trade, {item1 = 1278, item2 = 20656, item3 = 20655, item4 = 18086}) then\n\t\te.self:Emote(\"fiddles with the components, puts them into a box and hands it to you.\")\n\t\te.other:SummonItem(20653) -- Prepared Reagent Box\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 14991,
+        "zone": "timorous",
+        "name": "Drendico_Metalbones",
+        "lua_content": "-- Source: timorous/Drendico_Metalbones.pl\n-- Necromancer Epic 1.0: Drendico Metalbones reagent box chain.\n-- Converted from ProjectEQ Perl quest script.\n-- items: 20648, 18086, 1278, 20656, 20655, 20653\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"The hills ears keep spinning the wonders of wells. Twisting twisting fly in water scar hot horses. Teach me! Bring floating water islands of doom!\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 20648}) then\n\t\te.self:Emote(\"throws a book over his shoulder. 'Bring back book! Bring back reagents three!!'\")\n\t\te.other:Ding()\n\t\te.other:AddEXP(1000)\n\t\te.other:SummonItem(18086) -- Journal of Drendico\n\telseif item_lib.check_turn_in(e.trade, {item1 = 1278, item2 = 20656, item3 = 20655, item4 = 18086}) then\n\t\te.self:Emote(\"fiddles with the components, puts them into a box and hands it to you. 'Return the components to Kazen quickly.'\")\n\t\te.other:SummonItem(20653) -- Prepared Reagent Box\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/nektulos/Venenzi_Oberzendi.lua",
+      "beforeSha256": "10f6b16cb0a2d797e6d28ce54c81a0160a16e4421c8a9a5b36de55bea3bfd6d3",
+      "proposedFile": "changes/p99-nz-necromancer-directions/nektulos--Venenzi_Oberzendi.lua",
+      "afterSha256": "6465d23ab7e11e0827d2ba361d8c8b6f15d9b1ac2bd9c9f5a92227f8b1d5c94c"
+    },
+    {
+      "target": "maintained/lua/converted-perl/lakerathe/Kazen_Fecae.lua",
+      "beforeSha256": "acaaed7c834fa3a2e70d2b135753a96e8c5bd3fddf147abcf15a792ac76b89fd",
+      "proposedFile": "changes/p99-nz-necromancer-directions/lakerathe--Kazen_Fecae.lua",
+      "afterSha256": "f203d7852ff2abbc970f465bc88a9fc079788f4fe7104d3571357713ecdf6a61"
+    },
+    {
+      "target": "maintained/lua/converted-perl/timorous/Drendico_Metalbones.lua",
+      "beforeSha256": "5d3cca3b91175b9c25b2cc2a0c31c6b04d8c76dff2a945b430ea1680454ed5a9",
+      "proposedFile": "changes/p99-nz-necromancer-directions/timorous--Drendico_Metalbones.lua",
+      "afterSha256": "eca16b47003a8297d3a2f8c80d501573c2d570d7f519a39f1fd551f2c128f314"
+    }
+  ]
+}

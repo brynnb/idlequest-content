@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-puab-dialogue-freportw",
+  "summary": "Restore documented treant-fist hail hint, singular treant fist, monk of great skill pledge and Clawfist question without mandatory trailing space; preserve old pledge and existing eligibility/rewards.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/The_Treant_Fists?action=raw",
+      "note": "Cached 2026-07-17T23:38:42.110Z; revision unavailable; SHA256 35c449b37ea6c60fe86e98db758f58f72b57eedcd2abb905b73f213865acef10. Restore documented treant-fist hail hint, singular treant fist, monk of great skill pledge and Clawfist question without mandatory trailing space; preserve old pledge and existing eligibility/rewards. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 12198,
+        "zone": "freportw",
+        "name": "Puab_Closk",
+        "lua_content": "-- items: 12369, 18746, 13507, 28055, 12344\nfunction event_spawn(e)\n\tlocal xloc = e.self:GetX();\n\tlocal yloc = e.self:GetY();\n\teq.set_proximity(xloc - 50, xloc + 50, yloc - 50, yloc + 50);\nend\n\nfunction event_enter(e)\n\tif(e.other:HasItem(18746)) then\n\t\te.other:Message(MT.Yellow,\"As you get your bearings, a lightly armored man that appears to be in incredible shape turns to greet you. 'Welcome traveller. I am Puab Closk. If you wish to learn the ways of the Ashen Order, read the note in your inventory and hand it to me to begin your training.'\");\n\tend\nend\n\nfunction event_say(e)\n\tlocal fac = e.other:GetFaction(e.self);\n\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Greetings. I am Puab Closk, Master of the Ashen Order.  Our home is your home, friend. Feel free to stay as long as you like.  Learn our ways as many have done in the past.  To fight like the tiger and strike like the cobra are your goals.\");\n\telseif(fac < 4) then\n\t\tif(e.message:findi(\"treant fists\")) then\n\t\t\te.self:Say(\"You desire the treant fists?  I have them and I will offer them to any [skilled monk of the Ashen House].\");\n\t\telseif(e.message:findi(\"who is clawfist \")) then\n\t\t\te.self:Say(\"Clawfist is a Kerran, a catman. He braved the dangers of Norrath to reach the Ashen Order. He sought knowledge of our disiples. He learned well.\");\n\t\telseif(e.message:findi(\"where is clawfist\")) then\n\t\t\te.self:Say(\"Clawfist has been banished by the Kerrans of Odus. Where they have sent him I am unsure.\");\n\t\telseif(e.message:findi(\"skilled monk of the Ashen House\")) then\n\t\t\te.self:Say(\"Then you shall aid our family. My former pupil [Clawfist] has been banished by his people. You will go to him and hand him this token as proof of your origin. He shall be expecting you.\");\n\t\t\te.other:SummonItem(12369); -- Puab's Token\n\t\tend\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 18746})) then -- A tattered note\n\t\te.self:Say(\"Welcome to the house of the Ashen Order. We are a small guild of monks who have devoted our lives to refining our minds, souls, and physical beings to their maximum potential. Please see Brother Torresk as soon as you get a chance. He is in charge of helping our newer members begin their training. Good luck, \" .. e.other:GetName() .. \".\");\n\t\te.other:SummonItem(13507); -- Torn Cloth Tunic\n\t\te.other:Ding();\n\t\te.other:Faction(361,100,0); -- Ashen Order\n\t\te.other:Faction(281,15,0); -- Knights of Truth\n\t\te.other:Faction(309,5,0); -- Silent Fist Clan\n\t\te.other:AddEXP(100);\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 28055})) then -- Tattered Parchment\n\t\te.self:Say(\"You have performed a great service to one who is your brother. Your loyalty shines brightly, as does your skill. Take the treant fists. They are yours now.\");\n\t\te.other:SummonItem(12344); -- Treant Fists\n\t\te.other:Ding();\n\t\te.other:Faction(361,10,0); -- Ashen Order\n\t\te.other:Faction(281,5,0); -- Knights of Truth\n\t\te.other:Faction(309,5,0); -- Silent Fist Clan\n\t\te.other:AddEXP(100);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade);\nend\n\n-- END of FILE Zone:freportw -- Puab_Closk\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 12198,
+        "zone": "freportw",
+        "name": "Puab_Closk",
+        "lua_content": "-- items: 12369, 18746, 13507, 28055, 12344\nfunction event_spawn(e)\n\tlocal xloc = e.self:GetX();\n\tlocal yloc = e.self:GetY();\n\teq.set_proximity(xloc - 50, xloc + 50, yloc - 50, yloc + 50);\nend\n\nfunction event_enter(e)\n\tif(e.other:HasItem(18746)) then\n\t\te.other:Message(MT.Yellow,\"As you get your bearings, a lightly armored man that appears to be in incredible shape turns to greet you. 'Welcome traveller. I am Puab Closk. If you wish to learn the ways of the Ashen Order, read the note in your inventory and hand it to me to begin your training.'\");\n\tend\nend\n\nfunction event_say(e)\n\tlocal fac = e.other:GetFaction(e.self);\n\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Greetings. I am Puab Closk, Master of the Ashen Order.  Our home is your home, friend. Feel free to stay as long as you like.  Learn our ways as many have done in the past.  To fight like the tiger and strike like the cobra are your goals. Cough- [treant fist] -Cough!\");\n\telseif(fac < 4) then\n\t\tif(e.message:findi(\"treant fist\")) then\n\t\t\te.self:Say(\"You desire the treant fists?  I have them and I will offer them to any [skilled monk of the Ashen House].\");\n\t\telseif(e.message:findi(\"who is clawfist\")) then\n\t\t\te.self:Say(\"Clawfist is a Kerran, a catman. He braved the dangers of Norrath to reach the Ashen Order. He sought knowledge of our disiples. He learned well.\");\n\t\telseif(e.message:findi(\"where is clawfist\")) then\n\t\t\te.self:Say(\"Clawfist has been banished by the Kerrans of Odus. Where they have sent him I am unsure.\");\n\t\telseif(e.message:findi(\"skilled monk of the Ashen House\") or e.message:findi(\"monk of great skill\")) then\n\t\t\te.self:Say(\"Then you shall aid our family. My former pupil [Clawfist] has been banished by his people. You will go to him and hand him this token as proof of your origin. He shall be expecting you.\");\n\t\t\te.other:SummonItem(12369); -- Puab's Token\n\t\tend\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 18746})) then -- A tattered note\n\t\te.self:Say(\"Welcome to the house of the Ashen Order. We are a small guild of monks who have devoted our lives to refining our minds, souls, and physical beings to their maximum potential. Please see Brother Torresk as soon as you get a chance. He is in charge of helping our newer members begin their training. Good luck, \" .. e.other:GetName() .. \".\");\n\t\te.other:SummonItem(13507); -- Torn Cloth Tunic\n\t\te.other:Ding();\n\t\te.other:Faction(361,100,0); -- Ashen Order\n\t\te.other:Faction(281,15,0); -- Knights of Truth\n\t\te.other:Faction(309,5,0); -- Silent Fist Clan\n\t\te.other:AddEXP(100);\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 28055})) then -- Tattered Parchment\n\t\te.self:Say(\"You have performed a great service to one who is your brother. Your loyalty shines brightly, as does your skill. Take the treant fists. They are yours now.\");\n\t\te.other:SummonItem(12344); -- Treant Fists\n\t\te.other:Ding();\n\t\te.other:Faction(361,10,0); -- Ashen Order\n\t\te.other:Faction(281,5,0); -- Knights of Truth\n\t\te.other:Faction(309,5,0); -- Silent Fist Clan\n\t\te.other:AddEXP(100);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade);\nend\n\n-- END of FILE Zone:freportw -- Puab_Closk\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/freportw/Puab_Closk.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-tz-puab-dialogue-freportw/freportw--Puab_Closk.lua",
+      "afterSha256": "d7a787594045353bfca74789fdc720a1b8029e4ca475ee1d1ac5c98489f446af"
+    }
+  ]
+}

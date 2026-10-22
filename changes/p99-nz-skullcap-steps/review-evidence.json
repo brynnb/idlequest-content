@@ -1,0 +1,32 @@
+{
+  "titles": [
+    "Necromancer Skullcap Quests"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "partial",
+  "match_status": "partial",
+  "local_quest_keys": [
+    "cabwest/Master_Kyvix",
+    "overthere/Tin_Banker_Assistant",
+    "overthere/93182"
+  ],
+  "proposal": "changes/p99-nz-skullcap-steps.json",
+  "notes": [
+    "Restore exact fifth-rank Skullcap cash, correct the occultist hint item, and validate the retained Ryx level condition before consuming its four-item offer.",
+    "Full page and all ten mapped Lua scripts reviewed. Tin Banker exact6copper6silver6gold and Kyvix exact5gold are explicit. Item4246 resolves to Rhino Hide Skullcap, while4264 is Occultist Skullcap. Dusty Tome55978 is coherently used on both sides and upstream calls the same branch a journal; no speculative item substitution. Ryx retains imported greater-than20 threshold because the page conflicting level anecdotes concern banker, not proof of Ryx threshold; low-level complete offers now fall through to safe returned Spectacle lore and return all other items rather than destroy them. Existing simultaneous-four-item adaptation is retained; sequential P99 deposit handling remains open. Preserve faction bypass, eighth-rank exclusion, existing XP and unrelated branches."
+  ],
+  "verification": {
+    "proposalValidation": "changes/p99-nz-coverage/proposal-validation-67.txt",
+    "isolatedScenarioReceipt": "changes/p99-nz-coverage/isolated-reviewer-tests.json",
+    "isolatedScenarioCount": 229,
+    "scope": "Receipt contains hash-bound scenarios; data-only rows have structural proposal validation, not live gameplay.",
+    "fullGameRuntime": "not_run",
+    "ui": "not_run"
+  },
+  "unresolved": [
+    "Ordinary source drops/spawns, recipe live behavior and rendered complete quest path not verified.",
+    "Ryx still uses a simultaneous four-item hand-in, returns the Spectacle during lore, and retains the imported level>20 threshold. P99 sequential deposit and exact threshold need further evidence.",
+    "Grype candlestick/swashbuckler dialogue is missing, but no exact transcript was found in the full quest/NPC cache or preserved source.",
+    "Most XP/faction/currency amounts on other ranks are unspecified; existing values preserved."
+  ]
+}

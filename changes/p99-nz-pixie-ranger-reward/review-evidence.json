@@ -1,0 +1,26 @@
+{
+  "titles": [
+    "Pixie Dust (Kelethin Ranger)"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "partial",
+  "match_status": "partial",
+  "local_quest_keys": [
+    "gfaydark/Ran_Sunfire"
+  ],
+  "proposal": "changes/p99-nz-pixie-ranger-reward.json",
+  "notes": [
+    "Include the explicitly documented Leather Skullcap in Ran Sunfire\u2019s reward pool.",
+    "Leather Skullcap2001 verified exported item name. Other four documented patchwork pieces already possible. Preserve legacy Patchwork Tunic2104 and20percent item chance because page does not establish exhaustive pool or odds. Existing6copper and five faction directions match; quantities and item handin unchanged."
+  ],
+  "verification": {
+    "source": "Cached P99 and effective Lua reviewed; exact complete row preimages and source hashes recorded.",
+    "syntax": "pending",
+    "runtime": "Isolated mock regression pending; full game runtime unavailable.",
+    "ui": "not_run",
+    "connected_chain": "not_run"
+  },
+  "unresolved": [
+    "Ordinary source drops/spawns, recipe live behavior and rendered complete quest path not verified."
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "format": 1,
+  "id": "p99-am-trunt-replacement",
+  "summary": "Use supported owner-scoped hostile replacement lifecycle for Trunt instead of unsupported attached hate-list plus source-depop combination.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Monk_Epic_Quest?action=raw",
+      "note": "Cached 2026-07-17T23:25:34.139Z; revision unavailable; SHA256 ba4b460c745371d1dbd96436158a46dc932bc5514384a2e3618dfab0a71ab651. Monk Epic Quest"
+    },
+    {
+      "url": "https://wiki.project1999.com/Monk_Epic_Quest?action=raw",
+      "note": "Promote immutable upstream source sources/projecteq/nurga/a_sleeping_ogre.lua SHA256 1771eb589c21cf8c86245da991f91665ef5f609cd627aa1b0815cf4d703d4661 to maintained modified-upstream override; baseline remains untouched."
+    },
+    {
+      "url": "https://wiki.project1999.com/Monk_Epic_Quest?action=raw",
+      "note": "Supported retained pattern: effective/quests/citymist/%23Neh-Ashiir.lua plus %23Neh-Ashiir_.lua, and hole/Kyrenna.lua. NPC107161 exists, has no natural spawnentry and no explicit quest/NPC exclusion. Do not infer availability exclusion from exclude=1. Live owner-scoped encounter, natural availability, loot and UI still require runtime verification."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 13734,
+        "zone": "nurga",
+        "name": "a_sleeping_ogre",
+        "lua_content": "-- Monk Epic 1.0\nfunction event_spawn(e)\n\teq.set_timer(\"appearance\", 1000);\nend\n\nfunction event_timer(e)\n\teq.stop_timer(\"appearance\");\n\te.self:SetAppearance(3);\nend\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Emote(eq.ChooseRandom(\"snorts a bit and continues sleeping.\",\"yawns, and utters some gibberish, then falls back asleep.\"))\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\tif(item_lib.check_turn_in(e.trade, {item1 = 1685})) then --Breath of Gwan\n\t\te.self:SetAppearance(0);\n\t\te.self:Say(\"Your path of wanton destruction ends here. Gwan and Eejag were impatient and hot-headed. You will not defeat me, for I have the patience and perseverance of stone, unlike the children you have beaten before me. Are you sure you want to challenge me?\");\n\t\teq.spawn2(107161,0,0,e.self:GetX(),e.self:GetY(),e.self:GetZ(),e.self:GetHeading()):AddToHateList(e.other,1); --Trunt\n\t\teq.depop_with_timer();\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 13734,
+        "zone": "nurga",
+        "name": "a_sleeping_ogre",
+        "lua_content": "-- Monk Epic 1.0\nfunction event_spawn(e)\n\teq.set_timer(\"appearance\", 1000);\nend\n\nfunction event_timer(e)\n\teq.stop_timer(\"appearance\");\n\te.self:SetAppearance(3);\nend\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Emote(eq.ChooseRandom(\"snorts a bit and continues sleeping.\",\"yawns, and utters some gibberish, then falls back asleep.\"))\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\tif(item_lib.check_turn_in(e.trade, {item1 = 1685})) then --Breath of Gwan\n\t\te.self:SetAppearance(0);\n\t\te.self:Say(\"Your path of wanton destruction ends here. Gwan and Eejag were impatient and hot-headed. You will not defeat me, for I have the patience and perseverance of stone, unlike the children you have beaten before me. Are you sure you want to challenge me?\");\n\t\teq.spawn2(107161,0,0,e.self:GetX(),e.self:GetY(),e.self:GetZ(),e.self:GetHeading()); -- Trunt: owner-scoped aggression runs in his event_spawn.\n\t\teq.depop_with_timer();\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": null,
+      "after": {
+        "id": 503553,
+        "zone": "nurga",
+        "name": "Trunt",
+        "lua_content": "-- Authored from P99 Monk Epic Quest and retained owner-scoped replacement pattern.\n-- Trunt (107161) is spawned only by the sleeping ogre hand-in.\n-- The replacement receives the authoritative quest owner in event_spawn.\nfunction event_spawn(e)\n    eq.attack(e.other:GetName())\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/nurga/a_sleeping_ogre.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-am-trunt-replacement/nurga-a_sleeping_ogre.lua",
+      "afterSha256": "f2e805abf1fab323aeba4d4d7545b12b47a1ff5b91c4a22f4dddb9d62f035fad"
+    },
+    {
+      "target": "maintained/lua/idlequest-authored/nurga/Trunt.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-am-trunt-replacement/nurga-Trunt.lua",
+      "afterSha256": "10bf81c017f978cc7d5de5433336572af0251d7a9f43c17272d03248989e4f0b"
+    }
+  ]
+}

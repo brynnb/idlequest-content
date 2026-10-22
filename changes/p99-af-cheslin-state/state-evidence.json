@@ -1,0 +1,15 @@
+{
+  "path": "reference/server/internal/quest/lua_bridge.go",
+  "sha256": "dd4ec84cf2450401f60b7f6068c52a0ef174cb15e9b559b0f0250ba2e6093184",
+  "line_ranges": [
+    [
+      1668,
+      1681
+    ],
+    [
+      1798,
+      1840
+    ]
+  ],
+  "conclusion": "Scalar globals and closure upvalues are restored and recaptured across events; existing four completed flags can therefore survive. Proposed reset is source-backed, not a claimed live test."
+}

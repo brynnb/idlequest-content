@@ -1,0 +1,45 @@
+{
+  "format": 1,
+  "id": "p99-am-dal-task-dialogue",
+  "summary": "Accept Drill Master Dal advertised task link while preserving legacy response and all Curscale/Marauder trades.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Curscale_Shield?action=raw",
+      "note": "Cached 2026-07-17T23:12:23.702Z; revision unavailable; SHA256 5150cd2a37ac94ce790f6c53bd345b456e702b1f159a2345fd1d02a232df4372. Curscale Shield"
+    },
+    {
+      "url": "https://wiki.project1999.com/Marauder_Armor?action=raw",
+      "note": "Cached 2026-07-17T23:24:45.918Z; revision unavailable; SHA256 ae81c3f66007d28b4bda7d52c257ab4ffbda1147587a9d395ce7da7e832c1e78. Marauder Armor"
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 15501,
+        "zone": "cabeast",
+        "name": "Drill_Master_Dal",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: cabeast/Drill_Master_Dal.pl\n-- items: 17997, 12915, 12917, 12918, 12919, 12920, 12921, 12673, 12674\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Yes. yes!! What do I have here?!! Another [new recruit]? If so. then speak up! If not. then leave and do not waste my time nor risk your life. I also seek a [legion soldier] if you be one.\")\n\telseif e.message:findi(\"new recruit\") then\n\t\te.self:Say(\"Yes. You have the look of the Partisan. I trust you have begun your blacksmith training. If not. then do so. Also. you should read all the books available to you in Fortress Talishan. We are not dimwitted broodlings here. You shall need the knowledge soon. That. or a coffin. Ha!! Here is your task. are you [ready for your task]?\")\n\telseif e.message:findi(\"legion soldier\") then\n\t\te.self:Say(\"Good news to my ears!! I seek to prove to the War Baron that the infamous forsaken band of thieves who call themselves Marrtail's Marauders are operating within earshot of our city. You must bring me proof that you encountered no fewer than four of these thieves. Do so and I shall offer you an armor item unavailable to most.\")\n\telseif e.message:findi(\"ready for my task\") then\n\t\te.self:Say(\"Yes. yes!! It does not matter. You must be ready. I will hand you the Partisan pack. Into it you shall combine one giant blood sac of the giant leech; scout beads from a goblin scout; one sabertooth kitten canine and finally. three bone shards from decaying skeletons. Hopefully. you will survive your attempt to obtain these items. Return the full Partisan pack and you shall be rewarded with a curscale shield.\")\n\t\te.other:SummonItem(17997)\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 12915, item2 = 12915, item3 = 12915, item4 = 12915}) then\n\t\te.self:Emote(\"hands you a shimmering black piece of armor which smells quite horrid. You find it hard to keep it from slithering out of your hand. 'Here is the armor the tailors have been working on for the legion. You may test it for us. Keep up your fine work and I may have other pieces available for you to test.'\")\n\t\te.other:SummonItem(eq.ChooseRandom(12917, 12918, 12919, 12920, 12921))\n\t\te.other:Ding()\n\t\te.other:Faction(441, 10, 0)\n\t\te.other:Faction(440, 10, 0)\n\t\te.other:Faction(445, 10, 0)\n\t\te.other:Faction(442, 10, 0)\n\t\te.other:Faction(444, 10, 0)\n\t\te.other:AddEXP(1000)\n\t\te.other:GiveCash(0, 14, 0, 0)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 12673}) then\n\t\te.self:Say(\"Well done recruit, I knew we could count on you to do the job. Here is the reward you were promised\")\n\t\te.other:SummonItem(12674)\n\t\te.other:Ding()\n\t\te.other:Faction(441, 2, 0)\n\t\te.other:Faction(440, 2, 0)\n\t\te.other:Faction(445, 2, 0)\n\t\te.other:Faction(442, 2, 0)\n\t\te.other:Faction(444, 2, 0)\n\t\te.other:AddEXP(250)\n\t\te.other:GiveCash(0, 9, 0, 0)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 15501,
+        "zone": "cabeast",
+        "name": "Drill_Master_Dal",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: cabeast/Drill_Master_Dal.pl\n-- items: 17997, 12915, 12917, 12918, 12919, 12920, 12921, 12673, 12674\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Yes. yes!! What do I have here?!! Another [new recruit]? If so. then speak up! If not. then leave and do not waste my time nor risk your life. I also seek a [legion soldier] if you be one.\")\n\telseif e.message:findi(\"new recruit\") then\n\t\te.self:Say(\"Yes. You have the look of the Partisan. I trust you have begun your blacksmith training. If not. then do so. Also. you should read all the books available to you in Fortress Talishan. We are not dimwitted broodlings here. You shall need the knowledge soon. That. or a coffin. Ha!! Here is your task. are you [ready for your task]?\")\n\telseif e.message:findi(\"legion soldier\") then\n\t\te.self:Say(\"Good news to my ears!! I seek to prove to the War Baron that the infamous forsaken band of thieves who call themselves Marrtail's Marauders are operating within earshot of our city. You must bring me proof that you encountered no fewer than four of these thieves. Do so and I shall offer you an armor item unavailable to most.\")\n\telseif e.message:findi(\"ready for my task\") or e.message:findi(\"ready for your task\") then\n\t\te.self:Say(\"Yes. yes!! It does not matter. You must be ready. I will hand you the Partisan pack. Into it you shall combine one giant blood sac of the giant leech; scout beads from a goblin scout; one sabertooth kitten canine and finally. three bone shards from decaying skeletons. Hopefully. you will survive your attempt to obtain these items. Return the full Partisan pack and you shall be rewarded with a curscale shield.\")\n\t\te.other:SummonItem(17997)\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 12915, item2 = 12915, item3 = 12915, item4 = 12915}) then\n\t\te.self:Emote(\"hands you a shimmering black piece of armor which smells quite horrid. You find it hard to keep it from slithering out of your hand. 'Here is the armor the tailors have been working on for the legion. You may test it for us. Keep up your fine work and I may have other pieces available for you to test.'\")\n\t\te.other:SummonItem(eq.ChooseRandom(12917, 12918, 12919, 12920, 12921))\n\t\te.other:Ding()\n\t\te.other:Faction(441, 10, 0)\n\t\te.other:Faction(440, 10, 0)\n\t\te.other:Faction(445, 10, 0)\n\t\te.other:Faction(442, 10, 0)\n\t\te.other:Faction(444, 10, 0)\n\t\te.other:AddEXP(1000)\n\t\te.other:GiveCash(0, 14, 0, 0)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 12673}) then\n\t\te.self:Say(\"Well done recruit, I knew we could count on you to do the job. Here is the reward you were promised\")\n\t\te.other:SummonItem(12674)\n\t\te.other:Ding()\n\t\te.other:Faction(441, 2, 0)\n\t\te.other:Faction(440, 2, 0)\n\t\te.other:Faction(445, 2, 0)\n\t\te.other:Faction(442, 2, 0)\n\t\te.other:Faction(444, 2, 0)\n\t\te.other:AddEXP(250)\n\t\te.other:GiveCash(0, 9, 0, 0)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/cabeast/Drill_Master_Dal.lua",
+      "beforeSha256": "634196077661b8dc3f66c1dcab23168e67847af16187f0e98defaeb3e331c3c1",
+      "proposedFile": "changes/p99-am-dal-task-dialogue/cabeast-Drill_Master_Dal.lua",
+      "afterSha256": "7529e53da0af1c79c51d7adff7448363f9ade7e9dcbb82fa04e04a91d29fb7de"
+    }
+  ]
+}

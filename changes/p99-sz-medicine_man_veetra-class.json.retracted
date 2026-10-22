@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-sz-medicine_man_veetra-class",
+  "summary": "Compare numeric runtime class ID, preserving intended eligibility; book-return step still unresolved.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Shaman_Plane_of_Sky_Tests?action=raw",
+      "note": "Cached 2026-07-17T23:32:41.562Z; revision unavailable; SHA256 d2cf8a9522bfba312b59886ff4968b2699824ca84526006ed5a5fe9b0a624d2a. Source-only correction; full runtime and UI not executed. Undocumented numerical values unchanged."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 11951,
+        "zone": "airplane",
+        "name": "Medicine_Man_Veetra",
+        "lua_content": "function event_say(e)\n\tif(e.message:findi(\"Hail\")) then\n\t\te.self:Say(\"Good day to you, \" .. e.other:GetName() .. \". Are you a shaman of [much experience]?\");\n\telseif(e.message:findi(\"much experience\")) then\n\t\te.self:Say(\"Then welcome to the tests of the medicine man. I have two tomes, each tells of a shaman of great accomplishment. They are Gina MacStargan and Ooga. Simply tell me the name of the shaman you want to be tested by.\");\n\telseif((e.message:findi(\"Gina MacStargan\")) and (e.other:Class() == \"Shaman\")) then\n\t\te.self:Say(\"I shall summon them for you\");\n\t\teq.spawn2(71087,0,0,631.9,1401.9,-766.9,259.6); -- NPC: Gina_McStargan\n\t\teq.depop_with_timer();\n\telseif((e.message:findi(\"Ooga\")) and (e.other:Class() == \"Shaman\")) then\n\t\te.self:Say(\"I shall summon them for you\");\n\t\teq.spawn2(71093,0,0,653.4,1399.0,-766.9,259.6); -- NPC: Ooga\n\t\teq.depop_with_timer();\n\tend\nend\n\n-------------------------------------------------------------------------------------------------\n-- Converted to .lua using MATLAB converter written by Stryd\n-- Find/replace data for .pl --> .lua conversions provided by Speedz, Stryd, Sorvani and Robregen\n-------------------------------------------------------------------------------------------------\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 11951,
+        "zone": "airplane",
+        "name": "Medicine_Man_Veetra",
+        "lua_content": "function event_say(e)\n\tif(e.message:findi(\"Hail\")) then\n\t\te.self:Say(\"Good day to you, \" .. e.other:GetName() .. \". Are you a shaman of [much experience]?\");\n\telseif(e.message:findi(\"much experience\")) then\n\t\te.self:Say(\"Then welcome to the tests of the medicine man. I have two tomes, each tells of a shaman of great accomplishment. They are Gina MacStargan and Ooga. Simply tell me the name of the shaman you want to be tested by.\");\n\telseif((e.message:findi(\"Gina MacStargan\")) and (e.other:GetClass() == 10)) then\n\t\te.self:Say(\"I shall summon them for you\");\n\t\teq.spawn2(71087,0,0,631.9,1401.9,-766.9,259.6); -- NPC: Gina_McStargan\n\t\teq.depop_with_timer();\n\telseif((e.message:findi(\"Ooga\")) and (e.other:GetClass() == 10)) then\n\t\te.self:Say(\"I shall summon them for you\");\n\t\teq.spawn2(71093,0,0,653.4,1399.0,-766.9,259.6); -- NPC: Ooga\n\t\teq.depop_with_timer();\n\tend\nend\n\n-------------------------------------------------------------------------------------------------\n-- Converted to .lua using MATLAB converter written by Stryd\n-- Find/replace data for .pl --> .lua conversions provided by Speedz, Stryd, Sorvani and Robregen\n-------------------------------------------------------------------------------------------------\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/airplane/Medicine_Man_Veetra.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-sz-medicine_man_veetra-class/airplane--Medicine_Man_Veetra.lua",
+      "afterSha256": "3f25079f8464659f1dfd79d55c99d0cb409a374f6cee92b7b1e4d80008bc5ac4"
+    }
+  ]
+}

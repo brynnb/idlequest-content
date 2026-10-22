@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-tunare-courier-timer",
+  "summary": "Restrict courier movement/depop handler to its named timer. Preserve existing10sec poll, coordinates, grid and all event behavior; these world values remain unverified.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Tunare_Symbol_Quests?action=raw",
+      "note": "Cached 2026-07-17T23:40:02.388Z; revision unavailable; SHA256 e7c44586ede40fe7a40d590cdedf528a8cf89facd4f655092e96a7cf6d8d4392. Restrict courier movement/depop handler to its named timer. Preserve existing10sec poll, coordinates, grid and all event behavior; these world values remain unverified. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 12664,
+        "zone": "lfaydark",
+        "name": "a_dark_elf_courier",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: lfaydark/a_dark_elf_courier.pl\n\nfunction event_spawn(e)\n\teq.set_timer(\"CourierDepop\", 10000)\n\te.self:SetRunning(true)\nend\n\nfunction event_timer(e)\n\tif e.self:GetX() == 1150 and e.self:GetY() == -885 then\n\t\teq.stop_timer(\"CourierDepop\")\n\t\teq.depop()\n\tend\n\te.self:SetRunning(true)\nend\n\nfunction event_trade(e)\n\te.self:ReturnHandinItems(e.other)\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 12664,
+        "zone": "lfaydark",
+        "name": "a_dark_elf_courier",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: lfaydark/a_dark_elf_courier.pl\n\nfunction event_spawn(e)\n\teq.set_timer(\"CourierDepop\", 10000)\n\te.self:SetRunning(true)\nend\n\nfunction event_timer(e)\n\tif e.timer ~= \"CourierDepop\" then return end\n\tif e.self:GetX() == 1150 and e.self:GetY() == -885 then\n\t\teq.stop_timer(\"CourierDepop\")\n\t\teq.depop()\n\tend\n\te.self:SetRunning(true)\nend\n\nfunction event_trade(e)\n\te.self:ReturnHandinItems(e.other)\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/lfaydark/a_dark_elf_courier.lua",
+      "beforeSha256": "dc2aaec19fc4ffa374329d8779749c08366dee6441db43e8e69403864748eba0",
+      "proposedFile": "changes/p99-tz-tunare-courier-timer/lfaydark--a_dark_elf_courier.lua",
+      "afterSha256": "e6fc23626cedf5be2a47b59ea6cd1324bcaa2e3be5d5e6391652e64d75221f9d"
+    }
+  ]
+}

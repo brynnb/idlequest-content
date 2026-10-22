@@ -1,0 +1,26 @@
+{
+  "titles": [
+    "Package from Lomarc"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "partial",
+  "match_status": "partial",
+  "local_quest_keys": [
+    "qeynos2/Renux_Herkanor"
+  ],
+  "proposal": "changes/p99-nz-lomarc-dialogue.json",
+  "notes": [
+    "Make documented I will meet Lomarc reach payment issuance before generic Lomarc lore.",
+    "Previous generic lomarc substring intercepted exact documented acceptance; reordered existing branches, preserving Mermaid prompt and Rogue Epic Stanos dialogue.18793payment->Lomarc attack and13716doll->Renux standing directions match. Night spawn/Den placeholder/drop acquisition and ambient Hanns dialogue remain unverified."
+  ],
+  "verification": {
+    "source": "Cached P99 and effective Lua reviewed; exact complete row preimages and source hashes recorded.",
+    "syntax": "pending",
+    "runtime": "Isolated mock regression pending; full game runtime unavailable.",
+    "ui": "not_run",
+    "connected_chain": "not_run"
+  },
+  "unresolved": [
+    "Ordinary source drops/spawns, recipe live behavior and rendered complete quest path not verified."
+  ]
+}

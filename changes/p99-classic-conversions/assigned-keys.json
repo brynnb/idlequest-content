@@ -1,0 +1,1095 @@
+{
+  "schemaVersion": 1,
+  "scope": "Original 181 explicitly reviewed Classic/Kunark missing-Lua assignments; zone order is not an assignment rule. Membership does not determine quest era.",
+  "originalReviewFile": "changes/p99-classic-conversions/triage.json",
+  "originalReviewSha256": "172cc5bfd02367d1cda2790264bae1a07ac26471b3981fa132318c112220b101",
+  "publicBaseline": "b717b8a5c5dc5bd779d160b534c10329c1ae04bc",
+  "assignments": [
+    {
+      "key": "burningwood/Asmodin_Jru-dac",
+      "zone": "burningwood",
+      "file": "sources/projecteq/burningwood/Asmodin_Jru-dac.pl",
+      "sha256": "fe744d832281a822d4dc9558c0aee3bc2ef76a25e8521ec4b7beb2b0be137799"
+    },
+    {
+      "key": "butcher/Alun_Bilgum",
+      "zone": "butcher",
+      "file": "sources/projecteq/butcher/Alun_Bilgum.pl",
+      "sha256": "29a98a292398c148eb68bc3837dc93a8e196471f27cdbf6645b966ab3cba2bfe"
+    },
+    {
+      "key": "butcher/Atwin_Keladryn",
+      "zone": "butcher",
+      "file": "sources/projecteq/butcher/Atwin_Keladryn.pl",
+      "sha256": "bc52d13007fcf984312f31d2336e170a9869fd698f2a94d6be4f5b501116351e"
+    },
+    {
+      "key": "butcher/Feriella_Vorana",
+      "zone": "butcher",
+      "file": "sources/projecteq/butcher/Feriella_Vorana.pl",
+      "sha256": "0cced78beaa3634cc2c7d22e9672c62369a19e37fb908a8a8bdc3f40279ceec7"
+    },
+    {
+      "key": "butcher/Gibi_Bilgum",
+      "zone": "butcher",
+      "file": "sources/projecteq/butcher/Gibi_Bilgum.pl",
+      "sha256": "aca0c318976e64bee29e8a6ca4c51cc77e4d938ba3bc615dd10b8d3633f2c7a2"
+    },
+    {
+      "key": "butcher/Rokaon_Sternheart",
+      "zone": "butcher",
+      "file": "sources/projecteq/butcher/Rokaon_Sternheart.pl",
+      "sha256": "df89f34aeb11d7e5ad581498bb97a22fbb1291d2a4c6faf26784b0f183eaad90"
+    },
+    {
+      "key": "butcher/Savil_Tranquilsong",
+      "zone": "butcher",
+      "file": "sources/projecteq/butcher/Savil_Tranquilsong.pl",
+      "sha256": "e4068ded120020263d8e46e8d6e0aab04d21daa93f490ee79939cf357d00cff4"
+    },
+    {
+      "key": "butcher/Vual_Stoutest",
+      "zone": "butcher",
+      "file": "sources/projecteq/butcher/Vual_Stoutest.pl",
+      "sha256": "761d9ddd0350973f88b2a1e4eaf68b72b34c695ce76bf8d971d1709095200564"
+    },
+    {
+      "key": "cabeast/Pagnar_Vyng",
+      "zone": "cabeast",
+      "file": "sources/projecteq/cabeast/Pagnar_Vyng.pl",
+      "sha256": "eafdc577297b71ebccfaa0ccd3677f4546f5a932775be931c9d580884f3f9504"
+    },
+    {
+      "key": "cabeast/player",
+      "zone": "cabeast",
+      "file": "sources/projecteq/cabeast/player.pl",
+      "sha256": "d40bba36eab6f8747348b2a290f6d15b8a54aa9097eaf3f19137276f394a1a2f"
+    },
+    {
+      "key": "cabwest/player",
+      "zone": "cabwest",
+      "file": "sources/projecteq/cabwest/player.pl",
+      "sha256": "4106c0eab93b97b3b141a9d03f1dc9d828b8a1110b4a07af492e5aad5a2ea390"
+    },
+    {
+      "key": "cauldron/#aqua_goblin_shaman",
+      "zone": "cauldron",
+      "file": "sources/projecteq/cauldron/#aqua_goblin_shaman.pl",
+      "sha256": "878836af2f8358cf3de939385746affa397e8463a2cb352b7e5bde66f21b2024"
+    },
+    {
+      "key": "cauldron/Grimpl_Rustedcog",
+      "zone": "cauldron",
+      "file": "sources/projecteq/cauldron/Grimpl_Rustedcog.pl",
+      "sha256": "33837004846fb4e8176fb03b7f28f21135649d761273f551462f870663a35bb9"
+    },
+    {
+      "key": "cauldron/Henai_Silentwalker",
+      "zone": "cauldron",
+      "file": "sources/projecteq/cauldron/Henai_Silentwalker.pl",
+      "sha256": "13dd7fc7f82ff86d869221a235964b3207ed1a37444dbe5b73d5a52a0dc2a5a2"
+    },
+    {
+      "key": "cauldron/Symperbell_Moor",
+      "zone": "cauldron",
+      "file": "sources/projecteq/cauldron/Symperbell_Moor.pl",
+      "sha256": "3f812decff642377f7dfcb65122efb96c7607d40482b7e3026eb3a715bc5a5b1"
+    },
+    {
+      "key": "cauldron/an_aqua_goblin_mariner",
+      "zone": "cauldron",
+      "file": "sources/projecteq/cauldron/an_aqua_goblin_mariner.pl",
+      "sha256": "b4c7b127b20afacb9ed9c60d20e0d769951e51f6041c7cc65fb5d30b40eab8cb"
+    },
+    {
+      "key": "charasis/player",
+      "zone": "charasis",
+      "file": "sources/projecteq/charasis/player.pl",
+      "sha256": "176752fcc592c3b24eb82889758415e382208a62d9171e80ef79be539e68fab8"
+    },
+    {
+      "key": "chardok/#Tani_Cogswin",
+      "zone": "chardok",
+      "file": "sources/projecteq/chardok/#Tani_Cogswin.pl",
+      "sha256": "161550b6e3194ed40b30815f220c76b1a8dc0133e4bd271b372c953d11a015cc"
+    },
+    {
+      "key": "commons/Bealya_Tanilsuia",
+      "zone": "commons",
+      "file": "sources/projecteq/commons/Bealya_Tanilsuia.pl",
+      "sha256": "24efa182243ccd2e6a066fa57eca6c9b835d0e4b681334d2bfbdf630efbb313e"
+    },
+    {
+      "key": "ecommons/Barstre_Songweaver",
+      "zone": "ecommons",
+      "file": "sources/projecteq/ecommons/Barstre_Songweaver.pl",
+      "sha256": "904dae4750661dc9d62502f27d2b3332dc012c77aa0ca44cb73345e41df9bbf5"
+    },
+    {
+      "key": "ecommons/Kayci_Strahtin",
+      "zone": "ecommons",
+      "file": "sources/projecteq/ecommons/Kayci_Strahtin.pl",
+      "sha256": "9785e3d0039f1a01b1cce984574e0a671053dc22981b425c2c6663fb8d5f8a6e"
+    },
+    {
+      "key": "ecommons/Khaite_Ranna",
+      "zone": "ecommons",
+      "file": "sources/projecteq/ecommons/Khaite_Ranna.pl",
+      "sha256": "9502938a37c0f352498cbbce563b3ca6eb57c8b0be8da2f0b18de6e39460cfeb"
+    },
+    {
+      "key": "ecommons/Loric_Weaver",
+      "zone": "ecommons",
+      "file": "sources/projecteq/ecommons/Loric_Weaver.pl",
+      "sha256": "e42bcc2d889e4123d63bbdcd4b5ec603e7cb7ad68d14a1c65e0c977b667f2f54"
+    },
+    {
+      "key": "ecommons/Merra_Clayfinger",
+      "zone": "ecommons",
+      "file": "sources/projecteq/ecommons/Merra_Clayfinger.pl",
+      "sha256": "2a8e5981edcef0176b98bfb88dc51ebb2e55a5897b6dcb5593a93f442fd37a12"
+    },
+    {
+      "key": "ecommons/Sergeant_Ragus",
+      "zone": "ecommons",
+      "file": "sources/projecteq/ecommons/Sergeant_Ragus.pl",
+      "sha256": "e2b23af417c9bbc69fb06c1a111b8edaa8e7a495592270616aa08f7cc84a9bcb"
+    },
+    {
+      "key": "emeraldjungle/#tainted_gorilla",
+      "zone": "emeraldjungle",
+      "file": "sources/projecteq/emeraldjungle/#tainted_gorilla.pl",
+      "sha256": "4cbd65971d67214d446a9d5c004d64a2585a283a1597e41f85d778463c500b83"
+    },
+    {
+      "key": "erudnext/#Jordin_Sretin",
+      "zone": "erudnext",
+      "file": "sources/projecteq/erudnext/#Jordin_Sretin.pl",
+      "sha256": "cc15dcb3b296e5c925bab2588d15953202b12d8e40e7404c84c8d342cd42c1ee"
+    },
+    {
+      "key": "erudnext/#Senina_Jolik",
+      "zone": "erudnext",
+      "file": "sources/projecteq/erudnext/#Senina_Jolik.pl",
+      "sha256": "59581fcf83493dc5793036ddbbfdd9561788fc397999f911d3eab828fcb312be"
+    },
+    {
+      "key": "erudnext/Alimaja_Shanthun",
+      "zone": "erudnext",
+      "file": "sources/projecteq/erudnext/Alimaja_Shanthun.pl",
+      "sha256": "11fe64ffca065be7c83a59c360f472485774377e2076c2e3253a4de11f049eb9"
+    },
+    {
+      "key": "erudnext/Brianna_Falsruinay",
+      "zone": "erudnext",
+      "file": "sources/projecteq/erudnext/Brianna_Falsruinay.pl",
+      "sha256": "1cfb005ac4a0a255918c53f96b263edd89b4b43f2af350520c1943dd9521d681"
+    },
+    {
+      "key": "erudnext/Kordian_Keshalian",
+      "zone": "erudnext",
+      "file": "sources/projecteq/erudnext/Kordian_Keshalian.pl",
+      "sha256": "7fec1a121bd0bf2431ea12e95fed02b95f7d56c0540dc729cad693f863805ac0"
+    },
+    {
+      "key": "erudnext/Valani_Gadriek",
+      "zone": "erudnext",
+      "file": "sources/projecteq/erudnext/Valani_Gadriek.pl",
+      "sha256": "7aee249ec23694c9f0f1c4d90ae74d8ec6cfb7211a58be17725e2d0faec6a336"
+    },
+    {
+      "key": "everfrost/Kizpi_Taelwx",
+      "zone": "everfrost",
+      "file": "sources/projecteq/everfrost/Kizpi_Taelwx.pl",
+      "sha256": "30a65f962b059781f038924fb66bada30fd146776f456a3dc68cf50998953bb4"
+    },
+    {
+      "key": "everfrost/Teria_Grinntli",
+      "zone": "everfrost",
+      "file": "sources/projecteq/everfrost/Teria_Grinntli.pl",
+      "sha256": "be8672d918762fa8d0c5cf407443148f2d00d19e8bca87e9592d210495b43645"
+    },
+    {
+      "key": "feerrott/#Emissary_Shinsere",
+      "zone": "feerrott",
+      "file": "sources/projecteq/feerrott/#Emissary_Shinsere.pl",
+      "sha256": "984c5907c6cea70724b72f717a6559e48682729ee5b5be2ad5da09cabf80fb72"
+    },
+    {
+      "key": "feerrott/#druid_epic_trap",
+      "zone": "feerrott",
+      "file": "sources/projecteq/feerrott/#druid_epic_trap.pl",
+      "sha256": "708cc1dcd303a99f386b4270679b376670081a51c7e566b5870cf351e8d64f2f"
+    },
+    {
+      "key": "feerrott/Grinak",
+      "zone": "feerrott",
+      "file": "sources/projecteq/feerrott/Grinak.pl",
+      "sha256": "9502938a37c0f352498cbbce563b3ca6eb57c8b0be8da2f0b18de6e39460cfeb"
+    },
+    {
+      "key": "felwithea/Chenori_Berinal",
+      "zone": "felwithea",
+      "file": "sources/projecteq/felwithea/Chenori_Berinal.pl",
+      "sha256": "1b47016e7aa1b9575ff922bec9a2b1093cc6bb0a7ba75d32a51b0e10f8b243dc"
+    },
+    {
+      "key": "fieldofbone/Berserker-s_Image",
+      "zone": "fieldofbone",
+      "file": "sources/projecteq/fieldofbone/Berserker-s_Image.pl",
+      "sha256": "21298f1d146d32566b3a59d9d1cbaff10dca8091b79dd840aaad91f4c14d534f"
+    },
+    {
+      "key": "fieldofbone/Immug_Lashtail",
+      "zone": "fieldofbone",
+      "file": "sources/projecteq/fieldofbone/Immug_Lashtail.pl",
+      "sha256": "935196eb27d429839e1eea96e7874008e469044db834b9d26673f4f42156a008"
+    },
+    {
+      "key": "fieldofbone/Vesh_Tailwhip",
+      "zone": "fieldofbone",
+      "file": "sources/projecteq/fieldofbone/Vesh_Tailwhip.pl",
+      "sha256": "9502938a37c0f352498cbbce563b3ca6eb57c8b0be8da2f0b18de6e39460cfeb"
+    },
+    {
+      "key": "firiona/Gillia_Brissok",
+      "zone": "firiona",
+      "file": "sources/projecteq/firiona/Gillia_Brissok.pl",
+      "sha256": "266367c99246f5020a1bb8715e5fb5610a1b7b31c4a4e33d40a36c8c49ee0908"
+    },
+    {
+      "key": "firiona/Rinnala_Sweetsong",
+      "zone": "firiona",
+      "file": "sources/projecteq/firiona/Rinnala_Sweetsong.pl",
+      "sha256": "bb25fb7811f2cc7b78ecef4b04e9cf13a5c7cbefe60ced8ef21a142cad1c9045"
+    },
+    {
+      "key": "firiona/Vorla_Diensk",
+      "zone": "firiona",
+      "file": "sources/projecteq/firiona/Vorla_Diensk.pl",
+      "sha256": "c79465ca947c028588caa6e92457366a721dc31400cadf6d79596c2688bbe723"
+    },
+    {
+      "key": "firiona/Wekland_Greenfoot",
+      "zone": "firiona",
+      "file": "sources/projecteq/firiona/Wekland_Greenfoot.pl",
+      "sha256": "043644f35addc0cb143e6fb6a30afbdb982356b3d422dc8a3dc86bea93c3aa56"
+    },
+    {
+      "key": "freportw/Ginehl_Wiquar",
+      "zone": "freportw",
+      "file": "sources/projecteq/freportw/Ginehl_Wiquar.pl",
+      "sha256": "e88278f26b885092d8ed72b4562dc7df70b8e6de39c1596b07ae65fb239f1e38"
+    },
+    {
+      "key": "freportw/Joffin_Sinclay",
+      "zone": "freportw",
+      "file": "sources/projecteq/freportw/Joffin_Sinclay.pl",
+      "sha256": "40b1ec4e2bb44f8a4c7d02d0f860346a3d937203a7dc1bad5ebb8d922008b8b9"
+    },
+    {
+      "key": "frontiermtns/Cenobite_Pakclaw",
+      "zone": "frontiermtns",
+      "file": "sources/projecteq/frontiermtns/Cenobite_Pakclaw.pl",
+      "sha256": "7cc6e75c171a6f1f0172508e6279c792a2ff284eff48c58237e78bab121e9029"
+    },
+    {
+      "key": "frontiermtns/Digmaster_Duggert",
+      "zone": "frontiermtns",
+      "file": "sources/projecteq/frontiermtns/Digmaster_Duggert.pl",
+      "sha256": "d64af85140997fd65ccaf67dd7201213ba2380869eb3e80a95a590038de94a2c"
+    },
+    {
+      "key": "frontiermtns/Rock_Shaper_Dritam",
+      "zone": "frontiermtns",
+      "file": "sources/projecteq/frontiermtns/Rock_Shaper_Dritam.pl",
+      "sha256": "7f6dac2ad45f97dc7d9ecaadbdd9e5fab517e78ebde98a3337f14362ff4ff7ac"
+    },
+    {
+      "key": "gfaydark/Faerik_Windrunner",
+      "zone": "gfaydark",
+      "file": "sources/projecteq/gfaydark/Faerik_Windrunner.pl",
+      "sha256": "dee134661decc072151a36d398aa0dcfb4a5fbcffed4deffd354dbe580466401"
+    },
+    {
+      "key": "gfaydark/Guard_Orcflayer",
+      "zone": "gfaydark",
+      "file": "sources/projecteq/gfaydark/Guard_Orcflayer.pl",
+      "sha256": "efb6a63737678d2fb80c634c7b71525f7b3e932f97844992ed90b2ef02b0a136"
+    },
+    {
+      "key": "gfaydark/Niflel_Faliwae",
+      "zone": "gfaydark",
+      "file": "sources/projecteq/gfaydark/Niflel_Faliwae.pl",
+      "sha256": "684bdc585a2a844d6c4e474254ae4e4e042e4becd15fcf2b885e0aad364e6298"
+    },
+    {
+      "key": "gfaydark/Seana_Marsinger",
+      "zone": "gfaydark",
+      "file": "sources/projecteq/gfaydark/Seana_Marsinger.pl",
+      "sha256": "7cdd4b2f1fca8e1da6c582d0c87946ce3a8733a5828308d8d3db41e5d1844871"
+    },
+    {
+      "key": "gfaydark/Sindl_Talonstrike",
+      "zone": "gfaydark",
+      "file": "sources/projecteq/gfaydark/Sindl_Talonstrike.pl",
+      "sha256": "e0a5d4b81f4e707e497a7a810ac1b7bded1583e36d03b5a2b4319e6f490b353e"
+    },
+    {
+      "key": "gfaydark/Stefan_Marsinger",
+      "zone": "gfaydark",
+      "file": "sources/projecteq/gfaydark/Stefan_Marsinger.pl",
+      "sha256": "1ea9e61efa105f376a3c99f1551459ec8e4f4c4723d73c6fed60db6d068f23bb"
+    },
+    {
+      "key": "gfaydark/Tilania_Shadowwalker",
+      "zone": "gfaydark",
+      "file": "sources/projecteq/gfaydark/Tilania_Shadowwalker.pl",
+      "sha256": "6be449b3a6dcab9d51a77cba0d66aa801f565245d0893b9fca635cd1aa954c17"
+    },
+    {
+      "key": "grobb/Goldush",
+      "zone": "grobb",
+      "file": "sources/projecteq/grobb/Goldush.pl",
+      "sha256": "ad3e5afdf74aeea464347cd00824a6e2e96ab69d8cbff1af729e3790c2d7a273"
+    },
+    {
+      "key": "grobb/Grigdor",
+      "zone": "grobb",
+      "file": "sources/projecteq/grobb/Grigdor.pl",
+      "sha256": "a04e96b805be38d9653bb457632b4f5151e4cd5309570ee69a196aadd7c91a63"
+    },
+    {
+      "key": "grobb/Kugaran",
+      "zone": "grobb",
+      "file": "sources/projecteq/grobb/Kugaran.pl",
+      "sha256": "80ffeedda2703be4986a8b2d4390d6a7d3632325c2bc46fadaee3191013bd012"
+    },
+    {
+      "key": "grobb/Prashnak",
+      "zone": "grobb",
+      "file": "sources/projecteq/grobb/Prashnak.pl",
+      "sha256": "4de2cffd27c00eb6195e07733b5432ed49fea2bfb4035bac6ce6cc715c1895b6"
+    },
+    {
+      "key": "gukbottom/#a_corrupted_gnome_explorer",
+      "zone": "gukbottom",
+      "file": "sources/projecteq/gukbottom/#a_corrupted_gnome_explorer.pl",
+      "sha256": "d6bbb0474140fdcdf719e3eb3b5a0767146be17502c0590653c65432bc1b7eb4"
+    },
+    {
+      "key": "gukbottom/#a_spectral_shimmer",
+      "zone": "gukbottom",
+      "file": "sources/projecteq/gukbottom/#a_spectral_shimmer.pl",
+      "sha256": "67673cc2bd95308db72011cd44b7ecabc85249399c952c71fd0cf3e7032fe13f"
+    },
+    {
+      "key": "halas/Balgros_McMichael",
+      "zone": "halas",
+      "file": "sources/projecteq/halas/Balgros_McMichael.pl",
+      "sha256": "5713c8ddaaa550b98a391ce571d47149b91c399fef1f03ca37d473e5d4f206d2"
+    },
+    {
+      "key": "halas/Conladan_Kevellian",
+      "zone": "halas",
+      "file": "sources/projecteq/halas/Conladan_Kevellian.pl",
+      "sha256": "ae235076ac5be58d0b7f007ecfdee401a42138fa6fdcb88270ab958df44f88aa"
+    },
+    {
+      "key": "halas/Haladorf_Wuirgon",
+      "zone": "halas",
+      "file": "sources/projecteq/halas/Haladorf_Wuirgon.pl",
+      "sha256": "d7c77a19a73e26c1a22f8419867d9d2652e98a62f23d9e5a25e1621d103e0a5e"
+    },
+    {
+      "key": "halas/Rollian_Galothar",
+      "zone": "halas",
+      "file": "sources/projecteq/halas/Rollian_Galothar.pl",
+      "sha256": "a0a4e17566622dcc13099ef09125f4b0907fbee402daa97df4a8c93166470d76"
+    },
+    {
+      "key": "highpass/Shumpi_Wimahnn",
+      "zone": "highpass",
+      "file": "sources/projecteq/highpass/Shumpi_Wimahnn.pl",
+      "sha256": "08f8d5b4743f912af911ee0c6f5df6b4974d34e3dd70890425ac7d159442f647"
+    },
+    {
+      "key": "hole/#Pellillo_Cogswin",
+      "zone": "hole",
+      "file": "sources/projecteq/hole/#Pellillo_Cogswin.pl",
+      "sha256": "9c02e1e098c969239915118c33653c3a56e4f103c143bf099674b057c19eb8e8"
+    },
+    {
+      "key": "innothule/Deblik_Grumblok",
+      "zone": "innothule",
+      "file": "sources/projecteq/innothule/Deblik_Grumblok.pl",
+      "sha256": "42115c0f6c85638238f124e84009d74a1fda2fccedea2fe98a3a509d2b697025"
+    },
+    {
+      "key": "kaladimb/Dunony_Chestire",
+      "zone": "kaladimb",
+      "file": "sources/projecteq/kaladimb/Dunony_Chestire.pl",
+      "sha256": "9ebd2478f0c6fc8f83f70e785f99b569bd6c3921fdfb74467aece3b9d4070d37"
+    },
+    {
+      "key": "kaladimb/Goriba_Thurgorson",
+      "zone": "kaladimb",
+      "file": "sources/projecteq/kaladimb/Goriba_Thurgorson.pl",
+      "sha256": "614669d3b482a131759f1c292c3d404ba5a391424b8c00652de1e080820613f7"
+    },
+    {
+      "key": "lakeofillomen/Crix_Tzo-mok",
+      "zone": "lakeofillomen",
+      "file": "sources/projecteq/lakeofillomen/Crix_Tzo-mok.pl",
+      "sha256": "eb40a83f0134666bf861bd258129ee718fb62c5887f72b847f3cc39c71336f23"
+    },
+    {
+      "key": "lakeofillomen/Doovix_Mruzzik",
+      "zone": "lakeofillomen",
+      "file": "sources/projecteq/lakeofillomen/Doovix_Mruzzik.pl",
+      "sha256": "70046d59bbf832a83aa18a593c7068fb5934837006233b65125952a139a5f6e0"
+    },
+    {
+      "key": "lakeofillomen/Keras_McArik",
+      "zone": "lakeofillomen",
+      "file": "sources/projecteq/lakeofillomen/Keras_McArik.pl",
+      "sha256": "ff5c6d58a5b4b2a1d77bebeeaf4780621ce984357cc64d608471ca245e570e69"
+    },
+    {
+      "key": "lakeofillomen/Lingering_Axefall",
+      "zone": "lakeofillomen",
+      "file": "sources/projecteq/lakeofillomen/Lingering_Axefall.pl",
+      "sha256": "1d07c1b7da64e080d509eab1da6e57e0ff50ed8c762bd65e233b21a537a9e6ea"
+    },
+    {
+      "key": "lakeofillomen/Pagik_Tsissun",
+      "zone": "lakeofillomen",
+      "file": "sources/projecteq/lakeofillomen/Pagik_Tsissun.pl",
+      "sha256": "229ff65c0234f1fea6fe64b872353fe6c77299ff42ba171b06b285eca75d9e01"
+    },
+    {
+      "key": "lakeofillomen/Syrik_Iceblood",
+      "zone": "lakeofillomen",
+      "file": "sources/projecteq/lakeofillomen/Syrik_Iceblood.pl",
+      "sha256": "aaf258b7832dd134ef2b68e5c40d89586cf25b7f1c45db0b38ab8918302b4865"
+    },
+    {
+      "key": "lakeofillomen/Xiokai_Rissthrum",
+      "zone": "lakeofillomen",
+      "file": "sources/projecteq/lakeofillomen/Xiokai_Rissthrum.pl",
+      "sha256": "f14854d9a3cf38b2426ff86fd69b26360b6ab3e7ab66cad4963d1eb753d958eb"
+    },
+    {
+      "key": "lakeofillomen/Yimic_Pxo-hab",
+      "zone": "lakeofillomen",
+      "file": "sources/projecteq/lakeofillomen/Yimic_Pxo-hab.pl",
+      "sha256": "05adbe4bd364a5c932a1de97dc307b48665fcd932920d187f5f048b04e3d0751"
+    },
+    {
+      "key": "lakerathe/#Ronaiar_Skullmoore",
+      "zone": "lakerathe",
+      "file": "sources/projecteq/lakerathe/#Ronaiar_Skullmoore.pl",
+      "sha256": "0f32463c5358f464ee5baaf2041edd4cdd756b622ab51d0879a5f8b660514ba9"
+    },
+    {
+      "key": "lakerathe/#Worboli",
+      "zone": "lakerathe",
+      "file": "sources/projecteq/lakerathe/#Worboli.pl",
+      "sha256": "c3015a66eaaa3ab866c50881bec09c52bd721cf8b2ae2d81cae0d95225156166"
+    },
+    {
+      "key": "lakerathe/Kimm_McShannel",
+      "zone": "lakerathe",
+      "file": "sources/projecteq/lakerathe/Kimm_McShannel.pl",
+      "sha256": "d2737f23a10210fe76e75862b0b0799649759da5693e99df220d680f935165bf"
+    },
+    {
+      "key": "lfaydark/Averna_Eisley",
+      "zone": "lfaydark",
+      "file": "sources/projecteq/lfaydark/Averna_Eisley.pl",
+      "sha256": "1ee07c12d4c87f59be396963ec4e9b5a4371f7423b9feceeccaccba6865747ab"
+    },
+    {
+      "key": "lfaydark/Elwinn_Prelliaen",
+      "zone": "lfaydark",
+      "file": "sources/projecteq/lfaydark/Elwinn_Prelliaen.pl",
+      "sha256": "42afca962a559cf8be062c6325d1c9cadf4a2a2d54ed5d706bea1121402df6c9"
+    },
+    {
+      "key": "mistmoore/Nate",
+      "zone": "mistmoore",
+      "file": "sources/projecteq/mistmoore/Nate.pl",
+      "sha256": "12e6fbf7150a03c02ca68ca4c031ac01fc7a603170261830068225b30053de84"
+    },
+    {
+      "key": "misty/#a_tired_farmer",
+      "zone": "misty",
+      "file": "sources/projecteq/misty/#a_tired_farmer.pl",
+      "sha256": "92a9bacf53c0e000ba127dccc3df955c58c37fc245fac5282ab81397594b6fe8"
+    },
+    {
+      "key": "misty/Bidils_the_Quickhand",
+      "zone": "misty",
+      "file": "sources/projecteq/misty/Bidils_the_Quickhand.pl",
+      "sha256": "bb8a9920168c3a20015604b986321f47c793cb716d7dc01a04f74cd0bb33a13d"
+    },
+    {
+      "key": "misty/Roha_Jumthief",
+      "zone": "misty",
+      "file": "sources/projecteq/misty/Roha_Jumthief.pl",
+      "sha256": "30d23ebbbf0bab6c5f079636aaf96b13d70bd3678de32ac0a50fb95c3652223e"
+    },
+    {
+      "key": "misty/epicurean_halfling",
+      "zone": "misty",
+      "file": "sources/projecteq/misty/epicurean_halfling.pl",
+      "sha256": "7a611d9231bc0d12182dea1975b6b8c343676fdfab98c88f17d9568dd3cb6ae0"
+    },
+    {
+      "key": "nektulos/#checkpoint_ten",
+      "zone": "nektulos",
+      "file": "sources/projecteq/nektulos/#checkpoint_ten.pl",
+      "sha256": "4753228a25d877d1ea066e659da86077f31eadf755ee3f9b3d56f1b8ce92b500"
+    },
+    {
+      "key": "nektulos/Grom_Shives",
+      "zone": "nektulos",
+      "file": "sources/projecteq/nektulos/Grom_Shives.pl",
+      "sha256": "c224dcdd3faf869474f9f43f631abd9f78be14589a1579fb143520993a94e577"
+    },
+    {
+      "key": "nektulos/player",
+      "zone": "nektulos",
+      "file": "sources/projecteq/nektulos/player.pl",
+      "sha256": "179e1cc35438a8d495e61652cc3706681b210c28d35b26947b3ff02337c189e8"
+    },
+    {
+      "key": "neriaka/#Gardunk",
+      "zone": "neriaka",
+      "file": "sources/projecteq/neriaka/#Gardunk.pl",
+      "sha256": "6fba2e30c4ef0df34ce2cf7a030a5631ae4d73773a124ee1cecab790aea903a8"
+    },
+    {
+      "key": "neriaka/Javen_TaVos",
+      "zone": "neriaka",
+      "file": "sources/projecteq/neriaka/Javen_TaVos.pl",
+      "sha256": "173fc07d7770ae2307713ca180c0efe62c139261ef4be42aa5abd9bb6bd8aabc"
+    },
+    {
+      "key": "neriaka/a_Teir-Dal_correspondent",
+      "zone": "neriaka",
+      "file": "sources/projecteq/neriaka/a_Teir-Dal_correspondent.pl",
+      "sha256": "9a501479213d44e672c3820b300b6ce10e1038003f09b55c38c5d5a9a1a87d60"
+    },
+    {
+      "key": "neriakb/Camia_V-Retta",
+      "zone": "neriakb",
+      "file": "sources/projecteq/neriakb/Camia_V-Retta.pl",
+      "sha256": "adbcf5fe1ef76a8b0ed165e5765c84e3442c6332a8502682a6c6cb6c621f3654"
+    },
+    {
+      "key": "neriakb/Firon_Dernkal",
+      "zone": "neriakb",
+      "file": "sources/projecteq/neriakb/Firon_Dernkal.pl",
+      "sha256": "1d60b2a468f27543004e0dfb7dc57a025b8205349a9e9b6cd97c570dfe343dc6"
+    },
+    {
+      "key": "neriakb/Fleshweaver_T-soma",
+      "zone": "neriakb",
+      "file": "sources/projecteq/neriakb/Fleshweaver_T-soma.pl",
+      "sha256": "1c4c0f570134239e9bed7f1d1327603aa6e896b9098376fd4927e761887000b2"
+    },
+    {
+      "key": "neriakb/Gath_N-Mare",
+      "zone": "neriakb",
+      "file": "sources/projecteq/neriakb/Gath_N-Mare.pl",
+      "sha256": "7187f42169b0708f0382b5187dba0896ba0bec88be9dcace9f834be6b09ec706"
+    },
+    {
+      "key": "neriakb/Jayna_D-Bious",
+      "zone": "neriakb",
+      "file": "sources/projecteq/neriakb/Jayna_D-Bious.pl",
+      "sha256": "06da8eb8ad1366b5d8cb3b0496b91b2d78f5d8a491d306435bb5d2f0ae8c8ef5"
+    },
+    {
+      "key": "neriakb/Ryoz_K-Tarn",
+      "zone": "neriakb",
+      "file": "sources/projecteq/neriakb/Ryoz_K-Tarn.pl",
+      "sha256": "1ec5b2f60b1e29d7677e9e4841acdbc6ff0d8efdf1cf891b4b9965d49d02b8c0"
+    },
+    {
+      "key": "neriakb/player",
+      "zone": "neriakb",
+      "file": "sources/projecteq/neriakb/player.pl",
+      "sha256": "08a075501da270fd97ba4f43c0a92d2de942d57578efef49262f9b0e9b04d9c5"
+    },
+    {
+      "key": "neriakc/#Gribnor_the_Small",
+      "zone": "neriakc",
+      "file": "sources/projecteq/neriakc/#Gribnor_the_Small.pl",
+      "sha256": "ed6fc3d27b6221bab99b7ff78f5dd12e291e52e2af192f910776374f44c4442c"
+    },
+    {
+      "key": "neriakc/#a_spectral_shimmer",
+      "zone": "neriakc",
+      "file": "sources/projecteq/neriakc/#a_spectral_shimmer.pl",
+      "sha256": "01c2c13d137f9ff30bcf845ba2a544a70c2065a712b5fe0a5f3dcfd48d7d4bdb"
+    },
+    {
+      "key": "neriakc/Eolorn_J-Axx",
+      "zone": "neriakc",
+      "file": "sources/projecteq/neriakc/Eolorn_J-Axx.pl",
+      "sha256": "bc80e16702cce87c7747939b7745eea9b5801e791822db8266b3539c9b6c1b83"
+    },
+    {
+      "key": "neriakc/Qrixat_Du-voy",
+      "zone": "neriakc",
+      "file": "sources/projecteq/neriakc/Qrixat_Du-voy.pl",
+      "sha256": "44dde73ead1f027158ddd38002a6cb92d4ac8b953b8fd03ec39f68f589707434"
+    },
+    {
+      "key": "neriakc/Sazan_K-Jartan",
+      "zone": "neriakc",
+      "file": "sources/projecteq/neriakc/Sazan_K-Jartan.pl",
+      "sha256": "3ba9e85022f127f405ca9bfec7b3c49949d5aca7644c9e440a9c9ca45315d2e9"
+    },
+    {
+      "key": "neriakc/Tralon_Din-a",
+      "zone": "neriakc",
+      "file": "sources/projecteq/neriakc/Tralon_Din-a.pl",
+      "sha256": "cf63e953d7fefaae9aa45df6b3632d138cc2bc684744d67ea6d7050d836ddd37"
+    },
+    {
+      "key": "neriakc/player",
+      "zone": "neriakc",
+      "file": "sources/projecteq/neriakc/player.pl",
+      "sha256": "3a1bf0461a0779859b0f15a44f57e6f051b490ae1d46dee5297817f757404727"
+    },
+    {
+      "key": "nro/#Verrell_Cogswin",
+      "zone": "nro",
+      "file": "sources/projecteq/nro/#Verrell_Cogswin.pl",
+      "sha256": "e698f9b5c19dccfc810b56a3bb7598063e61699dc6bf28ca5b101c34378714b2"
+    },
+    {
+      "key": "nro/#_#_5",
+      "zone": "nro",
+      "file": "sources/projecteq/nro/#_#_5.pl",
+      "sha256": "71e0a40e26f01d6617a9adec99716ad223cf6bf8b8dee40eab0d4baebd74a3cd"
+    },
+    {
+      "key": "nro/Ruanya_Windleaf",
+      "zone": "nro",
+      "file": "sources/projecteq/nro/Ruanya_Windleaf.pl",
+      "sha256": "4f35bc6dd42b1d25c47c58d9593d255120fadd6adba7e8b7b87ff4eae364f0dd"
+    },
+    {
+      "key": "nro/Shelie_Dikop",
+      "zone": "nro",
+      "file": "sources/projecteq/nro/Shelie_Dikop.pl",
+      "sha256": "2d1801bf4813aef7d77ca063435102f1f567a750684a22464cccb8790e16125d"
+    },
+    {
+      "key": "oggok/Bakrishal",
+      "zone": "oggok",
+      "file": "sources/projecteq/oggok/Bakrishal.pl",
+      "sha256": "4c3d026828ce89d38e4caa9ffbd47e5d89ce19ba0982ac2163818fc2415f5b97"
+    },
+    {
+      "key": "oggok/Gronk",
+      "zone": "oggok",
+      "file": "sources/projecteq/oggok/Gronk.pl",
+      "sha256": "aa0b0fe7cdad1a19e39d71a23ba0cc5e5c5ff5c1bfa4857b2e716d8128bdebeb"
+    },
+    {
+      "key": "oggok/Mooglan",
+      "zone": "oggok",
+      "file": "sources/projecteq/oggok/Mooglan.pl",
+      "sha256": "0a6c354f9749a19d50d16400f68ab0f30d7748f91af5d05e55561a442cd38967"
+    },
+    {
+      "key": "oggok/Murak",
+      "zone": "oggok",
+      "file": "sources/projecteq/oggok/Murak.pl",
+      "sha256": "156465c73ec627c098cf630f515b142a5d1c097e2f814065c8925fa6f1ef5a41"
+    },
+    {
+      "key": "oggok/Ogomok",
+      "zone": "oggok",
+      "file": "sources/projecteq/oggok/Ogomok.pl",
+      "sha256": "d56e72fe64fb10741349f7404db3f633cad847187bb10f4bb2c0f91ed8be5630"
+    },
+    {
+      "key": "oggok/Ruksa",
+      "zone": "oggok",
+      "file": "sources/projecteq/oggok/Ruksa.pl",
+      "sha256": "cf63e953d7fefaae9aa45df6b3632d138cc2bc684744d67ea6d7050d836ddd37"
+    },
+    {
+      "key": "oggok/player",
+      "zone": "oggok",
+      "file": "sources/projecteq/oggok/player.pl",
+      "sha256": "7a188bcdd0934438f4d1e4df7945e8244fb228222130f33a3e0b17f7d1b1d4b4"
+    },
+    {
+      "key": "oot/#Marrey_McGrannel",
+      "zone": "oot",
+      "file": "sources/projecteq/oot/#Marrey_McGrannel.pl",
+      "sha256": "aef0c3cd71c290c15b704753f7a21af7ac75e0a1b5576fe4c56baac229531775"
+    },
+    {
+      "key": "oot/Assistant_Jeyular",
+      "zone": "oot",
+      "file": "sources/projecteq/oot/Assistant_Jeyular.pl",
+      "sha256": "adf6273d1b687230625c684131a9138353f3fb8d6e1f0712abe41ee8d4e6b20d"
+    },
+    {
+      "key": "oot/Raotin_teawel",
+      "zone": "oot",
+      "file": "sources/projecteq/oot/Raotin_teawel.pl",
+      "sha256": "d96c24d47f82430aadc4604e866da16b52cb05dbfe68e780b0de1e44799ffa58"
+    },
+    {
+      "key": "overthere/#Irionu_Bastun",
+      "zone": "overthere",
+      "file": "sources/projecteq/overthere/#Irionu_Bastun.pl",
+      "sha256": "6d11b7e6494d2adb7c4ad5bc98ee9a66ccd86334dc8fba88469dadf88c62dda0"
+    },
+    {
+      "key": "overthere/#Yiln_Darksly",
+      "zone": "overthere",
+      "file": "sources/projecteq/overthere/#Yiln_Darksly.pl",
+      "sha256": "de5facbdbe34662744a1a1a733887a01416639c716c38cab9b4444718fb4e5e6"
+    },
+    {
+      "key": "overthere/Osvima_K-Matim",
+      "zone": "overthere",
+      "file": "sources/projecteq/overthere/Osvima_K-Matim.pl",
+      "sha256": "7c1c1413705c04cce1aad1f01bf79ec728805ba0eeba55313e9e5004d6cd042a"
+    },
+    {
+      "key": "overthere/Pungub_Brawlum",
+      "zone": "overthere",
+      "file": "sources/projecteq/overthere/Pungub_Brawlum.pl",
+      "sha256": "69ba214d86810319e0b62cbf6c691046419891f644ecdeebb80b5409fb221e83"
+    },
+    {
+      "key": "overthere/Vaxxim_T-Quoren",
+      "zone": "overthere",
+      "file": "sources/projecteq/overthere/Vaxxim_T-Quoren.pl",
+      "sha256": "6808714c98cf96beeaff2471f998ba02fa40d0a87483387723a5ef196ffe311d"
+    },
+    {
+      "key": "overthere/player",
+      "zone": "overthere",
+      "file": "sources/projecteq/overthere/player.pl",
+      "sha256": "b320815db1d2caae7a7c6e0b25066697386dbba1057e65c49134e2067d7e3450"
+    },
+    {
+      "key": "paineel/#Jerith",
+      "zone": "paineel",
+      "file": "sources/projecteq/paineel/#Jerith.pl",
+      "sha256": "938fdce8d89e89b202b347937ceb256c03c54fe9f8be740338b44571bac22b47"
+    },
+    {
+      "key": "paineel/Erandi_Natasu",
+      "zone": "paineel",
+      "file": "sources/projecteq/paineel/Erandi_Natasu.pl",
+      "sha256": "f8f1048db0000658636cc6198d25e6bd08cc230f4c13235ad11477aa1d276b10"
+    },
+    {
+      "key": "paineel/Kelkarn",
+      "zone": "paineel",
+      "file": "sources/projecteq/paineel/Kelkarn.pl",
+      "sha256": "812a8ec61c5e0452f0006117a366cb7019c21b259a6937742acb9d39db6abf03"
+    },
+    {
+      "key": "paineel/Lolenton",
+      "zone": "paineel",
+      "file": "sources/projecteq/paineel/Lolenton.pl",
+      "sha256": "7bcf8a71f22a11bbc74ef1c62fff6bd8f18da8766011d5bef1b5024ca1af4c9f"
+    },
+    {
+      "key": "paineel/player",
+      "zone": "paineel",
+      "file": "sources/projecteq/paineel/player.pl",
+      "sha256": "1b495eb9d71fb93a4732976a3ab47e048c818ec2d2f2c0426759eeadfd4b40b4"
+    },
+    {
+      "key": "permafrost/player",
+      "zone": "permafrost",
+      "file": "sources/projecteq/permafrost/player.pl",
+      "sha256": "868ff11cc7f4745b4b92aa09c73d44ae1e5fb6234ff35ac6e2b462131e3fc1a9"
+    },
+    {
+      "key": "qcat/Zaen_Kalystir",
+      "zone": "qcat",
+      "file": "sources/projecteq/qcat/Zaen_Kalystir.pl",
+      "sha256": "d3d5cff153a9ae3a8991b2bcde510ff94cb73a454de2c60c886615851891d20e"
+    },
+    {
+      "key": "qeytoqrg/Ubzial_Iyeaql",
+      "zone": "qeytoqrg",
+      "file": "sources/projecteq/qeytoqrg/Ubzial_Iyeaql.pl",
+      "sha256": "d7475c6d83f5fce3c681160e537712789e8f41f214f9c0a8e2cabdcf5c42a4d5"
+    },
+    {
+      "key": "rathemtn/Ankhefenmut",
+      "zone": "rathemtn",
+      "file": "sources/projecteq/rathemtn/Ankhefenmut.pl",
+      "sha256": "a2ca1ee1c2a42936c3a4e39f9068e75b6f96b88179fce1b3792c8ca785105924"
+    },
+    {
+      "key": "rathemtn/Chalex_the_Redeemed",
+      "zone": "rathemtn",
+      "file": "sources/projecteq/rathemtn/Chalex_the_Redeemed.pl",
+      "sha256": "4e53bd63c949e5a219c7640c66400221004448bd43bae9f18e481868277ab6b5"
+    },
+    {
+      "key": "rathemtn/Delila",
+      "zone": "rathemtn",
+      "file": "sources/projecteq/rathemtn/Delila.pl",
+      "sha256": "19304a212f662c6bf48fbc1a03a9d251d5fd81495c548a297cbae640b9985a94"
+    },
+    {
+      "key": "rathemtn/Memory_of_Chalex",
+      "zone": "rathemtn",
+      "file": "sources/projecteq/rathemtn/Memory_of_Chalex.pl",
+      "sha256": "531bc5f19c6accb18ac77eb7b19da4a6c2ad97da7f0664b1192c6e86a6491c50"
+    },
+    {
+      "key": "rathemtn/Troll_Captain_Krignok",
+      "zone": "rathemtn",
+      "file": "sources/projecteq/rathemtn/Troll_Captain_Krignok.pl",
+      "sha256": "c3d60a122ff5ccc5e1b5ccaaf4b8466f505d031fcd3aaacfa1bc8d2db20b8604"
+    },
+    {
+      "key": "rathemtn/Undead_Troll_Marauder",
+      "zone": "rathemtn",
+      "file": "sources/projecteq/rathemtn/Undead_Troll_Marauder.pl",
+      "sha256": "1d5fe0f3055631ffb2213887b1f8fec3ab5a08bb794bc9fbaa650cd801446ad8"
+    },
+    {
+      "key": "rathemtn/Warrior_Spirit_Chalex",
+      "zone": "rathemtn",
+      "file": "sources/projecteq/rathemtn/Warrior_Spirit_Chalex.pl",
+      "sha256": "7584f5fb3e7bdc71b04ae372194a87c05c3efc2dad65fd356c67db60552d9348"
+    },
+    {
+      "key": "rathemtn/Zazamoukh",
+      "zone": "rathemtn",
+      "file": "sources/projecteq/rathemtn/Zazamoukh.pl",
+      "sha256": "878582ec78d89f2e0fc1dd027c4363ef8239b1d53c11f71b4dd6cee85274481c"
+    },
+    {
+      "key": "rathemtn/player",
+      "zone": "rathemtn",
+      "file": "sources/projecteq/rathemtn/player.pl",
+      "sha256": "ce27cc7f76d05dfc2e96f21dde39f96402f1e3b4d4142127f53df93f9df59fdb"
+    },
+    {
+      "key": "rivervale/Hebber_Druneny",
+      "zone": "rivervale",
+      "file": "sources/projecteq/rivervale/Hebber_Druneny.pl",
+      "sha256": "c5f452ca442015a96dab63db1011b4447a74657b864bb9f0cc08d724a17b55a7"
+    },
+    {
+      "key": "rivervale/Laryen_Lycanthrope",
+      "zone": "rivervale",
+      "file": "sources/projecteq/rivervale/Laryen_Lycanthrope.pl",
+      "sha256": "37f8110d1ee0bbd419ef27a12aac88d0a7cee06863feba010d851ab1c176131c"
+    },
+    {
+      "key": "skyfire/#Dragon_Trigger",
+      "zone": "skyfire",
+      "file": "sources/projecteq/skyfire/#Dragon_Trigger.pl",
+      "sha256": "28d1c8f01109de90ecc298a6891a71747e58ef1f7815e4ad06d74ef9e648e62b"
+    },
+    {
+      "key": "skyfire/91097",
+      "zone": "skyfire",
+      "file": "sources/projecteq/skyfire/91097.pl",
+      "sha256": "33ae2bba22cf2dc50f8bc6e5e457a265a4bd46ba345db64258de0a9b273da72e"
+    },
+    {
+      "key": "skyfire/Dry_Sapara",
+      "zone": "skyfire",
+      "file": "sources/projecteq/skyfire/Dry_Sapara.pl",
+      "sha256": "40918264879fb910b6c7cf339d2e11cfc1ff9901822bf72d57e089237cb0e680"
+    },
+    {
+      "key": "skyfire/Enrid_Ebonclaw",
+      "zone": "skyfire",
+      "file": "sources/projecteq/skyfire/Enrid_Ebonclaw.pl",
+      "sha256": "373f8d8aaccb6f9547d8364d3ac1e9c6fa7e5ca8240c11a14d6cd688b143b985"
+    },
+    {
+      "key": "skyfire/player",
+      "zone": "skyfire",
+      "file": "sources/projecteq/skyfire/player.pl",
+      "sha256": "c334ffe73fbfae01c04846bb7a5606e9ec3de91b31c237578d024b9155537768"
+    },
+    {
+      "key": "soldungb/player",
+      "zone": "soldungb",
+      "file": "sources/projecteq/soldungb/player.pl",
+      "sha256": "aaf2dbae0c71d8627bd2378669068abcd7323858b816deaab1fa57d37d26eb79"
+    },
+    {
+      "key": "sro/#Gargantula",
+      "zone": "sro",
+      "file": "sources/projecteq/sro/#Gargantula.pl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "key": "sro/#Saeko_L-Vinec",
+      "zone": "sro",
+      "file": "sources/projecteq/sro/#Saeko_L-Vinec.pl",
+      "sha256": "da57224a84e9d88b0bc941efd0765a85eaeb0b783997be87e1bedcc900d68b21"
+    },
+    {
+      "key": "sro/Dible_Hedledrap",
+      "zone": "sro",
+      "file": "sources/projecteq/sro/Dible_Hedledrap.pl",
+      "sha256": "ae6d08cc37f437118a8a4167f09f5cec6888685e604e4af238d17dd216ed20ca"
+    },
+    {
+      "key": "sro/Farwein_Windrun",
+      "zone": "sro",
+      "file": "sources/projecteq/sro/Farwein_Windrun.pl",
+      "sha256": "118adfc71ea08ef130085e13168e23411224440b571a81ee21db91f685fa0bbe"
+    },
+    {
+      "key": "steamfont/#Meldraths_Paige",
+      "zone": "steamfont",
+      "file": "sources/projecteq/steamfont/#Meldraths_Paige.pl",
+      "sha256": "fb940e01976b784735483ea626ee24b40aabb4d284c17173b1efb810954d2bc1"
+    },
+    {
+      "key": "steamfont/#Smith_Numden",
+      "zone": "steamfont",
+      "file": "sources/projecteq/steamfont/#Smith_Numden.pl",
+      "sha256": "1337049542deb2b126b9975c6ba3580beece040d1681c01f1bd8209848a6f03f"
+    },
+    {
+      "key": "steamfont/Brynn_Tinkerton",
+      "zone": "steamfont",
+      "file": "sources/projecteq/steamfont/Brynn_Tinkerton.pl",
+      "sha256": "b5c41f3fedc47231faf5794d7030195883e42adddeaed9c0dad545a5cf5910c9"
+    },
+    {
+      "key": "steamfont/Metallurgist_Mirakzin",
+      "zone": "steamfont",
+      "file": "sources/projecteq/steamfont/Metallurgist_Mirakzin.pl",
+      "sha256": "846cd1d6c11dae6e8b12fcdf484113ec038236ae50117f585b9b9561037ae52b"
+    },
+    {
+      "key": "steamfont/Yama_Twerik",
+      "zone": "steamfont",
+      "file": "sources/projecteq/steamfont/Yama_Twerik.pl",
+      "sha256": "73dc909cd518f46b5c6bb641a160c1cd271069d27fddba3c8e56c8e4c716f072"
+    },
+    {
+      "key": "swampofnohope/player",
+      "zone": "swampofnohope",
+      "file": "sources/projecteq/swampofnohope/player.pl",
+      "sha256": "bba4514d9cdf70fb3e51c836306f6b24742464f320b292c807331ee2a0d0ad17"
+    },
+    {
+      "key": "tox/38016",
+      "zone": "tox",
+      "file": "sources/projecteq/tox/38016.pl",
+      "sha256": "93e1f6b3a4e30de5adeb6f2993b83813861f441a737a47d8a8cc9f253dad2987"
+    },
+    {
+      "key": "tox/Dovon_Traical",
+      "zone": "tox",
+      "file": "sources/projecteq/tox/Dovon_Traical.pl",
+      "sha256": "9502938a37c0f352498cbbce563b3ca6eb57c8b0be8da2f0b18de6e39460cfeb"
+    },
+    {
+      "key": "tox/Fuzz_Selppa",
+      "zone": "tox",
+      "file": "sources/projecteq/tox/Fuzz_Selppa.pl",
+      "sha256": "2da6f5872cbfeed8e95eac3a24eee3ad8364692f5c2d5bdc9fd0525854fc5194"
+    },
+    {
+      "key": "tox/Ilisiv_Gantrau",
+      "zone": "tox",
+      "file": "sources/projecteq/tox/Ilisiv_Gantrau.pl",
+      "sha256": "cc1f9eb9e333b4d6a3bbe7c7d222d76dcc3b40581a4160fa86f28257e462d15f"
+    },
+    {
+      "key": "tox/Marta_Stalwart",
+      "zone": "tox",
+      "file": "sources/projecteq/tox/Marta_Stalwart.pl",
+      "sha256": "25f3bf8b0dba4e1286a8bcf86e31c4e79be30f13bbe0d33db590d7f5ef6d6d5e"
+    },
+    {
+      "key": "tox/a_pie_flinger",
+      "zone": "tox",
+      "file": "sources/projecteq/tox/a_pie_flinger.pl",
+      "sha256": "4c723d2f616dc4ab5270b8a22dcc1d23b619f90f31ca5c48ca1906e493f14fdc"
+    },
+    {
+      "key": "tox/a_pie_hurler",
+      "zone": "tox",
+      "file": "sources/projecteq/tox/a_pie_hurler.pl",
+      "sha256": "2f5bf6434469eeb29317cd2e5dd5372e2ddda1d9c3fad7d8bf9ab056fce4e52c"
+    },
+    {
+      "key": "tox/a_pie_thrower",
+      "zone": "tox",
+      "file": "sources/projecteq/tox/a_pie_thrower.pl",
+      "sha256": "4c723d2f616dc4ab5270b8a22dcc1d23b619f90f31ca5c48ca1906e493f14fdc"
+    },
+    {
+      "key": "veeshan/108040",
+      "zone": "veeshan",
+      "file": "sources/projecteq/veeshan/108040.pl",
+      "sha256": "17e96cf73565ca0d20284c171d3679b4196cfb9f9bf0aa45b242dfe4da1971cf"
+    },
+    {
+      "key": "veeshan/108043",
+      "zone": "veeshan",
+      "file": "sources/projecteq/veeshan/108043.pl",
+      "sha256": "4e904836118edb383793863b8a13f5a4b586d3626ba5809b8c8a04001300dc2b"
+    },
+    {
+      "key": "veeshan/108047",
+      "zone": "veeshan",
+      "file": "sources/projecteq/veeshan/108047.pl",
+      "sha256": "287b73f45e72cf17fb589616e83ed7bb52c3826655684fcf9f98f43351db86ed"
+    },
+    {
+      "key": "veeshan/108048",
+      "zone": "veeshan",
+      "file": "sources/projecteq/veeshan/108048.pl",
+      "sha256": "b66517fb44b8c886d3be6ee14bc4578a4f7641df8b66bd7a7a3559598838399f"
+    },
+    {
+      "key": "veeshan/108050",
+      "zone": "veeshan",
+      "file": "sources/projecteq/veeshan/108050.pl",
+      "sha256": "bdfbd6bba1e90afa4d8c2d0e1116584dc53eb78d082b028cdf2078dd33335914"
+    },
+    {
+      "key": "veeshan/108053",
+      "zone": "veeshan",
+      "file": "sources/projecteq/veeshan/108053.pl",
+      "sha256": "d8f9a6971dc0631b0ca4914f51a5dc9a20e6c931264b87e8f4a347dfd1526810"
+    },
+    {
+      "key": "warslikswood/79127",
+      "zone": "warslikswood",
+      "file": "sources/projecteq/warslikswood/79127.pl",
+      "sha256": "10ccf07e4e11a68341faba6e1986f82ea27fb50e4c1c260c19afb8b151cba7d5"
+    },
+    {
+      "key": "warslikswood/Lurking_Hopeful",
+      "zone": "warslikswood",
+      "file": "sources/projecteq/warslikswood/Lurking_Hopeful.pl",
+      "sha256": "6fa839fe818e57daf314a8b2d81239967cda51dd632b04dff6ae3584f5685baf"
+    }
+  ]
+}

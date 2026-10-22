@@ -1,0 +1,6 @@
+import pathlib,json,subprocess,os,time,hashlib,datetime
+s=pathlib.Path(open('/tmp/p99-validation-current-path').read());a=pathlib.Path(open('/tmp/p99-validation-current-artifacts').read());e=os.environ.copy();e.update(PATH='/tmp/p99-go-toolchain/go/bin:'+e['PATH'],GOCACHE='/tmp/p99-go-cache',GOPATH='/tmp/p99-go-path');status=json.load(open(a/'run-status.json'))
+for name,args in [('combined-validation-hardlinks',['node','tools/cli.mjs','check-proposal','.', '--proposal','changes/p99-combined-audit.json']),('baseline-validation-hardlinks',['npm','run','validate'])]:
+ t=time.time();started=datetime.datetime.now(datetime.timezone.utc).isoformat()
+ with open(a/(name+'.log'),'w')as f:p=subprocess.run(args,cwd=s,env=e,stdout=f,stderr=subprocess.STDOUT)
+ r={'name':name,'command':args,'startedAt':started,'durationSeconds':round(time.time()-t,3),'exitCode':p.returncode,'log':name+'.log','logSha256':hashlib.sha256((a/(name+'.log')).read_bytes()).hexdigest(),'supersedes':name.replace('-hardlinks',''),'reason':'Only baseline link topology changed; no content changes or validator bypass.'};status['steps'].append(r);status['completedAt']=datetime.datetime.now(datetime.timezone.utc).isoformat();(a/'run-status.json').write_text(json.dumps(status,indent=2));print(json.dumps(r),flush=True)

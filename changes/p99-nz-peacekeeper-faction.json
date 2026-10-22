@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-nz-peacekeeper-faction",
+  "summary": "Make Rodgar\u2019s four-pearl trade lower Circle of Unseen Hands standing as documented, rather than raise it.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Peacekeeper_Staff_Quest?action=raw",
+      "note": "Cached 2026-07-17T23:28:14.147Z; revision unavailable; SHA256 852b4e0315e309d781808ddbf44dbcf8402e4ba9dc19c1227f9cee0cbed6943e. Exported faction223 is Circle of Unseen Hands. Full cached page explicitly says worse; existing source comment also says negative but call is positive. Preserve imported magnitude10, four13878 Pearl of Odus input,13824 Wooden Shards output, all other standing and2432EXP. Supporting enabled recipe9906 combines13822 Treant Resin+13878 Pearl in17917 staff container to13816 staff; no recipe mutation. Lumi final cash11silver12copper matches, but page conflicts rusty-weapon prose with patchwork final list; broad legacy reward pool is not guessed or pruned."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 13094,
+        "zone": "qeynos2",
+        "name": "Rodgar_the_Tall",
+        "lua_content": "-- items: 13878, 13824\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(string.format(\"Greetings. %s!  You look like you could use some new footwear.\",e.other:GetName()));\n\telseif(e.message:findi(\"treant wood\")) then\n\t\te.self:Say(\"What is all this talk of Treant Wood? I can get you some. In about two months, I shall have a new stock. Perhaps I may have some to trade... if you do me a [favor]...\");\n\telseif(e.message:findi(\"favor\")) then\n\t\te.self:Say(\"I will be glad to part with some Treant Wood for an Odus Pearl from the waters surrounding Erudin. On second thought... make that four Odus Pearls.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 13878,item2 = 13878,item3 = 13878,item4 = 13878})) then -- Pearl of Odus\n\t\te.self:Say(\"Wonderful!! I am sure that was a lot safer than battling a treant.\");\n\t\te.other:SummonItem(13824); -- Wooden Shards\n\t\te.other:Ding();\n\t\te.other:Faction(291,10,0); -- +Merchants of Qeynos\n\t\te.other:Faction(223,10,0); -- -Circle Of Unseen Hands\n\t\te.other:Faction(219,10,0); -- +Antonius Bayle\n\t\te.other:Faction(229,10,0); -- +Coalition of Tradefolk\n\t\te.other:Faction(262,10,0); -- +Guards of Qeynos\n\t\te.other:AddEXP(2432);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 13094,
+        "zone": "qeynos2",
+        "name": "Rodgar_the_Tall",
+        "lua_content": "-- items: 13878, 13824\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(string.format(\"Greetings. %s!  You look like you could use some new footwear.\",e.other:GetName()));\n\telseif(e.message:findi(\"treant wood\")) then\n\t\te.self:Say(\"What is all this talk of Treant Wood? I can get you some. In about two months, I shall have a new stock. Perhaps I may have some to trade... if you do me a [favor]...\");\n\telseif(e.message:findi(\"favor\")) then\n\t\te.self:Say(\"I will be glad to part with some Treant Wood for an Odus Pearl from the waters surrounding Erudin. On second thought... make that four Odus Pearls.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 13878,item2 = 13878,item3 = 13878,item4 = 13878})) then -- Pearl of Odus\n\t\te.self:Say(\"Wonderful!! I am sure that was a lot safer than battling a treant.\");\n\t\te.other:SummonItem(13824); -- Wooden Shards\n\t\te.other:Ding();\n\t\te.other:Faction(291,10,0); -- +Merchants of Qeynos\n\t\te.other:Faction(223,-10,0); -- -Circle Of Unseen Hands\n\t\te.other:Faction(219,10,0); -- +Antonius Bayle\n\t\te.other:Faction(229,10,0); -- +Coalition of Tradefolk\n\t\te.other:Faction(262,10,0); -- +Guards of Qeynos\n\t\te.other:AddEXP(2432);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/qeynos2/Rodgar_the_Tall.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-nz-peacekeeper-faction/qeynos2--Rodgar_the_Tall.lua",
+      "afterSha256": "037a793d33a4b2b955a9912f5362ee44c202b5936fede5ca2948477be243da22"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "format": 1,
+  "id": "p99-af-cleric-spirit-lifecycle",
+  "summary": "Spawn the Spirit from Shmendrik death even without Natasha; remove only her duplicate spawn responsibility and honor her documented combat exception at timed depop.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Cleric_Epic_Quest?action=raw",
+      "note": "Cached reference/p99-wiki/raw-pages/cleric-epic-quest-454cc3a3b0.wiki SHA256 5424c1b56cb783c70649a906bc522872b17992ff1f659e1fa6670f46528f50cd."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 18313,
+        "zone": "lakerathe",
+        "name": "Shmendrik_Lavawalker",
+        "lua_content": "-- Source: lakerathe/Shmendrik_Lavawalker.pl\n-- Cleric Epic 1.0: Shmendrik Lavawalker starts the Orb of Frozen Water branch.\n-- Converted from ProjectEQ Perl quest script.\n-- items: 28044, 28045\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Hail, good \" .. e.other:GetName() .. \"!! Be wary near the waters of Lake Rathe! The Riptide goblin king, Lord Bergurgle, has been commanding his minions to murder and rob all who come near it! I am here seeking his death but I am afraid I am no match for all of his subjects. I shall reward you greatly for the death of Lord Bergurgle. I simply ask that you bring me his crown as proof.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 28044}) then\n\t\te.self:Emote(\"shoves the crown into a scorch marked leather satchel and cackles uncontrollably as madness twists his features and flames dance in his eyes.\")\n\t\te.other:SummonItem(28045) -- Oil of Fennin Ro\n\t\teq.spawn2(51138, 0, 0, 111, 3627.3, 51, 384.8) -- #Natasha_Whitewater\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\nfunction event_signal(e)\n\tif e.signal == 99 then\n\t\te.self:Say(\"I'll slay you like I slaughtered your fellow missionaries! The Triumvirate can not decide the fate of a follower of the Tyrant!!\")\n\t\teq.signal(51138, 199, 2000) -- #Natasha_Whitewater\n\telseif e.signal == 299 then\n\t\teq.signal(51138, 399, 2000) -- #Natasha_Whitewater\n\telseif e.signal == 499 then\n\t\t-- ProjectEQ has Natasha attack Shmendrik here. IdleQuest does not run\n\t\t-- full server-side NPC combat, so the e2e harness explicitly defeats\n\t\t-- Shmendrik after this signal exchange to continue the encounter.\n\tend\nend\n\nfunction event_death_complete(e)\n\teq.signal(51138, 599, 2000) -- #Natasha_Whitewater\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 18313,
+        "zone": "lakerathe",
+        "name": "Shmendrik_Lavawalker",
+        "lua_content": "-- Source: lakerathe/Shmendrik_Lavawalker.pl\n-- Cleric Epic 1.0: Shmendrik Lavawalker starts the Orb of Frozen Water branch.\n-- Converted from ProjectEQ Perl quest script.\n-- items: 28044, 28045\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Hail, good \" .. e.other:GetName() .. \"!! Be wary near the waters of Lake Rathe! The Riptide goblin king, Lord Bergurgle, has been commanding his minions to murder and rob all who come near it! I am here seeking his death but I am afraid I am no match for all of his subjects. I shall reward you greatly for the death of Lord Bergurgle. I simply ask that you bring me his crown as proof.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 28044}) then\n\t\te.self:Emote(\"shoves the crown into a scorch marked leather satchel and cackles uncontrollably as madness twists his features and flames dance in his eyes.\")\n\t\te.other:SummonItem(28045) -- Oil of Fennin Ro\n\t\teq.spawn2(51138, 0, 0, 111, 3627.3, 51, 384.8) -- #Natasha_Whitewater\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\nfunction event_signal(e)\n\tif e.signal == 99 then\n\t\te.self:Say(\"I'll slay you like I slaughtered your fellow missionaries! The Triumvirate can not decide the fate of a follower of the Tyrant!!\")\n\t\teq.signal(51138, 199, 2000) -- #Natasha_Whitewater\n\telseif e.signal == 299 then\n\t\teq.signal(51138, 399, 2000) -- #Natasha_Whitewater\n\telseif e.signal == 499 then\n\t\t-- ProjectEQ has Natasha attack Shmendrik here. IdleQuest does not run\n\t\t-- full server-side NPC combat, so the e2e harness explicitly defeats\n\t\t-- Shmendrik after this signal exchange to continue the encounter.\n\tend\nend\n\nfunction event_death_complete(e)\n\t-- P99 also permits killing Shmendrik before any crown hand-in.\n\teq.spawn2(51145, 0, 0, 33, 3619, 51, 0) -- a_spirit_of_flame\n\teq.signal(51138, 599, 2000) -- #Natasha_Whitewater\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 31939,
+        "zone": "lakerathe",
+        "name": "#Natasha_Whitewater",
+        "lua_content": "-- Cleric Epic 1.0: Lake Rathe Natasha accepts Damaged Goblin Crown.\n-- Merges the ProjectEQ numeric 51138.pl signal encounter behavior with the\n-- IdleQuest-authored final hand-in for the named #Natasha_Whitewater script.\n-- items: 28046, 28047\n\nfunction event_spawn(e)\n\teq.zone_emote(MT.Shout, \"The Triumvirate of Water has decreed your fate, Shmendrik Lavawalker!! I am here to deliver said fate!!\")\n\teq.signal(51012, 99, 2000) -- Shmendrik_Lavawalker\n\teq.set_timer(\"depop\", 300000)\nend\n\nfunction event_timer(e)\n\tif e.timer == \"depop\" then\n\t\teq.depop()\n\tend\nend\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"The Riptide goblins must have their crown returned to them. If you would be so kind as to give me the crown I will make sure that it reaches them.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 28046}) then\n\t\te.self:Say(\"I will have this crown returned to the Riptide Goblins immediately! Should you ever come across an Erudite named Omat Vastsea, give him this sea shell. The waters of Norrath shimmer with awareness of your deeds here today!\")\n\t\te.other:SummonItem(28047) -- Ornate Sea Shell\n\t\teq.depop()\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\nfunction event_signal(e)\n\tif e.signal == 199 then\n\t\te.self:Say(\"Enough!! Your existence has come to an end!\")\n\t\teq.signal(51012, 299, 2000) -- Shmendrik_Lavawalker\n\telseif e.signal == 399 then\n\t\te.self:Say(\"This conflict has been destined by the waters of the Triumvirate!\")\n\t\teq.signal(51012, 499, 2000) -- Shmendrik_Lavawalker\n\telseif e.signal == 599 then\n\t\teq.spawn2(51145, 0, 0, 33, 3619, 51, 0) -- a_spirit_of_flame\n\tend\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 31939,
+        "zone": "lakerathe",
+        "name": "#Natasha_Whitewater",
+        "lua_content": "-- Cleric Epic 1.0: Lake Rathe Natasha accepts Damaged Goblin Crown.\n-- Merges the ProjectEQ numeric 51138.pl signal encounter behavior with the\n-- IdleQuest-authored final hand-in for the named #Natasha_Whitewater script.\n-- items: 28046, 28047\n\nfunction event_spawn(e)\n\teq.zone_emote(MT.Shout, \"The Triumvirate of Water has decreed your fate, Shmendrik Lavawalker!! I am here to deliver said fate!!\")\n\teq.signal(51012, 99, 2000) -- Shmendrik_Lavawalker\n\teq.set_timer(\"depop\", 300000)\nend\n\nfunction event_timer(e)\n\tif e.timer == \"depop\" and not e.self:IsEngaged() then\n\t\teq.depop()\n\tend\nend\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"The Riptide goblins must have their crown returned to them. If you would be so kind as to give me the crown I will make sure that it reaches them.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 28046}) then\n\t\te.self:Say(\"I will have this crown returned to the Riptide Goblins immediately! Should you ever come across an Erudite named Omat Vastsea, give him this sea shell. The waters of Norrath shimmer with awareness of your deeds here today!\")\n\t\te.other:SummonItem(28047) -- Ornate Sea Shell\n\t\teq.depop()\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\nfunction event_signal(e)\n\tif e.signal == 199 then\n\t\te.self:Say(\"Enough!! Your existence has come to an end!\")\n\t\teq.signal(51012, 299, 2000) -- Shmendrik_Lavawalker\n\telseif e.signal == 399 then\n\t\te.self:Say(\"This conflict has been destined by the waters of the Triumvirate!\")\n\t\teq.signal(51012, 499, 2000) -- Shmendrik_Lavawalker\n\tend\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/lakerathe/Shmendrik_Lavawalker.lua",
+      "beforeSha256": "3a1dd3090b68c773d3ed828a448b7f4b674ed6020c7592462a238b55a366230b",
+      "proposedFile": "changes/p99-af-cleric-spirit-lifecycle/lakerathe-Shmendrik_Lavawalker.lua",
+      "afterSha256": "a36e0551ed2c2f93f1f18f3b8230cdab454fa0593e15ae4212875eb3f78fb5af"
+    },
+    {
+      "target": "maintained/lua/idlequest-authored/lakerathe/#Natasha_Whitewater.lua",
+      "beforeSha256": "0b92e3e5cfdb49113b5cd645a13e9cc70cc1362a59edc481790baa22e15d7670",
+      "proposedFile": "changes/p99-af-cleric-spirit-lifecycle/lakerathe-%23Natasha_Whitewater.lua",
+      "afterSha256": "8f09e87a3febda4dda1e25df29175542c9440b7a13e3b1fb46e26435afba54cb"
+    }
+  ]
+}

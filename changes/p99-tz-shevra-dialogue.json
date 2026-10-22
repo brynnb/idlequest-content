@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-shevra-dialogue",
+  "summary": "Support the advertised make yourself useful phrase and preserve the documented player response.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/The_Waylaid_Courier?action=raw",
+      "note": "Cached 2026-07-17T23:38:54.930Z; revision unavailable; SHA256 2e25814a39d4789f677f339a40af8bd926a32a2513e141a76e527e382767d2a8. Support the advertised make yourself useful phrase and preserve the documented player response. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 15724,
+        "zone": "paineel",
+        "name": "Shevra_Kollintar",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: paineel/Shevra_Kollintar.pl\n-- items: 12270, blackened iron reward pool\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Unless you intend to [make yourself useful], do not bother me. I await the return of our Lord, Cazic-Thule. He comes, and I shall be the first to greet Him. I will train you, if need be, for He looks upon those who aid Him kindly. If you are not here for training, return to your meditations or bother someone else.\")\n\telseif e.message:findi(\"make myself useful\") then\n\t\te.self:Say(\"One of our spies has reported a sighting of Malik Zaren, a courier of [the High Council]. He was seen resting at an inn called 'Golden Roosters' in High Pass Hold and is en route to Erudin Palace. He may be carrying a message containing information of great value to us. Hunt him down and return to me with the letter he carries. I will reward you for this task.\")\n\telseif e.message:findi(\"the high council\") then\n\t\te.self:Say(\"The High Council is the governing board of Erudin, our sworn enemies. Beware of these types, they will not look upon you warmly.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 12270}) then\n\t\te.self:Say(\"Ah, excellent work. I certainly had my doubts about you, \" .. e.other:GetName() .. \". Wear this well.\")\n\t\te.other:Ding()\n\t\te.other:SummonItem(eq.ChooseRandom(3040, 3042, 3043, 3044, 3046, 3047, 3048, 3049, 3050, 3051))\n\t\te.other:Faction(265, 5, 0)\n\t\te.other:Faction(242, -5, 0)\n\t\te.other:Faction(254, -5, 0)\n\t\te.other:Faction(231, -5, 0)\n\t\te.other:Faction(233, -5, 0)\n\t\te.other:AddEXP(250)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 15724,
+        "zone": "paineel",
+        "name": "Shevra_Kollintar",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: paineel/Shevra_Kollintar.pl\n-- items: 12270, blackened iron reward pool\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Unless you intend to [make yourself useful], do not bother me. I await the return of our Lord, Cazic-Thule. He comes, and I shall be the first to greet Him. I will train you, if need be, for He looks upon those who aid Him kindly. If you are not here for training, return to your meditations or bother someone else.\")\n\telseif e.message:findi(\"make myself useful\") or e.message:findi(\"make yourself useful\") then\n\t\te.self:Say(\"One of our spies has reported a sighting of Malik Zaren, a courier of [the High Council]. He was seen resting at an inn called 'Golden Roosters' in High Pass Hold and is en route to Erudin Palace. He may be carrying a message containing information of great value to us. Hunt him down and return to me with the letter he carries. I will reward you for this task.\")\n\telseif e.message:findi(\"the high council\") then\n\t\te.self:Say(\"The High Council is the governing board of Erudin, our sworn enemies. Beware of these types, they will not look upon you warmly.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 12270}) then\n\t\te.self:Say(\"Ah, excellent work. I certainly had my doubts about you, \" .. e.other:GetName() .. \". Wear this well.\")\n\t\te.other:Ding()\n\t\te.other:SummonItem(eq.ChooseRandom(3040, 3042, 3043, 3044, 3046, 3047, 3048, 3049, 3050, 3051))\n\t\te.other:Faction(265, 5, 0)\n\t\te.other:Faction(242, -5, 0)\n\t\te.other:Faction(254, -5, 0)\n\t\te.other:Faction(231, -5, 0)\n\t\te.other:Faction(233, -5, 0)\n\t\te.other:AddEXP(250)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/paineel/Shevra_Kollintar.lua",
+      "beforeSha256": "ca9917cdbf715f4d2127225c83b94f348cc8ff7ccd591c85f2d8fbee16984223",
+      "proposedFile": "changes/p99-tz-shevra-dialogue/paineel--Shevra_Kollintar.lua",
+      "afterSha256": "bde725c7352b1fe65bf064c161293d4fe4ebf30881d449bdba8122313dd0dad7"
+    }
+  ]
+}

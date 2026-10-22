@@ -1,0 +1,26 @@
+{
+  "titles": [
+    "Rogue Epic Quest"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "partial",
+  "match_status": "partial",
+  "local_quest_keys": [
+    "lakerathe/Eldreth"
+  ],
+  "proposal": "changes/p99-nz-eldreth-faction.json",
+  "notes": [
+    "Correct Opal Dark Briar faction direction on Eldreth translation hand-in.",
+    "Cached Rogue Epic detailed walkthrough explicitly says Opal Dark Briar got worse. Existing code/comments identify296but apply+10; flip sign only and retain undocumented magnitude10.100platinum,two13087milk,28012CombinedParchment ->28053ScribbledParchment and allotherrewards unchanged. Do not add epicminimumlevel."
+  ],
+  "verification": {
+    "source": "Cached P99 and effective Lua reviewed; exact complete row preimages and source hashes recorded.",
+    "syntax": "pending",
+    "runtime": "Isolated mock regression pending; full game runtime unavailable.",
+    "ui": "not_run",
+    "connected_chain": "not_run"
+  },
+  "unresolved": [
+    "Ordinary source drops/spawns, recipe live behavior and rendered complete quest path not verified."
+  ]
+}

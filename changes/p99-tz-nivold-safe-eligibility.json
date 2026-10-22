@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-nivold-safe-eligibility",
+  "summary": "Check the existing faction policy before consuming a full rejected offer. No stricter faction gate, no reward or numeric change.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/The_Summoning_of_Dread?action=raw",
+      "note": "Cached 2026-07-17T23:38:08.848Z; revision unavailable; SHA256 5533cdc993c0da616728c796158b51092d46155963ff2a451d86cc795aa294e0. Check the existing faction policy before consuming a full rejected offer. No stricter faction gate, no reward or numeric change. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 15483,
+        "zone": "paineel",
+        "name": "Nivold_Predd",
+        "lua_content": "-- Modified from ProjectEQ Lua for P99 \"The Summoning of Dread\".\n-- P99: https://wiki.project1999.com/The_Summoning_of_Dread\n-- items: 16540, 13739, 14111, 14112, 14105\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"What do you want? Do not disturb me lest you plan to assist in my [summoning of Dread].\");\n\telseif(e.message:findi(\"summoning of dread\")) then\n\t\te.self:Say(\"There are some components essential to the summoning of the avatar of Dread. I require the eye of a griffon, some [powder of reanimation], the brain of the Ishva Mal, and the toes of an ice giant. Fetch me these reagents so that we may summon the avatar to forge a shield worn only by the mightiest apostles of Cazic-Thule.\");\n\telseif(e.message:findi(\"powder of reanimation\")) then\n\t\te.self:Say(\"There is a gnome necromancer who has been experimenting with a powder used in reanimating long dead organic tissue. He is known to frequent places populated by undead in order to pursue his research. Seek him out and procure a bit of his powder.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 16540,item2 = 13739,item3 = 14111,item4 = 14112}) and (e.other:GetFaction(e.self) < 5)) then\n\t\te.self:Say(\"Commendable work, you have proven yourself a valuable member of our order. Our chanters have summoned the avatar of Dread. Hurry and take him this mundane shield so that he may forge it into a truly valuable symbol of your devotion to the lord of Fear!\");\n\t\te.other:SummonItem(14105); -- Mundane Shield\n\t\te.other:Ding();\n\t\te.other:Faction(265,400,0); -- Heretics\n\t\te.other:Faction(242,-400,0); -- Deepwater Knights\n\t\te.other:Faction(254,-400,0); -- Gate Callers\n\t\te.other:Faction(231,-400,0); -- Craftkeepers\n\t\te.other:Faction(233,-400,0); -- Crimson Hands\n\t\te.other:AddEXP(1000);\n\t\te.other:GiveCash(0,0,0,6);\n\t\teq.unique_spawn(75164,0,0,474,1230,-37,256); -- avatar_of_dread\n\telse\n\t\te.self:Say(\"I require all four reagents, anything less is useless. Incompetence will get you nowhere amongst the faithful of Cazic-Thule!\");\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade, false)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 15483,
+        "zone": "paineel",
+        "name": "Nivold_Predd",
+        "lua_content": "-- Modified from ProjectEQ Lua for P99 \"The Summoning of Dread\".\n-- P99: https://wiki.project1999.com/The_Summoning_of_Dread\n-- items: 16540, 13739, 14111, 14112, 14105\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"What do you want? Do not disturb me lest you plan to assist in my [summoning of Dread].\");\n\telseif(e.message:findi(\"summoning of dread\")) then\n\t\te.self:Say(\"There are some components essential to the summoning of the avatar of Dread. I require the eye of a griffon, some [powder of reanimation], the brain of the Ishva Mal, and the toes of an ice giant. Fetch me these reagents so that we may summon the avatar to forge a shield worn only by the mightiest apostles of Cazic-Thule.\");\n\telseif(e.message:findi(\"powder of reanimation\")) then\n\t\te.self:Say(\"There is a gnome necromancer who has been experimenting with a powder used in reanimating long dead organic tissue. He is known to frequent places populated by undead in order to pursue his research. Seek him out and procure a bit of his powder.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif((e.other:GetFaction(e.self) < 5) and item_lib.check_turn_in(e.trade, {item1 = 16540,item2 = 13739,item3 = 14111,item4 = 14112})) then\n\t\te.self:Say(\"Commendable work, you have proven yourself a valuable member of our order. Our chanters have summoned the avatar of Dread. Hurry and take him this mundane shield so that he may forge it into a truly valuable symbol of your devotion to the lord of Fear!\");\n\t\te.other:SummonItem(14105); -- Mundane Shield\n\t\te.other:Ding();\n\t\te.other:Faction(265,400,0); -- Heretics\n\t\te.other:Faction(242,-400,0); -- Deepwater Knights\n\t\te.other:Faction(254,-400,0); -- Gate Callers\n\t\te.other:Faction(231,-400,0); -- Craftkeepers\n\t\te.other:Faction(233,-400,0); -- Crimson Hands\n\t\te.other:AddEXP(1000);\n\t\te.other:GiveCash(0,0,0,6);\n\t\teq.unique_spawn(75164,0,0,474,1230,-37,256); -- avatar_of_dread\n\telse\n\t\te.self:Say(\"I require all four reagents, anything less is useless. Incompetence will get you nowhere amongst the faithful of Cazic-Thule!\");\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade, false)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/paineel/Nivold_Predd.lua",
+      "beforeSha256": "ac2416eade0c9b03bff3035f86711636c2cfe5cd91a62dc12360e8abbf7a696f",
+      "proposedFile": "changes/p99-tz-nivold-safe-eligibility/paineel--Nivold_Predd.lua",
+      "afterSha256": "c304668acdb046f709add9efb82c5e32e31151eb05fadcf81fe36c379642d93d"
+    }
+  ]
+}

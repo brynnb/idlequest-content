@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-garzicor-corpse-spawn",
+  "summary": "Move only initial corpse hostility out of the disappearing presence into the established owner-scoped event_spawn eq.attack callback. Corpse123194 has no natural spawnentry and no explicit content-exclusion policy; preserve npc_types.exclude1, all activation and the exact death-successor handler. Presence spawn-plus-hate-plus-depop was explicitly unsupported by the pinned deferred runtime contract.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/The_Spirit_of_Garzicor?action=raw",
+      "note": "Cached 2026-07-17T23:38:05.956Z; revision unavailable; SHA256 df0f4c209df4cd12720a5a70d0ac0a6f78e33e658a422caf07d146ae921274be. Move only initial corpse hostility out of the disappearing presence into the established owner-scoped event_spawn eq.attack callback. Corpse123194 has no natural spawnentry and no explicit content-exclusion policy; preserve npc_types.exclude1, all activation and the exact death-successor handler. Presence spawn-plus-hate-plus-depop was explicitly unsupported by the pinned deferred runtime contract. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 19739,
+        "zone": "necropolis",
+        "name": "#Garzicor-s_Corpse",
+        "lua_content": "function event_death_complete(e)\n\teq.spawn2(123195,0,0,e.self:GetX(),e.self:GetY(),e.self:GetZ(),e.self:GetHeading()):AddToHateList(e.other,1); --#Garzicor`s_Wraith (123195)\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 19739,
+        "zone": "necropolis",
+        "name": "#Garzicor-s_Corpse",
+        "lua_content": "-- Scripted-only corpse; preserve the authoritative spawn owner for initial hostility.\nfunction event_spawn(e)\n\teq.attack(e.other:GetName());\nend\n\nfunction event_death_complete(e)\n\teq.spawn2(123195,0,0,e.self:GetX(),e.self:GetY(),e.self:GetZ(),e.self:GetHeading()):AddToHateList(e.other,1); --#Garzicor`s_Wraith (123195)\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/necropolis/#Garzicor-s_Corpse.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-tz-garzicor-corpse-spawn/necropolis--#Garzicor-s_Corpse.lua",
+      "afterSha256": "3867c42089c050a36a7af5e1ebd4b1e35481038fa955a32e98c4e0e71fcd89d7"
+    }
+  ]
+}

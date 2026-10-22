@@ -1,0 +1,26 @@
+{
+  "titles": [
+    "Peacekeeper Staff Quest"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "partial",
+  "match_status": "partial",
+  "local_quest_keys": [
+    "qeynos2/Rodgar_the_Tall"
+  ],
+  "proposal": "changes/p99-nz-peacekeeper-faction.json",
+  "notes": [
+    "Make Rodgar\u2019s four-pearl trade lower Circle of Unseen Hands standing as documented, rather than raise it.",
+    "Exported faction223 is Circle of Unseen Hands. Full cached page explicitly says worse; existing source comment also says negative but call is positive. Preserve imported magnitude10, four13878 Pearl of Odus input,13824 Wooden Shards output, all other standing and2432EXP. Supporting enabled recipe9906 combines13822 Treant Resin+13878 Pearl in17917 staff container to13816 staff; no recipe mutation. Lumi final cash11silver12copper matches, but page conflicts rusty-weapon prose with patchwork final list; broad legacy reward pool is not guessed or pruned."
+  ],
+  "verification": {
+    "source": "Cached P99 and effective Lua reviewed; exact complete row preimages and source hashes recorded.",
+    "syntax": "pending",
+    "runtime": "Isolated mock regression pending; full game runtime unavailable.",
+    "ui": "not_run",
+    "connected_chain": "not_run"
+  },
+  "unresolved": [
+    "Ordinary source drops/spawns, recipe live behavior and rendered complete quest path not verified."
+  ]
+}

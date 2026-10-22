@@ -1,0 +1,965 @@
+{
+  "title": "Coldain Ring Quests",
+  "evidence": {
+    "title": "Coldain Ring Quests",
+    "url": "https://wiki.project1999.com/Coldain_Ring_Quests?action=raw",
+    "fetchedAt": "2026-07-17T23:11:14.085Z",
+    "revision": null,
+    "sha256": "4881b2816d5a485629a66855b1a4f44c7048899b5e9240b4bf068a9373384851",
+    "bytes": 57544,
+    "source": "raw-pages/coldain-ring-quests-59f262ab0e.json",
+    "cachePath": "reference/p99-wiki/raw-pages/coldain-ring-quests-59f262ab0e.wiki"
+  },
+  "limits": "Static primary actors for rings 1\u20139 and ring-10 staging only. The ring-10 encounter and final reward are owned by the separate 10th Coldain Ring Quest reviewer. No live world/combat/settlement parity claimed.",
+  "sources": {
+    "eastwastes/a_coldain_lookout": {
+      "path": "effective/quests/eastwastes/a_coldain_lookout.lua",
+      "sha256": "73cedcb27444d012234b3593199ddfd16cf8d5d3007502db9171b0dfb7b4cb55"
+    },
+    "eastwastes/Tain_Hammerfrost": {
+      "path": "effective/quests/eastwastes/Tain_Hammerfrost.lua",
+      "sha256": "21664aab85f0dcf789d8d42a6ceda14cd4e5fa7e9d20cb87a42e19f259c71aa0"
+    },
+    "eastwastes/Peffin_Ambersnow": {
+      "path": "effective/quests/eastwastes/Peffin_Ambersnow.lua",
+      "sha256": "35c5805166c130ef32f3b6b46dabb950ad2bb55dd3f73043146f5ceaeff75d04"
+    },
+    "eastwastes/Korrigain": {
+      "path": "effective/quests/eastwastes/Korrigain.lua",
+      "sha256": "a205ab38fc4ff0b3e021fef76c6ea936e13296f25b7020c85b80506d005fdcda"
+    },
+    "eastwastes/Icefang": {
+      "path": "effective/quests/eastwastes/Icefang.lua",
+      "sha256": "0d682c5e907d7ee5258f3fd1246de93c2d254d7d6f2b4e31e20d45ac76c8328e"
+    },
+    "eastwastes/Gloradin_Coldheart": {
+      "path": "effective/quests/eastwastes/Gloradin_Coldheart.lua",
+      "sha256": "22ec26d9447dea27cddfabdb566b32146b8f999093469dfb499c7ff28fce1a67"
+    },
+    "eastwastes/Garadain_Glacierbane": {
+      "path": "effective/quests/eastwastes/Garadain_Glacierbane.lua",
+      "sha256": "8bfa32988148b24ed64e71c40a61a47f6175de6140d1744a72823350065c02c5"
+    },
+    "eastwastes/Dobbin_Crossaxe": {
+      "path": "effective/quests/eastwastes/Dobbin_Crossaxe.lua",
+      "sha256": "ea98373afd3dc7bcb0c523bfccdceaa11665f0b8292510ca81ae0407a46d1be9"
+    },
+    "eastwastes/Corbin_Blackwell": {
+      "path": "effective/quests/eastwastes/Corbin_Blackwell.lua",
+      "sha256": "a1d503cb1e5d099c1a01d3b2dfcd40d3bf72fa1e3020ece5f2165207dd60d63b"
+    },
+    "eastwastes/Captain_Berradin": {
+      "path": "effective/quests/eastwastes/Captain_Berradin.lua",
+      "sha256": "9dcb35c6e16f14c783c0a521f26be056bfd702d20036a146f7cb152b04c89b30"
+    },
+    "eastwastes/Boridain_Glacierbane": {
+      "path": "effective/quests/eastwastes/Boridain_Glacierbane.lua",
+      "sha256": "28a6f42a15e66f803d07708bf9fc1b3022ae0f03d41eb6c4454fe119c6191ef5"
+    },
+    "eastwastes/#Peffin_Ambersnow": {
+      "path": "effective/quests/eastwastes/%23Peffin_Ambersnow.lua",
+      "sha256": "12a854f26e7fb22277f545ad66f931ffe3637bd889fd1e0f3584eae4d6b151d7"
+    },
+    "eastwastes/#Gloradin_Coldheart": {
+      "path": "effective/quests/eastwastes/%23Gloradin_Coldheart.lua",
+      "sha256": "67193f224a4a9bdcb727f0d5d497a85a70b004e3067eb6a5203acaf2b2e197d6"
+    },
+    "eastwastes/#Garadain_Glacierbane": {
+      "path": "effective/quests/eastwastes/%23Garadain_Glacierbane.lua",
+      "sha256": "ad1a838f9c53a3d7798101c4ee34a8098a8eff4c4c18e30f7c236371770201b7"
+    },
+    "eastwastes/#Dobbin_Crossaxe": {
+      "path": "effective/quests/eastwastes/%23Dobbin_Crossaxe.lua",
+      "sha256": "1cadc19adfbc04431e8153df33bb2ad64f21aa07b7ec1e1e006073d3d631822e"
+    },
+    "eastwastes/#Corbin_Blackwell": {
+      "path": "effective/quests/eastwastes/%23Corbin_Blackwell.lua",
+      "sha256": "5f5e09a5585a4d8982fffea63dbfd45640281826cbfded6fda20b51fb31e3daa"
+    },
+    "eastwastes/#Captain_Berradin": {
+      "path": "effective/quests/eastwastes/%23Captain_Berradin.lua",
+      "sha256": "3f45843559f37cb93189c57322f628bd139778c73adc66fb7cd7ce93a1a7dd0a"
+    },
+    "thurgadinb/Seneschal_Aldikar": {
+      "path": "effective/quests/thurgadinb/Seneschal_Aldikar.lua",
+      "sha256": "b7345b1a52e7f63dd7b5bb3c782426a54a53fd3e041588607dd6bb43adcd248e"
+    },
+    "thurgadinb/Councilor_Juliah_Lockheart": {
+      "path": "effective/quests/thurgadinb/Councilor_Juliah_Lockheart.lua",
+      "sha256": "66c56a33a74131cf65a0fef1aa682729a2162403c752b7bdfc8c6b42b3e772d4"
+    },
+    "thurgadinb/#Dain_Frostreaver_IV": {
+      "path": "effective/quests/thurgadinb/%23Dain_Frostreaver_IV.lua",
+      "sha256": "a82a95a7c461c826daa9c777dc434be7ab8f13c0aa6aac71713ed5790cfe1171"
+    },
+    "thurgadinb/#Councilor_Juliah_Lockheart": {
+      "path": "effective/quests/thurgadinb/%23Councilor_Juliah_Lockheart.lua",
+      "sha256": "f1b3f326e908560203c9da5dbb729a7fc815095514813daf511bc6d008e44104"
+    },
+    "kael/Doldigun_Steinwielder": {
+      "path": "effective/quests/kael/Doldigun_Steinwielder.lua",
+      "sha256": "71f74247ab21c28552174a0fcb8e19e157eff2b0771ccd053f6062a43570ab27"
+    },
+    "kael/#Doldigun_Steinwielder": {
+      "path": "effective/quests/kael/%23Doldigun_Steinwielder.lua",
+      "sha256": "bfcf4ea78890aedac5789aa49a6f4dbd68f1df7401088146af74ce62d678252b"
+    },
+    "greatdivide/Sentry_Badain_": {
+      "path": "effective/quests/greatdivide/Sentry_Badain_.lua",
+      "sha256": "01c7d98310155c534055b7826218219701a19479d966ee4527c8a615ac6d6f32"
+    },
+    "greatdivide/Sentry_Badain": {
+      "path": "effective/quests/greatdivide/Sentry_Badain.lua",
+      "sha256": "af4e603cde4cea969b27dc85c98b7df56e166fd9b059783a0920643c8b4149ae"
+    },
+    "greatdivide/2000965": {
+      "path": "effective/quests/greatdivide/2000965.lua",
+      "sha256": "65341926149cf6ae20682b339ac93447058bb11709c291543428702e69eb1f1a"
+    },
+    "greatdivide/2000966": {
+      "path": "effective/quests/greatdivide/2000966.lua",
+      "sha256": "9cf1e34bd1b01aceb1e0ce8557104a923b01d2e6386bac31d5a1327c9922b978"
+    }
+  },
+  "recipes": [
+    {
+      "recipe": {
+        "id": 2520,
+        "name": "Coldain Hunting Blanket",
+        "tradeskill": 61,
+        "skillneeded": 0,
+        "trivial": 41,
+        "nofail": 0,
+        "replace_container": 0,
+        "notes": null,
+        "must_learn": 0,
+        "learned_by_item_id": 0,
+        "quest": 0,
+        "enabled": 1,
+        "show_in_advanced": 1,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null,
+        "category": "Quest Items"
+      },
+      "entries": [
+        {
+          "id": 19521,
+          "recipe_id": 2520,
+          "item_id": 30030,
+          "successcount": 0,
+          "failcount": 0,
+          "componentcount": 2,
+          "salvagecount": 2,
+          "iscontainer": 0,
+          "item": {
+            "Name": "High Quality Cougarskin",
+            "lore": "High Quality Cougarskin",
+            "bagslots": 0,
+            "scrolleffect": -1,
+            "weight": 10,
+            "size": 2
+          }
+        },
+        {
+          "id": 19524,
+          "recipe_id": 2520,
+          "item_id": 16,
+          "successcount": 0,
+          "failcount": 0,
+          "componentcount": 0,
+          "salvagecount": 0,
+          "iscontainer": 1,
+          "item": null
+        },
+        {
+          "id": 19532,
+          "recipe_id": 2520,
+          "item_id": 92868,
+          "successcount": 0,
+          "failcount": 0,
+          "componentcount": 0,
+          "salvagecount": 0,
+          "iscontainer": 1,
+          "item": null
+        },
+        {
+          "id": 19542,
+          "recipe_id": 2520,
+          "item_id": 92878,
+          "successcount": 0,
+          "failcount": 0,
+          "componentcount": 0,
+          "salvagecount": 0,
+          "iscontainer": 1,
+          "item": null
+        },
+        {
+          "id": 19525,
+          "recipe_id": 2520,
+          "item_id": 17165,
+          "successcount": 0,
+          "failcount": 0,
+          "componentcount": 0,
+          "salvagecount": 0,
+          "iscontainer": 1,
+          "item": {
+            "Name": "Collapsible Sewing Kit",
+            "lore": "Collapsible Sewing Kit",
+            "bagslots": 8,
+            "scrolleffect": -1,
+            "weight": 10,
+            "size": 1
+          }
+        },
+        {
+          "id": 19527,
+          "recipe_id": 2520,
+          "item_id": 17806,
+          "successcount": 0,
+          "failcount": 0,
+          "componentcount": 0,
+          "salvagecount": 0,
+          "iscontainer": 1,
+          "item": {
+            "Name": "Worn Erudite Sewing Kit",
+            "lore": "Erudite Sewing Kit missing the specialized tools",
+            "bagslots": 10,
+            "scrolleffect": -1,
+            "weight": 40,
+            "size": 1
+          }
+        },
+        {
+          "id": 19534,
+          "recipe_id": 2520,
+          "item_id": 92870,
+          "successcount": 0,
+          "failcount": 0,
+          "componentcount": 0,
+          "salvagecount": 0,
+          "iscontainer": 1,
+          "item": null
+        },
+        {
+          "id": 19529,
+          "recipe_id": 2520,
+          "item_id": 17813,
+          "successcount": 0,
+          "failcount": 0,
+          "componentcount": 0,
+          "salvagecount": 0,
+          "iscontainer": 1,
+          "item": {
+            "Name": "Feir`Dal Sewing Kit",
+            "lore": "Feir`Dal Sewing Kit missing the specialized tools",
+            "bagslots": 10,
+            "scrolleffect": -1,
+            "weight": 40,
+            "size": 1
+          }
+        },
+        {
+          "id": 19530,
+          "recipe_id": 2520,
+          "item_id": 17880,
+          "successcount": 0,
+          "failcount": 0,
+          "componentcount": 0,
+          "salvagecount": 0,
+          "iscontainer": 1,
+          "item": {
+            "Name": "Large Sewing Kit",
+            "lore": "Large Sewing Kit",
+            "bagslots": 8,
+            "scrolleffect": -1,
+            "weight": 30,
+            "size": 1
+          }
+        },
+        {
+          "id": 19523,
+          "recipe_id": 2520,
+          "item_id": 30135,
+          "successcount": 1,
+          "failcount": 0,
+          "componentcount": 0,
+          "salvagecount": 0,
+          "iscontainer": 0,
+          "item": {
+            "Name": "Coldain Hunting Blanket",
+            "lore": "Coldain Hunting Blanket",
+            "bagslots": 0,
+            "scrolleffect": -1,
+            "weight": 10,
+            "size": 2
+          }
+        },
+        {
+          "id": 19531,
+          "recipe_id": 2520,
+          "item_id": 17966,
+          "successcount": 0,
+          "failcount": 0,
+          "componentcount": 0,
+          "salvagecount": 0,
+          "iscontainer": 1,
+          "item": {
+            "Name": "Deluxe Sewing Kit",
+            "lore": "Deluxe Sewing Kit",
+            "bagslots": 10,
+            "scrolleffect": -1,
+            "weight": 40,
+            "size": 1
+          }
+        },
+        {
+          "id": 19536,
+          "recipe_id": 2520,
+          "item_id": 92872,
+          "successcount": 0,
+          "failcount": 0,
+          "componentcount": 0,
+          "salvagecount": 0,
+          "iscontainer": 1,
+          "item": null
+        },
+        {
+          "id": 19538,
+          "recipe_id": 2520,
+          "item_id": 92874,
+          "successcount": 0,
+          "failcount": 0,
+          "componentcount": 0,
+          "salvagecount": 0,
+          "iscontainer": 1,
+          "item": null
+        },
+        {
+          "id": 19528,
+          "recipe_id": 2520,
+          "item_id": 17812,
+          "successcount": 0,
+          "failcount": 0,
+          "componentcount": 0,
+          "salvagecount": 0,
+          "iscontainer": 1,
+          "item": {
+            "Name": "Vale Sewing Kit",
+            "lore": "Halfling Sewing Kit missing the specialized tools",
+            "bagslots": 10,
+            "scrolleffect": -1,
+            "weight": 40,
+            "size": 1
+          }
+        },
+        {
+          "id": 19533,
+          "recipe_id": 2520,
+          "item_id": 92869,
+          "successcount": 0,
+          "failcount": 0,
+          "componentcount": 0,
+          "salvagecount": 0,
+          "iscontainer": 1,
+          "item": null
+        },
+        {
+          "id": 19540,
+          "recipe_id": 2520,
+          "item_id": 92876,
+          "successcount": 0,
+          "failcount": 0,
+          "componentcount": 0,
+          "salvagecount": 0,
+          "iscontainer": 1,
+          "item": null
+        },
+        {
+          "id": 19522,
+          "recipe_id": 2520,
+          "item_id": 30077,
+          "successcount": 0,
+          "failcount": 0,
+          "componentcount": 2,
+          "salvagecount": 2,
+          "iscontainer": 0,
+          "item": {
+            "Name": "High Quality Tundra Kodiak Pelt",
+            "lore": "High Quality Tundra Kodiak Pelt",
+            "bagslots": 0,
+            "scrolleffect": -1,
+            "weight": 10,
+            "size": 2
+          }
+        },
+        {
+          "id": 19543,
+          "recipe_id": 2520,
+          "item_id": 92879,
+          "successcount": 0,
+          "failcount": 0,
+          "componentcount": 0,
+          "salvagecount": 0,
+          "iscontainer": 1,
+          "item": null
+        },
+        {
+          "id": 19546,
+          "recipe_id": 2520,
+          "item_id": 92882,
+          "successcount": 0,
+          "failcount": 0,
+          "componentcount": 0,
+          "salvagecount": 0,
+          "iscontainer": 1,
+          "item": null
+        },
+        {
+          "id": 19539,
+          "recipe_id": 2520,
+          "item_id": 92875,
+          "successcount": 0,
+          "failcount": 0,
+          "componentcount": 0,
+          "salvagecount": 0,
+          "iscontainer": 1,
+          "item": null
+        },
+        {
+          "id": 19535,
+          "recipe_id": 2520,
+          "item_id": 92871,
+          "successcount": 0,
+          "failcount": 0,
+          "componentcount": 0,
+          "salvagecount": 0,
+          "iscontainer": 1,
+          "item": null
+        },
+        {
+          "id": 19545,
+          "recipe_id": 2520,
+          "item_id": 92881,
+          "successcount": 0,
+          "failcount": 0,
+          "componentcount": 0,
+          "salvagecount": 0,
+          "iscontainer": 1,
+          "item": null
+        },
+        {
+          "id": 19537,
+          "recipe_id": 2520,
+          "item_id": 92873,
+          "successcount": 0,
+          "failcount": 0,
+          "componentcount": 0,
+          "salvagecount": 0,
+          "iscontainer": 1,
+          "item": null
+        },
+        {
+          "id": 19541,
+          "recipe_id": 2520,
+          "item_id": 92877,
+          "successcount": 0,
+          "failcount": 0,
+          "componentcount": 0,
+          "salvagecount": 0,
+          "iscontainer": 1,
+          "item": null
+        },
+        {
+          "id": 19544,
+          "recipe_id": 2520,
+          "item_id": 92880,
+          "successcount": 0,
+          "failcount": 0,
+          "componentcount": 0,
+          "salvagecount": 0,
+          "iscontainer": 1,
+          "item": null
+        },
+        {
+          "id": 19526,
+          "recipe_id": 2520,
+          "item_id": 17768,
+          "successcount": 0,
+          "failcount": 0,
+          "componentcount": 0,
+          "salvagecount": 0,
+          "iscontainer": 1,
+          "item": {
+            "Name": "Planar Sewing Kit",
+            "lore": "Planar Sewing Kit",
+            "bagslots": 8,
+            "scrolleffect": -1,
+            "weight": 30,
+            "size": 1
+          }
+        }
+      ],
+      "verified": "All documented ingredients/counts, output, enabled state and explicitly documented trivial match. Cloud shell28522 confirmed by lore Clouding Sea Shell. Recipe execution and probability not tested."
+    },
+    {
+      "recipe": {
+        "id": 3951,
+        "name": "Coldain Hunting Knife",
+        "tradeskill": 63,
+        "skillneeded": 0,
+        "trivial": 41,
+        "nofail": 0,
+        "replace_container": 0,
+        "notes": null,
+        "must_learn": 0,
+        "learned_by_item_id": 0,
+        "quest": 0,
+        "enabled": 1,
+        "show_in_advanced": 1,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null,
+        "category": "General"
+      },
+      "entries": [
+        {
+          "id": 39275,
+          "recipe_id": 3951,
+          "item_id": 30062,
+          "successcount": 0,
+          "failcount": 0,
+          "componentcount": 1,
+          "salvagecount": 1,
+          "iscontainer": 0,
+          "item": {
+            "Name": "Skinning Rock",
+            "lore": "Skinning Rock",
+            "bagslots": 0,
+            "scrolleffect": -1,
+            "weight": 1,
+            "size": 0
+          }
+        },
+        {
+          "id": 39279,
+          "recipe_id": 3951,
+          "item_id": 17,
+          "successcount": 0,
+          "failcount": 0,
+          "componentcount": 0,
+          "salvagecount": 0,
+          "iscontainer": 1,
+          "item": null
+        },
+        {
+          "id": 39276,
+          "recipe_id": 3951,
+          "item_id": 30088,
+          "successcount": 0,
+          "failcount": 0,
+          "componentcount": 1,
+          "salvagecount": 1,
+          "iscontainer": 0,
+          "item": {
+            "Name": "Wooly Rhino Horn",
+            "lore": "Wooly Rhino Horn",
+            "bagslots": 0,
+            "scrolleffect": -1,
+            "weight": 10,
+            "size": 2
+          }
+        },
+        {
+          "id": 39278,
+          "recipe_id": 3951,
+          "item_id": 30137,
+          "successcount": 1,
+          "failcount": 0,
+          "componentcount": 0,
+          "salvagecount": 0,
+          "iscontainer": 0,
+          "item": {
+            "Name": "Coldain Hunting Knife",
+            "lore": "Coldain Hunting Knife",
+            "bagslots": 0,
+            "scrolleffect": -1,
+            "weight": 10,
+            "size": 1
+          }
+        },
+        {
+          "id": 39277,
+          "recipe_id": 3951,
+          "item_id": 30096,
+          "successcount": 0,
+          "failcount": 0,
+          "componentcount": 1,
+          "salvagecount": 1,
+          "iscontainer": 0,
+          "item": {
+            "Name": "High Quality Walrus Hide",
+            "lore": "High Quality Walrus Hide",
+            "bagslots": 0,
+            "scrolleffect": -1,
+            "weight": 10,
+            "size": 2
+          }
+        }
+      ],
+      "verified": "All documented ingredients/counts, output, enabled state and explicitly documented trivial match. Cloud shell28522 confirmed by lore Clouding Sea Shell. Recipe execution and probability not tested."
+    },
+    {
+      "recipe": {
+        "id": 7848,
+        "name": "Tainted Avalanche Ale",
+        "tradeskill": 65,
+        "skillneeded": 0,
+        "trivial": 248,
+        "nofail": 0,
+        "replace_container": 0,
+        "notes": null,
+        "must_learn": 0,
+        "learned_by_item_id": 0,
+        "quest": 0,
+        "enabled": 1,
+        "show_in_advanced": 1,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null,
+        "category": "Alcohol"
+      },
+      "entries": [
+        {
+          "id": 72968,
+          "recipe_id": 7848,
+          "item_id": 25101,
+          "successcount": 0,
+          "failcount": 0,
+          "componentcount": 1,
+          "salvagecount": 1,
+          "iscontainer": 0,
+          "item": {
+            "Name": "Ice Wyvern Stinger",
+            "lore": "Ice Wyvern Stinger",
+            "bagslots": 0,
+            "scrolleffect": -1,
+            "weight": 1,
+            "size": 0
+          }
+        },
+        {
+          "id": 72969,
+          "recipe_id": 7848,
+          "item_id": 28522,
+          "successcount": 0,
+          "failcount": 0,
+          "componentcount": 1,
+          "salvagecount": 1,
+          "iscontainer": 0,
+          "item": {
+            "Name": "Runed Sea Shell",
+            "lore": "Clouding Sea Shell",
+            "bagslots": 0,
+            "scrolleffect": -1,
+            "weight": 2,
+            "size": 1
+          }
+        },
+        {
+          "id": 72965,
+          "recipe_id": 7848,
+          "item_id": 14098,
+          "successcount": 0,
+          "failcount": 0,
+          "componentcount": 1,
+          "salvagecount": 1,
+          "iscontainer": 0,
+          "item": {
+            "Name": "Mind Melt",
+            "lore": "Mind Melt",
+            "bagslots": 0,
+            "scrolleffect": -1,
+            "weight": 2,
+            "size": 1
+          }
+        },
+        {
+          "id": 72973,
+          "recipe_id": 7848,
+          "item_id": 19,
+          "successcount": 0,
+          "failcount": 0,
+          "componentcount": 0,
+          "salvagecount": 0,
+          "iscontainer": 1,
+          "item": null
+        },
+        {
+          "id": 72966,
+          "recipe_id": 7848,
+          "item_id": 16598,
+          "successcount": 0,
+          "failcount": 1,
+          "componentcount": 1,
+          "salvagecount": 0,
+          "iscontainer": 0,
+          "item": {
+            "Name": "Bottle",
+            "lore": "Bottle",
+            "bagslots": 0,
+            "scrolleffect": -1,
+            "weight": 1,
+            "size": 1
+          }
+        },
+        {
+          "id": 72964,
+          "recipe_id": 7848,
+          "item_id": 12999,
+          "successcount": 0,
+          "failcount": 0,
+          "componentcount": 1,
+          "salvagecount": 1,
+          "iscontainer": 0,
+          "item": {
+            "Name": "Seahorse Scales",
+            "lore": "Seahorse Scales",
+            "bagslots": 0,
+            "scrolleffect": -1,
+            "weight": 1,
+            "size": 1
+          }
+        },
+        {
+          "id": 72970,
+          "recipe_id": 7848,
+          "item_id": 30014,
+          "successcount": 0,
+          "failcount": 0,
+          "componentcount": 1,
+          "salvagecount": 1,
+          "iscontainer": 0,
+          "item": {
+            "Name": "Iceball",
+            "lore": "Iceball",
+            "bagslots": 0,
+            "scrolleffect": -1,
+            "weight": 5,
+            "size": 0
+          }
+        },
+        {
+          "id": 72971,
+          "recipe_id": 7848,
+          "item_id": 1459,
+          "successcount": 1,
+          "failcount": 0,
+          "componentcount": 0,
+          "salvagecount": 0,
+          "iscontainer": 0,
+          "item": {
+            "Name": "Tainted Avalanche Ale",
+            "lore": "Poisoned Ale",
+            "bagslots": 0,
+            "scrolleffect": -1,
+            "weight": 0,
+            "size": 1
+          }
+        },
+        {
+          "id": 72967,
+          "recipe_id": 7848,
+          "item_id": 19122,
+          "successcount": 0,
+          "failcount": 0,
+          "componentcount": 1,
+          "salvagecount": 1,
+          "iscontainer": 0,
+          "item": {
+            "Name": "Arctic Mussels",
+            "lore": "Arctic Mussels",
+            "bagslots": 0,
+            "scrolleffect": -1,
+            "weight": 5,
+            "size": 1
+          }
+        }
+      ],
+      "verified": "All documented ingredients/counts, output, enabled state and explicitly documented trivial match. Cloud shell28522 confirmed by lore Clouding Sea Shell. Recipe execution and probability not tested."
+    },
+    {
+      "recipe": {
+        "id": 10067,
+        "name": "Box Of The Guilty",
+        "tradeskill": 75,
+        "skillneeded": 0,
+        "trivial": 0,
+        "nofail": 1,
+        "replace_container": 0,
+        "notes": "Created by janusd",
+        "must_learn": 0,
+        "learned_by_item_id": 0,
+        "quest": 0,
+        "enabled": 1,
+        "show_in_advanced": 0,
+        "min_expansion": 2,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null,
+        "category": null
+      },
+      "entries": [
+        {
+          "id": 85203,
+          "recipe_id": 10067,
+          "item_id": 1094,
+          "successcount": 0,
+          "failcount": 0,
+          "componentcount": 1,
+          "salvagecount": 1,
+          "iscontainer": 0,
+          "item": {
+            "Name": "Dirk of the Traitor",
+            "lore": "Cursed dirk of treachery",
+            "bagslots": 0,
+            "scrolleffect": -1,
+            "weight": 10,
+            "size": 1
+          }
+        },
+        {
+          "id": 85210,
+          "recipe_id": 10067,
+          "item_id": 17055,
+          "successcount": 0,
+          "failcount": 0,
+          "componentcount": 0,
+          "salvagecount": 0,
+          "iscontainer": 1,
+          "item": {
+            "Name": "Traitor's Bane Box",
+            "lore": "Traitor's Bane Box",
+            "bagslots": 6,
+            "scrolleffect": -1,
+            "weight": 20,
+            "size": 2
+          }
+        },
+        {
+          "id": 85209,
+          "recipe_id": 10067,
+          "item_id": 1500,
+          "successcount": 1,
+          "failcount": 0,
+          "componentcount": 0,
+          "salvagecount": 0,
+          "iscontainer": 0,
+          "item": {
+            "Name": "Box of the Guilty",
+            "lore": "Box of the Guilty",
+            "bagslots": 0,
+            "scrolleffect": -1,
+            "weight": 20,
+            "size": 2
+          }
+        },
+        {
+          "id": 85206,
+          "recipe_id": 10067,
+          "item_id": 1462,
+          "successcount": 0,
+          "failcount": 0,
+          "componentcount": 1,
+          "salvagecount": 1,
+          "iscontainer": 0,
+          "item": {
+            "Name": "Peffin's head",
+            "lore": "Peffin's head",
+            "bagslots": 0,
+            "scrolleffect": -1,
+            "weight": 1,
+            "size": 1
+          }
+        },
+        {
+          "id": 85204,
+          "recipe_id": 10067,
+          "item_id": 1460,
+          "successcount": 0,
+          "failcount": 0,
+          "componentcount": 1,
+          "salvagecount": 1,
+          "iscontainer": 0,
+          "item": {
+            "Name": "Murdrick's head",
+            "lore": "Murdrick's head",
+            "bagslots": 0,
+            "scrolleffect": -1,
+            "weight": 1,
+            "size": 1
+          }
+        },
+        {
+          "id": 85205,
+          "recipe_id": 10067,
+          "item_id": 1461,
+          "successcount": 0,
+          "failcount": 0,
+          "componentcount": 1,
+          "salvagecount": 1,
+          "iscontainer": 0,
+          "item": {
+            "Name": "Berradin's head",
+            "lore": "Berradin's head",
+            "bagslots": 0,
+            "scrolleffect": -1,
+            "weight": 1,
+            "size": 1
+          }
+        },
+        {
+          "id": 85207,
+          "recipe_id": 10067,
+          "item_id": 1463,
+          "successcount": 0,
+          "failcount": 0,
+          "componentcount": 1,
+          "salvagecount": 1,
+          "iscontainer": 0,
+          "item": {
+            "Name": "Doldigun's head",
+            "lore": "Doldigun's head",
+            "bagslots": 0,
+            "scrolleffect": -1,
+            "weight": 1,
+            "size": 1
+          }
+        },
+        {
+          "id": 85208,
+          "recipe_id": 10067,
+          "item_id": 1466,
+          "successcount": 0,
+          "failcount": 0,
+          "componentcount": 1,
+          "salvagecount": 1,
+          "iscontainer": 0,
+          "item": {
+            "Name": "Juliah's Head",
+            "lore": "Juliah's Head",
+            "bagslots": 0,
+            "scrolleffect": -1,
+            "weight": 10,
+            "size": 1
+          }
+        }
+      ],
+      "verified": "All documented ingredients/counts, output, enabled state and explicitly documented trivial match. Cloud shell28522 confirmed by lore Clouding Sea Shell. Recipe execution and probability not tested."
+    }
+  ],
+  "staging_verified": "Dain1465 returns dagger and opens shared60-second invitation; count on my help consumes flag and gives1567. Badain1567+30369 returns30369, sets staging and signals controller. Aldikar2000965 accepts30369 in staging, returns it and gives18511 unless already owned. Zrelik2000966 accepts18511 in staging, sets preparing, follows player, signals controller. P99 says invitation slightly under1minute, so60seconds is explicit retained approximation."
+}

@@ -1,0 +1,34 @@
+{
+  "reviewed_at": "2026-10-22",
+  "sources": [
+    {
+      "url": "https://wiki.project1999.com/Back_Straps_of_Mastery",
+      "method": "web search result text",
+      "finding": "Identifies this as the post-upgrade Plane of Sky reward and Mystical Back Straps as its previous version; does not itself specify a direct NPC hand-in result."
+    },
+    {
+      "url": "https://wiki.project1999.com/Plane_of_Sky_Quests_%28Old%29",
+      "method": "web search result text",
+      "finding": "Pairs old/new reward versions in test reward table, not an explicit legacy trade transcript."
+    },
+    {
+      "url": "https://wiki.project1999.com/Monk_Plane_of_Sky_Tests",
+      "method": "full cached source and web search result",
+      "finding": "Ton Po and Wu offer improvements to older items; exact returned item and all effects are not explicitly spelled out in those legacy-trade transcripts."
+    }
+  ],
+  "failed_retrievals": [
+    "https://wiki.project1999.com/Mystical_Back_Straps: cache miss",
+    "https://wiki.project1999.com/Wu%27s_Tranquil_Fist: cache miss",
+    "https://wiki.project1999.com/Wu%27s_Fist_of_Mastery:502"
+  ],
+  "decision": "Superseded: full cached Old Sky introduction explicitly permits old-to-new upgrades at the original NPC. Exact named pairs and local item IDs support the two Monk exchanges now proposed in changes/p99-am-monk-sky-upgrades.json. Earlier web snippets alone were incomplete evidence.",
+  "gina_identity_resolution": {
+    "actualKey": "airplane/Gina_McStargan",
+    "npcId": 71087,
+    "class": 10,
+    "evidence": "Medicine_Man_Veetra explicitly accepts Gina MacStargan and spawns71087; npc_types71087 is Gina_McStargan. This is the Shaman tester, not a Mage actor.",
+    "source": "effective/quests/airplane/Medicine_Man_Veetra.lua",
+    "sourceSha256": "9db907425a83d35a1ed5eec0d681e19ecba0c0d6013d4983cdfb6371a763cae3"
+  }
+}

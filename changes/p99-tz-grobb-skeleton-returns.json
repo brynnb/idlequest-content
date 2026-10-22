@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-grobb-skeleton-returns",
+  "summary": "Return partial, unrelated and surplus hand-ins without changing accepted inputs, rewards or depop behavior. Exact world lifecycle remains unverified.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Urako's_Big_Mistake?action=raw",
+      "note": "Cached 2026-07-17T23:40:17.020Z; revision unavailable; SHA256 c7504278e682914a6195eda6f36db21e2b1565fc1f9cfece25911850b253808f. Return partial, unrelated and surplus hand-ins without changing accepted inputs, rewards or depop behavior. Exact world lifecycle remains unverified. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 19477,
+        "zone": "grobb",
+        "name": "a_skeleton",
+        "lua_content": "-- Created by noudess\n-- items: 12211, 12213, 12217, 12214, 12198, 12216\n\nfunction event_say(e)\n\tlocal pfaction = e.other:GetFaction(e.self);\n\n\tif(e.message:findi(\"Hail\")) then\n\t\tif (e.self:GetNPCTypeID() == 52056) then\n\t\t\te.self:Say(\"Sorry.  Nothing t' sell at this time.  Maybe later.  Good day.\");\n\t\telseif (e.self:GetNPCTypeID() == 52118) then\n\t\t\te.self:Say(\"Step right up! I am the best butcher you have ever seen.  Well, are you the next to be fileted?\");\n\t\telseif (e.self:GetNPCTypeID() == 52119) then\n\t\t\te.self:Say(\"Here I stand high and above, a minstrel supreme, my words offer love. Love between all, troll and ogre alike. I sing to all, except Tabaz, so take a hike!\");\n\t\tend\n\t\t\n\telseif(e.message:findi(\"come back to the closet\")) then\n\t\tif (pfaction > 5) then\n\t\t\te.self:Say(\"I would like to assist you, but my masters say you are no friend of the Darkones and would rather see you dead.\");\n\t\telseif (pfaction > 4) then\n\t\t\te.self:Say(\"You're going to have to prove yourself a stronger aid to my masters, the Darkones.\");\n\t\telse\n\t\t\tif (e.self:GetNPCTypeID() == 52056) then\n\t\t\t\te.self:Say(\"Back to the closet?!  I just got out.  I would go back if I had a pair of oven mittens.\");\n\t\t\telseif (e.self:GetNPCTypeID() == 52118) then\n\t\t\t\te.self:Say(\"Darn!  I was just starting to have fun.  Tell you what, you find me a nice ogre butcher apron and I will gladly go back to my cramped quarters.\");\n\t\t\telseif (e.self:GetNPCTypeID() == 52119) then\n\t\t\t\te.self:Say(\"Back to the closet?! Not until I can get an instrument. You get me... hmm, I know. Get me a lizardman scout fife. Not just one, but four. Then my friends can also play along with me. Do this and I promise you I shall return.\");\n\t\t\tend\n\t\tend\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif (e.self:GetNPCTypeID() == 52056 and item_lib.check_turn_in(e.trade, {item1 = 12211})) then -- Mittens\n\t\te.self:Say(\"Ahh! Oven mittens! Kinda' large, don't you think?! Oh well, now I can bake all I want without burning my hands. OKAY! Lets go. I overheard some basher named Nanrum saying he spotted my friend, the butcher. You should ask him [where the skeleton] is.\");\n\t\te.other:SummonItem(12213); -- Item: The Baker\n\t\teq.depop();\n\telseif (e.self:GetNPCTypeID() == 52118 and item_lib.check_turn_in(e.trade, {item1 = 12217})) then -- butcher arpron\n\t\te.self:Say(\"Great! Thanks a lot, pal. Lets get moving. I hear my bonehead roomie called the Captain was spotted by Basher Sklama. Go ask [where the Captain] is.\");\n\t\te.other:SummonItem(12214); -- Item: The Butcher\n\t\teq.depop();\n\telseif (e.self:GetNPCTypeID() == 52119 and item_lib.check_turn_in(e.trade, {item1 = 12198, item2 = 12198, item3 = 12198, item4 = 12198})) then -- fifes\n\t\te.self:Say(\"All right! I was kinda hoping the lizards would finish you off and I could stay free, but a deal is a deal. Let's go.\");\n\t\te.other:SummonItem(12216); -- Item: The Minstrel\n\t\teq.depop();\n\tend\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 19477,
+        "zone": "grobb",
+        "name": "a_skeleton",
+        "lua_content": "-- Created by noudess\n-- items: 12211, 12213, 12217, 12214, 12198, 12216\n\nfunction event_say(e)\n\tlocal pfaction = e.other:GetFaction(e.self);\n\n\tif(e.message:findi(\"Hail\")) then\n\t\tif (e.self:GetNPCTypeID() == 52056) then\n\t\t\te.self:Say(\"Sorry.  Nothing t' sell at this time.  Maybe later.  Good day.\");\n\t\telseif (e.self:GetNPCTypeID() == 52118) then\n\t\t\te.self:Say(\"Step right up! I am the best butcher you have ever seen.  Well, are you the next to be fileted?\");\n\t\telseif (e.self:GetNPCTypeID() == 52119) then\n\t\t\te.self:Say(\"Here I stand high and above, a minstrel supreme, my words offer love. Love between all, troll and ogre alike. I sing to all, except Tabaz, so take a hike!\");\n\t\tend\n\t\t\n\telseif(e.message:findi(\"come back to the closet\")) then\n\t\tif (pfaction > 5) then\n\t\t\te.self:Say(\"I would like to assist you, but my masters say you are no friend of the Darkones and would rather see you dead.\");\n\t\telseif (pfaction > 4) then\n\t\t\te.self:Say(\"You're going to have to prove yourself a stronger aid to my masters, the Darkones.\");\n\t\telse\n\t\t\tif (e.self:GetNPCTypeID() == 52056) then\n\t\t\t\te.self:Say(\"Back to the closet?!  I just got out.  I would go back if I had a pair of oven mittens.\");\n\t\t\telseif (e.self:GetNPCTypeID() == 52118) then\n\t\t\t\te.self:Say(\"Darn!  I was just starting to have fun.  Tell you what, you find me a nice ogre butcher apron and I will gladly go back to my cramped quarters.\");\n\t\t\telseif (e.self:GetNPCTypeID() == 52119) then\n\t\t\t\te.self:Say(\"Back to the closet?! Not until I can get an instrument. You get me... hmm, I know. Get me a lizardman scout fife. Not just one, but four. Then my friends can also play along with me. Do this and I promise you I shall return.\");\n\t\t\tend\n\t\tend\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif (e.self:GetNPCTypeID() == 52056 and item_lib.check_turn_in(e.trade, {item1 = 12211})) then -- Mittens\n\t\te.self:Say(\"Ahh! Oven mittens! Kinda' large, don't you think?! Oh well, now I can bake all I want without burning my hands. OKAY! Lets go. I overheard some basher named Nanrum saying he spotted my friend, the butcher. You should ask him [where the skeleton] is.\");\n\t\te.other:SummonItem(12213); -- Item: The Baker\n\t\teq.depop();\n\telseif (e.self:GetNPCTypeID() == 52118 and item_lib.check_turn_in(e.trade, {item1 = 12217})) then -- butcher arpron\n\t\te.self:Say(\"Great! Thanks a lot, pal. Lets get moving. I hear my bonehead roomie called the Captain was spotted by Basher Sklama. Go ask [where the Captain] is.\");\n\t\te.other:SummonItem(12214); -- Item: The Butcher\n\t\teq.depop();\n\telseif (e.self:GetNPCTypeID() == 52119 and item_lib.check_turn_in(e.trade, {item1 = 12198, item2 = 12198, item3 = 12198, item4 = 12198})) then -- fifes\n\t\te.self:Say(\"All right! I was kinda hoping the lizards would finish you off and I could stay free, but a deal is a deal. Let's go.\");\n\t\te.other:SummonItem(12216); -- Item: The Minstrel\n\t\teq.depop();\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade); -- Return partial and unrelated offers.\n\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/grobb/a_skeleton.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-tz-grobb-skeleton-returns/grobb--a_skeleton.lua",
+      "afterSha256": "d6d660a4ba48099ec337f3ad87582d12d7e11bfa69675d25e12c2ba68de6b4bb"
+    }
+  ]
+}

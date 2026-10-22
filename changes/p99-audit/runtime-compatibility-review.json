@@ -1,0 +1,25 @@
+{
+  "scope": "Read-only review of the pinned exported bridge and normalization layer; not a live game execution claim.",
+  "findings": [
+    {
+      "topic": "Legacy class comparisons",
+      "evidence": ["reference/server/internal/questluasource/source.go", "reference/server/internal/quest/lua_bridge.go"],
+      "result": "Normalize rewrites direct :Class()==string to :GetClassName()==string before execution. Numeric PlayerProxy.Class alone is not evidence that these legacy class gates are broken. Blanket gate conversion was rejected. Sarkis's distinct Shadowknight versus actual Shadow Knight spelling discrepancy is reviewed separately."
+    },
+    {
+      "topic": "Per-NPC scalar closure state",
+      "evidence": ["reference/server/internal/quest/closure_state_test.go", "reference/server/internal/quest/lua_bridge.go", "reference/server/internal/quest/runtime_event.go"],
+      "result": "The bridge restores/captures supported scalar closure state across fresh events. Do not equate it with no-op entity-variable APIs. Xyrin uses this supported mechanism with stop_timer/depop guards; isolated tests are not proof of live event settlement."
+    },
+    {
+      "topic": "NPC exclude field",
+      "evidence": ["reference/server/internal/contentscope/npc_exclusions.json", "data/npc_types"],
+      "result": "An exported npc_types.exclude=1 field alone does not establish actual runtime exclusion. Explicit content policy, spawn and loot relations require separate analysis. No global population claim is inferred from that field."
+    },
+    {
+      "topic": "Exact script keys",
+      "evidence": ["reference/server/internal/quest/service.go"],
+      "result": "Runtime candidates preserve exact hash-prefixed actor keys; backtick-to-dash legacy candidate handling does not imply arbitrary alias equivalence. An existing empty row may stop candidate fallback. Supported hash-key epic conversions preserve distinct exact actor keys."
+    }
+  ]
+}

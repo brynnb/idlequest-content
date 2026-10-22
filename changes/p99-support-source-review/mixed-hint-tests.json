@@ -1,0 +1,32 @@
+{
+  "cases": [
+    {
+      "Name": "Guard_Fayfear combat joined=true",
+      "Source": "-- P99 scope: later Paladin2.0-only hail hint removed; ordinary guard combat preserved.\nfunction event_combat(e)\n\tif e.joined then\n\t\te.self:Say(\"Time to die \" .. e.other:GetCleanName() .. \".\");\n\tend\nend",
+      "Setup": "said={}; mob={Say=function(self,text) table.insert(said,text) end}; client={GetCleanName=function() return \"TestKnight\" end}",
+      "Assertions": "assert(event_say==nil); event_combat({self=mob,other=client,joined=true}); assert(#said==1); assert(said[1]==\"Time to die TestKnight.\")"
+    },
+    {
+      "Name": "Guard_Fayfear combat joined=false",
+      "Source": "-- P99 scope: later Paladin2.0-only hail hint removed; ordinary guard combat preserved.\nfunction event_combat(e)\n\tif e.joined then\n\t\te.self:Say(\"Time to die \" .. e.other:GetCleanName() .. \".\");\n\tend\nend",
+      "Setup": "said={}; mob={Say=function(self,text) table.insert(said,text) end}; client={GetCleanName=function() return \"TestKnight\" end}",
+      "Assertions": "assert(event_say==nil); event_combat({self=mob,other=client,joined=false}); assert(#said==0);"
+    },
+    {
+      "Name": "Guard_Highmoon combat joined=true",
+      "Source": "-- P99 scope: later Paladin2.0-only hail hint removed; ordinary guard combat preserved.\nfunction event_combat(e)\n\tif e.joined then\n\t\te.self:Say(\"Time to die \" .. e.other:GetCleanName() .. \".\");\n\tend\nend",
+      "Setup": "said={}; mob={Say=function(self,text) table.insert(said,text) end}; client={GetCleanName=function() return \"TestKnight\" end}",
+      "Assertions": "assert(event_say==nil); event_combat({self=mob,other=client,joined=true}); assert(#said==1); assert(said[1]==\"Time to die TestKnight.\")"
+    },
+    {
+      "Name": "Guard_Highmoon combat joined=false",
+      "Source": "-- P99 scope: later Paladin2.0-only hail hint removed; ordinary guard combat preserved.\nfunction event_combat(e)\n\tif e.joined then\n\t\te.self:Say(\"Time to die \" .. e.other:GetCleanName() .. \".\");\n\tend\nend",
+      "Setup": "said={}; mob={Say=function(self,text) table.insert(said,text) end}; client={GetCleanName=function() return \"TestKnight\" end}",
+      "Assertions": "assert(event_say==nil); event_combat({self=mob,other=client,joined=false}); assert(#said==0);"
+    }
+  ],
+  "passed": true,
+  "stdout": "PASS Guard_Fayfear combat joined=true\nPASS Guard_Fayfear combat joined=false\nPASS Guard_Highmoon combat joined=true\nPASS Guard_Highmoon combat joined=false\n",
+  "stderr": "",
+  "scope": "Isolated pinned Lua VM; no live runtime claim"
+}

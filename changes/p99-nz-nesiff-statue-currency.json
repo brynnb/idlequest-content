@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-nz-nesiff-statue-currency",
+  "summary": "Use documented one-silver statue delivery reward instead of three silver equivalent.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Nesiff's_Statue?action=raw",
+      "note": "Cached 2026-07-17T23:26:51.461Z; revision unavailable; SHA256 204f2a5e92572002d36016bcbdd44016c0a82662673afd71cfb9f7628a872868. P99 documents1silver and no alternative cash values. This preserves all items, faction effects and250 experience; fixed value follows the cached observation, not a claim of independently established distribution. New maintained override preserves all unrelated baseline source behavior."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 14199,
+        "zone": "qrg",
+        "name": "Vesteri_Nomanoi",
+        "lua_content": "-- items: 18012, 13864\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(string.format(\"Hail, %s. I am Vesteri Namanoi. I provide training to the Jaggedpine Treefolk and their allies. If you are not busy, I would like to ask a small [favor] of you.\",e.other:GetName()));\n\telseif(e.message:findi(\"favor\")) then\n\t\te.self:Say(\"I need you to take this claim check to Qeynos for me. Nesiff Talaherd is a woodcarver who owns a shop in South Qeynos. I am having him carve a small statue of Tunare for Te'Anara. With my training schedule, I can not make the journey to Qeynos. Please give this claim check to Nesiff and bring the statue to me. It is a surprise, so please do not say anything to Te'Anara about it.\");\n\t\te.other:SummonItem(18012); -- Item: Claim Check\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib =require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 13864})) then\n\t\te.self:Say(\"Oh thank you so much! Here. Take this reward for your time. I will also tell Te'Anara of you.\");\n\t\te.other:Ding();\n\t\te.other:Faction(272, 10,0); --Jaggedpine Treefolk\n\t\te.other:Faction(302, 10,0); --Protectors of Pine\n\t\te.other:Faction(343, 10,0); --QRG Protected Animals\n\t\te.other:Faction(324, -30,0); --Unkempt Druids\n\t\te.other:Faction(262, 10,0);   --Guards of Qeynos\n\t\te.other:AddEXP(250);\n\t\te.other:GiveCash(10,2,0,0);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 14199,
+        "zone": "qrg",
+        "name": "Vesteri_Nomanoi",
+        "lua_content": "-- items: 18012, 13864\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(string.format(\"Hail, %s. I am Vesteri Namanoi. I provide training to the Jaggedpine Treefolk and their allies. If you are not busy, I would like to ask a small [favor] of you.\",e.other:GetName()));\n\telseif(e.message:findi(\"favor\")) then\n\t\te.self:Say(\"I need you to take this claim check to Qeynos for me. Nesiff Talaherd is a woodcarver who owns a shop in South Qeynos. I am having him carve a small statue of Tunare for Te'Anara. With my training schedule, I can not make the journey to Qeynos. Please give this claim check to Nesiff and bring the statue to me. It is a surprise, so please do not say anything to Te'Anara about it.\");\n\t\te.other:SummonItem(18012); -- Item: Claim Check\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib =require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 13864})) then\n\t\te.self:Say(\"Oh thank you so much! Here. Take this reward for your time. I will also tell Te'Anara of you.\");\n\t\te.other:Ding();\n\t\te.other:Faction(272, 10,0); --Jaggedpine Treefolk\n\t\te.other:Faction(302, 10,0); --Protectors of Pine\n\t\te.other:Faction(343, 10,0); --QRG Protected Animals\n\t\te.other:Faction(324, -30,0); --Unkempt Druids\n\t\te.other:Faction(262, 10,0);   --Guards of Qeynos\n\t\te.other:AddEXP(250);\n\t\te.other:GiveCash(0,1,0,0);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/qrg/Vesteri_Nomanoi.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-nz-nesiff-statue-currency/qrg--Vesteri_Nomanoi.lua",
+      "afterSha256": "eb6daf2ba369997d18d43f7338d72b59b618b3b671b202085c3252c4b78c1ab6"
+    }
+  ]
+}

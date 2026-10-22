@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-sky-ogog",
+  "summary": "Restrict depop to its named timer, preserving300000ms unverified duration and every hand-in. Starter direct-spawn adaptation documented in quest-audit-review-notes.md remains unchanged.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Warrior_Plane_of_Sky_Tests?action=raw",
+      "note": "Cached 2026-07-17T23:40:55.425Z; revision unavailable; SHA256 e62b8760abb6a3d3f6e98d7e32b032b033c177e2372c8a78290e8fd4c15fae15. Restrict depop to its named timer, preserving300000ms unverified duration and every hand-in. Starter direct-spawn adaptation documented in quest-audit-review-notes.md remains unchanged. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 18474,
+        "zone": "airplane",
+        "name": "Ogog",
+        "lua_content": "-- Source: airplane/Ogog.lua\n-- P99 audit: Warrior Plane of Sky Tests\n-- items: 20983, 20963, 20981, 20982, 11675, 20980, 20979, 20956, 11674, 20976, 20949, 20977, 20978, 11673\n\nfunction event_spawn(e)\n\teq.set_timer(\"depop\",300000)\nend\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Ogog not smart, but Ogog smarter than you.  You ready for Ogog or no?\")\n\telseif(e.message:findi(\"ready\")) then\n\t\te.self:Say(\"Ok, \" .. e.other:GetName() .. \".  Ogog got some hard things for you.  You do bash, smash, or think test?\")\n\telseif(e.message:findi(\"think\")) then\n\t\te.self:Say(\"Ogog think you can do this one maybe.  Ogog no know, though.  You bring Ogog efreeti belt, pegasus statue, a spiroc wind totem, and a wind tablet.  Ogog say good luck!\")\n\telseif(e.message:findi(\"smash\")) then\n\t\te.self:Say(\"Ogog smash good. . . Ogog no think you can smash good.  But Ogog let you try.  You get Ogog Djinni War Blade, some virulent wasp poison, and a mottled spiroc feather.  Ogog say you good warrior if you do this!\")\n\telseif(e.message:findi(\"bash\")) then\n\t\te.self:Say(\"This one hard, Ogog like it.  Ogog need efreeti battle axe, some honey nectar, bottled djinni, and ethereal emerald. Then Ogog make you best basher.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 20983, item2 = 20963, item3 = 20981, item4 = 20982}) then\n\t\te.other:SummonItem(11675) -- Fangol\n\t\te.other:AddEXP(100000)\n\t\te.self:Say(\"Yuz do good! Take dis!\")\n\t\teq.depop()\n\telseif item_lib.check_turn_in(e.trade, {item1 = 20980, item2 = 20979, item3 = 20956}) then\n\t\te.other:SummonItem(11674) -- Dagas\n\t\te.other:AddEXP(100000)\n\t\te.self:Say(\"Yuz do good! Take dis!\")\n\t\teq.depop()\n\telseif item_lib.check_turn_in(e.trade, {item1 = 20976, item2 = 20949, item3 = 20977, item4 = 20978}) then\n\t\te.other:SummonItem(11673) -- Belt of the Four Winds\n\t\te.other:AddEXP(100000)\n\t\te.self:Say(\"Yuz do good! Take dis!\")\n\t\teq.depop()\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\nfunction event_timer(e)\n\teq.stop_timer(\"depop\")\n\teq.depop()\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 18474,
+        "zone": "airplane",
+        "name": "Ogog",
+        "lua_content": "-- Source: airplane/Ogog.lua\n-- P99 audit: Warrior Plane of Sky Tests\n-- items: 20983, 20963, 20981, 20982, 11675, 20980, 20979, 20956, 11674, 20976, 20949, 20977, 20978, 11673\n\nfunction event_spawn(e)\n\teq.set_timer(\"depop\",300000)\nend\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Ogog not smart, but Ogog smarter than you.  You ready for Ogog or no?\")\n\telseif(e.message:findi(\"ready\")) then\n\t\te.self:Say(\"Ok, \" .. e.other:GetName() .. \".  Ogog got some hard things for you.  You do bash, smash, or think test?\")\n\telseif(e.message:findi(\"think\")) then\n\t\te.self:Say(\"Ogog think you can do this one maybe.  Ogog no know, though.  You bring Ogog efreeti belt, pegasus statue, a spiroc wind totem, and a wind tablet.  Ogog say good luck!\")\n\telseif(e.message:findi(\"smash\")) then\n\t\te.self:Say(\"Ogog smash good. . . Ogog no think you can smash good.  But Ogog let you try.  You get Ogog Djinni War Blade, some virulent wasp poison, and a mottled spiroc feather.  Ogog say you good warrior if you do this!\")\n\telseif(e.message:findi(\"bash\")) then\n\t\te.self:Say(\"This one hard, Ogog like it.  Ogog need efreeti battle axe, some honey nectar, bottled djinni, and ethereal emerald. Then Ogog make you best basher.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 20983, item2 = 20963, item3 = 20981, item4 = 20982}) then\n\t\te.other:SummonItem(11675) -- Fangol\n\t\te.other:AddEXP(100000)\n\t\te.self:Say(\"Yuz do good! Take dis!\")\n\t\teq.depop()\n\telseif item_lib.check_turn_in(e.trade, {item1 = 20980, item2 = 20979, item3 = 20956}) then\n\t\te.other:SummonItem(11674) -- Dagas\n\t\te.other:AddEXP(100000)\n\t\te.self:Say(\"Yuz do good! Take dis!\")\n\t\teq.depop()\n\telseif item_lib.check_turn_in(e.trade, {item1 = 20976, item2 = 20949, item3 = 20977, item4 = 20978}) then\n\t\te.other:SummonItem(11673) -- Belt of the Four Winds\n\t\te.other:AddEXP(100000)\n\t\te.self:Say(\"Yuz do good! Take dis!\")\n\t\teq.depop()\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\nfunction event_timer(e)\n\tif e.timer ~= \"depop\" then return end\n\teq.stop_timer(\"depop\")\n\teq.depop()\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/airplane/Ogog.lua",
+      "beforeSha256": "f43d9c678d13cc07ab498a55f5f91396a860b7e324c44b828bbe890ee2cdcfb1",
+      "proposedFile": "changes/p99-tz-sky-ogog/airplane--Ogog.lua",
+      "afterSha256": "03baa356f2fa37f5d7656378d8768ee921e01576db5c60cc9f2a99c43962008b"
+    }
+  ]
+}

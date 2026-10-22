@@ -4,7 +4,7 @@
   "type": "module",
   "version": "0.1.0",
   "scripts": {
-    "test": "node --test tools/*.test.mjs",
+    "test": "node --test tools/*.test.mjs changes/p99-*/*.test.mjs",
     "validate": "node tools/cli.mjs validate ."
   },
   "engines": {

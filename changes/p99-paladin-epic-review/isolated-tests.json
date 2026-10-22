@@ -1,0 +1,282 @@
+{
+  "status": "passed",
+  "kind": "isolated_pinned_normalizer_mock_simulation",
+  "count": 45,
+  "manifest": "changes/p99-paladin-epic-review/runtime-assertions.json",
+  "manifestSha256": "26055bb82d681ac6201c93b468bc6facf956cb4faeb2f1552f95e4e95bab2cda",
+  "fixtureSha256": "256b1b239eee071c1e1f591649ada52e93845a769f8653691a4a79e9447fe56d",
+  "runnerSha256": "a381643eb50c5891ebbf105e209bd5a1aad5073ce21d1f2b34361d6a3e5b7e58",
+  "scenarios": [
+    {
+      "name": "Jark baseline documented some prompt has no reply",
+      "file": "effective/quests/kaladimb/Jark.lua",
+      "sourceSha256": "d0604abbd42805c6bec7c34a30da1014ef1eac80f6332dc6b1f15d436a23307e",
+      "coverageKind": "baseline_reproduction"
+    },
+    {
+      "name": "Jark documented discovery some",
+      "file": "changes/p99-paladin-jark-some/kaladimb--Jark.lua",
+      "sourceSha256": "884580e59e8a6a892ae8d34d5343bb91aa7cf89c96c319e6f0e24d0668527aa3",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "Jark documented discovery SoMe",
+      "file": "changes/p99-paladin-jark-some/kaladimb--Jark.lua",
+      "sourceSha256": "884580e59e8a6a892ae8d34d5343bb91aa7cf89c96c319e6f0e24d0668527aa3",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "Jark documented discovery Did you find something?",
+      "file": "changes/p99-paladin-jark-some/kaladimb--Jark.lua",
+      "sourceSha256": "884580e59e8a6a892ae8d34d5343bb91aa7cf89c96c319e6f0e24d0668527aa3",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "Jark dinner spawns exact Nella at retained coordinates",
+      "file": "changes/p99-paladin-jark-some/kaladimb--Jark.lua",
+      "sourceSha256": "884580e59e8a6a892ae8d34d5343bb91aa7cf89c96c319e6f0e24d0668527aa3",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "Jark crystal exact reward and extra invalid repeat",
+      "file": "changes/p99-paladin-jark-some/kaladimb--Jark.lua",
+      "sourceSha256": "884580e59e8a6a892ae8d34d5343bb91aa7cf89c96c319e6f0e24d0668527aa3",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "Nella gives dinner dinner",
+      "file": "effective/quests/kaladimb/Nella_Stonebraids.lua",
+      "sourceSha256": "12d42fdaafdfac7dc3278191161b48e07ec08553fd9f01d64b10e04c634cd052",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "Nella gives dinner Do you have Jark's dinner?",
+      "file": "effective/quests/kaladimb/Nella_Stonebraids.lua",
+      "sourceSha256": "12d42fdaafdfac7dc3278191161b48e07ec08553fd9f01d64b10e04c634cd052",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "freportw Paladin water delivery I will take it to him",
+      "file": "effective/quests/freportw/peasant_woman.lua",
+      "sourceSha256": "ec55a6fc1bd50390edbdc2595f35e2c86e9b1e850deb904a46ff768314d81a9d",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "freportw Paladin water delivery I will take this water to him",
+      "file": "effective/quests/freportw/peasant_woman.lua",
+      "sourceSha256": "ec55a6fc1bd50390edbdc2595f35e2c86e9b1e850deb904a46ff768314d81a9d",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "freportw Paladin water delivery take this water to him",
+      "file": "effective/quests/freportw/peasant_woman.lua",
+      "sourceSha256": "ec55a6fc1bd50390edbdc2595f35e2c86e9b1e850deb904a46ff768314d81a9d",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "freportw water prompt and non-Paladin gate",
+      "file": "effective/quests/freportw/peasant_woman.lua",
+      "sourceSha256": "ec55a6fc1bd50390edbdc2595f35e2c86e9b1e850deb904a46ff768314d81a9d",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "freportw Joshua water purification extra invalid repeat",
+      "file": "effective/quests/freportw/Joshua.lua",
+      "sourceSha256": "916828d6bbb57ba584da136159eab195acd3831f11c03b3d43e081b8a1d15271",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "freeporteast Paladin water delivery I will take it to him",
+      "file": "effective/quests/freeporteast/peasant_woman.lua",
+      "sourceSha256": "ec55a6fc1bd50390edbdc2595f35e2c86e9b1e850deb904a46ff768314d81a9d",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "freeporteast Paladin water delivery I will take this water to him",
+      "file": "effective/quests/freeporteast/peasant_woman.lua",
+      "sourceSha256": "ec55a6fc1bd50390edbdc2595f35e2c86e9b1e850deb904a46ff768314d81a9d",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "freeporteast Paladin water delivery take this water to him",
+      "file": "effective/quests/freeporteast/peasant_woman.lua",
+      "sourceSha256": "ec55a6fc1bd50390edbdc2595f35e2c86e9b1e850deb904a46ff768314d81a9d",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "freeporteast water prompt and non-Paladin gate",
+      "file": "effective/quests/freeporteast/peasant_woman.lua",
+      "sourceSha256": "ec55a6fc1bd50390edbdc2595f35e2c86e9b1e850deb904a46ff768314d81a9d",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "freeporteast Joshua water purification extra invalid repeat",
+      "file": "effective/quests/freeporteast/Joshua.lua",
+      "sourceSha256": "916828d6bbb57ba584da136159eab195acd3831f11c03b3d43e081b8a1d15271",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "Elia dialogue Hail",
+      "file": "effective/quests/felwithea/Elia_the_Pure.lua",
+      "sourceSha256": "8d6c991fe184b98cd7de52302c5f30adc3de474a26eca22ef8674bc3007f7d57",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "Elia dialogue What tasks?",
+      "file": "effective/quests/felwithea/Elia_the_Pure.lua",
+      "sourceSha256": "8d6c991fe184b98cd7de52302c5f30adc3de474a26eca22ef8674bc3007f7d57",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "Elia dialogue What purity?",
+      "file": "effective/quests/felwithea/Elia_the_Pure.lua",
+      "sourceSha256": "8d6c991fe184b98cd7de52302c5f30adc3de474a26eca22ef8674bc3007f7d57",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "Elia shield cleansing exact invalid extra repeat",
+      "file": "effective/quests/felwithea/Elia_the_Pure.lua",
+      "sourceSha256": "8d6c991fe184b98cd7de52302c5f30adc3de474a26eca22ef8674bc3007f7d57",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "Reklon dialogue Hail",
+      "file": "changes/p99-paladin-reklon-dialogue/erudnext--Reklon_Gnallen.lua",
+      "sourceSha256": "30b32cad7765322e555669c17c43c875722b1829ec66f5a1f3f5b027cfe57d0f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "Reklon dialogue I seek atonement",
+      "file": "changes/p99-paladin-reklon-dialogue/erudnext--Reklon_Gnallen.lua",
+      "sourceSha256": "30b32cad7765322e555669c17c43c875722b1829ec66f5a1f3f5b027cfe57d0f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "Reklon dialogue What temple of peace?",
+      "file": "changes/p99-paladin-reklon-dialogue/erudnext--Reklon_Gnallen.lua",
+      "sourceSha256": "30b32cad7765322e555669c17c43c875722b1829ec66f5a1f3f5b027cfe57d0f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "Reklon dialogue What paladins?",
+      "file": "changes/p99-paladin-reklon-dialogue/erudnext--Reklon_Gnallen.lua",
+      "sourceSha256": "30b32cad7765322e555669c17c43c875722b1829ec66f5a1f3f5b027cfe57d0f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "Reklon dialogue I wish to remain vigilant",
+      "file": "changes/p99-paladin-reklon-dialogue/erudnext--Reklon_Gnallen.lua",
+      "sourceSha256": "30b32cad7765322e555669c17c43c875722b1829ec66f5a1f3f5b027cfe57d0f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "Reklon dialogue What outcast?",
+      "file": "changes/p99-paladin-reklon-dialogue/erudnext--Reklon_Gnallen.lua",
+      "sourceSha256": "30b32cad7765322e555669c17c43c875722b1829ec66f5a1f3f5b027cfe57d0f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "Reklon dialogue Who has fallen from grace?",
+      "file": "changes/p99-paladin-reklon-dialogue/erudnext--Reklon_Gnallen.lua",
+      "sourceSha256": "30b32cad7765322e555669c17c43c875722b1829ec66f5a1f3f5b027cfe57d0f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "Reklon dialogue What stories?",
+      "file": "changes/p99-paladin-reklon-dialogue/erudnext--Reklon_Gnallen.lua",
+      "sourceSha256": "30b32cad7765322e555669c17c43c875722b1829ec66f5a1f3f5b027cfe57d0f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "Reklon dialogue what peasant woman?",
+      "file": "changes/p99-paladin-reklon-dialogue/erudnext--Reklon_Gnallen.lua",
+      "sourceSha256": "30b32cad7765322e555669c17c43c875722b1829ec66f5a1f3f5b027cfe57d0f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "Reklon dialogue What sacrifice?",
+      "file": "changes/p99-paladin-reklon-dialogue/erudnext--Reklon_Gnallen.lua",
+      "sourceSha256": "30b32cad7765322e555669c17c43c875722b1829ec66f5a1f3f5b027cfe57d0f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "Reklon exact 29004 partial extra repeat",
+      "file": "changes/p99-paladin-reklon-dialogue/erudnext--Reklon_Gnallen.lua",
+      "sourceSha256": "30b32cad7765322e555669c17c43c875722b1829ec66f5a1f3f5b027cfe57d0f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "Reklon exact 29003 partial extra repeat",
+      "file": "changes/p99-paladin-reklon-dialogue/erudnext--Reklon_Gnallen.lua",
+      "sourceSha256": "30b32cad7765322e555669c17c43c875722b1829ec66f5a1f3f5b027cfe57d0f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "Reklon exact 29010 partial extra repeat",
+      "file": "changes/p99-paladin-reklon-dialogue/erudnext--Reklon_Gnallen.lua",
+      "sourceSha256": "30b32cad7765322e555669c17c43c875722b1829ec66f5a1f3f5b027cfe57d0f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "Reklon missing one of three purified relics stays intact",
+      "file": "changes/p99-paladin-reklon-dialogue/erudnext--Reklon_Gnallen.lua",
+      "sourceSha256": "30b32cad7765322e555669c17c43c875722b1829ec66f5a1f3f5b027cfe57d0f",
+      "coverageKind": "proposed_source"
+    },
+    {
+      "name": "Irak documented dialogue Hail",
+      "file": "effective/quests/fearplane/Irak_Altil.lua",
+      "sourceSha256": "6446cfd238956f6b05a5ca39f83bd86012b66332730be1f2fea0661a69c2621a",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "Irak documented dialogue what are you mumbling about",
+      "file": "effective/quests/fearplane/Irak_Altil.lua",
+      "sourceSha256": "6446cfd238956f6b05a5ca39f83bd86012b66332730be1f2fea0661a69c2621a",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "Irak documented dialogue Why are you disgraced?",
+      "file": "effective/quests/fearplane/Irak_Altil.lua",
+      "sourceSha256": "6446cfd238956f6b05a5ca39f83bd86012b66332730be1f2fea0661a69c2621a",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "Irak documented dialogue What duties?",
+      "file": "effective/quests/fearplane/Irak_Altil.lua",
+      "sourceSha256": "6446cfd238956f6b05a5ca39f83bd86012b66332730be1f2fea0661a69c2621a",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "Irak documented dialogue What sword?",
+      "file": "effective/quests/fearplane/Irak_Altil.lua",
+      "sourceSha256": "6446cfd238956f6b05a5ca39f83bd86012b66332730be1f2fea0661a69c2621a",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "Irak documented dialogue What shield?",
+      "file": "effective/quests/fearplane/Irak_Altil.lua",
+      "sourceSha256": "6446cfd238956f6b05a5ca39f83bd86012b66332730be1f2fea0661a69c2621a",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "Irak documented dialogue What breastplate?",
+      "file": "effective/quests/fearplane/Irak_Altil.lua",
+      "sourceSha256": "6446cfd238956f6b05a5ca39f83bd86012b66332730be1f2fea0661a69c2621a",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "Irak documented dialogue How can they be cleansed?",
+      "file": "effective/quests/fearplane/Irak_Altil.lua",
+      "sourceSha256": "6446cfd238956f6b05a5ca39f83bd86012b66332730be1f2fea0661a69c2621a",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "Irak final exact reward partial extra repeat at level one",
+      "file": "effective/quests/fearplane/Irak_Altil.lua",
+      "sourceSha256": "6446cfd238956f6b05a5ca39f83bd86012b66332730be1f2fea0661a69c2621a",
+      "coverageKind": "baseline_verification"
+    }
+  ],
+  "limits": "Not actual engine settlement, rollback, spawn/death, loot, rendering, or full acquisition."
+}

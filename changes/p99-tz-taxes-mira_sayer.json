@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-taxes-mira_sayer",
+  "summary": "Remove only tax_collection prerequisites: P99 expressly permits collecting without first speaking to Vicus and bypassing Mira. Preserve all original item/faction effects and unrelated quest branches. Flynn also accepts documented your-feet phrase and uses documented Shout; no numeric values invented.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Taxes?action=raw",
+      "note": "Cached 2026-07-17T23:34:37.004Z; revision unavailable; SHA256 6fc59af937f3b2dfa4313beac8b349112c500bdbff0c89109de222dc34860c9b. Remove only tax_collection prerequisites: P99 expressly permits collecting without first speaking to Vicus and bypassing Mira. Preserve all original item/faction effects and unrelated quest branches. Flynn also accepts documented your-feet phrase and uses documented Shout; no numeric values invented. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 19485,
+        "zone": "qeytoqrg",
+        "name": "Mira_Sayer",
+        "lua_content": "function event_say(e)\n\n\tlocal qglobals = eq.get_qglobals(e.other);\n\t\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(string.format(\"Welcome %s. What brings you out this way? Be careful, we have had problems with bandits of late. As if the gnolls were not enough.\",e.other:GetName()));\n\telseif(e.message:findi(\"tax collection\") and qglobals.tax_collection ~= nil) then\n\t\te.self:Emote(\"looks up with tear-filled eyes and sobs uncontrollably.\");\n\telseif(e.message:findi(\"crying\")and qglobals.tax_collection ~= nil) then\n\t\te.self:Emote(\".sniff.. Oh, dear. We do not have the money. We were just robbed by a dreadful halfling bandit named Flynn something-or-other. He took the money we had set asisde for Antonius. Please. Find this highwayman and retrieve our tax payment. ..sob..\");\n\tend\n\t\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 19485,
+        "zone": "qeytoqrg",
+        "name": "Mira_Sayer",
+        "lua_content": "function event_say(e)\n\n\tlocal qglobals = eq.get_qglobals(e.other);\n\t\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(string.format(\"Welcome %s. What brings you out this way? Be careful, we have had problems with bandits of late. As if the gnolls were not enough.\",e.other:GetName()));\n\telseif(e.message:findi(\"tax collection\") ) then\n\t\te.self:Emote(\"looks up with tear-filled eyes and sobs uncontrollably.\");\n\telseif(e.message:findi(\"crying\")) then\n\t\te.self:Emote(\".sniff.. Oh, dear. We do not have the money. We were just robbed by a dreadful halfling bandit named Flynn something-or-other. He took the money we had set asisde for Antonius. Please. Find this highwayman and retrieve our tax payment. ..sob..\");\n\tend\n\t\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/qeytoqrg/Mira_Sayer.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-tz-taxes-mira_sayer/qeytoqrg--Mira_Sayer.lua",
+      "afterSha256": "728327d123db80ed208d3ca9c03ea575a6d32068e3b2e3a0e1830e370379b679"
+    }
+  ]
+}

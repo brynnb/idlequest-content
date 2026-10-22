@@ -1,0 +1,4420 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-22",
+  "scope": "Exactly eleven remaining N–R Velious armor pages, 77 armor exchanges.",
+  "existingComponentAudit": {
+    "file": "changes/p99-nz-coverage/armor-component-review.json",
+    "sha256": "571d6a015d0df4bf7df04275a9507952c0edd9367b8a59cdad256b0e31d1258c",
+    "independentComparison": "All assigned checklist triples independently parsed and joined to item IDs and source branches; no mismatches."
+  },
+  "levelRequirementEvidence": {
+    "title": "Velious Class Armor",
+    "url": "https://wiki.project1999.com/Velious_Class_Armor?action=raw",
+    "fetchedAt": "2026-07-17T23:40:24.136Z",
+    "revision": null,
+    "sha256": "5e6e60e04538d1a8ee36249a5871af09cf66f7e66662a7d6a5312b434d82fb8e",
+    "bytes": 5098,
+    "source": "raw-pages/velious-class-armor-0e9e1bb7ea.json",
+    "cachePath": "reference/p99-wiki/raw-pages/velious-class-armor-0e9e1bb7ea.wiki"
+  },
+  "tableInputs": [
+    {
+      "file": "data/items/0.ndjson",
+      "sha256": "b8f07fb7bae1555593a189c7341c1b6e69f224b052d1c2f4c0868cc3b120fe40"
+    },
+    {
+      "file": "data/items/1.ndjson",
+      "sha256": "1b9820f98ab0587cf4fe8bf4dd635b29ebf12d7fb86e4a002b2fe4ddf59f80f6"
+    },
+    {
+      "file": "data/items/2.ndjson",
+      "sha256": "692299f646d2c60f1950b6de6bfb7e4eba35dc31867291e1fca8982b63b658ce"
+    },
+    {
+      "file": "data/items/3.ndjson",
+      "sha256": "2093b0f9f697e3bc81aeee2b9a3572dcdc3d05e9a9a57245af53db1f0dc4c154"
+    },
+    {
+      "file": "data/items/4.ndjson",
+      "sha256": "cd3b7786b7bc45aac936d3bce41b23607d67c912fd70e67911f97841a7aa219b"
+    },
+    {
+      "file": "data/items/5.ndjson",
+      "sha256": "970d60500036224d6c00da456bcc0e0e0641c773615291349194a5c2ca3ad4b2"
+    },
+    {
+      "file": "data/items/6.ndjson",
+      "sha256": "e43bf2c5f9180a30cd00d23cbb0a6e2a0afbac1ab4f49616b827dcba76034159"
+    },
+    {
+      "file": "data/items/7.ndjson",
+      "sha256": "2e0df235e480570e1cf9e4057c7c09c0359adf836b2a75f3466bc70cf5cc3396"
+    },
+    {
+      "file": "data/items/8.ndjson",
+      "sha256": "4c18ec44abe02929c1eca7eb54a0500102063b46bdc506b6c93992fa46dbd6d1"
+    },
+    {
+      "file": "data/items/9.ndjson",
+      "sha256": "254d009e7bcfe2259417b3f5174beb0cdb55adcf888ac5c8d62b1f2c1e6c4820"
+    },
+    {
+      "file": "data/items/a.ndjson",
+      "sha256": "fd2804ea2a6a32e7098ebd39ece979034f3ec6418d6297a5416edf68afd1bbb8"
+    },
+    {
+      "file": "data/items/b.ndjson",
+      "sha256": "7de5f35c479f25e5b55c8628544ea8926a4bf92631f72bab5422306424c783dc"
+    },
+    {
+      "file": "data/items/c.ndjson",
+      "sha256": "ebbe567773ee144f4b204fdc8cee418e77c9e7e883ab40ed6100773d499c4d03"
+    },
+    {
+      "file": "data/items/d.ndjson",
+      "sha256": "808b210f9d2c804c29a34e19cefe8c146d123563099cada667b7a2d59d3e6863"
+    },
+    {
+      "file": "data/items/e.ndjson",
+      "sha256": "90ef4f3eeb1a4d84ed8e8117d2e0e2cacc39d1f2db4f9b2f12259d5fa8494471"
+    },
+    {
+      "file": "data/items/f.ndjson",
+      "sha256": "d3d4a5c54e8b6d3c1ae4233df34f4a0dee1cd30397e5ae4c86c8c97789c7463e"
+    },
+    {
+      "file": "data/quests/0.ndjson",
+      "sha256": "26391a5cbfd5376a1c647367121288c71108f84bfb96bc8b09bfb6f5cd3bbeb2"
+    },
+    {
+      "file": "data/quests/1.ndjson",
+      "sha256": "93d54e4dd607fea17a428877364bad1d78520557fa95bac82d3fffd95872b2df"
+    },
+    {
+      "file": "data/quests/2.ndjson",
+      "sha256": "d28a148e127c23efc2960f5738086204fca63f144b213a8fcf607927e8a030f5"
+    },
+    {
+      "file": "data/quests/3.ndjson",
+      "sha256": "36a4c1041d416a8ca7670b33119b88c365a0cc7f70a35a3b9d23f5ac51ca6a9b"
+    },
+    {
+      "file": "data/quests/4.ndjson",
+      "sha256": "da5c8a2eacc911b5515739698a4c4897c2306ad1449fab910c9651f3413f3556"
+    },
+    {
+      "file": "data/quests/5.ndjson",
+      "sha256": "341ca1a71c11cc992a8c762c058c468147dbc492c2296be13251ea6a8f9e8d0c"
+    },
+    {
+      "file": "data/quests/6.ndjson",
+      "sha256": "2974e9f066f3d487e6683745972dc3005b56f87679e6286ca1d14a3453452b48"
+    },
+    {
+      "file": "data/quests/7.ndjson",
+      "sha256": "9ecda61f413eba15bc07bcbe29f4d0bb3add7a004618ac63ad096a78f0fafdb3"
+    },
+    {
+      "file": "data/quests/8.ndjson",
+      "sha256": "f88fc32d0f24739c3d6a85c1e99d8222ca2c95f1fa253999acd429df7b2e9c60"
+    },
+    {
+      "file": "data/quests/9.ndjson",
+      "sha256": "47a24810f6ae63b6dc610db0f87627ee66fec8ed2abdeeb812c34c066471c185"
+    },
+    {
+      "file": "data/quests/a.ndjson",
+      "sha256": "39e2288e666d475ff8adb61ee499eec0782655860456a5dbf52850edb163ac71"
+    },
+    {
+      "file": "data/quests/b.ndjson",
+      "sha256": "2cc535e2fbc510a44e32f49f2c68b7fd0ff04bd82dc9a0cc89afc16c99db2b0b"
+    },
+    {
+      "file": "data/quests/c.ndjson",
+      "sha256": "cd748cb8792b46d46fea64091a571a21758b2fae3d0b274e782b9cd842592485"
+    },
+    {
+      "file": "data/quests/d.ndjson",
+      "sha256": "855e70e27185e25833402e673b7cba66af7c65ac0db87bfa51d52c3247bb1fcf"
+    },
+    {
+      "file": "data/quests/e.ndjson",
+      "sha256": "dffab6f962908505f7059075d9d5a0b9efd3ce6b36bd7bac5c8820ffe7d66540"
+    },
+    {
+      "file": "data/quests/f.ndjson",
+      "sha256": "103976ace7037698153ce91ad2932c909752bbbbb3a43b9eb0468cbfc883a718"
+    },
+    {
+      "file": "data/faction_list/0.ndjson",
+      "sha256": "0a70fd4be184019376d3487dfeb6cbe556aef83235d4ced736b6cbb658cb2183"
+    },
+    {
+      "file": "data/faction_list/1.ndjson",
+      "sha256": "18792a0a82c21f61f465c2c649c884935d313210e6dc2e28876b9005307c41e6"
+    },
+    {
+      "file": "data/faction_list/2.ndjson",
+      "sha256": "8e460e1d6d9b427207e014d9d12fdeb637b85b74f5b2a7e8f3b96bcbf653c32e"
+    },
+    {
+      "file": "data/faction_list/3.ndjson",
+      "sha256": "bad461b42393d96662fe2e74ecae1ebca229b608426b86b5b08c4df423f77e3d"
+    },
+    {
+      "file": "data/faction_list/4.ndjson",
+      "sha256": "97d9a113fd68d18fd8f8eb7ead694a9e0f785f90cbcad65a8520630f33253cd3"
+    },
+    {
+      "file": "data/faction_list/5.ndjson",
+      "sha256": "4bbc7b7001854cb3a76e59d98a78e4692fff291ef461f2a48aa362fb11f96268"
+    },
+    {
+      "file": "data/faction_list/6.ndjson",
+      "sha256": "d7c834ee1abd19bc4821384fc6507e74fb834aa3ad9ec0516dbc1ef184c23634"
+    },
+    {
+      "file": "data/faction_list/7.ndjson",
+      "sha256": "07ac0905df7605225a82385b94cb863a2ccc5d206e9a30ac6e528d3abb45d144"
+    },
+    {
+      "file": "data/faction_list/8.ndjson",
+      "sha256": "d383a8523a62282470380b263cd095cc3db88608ae84afad063257e689c457e4"
+    },
+    {
+      "file": "data/faction_list/9.ndjson",
+      "sha256": "d24f1db3e4b12a2263f7f6ad13bc4d4dabb1148bdb29996407c6911623c8f82b"
+    },
+    {
+      "file": "data/faction_list/a.ndjson",
+      "sha256": "7db9a7f8459d56147b4d6cfaf4dc6684d1ec56ecb00b6aa6677828298e884f47"
+    },
+    {
+      "file": "data/faction_list/b.ndjson",
+      "sha256": "c3fbfd2772f0aa2acab2540b1c57ec2a4a16a4a8f93847b4fab82f81f8f577e7"
+    },
+    {
+      "file": "data/faction_list/c.ndjson",
+      "sha256": "5db2aa1963baf6ab9f6b1ac846ec61691697d564a36ea4843476f0b1f78a4032"
+    },
+    {
+      "file": "data/faction_list/d.ndjson",
+      "sha256": "54cd5281625b866328175b2cda85c8845a189a4f7e4832ec7f53f0f85e19d7cf"
+    },
+    {
+      "file": "data/faction_list/e.ndjson",
+      "sha256": "30039e9542ccc67fc03fb8d6c3759db7f429c2c98788445275a5cf143910c384"
+    },
+    {
+      "file": "data/faction_list/f.ndjson",
+      "sha256": "ea97618fd4f5d679e39e49e8fd8bb1e403d73b55296d9bc98e3539d099eb633b"
+    },
+    {
+      "file": "data/npc_types/0.ndjson",
+      "sha256": "713639bcbddee4e962696494c2841f9282009eb57c374e2964054595bb345910"
+    },
+    {
+      "file": "data/npc_types/1.ndjson",
+      "sha256": "a6f9003d0749fcc201c0beefcf4fb1efbe2980df49af8d75ff4752aa1c76b9e9"
+    },
+    {
+      "file": "data/npc_types/2.ndjson",
+      "sha256": "cf46eaad4198419d94f82d0b20572856c5dc519baf08126eba11b5e3cd54a283"
+    },
+    {
+      "file": "data/npc_types/3.ndjson",
+      "sha256": "98e3002c094c9e95ec9fb768519dd493286545e4e46a2c197773d33aa2024799"
+    },
+    {
+      "file": "data/npc_types/4.ndjson",
+      "sha256": "489921edeb059f655a15ac4cea3dce1a0fdc945b3c10b52a9ea715c1daac06a7"
+    },
+    {
+      "file": "data/npc_types/5.ndjson",
+      "sha256": "bbe1591331e609b56f7e07f49288f29225208011d86f24642e91df53d4676d75"
+    },
+    {
+      "file": "data/npc_types/6.ndjson",
+      "sha256": "f072cd798f210d425e2a931760870dbf5e7c35fd1ab03837e93744c06959cc52"
+    },
+    {
+      "file": "data/npc_types/7.ndjson",
+      "sha256": "9b2bff6a387ec86992e8d2a11dfb12afa0cc7c7c2901053d22f84b289e373a4b"
+    },
+    {
+      "file": "data/npc_types/8.ndjson",
+      "sha256": "8ac39a63330215903fde4da7272e1d10a7bb6fc5c1daa0517ced521b0cb7de9a"
+    },
+    {
+      "file": "data/npc_types/9.ndjson",
+      "sha256": "c3fb27325160df75909dba68d367bfc4e1c5813077a75bc65f2b6a675ac02cfc"
+    },
+    {
+      "file": "data/npc_types/a.ndjson",
+      "sha256": "8a7af6d500276dc42b5c27e8a8c60f75f38774b3c513b6290c8e92940dc48f8e"
+    },
+    {
+      "file": "data/npc_types/b.ndjson",
+      "sha256": "22a4a3b570e974b8411f882e7f0d1f987e57767c5a91d99ccd20264fb15ce39d"
+    },
+    {
+      "file": "data/npc_types/c.ndjson",
+      "sha256": "8bfb49fe0f8889c525cc9f4800b58713021b56f5acac444ef95a4e732d71e0ae"
+    },
+    {
+      "file": "data/npc_types/d.ndjson",
+      "sha256": "de922baa9d48f3f0217e0113d1b521f3cb2440363bea46792b64a6cdaeb2ba82"
+    },
+    {
+      "file": "data/npc_types/e.ndjson",
+      "sha256": "3c978e0bcd7d1c083caa049595fa90b1b7454eebfdaf18dcf2671343f73daf7c"
+    },
+    {
+      "file": "data/npc_types/f.ndjson",
+      "sha256": "1bb121e903c24d4a41b2a5c5c94daaa526bd92b64c3ec57dbc9ec95949411108"
+    },
+    {
+      "file": "data/spawnentry/0.ndjson",
+      "sha256": "eee76312a5abeb730110fe69e86c8116b559325323b835fe40cd14bc5c6111fe"
+    },
+    {
+      "file": "data/spawnentry/1.ndjson",
+      "sha256": "6104eb13a34c2cf71a15d77cfafc39358843d044b266ec2e47dc1833b2b38270"
+    },
+    {
+      "file": "data/spawnentry/2.ndjson",
+      "sha256": "5bdb008bb0d4ede0f2ab45013fb77f4992806c690627f33c6ade8397bf938ed2"
+    },
+    {
+      "file": "data/spawnentry/3.ndjson",
+      "sha256": "0ff00543127af54e3f8a0d0e27007d63ba498907bca9f588aa3f8bdd1005cc15"
+    },
+    {
+      "file": "data/spawnentry/4.ndjson",
+      "sha256": "eac877cd67cda60280108b2666c579564ba67883f1c9167c9ef0d2407f5aa8f4"
+    },
+    {
+      "file": "data/spawnentry/5.ndjson",
+      "sha256": "8cdd4ac3aba1175009ab901adcc1a334f846c407c85b3d93860cbb96eea8be22"
+    },
+    {
+      "file": "data/spawnentry/6.ndjson",
+      "sha256": "b05ed2a4a0c8c32fe56521ec83d8c401de7177b15c42eaaaa66c8a7654b21a7f"
+    },
+    {
+      "file": "data/spawnentry/7.ndjson",
+      "sha256": "9d6d6c9d95a769ed1fdec035fe1c5844d29fe489b2be795be60eaff0f5fe2727"
+    },
+    {
+      "file": "data/spawnentry/8.ndjson",
+      "sha256": "76edf4c0222e15e592e7b7d52cfd9144469685bd3141cd3eb7e3b3a022d306d7"
+    },
+    {
+      "file": "data/spawnentry/9.ndjson",
+      "sha256": "47be300cf8f9233ed0fc7a065d64703eba4f3847721b5e7598d86b4c711a6c48"
+    },
+    {
+      "file": "data/spawnentry/a.ndjson",
+      "sha256": "5a1587819c9d2a103b58261964ee3265ca74a583610a3a1bc325bd78f457acc2"
+    },
+    {
+      "file": "data/spawnentry/b.ndjson",
+      "sha256": "0a0ede67107b25b08f6813b7cb1008d4ef4084b118894dfe2a73b5a626d40a2f"
+    },
+    {
+      "file": "data/spawnentry/c.ndjson",
+      "sha256": "553ebd50c835bbfd15dd7f45086c53fb12be99ef53ff9476c408387f5f9ec039"
+    },
+    {
+      "file": "data/spawnentry/d.ndjson",
+      "sha256": "d60ce70314d07133ed903c911e05326362ad2ef5ad9181f66fc98a0bd24d319f"
+    },
+    {
+      "file": "data/spawnentry/e.ndjson",
+      "sha256": "172155d5c4141e26f89be14c9e91993b7475d7b924bf1c507ca61f66c25e0926"
+    },
+    {
+      "file": "data/spawnentry/f.ndjson",
+      "sha256": "cef4087028fdbff87e42a1071bbf212fc142c21f95119f00d8507901790780d0"
+    },
+    {
+      "file": "data/spawn2/0.ndjson",
+      "sha256": "71b3cf0047b4dea0c0a8b5ab90b933be6c897a87df6b00aab61eed45db9e8a5b"
+    },
+    {
+      "file": "data/spawn2/1.ndjson",
+      "sha256": "9db1ab8e29c20f3dab36ed9b1bcdca6b93a411b677bd1ea1e772e6463cd5f317"
+    },
+    {
+      "file": "data/spawn2/2.ndjson",
+      "sha256": "1f1091af8abad4c8e33538fe9bd6a27eb2e6a9267eaea0ce7d08d2e4a2545899"
+    },
+    {
+      "file": "data/spawn2/3.ndjson",
+      "sha256": "016eb46ffbd93520e0b6bf837ab0c459a68eb396301528acfc07ae435cde2d53"
+    },
+    {
+      "file": "data/spawn2/4.ndjson",
+      "sha256": "508a86b5917ba6d4e55f743ecbb298f16b13e45dd1930c6364c1ff937410824a"
+    },
+    {
+      "file": "data/spawn2/5.ndjson",
+      "sha256": "9cfa4d661a5b1f96e3b1d5a73bf04b8aa7dd0dcfb20e4a9992de2bd5fd211942"
+    },
+    {
+      "file": "data/spawn2/6.ndjson",
+      "sha256": "89a17ae4c3a6952f537c55bcaa8b02c62e269907c65925d80fda4097f428a9f3"
+    },
+    {
+      "file": "data/spawn2/7.ndjson",
+      "sha256": "80a372aa727802eac34fe396dcedb0c83d523d0fd7cb409d511606a464baa954"
+    },
+    {
+      "file": "data/spawn2/8.ndjson",
+      "sha256": "b343ff00947218ac6f3b2ee7c3af68eb54dd9384cb842302fe56614b7e84f4d5"
+    },
+    {
+      "file": "data/spawn2/9.ndjson",
+      "sha256": "5f18287ec2db86b16229ef3e1bc797600843c18b64c9bba3b87a48c0734180b1"
+    },
+    {
+      "file": "data/spawn2/a.ndjson",
+      "sha256": "9a496cd884d05064c627a37a9b89bab889e40903866441aa4f331446da7c722e"
+    },
+    {
+      "file": "data/spawn2/b.ndjson",
+      "sha256": "3aa923598ac4cd7632f023eae02e796df54a9bdfa870d8d568f854a37eadd878"
+    },
+    {
+      "file": "data/spawn2/c.ndjson",
+      "sha256": "99847b59870374b4ed113a1a1741dffe9aa82433b826e32acbb11b449f2efffc"
+    },
+    {
+      "file": "data/spawn2/d.ndjson",
+      "sha256": "fb6a68ff8743adc00f467b2cb70c9bc50a51b076991c6391ef27ed1aabb48082"
+    },
+    {
+      "file": "data/spawn2/e.ndjson",
+      "sha256": "bff5b2f91ca3b81aafd9081f25ac296915ef75f08b4654526c1f1c1b9116ec7f"
+    },
+    {
+      "file": "data/spawn2/f.ndjson",
+      "sha256": "74afdf330dc47ce7bd048e8002de38a5b8a7313b5836e82ca6a54f6ffff06259"
+    },
+    {
+      "file": "data/loottable_entries/0.ndjson",
+      "sha256": "730fa45de5fc9fb0ff302650a546c6f7fd66fc084df4494e194666c4275e1dd5"
+    },
+    {
+      "file": "data/loottable_entries/1.ndjson",
+      "sha256": "243d78f3b50951ecd2397094941d160ec7dfb7f812d432080ca5a4bedde836cb"
+    },
+    {
+      "file": "data/loottable_entries/2.ndjson",
+      "sha256": "045823c5203d68cf8fb15247383ba9f2f7f13782a0a3097f39ed882eafd9b890"
+    },
+    {
+      "file": "data/loottable_entries/3.ndjson",
+      "sha256": "f425d26f11beda0e79ca8e471989edbc54980de81fd5800d8f733f317f034b0e"
+    },
+    {
+      "file": "data/loottable_entries/4.ndjson",
+      "sha256": "9727ca36a50b2cd76a56ec04caef0c8d491d458e9866419035f9ebbcdb5e7f38"
+    },
+    {
+      "file": "data/loottable_entries/5.ndjson",
+      "sha256": "b35b023119ef6124dd970791e380505edc71752fbf5aa9ad37c6855143eaeb65"
+    },
+    {
+      "file": "data/loottable_entries/6.ndjson",
+      "sha256": "7ad7249f495526e782bdecce3f60712ad14baeaf2ddc0bda7681ab4aa6d56ccf"
+    },
+    {
+      "file": "data/loottable_entries/7.ndjson",
+      "sha256": "3331b3511fc8b7e1bed6f931a8eb7491079c8ef09688dd0677da910b3c322bcd"
+    },
+    {
+      "file": "data/loottable_entries/8.ndjson",
+      "sha256": "c2b49d336a66bc503251b218fb2c75af510fab46fbafb4d6bbcac0da9b4e9d4e"
+    },
+    {
+      "file": "data/loottable_entries/9.ndjson",
+      "sha256": "4b7e8ec7e837a57236170239eb6e1b3b3e936c2089382d029b7b2f858b3e579b"
+    },
+    {
+      "file": "data/loottable_entries/a.ndjson",
+      "sha256": "bc7ab37b649f18fc3bfb6daec96bb4e246b33b9fe4da738fc79855c1d71ea444"
+    },
+    {
+      "file": "data/loottable_entries/b.ndjson",
+      "sha256": "fdbcffdfe94fc598ef8d3c87e92d3add314284634efa6b965cd2320ed79f1a9c"
+    },
+    {
+      "file": "data/loottable_entries/c.ndjson",
+      "sha256": "d4fd15b847db9ec298e4c3c96b7fb4ce5b60703bec24534091ac5da9f63cd8de"
+    },
+    {
+      "file": "data/loottable_entries/d.ndjson",
+      "sha256": "cb16484fa87db9b90f9b55061dac3449b8748e4ef5f61bdfb53653be0ab60682"
+    },
+    {
+      "file": "data/loottable_entries/e.ndjson",
+      "sha256": "554f20235f54f03740a5df9da8fd6aabd4234e666e7b5b8a5e7dc2b5299830bf"
+    },
+    {
+      "file": "data/loottable_entries/f.ndjson",
+      "sha256": "022a5d855eeb89d77c1dd9b89b3b68dd558a324a2e6588a602e91d154d48c4a8"
+    },
+    {
+      "file": "data/lootdrop_entries/0.ndjson",
+      "sha256": "a804ec80b8eddf367e3b6be09cdb11bf91fa0bf36d2a40b9e1ac82cd149f4364"
+    },
+    {
+      "file": "data/lootdrop_entries/1.ndjson",
+      "sha256": "55fdca2b935c141e836175d2c5853c4e26f6b3070ba8b827b00cf5ce6f51a7d0"
+    },
+    {
+      "file": "data/lootdrop_entries/2.ndjson",
+      "sha256": "8e4d08cd7c705138cff936b7a95d079f45cf8e1150cb6ac5ef06f86e356f65a9"
+    },
+    {
+      "file": "data/lootdrop_entries/3.ndjson",
+      "sha256": "bdcaaabd637bf60904eb164708973a61c47f6c9f9ccaceb8d6950a68ef608f55"
+    },
+    {
+      "file": "data/lootdrop_entries/4.ndjson",
+      "sha256": "930c1c4284fc97e4326ec1ce3bf321c6abb560a6612926cd9e5687da5fb812ce"
+    },
+    {
+      "file": "data/lootdrop_entries/5.ndjson",
+      "sha256": "53b35c032fe9f108f63981be767b4e80f731aa12ec994e3adee059418b0278bc"
+    },
+    {
+      "file": "data/lootdrop_entries/6.ndjson",
+      "sha256": "2fce46173cd128d9eeb00a992956c25f2260995ea1fecacb5e32906fc5e15d11"
+    },
+    {
+      "file": "data/lootdrop_entries/7.ndjson",
+      "sha256": "7dd67d7bb92a3bdf3e85a96028bbe7cc69e9e759b02aeebf4e64db9e5fcff5e9"
+    },
+    {
+      "file": "data/lootdrop_entries/8.ndjson",
+      "sha256": "46146399b11139e02bccd64d41ce74b6a8378878da2042098cd9991985989d42"
+    },
+    {
+      "file": "data/lootdrop_entries/9.ndjson",
+      "sha256": "6ea171b4e6e826c9452fdd75de84f911e3360cad3b3cf84ccc30e2c8cd47e5e8"
+    },
+    {
+      "file": "data/lootdrop_entries/a.ndjson",
+      "sha256": "b94a804f9cd485136004fe5c4721129ca79240c18ffb5892dd9cb7fc6b51b3e4"
+    },
+    {
+      "file": "data/lootdrop_entries/b.ndjson",
+      "sha256": "c04366526db36505cbe1d432dd3119156dc36e3c5d0cee4f165c8edf9e22d540"
+    },
+    {
+      "file": "data/lootdrop_entries/c.ndjson",
+      "sha256": "6e6535e23f33332c37f695e97f789c7cac5687c1c762802752988ff1d9608dab"
+    },
+    {
+      "file": "data/lootdrop_entries/d.ndjson",
+      "sha256": "43a02979eab9cbce1a03bc4fea2ca42942f85ff6eb30b75ecdfec015810028b2"
+    },
+    {
+      "file": "data/lootdrop_entries/e.ndjson",
+      "sha256": "813927b31ea011dc3c056ccc9dc76387a66b4de901854c86fb2b3f9874f67132"
+    },
+    {
+      "file": "data/lootdrop_entries/f.ndjson",
+      "sha256": "ffb43e47b349d1923207a4190680b3244e1cb8f040c435a96102acb3f15db512"
+    }
+  ],
+  "overlaySnapshot": "changes/p99-armor-review/overlay-inspection.json",
+  "branches": [
+    {
+      "title": "Necromancer Kael Armor Quests",
+      "key": "kael/Bjarorm_Mjlorn",
+      "reward": {
+        "id": 25412,
+        "name": "Plague Bearer's Circlet",
+        "quantity": 1,
+        "classes": 1024
+      },
+      "requirements": [
+        {
+          "id": 24926,
+          "name": "Ancient Silk Turban",
+          "quantity": 1
+        },
+        {
+          "id": 25837,
+          "name": "Crushed Flame Opal",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 150000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 429,
+          "name": "King Tormax",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 419,
+          "name": "Kromrif",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 430,
+          "name": "Claws of Veeshan",
+          "delta": -20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Necromancer Kael Armor Quests",
+      "key": "kael/Bjarorm_Mjlorn",
+      "reward": {
+        "id": 25413,
+        "name": "Plague Bearer's Robe",
+        "quantity": 1,
+        "classes": 1024
+      },
+      "requirements": [
+        {
+          "id": 24921,
+          "name": "Ancient Silk Robe",
+          "quantity": 1
+        },
+        {
+          "id": 25807,
+          "name": "Pristine Emerald",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 150000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 429,
+          "name": "King Tormax",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 419,
+          "name": "Kromrif",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 430,
+          "name": "Claws of Veeshan",
+          "delta": -20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Necromancer Kael Armor Quests",
+      "key": "kael/Bjarorm_Mjlorn",
+      "reward": {
+        "id": 25414,
+        "name": "Plague Bearer's Sleeves",
+        "quantity": 1,
+        "classes": 1024
+      },
+      "requirements": [
+        {
+          "id": 24923,
+          "name": "Ancient Silk Sleeves",
+          "quantity": 1
+        },
+        {
+          "id": 25818,
+          "name": "Flawed Topaz",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 150000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 429,
+          "name": "King Tormax",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 419,
+          "name": "Kromrif",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 430,
+          "name": "Claws of Veeshan",
+          "delta": -20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Necromancer Kael Armor Quests",
+      "key": "kael/Bjarorm_Mjlorn",
+      "reward": {
+        "id": 25415,
+        "name": "Plague Bearer's Wristguard",
+        "quantity": 1,
+        "classes": 1024
+      },
+      "requirements": [
+        {
+          "id": 24925,
+          "name": "Ancient Silk Wristband",
+          "quantity": 1
+        },
+        {
+          "id": 25841,
+          "name": "Crushed Onyx Sapphire",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 150000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 429,
+          "name": "King Tormax",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 419,
+          "name": "Kromrif",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 430,
+          "name": "Claws of Veeshan",
+          "delta": -20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Necromancer Kael Armor Quests",
+      "key": "kael/Bjarorm_Mjlorn",
+      "reward": {
+        "id": 25416,
+        "name": "Plague Bearer's Gloves",
+        "quantity": 1,
+        "classes": 1024
+      },
+      "requirements": [
+        {
+          "id": 24927,
+          "name": "Ancient Silk Gloves",
+          "quantity": 1
+        },
+        {
+          "id": 25832,
+          "name": "Crushed Topaz",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 150000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 429,
+          "name": "King Tormax",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 419,
+          "name": "Kromrif",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 430,
+          "name": "Claws of Veeshan",
+          "delta": -20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Necromancer Kael Armor Quests",
+      "key": "kael/Bjarorm_Mjlorn",
+      "reward": {
+        "id": 25417,
+        "name": "Plague Bearer's Trousers",
+        "quantity": 1,
+        "classes": 1024
+      },
+      "requirements": [
+        {
+          "id": 24922,
+          "name": "Ancient Silk Pantaloons",
+          "quantity": 1
+        },
+        {
+          "id": 25816,
+          "name": "Nephrite",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 150000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 429,
+          "name": "King Tormax",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 419,
+          "name": "Kromrif",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 430,
+          "name": "Claws of Veeshan",
+          "delta": -20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Necromancer Kael Armor Quests",
+      "key": "kael/Bjarorm_Mjlorn",
+      "reward": {
+        "id": 25418,
+        "name": "Plague Bearer's Boots",
+        "quantity": 1,
+        "classes": 1024
+      },
+      "requirements": [
+        {
+          "id": 24924,
+          "name": "Ancient Silk Boots",
+          "quantity": 1
+        },
+        {
+          "id": 25829,
+          "name": "Crushed Jaundice Gem",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 150000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 429,
+          "name": "King Tormax",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 419,
+          "name": "Kromrif",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 430,
+          "name": "Claws of Veeshan",
+          "delta": -20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Necromancer Skyshrine Armor Quests",
+      "key": "skyshrine/Abudan_Fe-Dhar",
+      "reward": {
+        "id": 31161,
+        "name": "Rotting Crown",
+        "quantity": 1,
+        "classes": 1024
+      },
+      "requirements": [
+        {
+          "id": 24982,
+          "name": "Tattered Silk Turban",
+          "quantity": 1
+        },
+        {
+          "id": 25837,
+          "name": "Crushed Flame Opal",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 175000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 430,
+          "name": "Claws of Veeshan",
+          "delta": 30,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 436,
+          "name": "Yelinak",
+          "delta": 30,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Necromancer Skyshrine Armor Quests",
+      "key": "skyshrine/Abudan_Fe-Dhar",
+      "reward": {
+        "id": 31162,
+        "name": "Rotting Robe",
+        "quantity": 1,
+        "classes": 1024
+      },
+      "requirements": [
+        {
+          "id": 24977,
+          "name": "Tattered Silk Robe",
+          "quantity": 1
+        },
+        {
+          "id": 25807,
+          "name": "Pristine Emerald",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 175000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 430,
+          "name": "Claws of Veeshan",
+          "delta": 30,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 436,
+          "name": "Yelinak",
+          "delta": 30,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Necromancer Skyshrine Armor Quests",
+      "key": "skyshrine/Abudan_Fe-Dhar",
+      "reward": {
+        "id": 31163,
+        "name": "Rotting Sleeves",
+        "quantity": 1,
+        "classes": 1024
+      },
+      "requirements": [
+        {
+          "id": 24979,
+          "name": "Tattered Silk Sleeves",
+          "quantity": 1
+        },
+        {
+          "id": 25818,
+          "name": "Flawed Topaz",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 175000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 430,
+          "name": "Claws of Veeshan",
+          "delta": 30,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 436,
+          "name": "Yelinak",
+          "delta": 30,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Necromancer Skyshrine Armor Quests",
+      "key": "skyshrine/Abudan_Fe-Dhar",
+      "reward": {
+        "id": 31164,
+        "name": "Rotting Wristguard",
+        "quantity": 1,
+        "classes": 1024
+      },
+      "requirements": [
+        {
+          "id": 24981,
+          "name": "Tattered Silk Wristband",
+          "quantity": 1
+        },
+        {
+          "id": 25841,
+          "name": "Crushed Onyx Sapphire",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 175000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 430,
+          "name": "Claws of Veeshan",
+          "delta": 30,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 436,
+          "name": "Yelinak",
+          "delta": 30,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Necromancer Skyshrine Armor Quests",
+      "key": "skyshrine/Abudan_Fe-Dhar",
+      "reward": {
+        "id": 31165,
+        "name": "Rotting Gloves",
+        "quantity": 1,
+        "classes": 1024
+      },
+      "requirements": [
+        {
+          "id": 24983,
+          "name": "Tattered Silk Gloves",
+          "quantity": 1
+        },
+        {
+          "id": 25832,
+          "name": "Crushed Topaz",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 175000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 430,
+          "name": "Claws of Veeshan",
+          "delta": 30,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 436,
+          "name": "Yelinak",
+          "delta": 30,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Necromancer Skyshrine Armor Quests",
+      "key": "skyshrine/Abudan_Fe-Dhar",
+      "reward": {
+        "id": 31166,
+        "name": "Rotting Trousers",
+        "quantity": 1,
+        "classes": 1024
+      },
+      "requirements": [
+        {
+          "id": 24978,
+          "name": "Tattered Silk Pantaloons",
+          "quantity": 1
+        },
+        {
+          "id": 25816,
+          "name": "Nephrite",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 175000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 430,
+          "name": "Claws of Veeshan",
+          "delta": 30,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 436,
+          "name": "Yelinak",
+          "delta": 30,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Necromancer Skyshrine Armor Quests",
+      "key": "skyshrine/Abudan_Fe-Dhar",
+      "reward": {
+        "id": 31167,
+        "name": "Rotting Boots",
+        "quantity": 1,
+        "classes": 1024
+      },
+      "requirements": [
+        {
+          "id": 24980,
+          "name": "Tattered Silk Boots",
+          "quantity": 1
+        },
+        {
+          "id": 25829,
+          "name": "Crushed Jaundice Gem",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 175000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 430,
+          "name": "Claws of Veeshan",
+          "delta": 30,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 436,
+          "name": "Yelinak",
+          "delta": 30,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Necromancer Thurgadin Armor Quests",
+      "key": "thurgadina/Lorekeeper_Zorik",
+      "reward": {
+        "id": 31063,
+        "name": "Warlock's Crown",
+        "quantity": 1,
+        "classes": 1024
+      },
+      "requirements": [
+        {
+          "id": 24954,
+          "name": "Torn Enchanted Silk Turban",
+          "quantity": 1
+        },
+        {
+          "id": 25837,
+          "name": "Crushed Flame Opal",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 100000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 406,
+          "name": "Coldain",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 405,
+          "name": "Dain Frostreaver IV",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 419,
+          "name": "Kromrif",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Necromancer Thurgadin Armor Quests",
+      "key": "thurgadina/Lorekeeper_Zorik",
+      "reward": {
+        "id": 31064,
+        "name": "Warlock's Robe",
+        "quantity": 1,
+        "classes": 1024
+      },
+      "requirements": [
+        {
+          "id": 24949,
+          "name": "Torn Enchanted Silk Robe",
+          "quantity": 1
+        },
+        {
+          "id": 25807,
+          "name": "Pristine Emerald",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 100000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 406,
+          "name": "Coldain",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 405,
+          "name": "Dain Frostreaver IV",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 419,
+          "name": "Kromrif",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Necromancer Thurgadin Armor Quests",
+      "key": "thurgadina/Lorekeeper_Zorik",
+      "reward": {
+        "id": 31065,
+        "name": "Warlock's Sleeves",
+        "quantity": 1,
+        "classes": 1024
+      },
+      "requirements": [
+        {
+          "id": 24951,
+          "name": "Torn Enchanted Silk Sleeves",
+          "quantity": 1
+        },
+        {
+          "id": 25818,
+          "name": "Flawed Topaz",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 100000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 406,
+          "name": "Coldain",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 405,
+          "name": "Dain Frostreaver IV",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 419,
+          "name": "Kromrif",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Necromancer Thurgadin Armor Quests",
+      "key": "thurgadina/Lorekeeper_Zorik",
+      "reward": {
+        "id": 31066,
+        "name": "Warlock's Wristguard",
+        "quantity": 1,
+        "classes": 1024
+      },
+      "requirements": [
+        {
+          "id": 24953,
+          "name": "Torn Enchanted Silk Wristband",
+          "quantity": 1
+        },
+        {
+          "id": 25841,
+          "name": "Crushed Onyx Sapphire",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 100000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 406,
+          "name": "Coldain",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 405,
+          "name": "Dain Frostreaver IV",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 419,
+          "name": "Kromrif",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Necromancer Thurgadin Armor Quests",
+      "key": "thurgadina/Lorekeeper_Zorik",
+      "reward": {
+        "id": 31067,
+        "name": "Warlock's Gloves",
+        "quantity": 1,
+        "classes": 1024
+      },
+      "requirements": [
+        {
+          "id": 24955,
+          "name": "Torn Enchanted Silk Gloves",
+          "quantity": 1
+        },
+        {
+          "id": 25832,
+          "name": "Crushed Topaz",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 100000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 406,
+          "name": "Coldain",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 405,
+          "name": "Dain Frostreaver IV",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 419,
+          "name": "Kromrif",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Necromancer Thurgadin Armor Quests",
+      "key": "thurgadina/Lorekeeper_Zorik",
+      "reward": {
+        "id": 31068,
+        "name": "Warlock's Pantaloons",
+        "quantity": 1,
+        "classes": 1024
+      },
+      "requirements": [
+        {
+          "id": 24950,
+          "name": "Torn Enchanted Silk Pantaloons",
+          "quantity": 1
+        },
+        {
+          "id": 25816,
+          "name": "Nephrite",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 100000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 406,
+          "name": "Coldain",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 405,
+          "name": "Dain Frostreaver IV",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 419,
+          "name": "Kromrif",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Necromancer Thurgadin Armor Quests",
+      "key": "thurgadina/Lorekeeper_Zorik",
+      "reward": {
+        "id": 31069,
+        "name": "Warlock's Boots",
+        "quantity": 1,
+        "classes": 1024
+      },
+      "requirements": [
+        {
+          "id": 24952,
+          "name": "Torn Enchanted Silk Boots",
+          "quantity": 1
+        },
+        {
+          "id": 25829,
+          "name": "Crushed Jaundice Gem",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 100000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 406,
+          "name": "Coldain",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 405,
+          "name": "Dain Frostreaver IV",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 419,
+          "name": "Kromrif",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Paladin Kael Armor Quests",
+      "key": "kael/Barlek_Stonefist",
+      "reward": {
+        "id": 25370,
+        "name": "Shining Helm",
+        "quantity": 1,
+        "classes": 4
+      },
+      "requirements": [
+        {
+          "id": 24905,
+          "name": "Ancient Tarnished Plate Helmet",
+          "quantity": 1
+        },
+        {
+          "id": 25831,
+          "name": "Crushed Coral",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 150000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 429,
+          "name": "King Tormax",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 419,
+          "name": "Kromrif",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 430,
+          "name": "Claws of Veeshan",
+          "delta": -20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Paladin Kael Armor Quests",
+      "key": "kael/Barlek_Stonefist",
+      "reward": {
+        "id": 25371,
+        "name": "Shining Breastplate",
+        "quantity": 1,
+        "classes": 4
+      },
+      "requirements": [
+        {
+          "id": 24900,
+          "name": "Ancient Tarnished Breastplate",
+          "quantity": 1
+        },
+        {
+          "id": 25814,
+          "name": "Flawless Diamond",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 150000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 429,
+          "name": "King Tormax",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 419,
+          "name": "Kromrif",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 430,
+          "name": "Claws of Veeshan",
+          "delta": -20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Paladin Kael Armor Quests",
+      "key": "kael/Barlek_Stonefist",
+      "reward": {
+        "id": 25372,
+        "name": "Shining Vambraces",
+        "quantity": 1,
+        "classes": 4
+      },
+      "requirements": [
+        {
+          "id": 24902,
+          "name": "Ancient Tarnished Vambraces",
+          "quantity": 1
+        },
+        {
+          "id": 25821,
+          "name": "Flawed Emerald",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 150000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 429,
+          "name": "King Tormax",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 419,
+          "name": "Kromrif",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 430,
+          "name": "Claws of Veeshan",
+          "delta": -20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Paladin Kael Armor Quests",
+      "key": "kael/Barlek_Stonefist",
+      "reward": {
+        "id": 25373,
+        "name": "Shining Bracer",
+        "quantity": 1,
+        "classes": 4
+      },
+      "requirements": [
+        {
+          "id": 24904,
+          "name": "Ancient Tarnished Plate Bracelet",
+          "quantity": 1
+        },
+        {
+          "id": 25838,
+          "name": "Crushed Flame Emerald",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 150000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 429,
+          "name": "King Tormax",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 419,
+          "name": "Kromrif",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 430,
+          "name": "Claws of Veeshan",
+          "delta": -20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Paladin Kael Armor Quests",
+      "key": "kael/Barlek_Stonefist",
+      "reward": {
+        "id": 25374,
+        "name": "Shining Gauntlets",
+        "quantity": 1,
+        "classes": 4
+      },
+      "requirements": [
+        {
+          "id": 24906,
+          "name": "Ancient Tarnished Plate Gauntlets",
+          "quantity": 1
+        },
+        {
+          "id": 25832,
+          "name": "Crushed Topaz",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 150000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 429,
+          "name": "King Tormax",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 419,
+          "name": "Kromrif",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 430,
+          "name": "Claws of Veeshan",
+          "delta": -20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Paladin Kael Armor Quests",
+      "key": "kael/Barlek_Stonefist",
+      "reward": {
+        "id": 25375,
+        "name": "Shining Greaves",
+        "quantity": 1,
+        "classes": 4
+      },
+      "requirements": [
+        {
+          "id": 24901,
+          "name": "Ancient Tarnished Greaves",
+          "quantity": 1
+        },
+        {
+          "id": 25825,
+          "name": "Flawed Sea Sapphire",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 150000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 429,
+          "name": "King Tormax",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 419,
+          "name": "Kromrif",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 430,
+          "name": "Claws of Veeshan",
+          "delta": -20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Paladin Kael Armor Quests",
+      "key": "kael/Barlek_Stonefist",
+      "reward": {
+        "id": 25376,
+        "name": "Shining Boots",
+        "quantity": 1,
+        "classes": 4
+      },
+      "requirements": [
+        {
+          "id": 24903,
+          "name": "Ancient Tarnished Plate Boots",
+          "quantity": 1
+        },
+        {
+          "id": 25833,
+          "name": "Crushed Black Marble",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 150000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 429,
+          "name": "King Tormax",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 419,
+          "name": "Kromrif",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 430,
+          "name": "Claws of Veeshan",
+          "delta": -20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Paladin Skyshrine Armor Quests",
+      "key": "skyshrine/Adwetram_Fe-Dhar",
+      "reward": {
+        "id": 31119,
+        "name": "Scaled Knight's Helm",
+        "quantity": 1,
+        "classes": 4
+      },
+      "requirements": [
+        {
+          "id": 24961,
+          "name": "Unadorned Plate Helmet",
+          "quantity": 1
+        },
+        {
+          "id": 25831,
+          "name": "Crushed Coral",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 175000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 430,
+          "name": "Claws of Veeshan",
+          "delta": 30,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 436,
+          "name": "Yelinak",
+          "delta": 30,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Paladin Skyshrine Armor Quests",
+      "key": "skyshrine/Adwetram_Fe-Dhar",
+      "reward": {
+        "id": 31120,
+        "name": "Scaled Knight's Breastplate",
+        "quantity": 1,
+        "classes": 4
+      },
+      "requirements": [
+        {
+          "id": 24956,
+          "name": "Unadorned Breastplate",
+          "quantity": 1
+        },
+        {
+          "id": 25814,
+          "name": "Flawless Diamond",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 175000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 430,
+          "name": "Claws of Veeshan",
+          "delta": 30,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 436,
+          "name": "Yelinak",
+          "delta": 30,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Paladin Skyshrine Armor Quests",
+      "key": "skyshrine/Adwetram_Fe-Dhar",
+      "reward": {
+        "id": 31121,
+        "name": "Scaled Knight's Vambraces",
+        "quantity": 1,
+        "classes": 4
+      },
+      "requirements": [
+        {
+          "id": 24958,
+          "name": "Unadorned Plate Vambraces",
+          "quantity": 1
+        },
+        {
+          "id": 25821,
+          "name": "Flawed Emerald",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 175000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 430,
+          "name": "Claws of Veeshan",
+          "delta": 30,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 436,
+          "name": "Yelinak",
+          "delta": 30,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Paladin Skyshrine Armor Quests",
+      "key": "skyshrine/Adwetram_Fe-Dhar",
+      "reward": {
+        "id": 31122,
+        "name": "Scaled Knight's Bracer",
+        "quantity": 1,
+        "classes": 4
+      },
+      "requirements": [
+        {
+          "id": 24960,
+          "name": "Unadorned Plate Bracer",
+          "quantity": 1
+        },
+        {
+          "id": 25838,
+          "name": "Crushed Flame Emerald",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 175000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 430,
+          "name": "Claws of Veeshan",
+          "delta": 30,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 436,
+          "name": "Yelinak",
+          "delta": 30,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Paladin Skyshrine Armor Quests",
+      "key": "skyshrine/Adwetram_Fe-Dhar",
+      "reward": {
+        "id": 31123,
+        "name": "Scaled Knight's Gauntlets",
+        "quantity": 1,
+        "classes": 4
+      },
+      "requirements": [
+        {
+          "id": 24962,
+          "name": "Unadorned Plate Gauntlets",
+          "quantity": 1
+        },
+        {
+          "id": 25832,
+          "name": "Crushed Topaz",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 175000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 430,
+          "name": "Claws of Veeshan",
+          "delta": 30,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 436,
+          "name": "Yelinak",
+          "delta": 30,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Paladin Skyshrine Armor Quests",
+      "key": "skyshrine/Adwetram_Fe-Dhar",
+      "reward": {
+        "id": 31124,
+        "name": "Scaled Knight's Greaves",
+        "quantity": 1,
+        "classes": 4
+      },
+      "requirements": [
+        {
+          "id": 24957,
+          "name": "Unadorned Plate Greaves",
+          "quantity": 1
+        },
+        {
+          "id": 25825,
+          "name": "Flawed Sea Sapphire",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 175000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 430,
+          "name": "Claws of Veeshan",
+          "delta": 30,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 436,
+          "name": "Yelinak",
+          "delta": 30,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Paladin Skyshrine Armor Quests",
+      "key": "skyshrine/Adwetram_Fe-Dhar",
+      "reward": {
+        "id": 31125,
+        "name": "Scaled Knight's Boots",
+        "quantity": 1,
+        "classes": 4
+      },
+      "requirements": [
+        {
+          "id": 24959,
+          "name": "Unadorned Plate Boots",
+          "quantity": 1
+        },
+        {
+          "id": 25833,
+          "name": "Crushed Black Marble",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 175000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 430,
+          "name": "Claws of Veeshan",
+          "delta": 30,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 436,
+          "name": "Yelinak",
+          "delta": 30,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Paladin Thurgadin Armor Quests",
+      "key": "thurgadina/Battlepriest_Daragor",
+      "reward": {
+        "id": 31021,
+        "name": "Runed Protector's Helm",
+        "quantity": 1,
+        "classes": 4
+      },
+      "requirements": [
+        {
+          "id": 24933,
+          "name": "Corroded Plate Helmet",
+          "quantity": 1
+        },
+        {
+          "id": 25831,
+          "name": "Crushed Coral",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 100000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 406,
+          "name": "Coldain",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 405,
+          "name": "Dain Frostreaver IV",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 419,
+          "name": "Kromrif",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Paladin Thurgadin Armor Quests",
+      "key": "thurgadina/Battlepriest_Daragor",
+      "reward": {
+        "id": 31022,
+        "name": "Runed Protector's Breastplate",
+        "quantity": 1,
+        "classes": 4
+      },
+      "requirements": [
+        {
+          "id": 24928,
+          "name": "Corroded Breastplate",
+          "quantity": 1
+        },
+        {
+          "id": 25814,
+          "name": "Flawless Diamond",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 100000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 406,
+          "name": "Coldain",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 405,
+          "name": "Dain Frostreaver IV",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 419,
+          "name": "Kromrif",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Paladin Thurgadin Armor Quests",
+      "key": "thurgadina/Battlepriest_Daragor",
+      "reward": {
+        "id": 31023,
+        "name": "Runed Protector's Vambraces",
+        "quantity": 1,
+        "classes": 4
+      },
+      "requirements": [
+        {
+          "id": 24930,
+          "name": "Corroded Plate Vambraces",
+          "quantity": 1
+        },
+        {
+          "id": 25821,
+          "name": "Flawed Emerald",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 100000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 406,
+          "name": "Coldain",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 405,
+          "name": "Dain Frostreaver IV",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 419,
+          "name": "Kromrif",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Paladin Thurgadin Armor Quests",
+      "key": "thurgadina/Battlepriest_Daragor",
+      "reward": {
+        "id": 31024,
+        "name": "Runed Protector's Bracer",
+        "quantity": 1,
+        "classes": 4
+      },
+      "requirements": [
+        {
+          "id": 24932,
+          "name": "Corroded Plate Bracer",
+          "quantity": 1
+        },
+        {
+          "id": 25838,
+          "name": "Crushed Flame Emerald",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 100000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 406,
+          "name": "Coldain",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 405,
+          "name": "Dain Frostreaver IV",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 419,
+          "name": "Kromrif",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Paladin Thurgadin Armor Quests",
+      "key": "thurgadina/Battlepriest_Daragor",
+      "reward": {
+        "id": 31025,
+        "name": "Runed Protector's Gauntlets",
+        "quantity": 1,
+        "classes": 4
+      },
+      "requirements": [
+        {
+          "id": 24934,
+          "name": "Corroded Plate Gauntlets",
+          "quantity": 1
+        },
+        {
+          "id": 25832,
+          "name": "Crushed Topaz",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 100000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 406,
+          "name": "Coldain",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 405,
+          "name": "Dain Frostreaver IV",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 419,
+          "name": "Kromrif",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Paladin Thurgadin Armor Quests",
+      "key": "thurgadina/Battlepriest_Daragor",
+      "reward": {
+        "id": 31026,
+        "name": "Runed Protector's Greaves",
+        "quantity": 1,
+        "classes": 4
+      },
+      "requirements": [
+        {
+          "id": 24929,
+          "name": "Corroded Plate Greaves",
+          "quantity": 1
+        },
+        {
+          "id": 25825,
+          "name": "Flawed Sea Sapphire",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 100000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 406,
+          "name": "Coldain",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 405,
+          "name": "Dain Frostreaver IV",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 419,
+          "name": "Kromrif",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Paladin Thurgadin Armor Quests",
+      "key": "thurgadina/Battlepriest_Daragor",
+      "reward": {
+        "id": 31027,
+        "name": "Runed Protector's Boots",
+        "quantity": 1,
+        "classes": 4
+      },
+      "requirements": [
+        {
+          "id": 24931,
+          "name": "Corroded Plate Boots",
+          "quantity": 1
+        },
+        {
+          "id": 25833,
+          "name": "Crushed Black Marble",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 100000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 406,
+          "name": "Coldain",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 405,
+          "name": "Dain Frostreaver IV",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 419,
+          "name": "Kromrif",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Ranger Kael Armor Quests",
+      "key": "kael/Gragek_Mjlorkigar",
+      "reward": {
+        "id": 25363,
+        "name": "Forest Stalker's Coif",
+        "quantity": 1,
+        "classes": 8
+      },
+      "requirements": [
+        {
+          "id": 24912,
+          "name": "Ancient Tarnished Chain Coif",
+          "quantity": 1
+        },
+        {
+          "id": 25831,
+          "name": "Crushed Coral",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 150000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 429,
+          "name": "King Tormax",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 419,
+          "name": "Kromrif",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 430,
+          "name": "Claws of Veeshan",
+          "delta": -20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Ranger Kael Armor Quests",
+      "key": "kael/Gragek_Mjlorkigar",
+      "reward": {
+        "id": 25364,
+        "name": "Forest Stalker's Breastplate",
+        "quantity": 1,
+        "classes": 8
+      },
+      "requirements": [
+        {
+          "id": 24907,
+          "name": "Ancient Tarnished Chain Tunic",
+          "quantity": 1
+        },
+        {
+          "id": 25814,
+          "name": "Flawless Diamond",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 150000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 429,
+          "name": "King Tormax",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 419,
+          "name": "Kromrif",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 430,
+          "name": "Claws of Veeshan",
+          "delta": -20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Ranger Kael Armor Quests",
+      "key": "kael/Gragek_Mjlorkigar",
+      "reward": {
+        "id": 25365,
+        "name": "Forest Stalker's Vambraces",
+        "quantity": 1,
+        "classes": 8
+      },
+      "requirements": [
+        {
+          "id": 24909,
+          "name": "Ancient Tarnished Chain Sleeves",
+          "quantity": 1
+        },
+        {
+          "id": 25821,
+          "name": "Flawed Emerald",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 150000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 429,
+          "name": "King Tormax",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 419,
+          "name": "Kromrif",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 430,
+          "name": "Claws of Veeshan",
+          "delta": -20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Ranger Kael Armor Quests",
+      "key": "kael/Gragek_Mjlorkigar",
+      "reward": {
+        "id": 25366,
+        "name": "Forest Stalker's Bracer",
+        "quantity": 1,
+        "classes": 8
+      },
+      "requirements": [
+        {
+          "id": 24911,
+          "name": "Ancient Tarnished Chain Bracer",
+          "quantity": 1
+        },
+        {
+          "id": 25838,
+          "name": "Crushed Flame Emerald",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 150000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 429,
+          "name": "King Tormax",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 419,
+          "name": "Kromrif",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 430,
+          "name": "Claws of Veeshan",
+          "delta": -20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Ranger Kael Armor Quests",
+      "key": "kael/Gragek_Mjlorkigar",
+      "reward": {
+        "id": 25367,
+        "name": "Forest Stalker's Gauntlets",
+        "quantity": 1,
+        "classes": 8
+      },
+      "requirements": [
+        {
+          "id": 24913,
+          "name": "Ancient Tarnished Chain Gauntlets",
+          "quantity": 1
+        },
+        {
+          "id": 25832,
+          "name": "Crushed Topaz",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 150000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 429,
+          "name": "King Tormax",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 419,
+          "name": "Kromrif",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 430,
+          "name": "Claws of Veeshan",
+          "delta": -20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Ranger Kael Armor Quests",
+      "key": "kael/Gragek_Mjlorkigar",
+      "reward": {
+        "id": 25368,
+        "name": "Forest Stalker's Greaves",
+        "quantity": 1,
+        "classes": 8
+      },
+      "requirements": [
+        {
+          "id": 24908,
+          "name": "Ancient Tarnished Chain Leggings",
+          "quantity": 1
+        },
+        {
+          "id": 25825,
+          "name": "Flawed Sea Sapphire",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 150000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 429,
+          "name": "King Tormax",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 419,
+          "name": "Kromrif",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 430,
+          "name": "Claws of Veeshan",
+          "delta": -20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Ranger Kael Armor Quests",
+      "key": "kael/Gragek_Mjlorkigar",
+      "reward": {
+        "id": 25369,
+        "name": "Forest Stalker's Boots",
+        "quantity": 1,
+        "classes": 8
+      },
+      "requirements": [
+        {
+          "id": 24910,
+          "name": "Ancient Tarnished Chain Boots",
+          "quantity": 1
+        },
+        {
+          "id": 25833,
+          "name": "Crushed Black Marble",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 150000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 429,
+          "name": "King Tormax",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 419,
+          "name": "Kromrif",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 430,
+          "name": "Claws of Veeshan",
+          "delta": -20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Ranger Skyshrine Armor Quests",
+      "key": "skyshrine/Nalelin_Fe-Dhar",
+      "reward": {
+        "id": 31112,
+        "name": "Golden Leaf Helm",
+        "quantity": 1,
+        "classes": 8
+      },
+      "requirements": [
+        {
+          "id": 24968,
+          "name": "Unadorned Chain Coif",
+          "quantity": 1
+        },
+        {
+          "id": 25831,
+          "name": "Crushed Coral",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 175000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 430,
+          "name": "Claws of Veeshan",
+          "delta": 30,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 436,
+          "name": "Yelinak",
+          "delta": 30,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Ranger Skyshrine Armor Quests",
+      "key": "skyshrine/Nalelin_Fe-Dhar",
+      "reward": {
+        "id": 31113,
+        "name": "Golden Leaf Breastplate",
+        "quantity": 1,
+        "classes": 8
+      },
+      "requirements": [
+        {
+          "id": 24963,
+          "name": "Unadorned Chain Tunic",
+          "quantity": 1
+        },
+        {
+          "id": 25814,
+          "name": "Flawless Diamond",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 175000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 430,
+          "name": "Claws of Veeshan",
+          "delta": 30,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 436,
+          "name": "Yelinak",
+          "delta": 30,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Ranger Skyshrine Armor Quests",
+      "key": "skyshrine/Nalelin_Fe-Dhar",
+      "reward": {
+        "id": 31114,
+        "name": "Golden Leaf Vambraces",
+        "quantity": 1,
+        "classes": 8
+      },
+      "requirements": [
+        {
+          "id": 24965,
+          "name": "Unadorned Chain Sleeves",
+          "quantity": 1
+        },
+        {
+          "id": 25821,
+          "name": "Flawed Emerald",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 175000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 430,
+          "name": "Claws of Veeshan",
+          "delta": 30,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 436,
+          "name": "Yelinak",
+          "delta": 30,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Ranger Skyshrine Armor Quests",
+      "key": "skyshrine/Nalelin_Fe-Dhar",
+      "reward": {
+        "id": 31115,
+        "name": "Golden Leaf Bracer",
+        "quantity": 1,
+        "classes": 8
+      },
+      "requirements": [
+        {
+          "id": 24967,
+          "name": "Unadorned Chain Bracer",
+          "quantity": 1
+        },
+        {
+          "id": 25838,
+          "name": "Crushed Flame Emerald",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 175000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 430,
+          "name": "Claws of Veeshan",
+          "delta": 30,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 436,
+          "name": "Yelinak",
+          "delta": 30,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Ranger Skyshrine Armor Quests",
+      "key": "skyshrine/Nalelin_Fe-Dhar",
+      "reward": {
+        "id": 31116,
+        "name": "Golden Leaf Gauntlets",
+        "quantity": 1,
+        "classes": 8
+      },
+      "requirements": [
+        {
+          "id": 24969,
+          "name": "Unadorned Chain Gauntlets",
+          "quantity": 1
+        },
+        {
+          "id": 25832,
+          "name": "Crushed Topaz",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 175000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 430,
+          "name": "Claws of Veeshan",
+          "delta": 30,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 436,
+          "name": "Yelinak",
+          "delta": 30,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Ranger Skyshrine Armor Quests",
+      "key": "skyshrine/Nalelin_Fe-Dhar",
+      "reward": {
+        "id": 31117,
+        "name": "Golden Leaf Greaves",
+        "quantity": 1,
+        "classes": 8
+      },
+      "requirements": [
+        {
+          "id": 24964,
+          "name": "Unadorned Chain Leggings",
+          "quantity": 1
+        },
+        {
+          "id": 25825,
+          "name": "Flawed Sea Sapphire",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 175000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 430,
+          "name": "Claws of Veeshan",
+          "delta": 30,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 436,
+          "name": "Yelinak",
+          "delta": 30,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Ranger Skyshrine Armor Quests",
+      "key": "skyshrine/Nalelin_Fe-Dhar",
+      "reward": {
+        "id": 31118,
+        "name": "Golden Leaf Boots",
+        "quantity": 1,
+        "classes": 8
+      },
+      "requirements": [
+        {
+          "id": 24966,
+          "name": "Unadorned Chain Boots",
+          "quantity": 1
+        },
+        {
+          "id": 25833,
+          "name": "Crushed Black Marble",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 175000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 430,
+          "name": "Claws of Veeshan",
+          "delta": 30,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 436,
+          "name": "Yelinak",
+          "delta": 30,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Ranger Thurgadin Armor Quests",
+      "key": "thurgadina/Argash",
+      "reward": {
+        "id": 31014,
+        "name": "Runed Scout's Helm",
+        "quantity": 1,
+        "classes": 8
+      },
+      "requirements": [
+        {
+          "id": 24940,
+          "name": "Corroded Chain Coif",
+          "quantity": 1
+        },
+        {
+          "id": 25831,
+          "name": "Crushed Coral",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 100000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 406,
+          "name": "Coldain",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 405,
+          "name": "Dain Frostreaver IV",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 419,
+          "name": "Kromrif",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Ranger Thurgadin Armor Quests",
+      "key": "thurgadina/Argash",
+      "reward": {
+        "id": 31015,
+        "name": "Runed Scout's Breastplate",
+        "quantity": 1,
+        "classes": 8
+      },
+      "requirements": [
+        {
+          "id": 24935,
+          "name": "Corroded Chain Tunic",
+          "quantity": 1
+        },
+        {
+          "id": 25814,
+          "name": "Flawless Diamond",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 100000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 406,
+          "name": "Coldain",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 405,
+          "name": "Dain Frostreaver IV",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 419,
+          "name": "Kromrif",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Ranger Thurgadin Armor Quests",
+      "key": "thurgadina/Argash",
+      "reward": {
+        "id": 31016,
+        "name": "Runed Scout's Vambraces",
+        "quantity": 1,
+        "classes": 8
+      },
+      "requirements": [
+        {
+          "id": 24937,
+          "name": "Corroded Chain Sleeves",
+          "quantity": 1
+        },
+        {
+          "id": 25821,
+          "name": "Flawed Emerald",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 100000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 406,
+          "name": "Coldain",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 405,
+          "name": "Dain Frostreaver IV",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 419,
+          "name": "Kromrif",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Ranger Thurgadin Armor Quests",
+      "key": "thurgadina/Argash",
+      "reward": {
+        "id": 31017,
+        "name": "Runed Scout's Bracer",
+        "quantity": 1,
+        "classes": 8
+      },
+      "requirements": [
+        {
+          "id": 24939,
+          "name": "Corroded Chain Bracer",
+          "quantity": 1
+        },
+        {
+          "id": 25838,
+          "name": "Crushed Flame Emerald",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 100000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 406,
+          "name": "Coldain",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 405,
+          "name": "Dain Frostreaver IV",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 419,
+          "name": "Kromrif",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Ranger Thurgadin Armor Quests",
+      "key": "thurgadina/Argash",
+      "reward": {
+        "id": 31018,
+        "name": "Runed Scout's Gauntlets",
+        "quantity": 1,
+        "classes": 8
+      },
+      "requirements": [
+        {
+          "id": 24941,
+          "name": "Corroded Chain Gauntlets",
+          "quantity": 1
+        },
+        {
+          "id": 25832,
+          "name": "Crushed Topaz",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 100000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 406,
+          "name": "Coldain",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 405,
+          "name": "Dain Frostreaver IV",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 419,
+          "name": "Kromrif",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Ranger Thurgadin Armor Quests",
+      "key": "thurgadina/Argash",
+      "reward": {
+        "id": 31019,
+        "name": "Runed Scout's Greaves",
+        "quantity": 1,
+        "classes": 8
+      },
+      "requirements": [
+        {
+          "id": 24936,
+          "name": "Corroded Chain Leggings",
+          "quantity": 1
+        },
+        {
+          "id": 25825,
+          "name": "Flawed Sea Sapphire",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 100000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 406,
+          "name": "Coldain",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 405,
+          "name": "Dain Frostreaver IV",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 419,
+          "name": "Kromrif",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Ranger Thurgadin Armor Quests",
+      "key": "thurgadina/Argash",
+      "reward": {
+        "id": 31020,
+        "name": "Runed Scout's Boots",
+        "quantity": 1,
+        "classes": 8
+      },
+      "requirements": [
+        {
+          "id": 24938,
+          "name": "Corroded Chain Boots",
+          "quantity": 1
+        },
+        {
+          "id": 25833,
+          "name": "Crushed Black Marble",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 100000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 406,
+          "name": "Coldain",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 405,
+          "name": "Dain Frostreaver IV",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 419,
+          "name": "Kromrif",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Rogue Kael Armor Quests",
+      "key": "kael/Kelenek_Bluadfeth",
+      "reward": {
+        "id": 25377,
+        "name": "Deceiver's Crown",
+        "quantity": 1,
+        "classes": 256
+      },
+      "requirements": [
+        {
+          "id": 24912,
+          "name": "Ancient Tarnished Chain Coif",
+          "quantity": 1
+        },
+        {
+          "id": 25831,
+          "name": "Crushed Coral",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 150000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 429,
+          "name": "King Tormax",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 419,
+          "name": "Kromrif",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 430,
+          "name": "Claws of Veeshan",
+          "delta": -20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Rogue Kael Armor Quests",
+      "key": "kael/Kelenek_Bluadfeth",
+      "reward": {
+        "id": 25378,
+        "name": "Deceiver's Chestguard",
+        "quantity": 1,
+        "classes": 256
+      },
+      "requirements": [
+        {
+          "id": 24907,
+          "name": "Ancient Tarnished Chain Tunic",
+          "quantity": 1
+        },
+        {
+          "id": 25814,
+          "name": "Flawless Diamond",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 150000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 429,
+          "name": "King Tormax",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 419,
+          "name": "Kromrif",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 430,
+          "name": "Claws of Veeshan",
+          "delta": -20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Rogue Kael Armor Quests",
+      "key": "kael/Kelenek_Bluadfeth",
+      "reward": {
+        "id": 25379,
+        "name": "Deceiver's Vambraces",
+        "quantity": 1,
+        "classes": 256
+      },
+      "requirements": [
+        {
+          "id": 24909,
+          "name": "Ancient Tarnished Chain Sleeves",
+          "quantity": 1
+        },
+        {
+          "id": 25821,
+          "name": "Flawed Emerald",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 150000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 429,
+          "name": "King Tormax",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 419,
+          "name": "Kromrif",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 430,
+          "name": "Claws of Veeshan",
+          "delta": -20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Rogue Kael Armor Quests",
+      "key": "kael/Kelenek_Bluadfeth",
+      "reward": {
+        "id": 25380,
+        "name": "Deceiver's Bracer",
+        "quantity": 1,
+        "classes": 256
+      },
+      "requirements": [
+        {
+          "id": 24911,
+          "name": "Ancient Tarnished Chain Bracer",
+          "quantity": 1
+        },
+        {
+          "id": 25838,
+          "name": "Crushed Flame Emerald",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 150000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 429,
+          "name": "King Tormax",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 419,
+          "name": "Kromrif",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 430,
+          "name": "Claws of Veeshan",
+          "delta": -20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Rogue Kael Armor Quests",
+      "key": "kael/Kelenek_Bluadfeth",
+      "reward": {
+        "id": 25381,
+        "name": "Deceiver's Gauntlets",
+        "quantity": 1,
+        "classes": 256
+      },
+      "requirements": [
+        {
+          "id": 24913,
+          "name": "Ancient Tarnished Chain Gauntlets",
+          "quantity": 1
+        },
+        {
+          "id": 25832,
+          "name": "Crushed Topaz",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 150000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 429,
+          "name": "King Tormax",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 419,
+          "name": "Kromrif",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 430,
+          "name": "Claws of Veeshan",
+          "delta": -20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Rogue Kael Armor Quests",
+      "key": "kael/Kelenek_Bluadfeth",
+      "reward": {
+        "id": 25382,
+        "name": "Deceiver's Greaves",
+        "quantity": 1,
+        "classes": 256
+      },
+      "requirements": [
+        {
+          "id": 24908,
+          "name": "Ancient Tarnished Chain Leggings",
+          "quantity": 1
+        },
+        {
+          "id": 25825,
+          "name": "Flawed Sea Sapphire",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 150000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 429,
+          "name": "King Tormax",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 419,
+          "name": "Kromrif",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 430,
+          "name": "Claws of Veeshan",
+          "delta": -20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Rogue Kael Armor Quests",
+      "key": "kael/Kelenek_Bluadfeth",
+      "reward": {
+        "id": 25383,
+        "name": "Deceiver's Boots",
+        "quantity": 1,
+        "classes": 256
+      },
+      "requirements": [
+        {
+          "id": 24910,
+          "name": "Ancient Tarnished Chain Boots",
+          "quantity": 1
+        },
+        {
+          "id": 25833,
+          "name": "Crushed Black Marble",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 150000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 429,
+          "name": "King Tormax",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 419,
+          "name": "Kromrif",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 430,
+          "name": "Claws of Veeshan",
+          "delta": -20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Rogue Thurgadin Armor Quests",
+      "key": "thurgadina/Foreman_Felspar",
+      "reward": {
+        "id": 31028,
+        "name": "Brigand's Circlet",
+        "quantity": 1,
+        "classes": 256
+      },
+      "requirements": [
+        {
+          "id": 24940,
+          "name": "Corroded Chain Coif",
+          "quantity": 1
+        },
+        {
+          "id": 25831,
+          "name": "Crushed Coral",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 100000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 406,
+          "name": "Coldain",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 405,
+          "name": "Dain Frostreaver IV",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 419,
+          "name": "Kromrif",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Rogue Thurgadin Armor Quests",
+      "key": "thurgadina/Foreman_Felspar",
+      "reward": {
+        "id": 31029,
+        "name": "Brigand's Chestguard",
+        "quantity": 1,
+        "classes": 256
+      },
+      "requirements": [
+        {
+          "id": 24935,
+          "name": "Corroded Chain Tunic",
+          "quantity": 1
+        },
+        {
+          "id": 25814,
+          "name": "Flawless Diamond",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 100000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 406,
+          "name": "Coldain",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 405,
+          "name": "Dain Frostreaver IV",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 419,
+          "name": "Kromrif",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Rogue Thurgadin Armor Quests",
+      "key": "thurgadina/Foreman_Felspar",
+      "reward": {
+        "id": 31030,
+        "name": "Brigand's Vambraces",
+        "quantity": 1,
+        "classes": 256
+      },
+      "requirements": [
+        {
+          "id": 24937,
+          "name": "Corroded Chain Sleeves",
+          "quantity": 1
+        },
+        {
+          "id": 25821,
+          "name": "Flawed Emerald",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 100000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 406,
+          "name": "Coldain",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 405,
+          "name": "Dain Frostreaver IV",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 419,
+          "name": "Kromrif",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Rogue Thurgadin Armor Quests",
+      "key": "thurgadina/Foreman_Felspar",
+      "reward": {
+        "id": 31031,
+        "name": "Brigand's Bracer",
+        "quantity": 1,
+        "classes": 256
+      },
+      "requirements": [
+        {
+          "id": 24939,
+          "name": "Corroded Chain Bracer",
+          "quantity": 1
+        },
+        {
+          "id": 25838,
+          "name": "Crushed Flame Emerald",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 100000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 406,
+          "name": "Coldain",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 405,
+          "name": "Dain Frostreaver IV",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 419,
+          "name": "Kromrif",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Rogue Thurgadin Armor Quests",
+      "key": "thurgadina/Foreman_Felspar",
+      "reward": {
+        "id": 31032,
+        "name": "Brigand's Gauntlets",
+        "quantity": 1,
+        "classes": 256
+      },
+      "requirements": [
+        {
+          "id": 24941,
+          "name": "Corroded Chain Gauntlets",
+          "quantity": 1
+        },
+        {
+          "id": 25832,
+          "name": "Crushed Topaz",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 100000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 406,
+          "name": "Coldain",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 405,
+          "name": "Dain Frostreaver IV",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 419,
+          "name": "Kromrif",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Rogue Thurgadin Armor Quests",
+      "key": "thurgadina/Foreman_Felspar",
+      "reward": {
+        "id": 31033,
+        "name": "Brigand's Greaves",
+        "quantity": 1,
+        "classes": 256
+      },
+      "requirements": [
+        {
+          "id": 24936,
+          "name": "Corroded Chain Leggings",
+          "quantity": 1
+        },
+        {
+          "id": 25825,
+          "name": "Flawed Sea Sapphire",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 100000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 406,
+          "name": "Coldain",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 405,
+          "name": "Dain Frostreaver IV",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 419,
+          "name": "Kromrif",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    },
+    {
+      "title": "Rogue Thurgadin Armor Quests",
+      "key": "thurgadina/Foreman_Felspar",
+      "reward": {
+        "id": 31034,
+        "name": "Brigand's Boots",
+        "quantity": 1,
+        "classes": 256
+      },
+      "requirements": [
+        {
+          "id": 24938,
+          "name": "Corroded Chain Boots",
+          "quantity": 1
+        },
+        {
+          "id": 25833,
+          "name": "Crushed Black Marble",
+          "quantity": 3
+        }
+      ],
+      "xp": {
+        "amount": 100000,
+        "status": "retained_not_documented_numeric_P99"
+      },
+      "factions": [
+        {
+          "id": 406,
+          "name": "Coldain",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 405,
+          "name": "Dain Frostreaver IV",
+          "delta": 20,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 419,
+          "name": "Kromrif",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        },
+        {
+          "id": 448,
+          "name": "Kromzek",
+          "delta": -60,
+          "numericStatus": "retained_not_documented_numeric_P99"
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "NPC-page faction values are kill effects, not armor turn-in rewards.",
+    "Static placements and exclude flags are evidence only; not proof of content-policy availability.",
+    "All quest XP/faction magnitudes remain uncertified; no measured P99 zeros inferred from omissions."
+  ]
+}

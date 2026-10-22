@@ -1,0 +1,186 @@
+{
+  "format": 1,
+  "id": "p99-classic-conversions",
+  "summary": "Fill six exact-key missing Lua bodies: two classic guild greetings, three hashed tainted epic death handlers, and Minotaur Lord aggro/death speech. No invented rewards or spawn probabilities.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Sindl_Talonstrike?action=raw",
+      "note": "Cached 2026-08-12T20:53:18.247Z; revision unavailable; SHA256 593df932114d7ef11849f5265d306eb6b1ea657873e75e65e06a144e4feccdf3. Sindl Talonstrike. NPC identity verified against baseline. Dialogue wording uses ProjectEQ where P99 only describes the actor."
+    },
+    {
+      "url": "https://wiki.project1999.com/Zaen_Kalystir?action=raw",
+      "note": "Cached 2026-08-12T21:39:54.516Z; revision unavailable; SHA256 eb054ec259cbf16f4a6f0144dcf9e30ab5df1c94edefd3e820ae145aa31fe86f. Zaen Kalystir. NPC identity verified against baseline. Dialogue wording uses ProjectEQ where P99 only describes the actor."
+    },
+    {
+      "url": "https://wiki.project1999.com/Tainted_gorilla?action=raw",
+      "note": "Cached 2026-08-12T21:04:39.653Z; revision unavailable; SHA256 753f12ca3ef4cc4a43a66f36f1be153e4640acb704b43475fde00649a6c1c477. Tainted gorilla. NPC identity verified against baseline. Dialogue wording uses ProjectEQ where P99 only describes the actor."
+    },
+    {
+      "url": "https://wiki.project1999.com/Tainted_Aquagoblin?action=raw",
+      "note": "Cached 2026-08-12T21:04:31.835Z; revision unavailable; SHA256 6ee00dd3f8870e10ee78a67898ba0a1007a9320a49f26dfd54c6b1d00c7b4621. Tainted Aquagoblin. Exact implementation provenance in adjacent review."
+    },
+    {
+      "url": "https://wiki.project1999.com/Tainted_barracuda?action=raw",
+      "note": "Cached 2026-08-12T21:04:34.348Z; revision unavailable; SHA256 abacb31ef5912e96553d947747fbdce2ed7763520cdce8776076ac865ba0ac56. Tainted barracuda. Exact implementation provenance in adjacent review."
+    },
+    {
+      "url": "https://wiki.project1999.com/Minotaur_Lord?action=raw",
+      "note": "Cached 2026-08-12T20:11:30.698Z; revision unavailable; SHA256 fb9eb447dfe908afb5f982805fbfa13bfea1a209f671e20aeefc169d2377df2d. Minotaur Lord. Exact implementation provenance in adjacent review."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 18835,
+        "zone": "gfaydark",
+        "name": "Sindl_Talonstrike",
+        "lua_content": null,
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 18835,
+        "zone": "gfaydark",
+        "name": "Sindl_Talonstrike",
+        "lua_content": "-- Converted from ProjectEQ Perl; P99 NPC page confirms harvesters/Soldiers of Tunare dialogue.\n-- Later discipline tome helper deliberately omitted.\nfunction event_say(e)\n    if e.message:findi(\"hail\") then\n        e.self:Say(\"Greetings.  Is not Kelethin the most glorious city you have seen?  A part of the forest itself. it is.  The forest is our life force.  It shelters us and we feed from its vegetation.  The [Soldiers of Tunare] have [harvesters] upon the grounds at all times.  We have our hunters.\")\n    elseif e.message:findi(\"soldiers of tunare\") then\n        e.self:Say(\"The Soldiers of Tunare are lovers of the forest.  They are druids who protect and nurture the forest.  The forest is the genesis of their mana.  The soldiers are comprised of Fier'Dal and Koada'Dal.  Imagine that!  A Koada'Dal not afraid to get dirt under his nails!!\")\n    elseif e.message:findi(\"harvesters\") then\n        e.self:Say(\"Just as our young warriors are employed as hunters to supply all the meat for Kelethin. the druids have their young scour the grounds of the forest for all the vegetation we need to survive.\")\n    end\nend\n\nfunction event_trade(e)\n    local item_lib = require(\"items\")\n    item_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 13974,
+        "zone": "qcat",
+        "name": "Zaen_Kalystir",
+        "lua_content": null,
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 13974,
+        "zone": "qcat",
+        "name": "Zaen_Kalystir",
+        "lua_content": "-- P99 identifies this classic guildmaster; greeting retained from ProjectEQ.\n-- Exact speech not independently quoted by P99; later discipline tome helper omitted.\nfunction event_say(e)\n    if e.message:findi(\"hail\") then\n        e.self:Say(\"Welcome to the Shrine of the Diseased! You will be repaid for your service when your soul crosses the void into Bertoxxulous' waiting arms. Are you available to do His bidding?\")\n    end\nend\n\nfunction event_trade(e)\n    local item_lib = require(\"items\")\n    item_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 18841,
+        "zone": "emeraldjungle",
+        "name": "#tainted_gorilla",
+        "lua_content": null,
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 18841,
+        "zone": "emeraldjungle",
+        "name": "#tainted_gorilla",
+        "lua_content": "-- name: #tainted_gorilla\n-- Exact hashed NPC variant; do not overwrite existing plain-name maintained source.\n-- P99 tainted gorilla spawns corrupted gorilla on death.\nfunction event_death_complete(e)\n    eq.spawn2(94140, 0, 0, e.self:GetX(), e.self:GetY(), e.self:GetZ(), e.self:GetHeading())\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 19725,
+        "zone": "lakerathe",
+        "name": "#tainted_aquagoblin",
+        "lua_content": null,
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 19725,
+        "zone": "lakerathe",
+        "name": "#tainted_aquagoblin",
+        "lua_content": "-- name: #tainted_aquagoblin\n-- Exact hashed NPC variant, preserving existing plain-name Lua separately.\n-- P99 Druid Epic; ProjectEQ implementation preserves spawn coordinates and API.\nfunction event_death_complete(e)\n    eq.unique_spawn(51149, 0, 0, e.self:GetX(), e.self:GetY(), e.self:GetZ(), e.self:GetHeading())\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 18693,
+        "zone": "lakeofillomen",
+        "name": "#tainted_barracuda",
+        "lua_content": null,
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 18693,
+        "zone": "lakeofillomen",
+        "name": "#tainted_barracuda",
+        "lua_content": "-- name: #tainted_barracuda\n-- Exact hashed NPC variant, preserving existing plain-name Lua separately.\n-- P99 Druid Epic; ProjectEQ implementation preserves spawn coordinates and API.\nfunction event_death_complete(e)\n    eq.spawn2(85224, 0, 0, e.self:GetX(), e.self:GetY(), e.self:GetZ(), e.self:GetHeading())\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 12330,
+        "zone": "steamfont",
+        "name": "Minotaur_Lord",
+        "lua_content": null,
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 12330,
+        "zone": "steamfont",
+        "name": "Minotaur_Lord",
+        "lua_content": "-- P99 NPC page quotes the aggro line. Death line retained from ProjectEQ.\n-- Hero spawn-cycle probability is not established here; no invented spawn roll.\nfunction event_aggro(e)\n    e.self:Say(\"I survived the gladiator pens of Qeynos!! What can you do to one such as I?!!\")\nend\n\nfunction event_death_complete(e)\n    e.self:Say(\"I die soon! Meldrath, help me!\")\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/gfaydark/Sindl_Talonstrike.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-classic-conversions/gfaydark--Sindl_Talonstrike.lua",
+      "afterSha256": "94f4006c9c76c9edd381fa3b8671279636c9100d9f7ba85b1ddeeaa4408aa714"
+    },
+    {
+      "target": "maintained/lua/converted-perl/qcat/Zaen_Kalystir.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-classic-conversions/qcat--Zaen_Kalystir.lua",
+      "afterSha256": "fa71202ffd7072a4c85b4edefee0cf9d56dde820541770c0540009dba7094627"
+    },
+    {
+      "target": "maintained/lua/converted-perl/emeraldjungle/#tainted_gorilla.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-classic-conversions/emeraldjungle--hash-tainted_gorilla.lua",
+      "afterSha256": "161b415dc14465db8d65581be8adb02b848015397d60d9ce7abac0972ce7e4bf"
+    },
+    {
+      "target": "maintained/lua/converted-perl/lakerathe/#tainted_aquagoblin.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-classic-conversions/lakerathe--hash-tainted_aquagoblin.lua",
+      "afterSha256": "b88ea40d4fd090b95d81e0f5411a3b613d820067be3a8a81845153c64ccd6d8a"
+    },
+    {
+      "target": "maintained/lua/converted-perl/lakeofillomen/#tainted_barracuda.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-classic-conversions/lakeofillomen--hash-tainted_barracuda.lua",
+      "afterSha256": "a5622b62707d9b40af9b9f2e8ac46fcd7d2e263e7f5c4a0ebe3a7409cb8b5ff3"
+    },
+    {
+      "target": "maintained/lua/converted-perl/steamfont/Minotaur_Lord.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-classic-conversions/steamfont--Minotaur_Lord.lua",
+      "afterSha256": "2305cfd8e757bb99db066d7e58ab9d9b69e3333b6dc4d6d8a569a764e3ec842e"
+    }
+  ]
+}

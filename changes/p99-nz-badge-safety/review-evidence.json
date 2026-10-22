@@ -1,0 +1,29 @@
+{
+  "titles": [
+    "Qeynos Badge Quests"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "partial",
+  "match_status": "partial",
+  "local_quest_keys": [
+    "qeynos2/Vegalys_Keldrane",
+    "southkarana/#Theodore_Exanthem",
+    "southkarana/an_interrogator"
+  ],
+  "proposal": "changes/p99-nz-badge-safety.json",
+  "notes": [
+    "Make documented Badge advancement prompts reachable, prevent premature Confession Document consumption, and isolate the briefing timer.",
+    "Vegalys recognizes advance further/further advance/advancing further and accepts Interrogator Badge2387 for existing research directions. Theodore retains his exact existing coordinate gate but checks it before consuming2344. Interrogator ignores unrelated timer names; existing briefing, grids and staged encounter adaptations remain unchanged. Full rat-puzzle stage is missing, so this is not a complete badge restoration. Imported reward amounts remain unverified fallback."
+  ],
+  "verification": {
+    "proposalValidation": "changes/p99-nz-coverage/proposal-validation-67.txt",
+    "isolatedScenarioReceipt": "changes/p99-nz-coverage/isolated-reviewer-tests.json",
+    "isolatedScenarioCount": 229,
+    "scope": "Receipt contains hash-bound scenarios; data-only rows have structural proposal validation, not live gameplay.",
+    "fullGameRuntime": "not_run",
+    "ui": "not_run"
+  },
+  "unresolved": [
+    "Ordinary source drops/spawns, recipe live behavior and rendered complete quest path not verified."
+  ]
+}

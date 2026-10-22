@@ -1,0 +1,66 @@
+{
+  "format": 1,
+  "id": "p99-am-call-of-flame",
+  "summary": "Remove Devin Ashwood duplicate unqualified letter grant; keep Lily as Ranger 50+ letter giver; correct Kithicor Unkempt Druids reward direction.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Call_of_Flame_Quest?action=raw",
+      "note": "Cached 2026-07-17T23:09:44.115Z; revision unavailable; SHA256 29c4dd325232a435ca2fa3005cffea559e11e72d98f09f5d07a4a04a94e30a9c. Call of Flame Quest"
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 19741,
+        "zone": "gfaydark",
+        "name": "Devin_Ashwood",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: gfaydark/Devin_Ashwood.pl\n-- items: 20876\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Good day to you. \" .. e.other:GetName() .. \"!  I am Devin Ashwood.  Pleased to make your acquaintance.\")\n\telseif e.message:findi(\"marry\") then\n\t\te.self:Say(\"Bah! Why would the greatest forester in all of Norrath ask you to marry him? Between his time spent protecting wildlife, hunting poachers and training me, I doubt he has any spare time for a foolish girl like you, sister.\")\n\t\te.self:Emote(\"Lily Ashwood sulks.\")\n\telseif e.message:findi(\"ganelorn oast\") then\n\t\te.self:Say(\"Ganelorn Oast! For he has single-handedly caught more poachers than any other ranger. He is credited for helping numerous endangered species recover from certain extinction. I suppose I am lucky he is fond of my sister, as I am soon to train under him as an apprentice. Perhaps one day I will even [call upon the flames] in the way that he does.\")\n\telseif e.message:findi(\"call upon the flames\") then\n\t\te.self:Say(\"Aye, Ganelorn is renowned not only for his abilities as an archer and a master of melee combat, but also for his use of powerful magics. Never before have I seen a forester evoke a fireball of such great force. It would be any ranger's dream to become his pupil just to study that one spell. Ganelorn doesn't train just anyone, though. If you want to learn from him, I'm certain you would have to prove yourself as a forester.\")\n\telseif e.message:findi(\"i want to learn\") then\n\t\te.self:Say(\"He is a very busy individual. I believe he is currently in the eastern part of the Karanas trying to track down a poacher. Even if you can track him down, don't get your hopes up.\")\n\t\te.self:Say(\"Oh! If you're going to see him, would you please take this letter to him? I trust you, since you're a ranger and all.\")\n\telseif e.message:findi(\"i will take him the letter\") then\n\t\te.self:Emote(\"Lily Ashwood smiles sweetly. 'Thank you sooo much.'\")\n\t\te.other:SummonItem(20876)\n\tend\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 19741,
+        "zone": "gfaydark",
+        "name": "Devin_Ashwood",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: gfaydark/Devin_Ashwood.pl\n-- P99: Lily, not Devin, gives the letter after checking Ranger level 50+.\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Good day to you. \" .. e.other:GetName() .. \"!  I am Devin Ashwood.  Pleased to make your acquaintance.\")\n\telseif e.message:findi(\"marry\") then\n\t\te.self:Say(\"Bah! Why would the greatest forester in all of Norrath ask you to marry him? Between his time spent protecting wildlife, hunting poachers and training me, I doubt he has any spare time for a foolish girl like you, sister.\")\n\t\te.self:Emote(\"Lily Ashwood sulks.\")\n\telseif e.message:findi(\"ganelorn oast\") then\n\t\te.self:Say(\"Ganelorn Oast! For he has single-handedly caught more poachers than any other ranger. He is credited for helping numerous endangered species recover from certain extinction. I suppose I am lucky he is fond of my sister, as I am soon to train under him as an apprentice. Perhaps one day I will even [call upon the flames] in the way that he does.\")\n\telseif e.message:findi(\"call upon the flames\") then\n\t\te.self:Say(\"Aye, Ganelorn is renowned not only for his abilities as an archer and a master of melee combat, but also for his use of powerful magics. Never before have I seen a forester evoke a fireball of such great force. It would be any ranger's dream to become his pupil just to study that one spell. Ganelorn doesn't train just anyone, though. If you want to learn from him, I'm certain you would have to prove yourself as a forester.\")\n\telseif e.message:findi(\"i want to learn\") then\n\t\te.self:Say(\"He is a very busy individual. I believe he is currently in the eastern part of the Karanas trying to track down a poacher. Even if you can track him down, don't get your hopes up.\")\n\t\te.self:Say(\"Oh! If you're going to see him, would you please take this letter to him? I trust you, since you're a ranger and all.\")\n\tend\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 17664,
+        "zone": "kithicor",
+        "name": "Kithicor",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: kithicor/Kithicor.pl\n-- items: 20877, 20878\n-- Retain Call of Flame; omit the later rogue epic 1.5 orb branch.\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Hello Traveler, I do not see many this deep into the woods.\")\n\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 20877}) then\n\t\te.self:Say(\"Wow, this is certainly something I have not seen in a long time. It was said that this species of snake had been wiped out due to the poachers and griffins. It was very noble of you to help in saving this species. I will see that these are raised properly. Please wear this icon with pride so other rangers will know of the good deed you have done.\")\n\t\te.other:Faction(269, 50, 0)\n\t\te.other:Faction(302, 50, 0)\n\t\te.other:Faction(272, 50, 0)\n\t\te.other:Faction(324, 50, 0)\n\t\te.other:AddEXP(1000)\n\t\te.other:Ding()\n\t\te.other:SummonItem(20878)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 17664,
+        "zone": "kithicor",
+        "name": "Kithicor",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: kithicor/Kithicor.pl\n-- items: 20877, 20878\n-- Retain Call of Flame; omit the later rogue epic 1.5 orb branch.\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Hello Traveler, I do not see many this deep into the woods.\")\n\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 20877}) then\n\t\te.self:Say(\"Wow, this is certainly something I have not seen in a long time. It was said that this species of snake had been wiped out due to the poachers and griffins. It was very noble of you to help in saving this species. I will see that these are raised properly. Please wear this icon with pride so other rangers will know of the good deed you have done.\")\n\t\te.other:Faction(269, 50, 0)\n\t\te.other:Faction(302, 50, 0)\n\t\te.other:Faction(272, 50, 0)\n\t\te.other:Faction(324, -50, 0) -- Unkempt Druids: P99 documents a loss.\n\t\te.other:AddEXP(1000)\n\t\te.other:Ding()\n\t\te.other:SummonItem(20878)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/gfaydark/Devin_Ashwood.lua",
+      "beforeSha256": "160a8508c3154cf89cd522df73cad9c6768a70c0a8c24e9d97084eb64c34637b",
+      "proposedFile": "changes/p99-am-call-of-flame/gfaydark-Devin_Ashwood.lua",
+      "afterSha256": "fb70556b8bc475f8b35165bc19a3fd269df6bddc4225aaafb4de2b4c6184961b"
+    },
+    {
+      "target": "maintained/lua/converted-perl/kithicor/Kithicor.lua",
+      "beforeSha256": "5d6c1c6dda8806cfcad8a85764c85a56a77b28821ad938ac05f5f862586620a7",
+      "proposedFile": "changes/p99-am-call-of-flame/kithicor-Kithicor.lua",
+      "afterSha256": "3263913a0b888f7d436c52c5859d4457212533d5d8f641cd4b9b09e881aa93af"
+    }
+  ]
+}

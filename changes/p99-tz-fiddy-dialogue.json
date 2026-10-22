@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-fiddy-dialogue",
+  "summary": "Support documented Wickystick sent me and preserve the legacy phrase; return unrelated and surplus items on accepted as well as rejected offers.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/The_Fishslayers?action=raw",
+      "note": "Cached 2026-07-17T23:36:34.714Z; revision unavailable; SHA256 aba67790c5004cb90cff9abd7bb194387348fc964e9a494293549505e1e356b9. Support documented Wickystick sent me and preserve the legacy phrase; return unrelated and surplus items on accepted as well as rejected offers. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 14162,
+        "zone": "rivervale",
+        "name": "Fiddy_Bobick",
+        "lua_content": "--------------------------\n  --Quest Name:The Fishslayers\n  --Author:Shaznito\n  --NPCs Involved:Fiddy Bobick, Marshall Lanena\n  --Items Involved:Bag of Piranha Teeth, Piranha Bag, Piranha Tooth\n  ----------------------------------\n-- items: 13870\nfunction event_waypoint_arrive(e)\n\tif e.wp == 6 then\n\t\te.self:Say(\"When will Wickystick send help?!\");\n\tend\nend\n\nfunction event_say(e) \n\tif(e.message:findi(\"Hail\")) then\n\t\te.self:Say(\"Ahoy. mate!! The name's Fiddy Bobick! Perhaps you've heard of me.. the greatest halfling to sail the seas of Norrath? I have been to the North. South. East and West. and thank Prexus. I have survived it all!  Why I have returned to this little hollow is a wonder to me. Obviously. the salty air finally got to my brain!\");\n\telseif(e.message:findi(\"marshall lanena sent me\")) then\n\t\te.self:Say(\"Well. it's about blasted time!  The ship was about to sink.  Wickystick finally managed to send the troops in!  The problem. mate. is piranha !!  What?!!  That's what I said.  Piranha!  The lake is infested with the little buggers.  More and more every sunrise.  They're chomping down all our food supply.  You have gotta get your can in the drink and kill them.  Take one of their teeth to old Wickystick and see what she has to say about Fiddy then!  I will also give you some booty for any teeth you pull out of this river.  Well. get going. Deputy \"..e.other:GetName()..\"!\");  \n\tend\nend\n  \nfunction event_trade(e)\nlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 13870})) then \n\t\te.self:Say(\"Whew!! We are sure on the way to saving this village, pal! They're gonna erect a statue in our names.  Fishslayers is what we are!  Let's keep up the good work!\");\n\t\te.other:Faction(292,5); -- Faction: Merchants of Rivervale\n\t\te.other:Faction(241,5); -- Faction: Deeppockets\n\t\te.other:Faction(263,5); -- Faction: Guardians of the Vale\n\t\te.other:Faction(286,5); -- Faction: Mayor Gubbin\n\t\te.other:Faction(336,-5); -- Faction: Coalition of Tradefolk Underground\n\t\te.other:GiveCash(0,8,1,0);\n\t\te.other:AddEXP(15);\n\telse\n\t\titem_lib.return_items(e.self, e.other, e.trade); -- return unused items\n\tend\nend\n --END of FILE Zone:rivervale  ID:19086 -- Fiddy_Bobick\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 14162,
+        "zone": "rivervale",
+        "name": "Fiddy_Bobick",
+        "lua_content": "--------------------------\n  --Quest Name:The Fishslayers\n  --Author:Shaznito\n  --NPCs Involved:Fiddy Bobick, Marshall Lanena\n  --Items Involved:Bag of Piranha Teeth, Piranha Bag, Piranha Tooth\n  ----------------------------------\n-- items: 13870\nfunction event_waypoint_arrive(e)\n\tif e.wp == 6 then\n\t\te.self:Say(\"When will Wickystick send help?!\");\n\tend\nend\n\nfunction event_say(e) \n\tif(e.message:findi(\"Hail\")) then\n\t\te.self:Say(\"Ahoy. mate!! The name's Fiddy Bobick! Perhaps you've heard of me.. the greatest halfling to sail the seas of Norrath? I have been to the North. South. East and West. and thank Prexus. I have survived it all!  Why I have returned to this little hollow is a wonder to me. Obviously. the salty air finally got to my brain!\");\n\telseif(e.message:findi(\"marshall lanena sent me\") or e.message:findi(\"wickystick sent me\")) then\n\t\te.self:Say(\"Well. it's about blasted time!  The ship was about to sink.  Wickystick finally managed to send the troops in!  The problem. mate. is piranha !!  What?!!  That's what I said.  Piranha!  The lake is infested with the little buggers.  More and more every sunrise.  They're chomping down all our food supply.  You have gotta get your can in the drink and kill them.  Take one of their teeth to old Wickystick and see what she has to say about Fiddy then!  I will also give you some booty for any teeth you pull out of this river.  Well. get going. Deputy \"..e.other:GetName()..\"!\");  \n\tend\nend\n  \nfunction event_trade(e)\nlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 13870})) then \n\t\te.self:Say(\"Whew!! We are sure on the way to saving this village, pal! They're gonna erect a statue in our names.  Fishslayers is what we are!  Let's keep up the good work!\");\n\t\te.other:Faction(292,5); -- Faction: Merchants of Rivervale\n\t\te.other:Faction(241,5); -- Faction: Deeppockets\n\t\te.other:Faction(263,5); -- Faction: Guardians of the Vale\n\t\te.other:Faction(286,5); -- Faction: Mayor Gubbin\n\t\te.other:Faction(336,-5); -- Faction: Coalition of Tradefolk Underground\n\t\te.other:GiveCash(0,8,1,0);\n\t\te.other:AddEXP(15);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade); -- return unused items after accepted and rejected trades\nend\n --END of FILE Zone:rivervale  ID:19086 -- Fiddy_Bobick\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/rivervale/Fiddy_Bobick.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-tz-fiddy-dialogue/rivervale--Fiddy_Bobick.lua",
+      "afterSha256": "74dc1daaf269277eeb863ba80781d63c4eb55819ec87383e80d38c7d6057b916"
+    }
+  ]
+}

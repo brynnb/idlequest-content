@@ -1,0 +1,45 @@
+{
+  "format": 1,
+  "id": "p99-am-collier-reward",
+  "summary": "Restore Collier P99 explicit five faction adjustments and post-exchange despawn; correct weapon-treatment dialogue. Preserve upstream XP magnitude and quest faction bypass.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Collier's_Weapon_Treatment?action=raw",
+      "note": "Cached 2026-07-17T23:11:21.294Z; revision unavailable; SHA256 91fd78e3470819a2c6be0aec2b05767cb4020259124957f50ec9abc870594b24. Collier's Weapon Treatment"
+    },
+    {
+      "url": "https://wiki.project1999.com/Collier's_Weapon_Treatment?action=raw",
+      "note": "Promote immutable upstream source sources/projecteq/erudnext/Collier.lua SHA256 79630374950aa19814a8d7871c5785a93e30d176e4eea64647351ea12863dfe4 to maintained modified-upstream override; baseline remains untouched."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 19760,
+        "zone": "erudnext",
+        "name": "Collier",
+        "lua_content": "function event_say(e)\n\te.self:SetTarget(e.other);\n\te.self:SetAppearance(0); -- Stand\n\tlocal plevel = e.other:GetLevel();\n\teq.set_timer(\"Sit\", 30 * 1000);\n\n\tif e.other:GetFaction(e.self) >= 7 then -- Dubious or higher (lower number is higher faction)\n\t\te.self:Say(\"You had best be on your way before you end up as a feast for the worms!\");\n\telseif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Make it a habit of walking into peoples rooms now do ya? Well seeing as I'm here on business I may have a [proposition] for you.\");\n\telse\n\t\tif plevel <= 19 then\n\t\t\te.self:Say(\"You are far too inexperienced to assist me in my endeavors.\");\n\t\telse\n\t\t\tif e.message:findi(\"proposition\") then\n\t\t\t\te.self:Say(\"I'm in the employment of an alchemist that desires some rare venom from this region of Norrath. I will reward you with a special weapon treatment if you can return to me with a venomous spikefish poison sac, an ancient poison sac, an ancient snake fang, and the blood of a necromancer.\");\n\t\t\telseif e.message:findi(\"special weapon treatment\") then\n\t\t\t\te.self:Say(\"My employer has uncovered the secrets of the Bloodclaw and can reproduce the weapon treatment used in the forging of the legendary Stiletto of the Bloodclaw.\");\n\t\t\tend\n\t\tend\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif item_lib.check_turn_in(e.trade, {item1 = 31828,item2 = 22570, item3 = 6949,item4 = 6950}) then\n\t\te.self:Say(\"There is the weapon treatment I promised you. Use it in a forge with either a Long Sword or a Scimitar. Choose which weapon you prefer carefully as there is only enough of the substance for a single treatment.\");\n\t\te.other:QuestReward(e.self,{itemid = 22571, exp = 500}); -- Item: Thick Caustic Liquid\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade);\nend\n\nfunction event_spawn(e)\n\tlocal xloc = e.self:GetX();\n\tlocal yloc = e.self:GetY();\n\teq.set_proximity(xloc - 50, xloc + 50, yloc - 50, yloc + 50);\nend\n\nfunction event_enter(e)\n\tif e.other:IsClient() then\n\t\te.self:SetTarget(e.other);\n\t\te.self:SetAppearance(0); -- Stand\n\tend\nend\n\nfunction event_exit(e)\n\tif e.other:IsClient() then\n\t\te.self:SetAppearance(1); -- Sit\n\tend\nend\n\nfunction event_timer(e)\n  if e.self:IsEngaged() then\n    e.self:SetAppearance(0); -- Stand\n  else\n    e.self:SetAppearance(1); -- Sit\n  end\nend",
+        "has_say_event": 1,
+        "enabled": 0
+      },
+      "after": {
+        "id": 19760,
+        "zone": "erudnext",
+        "name": "Collier",
+        "lua_content": "-- enabled: false\n-- Pending Stonebrunt component acquisition and six weapon-forge recipe validation; P99 scope alone does not verify a complete chain.\nfunction event_say(e)\n\te.self:SetTarget(e.other);\n\te.self:SetAppearance(0); -- Stand\n\tlocal plevel = e.other:GetLevel();\n\teq.set_timer(\"Sit\", 30 * 1000);\n\n\tif e.other:GetFaction(e.self) >= 7 then -- Dubious or higher (lower number is higher faction)\n\t\te.self:Say(\"You had best be on your way before you end up as a feast for the worms!\");\n\telseif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Make it a habit of walking into peoples rooms now do ya? Well seeing as I'm here on business I may have a [proposition] for you.\");\n\telse\n\t\tif plevel <= 19 then\n\t\t\te.self:Say(\"You are far too inexperienced to assist me in my endeavors.\");\n\t\telse\n\t\t\tif e.message:findi(\"proposition\") then\n\t\t\t\te.self:Say(\"I'm in the employment of an alchemist that desires some rare venom from this region of Norrath. I will reward you with a special weapon treatment if you can return to me with a venomous spikefish poison sac, an ancient poison sac, an ancient snake fang, and the blood of a necromancer.\");\n\t\t\telseif e.message:findi(\"special weapon treatment\") then\n\t\t\t\te.self:Say(\"My employer has uncovered the secrets of the Bloodclaw and can reproduce the weapon treatment used in the forging of the legendary Stiletto of the Bloodclaw.\");\n\t\t\tend\n\t\tend\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif item_lib.check_turn_in(e.trade, {item1 = 31828,item2 = 22570, item3 = 6949,item4 = 6950}) then\n\t\te.self:Say(\"Here is the weapon treatment that I have promised you. Use it with any standard forged weapon. Choose your preferred weapon carefully as there is only enough of the substance for a single treatment.\");\n\t\te.other:QuestReward(e.self,{itemid = 22571, exp = 500}); -- Item: Thick Caustic Liquid\n\t\te.other:Faction(223, 2, 0); -- Circle of Unseen Hands\n\t\te.other:Faction(291, -1, 0); -- Merchants of Qeynos\n\t\te.other:Faction(230, 1, 0); -- Corrupt Qeynos Guards\n\t\te.other:Faction(262, -1, 0); -- Guards of Qeynos\n\t\te.other:Faction(273, 1, 0); -- Kane Bayle\n\t\teq.depop_with_timer(); -- P99: Collier despawns after the exchange.\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade);\nend\n\nfunction event_spawn(e)\n\tlocal xloc = e.self:GetX();\n\tlocal yloc = e.self:GetY();\n\teq.set_proximity(xloc - 50, xloc + 50, yloc - 50, yloc + 50);\nend\n\nfunction event_enter(e)\n\tif e.other:IsClient() then\n\t\te.self:SetTarget(e.other);\n\t\te.self:SetAppearance(0); -- Stand\n\tend\nend\n\nfunction event_exit(e)\n\tif e.other:IsClient() then\n\t\te.self:SetAppearance(1); -- Sit\n\tend\nend\n\nfunction event_timer(e)\n  if e.self:IsEngaged() then\n    e.self:SetAppearance(0); -- Stand\n  else\n    e.self:SetAppearance(1); -- Sit\n  end\nend",
+        "has_say_event": 1,
+        "enabled": 0
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/erudnext/Collier.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-am-collier-reward/erudnext-Collier.lua",
+      "afterSha256": "7be374763a86b831df0c881e524c69536c48081588465f9ea8ef4e1892210cde"
+    }
+  ]
+}

@@ -1,0 +1,716 @@
+{
+  "scope": "Explicit open/blocked/mixed/runtime review labels among retained no-Lua rows. This is a transparent view of existing dispositions, not a new source review or an exhaustive proof that all other cases are resolved.",
+  "counts": {
+    "blocked-mixed-era-spawn-cycle": 1,
+    "blocked-roaming-path-evidence": 1,
+    "blocked_ambient_runtime_lifecycle": 4,
+    "blocked_corrupt_upstream_dialogue": 1,
+    "blocked_council_multi_actor_lifecycle": 2,
+    "blocked_cross_zone_sleeper_lifecycle": 10,
+    "blocked_giant_sifaye_world_chain": 5,
+    "blocked_npc_target_follow": 2,
+    "blocked_p99_encounter_conflict": 1,
+    "blocked_removed_pie_dialogue_conflict": 2,
+    "empty-event-no-conversion-needed": 10,
+    "empty-handler-no-conversion": 1,
+    "empty-reference": 3,
+    "excluded-holiday-gm-event": 8,
+    "excluded_eighth_shawl": 5,
+    "excluded_later_class": 6,
+    "excluded_later_epic": 3,
+    "excluded_luclin_quest_no_conversion": 1,
+    "excluded_luclin_sleeper_revamp": 18,
+    "excluded_luclin_transport": 3,
+    "excluded_post_velious": 1,
+    "excluded_post_velious_branch": 1,
+    "identity-alias-existing-lua": 4,
+    "later-era-epic-prequest": 1,
+    "later-revamp-encounter-reference": 3,
+    "later-service-or-relocation-reference": 2,
+    "mixed-player-runtime-review": 2,
+    "mixed_flavor_unverified_bandana": 1,
+    "mixed_in_era_flavor_later_shawl": 2,
+    "mixed_mug_special_beans_ambient": 1,
+    "mixed_rum_and_later_shawl": 1,
+    "no_conversion_empty_source": 1,
+    "open_ambient_timer_implementation": 5,
+    "open_ambient_waypoint_lifecycle": 3,
+    "open_animation_timer_effect": 2,
+    "open_bloodmaw_proximity_lifecycle": 1,
+    "open_construct_spawn_lifecycle": 2,
+    "open_council_movement_mapping": 11,
+    "open_cross_actor_speech": 1,
+    "open_draconic_loyalist_era": 2,
+    "open_faun_exchange_effect": 1,
+    "open_flavor_identity": 2,
+    "open_gender_variants_identity": 2,
+    "open_icebreaker_transport_identity": 1,
+    "open_jaled_proximity_hate": 1,
+    "open_later_epic_item_chain": 2,
+    "open_plate_house_cycle_identity": 4,
+    "open_revamp_spawn_identity": 3,
+    "open_ring_eight_cleanup_identity": 5,
+    "open_ring_five_waypoint_identity": 1,
+    "open_ring_six_actor_identity": 1,
+    "open_sentinel_proximity_identity": 1,
+    "open_service_plugin_authority": 1,
+    "open_spider_stiggles_era": 2,
+    "open_timed_shark_era": 3,
+    "open_tower_global_spawn_state": 3,
+    "open_velium_focus_cleanup_identity": 2,
+    "out-of-scope-beastlord-epic": 1,
+    "out-of-scope-holiday-event": 21,
+    "out-of-scope-holiday-task": 6,
+    "out-of-scope-ring-of-fear-revamp": 4,
+    "p99-npc-roaming-only-not-quest": 1,
+    "placeholder-no-proven-quest": 4,
+    "player-runtime-review": 2,
+    "post-era-beastlord-guildmaster": 1,
+    "post-era-charm-quest": 3,
+    "post-era-epic": 22,
+    "post-era-guktan-illusion": 13,
+    "post-era-hole-revamp": 2,
+    "post-era-ldon": 20,
+    "post-era-loy": 2,
+    "post-era-loy-cultural": 4,
+    "post-era-loy-freed-slave": 15,
+    "post-era-loy-pirate": 6,
+    "post-era-novice-armor": 19,
+    "post-era-phylactery": 8,
+    "post-era-shadowrest": 6,
+    "post-era-task-system": 18,
+    "post-era-veksar": 1,
+    "post-era-vp-revamp": 9,
+    "probable-later-revamp-confirm-era-before-conversion": 5,
+    "superseded_direct_neb_dialogue": 1,
+    "unresolved-era-reference": 2,
+    "unresolved-later-scale-alternative": 1,
+    "unresolved-revamp-death-trigger": 7,
+    "unresolved-roaming-only-no-p99-evidence": 2,
+    "unresolved-world-event-no-p99-evidence": 2,
+    "unresolved-world-transport": 1,
+    "unsafe-mixed-era-reference": 2
+  },
+  "explicitOpenBoundaryRows": [
+    {
+      "key": "cauldron/#a_cauldron_rat",
+      "disposition": "blocked-mixed-era-spawn-cycle",
+      "artifact": "changes/p99-audit/manual-linked-dispositions.json"
+    },
+    {
+      "key": "cauldron/#aqua_goblin_shaman",
+      "disposition": "unsafe-mixed-era-reference",
+      "artifact": "changes/p99-classic-conversions/triage.json"
+    },
+    {
+      "key": "cauldron/an_aqua_goblin_mariner",
+      "disposition": "unsafe-mixed-era-reference",
+      "artifact": "changes/p99-classic-conversions/triage.json"
+    },
+    {
+      "key": "cazicthule/#a_boiling_ooze",
+      "disposition": "probable-later-revamp-confirm-era-before-conversion",
+      "artifact": "changes/p99-audit/manual-event-dispositions.json"
+    },
+    {
+      "key": "cazicthule/#a_bubbling_ooze",
+      "disposition": "probable-later-revamp-confirm-era-before-conversion",
+      "artifact": "changes/p99-audit/manual-event-dispositions.json"
+    },
+    {
+      "key": "cazicthule/#a_swirling_ooze",
+      "disposition": "probable-later-revamp-confirm-era-before-conversion",
+      "artifact": "changes/p99-audit/manual-event-dispositions.json"
+    },
+    {
+      "key": "cazicthule/#a_Thul_Tae_Ew_Tracker",
+      "disposition": "probable-later-revamp-confirm-era-before-conversion",
+      "artifact": "changes/p99-audit/manual-event-dispositions.json"
+    },
+    {
+      "key": "cazicthule/#an_acidic_mass",
+      "disposition": "probable-later-revamp-confirm-era-before-conversion",
+      "artifact": "changes/p99-audit/manual-event-dispositions.json"
+    },
+    {
+      "key": "cazicthule/a_Thul_Tae_Ew_bloodcaller",
+      "disposition": "unresolved-revamp-death-trigger",
+      "artifact": "changes/p99-audit/manual-event-dispositions.json"
+    },
+    {
+      "key": "cazicthule/a_Thul_Tae_Ew_defender",
+      "disposition": "unresolved-revamp-death-trigger",
+      "artifact": "changes/p99-audit/manual-event-dispositions.json"
+    },
+    {
+      "key": "cazicthule/a_Thul_Tae_Ew_fanatic",
+      "disposition": "unresolved-revamp-death-trigger",
+      "artifact": "changes/p99-audit/manual-event-dispositions.json"
+    },
+    {
+      "key": "cazicthule/a_Thul_Tae_Ew_judicator",
+      "disposition": "unresolved-revamp-death-trigger",
+      "artifact": "changes/p99-audit/manual-event-dispositions.json"
+    },
+    {
+      "key": "cazicthule/a_Thul_Tae_Ew_justicar",
+      "disposition": "unresolved-revamp-death-trigger",
+      "artifact": "changes/p99-audit/manual-event-dispositions.json"
+    },
+    {
+      "key": "cazicthule/a_Thul_Tae_Ew_protector",
+      "disposition": "unresolved-revamp-death-trigger",
+      "artifact": "changes/p99-audit/manual-event-dispositions.json"
+    },
+    {
+      "key": "cazicthule/a_Thul_Tae_Ew_zealot",
+      "disposition": "unresolved-revamp-death-trigger",
+      "artifact": "changes/p99-audit/manual-event-dispositions.json"
+    },
+    {
+      "key": "charasis/player",
+      "disposition": "mixed-player-runtime-review",
+      "artifact": "changes/p99-classic-conversions/triage.json"
+    },
+    {
+      "key": "cobaltscar/Darting_Shark",
+      "disposition": "open_timed_shark_era",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "cobaltscar/Feeder_Shark",
+      "disposition": "open_timed_shark_era",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "cobaltscar/Gnashing_Killer_Shark",
+      "disposition": "open_timed_shark_era",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "eastwastes/116006",
+      "disposition": "open_ring_eight_cleanup_identity",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "eastwastes/116012",
+      "disposition": "open_ring_eight_cleanup_identity",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "eastwastes/116548",
+      "disposition": "open_ring_eight_cleanup_identity",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "eastwastes/116556",
+      "disposition": "open_ring_eight_cleanup_identity",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "eastwastes/116577",
+      "disposition": "open_ring_eight_cleanup_identity",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "eastwastes/a_Ry-Gorr_messenger",
+      "disposition": "open_ring_five_waypoint_identity",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "eastwastes/a_Ry-Gorr_prison_guard",
+      "disposition": "open_ring_six_actor_identity",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "frozenshadow/#an_enraged_vampire",
+      "disposition": "open_gender_variants_identity",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "frozenshadow/#Cara_Omica",
+      "disposition": "open_tower_global_spawn_state",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "frozenshadow/111154",
+      "disposition": "open_tower_global_spawn_state",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "frozenshadow/a_haunting_voice",
+      "disposition": "open_tower_global_spawn_state",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "frozenshadow/an_enraged_vampire",
+      "disposition": "open_gender_variants_identity",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "greatdivide/gnomish_captive",
+      "disposition": "open_bloodmaw_proximity_lifecycle",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "growthplane/Flighty_Viridian_Wisp",
+      "disposition": "open_later_epic_item_chain",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "growthplane/player",
+      "disposition": "open_later_epic_item_chain",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "iceclad/110115",
+      "disposition": "open_icebreaker_transport_identity",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "iceclad/Joshel_the_Large",
+      "disposition": "mixed_flavor_unverified_bandana",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "iceclad/Madan_Eflik",
+      "disposition": "open_ambient_timer_implementation",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "iceclad/Novyak_the_Lookout",
+      "disposition": "open_ambient_timer_implementation",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "iceclad/Ratop",
+      "disposition": "mixed_rum_and_later_shawl",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "iceclad/Soulbinder_Cubnitskin",
+      "disposition": "open_service_plugin_authority",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "kael/#Grondon_Zekkin",
+      "disposition": "open_plate_house_cycle_identity",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "kael/#Kromzog_Zekkin",
+      "disposition": "open_plate_house_cycle_identity",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "kael/#Zlirron_Windchill",
+      "disposition": "open_plate_house_cycle_identity",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "kael/113553",
+      "disposition": "open_plate_house_cycle_identity",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "kael/a_bag_of_supplies",
+      "disposition": "open_faun_exchange_effect",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "kithicor/#a_jack_o_lantern",
+      "disposition": "unresolved-roaming-only-no-p99-evidence",
+      "artifact": "changes/p99-audit/manual-event-dispositions.json"
+    },
+    {
+      "key": "kithicor/a_black_cat",
+      "disposition": "unresolved-roaming-only-no-p99-evidence",
+      "artifact": "changes/p99-audit/manual-event-dispositions.json"
+    },
+    {
+      "key": "kithicor/a_fallen_werewolf",
+      "disposition": "unresolved-world-event-no-p99-evidence",
+      "artifact": "changes/p99-audit/manual-event-dispositions.json"
+    },
+    {
+      "key": "kithicor/Feign_Death_Trooper",
+      "disposition": "unresolved-world-event-no-p99-evidence",
+      "artifact": "changes/p99-audit/manual-event-dispositions.json"
+    },
+    {
+      "key": "lfaydark/Kalayia_Woodwhisper",
+      "disposition": "blocked-roaming-path-evidence",
+      "artifact": "changes/p99-audit/manual-linked-dispositions.json"
+    },
+    {
+      "key": "mischiefplane/#Bristlebane",
+      "disposition": "blocked_p99_encounter_conflict",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "misty/Bidils_the_Quickhand",
+      "disposition": "unresolved-era-reference",
+      "artifact": "changes/p99-classic-conversions/triage.json"
+    },
+    {
+      "key": "necropolis/#an_Odd_Looking_Spider",
+      "disposition": "open_spider_stiggles_era",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "necropolis/#Stiggles_Cogswin",
+      "disposition": "open_spider_stiggles_era",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "necropolis/A_Guardian_of_the_Shrine",
+      "disposition": "open_jaled_proximity_hate",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "necropolis/a_nest",
+      "disposition": "open_construct_spawn_lifecycle",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "necropolis/a_pile_of_bones",
+      "disposition": "open_construct_spawn_lifecycle",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "neriaka/Hukulk",
+      "disposition": "later-service-or-relocation-reference",
+      "artifact": "changes/p99-audit/manual-linked-dispositions.json"
+    },
+    {
+      "key": "neriaka/Ranjor",
+      "disposition": "later-service-or-relocation-reference",
+      "artifact": "changes/p99-audit/manual-linked-dispositions.json"
+    },
+    {
+      "key": "neriakb/player",
+      "disposition": "mixed-player-runtime-review",
+      "artifact": "changes/p99-classic-conversions/triage.json"
+    },
+    {
+      "key": "nro/#_#_5",
+      "disposition": "unresolved-world-transport",
+      "artifact": "changes/p99-classic-conversions/triage.json"
+    },
+    {
+      "key": "nro/#Verrell_Cogswin",
+      "disposition": "unresolved-later-scale-alternative",
+      "artifact": "changes/p99-classic-conversions/triage.json"
+    },
+    {
+      "key": "permafrost/player",
+      "disposition": "player-runtime-review",
+      "artifact": "changes/p99-classic-conversions/triage.json"
+    },
+    {
+      "key": "skyshrine/#Kerafyrm",
+      "disposition": "blocked_cross_zone_sleeper_lifecycle",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "skyshrine/#kerafyrm_trigger",
+      "disposition": "blocked_cross_zone_sleeper_lifecycle",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "skyshrine/A_Guardian_of_the_Shrine",
+      "disposition": "blocked_cross_zone_sleeper_lifecycle",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "skyshrine/Grudash_the_Baker",
+      "disposition": "blocked_removed_pie_dialogue_conflict",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "skyshrine/Mercutius_Del_Torre",
+      "disposition": "open_draconic_loyalist_era",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "skyshrine/Ruru_the_Cook",
+      "disposition": "blocked_removed_pie_dialogue_conflict",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "skyshrine/Torm_Wenrar",
+      "disposition": "open_draconic_loyalist_era",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "sleeper/#Drakeen_Apprentice",
+      "disposition": "open_revamp_spawn_identity",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "sleeper/#Drakeen_Protector",
+      "disposition": "open_revamp_spawn_identity",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "sleeper/#Hraashna_the_Warder",
+      "disposition": "blocked_cross_zone_sleeper_lifecycle",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "sleeper/#Kerafyrm",
+      "disposition": "blocked_cross_zone_sleeper_lifecycle",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "sleeper/#Kerafyrm_",
+      "disposition": "blocked_cross_zone_sleeper_lifecycle",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "sleeper/#Nanzata_the_Warder",
+      "disposition": "blocked_cross_zone_sleeper_lifecycle",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "sleeper/#The_Sleeper",
+      "disposition": "blocked_cross_zone_sleeper_lifecycle",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "sleeper/#Tukaarak_the_Warder",
+      "disposition": "blocked_cross_zone_sleeper_lifecycle",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "sleeper/#Ventani_the_Warder",
+      "disposition": "blocked_cross_zone_sleeper_lifecycle",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "sleeper/Forbidding_Gargoyle",
+      "disposition": "open_revamp_spawn_identity",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "soldungb/player",
+      "disposition": "player-runtime-review",
+      "artifact": "changes/p99-classic-conversions/triage.json"
+    },
+    {
+      "key": "steamfont/#Smith_Numden",
+      "disposition": "unresolved-era-reference",
+      "artifact": "changes/p99-classic-conversions/triage.json"
+    },
+    {
+      "key": "thurgadina/Avalanche",
+      "disposition": "blocked_npc_target_follow",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "thurgadina/Brina_Snowfox",
+      "disposition": "blocked_corrupt_upstream_dialogue",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "thurgadina/Doriggan",
+      "disposition": "open_ambient_waypoint_lifecycle",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "thurgadina/Fergus_Sawdust",
+      "disposition": "open_flavor_identity",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "thurgadina/Frostpaw",
+      "disposition": "blocked_npc_target_follow",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "thurgadina/Guard_Dagur",
+      "disposition": "open_cross_actor_speech",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "thurgadina/Horasug",
+      "disposition": "blocked_ambient_runtime_lifecycle",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "thurgadina/Initiate_Corrith",
+      "disposition": "open_animation_timer_effect",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "thurgadina/Initiate_Kroskain",
+      "disposition": "open_ambient_timer_implementation",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "thurgadina/Initiate_Sirchthain",
+      "disposition": "open_animation_timer_effect",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "thurgadina/Jorumin",
+      "disposition": "blocked_ambient_runtime_lifecycle",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "thurgadina/Lieutenant_Ulfur",
+      "disposition": "open_ambient_waypoint_lifecycle",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "thurgadina/Meg_Tucter",
+      "disposition": "mixed_in_era_flavor_later_shawl",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "thurgadina/Petcas_Coldbeard",
+      "disposition": "mixed_mug_special_beans_ambient",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "thurgadina/Ronodun",
+      "disposition": "open_ambient_waypoint_lifecycle",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "thurgadina/Rumagur",
+      "disposition": "blocked_ambient_runtime_lifecycle",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "thurgadina/Saramor",
+      "disposition": "blocked_ambient_runtime_lifecycle",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "thurgadina/Templar_Franchus",
+      "disposition": "open_ambient_timer_implementation",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "thurgadina/Templar_Tingar",
+      "disposition": "open_ambient_timer_implementation",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "thurgadinb/129097",
+      "disposition": "blocked_council_multi_actor_lifecycle",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "thurgadinb/129098",
+      "disposition": "blocked_council_multi_actor_lifecycle",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "thurgadinb/Councilor_Amberfeld",
+      "disposition": "open_council_movement_mapping",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "thurgadinb/Councilor_Coldember",
+      "disposition": "open_council_movement_mapping",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "thurgadinb/Councilor_Darakor",
+      "disposition": "open_council_movement_mapping",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "thurgadinb/Councilor_Darkfrost",
+      "disposition": "open_council_movement_mapping",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "thurgadinb/Councilor_Deynekn",
+      "disposition": "open_council_movement_mapping",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "thurgadinb/Councilor_Dirkins",
+      "disposition": "open_council_movement_mapping",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "thurgadinb/Councilor_Glacierbane",
+      "disposition": "open_council_movement_mapping",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "thurgadinb/Councilor_Icelok",
+      "disposition": "open_council_movement_mapping",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "thurgadinb/Councilor_Icepike",
+      "disposition": "open_council_movement_mapping",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "thurgadinb/Councilor_Thubins",
+      "disposition": "open_council_movement_mapping",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "thurgadinb/Councilor_Wintershade",
+      "disposition": "open_council_movement_mapping",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "thurgadinb/Loremaster_Solstrin",
+      "disposition": "mixed_in_era_flavor_later_shawl",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "wakening/a_sifaye_defender",
+      "disposition": "blocked_giant_sifaye_world_chain",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "wakening/accolyte_of_Zek",
+      "disposition": "open_velium_focus_cleanup_identity",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "wakening/Berzerker_Dolvad",
+      "disposition": "blocked_giant_sifaye_world_chain",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "wakening/Berzerker_Voldak",
+      "disposition": "blocked_giant_sifaye_world_chain",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "wakening/Bloodpriest_Ioukond",
+      "disposition": "open_velium_focus_cleanup_identity",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "wakening/Corporal_Hlash",
+      "disposition": "blocked_giant_sifaye_world_chain",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "wakening/Disciple_Atharm",
+      "disposition": "blocked_giant_sifaye_world_chain",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "westwastes/A_sentinel-s_voice",
+      "disposition": "open_sentinel_proximity_identity",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    },
+    {
+      "key": "westwastes/Julius_Oresko",
+      "disposition": "open_flavor_identity",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json"
+    }
+  ]
+}

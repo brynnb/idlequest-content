@@ -1,0 +1,153 @@
+{
+  "Shaman Skull Quests": {
+    "review_status": "partial",
+    "reviewed_at": "2026-10-22",
+    "match_status": "bounded_source_correction_with_open_chain_limits",
+    "local_quest_keys": [
+      "cabeast/Hierophant_Dexl",
+      "cabeast/Hierophant_Granix",
+      "cabeast/Hierophant_Oxyn",
+      "cabeast/Hierophant_Zand",
+      "charasis/An_Iksar_Apparition",
+      "charasis/the_spirit_of_Rile",
+      "dalnir/a_coerced_channeler",
+      "fieldofbone/Crusader_Quarg",
+      "fieldofbone/Oracle_Qulin",
+      "fieldofbone/Oracle_Vauris",
+      "overthere/Galdon_Vok_Nir",
+      "swampofnohope/Mystic_Dovan"
+    ],
+    "p99_source": {
+      "title": "Shaman Skull Quests",
+      "url": "https://wiki.project1999.com/Shaman_Skull_Quests?action=raw",
+      "raw_cache": "reference/p99-wiki/raw-pages/shaman-skull-quests-b63ed30880.wiki",
+      "sha256": "58e529950f5736a98c7deac45fbf8897833cae17bfcf08706222406a34ab791c",
+      "fetched_at": "2026-07-17T23:32:43.944Z",
+      "revision": null
+    },
+    "notes": [
+      "Source-reconciliation supplement to the earlier S-Z review, not a new full-chain completion claim.",
+      "The cached quest page explicitly limits P99 to the first five Skull quests. Five sole-purpose later sources are proposed disabled by row/header only; their full historical bodies and NPC data are retained.",
+      "Crusader Quarg preserves the prior advertised-phrase fix. Complete C.O.B.B. 12735 plus Seer cudgel 5142 now explicitly summon Mystic cudgel 5143 and chest 17035 with the existing 100000 XP. The unsupported QuestReward items array silently lost both rewards in the pinned bridge. The chest is for preserved step4 C.O.R.N., not a later excluded step.",
+      "The preceding Zand note 18054 to chest 17034 branch, its existing 10000 XP and faction calls are unchanged. Existing friendly-faction adaptation and class/level neutrality are retained.",
+      "Hash-bound VM tests reproduce the baseline reward loss and cover the repair, wrong/partial/extra/repeated offers, the preceding note, and an injected nonfriendly guard. Static scope tests separately verify disabled metadata and preserved historical bodies."
+    ],
+    "unresolved": [
+      "No full-chain claim: loot acquisition, actual NPC variants, real container crafting, inventory settlement, world timing and player UI remain unverified by this supplement.",
+      "Exact XP, faction deltas and unrecorded minor coin remain undocumented and unchanged; retained constants are not P99 numerical evidence.",
+      "Isolated invocation of disabled historical Lua tests compilation and rejection only, not runtime admission. Policy/admission preservation is a separate static assertion."
+    ],
+    "verification": {
+      "current_source_reconciliation": {
+        "artifact": "changes/p99-source-review/review-records.json",
+        "scope_receipt": "changes/p99-source-review/scope-receipt.json",
+        "runtime_assertions": "changes/p99-source-review/runtime-assertions.json",
+        "runtime": "isolated normalized VM, pinned helpers, strict mocked APIs; not game settlement",
+        "full_chain": false,
+        "ui": "not_verified"
+      },
+      "prior_review": "changes/p99-sz-review/ledger-records.json"
+    },
+    "proposal_sources": [
+      {
+        "proposal": "changes/p99-sz-dovan-alias.json",
+        "proposal_sha256": "652c309c3eca9618ad6a98225a6bf40ac582ca081d85450b627a19f686ee6283",
+        "key": "swampofnohope/Mystic_Dovan",
+        "lua_sha256": "2730bdb472dbcd6f30fcd57861fa047b39650d96201721fe63eaa1039353b7ae"
+      },
+      {
+        "key": "fieldofbone/Crusader_Quarg",
+        "proposal": "changes/p99-sz-quarg-alias.json",
+        "proposal_sha256": "cf6ae11c85bc51abad03eaf898700101f48c224a937677e451e6bd56cc5904d5",
+        "lua_sha256": "9833a30cb5a261096b24ce2d87aa1609b3a3226a8edea9fe0fa44af40b006671",
+        "proposedFile": "changes/p99-sz-quarg-alias/fieldofbone--Crusader_Quarg.lua",
+        "enabled": 1
+      },
+      {
+        "proposal": "changes/p99-sz-zand-alias.json",
+        "proposal_sha256": "d745f7418e80999e3289f26b0a5a8e630ddb99dc84d1b6a9bafb362cfeb9b637",
+        "key": "cabeast/Hierophant_Zand",
+        "lua_sha256": "36b90b75628a7d4539866e553ab0a1fead197167cb14138e31a16b294e0f011b"
+      },
+      {
+        "key": "dalnir/a_coerced_channeler",
+        "proposal": "changes/p99-source-scope-disables.json",
+        "proposal_sha256": "3bf1cfe04ae00e6cd33ac60bb4087dd82efd222b41eb26c269320c6611840731",
+        "lua_sha256": "27be6c56f4d8fffa6cb808c9fa6972918295b072fd3224e4a2e89a4c5be1a961",
+        "proposedFile": "changes/p99-source-scope-disables/dalnir--a_coerced_channeler.lua",
+        "enabled": 0
+      },
+      {
+        "key": "charasis/An_Iksar_Apparition",
+        "proposal": "changes/p99-source-scope-disables.json",
+        "proposal_sha256": "3bf1cfe04ae00e6cd33ac60bb4087dd82efd222b41eb26c269320c6611840731",
+        "lua_sha256": "f7a5fb0582f1dc3f4626f9bc609c05d4f417288837b4962416035337f6b3f1ab",
+        "proposedFile": "changes/p99-source-scope-disables/charasis--An_Iksar_Apparition.lua",
+        "enabled": 0
+      },
+      {
+        "key": "charasis/the_spirit_of_Rile",
+        "proposal": "changes/p99-source-scope-disables.json",
+        "proposal_sha256": "3bf1cfe04ae00e6cd33ac60bb4087dd82efd222b41eb26c269320c6611840731",
+        "lua_sha256": "df9f8a5e7dbd213198e09586442d4007a3d0388ea63675c725cea52d724aee1b",
+        "proposedFile": "changes/p99-source-scope-disables/charasis--the_spirit_of_Rile.lua",
+        "enabled": 0
+      },
+      {
+        "key": "fieldofbone/Oracle_Qulin",
+        "proposal": "changes/p99-source-scope-disables.json",
+        "proposal_sha256": "3bf1cfe04ae00e6cd33ac60bb4087dd82efd222b41eb26c269320c6611840731",
+        "lua_sha256": "8864b2cf02cd48086beae0abee96746609e4abf0d43b2eeb6c8660fb7ae06dbd",
+        "proposedFile": "changes/p99-source-scope-disables/fieldofbone--Oracle_Qulin.lua",
+        "enabled": 0
+      },
+      {
+        "key": "fieldofbone/Oracle_Vauris",
+        "proposal": "changes/p99-source-scope-disables.json",
+        "proposal_sha256": "3bf1cfe04ae00e6cd33ac60bb4087dd82efd222b41eb26c269320c6611840731",
+        "lua_sha256": "7f74bcc91941d7ec55338a9024e682d151ec9c26fe47852df76a25e9906ebfc9",
+        "proposedFile": "changes/p99-source-scope-disables/fieldofbone--Oracle_Vauris.lua",
+        "enabled": 0
+      }
+    ]
+  },
+  "Guild Summons - Faydark's Champions": {
+    "review_status": "partial",
+    "reviewed_at": "2026-10-22",
+    "match_status": "bounded_source_correction_with_open_chain_limits",
+    "local_quest_keys": [
+      "gfaydark/Samatansyn_Flamecaller"
+    ],
+    "p99_source": {
+      "title": "Guild Summons - Faydark's Champions",
+      "url": "https://wiki.project1999.com/Guild_Summons_-_Faydark's_Champions?action=raw",
+      "raw_cache": "reference/p99-wiki/raw-pages/guild-summons-faydark-s-champions-40472b61a1.wiki",
+      "sha256": "b51ed7f5f67d036ffb5da3d534aeddcdf6503c981245de89af66d93eea7b4ca2",
+      "fetched_at": "2026-07-17T23:18:04.251Z",
+      "revision": null
+    },
+    "notes": [
+      "Bounded source-disposition review only. The cached quest notes explicitly identify Samatansyn as not active on P99; this is positive NPC-specific evidence, not inference from an absent quest listing.",
+      "His standalone Trueshot newcomer-armor source is proposed disabled by row/header while its full historical body and NPC data are preserved. This does not disable Maesyn or the classic Ranger guild summons."
+    ],
+    "unresolved": [
+      "No claim that this supplementary source-disposition review verifies the full guild-summons chain, world NPC admission or UI."
+    ],
+    "verification": {
+      "source": "whole Samatansyn event source and exact cached quest notes reviewed",
+      "runtime": "historical Lua compiles and returns unrelated offers under strict mocked APIs; disabled metadata checked separately",
+      "full_chain": false,
+      "ui": "not_verified"
+    },
+    "proposal_sources": [
+      {
+        "key": "gfaydark/Samatansyn_Flamecaller",
+        "proposal": "changes/p99-source-scope-disables.json",
+        "proposal_sha256": "3bf1cfe04ae00e6cd33ac60bb4087dd82efd222b41eb26c269320c6611840731",
+        "lua_sha256": "db7112ce2c505cb3a2d8bafe533c8e0b856ff7602c6a841e9f92290320892f2c",
+        "proposedFile": "changes/p99-source-scope-disables/gfaydark--Samatansyn_Flamecaller.lua",
+        "enabled": 0
+      }
+    ]
+  }
+}

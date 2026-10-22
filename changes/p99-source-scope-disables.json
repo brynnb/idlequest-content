@@ -1,0 +1,278 @@
+{
+  "format": 1,
+  "id": "p99-source-scope-disables",
+  "summary": "Disable ten standalone source-only later/inactive P99 quest scripts using explicit P99 evidence. Retain complete historical Lua bodies and all NPC data. No blanket era inference from enabled flags, missing names or absent items.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Shaman_Skull_Quests?action=raw",
+      "note": "P99 explicitly states only steps1\u20135 exist and later steps were added in Luclin. These five source bodies implement only steps6\u20138. Cache reference/p99-wiki/raw-pages/shaman-skull-quests-b63ed30880.wiki; fetched 2026-07-17T23:32:43.944Z; SHA256 58e529950f5736a98c7deac45fbf8897833cae17bfcf08706222406a34ab791c; revision unavailable. Not a live wiki freshness claim."
+    },
+    {
+      "url": "https://wiki.project1999.com/Guild_Summons_-_Faydark's_Champions?action=raw",
+      "note": "Notes explicitly identify Samatansyn Flamecaller as not active, despite era-inaccurate referral dialogue; his source contains only Trueshot newcomer armor/weapon. Cache reference/p99-wiki/raw-pages/guild-summons-faydark-s-champions-40472b61a1.wiki; fetched 2026-07-17T23:18:04.251Z; SHA256 b51ed7f5f67d036ffb5da3d534aeddcdf6503c981245de89af66d93eea7b4ca2; revision unavailable. Not a live wiki freshness claim."
+    },
+    {
+      "url": "https://wiki.project1999.com/Dionna?action=raw",
+      "note": "NPC description explicitly identifies Fabian's Strings as Planes of Power and no P99 quest. Source has only Fabian note\u2192placeholder reward; NPC remains present. Cache reference/p99-wiki/npc-pages/dionna-fceda972b8.wiki; fetched 2026-08-12T18:28:10.727Z; SHA256 d1e05457fdd092590d64c955db5dc956900fb678ca68cb234f141040e1d410d0; revision unavailable. Not a live wiki freshness claim."
+    },
+    {
+      "url": "https://wiki.project1999.com/Shackle_of_Tynnonium",
+      "note": "Public wiki search-index result retrieved2026-10-22T05:00:46Z, reported crawled6days earlier. Exact excerpt: \"This is a post-Velious (non-Classic) item.\" No fresh raw/API fetch claimed; see public-evidence.json. Only three sole-purpose sources which output or require item4199 are disabled; classic Steel and mixed lore actors retained."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 14637,
+        "zone": "dalnir",
+        "name": "a_coerced_channeler",
+        "lua_content": "--Shaman Skull Quest 6\n-- items: 12752\nfunction event_death_complete(e)\n\te.self:Shout(\"the river of Xinth...\");\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\t--Turn in the a potion of swirling liquid\n\tif(item_lib.check_turn_in(e.trade, {item1 = 12752})) then\n\t\te.other:QuestReward(e.self,0,0,0,0,12750); --give the player one of the Iksar skulls of the sisters...\n\t\te.self:Shout(\"Go to where the pines have been smashed. Must reach great heights!\");\n\t\teq.depop_with_timer();\n\t\t-- an npc named, Friend Vagnar the Channeler, is supposed to spawn and shout that text while running away, figure this would b easier on the server...\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade) --return items if not the ones required\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 14637,
+        "zone": "dalnir",
+        "name": "a_coerced_channeler",
+        "lua_content": "-- enabled: false\n-- P99 Shaman Skull Quests explicitly excludes steps6\u20138 (Luclin); first-five-stage sources are not changed. Historical source body retained below.\n--Shaman Skull Quest 6\n-- items: 12752\nfunction event_death_complete(e)\n\te.self:Shout(\"the river of Xinth...\");\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\t--Turn in the a potion of swirling liquid\n\tif(item_lib.check_turn_in(e.trade, {item1 = 12752})) then\n\t\te.other:QuestReward(e.self,0,0,0,0,12750); --give the player one of the Iksar skulls of the sisters...\n\t\te.self:Shout(\"Go to where the pines have been smashed. Must reach great heights!\");\n\t\teq.depop_with_timer();\n\t\t-- an npc named, Friend Vagnar the Channeler, is supposed to spawn and shout that text while running away, figure this would b easier on the server...\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade) --return items if not the ones required\nend\n",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 19589,
+        "zone": "charasis",
+        "name": "An_Iksar_Apparition",
+        "lua_content": "--Shaman Skull Quest 8\n-- items: 30994\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 30994})) then --Iksar Relics\n\t\teq.unique_spawn(105182,0,0,e.self:GetX(),e.self:GetY(),e.self:GetZ(),e.self:GetHeading()); --Venril_Sathir\n\t\teq.unique_spawn(105186,0,0,-13,-658,8,100); --an Arisen Disciple\n\t\teq.unique_spawn(105183,0,0,13,-658,8,160); --an Arisen Priest\n\t\teq.unique_spawn(105184,0,0,13,-690,8,228); --an Arisen Necromancer\n\t\teq.unique_spawn(105185,0,0,-13,-690,8,34); --an Arisen Acolyte\n\t\teq.depop_with_timer();\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 19589,
+        "zone": "charasis",
+        "name": "An_Iksar_Apparition",
+        "lua_content": "-- enabled: false\n-- P99 Shaman Skull Quests explicitly excludes steps6\u20138 (Luclin); first-five-stage sources are not changed. Historical source body retained below.\n--Shaman Skull Quest 8\n-- items: 30994\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 30994})) then --Iksar Relics\n\t\teq.unique_spawn(105182,0,0,e.self:GetX(),e.self:GetY(),e.self:GetZ(),e.self:GetHeading()); --Venril_Sathir\n\t\teq.unique_spawn(105186,0,0,-13,-658,8,100); --an Arisen Disciple\n\t\teq.unique_spawn(105183,0,0,13,-658,8,160); --an Arisen Priest\n\t\teq.unique_spawn(105184,0,0,13,-690,8,228); --an Arisen Necromancer\n\t\teq.unique_spawn(105185,0,0,-13,-690,8,34); --an Arisen Acolyte\n\t\teq.depop_with_timer();\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 17081,
+        "zone": "charasis",
+        "name": "the_spirit_of_Rile",
+        "lua_content": "--Shaman Skull Quest 8\n-- items: 30995, 5148\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 30995, item2 = 5148})) then --Skull of Rile, Skyiron Cudgel of the Arison\n\t\te.self:Say(\"Use your cudgel to unite my soul with my body \" .. e.other:GetCleanName() .. \"\");\n\t\te.self:Emote(\"begins to shudder and shake, the bones fly from your hands to meet their rightful soul. The spirit and bones being to glow and meld into one another, forming a swirling mass of ethereal energy. Abani begins to mouth incantations in an unfamiliar tongue. Their voice rises ever higher as mystic energy surges through the room. Then, in a suddenly flash, the spirit and corpse disappear without a trace, leaving only \" .. e.other:GetCleanName() .. \" holding a Faintly glowing Cudgel in his hand.\");\n\t\te.other:QuestReward(e.self,0,0,0,0,5149);\n\t\teq.depop();\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 17081,
+        "zone": "charasis",
+        "name": "the_spirit_of_Rile",
+        "lua_content": "-- enabled: false\n-- P99 Shaman Skull Quests explicitly excludes steps6\u20138 (Luclin); first-five-stage sources are not changed. Historical source body retained below.\n--Shaman Skull Quest 8\n-- items: 30995, 5148\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 30995, item2 = 5148})) then --Skull of Rile, Skyiron Cudgel of the Arison\n\t\te.self:Say(\"Use your cudgel to unite my soul with my body \" .. e.other:GetCleanName() .. \"\");\n\t\te.self:Emote(\"begins to shudder and shake, the bones fly from your hands to meet their rightful soul. The spirit and bones being to glow and meld into one another, forming a swirling mass of ethereal energy. Abani begins to mouth incantations in an unfamiliar tongue. Their voice rises ever higher as mystic energy surges through the room. Then, in a suddenly flash, the spirit and corpse disappear without a trace, leaving only \" .. e.other:GetCleanName() .. \" holding a Faintly glowing Cudgel in his hand.\");\n\t\te.other:QuestReward(e.self,0,0,0,0,5149);\n\t\teq.depop();\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 15469,
+        "zone": "fieldofbone",
+        "name": "Oracle_Qulin",
+        "lua_content": "--Shaman Skull Quest 7\n-- items: 30984, 30985\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\t\n\t--Turn in the a dusty iksar skull\n\tif(item_lib.check_turn_in(e.trade, {item1 = 30984})) then\n\t\te.self:Emote(\"runs his scaled fingers slowly over the cracked, brittle skull. 'Granix did well to send you to me, I may yet be able to recover the spirit of this ancient and set it free. Come! I shall need your help with this ritual.'\");\n\t\te.self:Emote(\"dips the skull in the crystal waters. He lifts the skull over his head and stands completely still, allowing the water to drip down off the skull down over his body and finally on to the parched sand.'\");\n\t\te.self:Emote(\"begins to chant. Quietly at first but then louder and faster. He speaks a language you only vaguely recognize. It is the voice and language of the ancient oracles. His voice booms out over the water filling your mind with images of the ancient Sebilisian empire and the great Iksar rulers of old.\");\n\t\te.self:Emote(\"'s voice stops suddenly, leaving the air completely silent. Even the waves seem to have stopped for a moment. You begin to move toward him, but he raises a hand toward you motioning for you to stay still.\");\n\t\te.self:Say(\"Suddenly without warning the skull flies from Quilin's hands and flies into the murky waters. It stays submerged for a moment and then flies toward you, but this time an entire corpse is attached to it.\");\n\t\teq.spawn2(78215,0,0,e.self:GetX() + 5,e.self:GetY(),e.self:GetZ(),e.self:GetHeading());--spawn An Arisen Iksar\n\t--Turn in the Wet Skull Fragments\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 30985})) then\n\t\te.self:Say(\"It seems this particular ancient does not wish to be put to rest. Return this note to Hierophant Granix and tell him what happened. He will surely wish this skull to be disposed of properly, but I do not have the power to do it myself.\");\n\t\te.other:QuestReward(e.self,0,0,0,0,30986); --note to Hierophant Granix\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 15469,
+        "zone": "fieldofbone",
+        "name": "Oracle_Qulin",
+        "lua_content": "-- enabled: false\n-- P99 Shaman Skull Quests explicitly excludes steps6\u20138 (Luclin); first-five-stage sources are not changed. Historical source body retained below.\n--Shaman Skull Quest 7\n-- items: 30984, 30985\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\t\n\t--Turn in the a dusty iksar skull\n\tif(item_lib.check_turn_in(e.trade, {item1 = 30984})) then\n\t\te.self:Emote(\"runs his scaled fingers slowly over the cracked, brittle skull. 'Granix did well to send you to me, I may yet be able to recover the spirit of this ancient and set it free. Come! I shall need your help with this ritual.'\");\n\t\te.self:Emote(\"dips the skull in the crystal waters. He lifts the skull over his head and stands completely still, allowing the water to drip down off the skull down over his body and finally on to the parched sand.'\");\n\t\te.self:Emote(\"begins to chant. Quietly at first but then louder and faster. He speaks a language you only vaguely recognize. It is the voice and language of the ancient oracles. His voice booms out over the water filling your mind with images of the ancient Sebilisian empire and the great Iksar rulers of old.\");\n\t\te.self:Emote(\"'s voice stops suddenly, leaving the air completely silent. Even the waves seem to have stopped for a moment. You begin to move toward him, but he raises a hand toward you motioning for you to stay still.\");\n\t\te.self:Say(\"Suddenly without warning the skull flies from Quilin's hands and flies into the murky waters. It stays submerged for a moment and then flies toward you, but this time an entire corpse is attached to it.\");\n\t\teq.spawn2(78215,0,0,e.self:GetX() + 5,e.self:GetY(),e.self:GetZ(),e.self:GetHeading());--spawn An Arisen Iksar\n\t--Turn in the Wet Skull Fragments\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 30985})) then\n\t\te.self:Say(\"It seems this particular ancient does not wish to be put to rest. Return this note to Hierophant Granix and tell him what happened. He will surely wish this skull to be disposed of properly, but I do not have the power to do it myself.\");\n\t\te.other:QuestReward(e.self,0,0,0,0,30986); --note to Hierophant Granix\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 18512,
+        "zone": "fieldofbone",
+        "name": "Oracle_Vauris",
+        "lua_content": "-- items: 30989, 30991, 30990, 30993, 30992\n\n\n--Shaman Skull Quest 8\nfunction event_say(e)\n\tif(e.message:findi(\"Hail\")) then\n\t\te.self:Emote(\"Oracle Vauris motions for silence and points at the shifting sands below him without a word.\");\n\telseif(e.other:GetFaction(e.self) < 6 and e.message:findi(\"rile\")) then\n\t\te.self:Say(\"Have you learned nothing in all your years of service to the hall of Terror? The skulls on that necklace were the bones of the traitorous Iksar who defiled Rile's Relics. Their final moments were spent in Charasis, destroyed by their own dark magics. Rile was the son of the most powerful and terrible [emperor] the Iksar have ever known. Not since the days of Ssrae... 'His voice trails off and his eyes glaze over a bit. You sense that Vauris has been touched by some unmentionable terror.\");\n\telseif(e.other:GetFaction(e.self) < 6 and (e.message:findi(\"emperor\") or e.message:findi(\"xalgoz\"))) then\n\t\te.self:Say(\"At last you see \" .. e.other:GetCleanName() .. \". The one you speak of is indeed a servant of Rile's father. His presence on this world has disrupted the spirits of the ancients. This disruption must be put to an end. Slaying him will do little good unfortunately. We will have to make use of other powers to truly banish him from this world. If we are to do this we shall need a true relic of Rile, and the soul of his father. Only with these items can we hope to free Rile's soul from the void between death and life. But first there are others that serve the risen emperor that must be destroyed.\");\n\telseif(e.other:GetFaction(e.self) < 6 and e.message:findi(\"other\")) then\n\t\te.self:Say(\"The servants of the emperor wear many faces. One in particular is know to wear several himself. Of Serpents and Iksar is his current incarnation, a twisted vision of a dark union. Bring me his essence, for I will need a vessel to siphon the emperor's soul into. Bring me these 3 items along with the pouch of bone dust and we shall see what fate the ancients have chosen for us.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\t\n\t--Turn in the Shrunken Iksar Skull Necklace\n\tif(e.other:GetFaction(e.self) < 6 and item_lib.check_turn_in(e.trade, {item1 = 30989})) then\n\t\te.self:Emote(\"takes the necklace from you without a word. He looks into your eyes for a moment. He seems to be searching for something. Apparently he finds whatever he was looking for as he pulls an empty bag from his belt. He takes the necklace and snaps the cord with his teeth allowing the skulls to fall into the bag. He looks you square in the eyes again and motions for you to put out your hand. You do so and almost immediately regret it. Vauris takes the knife from his belt and slices open your forearm allowing your blood to fall into the bag. He uses the cord to tie the bag and hands it back to you. 'You now share the mark of Rile, \" .. e.other:GetCleanName() .. \". Your fates are intertwined.'\");\n\t\te.other:QuestReward(e.self,0,0,0,0,30990); --give the player Bag of Iksar Skull Dust\n\t--Turn in the Changeling Essence, Bag of Iksar Skull Dust, Glowing Kunzar Amulet, Blackened Iksar Bones\n\telseif(e.other:GetFaction(e.self) < 6 and item_lib.check_turn_in(e.trade, {item1 = 30991, item2 = 30990, item3 = 30993, item4 = 30992})) then\n\t\te.self:Say(\"You have done well \" .. e.other:GetCleanName() .. \". Now it is time for the true test of your clairvoyance. Only a true Scaled mystic will be able to put these spirits to rest. Be warned, these souls will not go quietly into the next world. They have strong ties to this land, and it is these ties we must break. Take them to the City of the Kunzar, the birthplace of the emperor. Only there will you be able to tear asunder the dark rituals that have twisted the souls of our ancient heroes. I will await you in that place \" .. e.other:GetCleanName() .. \".\");\n\t\te.other:QuestReward(e.self,0,0,0,0,30994); --give the player Iksar Relics\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 18512,
+        "zone": "fieldofbone",
+        "name": "Oracle_Vauris",
+        "lua_content": "-- enabled: false\n-- P99 Shaman Skull Quests explicitly excludes steps6\u20138 (Luclin); first-five-stage sources are not changed. Historical source body retained below.\n-- items: 30989, 30991, 30990, 30993, 30992\n\n\n--Shaman Skull Quest 8\nfunction event_say(e)\n\tif(e.message:findi(\"Hail\")) then\n\t\te.self:Emote(\"Oracle Vauris motions for silence and points at the shifting sands below him without a word.\");\n\telseif(e.other:GetFaction(e.self) < 6 and e.message:findi(\"rile\")) then\n\t\te.self:Say(\"Have you learned nothing in all your years of service to the hall of Terror? The skulls on that necklace were the bones of the traitorous Iksar who defiled Rile's Relics. Their final moments were spent in Charasis, destroyed by their own dark magics. Rile was the son of the most powerful and terrible [emperor] the Iksar have ever known. Not since the days of Ssrae... 'His voice trails off and his eyes glaze over a bit. You sense that Vauris has been touched by some unmentionable terror.\");\n\telseif(e.other:GetFaction(e.self) < 6 and (e.message:findi(\"emperor\") or e.message:findi(\"xalgoz\"))) then\n\t\te.self:Say(\"At last you see \" .. e.other:GetCleanName() .. \". The one you speak of is indeed a servant of Rile's father. His presence on this world has disrupted the spirits of the ancients. This disruption must be put to an end. Slaying him will do little good unfortunately. We will have to make use of other powers to truly banish him from this world. If we are to do this we shall need a true relic of Rile, and the soul of his father. Only with these items can we hope to free Rile's soul from the void between death and life. But first there are others that serve the risen emperor that must be destroyed.\");\n\telseif(e.other:GetFaction(e.self) < 6 and e.message:findi(\"other\")) then\n\t\te.self:Say(\"The servants of the emperor wear many faces. One in particular is know to wear several himself. Of Serpents and Iksar is his current incarnation, a twisted vision of a dark union. Bring me his essence, for I will need a vessel to siphon the emperor's soul into. Bring me these 3 items along with the pouch of bone dust and we shall see what fate the ancients have chosen for us.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\t\n\t--Turn in the Shrunken Iksar Skull Necklace\n\tif(e.other:GetFaction(e.self) < 6 and item_lib.check_turn_in(e.trade, {item1 = 30989})) then\n\t\te.self:Emote(\"takes the necklace from you without a word. He looks into your eyes for a moment. He seems to be searching for something. Apparently he finds whatever he was looking for as he pulls an empty bag from his belt. He takes the necklace and snaps the cord with his teeth allowing the skulls to fall into the bag. He looks you square in the eyes again and motions for you to put out your hand. You do so and almost immediately regret it. Vauris takes the knife from his belt and slices open your forearm allowing your blood to fall into the bag. He uses the cord to tie the bag and hands it back to you. 'You now share the mark of Rile, \" .. e.other:GetCleanName() .. \". Your fates are intertwined.'\");\n\t\te.other:QuestReward(e.self,0,0,0,0,30990); --give the player Bag of Iksar Skull Dust\n\t--Turn in the Changeling Essence, Bag of Iksar Skull Dust, Glowing Kunzar Amulet, Blackened Iksar Bones\n\telseif(e.other:GetFaction(e.self) < 6 and item_lib.check_turn_in(e.trade, {item1 = 30991, item2 = 30990, item3 = 30993, item4 = 30992})) then\n\t\te.self:Say(\"You have done well \" .. e.other:GetCleanName() .. \". Now it is time for the true test of your clairvoyance. Only a true Scaled mystic will be able to put these spirits to rest. Be warned, these souls will not go quietly into the next world. They have strong ties to this land, and it is these ties we must break. Take them to the City of the Kunzar, the birthplace of the emperor. Only there will you be able to tear asunder the dark rituals that have twisted the souls of our ancient heroes. I will await you in that place \" .. e.other:GetCleanName() .. \".\");\n\t\te.other:QuestReward(e.self,0,0,0,0,30994); --give the player Iksar Relics\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 12398,
+        "zone": "gfaydark",
+        "name": "Samatansyn_Flamecaller",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: gfaydark/Samatansyn_Flamecaller.pl\n-- items: 17367, 22671, 22672, 22673, 22674, 22675, 22676, 22677, 27539, 13266, 27532\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"It is a pleasure to meet you \" .. e.other:GetName() .. \", I am Samatansyn Flamecaller, Warder of Tunare and Guildmaster of Faydarks Champions. I have studied here for many of my years until recently when I took up teaching. I have many pupils that undergo my vigorous [training exercises].\")\n\telseif e.message:findi(\"training exercises\") then\n\t\te.self:Say(\"I have a series of tests that all new rangers of Kelethin are suggested to participate in. These tests will help you develop many of your skills including hunting and gathering and will also provide you with a chance to fashion your own Trueshot Chainmail. If you are a [ranger of Tunare] and are willing to begin your training I will be happy to explain to you how the tests work.\")\n\telseif e.message:findi(\"ranger of tunare\") then\n\t\te.self:Say(\"Excellent \" .. e.other:GetName() .. \", then lets get started! Here is your Trueshot Assembly Kit. You will collect various items from the Faydark and Clan Crushbone that will be necessary for creating your armor materials in your assembly kit. Once you have fashioned together a specific armor material you can then take it to a forge along with the applicable pattern to create your Trueshot Chainmail armor piece. Simply tell me what armor piece you [want] to craft and I can provide you with the material recipes and patterns for Trueshot Chainmail [Coifs], [Bracers], [Sleeves], [Boots], [Legplates], [Gauntlets] and [Tunics].\")\n\t\te.other:SummonItem(17367)\n\telseif e.message:findi(\"coif\") then\n\t\te.self:Say(\"To create your coif material you will need to combine 2 Bricks of Crude Bronze, 1 Royal Jelly, 1 Spiderling Eye and 1 Ration in your assembly kit. Once you have created the proper material take it to a forge along with this mold to fashion your very own Trueshot Coif.\")\n\t\te.other:SummonItem(22671)\n\telseif e.message:findi(\"bracer\") then\n\t\te.self:Say(\"To create your bracer material you will need to combine 1 Brick of Crude Bronze, 1 Skeleton Tibia, 1 Pixie Wing and 1 Gypsy Wine in your assembly kit. Once you have created the proper material take it to a forge along with this mold to fashion your very own Trueshot Chainmail Bracer.\")\n\t\te.other:SummonItem(22672)\n\telseif e.message:findi(\"sleeves\") then\n\t\te.self:Say(\"To create your sleeves material you will need to combine 2 Bricks of Crude Bronze, 2 Giant Wasp Venom Sacs, 1 Large Widow Abdomen and 1 White Wine in your assembly kit. Once you have created the proper material take it to a forge along with this mold to fashion your very own Trueshot Chainmail Sleeves.\")\n\t\te.other:SummonItem(22673)\n\telseif e.message:findi(\"boots\") then\n\t\te.self:Say(\"To create your boots material you will need to combine 3 Bricks of Crude Bronze, 1 Severed Orc Foot, 2 Spider Legs in your assembly kit. Once you have created the proper material take it to a forge along with this mold to fashion your very own Trueshot Chainmail Boots.\")\n\t\te.other:SummonItem(22674)\n\telseif e.message:findi(\"legplates\") then\n\t\te.self:Say(\"To create your legplates material you will need to combine 4 Bricks of Crude Bronze, 1 Orc Fibula, 1 Orc Clavicle, and 1 Lightstone in your assembly kit. Once you have created the proper material take it to a forge along with this mold to fashion your very own Trueshot Chainmail Legplates.\")\n\t\te.other:SummonItem(22675)\n\telseif e.message:findi(\"gauntlets\") then\n\t\te.self:Say(\"To create your gauntlets material you will need to combine 3 Bricks of Crude Bronze, 1 Orc Ulna, 1 Orc Tibia, and 2 Orc Finger Bones in your assembly kit. Once you have created the proper material take it to a forge along with this mold to fashion your very own Trueshot Chainmail Gauntlets.\")\n\t\te.other:SummonItem(22676)\n\telseif e.message:findi(\"tunic\") then\n\t\te.self:Say(\"To create your tunic material you will need to combine 5 Bricks of Crude Bronze, 1 Orc Fibula, 1 Golden Bandit Tooth, 1 Pristine Forest Drakeling Scale, 1 Orc Ribcage and 1 Orc Eye in your assembly kit. Once you have created the proper material take it to a forge along with this mold to fashion your very own Trueshot Chainmail Tunic. Please return to me after you have completed your tunic, for I have one final [favor] to ask of you.\")\n\t\te.other:SummonItem(22677)\n\telseif e.message:findi(\"favor\") then\n\t\te.self:Say(\"I have received word that there are numerous elves being held hostage in the confines of Clan Crushbone, beaten and forced to perform slave work under horrible conditions. There is believed to be a specific Orc that patrols the jail cells that has a master key in his possession for all of the elven hostages. If you were to retrieve this master key for me I would possibly be able to make copies of it and distribute them to my task force so that we may attempt to rescue our helpless bretheren. Will you [retrieve the master key]?\")\n\telseif e.message:findi(\"retrieve the master key\") then\n\t\te.self:Say(\"Excellent news, I was afraid I would not be able to find someone willing to help. Please bring me the master key along with 2 Orc Eyes and I shall craft you a long sword worthy of your great deeds.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 27539, item2 = 13266, item3 = 13266}) then\n\t\te.self:Say(\"Well done, \" .. e.other:GetName() .. \"! Now we will be able to free more of our brothers and sisters from the orcs! Take this, as promised, a fine weapon with which to slay more orcs!!\")\n\t\te.other:SummonItem(27532)\n\t\te.other:AddEXP(7000)\n\t\te.other:Ding()\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 12398,
+        "zone": "gfaydark",
+        "name": "Samatansyn_Flamecaller",
+        "lua_content": "-- enabled: false\n-- P99 Faydark's Champions notes explicitly identify Samatansyn as inactive; only later newcomer armor is implemented here. Historical source body retained below.\n-- Converted from ProjectEQ Perl quest script.\n-- Source: gfaydark/Samatansyn_Flamecaller.pl\n-- items: 17367, 22671, 22672, 22673, 22674, 22675, 22676, 22677, 27539, 13266, 27532\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"It is a pleasure to meet you \" .. e.other:GetName() .. \", I am Samatansyn Flamecaller, Warder of Tunare and Guildmaster of Faydarks Champions. I have studied here for many of my years until recently when I took up teaching. I have many pupils that undergo my vigorous [training exercises].\")\n\telseif e.message:findi(\"training exercises\") then\n\t\te.self:Say(\"I have a series of tests that all new rangers of Kelethin are suggested to participate in. These tests will help you develop many of your skills including hunting and gathering and will also provide you with a chance to fashion your own Trueshot Chainmail. If you are a [ranger of Tunare] and are willing to begin your training I will be happy to explain to you how the tests work.\")\n\telseif e.message:findi(\"ranger of tunare\") then\n\t\te.self:Say(\"Excellent \" .. e.other:GetName() .. \", then lets get started! Here is your Trueshot Assembly Kit. You will collect various items from the Faydark and Clan Crushbone that will be necessary for creating your armor materials in your assembly kit. Once you have fashioned together a specific armor material you can then take it to a forge along with the applicable pattern to create your Trueshot Chainmail armor piece. Simply tell me what armor piece you [want] to craft and I can provide you with the material recipes and patterns for Trueshot Chainmail [Coifs], [Bracers], [Sleeves], [Boots], [Legplates], [Gauntlets] and [Tunics].\")\n\t\te.other:SummonItem(17367)\n\telseif e.message:findi(\"coif\") then\n\t\te.self:Say(\"To create your coif material you will need to combine 2 Bricks of Crude Bronze, 1 Royal Jelly, 1 Spiderling Eye and 1 Ration in your assembly kit. Once you have created the proper material take it to a forge along with this mold to fashion your very own Trueshot Coif.\")\n\t\te.other:SummonItem(22671)\n\telseif e.message:findi(\"bracer\") then\n\t\te.self:Say(\"To create your bracer material you will need to combine 1 Brick of Crude Bronze, 1 Skeleton Tibia, 1 Pixie Wing and 1 Gypsy Wine in your assembly kit. Once you have created the proper material take it to a forge along with this mold to fashion your very own Trueshot Chainmail Bracer.\")\n\t\te.other:SummonItem(22672)\n\telseif e.message:findi(\"sleeves\") then\n\t\te.self:Say(\"To create your sleeves material you will need to combine 2 Bricks of Crude Bronze, 2 Giant Wasp Venom Sacs, 1 Large Widow Abdomen and 1 White Wine in your assembly kit. Once you have created the proper material take it to a forge along with this mold to fashion your very own Trueshot Chainmail Sleeves.\")\n\t\te.other:SummonItem(22673)\n\telseif e.message:findi(\"boots\") then\n\t\te.self:Say(\"To create your boots material you will need to combine 3 Bricks of Crude Bronze, 1 Severed Orc Foot, 2 Spider Legs in your assembly kit. Once you have created the proper material take it to a forge along with this mold to fashion your very own Trueshot Chainmail Boots.\")\n\t\te.other:SummonItem(22674)\n\telseif e.message:findi(\"legplates\") then\n\t\te.self:Say(\"To create your legplates material you will need to combine 4 Bricks of Crude Bronze, 1 Orc Fibula, 1 Orc Clavicle, and 1 Lightstone in your assembly kit. Once you have created the proper material take it to a forge along with this mold to fashion your very own Trueshot Chainmail Legplates.\")\n\t\te.other:SummonItem(22675)\n\telseif e.message:findi(\"gauntlets\") then\n\t\te.self:Say(\"To create your gauntlets material you will need to combine 3 Bricks of Crude Bronze, 1 Orc Ulna, 1 Orc Tibia, and 2 Orc Finger Bones in your assembly kit. Once you have created the proper material take it to a forge along with this mold to fashion your very own Trueshot Chainmail Gauntlets.\")\n\t\te.other:SummonItem(22676)\n\telseif e.message:findi(\"tunic\") then\n\t\te.self:Say(\"To create your tunic material you will need to combine 5 Bricks of Crude Bronze, 1 Orc Fibula, 1 Golden Bandit Tooth, 1 Pristine Forest Drakeling Scale, 1 Orc Ribcage and 1 Orc Eye in your assembly kit. Once you have created the proper material take it to a forge along with this mold to fashion your very own Trueshot Chainmail Tunic. Please return to me after you have completed your tunic, for I have one final [favor] to ask of you.\")\n\t\te.other:SummonItem(22677)\n\telseif e.message:findi(\"favor\") then\n\t\te.self:Say(\"I have received word that there are numerous elves being held hostage in the confines of Clan Crushbone, beaten and forced to perform slave work under horrible conditions. There is believed to be a specific Orc that patrols the jail cells that has a master key in his possession for all of the elven hostages. If you were to retrieve this master key for me I would possibly be able to make copies of it and distribute them to my task force so that we may attempt to rescue our helpless bretheren. Will you [retrieve the master key]?\")\n\telseif e.message:findi(\"retrieve the master key\") then\n\t\te.self:Say(\"Excellent news, I was afraid I would not be able to find someone willing to help. Please bring me the master key along with 2 Orc Eyes and I shall craft you a long sword worthy of your great deeds.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 27539, item2 = 13266, item3 = 13266}) then\n\t\te.self:Say(\"Well done, \" .. e.other:GetName() .. \"! Now we will be able to free more of our brothers and sisters from the orcs! Take this, as promised, a fine weapon with which to slay more orcs!!\")\n\t\te.other:SummonItem(27532)\n\t\te.other:AddEXP(7000)\n\t\te.other:Ding()\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 14855,
+        "zone": "qeynos",
+        "name": "Dionna",
+        "lua_content": "-- items: 13708\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 13708})) then -- Note From Fabian\n\t\te.self:Say(\"Ah, well, Fabian said to give you this. It really is a good piece. Good luck!\");\n\t\te.other:QuestReward(e.self,0,0,0,0,11010,5000); -- Placeholder Scroll, real reward Cloak of Hazy Memories was added after 2012\n\t\te.other:Ding();\n\t\te.other:Faction(284, 5,0); -- Faction: League of Antonican Bards\n\t\te.other:Faction(281, 5,0); -- Faction: Knights of Truth\n\t\te.other:Faction(262, 5,0); -- Faction: Guards of Qeynos\n\t\te.other:Faction(304, -5,0); -- Faction: Ring of Scale\n\t\te.other:Faction(285, -5,0); -- Faction: Mayong Mistmoore\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 14855,
+        "zone": "qeynos",
+        "name": "Dionna",
+        "lua_content": "-- enabled: false\n-- P99 Dionna description identifies Fabian's Strings as Planes of Power; preserve NPC data, disable this sole later quest source. Historical source body retained below.\n-- items: 13708\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 13708})) then -- Note From Fabian\n\t\te.self:Say(\"Ah, well, Fabian said to give you this. It really is a good piece. Good luck!\");\n\t\te.other:QuestReward(e.self,0,0,0,0,11010,5000); -- Placeholder Scroll, real reward Cloak of Hazy Memories was added after 2012\n\t\te.other:Ding();\n\t\te.other:Faction(284, 5,0); -- Faction: League of Antonican Bards\n\t\te.other:Faction(281, 5,0); -- Faction: Knights of Truth\n\t\te.other:Faction(262, 5,0); -- Faction: Guards of Qeynos\n\t\te.other:Faction(304, -5,0); -- Faction: Ring of Scale\n\t\te.other:Faction(285, -5,0); -- Faction: Mayong Mistmoore\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 12631,
+        "zone": "dreadlands",
+        "name": "Veltar",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: dreadlands/Veltar.pl\n-- items: 7879, 7880, 7881, 4199\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Emote(\"'s body has scars all about it, looking as though beaten with whips. One wrist bares a unique looking bracer, the other is bare. 'Leave me be! I did not come up here because I wanted company.'\")\n\telseif e.message:findi(\"tynnonium shackle\") then\n\t\te.self:Say(\"So it is the one that has freed me before! You seek the ways of Tynn I see. You must be on the true path of the monk to accomplish what is needed. The path will test the [three virtues] most important to becoming a true vessel for Cazic Thule's power.\")\n\telseif e.message:findi(\"three virtues\") then\n\t\te.self:Say(\"The three virtues are [patience], [agility], and [peace of mind]. Patience is important in knowing in when to strike your opponent, too soon and you may crushed, too late and your opportunity may pass. Agility is very important in showing your ability to avoid blows sent your way, and then returning what was sent to you. Without striking quickly you are no monk at all. Peace of mind will allow you to concentrate on the situation you are in. With it you can control your actions and make decisive strikes at critical times. Without peace of mind you may attack out of rage and will surely fall for your mind is clouded. You must complete these three trials to earn the shackle of the Grandmaster.\")\n\telseif e.message:findi(\"patience\") then\n\t\te.self:Say(\"Patience shall be tested by the one whom has the greatest patience. Seek Master Rinmark, and ask him of this trial.\")\n\telseif e.message:findi(\"agility\") then\n\t\te.self:Say(\"To show agility you must be tested by the most swift of us. Grandmaster Glox will provide your test for this. Ask him of the trial of agility.\")\n\telseif e.message:findi(\"peace of mind\") then\n\t\te.self:Say(\"To show peace of mind you must decipher a tome found in the library of Kaesora. An undead tome keeper will wait for you to come, ask him of the trial of peace of mind. The tome will tell you what you shall seek. Do with the tome the same as you would with the item you seek. Show you have clarity of mind in solving this.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 7879, item2 = 7880, item3 = 7881}) then\n\t\te.self:Say(\"So you are finally ready for the final rung. Here it is, you shall receive mine for I quest for the fists of Cazic Thule no longer.\")\n\t\te.other:SummonItem(4199)\n\t\te.other:AddEXP(60000)\n\t\te.other:Ding()\n\t\te.other:Faction(444, 100, 0)\n\t\te.other:Faction(441, 25, 0)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 12631,
+        "zone": "dreadlands",
+        "name": "Veltar",
+        "lua_content": "-- enabled: false\n-- P99 Shackle of Tynnonium is explicitly post-Velious/non-P99. This sole-purpose later chain source is retained below; classic Steel and mixed lore actors are unchanged.\n-- Converted from ProjectEQ Perl quest script.\n-- Source: dreadlands/Veltar.pl\n-- items: 7879, 7880, 7881, 4199\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Emote(\"'s body has scars all about it, looking as though beaten with whips. One wrist bares a unique looking bracer, the other is bare. 'Leave me be! I did not come up here because I wanted company.'\")\n\telseif e.message:findi(\"tynnonium shackle\") then\n\t\te.self:Say(\"So it is the one that has freed me before! You seek the ways of Tynn I see. You must be on the true path of the monk to accomplish what is needed. The path will test the [three virtues] most important to becoming a true vessel for Cazic Thule's power.\")\n\telseif e.message:findi(\"three virtues\") then\n\t\te.self:Say(\"The three virtues are [patience], [agility], and [peace of mind]. Patience is important in knowing in when to strike your opponent, too soon and you may crushed, too late and your opportunity may pass. Agility is very important in showing your ability to avoid blows sent your way, and then returning what was sent to you. Without striking quickly you are no monk at all. Peace of mind will allow you to concentrate on the situation you are in. With it you can control your actions and make decisive strikes at critical times. Without peace of mind you may attack out of rage and will surely fall for your mind is clouded. You must complete these three trials to earn the shackle of the Grandmaster.\")\n\telseif e.message:findi(\"patience\") then\n\t\te.self:Say(\"Patience shall be tested by the one whom has the greatest patience. Seek Master Rinmark, and ask him of this trial.\")\n\telseif e.message:findi(\"agility\") then\n\t\te.self:Say(\"To show agility you must be tested by the most swift of us. Grandmaster Glox will provide your test for this. Ask him of the trial of agility.\")\n\telseif e.message:findi(\"peace of mind\") then\n\t\te.self:Say(\"To show peace of mind you must decipher a tome found in the library of Kaesora. An undead tome keeper will wait for you to come, ask him of the trial of peace of mind. The tome will tell you what you shall seek. Do with the tome the same as you would with the item you seek. Show you have clarity of mind in solving this.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 7879, item2 = 7880, item3 = 7881}) then\n\t\te.self:Say(\"So you are finally ready for the final rung. Here it is, you shall receive mine for I quest for the fists of Cazic Thule no longer.\")\n\t\te.other:SummonItem(4199)\n\t\te.other:AddEXP(60000)\n\t\te.other:Ding()\n\t\te.other:Faction(444, 100, 0)\n\t\te.other:Faction(441, 25, 0)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 12161,
+        "zone": "charasis",
+        "name": "Gandan_Tailfist",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: charasis/Gandan_Tailfist.pl\n-- items: 18899, 4199, 17364\n\nfunction event_spawn(e)\n\teq.set_timer(\"Feign\", 5)\nend\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Emote(\"places a foul smelling book in your hands and speaks to you slowly. 'Take this rotting book given to me by lord Cazic Thule himself, I was given another but it has been lost. The search for the fists will be the end of me. If you are a monk of the final rung show me your Shackle of Tynnonium and I will share with you what I have found.\")\n\t\te.other:SummonItem(18899) -- Flayed Skin Tome\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 4199}) then\n\t\te.self:Say(\"The search for the fists has killed many so I hope that your strength is more than mine and those in the past. I was given this satchel by the lord Cazic Thule. I have searched for the fists in this place but they are not here. I suggest you seek audience with our lord. Tell him that I have failed in my task. I am sure that he ugnnnnnhnnn.' One last look to you is given before falling completely lifeless to the cold stone.\")\n\t\te.other:SummonItem(4199) -- Shackle of Tynnonium\n\t\te.other:SummonItem(17364) -- Satchel of Flayed Skin\n\t\te.other:AddEXP(20000)\n\t\te.other:Ding()\n\t\teq.depop_with_timer()\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\nfunction event_timer(e)\n\tif e.timer == \"Feign\" then\n\t\te.self:SetAppearance(3)\n\t\teq.stop_timer(\"Feign\")\n\tend\nend\n\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 12161,
+        "zone": "charasis",
+        "name": "Gandan_Tailfist",
+        "lua_content": "-- enabled: false\n-- P99 Shackle of Tynnonium is explicitly post-Velious/non-P99. This sole-purpose later chain source is retained below; classic Steel and mixed lore actors are unchanged.\n-- Converted from ProjectEQ Perl quest script.\n-- Source: charasis/Gandan_Tailfist.pl\n-- items: 18899, 4199, 17364\n\nfunction event_spawn(e)\n\teq.set_timer(\"Feign\", 5)\nend\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Emote(\"places a foul smelling book in your hands and speaks to you slowly. 'Take this rotting book given to me by lord Cazic Thule himself, I was given another but it has been lost. The search for the fists will be the end of me. If you are a monk of the final rung show me your Shackle of Tynnonium and I will share with you what I have found.\")\n\t\te.other:SummonItem(18899) -- Flayed Skin Tome\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 4199}) then\n\t\te.self:Say(\"The search for the fists has killed many so I hope that your strength is more than mine and those in the past. I was given this satchel by the lord Cazic Thule. I have searched for the fists in this place but they are not here. I suggest you seek audience with our lord. Tell him that I have failed in my task. I am sure that he ugnnnnnhnnn.' One last look to you is given before falling completely lifeless to the cold stone.\")\n\t\te.other:SummonItem(4199) -- Shackle of Tynnonium\n\t\te.other:SummonItem(17364) -- Satchel of Flayed Skin\n\t\te.other:AddEXP(20000)\n\t\te.other:Ding()\n\t\teq.depop_with_timer()\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\nfunction event_timer(e)\n\tif e.timer == \"Feign\" then\n\t\te.self:SetAppearance(3)\n\t\teq.stop_timer(\"Feign\")\n\tend\nend\n\n",
+        "has_say_event": 1,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 16513,
+        "zone": "sebilis",
+        "name": "a_fallen_monk",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: sebilis/a_fallen_monk.pl\n-- items: 4199\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Emote(\"Failed to find the rest I have. If you wish what is mine then give proof of the final shackle unto me.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 4199}) then\n\t\te.self:Say(\"Earn what is mine. Show me you have the power worthy to wield what I possess.\")\n\t\teq.spawn2(89183, 0, 0, e.self:GetX(), e.self:GetY(), e.self:GetZ(), e.self:GetHeading()) -- a_fallen_monk_master\n\t\teq.depop_with_timer()\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 16513,
+        "zone": "sebilis",
+        "name": "a_fallen_monk",
+        "lua_content": "-- enabled: false\n-- P99 Shackle of Tynnonium is explicitly post-Velious/non-P99. This sole-purpose later chain source is retained below; classic Steel and mixed lore actors are unchanged.\n-- Converted from ProjectEQ Perl quest script.\n-- Source: sebilis/a_fallen_monk.pl\n-- items: 4199\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Emote(\"Failed to find the rest I have. If you wish what is mine then give proof of the final shackle unto me.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 4199}) then\n\t\te.self:Say(\"Earn what is mine. Show me you have the power worthy to wield what I possess.\")\n\t\teq.spawn2(89183, 0, 0, e.self:GetX(), e.self:GetY(), e.self:GetZ(), e.self:GetHeading()) -- a_fallen_monk_master\n\t\teq.depop_with_timer()\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\n",
+        "has_say_event": 1,
+        "enabled": 0
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/dalnir/a_coerced_channeler.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-source-scope-disables/dalnir--a_coerced_channeler.lua",
+      "afterSha256": "27be6c56f4d8fffa6cb808c9fa6972918295b072fd3224e4a2e89a4c5be1a961"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/charasis/An_Iksar_Apparition.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-source-scope-disables/charasis--An_Iksar_Apparition.lua",
+      "afterSha256": "f7a5fb0582f1dc3f4626f9bc609c05d4f417288837b4962416035337f6b3f1ab"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/charasis/the_spirit_of_Rile.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-source-scope-disables/charasis--the_spirit_of_Rile.lua",
+      "afterSha256": "df9f8a5e7dbd213198e09586442d4007a3d0388ea63675c725cea52d724aee1b"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/fieldofbone/Oracle_Qulin.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-source-scope-disables/fieldofbone--Oracle_Qulin.lua",
+      "afterSha256": "8864b2cf02cd48086beae0abee96746609e4abf0d43b2eeb6c8660fb7ae06dbd"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/fieldofbone/Oracle_Vauris.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-source-scope-disables/fieldofbone--Oracle_Vauris.lua",
+      "afterSha256": "7f74bcc91941d7ec55338a9024e682d151ec9c26fe47852df76a25e9906ebfc9"
+    },
+    {
+      "target": "maintained/lua/converted-perl/gfaydark/Samatansyn_Flamecaller.lua",
+      "beforeSha256": "1169ee526a88fd89d10648345bd4dbeb60f5a2a9ee47716fce653b6b9e71cc64",
+      "proposedFile": "changes/p99-source-scope-disables/gfaydark--Samatansyn_Flamecaller.lua",
+      "afterSha256": "db7112ce2c505cb3a2d8bafe533c8e0b856ff7602c6a841e9f92290320892f2c"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qeynos/Dionna.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-source-scope-disables/qeynos--Dionna.lua",
+      "afterSha256": "637f055737341234beb9b63b2088ffb121e942d80b0ae207fd0d9ce55d00c65e"
+    },
+    {
+      "target": "maintained/lua/converted-perl/dreadlands/Veltar.lua",
+      "beforeSha256": "6bfc4683a7040172bf6ab8dc83c93618b32d6d1cb68614f3d1191e5f25dccebb",
+      "proposedFile": "changes/p99-source-scope-disables/dreadlands--Veltar.lua",
+      "afterSha256": "9e90f6f1dca1cc5272c0e5d8ae7adc311f014cd26b71b97ea8edcea7d1b04c7c"
+    },
+    {
+      "target": "maintained/lua/converted-perl/charasis/Gandan_Tailfist.lua",
+      "beforeSha256": "6fd777428e67d5ee7e6ed6be3bdfd1b157950822e66ea32db6b99205ef9a9b50",
+      "proposedFile": "changes/p99-source-scope-disables/charasis--Gandan_Tailfist.lua",
+      "afterSha256": "84394acb04c30e5487e0c2d3a8aad6d46bb75cefbc8fad8b2cf7483bf95d09a9"
+    },
+    {
+      "target": "maintained/lua/converted-perl/sebilis/a_fallen_monk.lua",
+      "beforeSha256": "12b41f8850efc39d0c283c59cbeb87c7b43447bf7146080c2143ee446f0d7dbc",
+      "proposedFile": "changes/p99-source-scope-disables/sebilis--a_fallen_monk.lua",
+      "afterSha256": "b31d369707f0ba666b55fb88c8ba375d71f594e9b24e396ee579e310c8fc5be6"
+    }
+  ]
+}

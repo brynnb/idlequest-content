@@ -1,0 +1,45 @@
+{
+  "format": 1,
+  "id": "p99-support-ocean-fishing-scope",
+  "summary": "Remove only the positively identified Omens Paladin 1.5 fish-success handler from mixed Ocean of Tears player script; preserve entire classic Journal Strongbox enter-zone body and every numeric value.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://www.tapatalk.com/groups/paladinsofnorrath/paladin-epic-1-5-walkthrough-checklist-t1511.html",
+      "note": "Contemporaneous October1,2004 player walkthrough explicitly documents Brunar Rankin note and fishing a dark scale to spawn a Corrupted Koalindl in Ocean of Tears as Paladin1.5. Exact local flag3/item69914/NPC69141 linkage in ocean-fishing-proof.json. No source-wide disable or numeric guess."
+    },
+    {
+      "url": "https://wiki.project1999.com/Journal_Strongbox",
+      "note": "Cached P99 strongbox page establishes classic object retrieval near Sisters dock; its complete imported handler, coordinates and lifetime are retained, not newly certified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 16142,
+        "zone": "oot",
+        "name": "player",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: oot/player.pl\n-- items: 13860\n\nfunction event_enter_zone(e)\n\tlocal qglobals = eq.get_qglobals(e.self)\n\tif qglobals[\"strongbox\"] ~= nil then\n\t\teq.create_ground_object(13860, -9200, -430, -293, 0, 3000000)\n\t\teq.delete_global(\"strongbox\")\n\tend\nend\n\nfunction event_fish_success(e)\n\tlocal qglobals = eq.get_qglobals(e.self)\n\tif qglobals[\"paladin_epic\"] == \"3\" or qglobals[\"paladin_epic\"] == 3 then\n\t\tif tonumber(e.fished_item) == 69914 then\n\t\t\te.self:Message(1, \"As you reel in the dark fish's scale, you notice a large fish in the water\")\n\t\t\teq.depop_all(69141)\n\t\t\teq.spawn2(69141, 0, 0, -9169, 265, -20.5, 460)\n\t\tend\n\tend\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 16142,
+        "zone": "oot",
+        "name": "player",
+        "lua_content": "-- P99 scope: later Paladin 1.5 fishing trigger removed; classic Journal Strongbox handler preserved.\n-- Converted from ProjectEQ Perl quest script.\n-- Source: oot/player.pl\n-- items: 13860\n\nfunction event_enter_zone(e)\n\tlocal qglobals = eq.get_qglobals(e.self)\n\tif qglobals[\"strongbox\"] ~= nil then\n\t\teq.create_ground_object(13860, -9200, -430, -293, 0, 3000000)\n\t\teq.delete_global(\"strongbox\")\n\tend\nend\n\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/oot/player.lua",
+      "beforeSha256": "43ed9d535b2868cfd04c302bddedd4bba19fabfdb944264b1ad6dac010bb4fc2",
+      "proposedFile": "changes/p99-support-ocean-fishing-scope/oot-player.lua",
+      "afterSha256": "1fa873bb1ab85f06a929fe305c97cd240af8053223b4797564c3ebd265c6a506"
+    }
+  ]
+}

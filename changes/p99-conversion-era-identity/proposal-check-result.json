@@ -1,0 +1,11 @@
+{
+  "kind": "actual-cli-proposal-and-runtime-lua-syntax-check",
+  "command": "PATH=/tmp/p99-go-toolchain/go/bin:$PATH GOCACHE=/tmp/p99-go-cache GOPATH=/tmp/p99-go-path node tools/cli.mjs check-proposal . --proposal changes/p99-conversion-era-identity.json",
+  "passed": true,
+  "checkedSources": 1,
+  "rows": 1,
+  "proposalSha256": "4d3a07fa5b125ac439d5645b8d8bdb5313c5953ecc73ab65d220a1379c87b332",
+  "logSha256": "849b59145e3ce64b84d6c7b03e1844c164e1b0cf7bf8af355560fb5f5317491d",
+  "baselineManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "limit": "Content/schema/source syntax only, not gameplay or database import. Initial default PATH selected an unrelated executable named go; rerun used the existing Go toolchain and succeeded."
+}

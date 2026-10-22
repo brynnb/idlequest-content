@@ -1,0 +1,800 @@
+[
+  {
+    "name": "Guild note 18775 quantity/repeat/retained values: akanon/Iony_Gredlong",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/akanon/Iony_Gredlong.lua",
+    "sourceSha256": "2a7702064ed1bbee274ebc4c5fa698e3d9baa3b9f0a234214d923ce9d3caefee",
+    "assertions": "character.level=1;character.class=2;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18775,999999},{copper=3});equal(remaining[18775],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13517,1);faction(238,-15);faction(240,100);faction(255,15);faction(288,15);equal(calls.exp,100);equal(#calls.cash,0);trade({18775,18775,999999});equal(remaining[18775],1);equal(remaining[999999],1);reward(13517,2);faction(238,-30);faction(240,200);faction(255,30);faction(288,30);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18776 quantity/repeat/retained values: akanon/Welno_Tanlonikan",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/akanon/Welno_Tanlonikan.lua",
+    "sourceSha256": "7c586765e913b8ff5a4e9ab461df2cbf914dab1ce0e217fde3caff5fdb61f174",
+    "assertions": "character.level=1;character.class=9;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18776,999999},{copper=3});equal(remaining[18776],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13519,1);faction(238,-15);faction(240,100);faction(255,15);faction(288,15);equal(calls.exp,100);equal(#calls.cash,0);trade({18776,18776,999999});equal(remaining[18776],1);equal(remaining[999999],1);reward(13519,2);faction(238,-30);faction(240,200);faction(255,30);faction(288,30);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18781 quantity/repeat/retained values: felwithea/Tynkale",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/felwithea/Tynkale.lua",
+    "sourceSha256": "ff7ed3c918df9b25178c8fa8dea86b52a226d2df24c556be6c4ee0b8ef0b07cd",
+    "assertions": "character.level=1;character.class=3;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18781,999999},{copper=3});equal(remaining[18781],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13591,1);faction(226,100);faction(279,100);faction(5001,75);equal(calls.exp,100);equal(#calls.cash,0);trade({18781,18781,999999});equal(remaining[18781],1);equal(remaining[999999],1);reward(13591,2);faction(226,200);faction(279,200);faction(5001,150);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18751 quantity/repeat/retained values: neriakb/Seloxia_Punox",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-guild-review/neriakb--Seloxia_Punox.lua",
+    "sourceSha256": "b5222022dbd38a9a73cc24f9744f0571eb5327036bcd41185fb961219d46911f",
+    "assertions": "character.level=1;character.class=1;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18751,999999},{copper=3});equal(remaining[18751],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13580,1);faction(270,100);faction(311,-5);faction(326,-15);faction(1522,-200);equal(calls.exp,100);equal(#calls.cash,0);trade({18751,18751,999999});equal(remaining[18751],1);equal(remaining[999999],1);reward(13580,2);faction(270,200);faction(311,-10);faction(326,-30);faction(1522,-400);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18765 quantity/repeat/retained values: kaladimb/Priestess_Ghalea",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/kaladimb/Priestess_Ghalea.lua",
+    "sourceSha256": "213b53bad80bf5f1cfefe2af784ae4920afacc05a63c0aa6914674456b27f53c",
+    "assertions": "character.level=1;character.class=2;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18765,999999},{copper=3});equal(remaining[18765],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13514,1);faction(227,100);faction(274,100);faction(293,75);equal(calls.exp,100);equal(#calls.cash,0);trade({18765,18765,999999});equal(remaining[18765],1);equal(remaining[999999],1);reward(13514,2);faction(227,200);faction(274,200);faction(293,150);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18708 quantity/repeat/retained values: qeynos2/Hanns_Krieghor",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/qeynos2/Hanns_Krieghor.lua",
+    "sourceSha256": "1ae58c8f79cae36c7b9f40e0c33fda2369c63d5d946013673526068025ebba49",
+    "assertions": "character.level=1;character.class=9;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18708,999999},{copper=3});equal(remaining[18708],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13501,1);faction(223,100);faction(230,15);faction(262,-15);faction(273,10);faction(291,15);equal(calls.exp,100);equal(#calls.cash,0);trade({18708,18708,999999});equal(remaining[18708],1);equal(remaining[999999],1);reward(13501,2);faction(223,200);faction(230,30);faction(262,-30);faction(273,20);faction(291,30);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18745 quantity/repeat/retained values: freporte/Elisi_Nasin",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/freporte/Elisi_Nasin.lua",
+    "sourceSha256": "68d00236a86850c36afcda69dd7ccba5551cfb34a68dcb84fcb6ed405b96965c",
+    "assertions": "character.level=1;character.class=9;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18745,999999},{copper=3});equal(remaining[18745],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13568,1);faction(229,100);faction(230,5);faction(329,10);faction(330,15);faction(336,100);equal(calls.exp,100);equal(#calls.cash,0);trade({18745,18745,999999});equal(remaining[18745],1);equal(remaining[999999],1);reward(13568,2);faction(229,200);faction(230,10);faction(329,20);faction(330,30);faction(336,200);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18745 quantity/repeat/retained values: freeporteast/Elisi_Nasin",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/freeporteast/Elisi_Nasin.lua",
+    "sourceSha256": "df9af01691f9b7b5edb2fafa99bef9e6d744d2b1b2ef1354247cec6de35aa52b",
+    "assertions": "character.level=1;character.class=9;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18745,999999},{copper=3});equal(remaining[18745],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13568,1);faction(229,100);faction(230,5);faction(329,10);faction(330,15);faction(336,100);equal(calls.exp,100);equal(#calls.cash,0);trade({18745,18745,999999});equal(remaining[18745],1);equal(remaining[999999],1);reward(13568,2);faction(229,200);faction(230,10);faction(329,20);faction(330,30);faction(336,200);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18729 quantity/repeat/retained values: erudnint/Lanken_Rjarn",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/erudnint/Lanken_Rjarn.lua",
+    "sourceSha256": "99ca10b9d4ea25cb8bcc0bf32fb8c9fb579d582086abd662d17227eede8d1003",
+    "assertions": "character.level=1;character.class=14;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18729,999999},{copper=3});equal(remaining[18729],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13549,1);faction(231,100);faction(265,-15);faction(266,10);faction(267,15);equal(calls.exp,100);equal(#calls.cash,0);trade({18729,18729,999999});equal(remaining[18729],1);equal(remaining[999999],1);reward(13549,2);faction(231,200);faction(265,-30);faction(266,20);faction(267,30);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18790 quantity/repeat/retained values: grobb/Ranjor",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-nz-ranjor-dialogue/grobb--Ranjor.lua",
+    "sourceSha256": "749a9367dbbf5e999fa04c4582f683aa17bb251673e45dc1a8939c65b4b243b5",
+    "assertions": "character.level=1;character.class=1;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18790,999999},{copper=3});equal(remaining[18790],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13528,1);faction(222,-15);faction(235,100);equal(calls.exp,100);equal(#calls.cash,0);trade({18790,18790,999999});equal(remaining[18790],1);equal(remaining[999999],1);reward(13528,2);faction(222,-30);faction(235,200);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18791 quantity/repeat/retained values: grobb/Kaglari",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-am-innoruuk-faction/grobb-Kaglari.lua",
+    "sourceSha256": "f87faf8339f3aa656fc2f9aa6c83a9bccc303ffab8b351227d9f93dd9c0ebb08",
+    "assertions": "character.level=1;character.class=10;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18791,999999},{copper=3});equal(remaining[18791],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13529,1);faction(237,100);faction(251,-15);faction(308,25);equal(calls.exp,20);equal(#calls.cash,0);trade({18791,18791,999999});equal(remaining[18791],1);equal(remaining[999999],1);reward(13529,2);faction(237,200);faction(251,-30);faction(308,50);equal(calls.exp,40);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18769 quantity/repeat/retained values: akanon/Evah_Xokez",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/akanon/Evah_Xokez.lua",
+    "sourceSha256": "2f0638e73550823d4c8486b1292b4f3d0a8d189ca28b7d10908d86c282d8f378",
+    "assertions": "character.level=1;character.class=2;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18769,999999},{copper=3});equal(remaining[18769],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13518,1);faction(238,100);faction(240,-10);faction(245,-10);faction(255,-10);equal(calls.exp,100);equal(#calls.cash,0);trade({18769,18769,999999});equal(remaining[18769],1);equal(remaining[999999],1);reward(13518,2);faction(238,200);faction(240,-20);faction(245,-20);faction(255,-20);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18703 quantity/repeat/retained values: akanon/Rilgor_Plegnog",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/akanon/Rilgor_Plegnog.lua",
+    "sourceSha256": "9780a165d6eefc7c357f59f072599c29811c0868562c4d191345f23746281de1",
+    "assertions": "character.level=1;character.class=14;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18703,999999},{copper=3});equal(remaining[18703],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13524,1);faction(238,100);faction(240,-10);faction(245,-10);faction(255,-10);equal(calls.exp,100);equal(#calls.cash,0);trade({18703,18703,999999});equal(remaining[18703],1);equal(remaining[999999],1);reward(13524,2);faction(238,200);faction(240,-20);faction(245,-20);faction(255,-20);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18702 quantity/repeat/retained values: akanon/Vaenor_Husga",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/akanon/Vaenor_Husga.lua",
+    "sourceSha256": "dd168566d6eb5612e1d457593998935a509603f2841caca177b6ad5c51bc3765",
+    "assertions": "character.level=1;character.class=13;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18702,999999},{copper=3});equal(remaining[18702],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13524,1);faction(238,100);faction(240,-10);faction(245,-10);faction(255,-10);equal(calls.exp,100);equal(#calls.cash,0);trade({18702,18702,999999});equal(remaining[18702],1);equal(remaining[999999],1);reward(13524,2);faction(238,200);faction(240,-20);faction(245,-20);faction(255,-20);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18771 quantity/repeat/retained values: akanon/Eonis_Mournunder",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/akanon/Eonis_Mournunder.lua",
+    "sourceSha256": "572dc30d0a617e99a278bcf403b5d2ad2bcc6ecc4ebcddae6bcf2b6c684dde10",
+    "assertions": "character.level=1;character.class=11;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18771,999999},{copper=3});equal(remaining[18771],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13524,1);faction(238,100);faction(240,-10);faction(245,-10);faction(255,-10);equal(calls.exp,100);equal(#calls.cash,0);trade({18771,18771,999999});equal(remaining[18771],1);equal(remaining[999999],1);reward(13524,2);faction(238,200);faction(240,-20);faction(245,-20);faction(255,-20);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18705 quantity/repeat/retained values: akanon/Kaxon_Frennor",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/akanon/Kaxon_Frennor.lua",
+    "sourceSha256": "0c8178cd22869832b06f184f13a3cebf521da09c9294e82199dd81d791f7e51c",
+    "assertions": "character.level=1;character.class=9;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18705,999999},{copper=3});equal(remaining[18705],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13518,1);faction(238,100);faction(240,-10);faction(245,-10);faction(255,-10);equal(calls.exp,100);equal(#calls.cash,0);trade({18705,18705,999999});equal(remaining[18705],1);equal(remaining[999999],1);reward(13518,2);faction(238,200);faction(240,-20);faction(245,-20);faction(255,-20);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18759 quantity/repeat/retained values: akanon/Naygog_Mitope",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/akanon/Naygog_Mitope.lua",
+    "sourceSha256": "55cc6bf496bca5481b48bb2ff44dc19aea2fa8af1195ea33db943e023e1ee3e5",
+    "assertions": "character.level=1;character.class=1;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18759,999999},{copper=3});equal(remaining[18759],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13518,1);faction(238,100);faction(240,-10);faction(245,-10);faction(255,-10);equal(calls.exp,100);equal(#calls.cash,0);trade({18759,18759,999999});equal(remaining[18759],1);equal(remaining[999999],1);reward(13518,2);faction(238,200);faction(240,-20);faction(245,-20);faction(255,-20);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18704 quantity/repeat/retained values: akanon/Velena_Corgtec",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/akanon/Velena_Corgtec.lua",
+    "sourceSha256": "1c98ead8f03f47edb1fe0d5f2b3ff33d95c503eca28f0a7a32f2101cd6680e88",
+    "assertions": "character.level=1;character.class=12;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18704,999999},{copper=3});equal(remaining[18704],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13524,1);faction(238,100);faction(240,-10);faction(245,-10);faction(255,-10);equal(calls.exp,100);equal(#calls.cash,0);trade({18704,18704,999999});equal(remaining[18704],1);equal(remaining[999999],1);reward(13524,2);faction(238,200);faction(240,-20);faction(245,-20);faction(255,-20);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18724 quantity/repeat/retained values: erudnext/Gans_Paust",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-tz-gans-no-final-xp/erudnext--Gans_Paust.lua",
+    "sourceSha256": "8722e125b181186ca963595f189e532085e71047316a6f1852f84b9e3a8ee952",
+    "assertions": "character.level=1;character.class=2;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18724,999999},{copper=3});equal(remaining[18724],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13544,1);faction(242,100);faction(265,-15);faction(266,15);equal(calls.exp,20);equal(#calls.cash,0);trade({18724,18724,999999});equal(remaining[18724],1);equal(remaining[999999],1);reward(13544,2);faction(242,200);faction(265,-30);faction(266,30);equal(calls.exp,40);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18725 quantity/repeat/retained values: erudnext/Weligon_Steelherder",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-nz-odus-pearls/erudnext--Weligon_Steelherder.lua",
+    "sourceSha256": "5fff211922a3fd8d56620856f0ad115a23d2b863f36e49322202dc8d100c8ff9",
+    "assertions": "character.level=1;character.class=3;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18725,999999},{copper=3});equal(remaining[18725],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13544,1);faction(242,100);faction(265,-15);faction(266,15);equal(calls.exp,100);equal(#calls.cash,0);trade({18725,18725,999999});equal(remaining[18725],1);equal(remaining[999999],1);reward(13544,2);faction(242,200);faction(265,-30);faction(266,30);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,0)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18744 quantity/repeat/retained values: freporte/Venox_Tarkog",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/freporte/Venox_Tarkog.lua",
+    "sourceSha256": "28c969528cd05d9f78966d4b6aa6000f7c83ac5993042825f8f66fdff3b1235c",
+    "assertions": "character.level=1;character.class=2;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18744,999999},{copper=3});equal(remaining[18744],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13561,1);faction(271,100);faction(281,-15);faction(296,20);equal(calls.exp,100);equal(#calls.cash,0);trade({18744,18744,999999});equal(remaining[18744],1);equal(remaining[999999],1);reward(13561,2);faction(271,200);faction(281,-30);faction(296,40);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18744 quantity/repeat/retained values: freeporteast/Venox_Tarkog",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/freeporteast/Venox_Tarkog.lua",
+    "sourceSha256": "63b085c5cd96f8731c4e0837a300d89fabd21ccf2bf5376c96865ac788cebccd",
+    "assertions": "character.level=1;character.class=2;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18744,999999},{copper=3});equal(remaining[18744],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13561,1);faction(271,100);faction(281,-15);faction(296,20);equal(calls.exp,100);equal(#calls.cash,0);trade({18744,18744,999999});equal(remaining[18744],1);equal(remaining[999999],1);reward(13561,2);faction(271,200);faction(281,-30);faction(296,40);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18856 quantity/repeat/retained values: freporte/Konious_Eranon",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/freporte/Konious_Eranon.lua",
+    "sourceSha256": "a67d3475a92ce8e17fe024387464abf8f0a54a9be17b7409bfcaf657f09e8193",
+    "assertions": "character.level=1;character.class=14;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18856,999999},{copper=3});equal(remaining[18856],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13565,1);faction(271,100);faction(281,-15);faction(296,20);equal(calls.exp,100);equal(#calls.cash,0);trade({18856,18856,999999});equal(remaining[18856],1);equal(remaining[999999],1);reward(13565,2);faction(271,200);faction(281,-30);faction(296,40);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18856 quantity/repeat/retained values: freeporteast/Konious_Eranon",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/freeporteast/Konious_Eranon.lua",
+    "sourceSha256": "2bb9404a03d9285db9210b79278edf8b9c11d309492da6297e536032e9fde581",
+    "assertions": "character.level=1;character.class=14;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18856,999999},{copper=3});equal(remaining[18856],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13565,1);faction(271,100);faction(281,-15);faction(296,20);equal(calls.exp,100);equal(#calls.cash,0);trade({18856,18856,999999});equal(remaining[18856],1);equal(remaining[999999],1);reward(13565,2);faction(271,200);faction(281,-30);faction(296,40);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18855 quantity/repeat/retained values: freporte/Heneva_Jexsped",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/freporte/Heneva_Jexsped.lua",
+    "sourceSha256": "9d133a656d583bb5177544335a96dcd29e616e8a3edf8ece0b418200d6ff1fa0",
+    "assertions": "character.level=1;character.class=13;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18855,999999},{copper=3});equal(remaining[18855],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13565,1);faction(271,100);faction(281,-15);faction(296,20);equal(calls.exp,100);equal(#calls.cash,0);trade({18855,18855,999999});equal(remaining[18855],1);equal(remaining[999999],1);reward(13565,2);faction(271,200);faction(281,-30);faction(296,40);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18855 quantity/repeat/retained values: freeporteast/Heneva_Jexsped",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/freeporteast/Heneva_Jexsped.lua",
+    "sourceSha256": "c433fe6a7834fbe877dd0cf8c6d477bda834811c7034356012015fcfbf0dbf0f",
+    "assertions": "character.level=1;character.class=13;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18855,999999},{copper=3});equal(remaining[18855],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13565,1);faction(271,100);faction(281,-15);faction(296,20);equal(calls.exp,100);equal(#calls.cash,0);trade({18855,18855,999999});equal(remaining[18855],1);equal(remaining[999999],1);reward(13565,2);faction(271,200);faction(281,-30);faction(296,40);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18742 quantity/repeat/retained values: freporte/Opal_Darkbriar",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/freporte/Opal_Darkbriar.lua",
+    "sourceSha256": "e582b97e9e68904422270ffba9bd04f964cb3feb5049942ea5752ef2c542bbe3",
+    "assertions": "character.level=1;character.class=11;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18742,999999},{copper=3});equal(remaining[18742],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13562,1);faction(221,25);faction(238,25);faction(239,25);faction(271,25);faction(296,100);equal(calls.exp,100);equal(#calls.cash,0);trade({18742,18742,999999});equal(remaining[18742],1);equal(remaining[999999],1);reward(13562,2);faction(221,50);faction(238,50);faction(239,50);faction(271,50);faction(296,200);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18742 quantity/repeat/retained values: freeporteast/Opal_Darkbriar",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/freeporteast/Opal_Darkbriar.lua",
+    "sourceSha256": "deede4308925bb21e9c228e04e0d5f656b19e8ebd09ddbbbbc1d5fb0127b9cb0",
+    "assertions": "character.level=1;character.class=11;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18742,999999},{copper=3});equal(remaining[18742],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13562,1);faction(221,25);faction(238,25);faction(239,25);faction(271,25);faction(296,100);equal(calls.exp,100);equal(#calls.cash,0);trade({18742,18742,999999});equal(remaining[18742],1);equal(remaining[999999],1);reward(13562,2);faction(221,50);faction(238,50);faction(239,50);faction(271,50);faction(296,200);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18743 quantity/repeat/retained values: freporte/Pietro_Zarn",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-tz-bayle-freporte-pietro_zarn/freporte--Pietro_Zarn.lua",
+    "sourceSha256": "257a7871b15e620028bd9ac521ce65ba5a0a0cb75aed06c021465e3583e640be",
+    "assertions": "character.level=1;character.class=5;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18743,999999},{copper=3});equal(remaining[18743],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13561,1);faction(271,100);faction(281,-15);faction(296,20);equal(calls.exp,100);equal(#calls.cash,0);trade({18743,18743,999999});equal(remaining[18743],1);equal(remaining[999999],1);reward(13561,2);faction(271,200);faction(281,-30);faction(296,40);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18743 quantity/repeat/retained values: freeporteast/Pietro_Zarn",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-tz-bayle-freeporteast-pietro_zarn/freeporteast--Pietro_Zarn.lua",
+    "sourceSha256": "e10ff7ea1bda40b11add9a5de71b626ea87b6923b97c3e6cf5b626e87270eb77",
+    "assertions": "character.level=1;character.class=5;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18743,999999},{copper=3});equal(remaining[18743],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13561,1);faction(271,100);faction(281,-15);faction(296,20);equal(calls.exp,100);equal(#calls.cash,0);trade({18743,18743,999999});equal(remaining[18743],1);equal(remaining[999999],1);reward(13561,2);faction(271,200);faction(281,-30);faction(296,40);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18857 quantity/repeat/retained values: freporte/Brutol_Rhaksen",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/freporte/Brutol_Rhaksen.lua",
+    "sourceSha256": "15bc50f9597079364787212114262030283f45355a3c5a41c57e631b69fcb870",
+    "assertions": "character.level=1;character.class=1;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18857,999999},{copper=3});equal(remaining[18857],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13561,1);faction(271,100);faction(281,-15);faction(296,20);equal(calls.exp,100);equal(#calls.cash,0);trade({18857,18857,999999});equal(remaining[18857],1);equal(remaining[999999],1);reward(13561,2);faction(271,200);faction(281,-30);faction(296,40);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18857 quantity/repeat/retained values: freeporteast/Brutol_Rhaksen",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/freeporteast/Brutol_Rhaksen.lua",
+    "sourceSha256": "c1013af7b3bc404550898a5214baab767cc0b397c9c70c48c19a0a855bc20b11",
+    "assertions": "character.level=1;character.class=1;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18857,999999},{copper=3});equal(remaining[18857],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13561,1);faction(271,100);faction(281,-15);faction(296,20);equal(calls.exp,100);equal(#calls.cash,0);trade({18857,18857,999999});equal(remaining[18857],1);equal(remaining[999999],1);reward(13561,2);faction(271,200);faction(281,-30);faction(296,40);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18854 quantity/repeat/retained values: freporte/Nexvok_Thirod",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/freporte/Nexvok_Thirod.lua",
+    "sourceSha256": "adf3265f073cbb9d2fa4daf079d851c9dd5cf208f7717e6da7683cd6a71c9985",
+    "assertions": "character.level=1;character.class=12;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18854,999999},{copper=3});equal(remaining[18854],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13562,1);faction(271,100);faction(281,-15);faction(296,20);equal(calls.exp,100);equal(#calls.cash,0);trade({18854,18854,999999});equal(remaining[18854],1);equal(remaining[999999],1);reward(13562,2);faction(271,200);faction(281,-30);faction(296,40);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18854 quantity/repeat/retained values: freeporteast/Nexvok_Thirod",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/freeporteast/Nexvok_Thirod.lua",
+    "sourceSha256": "185a24636f37ce839d2eb5a17d48268a6b8aadb0f36155ba683b00ee48345b88",
+    "assertions": "character.level=1;character.class=12;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18854,999999},{copper=3});equal(remaining[18854],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13562,1);faction(271,100);faction(281,-15);faction(296,20);equal(calls.exp,100);equal(#calls.cash,0);trade({18854,18854,999999});equal(remaining[18854],1);equal(remaining[999999],1);reward(13562,2);faction(271,200);faction(281,-30);faction(296,40);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18782 quantity/repeat/retained values: gfaydark/Regren",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/gfaydark/Regren.lua",
+    "sourceSha256": "0d76dc9f3671df6694ea42b56a3fc89259d106dd7819a8612b2e423892227c37",
+    "assertions": "character.level=1;character.class=1;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18782,999999},{copper=3});equal(remaining[18782],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13533,1);faction(270,-15);faction(276,10);faction(325,10);faction(326,100);equal(calls.exp,100);equal(#calls.cash,0);trade({18782,18782,999999});equal(remaining[18782],1);equal(remaining[999999],1);reward(13533,2);faction(270,-30);faction(276,20);faction(325,20);faction(326,200);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18785 quantity/repeat/retained values: gfaydark/Maesyn_Trueshot",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/gfaydark/Maesyn_Trueshot.lua",
+    "sourceSha256": "c16cb4f82f1b9888b861751e474109e7ece77bf472cbd82d4feece257f7c5248",
+    "assertions": "character.level=1;character.class=4;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18785,999999},{copper=3});equal(remaining[18785],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13536,1);faction(226,25);faction(234,-25);faction(246,100);faction(279,25);faction(310,25);equal(calls.exp,100);equal(#calls.cash,0);trade({18785,18785,999999});equal(remaining[18785],1);equal(remaining[999999],1);reward(13536,2);faction(226,50);faction(234,-50);faction(246,200);faction(279,50);faction(310,50);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18787 quantity/repeat/retained values: oggok/Guntrik",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-nz-noble-crest-rewards/oggok--Guntrik.lua",
+    "sourceSha256": "997c28aff938b81ce230fba1d4ed7291d021207b12e3ff8bab5b82f84746e50b",
+    "assertions": "character.level=1;character.class=1;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18787,999999},{copper=3});equal(remaining[18787],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13525,1);faction(228,15);faction(232,100);faction(261,-15);equal(calls.exp,100);equal(#calls.cash,0);trade({18787,18787,999999});equal(remaining[18787],1);equal(remaining[999999],1);reward(13525,2);faction(228,30);faction(232,200);faction(261,-30);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18770 quantity/repeat/retained values: akanon/Baxok_Curhunter",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-am-gearheart-reward/akanon-Baxok_Curhunter.lua",
+    "sourceSha256": "256cfffd065961ef24c0cff7af4a394cc6d981d925925254b381145d52b382d0",
+    "assertions": "character.level=1;character.class=1;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18770,999999},{copper=3});equal(remaining[18770],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13520,1);faction(238,-25);faction(255,100);faction(288,25);faction(333,25);faction(1604,-5);equal(calls.exp,100);equal(#calls.cash,0);trade({18770,18770,999999});equal(remaining[18770],1);equal(remaining[999999],1);reward(13520,2);faction(238,-50);faction(255,200);faction(288,50);faction(333,50);faction(1604,-10);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18788 quantity/repeat/retained values: oggok/Zulort",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/oggok/Zulort.lua",
+    "sourceSha256": "ea0a0d1736d62368160af80ba57b2e640050ffeac5bf4f7040a4df7323fc2e11",
+    "assertions": "character.level=1;character.class=10;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18788,999999},{copper=3});equal(remaining[18788],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13526,1);faction(394,100);equal(calls.exp,100);equal(#calls.cash,0);trade({18788,18788,999999});equal(remaining[18788],1);equal(remaining[999999],1);reward(13526,2);faction(394,200);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18720 quantity/repeat/retained values: qeynos/Mespha_Tevalian",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-guild-review/qeynos--Mespha_Tevalian.lua",
+    "sourceSha256": "d5b8aebc458dc259ee68fcbb132a69f7b8ee28b8f8a52b58df8a30645700fb77",
+    "assertions": "character.level=1;character.class=14;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18720,999999},{copper=3});equal(remaining[18720],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13508,1);faction(221,-25);faction(262,15);faction(296,-15);faction(342,100);equal(calls.exp,100);equal(#calls.cash,0);trade({18720,18720,999999});equal(remaining[18720],1);equal(remaining[999999],1);reward(13508,2);faction(221,-50);faction(262,30);faction(296,-30);faction(342,200);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18719 quantity/repeat/retained values: qeynos/Kinloc_Flamepaw",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/qeynos/Kinloc_Flamepaw.lua",
+    "sourceSha256": "55ddca5c53ae68b7700a6469dcc1fb9df3d8f0ce17c569afe8f7cbe463734131",
+    "assertions": "character.level=1;character.class=13;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18719,999999},{copper=3});equal(remaining[18719],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13508,1);faction(221,-25);faction(262,15);faction(296,-15);faction(342,100);equal(calls.exp,100);equal(#calls.cash,0);trade({18719,18719,999999});equal(remaining[18719],1);equal(remaining[999999],1);reward(13508,2);faction(221,-50);faction(262,30);faction(296,-30);faction(342,200);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18718 quantity/repeat/retained values: qeynos/Gahlith_Wrannstad",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-guild-review/qeynos--Gahlith_Wrannstad.lua",
+    "sourceSha256": "ba4582a80587b40371d32959403613e9206b83bf76444ed8ca270b087e56810c",
+    "assertions": "character.level=1;character.class=12;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18718,999999},{copper=3});equal(remaining[18718],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13508,1);faction(221,-25);faction(262,15);faction(296,-15);faction(342,100);equal(calls.exp,100);equal(#calls.cash,0);trade({18718,18718,999999});equal(remaining[18718],1);equal(remaining[999999],1);reward(13508,2);faction(221,-50);faction(262,30);faction(296,-30);faction(342,200);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18752 quantity/repeat/retained values: neriakc/Eolorn_J`Axx",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/neriakc/Eolorn_J%60Axx.lua",
+    "sourceSha256": "f260710cd12ed967c6f51561ec365c4d24aef3939ed6c7a91e5f80e258a7c8c7",
+    "assertions": "character.level=1;character.class=9;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18752,999999},{copper=3});equal(remaining[18752],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13581,1);faction(244,100);faction(262,-5);faction(263,-10);faction(320,-25);faction(329,-25);equal(calls.exp,100);equal(#calls.cash,0);trade({18752,18752,999999});equal(remaining[18752],1);equal(remaining[999999],1);reward(13581,2);faction(244,200);faction(262,-10);faction(263,-20);faction(320,-50);faction(329,-50);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18735 quantity/repeat/retained values: freportn/Eestyana_Naestra",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-af-eestyana-note/freportn-Eestyana_Naestra.lua",
+    "sourceSha256": "ddcb1b98cd1e0d2ee96ed7c45c2342100823730a3133fd275b596f2c6443fda5",
+    "assertions": "character.level=1;character.class=2;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18735,999999},{copper=3});equal(remaining[18735],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13554,1);faction(271,-15);faction(281,100);faction(311,10);faction(330,-15);faction(362,20);equal(calls.exp,100);equal(#calls.cash,0);trade({18735,18735,999999});equal(remaining[18735],1);equal(remaining[999999],1);reward(13554,2);faction(271,-30);faction(281,200);faction(311,20);faction(330,-30);faction(362,40);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18735 quantity/repeat/retained values: freeportwest/Eestyana_Naestra",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-af-eestyana-note/freeportwest-Eestyana_Naestra.lua",
+    "sourceSha256": "fed6b0e2f6991d1577ba6d459adec314d195262e50cbaec0c47e5d95ff9fa00c",
+    "assertions": "character.level=1;character.class=2;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18735,999999},{copper=3});equal(remaining[18735],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13554,1);faction(271,-15);faction(281,100);faction(311,10);faction(330,-15);faction(362,20);equal(calls.exp,100);equal(#calls.cash,0);trade({18735,18735,999999});equal(remaining[18735],1);equal(remaining[999999],1);reward(13554,2);faction(271,-30);faction(281,200);faction(311,20);faction(330,-30);faction(362,40);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18737 quantity/repeat/retained values: freportn/Valeron_Dushire",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-tz-valeron-diggs-freportn/freportn--Valeron_Dushire.lua",
+    "sourceSha256": "b85f92c7b4a6e5c88a091bc0d849683af17eb76a9c848c5351847e8370ca0aab",
+    "assertions": "character.level=1;character.class=3;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18737,999999},{copper=3});equal(remaining[18737],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13554,1);faction(271,-15);faction(281,100);faction(311,10);faction(330,-15);faction(362,20);equal(calls.exp,100);equal(#calls.cash,0);trade({18737,18737,999999});equal(remaining[18737],1);equal(remaining[999999],1);reward(13554,2);faction(271,-30);faction(281,200);faction(311,20);faction(330,-30);faction(362,40);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18737 quantity/repeat/retained values: freeportwest/Valeron_Dushire",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-tz-valeron-diggs-freeportwest/freeportwest--Valeron_Dushire.lua",
+    "sourceSha256": "762666fbf5ae7fa417814e624e5bdf7a830d014dedce3335b6acbc89b2382c8e",
+    "assertions": "character.level=1;character.class=3;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18737,999999},{copper=3});equal(remaining[18737],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13554,1);faction(271,-15);faction(281,100);faction(311,10);faction(330,-15);faction(362,20);equal(calls.exp,100);equal(#calls.cash,0);trade({18737,18737,999999});equal(remaining[18737],1);equal(remaining[999999],1);reward(13554,2);faction(271,-30);faction(281,200);faction(311,20);faction(330,-30);faction(362,40);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18713 quantity/repeat/retained values: qrg/TeAnara",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/qrg/TeAnara.lua",
+    "sourceSha256": "c221b7ba22049b47cf3f274caeb6f7565331be297d9629d3a23b295b83ea75c4",
+    "assertions": "character.level=1;character.class=6;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18713,999999},{copper=3});equal(remaining[18713],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13510,1);faction(262,15);faction(272,100);faction(302,25);faction(324,-25);faction(343,15);equal(calls.exp,100);equal(#calls.cash,0);trade({18713,18713,999999});equal(remaining[18713],1);equal(remaining[999999],1);reward(13510,2);faction(262,30);faction(272,200);faction(302,50);faction(324,-50);faction(343,30);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18773 quantity/repeat/retained values: akanon/Juline_Urncaller",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/akanon/Juline_Urncaller.lua",
+    "sourceSha256": "73712d4f3beb1808cf045b3c7ec1ebcb612b612dfe342bec46eedec1107cb76f",
+    "assertions": "character.level=1;character.class=14;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18773,999999},{copper=3});equal(remaining[18773],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13522,1);faction(238,-15);faction(239,-5);faction(245,100);faction(255,15);faction(333,15);equal(calls.exp,100);equal(#calls.cash,0);trade({18773,18773,999999});equal(remaining[18773],1);equal(remaining[999999],1);reward(13522,2);faction(238,-30);faction(239,-10);faction(245,200);faction(255,30);faction(333,30);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18772 quantity/repeat/retained values: akanon/Wuggan_Azusphere",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/akanon/Wuggan_Azusphere.lua",
+    "sourceSha256": "1f731795f4c643e550f17e4c9343dd84272ba4688d0234edca567d340e93e1ec",
+    "assertions": "character.level=1;character.class=13;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18772,999999},{copper=3});equal(remaining[18772],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13522,1);faction(238,-15);faction(239,-5);faction(245,100);faction(255,15);faction(333,15);equal(calls.exp,100);equal(#calls.cash,0);trade({18772,18772,999999});equal(remaining[18772],1);equal(remaining[999999],1);reward(13522,2);faction(238,-30);faction(239,-10);faction(245,200);faction(255,30);faction(333,30);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18774 quantity/repeat/retained values: akanon/Tobon_Starpyre",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/akanon/Tobon_Starpyre.lua",
+    "sourceSha256": "c9d4d43daa8c61b02bbc1cc707e71a4e64d7d1e99ab3e2231517eeb96696ad6c",
+    "assertions": "character.level=1;character.class=12;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18774,999999},{copper=3});equal(remaining[18774],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13522,1);faction(238,-15);faction(239,-5);faction(245,100);faction(255,15);faction(288,15);faction(333,15);equal(calls.exp,100);equal(#calls.cash,0);trade({18774,18774,999999});equal(remaining[18774],1);equal(remaining[999999],1);reward(13522,2);faction(238,-30);faction(239,-10);faction(245,200);faction(255,30);faction(288,30);faction(333,30);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18747 quantity/repeat/retained values: freportn/Caskin_Marsheart",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/freportn/Caskin_Marsheart.lua",
+    "sourceSha256": "01d6e362fbe9f74b9781a0365b54324929d35e6dfa1edf7ae3677682ac066024",
+    "assertions": "character.level=1;character.class=8;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18747,999999},{copper=3});equal(remaining[18747],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13571,1);faction(262,15);faction(281,15);faction(284,100);faction(285,-5);faction(304,-5);equal(calls.exp,100);equal(#calls.cash,0);trade({18747,18747,999999});equal(remaining[18747],1);equal(remaining[999999],1);reward(13571,2);faction(262,30);faction(281,30);faction(284,200);faction(285,-10);faction(304,-10);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18747 quantity/repeat/retained values: freeporteast/Caskin_Marsheart",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/freeporteast/Caskin_Marsheart.lua",
+    "sourceSha256": "16ce560772e92d1f0d43b35efc36b5bbf2b326b6b3e2daa3829fde28f2641765",
+    "assertions": "character.level=1;character.class=8;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18747,999999},{copper=3});equal(remaining[18747],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13571,1);faction(262,15);faction(281,15);faction(284,100);faction(285,-5);faction(304,-5);equal(calls.exp,100);equal(#calls.cash,0);trade({18747,18747,999999});equal(remaining[18747],1);equal(remaining[999999],1);reward(13571,2);faction(262,30);faction(281,30);faction(284,200);faction(285,-10);faction(304,-10);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18767 quantity/repeat/retained values: kaladimb/Mater",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/kaladimb/Mater.lua",
+    "sourceSha256": "de9889342d7b0b85929bbc15192c7041a41a0ff132615f7da4a24b9796fb4682",
+    "assertions": "character.level=1;character.class=9;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18767,999999},{copper=3});equal(remaining[18767],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13516,1);faction(223,-5);faction(241,5);faction(244,-15);faction(322,100);faction(379,-5);equal(calls.exp,100);equal(#calls.cash,0);trade({18767,18767,999999});equal(remaining[18767],1);equal(remaining[999999],1);reward(13516,2);faction(223,-10);faction(241,10);faction(244,-30);faction(322,200);faction(379,-10);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18789 quantity/repeat/retained values: oggok/Soonog",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/oggok/Soonog.lua",
+    "sourceSha256": "34aef632a5c6c1ba345a19c17331bcc00b566c150928e01a94afa08a3207ce6e",
+    "assertions": "character.level=1;character.class=5;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18789,999999},{copper=3});equal(remaining[18789],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13527,1);faction(228,50);faction(261,100);faction(308,-15);faction(312,-15);equal(calls.exp,100);equal(#calls.cash,0);trade({18789,18789,999999});equal(remaining[18789],1);equal(remaining[999999],1);reward(13527,2);faction(228,100);faction(261,200);faction(308,-30);faction(312,-30);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18792 quantity/repeat/retained values: grobb/Hukulk",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/grobb/Hukulk.lua",
+    "sourceSha256": "64e30fce86e83a68e7f99119007b83115ea8b6149d7f4ff17091fef64ec9a3c6",
+    "assertions": "character.level=1;character.class=5;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18792,999999},{copper=3});equal(remaining[18792],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13530,1);faction(222,-25);faction(235,5);faction(261,15);faction(308,100);equal(calls.exp,30);equal(#calls.cash,0);trade({18792,18792,999999});equal(remaining[18792],1);equal(remaining[999999],1);reward(13530,2);faction(222,-50);faction(235,10);faction(261,30);faction(308,200);equal(calls.exp,60);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18712 quantity/repeat/retained values: qeynos2/LuSun",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/qeynos2/LuSun.lua",
+    "sourceSha256": "9ae47afe75d0e372a5c746d2992bb17fee1ada31249da5be6f2ae8b53677ea9b",
+    "assertions": "character.level=1;character.class=7;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18712,999999},{copper=3});equal(remaining[18712],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13507,1);faction(280,15);faction(309,100);faction(361,15);equal(calls.exp,100);equal(#calls.cash,0);trade({18712,18712,999999});equal(remaining[18712],1);equal(remaining[999999],1);reward(13507,2);faction(280,30);faction(309,200);faction(361,30);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18768 quantity/repeat/retained values: kaladimb/Datur_Nightseer",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-guild-review/kaladimb--Datur_Nightseer.lua",
+    "sourceSha256": "0a8fbc1fb06e5fd0cf1747a49016a187971d1e3c3cd31cc9ddffec28f87bd8db",
+    "assertions": "character.level=1;character.class=3;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18768,999999},{copper=3});equal(remaining[18768],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13514,1);faction(227,100);faction(274,100);faction(293,75);equal(calls.exp,0);equal(#calls.cash,0);trade({18768,18768,999999});equal(remaining[18768],1);equal(remaining[999999],1);reward(13514,2);faction(227,200);faction(274,200);faction(293,150);equal(calls.exp,0);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Reproduces Datur missing XP, a known documented-presence discrepancy. Zero XP is NOT asserted as P99 parity."
+  },
+  {
+    "name": "Guild note 18756 quantity/repeat/retained values: neriakc/Perrir_Zexus",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/neriakc/Perrir_Zexus.lua",
+    "sourceSha256": "fc2216f280efac3096db49673718771efd63df04c6bb2890056d85aa9896bd92",
+    "assertions": "character.level=1;character.class=2;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18756,999999},{copper=3});equal(remaining[18756],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13585,1);faction(226,-25);faction(278,15);faction(340,100);faction(341,-15);faction(362,-35);faction(1522,-400);equal(calls.exp,100);equal(#calls.cash,0);trade({18756,18756,999999});equal(remaining[18756],1);equal(remaining[999999],1);reward(13585,2);faction(226,-50);faction(278,30);faction(340,200);faction(341,-30);faction(362,-70);faction(1522,-800);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18709 quantity/repeat/retained values: qrg/Hager_Sureshot",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/qrg/Hager_Sureshot.lua",
+    "sourceSha256": "a82f9659c1e70f7890e3e0758435d2d55c5d472e77fe8a70f739f81394130a56",
+    "assertions": "character.level=1;character.class=4;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18709,999999},{copper=3});equal(remaining[18709],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13509,1);faction(262,25);faction(272,25);faction(302,100);faction(306,-15);equal(calls.exp,100);equal(#calls.cash,0);trade({18709,18709,999999});equal(remaining[18709],1);equal(remaining[999999],1);reward(13509,2);faction(262,50);faction(272,50);faction(302,200);faction(306,-30);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18762 quantity/repeat/retained values: halas/Dun_McDowell",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/halas/Dun_McDowell.lua",
+    "sourceSha256": "20fc8ae17962c27ef0d72ea3de8f126c3264a1d5ae4b58537d7d10d700535681",
+    "assertions": "character.level=1;character.class=9;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18762,999999},{copper=3});equal(remaining[18762],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13513,1);faction(305,100);equal(calls.exp,100);equal(#calls.cash,0);trade({18762,18762,999999});equal(remaining[18762],1);equal(remaining[999999],1);reward(13513,2);faction(305,200);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18784 quantity/repeat/retained values: gfaydark/Tylfon",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/gfaydark/Tylfon.lua",
+    "sourceSha256": "844db30fcc03554b40bdc2f563c81ed64fee2be7fd417e1489b8f320016b5a1e",
+    "assertions": "character.level=1;character.class=9;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18784,999999},{copper=3});equal(remaining[18784],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13535,1);faction(316,100);equal(calls.exp,100);equal(#calls.cash,0);trade({18784,18784,999999});equal(remaining[18784],1);equal(remaining[999999],1);reward(13535,2);faction(316,200);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18761 quantity/repeat/retained values: halas/Margyn_McCann",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/halas/Margyn_McCann.lua",
+    "sourceSha256": "37171abe1762b62dc4f4106d1db6d665ae612c9b6f017d0ec97ab429f06ebe93",
+    "assertions": "character.level=1;character.class=10;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18761,999999},{copper=3});equal(remaining[18761],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13512,1);faction(223,-15);faction(244,-20);faction(327,100);faction(328,15);faction(336,-15);equal(calls.exp,100);equal(#calls.cash,0);trade({18761,18761,999999});equal(remaining[18761],1);equal(remaining[999999],1);reward(13512,2);faction(223,-30);faction(244,-40);faction(327,200);faction(328,30);faction(336,-30);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18851 quantity/repeat/retained values: qcat/Reania_Jukle",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/qcat/Reania_Jukle.lua",
+    "sourceSha256": "6a963e445704d2e2c97a945388c7167b7279883dfdc7538693eca7c6a1445b49",
+    "assertions": "character.level=1;character.class=14;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18851,999999},{copper=3});equal(remaining[18851],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13596,1);faction(221,100);faction(230,5);faction(262,-15);faction(296,10);faction(341,-25);equal(calls.exp,100);equal(#calls.cash,0);trade({18851,18851,999999});equal(remaining[18851],1);equal(remaining[999999],1);reward(13596,2);faction(221,200);faction(230,10);faction(262,-30);faction(296,20);faction(341,-50);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18850 quantity/repeat/retained values: qcat/Perkon_Malok",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/qcat/Perkon_Malok.lua",
+    "sourceSha256": "b27385dc36ab7d53ff7f98e3a1dcf7789d18c6c8b2bdb27033a1f61dcb3fe84c",
+    "assertions": "character.level=1;character.class=13;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18850,999999},{copper=3});equal(remaining[18850],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13596,1);faction(221,100);faction(230,5);faction(262,-15);faction(296,10);faction(341,-25);equal(calls.exp,100);equal(#calls.cash,0);trade({18850,18850,999999});equal(remaining[18850],1);equal(remaining[999999],1);reward(13596,2);faction(221,200);faction(230,10);faction(262,-30);faction(296,20);faction(341,-50);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18721 quantity/repeat/retained values: qcat/Lyris_Moonbane",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/qcat/Lyris_Moonbane.lua",
+    "sourceSha256": "b6a64a675d369af6a30e3c2f6d164fa4342886eea62a0e6dc37f9afc041008f7",
+    "assertions": "character.level=1;character.class=11;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18721,999999},{copper=3});equal(remaining[18721],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13552,1);faction(221,100);faction(230,5);faction(262,-15);faction(296,10);faction(341,-25);equal(calls.exp,100);equal(#calls.cash,0);trade({18721,18721,999999});equal(remaining[18721],1);equal(remaining[999999],1);reward(13552,2);faction(221,200);faction(230,10);faction(262,-30);faction(296,20);faction(341,-50);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18706 quantity/repeat/retained values: qcat/Sragg_Bloodheart",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-guild-review/qcat--Sragg_Bloodheart.lua",
+    "sourceSha256": "cef2f7f06a73d77ccaf6cabb4b69fdfd4042dd3822ff403a6f4e6e276abc2185",
+    "assertions": "character.level=1;character.class=5;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18706,999999},{copper=3});equal(remaining[18706],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13598,1);faction(221,100);faction(230,5);faction(262,-15);faction(296,10);faction(341,-25);equal(calls.exp,100);equal(#calls.cash,0);trade({18706,18706,999999});equal(remaining[18706],1);equal(remaining[999999],1);reward(13598,2);faction(221,200);faction(230,10);faction(262,-30);faction(296,20);faction(341,-50);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18853 quantity/repeat/retained values: qcat/Rocthar_Bekesna",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/qcat/Rocthar_Bekesna.lua",
+    "sourceSha256": "a049340e6646b3052f8b4e44fc5b2c63260144472e8222191efd37bffa0d0876",
+    "assertions": "character.level=1;character.class=1;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18853,999999},{copper=3});equal(remaining[18853],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13504,1);faction(221,100);faction(230,5);faction(262,-15);faction(296,10);faction(341,-25);equal(calls.exp,100);equal(#calls.cash,0);trade({18853,18853,999999});equal(remaining[18853],1);equal(remaining[999999],1);reward(13504,2);faction(221,200);faction(230,10);faction(262,-30);faction(296,20);faction(341,-50);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18852 quantity/repeat/retained values: qcat/Trenon_Callust",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/qcat/Trenon_Callust.lua",
+    "sourceSha256": "241b02adf6356633c7346ce0e8d3b8002c5c1ed77d0de840410a48f0a5d80893",
+    "assertions": "character.level=1;character.class=12;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18852,999999},{copper=3});equal(remaining[18852],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13596,1);faction(221,100);faction(230,5);faction(262,-15);faction(296,10);faction(341,-25);equal(calls.exp,100);equal(#calls.cash,0);trade({18852,18852,999999});equal(remaining[18852],1);equal(remaining[999999],1);reward(13596,2);faction(221,200);faction(230,10);faction(262,-30);faction(296,20);faction(341,-50);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18786 quantity/repeat/retained values: gfaydark/Heartwood_Master",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/gfaydark/Heartwood_Master.lua",
+    "sourceSha256": "9c6cc51d4e11e9f4f90024780b4ab19decacec59b744edfb3c5dc3e2d7c3e9ca",
+    "assertions": "character.level=1;character.class=6;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18786,999999},{copper=3});equal(remaining[18786],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13537,1);faction(246,15);faction(279,15);faction(310,100);equal(calls.exp,100);equal(#calls.cash,0);trade({18786,18786,999999});equal(remaining[18786],1);equal(remaining[999999],1);reward(13537,2);faction(246,30);faction(279,30);faction(310,200);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18783 quantity/repeat/retained values: gfaydark/Sylia_Windlehands",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/gfaydark/Sylia_Windlehands.lua",
+    "sourceSha256": "dee62c68cdf6e15966ff1888545fd76aee1276e8f932b66fc1bd7749dccacb73",
+    "assertions": "character.level=1;character.class=8;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18783,999999},{copper=3});equal(remaining[18783],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13534,1);faction(401,100);equal(calls.exp,100);equal(#calls.cash,0);trade({18783,18783,999999});equal(remaining[18783],1);equal(remaining[999999],1);reward(13534,2);faction(401,200);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18766 quantity/repeat/retained values: kaladima/Furtog_Ogrebane",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-tz-furtog-mudtoe-dialogue/kaladima--Furtog_Ogrebane.lua",
+    "sourceSha256": "1f792b57111d220c1d5a694f8c2494aabf7f28cbf2f3240ff39e527c34318a1c",
+    "assertions": "character.level=1;character.class=1;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18766,999999},{copper=3});equal(remaining[18766],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13515,1);faction(232,-25);faction(274,15);faction(290,25);faction(293,15);faction(312,100);equal(calls.exp,100);equal(#calls.cash,0);trade({18766,18766,999999});equal(remaining[18766],1);equal(remaining[999999],1);reward(13515,2);faction(232,-50);faction(274,30);faction(290,50);faction(293,30);faction(312,200);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18716 quantity/repeat/retained values: qcat/Xeture_Demiagar",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/qcat/Xeture_Demiagar.lua",
+    "sourceSha256": "eddb70fa4da744fc1d077f45f9dc4b197e6e7dc823bece5b900c5e11fe357051",
+    "assertions": "character.level=1;character.class=2;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18716,999999},{copper=3});equal(remaining[18716],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13598,1);faction(221,100);faction(230,5);faction(262,-15);faction(280,-15);faction(296,10);faction(341,-25);equal(calls.exp,100);equal(#calls.cash,0);trade({18716,18716,999999});equal(remaining[18716],1);equal(remaining[999999],1);reward(13598,2);faction(221,200);faction(230,10);faction(262,-30);faction(280,-30);faction(296,20);faction(341,-50);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18723 quantity/repeat/retained values: erudnext/Leraena_Shelyrak",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-guild-review/erudnext--Leraena_Shelyrak.lua",
+    "sourceSha256": "0198c2ea1b836b1dcce9e4f5a799e5fc822ee0affa1db73ce01dae8d90f51bcf",
+    "assertions": "character.level=1;character.class=2;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18723,999999},{copper=3});equal(remaining[18723],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13546,1);faction(265,-25);faction(266,25);faction(298,100);equal(calls.exp,100);equal(#calls.cash,0);trade({18723,18723,999999});equal(remaining[18723],1);equal(remaining[999999],1);reward(13546,2);faction(265,-50);faction(266,50);faction(298,200);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18726 quantity/repeat/retained values: erudnext/Depnar_Bulrious",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-guild-review/erudnext--Depnar_Bulrious.lua",
+    "sourceSha256": "999a93ec08ef989cc70f1000594fa31148f34d9ff40031e6dee7aff04cfc6fdf",
+    "assertions": "character.level=1;character.class=3;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18726,999999},{copper=3});equal(remaining[18726],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13546,1);faction(265,-25);faction(266,25);faction(298,100);equal(calls.exp,100);equal(#calls.cash,0);trade({18726,18726,999999});equal(remaining[18726],1);equal(remaining[999999],1);reward(13546,2);faction(265,-50);faction(266,50);faction(298,200);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18714 quantity/repeat/retained values: qeynos2/Priestess_Jahnda",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/qeynos2/Priestess_Jahnda.lua",
+    "sourceSha256": "7e8255c210ab09211645285f4788b8b01a6d549b392d2643b9a8cab67158ec59",
+    "assertions": "character.level=1;character.class=2;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18714,999999},{copper=3});equal(remaining[18714],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13506,1);faction(219,15);faction(221,-25);faction(262,50);faction(280,30);faction(341,100);equal(calls.exp,100);equal(#calls.cash,0);trade({18714,18714,999999});equal(remaining[18714],1);equal(remaining[999999],1);reward(13506,2);faction(219,30);faction(221,-50);faction(262,100);faction(280,60);faction(341,200);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18711 quantity/repeat/retained values: qeynos2/Camlend_Serbold",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-af-aegis-dialogue/qeynos2-Camlend_Serbold.lua",
+    "sourceSha256": "a1b63ca5e3e356928e5ffdaf9d67fcffeed645a38790560f3afffdc3b8c9d428",
+    "assertions": "character.level=1;character.class=3;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18711,999999},{copper=3});equal(remaining[18711],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13506,1);faction(221,-25);faction(262,50);faction(280,30);faction(341,100);equal(calls.exp,100);equal(#calls.cash,0);trade({18711,18711,999999});equal(remaining[18711],1);equal(remaining[999999],1);reward(13506,2);faction(221,-50);faction(262,100);faction(280,60);faction(341,200);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18736 quantity/repeat/retained values: freportn/Tholius_Quey",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/freportn/Tholius_Quey.lua",
+    "sourceSha256": "dd11f7defa038353ee2d38c7ca89c11daac24fd8d8df7c810819ee94f87ce6d8",
+    "assertions": "character.level=1;character.class=2;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18736,999999},{copper=3});equal(remaining[18736],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13556,1);faction(281,15);faction(330,-10);faction(362,100);equal(calls.exp,100);equal(#calls.cash,0);trade({18736,18736,999999});equal(remaining[18736],1);equal(remaining[999999],1);reward(13556,2);faction(281,30);faction(330,-20);faction(362,200);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18736 quantity/repeat/retained values: freeportwest/Tholius_Quey",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/freeportwest/Tholius_Quey.lua",
+    "sourceSha256": "6bbe8749baea13e23266226b902cb18270df9e7c83c609372ba65db94d982176",
+    "assertions": "character.level=1;character.class=2;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18736,999999},{copper=3});equal(remaining[18736],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13556,1);faction(281,15);faction(330,-10);faction(362,100);equal(calls.exp,100);equal(#calls.cash,0);trade({18736,18736,999999});equal(remaining[18736],1);equal(remaining[999999],1);reward(13556,2);faction(281,30);faction(330,-20);faction(362,200);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18738 quantity/repeat/retained values: freportn/Gygus_Remnara",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/freportn/Gygus_Remnara.lua",
+    "sourceSha256": "34295b42f1d1ff0e9989d4114d1124c998898242a3db11f2f84a8b05ae1c0c41",
+    "assertions": "character.level=1;character.class=3;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18738,999999},{copper=3});equal(remaining[18738],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13554,1);faction(281,15);faction(330,-10);faction(362,100);equal(calls.exp,100);equal(#calls.cash,0);trade({18738,18738,999999});equal(remaining[18738],1);equal(remaining[999999],1);reward(13554,2);faction(281,30);faction(330,-20);faction(362,200);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18738 quantity/repeat/retained values: freeportwest/Gygus_Remnara",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/freeportwest/Gygus_Remnara.lua",
+    "sourceSha256": "cde2546f95c98f3c495fdc087f017b4d4c3b516991618a63a105ef2c9509e5ac",
+    "assertions": "character.level=1;character.class=3;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18738,999999},{copper=3});equal(remaining[18738],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13554,1);faction(281,15);faction(330,-10);faction(362,100);equal(calls.exp,100);equal(#calls.cash,0);trade({18738,18738,999999});equal(remaining[18738],1);equal(remaining[999999],1);reward(13554,2);faction(281,30);faction(330,-20);faction(362,200);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18715 quantity/repeat/retained values: qeynos/Renic_Losaren",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/qeynos/Renic_Losaren.lua",
+    "sourceSha256": "0a65e1cf65f8d7b72cc90f40c11e47e9bebd8752612dc6faa4cb05b7b14ea111",
+    "assertions": "character.level=1;character.class=2;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18715,999999},{copper=3});equal(remaining[18715],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13505,1);faction(221,-100);faction(262,75);faction(280,100);faction(341,75);equal(calls.exp,100);equal(#calls.cash,0);trade({18715,18715,999999});equal(remaining[18715],1);equal(remaining[999999],1);reward(13505,2);faction(221,-200);faction(262,150);faction(280,200);faction(341,150);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18710 quantity/repeat/retained values: qeynos/Runethar_Hamest",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-guild-review/qeynos--Runethar_Hamest.lua",
+    "sourceSha256": "4df4c12fc67f513f2982602fe3e3a318d8dba6bf21ee251dce6d49994b173bde",
+    "assertions": "character.level=1;character.class=3;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18710,999999},{copper=3});equal(remaining[18710],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13505,1);faction(221,-100);faction(262,75);faction(280,100);faction(341,75);equal(calls.exp,100);equal(#calls.cash,0);trade({18710,18710,999999});equal(remaining[18710],1);equal(remaining[999999],1);reward(13505,2);faction(221,-200);faction(262,150);faction(280,200);faction(341,150);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18018 quantity/repeat/retained values: paineel/Coriante_Verisue",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/paineel/Coriante_Verisue.lua",
+    "sourceSha256": "dcc16f8ca93ecb2695cc39a734154895454fa05eef30cb2ab7c3b53693a7c41f",
+    "assertions": "character.level=1;character.class=11;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18018,999999},{copper=3});equal(remaining[18018],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13551,1);faction(231,-100);faction(233,-100);faction(242,-100);faction(254,-100);faction(265,100);equal(calls.exp,100);equal(#calls.cash,0);trade({18018,18018,999999});equal(remaining[18018],1);equal(remaining[999999],1);reward(13551,2);faction(231,-200);faction(233,-200);faction(242,-200);faction(254,-200);faction(265,200);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18779 quantity/repeat/retained values: felwitheb/Tarker_Blazetoss",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/felwitheb/Tarker_Blazetoss.lua",
+    "sourceSha256": "78dc732fa68ccd68ff9ef626e67a62b35b031c4938b5b68336f9beeea5d2d864",
+    "assertions": "character.level=1;character.class=12;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18779,999999},{copper=3});equal(remaining[18779],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13542,1);faction(239,-25);faction(246,15);faction(275,100);faction(279,25);equal(calls.exp,100);equal(#calls.cash,0);trade({18779,18779,999999});equal(remaining[18779],1);equal(remaining[999999],1);reward(13542,2);faction(239,-50);faction(246,30);faction(275,200);faction(279,50);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18758 quantity/repeat/retained values: neriakc/Xon_Quexill",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/neriakc/Xon_Quexill.lua",
+    "sourceSha256": "1dda82f3a336d6fbe71503212cf262a287e59a90457eb81a3dff04053565758e",
+    "assertions": "character.level=1;character.class=11;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18758,999999},{copper=3});equal(remaining[18758],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13587,1);faction(239,100);faction(245,-15);faction(275,-15);faction(278,-15);faction(303,15);faction(1522,-200);equal(calls.exp,100);equal(#calls.cash,0);trade({18758,18758,999999});equal(remaining[18758],1);equal(remaining[999999],1);reward(13587,2);faction(239,200);faction(245,-30);faction(275,-30);faction(278,-30);faction(303,30);faction(1522,-400);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18757 quantity/repeat/retained values: neriakc/Nezzka_Tolax",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/neriakc/Nezzka_Tolax.lua",
+    "sourceSha256": "617f1cde4220aab635561a154fa061e1760c234fbb0a0159f9fe694598f37c54",
+    "assertions": "character.level=1;character.class=5;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18757,999999},{copper=3});equal(remaining[18757],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13586,1);faction(239,100);faction(245,-15);faction(275,-15);faction(278,-15);faction(303,15);faction(1522,-200);equal(calls.exp,100);equal(#calls.cash,0);trade({18757,18757,999999});equal(remaining[18757],1);equal(remaining[999999],1);reward(13586,2);faction(239,200);faction(245,-30);faction(275,-30);faction(278,-30);faction(303,30);faction(1522,-400);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18753 quantity/repeat/retained values: neriakb/Camia_V`Retta",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/neriakb/Camia_V%60Retta.lua",
+    "sourceSha256": "033d1b9a42bc5fcd88ec6e02829f5a692f84c1e1f5915c7b738d9994d0d24b78",
+    "assertions": "character.level=1;character.class=14;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18753,999999},{copper=3});equal(remaining[18753],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13584,1);faction(239,-15);faction(363,100);equal(calls.exp,100);equal(#calls.cash,0);trade({18753,18753,999999});equal(remaining[18753],1);equal(remaining[999999],1);reward(13584,2);faction(239,-30);faction(363,200);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18754 quantity/repeat/retained values: neriakb/Jayna_D`Bious",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/neriakb/Jayna_D%60Bious.lua",
+    "sourceSha256": "ed2ef9bb4e990211a4634d792d452e4df13f497e1d9a45d7066a929cc769f741",
+    "assertions": "character.level=1;character.class=13;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18754,999999},{copper=3});equal(remaining[18754],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13584,1);faction(239,-15);faction(363,100);equal(calls.exp,100);equal(#calls.cash,0);trade({18754,18754,999999});equal(remaining[18754],1);equal(remaining[999999],1);reward(13584,2);faction(239,-30);faction(363,200);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18755 quantity/repeat/retained values: neriakb/Gath_N`Mare",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/neriakb/Gath_N%60Mare.lua",
+    "sourceSha256": "25d974fced9db2e47301dffbd867c52cf39c2ef07cb72ae61477c17c2a55e298",
+    "assertions": "character.level=1;character.class=12;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18755,999999},{copper=3});equal(remaining[18755],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13584,1);faction(239,-15);faction(363,100);equal(calls.exp,100);equal(#calls.cash,0);trade({18755,18755,999999});equal(remaining[18755],1);equal(remaining[999999],1);reward(13584,2);faction(239,-30);faction(363,200);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18717 quantity/repeat/retained values: qeynos/Belious_Naliedin",
+    "coverageKind": "proposed_source",
+    "proposedFile": "changes/p99-guild-review/qeynos--Belious_Naliedin.lua",
+    "sourceSha256": "fb99b7ff2332e6bee607bd5e0a5aecaa0a0892a3da4d0ef8591029c50255fe45",
+    "assertions": "character.level=1;character.class=8;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18717,999999},{copper=3});equal(remaining[18717],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13502,1);faction(262,15);faction(281,15);faction(284,100);faction(285,-5);faction(304,-5);equal(calls.exp,100);equal(#calls.cash,0);trade({18717,18717,999999});equal(remaining[18717],1);equal(remaining[999999],1);reward(13502,2);faction(262,30);faction(281,30);faction(284,200);faction(285,-10);faction(304,-10);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18760 quantity/repeat/retained values: halas/Kylan_O-Danos",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/halas/Kylan_O-Danos.lua",
+    "sourceSha256": "5d8bc8ed8753180822c70b05af7060dfa0593521dc00c8b9c452a2e2db746782",
+    "assertions": "character.level=1;character.class=1;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18760,999999},{copper=3});equal(remaining[18760],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13511,1);faction(311,5);faction(320,100);faction(327,20);faction(328,25);equal(calls.exp,100);equal(#calls.cash,0);trade({18760,18760,999999});equal(remaining[18760],1);equal(remaining[999999],1);reward(13511,2);faction(311,10);faction(320,200);faction(327,40);faction(328,50);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Guild note 18760 quantity/repeat/retained values: halas/Kylan_O`Danos",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/halas/Kylan_O%60Danos.lua",
+    "sourceSha256": "d35a1ed363c286a161ecc8a697361ef19db0038b3b0bc98ef914f8d206d09e3f",
+    "assertions": "character.level=1;character.class=1;trade({});equal(next(calls.rewards),nil);trade({999999});equal(remaining[999999],1);equal(next(calls.rewards),nil);trade({18760,999999},{copper=3});equal(remaining[18760],0);equal(remaining[999999],1);equal(remaining.copper,3);reward(13511,1);faction(311,5);faction(320,100);faction(327,20);faction(328,25);equal(calls.exp,100);equal(#calls.cash,0);trade({18760,18760,999999});equal(remaining[18760],1);equal(remaining[999999],1);reward(13511,2);faction(311,10);faction(320,200);faction(327,40);faction(328,50);equal(calls.exp,200);equal(#calls.cash,0);equal(calls.returns,4)",
+    "notes": "Retained magnitudes regression only; P99 exact XP/faction amounts are unknown."
+  },
+  {
+    "name": "Documented guild dialogue: neriakb/Seloxia_Punox",
+    "proposedFile": "changes/p99-guild-review/neriakb--Seloxia_Punox.lua",
+    "sourceSha256": "b5222022dbd38a9a73cc24f9744f0571eb5327036bcd41185fb961219d46911f",
+    "assertions": "trade({18751});equal(calls.speech[1],\"Welcome to the Indigo Brotherhood. Hmmm, you're a bit scrawny, but we'll work with it. Here's your guild tunic. Defend Neriak and all her allies.\");assert(not string.find(calls.speech[1],'Jarrex',1,true))"
+  },
+  {
+    "name": "Documented guild dialogue: qeynos/Mespha_Tevalian",
+    "proposedFile": "changes/p99-guild-review/qeynos--Mespha_Tevalian.lua",
+    "sourceSha256": "d5b8aebc458dc259ee68fcbb132a69f7b8ee28b8f8a52b58df8a30645700fb77",
+    "assertions": "say('hail');assert(string.find(calls.speech[1],'Greetings, Reviewer.',1,true));assert(string.find(calls.speech[1],'Arch Enchantress of the Order of Three',1,true));assert(string.find(calls.speech[1],'three circles of magic',1,true))"
+  },
+  {
+    "name": "Documented guild dialogue: qeynos/Gahlith_Wrannstad",
+    "proposedFile": "changes/p99-guild-review/qeynos--Gahlith_Wrannstad.lua",
+    "sourceSha256": "ba4582a80587b40371d32959403613e9206b83bf76444ed8ca270b087e56810c",
+    "assertions": "say('hail');equal(calls.speech[1],'Greetings, Reviewer. I am Gahlith Wrannstad, Arch Wizard of the Order of Three.')"
+  },
+  {
+    "name": "Documented guild dialogue: kaladimb/Datur_Nightseer",
+    "proposedFile": "changes/p99-guild-review/kaladimb--Datur_Nightseer.lua",
+    "sourceSha256": "0a8fbc1fb06e5fd0cf1747a49016a187971d1e3c3cd31cc9ddffec28f87bd8db",
+    "assertions": "say('hail');assert(string.find(calls.speech[1],'paladins of the Church of Underfoot',1,true));assert(string.find(calls.speech[1],'allegiance to Brell',1,true));equal(next(calls.rewards),nil);equal(calls.exp,0)"
+  },
+  {
+    "name": "Documented guild dialogue: qcat/Sragg_Bloodheart",
+    "proposedFile": "changes/p99-guild-review/qcat--Sragg_Bloodheart.lua",
+    "sourceSha256": "cef2f7f06a73d77ccaf6cabb4b69fdfd4042dd3822ff403a6f4e6e276abc2185",
+    "assertions": "equal(event_say,nil);trade({18706});equal(calls.speech[1],'Ah, another would-be soldier for the army of the Plaguebringer. Begone!')"
+  },
+  {
+    "name": "Documented guild dialogue: erudnext/Leraena_Shelyrak",
+    "proposedFile": "changes/p99-guild-review/erudnext--Leraena_Shelyrak.lua",
+    "sourceSha256": "0198c2ea1b836b1dcce9e4f5a799e5fc822ee0affa1db73ce01dae8d90f51bcf",
+    "assertions": "say('hail');assert(string.find(calls.speech[1],'Together we shall put an end to such disruptive influences as the [kobold shaman].',1,true));say('kobold shaman');equal(#calls.speech,2)"
+  },
+  {
+    "name": "Documented guild dialogue: erudnext/Depnar_Bulrious",
+    "proposedFile": "changes/p99-guild-review/erudnext--Depnar_Bulrious.lua",
+    "sourceSha256": "999a93ec08ef989cc70f1000594fa31148f34d9ff40031e6dee7aff04cfc6fdf",
+    "assertions": "say('hail');assert(string.find(calls.speech[1],'[joined]',1,true));say('joined');equal(#calls.speech,2);assert(string.find(calls.speech[2],'Quellious',1,true))"
+  },
+  {
+    "name": "Documented guild dialogue: qeynos/Runethar_Hamest",
+    "proposedFile": "changes/p99-guild-review/qeynos--Runethar_Hamest.lua",
+    "sourceSha256": "4df4c12fc67f513f2982602fe3e3a318d8dba6bf21ee251dce6d49994b173bde",
+    "assertions": "trade({18710});assert(string.find(calls.speech[1],'Thank you Reviewer, and welcome',1,true));assert(not string.find(calls.speech[1],'Teddee',1,true))"
+  },
+  {
+    "name": "Documented guild dialogue: qeynos/Belious_Naliedin",
+    "proposedFile": "changes/p99-guild-review/qeynos--Belious_Naliedin.lua",
+    "sourceSha256": "fb99b7ff2332e6bee607bd5e0a5aecaa0a0892a3da4d0ef8591029c50255fe45",
+    "assertions": "say('hail');equal(calls.speech[1],\"Welcome, my name is Belious Naliedin of the League of Antonican Bards. A few years ago, I had finally saved up the money, and I bought this place. I settled in, and have been working here ever since.\")"
+  }
+]

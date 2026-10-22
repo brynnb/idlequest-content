@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-nz-razortooth-dialogue",
+  "summary": "Restore Feren Razor Tooth completion line quoted by P99.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Razortooth?action=raw",
+      "note": "Cached 2026-07-17T23:30:06.652Z; revision unavailable; SHA256 101410486fec3ae3c1d2b6febb892062c268662b709f6d14f663ee31299a482a. Input 6348 Razor Tooth, output 1062 Kerran Fishingpole, positive faction 382 Kerra Isle all resolve to exported rows and match. Preserve 18000 EXP and faction magnitude 10 because P99 gives only presence/direction, not exact numbers. Spawn rarity and loot unverified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 13004,
+        "zone": "kerraridge",
+        "name": "Feren",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: kerraridge/Feren.pl\n-- items: 6348, 1062\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Rarr.  Me is Feren.  Me is fisher.  That means Feren catches [fish].\")\n\telseif e.message:findi(\"fish\") then\n\t\te.self:Say(\"All kinds of fish.  Tasty fish.  All day Feren catches the fishes so all Kerran can eat.  I do for good of all Kerran.  Rrrrr.  One thing bother Feren always though.  Is bad fish.  [Razortooth].\")\n\telseif e.message:findi(\"razortooth\") then\n\t\te.self:Say(\"Rrrrrr!  Razortooth mean fish.  Razortooth eat fish off Feren's line.  Razortooth gnaw Feren's boat.  Razortooth smart and dangerous.  Feren never able to catch Razortooth.  This haunt Feren for months.  If you was able to catch Razortooth. Feren be forever grateful. Maybe even give you possessions.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 6348}) then\n\t\te.self:Say(\"Rarr, Feren not haunted by Razortooth no more. Feren grateful and give you this possession.\")\n\t\te.other:SummonItem(1062)\n\t\te.other:Faction(382, 10, 0)\n\t\te.other:AddEXP(18000)\n\t\te.other:Ding()\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 13004,
+        "zone": "kerraridge",
+        "name": "Feren",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: kerraridge/Feren.pl\n-- items: 6348, 1062\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Rarr.  Me is Feren.  Me is fisher.  That means Feren catches [fish].\")\n\telseif e.message:findi(\"fish\") then\n\t\te.self:Say(\"All kinds of fish.  Tasty fish.  All day Feren catches the fishes so all Kerran can eat.  I do for good of all Kerran.  Rrrrr.  One thing bother Feren always though.  Is bad fish.  [Razortooth].\")\n\telseif e.message:findi(\"razortooth\") then\n\t\te.self:Say(\"Rrrrrr!  Razortooth mean fish.  Razortooth eat fish off Feren's line.  Razortooth gnaw Feren's boat.  Razortooth smart and dangerous.  Feren never able to catch Razortooth.  This haunt Feren for months.  If you was able to catch Razortooth. Feren be forever grateful. Maybe even give you possessions.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 6348}) then\n\t\te.self:Say(\"Razortooth! You catch him!  Truly you be great fisher.  Please take this from me.  Feren is forever owing you.\")\n\t\te.other:SummonItem(1062)\n\t\te.other:Faction(382, 10, 0)\n\t\te.other:AddEXP(18000)\n\t\te.other:Ding()\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/kerraridge/Feren.lua",
+      "beforeSha256": "c35c4f724cbcccc2b40fd482a5a88696460b14228dbaa27b306f0cf814a34507",
+      "proposedFile": "changes/p99-nz-razortooth-dialogue/kerraridge--Feren.lua",
+      "afterSha256": "fd8edecd0873f4946d8f8ed85fde46fb7fc5099f921cdfb604c155ffacdcfc5b"
+    }
+  ]
+}

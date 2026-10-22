@@ -1,0 +1,21 @@
+{
+  "format": 1,
+  "id": "p99-audit-ledger",
+  "summary": "Record evidence-backed partial reviews and conversions while preserving historical audit notes separately; no exclusion removals.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Category:Quests",
+      "note": "Per-title exact cached evidence and hashes are linked from audit_evidence_files; historical reviewed status is not a fresh full-playability claim."
+    }
+  ],
+  "rows": [],
+  "sources": [
+    {
+      "target": "reference/server/internal/quest/content_exclusions.json",
+      "beforeSha256": "874b10f289c7507640a73fd4f70d0affa617f31b793f2decc2c606aad869390a",
+      "proposedFile": "changes/p99-audit-ledger/content_exclusions.json",
+      "afterSha256": "019c8560ebc0b7d85053189c1aecd9fb857f7461a8c2d1275d2773af75c3f55e"
+    }
+  ]
+}

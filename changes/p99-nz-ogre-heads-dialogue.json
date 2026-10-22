@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-nz-ogre-heads-dialogue",
+  "summary": "Accept correct Zarchoomi spelling alongside existing misspelled Zachoomi trigger.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Ogre_Heads?action=raw",
+      "note": "Cached 2026-07-17T23:27:18.868Z; revision unavailable; SHA256 c423efbcf7246fdc9199f1926af18104d58a2b9d3de94281f71a8f4a0cdf1467. Two distinct Ogre Head IDs13741 and13740 lead to all seven documented Bloodforge pieces3090\u20133096. Existing Helm weighting6of12is retained as unsupported inherited approximation. All five quest faction directions match. Killing NPC faction changes/drop data not verified. Corflunk phrase unchanged."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 14649,
+        "zone": "kaladima",
+        "name": "Byzar_Bloodforge",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: kaladima/Byzar_Bloodforge.pl\n-- items: 13931, 2113, 2114, 2115, 2117, 2119, 2121, 2122, 13741, 13740, 3090, 3091, 3092, 3093, 3094, 3095, 3096, 12136, 13314\n\nlocal function bloodforge_reward(e)\n\te.other:Faction(312, 15, 0)\n\te.other:Faction(274, 15, 0)\n\te.other:Faction(293, 15, 0)\n\te.other:Faction(290, 15, 0)\n\te.other:Faction(232, -15, 0)\n\te.other:AddEXP(10000)\n\te.other:Ding()\nend\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"State your business!!  I have no time for chitchat.  Well..  speak up. toad!!  What?!!..  Have you come here to [return goblin beads]?\")\n\telseif e.message:findi(\"return goblin beads\") then\n\t\te.self:Say(\"If you wish to return Runnyeye Warbeads you best have at least four of them.  Do not waste my time with any less.  If I am in a good mood I just may reward you with some trash, err..  I mean equipment from our armory.\")\n\telseif e.message:findi(\"Zachoomi\") or e.message:findi(\"Corflunk\") then\n\t\te.self:Say(\"Do not speak the names of Zarchoomi and Corflunk!!  I have heard enough of those ogres!!  I would pay greatly for their heads!!\")\n\telseif e.message:findi(\"take a little trip\") then\n\t\te.self:Say(\"Yes.  You will do.  My sister was once engaged to a fellow warrior.  He disgraced her and left her crying at the altar.  I will have his head for such a slap in the face of my family.  His name was Trumpy Irontoe, once a member of the now defunct Irontoe Brigade.  I know not where he went.  Find his whereabouts and return his head to me.  Do so, and I shall make you an honorary member of the Bloodforge Brigade.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 13931, item2 = 13931, item3 = 13931, item4 = 13931}) then\n\t\te.self:Say(\"You finally have proven yourself a warrior, a slow one!!  Take this reward and ask for nothing else.  You should be proud to defend Kaladim and expect no reward.\")\n\t\tbloodforge_reward(e)\n\t\te.other:SummonItem(eq.ChooseRandom(2113, 2114, 2115, 2117, 2119, 2121, 2122))\n\telseif item_lib.check_turn_in(e.trade, {item1 = 13741, item2 = 13740}) then\n\t\te.self:Say(\"I underestimated you.  You are truly a great warrior.  I reward you with a piece of my own Bloodforge armor.  You would be fine Bloodforge Brigade material!  How would you like to [take a little trip] in the name of the Bloodforge Brigade?\")\n\t\tbloodforge_reward(e)\n\t\te.other:SummonItem(eq.ChooseRandom(3090, 3090, 3090, 3090, 3090, 3090, 3091, 3092, 3093, 3094, 3095, 3096))\n\telseif item_lib.check_turn_in(e.trade, {item1 = 12136}) then\n\t\te.self:Say(\"Ha!! His death brings me great happiness.  I owe you much.  Take this hammer.  It is the hammer of the Bloodforge Brigade.  May it serve you well.  Now go,so I can enjoy this moment of happiness alone.\")\n\t\tbloodforge_reward(e)\n\t\te.other:SummonItem(13314)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 14649,
+        "zone": "kaladima",
+        "name": "Byzar_Bloodforge",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: kaladima/Byzar_Bloodforge.pl\n-- items: 13931, 2113, 2114, 2115, 2117, 2119, 2121, 2122, 13741, 13740, 3090, 3091, 3092, 3093, 3094, 3095, 3096, 12136, 13314\n\nlocal function bloodforge_reward(e)\n\te.other:Faction(312, 15, 0)\n\te.other:Faction(274, 15, 0)\n\te.other:Faction(293, 15, 0)\n\te.other:Faction(290, 15, 0)\n\te.other:Faction(232, -15, 0)\n\te.other:AddEXP(10000)\n\te.other:Ding()\nend\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"State your business!!  I have no time for chitchat.  Well..  speak up. toad!!  What?!!..  Have you come here to [return goblin beads]?\")\n\telseif e.message:findi(\"return goblin beads\") then\n\t\te.self:Say(\"If you wish to return Runnyeye Warbeads you best have at least four of them.  Do not waste my time with any less.  If I am in a good mood I just may reward you with some trash, err..  I mean equipment from our armory.\")\n\telseif e.message:findi(\"Zachoomi\") or e.message:findi(\"Zarchoomi\") or e.message:findi(\"Corflunk\") then\n\t\te.self:Say(\"Do not speak the names of Zarchoomi and Corflunk!!  I have heard enough of those ogres!!  I would pay greatly for their heads!!\")\n\telseif e.message:findi(\"take a little trip\") then\n\t\te.self:Say(\"Yes.  You will do.  My sister was once engaged to a fellow warrior.  He disgraced her and left her crying at the altar.  I will have his head for such a slap in the face of my family.  His name was Trumpy Irontoe, once a member of the now defunct Irontoe Brigade.  I know not where he went.  Find his whereabouts and return his head to me.  Do so, and I shall make you an honorary member of the Bloodforge Brigade.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 13931, item2 = 13931, item3 = 13931, item4 = 13931}) then\n\t\te.self:Say(\"You finally have proven yourself a warrior, a slow one!!  Take this reward and ask for nothing else.  You should be proud to defend Kaladim and expect no reward.\")\n\t\tbloodforge_reward(e)\n\t\te.other:SummonItem(eq.ChooseRandom(2113, 2114, 2115, 2117, 2119, 2121, 2122))\n\telseif item_lib.check_turn_in(e.trade, {item1 = 13741, item2 = 13740}) then\n\t\te.self:Say(\"I underestimated you.  You are truly a great warrior.  I reward you with a piece of my own Bloodforge armor.  You would be fine Bloodforge Brigade material!  How would you like to [take a little trip] in the name of the Bloodforge Brigade?\")\n\t\tbloodforge_reward(e)\n\t\te.other:SummonItem(eq.ChooseRandom(3090, 3090, 3090, 3090, 3090, 3090, 3091, 3092, 3093, 3094, 3095, 3096))\n\telseif item_lib.check_turn_in(e.trade, {item1 = 12136}) then\n\t\te.self:Say(\"Ha!! His death brings me great happiness.  I owe you much.  Take this hammer.  It is the hammer of the Bloodforge Brigade.  May it serve you well.  Now go,so I can enjoy this moment of happiness alone.\")\n\t\tbloodforge_reward(e)\n\t\te.other:SummonItem(13314)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/kaladima/Byzar_Bloodforge.lua",
+      "beforeSha256": "e0820094bbe60c9d8b9ea1a58270eb9d68aa22dda548d79a9c9a07c7c3eb06c1",
+      "proposedFile": "changes/p99-nz-ogre-heads-dialogue/kaladima--Byzar_Bloodforge.lua",
+      "afterSha256": "b7c0309316824de88980a29bf9b9c3ab602decf0fafc62fa8413784b02d473d4"
+    }
+  ]
+}

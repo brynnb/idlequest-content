@@ -1,0 +1,45 @@
+{
+  "format": 1,
+  "id": "p99-nz-ged-glove-dialogue",
+  "summary": "Allow garments prompt and route species-specific glove requests before the generic gloves branch.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Ratskin_Gloves_Quest?action=raw",
+      "note": "Cached 2026-07-17T23:30:04.761Z; revision unavailable; SHA256 28e8e5e3b22da78188aa615c10cdd3132ec257dc25661f30818fddb58ce52a57. P99 What ratskin gloves and wolfskin gloves currently hit generic gloves first and give lion recipe. Species branches now precede generic gloves; all costs, items, rewards and faction/experience unchanged. Existing non-P99 exact wording retained, so source dialogue prose still differs."
+    },
+    {
+      "url": "https://wiki.project1999.com/Wolfskin_Gloves_Quest?action=raw",
+      "note": "Cached 2026-07-17T23:41:56.907Z; revision unavailable; SHA256 0cb02c262bf885752db180734beca34c6bcde5410983b4117ab57572ff7e8d1f. P99 What ratskin gloves and wolfskin gloves currently hit generic gloves first and give lion recipe. Species branches now precede generic gloves; all costs, items, rewards and faction/experience unchanged. Existing non-P99 exact wording retained, so source dialogue prose still differs."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 11905,
+        "zone": "kithicor",
+        "name": "Ged_Twigborn",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: kithicor/Ged_Twigborn.pl\n-- P99 audit: Ratskin Gloves Quest\n-- items: 13766, 2315, 13752, 2314, 13054, 2312, 13755, 2313\n\nlocal function reward_gloves(e, item_id)\n\te.other:SummonItem(item_id)\n\te.other:Faction(269, 5, 0) -- Kithicor Residents\n\te.other:Faction(302, 5, 0) -- Protectors of Pine\n\te.other:Faction(272, 5, 0) -- Jaggedpine Treefolk\n\te.other:Faction(324, -5, 0) -- Unkempt Druids\n\te.other:AddEXP(100)\n\te.other:Ding()\nend\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Hello Traveler.  Don't mind me, I'm just working on some [clothes]\")\n\telseif e.message:findi(\"clothes\") then\n\t\te.self:Say(\"Well, more like [gloves] actually, they are my specialty.\")\n\telseif e.message:findi(\"gloves\") then\n\t\te.self:Say(\"Aye, gloves.  I would be happy to make you a pair if you can bring me a lion skin and 96 gold pieces.  I also make them from [bear] skin, [wolf] skin, or [rat] skin.\")\n\telseif e.message:findi(\"bear\") then\n\t\te.self:Say(\"If you would like gloves from bear skin I require a bear hide and 25 gold pieces.\")\n\telseif e.message:findi(\"rat\") then\n\t\te.self:Say(\"I will need 6 gold, and a giant rat pelt.\")\n\telseif e.message:findi(\"wolf\") then\n\t\te.self:Say(\"I will require 13 gold pieces and a wolf pelt.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 13766, gold = 96}) then\n\t\treward_gloves(e, 2315)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 13752, gold = 25}) then\n\t\treward_gloves(e, 2314)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 13054, gold = 6}) then\n\t\te.self:Say(\"Ahh yes, these will do quite nicely. Here are your ratskin gloves.\")\n\t\treward_gloves(e, 2312)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 13755, gold = 13}) then\n\t\treward_gloves(e, 2313)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 11905,
+        "zone": "kithicor",
+        "name": "Ged_Twigborn",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: kithicor/Ged_Twigborn.pl\n-- P99 audit: Ratskin Gloves Quest\n-- items: 13766, 2315, 13752, 2314, 13054, 2312, 13755, 2313\n\nlocal function reward_gloves(e, item_id)\n\te.other:SummonItem(item_id)\n\te.other:Faction(269, 5, 0) -- Kithicor Residents\n\te.other:Faction(302, 5, 0) -- Protectors of Pine\n\te.other:Faction(272, 5, 0) -- Jaggedpine Treefolk\n\te.other:Faction(324, -5, 0) -- Unkempt Druids\n\te.other:AddEXP(100)\n\te.other:Ding()\nend\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Hello Traveler.  Don't mind me, I'm just working on some [clothes]\")\n\telseif e.message:findi(\"clothes\") or e.message:findi(\"garments\") then\n\t\te.self:Say(\"Well, more like [gloves] actually, they are my specialty.\")\n\telseif e.message:findi(\"bear\") then\n\t\te.self:Say(\"If you would like gloves from bear skin I require a bear hide and 25 gold pieces.\")\n\telseif e.message:findi(\"rat\") then\n\t\te.self:Say(\"I will need 6 gold, and a giant rat pelt.\")\n\telseif e.message:findi(\"wolf\") then\n\t\te.self:Say(\"I will require 13 gold pieces and a wolf pelt.\")\n\telseif e.message:findi(\"gloves\") then\n\t\te.self:Say(\"Aye, gloves.  I would be happy to make you a pair if you can bring me a lion skin and 96 gold pieces.  I also make them from [bear] skin, [wolf] skin, or [rat] skin.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 13766, gold = 96}) then\n\t\treward_gloves(e, 2315)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 13752, gold = 25}) then\n\t\treward_gloves(e, 2314)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 13054, gold = 6}) then\n\t\te.self:Say(\"Ahh yes, these will do quite nicely. Here are your ratskin gloves.\")\n\t\treward_gloves(e, 2312)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 13755, gold = 13}) then\n\t\treward_gloves(e, 2313)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/kithicor/Ged_Twigborn.lua",
+      "beforeSha256": "e515729ee16966f387ed3ef44480ca77c71f23ce02b4e342e9aeb740167cd468",
+      "proposedFile": "changes/p99-nz-ged-glove-dialogue/kithicor--Ged_Twigborn.lua",
+      "afterSha256": "e17ac6d48353da6755e035ccafd4d301353f2d6a83b5288ef006cb1b8a5830c9"
+    }
+  ]
+}

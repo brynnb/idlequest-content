@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-ruathey-hail",
+  "summary": "Restore documented personalized hail; preserve note and free-bag branches, no invented rewards.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/The_Sword_of_Nobility?action=raw",
+      "note": "Cached 2026-07-17T23:38:21.797Z; revision unavailable; SHA256 75ec79c07c0b26f697eb8d80888fa239454850a2024514bdae012b08cd9aa45d. Restore documented personalized hail; preserve note and free-bag branches, no invented rewards. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 31457,
+        "zone": "lavastorm",
+        "name": "Ruathey",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: lavastorm/v1/Ruathey.pl\n-- items: 2417, 17878\n\nfunction event_say(e)\n\tif e.message:findi(\"sword\") then\n\t\te.self:Say(\"I've heard stories about a holy sword. There are many rumored to be hidden all throughout the world, yet only a few have actually been found. Amstaf had one of these swords. It is known for its ability to dismiss the undead. Perhaps by having this sword it'll bring you closer to finding your friend. Gather a ghoul's heart, Amstaf's Scroll, the Blade of Nobility, a noblemans hilt and place them in this [bag].\")\n\telseif e.message:findi(\"bag\") then\n\t\te.self:Say(\"Take this bag and gather the items I've mentioned. I've been told that the Ghoul's Heart can be found in the estate of the undead, while the scroll can be found in the Keep not far from the Karanas. One of the others are rumored to be found near the dwarven city among the goblins. While the last should be found in the caverns of Najena.\")\n\t\te.other:SummonItem(17878)\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 2417}) then\n\t\te.self:Say(\"I see that you've spoken to Llara. She too came to me looking for Amstaf. Though she wasn't able to find her friend, she was able to recover his [sword].\")\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 31457,
+        "zone": "lavastorm",
+        "name": "Ruathey",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: lavastorm/v1/Ruathey.pl\n-- items: 2417, 17878\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Hello \" .. e.other:GetName() .. \".\")\n\telseif e.message:findi(\"sword\") then\n\t\te.self:Say(\"I've heard stories about a holy sword. There are many rumored to be hidden all throughout the world, yet only a few have actually been found. Amstaf had one of these swords. It is known for its ability to dismiss the undead. Perhaps by having this sword it'll bring you closer to finding your friend. Gather a ghoul's heart, Amstaf's Scroll, the Blade of Nobility, a noblemans hilt and place them in this [bag].\")\n\telseif e.message:findi(\"bag\") then\n\t\te.self:Say(\"Take this bag and gather the items I've mentioned. I've been told that the Ghoul's Heart can be found in the estate of the undead, while the scroll can be found in the Keep not far from the Karanas. One of the others are rumored to be found near the dwarven city among the goblins. While the last should be found in the caverns of Najena.\")\n\t\te.other:SummonItem(17878)\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 2417}) then\n\t\te.self:Say(\"I see that you've spoken to Llara. She too came to me looking for Amstaf. Though she wasn't able to find her friend, she was able to recover his [sword].\")\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/lavastorm/Ruathey.lua",
+      "beforeSha256": "e74e6d74bbb0a68559bd2081c3cae3095b2ff7284192642e4cbdfeb5fdab9f08",
+      "proposedFile": "changes/p99-tz-ruathey-hail/lavastorm--Ruathey.lua",
+      "afterSha256": "6207048e7ea568b0eca3c6b0cceaf7058a93876be11c11e4e665334fd5cc66a6"
+    }
+  ]
+}

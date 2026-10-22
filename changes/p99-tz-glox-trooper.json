@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-glox-trooper",
+  "summary": "Restore documented helm note and Tiny Collar plus TWO Star Rubies exchanges. Source Perl has only one ruby; P99 explicitly requires two. No undocumented XP/faction additions, guild branch preserved. Note18980 and Glox Reference14783 identities verified.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Trooper_Scale_Armor?action=raw",
+      "note": "Cached 2026-07-17T23:39:47.938Z; revision unavailable; SHA256 afb9c525fe7e71ec1799feae381412fd13dafe12a792f3ea7e161ab4f3a144fe. Restore documented helm note and Tiny Collar plus TWO Star Rubies exchanges. Source Perl has only one ruby; P99 explicitly requires two. No undocumented XP/faction additions, guild branch preserved. Note18980 and Glox Reference14783 identities verified. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 14781,
+        "zone": "cabeast",
+        "name": "Grand_Master_Glox",
+        "lua_content": "-- IdleQuest starting guild note turn-in.\n-- Source: cabeast/Grand_Master_Glox.pl\n-- items: 18204, 4190\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 18204}) then\n\t\te.self:Emote(\"breaks his meditation and quickly grabs your forearms. You feel the raw power in his heavily callused hands. Out of nowhere, his tail sweeps forward and places a shackle upon your wrist. He then points south towards Master Bain and returns to his meditation.\")\n\t\te.other:SummonItem(4190)\n\t\te.other:AddEXP(100)\n\t\te.other:Faction(444, 200, 0)\n\t\te.other:Faction(441, 50, 0)\n\t\te.other:Ding()\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 14781,
+        "zone": "cabeast",
+        "name": "Grand_Master_Glox",
+        "lua_content": "-- IdleQuest starting guild note turn-in.\n-- Source: cabeast/Grand_Master_Glox.pl\n-- items: 18204, 4190\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 18204}) then\n\t\te.self:Emote(\"breaks his meditation and quickly grabs your forearms. You feel the raw power in his heavily callused hands. Out of nowhere, his tail sweeps forward and places a shackle upon your wrist. He then points south towards Master Bain and returns to his meditation.\")\n\t\te.other:SummonItem(4190)\n\t\te.other:AddEXP(100)\n\t\te.other:Faction(444, 200, 0)\n\t\te.other:Faction(441, 50, 0)\n\t\te.other:Ding()\n\telseif item_lib.check_turn_in(e.trade, {item1 = 14788}) then\n\t\te.self:Emote(\"scrawls instructions on the note and resumes meditation.\")\n\t\te.other:SummonItem(18980)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 14782, item2 = 10032, item3 = 10032}) then\n\t\te.self:Emote(\"scratches a brief reference and motions for you to leave.\")\n\t\te.other:SummonItem(14783)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/cabeast/Grand_Master_Glox.lua",
+      "beforeSha256": "b8d051e3c7e0f53af53f1b8407a98892e1483fd86cc738018a52ffb3004a88a6",
+      "proposedFile": "changes/p99-tz-glox-trooper/cabeast--Grand_Master_Glox.lua",
+      "afterSha256": "bd488318bf845f658c55f495594ac2be206235ab09f6dc283c7468e64af73b97"
+    }
+  ]
+}

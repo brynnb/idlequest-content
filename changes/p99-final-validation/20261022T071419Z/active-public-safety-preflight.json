@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "scope": "Authored P99 changes, P99 tools, and package configuration. Existing public baseline files are not rewritten.",
+  "filesScanned": 1888,
+  "bytesScanned": 84593852,
+  "findings": [],
+  "passed": true,
+  "limits": [
+    "Pattern checks are a publication guard, not proof that arbitrary confidential information is absent.",
+    "Embedded archives and symlinks fail closed; inspect and publish only ordinary sanitized files.",
+    "Run final tests and bind the publication manifest after any edits. Historical receipts are not evidence that changed publication bytes were tested."
+  ]
+}

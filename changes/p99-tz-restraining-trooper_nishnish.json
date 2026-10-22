@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-restraining-trooper_nishnish",
+  "summary": "Support documented sign this restraining order phrase alongside existing sign the restraining order, only lore/requirements response. No new reward or itemgrant route; all sequential trade conditions unchanged.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/The_Restraining_Order?action=raw",
+      "note": "Cached 2026-07-17T23:37:55.399Z; revision unavailable; SHA256 e4a24f856e44c7cec752b6501686b06243a9be01bf578245f610362916c467e3. Support documented sign this restraining order phrase alongside existing sign the restraining order, only lore/requirements response. No new reward or itemgrant route; all sequential trade conditions unchanged. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 18893,
+        "zone": "cabeast",
+        "name": "Trooper_Nishnish",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: cabeast/Trooper_Nishnish.pl\n-- items: 18244, 12465, 18245\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Hail, citizen! Keep clear of the waterways which run through this grand city. For swimming they are not. Many times have playful broodlings fallen prey to the sharp teeth of barracudas.\")\n\telseif e.message:findi(\"sign the restraining order\") then\n\t\te.self:Say(\"So the legion has sent you to have me sign this order, eh? Nay. I shall not do so unless the messenger, you, gathers two barracuda teeth for me. Hand me the legion order when you hand me the two barracuda teeth and then your task shall be complete.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 18244, item2 = 12465, item3 = 12465}) then\n\t\te.self:Emote(\"grabs the barracuda teeth and attaches them to a necklace. 'Good. Now this barracuda charm shall keep me safe from slipping into the waters and becoming a feast for the barracuda. And you, take this legion order and be gone.'\")\n\t\te.other:SummonItem(18245)\n\t\te.other:Faction(441, 5, 0)\n\t\te.other:Faction(440, 5, 0)\n\t\te.other:Faction(445, 5, 0)\n\t\te.other:Faction(442, 5, 0)\n\t\te.other:Faction(444, 5, 0)\n\t\te.other:AddEXP(800)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 18244}) then\n\t\te.self:Say(\"You shall get my signature when I have the legion order and two barracuda teeth.\")\n\t\te.other:SummonItem(18244)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 12465, item2 = 12465}) then\n\t\te.self:Say(\"You shall get my signature when I have the legion order and two barracuda teeth.\")\n\t\te.other:SummonItem(12465, 2)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 12465}) then\n\t\te.self:Say(\"You shall get my signature when I have the legion order and two barracuda teeth.\")\n\t\te.other:SummonItem(12465)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 18893,
+        "zone": "cabeast",
+        "name": "Trooper_Nishnish",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: cabeast/Trooper_Nishnish.pl\n-- items: 18244, 12465, 18245\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Hail, citizen! Keep clear of the waterways which run through this grand city. For swimming they are not. Many times have playful broodlings fallen prey to the sharp teeth of barracudas.\")\n\telseif e.message:findi(\"sign the restraining order\") or e.message:findi(\"sign this restraining order\") then\n\t\te.self:Say(\"So the legion has sent you to have me sign this order, eh? Nay. I shall not do so unless the messenger, you, gathers two barracuda teeth for me. Hand me the legion order when you hand me the two barracuda teeth and then your task shall be complete.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 18244, item2 = 12465, item3 = 12465}) then\n\t\te.self:Emote(\"grabs the barracuda teeth and attaches them to a necklace. 'Good. Now this barracuda charm shall keep me safe from slipping into the waters and becoming a feast for the barracuda. And you, take this legion order and be gone.'\")\n\t\te.other:SummonItem(18245)\n\t\te.other:Faction(441, 5, 0)\n\t\te.other:Faction(440, 5, 0)\n\t\te.other:Faction(445, 5, 0)\n\t\te.other:Faction(442, 5, 0)\n\t\te.other:Faction(444, 5, 0)\n\t\te.other:AddEXP(800)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 18244}) then\n\t\te.self:Say(\"You shall get my signature when I have the legion order and two barracuda teeth.\")\n\t\te.other:SummonItem(18244)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 12465, item2 = 12465}) then\n\t\te.self:Say(\"You shall get my signature when I have the legion order and two barracuda teeth.\")\n\t\te.other:SummonItem(12465, 2)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 12465}) then\n\t\te.self:Say(\"You shall get my signature when I have the legion order and two barracuda teeth.\")\n\t\te.other:SummonItem(12465)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/cabeast/Trooper_Nishnish.lua",
+      "beforeSha256": "85d998fdbba21bd92d5aa3363da48e66d8d71c9c87ca1338eb3dbc5f14f1098a",
+      "proposedFile": "changes/p99-tz-restraining-trooper_nishnish/cabeast--Trooper_Nishnish.lua",
+      "afterSha256": "094a7b37d72a5989160f671b9423e2558a887305ec06afe173925d215b21f6ac"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-lottery-treasurer_lynn",
+  "summary": "Support documented highkeep lottery prompt alongside existing highpass lottery; no change to ticket pool, payment, keys or eligibility.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/The_Lottery_Ticket?action=raw",
+      "note": "Cached 2026-07-17T23:37:17.828Z; revision unavailable; SHA256 35986dbd4f4624c363492e7658199332616b576ee644aaef4d7afc0fd359398e. Support documented highkeep lottery prompt alongside existing highpass lottery; no change to ticket pool, payment, keys or eligibility. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 14012,
+        "zone": "highkeep",
+        "name": "Treasurer_Lynn",
+        "lua_content": "-- items: 12261, 12266, 12267\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Greetings!!  Welcome to Highkeep. home of the greatest casino in all of Norrath.  Please visit our fine casino on the second floor.\"); \n\telseif(e.message:findi(\"highpass lottery\")) then\n\t\te.self:Say(\"Interested in the Highkeep lotter, are we?  I am afraid it as been put on hold.  We found last season's winner to be holding a counterfeit ticket.  We now await [last season's winner] to step foward with the winning ticket - ticket number 16568.  His prize is the key to the royal suite.\"); \n\telseif(e.message:findi(\"last season\")) then\n\t\te.self:Say(\"Last season's winner is not known.  I have heard from my sources that he was some sort of merchant of used goods.\"); \n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 12261})) then\n\t\te.self:Say(\"You have the runner up ticket from last season!! Here is your reward. Remember, a copper gambled is a plat earned!!\");\n\t\te.other:Ding();\n\t\te.other:AddEXP(500);\n\t\te.other:GiveCash(16,11,10,0);\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 12266})) then\n\t\te.self:Say(\"Congratulations!! You are the winner of last season's Highkeep lottery. Here is the key to the royal suite. You should find this room on the third floor.\");\n\t\te.other:SummonItem(12267); -- Item: Highkeep Royal Suite\n\t\te.other:Ding();\n\t\te.other:AddEXP(500);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\n-- END of FILE Zone:highkeep  Treasurer_Lynn",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 14012,
+        "zone": "highkeep",
+        "name": "Treasurer_Lynn",
+        "lua_content": "-- items: 12261, 12266, 12267\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Greetings!!  Welcome to Highkeep. home of the greatest casino in all of Norrath.  Please visit our fine casino on the second floor.\"); \n\telseif(e.message:findi(\"highpass lottery\") or e.message:findi(\"highkeep lottery\")) then\n\t\te.self:Say(\"Interested in the Highkeep lotter, are we?  I am afraid it as been put on hold.  We found last season's winner to be holding a counterfeit ticket.  We now await [last season's winner] to step foward with the winning ticket - ticket number 16568.  His prize is the key to the royal suite.\"); \n\telseif(e.message:findi(\"last season\")) then\n\t\te.self:Say(\"Last season's winner is not known.  I have heard from my sources that he was some sort of merchant of used goods.\"); \n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 12261})) then\n\t\te.self:Say(\"You have the runner up ticket from last season!! Here is your reward. Remember, a copper gambled is a plat earned!!\");\n\t\te.other:Ding();\n\t\te.other:AddEXP(500);\n\t\te.other:GiveCash(16,11,10,0);\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 12266})) then\n\t\te.self:Say(\"Congratulations!! You are the winner of last season's Highkeep lottery. Here is the key to the royal suite. You should find this room on the third floor.\");\n\t\te.other:SummonItem(12267); -- Item: Highkeep Royal Suite\n\t\te.other:Ding();\n\t\te.other:AddEXP(500);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\n-- END of FILE Zone:highkeep  Treasurer_Lynn",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/highkeep/Treasurer_Lynn.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-tz-lottery-treasurer_lynn/highkeep--Treasurer_Lynn.lua",
+      "afterSha256": "df2c81e3e8ab537f38c0215a308910f7624ec1c498b4c15c11f78229b239f888"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "format": 1,
+  "id": "p99-support-mixed-hints",
+  "summary": "Remove only two positively traced Paladin2.0 hint handlers from mixed classic guards, preserving complete ordinary combat callbacks and all NPC rows.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://www.everquest.com/news/imported-eq-enus-62693",
+      "note": "Official2004 Omens art update dates new Epic2.0 weapons beyond P99 era. Exact corresponding felwithea/#Galrun_Starforge source explicitly labels Paladin Epic2.0 and uses paladin_epic9 Vampire investigation, identical guard hint gate. Complete source proof in changes/p99-support-source-review/mixed-hint-proof.json."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 14433,
+        "zone": "gfaydark",
+        "name": "Guard_Fayfear",
+        "lua_content": "function event_say(e)\n\tlocal qglobals = eq.get_qglobals(e.other);\n\tif(qglobals[\"paladin_epic\"] == \"9\") then\n\t\tif(e.message:findi(\"hail\")) then\n\t\t\te.self:Say(\"Salutations \" .. e.other:GetName() .. \", nice to meet you. We have been getting reports of activity in Crushbone lately. The reports have indicated that an orc messenger was seen speaking to a being of some sort. . .some say it was a vampire. Maybe you should investigate.\");\n\t\tend\n\tend\nend\n\nfunction event_combat(e)\n\tif e.joined then\n\t\te.self:Say(\"Time to die \" .. e.other:GetCleanName() .. \".\");\n\tend\nend",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 14433,
+        "zone": "gfaydark",
+        "name": "Guard_Fayfear",
+        "lua_content": "-- P99 scope: later Paladin2.0-only hail hint removed; ordinary guard combat preserved.\nfunction event_combat(e)\n\tif e.joined then\n\t\te.self:Say(\"Time to die \" .. e.other:GetCleanName() .. \".\");\n\tend\nend",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 14488,
+        "zone": "gfaydark",
+        "name": "Guard_Highmoon",
+        "lua_content": "function event_say(e)\n\tlocal qglobals = eq.get_qglobals(e.other);\n\tif(qglobals[\"paladin_epic\"] == \"9\") then\n\t\tif(e.message:findi(\"hail\")) then\n\t\t\te.self:Say(\"Hail, \" .. e.other:GetName() .. \". I got a tip from one of our patroling guards that they saw a meeting in Lesser Faydark between the Teir`Dal and Vampires there. Perhaps you should check it out.\");\n\t\tend\n\tend\nend\n\nfunction event_combat(e)\n\tif e.joined then\n\t\te.self:Say(\"Time to die \" .. e.other:GetCleanName() .. \".\");\n\tend\nend",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 14488,
+        "zone": "gfaydark",
+        "name": "Guard_Highmoon",
+        "lua_content": "-- P99 scope: later Paladin2.0-only hail hint removed; ordinary guard combat preserved.\nfunction event_combat(e)\n\tif e.joined then\n\t\te.self:Say(\"Time to die \" .. e.other:GetCleanName() .. \".\");\n\tend\nend",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/gfaydark/Guard_Fayfear.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-mixed-hints/Guard_Fayfear.lua",
+      "afterSha256": "1722962551de8705c4081fac0311397b668da2eefe91204947835ed315c91831"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/gfaydark/Guard_Highmoon.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-mixed-hints/Guard_Highmoon.lua",
+      "afterSha256": "1722962551de8705c4081fac0311397b668da2eefe91204947835ed315c91831"
+    }
+  ]
+}

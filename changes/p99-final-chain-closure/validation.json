@@ -1,0 +1,163 @@
+{
+  "checkedAt": "2026-10-22T07:14:05Z",
+  "command": "PATH=/tmp/p99-go-toolchain/go/bin:$PATH GOCACHE=/tmp/p99-go-cache GOPATH=/tmp/p99-go-path node tools/cli.mjs check-proposal . --proposal changes/p99-final-chain-closure.json",
+  "exitCode": 0,
+  "stdout": "{ checked: 25, failures: null }\nValidated proposal p99-final-chain-closure: 25 rows, 25 sources\n",
+  "proposalSha256": "5cbb185b1d57af7a09da5058931678ea032e4fa8a21c36aecde398c7570029d6",
+  "runtimeManifestSha256": "9a3a26650bc050c41ec6761d40ce3448f43ab023d49c794241f32c57e5486253",
+  "sourceChecksums": [
+    {
+      "target": "maintained/lua/converted-perl/rathemtn/Rambling_Sphinx_Spiritservant.lua",
+      "beforeSha256": "bda83cdba9f31ee24af85d4b97b5c75077acf6941d66200e8ea84badc51401a4",
+      "proposedFile": "changes/p99-final-chain-closure/rathemtn--Rambling_Sphinx_Spiritservant.lua",
+      "afterSha256": "74e655ed4838a21d3a8e754ca340908b6836bce280da27aa2c15e55aa7357973"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/cazicthule/#Avatar_of_Fear.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-final-chain-closure/cazicthule--#Avatar_of_Fear.lua",
+      "afterSha256": "e0681301e2081313b6d6c2308cbdb020419572d76c792eaeca83c04a550bf12a"
+    },
+    {
+      "target": "maintained/lua/converted-perl/warslikswood/Ferocious_Goblin.lua",
+      "beforeSha256": "97df52fec6602a7e8d3f0278c1df8ae8844f0f464925a34cc8a1005c94f5d6af",
+      "proposedFile": "changes/p99-final-chain-closure/warslikswood--Ferocious_Goblin.lua",
+      "afterSha256": "a613cd969f1d269e9e88efed8b8ebb4ca2ae4f2f1b2529d0ac0d0b2f4df09072"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/befallen/#a_skeletal_foreman.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-final-chain-closure/befallen--#a_skeletal_foreman.lua",
+      "afterSha256": "5b6cade8f2fea0856e057bf7f7ea7c379adcc807944668ebd935d25f1c734651"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/nro/a_lamented_knight.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-final-chain-closure/nro--a_lamented_knight.lua",
+      "afterSha256": "4f227ecae0a82a191b7a820cf856250c835cd66f8c836f3b5b13f295c7eae65d"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/befallen/a_skeletal_excavator.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-final-chain-closure/befallen--a_skeletal_excavator.lua",
+      "afterSha256": "62768bafba82c5508f31edb5e5c4e6ada1607814df7cbd36362dafa8241d7c19"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/nro/a_guardian_tormentor.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-final-chain-closure/nro--a_guardian_tormentor.lua",
+      "afterSha256": "05c2af54db1aa8074c524e55351bdddff7a5135c262e008d0617fee9094089ac"
+    },
+    {
+      "target": "maintained/lua/converted-perl/timorous/Grandmaster_Rinmark.lua",
+      "beforeSha256": "14d3f899be6cfd55231186a17a6dd5d58f9d1495613fc16695a78ff56c5f5f61",
+      "proposedFile": "changes/p99-final-chain-closure/timorous--Grandmaster_Rinmark.lua",
+      "afterSha256": "db11ef260fc9edc800b67411167bb31c62341b3337a84760a940d2bd66e09fb6"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/kithicor/#Blackened_Treant.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-final-chain-closure/kithicor--#Blackened_Treant.lua",
+      "afterSha256": "de309872eb5a0ba99fe476d49651b40c811269416e6d7b319a38041e3114a41c"
+    },
+    {
+      "target": "maintained/lua/converted-perl/qey2hh1/12184.lua",
+      "beforeSha256": "0b746b4227e657b98f6ef233d22fc683f47dd63e14ec6f8a8a3e9d7c4ac26359",
+      "proposedFile": "changes/p99-final-chain-closure/qey2hh1--12184.lua",
+      "afterSha256": "da3ddcb6a83c9582915a312b543a7a71e584b5ad09da22a0bd5fe006b1812963"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/nro/a_haunt.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-final-chain-closure/nro--a_haunt.lua",
+      "afterSha256": "334d64bd5c7c18b8291b170c4539463d919d4ce0eca384940f773f9f9f27f9f0"
+    },
+    {
+      "target": "maintained/lua/converted-perl/lakerathe/#Gnoll_Scavenger.lua",
+      "beforeSha256": "33fb7400f6c4a648da81390d06cec7fcc94c61992c5d972581b13fb7bb02f303",
+      "proposedFile": "changes/p99-final-chain-closure/lakerathe--#Gnoll_Scavenger.lua",
+      "afterSha256": "5fa8a2a97d8e877ff631f4b7722ebaac6e82f2fb773431598fea44f4c7fa91c7"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/frontiermtns/#a_goblin_whipcracker.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-final-chain-closure/frontiermtns--#a_goblin_whipcracker.lua",
+      "afterSha256": "ca9045cc2b1ea40a6c296ae5ffa0fbb7dc90bb23a45aa3a2a0bd1764aeb54d57"
+    },
+    {
+      "target": "maintained/lua/converted-perl/timorous/Master_Rinmark.lua",
+      "beforeSha256": "d5f7eb3b9c6ea5d1cd8f1f75fb85c6432025d5ffcfcbdc4a0449655924f6e0c4",
+      "proposedFile": "changes/p99-final-chain-closure/timorous--Master_Rinmark.lua",
+      "afterSha256": "40ab2be264226beed9619c7d043518740453d7dbdc3d02d4d2d08636fc137088"
+    },
+    {
+      "target": "maintained/lua/converted-perl/lakeofillomen/Impervious_Bloodbeast.lua",
+      "beforeSha256": "7b012247293a46a832790f68f231d4cc4600da1c97b8d973913bc4d969dcc6ee",
+      "proposedFile": "changes/p99-final-chain-closure/lakeofillomen--Impervious_Bloodbeast.lua",
+      "afterSha256": "0e773d10ecdb1aa356a460ead74d8801bc0c84ed305cd5e71abd882a040cfea7"
+    },
+    {
+      "target": "maintained/lua/converted-perl/qey2hh1/12183.lua",
+      "beforeSha256": "4ea2d25fc6588caad51ad745c147a61927c985e1b0ef195cea4729383c4d649f",
+      "proposedFile": "changes/p99-final-chain-closure/qey2hh1--12183.lua",
+      "afterSha256": "1cd3a02296313e4a97157c02f9ac3a48529a199a9839a4e1aee92b5814f09805"
+    },
+    {
+      "target": "maintained/lua/converted-perl/timorous/Draz_Nurakk.lua",
+      "beforeSha256": "8016936dda407c8498e2828c550349a94e5704895545509e8cd967c245327820",
+      "proposedFile": "changes/p99-final-chain-closure/timorous--Draz_Nurakk.lua",
+      "afterSha256": "1ca076018d7d8bbc56b0003476c50ea7aa3edc3340209dc1ea2f7478a6b82eb9"
+    },
+    {
+      "target": "maintained/lua/converted-perl/rathemtn/Raving_Sphinx_Spiritservant.lua",
+      "beforeSha256": "462ed67ef5d36287827ff91499358af170d347661c7f553389c090e9d3229735",
+      "proposedFile": "changes/p99-final-chain-closure/rathemtn--Raving_Sphinx_Spiritservant.lua",
+      "afterSha256": "31df1bc1c114ee3402757990befb0f8f0a3d731142d3149524efa74a48ce568a"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/cazicthule/#a_Thul_Tae_Ew_High_Priest.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-final-chain-closure/cazicthule--#a_Thul_Tae_Ew_High_Priest.lua",
+      "afterSha256": "d25d8e4a66f052c7fa368b6ba23f606506b928d1ffd7e898268293d73bc2f721"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/kithicor/#Blackened_Tree_Limb.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-final-chain-closure/kithicor--#Blackened_Tree_Limb.lua",
+      "afterSha256": "1ddb92ae442aea58d7ca07fd71fe4b1670601f0a9ee4c7ff39b1acefc7e953a9"
+    },
+    {
+      "target": "maintained/lua/converted-perl/warslikswood/a_frantic_goblin.lua",
+      "beforeSha256": "035157961f2d4322c4e2c247b16e7c8bd3b7ffeedc5f10a76e5aa015fb64fef3",
+      "proposedFile": "changes/p99-final-chain-closure/warslikswood--a_frantic_goblin.lua",
+      "afterSha256": "c304b256593c7c762f79a2e52955babc5df339032b88586166940f09bd2874c5"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/nro/a_spirit.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-final-chain-closure/nro--a_spirit.lua",
+      "afterSha256": "9a337b19bc1fab68c7fc9304f8eeae460066c44873cb18cdae78b1674936ae77"
+    },
+    {
+      "target": "maintained/lua/converted-perl/timorous/Rinmark.lua",
+      "beforeSha256": "3cb9ab414f947bf7cc01dc662f01f77b707971047880a4fbda0816e4f9702159",
+      "proposedFile": "changes/p99-final-chain-closure/timorous--Rinmark.lua",
+      "afterSha256": "02a860d8e15a78ec8a53ac82d7904517a4191c23c85442b8070d7eed720c22e0"
+    },
+    {
+      "target": "maintained/lua/converted-perl/timorous/an_Iksar_master.lua",
+      "beforeSha256": "4b17cfed06c4d0320fa3f6cd2156c41ed0bfb3be22ef82bc5c5c75d77d584aa6",
+      "proposedFile": "changes/p99-final-chain-closure/timorous--an_Iksar_master.lua",
+      "afterSha256": "16ceafc8465767a47b1f8e6602617e951874a170ef42e6513457e2f46d520568"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/befallen/#Sir_Ariam_Arcanum.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-final-chain-closure/befallen--#Sir_Ariam_Arcanum.lua",
+      "afterSha256": "bea36a1921acce284e87b34964a76754a88b9a3c18cb6ca7e1723f4f74cf1c5b"
+    }
+  ],
+  "isolatedRuntimeCases": 73,
+  "staticChecks": "PASS: exact historical-body bytes,25 source hashes, full row preimages/postimages, classic fields and branch preservation, positive/negative/refund/repeat cases, public evidence data SHA bindings.",
+  "limits": "No actual game settlement or complete P99 parity proof. Baseline checksums are enforced by actual CLI. No private runtime used."
+}

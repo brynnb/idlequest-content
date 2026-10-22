@@ -1,0 +1,1567 @@
+[
+  {
+    "ordinal": 1,
+    "key": "akanon/Exterminator_VIII",
+    "questRowId": 14897,
+    "baselineFile": "effective/quests/akanon/Exterminator_VIII.lua",
+    "baselineSourceSha256": "b56c9692b4caaa18f7e2a66f4eafad150e9eb7987871d7ecb19946b9c1dc6dcc",
+    "baselineHashKind": "exact_file_bytes",
+    "baselineNormalizedLfSourceSha256": "b56c9692b4caaa18f7e2a66f4eafad150e9eb7987871d7ecb19946b9c1dc6dcc",
+    "baselineSourceBytes": 1091,
+    "sourceLines": 24,
+    "handlersReviewed": [
+      "event_say",
+      "event_trade"
+    ],
+    "disposition": "unresolved_no_exact_p99_implementation_proof",
+    "sourceCategory": "unresolved",
+    "sourceSpecificReview": "Clockwork rat-leg quartet 10967 grants coin/XP/factions. The VII-titled NPC page actually names VIII, but documents no hand-in values.",
+    "action": "unchanged",
+    "proposedState": null,
+    "cachedEvidenceTitles": [
+      "Exterminator VII"
+    ],
+    "publicEvidenceIds": [],
+    "existingReviewReferences": [],
+    "itemEvidenceNavigation": "item-evidence-navigation.json#akanon/Exterminator_VIII",
+    "numericNpcIdentity": null,
+    "baselineQuestPolicy": null,
+    "baselineNpcPolicyCandidates": [],
+    "runtimeAdmission": "not proven by enabled row, source presence, item existence, name match, or isolated VM execution",
+    "parityLimitations": [
+      "No full-chain claim from this individual source disposition.",
+      "Unknown numerical XP, faction, coin, timing and random probabilities are not silently certified or retuned.",
+      "Acquisition, actual spawn identity, engine settlement and player UI remain separate evidence requirements."
+    ]
+  },
+  {
+    "ordinal": 5,
+    "key": "akanon/Lobal_Postugger",
+    "questRowId": 18458,
+    "baselineFile": "effective/quests/akanon/Lobal_Postugger.lua",
+    "baselineSourceSha256": "7847baf7bdb15ca989b3bc62ea8f72163709a2b529fecb09e714562d9acbb629",
+    "baselineHashKind": "exact_file_bytes",
+    "baselineNormalizedLfSourceSha256": "7847baf7bdb15ca989b3bc62ea8f72163709a2b529fecb09e714562d9acbb629",
+    "baselineSourceBytes": 1197,
+    "sourceLines": 22,
+    "handlersReviewed": [
+      "event_say",
+      "event_trade"
+    ],
+    "disposition": "unresolved_no_exact_p99_implementation_proof",
+    "sourceCategory": "unresolved",
+    "sourceSpecificReview": "Bundle of Poisons 9470\u2192Dip Resist Sketch 24096. P99 confirms rogue guildmaster only, not this poison-recipe exchange.",
+    "action": "unchanged",
+    "proposedState": null,
+    "cachedEvidenceTitles": [
+      "Lobal Postugger"
+    ],
+    "publicEvidenceIds": [],
+    "existingReviewReferences": [],
+    "itemEvidenceNavigation": "item-evidence-navigation.json#akanon/Lobal_Postugger",
+    "numericNpcIdentity": null,
+    "baselineQuestPolicy": null,
+    "baselineNpcPolicyCandidates": [],
+    "runtimeAdmission": "not proven by enabled row, source presence, item existence, name match, or isolated VM execution",
+    "parityLimitations": [
+      "No full-chain claim from this individual source disposition.",
+      "Unknown numerical XP, faction, coin, timing and random probabilities are not silently certified or retuned.",
+      "Acquisition, actual spawn identity, engine settlement and player UI remain separate evidence requirements."
+    ]
+  },
+  {
+    "ordinal": 12,
+    "key": "befallen/#Sir_Ariam_Arcanum",
+    "questRowId": 19363,
+    "baselineFile": "effective/quests/befallen/%23Sir_Ariam_Arcanum.lua",
+    "baselineSourceSha256": "bdffaf1403081d322ce431b3fe95329592f449cc43c7b50caf384eb64a44625a",
+    "baselineHashKind": "exact_file_bytes",
+    "baselineNormalizedLfSourceSha256": "bdffaf1403081d322ce431b3fe95329592f449cc43c7b50caf384eb64a44625a",
+    "baselineSourceBytes": 2871,
+    "sourceLines": 35,
+    "handlersReviewed": [
+      "event_say",
+      "event_timer",
+      "event_trade"
+    ],
+    "disposition": "unresolved_no_exact_p99_implementation_proof",
+    "sourceCategory": "later_candidate",
+    "sourceSpecificReview": "Sir Ariam bridle/token chain 31492/18474/31493, with spawn_event and timed depop; do not repair an unverified P99 branch merely from a code smell.",
+    "action": "unchanged",
+    "proposedState": null,
+    "cachedEvidenceTitles": [],
+    "publicEvidenceIds": [],
+    "existingReviewReferences": [],
+    "itemEvidenceNavigation": "item-evidence-navigation.json#befallen/#Sir_Ariam_Arcanum",
+    "numericNpcIdentity": null,
+    "baselineQuestPolicy": null,
+    "baselineNpcPolicyCandidates": [],
+    "runtimeAdmission": "not proven by enabled row, source presence, item existence, name match, or isolated VM execution",
+    "parityLimitations": [
+      "No full-chain claim from this individual source disposition.",
+      "Unknown numerical XP, faction, coin, timing and random probabilities are not silently certified or retuned.",
+      "Acquisition, actual spawn identity, engine settlement and player UI remain separate evidence requirements."
+    ]
+  },
+  {
+    "ordinal": 13,
+    "key": "befallen/Zeek",
+    "questRowId": 16085,
+    "baselineFile": "effective/quests/befallen/Zeek.lua",
+    "baselineSourceSha256": "a113e5cc918001da1aa90125c4cb58ad5f441b2c228360078fe97df6effb6dfe",
+    "baselineHashKind": "exact_file_bytes",
+    "baselineNormalizedLfSourceSha256": "a113e5cc918001da1aa90125c4cb58ad5f441b2c228360078fe97df6effb6dfe",
+    "baselineSourceBytes": 602,
+    "sourceLines": 17,
+    "handlersReviewed": [
+      "event_say",
+      "event_trade"
+    ],
+    "disposition": "unresolved_no_exact_p99_implementation_proof",
+    "sourceCategory": "unresolved",
+    "sourceSpecificReview": "Four clue pages 18651\u201318654\u2192crate 13984. P99 Zeek page expressly requests confirmation of his presence, not definitive absence.",
+    "action": "unchanged",
+    "proposedState": null,
+    "cachedEvidenceTitles": [
+      "Zeek"
+    ],
+    "publicEvidenceIds": [],
+    "existingReviewReferences": [],
+    "itemEvidenceNavigation": "item-evidence-navigation.json#befallen/Zeek",
+    "numericNpcIdentity": null,
+    "baselineQuestPolicy": null,
+    "baselineNpcPolicyCandidates": [],
+    "runtimeAdmission": "not proven by enabled row, source presence, item existence, name match, or isolated VM execution",
+    "parityLimitations": [
+      "No full-chain claim from this individual source disposition.",
+      "Unknown numerical XP, faction, coin, timing and random probabilities are not silently certified or retuned.",
+      "Acquisition, actual spawn identity, engine settlement and player UI remain separate evidence requirements."
+    ]
+  },
+  {
+    "ordinal": 15,
+    "key": "butcher/Dapper_Blackhammer",
+    "questRowId": 19781,
+    "baselineFile": "effective/quests/butcher/Dapper_Blackhammer.lua",
+    "baselineSourceSha256": "2e3bd9b53d264bbf57a94e5363f086432d5605736b9fd62cd800d8003f7653f9",
+    "baselineHashKind": "exact_file_bytes",
+    "baselineNormalizedLfSourceSha256": "2e3bd9b53d264bbf57a94e5363f086432d5605736b9fd62cd800d8003f7653f9",
+    "baselineSourceBytes": 1444,
+    "sourceLines": 26,
+    "handlersReviewed": [
+      "event_say",
+      "event_trade"
+    ],
+    "disposition": "unresolved_no_exact_p99_implementation_proof",
+    "sourceCategory": "unresolved",
+    "sourceSpecificReview": "Rozzut's Whistler 6551 exchange requires ore 12880, nimble gem 6552,500pp and level 40; alternate branch suspiciously grants same reward and refunds. Scope not established, so no speculative repair.",
+    "action": "unchanged",
+    "proposedState": null,
+    "cachedEvidenceTitles": [],
+    "publicEvidenceIds": [],
+    "existingReviewReferences": [],
+    "itemEvidenceNavigation": "item-evidence-navigation.json#butcher/Dapper_Blackhammer",
+    "numericNpcIdentity": null,
+    "baselineQuestPolicy": null,
+    "baselineNpcPolicyCandidates": [],
+    "runtimeAdmission": "not proven by enabled row, source presence, item existence, name match, or isolated VM execution",
+    "parityLimitations": [
+      "No full-chain claim from this individual source disposition.",
+      "Unknown numerical XP, faction, coin, timing and random probabilities are not silently certified or retuned.",
+      "Acquisition, actual spawn identity, engine settlement and player UI remain separate evidence requirements."
+    ]
+  },
+  {
+    "ordinal": 19,
+    "key": "cabeast/Exterminator_Sahizz",
+    "questRowId": 18068,
+    "baselineFile": "effective/quests/cabeast/Exterminator_Sahizz.lua",
+    "baselineSourceSha256": "2302a1be8e127b7a2403fdb7e6b759d3f6900a7a6d009295271311761a4288ee",
+    "baselineHashKind": "exact_file_bytes",
+    "baselineNormalizedLfSourceSha256": "2302a1be8e127b7a2403fdb7e6b759d3f6900a7a6d009295271311761a4288ee",
+    "baselineSourceBytes": 918,
+    "sourceLines": 24,
+    "handlersReviewed": [
+      "event_say",
+      "event_trade"
+    ],
+    "disposition": "unresolved_no_exact_p99_implementation_proof",
+    "sourceCategory": "unresolved",
+    "sourceSpecificReview": "Four loose scales 12466\u2192coin/XP/Cabilis faction. No documented P99 hand-in located; preserve numeric unknowns.",
+    "action": "unchanged",
+    "proposedState": null,
+    "cachedEvidenceTitles": [
+      "Shestar's Scaled Coif Quest"
+    ],
+    "publicEvidenceIds": [],
+    "existingReviewReferences": [],
+    "itemEvidenceNavigation": "item-evidence-navigation.json#cabeast/Exterminator_Sahizz",
+    "numericNpcIdentity": null,
+    "baselineQuestPolicy": null,
+    "baselineNpcPolicyCandidates": [],
+    "runtimeAdmission": "not proven by enabled row, source presence, item existence, name match, or isolated VM execution",
+    "parityLimitations": [
+      "No full-chain claim from this individual source disposition.",
+      "Unknown numerical XP, faction, coin, timing and random probabilities are not silently certified or retuned.",
+      "Acquisition, actual spawn identity, engine settlement and player UI remain separate evidence requirements."
+    ]
+  },
+  {
+    "ordinal": 22,
+    "key": "cazicthule/48255",
+    "questRowId": 15090,
+    "baselineFile": "effective/quests/cazicthule/48255.lua",
+    "baselineSourceSha256": "a216aed3f10e5f53954d58ca3090a496b68cf75c4ad5a8746af2e5f1c8c0eaf5",
+    "baselineHashKind": "exact_file_bytes",
+    "baselineNormalizedLfSourceSha256": "a216aed3f10e5f53954d58ca3090a496b68cf75c4ad5a8746af2e5f1c8c0eaf5",
+    "baselineSourceBytes": 773,
+    "sourceLines": 19,
+    "handlersReviewed": [
+      "event_spawn",
+      "event_timer",
+      "event_trade"
+    ],
+    "disposition": "unresolved_no_exact_p99_implementation_proof",
+    "sourceCategory": "later_candidate",
+    "sourceSpecificReview": "Numeric 48255 is Gimlik;8723\u2192five-way random CT-revamp equipment. Identity and era must be established beyond source path.",
+    "action": "unchanged",
+    "proposedState": null,
+    "cachedEvidenceTitles": [],
+    "publicEvidenceIds": [],
+    "existingReviewReferences": [],
+    "itemEvidenceNavigation": "item-evidence-navigation.json#cazicthule/48255",
+    "numericNpcIdentity": {
+      "npcId": 48255,
+      "name": "Gimlik_Cogboggle_"
+    },
+    "baselineQuestPolicy": null,
+    "baselineNpcPolicyCandidates": [],
+    "runtimeAdmission": "not proven by enabled row, source presence, item existence, name match, or isolated VM execution",
+    "parityLimitations": [
+      "No full-chain claim from this individual source disposition.",
+      "Unknown numerical XP, faction, coin, timing and random probabilities are not silently certified or retuned.",
+      "Acquisition, actual spawn identity, engine settlement and player UI remain separate evidence requirements."
+    ]
+  },
+  {
+    "ordinal": 29,
+    "key": "commons/Guard_Colin",
+    "questRowId": 15225,
+    "baselineFile": "effective/quests/commons/Guard_Colin.lua",
+    "baselineSourceSha256": "6956e19790c5a84f3daef147925243dc11dbd573729d91f60acd9d4561203eea",
+    "baselineHashKind": "exact_file_bytes",
+    "baselineNormalizedLfSourceSha256": "6956e19790c5a84f3daef147925243dc11dbd573729d91f60acd9d4561203eea",
+    "baselineSourceBytes": 532,
+    "sourceLines": 16,
+    "handlersReviewed": [
+      "event_say",
+      "event_trade"
+    ],
+    "disposition": "unresolved_no_exact_p99_implementation_proof",
+    "sourceCategory": "p99_support_partial",
+    "sourceSpecificReview": "Guard Colin toll 1gold only, no reward. P99 confirms tollbooth actor; exact toll amount not verified. Not automatically a missing quest.",
+    "action": "unchanged",
+    "proposedState": null,
+    "cachedEvidenceTitles": [
+      "Guard Colin",
+      "Guard Valon"
+    ],
+    "publicEvidenceIds": [],
+    "existingReviewReferences": [],
+    "itemEvidenceNavigation": "item-evidence-navigation.json#commons/Guard_Colin",
+    "numericNpcIdentity": null,
+    "baselineQuestPolicy": null,
+    "baselineNpcPolicyCandidates": [],
+    "runtimeAdmission": "not proven by enabled row, source presence, item existence, name match, or isolated VM execution",
+    "parityLimitations": [
+      "No full-chain claim from this individual source disposition.",
+      "Unknown numerical XP, faction, coin, timing and random probabilities are not silently certified or retuned.",
+      "Acquisition, actual spawn identity, engine settlement and player UI remain separate evidence requirements."
+    ]
+  },
+  {
+    "ordinal": 32,
+    "key": "droga/81182",
+    "questRowId": 207951,
+    "baselineFile": "effective/quests/droga/81182.lua",
+    "baselineSourceSha256": "5fef3e949f41d486be897331a1a83f2128fab14747edf8930531ad380ce711c9",
+    "baselineHashKind": "exact_file_bytes",
+    "baselineNormalizedLfSourceSha256": "5fef3e949f41d486be897331a1a83f2128fab14747edf8930531ad380ce711c9",
+    "baselineSourceBytes": 1929,
+    "sourceLines": 23,
+    "handlersReviewed": [
+      "event_say",
+      "event_trade"
+    ],
+    "disposition": "unresolved_no_exact_p99_implementation_proof",
+    "sourceCategory": "identity_unresolved",
+    "sourceSpecificReview": "Numeric 81182 maps to an_Iksar_slave and accepts 12839+4195+4194\u21924196 Steel. P99 NPC pages confirm Droga versions but give 81164 and warn about wrong variants; quest prose also says Frontier Mountains. Exact numeric/spawn identity remains unresolved, not presumed later-era.",
+    "action": "unchanged",
+    "proposedState": null,
+    "cachedEvidenceTitles": [
+      "A crazed iksar slave",
+      "An Iksar slave",
+      "An iksar slave",
+      "Crusader's Tests",
+      "Monk Shackle Quests"
+    ],
+    "publicEvidenceIds": [],
+    "existingReviewReferences": [],
+    "itemEvidenceNavigation": "item-evidence-navigation.json#droga/81182",
+    "numericNpcIdentity": {
+      "npcId": 81182,
+      "name": "an_Iksar_slave"
+    },
+    "baselineQuestPolicy": null,
+    "baselineNpcPolicyCandidates": [],
+    "runtimeAdmission": "not proven by enabled row, source presence, item existence, name match, or isolated VM execution",
+    "parityLimitations": [
+      "No full-chain claim from this individual source disposition.",
+      "Unknown numerical XP, faction, coin, timing and random probabilities are not silently certified or retuned.",
+      "Acquisition, actual spawn identity, engine settlement and player UI remain separate evidence requirements."
+    ]
+  },
+  {
+    "ordinal": 38,
+    "key": "feerrott/Aqaar_Aluram",
+    "questRowId": 15990,
+    "baselineFile": "effective/quests/feerrott/Aqaar_Aluram.lua",
+    "baselineSourceSha256": "b47a32de50306a047ed16a555d7bfcbff8588e9d3a33819b4bbfc2724a9273ed",
+    "baselineHashKind": "exact_file_bytes",
+    "baselineNormalizedLfSourceSha256": "b47a32de50306a047ed16a555d7bfcbff8588e9d3a33819b4bbfc2724a9273ed",
+    "baselineSourceBytes": 3950,
+    "sourceLines": 36,
+    "handlersReviewed": [
+      "event_say",
+      "event_trade"
+    ],
+    "disposition": "unresolved_no_exact_p99_implementation_proof",
+    "sourceCategory": "later_candidate",
+    "sourceSpecificReview": "Phobonomicon 8720\u2192Arcane Scientists medallion 8732,100000XP; CT-revamp connection, not established P99 hand-in.",
+    "action": "unchanged",
+    "proposedState": null,
+    "cachedEvidenceTitles": [
+      "Aqaar Aluram"
+    ],
+    "publicEvidenceIds": [],
+    "existingReviewReferences": [],
+    "itemEvidenceNavigation": "item-evidence-navigation.json#feerrott/Aqaar_Aluram",
+    "numericNpcIdentity": null,
+    "baselineQuestPolicy": null,
+    "baselineNpcPolicyCandidates": [],
+    "runtimeAdmission": "not proven by enabled row, source presence, item existence, name match, or isolated VM execution",
+    "parityLimitations": [
+      "No full-chain claim from this individual source disposition.",
+      "Unknown numerical XP, faction, coin, timing and random probabilities are not silently certified or retuned.",
+      "Acquisition, actual spawn identity, engine settlement and player UI remain separate evidence requirements."
+    ]
+  },
+  {
+    "ordinal": 40,
+    "key": "felwithea/Arrias_Arcanum",
+    "questRowId": 14329,
+    "baselineFile": "effective/quests/felwithea/Arrias_Arcanum.lua",
+    "baselineSourceSha256": "0460f65ac76efd17aea0a13b81d041eb82b874f8324345bf7cf8730f7702e777",
+    "baselineHashKind": "exact_file_bytes",
+    "baselineNormalizedLfSourceSha256": "0460f65ac76efd17aea0a13b81d041eb82b874f8324345bf7cf8730f7702e777",
+    "baselineSourceBytes": 1512,
+    "sourceLines": 24,
+    "handlersReviewed": [
+      "event_say",
+      "event_trade"
+    ],
+    "disposition": "unresolved_no_exact_p99_implementation_proof",
+    "sourceCategory": "later_candidate",
+    "sourceSpecificReview": "Arrias bridle quest token 31493\u219231495 with cash/factions/XP. NPC page flags uncertainty of presence; no absence conclusion.",
+    "action": "unchanged",
+    "proposedState": null,
+    "cachedEvidenceTitles": [
+      "Arrias Arcanum"
+    ],
+    "publicEvidenceIds": [],
+    "existingReviewReferences": [],
+    "itemEvidenceNavigation": "item-evidence-navigation.json#felwithea/Arrias_Arcanum",
+    "numericNpcIdentity": null,
+    "baselineQuestPolicy": null,
+    "baselineNpcPolicyCandidates": [],
+    "runtimeAdmission": "not proven by enabled row, source presence, item existence, name match, or isolated VM execution",
+    "parityLimitations": [
+      "No full-chain claim from this individual source disposition.",
+      "Unknown numerical XP, faction, coin, timing and random probabilities are not silently certified or retuned.",
+      "Acquisition, actual spawn identity, engine settlement and player UI remain separate evidence requirements."
+    ]
+  },
+  {
+    "ordinal": 41,
+    "key": "felwithea/Exterminator_Valern",
+    "questRowId": 19373,
+    "baselineFile": "effective/quests/felwithea/Exterminator_Valern.lua",
+    "baselineSourceSha256": "a1f9af28f11ff9bf5105bfd743da04b5e08a3f7f1d7c776058ea249340db2754",
+    "baselineHashKind": "exact_file_bytes",
+    "baselineNormalizedLfSourceSha256": "a1f9af28f11ff9bf5105bfd743da04b5e08a3f7f1d7c776058ea249340db2754",
+    "baselineSourceBytes": 835,
+    "sourceLines": 21,
+    "handlersReviewed": [
+      "event_say",
+      "event_trade"
+    ],
+    "disposition": "unresolved_no_exact_p99_implementation_proof",
+    "sourceCategory": "unresolved",
+    "sourceSpecificReview": "Four rat whiskers 13071\u2192coin/faction, no XP; actor-name cache absence is not quest absence.",
+    "action": "unchanged",
+    "proposedState": null,
+    "cachedEvidenceTitles": [],
+    "publicEvidenceIds": [],
+    "existingReviewReferences": [],
+    "itemEvidenceNavigation": "item-evidence-navigation.json#felwithea/Exterminator_Valern",
+    "numericNpcIdentity": null,
+    "baselineQuestPolicy": null,
+    "baselineNpcPolicyCandidates": [],
+    "runtimeAdmission": "not proven by enabled row, source presence, item existence, name match, or isolated VM execution",
+    "parityLimitations": [
+      "No full-chain claim from this individual source disposition.",
+      "Unknown numerical XP, faction, coin, timing and random probabilities are not silently certified or retuned.",
+      "Acquisition, actual spawn identity, engine settlement and player UI remain separate evidence requirements."
+    ]
+  },
+  {
+    "ordinal": 49,
+    "key": "firiona/#Realla_Segoan",
+    "questRowId": 15973,
+    "baselineFile": "effective/quests/firiona/%23Realla_Segoan.lua",
+    "baselineSourceSha256": "661edbbe0238505eac929aec01f724acca83792a3d1c693a1dc00006f47982ca",
+    "baselineHashKind": "exact_file_bytes",
+    "baselineNormalizedLfSourceSha256": "661edbbe0238505eac929aec01f724acca83792a3d1c693a1dc00006f47982ca",
+    "baselineSourceBytes": 2689,
+    "sourceLines": 22,
+    "handlersReviewed": [
+      "event_say"
+    ],
+    "disposition": "unresolved_no_exact_p99_implementation_proof",
+    "sourceCategory": "unresolved",
+    "sourceSpecificReview": "Realla missing Al'Kabor notes/binder 17088 chain dialogue. No exact P99 quest evidence located; name absence is not exclusion.",
+    "action": "unchanged",
+    "proposedState": null,
+    "cachedEvidenceTitles": [],
+    "publicEvidenceIds": [],
+    "existingReviewReferences": [],
+    "itemEvidenceNavigation": "item-evidence-navigation.json#firiona/#Realla_Segoan",
+    "numericNpcIdentity": null,
+    "baselineQuestPolicy": null,
+    "baselineNpcPolicyCandidates": [],
+    "runtimeAdmission": "not proven by enabled row, source presence, item existence, name match, or isolated VM execution",
+    "parityLimitations": [
+      "No full-chain claim from this individual source disposition.",
+      "Unknown numerical XP, faction, coin, timing and random probabilities are not silently certified or retuned.",
+      "Acquisition, actual spawn identity, engine settlement and player UI remain separate evidence requirements."
+    ]
+  },
+  {
+    "ordinal": 50,
+    "key": "firiona/Allaria_Sneakyfeet",
+    "questRowId": 13327,
+    "baselineFile": "effective/quests/firiona/Allaria_Sneakyfeet.lua",
+    "baselineSourceSha256": "2bd3be3a02776a883ee2a454fad720eb461e820095299198e4a544da426898cf",
+    "baselineHashKind": "exact_file_bytes",
+    "baselineNormalizedLfSourceSha256": "2bd3be3a02776a883ee2a454fad720eb461e820095299198e4a544da426898cf",
+    "baselineSourceBytes": 1369,
+    "sourceLines": 14,
+    "handlersReviewed": [
+      "event_say"
+    ],
+    "disposition": "unresolved_no_exact_p99_implementation_proof",
+    "sourceCategory": "unresolved",
+    "sourceSpecificReview": "Allaria supplies Whistler plans 18347; connected to Dapper, not established as a P99 chain.",
+    "action": "unchanged",
+    "proposedState": null,
+    "cachedEvidenceTitles": [],
+    "publicEvidenceIds": [],
+    "existingReviewReferences": [],
+    "itemEvidenceNavigation": "item-evidence-navigation.json#firiona/Allaria_Sneakyfeet",
+    "numericNpcIdentity": null,
+    "baselineQuestPolicy": null,
+    "baselineNpcPolicyCandidates": [],
+    "runtimeAdmission": "not proven by enabled row, source presence, item existence, name match, or isolated VM execution",
+    "parityLimitations": [
+      "No full-chain claim from this individual source disposition.",
+      "Unknown numerical XP, faction, coin, timing and random probabilities are not silently certified or retuned.",
+      "Acquisition, actual spawn identity, engine settlement and player UI remain separate evidence requirements."
+    ]
+  },
+  {
+    "ordinal": 52,
+    "key": "firiona/Noilgin_Mindtune",
+    "questRowId": 18185,
+    "baselineFile": "effective/quests/firiona/Noilgin_Mindtune.lua",
+    "baselineSourceSha256": "036e2732fcf91dc661fb385ba848cd615f20768e55d8825e87cc090862dc51a3",
+    "baselineHashKind": "exact_file_bytes",
+    "baselineNormalizedLfSourceSha256": "036e2732fcf91dc661fb385ba848cd615f20768e55d8825e87cc090862dc51a3",
+    "baselineSourceBytes": 855,
+    "sourceLines": 18,
+    "handlersReviewed": [
+      "event_say",
+      "event_trade"
+    ],
+    "disposition": "unresolved_no_exact_p99_implementation_proof",
+    "sourceCategory": "unresolved",
+    "sourceSpecificReview": "Bound Research Notes 6067\u2192Packaged Research Notes 6069. Kunark NPC page confirms Noilgin, not amounts/quest timing.",
+    "action": "unchanged",
+    "proposedState": null,
+    "cachedEvidenceTitles": [
+      "Noilgin Mindtune"
+    ],
+    "publicEvidenceIds": [],
+    "existingReviewReferences": [],
+    "itemEvidenceNavigation": "item-evidence-navigation.json#firiona/Noilgin_Mindtune",
+    "numericNpcIdentity": null,
+    "baselineQuestPolicy": null,
+    "baselineNpcPolicyCandidates": [],
+    "runtimeAdmission": "not proven by enabled row, source presence, item existence, name match, or isolated VM execution",
+    "parityLimitations": [
+      "No full-chain claim from this individual source disposition.",
+      "Unknown numerical XP, faction, coin, timing and random probabilities are not silently certified or retuned.",
+      "Acquisition, actual spawn identity, engine settlement and player UI remain separate evidence requirements."
+    ]
+  },
+  {
+    "ordinal": 54,
+    "key": "freporte/Exterminator_Larkey",
+    "questRowId": 12275,
+    "baselineFile": "effective/quests/freporte/Exterminator_Larkey.lua",
+    "baselineSourceSha256": "bc4e3c1ac983dbc66b9a847095a70fd22a04a98c3493d5ebe90a083d56e41c3a",
+    "baselineHashKind": "exact_file_bytes",
+    "baselineNormalizedLfSourceSha256": "bc4e3c1ac983dbc66b9a847095a70fd22a04a98c3493d5ebe90a083d56e41c3a",
+    "baselineSourceBytes": 1075,
+    "sourceLines": 22,
+    "handlersReviewed": [
+      "event_say",
+      "event_trade"
+    ],
+    "disposition": "unresolved_no_exact_p99_implementation_proof",
+    "sourceCategory": "unresolved",
+    "sourceSpecificReview": "Larkey rat-whisker quartet\u2192coin/XP/factions. Not established by actor-name absence.",
+    "action": "unchanged",
+    "proposedState": null,
+    "cachedEvidenceTitles": [],
+    "publicEvidenceIds": [],
+    "existingReviewReferences": [],
+    "itemEvidenceNavigation": "item-evidence-navigation.json#freporte/Exterminator_Larkey",
+    "numericNpcIdentity": null,
+    "baselineQuestPolicy": null,
+    "baselineNpcPolicyCandidates": [],
+    "runtimeAdmission": "not proven by enabled row, source presence, item existence, name match, or isolated VM execution",
+    "parityLimitations": [
+      "No full-chain claim from this individual source disposition.",
+      "Unknown numerical XP, faction, coin, timing and random probabilities are not silently certified or retuned.",
+      "Acquisition, actual spawn identity, engine settlement and player UI remain separate evidence requirements."
+    ]
+  },
+  {
+    "ordinal": 61,
+    "key": "freporte/Sir_Artanis",
+    "questRowId": 13957,
+    "baselineFile": "effective/quests/freporte/Sir_Artanis.lua",
+    "baselineSourceSha256": "8a61a11de2d5791f5e315c29bb288f2debf27be3c10dd30eed72dfaf5ba79b81",
+    "baselineHashKind": "exact_file_bytes",
+    "baselineNormalizedLfSourceSha256": "8a61a11de2d5791f5e315c29bb288f2debf27be3c10dd30eed72dfaf5ba79b81",
+    "baselineSourceBytes": 1061,
+    "sourceLines": 19,
+    "handlersReviewed": [
+      "event_say",
+      "event_trade"
+    ],
+    "disposition": "unresolved_no_exact_p99_implementation_proof",
+    "sourceCategory": "later_candidate",
+    "sourceSpecificReview": "East Freeport SirArtanis bridle exchange. Different zone variant from North Freeport; do not deduplicate without admission proof.",
+    "action": "unchanged",
+    "proposedState": null,
+    "cachedEvidenceTitles": [
+      "Sir Artanis"
+    ],
+    "publicEvidenceIds": [],
+    "existingReviewReferences": [],
+    "itemEvidenceNavigation": "item-evidence-navigation.json#freporte/Sir_Artanis",
+    "numericNpcIdentity": null,
+    "baselineQuestPolicy": null,
+    "baselineNpcPolicyCandidates": [],
+    "runtimeAdmission": "not proven by enabled row, source presence, item existence, name match, or isolated VM execution",
+    "parityLimitations": [
+      "No full-chain claim from this individual source disposition.",
+      "Unknown numerical XP, faction, coin, timing and random probabilities are not silently certified or retuned.",
+      "Acquisition, actual spawn identity, engine settlement and player UI remain separate evidence requirements."
+    ]
+  },
+  {
+    "ordinal": 66,
+    "key": "freportn/Palious_Jarten",
+    "questRowId": 15928,
+    "baselineFile": "effective/quests/freportn/Palious_Jarten.lua",
+    "baselineSourceSha256": "8d71907dd3ef69353b4f0d590036959bcb16e755f26f9d665701f16615856014",
+    "baselineHashKind": "exact_file_bytes",
+    "baselineNormalizedLfSourceSha256": "8d71907dd3ef69353b4f0d590036959bcb16e755f26f9d665701f16615856014",
+    "baselineSourceBytes": 742,
+    "sourceLines": 17,
+    "handlersReviewed": [
+      "event_say",
+      "event_trade"
+    ],
+    "disposition": "unresolved_no_exact_p99_implementation_proof",
+    "sourceCategory": "service_unresolved",
+    "sourceSpecificReview": "Ten-gold Cure Disease 213 service; not an item reward quest. P99 NPC presence alone does not verify price.",
+    "action": "unchanged",
+    "proposedState": null,
+    "cachedEvidenceTitles": [
+      "Palious Jarten"
+    ],
+    "publicEvidenceIds": [],
+    "existingReviewReferences": [],
+    "itemEvidenceNavigation": "item-evidence-navigation.json#freportn/Palious_Jarten",
+    "numericNpcIdentity": null,
+    "baselineQuestPolicy": null,
+    "baselineNpcPolicyCandidates": [],
+    "runtimeAdmission": "not proven by enabled row, source presence, item existence, name match, or isolated VM execution",
+    "parityLimitations": [
+      "No full-chain claim from this individual source disposition.",
+      "Unknown numerical XP, faction, coin, timing and random probabilities are not silently certified or retuned.",
+      "Acquisition, actual spawn identity, engine settlement and player UI remain separate evidence requirements."
+    ]
+  },
+  {
+    "ordinal": 67,
+    "key": "freportn/Plur_Etinu",
+    "questRowId": 16556,
+    "baselineFile": "effective/quests/freportn/Plur_Etinu.lua",
+    "baselineSourceSha256": "4e1b901e281073bef8ed26089b8c7b5c962ab69c2f70e127a5d7db5fd6a434a1",
+    "baselineHashKind": "exact_file_bytes",
+    "baselineNormalizedLfSourceSha256": "4e1b901e281073bef8ed26089b8c7b5c962ab69c2f70e127a5d7db5fd6a434a1",
+    "baselineSourceBytes": 1789,
+    "sourceLines": 31,
+    "handlersReviewed": [
+      "event_say",
+      "event_trade"
+    ],
+    "disposition": "unresolved_no_exact_p99_implementation_proof",
+    "sourceCategory": "service_unresolved",
+    "sourceSpecificReview": "Two zombie skins\u2192CureDisease 213,three bixie stingers\u2192CurePoison 203,10gold\u2192LightHealing 17. Treat services separately; values unverified.",
+    "action": "unchanged",
+    "proposedState": null,
+    "cachedEvidenceTitles": [],
+    "publicEvidenceIds": [],
+    "existingReviewReferences": [],
+    "itemEvidenceNavigation": "item-evidence-navigation.json#freportn/Plur_Etinu",
+    "numericNpcIdentity": null,
+    "baselineQuestPolicy": null,
+    "baselineNpcPolicyCandidates": [],
+    "runtimeAdmission": "not proven by enabled row, source presence, item existence, name match, or isolated VM execution",
+    "parityLimitations": [
+      "No full-chain claim from this individual source disposition.",
+      "Unknown numerical XP, faction, coin, timing and random probabilities are not silently certified or retuned.",
+      "Acquisition, actual spawn identity, engine settlement and player UI remain separate evidence requirements."
+    ]
+  },
+  {
+    "ordinal": 68,
+    "key": "freportn/Sir_Artanis",
+    "questRowId": 17728,
+    "baselineFile": "effective/quests/freportn/Sir_Artanis.lua",
+    "baselineSourceSha256": "2407b43d1e1d6850321c22d2760b63b3f825f4a2a59957d33b98d641ae721234",
+    "baselineHashKind": "exact_file_bytes",
+    "baselineNormalizedLfSourceSha256": "2407b43d1e1d6850321c22d2760b63b3f825f4a2a59957d33b98d641ae721234",
+    "baselineSourceBytes": 1759,
+    "sourceLines": 34,
+    "handlersReviewed": [
+      "event_say",
+      "event_trade"
+    ],
+    "disposition": "unresolved_no_exact_p99_implementation_proof",
+    "sourceCategory": "later_candidate",
+    "sourceSpecificReview": "North Freeport SirArtanis bridle variant adds 6400XP; do not flatten zone-specific variants or claim XP parity.",
+    "action": "unchanged",
+    "proposedState": null,
+    "cachedEvidenceTitles": [
+      "Sir Artanis"
+    ],
+    "publicEvidenceIds": [],
+    "existingReviewReferences": [],
+    "itemEvidenceNavigation": "item-evidence-navigation.json#freportn/Sir_Artanis",
+    "numericNpcIdentity": null,
+    "baselineQuestPolicy": null,
+    "baselineNpcPolicyCandidates": [],
+    "runtimeAdmission": "not proven by enabled row, source presence, item existence, name match, or isolated VM execution",
+    "parityLimitations": [
+      "No full-chain claim from this individual source disposition.",
+      "Unknown numerical XP, faction, coin, timing and random probabilities are not silently certified or retuned.",
+      "Acquisition, actual spawn identity, engine settlement and player UI remain separate evidence requirements."
+    ]
+  },
+  {
+    "ordinal": 71,
+    "key": "freportw/Exterminator_Qalantir",
+    "questRowId": 14446,
+    "baselineFile": "effective/quests/freportw/Exterminator_Qalantir.lua",
+    "baselineSourceSha256": "169adbfdbf106d5cf4a7392e8d5b8c8862adf5fe4ef6f6d4186e8fa253214c70",
+    "baselineHashKind": "exact_file_bytes",
+    "baselineNormalizedLfSourceSha256": "169adbfdbf106d5cf4a7392e8d5b8c8862adf5fe4ef6f6d4186e8fa253214c70",
+    "baselineSourceBytes": 1121,
+    "sourceLines": 25,
+    "handlersReviewed": [
+      "event_say",
+      "event_trade"
+    ],
+    "disposition": "unresolved_no_exact_p99_implementation_proof",
+    "sourceCategory": "unresolved",
+    "sourceSpecificReview": "Qalantir rat-whisker quartet has zero-item fix already; no new issue established, rewards remain unverified.",
+    "action": "unchanged",
+    "proposedState": null,
+    "cachedEvidenceTitles": [],
+    "publicEvidenceIds": [],
+    "existingReviewReferences": [],
+    "itemEvidenceNavigation": "item-evidence-navigation.json#freportw/Exterminator_Qalantir",
+    "numericNpcIdentity": null,
+    "baselineQuestPolicy": null,
+    "baselineNpcPolicyCandidates": [],
+    "runtimeAdmission": "not proven by enabled row, source presence, item existence, name match, or isolated VM execution",
+    "parityLimitations": [
+      "No full-chain claim from this individual source disposition.",
+      "Unknown numerical XP, faction, coin, timing and random probabilities are not silently certified or retuned.",
+      "Acquisition, actual spawn identity, engine settlement and player UI remain separate evidence requirements."
+    ]
+  },
+  {
+    "ordinal": 83,
+    "key": "grobb/Bregna",
+    "questRowId": 13689,
+    "baselineFile": "effective/quests/grobb/Bregna.lua",
+    "baselineSourceSha256": "1be5eaac5953f07d451b597d8c6b76841fa1a180d63e5b75ca4ef5ed53d913ca",
+    "baselineHashKind": "exact_file_bytes",
+    "baselineNormalizedLfSourceSha256": "1be5eaac5953f07d451b597d8c6b76841fa1a180d63e5b75ca4ef5ed53d913ca",
+    "baselineSourceBytes": 1951,
+    "sourceLines": 32,
+    "handlersReviewed": [
+      "event_say",
+      "event_trade"
+    ],
+    "disposition": "unresolved_no_exact_p99_implementation_proof",
+    "sourceCategory": "mixed_unresolved",
+    "sourceSpecificReview": "Grobb Bregna 13916\u2192SpiritPouch 15272 reproduces More Help for Innoruuk but P99 assigns it to Kaglari, not Bregna. Separate Aid Garuuk receipt 28740 branch. Actor identity/admission is unresolved; do not retune the copied branch from Kaglari alone.",
+    "action": "unchanged",
+    "proposedState": null,
+    "cachedEvidenceTitles": [
+      "Bregna",
+      "More Help for Innoruuk"
+    ],
+    "publicEvidenceIds": [],
+    "existingReviewReferences": [],
+    "itemEvidenceNavigation": "item-evidence-navigation.json#grobb/Bregna",
+    "numericNpcIdentity": null,
+    "baselineQuestPolicy": null,
+    "baselineNpcPolicyCandidates": [],
+    "runtimeAdmission": "not proven by enabled row, source presence, item existence, name match, or isolated VM execution",
+    "parityLimitations": [
+      "No full-chain claim from this individual source disposition.",
+      "Unknown numerical XP, faction, coin, timing and random probabilities are not silently certified or retuned.",
+      "Acquisition, actual spawn identity, engine settlement and player UI remain separate evidence requirements."
+    ]
+  },
+  {
+    "ordinal": 85,
+    "key": "grobb/Exterminator_Filrog",
+    "questRowId": 14875,
+    "baselineFile": "effective/quests/grobb/Exterminator_Filrog.lua",
+    "baselineSourceSha256": "ab2e15b06847d6c8fc67c2d9037ef33d1c7172ba85ade7bc5de5ef3de8a81eb2",
+    "baselineHashKind": "exact_file_bytes",
+    "baselineNormalizedLfSourceSha256": "ab2e15b06847d6c8fc67c2d9037ef33d1c7172ba85ade7bc5de5ef3de8a81eb2",
+    "baselineSourceBytes": 744,
+    "sourceLines": 21,
+    "handlersReviewed": [
+      "event_say",
+      "event_trade"
+    ],
+    "disposition": "unresolved_no_exact_p99_implementation_proof",
+    "sourceCategory": "unresolved",
+    "sourceSpecificReview": "Four spiderling eyes\u2192coin/XP/Merchant faction; P99 NPC exists but does not document this exchange.",
+    "action": "unchanged",
+    "proposedState": null,
+    "cachedEvidenceTitles": [
+      "Exterminator Filrog"
+    ],
+    "publicEvidenceIds": [],
+    "existingReviewReferences": [],
+    "itemEvidenceNavigation": "item-evidence-navigation.json#grobb/Exterminator_Filrog",
+    "numericNpcIdentity": null,
+    "baselineQuestPolicy": null,
+    "baselineNpcPolicyCandidates": [],
+    "runtimeAdmission": "not proven by enabled row, source presence, item existence, name match, or isolated VM execution",
+    "parityLimitations": [
+      "No full-chain claim from this individual source disposition.",
+      "Unknown numerical XP, faction, coin, timing and random probabilities are not silently certified or retuned.",
+      "Acquisition, actual spawn identity, engine settlement and player UI remain separate evidence requirements."
+    ]
+  },
+  {
+    "ordinal": 88,
+    "key": "guktop/an_old_froglok",
+    "questRowId": 13574,
+    "baselineFile": "effective/quests/guktop/an_old_froglok.lua",
+    "baselineSourceSha256": "f816089abbee5ed471d2e69784fa616b5fb7c3f5880a911448b3eef607262b50",
+    "baselineHashKind": "exact_file_bytes",
+    "baselineNormalizedLfSourceSha256": "f816089abbee5ed471d2e69784fa616b5fb7c3f5880a911448b3eef607262b50",
+    "baselineSourceBytes": 2181,
+    "sourceLines": 36,
+    "handlersReviewed": [
+      "event_say",
+      "event_trade"
+    ],
+    "disposition": "unresolved_no_exact_p99_implementation_proof",
+    "sourceCategory": "later_candidate",
+    "sourceSpecificReview": "Old froglok CrownDeceit chain 11275\u219218499 recipe and 11274+11276+10254+26999\u219211277; full P99 evidence not established, do not tune numbers.",
+    "action": "unchanged",
+    "proposedState": null,
+    "cachedEvidenceTitles": [],
+    "publicEvidenceIds": [],
+    "existingReviewReferences": [],
+    "itemEvidenceNavigation": "item-evidence-navigation.json#guktop/an_old_froglok",
+    "numericNpcIdentity": null,
+    "baselineQuestPolicy": null,
+    "baselineNpcPolicyCandidates": [],
+    "runtimeAdmission": "not proven by enabled row, source presence, item existence, name match, or isolated VM execution",
+    "parityLimitations": [
+      "No full-chain claim from this individual source disposition.",
+      "Unknown numerical XP, faction, coin, timing and random probabilities are not silently certified or retuned.",
+      "Acquisition, actual spawn identity, engine settlement and player UI remain separate evidence requirements."
+    ]
+  },
+  {
+    "ordinal": 99,
+    "key": "kaladimb/Exterminator_Vin",
+    "questRowId": 15440,
+    "baselineFile": "effective/quests/kaladimb/Exterminator_Vin.lua",
+    "baselineSourceSha256": "588856165675fd87a19f40147c9394e7dac5f59dc2f20745f5cbaf3b1c796200",
+    "baselineHashKind": "exact_file_bytes",
+    "baselineNormalizedLfSourceSha256": "588856165675fd87a19f40147c9394e7dac5f59dc2f20745f5cbaf3b1c796200",
+    "baselineSourceBytes": 1149,
+    "sourceLines": 33,
+    "handlersReviewed": [
+      "event_combat",
+      "event_say",
+      "event_slay",
+      "event_trade"
+    ],
+    "disposition": "unresolved_no_exact_p99_implementation_proof",
+    "sourceCategory": "unresolved",
+    "sourceSpecificReview": "Vin rat-whisker exchange plus combat/slay handlers. Preserve unrelated handlers even if exchange scope is later resolved.",
+    "action": "unchanged",
+    "proposedState": null,
+    "cachedEvidenceTitles": [],
+    "publicEvidenceIds": [],
+    "existingReviewReferences": [],
+    "itemEvidenceNavigation": "item-evidence-navigation.json#kaladimb/Exterminator_Vin",
+    "numericNpcIdentity": null,
+    "baselineQuestPolicy": null,
+    "baselineNpcPolicyCandidates": [],
+    "runtimeAdmission": "not proven by enabled row, source presence, item existence, name match, or isolated VM execution",
+    "parityLimitations": [
+      "No full-chain claim from this individual source disposition.",
+      "Unknown numerical XP, faction, coin, timing and random probabilities are not silently certified or retuned.",
+      "Acquisition, actual spawn identity, engine settlement and player UI remain separate evidence requirements."
+    ]
+  },
+  {
+    "ordinal": 101,
+    "key": "kaladimb/Harnoff_Splitrock",
+    "questRowId": 19483,
+    "baselineFile": "effective/quests/kaladimb/Harnoff_Splitrock.lua",
+    "baselineSourceSha256": "2cd3d9bc275c12ddb4440943d9d71f9bbe28ddce721d5997da11d2661726ec9a",
+    "baselineHashKind": "exact_file_bytes",
+    "baselineNormalizedLfSourceSha256": "2cd3d9bc275c12ddb4440943d9d71f9bbe28ddce721d5997da11d2661726ec9a",
+    "baselineSourceBytes": 1280,
+    "sourceLines": 32,
+    "handlersReviewed": [
+      "event_say",
+      "event_trade"
+    ],
+    "disposition": "unresolved_no_exact_p99_implementation_proof",
+    "sourceCategory": "unresolved",
+    "sourceSpecificReview": "HQ ore shipments 10952/10953\u21928/14pp and 2000/3500XP;17814 container. Exact P99 delivery quest not established.",
+    "action": "unchanged",
+    "proposedState": null,
+    "cachedEvidenceTitles": [],
+    "publicEvidenceIds": [],
+    "existingReviewReferences": [],
+    "itemEvidenceNavigation": "item-evidence-navigation.json#kaladimb/Harnoff_Splitrock",
+    "numericNpcIdentity": null,
+    "baselineQuestPolicy": null,
+    "baselineNpcPolicyCandidates": [],
+    "runtimeAdmission": "not proven by enabled row, source presence, item existence, name match, or isolated VM execution",
+    "parityLimitations": [
+      "No full-chain claim from this individual source disposition.",
+      "Unknown numerical XP, faction, coin, timing and random probabilities are not silently certified or retuned.",
+      "Acquisition, actual spawn identity, engine settlement and player UI remain separate evidence requirements."
+    ]
+  },
+  {
+    "ordinal": 102,
+    "key": "kerraridge/Allix",
+    "questRowId": 15570,
+    "baselineFile": "effective/quests/kerraridge/Allix.lua",
+    "baselineSourceSha256": "f3137339a317e565838d1d0820f70b609cf6a0234d83ed5c59656b9f59800339",
+    "baselineHashKind": "exact_file_bytes",
+    "baselineNormalizedLfSourceSha256": "f3137339a317e565838d1d0820f70b609cf6a0234d83ed5c59656b9f59800339",
+    "baselineSourceBytes": 1265,
+    "sourceLines": 23,
+    "handlersReviewed": [
+      "event_say",
+      "event_trade"
+    ],
+    "disposition": "unresolved_no_exact_p99_implementation_proof",
+    "sourceCategory": "unresolved",
+    "sourceSpecificReview": "Ajrah Leaf 6349\u2192Erudehide Tunic 1120,25XP; P99 confirms Allix NPC but not this hand-in.",
+    "action": "unchanged",
+    "proposedState": null,
+    "cachedEvidenceTitles": [
+      "Allix"
+    ],
+    "publicEvidenceIds": [],
+    "existingReviewReferences": [],
+    "itemEvidenceNavigation": "item-evidence-navigation.json#kerraridge/Allix",
+    "numericNpcIdentity": null,
+    "baselineQuestPolicy": null,
+    "baselineNpcPolicyCandidates": [],
+    "runtimeAdmission": "not proven by enabled row, source presence, item existence, name match, or isolated VM execution",
+    "parityLimitations": [
+      "No full-chain claim from this individual source disposition.",
+      "Unknown numerical XP, faction, coin, timing and random probabilities are not silently certified or retuned.",
+      "Acquisition, actual spawn identity, engine settlement and player UI remain separate evidence requirements."
+    ]
+  },
+  {
+    "ordinal": 111,
+    "key": "lakerathe/#Triathalon_Bike",
+    "questRowId": 16387,
+    "baselineFile": "effective/quests/lakerathe/%23Triathalon_Bike.lua",
+    "baselineSourceSha256": "d3a1f842b80a864d3a0c0845add1e3bb0962bd0190979c7723d931a7e3a413f4",
+    "baselineHashKind": "exact_file_bytes",
+    "baselineNormalizedLfSourceSha256": "d3a1f842b80a864d3a0c0845add1e3bb0962bd0190979c7723d931a7e3a413f4",
+    "baselineSourceBytes": 729,
+    "sourceLines": 18,
+    "handlersReviewed": [
+      "event_say",
+      "event_trade"
+    ],
+    "disposition": "unresolved_no_exact_p99_implementation_proof",
+    "sourceCategory": "custom_event",
+    "sourceSpecificReview": "Triathalon bicycle actor trades rebreather 16889 for horse 21800; custom GM event, not documented P99 quest.",
+    "action": "unchanged",
+    "proposedState": null,
+    "cachedEvidenceTitles": [],
+    "publicEvidenceIds": [],
+    "existingReviewReferences": [],
+    "itemEvidenceNavigation": "item-evidence-navigation.json#lakerathe/#Triathalon_Bike",
+    "numericNpcIdentity": null,
+    "baselineQuestPolicy": null,
+    "baselineNpcPolicyCandidates": [],
+    "runtimeAdmission": "not proven by enabled row, source presence, item existence, name match, or isolated VM execution",
+    "parityLimitations": [
+      "No full-chain claim from this individual source disposition.",
+      "Unknown numerical XP, faction, coin, timing and random probabilities are not silently certified or retuned.",
+      "Acquisition, actual spawn identity, engine settlement and player UI remain separate evidence requirements."
+    ]
+  },
+  {
+    "ordinal": 112,
+    "key": "lakerathe/#Triathalon_Swim_Goggles",
+    "questRowId": 18852,
+    "baselineFile": "effective/quests/lakerathe/%23Triathalon_Swim_Goggles.lua",
+    "baselineSourceSha256": "5a759cc1feb51f6246100351620b48c9eaf16d7fa5e9c3b4d097ebe193635133",
+    "baselineHashKind": "exact_file_bytes",
+    "baselineNormalizedLfSourceSha256": "5a759cc1feb51f6246100351620b48c9eaf16d7fa5e9c3b4d097ebe193635133",
+    "baselineSourceBytes": 475,
+    "sourceLines": 10,
+    "handlersReviewed": [
+      "event_say"
+    ],
+    "disposition": "unresolved_no_exact_p99_implementation_proof",
+    "sourceCategory": "custom_event",
+    "sourceSpecificReview": "Triathalon swimming actor issues 16889 on hail; custom GM event.",
+    "action": "unchanged",
+    "proposedState": null,
+    "cachedEvidenceTitles": [],
+    "publicEvidenceIds": [],
+    "existingReviewReferences": [],
+    "itemEvidenceNavigation": "item-evidence-navigation.json#lakerathe/#Triathalon_Swim_Goggles",
+    "numericNpcIdentity": null,
+    "baselineQuestPolicy": null,
+    "baselineNpcPolicyCandidates": [],
+    "runtimeAdmission": "not proven by enabled row, source presence, item existence, name match, or isolated VM execution",
+    "parityLimitations": [
+      "No full-chain claim from this individual source disposition.",
+      "Unknown numerical XP, faction, coin, timing and random probabilities are not silently certified or retuned.",
+      "Acquisition, actual spawn identity, engine settlement and player UI remain separate evidence requirements."
+    ]
+  },
+  {
+    "ordinal": 117,
+    "key": "lavastorm/Brunnel_Kegstander",
+    "questRowId": 31456,
+    "baselineFile": "effective/quests/lavastorm/Brunnel_Kegstander.lua",
+    "baselineSourceSha256": "2a9910736e1d9580e714e25871dfd8c46c3a111446c9fcd2f09c7dd4cddeb27a",
+    "baselineHashKind": "exact_file_bytes",
+    "baselineNormalizedLfSourceSha256": "2a9910736e1d9580e714e25871dfd8c46c3a111446c9fcd2f09c7dd4cddeb27a",
+    "baselineSourceBytes": 1644,
+    "sourceLines": 25,
+    "handlersReviewed": [
+      "event_say",
+      "event_trade"
+    ],
+    "disposition": "unresolved_no_exact_p99_implementation_proof",
+    "sourceCategory": "later_candidate",
+    "sourceSpecificReview": "Brunnel v 1 ForgedFirebrand materials 7882/7885/7886\u2192random 7888\u20137901; version marker alone is not conclusive P99 exclusion.",
+    "action": "unchanged",
+    "proposedState": null,
+    "cachedEvidenceTitles": [],
+    "publicEvidenceIds": [],
+    "existingReviewReferences": [],
+    "itemEvidenceNavigation": "item-evidence-navigation.json#lavastorm/Brunnel_Kegstander",
+    "numericNpcIdentity": null,
+    "baselineQuestPolicy": null,
+    "baselineNpcPolicyCandidates": [],
+    "runtimeAdmission": "not proven by enabled row, source presence, item existence, name match, or isolated VM execution",
+    "parityLimitations": [
+      "No full-chain claim from this individual source disposition.",
+      "Unknown numerical XP, faction, coin, timing and random probabilities are not silently certified or retuned.",
+      "Acquisition, actual spawn identity, engine settlement and player UI remain separate evidence requirements."
+    ]
+  },
+  {
+    "ordinal": 121,
+    "key": "mistmoore/Eirod_Haerod",
+    "questRowId": 19120,
+    "baselineFile": "effective/quests/mistmoore/Eirod_Haerod.lua",
+    "baselineSourceSha256": "e4b2197828aa39af5fa3d3ecb826cddcc08704600e2d13e40da0082a3c3affb2",
+    "baselineHashKind": "exact_file_bytes",
+    "baselineNormalizedLfSourceSha256": "e4b2197828aa39af5fa3d3ecb826cddcc08704600e2d13e40da0082a3c3affb2",
+    "baselineSourceBytes": 3132,
+    "sourceLines": 51,
+    "handlersReviewed": [
+      "event_say",
+      "event_trade"
+    ],
+    "disposition": "unresolved_no_exact_p99_implementation_proof",
+    "sourceCategory": "later_candidate",
+    "sourceSpecificReview": "Eirod IndigoBrother task/global 21972 and torso 21973\u00d72 consume-before-global-check hazard; no P99 hand-in evidence, so do not conflate code hazard with established P99 defect.",
+    "action": "unchanged",
+    "proposedState": null,
+    "cachedEvidenceTitles": [],
+    "publicEvidenceIds": [],
+    "existingReviewReferences": [],
+    "itemEvidenceNavigation": "item-evidence-navigation.json#mistmoore/Eirod_Haerod",
+    "numericNpcIdentity": null,
+    "baselineQuestPolicy": null,
+    "baselineNpcPolicyCandidates": [],
+    "runtimeAdmission": "not proven by enabled row, source presence, item existence, name match, or isolated VM execution",
+    "parityLimitations": [
+      "No full-chain claim from this individual source disposition.",
+      "Unknown numerical XP, faction, coin, timing and random probabilities are not silently certified or retuned.",
+      "Acquisition, actual spawn identity, engine settlement and player UI remain separate evidence requirements."
+    ]
+  },
+  {
+    "ordinal": 128,
+    "key": "neriaka/Bregna",
+    "questRowId": 14222,
+    "baselineFile": "effective/quests/neriaka/Bregna.lua",
+    "baselineSourceSha256": "30f7510b8d8676b57a9806de47dd46a94b2f53a5688a120db07b816833a7dcdb",
+    "baselineHashKind": "exact_file_bytes",
+    "baselineNormalizedLfSourceSha256": "30f7510b8d8676b57a9806de47dd46a94b2f53a5688a120db07b816833a7dcdb",
+    "baselineSourceBytes": 846,
+    "sourceLines": 20,
+    "handlersReviewed": [
+      "event_say",
+      "event_trade"
+    ],
+    "disposition": "unresolved_no_exact_p99_implementation_proof",
+    "sourceCategory": "later_candidate",
+    "sourceSpecificReview": "Neriak Bregna only AidGaruuk four-item receipt 28740, unlike Grobb mixed actor; not interchangeable identities.",
+    "action": "unchanged",
+    "proposedState": null,
+    "cachedEvidenceTitles": [
+      "Bregna"
+    ],
+    "publicEvidenceIds": [],
+    "existingReviewReferences": [],
+    "itemEvidenceNavigation": "item-evidence-navigation.json#neriaka/Bregna",
+    "numericNpcIdentity": null,
+    "baselineQuestPolicy": null,
+    "baselineNpcPolicyCandidates": [],
+    "runtimeAdmission": "not proven by enabled row, source presence, item existence, name match, or isolated VM execution",
+    "parityLimitations": [
+      "No full-chain claim from this individual source disposition.",
+      "Unknown numerical XP, faction, coin, timing and random probabilities are not silently certified or retuned.",
+      "Acquisition, actual spawn identity, engine settlement and player UI remain separate evidence requirements."
+    ]
+  },
+  {
+    "ordinal": 130,
+    "key": "neriakb/Exterminator_Damasi",
+    "questRowId": 15453,
+    "baselineFile": "effective/quests/neriakb/Exterminator_Damasi.lua",
+    "baselineSourceSha256": "2f31b27b83f41c661179ffb26d26ef5f65cd33fbd7797a8c2f661a5bfa7c9224",
+    "baselineHashKind": "exact_file_bytes",
+    "baselineNormalizedLfSourceSha256": "2f31b27b83f41c661179ffb26d26ef5f65cd33fbd7797a8c2f661a5bfa7c9224",
+    "baselineSourceBytes": 1024,
+    "sourceLines": 23,
+    "handlersReviewed": [
+      "event_say",
+      "event_trade"
+    ],
+    "disposition": "unresolved_no_exact_p99_implementation_proof",
+    "sourceCategory": "unresolved",
+    "sourceSpecificReview": "Damasi rat quartet 13071\u2192coin/XP/factions; no P99 hand-in documentation located.",
+    "action": "unchanged",
+    "proposedState": null,
+    "cachedEvidenceTitles": [],
+    "publicEvidenceIds": [],
+    "existingReviewReferences": [],
+    "itemEvidenceNavigation": "item-evidence-navigation.json#neriakb/Exterminator_Damasi",
+    "numericNpcIdentity": null,
+    "baselineQuestPolicy": null,
+    "baselineNpcPolicyCandidates": [],
+    "runtimeAdmission": "not proven by enabled row, source presence, item existence, name match, or isolated VM execution",
+    "parityLimitations": [
+      "No full-chain claim from this individual source disposition.",
+      "Unknown numerical XP, faction, coin, timing and random probabilities are not silently certified or retuned.",
+      "Acquisition, actual spawn identity, engine settlement and player UI remain separate evidence requirements."
+    ]
+  },
+  {
+    "ordinal": 135,
+    "key": "neriakc/Exterminator_Gilea",
+    "questRowId": 12367,
+    "baselineFile": "effective/quests/neriakc/Exterminator_Gilea.lua",
+    "baselineSourceSha256": "baebb215207bf4e1ae12888d86f7c4bff58442d6f3ac22e57285ca01e62aa3b1",
+    "baselineHashKind": "exact_file_bytes",
+    "baselineNormalizedLfSourceSha256": "baebb215207bf4e1ae12888d86f7c4bff58442d6f3ac22e57285ca01e62aa3b1",
+    "baselineSourceBytes": 957,
+    "sourceLines": 23,
+    "handlersReviewed": [
+      "event_say",
+      "event_trade"
+    ],
+    "disposition": "unresolved_no_exact_p99_implementation_proof",
+    "sourceCategory": "unresolved",
+    "sourceSpecificReview": "Gilea rat quartet\u2192coin/XP/factions; no P99 exchange evidence found.",
+    "action": "unchanged",
+    "proposedState": null,
+    "cachedEvidenceTitles": [],
+    "publicEvidenceIds": [],
+    "existingReviewReferences": [],
+    "itemEvidenceNavigation": "item-evidence-navigation.json#neriakc/Exterminator_Gilea",
+    "numericNpcIdentity": null,
+    "baselineQuestPolicy": null,
+    "baselineNpcPolicyCandidates": [],
+    "runtimeAdmission": "not proven by enabled row, source presence, item existence, name match, or isolated VM execution",
+    "parityLimitations": [
+      "No full-chain claim from this individual source disposition.",
+      "Unknown numerical XP, faction, coin, timing and random probabilities are not silently certified or retuned.",
+      "Acquisition, actual spawn identity, engine settlement and player UI remain separate evidence requirements."
+    ]
+  },
+  {
+    "ordinal": 143,
+    "key": "northkarana/#Triathalon_Token",
+    "questRowId": 14501,
+    "baselineFile": "effective/quests/northkarana/%23Triathalon_Token.lua",
+    "baselineSourceSha256": "79e43b8eb75a67055be5ff841fa2da9a060a060e891f67ac27d1a99ffa52a2f9",
+    "baselineHashKind": "exact_file_bytes",
+    "baselineNormalizedLfSourceSha256": "79e43b8eb75a67055be5ff841fa2da9a060a060e891f67ac27d1a99ffa52a2f9",
+    "baselineSourceBytes": 594,
+    "sourceLines": 19,
+    "handlersReviewed": [
+      "event_say",
+      "event_trade"
+    ],
+    "disposition": "unresolved_no_exact_p99_implementation_proof",
+    "sourceCategory": "custom_event",
+    "sourceSpecificReview": "Triathalon token actor explicitly custom GM event;2300boots\u219220695heart.",
+    "action": "unchanged",
+    "proposedState": null,
+    "cachedEvidenceTitles": [],
+    "publicEvidenceIds": [],
+    "existingReviewReferences": [],
+    "itemEvidenceNavigation": "item-evidence-navigation.json#northkarana/#Triathalon_Token",
+    "numericNpcIdentity": null,
+    "baselineQuestPolicy": null,
+    "baselineNpcPolicyCandidates": [],
+    "runtimeAdmission": "not proven by enabled row, source presence, item existence, name match, or isolated VM execution",
+    "parityLimitations": [
+      "No full-chain claim from this individual source disposition.",
+      "Unknown numerical XP, faction, coin, timing and random probabilities are not silently certified or retuned.",
+      "Acquisition, actual spawn identity, engine settlement and player UI remain separate evidence requirements."
+    ]
+  },
+  {
+    "ordinal": 144,
+    "key": "northkarana/Gorri_Fallstine",
+    "questRowId": 19037,
+    "baselineFile": "effective/quests/northkarana/Gorri_Fallstine.lua",
+    "baselineSourceSha256": "e4d087cb26758c202a5122b632eab26dc50c4624793cf3883c1b125ed7b558c7",
+    "baselineHashKind": "exact_file_bytes",
+    "baselineNormalizedLfSourceSha256": "e4d087cb26758c202a5122b632eab26dc50c4624793cf3883c1b125ed7b558c7",
+    "baselineSourceBytes": 739,
+    "sourceLines": 19,
+    "handlersReviewed": [
+      "event_say",
+      "event_trade"
+    ],
+    "disposition": "unresolved_no_exact_p99_implementation_proof",
+    "sourceCategory": "later_candidate",
+    "sourceSpecificReview": "Gorri consumes one to four fire-beetle eyes 10307 and Dings, no reward; no documented P99 objective located.",
+    "action": "unchanged",
+    "proposedState": null,
+    "cachedEvidenceTitles": [],
+    "publicEvidenceIds": [],
+    "existingReviewReferences": [],
+    "itemEvidenceNavigation": "item-evidence-navigation.json#northkarana/Gorri_Fallstine",
+    "numericNpcIdentity": null,
+    "baselineQuestPolicy": null,
+    "baselineNpcPolicyCandidates": [],
+    "runtimeAdmission": "not proven by enabled row, source presence, item existence, name match, or isolated VM execution",
+    "parityLimitations": [
+      "No full-chain claim from this individual source disposition.",
+      "Unknown numerical XP, faction, coin, timing and random probabilities are not silently certified or retuned.",
+      "Acquisition, actual spawn identity, engine settlement and player UI remain separate evidence requirements."
+    ]
+  },
+  {
+    "ordinal": 147,
+    "key": "oggok/Exterminator_Glurg",
+    "questRowId": 14884,
+    "baselineFile": "effective/quests/oggok/Exterminator_Glurg.lua",
+    "baselineSourceSha256": "3a1a59917549d51465948fb69711383c80160d5163c56a9413036e2f87f53c23",
+    "baselineHashKind": "exact_file_bytes",
+    "baselineNormalizedLfSourceSha256": "3a1a59917549d51465948fb69711383c80160d5163c56a9413036e2f87f53c23",
+    "baselineSourceBytes": 819,
+    "sourceLines": 22,
+    "handlersReviewed": [
+      "event_say",
+      "event_trade"
+    ],
+    "disposition": "unresolved_no_exact_p99_implementation_proof",
+    "sourceCategory": "unresolved",
+    "sourceSpecificReview": "Glurg four armadillo husks 19195\u2192coin/XP/faction. P99 NPC confirmation does not verify hand-in.",
+    "action": "unchanged",
+    "proposedState": null,
+    "cachedEvidenceTitles": [
+      "Exterminator Glurg"
+    ],
+    "publicEvidenceIds": [],
+    "existingReviewReferences": [],
+    "itemEvidenceNavigation": "item-evidence-navigation.json#oggok/Exterminator_Glurg",
+    "numericNpcIdentity": null,
+    "baselineQuestPolicy": null,
+    "baselineNpcPolicyCandidates": [],
+    "runtimeAdmission": "not proven by enabled row, source presence, item existence, name match, or isolated VM execution",
+    "parityLimitations": [
+      "No full-chain claim from this individual source disposition.",
+      "Unknown numerical XP, faction, coin, timing and random probabilities are not silently certified or retuned.",
+      "Acquisition, actual spawn identity, engine settlement and player UI remain separate evidence requirements."
+    ]
+  },
+  {
+    "ordinal": 161,
+    "key": "qey2hh1/Tarnic_McWillows",
+    "questRowId": 14569,
+    "baselineFile": "effective/quests/qey2hh1/Tarnic_McWillows.lua",
+    "baselineSourceSha256": "06c1b7916b549f08bd55b57ffdbbd123dfa7a4974bcc4d8ba0eb4bb6305ad6d2",
+    "baselineHashKind": "exact_file_bytes",
+    "baselineNormalizedLfSourceSha256": "06c1b7916b549f08bd55b57ffdbbd123dfa7a4974bcc4d8ba0eb4bb6305ad6d2",
+    "baselineSourceBytes": 518,
+    "sourceLines": 12,
+    "handlersReviewed": [
+      "event_trade"
+    ],
+    "disposition": "unresolved_no_exact_p99_implementation_proof",
+    "sourceCategory": "unresolved",
+    "sourceSpecificReview": "Medicine bag 21987\u2192Antidotewind 21988,zeroXP. No exact P99 evidence located; preserve without parity claim.",
+    "action": "unchanged",
+    "proposedState": null,
+    "cachedEvidenceTitles": [],
+    "publicEvidenceIds": [],
+    "existingReviewReferences": [],
+    "itemEvidenceNavigation": "item-evidence-navigation.json#qey2hh1/Tarnic_McWillows",
+    "numericNpcIdentity": null,
+    "baselineQuestPolicy": null,
+    "baselineNpcPolicyCandidates": [],
+    "runtimeAdmission": "not proven by enabled row, source presence, item existence, name match, or isolated VM execution",
+    "parityLimitations": [
+      "No full-chain claim from this individual source disposition.",
+      "Unknown numerical XP, faction, coin, timing and random probabilities are not silently certified or retuned.",
+      "Acquisition, actual spawn identity, engine settlement and player UI remain separate evidence requirements."
+    ]
+  },
+  {
+    "ordinal": 163,
+    "key": "qeynos/Exterminator_Rasmon",
+    "questRowId": 13039,
+    "baselineFile": "effective/quests/qeynos/Exterminator_Rasmon.lua",
+    "baselineSourceSha256": "36b49baa9135b5c93cf4f42f1310346d633f29d8357841ea6ef3cb1a30f94c50",
+    "baselineHashKind": "exact_file_bytes",
+    "baselineNormalizedLfSourceSha256": "36b49baa9135b5c93cf4f42f1310346d633f29d8357841ea6ef3cb1a30f94c50",
+    "baselineSourceBytes": 1083,
+    "sourceLines": 22,
+    "handlersReviewed": [
+      "event_say",
+      "event_trade"
+    ],
+    "disposition": "unresolved_no_exact_p99_implementation_proof",
+    "sourceCategory": "unresolved",
+    "sourceSpecificReview": "Rasmon rat quartet\u21924silver/XP/faction; code comments mislabel some IDs but no P99 numeric evidence supports changing actual values.",
+    "action": "unchanged",
+    "proposedState": null,
+    "cachedEvidenceTitles": [],
+    "publicEvidenceIds": [],
+    "existingReviewReferences": [],
+    "itemEvidenceNavigation": "item-evidence-navigation.json#qeynos/Exterminator_Rasmon",
+    "numericNpcIdentity": null,
+    "baselineQuestPolicy": null,
+    "baselineNpcPolicyCandidates": [],
+    "runtimeAdmission": "not proven by enabled row, source presence, item existence, name match, or isolated VM execution",
+    "parityLimitations": [
+      "No full-chain claim from this individual source disposition.",
+      "Unknown numerical XP, faction, coin, timing and random probabilities are not silently certified or retuned.",
+      "Acquisition, actual spawn identity, engine settlement and player UI remain separate evidence requirements."
+    ]
+  },
+  {
+    "ordinal": 164,
+    "key": "qeynos/Jalorin_Tar-Visgur",
+    "questRowId": 15640,
+    "baselineFile": "effective/quests/qeynos/Jalorin_Tar-Visgur.lua",
+    "baselineSourceSha256": "683f338dd9447c748151f62ba9d28a468d8bba49b0fcaef1d0ab7eec8f940a3a",
+    "baselineHashKind": "exact_file_bytes",
+    "baselineNormalizedLfSourceSha256": "683f338dd9447c748151f62ba9d28a468d8bba49b0fcaef1d0ab7eec8f940a3a",
+    "baselineSourceBytes": 2106,
+    "sourceLines": 28,
+    "handlersReviewed": [
+      "event_say",
+      "event_trade"
+    ],
+    "disposition": "unresolved_no_exact_p99_implementation_proof",
+    "sourceCategory": "later_candidate",
+    "sourceSpecificReview": "Jalorin Erudin medal 21971/Brianna note 21969/Elisi attack story; no exact P99 chain evidence found.",
+    "action": "unchanged",
+    "proposedState": null,
+    "cachedEvidenceTitles": [],
+    "publicEvidenceIds": [],
+    "existingReviewReferences": [],
+    "itemEvidenceNavigation": "item-evidence-navigation.json#qeynos/Jalorin_Tar-Visgur",
+    "numericNpcIdentity": null,
+    "baselineQuestPolicy": null,
+    "baselineNpcPolicyCandidates": [],
+    "runtimeAdmission": "not proven by enabled row, source presence, item existence, name match, or isolated VM execution",
+    "parityLimitations": [
+      "No full-chain claim from this individual source disposition.",
+      "Unknown numerical XP, faction, coin, timing and random probabilities are not silently certified or retuned.",
+      "Acquisition, actual spawn identity, engine settlement and player UI remain separate evidence requirements."
+    ]
+  },
+  {
+    "ordinal": 169,
+    "key": "qeynos/Yakem_Oreslinger",
+    "questRowId": 12711,
+    "baselineFile": "effective/quests/qeynos/Yakem_Oreslinger.lua",
+    "baselineSourceSha256": "c54d9a394ddd4216123bcf2c529f4ed1c90a90d9d64b3993c3a1bd72c5e2d8be",
+    "baselineHashKind": "exact_file_bytes",
+    "baselineNormalizedLfSourceSha256": "c54d9a394ddd4216123bcf2c529f4ed1c90a90d9d64b3993c3a1bd72c5e2d8be",
+    "baselineSourceBytes": 1674,
+    "sourceLines": 31,
+    "handlersReviewed": [
+      "event_say",
+      "event_trade"
+    ],
+    "disposition": "unresolved_no_exact_p99_implementation_proof",
+    "sourceCategory": "unresolved",
+    "sourceSpecificReview": "Yakem HQ ore shipments 10952/10953\u2192random coin,500XP and 17814container. Different payouts from Harnoff do not establish a bug.",
+    "action": "unchanged",
+    "proposedState": null,
+    "cachedEvidenceTitles": [],
+    "publicEvidenceIds": [],
+    "existingReviewReferences": [],
+    "itemEvidenceNavigation": "item-evidence-navigation.json#qeynos/Yakem_Oreslinger",
+    "numericNpcIdentity": null,
+    "baselineQuestPolicy": null,
+    "baselineNpcPolicyCandidates": [],
+    "runtimeAdmission": "not proven by enabled row, source presence, item existence, name match, or isolated VM execution",
+    "parityLimitations": [
+      "No full-chain claim from this individual source disposition.",
+      "Unknown numerical XP, faction, coin, timing and random probabilities are not silently certified or retuned.",
+      "Acquisition, actual spawn identity, engine settlement and player UI remain separate evidence requirements."
+    ]
+  },
+  {
+    "ordinal": 171,
+    "key": "qeynos2/Exterminator_Wintloag",
+    "questRowId": 19033,
+    "baselineFile": "effective/quests/qeynos2/Exterminator_Wintloag.lua",
+    "baselineSourceSha256": "fb25c822e643233c13b07277534246f1b825c153f7c72ee4be893f6ee9789a78",
+    "baselineHashKind": "exact_file_bytes",
+    "baselineNormalizedLfSourceSha256": "fb25c822e643233c13b07277534246f1b825c153f7c72ee4be893f6ee9789a78",
+    "baselineSourceBytes": 1125,
+    "sourceLines": 22,
+    "handlersReviewed": [
+      "event_say",
+      "event_trade"
+    ],
+    "disposition": "unresolved_no_exact_p99_implementation_proof",
+    "sourceCategory": "unresolved",
+    "sourceSpecificReview": "Wintloag rat quartet\u21924silver/XP/\u00b15factions; do not standardize to other exterminators without evidence.",
+    "action": "unchanged",
+    "proposedState": null,
+    "cachedEvidenceTitles": [],
+    "publicEvidenceIds": [],
+    "existingReviewReferences": [],
+    "itemEvidenceNavigation": "item-evidence-navigation.json#qeynos2/Exterminator_Wintloag",
+    "numericNpcIdentity": null,
+    "baselineQuestPolicy": null,
+    "baselineNpcPolicyCandidates": [],
+    "runtimeAdmission": "not proven by enabled row, source presence, item existence, name match, or isolated VM execution",
+    "parityLimitations": [
+      "No full-chain claim from this individual source disposition.",
+      "Unknown numerical XP, faction, coin, timing and random probabilities are not silently certified or retuned.",
+      "Acquisition, actual spawn identity, engine settlement and player UI remain separate evidence requirements."
+    ]
+  },
+  {
+    "ordinal": 186,
+    "key": "rivervale/Exterminator_Sutten",
+    "questRowId": 16952,
+    "baselineFile": "effective/quests/rivervale/Exterminator_Sutten.lua",
+    "baselineSourceSha256": "422d7d0f575ac86e740a7da6767a7186ec25d166b5a39eef203f2f5d405e85af",
+    "baselineHashKind": "exact_file_bytes",
+    "baselineNormalizedLfSourceSha256": "422d7d0f575ac86e740a7da6767a7186ec25d166b5a39eef203f2f5d405e85af",
+    "baselineSourceBytes": 1356,
+    "sourceLines": 24,
+    "handlersReviewed": [
+      "event_say",
+      "event_trade"
+    ],
+    "disposition": "unresolved_no_exact_p99_implementation_proof",
+    "sourceCategory": "unresolved",
+    "sourceSpecificReview": "Sutten rat quartet\u2192coin/XP/Rivervale factions; no exact P99 exchange documentation found.",
+    "action": "unchanged",
+    "proposedState": null,
+    "cachedEvidenceTitles": [],
+    "publicEvidenceIds": [],
+    "existingReviewReferences": [],
+    "itemEvidenceNavigation": "item-evidence-navigation.json#rivervale/Exterminator_Sutten",
+    "numericNpcIdentity": null,
+    "baselineQuestPolicy": null,
+    "baselineNpcPolicyCandidates": [],
+    "runtimeAdmission": "not proven by enabled row, source presence, item existence, name match, or isolated VM execution",
+    "parityLimitations": [
+      "No full-chain claim from this individual source disposition.",
+      "Unknown numerical XP, faction, coin, timing and random probabilities are not silently certified or retuned.",
+      "Acquisition, actual spawn identity, engine settlement and player UI remain separate evidence requirements."
+    ]
+  },
+  {
+    "ordinal": 194,
+    "key": "sirens/Ravaging_Tsunami_Elemental",
+    "questRowId": 19388,
+    "baselineFile": "effective/quests/sirens/Ravaging_Tsunami_Elemental.lua",
+    "baselineSourceSha256": "dca30aa09b2ad61ac8dd268a44953b27d6b89c5d8913469b757362ea3e72548a",
+    "baselineHashKind": "exact_file_bytes",
+    "baselineNormalizedLfSourceSha256": "dca30aa09b2ad61ac8dd268a44953b27d6b89c5d8913469b757362ea3e72548a",
+    "baselineSourceBytes": 467,
+    "sourceLines": 11,
+    "handlersReviewed": [
+      "event_trade"
+    ],
+    "disposition": "unresolved_no_exact_p99_implementation_proof",
+    "sourceCategory": "unresolved",
+    "sourceSpecificReview": "Ravaging Tsunami Elemental 11304 vial returns itself and removes immunity/aggros; encounter hand-in, not reward quest. P99 exact presence/admission unverified.",
+    "action": "unchanged",
+    "proposedState": null,
+    "cachedEvidenceTitles": [],
+    "publicEvidenceIds": [],
+    "existingReviewReferences": [],
+    "itemEvidenceNavigation": "item-evidence-navigation.json#sirens/Ravaging_Tsunami_Elemental",
+    "numericNpcIdentity": null,
+    "baselineQuestPolicy": null,
+    "baselineNpcPolicyCandidates": [],
+    "runtimeAdmission": "not proven by enabled row, source presence, item existence, name match, or isolated VM execution",
+    "parityLimitations": [
+      "No full-chain claim from this individual source disposition.",
+      "Unknown numerical XP, faction, coin, timing and random probabilities are not silently certified or retuned.",
+      "Acquisition, actual spawn identity, engine settlement and player UI remain separate evidence requirements."
+    ]
+  },
+  {
+    "ordinal": 198,
+    "key": "southkarana/#Triathalon_Running_Shoes",
+    "questRowId": 17511,
+    "baselineFile": "effective/quests/southkarana/%23Triathalon_Running_Shoes.lua",
+    "baselineSourceSha256": "3544149f89efe84ef4c3618403cb97ad2cfb210cebb4d19de5c38bfb5cdbe8e9",
+    "baselineHashKind": "exact_file_bytes",
+    "baselineNormalizedLfSourceSha256": "3544149f89efe84ef4c3618403cb97ad2cfb210cebb4d19de5c38bfb5cdbe8e9",
+    "baselineSourceBytes": 713,
+    "sourceLines": 19,
+    "handlersReviewed": [
+      "event_say",
+      "event_trade"
+    ],
+    "disposition": "unresolved_no_exact_p99_implementation_proof",
+    "sourceCategory": "custom_event",
+    "sourceSpecificReview": "Triathalon shoes actor explicitly custom GM event;horse 21800\u2192JBoots 2300.",
+    "action": "unchanged",
+    "proposedState": null,
+    "cachedEvidenceTitles": [],
+    "publicEvidenceIds": [],
+    "existingReviewReferences": [],
+    "itemEvidenceNavigation": "item-evidence-navigation.json#southkarana/#Triathalon_Running_Shoes",
+    "numericNpcIdentity": null,
+    "baselineQuestPolicy": null,
+    "baselineNpcPolicyCandidates": [],
+    "runtimeAdmission": "not proven by enabled row, source presence, item existence, name match, or isolated VM execution",
+    "parityLimitations": [
+      "No full-chain claim from this individual source disposition.",
+      "Unknown numerical XP, faction, coin, timing and random probabilities are not silently certified or retuned.",
+      "Acquisition, actual spawn identity, engine settlement and player UI remain separate evidence requirements."
+    ]
+  },
+  {
+    "ordinal": 206,
+    "key": "tox/Lanivon_Baxer",
+    "questRowId": 18922,
+    "baselineFile": "effective/quests/tox/Lanivon_Baxer.lua",
+    "baselineSourceSha256": "149189532f714dfab532e433d5ccefb87cdef75d79e3206bc8f5819d93672701",
+    "baselineHashKind": "exact_file_bytes",
+    "baselineNormalizedLfSourceSha256": "149189532f714dfab532e433d5ccefb87cdef75d79e3206bc8f5819d93672701",
+    "baselineSourceBytes": 668,
+    "sourceLines": 19,
+    "handlersReviewed": [
+      "event_say",
+      "event_trade"
+    ],
+    "disposition": "unresolved_no_exact_p99_implementation_proof",
+    "sourceCategory": "unresolved",
+    "sourceSpecificReview": "Lanivon PackagedNotes 6069\u2192RingMessenger 1573 and 85000XP. P99 NPC page links a research quest but does not establish these exact values or complete acquisition chain.",
+    "action": "unchanged",
+    "proposedState": null,
+    "cachedEvidenceTitles": [
+      "Lanivon Baxer"
+    ],
+    "publicEvidenceIds": [],
+    "existingReviewReferences": [],
+    "itemEvidenceNavigation": "item-evidence-navigation.json#tox/Lanivon_Baxer",
+    "numericNpcIdentity": null,
+    "baselineQuestPolicy": null,
+    "baselineNpcPolicyCandidates": [],
+    "runtimeAdmission": "not proven by enabled row, source presence, item existence, name match, or isolated VM execution",
+    "parityLimitations": [
+      "No full-chain claim from this individual source disposition.",
+      "Unknown numerical XP, faction, coin, timing and random probabilities are not silently certified or retuned.",
+      "Acquisition, actual spawn identity, engine settlement and player UI remain separate evidence requirements."
+    ]
+  }
+]

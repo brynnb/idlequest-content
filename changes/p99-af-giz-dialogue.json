@@ -1,0 +1,66 @@
+{
+  "format": 1,
+  "id": "p99-af-giz-dialogue",
+  "summary": "Add documented Tani sent me dialogue alias in both Giz sources; preserve existing handlers and avoid invented class gates or attack behavior.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Death_of_Lyda_Nasin?action=raw",
+      "note": "Cached reference/p99-wiki/raw-pages/death-of-lyda-nasin-ee52c2250a.wiki SHA256 70c1c4e88f13b0d9c88df0c01ab830c0a6a9d61266d3f866d2c3e5f36f9d953a."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 12174,
+        "zone": "freporte",
+        "name": "Giz_Dinree",
+        "lua_content": "-- items: 18844\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Excuse me! I came here in hopes of being alone!\");\n\telseif(e.message:findi(\"sent by tani\")) then\n\t\te.self:Say(\"You're a new rogue, then! Your mission is to kill the young daughter of the owner of the Seafarer's Roost. Wait for the right time. Why? You don't need to know. Do it and return Lyda's head to Tani in Neriak. I hope you can make it back to Neriak alive. Good hunting!\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\tif(item_lib.check_turn_in(e.trade, {item1 = 18844})) then -- Sealed Letter\n\t\te.self:Say(\"I am glad to see you. We have a problem. The last runner and I attempted to carry the chest from a boat. It fell overboard! He went in after it, but the sharks made a meal of him. If you want to try and get it, it is down below in the water in the harbor. Be careful.\");\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 12174,
+        "zone": "freporte",
+        "name": "Giz_Dinree",
+        "lua_content": "-- items: 18844\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Excuse me! I came here in hopes of being alone!\");\n\telseif(e.message:findi(\"sent by tani\") or e.message:findi(\"tani sent me\")) then\n\t\te.self:Say(\"You're a new rogue, then! Your mission is to kill the young daughter of the owner of the Seafarer's Roost. Wait for the right time. Why? You don't need to know. Do it and return Lyda's head to Tani in Neriak. I hope you can make it back to Neriak alive. Good hunting!\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\tif(item_lib.check_turn_in(e.trade, {item1 = 18844})) then -- Sealed Letter\n\t\te.self:Say(\"I am glad to see you. We have a problem. The last runner and I attempted to carry the chest from a boat. It fell overboard! He went in after it, but the sharks made a meal of him. If you want to try and get it, it is down below in the water in the harbor. Be careful.\");\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 16554,
+        "zone": "freeporteast",
+        "name": "Giz_Dinree",
+        "lua_content": "function event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Excuse me! I came here in hopes of being alone!\");\n\telseif(e.message:findi(\"sent by tani\")) then\n\t\te.self:Say(\"You're a new rogue, then! Your mission is to kill the young daughter of the owner of the Seafarer's Roost. Wait for the right time. Why? You don't need to know. Do it and return Lyda's head to Tani in Neriak. I hope you can make it back to Neriak alive. Good hunting!\");\n\tend\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 16554,
+        "zone": "freeporteast",
+        "name": "Giz_Dinree",
+        "lua_content": "function event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Excuse me! I came here in hopes of being alone!\");\n\telseif(e.message:findi(\"sent by tani\") or e.message:findi(\"tani sent me\")) then\n\t\te.self:Say(\"You're a new rogue, then! Your mission is to kill the young daughter of the owner of the Seafarer's Roost. Wait for the right time. Why? You don't need to know. Do it and return Lyda's head to Tani in Neriak. I hope you can make it back to Neriak alive. Good hunting!\");\n\tend\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/freporte/Giz_Dinree.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-af-giz-dialogue/freporte-Giz_Dinree.lua",
+      "afterSha256": "8c0dabc31539e2d2199bf3e243c1263e8a9a06784cb99c209c38aef0e03a9115"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freeporteast/Giz_Dinree.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-af-giz-dialogue/freeporteast-Giz_Dinree.lua",
+      "afterSha256": "385680af576a3530ea081e263e9bd77ab363b81facf4408bd0f0be8969379848"
+    }
+  ]
+}

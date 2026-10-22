@@ -1,0 +1,219 @@
+{
+  "format": 1,
+  "id": "p99-support-dialogue-fixes",
+  "summary": "Restore Grynnaf discovery hail; remove Jaxxtz Skull6 hints; suppress only later troll cultural guide and exact Beastlord epic helper/controller scripts, preserving NPCs and source bodies.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Grynnaf_Einoom?action=raw",
+      "note": "Cached 2026-08-12T19:01:15.805Z; revision unavailable; SHA256 6b29fdb319e1074694fc61fadb9a743488f913c0f6f54512d787337882d4abc1. Restore only the NPC page documented hail emote. Existing Nortlav and rusty-weapon directions remain byte-preserved after inserted branch. Page spells display name Grynnaf Einoo but also names Grynnaf Einoom and Lesser Faydark identity; both exported same-name NPC identities are documented, not silently interchanged."
+    },
+    {
+      "url": "https://wiki.project1999.com/Jaxxtz?action=raw",
+      "note": "Cached 2026-08-12T19:35:28.426Z; revision unavailable; SHA256 62835d6e0f5adcb1eefadcfc079f34fa3d4030763b5581f129c99d7c18a60aee. Preserve documented Kunark merchant hail; remove only Vagnar and Dragon kin directions. NPC page maps these to Shaman Skull Quest No.6; primary quest page explicitly excludes quests beyond five as Luclin. No merchant row, inventory, faction value or NPC availability changed."
+    },
+    {
+      "url": "https://wiki.project1999.com/Shaman_Skull_Quests?action=raw",
+      "note": "Cached 2026-07-17T23:32:43.944Z; revision unavailable; SHA256 58e529950f5736a98c7deac45fbf8897833cae17bfcf08706222406a34ab791c. Preserve documented Kunark merchant hail; remove only Vagnar and Dragon kin directions. NPC page maps these to Shaman Skull Quest No.6; primary quest page explicitly excludes quests beyond five as Luclin. No merchant row, inventory, faction value or NPC availability changed."
+    },
+    {
+      "url": "https://wiki.project1999.com/Skill_Blacksmithing",
+      "note": "Complete source only teaches troll cultural acrylia weapons. Primary P99 Skill Blacksmithing explicitly says troll cultural smithing is not in game due to timeline; classic warrior trainer NPC is preserved. Exact local hashes, numeric NPC mapping and controller source provenance in changes/p99-support-dialogue-fixes/provenance.json. For Beastlord: Dumul explicitly says beastlord, creates9031, sets bstepic, directs Luclin zones; existing exact Scout Malom100171/Spirit of Torment100220 policy calls same9031 family Luclin Beastlord epic. No claim current Vyrak/Janomin were already excluded."
+    },
+    {
+      "url": "https://github.com/brynnb/idlequest-content",
+      "note": "Death-only Omakin farewell helper. Scout Vyrak takes9031 and spawns NPC94126, whose exact exported name is #The_Spirit_of_Rage. Helper key lacks # and inspected runtime does not prove alias dispatch; preventive later-only helper suppression, not a claim this body currently executes. Not a Druid1.0 spirit. Exact local hashes, numeric NPC mapping and controller source provenance in changes/p99-support-dialogue-fixes/provenance.json. For Beastlord: Dumul explicitly says beastlord, creates9031, sets bstepic, directs Luclin zones; existing exact Scout Malom100171/Spirit of Torment100220 policy calls same9031 family Luclin Beastlord epic. No claim current Vyrak/Janomin were already excluded."
+    },
+    {
+      "url": "https://github.com/brynnb/idlequest-content",
+      "note": "Death-only Zehkes farewell helper. Scout Janomin takes9031 and spawns exact NPC73107 The_Icebound_Spirit. Not a Druid1.0 spirit. Exact local hashes, numeric NPC mapping and controller source provenance in changes/p99-support-dialogue-fixes/provenance.json. For Beastlord: Dumul explicitly says beastlord, creates9031, sets bstepic, directs Luclin zones; existing exact Scout Malom100171/Spirit of Torment100220 policy calls same9031 family Luclin Beastlord epic. No claim current Vyrak/Janomin were already excluded."
+    },
+    {
+      "url": "https://github.com/brynnb/idlequest-content",
+      "note": "Full source has only Shar Vahl greeting, seal9031 encounter94126 spawn, and gorilla totem9038 to9031+9039 wrapping. No independent classic branch. Exact local hashes, numeric NPC mapping and controller source provenance in changes/p99-support-dialogue-fixes/provenance.json. For Beastlord: Dumul explicitly says beastlord, creates9031, sets bstepic, directs Luclin zones; existing exact Scout Malom100171/Spirit of Torment100220 policy calls same9031 family Luclin Beastlord epic. No claim current Vyrak/Janomin were already excluded."
+    },
+    {
+      "url": "https://github.com/brynnb/idlequest-content",
+      "note": "Full source has only Shar Vahl greeting, seal9031 encounter73107 spawn/return9031, and ice bear totem9036 to9037 wrapping. No independent classic branch. Exact local hashes, numeric NPC mapping and controller source provenance in changes/p99-support-dialogue-fixes/provenance.json. For Beastlord: Dumul explicitly says beastlord, creates9031, sets bstepic, directs Luclin zones; existing exact Scout Malom100171/Spirit of Torment100220 policy calls same9031 family Luclin Beastlord epic. No claim current Vyrak/Janomin were already excluded."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 18370,
+        "zone": "lfaydark",
+        "name": "Grynnaf_Einoom",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: lfaydark/Grynnaf_Einoom.pl\n\nfunction event_say(e)\n\tif e.message:findi(\"Who is the scalekeeper?\") then\n\t\te.self:Say(\"Ahh...Ye be lookin' for Nortlav then. Nortlav is a strong fella. Ye dunna want to mess with the likes of him. He's known as a dragonslayer. I heard that he keeps the scales of the dragons he's slain. Yer not impressed eh? All the dragons he's killed have died by the blade of a [rusty weapon].\")\n\telseif e.message:findi(\"What rusty weapon?\") then\n\t\te.self:Say(\"Aye. I dunno know why he does what he does. But every dragon he's killed died by the likes of a rusty weapon. I dunno where he is now. but I heard he can be found in the depths of Norrath. surrounded by darkness.\")\n\tend\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 18370,
+        "zone": "lfaydark",
+        "name": "Grynnaf_Einoom",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: lfaydark/Grynnaf_Einoom.pl\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Emote(\"looks at \" .. e.other:GetName() .. \" and wonders if he is looking for the Scalekeeper?\")\n\telseif e.message:findi(\"Who is the scalekeeper?\") then\n\t\te.self:Say(\"Ahh...Ye be lookin' for Nortlav then. Nortlav is a strong fella. Ye dunna want to mess with the likes of him. He's known as a dragonslayer. I heard that he keeps the scales of the dragons he's slain. Yer not impressed eh? All the dragons he's killed have died by the blade of a [rusty weapon].\")\n\telseif e.message:findi(\"What rusty weapon?\") then\n\t\te.self:Say(\"Aye. I dunno know why he does what he does. But every dragon he's killed died by the likes of a rusty weapon. I dunno where he is now. but I heard he can be found in the depths of Norrath. surrounded by darkness.\")\n\tend\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 13638,
+        "zone": "cabwest",
+        "name": "Jaxxtz",
+        "lua_content": "function event_say(e)\n\n\tif(e.message:findi(\"Hail\")) then\n\t\te.self:Say(\"Greetings, \" .. e.other:GetCleanName() .. \", Perhaps you've come to purchase some of my rare supplies? I have a special blend of eleven herbs and spices......oh wait.....I'm sold out of that......anyway. What can I do for you?\");\n\telseif(e.message:findi(\"Vagnar\") and e.other:GetFaction(e.self) < 6) then\n\t\te.self:Say(\"Vagnar? I don't recall.....Unless Vagnar was that shaman supposedly on some quest to save our entire race from total destruction..someone always on one of those. He bought some charms to ward of [Dragon kin]. He's most likely in the belly of some beast now.\");\n\telseif(e.message:findi(\"Dragon kin\") and e.other:GetFaction(e.self) < 6) then\n\t\te.self:Say(\"Yes he said he needed to steal secrets from the hated Sarnaks to aid him in his true quest. He said the sarnak know ways to cleanse the mind from intrusion, he would say no more.\");\n\tend\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 13638,
+        "zone": "cabwest",
+        "name": "Jaxxtz",
+        "lua_content": "function event_say(e)\n\n\tif(e.message:findi(\"Hail\")) then\n\t\te.self:Say(\"Greetings, \" .. e.other:GetCleanName() .. \", Perhaps you've come to purchase some of my rare supplies? I have a special blend of eleven herbs and spices......oh wait.....I'm sold out of that......anyway. What can I do for you?\");\n\tend\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 12331,
+        "zone": "grobb",
+        "name": "Kragia",
+        "lua_content": "-- Converted to .lua by Speedz\n-- added saylink by robregen\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Mez got secretz!'  Kragia's eyes glint with menace.  'Mez bet yoo wantz to know my [\" .. eq.say_link(\"secretz\",false,\"secretz\") .. \"]!\");\n\telseif(e.message:findi(\"secretz\")) then\n\t\te.self:Say(\"The Dark Stranger!  He show me how to make some...' Kragia cackles. '...some fingz for hurti and bashin!'  Kragia grins. and brandishes a long sword that crackles with an energy of its own.  'Yoo need to [work] dem weaponz. and den [\" .. eq.say_link(\"finish\",false,\"finish\") .. \"] dem!\");\n\telseif(e.message:findi(\"work\")) then\n\t\te.self:Say(\"Trollz. we'z always gud at recycling scrap!  Take your [\" .. eq.say_link(\"old weapon\",false,\"old weapon\") .. \"] and den use a smithy hammer to bash in two sheetz of dem magic [\" .. eq.say_link(\"acrylia ore\",false,\"acrylia ore\") .. \"]. wiv a special [\" .. eq.say_link(\"mold\",false,\"mold\") .. \"]!  Yooz have to use da special Grobb forge.\");\n\telseif(e.message:findi(\"acrylia ore\")) then\n\t\te.self:Say(\"He show me some real gud metal. he sayz it come from far away.  It look funny to me!  He tellz me dat a block of it. and a smithy hammer and water. can make dem sheet.  Den. wiv dat sheet. yoo use yer hammer again but wiv [\" .. eq.say_link(\"magical temper\",false,\"magical temper\") .. \"] dis time.\");\n\telseif(e.message:findi(\"mold\")) then\n\t\te.self:Say(\"Each of dem weaponz needs a special mold.  Yooz try a Short Blade. Curved Blade. Thin Blade. Dagger Blade. Long Blade. Mace Head. Hammer Head or Large Kite Shield mold.  Da stickz need an Oak Shaft. and da Orb needz some Oakmoss!\");\n\telseif(e.message:findi(\"magical temper\")) then\n\t\te.self:Say(\"Dis is some magical stuffz!'  Kragia's eyes dart about. 'Mez not know how yooz make it. mez just use what he give mez.'\");\n\telseif(e.message:findi(\"old weapon\")) then\n\t\te.self:Say(\"The Dark Stranger. he tellz me dat...' Kragia furrows his brow with concentration. 'Shortsword of the Ykesha. Runed Falchion. Electrum-Bladed Wakizashi. Obsidian Shard. Gigantic Zweihander. Enamelled Black Mace. Sharkbone Warhammer. Glowing Wooden Crook. Staff of the Observer. Crested Mistmoore Shield. Shimmering Orb - dem all good!\");\n\telseif(e.message:findi(\"finish\")) then\n\t\te.self:Say(\"Dis da fun bit!  In da special forge. yooz put in da worked weapon and use chisel and file. wiv some [\" .. eq.say_link(\"bile temper\",false,\"bile temper\") .. \"]!  Yooz make weaponz as gud as Kragia!'  Kragia leans over to you and whispers loudly. 'Yooz can also make dem magical wiv imbued shinystonez.  Dey really gud!\");\n\telseif(e.message:findi(\"bile temper\")) then\n\t\te.self:Say(\"Dis da special brew for trollz. wez alwayz use it!  Youz make da Special Brew from water. froglok tongue. cask and malt.  Den youz mix dat Special Brew wiv Swampy Veggies and dem Mushroomz from da swamp.\");\n\tend\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 12331,
+        "zone": "grobb",
+        "name": "Kragia",
+        "lua_content": "-- enabled: false\n-- P99 scope: exclusive later-era guide or Beastlord epic hook. Complete callbacks retained below.\n-- Converted to .lua by Speedz\n-- added saylink by robregen\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Mez got secretz!'  Kragia's eyes glint with menace.  'Mez bet yoo wantz to know my [\" .. eq.say_link(\"secretz\",false,\"secretz\") .. \"]!\");\n\telseif(e.message:findi(\"secretz\")) then\n\t\te.self:Say(\"The Dark Stranger!  He show me how to make some...' Kragia cackles. '...some fingz for hurti and bashin!'  Kragia grins. and brandishes a long sword that crackles with an energy of its own.  'Yoo need to [work] dem weaponz. and den [\" .. eq.say_link(\"finish\",false,\"finish\") .. \"] dem!\");\n\telseif(e.message:findi(\"work\")) then\n\t\te.self:Say(\"Trollz. we'z always gud at recycling scrap!  Take your [\" .. eq.say_link(\"old weapon\",false,\"old weapon\") .. \"] and den use a smithy hammer to bash in two sheetz of dem magic [\" .. eq.say_link(\"acrylia ore\",false,\"acrylia ore\") .. \"]. wiv a special [\" .. eq.say_link(\"mold\",false,\"mold\") .. \"]!  Yooz have to use da special Grobb forge.\");\n\telseif(e.message:findi(\"acrylia ore\")) then\n\t\te.self:Say(\"He show me some real gud metal. he sayz it come from far away.  It look funny to me!  He tellz me dat a block of it. and a smithy hammer and water. can make dem sheet.  Den. wiv dat sheet. yoo use yer hammer again but wiv [\" .. eq.say_link(\"magical temper\",false,\"magical temper\") .. \"] dis time.\");\n\telseif(e.message:findi(\"mold\")) then\n\t\te.self:Say(\"Each of dem weaponz needs a special mold.  Yooz try a Short Blade. Curved Blade. Thin Blade. Dagger Blade. Long Blade. Mace Head. Hammer Head or Large Kite Shield mold.  Da stickz need an Oak Shaft. and da Orb needz some Oakmoss!\");\n\telseif(e.message:findi(\"magical temper\")) then\n\t\te.self:Say(\"Dis is some magical stuffz!'  Kragia's eyes dart about. 'Mez not know how yooz make it. mez just use what he give mez.'\");\n\telseif(e.message:findi(\"old weapon\")) then\n\t\te.self:Say(\"The Dark Stranger. he tellz me dat...' Kragia furrows his brow with concentration. 'Shortsword of the Ykesha. Runed Falchion. Electrum-Bladed Wakizashi. Obsidian Shard. Gigantic Zweihander. Enamelled Black Mace. Sharkbone Warhammer. Glowing Wooden Crook. Staff of the Observer. Crested Mistmoore Shield. Shimmering Orb - dem all good!\");\n\telseif(e.message:findi(\"finish\")) then\n\t\te.self:Say(\"Dis da fun bit!  In da special forge. yooz put in da worked weapon and use chisel and file. wiv some [\" .. eq.say_link(\"bile temper\",false,\"bile temper\") .. \"]!  Yooz make weaponz as gud as Kragia!'  Kragia leans over to you and whispers loudly. 'Yooz can also make dem magical wiv imbued shinystonez.  Dey really gud!\");\n\telseif(e.message:findi(\"bile temper\")) then\n\t\te.self:Say(\"Dis da special brew for trollz. wez alwayz use it!  Youz make da Special Brew from water. froglok tongue. cask and malt.  Den youz mix dat Special Brew wiv Swampy Veggies and dem Mushroomz from da swamp.\");\n\tend\nend\n",
+        "has_say_event": 1,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 15692,
+        "zone": "emeraldjungle",
+        "name": "The_Spirit_of_Rage",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: emeraldjungle/The_Spirit_of_Rage.pl\n\nfunction event_death_complete(e)\n\te.self:Say(\"Omakin the Stalker looks at you with a kind expression. The large creature smiles at you and motions for you to move away. Perhaps it senses that you have more adventure ahead of you. Its form begins to loosen, as if it were a mirage produced by the jungle heat.\")\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 15692,
+        "zone": "emeraldjungle",
+        "name": "The_Spirit_of_Rage",
+        "lua_content": "-- enabled: false\n-- P99 scope: exclusive later-era guide or Beastlord epic hook. Complete callbacks retained below.\n-- Converted from ProjectEQ Perl quest script.\n-- Source: emeraldjungle/The_Spirit_of_Rage.pl\n\nfunction event_death_complete(e)\n\te.self:Say(\"Omakin the Stalker looks at you with a kind expression. The large creature smiles at you and motions for you to move away. Perhaps it senses that you have more adventure ahead of you. Its form begins to loosen, as if it were a mirage produced by the jungle heat.\")\nend\n",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 16152,
+        "zone": "permafrost",
+        "name": "The_Icebound_Spirit",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: permafrost/The_Icebound_Spirit.pl\n\nfunction event_death_complete(e)\n\te.self:Emote(\"Zehkes the Great Storm takes form before you. It growls and sniffs the air. The strange spirit appears to nod at you and then looks to the ground. The bear's form begins to lose shape, as its fur turns to snow and begins to blow away.\")\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 16152,
+        "zone": "permafrost",
+        "name": "The_Icebound_Spirit",
+        "lua_content": "-- enabled: false\n-- P99 scope: exclusive later-era guide or Beastlord epic hook. Complete callbacks retained below.\n-- Converted from ProjectEQ Perl quest script.\n-- Source: permafrost/The_Icebound_Spirit.pl\n\nfunction event_death_complete(e)\n\te.self:Emote(\"Zehkes the Great Storm takes form before you. It growls and sniffs the air. The strange spirit appears to nod at you and then looks to the ground. The bear's form begins to lose shape, as its fur turns to snow and begins to blow away.\")\nend\n",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 16018,
+        "zone": "emeraldjungle",
+        "name": "Scout_Vyrak",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: emeraldjungle/Scout_Vyrak.pl\n-- items: 9031, 9038, 9039\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"It is a pleasure to meet you. but I do not have time to speak.  I am waiting on official word from Shar Vahl.  If you have been sent to assist me. please show me the Official Seal of the Khati Sha at this time.  If you are not such a person. please carry on with your business and leave me to tend to mine.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 9031}) then\n\t\te.self:Say(\"Well met, \" .. e.other:GetName() .. \", well met indeed I find comfort in the fact that the jungle permitted your passage to me! Maybe there is still hope we can stop this disturbance before any more damage can be done to the balance of the spirit realm I have spent several weeks tracking the corrupted spirit. It seems to have made a home of the ruins just south of here. The spirit no longer resembles he entity that it once was. It is quickly becoming something foul and savage. Let us hope that you are not too late.\")\n\t\te.self:Say(\"Destroy the spirit's current form and you will be able to retrieve the implement which has befouled it. Once you gather that totem please return it to me and I will wrap it so that you may carry it in the case that you were given in Shar Vahl.\")\n\t\te.self:Emote(\"You hear a massive creature roar as if awakened from a deep sleep.\")\n\t\teq.spawn2(94126, 0, 0, 4162, 1443, -45, 0)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 9038}) then\n\t\te.self:Say(\"Excellent work, \" .. e.other:GetName() .. \"! Judging by the speed with which it altered that spirit, this totem must be extremely powerful. I've wrapped it, so you should be safe from its magic. Just be sure to keep it in the case. Once you have all of the totems, seal the case and make your way back to Shar Vahl. They will be waiting for you there. I'll continue to look for the person that perpetrated this vile act.\")\n\t\te.other:SummonItem(9031) -- Official Seal of the Khati Sha\n\t\te.other:SummonItem(9039) -- Wrapped Gorilla Totem\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 16018,
+        "zone": "emeraldjungle",
+        "name": "Scout_Vyrak",
+        "lua_content": "-- enabled: false\n-- P99 scope: exclusive later-era guide or Beastlord epic hook. Complete callbacks retained below.\n-- Converted from ProjectEQ Perl quest script.\n-- Source: emeraldjungle/Scout_Vyrak.pl\n-- items: 9031, 9038, 9039\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"It is a pleasure to meet you. but I do not have time to speak.  I am waiting on official word from Shar Vahl.  If you have been sent to assist me. please show me the Official Seal of the Khati Sha at this time.  If you are not such a person. please carry on with your business and leave me to tend to mine.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 9031}) then\n\t\te.self:Say(\"Well met, \" .. e.other:GetName() .. \", well met indeed I find comfort in the fact that the jungle permitted your passage to me! Maybe there is still hope we can stop this disturbance before any more damage can be done to the balance of the spirit realm I have spent several weeks tracking the corrupted spirit. It seems to have made a home of the ruins just south of here. The spirit no longer resembles he entity that it once was. It is quickly becoming something foul and savage. Let us hope that you are not too late.\")\n\t\te.self:Say(\"Destroy the spirit's current form and you will be able to retrieve the implement which has befouled it. Once you gather that totem please return it to me and I will wrap it so that you may carry it in the case that you were given in Shar Vahl.\")\n\t\te.self:Emote(\"You hear a massive creature roar as if awakened from a deep sleep.\")\n\t\teq.spawn2(94126, 0, 0, 4162, 1443, -45, 0)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 9038}) then\n\t\te.self:Say(\"Excellent work, \" .. e.other:GetName() .. \"! Judging by the speed with which it altered that spirit, this totem must be extremely powerful. I've wrapped it, so you should be safe from its magic. Just be sure to keep it in the case. Once you have all of the totems, seal the case and make your way back to Shar Vahl. They will be waiting for you there. I'll continue to look for the person that perpetrated this vile act.\")\n\t\te.other:SummonItem(9031) -- Official Seal of the Khati Sha\n\t\te.other:SummonItem(9039) -- Wrapped Gorilla Totem\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\n",
+        "has_say_event": 1,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 18286,
+        "zone": "permafrost",
+        "name": "Scout_Janomin",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: permafrost/Scout_Janomin.pl\n-- items: 9031, 9036, 9037\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"It is a comfort to meet you, \" .. e.other:GetName() .. \". I was afraid that you might not be able to track me with weather out there being what it is. I must admit that my fondness of the snow is at an all time low right now. The sooner you release the spirit that resides in here, the sooner we can make a way back to a warmer climate.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 9031}) then\n\t\te.self:Say(\"The spirit that you seek is deep within these halls. I tracked it into this lair more than a week ago. The spirit has taken up residence with the other bears in the lower chambers during that time. It should be relatively easy for your and your people to reach. Once you release the spirit, please return the totem to me. I will prepare it for the journey to Shar Vahl. May stealth and good fortune move with you.\")\n\t\teq.zone_emote(0, \"A large creature growls from deep within its icy lair.\")\n\t\teq.unique_spawn(73107, 0, 0, -275, 700, -38, 0) -- The Icebound Spirit\n\t\te.other:SummonItem(9031) -- Official Seal of the Khati Sha\n\telseif item_lib.check_turn_in(e.trade, {item1 = 9036}) then\n\t\te.self:Say(\"Perfect work, \" .. e.other:GetName() .. \"! I am glad the Elders made such a wise choice in sending you. I must admit, I was rather scared during the exploration of these halls. This lair is quite foul, quite foul indeed! Take this wrapped totem and place it in the case that you were given. Once you have all of the totems, seal the case and make your way back to Shar Vahl. I work my way back as well. Thank you again.\")\n\t\te.other:SummonItem(9037) -- Wrapped Ice Bear Totem\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 18286,
+        "zone": "permafrost",
+        "name": "Scout_Janomin",
+        "lua_content": "-- enabled: false\n-- P99 scope: exclusive later-era guide or Beastlord epic hook. Complete callbacks retained below.\n-- Converted from ProjectEQ Perl quest script.\n-- Source: permafrost/Scout_Janomin.pl\n-- items: 9031, 9036, 9037\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"It is a comfort to meet you, \" .. e.other:GetName() .. \". I was afraid that you might not be able to track me with weather out there being what it is. I must admit that my fondness of the snow is at an all time low right now. The sooner you release the spirit that resides in here, the sooner we can make a way back to a warmer climate.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 9031}) then\n\t\te.self:Say(\"The spirit that you seek is deep within these halls. I tracked it into this lair more than a week ago. The spirit has taken up residence with the other bears in the lower chambers during that time. It should be relatively easy for your and your people to reach. Once you release the spirit, please return the totem to me. I will prepare it for the journey to Shar Vahl. May stealth and good fortune move with you.\")\n\t\teq.zone_emote(0, \"A large creature growls from deep within its icy lair.\")\n\t\teq.unique_spawn(73107, 0, 0, -275, 700, -38, 0) -- The Icebound Spirit\n\t\te.other:SummonItem(9031) -- Official Seal of the Khati Sha\n\telseif item_lib.check_turn_in(e.trade, {item1 = 9036}) then\n\t\te.self:Say(\"Perfect work, \" .. e.other:GetName() .. \"! I am glad the Elders made such a wise choice in sending you. I must admit, I was rather scared during the exploration of these halls. This lair is quite foul, quite foul indeed! Take this wrapped totem and place it in the case that you were given. Once you have all of the totems, seal the case and make your way back to Shar Vahl. I work my way back as well. Thank you again.\")\n\t\te.other:SummonItem(9037) -- Wrapped Ice Bear Totem\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\n",
+        "has_say_event": 1,
+        "enabled": 0
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/lfaydark/Grynnaf_Einoom.lua",
+      "beforeSha256": "a61dfc26057b3df8600cacdbf561f7a8248b2d05f33ba7053bcd0d3517e30baa",
+      "proposedFile": "changes/p99-support-dialogue-fixes/lfaydark--Grynnaf_Einoom.lua",
+      "afterSha256": "1328f8fe3010f9c40512937b3f6c4293f9bba9285f07bea9ac18926ebca88e06"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/cabwest/Jaxxtz.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-dialogue-fixes/cabwest--Jaxxtz.lua",
+      "afterSha256": "1cc9f089cabc48bbe8fa0e03d1de2956c01e7613f05a0a8f16ee585ae8c6f015"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/grobb/Kragia.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-dialogue-fixes/grobb--Kragia.lua",
+      "afterSha256": "7cc52f5530d7b014108ab68c94deeecc0800d9eaba90ca8a2ad1d1531eeadbce"
+    },
+    {
+      "target": "maintained/lua/converted-perl/emeraldjungle/The_Spirit_of_Rage.lua",
+      "beforeSha256": "277f8a7bfd4f34e3a5acad62ad0cf740f35e30d80992658c9c6d89a215b61c1a",
+      "proposedFile": "changes/p99-support-dialogue-fixes/emeraldjungle--The_Spirit_of_Rage.lua",
+      "afterSha256": "d587348ea709da8f59c9cf1a1a044a77a3cbb82b80b080ce8f36056eed328148"
+    },
+    {
+      "target": "maintained/lua/converted-perl/permafrost/The_Icebound_Spirit.lua",
+      "beforeSha256": "827140a9850d9341b9ed4ea61bacff5621cad2c63a07b1652d25597897db87c7",
+      "proposedFile": "changes/p99-support-dialogue-fixes/permafrost--The_Icebound_Spirit.lua",
+      "afterSha256": "3edcc11eaf362cc35f0dcfe60916a0d227c26cc485812877f0904f2b3a0565a7"
+    },
+    {
+      "target": "maintained/lua/converted-perl/emeraldjungle/Scout_Vyrak.lua",
+      "beforeSha256": "0cfd4edfe284043d99e494f028371262e4863093aa85625ea0fe126c4b73e204",
+      "proposedFile": "changes/p99-support-dialogue-fixes/emeraldjungle--Scout_Vyrak.lua",
+      "afterSha256": "8a1ae3367d66bb39d95811f86f63340250636e27fc20fa719a87da47ecc2f25b"
+    },
+    {
+      "target": "maintained/lua/converted-perl/permafrost/Scout_Janomin.lua",
+      "beforeSha256": "b14a4dddd8aeb88af480ee040d2cc2aead28ae47c5e4e98831e39f3b0dda3974",
+      "proposedFile": "changes/p99-support-dialogue-fixes/permafrost--Scout_Janomin.lua",
+      "afterSha256": "233a04773ea5fa5241112695e1ae4ef42bc4fe7f0a5085be5b1b1b9f4fe1e9fc"
+    }
+  ]
+}

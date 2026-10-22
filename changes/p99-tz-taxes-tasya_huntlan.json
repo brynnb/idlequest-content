@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-taxes-tasya_huntlan",
+  "summary": "Remove only tax_collection prerequisites: P99 expressly permits collecting without first speaking to Vicus and bypassing Mira. Preserve all original item/faction effects and unrelated quest branches. Flynn also accepts documented your-feet phrase and uses documented Shout; no numeric values invented.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Taxes?action=raw",
+      "note": "Cached 2026-07-17T23:34:37.004Z; revision unavailable; SHA256 6fc59af937f3b2dfa4313beac8b349112c500bdbff0c89109de222dc34860c9b. Remove only tax_collection prerequisites: P99 expressly permits collecting without first speaking to Vicus and bypassing Mira. Preserve all original item/faction effects and unrelated quest branches. Flynn also accepts documented your-feet phrase and uses documented Shout; no numeric values invented. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 17328,
+        "zone": "qeynos",
+        "name": "Tasya_Huntlan",
+        "lua_content": "-- items: 13176\nfunction event_say(e)\n\n\tlocal qglobals = eq.get_qglobals(e.other);\n\t\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(string.format(\"Hail, %s!  Are you just visiting Qeynos?  We have plenty of rooms available or, if your throat is parched, you can always visit Earron in our pub.\",e.other:GetName()));\n\telseif(e.message:findi(\"tax collection\") and qglobals.tax_collection ~= nil) then\n\t\te.self:Say(\"Taxes? Oh, that time again huh? Here you are. Give Vicus our best. I hear he is under the weather.\");\n\t\te.other:SummonItem(13176); -- Item: Huntlan's Tax Payment\n\t\te.other:Faction(291,-10,0); -- Faction: Merchants of Qeynos\n\tend\n\t\nend\n\nfunction event_signal(e)\n\n\tif(e.signal == 2) then\n\t\te.self:Say(\"Yes.  He is staying here at the Lion's Mane Inn, but it is against regulations to give out room numbers.  I can tell you that he loves to see the sun rise over the ocean.\");\n\tend\n\t\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 17328,
+        "zone": "qeynos",
+        "name": "Tasya_Huntlan",
+        "lua_content": "-- items: 13176\nfunction event_say(e)\n\n\tlocal qglobals = eq.get_qglobals(e.other);\n\t\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(string.format(\"Hail, %s!  Are you just visiting Qeynos?  We have plenty of rooms available or, if your throat is parched, you can always visit Earron in our pub.\",e.other:GetName()));\n\telseif(e.message:findi(\"tax collection\") ) then\n\t\te.self:Say(\"Taxes? Oh, that time again huh? Here you are. Give Vicus our best. I hear he is under the weather.\");\n\t\te.other:SummonItem(13176); -- Item: Huntlan's Tax Payment\n\t\te.other:Faction(291,-10,0); -- Faction: Merchants of Qeynos\n\tend\n\t\nend\n\nfunction event_signal(e)\n\n\tif(e.signal == 2) then\n\t\te.self:Say(\"Yes.  He is staying here at the Lion's Mane Inn, but it is against regulations to give out room numbers.  I can tell you that he loves to see the sun rise over the ocean.\");\n\tend\n\t\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/qeynos/Tasya_Huntlan.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-tz-taxes-tasya_huntlan/qeynos--Tasya_Huntlan.lua",
+      "afterSha256": "31f5ed2396480df004893c94fd1481093bc5c880d26f97ef0b39306e67ba5b95"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "titles": [
+    "Recharge Prayer Beads"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "partial",
+  "match_status": "partial",
+  "local_quest_keys": [
+    "qeynos2/Tyokan_Mekase"
+  ],
+  "proposal": "changes/p99-nz-prayer-beads-dialogue.json",
+  "notes": [
+    "Restore the Prayer Beads price hint and completion dialogue without consuming incomplete offers.",
+    "P99 says used beads alone prompt 100 gold donation. Preserve safe single-trade bead+100gold requirement rather than introducing unsupported multiquest persistence. Inspect trade item userdata GetID without CheckHandin or SummonItem; existing return_items returns original beads and currency. Runtime payload evidence reference/server/internal/quest/lua_bridge.go setupTradeTable and real items.lua test. Item13296 PrayerBeads exported maxcharges2/clickeffect12. Full transaction charge preservation not live-tested; only isolated contract. Existing faction bypass behavior and scroll strongbox branch unchanged."
+  ],
+  "verification": {
+    "source": "Cached P99 and effective Lua reviewed; exact complete row preimages and source hashes recorded.",
+    "syntax": "pending",
+    "runtime": "Isolated mock regression pending; full game runtime unavailable.",
+    "ui": "not_run",
+    "connected_chain": "not_run"
+  },
+  "unresolved": [
+    "Ordinary source drops/spawns, recipe live behavior and rendered complete quest path not verified."
+  ]
+}

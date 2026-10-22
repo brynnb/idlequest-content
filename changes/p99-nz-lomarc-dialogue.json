@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-nz-lomarc-dialogue",
+  "summary": "Make documented I will meet Lomarc reach payment issuance before generic Lomarc lore.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Package_from_Lomarc?action=raw",
+      "note": "Cached 2026-07-17T23:27:52.894Z; revision unavailable; SHA256 942c1cad476b6e18c98ac853b993a7908c23d227f51ec86af0b2f9b9411741a9. Previous generic lomarc substring intercepted exact documented acceptance; reordered existing branches, preserving Mermaid prompt and Rogue Epic Stanos dialogue.18793payment->Lomarc attack and13716doll->Renux standing directions match. Night spawn/Den placeholder/drop acquisition and ambient Hanns dialogue remain unverified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 12376,
+        "zone": "qeynos2",
+        "name": "Renux_Herkanor",
+        "lua_content": "-- Source: qeynos2/Renux_Herkanor.lua\n-- P99 audit: Package from Lomarc\n-- items: 18793, 13716\n\nfunction event_say(e)\n\t-- P99 Rogue Epic Quest side conversation; preserve her separate package quest.\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"You need something, or are you just browsing?\")\n\telseif e.message:findi(\"stanos\") then\n\t\te.self:Say(\"What? (she looks shaken) I see it is time to make my choices. Forget you mentioned that name, \" .. e.other:GetName() .. \". Leave me.\")\n\telseif e.message:findi(\"lomarc\") then\n\t\te.self:Say(\"Lomarc? He's a small time smuggler who runs from here to Odus. He got sloppy this last run, and now the guards are onto him. We need to have someone [meet him behind the Mermaid's Lure] tonight to pick up a package.\")\n\telseif e.message:findi(\"meet him behind the mermaid\") or e.message:findi(\"meet lomarc\") then\n\t\te.self:Say(\"Hmm, you think you can handle it? Eh, Lomarc is nothing but a two-bit smuggler anyways. Take this payment to him for the package, and don't let him give you any grief. Got it?\")\n\t\te.other:SummonItem(18793) -- Lomarc's Payment\n\telseif e.message:findi(\"mermaid\") then\n\t\te.self:Say(\"The Mermaid's Lure is down by the Qeynos docks. Lomarc is laying low behind it tonight.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\n\tif item_lib.check_turn_in(e.trade, {item1 = 13716}) then\n\t\te.self:Say(\"Yes, I see you aim to please. I hope you gave Lomarc the payment that he deserved? Heh, that punk had no idea of the value of this shipment. The emerald inside this doll will fetch a pretty penny from those greedy merchants.\")\n\t\te.other:Ding()\n\t\te.other:Faction(223, 10, 0) -- Circle of Unseen Hands\n\t\te.other:Faction(291, -10, 0) -- Merchants of Qeynos\n\t\te.other:Faction(230, 10, 0) -- Corrupt Qeynos Guards\n\t\te.other:Faction(262, -10, 0) -- Guards of Qeynos\n\t\te.other:Faction(273, 10, 0) -- Kane Bayle\n\t\te.other:AddEXP(500)\n\tend\n\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\nfunction event_waypoint_arrive(e)\n\tif e.wp == 3 then\n\t\te.self:Say(\"When is Lomarc getting back from Odus? He was supposed to be back three nights ago. Have you heard anything?\")\n\t\teq.signal(2074, 3) -- Hanns Krieghor\n\telseif e.wp == 4 then\n\t\te.self:Say(\"Hanns, you are not going to want to hear this, but one of our boys in Donovan's gang swears he saw Stanos in the Karanas a week ago. And we still haven't cornered Malka Rale.\")\n\t\teq.signal(2074, 4) -- Hanns Krieghor\n\tend\nend\n\nfunction event_signal(e)\n\tif e.signal == 1 then\n\t\te.self:Say(\"Ok, I'll send someone out to meet [Lomarc] behind the [Mermaid's Lure] tonight.\")\n\telseif e.signal == 2 then\n\t\te.self:Say(\"Very well, Father is as good as dead. Did I ever mention that I really hate family reunions? <chuckle>. I am gone!\")\n\tend\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 12376,
+        "zone": "qeynos2",
+        "name": "Renux_Herkanor",
+        "lua_content": "-- Source: qeynos2/Renux_Herkanor.lua\n-- P99 audit: Package from Lomarc\n-- items: 18793, 13716\n\nfunction event_say(e)\n\t-- P99 Rogue Epic Quest side conversation; preserve her separate package quest.\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"You need something, or are you just browsing?\")\n\telseif e.message:findi(\"stanos\") then\n\t\te.self:Say(\"What? (she looks shaken) I see it is time to make my choices. Forget you mentioned that name, \" .. e.other:GetName() .. \". Leave me.\")\n\telseif e.message:findi(\"meet him behind the mermaid\") or e.message:findi(\"meet lomarc\") then\n\t\te.self:Say(\"Hmm, you think you can handle it? Eh, Lomarc is nothing but a two-bit smuggler anyways. Take this payment to him for the package, and don't let him give you any grief. Got it?\")\n\t\te.other:SummonItem(18793) -- Lomarc's Payment\n\telseif e.message:findi(\"lomarc\") then\n\t\te.self:Say(\"Lomarc? He's a small time smuggler who runs from here to Odus. He got sloppy this last run, and now the guards are onto him. We need to have someone [meet him behind the Mermaid's Lure] tonight to pick up a package.\")\n\telseif e.message:findi(\"mermaid\") then\n\t\te.self:Say(\"The Mermaid's Lure is down by the Qeynos docks. Lomarc is laying low behind it tonight.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\n\tif item_lib.check_turn_in(e.trade, {item1 = 13716}) then\n\t\te.self:Say(\"Yes, I see you aim to please. I hope you gave Lomarc the payment that he deserved? Heh, that punk had no idea of the value of this shipment. The emerald inside this doll will fetch a pretty penny from those greedy merchants.\")\n\t\te.other:Ding()\n\t\te.other:Faction(223, 10, 0) -- Circle of Unseen Hands\n\t\te.other:Faction(291, -10, 0) -- Merchants of Qeynos\n\t\te.other:Faction(230, 10, 0) -- Corrupt Qeynos Guards\n\t\te.other:Faction(262, -10, 0) -- Guards of Qeynos\n\t\te.other:Faction(273, 10, 0) -- Kane Bayle\n\t\te.other:AddEXP(500)\n\tend\n\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\nfunction event_waypoint_arrive(e)\n\tif e.wp == 3 then\n\t\te.self:Say(\"When is Lomarc getting back from Odus? He was supposed to be back three nights ago. Have you heard anything?\")\n\t\teq.signal(2074, 3) -- Hanns Krieghor\n\telseif e.wp == 4 then\n\t\te.self:Say(\"Hanns, you are not going to want to hear this, but one of our boys in Donovan's gang swears he saw Stanos in the Karanas a week ago. And we still haven't cornered Malka Rale.\")\n\t\teq.signal(2074, 4) -- Hanns Krieghor\n\tend\nend\n\nfunction event_signal(e)\n\tif e.signal == 1 then\n\t\te.self:Say(\"Ok, I'll send someone out to meet [Lomarc] behind the [Mermaid's Lure] tonight.\")\n\telseif e.signal == 2 then\n\t\te.self:Say(\"Very well, Father is as good as dead. Did I ever mention that I really hate family reunions? <chuckle>. I am gone!\")\n\tend\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/qeynos2/Renux_Herkanor.lua",
+      "beforeSha256": "6924d432515704f9a88851ff087d33965b7620b6dbe546ab7f7f69594c4a36eb",
+      "proposedFile": "changes/p99-nz-lomarc-dialogue/qeynos2--Renux_Herkanor.lua",
+      "afterSha256": "858e880b887b84cf2da4d58af05493e14e7c37db1b76be3ca6bf27824a354368"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "status": "diagnostic_complete_with_central_coverage_registration_failure",
+  "completedAt": "2026-10-22T08:23:15.669391+00:00",
+  "inputSetSha256": "e3dd9b579b780baab6b6e0e5870464d430bdfae3d16e39562f9e22ffc02b729b",
+  "preparedInputSetSha256": "542dee6234d7a6f76a77b9987e91904ba6202eb9b5144f84958a98bdd2282d1a",
+  "postPreparationDrift": [
+    {
+      "file": "changes/p99-armor-review/runtime-receipt.json",
+      "before": "7df55525abe5d097f8cc7f1242118fef08ba7289a41d263c7cad745d9eb628f0",
+      "after": "8b2cdd0b7071cfef5a89dd68eea02202ca11c4fce4b644ed8ceca41b903433fc"
+    }
+  ],
+  "rows": 896,
+  "sources": 817,
+  "proposedLuaSources": 816,
+  "npm": {
+    "passed": 87,
+    "failed": 1,
+    "skipped": 1
+  },
+  "mainBehavior": {
+    "kind": "isolated-script-behavior-not-game-runtime",
+    "completedAt": "2026-10-22T08:13:35.962Z",
+    "scenarios": 2513,
+    "baselineReproductions": 95,
+    "baselineVerifications": 264,
+    "proposedSourceScenarios": 2154
+  },
+  "failure": "Bidils has 17 passing component cases but was absent from the central manifest registry. Central proposed-source guard correctly failed. A later snapshot includes its explicit registration.",
+  "actualCombinedCLI": "passed 896 rows and 817 sources",
+  "baseline": "passed 36496 files and 53 tables",
+  "armor": {
+    "evidence": "passed",
+    "isolatedCases": 368
+  },
+  "paladin": {
+    "isolatedCases": 45,
+    "recipeChecks": "passed"
+  },
+  "compile": {
+    "checked": 8885,
+    "passed": 8884,
+    "failed": 1,
+    "allProposedPassed": true,
+    "exception": "Unchanged disabled baseline Perl utility effective/quests/utility/comments-helper-generator.lua"
+  },
+  "references": {
+    "checked": 5905,
+    "missingCount": 33,
+    "retainedDisabledHistoricalOccurrences": 33,
+    "affectedSourceKeys": 8,
+    "newOrActiveUnresolved": 0
+  },
+  "limits": [
+    "Diagnostic, not final-set certification.",
+    "Isolated pinned-VM mocks do not prove live settlement, world activation, crafting, pickup, persistence or UI.",
+    "No raw private evidence included."
+  ]
+}

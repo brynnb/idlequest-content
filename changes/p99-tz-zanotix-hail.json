@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-zanotix-hail",
+  "summary": "Restore documented missing hail response only, preserving blood spawning and optional75platinum payment.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/The_Visiting_Priestess?action=raw",
+      "note": "Cached 2026-07-17T23:38:51.949Z; revision unavailable; SHA256 afb57799ad1e5aa37e4a4b19e08bac0fb4cf15bb8cff5b6cbd0d4021776a98d2. Restore documented missing hail response only, preserving blood spawning and optional75platinum payment. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 14605,
+        "zone": "neriakb",
+        "name": "Zanotix_Ixtaz",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: neriakb/Zanotix_Ixtaz.pl\n-- items: 1890\n\nfunction event_say(e)\n\tif e.message:findi(\"what indigo sabres\") then\n\t\te.self:Say(\"Indigo sabres are the weapons of choice for true swordsmen. They are constructed of the finest adamantite and can only be crafted in our unique Teir'Dal forge. In order to successfully craft an indigo sabre. you will require a curved blade mold. Neriak nectar. a folded sheet of adamantite. and a mold for the hilt and pommel. If you are a faithful follower of our Lord of Hate then you may be interested in crafting an imbued indigo sabre. You will need to temper the sword with shadow temper instead of Neriak nectar. and will have to forge a sapphire that has been imbued by a cleric into the sword at the time of its creation.\")\n\telseif e.message:findi(\"blue flame\") then\n\t\te.self:Emote(\"gazes at you for many breaths, studying your eyes before looking back at his forge and saying, 'The Blue Flame. This is what allows us to forge our ancestral armor and weapons of adamantite. That and my unmatched skill that is. Many souls were [ritually] sacrificed to spark the flame that now feeds off the constant flow of hatred and envy of the victims . Some call it the Flame of Vengence.' Zanotix stares into the flames, poking at it absently.\")\n\telseif e.message:findi(\"ritual\") then\n\t\te.self:Say(\"The Ritual? Well I was young when it took place. I don't really remember. I've had so much on my mind lately, what with all these new taxes. For instance, I need to come up with an extra 75 pieces of platinum just to cover the forge tax. I don't know what I'm going to do.....*cough*.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {platinum = 75}) then\n\t\te.self:Emote(\"quickly pockets the coins and says, 'Go see the Librarian, Nallar. Tell him Denouncer Ixtaz sent you. Do not return here for at least 3 days, now go, \" .. e.other:Race() .. \".\")\n\t\te.other:AddEXP(26555)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 1890}) then\n\t\te.self:Emote(\"accepts the vial and looks you over, eyebrow raised. He says, 'Well, a sacrifice to feed my forge. You have done Neriak a great service, Citizen \" .. e.other:GetName() .. \". I shall burn it now.' He then holds the vial up the the flames, the blood seems to glow brightly as he stares into it. Then suddenly, with the shout of an arcane phrase, he throws the vial violently into the flame. The force shatters the vial, spilling the blood about the flames. Almost immediately the flames flare up to the ceiling. When they die down a presence is felt within the flames.\")\n\t\teq.spawn2(41106, 0, 0, -867, 70, -35, 0)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 14605,
+        "zone": "neriakb",
+        "name": "Zanotix_Ixtaz",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: neriakb/Zanotix_Ixtaz.pl\n-- items: 1890\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"I, Zanotix Ixtaz, am the greatest weaponsmith in all of Neriak. Have you disturbed me to purchase one of my superior products or have you come to learn the art of crafting [indigo sabres]?\")\n\telseif e.message:findi(\"what indigo sabres\") then\n\t\te.self:Say(\"Indigo sabres are the weapons of choice for true swordsmen. They are constructed of the finest adamantite and can only be crafted in our unique Teir'Dal forge. In order to successfully craft an indigo sabre. you will require a curved blade mold. Neriak nectar. a folded sheet of adamantite. and a mold for the hilt and pommel. If you are a faithful follower of our Lord of Hate then you may be interested in crafting an imbued indigo sabre. You will need to temper the sword with shadow temper instead of Neriak nectar. and will have to forge a sapphire that has been imbued by a cleric into the sword at the time of its creation.\")\n\telseif e.message:findi(\"blue flame\") then\n\t\te.self:Emote(\"gazes at you for many breaths, studying your eyes before looking back at his forge and saying, 'The Blue Flame. This is what allows us to forge our ancestral armor and weapons of adamantite. That and my unmatched skill that is. Many souls were [ritually] sacrificed to spark the flame that now feeds off the constant flow of hatred and envy of the victims . Some call it the Flame of Vengence.' Zanotix stares into the flames, poking at it absently.\")\n\telseif e.message:findi(\"ritual\") then\n\t\te.self:Say(\"The Ritual? Well I was young when it took place. I don't really remember. I've had so much on my mind lately, what with all these new taxes. For instance, I need to come up with an extra 75 pieces of platinum just to cover the forge tax. I don't know what I'm going to do.....*cough*.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {platinum = 75}) then\n\t\te.self:Emote(\"quickly pockets the coins and says, 'Go see the Librarian, Nallar. Tell him Denouncer Ixtaz sent you. Do not return here for at least 3 days, now go, \" .. e.other:Race() .. \".\")\n\t\te.other:AddEXP(26555)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 1890}) then\n\t\te.self:Emote(\"accepts the vial and looks you over, eyebrow raised. He says, 'Well, a sacrifice to feed my forge. You have done Neriak a great service, Citizen \" .. e.other:GetName() .. \". I shall burn it now.' He then holds the vial up the the flames, the blood seems to glow brightly as he stares into it. Then suddenly, with the shout of an arcane phrase, he throws the vial violently into the flame. The force shatters the vial, spilling the blood about the flames. Almost immediately the flames flare up to the ceiling. When they die down a presence is felt within the flames.\")\n\t\teq.spawn2(41106, 0, 0, -867, 70, -35, 0)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/neriakb/Zanotix_Ixtaz.lua",
+      "beforeSha256": "815f0d14f9a0f82ab2ae7e77c3c878dabe264a6ec349d3dc331f693343e0d492",
+      "proposedFile": "changes/p99-tz-zanotix-hail/neriakb--Zanotix_Ixtaz.lua",
+      "afterSha256": "7be786d7c77fd57d2ae30b0f69d8da2f0a6316acbaf0239def9aa5cf436d9a53"
+    }
+  ]
+}

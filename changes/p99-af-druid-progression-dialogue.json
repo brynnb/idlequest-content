@@ -1,0 +1,120 @@
+{
+  "format": 1,
+  "id": "p99-af-druid-progression-dialogue",
+  "summary": "Restore exact documented progression instructions for Alrik, Foloal and both Ella aliases; preserve all shared Ranger/Druid item protocols and existing adaptations.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Druid_Epic_Quest?action=raw",
+      "note": "Cached reference/p99-wiki/raw-pages/druid-epic-quest-5c6300a3aa.wiki SHA256 2db1c51e34386f54d5e8d0c0f0f27518c4239872d7f7e5379f0a3ce709b6eb28."
+    },
+    {
+      "url": "https://wiki.project1999.com/Ranger_Epic_Quest?action=raw",
+      "note": "Ranger exact prompt alias ancient type of bowl; cached SHA256 bcbcf1b4d66a648a696eaaf1f4d114a5ab3201f2d7b1908987a903b56b1fc821. Existing ancient bowl and artifacts paths preserved."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 17309,
+        "zone": "timorous",
+        "name": "Alrik_Farsight",
+        "lua_content": "-- Source: timorous/Alrik_Farsight.pl\n-- Ranger Epic 1.0: Alrik Farsight gives Ancient Pattern.\n-- Converted from ProjectEQ Perl quest script.\n-- items: 20457, 20474, 18960\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Ah. Hello there, adventurer. Come to search for ancient artifacts with Fizzlebik and myself?\")\n\telseif e.message:findi(\"ancient bowl\") then\n\t\te.self:Say(\"If you helped me out on a chore I have, I'd be happy to give it to you.\")\n\telseif e.message:findi(\"take the artifact\") then\n\t\te.self:Say(\"Hah! Okay, then. Here take this to Farios Elianos in Felwithe.\")\n\t\te.other:SummonItem(20457) -- Crushed Pot\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 20474}) then\n\t\te.self:Emote(\"grins happily.\")\n\t\te.other:SummonItem(18960) -- Ancient Pattern\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 17309,
+        "zone": "timorous",
+        "name": "Alrik_Farsight",
+        "lua_content": "-- Source: timorous/Alrik_Farsight.pl\n-- Ranger Epic 1.0: Alrik Farsight gives Ancient Pattern.\n-- Converted from ProjectEQ Perl quest script.\n-- items: 20457, 20474, 18960\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Ah. Hello there, adventurer. Come to search for ancient artifacts with Fizzlebik and myself?\")\n\telseif e.message:findi(\"artifacts\") then\n\t\te.self:Say(\"Oh. All types of things. This area is great. So many artifacts and remains of things all over. It's starting to fall into the pattern of things.\")\n\telseif e.message:findi(\"ancient bowl\") or e.message:findi(\"ancient type of bowl\") then\n\t\te.self:Emote(\"rummages through his tattered bag and throws aside a towel. 'Too many towels. Oh well, someone told me they were good to have once. Here it is, a bowl pattern. Interesting bowl. Looks almost like a magical bowl but I'm no potter. You need it, you say? Well, it is interesting. Part of my research here is for the wizard guild in Felwithe. I'm sure they'd put a high price on this one, the enchanters guild being so interested in trading for magical paraphernalia and all. Of course if you helped me out on a chore I have, I'd be happy to give it to you. I need to deliver an artifact to the guild and I'd much rather stay here exploring. If you wish, you can take the artifact and return with the receipt and I'll give you the pattern.'\")\n\telseif e.message:findi(\"take the artifact\") then\n\t\te.self:Say(\"Hah! Okay, then. Here take this to Farios Elianos in Felwithe. He will give you the receipt.\")\n\t\te.other:SummonItem(20457) -- Crushed Pot\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 20474}) then\n\t\te.self:Emote(\"grins happily.\")\n\t\te.other:SummonItem(18960) -- Ancient Pattern\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 19759,
+        "zone": "firiona",
+        "name": "Foloal_Stormforest",
+        "lua_content": "-- Source: firiona/Foloal_Stormforest.pl\n-- Ranger Epic 1.0: Foloal combines the stones.\n-- Converted from ProjectEQ Perl quest script.\n-- items: 20462, 20461, 20468\n\nfunction event_say(e)\n\tif e.message:findi(\"are you one such as myself\") then\n\t\te.self:Emote(\"stares at you and whispers.\")\n\telseif e.message:findi(\"venril sathir\") then\n\t\te.self:Say(\"Find him and remove him from the face of this earth. Bring me the half of the stone I know you have and whatever conduit of power you find on his rotting corpse.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 20462, item2 = 20461}) then\n\t\te.self:Emote(\"carefully takes the stones from you.\")\n\t\te.other:SummonItem(20468) -- Warmly Glowing Stone\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 19759,
+        "zone": "firiona",
+        "name": "Foloal_Stormforest",
+        "lua_content": "-- Source: firiona/Foloal_Stormforest.pl\n-- Ranger Epic 1.0: Foloal combines the stones.\n-- Converted from ProjectEQ Perl quest script.\n-- items: 20462, 20461, 20468\n\nfunction event_say(e)\n\tif e.message:findi(\"are you one such as myself\") then\n\t\te.self:Emote(\"stares at you and whispers. 'You must be the one that has been spoken of. Yes, yes I am one of the circle. There are many of us in the lands right now, all seeking answers to the ills that have befallen our homes.'\")\n\telseif e.message:findi(\"answers\") then\n\t\te.self:Say(\"I have heard whispers of new Iksar movements in the land. The name of Venril Sathir is on the scaled lips and sharp tongues of every cold blooded lizard in this place.\")\n\telseif e.message:findi(\"venril sathir\") then\n\t\te.self:Say(\"All I've heard are whispers of connections between the undead lizards and the dark god of hate. There's some kind of history behind the two. It might be that Venril is the main focus of Innoruuk's will in the land. Then again, maybe not, but this is the best we've gotten so far. If you think you can do it, then find him and remove him from the face of this earth. Bring me the half of the stone I know you have and whatever conduit of power you find on his rotting corpse.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 20462, item2 = 20461}) then\n\t\te.self:Emote(\"blinks and carefully takes the stones from you, cautiously scratching the jagged green stone against the other. Its skin seems to shiver and flake at the contact and eventually begins to shine brightly. 'With the gem nature's balance is complete. Take the stone and walk your path. Blade or lightning caller, burning sword or the mother's walk.'\")\n\t\te.other:SummonItem(20468) -- Warmly Glowing Stone\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 13199,
+        "zone": "misty",
+        "name": "Ella_Foodcrafter",
+        "lua_content": "-- Source: misty/Ella_Foodcrafter.pl\n-- Ranger Epic 1.0: Ella Foodcrafter handles bowl, stone, and scimitar hand-ins.\n-- Converted from ProjectEQ Perl quest script.\n-- items: 18959, 17860, 20473, 20460, 20462, 20468, 20440\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Hi, hi. I've got a lot to do.\")\n\telseif e.message:findi(\"two tasks\") then\n\t\te.self:Say(\"First, I need a mixture. When ya do find how to make it ya can mix it in that bowl.\")\n\t\te.other:SummonItem(17860) -- Shiny Tin Bowl\n\telseif e.message:findi(\"second task\") then\n\t\te.self:Say(\"Second, I need a special type of bowl. Seek this knowledge and these items out in the lands.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 18959}) then\n\t\te.self:Say(\"I've been waiting for someone to bring me this. I have two tasks for ya.\")\n\telseif item_lib.check_turn_in(e.trade, {item1 = 20473, item2 = 20460}) then\n\t\te.self:Emote(\"smiles slowly as she works the mixture in the bowl and it starts to shine with power.\")\n\t\te.other:SummonItem(20462) -- Softly Glowing Stone\n\telseif item_lib.check_turn_in(e.trade, {item1 = 20468}) then\n\t\te.self:Emote(\"hands you a scimitar she usually wears at her side.\")\n\t\te.other:SummonItem(20440) -- Elaborate Scimitar\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 13199,
+        "zone": "misty",
+        "name": "Ella_Foodcrafter",
+        "lua_content": "-- Source: misty/Ella_Foodcrafter.pl\n-- Ranger Epic 1.0: Ella Foodcrafter handles bowl, stone, and scimitar hand-ins.\n-- Converted from ProjectEQ Perl quest script.\n-- items: 18959, 17860, 20473, 20460, 20462, 20468, 20440\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Hi, hi. I've got a lot to do.\")\n\telseif e.message:findi(\"two tasks\") then\n\t\te.self:Say(\"Well, ya ask before ya act. That's a good sign. What I need isn't easy to find. First, I need a mixture. Plain sounding enough but it's a special one. Cleanses the mind and focuses the earth's energies into a forest walker's mind. I don't know how to make it. I don't even know what it's called. I merely know it exists and we'll be needing it for our task. When ya do find how to make it ya can mix it in that bowl. Keep it when youre done, it's a good bowl.\")\n\t\te.other:SummonItem(17860) -- Shiny Tin Bowl\n\telseif e.message:findi(\"second task\") then\n\t\te.self:Emote(\"grins. 'Good, ya didn't run off without finding out what else ya need to do. Second, I need a special type of bowl. An ancient type of bowl, which strengthened the food placed inside it, once made by the elves of old. Again, I cannot tell ya how it is made for the making was lost to the ages. Seek this knowledge and these items out in the lands. Come to me when ya have found both.'\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 18959}) then\n\t\te.self:Say(\"I've been waiting for someone to bring me this. I have two tasks for ya.\")\n\telseif item_lib.check_turn_in(e.trade, {item1 = 20473, item2 = 20460}) then\n\t\te.self:Emote(\"smiles slowly as she works the mixture in the bowl and it starts to shine with power. 'This is... a piece of a lost magic item known as Nature's Gem. When restored to completeness I've heard its healing powers will be extraordinary. Take it now. I will take the bowl and hopefully do some good from my end. From here, you can go many ways but I can't guide your path step by step. The only advice I can give you is to look for ones such as yourself.'\")\n\t\te.other:SummonItem(20462) -- Softly Glowing Stone\n\telseif item_lib.check_turn_in(e.trade, {item1 = 20468}) then\n\t\te.self:Emote(\"hands you a scimitar she usually wears at her side. 'Thank you, \" .. e.other:GetName() .. \". With this we can hold back the corruption. We have learned something new though. Not only is this work the responsibility of the lord of hatred alone. For some reason we cannot know the lord of disease has decided it worthy of his time to work in conjunction with Innoruuk. The spirits of the three main continents, Faydwer, Antonica, and Kunark, have been corrupted. Look for the corrupted forces of the land and heal them. When you have found them all then take my scimitar and the spirits to Xanuusus.'\")\n\t\te.other:SummonItem(20440) -- Elaborate Scimitar\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 16671,
+        "zone": "mistythicket",
+        "name": "Ella_Foodcrafter",
+        "lua_content": "-- Source: mistythicket/Ella_Foodcrafter.pl\n-- Ranger Epic 1.0: Ella Foodcrafter handles bowl, stone, and scimitar hand-ins.\n-- Converted from ProjectEQ Perl quest script.\n-- items: 18959, 17860, 20473, 20460, 20462, 20468, 20440\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Hi, hi. I've got a lot to do.\")\n\telseif e.message:findi(\"two tasks\") then\n\t\te.self:Say(\"First, I need a mixture. When ya do find how to make it ya can mix it in that bowl.\")\n\t\te.other:SummonItem(17860) -- Shiny Tin Bowl\n\telseif e.message:findi(\"second task\") then\n\t\te.self:Say(\"Second, I need a special type of bowl. Seek this knowledge and these items out in the lands.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 18959}) then\n\t\te.self:Say(\"I've been waiting for someone to bring me this. I have two tasks for ya.\")\n\telseif item_lib.check_turn_in(e.trade, {item1 = 20473, item2 = 20460}) then\n\t\te.self:Emote(\"smiles slowly as she works the mixture in the bowl and it starts to shine with power.\")\n\t\te.other:SummonItem(20462) -- Softly Glowing Stone\n\telseif item_lib.check_turn_in(e.trade, {item1 = 20468}) then\n\t\te.self:Emote(\"hands you a scimitar she usually wears at her side.\")\n\t\te.other:SummonItem(20440) -- Elaborate Scimitar\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 16671,
+        "zone": "mistythicket",
+        "name": "Ella_Foodcrafter",
+        "lua_content": "-- Source: mistythicket/Ella_Foodcrafter.pl\n-- Ranger Epic 1.0: Ella Foodcrafter handles bowl, stone, and scimitar hand-ins.\n-- Converted from ProjectEQ Perl quest script.\n-- items: 18959, 17860, 20473, 20460, 20462, 20468, 20440\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Hi, hi. I've got a lot to do.\")\n\telseif e.message:findi(\"two tasks\") then\n\t\te.self:Say(\"Well, ya ask before ya act. That's a good sign. What I need isn't easy to find. First, I need a mixture. Plain sounding enough but it's a special one. Cleanses the mind and focuses the earth's energies into a forest walker's mind. I don't know how to make it. I don't even know what it's called. I merely know it exists and we'll be needing it for our task. When ya do find how to make it ya can mix it in that bowl. Keep it when youre done, it's a good bowl.\")\n\t\te.other:SummonItem(17860) -- Shiny Tin Bowl\n\telseif e.message:findi(\"second task\") then\n\t\te.self:Emote(\"grins. 'Good, ya didn't run off without finding out what else ya need to do. Second, I need a special type of bowl. An ancient type of bowl, which strengthened the food placed inside it, once made by the elves of old. Again, I cannot tell ya how it is made for the making was lost to the ages. Seek this knowledge and these items out in the lands. Come to me when ya have found both.'\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 18959}) then\n\t\te.self:Say(\"I've been waiting for someone to bring me this. I have two tasks for ya.\")\n\telseif item_lib.check_turn_in(e.trade, {item1 = 20473, item2 = 20460}) then\n\t\te.self:Emote(\"smiles slowly as she works the mixture in the bowl and it starts to shine with power. 'This is... a piece of a lost magic item known as Nature's Gem. When restored to completeness I've heard its healing powers will be extraordinary. Take it now. I will take the bowl and hopefully do some good from my end. From here, you can go many ways but I can't guide your path step by step. The only advice I can give you is to look for ones such as yourself.'\")\n\t\te.other:SummonItem(20462) -- Softly Glowing Stone\n\telseif item_lib.check_turn_in(e.trade, {item1 = 20468}) then\n\t\te.self:Emote(\"hands you a scimitar she usually wears at her side. 'Thank you, \" .. e.other:GetName() .. \". With this we can hold back the corruption. We have learned something new though. Not only is this work the responsibility of the lord of hatred alone. For some reason we cannot know the lord of disease has decided it worthy of his time to work in conjunction with Innoruuk. The spirits of the three main continents, Faydwer, Antonica, and Kunark, have been corrupted. Look for the corrupted forces of the land and heal them. When you have found them all then take my scimitar and the spirits to Xanuusus.'\")\n\t\te.other:SummonItem(20440) -- Elaborate Scimitar\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/timorous/Alrik_Farsight.lua",
+      "beforeSha256": "4078c1689e746b3bd8ee7bf280c09ac1e5d9b0cdc5085e73c5cf071b76f65be9",
+      "proposedFile": "changes/p99-af-druid-progression-dialogue/timorous-Alrik_Farsight.lua",
+      "afterSha256": "365704dbc93ad8408d189ebfb6a47532ecb6bb4d80dea135858a003ff4fd82bc"
+    },
+    {
+      "target": "maintained/lua/converted-perl/firiona/Foloal_Stormforest.lua",
+      "beforeSha256": "354f22fdc0ae2a42856985a6460feacff94e7269de3de2e460bb36d4823913fb",
+      "proposedFile": "changes/p99-af-druid-progression-dialogue/firiona-Foloal_Stormforest.lua",
+      "afterSha256": "25bc081a44724ac83b2dbf36a77f3dd7ca52f0918263403bc4f8183737314c8e"
+    },
+    {
+      "target": "maintained/lua/converted-perl/misty/Ella_Foodcrafter.lua",
+      "beforeSha256": "e68d0771f00890de39eedb429a78df9b7c0e2b5a200f650dc15d148b046a9e05",
+      "proposedFile": "changes/p99-af-druid-progression-dialogue/misty-Ella_Foodcrafter.lua",
+      "afterSha256": "8e5ab9e78ea7b14cb105f10277b122eb2b6e215339f2278498d490d91d94cd49"
+    },
+    {
+      "target": "maintained/lua/converted-perl/mistythicket/Ella_Foodcrafter.lua",
+      "beforeSha256": "36c3c4e56946354b99fb7a3e9b3f1cfb42ac97285c61cad4ae4e58980ecd4e3a",
+      "proposedFile": "changes/p99-af-druid-progression-dialogue/mistythicket-Ella_Foodcrafter.lua",
+      "afterSha256": "dfa95747eeae4e4bc81b13ef6a96972eea09d0883ff2acb2a576a33d3fa8e2a5"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "format": 1,
+  "id": "p99-am-indaria-dialogue",
+  "summary": "Remove upstream daughter reply because P99 explicitly says Indaria only gives her hail before the doll turn-in. Keep all trade values; unquantified missing coin is not fabricated.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Indaria's_Doll?action=raw",
+      "note": "Cached 2026-07-17T23:22:06.577Z; revision unavailable; SHA256 18cfd950503cc4599e1970d045db35e0aec2098a11a035540cac9ccf434a96d7. Indaria's Doll"
+    },
+    {
+      "url": "https://wiki.project1999.com/Indaria's_Doll?action=raw",
+      "note": "Promote immutable upstream source sources/projecteq/qeynos/Indaria.lua SHA256 98697fd7886dd19e2b670afdb22c448006c8cdba6d413152f300dba5b450e9c7 to maintained modified-upstream override; baseline remains untouched."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 18838,
+        "zone": "qeynos",
+        "name": "Indaria",
+        "lua_content": "-- items: 13712, 1316\nfunction event_say(e)\n  if(e.message:findi(\"hail\")) then\n    e.self:Say(\"Hello, have you seen my daughter?\");\n  elseif(e.message:findi(\"daughter\")) then\n    e.self:Say(\"Yes, my daughter. She went to play near the aqueducts with her doll and now she is gone. If only there was some sign of her..\");\n  end\nend\n\nfunction event_trade(e)\n  local item_lib =require(\"items\");\n  if(item_lib.check_turn_in(e.trade, {item1 = 13712})) then\n    e.self:Emote(\"tries to keep her composure. She hands you a silver locket with great effort, and then bursts into tears.\");\n    e.other:SummonItem(1316); -- Item: Velvet Choker\n    e.other:Ding();\n    e.other:Faction(262,2,0); -- Guards of Qeynos\n    e.other:Faction(219,1,0); -- Antonius Bayle\n    e.other:Faction(230,-1,0); -- Corrupt Qeynos Guards\n    e.other:Faction(223,-1,0); -- CIrcle of Unseen Hands\n    e.other:Faction(291,1,0); -- Merchants of Qeynos\n    e.other:AddEXP(27440);\n  end\n  item_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 18838,
+        "zone": "qeynos",
+        "name": "Indaria",
+        "lua_content": "-- items: 13712, 1316\nfunction event_say(e)\n  if(e.message:findi(\"hail\")) then\n    e.self:Say(\"Hello, have you seen my daughter?\");\n  end\nend\n\nfunction event_trade(e)\n  local item_lib =require(\"items\");\n  if(item_lib.check_turn_in(e.trade, {item1 = 13712})) then\n    e.self:Emote(\"tries to keep her composure. She hands you a silver locket with great effort, and then bursts into tears.\");\n    e.other:SummonItem(1316); -- Item: Velvet Choker\n    e.other:Ding();\n    e.other:Faction(262,2,0); -- Guards of Qeynos\n    e.other:Faction(219,1,0); -- Antonius Bayle\n    e.other:Faction(230,-1,0); -- Corrupt Qeynos Guards\n    e.other:Faction(223,-1,0); -- CIrcle of Unseen Hands\n    e.other:Faction(291,1,0); -- Merchants of Qeynos\n    e.other:AddEXP(27440);\n  end\n  item_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/qeynos/Indaria.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-am-indaria-dialogue/qeynos-Indaria.lua",
+      "afterSha256": "d5cc3dbd1f9932110626498ad430272f9e10217178dc08b37518ba6cc0d89c4b"
+    }
+  ]
+}

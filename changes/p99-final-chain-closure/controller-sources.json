@@ -1,0 +1,146 @@
+[
+  {
+    "id": 16890,
+    "zone": "lakerathe",
+    "name": "#Worboli",
+    "lua_content": null,
+    "has_say_event": 1,
+    "enabled": 1
+  },
+  {
+    "id": 17776,
+    "zone": "rathemtn",
+    "name": "Zazamoukh",
+    "lua_content": null,
+    "has_say_event": 1,
+    "enabled": 1
+  },
+  {
+    "id": 14131,
+    "zone": "qey2hh1",
+    "name": "#Yuanda",
+    "lua_content": "-- BeginFile: qey2hh1\\#Yuanda.pl\n -- Quest file for West Karana - Yuanda: Necromancer Epic 1.5 (pre)\n-- items: 15809\n\n function event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Shhh, not so loud. I have heard stories of werewolves in this area...\"); -- Text made up\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\tlocal xloc = e.self:GetX();\n\tlocal yloc = e.self:GetY();\n\tlocal zloc = e.self:GetZ();\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 15809})) then -- Note to Yuanda\n\t\te.self:Say(\"So you are working for Geboron? Yes I have seen the paladins and the staff they were guarding. They passed through here just one day ago. From what I have been told, they were attacked by a pack of werewolves. All of the paladins were killed and one of the werewolves took the staff. If you want the staff you will need to find these werewolves. Oh, no! Here they come now! I am getting out of here!\");\n\t\te.other:Ding();\n\t\teq.spawn2(12183, 0, 0, xloc -18, yloc -35, zloc,   256); -- a snarling werewolf (normal)\n\t\teq.spawn2(12183, 0, 0, xloc +18, yloc -35, zloc,   256); -- a snarling werewolf (normal)\n\t\teq.spawn2(12183, 0, 0, xloc -35, yloc +10, zloc+5, 256); -- a snarling werewolf (normal)\n\t\teq.spawn2(12183, 0, 0, xloc +35, yloc +10, zloc,   256); -- a snarling werewolf (normal)\n\t\teq.spawn2(12184, 0, 0, xloc,    yloc +35, zloc,   256); -- a snarling werewolf (high)\n\t\teq.depop_with_timer();\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\n-- EndFile: qey2hh1\\#Yuanda.lua (12188)\n-- converted to lua by: robregen\n",
+    "has_say_event": 1,
+    "enabled": 0
+  },
+  {
+    "id": 14651,
+    "zone": "nro",
+    "name": "a_lamented_knight",
+    "lua_content": "function event_death_complete(e)\n    eq.signal(392057, 0); -- NPC: #a_madman\nend\n\nfunction event_spawn(e)\n\te.self:Say(\"Destroy me, if you must. I cannot hold him alone. We do not blame you for what you do, for you have great need and you seek to save others. Do not allow this to weigh heavily upon you.\");\nend",
+    "has_say_event": 0,
+    "enabled": 1
+  },
+  {
+    "id": 19270,
+    "zone": "timorous",
+    "name": "an_Iksar_master",
+    "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: timorous/an_Iksar_master.pl\n-- items: 17036, 17039, 17040, 12815, 12797, 12829, 12836, 4195\n\nlocal function monk_faction(e)\n\te.other:Faction(444, 20, 0)\n\te.other:Faction(441, 10, 0)\nend\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Emote(\"is humming and chanting softly. He seems oblivious to your presence.\")\n\telseif e.message:findi(\"master rinmark\") then\n\t\te.self:Emote(\"squints one eye open, then returns to his meditation.\")\n\telseif e.message:findi(\"talon southpaw\") then\n\t\te.self:Emote(\"waves his arms in the air. 'The great master. His soul is the wind. He speaks to us in words of thunder. He strikes Norrath with bolts of lightning. I seek to be as he is. I have traveled the globe in search of his fists. I have found only one. Another is said to be with [Gomoz]. I shall return it when I am finished with my seasons-long meditation or perhaps I shall find a monk to [return the hand to Cabilis].'\")\n\telseif e.message:findi(\"Gomoz\") then\n\t\te.self:Say(\"Disciple Gomoz was once Talon Southpaw's pupil. It is rumored that he has only one hand. Unfortunately, a horde of ogre raiders swiped his bones, along with others, from their place in Kurn's Tower. What those simple oafs plan to do with them is a mystery. Only one who has studied the arcane sciences could use them. They most likely used them as soup bones.\")\n\telseif e.message:findi(\"return the hand to Cabilis\") then\n\t\te.self:Emote(\"hands you an old tattered sack. 'This shall be your proof of allegiance. Prove that you are strong with an intact mandible of a skulking brutling and the claws of a burynai excavator. Prove that you are a monk of fist and tail with a sash of an exiled human monk and the sparring gloves of a goblin pit fighter. Combined, these items make the sack full. This will earn my trust and the hand.'\")\n\t\te.other:SummonItem(17036)\n\telseif e.message:findi(\"assist old Rinmark in completing his rock garden\") then\n\t\te.self:Emote(\"pours the pebbles into his pocket and hands the box to you. 'Take my box. Fill and combine within my box the following; a radiant meteorite, frontier fool's gold, petrified redwood, Rile's sand coin, sulfur stone, fragment of tektite, plains pebble, jade magma, heart of ice and an unholy coldstone. Return the full tin box to me and I shall reward you with a shackle of bronze.'\")\n\t\te.other:SummonItem(17039)\n\telseif e.message:findi(\"student\") then\n\t\te.self:Emote(\"hands you what appears to be the base of a key. 'This was delivered to me by a dying student. He collapsed just after handing it to me. He was accompanying a student of mine named Veltar. They were questing for the legendary Whistling Fists. The key is made of a metal I have never felt or heard of. Find him.'\")\n\t\te.other:SummonItem(17040)\n\telseif e.message:findi(\"test of patience\") then\n\t\te.self:Say(\"So your time has finally come to be tested for the final rung. To show your patience you shall spar with me. When you have gained the insight and strategy to strike you will know when. Strike me too soon and you will perish, too late and I will be gone. Come at me when the time is right. Let us begin.\")\n\t\teq.spawn2(96318, 0, 0, e.self:GetX(), e.self:GetY(), e.self:GetZ(), e.self:GetHeading())\n\t\teq.depop_with_timer()\n\telseif e.message:findi(\"whistling fists\") then\n\t\te.self:Say(\"The Whistling Fists are rumored to be magical instruments of destruction which can only be wielded by monks. The founder, Supreme Master Tynn, was the only lizard to ever gaze upon the weapon. He only spoke of it to his student Marthor. Marthor rarely spoke of it and when he did it was usually after a few flagons of Trog Brew. That is why many consider it to be babble.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 12815}) then\n\t\te.self:Emote(\"bows before you and takes a wrinkled, mummified hand from a pouch at his side. 'Take the hand. Let it rest within Cabilis and be reunited with the left.'\")\n\t\te.other:SummonItem(12797)\n\t\te.other:AddEXP(20000)\n\t\te.other:Ding()\n\t\tmonk_faction(e)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 12829}) then\n\t\te.self:Emote(\"opens the box to reveal a variety of pebbles. 'How grand!! My pebbles!! Now I can continue with my rock garden!! Hmmm. You look familiar. Hey!! I bet you can help me complete my garden!! Would you please [assist old Rinmark in completing his rock garden]?'\")\n\t\te.other:AddEXP(30000)\n\t\te.other:Ding()\n\t\tmonk_faction(e)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 12836}) then\n\t\te.self:Emote(\"graciously accepts the tin box filled with precious rocks and gems. 'Thank you greatly, young \" .. e.other:GetName() .. \". For your deed, I bestow upon you the shackle of bronze!! You have completed the third rung. Alas, there is no time for celebration. I need your help in rescuing a [student] of mine.'\")\n\t\te.other:SummonItem(4195)\n\t\te.other:AddEXP(30000)\n\t\te.other:Ding()\n\t\tmonk_faction(e)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+    "has_say_event": 1,
+    "enabled": 1
+  },
+  {
+    "id": 12433,
+    "zone": "nro",
+    "name": "a_guardian_tormentor",
+    "lua_content": "function event_death_complete(e)\n  eq.spawn2(392107,0,0,e.self:GetX(),e.self:GetY(),e.self:GetZ(),e.self:GetHeading()); -- NPC: a_lamented_knight\nend\n\nfunction event_spawn(e)\n\te.self:Say(\"He is a dangerous creature. Please do not prevent us from doing our work.\");\nend",
+    "has_say_event": 0,
+    "enabled": 1
+  },
+  {
+    "id": 16016,
+    "zone": "rathemtn",
+    "name": "Ankhefenmut",
+    "lua_content": null,
+    "has_say_event": 1,
+    "enabled": 1
+  },
+  {
+    "id": 15386,
+    "zone": "timorous",
+    "name": "Grandmaster_Rinmark",
+    "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: timorous/Grandmaster_Rinmark.pl\n\nfunction event_spawn(e)\n\teq.set_timer(\"Depop1\", 90000)\nend\n\nfunction event_timer(e)\n\tif e.timer == \"Depop1\" then\n\t\te.self:Emote(\"seems to lose a small amount of concentration.\")\n\t\teq.spawn2(96319, 0, 0, e.self:GetX(), e.self:GetY(), e.self:GetZ(), e.self:GetHeading()) -- Master_Rinmark\n\t\teq.stop_timer(\"Depop1\")\n\t\teq.depop()\n\tend\nend\n\nfunction event_combat(e)\n\tif e.joined then\n\t\teq.stop_timer(\"Depop1\")\n\telse\n\t\teq.set_timer(\"Depop1\", 90000)\n\tend\nend\n",
+    "has_say_event": 0,
+    "enabled": 1
+  },
+  {
+    "id": 15831,
+    "zone": "qey2hh1",
+    "name": "12184",
+    "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: qey2hh1/12184.pl\n\nfunction event_spawn(e)\n\teq.set_timer(\"Werewolf2Depop\", 1800000)\n\teq.set_next_hp_event(75)\nend\n\nfunction event_death_complete(e)\n\te.self:Say(\"Your attack was in vain, fool. The staff was stolen from us by a bandit only hours ago.\")\n\teq.spawn2(12185, 186, 0, -11080, -2920, 38, 0) -- Shady Bandit\nend\n\nfunction event_timer(e)\n\teq.stop_timer(\"Werewolf2Depop\")\n\teq.depop()\nend\n\nfunction event_combat(e)\n\tif e.joined then\n\t\te.self:Emote(\"moves to attack.\")\n\telse\n\t\te.self:MoveTo(e.self:GetX(), e.self:GetY(), e.self:GetZ(), e.self:GetHeading(), true)\n\tend\nend\n\nfunction event_hp(e)\n\tif e.hp_event == 75 then\n\t\te.self:ModifyNPCStat(\"max_hit\", \"1400\")\n\t\teq.set_next_hp_event(50)\n\telseif e.hp_event == 50 then\n\t\te.self:ModifyNPCStat(\"max_hit\", \"1600\")\n\t\teq.set_next_hp_event(25)\n\telseif e.hp_event == 25 then\n\t\te.self:ModifyNPCStat(\"max_hit\", \"1800\")\n\tend\nend\n",
+    "has_say_event": 0,
+    "enabled": 1
+  },
+  {
+    "id": 15620,
+    "zone": "paineel",
+    "name": "Librarian_Kesler",
+    "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: paineel/Librarian_Kesler.pl\n\nfunction event_say(e)\n\tif e.message:findi(\"Hail\") then\n\t\te.self:Say(\"Hello. researcher!  There are many things to be found here.  Our selection grows daily.  Would you [care for any books]?\")\n\telseif e.message:findi(\"i care for any books\") then\n\t\te.self:Say(\"Excellent!  I love to see the young so interested in knowledge.  What subject would you like to research? My most interesting topics today would have to be the Hole. old Paineel. the Underfoot. and the history of Paineel.\")\n\telseif e.message:findi(\"tell me about the history of paineel\") then\n\t\te.self:Say(\"Tis an excellent topic. \" .. e.other:GetName() .. \".  Much can be learned of a civilization if one first understands its history.  I hope you enjoy the book.\")\n\telseif e.message:findi(\"tell me about the hole\") then\n\t\te.self:Say(\"Here you are. \" .. e.other:GetName() .. \".  The book has old bindings and is worthless to most. but the value of knowledge is priceless.\")\n\telseif e.message:findi(\"tell me about the underfoot\") then\n\t\te.self:Say(\"Excellent choice. \" .. e.other:GetName() .. \".  The Underfoot is a mysterious place.  I hope you get as much from the book as I did.\")\n\telseif e.message:findi(\"tell me about the old paineel\") then\n\t\te.self:Say(\"Take this book. \" .. e.other:GetName() .. \".  It contains the history of the ancient city from which we came.\")\n\tend\nend\n",
+    "has_say_event": 1,
+    "enabled": 1
+  },
+  {
+    "id": 16399,
+    "zone": "nro",
+    "name": "a_haunt",
+    "lua_content": "function event_death_complete(e)\n  eq.spawn2(392105,0,0,e.self:GetX(),e.self:GetY(),e.self:GetZ(),e.self:GetHeading()); -- NPC: a_spirit\nend\n\nfunction event_spawn(e)\n\te.self:Say(\"Please, allow us to continue our work. Do not allow this man to return to his ways.\");\nend",
+    "has_say_event": 0,
+    "enabled": 1
+  },
+  {
+    "id": 19363,
+    "zone": "befallen",
+    "name": "#Sir_Ariam_Arcanum",
+    "lua_content": "function spawn_event(e)\n\teq.set_timer(\"depop\",20 * 60 * 1000); -- 20 Minutes\nend\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"My thanks for destroying these minions of Befallen's masters. This accursed place rends my soul trying to twist me to its purposes. My time here is short, so i must get this [task] done quikly.\");\n\telseif e.message:findi(\"task\") then\n\t\te.self:Say(\"I have this parchment that must be delivered to either the Knights of Truth in Freeport or to the Queen of Neriak. The contents of the note concern them both and I am desperate to have this matter addressed so ask that you take it to which ever of the cities will accept your presence. Will you take the note to the [Knights of Truth] or to [The Dead]?\");\n\telseif e.message:findi(\"truth\") then\n\t\te.self:Say(\"It must be delivered to Sir Artanis in the city of Freeport. It details a terrible plan of the masters of this place to restore life to a foul necromancer named Marnek. The Burning Dead must not be allowed to achieve this goal. So that you may ride swiftly with news of this nefarious scheme, take this as well, the bridle to the noble steed that was entombed alive with me here. He has strength enough for one final ride.\");\n\t\te.other:SummonItem(31492); -- Ghostly Bridle\n\t\te.other:SummonItem(18474); -- Scroll of the Burning Dead\n\t\teq.depop();\n\telseif e.message:findi(\"dead\") then\n\t\te.self:Say(\"Then take this parchment to the Queens assistant, the necromancer Xon, enemy of my enemy. I have no love for her, but Queen Thex's interests too are at risk. This details a terrible plan of the masters of this place to restore life to a foul necromancer named Marnek. The Burning Dead must not be allowed to achieve this goal. So that you may ride swiftly with news of this nefarious scheme, take this as well, the bridle to the noble steed that was entombed alive with me here.\");\n\t\te.other:SummonItem(31492); -- Ghostly Bridle\n\t\te.other:SummonItem(18474); -- Scroll of the Burning Dead\n\t\teq.depop();\n\telseif e.message:findi(\"who are you\") or e.message:findi(\"what are you\") then\n\t\te.self:Say(\"I am Sir Ariam Arcanum, a paladin of Tunare. There is no time for my own story, which is of little account. But if you wish to know more of me, and wish also to do me a personal favor then you could seek out my family in Felwithe, provided you are welcome there. Will you travel to Felwithe?\");\n\telseif e.message:findi(\"travel to felwithe\") then\n\t\te.self:Say(\"Then deliver this to my family. I have my sisters token to thank for my survival in this form. Something in the magic of this persisted even as I truly wasted away buried alive near here.\");\n\t\te.other:SummonItem(31493); -- Arriallas Expended Token\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\nfunction event_timer(e)\n\teq.depop();\nend",
+    "has_say_event": 1,
+    "enabled": 1
+  },
+  {
+    "id": 13535,
+    "zone": "lakeofillomen",
+    "name": "Lingering_Axefall",
+    "lua_content": null,
+    "has_say_event": 1,
+    "enabled": 1
+  },
+  {
+    "id": 13872,
+    "zone": "timorous",
+    "name": "Rinmark",
+    "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: timorous/Rinmark.pl\n\nfunction event_spawn(e)\n\teq.set_timer(\"Depop3\", 90000)\nend\n\nfunction event_combat(e)\n\tif e.joined then\n\t\teq.stop_timer(\"Depop3\")\n\t\te.self:Say(\"Good, your sense of timing is correct. Now begin! Show me that your training has not been wasted.\")\n\telse\n\t\teq.set_timer(\"Depop3\", 90000)\n\tend\nend\n\nfunction event_timer(e)\n\tif e.timer == \"Depop3\" then\n\t\teq.stop_timer(\"Depop3\")\n\t\teq.depop()\n\tend\nend\n\nfunction event_death_complete(e)\n\te.self:Say(\"Your ability is strong, may you serve Cazic Thule with all your might.\")\nend\n",
+    "has_say_event": 0,
+    "enabled": 1
+  },
+  {
+    "id": 17781,
+    "zone": "timorous",
+    "name": "Master_Rinmark",
+    "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: timorous/Master_Rinmark.pl\n\nfunction event_spawn(e)\n\teq.set_timer(\"Depop2\", 90000)\nend\n\nfunction event_combat(e)\n\tif e.joined then\n\t\teq.stop_timer(\"Depop2\")\n\telse\n\t\teq.set_timer(\"Depop2\", 90000)\n\tend\nend\n\nfunction event_timer(e)\n\tif e.timer == \"Depop2\" then\n\t\te.self:Emote(\"stares off into the horizon, lost in his thoughts.\")\n\t\teq.spawn2(96320, 0, 0, e.self:GetX(), e.self:GetY(), e.self:GetZ(), e.self:GetHeading()) -- Rinmark\n\t\teq.stop_timer(\"Depop2\")\n\t\teq.depop()\n\tend\nend\n",
+    "has_say_event": 0,
+    "enabled": 1
+  },
+  {
+    "id": 19185,
+    "zone": "qey2hh1",
+    "name": "12183",
+    "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: qey2hh1/12183.pl\n\nlocal werewolf = 0\n\nfunction event_spawn(e)\n\teq.set_timer(\"Werewolf1Depop\", 1800000)\n\twerewolf = 0\nend\n\nfunction event_death_complete(e)\n\twerewolf = werewolf + 1\n\tif werewolf == 4 then\n\t\te.self:Say(\"Your attack was in vain, fool. The staff was stolen from us by a bandit only hours ago.\")\n\t\teq.spawn2(12185, 186, 0, -11080, -2920, 38, 0) -- Shady Bandit\n\tend\nend\n\nfunction event_timer(e)\n\teq.stop_timer(\"Werewolf1Depop\")\n\teq.depop()\nend\n\nfunction event_combat(e)\n\tif e.joined then\n\t\te.self:Emote(\"moves to attack.\")\n\telse\n\t\te.self:MoveTo(e.self:GetX(), e.self:GetY(), e.self:GetZ(), e.self:GetHeading(), true)\n\tend\nend\n",
+    "has_say_event": 0,
+    "enabled": 1
+  },
+  {
+    "id": 19018,
+    "zone": "nro",
+    "name": "a_spirit",
+    "lua_content": "function event_death_complete(e)\n  eq.spawn2(392106,0,0,e.self:GetX(),e.self:GetY(),e.self:GetZ(),e.self:GetHeading()); -- NPC: a_guardian_tormentor\nend\n\nfunction event_spawn(e)\n\te.self:Say(\"We understand your need, but you must not free him.\");\nend",
+    "has_say_event": 0,
+    "enabled": 1
+  },
+  {
+    "id": 17068,
+    "zone": "qey2hh1",
+    "name": "#Shady_Bandit",
+    "lua_content": "-- BeginFile: qey2hh1\\#Shady_Bandit.pl\n-- Quest file for West Karana - Shady Bandit: Necromancer Epic 1.5 (pre)\n\nfunction event_spawn(e)\n\teq.set_timer(\"ShadyDepop\", 1800000); -- Depop after 30 minutes\nend\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\teq.attack(e.other:GetName());\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\nfunction event_timer(e)\n\tif(e.timer == \"ShadyDepop\") then\n\t\teq.depop();\n\tend\nend\n\n-- EndFile: qey2hh1\\#Shady_Bandit.lua (12185)\n-- converted to lua by: robregen",
+    "has_say_event": 1,
+    "enabled": 0
+  }
+]

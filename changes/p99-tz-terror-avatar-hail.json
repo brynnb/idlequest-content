@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-terror-avatar-hail",
+  "summary": "Restore exact documented Avatar of Terror hail, leave spawning/timers/rewards unchanged.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/The_Summoning_of_Terror?action=raw",
+      "note": "Cached 2026-07-17T23:38:12.740Z; revision unavailable; SHA256 b1054077a0f88325f520e6c6619e153afb74b91ac6948f37198caefe50c4af3d. Restore exact documented Avatar of Terror hail, leave spawning/timers/rewards unchanged. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 16588,
+        "zone": "paineel",
+        "name": "#Avatar_of_Terror",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: paineel/#Avatar_of_Terror.pl\n-- P99 audit: The Summoning of Terror\n-- P99: https://wiki.project1999.com/The_Summoning_of_Terror\n-- items: 14106, 14108\n\nfunction event_spawn(e)\n\teq.set_timer(\"TerrorShouting\", 5000)\n\teq.set_timer(\"TerrorDepop\", 120000)\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 14106}) then\n\t\te.self:Say(\"I grant you a mask crafted with my own essence! Wear it in honor of your devotion to our Lord Cazic Thule!\")\n\t\te.other:SummonItem(14108)\n\t\te.other:Ding()\n\t\te.other:Faction(265, 50, 0) -- Heretics\n\t\te.other:Faction(242, -50, 0) -- Deepwater Knights\n\t\te.other:Faction(254, -50, 0) -- Gate Callers\n\t\te.other:Faction(231, -50, 0) -- Craftkeepers\n\t\te.other:Faction(233, -50, 0) -- Crimson Hands\n\t\te.other:AddEXP(1000)\n\t\teq.stop_timer(\"TerrorShouting\")\n\t\teq.stop_timer(\"TerrorDepop\")\n\t\teq.depop()\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\nfunction event_timer(e)\n\tif e.timer == \"TerrorShouting\" then\n\t\teq.zone_emote(MT.Shout, \"Grrrraaaarrrrg! The stench of fear permeates the walls of this city! I will forge one item for the faithful of our Lord Cazic-Thule! Make haste! My time here is short!\")\n\telseif e.timer == \"TerrorDepop\" then\n\t\teq.stop_timer(\"TerrorShouting\")\n\t\teq.stop_timer(\"TerrorDepop\")\n\t\teq.depop()\n\tend\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 16588,
+        "zone": "paineel",
+        "name": "#Avatar_of_Terror",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: paineel/#Avatar_of_Terror.pl\n-- P99 audit: The Summoning of Terror\n-- P99: https://wiki.project1999.com/The_Summoning_of_Terror\n-- items: 14106, 14108\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"I haven't much time mortal. Do you bring Terror?\")\n\tend\nend\n\nfunction event_spawn(e)\n\teq.set_timer(\"TerrorShouting\", 5000)\n\teq.set_timer(\"TerrorDepop\", 120000)\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 14106}) then\n\t\te.self:Say(\"I grant you a mask crafted with my own essence! Wear it in honor of your devotion to our Lord Cazic Thule!\")\n\t\te.other:SummonItem(14108)\n\t\te.other:Ding()\n\t\te.other:Faction(265, 50, 0) -- Heretics\n\t\te.other:Faction(242, -50, 0) -- Deepwater Knights\n\t\te.other:Faction(254, -50, 0) -- Gate Callers\n\t\te.other:Faction(231, -50, 0) -- Craftkeepers\n\t\te.other:Faction(233, -50, 0) -- Crimson Hands\n\t\te.other:AddEXP(1000)\n\t\teq.stop_timer(\"TerrorShouting\")\n\t\teq.stop_timer(\"TerrorDepop\")\n\t\teq.depop()\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\nfunction event_timer(e)\n\tif e.timer == \"TerrorShouting\" then\n\t\teq.zone_emote(MT.Shout, \"Grrrraaaarrrrg! The stench of fear permeates the walls of this city! I will forge one item for the faithful of our Lord Cazic-Thule! Make haste! My time here is short!\")\n\telseif e.timer == \"TerrorDepop\" then\n\t\teq.stop_timer(\"TerrorShouting\")\n\t\teq.stop_timer(\"TerrorDepop\")\n\t\teq.depop()\n\tend\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/paineel/#Avatar_of_Terror.lua",
+      "beforeSha256": "fb2249fbae51560029661c509d92027f10593b9e1662d677fdde7e24a2cbed5b",
+      "proposedFile": "changes/p99-tz-terror-avatar-hail/paineel--#Avatar_of_Terror.lua",
+      "afterSha256": "50abb441c8e600f1e3f204d4b19f8c4726a24fa5ff254d7b2caded92e6647a82"
+    }
+  ]
+}

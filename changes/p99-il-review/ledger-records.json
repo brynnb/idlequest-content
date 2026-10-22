@@ -1,0 +1,1462 @@
+{
+  "Ice Goblin Beads": {
+    "reviewed_at": "2026-10-22",
+    "review_status": "partial",
+    "match_status": "source_facets_reviewed_with_open_limits",
+    "local_quest_keys": [
+      "erudnint/Josper_Kenshed"
+    ],
+    "p99_source": {
+      "title": "Ice Goblin Beads",
+      "url": "https://wiki.project1999.com/Ice_Goblin_Beads?action=raw",
+      "raw_cache": "reference/p99-wiki/raw-pages/ice-goblin-beads-3c8f1e60ac.wiki",
+      "sha256": "fb7d2e18b0b64579691fa0163aa80937fc7cad36914b87e0ecf674c8306ed321"
+    },
+    "page_purpose": "quest_walkthrough",
+    "notes": [
+      "dialogue_and_reachability: Josper hail \u2192 servant of wizardry \u2192 collect components issues Empty Bag 17944; special matter is the separate Ilanic branch.",
+      "item_counts_and_rewards: Six Goblin Ice Necklaces 13897 combine in 17944 into 13898; bag returns Servant Staff 12208.",
+      "cash_xp_faction: Seven GOLD, not upstream seven silver, is already corrected. XP 1000 and 233:+15/266:+1/265:-2/267:+2 remain same-quest fallbacks.",
+      "acquisition_and_dependencies: Recipe 9670 is enabled and has six components plus the correct bag. Ice-goblin static loot and actors are recorded."
+    ],
+    "unresolved": [
+      "Amiable threshold reports conflict and faction checks are deliberately bypassed. Exact XP/deltas and live combine/settlement unverified.",
+      "Runtime inventory settlement, activation, acquisition lifecycle and UI were not live verified."
+    ],
+    "audit_evidence_files": [
+      "changes/p99-il-review/manual-facet-review.json",
+      "changes/p99-il-review/static-evidence.json"
+    ],
+    "verification": {
+      "source": "Full cached page and complete mapped canonical/alias Lua/Perl compared; source hashes retained.",
+      "static": "Item/actor/loot/recipe candidates inspected in exported data with proposal rows applied at the recorded snapshot. Later source/ownership inspection is separately hash-listed; no full live acquisition assertion.",
+      "runtime": "33 focused normalized Lua mock scenarios pass for this worker proposal; not real inventory/activation proof.",
+      "ui": "not_verified"
+    }
+  },
+  "Ice Goblin Necklaces": {
+    "reviewed_at": "2026-10-22",
+    "review_status": "partial",
+    "match_status": "source_facets_reviewed_with_open_limits",
+    "local_quest_keys": [
+      "halas/Lysbith_McNaff"
+    ],
+    "p99_source": {
+      "title": "Ice Goblin Necklaces",
+      "url": "https://wiki.project1999.com/Ice_Goblin_Necklaces?action=raw",
+      "raw_cache": "reference/p99-wiki/raw-pages/ice-goblin-necklaces-8266b31b55.wiki",
+      "sha256": "a64f634f552153abf2f849d3448e0e0709a1e5593e10fea4d595603ecfe138ec"
+    },
+    "page_purpose": "quest_walkthrough",
+    "notes": [
+      "dialogue_and_reachability: Lysbith serve Halas \u2192 ice goblins \u2192 protect the pass issues 17944. Shared TZ proposal now accepts naked ice goblins as well as full question.",
+      "item_counts_and_rewards: Same six-necklace recipe 9670 and 13898 bag. Current six-item food/light reward pool includes the reward-table Large Lantern.",
+      "cash_xp_faction: Current three gold matches page; XP 3800 and four +5 faction amounts are not established by this page.",
+      "acquisition_and_dependencies: Shared bag recipe and Everfrost acquisition checked structurally; unrelated Seax and gnoll branches preserved."
+    ],
+    "unresolved": [
+      "Reward odds/equal weighting and exact XP/deltas remain unknown. No live inventory or faction test.",
+      "Runtime inventory settlement, activation, acquisition lifecycle and UI were not live verified."
+    ],
+    "audit_evidence_files": [
+      "changes/p99-il-review/manual-facet-review.json",
+      "changes/p99-il-review/static-evidence.json",
+      "changes/p99-tz-lysbith-dialogue.json"
+    ],
+    "verification": {
+      "source": "Full cached page and complete mapped canonical/alias Lua/Perl compared; source hashes retained.",
+      "static": "Item/actor/loot/recipe candidates inspected in exported data with proposal rows applied at the recorded snapshot. Later source/ownership inspection is separately hash-listed; no full live acquisition assertion.",
+      "runtime": "33 focused normalized Lua mock scenarios pass for this worker proposal; not real inventory/activation proof.",
+      "ui": "not_verified"
+    }
+  },
+  "Icestar's Eve Snowdrift Feast": {
+    "reviewed_at": "2026-10-22",
+    "review_status": "partial",
+    "match_status": "source_facets_reviewed_with_open_limits",
+    "local_quest_keys": [],
+    "p99_source": {
+      "title": "Icestar's Eve Snowdrift Feast",
+      "url": "https://wiki.project1999.com/Icestar's_Eve_Snowdrift_Feast?action=raw",
+      "raw_cache": "reference/p99-wiki/raw-pages/icestar-s-eve-snowdrift-feast-e4fbf06da6.wiki",
+      "sha256": "d3fb839a458dda675ab4eda56bbef1bbdb884191a4c19391512990a1468c3945"
+    },
+    "page_purpose": "gm_event_walkthrough",
+    "notes": [
+      "dialogue_and_reachability: Full page describes Quartermaster Nellian and The Cracking of the Icestar holiday event, not an ordinary era quest.",
+      "item_counts_and_rewards: Mammoth meat, Snow Bunny Stew and Chilled Berries lead to Winter Broth/Holiday Gift in the event description.",
+      "cash_xp_faction: No reliable numerical rewards established.",
+      "acquisition_and_dependencies: No original quest-key mapping. Event classification does not itself establish a content_exclusions.quests-map entry."
+    ],
+    "unresolved": [
+      "GM seasonal event reconstruction not attempted. This is a page-purpose decision, not a claim that a runtime exclusion was found or that all event NPC sources were audited.",
+      "Runtime inventory settlement, activation, acquisition lifecycle and UI were not live verified."
+    ],
+    "audit_evidence_files": [
+      "changes/p99-il-review/manual-facet-review.json",
+      "changes/p99-il-review/static-evidence.json"
+    ],
+    "verification": {
+      "source": "Full cached page and complete mapped canonical/alias Lua/Perl compared; source hashes retained.",
+      "static": "Item/actor/loot/recipe candidates inspected in exported data with proposal rows applied at the recorded snapshot. Later source/ownership inspection is separately hash-listed; no full live acquisition assertion.",
+      "runtime": "33 focused normalized Lua mock scenarios pass for this worker proposal; not real inventory/activation proof.",
+      "ui": "not_verified"
+    }
+  },
+  "Iksar Prisoner Quest": {
+    "reviewed_at": "2026-10-22",
+    "review_status": "partial",
+    "match_status": "source_facets_reviewed_with_open_limits",
+    "local_quest_keys": [
+      "cabeast/Arch_Duke_Xog",
+      "dalnir/an_Iksar_prisoner"
+    ],
+    "p99_source": {
+      "title": "Iksar Prisoner Quest",
+      "url": "https://wiki.project1999.com/Iksar_Prisoner_Quest?action=raw",
+      "raw_cache": "reference/p99-wiki/raw-pages/iksar-prisoner-quest-6f881e4f78.wiki",
+      "sha256": "fbfc1c5cd0ad8579156725c12c25079f85b5df640a53b5429ea2f8a8f2f41dc4"
+    },
+    "page_purpose": "quest_walkthrough",
+    "notes": [
+      "dialogue_and_reachability: Prisoner accepts serrated wire; Arch Duke Xog response to icon is the documented failed-rescue ending.",
+      "item_counts_and_rewards: 14812 wire \u219214814 Greenmist Icon. Xog icon-only branch needs no sapphires; the separate heart 14807 plus two 10034 sapphires route is retained.",
+      "cash_xp_faction: Prisoner XP 1000 and Xog negative 442/441 magnitudes 50 are inherited, not quantified by page.",
+      "acquisition_and_dependencies: Coerced-dwarf Dalnir loot paths include 14812. Prisoner escape is represented by depop_with_timer, not verified pathing."
+    ],
+    "unresolved": [
+      "Escape route/timing and numerical rewards unknown; full Xog source reviewed but unrelated tests not claimed.",
+      "Runtime inventory settlement, activation, acquisition lifecycle and UI were not live verified."
+    ],
+    "audit_evidence_files": [
+      "changes/p99-il-review/manual-facet-review.json",
+      "changes/p99-il-review/static-evidence.json"
+    ],
+    "verification": {
+      "source": "Full cached page and complete mapped canonical/alias Lua/Perl compared; source hashes retained.",
+      "static": "Item/actor/loot/recipe candidates inspected in exported data with proposal rows applied at the recorded snapshot. Later source/ownership inspection is separately hash-listed; no full live acquisition assertion.",
+      "runtime": "33 focused normalized Lua mock scenarios pass for this worker proposal; not real inventory/activation proof.",
+      "ui": "not_verified"
+    }
+  },
+  "Ilanic's Scroll": {
+    "reviewed_at": "2026-10-22",
+    "review_status": "partial",
+    "match_status": "source_facets_reviewed_with_open_limits",
+    "local_quest_keys": [
+      "erudnint/Josper_Kenshed",
+      "tox/Ilanics_skeleton",
+      "toxxulia/Ilanics_skeleton"
+    ],
+    "p99_source": {
+      "title": "Ilanic's Scroll",
+      "url": "https://wiki.project1999.com/Ilanic's_Scroll?action=raw",
+      "raw_cache": "reference/p99-wiki/raw-pages/ilanic-s-scroll-2bea5c2186.wiki",
+      "sha256": "616bd19b92a58eda5afe7f0c298f2bad0a5385ef52165e56e60bb109ee17a4a6"
+    },
+    "page_purpose": "quest_walkthrough",
+    "notes": [
+      "dialogue_and_reachability: Josper special matter and skeleton scroll response are reachable; canonical tox and toxxulia skeleton aliases reviewed.",
+      "item_counts_and_rewards: Half of a Spell 12207 \u2192 Column of Frost 15380.",
+      "cash_xp_faction: Seven silver and directional faction effects match; XP 1000 and 5/1/-1/11 faction magnitudes are unverified.",
+      "acquisition_and_dependencies: Scripted caster 38172/414192 carries 12207; skeleton triggers spawn and depops."
+    ],
+    "unresolved": [
+      "Wiki calls caster a rare spawn, not proof of the inherited scripted trigger/lifecycle. Spawn timing not live verified.",
+      "Runtime inventory settlement, activation, acquisition lifecycle and UI were not live verified."
+    ],
+    "audit_evidence_files": [
+      "changes/p99-il-review/manual-facet-review.json",
+      "changes/p99-il-review/static-evidence.json"
+    ],
+    "verification": {
+      "source": "Full cached page and complete mapped canonical/alias Lua/Perl compared; source hashes retained.",
+      "static": "Item/actor/loot/recipe candidates inspected in exported data with proposal rows applied at the recorded snapshot. Later source/ownership inspection is separately hash-listed; no full live acquisition assertion.",
+      "runtime": "33 focused normalized Lua mock scenarios pass for this worker proposal; not real inventory/activation proof.",
+      "ui": "not_verified"
+    }
+  },
+  "Illegible Scrolls": {
+    "reviewed_at": "2026-10-22",
+    "review_status": "partial",
+    "match_status": "source_facets_reviewed_with_open_limits",
+    "local_quest_keys": [
+      "freeporteast/Lozani",
+      "freporte/Lozani",
+      "highkeep/Lozani"
+    ],
+    "p99_source": {
+      "title": "Illegible Scrolls",
+      "url": "https://wiki.project1999.com/Illegible_Scrolls?action=raw",
+      "raw_cache": "reference/p99-wiki/raw-pages/illegible-scrolls-cb44f32cbf.wiki",
+      "sha256": "50ca8f7b3c8baf33b40c96f9c82eaaf7b851d379cd5222caa7de25f8dd4fb670"
+    },
+    "page_purpose": "quest_walkthrough",
+    "notes": [
+      "dialogue_and_reachability: All three Lozani handlers implement orc oracles \u2192 oracle scroll/apprentice cantrips.",
+      "item_counts_and_rewards: 13225 plus four GOLD or two 13845 cantrips \u2192 documented low-spell examples 15351/15212/15079/15277. Proposed partial checks inspect item instances without consuming an unpaid scroll or lone cantrip.",
+      "cash_xp_faction: XP 100 and 255/333/288:+5,238/239:-5 are inherited, not established by page.",
+      "acquisition_and_dependencies: Canonical highkeep and both Freeport aliases reviewed, including original dialogue-only Lua."
+    ],
+    "unresolved": [
+      "Full random spell pool and probabilities are unknown; four examples are not asserted exhaustive. Mocked tests cover partial/full/excess offers, not real inventory settlement.",
+      "Runtime inventory settlement, activation, acquisition lifecycle and UI were not live verified."
+    ],
+    "audit_evidence_files": [
+      "changes/p99-il-review/manual-facet-review.json",
+      "changes/p99-il-review/static-evidence.json",
+      "changes/p99-il-parity/proposal.json"
+    ],
+    "verification": {
+      "source": "Full cached page and complete mapped canonical/alias Lua/Perl compared; source hashes retained.",
+      "static": "Item/actor/loot/recipe candidates inspected in exported data with proposal rows applied at the recorded snapshot. Later source/ownership inspection is separately hash-listed; no full live acquisition assertion.",
+      "runtime": "33 focused normalized Lua mock scenarios pass for this worker proposal; not real inventory/activation proof.",
+      "ui": "not_verified"
+    }
+  },
+  "Illegible Scrolls (Felwithe)": {
+    "reviewed_at": "2026-10-22",
+    "review_status": "partial",
+    "match_status": "source_facets_reviewed_with_open_limits",
+    "local_quest_keys": [
+      "felwithea/General_Jyleel"
+    ],
+    "p99_source": {
+      "title": "Illegible Scrolls (Felwithe)",
+      "url": "https://wiki.project1999.com/Illegible_Scrolls_(Felwithe)?action=raw",
+      "raw_cache": "reference/p99-wiki/raw-pages/illegible-scrolls-felwithe-9215af2bc3.wiki",
+      "sha256": "abfe564038579246e95002041d46fb5d56fb6979ac8e9f2c4f2f840d553242f7"
+    },
+    "page_purpose": "quest_walkthrough",
+    "notes": [
+      "dialogue_and_reachability: Current NZ overlay accepts displayed enlightenment wording; follow Tunare/assist defenders route is reachable.",
+      "item_counts_and_rewards: One 13225 scroll \u2192 current food/supply pool 13005/13004/13008/13010.",
+      "cash_xp_faction: Two silver one copper matches. XP 500 and 226:+5/279:+5/5001:+3 remain fallbacks.",
+      "acquisition_and_dependencies: Oracle scroll acquisition has static loot candidates; runner and Koada Vie branches retained."
+    ],
+    "unresolved": [
+      "The page\u2019s orc kill-faction list must not be misapplied as the hand-in faction list. Reward odds and exact XP/deltas unknown.",
+      "Runtime inventory settlement, activation, acquisition lifecycle and UI were not live verified."
+    ],
+    "audit_evidence_files": [
+      "changes/p99-il-review/manual-facet-review.json",
+      "changes/p99-il-review/static-evidence.json",
+      "changes/p99-nz-jyleel-dialogue.json"
+    ],
+    "verification": {
+      "source": "Full cached page and complete mapped canonical/alias Lua/Perl compared; source hashes retained.",
+      "static": "Item/actor/loot/recipe candidates inspected in exported data with proposal rows applied at the recorded snapshot. Later source/ownership inspection is separately hash-listed; no full live acquisition assertion.",
+      "runtime": "33 focused normalized Lua mock scenarios pass for this worker proposal; not real inventory/activation proof.",
+      "ui": "not_verified"
+    }
+  },
+  "Illusion: Iksar Quest": {
+    "reviewed_at": "2026-10-22",
+    "review_status": "partial",
+    "match_status": "source_facets_reviewed_with_open_limits",
+    "local_quest_keys": [
+      "firiona/Luminare_Pasinia"
+    ],
+    "p99_source": {
+      "title": "Illusion: Iksar Quest",
+      "url": "https://wiki.project1999.com/Illusion%3A_Iksar_Quest?action=raw",
+      "raw_cache": "reference/p99-wiki/raw-pages/illusion-iksar-quest-2cea4fff50.wiki",
+      "sha256": "5cfa570c01ed44c5e5036802f604ee97c2963ae5dbe9db80a536d44ccb7b74a8"
+    },
+    "page_purpose": "quest_walkthrough",
+    "notes": [
+      "dialogue_and_reachability: Luminare assist/collect accepts documented full responses and explains the four components.",
+      "item_counts_and_rewards: 12948 Nok Shaman Powder,12834 Heart of Ice,12743 Ton Warrior Totem,12824 Sabertooth Tiger Mane \u219212949. No enchanter-only gate, consistent with documented other classes turning in.",
+      "cash_xp_faction: XP 250 and signed 248/326/312/441/313 changes of 10 remain unverified.",
+      "acquisition_and_dependencies: Matching froglok, icebone and sabertooth static loot/zone edges found."
+    ],
+    "unresolved": [
+      "Exact numerical effects and rare-spawn probabilities remain unknown; no live acquisition or settlement proof.",
+      "Runtime inventory settlement, activation, acquisition lifecycle and UI were not live verified."
+    ],
+    "audit_evidence_files": [
+      "changes/p99-il-review/manual-facet-review.json",
+      "changes/p99-il-review/static-evidence.json"
+    ],
+    "verification": {
+      "source": "Full cached page and complete mapped canonical/alias Lua/Perl compared; source hashes retained.",
+      "static": "Item/actor/loot/recipe candidates inspected in exported data with proposal rows applied at the recorded snapshot. Later source/ownership inspection is separately hash-listed; no full live acquisition assertion.",
+      "runtime": "33 focused normalized Lua mock scenarios pass for this worker proposal; not real inventory/activation proof.",
+      "ui": "not_verified"
+    }
+  },
+  "Illweed Parchment Quest": {
+    "reviewed_at": "2026-10-22",
+    "review_status": "partial",
+    "match_status": "source_facets_reviewed_with_open_limits",
+    "local_quest_keys": [
+      "cabeast/War_Historian_Kobl"
+    ],
+    "p99_source": {
+      "title": "Illweed Parchment Quest",
+      "url": "https://wiki.project1999.com/Illweed_Parchment_Quest?action=raw",
+      "raw_cache": "reference/p99-wiki/raw-pages/illweed-parchment-quest-73408b820d.wiki",
+      "sha256": "2c416ec63654151ada191f7b49af173cc605a66a285c38a2e6788f74f316aa9e"
+    },
+    "page_purpose": "unsolved_quest_walkthrough",
+    "notes": [
+      "dialogue_and_reachability: Kobl full source reviewed; proposed unique writing materials/blood ink/illweed parchment keyword aliases make displayed links reachable.",
+      "item_counts_and_rewards: Four 12389 Illweed \u219212385 parchment is an existing authored branch, while preserved Perl is dialogue-only.",
+      "cash_xp_faction: Current 100 XP and five Cabilis factions+2 are not P 99-quantified.",
+      "acquisition_and_dependencies: No loot/ground route for Illweed in exported tables; historical ledger says migration 078 added Lake of Ill Omen fishing, but fishing table is not exported here."
+    ],
+    "unresolved": [
+      "P 99 marks quest unsolved/unconfirmed. No claim that the four-Illweed exchange or fishing rarity has been demonstrated on P 99; no new numerical guesses.",
+      "Runtime inventory settlement, activation, acquisition lifecycle and UI were not live verified."
+    ],
+    "audit_evidence_files": [
+      "changes/p99-il-review/manual-facet-review.json",
+      "changes/p99-il-review/static-evidence.json",
+      "changes/p99-il-parity/proposal.json"
+    ],
+    "verification": {
+      "source": "Full cached page and complete mapped canonical/alias Lua/Perl compared; source hashes retained.",
+      "static": "Item/actor/loot/recipe candidates inspected in exported data with proposal rows applied at the recorded snapshot. Later source/ownership inspection is separately hash-listed; no full live acquisition assertion.",
+      "runtime": "33 focused normalized Lua mock scenarios pass for this worker proposal; not real inventory/activation proof.",
+      "ui": "not_verified"
+    }
+  },
+  "Incandescent Mask quest": {
+    "reviewed_at": "2026-10-22",
+    "review_status": "partial",
+    "match_status": "source_facets_reviewed_with_open_limits",
+    "local_quest_keys": [
+      "neriakc/Mizr_N-Mar",
+      "qeynos/Madame_Serena",
+      "qeynos2/Madame_Serena",
+      "soltemple/Sultin"
+    ],
+    "p99_source": {
+      "title": "Incandescent Mask quest",
+      "url": "https://wiki.project1999.com/Incandescent_Mask_quest?action=raw",
+      "raw_cache": "reference/p99-wiki/raw-pages/incandescent-mask-quest-8868d8806e.wiki",
+      "sha256": "c84db5e1df0260a3367e189e529a98583e27cbf84f25d6391a00a364a1684fb3"
+    },
+    "page_purpose": "quest_walkthrough",
+    "notes": [
+      "dialogue_and_reachability: AM Sultin overlay already makes Mask direct keyword reachable; all Sultin branches read and preserved.",
+      "item_counts_and_rewards: Glowing Mask 2352 plus three DISTINCT Fortune runes 10530/10531/10532 \u21922350. Mizr and Serena payment branches each yield their rune for 50 gold; Mizr also accepts 5 platinum inherited alternative.",
+      "cash_xp_faction: Sultin 1000 XP and 415:+5/416:-1 unverified. Mizr rune branch lacks the page-described Beta Neutral improvement; magnitude unavailable.",
+      "acquisition_and_dependencies: Enynti has 10530 loot; skeletal monk and froglok scryer have 2352. Full supporting Mizr/Serena sources inspected."
+    ],
+    "unresolved": [
+      "Mizr faction omission flagged without invented amount. Random/static spawn rates and exact XP unverified.",
+      "Runtime inventory settlement, activation, acquisition lifecycle and UI were not live verified."
+    ],
+    "audit_evidence_files": [
+      "changes/p99-il-review/manual-facet-review.json",
+      "changes/p99-il-review/static-evidence.json",
+      "changes/p99-am-incandescent-wand.json"
+    ],
+    "verification": {
+      "source": "Full cached page and complete mapped canonical/alias Lua/Perl compared; source hashes retained.",
+      "static": "Item/actor/loot/recipe candidates inspected in exported data with proposal rows applied at the recorded snapshot. Later source/ownership inspection is separately hash-listed; no full live acquisition assertion.",
+      "runtime": "33 focused normalized Lua mock scenarios pass for this worker proposal; not real inventory/activation proof.",
+      "ui": "not_verified"
+    }
+  },
+  "Inert Potion Quest": {
+    "reviewed_at": "2026-10-22",
+    "review_status": "partial",
+    "match_status": "source_facets_reviewed_with_open_limits",
+    "local_quest_keys": [
+      "erudnint/Slansin",
+      "erudnint/Toresian_Fhabel"
+    ],
+    "p99_source": {
+      "title": "Inert Potion Quest",
+      "url": "https://wiki.project1999.com/Inert_Potion_Quest?action=raw",
+      "raw_cache": "reference/p99-wiki/raw-pages/inert-potion-quest-706b575631.wiki",
+      "sha256": "f2eca9eaba81622b69f1014732edadf5d37921d996bbcaf487edae91c62af155"
+    },
+    "page_purpose": "quest_walkthrough",
+    "notes": [
+      "dialogue_and_reachability: Toresian study enchantment spawns one of two Slansin roles only if neither exists; proposed study alias supports the displayed link. assist Toresian issues 13983.",
+      "item_counts_and_rewards: One 13983 potion consumed per interaction; merchant despawns, enchanter permits repeat hand-ins.",
+      "cash_xp_faction: Approved correction: enchanter five factions 336/229/329/230/330 each+1, not+5. Merchant signs retained;XP 300 and merchant amounts unverified.",
+      "acquisition_and_dependencies: Raw NPC 23080 is merchant 41 and 23001 enchanter 14 under same name; source distinguishes GetClass."
+    ],
+    "unresolved": [
+      "Equal spawn choice, pet summon and enchanter 20-minute-plus lifecycle unverified. Numeric Class API is not independently a bug; no lifecycle guesses added.",
+      "Runtime inventory settlement, activation, acquisition lifecycle and UI were not live verified."
+    ],
+    "audit_evidence_files": [
+      "changes/p99-il-review/manual-facet-review.json",
+      "changes/p99-il-review/static-evidence.json",
+      "changes/p99-il-parity/proposal.json"
+    ],
+    "verification": {
+      "source": "Full cached page and complete mapped canonical/alias Lua/Perl compared; source hashes retained.",
+      "static": "Item/actor/loot/recipe candidates inspected in exported data with proposal rows applied at the recorded snapshot. Later source/ownership inspection is separately hash-listed; no full live acquisition assertion.",
+      "runtime": "33 focused normalized Lua mock scenarios pass for this worker proposal; not real inventory/activation proof.",
+      "ui": "not_verified"
+    }
+  },
+  "Innoruuk Recommendation": {
+    "reviewed_at": "2026-10-22",
+    "review_status": "partial",
+    "match_status": "source_facets_reviewed_with_open_limits",
+    "local_quest_keys": [
+      "freeporteast/Saxarivza_Zaxun",
+      "freporte/Saxarivza_Zaxun",
+      "grobb/Savarixsa_Zexus",
+      "neriakc/Perrir_Zexus"
+    ],
+    "p99_source": {
+      "title": "Innoruuk Recommendation",
+      "url": "https://wiki.project1999.com/Innoruuk_Recommendation?action=raw",
+      "raw_cache": "reference/p99-wiki/raw-pages/innoruuk-recommendation-f3169a083a.wiki",
+      "sha256": "3599fafc8b4ceaeb96afaf624235d86f06906c1a71f45846125ecff72b7e26dc"
+    },
+    "page_purpose": "quest_walkthrough",
+    "notes": [
+      "dialogue_and_reachability: Savarixsa and both Saxarivza aliases issue 18148; Perrir accepts recommendation and later 13113 skullcap.",
+      "item_counts_and_rewards: Recommendation has no item reward; guild note 18756 still gives 13585 and is kept separate.",
+      "cash_xp_faction: Approved 18148 deltas 340:+200,278:+30,362:-70,226:-50,341:-30,1522:-800. Guild-note original 100/15/-35/-25/-15/-400 untouched and tested.",
+      "acquisition_and_dependencies: All mapped sources and raw Perl checked; skullcap acquisition is separate from player-made Leatherfoot Raider Skullcap 12259."
+    ],
+    "unresolved": [
+      "Skullcap page says Primordial Malice improves but source -40; positive magnitude and minor-coin amount unknown, left unresolved. XP 100 not established.",
+      "Runtime inventory settlement, activation, acquisition lifecycle and UI were not live verified."
+    ],
+    "audit_evidence_files": [
+      "changes/p99-il-review/manual-facet-review.json",
+      "changes/p99-il-review/static-evidence.json",
+      "changes/p99-il-parity/proposal.json"
+    ],
+    "verification": {
+      "source": "Full cached page and complete mapped canonical/alias Lua/Perl compared; source hashes retained.",
+      "static": "Item/actor/loot/recipe candidates inspected in exported data with proposal rows applied at the recorded snapshot. Later source/ownership inspection is separately hash-listed; no full live acquisition assertion.",
+      "runtime": "33 focused normalized Lua mock scenarios pass for this worker proposal; not real inventory/activation proof.",
+      "ui": "not_verified"
+    }
+  },
+  "Innoruuk Symbol Quests": {
+    "reviewed_at": "2026-10-22",
+    "review_status": "partial",
+    "match_status": "source_facets_reviewed_with_open_limits",
+    "local_quest_keys": [
+      "commonlands/Wallin_Slyfoot",
+      "commons/Wallin_Slyfoot",
+      "lfaydark/Dragoon_Szorn",
+      "neriaka/Dran_-slug-_Rembor",
+      "neriakb/Draxiz_N-Ryt",
+      "neriakc/Ithvol_K-Jasn",
+      "neriakc/Perrir_Zexus",
+      "steamfont/Ennixy_Frennor"
+    ],
+    "p99_source": {
+      "title": "Innoruuk Symbol Quests",
+      "url": "https://wiki.project1999.com/Innoruuk_Symbol_Quests?action=raw",
+      "raw_cache": "reference/p99-wiki/raw-pages/innoruuk-symbol-quests-9d6182b9a6.wiki",
+      "sha256": "2365b7f26247ab51617d3da8d6718fea9b57b7afb094b27019057ae9ecd81ee3"
+    },
+    "page_purpose": "quest_walkthrough",
+    "notes": [
+      "dialogue_and_reachability: Perrir hematite, Ithvol initiate/disciple, Draxiz orders, Dran/Ithvol and Szorn/Ennixy chains reviewed end to end in source.",
+      "item_counts_and_rewards: Four 14550 \u21921369;12497+1369 \u21921370;12499+12498+19029+1370 \u21921371. Draxiz 12807 \u21922284;18957 spawns spy. Dran two 12073 \u219219030, with safe lone-boning return proposed.",
+      "cash_xp_faction: Faction directions generally match; XP 2000/4000/8000 and amounts unverified. Szorn crate-receipt branch has no XP although page describes experience.",
+      "acquisition_and_dependencies: Steel-boning recipe 6410 exists; orders spawn spy 41104, Ennixy spawns Swiftmoon 56150. Exact dash keys and raw backtick actor identities retained."
+    ],
+    "unresolved": [
+      "Wallin both aliases omit the Perl/wiki Halfling disguise prerequisite; not treated as faction adaptation. Pinned context_reads.go derives RaceID from player.Race, and GetRace/GetBaseRace expose that same base field; an effective illusion-aware prerequisite is missing. Parent explicitly deferred a base-race gate because it would block disguised non-halflings. Travel timers, spy combat and receipt XP unverified.",
+      "Runtime inventory settlement, activation, acquisition lifecycle and UI were not live verified."
+    ],
+    "audit_evidence_files": [
+      "changes/p99-il-review/manual-facet-review.json",
+      "changes/p99-il-review/static-evidence.json",
+      "changes/p99-il-parity/proposal.json"
+    ],
+    "verification": {
+      "source": "Full cached page and complete mapped canonical/alias Lua/Perl compared; source hashes retained.",
+      "static": "Item/actor/loot/recipe candidates inspected in exported data with proposal rows applied at the recorded snapshot. Later source/ownership inspection is separately hash-listed; no full live acquisition assertion.",
+      "runtime": "33 focused normalized Lua mock scenarios pass for this worker proposal; not real inventory/activation proof.",
+      "ui": "not_verified"
+    }
+  },
+  "Ivy Etched Armor Quests": {
+    "reviewed_at": "2026-10-22",
+    "review_status": "partial",
+    "match_status": "source_facets_reviewed_with_open_limits",
+    "local_quest_keys": [
+      "kaladimb/Priestess_Ghalea",
+      "kithicor/Gandari",
+      "kithicor/Leaf_Falldim",
+      "soltemple/Lord_Searfire"
+    ],
+    "p99_source": {
+      "title": "Ivy Etched Armor Quests",
+      "url": "https://wiki.project1999.com/Ivy_Etched_Armor_Quests?action=raw",
+      "raw_cache": "reference/p99-wiki/raw-pages/ivy-etched-armor-quests-96ce0540ef.wiki",
+      "sha256": "bd5f5e03ac1738c6a21c01357fc7e133ca7438995a167fee92f02ae312f38bef"
+    },
+    "page_purpose": "quest_walkthrough",
+    "notes": [
+      "dialogue_and_reachability: Gandari and Leaf component dialogue reachable. Searfire extra ronium/bar-of-alloy step remains reachable, not a missing quest. Ghalea full source reviewed.",
+      "item_counts_and_rewards: Gandari four armor branches use correct rune portions, gems and components; Leaf broken bow pieces\u2192gloves,12305 ronium+12306 granite+2000 gold\u2192boots,10059 StarOfOdus+12328 quiver\u2192leggings.",
+      "cash_xp_faction: 10000 XP and 269/302/272:+30,324:-60 armor amounts inherited; source does not establish them.",
+      "acquisition_and_dependencies: Enabled recipes 9679 ronium and 9923 full quiver have expected components/container; Searfire gives 17977, Ghalea four 12106 dust gives 12282 soil."
+    ],
+    "unresolved": [
+      "Craft-container runtime support, all ingredient probabilities, exact numeric rewards and full bow/arrow prerequisite subquests remain unverified. Equipment class/minimum level is not inferred as hard turn-in gate.",
+      "Runtime inventory settlement, activation, acquisition lifecycle and UI were not live verified."
+    ],
+    "audit_evidence_files": [
+      "changes/p99-il-review/manual-facet-review.json",
+      "changes/p99-il-review/static-evidence.json"
+    ],
+    "verification": {
+      "source": "Full cached page and complete mapped canonical/alias Lua/Perl compared; source hashes retained.",
+      "static": "Item/actor/loot/recipe candidates inspected in exported data with proposal rows applied at the recorded snapshot. Later source/ownership inspection is separately hash-listed; no full live acquisition assertion.",
+      "runtime": "33 focused normalized Lua mock scenarios pass for this worker proposal; not real inventory/activation proof.",
+      "ui": "not_verified"
+    }
+  },
+  "Jillin's Stew": {
+    "reviewed_at": "2026-10-22",
+    "review_status": "partial",
+    "match_status": "source_facets_reviewed_with_open_limits",
+    "local_quest_keys": [
+      "rivervale/Blinza_Toepopal",
+      "rivervale/Deputy_Lowmot"
+    ],
+    "p99_source": {
+      "title": "Jillin's Stew",
+      "url": "https://wiki.project1999.com/Jillin's_Stew?action=raw",
+      "raw_cache": "reference/p99-wiki/raw-pages/jillin-s-stew-db73ff483c.wiki",
+      "sha256": "20729e94447d888e3abb43ae15ac7fc0876eee5cf6fa2b1b099bc0b6dd995a64"
+    },
+    "page_purpose": "quest_walkthrough",
+    "notes": [
+      "dialogue_and_reachability: Blinza Jillin/stew issues 13959; timer label is corrected in maintained source. Deputy Lowmot accepts stew.",
+      "item_counts_and_rewards: 13959 Carrot Stew is delivery item; no added carrot prerequisite because page does not prove hard state gate.",
+      "cash_xp_faction: Storm Reapers+5 matches explicit page confirmation; current 2\u20136 c and 1\u20134 s retained despite earlier 7 c report. XP 10 and other signed 1 amounts unverified.",
+      "acquisition_and_dependencies: Both actors have static candidates. Full Blinza carrot-related branches read but no unrelated changes."
+    ],
+    "unresolved": [
+      "Cash distribution odds and conflicting historical report not resolved; no live timer or delivery test.",
+      "Runtime inventory settlement, activation, acquisition lifecycle and UI were not live verified."
+    ],
+    "audit_evidence_files": [
+      "changes/p99-il-review/manual-facet-review.json",
+      "changes/p99-il-review/static-evidence.json"
+    ],
+    "verification": {
+      "source": "Full cached page and complete mapped canonical/alias Lua/Perl compared; source hashes retained.",
+      "static": "Item/actor/loot/recipe candidates inspected in exported data with proposal rows applied at the recorded snapshot. Later source/ownership inspection is separately hash-listed; no full live acquisition assertion.",
+      "runtime": "33 focused normalized Lua mock scenarios pass for this worker proposal; not real inventory/activation proof.",
+      "ui": "not_verified"
+    }
+  },
+  "Journal Strongbox": {
+    "reviewed_at": "2026-10-22",
+    "review_status": "partial",
+    "match_status": "source_facets_reviewed_with_open_limits",
+    "local_quest_keys": [
+      "firiona/Lenka_Stoutheart",
+      "freeporteast/Lenka_Stoutheart",
+      "freeportwest/Nusk_Treton",
+      "freporte/Lenka_Stoutheart",
+      "freportw/Nusk_Treton"
+    ],
+    "p99_source": {
+      "title": "Journal Strongbox",
+      "url": "https://wiki.project1999.com/Journal_Strongbox?action=raw",
+      "raw_cache": "reference/p99-wiki/raw-pages/journal-strongbox-3824b1b2b4.wiki",
+      "sha256": "b643c97bede77f9ec7bb12fbbf18a75ae687bf79719be2ebd2e419ecb678299f"
+    },
+    "page_purpose": "quest_walkthrough",
+    "notes": [
+      "dialogue_and_reachability: Nusk arcane scientist/locked journal/seek Lenka and both port Lenka journal-strongbox branches reachable. Firiona same-name Lenka is a separate flavor script, not silently substituted.",
+      "item_counts_and_rewards: Strongbox 13860 accepted by both Nusk aliases; Lenka sets strongbox global for one hour.",
+      "cash_xp_faction: Nusk 100 XP,2 c 10 s and duplicate 220 calls totaling+4 plus other factions are inherited and not quantified by page.",
+      "acquisition_and_dependencies: Ground row 1772 supplies 13860 in zone 69 OOT; no 1772 row is present in exported idlequest_enabled_ground_spawns; any quest-specific strongbox activation path remains unverified."
+    ],
+    "unresolved": [
+      "Live ground pickup availability and global dependency unverified. Duplicate faction call is not corrected without authority; alternate-zone Lenka flavor source is incomplete but not this canonical stage.",
+      "Runtime inventory settlement, activation, acquisition lifecycle and UI were not live verified."
+    ],
+    "audit_evidence_files": [
+      "changes/p99-il-review/manual-facet-review.json",
+      "changes/p99-il-review/static-evidence.json",
+      "changes/p99-am-lenka-pouch.json"
+    ],
+    "verification": {
+      "source": "Full cached page and complete mapped canonical/alias Lua/Perl compared; source hashes retained.",
+      "static": "Item/actor/loot/recipe candidates inspected in exported data with proposal rows applied at the recorded snapshot. Later source/ownership inspection is separately hash-listed; no full live acquisition assertion.",
+      "runtime": "33 focused normalized Lua mock scenarios pass for this worker proposal; not real inventory/activation proof.",
+      "ui": "not_verified"
+    }
+  },
+  "Journeyman's Boots Quest": {
+    "reviewed_at": "2026-10-22",
+    "review_status": "partial",
+    "match_status": "source_facets_reviewed_with_open_limits",
+    "local_quest_keys": [
+      "rathemtn/Hasten_Bootstrutter"
+    ],
+    "p99_source": {
+      "title": "Journeyman's Boots Quest",
+      "url": "https://wiki.project1999.com/Journeyman's_Boots_Quest?action=raw",
+      "raw_cache": "reference/p99-wiki/raw-pages/journeyman-s-boots-quest-2ee79cfee8.wiki",
+      "sha256": "c845ccc2cc1d78ed1869422190282d3656e5751ac01a84d990527cd569346d20"
+    },
+    "page_purpose": "quest_walkthrough",
+    "notes": [
+      "dialogue_and_reachability: Hasten full documented boot/rare trade/component dialogue and running spawn handler reviewed.",
+      "item_counts_and_rewards: 12268 Ring of Ancients+7100 Shadowed Rapier+3250 GOLD \u21922300 Journeyman Boots; no platinum substitution in maintained source.",
+      "cash_xp_faction: 1250 XP fallback, no factions; P 99 exact XP not established.",
+      "acquisition_and_dependencies: Normal ancient cyclops in sro/oot and shadowed-man loot routes found; Fabled candidate explicitly not valid acquisition evidence."
+    ],
+    "unresolved": [
+      "Partial-offer warning compares trade userdata to number and may not fire, but return_items preserves failed offers. Spawn timing, no-rent lifetime, MQ and live settlement unverified.",
+      "Runtime inventory settlement, activation, acquisition lifecycle and UI were not live verified."
+    ],
+    "audit_evidence_files": [
+      "changes/p99-il-review/manual-facet-review.json",
+      "changes/p99-il-review/static-evidence.json"
+    ],
+    "verification": {
+      "source": "Full cached page and complete mapped canonical/alias Lua/Perl compared; source hashes retained.",
+      "static": "Item/actor/loot/recipe candidates inspected in exported data with proposal rows applied at the recorded snapshot. Later source/ownership inspection is separately hash-listed; no full live acquisition assertion.",
+      "runtime": "33 focused normalized Lua mock scenarios pass for this worker proposal; not real inventory/activation proof.",
+      "ui": "not_verified"
+    }
+  },
+  "Key to Charasis Quest": {
+    "reviewed_at": "2026-10-22",
+    "review_status": "partial",
+    "match_status": "source_facets_reviewed_with_open_limits",
+    "local_quest_keys": [
+      "swampofnohope/Dugroz"
+    ],
+    "p99_source": {
+      "title": "Key to Charasis Quest",
+      "url": "https://wiki.project1999.com/Key_to_Charasis_Quest?action=raw",
+      "raw_cache": "reference/p99-wiki/raw-pages/key-to-charasis-quest-7ed9e81e98.wiki",
+      "sha256": "c599d885b576621841017c9dc86377122b42a2cd97dbf74a1cc1e4aca11801cc"
+    },
+    "page_purpose": "quest_walkthrough",
+    "notes": [
+      "dialogue_and_reachability: Dugroz work/escape/key/small-favor chain reachable.",
+      "item_counts_and_rewards: 7236 Xalgozian Fang +7256 Jade Chokidai Prod \u219220600; legacy 7254 alternative retained but not established by page.",
+      "cash_xp_faction: 1000 XP and zoneflag 105 are repository fallbacks/runtime adaptation, not numerical wiki proof.",
+      "acquisition_and_dependencies: Xalgoz Kaesora and Chancellor of Di`zok Lake of Ill Omen loot edges found."
+    ],
+    "unresolved": [
+      "Key persistence/door access and pre-nerf alternative availability unverified. No hard recommended-level gate added.",
+      "Runtime inventory settlement, activation, acquisition lifecycle and UI were not live verified."
+    ],
+    "audit_evidence_files": [
+      "changes/p99-il-review/manual-facet-review.json",
+      "changes/p99-il-review/static-evidence.json"
+    ],
+    "verification": {
+      "source": "Full cached page and complete mapped canonical/alias Lua/Perl compared; source hashes retained.",
+      "static": "Item/actor/loot/recipe candidates inspected in exported data with proposal rows applied at the recorded snapshot. Later source/ownership inspection is separately hash-listed; no full live acquisition assertion.",
+      "runtime": "33 focused normalized Lua mock scenarios pass for this worker proposal; not real inventory/activation proof.",
+      "ui": "not_verified"
+    }
+  },
+  "Key to Cobalt Scar": {
+    "reviewed_at": "2026-10-22",
+    "review_status": "partial",
+    "match_status": "source_facets_reviewed_with_open_limits",
+    "local_quest_keys": [
+      "kael/Wenglawks_Kkeak",
+      "skyshrine/Ziglark_Whisperwing"
+    ],
+    "p99_source": {
+      "title": "Key to Cobalt Scar",
+      "url": "https://wiki.project1999.com/Key_to_Cobalt_Scar?action=raw",
+      "raw_cache": "reference/p99-wiki/raw-pages/key-to-cobalt-scar-d3017e4369.wiki",
+      "sha256": "7dbaa20986ed8fbcece8c934528073a6dff58cadf5353381603f1f4dce1c44ad"
+    },
+    "page_purpose": "quest_walkthrough",
+    "notes": [
+      "dialogue_and_reachability: Proposed Ziglark worthy branch immediately gives 28600, matching P 99 instead of requiring challenge/deliver extra stages; legacy stages retained. mundane/trivial alias accepted.",
+      "item_counts_and_rewards: 28600+200 platinum to Wenglawks \u219228601, then Ziglark\u219228602 Shrine Key.",
+      "cash_xp_faction: Ziglark 500 XP retained; Wenglawks lacks documented XP with no amount known.",
+      "acquisition_and_dependencies: Both full handlers reviewed; named items and actor candidates exist. Wenglawks is a reviewed_velious_override entry, not a blanket ban: its bounded maintained override and enabled row are present; unreviewed branches remain outside that override."
+    ],
+    "unresolved": [
+      "Wiki contains conflicting 200 pp reports; retain explicit documented required payment. Exact XP, key/door persistence and KoS behavior under intentional faction bypass not P 99-live verified.",
+      "Runtime inventory settlement, activation, acquisition lifecycle and UI were not live verified."
+    ],
+    "audit_evidence_files": [
+      "changes/p99-il-review/manual-facet-review.json",
+      "changes/p99-il-review/static-evidence.json",
+      "changes/p99-il-parity/proposal.json"
+    ],
+    "verification": {
+      "source": "Full cached page and complete mapped canonical/alias Lua/Perl compared; source hashes retained.",
+      "static": "Item/actor/loot/recipe candidates inspected in exported data with proposal rows applied at the recorded snapshot. Later source/ownership inspection is separately hash-listed; no full live acquisition assertion.",
+      "runtime": "33 focused normalized Lua mock scenarios pass for this worker proposal; not real inventory/activation proof.",
+      "ui": "not_verified"
+    }
+  },
+  "Key to Jaled Dar's Lair (Neb)": {
+    "reviewed_at": "2026-10-22",
+    "review_status": "partial",
+    "match_status": "source_facets_reviewed_with_open_limits",
+    "local_quest_keys": [
+      "necropolis/Neb"
+    ],
+    "p99_source": {
+      "title": "Key to Jaled Dar's Lair (Neb)",
+      "url": "https://wiki.project1999.com/Key_to_Jaled_Dar's_Lair_(Neb)?action=raw",
+      "raw_cache": "reference/p99-wiki/raw-pages/key-to-jaled-dar-s-lair-neb-d3aa861c4e.wiki",
+      "sha256": "d24be302d2fb59e55539403ac86d16307254c4629edd165c7e61d43fea0f969e"
+    },
+    "page_purpose": "quest_walkthrough",
+    "notes": [
+      "dialogue_and_reachability: Parent Neb conversion independently checked against all seven documented dialogue topics and complete Perl.",
+      "item_counts_and_rewards: 26033 Vaniki heart+26009 Zlandicar heart \u219226040 Neb Warbone+28060 Tomb Key. Later 69341/69344 Nexona branch correctly excluded.",
+      "cash_xp_faction: 250000 XP and 463:+100/462:-10/464:-10 explicitly retained same-quest unverified fallbacks.",
+      "acquisition_and_dependencies: Vaniki and Zlandicar Necropolis loot paths and Neb actor candidates found."
+    ],
+    "unresolved": [
+      "No live trap/door/key persistence proof; level 55 infobox not treated as mandatory gate. No duplicate conversion created.",
+      "Runtime inventory settlement, activation, acquisition lifecycle and UI were not live verified."
+    ],
+    "audit_evidence_files": [
+      "changes/p99-il-review/manual-facet-review.json",
+      "changes/p99-il-review/static-evidence.json",
+      "changes/p99-neb-lua/proposal.json"
+    ],
+    "verification": {
+      "source": "Full cached page and complete mapped canonical/alias Lua/Perl compared; source hashes retained.",
+      "static": "Item/actor/loot/recipe candidates inspected in exported data with proposal rows applied at the recorded snapshot. Later source/ownership inspection is separately hash-listed; no full live acquisition assertion.",
+      "runtime": "33 focused normalized Lua mock scenarios pass for this worker proposal; not real inventory/activation proof.",
+      "ui": "not_verified"
+    }
+  },
+  "Key to Sleeper's Tomb": {
+    "reviewed_at": "2026-10-22",
+    "review_status": "partial",
+    "match_status": "source_facets_reviewed_with_open_limits",
+    "local_quest_keys": [
+      "necropolis/Jaled_Dar-s_shade"
+    ],
+    "p99_source": {
+      "title": "Key to Sleeper's Tomb",
+      "url": "https://wiki.project1999.com/Key_to_Sleeper's_Tomb?action=raw",
+      "raw_cache": "reference/p99-wiki/raw-pages/key-to-sleeper-s-tomb-b5e40fd0e6.wiki",
+      "sha256": "a8de7d98ec488e3b0406e867bcd876fde38d07dff6feb93da38484d873f06e97"
+    },
+    "page_purpose": "quest_walkthrough",
+    "notes": [
+      "dialogue_and_reachability: Parent Jaled conversion independently checked against complete source and five dialogue topics. Exact script key is Jaled_Dar-s_shade; raw actor uses backtick.",
+      "item_counts_and_rewards: Each 27255/27256/27258/27259/27266 talisman \u219227265 Sleeper Key.9296 alternate omitted as unsupported by named P 99 rewards.",
+      "cash_xp_faction: 500000 XP and zoneflag 128 retained from same-quest source, not exact P 99 values.",
+      "acquisition_and_dependencies: Actor 123011 resolves by documented backtick-to-dash candidate lookup. Five item identities verified in parent evidence."
+    ],
+    "unresolved": [
+      "Raid-loot source lifecycle, door access and persistence not independently established by this review. No recommended-level 55 gate invented.",
+      "Runtime inventory settlement, activation, acquisition lifecycle and UI were not live verified."
+    ],
+    "audit_evidence_files": [
+      "changes/p99-il-review/manual-facet-review.json",
+      "changes/p99-il-review/static-evidence.json",
+      "changes/p99-jaled-lua/proposal.json"
+    ],
+    "verification": {
+      "source": "Full cached page and complete mapped canonical/alias Lua/Perl compared; source hashes retained.",
+      "static": "Item/actor/loot/recipe candidates inspected in exported data with proposal rows applied at the recorded snapshot. Later source/ownership inspection is separately hash-listed; no full live acquisition assertion.",
+      "runtime": "33 focused normalized Lua mock scenarios pass for this worker proposal; not real inventory/activation proof.",
+      "ui": "not_verified"
+    }
+  },
+  "Kezzek's Fight Strategies for Rogue Epic Quest": {
+    "reviewed_at": "2026-10-22",
+    "review_status": "partial",
+    "match_status": "source_facets_reviewed_with_open_limits",
+    "local_quest_keys": [],
+    "p99_source": {
+      "title": "Kezzek's Fight Strategies for Rogue Epic Quest",
+      "url": "https://wiki.project1999.com/Kezzek's_Fight_Strategies_for_Rogue_Epic_Quest?action=raw",
+      "raw_cache": "reference/p99-wiki/raw-pages/kezzek-s-fight-strategies-for-rogue-epic-quest-39b608a8d3.wiki",
+      "sha256": "4b2d922a15ad6e28b2d3e46f80558c9fa2dcbeda45f0d8bfc05788f2c64d1bea"
+    },
+    "page_purpose": "strategy_guide",
+    "notes": [
+      "dialogue_and_reachability: Full page is a historical 2001 Rogue Epic combat-strategy guide, not a new NPC exchange.",
+      "item_counts_and_rewards: Renux/General tactical advice does not define a separate hand-in or new reward.",
+      "cash_xp_faction: No independent numeric quest rewards derived.",
+      "acquisition_and_dependencies: No page-specific handler mapping; this classification does not supersede substantive Rogue Epic review elsewhere."
+    ],
+    "unresolved": [
+      "Renux summon/aggro/pet behavior and General combat tactics were not tested. Source-branch audit is not claimed complete merely because this page is a guide.",
+      "Runtime inventory settlement, activation, acquisition lifecycle and UI were not live verified."
+    ],
+    "audit_evidence_files": [
+      "changes/p99-il-review/manual-facet-review.json",
+      "changes/p99-il-review/static-evidence.json"
+    ],
+    "verification": {
+      "source": "Full cached page and complete mapped canonical/alias Lua/Perl compared; source hashes retained.",
+      "static": "Item/actor/loot/recipe candidates inspected in exported data with proposal rows applied at the recorded snapshot. Later source/ownership inspection is separately hash-listed; no full live acquisition assertion.",
+      "runtime": "33 focused normalized Lua mock scenarios pass for this worker proposal; not real inventory/activation proof.",
+      "ui": "not_verified"
+    }
+  },
+  "Kilij's Plans": {
+    "reviewed_at": "2026-10-22",
+    "review_status": "partial",
+    "match_status": "source_facets_reviewed_with_open_limits",
+    "local_quest_keys": [
+      "gfaydark/Bilrio_Surecut"
+    ],
+    "p99_source": {
+      "title": "Kilij's Plans",
+      "url": "https://wiki.project1999.com/Kilij's_Plans?action=raw",
+      "raw_cache": "reference/p99-wiki/raw-pages/kilij-s-plans-38bd67ceff.wiki",
+      "sha256": "d8c9a493134b278372cf1c12235c13df2f8c0ffbcd584a554c5204a713ec46d4"
+    },
+    "page_purpose": "quest_walkthrough",
+    "notes": [
+      "dialogue_and_reachability: Bilrio full plans/enchantment speech matches the documented chain; Lua corrects original Perl gaps.",
+      "item_counts_and_rewards: 12206 Kilij Plans+three 16506 Enchanted Gold Bars \u21925366.",
+      "cash_xp_faction: 1500 XP and four+30 faction amounts are inherited; directions match.",
+      "acquisition_and_dependencies: Item identities and NPC/loot candidates recorded; enchanted bars are spell-produced rather than assumed merchant purchases."
+    ],
+    "unresolved": [
+      "Husam drop probability, spell production/runtime acquisition and exact numeric effects unverified.",
+      "Runtime inventory settlement, activation, acquisition lifecycle and UI were not live verified."
+    ],
+    "audit_evidence_files": [
+      "changes/p99-il-review/manual-facet-review.json",
+      "changes/p99-il-review/static-evidence.json"
+    ],
+    "verification": {
+      "source": "Full cached page and complete mapped canonical/alias Lua/Perl compared; source hashes retained.",
+      "static": "Item/actor/loot/recipe candidates inspected in exported data with proposal rows applied at the recorded snapshot. Later source/ownership inspection is separately hash-listed; no full live acquisition assertion.",
+      "runtime": "33 focused normalized Lua mock scenarios pass for this worker proposal; not real inventory/activation proof.",
+      "ui": "not_verified"
+    }
+  },
+  "Knight Card Quest": {
+    "reviewed_at": "2026-10-22",
+    "review_status": "partial",
+    "match_status": "source_facets_reviewed_with_open_limits",
+    "local_quest_keys": [
+      "kaladima/Beno_Targnarle",
+      "oceanoftears/Doran_Vargnus",
+      "oot/Doran_Vargnus"
+    ],
+    "p99_source": {
+      "title": "Knight Card Quest",
+      "url": "https://wiki.project1999.com/Knight_Card_Quest?action=raw",
+      "raw_cache": "reference/p99-wiki/raw-pages/knight-card-quest-d4a6bb1225.wiki",
+      "sha256": "e431f865fac960538a24eb8916abf34e1de3f374ea329765328f65a02ef3c2a9"
+    },
+    "page_purpose": "quest_walkthrough",
+    "notes": [
+      "dialogue_and_reachability: Beno sends adventurer to Doran; original OOT Doran accepts knight card. Revamped oceanoftears alias has empty Lua and separate incomplete Perl, kept distinct.",
+      "item_counts_and_rewards: 13995 Knight Card \u2192 documented mixed armor reward pool; Beno 13282 scrap\u219213995 is upstream acquisition.",
+      "cash_xp_faction: XP 500,312:+10/274:+1/293:+1/290:+1/232:-1 and equal pool weighting unverified.",
+      "acquisition_and_dependencies: Original oot actor/static reward identities checked; upstream cleaner-clockwork stage not independently live tested."
+    ],
+    "unresolved": [
+      "Revamped oceanoftears source is not silently counted as converted canonical content. Full pool completeness/probabilities and exact effects unknown.",
+      "Runtime inventory settlement, activation, acquisition lifecycle and UI were not live verified."
+    ],
+    "audit_evidence_files": [
+      "changes/p99-il-review/manual-facet-review.json",
+      "changes/p99-il-review/static-evidence.json"
+    ],
+    "verification": {
+      "source": "Full cached page and complete mapped canonical/alias Lua/Perl compared; source hashes retained.",
+      "static": "Item/actor/loot/recipe candidates inspected in exported data with proposal rows applied at the recorded snapshot. Later source/ownership inspection is separately hash-listed; no full live acquisition assertion.",
+      "runtime": "33 focused normalized Lua mock scenarios pass for this worker proposal; not real inventory/activation proof.",
+      "ui": "not_verified"
+    }
+  },
+  "Kobold Killing": {
+    "reviewed_at": "2026-10-22",
+    "review_status": "partial",
+    "match_status": "source_facets_reviewed_with_open_limits",
+    "local_quest_keys": [
+      "qeynos/Tabure_Ahendle"
+    ],
+    "p99_source": {
+      "title": "Kobold Killing",
+      "url": "https://wiki.project1999.com/Kobold_Killing?action=raw",
+      "raw_cache": "reference/p99-wiki/raw-pages/kobold-killing-771eadfaab.wiki",
+      "sha256": "2add8adbab31a3e36c8357cc134d2cb56479988200182858ffe9512afd6bcc34"
+    },
+    "page_purpose": "quest_walkthrough",
+    "notes": [
+      "dialogue_and_reachability: Shared AM Tabure proposal now supplies documented friendly Steel Warriors reply and assist link; full source read, book/guild-note changes preserved.",
+      "item_counts_and_rewards: Four 13424 Kobold Hides \u2192 current medium rawhide pool 2137\u20132148; blurred-map branch remains separate.",
+      "cash_xp_faction: Seven silver maintained;500 XP and 262/281/311:+1,230/330:-5 unverified.",
+      "acquisition_and_dependencies: Tox kobold-shaman and other valid-era static hide paths found."
+    ],
+    "unresolved": [
+      "Exact random pool probabilities and numerical factions/XP unknown; no added progression state or class restriction.",
+      "Runtime inventory settlement, activation, acquisition lifecycle and UI were not live verified."
+    ],
+    "audit_evidence_files": [
+      "changes/p99-il-review/manual-facet-review.json",
+      "changes/p99-il-review/static-evidence.json",
+      "changes/p99-am-hall-steel-note.json"
+    ],
+    "verification": {
+      "source": "Full cached page and complete mapped canonical/alias Lua/Perl compared; source hashes retained.",
+      "static": "Item/actor/loot/recipe candidates inspected in exported data with proposal rows applied at the recorded snapshot. Later source/ownership inspection is separately hash-listed; no full live acquisition assertion.",
+      "runtime": "33 focused normalized Lua mock scenarios pass for this worker proposal; not real inventory/activation proof.",
+      "ui": "not_verified"
+    }
+  },
+  "Kobold Molars (Evil)": {
+    "reviewed_at": "2026-10-22",
+    "review_status": "partial",
+    "match_status": "source_facets_reviewed_with_open_limits",
+    "local_quest_keys": [
+      "paineel/Royal_Guard_Lilkus"
+    ],
+    "p99_source": {
+      "title": "Kobold Molars (Evil)",
+      "url": "https://wiki.project1999.com/Kobold_Molars_(Evil)?action=raw",
+      "raw_cache": "reference/p99-wiki/raw-pages/kobold-molars-evil-97778cb0fd.wiki",
+      "sha256": "3858061410cd6115a63a027876c2abf559068733dffa2db73982dfc7b96c67ba"
+    },
+    "page_purpose": "quest_walkthrough",
+    "notes": [
+      "dialogue_and_reachability: Lilkus hail/business/job chain fully reachable.",
+      "item_counts_and_rewards: One 1761 molar, possible random ringmail armor.",
+      "cash_xp_faction: Approved Heretics+10 correction; page says 1 gold and few silver/copper per turn-in, so add 1 gold while retaining 2 s 8 c as unknown fallback. XP 2000 and other-1 deltas remain unverified.",
+      "acquisition_and_dependencies: Many Warrens kobold static molar routes exist; npc exclude column alone is not treated as policy exclusion."
+    ],
+    "unresolved": [
+      "Inherited 10% armor chance conflicts with 34/51 anecdote; no replacement probability guessed. Deepwater negative magnitude described stronger but exact value unknown.",
+      "Runtime inventory settlement, activation, acquisition lifecycle and UI were not live verified."
+    ],
+    "audit_evidence_files": [
+      "changes/p99-il-review/manual-facet-review.json",
+      "changes/p99-il-review/static-evidence.json",
+      "changes/p99-il-parity/proposal.json"
+    ],
+    "verification": {
+      "source": "Full cached page and complete mapped canonical/alias Lua/Perl compared; source hashes retained.",
+      "static": "Item/actor/loot/recipe candidates inspected in exported data with proposal rows applied at the recorded snapshot. Later source/ownership inspection is separately hash-listed; no full live acquisition assertion.",
+      "runtime": "33 focused normalized Lua mock scenarios pass for this worker proposal; not real inventory/activation proof.",
+      "ui": "not_verified"
+    }
+  },
+  "Kobold Molars (Good)": {
+    "reviewed_at": "2026-10-22",
+    "review_status": "partial",
+    "match_status": "source_facets_reviewed_with_open_limits",
+    "local_quest_keys": [
+      "erudnext/Tiam_Khonsir"
+    ],
+    "p99_source": {
+      "title": "Kobold Molars (Good)",
+      "url": "https://wiki.project1999.com/Kobold_Molars_(Good)?action=raw",
+      "raw_cache": "reference/p99-wiki/raw-pages/kobold-molars-good-70e594a193.wiki",
+      "sha256": "a162dee71ea7cd501bf6839f4a442b6eb4d55ff6d27ec42f6ce78b165a1e5e7d"
+    },
+    "page_purpose": "quest_walkthrough",
+    "notes": [
+      "dialogue_and_reachability: Tiam hail/yes/come to serve Lord chain reachable in source; greater importance sends to Breya.",
+      "item_counts_and_rewards: 1761 accepted one through four per offer after proposed bounded loop; all surplus/unrelated items returned.",
+      "cash_xp_faction: Existing 25% ringmail chance,2000 XP,12 c 14 s 5 g and 242/266:+5,265:-5 retained, not newly asserted exact.",
+      "acquisition_and_dependencies: Molar static loot paths exist in Warrens."
+    ],
+    "unresolved": [
+      "Quest row remains enabled 0 and explicit content_exclusions.quests[erudnext/Tiam_Khonsir] preserved, despite Warrens now being within broad audit scope. No activation claim.",
+      "Runtime inventory settlement, activation, acquisition lifecycle and UI were not live verified."
+    ],
+    "audit_evidence_files": [
+      "changes/p99-il-review/manual-facet-review.json",
+      "changes/p99-il-review/static-evidence.json",
+      "changes/p99-il-parity/proposal.json"
+    ],
+    "verification": {
+      "source": "Full cached page and complete mapped canonical/alias Lua/Perl compared; source hashes retained.",
+      "static": "Item/actor/loot/recipe candidates inspected in exported data with proposal rows applied at the recorded snapshot. Later source/ownership inspection is separately hash-listed; no full live acquisition assertion.",
+      "runtime": "33 focused normalized Lua mock scenarios pass for this worker proposal; not real inventory/activation proof.",
+      "ui": "not_verified"
+    }
+  },
+  "Kobold Shaman Artifacts": {
+    "reviewed_at": "2026-10-22",
+    "review_status": "partial",
+    "match_status": "source_facets_reviewed_with_open_limits",
+    "local_quest_keys": [
+      "erudnext/Breya_Nostulia",
+      "erudnext/Tiam_Khonsir"
+    ],
+    "p99_source": {
+      "title": "Kobold Shaman Artifacts",
+      "url": "https://wiki.project1999.com/Kobold_Shaman_Artifacts?action=raw",
+      "raw_cache": "reference/p99-wiki/raw-pages/kobold-shaman-artifacts-680f26acb5.wiki",
+      "sha256": "ac7a0be3f09990abda6ae7e4d08f0c1344ff9a19151839e1dd12cf5122137cca"
+    },
+    "page_purpose": "quest_walkthrough",
+    "notes": [
+      "dialogue_and_reachability: Tiam referral and Breya Tiam sent me/instruments/other item dialogue match.",
+      "item_counts_and_rewards: 17056 shaman pouch+1766 Diviner Bowl \u21921762 Midnight Sea Mail Leggings; incomplete offers return.",
+      "cash_xp_faction: 1000 XP and 242/266:+2,265:-2 inherited, not quantified by page.",
+      "acquisition_and_dependencies: Greater-shaman pouch and Krode-type bowl static loot edges exist."
+    ],
+    "unresolved": [
+      "Breya row enabled 0 and explicit quest exclusion retained. General zone scope does not remove that entry; no runtime completion claim.",
+      "Runtime inventory settlement, activation, acquisition lifecycle and UI were not live verified."
+    ],
+    "audit_evidence_files": [
+      "changes/p99-il-review/manual-facet-review.json",
+      "changes/p99-il-review/static-evidence.json",
+      "changes/p99-il-parity/proposal.json"
+    ],
+    "verification": {
+      "source": "Full cached page and complete mapped canonical/alias Lua/Perl compared; source hashes retained.",
+      "static": "Item/actor/loot/recipe candidates inspected in exported data with proposal rows applied at the recorded snapshot. Later source/ownership inspection is separately hash-listed; no full live acquisition assertion.",
+      "runtime": "33 focused normalized Lua mock scenarios pass for this worker proposal; not real inventory/activation proof.",
+      "ui": "not_verified"
+    }
+  },
+  "Kobold Shaman Paws": {
+    "reviewed_at": "2026-10-22",
+    "review_status": "partial",
+    "match_status": "source_facets_reviewed_with_open_limits",
+    "local_quest_keys": [
+      "erudnext/Leraena_Shelyrak"
+    ],
+    "p99_source": {
+      "title": "Kobold Shaman Paws",
+      "url": "https://wiki.project1999.com/Kobold_Shaman_Paws?action=raw",
+      "raw_cache": "reference/p99-wiki/raw-pages/kobold-shaman-paws-ddaef7ad85.wiki",
+      "sha256": "00ae321646305a1b409c646f36142ed7fb1d19bb6b8efad9201c13d8fce2a427"
+    },
+    "page_purpose": "quest_walkthrough",
+    "notes": [
+      "dialogue_and_reachability: Guild overlay places slay before generic kobold topic and supports both shaman/shamen symbol paths; no duplicate edit.",
+      "item_counts_and_rewards: Three 13883 Odd Kobold Paws \u219215213 Cure Disease or 15011 Holy Armor.",
+      "cash_xp_faction: Peace Keepers+20,High Council+5,Heretics-5 match explicit values.17 silver page example preserved;500 XP is fallback.",
+      "acquisition_and_dependencies: Tox kobold-shaman loot edges found; source also retains symbols and guild note."
+    ],
+    "unresolved": [
+      "Exact spell odds, XP and whether 17 silver is fixed versus observed payout unverified. Symbol stages reviewed elsewhere; no claim all their numbers are sourced by this page.",
+      "Runtime inventory settlement, activation, acquisition lifecycle and UI were not live verified."
+    ],
+    "audit_evidence_files": [
+      "changes/p99-il-review/manual-facet-review.json",
+      "changes/p99-il-review/static-evidence.json",
+      "changes/p99-nz-quellious-dialogue.json"
+    ],
+    "verification": {
+      "source": "Full cached page and complete mapped canonical/alias Lua/Perl compared; source hashes retained.",
+      "static": "Item/actor/loot/recipe candidates inspected in exported data with proposal rows applied at the recorded snapshot. Later source/ownership inspection is separately hash-listed; no full live acquisition assertion.",
+      "runtime": "33 focused normalized Lua mock scenarios pass for this worker proposal; not real inventory/activation proof.",
+      "ui": "not_verified"
+    }
+  },
+  "Kwinn's Quest": {
+    "reviewed_at": "2026-10-22",
+    "review_status": "partial",
+    "match_status": "source_facets_reviewed_with_open_limits",
+    "local_quest_keys": [
+      "firiona/#Kwinn_the_Outlander"
+    ],
+    "p99_source": {
+      "title": "Kwinn's Quest",
+      "url": "https://wiki.project1999.com/Kwinn's_Quest?action=raw",
+      "raw_cache": "reference/p99-wiki/raw-pages/kwinn-s-quest-3ec0312f5f.wiki",
+      "sha256": "29a61536f395f454e5d9e094fbd58379afaabcec6c44ecbf1184226f6a6d5044"
+    },
+    "page_purpose": "quest_walkthrough",
+    "notes": [
+      "dialogue_and_reachability: Kwinn odd trinkets/iron tail/trade for mechanical thing gives 17038 pack.",
+      "item_counts_and_rewards: 12824 mane+12825 choppers+12827 plume+12826 fist combine\u219212828, then 12822 Mechanical Iksar Tail.",
+      "cash_xp_faction: 25000 XP is inherited; no coin/factions introduced.",
+      "acquisition_and_dependencies: Enabled recipe 9784 has exactly four distinct components and 17038 container; matching component loot paths recorded."
+    ],
+    "unresolved": [
+      "Container registration, rare Kwinn cycle and exact XP unverified; level 25 infobox not taken as hard restriction.",
+      "Runtime inventory settlement, activation, acquisition lifecycle and UI were not live verified."
+    ],
+    "audit_evidence_files": [
+      "changes/p99-il-review/manual-facet-review.json",
+      "changes/p99-il-review/static-evidence.json"
+    ],
+    "verification": {
+      "source": "Full cached page and complete mapped canonical/alias Lua/Perl compared; source hashes retained.",
+      "static": "Item/actor/loot/recipe candidates inspected in exported data with proposal rows applied at the recorded snapshot. Later source/ownership inspection is separately hash-listed; no full live acquisition assertion.",
+      "runtime": "33 focused normalized Lua mock scenarios pass for this worker proposal; not real inventory/activation proof.",
+      "ui": "not_verified"
+    }
+  },
+  "Kwint's Kwest": {
+    "reviewed_at": "2026-10-22",
+    "review_status": "partial",
+    "match_status": "source_facets_reviewed_with_open_limits",
+    "local_quest_keys": [
+      "qeynos/Earron_Huntlan",
+      "qeynos/Guard_Kwint"
+    ],
+    "p99_source": {
+      "title": "Kwint's Kwest",
+      "url": "https://wiki.project1999.com/Kwint's_Kwest?action=raw",
+      "raw_cache": "reference/p99-wiki/raw-pages/kwint-s-kwest-84e62c57cc.wiki",
+      "sha256": "e327c8ecc84356ab2d11e35c469a8a1507ff38a8b6db7bc27db37c1b7ffba07b"
+    },
+    "page_purpose": "quest_walkthrough",
+    "notes": [
+      "dialogue_and_reachability: Kwint hail points to Earron; Kwint sent phrase issues 18821 voucher. Both success and dishonest return paths reviewed.",
+      "item_counts_and_rewards: 18821 returned to Kwint grants coin/faction/XP; Earron consumes it with documented faction punishment, no free ale invented.",
+      "cash_xp_faction: Kwint 8 c/8000 XP and+10/-20 amounts unverified; all faction directions match. Earron signed amounts also unverified.",
+      "acquisition_and_dependencies: Both Qeynos actors have static candidates; voucher is dialogue-created."
+    ],
+    "unresolved": [
+      "Reward magnitudes and live repeat behavior not P 99 proven; Nug Rellash item-eating anecdote not reproduced as required behavior.",
+      "Runtime inventory settlement, activation, acquisition lifecycle and UI were not live verified."
+    ],
+    "audit_evidence_files": [
+      "changes/p99-il-review/manual-facet-review.json",
+      "changes/p99-il-review/static-evidence.json"
+    ],
+    "verification": {
+      "source": "Full cached page and complete mapped canonical/alias Lua/Perl compared; source hashes retained.",
+      "static": "Item/actor/loot/recipe candidates inspected in exported data with proposal rows applied at the recorded snapshot. Later source/ownership inspection is separately hash-listed; no full live acquisition assertion.",
+      "runtime": "33 focused normalized Lua mock scenarios pass for this worker proposal; not real inventory/activation proof.",
+      "ui": "not_verified"
+    }
+  },
+  "Lambent Armor Quests": {
+    "reviewed_at": "2026-10-22",
+    "review_status": "partial",
+    "match_status": "source_facets_reviewed_with_open_limits",
+    "local_quest_keys": [
+      "soltemple/Cryssia_Stardreamer",
+      "soltemple/Gardern",
+      "soltemple/Genni",
+      "soltemple/Ostorm",
+      "soltemple/Vilissia",
+      "soltemple/Walthin_Fireweaver"
+    ],
+    "p99_source": {
+      "title": "Lambent Armor Quests",
+      "url": "https://wiki.project1999.com/Lambent_Armor_Quests?action=raw",
+      "raw_cache": "reference/p99-wiki/raw-pages/lambent-armor-quests-f5ff890c80.wiki",
+      "sha256": "699b88fde532511a9c871f48057805602335efb92e63ac94f398f9c10d64eab9"
+    },
+    "page_purpose": "quest_walkthrough",
+    "notes": [
+      "dialogue_and_reachability: All six primary/support NPC handlers and original sources read. Walthin lambent armor options and Genni gemstone directions reachable; later bard epic 1.5 remains excluded.",
+      "item_counts_and_rewards: Seven armor exchanges match page; each upgraded gem uses one 10000 Lambent Stone and two appropriate base gems.",
+      "cash_xp_faction: Cryssia only item rewards; Walthin 1000 XP/+5/-5; support 1 or 15 faction/1000 XP vary by source and are unverified.",
+      "acquisition_and_dependencies: Four gem conversions are scripted, not tradeskill recipes. Named armor components and static candidate loot edges recorded."
+    ],
+    "unresolved": [
+      "No claim bard equipment restriction/minimum 30 is a hard turn-in gate. Exact XP/faction and ingredient/loot probabilities unknown; unrelated respecialization branches preserved.",
+      "Runtime inventory settlement, activation, acquisition lifecycle and UI were not live verified."
+    ],
+    "audit_evidence_files": [
+      "changes/p99-il-review/manual-facet-review.json",
+      "changes/p99-il-review/static-evidence.json",
+      "changes/p99-nz-ostorm-dialogue.json",
+      "changes/p99-sz-gardern-dialogue.json",
+      "changes/p99-tz-vilissia-dialogue.json"
+    ],
+    "verification": {
+      "source": "Full cached page and complete mapped canonical/alias Lua/Perl compared; source hashes retained.",
+      "static": "Item/actor/loot/recipe candidates inspected in exported data with proposal rows applied at the recorded snapshot. Later source/ownership inspection is separately hash-listed; no full live acquisition assertion.",
+      "runtime": "33 focused normalized Lua mock scenarios pass for this worker proposal; not real inventory/activation proof.",
+      "ui": "not_verified"
+    }
+  },
+  "Learn the Ways of Skinning and Tailoring": {
+    "reviewed_at": "2026-10-22",
+    "review_status": "partial",
+    "match_status": "source_facets_reviewed_with_open_limits",
+    "local_quest_keys": [
+      "iceclad/Errgriz"
+    ],
+    "p99_source": {
+      "title": "Learn the Ways of Skinning and Tailoring",
+      "url": "https://wiki.project1999.com/Learn_the_Ways_of_Skinning_and_Tailoring?action=raw",
+      "raw_cache": "reference/p99-wiki/raw-pages/learn-the-ways-of-skinning-and-tailoring-2868fb301f.wiki",
+      "sha256": "ab63cdd2851fa165dfe132ba28d798b8ea79e5c2caa4a070749e5e84c3f627e9"
+    },
+    "page_purpose": "quest_walkthrough",
+    "notes": [
+      "dialogue_and_reachability: Parent Errgriz overlay independently matches hail/learning/clean/things full-page progression.",
+      "item_counts_and_rewards: 30023 High Quality Dire Wolf Fur \u219230037 Wolf Fur Earcovers.",
+      "cash_xp_faction: No XP, coin or faction invented because wiki lists none.",
+      "acquisition_and_dependencies: Dire-wolf loot paths in Iceclad/Eastern Wastes and exact item identities recorded; downstream Nalot use belongs to shared AM chain."
+    ],
+    "unresolved": [
+      "Live fur drop rarity/hand-in settlement unverified. Existing partial Perl was not adequate, but current parent conversion is reviewed, not duplicated.",
+      "Runtime inventory settlement, activation, acquisition lifecycle and UI were not live verified."
+    ],
+    "audit_evidence_files": [
+      "changes/p99-il-review/manual-facet-review.json",
+      "changes/p99-il-review/static-evidence.json",
+      "changes/p99-conversions-velious.json"
+    ],
+    "verification": {
+      "source": "Full cached page and complete mapped canonical/alias Lua/Perl compared; source hashes retained.",
+      "static": "Item/actor/loot/recipe candidates inspected in exported data with proposal rows applied at the recorded snapshot. Later source/ownership inspection is separately hash-listed; no full live acquisition assertion.",
+      "runtime": "33 focused normalized Lua mock scenarios pass for this worker proposal; not real inventory/activation proof.",
+      "ui": "not_verified"
+    }
+  },
+  "Leatherfoot Raiders": {
+    "reviewed_at": "2026-10-22",
+    "review_status": "partial",
+    "match_status": "source_facets_reviewed_with_open_limits",
+    "local_quest_keys": [
+      "rivervale/Marshal_Anrey"
+    ],
+    "p99_source": {
+      "title": "Leatherfoot Raiders",
+      "url": "https://wiki.project1999.com/Leatherfoot_Raiders?action=raw",
+      "raw_cache": "reference/p99-wiki/raw-pages/leatherfoot-raiders-0d2925e6b3.wiki",
+      "sha256": "03ee10cad38839c9d83c28c0dd922e9efa556c5af2899b0f912cf769d0d73e42"
+    },
+    "page_purpose": "quest_walkthrough",
+    "notes": [
+      "dialogue_and_reachability: Anrey petitioning/visitor chain matches; proposed singular Raider and naked from aliases restore advertised choices.",
+      "item_counts_and_rewards: Four skins 13761/13756/13075/13749 simultaneously\u219213941;13941+13942 DragoonDirk\u219212259. Do not confuse with 13113 dropped raider skullcap.",
+      "cash_xp_faction: Correct directional faction sets retained;1000/5000 XP, cash and magnitudes remain source fallbacks.",
+      "acquisition_and_dependencies: Polar/grizzly/shark/alligator/dirk static loot candidates recorded; no recipes necessary."
+    ],
+    "unresolved": [
+      "Amiable gate is present in source but runtime quest-faction ally adaptation applies. High-amiable threshold ambiguity and live gate/click effect not verified.",
+      "Runtime inventory settlement, activation, acquisition lifecycle and UI were not live verified."
+    ],
+    "audit_evidence_files": [
+      "changes/p99-il-review/manual-facet-review.json",
+      "changes/p99-il-review/static-evidence.json",
+      "changes/p99-il-parity/proposal.json"
+    ],
+    "verification": {
+      "source": "Full cached page and complete mapped canonical/alias Lua/Perl compared; source hashes retained.",
+      "static": "Item/actor/loot/recipe candidates inspected in exported data with proposal rows applied at the recorded snapshot. Later source/ownership inspection is separately hash-listed; no full live acquisition assertion.",
+      "runtime": "33 focused normalized Lua mock scenarios pass for this worker proposal; not real inventory/activation proof.",
+      "ui": "not_verified"
+    }
+  },
+  "Left Goblin Ears": {
+    "reviewed_at": "2026-10-22",
+    "review_status": "partial",
+    "match_status": "source_facets_reviewed_with_open_limits",
+    "local_quest_keys": [
+      "highkeep/Captain_Bosec"
+    ],
+    "p99_source": {
+      "title": "Left Goblin Ears",
+      "url": "https://wiki.project1999.com/Left_Goblin_Ears?action=raw",
+      "raw_cache": "reference/p99-wiki/raw-pages/left-goblin-ears-c463bdf6b0.wiki",
+      "sha256": "cb1c43e16505d3496e8684bb3dbb7b45ad95363ce4b403805f4cc11d58e7a2b3"
+    },
+    "page_purpose": "quest_walkthrough",
+    "notes": [
+      "dialogue_and_reachability: Bosec goblins/Pickclaw topics reachable.",
+      "item_counts_and_rewards: One to four 13790 Left Goblin Ears handled in full count then per-ear rewards.",
+      "cash_xp_faction: One to five gold range matches page; uniform odds,30 XP and 332:+2/329/331/230/330:+1 are unverified.",
+      "acquisition_and_dependencies: Pickclaw static loot/Highkeep actor candidates recorded."
+    ],
+    "unresolved": [
+      "Page minimum 9 conflicts with historical lower-level examples; no new hard gate inferred. Current P 99 XP cannot be derived reliably from class/race/level percentage anecdotes.",
+      "Runtime inventory settlement, activation, acquisition lifecycle and UI were not live verified."
+    ],
+    "audit_evidence_files": [
+      "changes/p99-il-review/manual-facet-review.json",
+      "changes/p99-il-review/static-evidence.json"
+    ],
+    "verification": {
+      "source": "Full cached page and complete mapped canonical/alias Lua/Perl compared; source hashes retained.",
+      "static": "Item/actor/loot/recipe candidates inspected in exported data with proposal rows applied at the recorded snapshot. Later source/ownership inspection is separately hash-listed; no full live acquisition assertion.",
+      "runtime": "33 focused normalized Lua mock scenarios pass for this worker proposal; not real inventory/activation proof.",
+      "ui": "not_verified"
+    }
+  },
+  "Legion Lager Quest": {
+    "reviewed_at": "2026-10-22",
+    "review_status": "partial",
+    "match_status": "source_facets_reviewed_with_open_limits",
+    "local_quest_keys": [
+      "cabwest/Trooper_Neozite"
+    ],
+    "p99_source": {
+      "title": "Legion Lager Quest",
+      "url": "https://wiki.project1999.com/Legion_Lager_Quest?action=raw",
+      "raw_cache": "reference/p99-wiki/raw-pages/legion-lager-quest-3e37d25024.wiki",
+      "sha256": "ec3798b781bf7ce6fb276b1a35347973dade3ce8f29063c3e99af5b9f2fb78e1"
+    },
+    "page_purpose": "unsolved_quest_walkthrough",
+    "notes": [
+      "dialogue_and_reachability: Full unsolved page names Trooper Neozite, possibly removed. Complete source/index/overlay search found no such actor handler.",
+      "item_counts_and_rewards: Legion Lager recipe/item exist separately; no invented recipient or quest-row ID.",
+      "cash_xp_faction: Page gives faction directions/XP/small coin but no exact values.",
+      "acquisition_and_dependencies: No Neozite raw npc_types record or Lua/Perl file found; brewing alone cannot prove quest availability."
+    ],
+    "unresolved": [
+      "Unsolved/possibly removed remains unresolved. Historical out_of_scope label is not used as runtime ban, and no unsupported reconstruction performed.",
+      "Runtime inventory settlement, activation, acquisition lifecycle and UI were not live verified."
+    ],
+    "audit_evidence_files": [
+      "changes/p99-il-review/manual-facet-review.json",
+      "changes/p99-il-review/static-evidence.json"
+    ],
+    "verification": {
+      "source": "Full cached page and complete mapped canonical/alias Lua/Perl compared; source hashes retained.",
+      "static": "Item/actor/loot/recipe candidates inspected in exported data with proposal rows applied at the recorded snapshot. Later source/ownership inspection is separately hash-listed; no full live acquisition assertion.",
+      "runtime": "33 focused normalized Lua mock scenarios pass for this worker proposal; not real inventory/activation proof.",
+      "ui": "not_verified"
+    }
+  },
+  "Letter to Master Whoopal": {
+    "reviewed_at": "2026-10-22",
+    "review_status": "partial",
+    "match_status": "source_facets_reviewed_with_open_limits",
+    "local_quest_keys": [
+      "commonlands/Wallin_Slyfoot",
+      "commons/Wallin_Slyfoot",
+      "nektulos/Master_Whoopal"
+    ],
+    "p99_source": {
+      "title": "Letter to Master Whoopal",
+      "url": "https://wiki.project1999.com/Letter_to_Master_Whoopal?action=raw",
+      "raw_cache": "reference/p99-wiki/raw-pages/letter-to-master-whoopal-ff8d439343.wiki",
+      "sha256": "b62cdd8f572b316e536936b27c7a09af4a101c22d078f02cc6bb923dedeed2f9"
+    },
+    "page_purpose": "quest_walkthrough",
+    "notes": [
+      "dialogue_and_reachability: Wallin assist phrase issues 18957 in commons and commonlands; Whoopal full delivery response matches.",
+      "item_counts_and_rewards: 18957 Leatherfoot Raider Orders \u2192 payment; unrelated items returned.",
+      "cash_xp_faction: Approved one SILVER correction from one gold;100 XP and 286/355/292:+1,324:-1 remain unverified magnitudes.",
+      "acquisition_and_dependencies: Raw actors/static candidates exist; same orders also feed Innoruuk branch."
+    ],
+    "unresolved": [
+      "Halfling/disguise requirement in Perl and Innoruuk page is absent in current Lua; pinned context_reads.go exposes base player.Race through both GetRace and GetBaseRace. Preserve current behavior until downstream effective illusion-race support is verified, rather than wrongly reject disguised non-halflings. Letter page says all classes but does not establish all races.",
+      "Runtime inventory settlement, activation, acquisition lifecycle and UI were not live verified."
+    ],
+    "audit_evidence_files": [
+      "changes/p99-il-review/manual-facet-review.json",
+      "changes/p99-il-review/static-evidence.json",
+      "changes/p99-il-parity/proposal.json"
+    ],
+    "verification": {
+      "source": "Full cached page and complete mapped canonical/alias Lua/Perl compared; source hashes retained.",
+      "static": "Item/actor/loot/recipe candidates inspected in exported data with proposal rows applied at the recorded snapshot. Later source/ownership inspection is separately hash-listed; no full live acquisition assertion.",
+      "runtime": "33 focused normalized Lua mock scenarios pass for this worker proposal; not real inventory/activation proof.",
+      "ui": "not_verified"
+    }
+  },
+  "Leuz's Task": {
+    "reviewed_at": "2026-10-22",
+    "review_status": "partial",
+    "match_status": "source_facets_reviewed_with_open_limits",
+    "local_quest_keys": [
+      "skyshrine/Commander_Leuz",
+      "westwastes/#Scout_Charisa"
+    ],
+    "p99_source": {
+      "title": "Leuz's Task",
+      "url": "https://wiki.project1999.com/Leuz's_Task?action=raw",
+      "raw_cache": "reference/p99-wiki/raw-pages/leuz-s-task-b524f4f4f2.wiki",
+      "sha256": "29d3abc1fdd97a45f20f27ffd8410b479b4860b4ffcccdac7c436c2a4363dd1e"
+    },
+    "page_purpose": "quest_walkthrough",
+    "notes": [
+      "dialogue_and_reachability: Leuz proposed precedence makes I will accept this task grant 29683 instead of generic task explanation. Scout source accepts all documented later items.",
+      "item_counts_and_rewards: Tools spawn captain 120115 and seven warriors 120121, replace original scout 120000 with 120613; disk 29684\u2192report 29688+robe 29685; robe\u219229686 bracer\u219229687 talisman.",
+      "cash_xp_faction: XP 10000/100000 and faction amounts inherited, not page-quantified.",
+      "acquisition_and_dependencies: Captain has 29684 static loot. Personal scout 900000 ms timer matches 15 minutes; full source preserves exact hash actor key."
+    ],
+    "unresolved": [
+      "Giants lack observed 15-minute despawn handler, and combat-paused despawn unverified. Alternate bag appearance omitted. Extra talisman\u2192robe cycle is inherited but not documented by this page. No full lifecycle proof.",
+      "Runtime inventory settlement, activation, acquisition lifecycle and UI were not live verified."
+    ],
+    "audit_evidence_files": [
+      "changes/p99-il-review/manual-facet-review.json",
+      "changes/p99-il-review/static-evidence.json",
+      "changes/p99-il-parity/proposal.json"
+    ],
+    "verification": {
+      "source": "Full cached page and complete mapped canonical/alias Lua/Perl compared; source hashes retained.",
+      "static": "Item/actor/loot/recipe candidates inspected in exported data with proposal rows applied at the recorded snapshot. Later source/ownership inspection is separately hash-listed; no full live acquisition assertion.",
+      "runtime": "33 focused normalized Lua mock scenarios pass for this worker proposal; not real inventory/activation proof.",
+      "ui": "not_verified"
+    }
+  },
+  "Living Dragons": {
+    "reviewed_at": "2026-10-22",
+    "review_status": "partial",
+    "match_status": "source_facets_reviewed_with_open_limits",
+    "local_quest_keys": [
+      "kael/Kyenka"
+    ],
+    "p99_source": {
+      "title": "Living Dragons",
+      "url": "https://wiki.project1999.com/Living_Dragons?action=raw",
+      "raw_cache": "reference/p99-wiki/raw-pages/living-dragons-4ef6c06f59.wiki",
+      "sha256": "966c12d12214e2f00d8bb304d0a2f7e9bbb272da4a0f1ff6411c682606b3f1db"
+    },
+    "page_purpose": "quest_walkthrough",
+    "notes": [
+      "dialogue_and_reachability: Kyenka dragons/purge/assist sequence reachable with faction check deliberately bypassed.",
+      "item_counts_and_rewards: Greater Head 25118\u219225028 Pauldrons; Great Head 25119\u219225029 Boots, identities not reversed.",
+      "cash_xp_faction: 100 XP and 448/419/429:+20,430:-60 are inherited; only directions established.",
+      "acquisition_and_dependencies: Western Wastes dragon static head loot candidates exist; exact items checked."
+    ],
+    "unresolved": [
+      "Warmly requirement intentionally bypassed for quest interaction, not claimed P 99 equivalence. Exact rewards/raid drop rates and level 50 necessity unverified.",
+      "Runtime inventory settlement, activation, acquisition lifecycle and UI were not live verified."
+    ],
+    "audit_evidence_files": [
+      "changes/p99-il-review/manual-facet-review.json",
+      "changes/p99-il-review/static-evidence.json"
+    ],
+    "verification": {
+      "source": "Full cached page and complete mapped canonical/alias Lua/Perl compared; source hashes retained.",
+      "static": "Item/actor/loot/recipe candidates inspected in exported data with proposal rows applied at the recorded snapshot. Later source/ownership inspection is separately hash-listed; no full live acquisition assertion.",
+      "runtime": "33 focused normalized Lua mock scenarios pass for this worker proposal; not real inventory/activation proof.",
+      "ui": "not_verified"
+    }
+  },
+  "Lodizal Shell Shield Quest": {
+    "reviewed_at": "2026-10-22",
+    "review_status": "partial",
+    "match_status": "source_facets_reviewed_with_open_limits",
+    "local_quest_keys": [
+      "cobaltscar/Bungre_Crawcrusher"
+    ],
+    "p99_source": {
+      "title": "Lodizal Shell Shield Quest",
+      "url": "https://wiki.project1999.com/Lodizal_Shell_Shield_Quest?action=raw",
+      "raw_cache": "reference/p99-wiki/raw-pages/lodizal-shell-shield-quest-db22fca143.wiki",
+      "sha256": "7d3da9eb883110996a21b8cb464c3ff78e4a738ae15a88be40e009a0a47ed515"
+    },
+    "page_purpose": "quest_walkthrough",
+    "notes": [
+      "dialogue_and_reachability: Bungre predators/Lodizal branches reachable; inherited race-specific aside omission is explicitly documented.",
+      "item_counts_and_rewards: 22815 Section of Lodizal Shell+10000 GOLD\u219222816 shield.",
+      "cash_xp_faction: 150000 XP,432:+30/431:-60 inherited; signs and 10 k-gold cost documented.",
+      "acquisition_and_dependencies: Lodizal Iceclad static shell loot exists, and reward item matches."
+    ],
+    "unresolved": [
+      "Apprehensive faction deliberately bypassed; no equipment-class/minimum 50 hard gate inferred. No live cash settlement, drop probability or shield click/stat verification.",
+      "Runtime inventory settlement, activation, acquisition lifecycle and UI were not live verified."
+    ],
+    "audit_evidence_files": [
+      "changes/p99-il-review/manual-facet-review.json",
+      "changes/p99-il-review/static-evidence.json"
+    ],
+    "verification": {
+      "source": "Full cached page and complete mapped canonical/alias Lua/Perl compared; source hashes retained.",
+      "static": "Item/actor/loot/recipe candidates inspected in exported data with proposal rows applied at the recorded snapshot. Later source/ownership inspection is separately hash-listed; no full live acquisition assertion.",
+      "runtime": "33 focused normalized Lua mock scenarios pass for this worker proposal; not real inventory/activation proof.",
+      "ui": "not_verified"
+    }
+  }
+}

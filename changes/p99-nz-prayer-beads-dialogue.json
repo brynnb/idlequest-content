@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-nz-prayer-beads-dialogue",
+  "summary": "Restore the Prayer Beads price hint and completion dialogue without consuming incomplete offers.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Recharge_Prayer_Beads?action=raw",
+      "note": "Cached 2026-07-17T23:30:08.983Z; revision unavailable; SHA256 514ba3e8047a928bb440f5dfaa41253658d07512ffb48578eb1ce08c28f0174f. P99 says used beads alone prompt 100 gold donation. Preserve safe single-trade bead+100gold requirement rather than introducing unsupported multiquest persistence. Inspect trade item userdata GetID without CheckHandin or SummonItem; existing return_items returns original beads and currency. Runtime payload evidence reference/server/internal/quest/lua_bridge.go setupTradeTable and real items.lua test. Item13296 PrayerBeads exported maxcharges2/clickeffect12. Full transaction charge preservation not live-tested; only isolated contract. Existing faction bypass behavior and scroll strongbox branch unchanged."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 12510,
+        "zone": "qeynos2",
+        "name": "Tyokan_Mekase",
+        "lua_content": "-- Modified from ProjectEQ Lua.\n-- Source: qeynos2/Tyokan_Mekase.lua\n-- P99 audit: Recharge Prayer Beads\n-- items: 13306, 15126, 15248, 13296\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Please look around. We have many items exclusively for the members of the Temple of Life. We also have [scroll strongboxes]. If you are unsure of what an item is, feel free to ask me.\")\n\telseif(e.message:findi(\"scroll strongbox\")) then\n\t\te.self:Say(\"The scroll strongboxes are merely personal safes. Most of the members use them. I am afraid all are taken, but if you are here to remove a scroll, merely hand me your key and I shall get it for you. I handle all 20 numbered keys and [Whysia] handles all 30 and 40 numbered keys.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\n\tif item_lib.check_turn_in(e.trade, {item1 = 13296, gold = 100}) then\n\t\tif e.other:GetFaction(e.self) > 4 then\n\t\t\te.self:Say(\"The Temple of Life does not yet trust you with such a service.\")\n\t\t\te.other:SummonItem(13296)\n\t\t\te.other:GiveCash(0, 0, 100, 0)\n\t\telse\n\t\t\te.self:Say(\"The blessings of life are renewed. Take care that you do not waste them.\")\n\t\t\te.other:SummonItem(13296) -- Prayer Beads\n\t\tend\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 13306})) then\n\t\te.self:Say(\"Oh, turning in your key, are you? Very well, defender of life. Here you are.\")\n\t\te.other:SummonItem(eq.ChooseRandom(15126,15126,15248)) -- Spell: Inspire Fear / Ward Summoned\n\t\te.other:Ding()\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 12510,
+        "zone": "qeynos2",
+        "name": "Tyokan_Mekase",
+        "lua_content": "-- Modified from ProjectEQ Lua.\n-- Source: qeynos2/Tyokan_Mekase.lua\n-- P99 audit: Recharge Prayer Beads\n-- items: 13306, 15126, 15248, 13296\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Please look around. We have many items exclusively for the members of the Temple of Life. We also have [scroll strongboxes]. If you are unsure of what an item is, feel free to ask me.\")\n\telseif(e.message:findi(\"scroll strongbox\")) then\n\t\te.self:Say(\"The scroll strongboxes are merely personal safes. Most of the members use them. I am afraid all are taken, but if you are here to remove a scroll, merely hand me your key and I shall get it for you. I handle all 20 numbered keys and [Whysia] handles all 30 and 40 numbered keys.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\n\tif item_lib.check_turn_in(e.trade, {item1 = 13296, gold = 100}) then\n\t\tif e.other:GetFaction(e.self) > 4 then\n\t\t\te.self:Say(\"The Temple of Life does not yet trust you with such a service.\")\n\t\t\te.other:SummonItem(13296)\n\t\t\te.other:GiveCash(0, 0, 100, 0)\n\t\telse\n\t\t\te.self:Say(\"I see your beads need to be charged. Very well, here you are. Use them and good health to you!!!\")\n\t\t\te.other:SummonItem(13296) -- Prayer Beads\n\t\tend\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 13306})) then\n\t\te.self:Say(\"Oh, turning in your key, are you? Very well, defender of life. Here you are.\")\n\t\te.other:SummonItem(eq.ChooseRandom(15126,15126,15248)) -- Spell: Inspire Fear / Ward Summoned\n\t\te.other:Ding()\n\telse\n\t\t-- Inspect, but do not consume or replace partially offered beads.\n\t\t-- Returning the original offer preserves its charges until payment is complete.\n\t\tfor key, item in pairs(e.trade) do\n\t\t\tif type(key) == \"string\" and key:match(\"^item%d+$\") and item:GetID() == 13296 then\n\t\t\t\te.self:Say(\"As instructed by High Priestess Jahnda I must ask for the beads and a donation of 100 gold coins.\")\n\t\t\t\tbreak\n\t\t\tend\n\t\tend\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/qeynos2/Tyokan_Mekase.lua",
+      "beforeSha256": "b8298cc101ad70828122306c6d3b779fb17971539b32497f87e4a1c563861270",
+      "proposedFile": "changes/p99-nz-prayer-beads-dialogue/qeynos2--Tyokan_Mekase.lua",
+      "afterSha256": "edde94d52ee7ac90847de99b4a3e65ed417a976b22c47ab56acd36a5101de975"
+    }
+  ]
+}

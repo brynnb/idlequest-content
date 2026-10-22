@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-sz-smaka-factions",
+  "summary": "Match explicitly documented SK Epic Cough Elixir faction3/1/1; preserve1000platinum cost.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Shadow_Knight_Epic_Quest?action=raw",
+      "note": "Cached 2026-07-17T23:32:15.536Z; revision unavailable; SHA256 c292187a82bfc78a0051c33c15a64b072225f3b6dedce48db2449c46b67dd3aa. Source-only correction; full runtime and UI not executed. Undocumented numerical values unchanged."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 13611,
+        "zone": "neriaka",
+        "name": "Smaka",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: neriaka/Smaka.pl\n-- items: 14365\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"You want stuff? Or mebby you looks for a cure?\")\n\telseif e.message:findi(\"cough elixir\") then\n\t\te.self:Say(\"Ahh, you want me cure?! It cost lots of money, big big secret it is. Only us ogres know how to make. You wants? Only 1000 platinum! Make you feels bedder in no times!\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {platinum = 1000}) then\n\t\te.self:Say(\"Okay, enjoy me drink!\")\n\t\te.other:Faction(236, 5, 0)\n\t\te.other:Faction(334, 5, 0)\n\t\te.other:Faction(370, 5, 0)\n\t\te.other:SummonItem(14365)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 13611,
+        "zone": "neriaka",
+        "name": "Smaka",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: neriaka/Smaka.pl\n-- items: 14365\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"You want stuff? Or mebby you looks for a cure?\")\n\telseif e.message:findi(\"cough elixir\") then\n\t\te.self:Say(\"Ahh, you want me cure?! It cost lots of money, big big secret it is. Only us ogres know how to make. You wants? Only 1000 platinum! Make you feels bedder in no times!\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {platinum = 1000}) then\n\t\te.self:Say(\"Okay, enjoy me drink!\")\n\t\te.other:Faction(236, 3, 0)\n\t\te.other:Faction(334, 1, 0)\n\t\te.other:Faction(370, 1, 0)\n\t\te.other:SummonItem(14365)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/neriaka/Smaka.lua",
+      "beforeSha256": "0e768fdbc5b8b091d1ce61c4d753ea34679c16851da45a7df2f4624b61fe7de9",
+      "proposedFile": "changes/p99-sz-smaka-factions/neriaka--Smaka.lua",
+      "afterSha256": "84dba6f7adc5a09439dfa4ebb9ef367a1f688ba792f4004d73e158617092780d"
+    }
+  ]
+}

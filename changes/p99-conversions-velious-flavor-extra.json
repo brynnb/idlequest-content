@@ -1,0 +1,157 @@
+{
+  "format": 1,
+  "id": "p99-conversions-velious-flavor-extra",
+  "summary": "Faithfully convert P99-present Velious NPC flavor speech, return-only, signal speech and combat emotes; no invented rewards or progression. Preserve source provenance and unsupported/ambiguous exclusions.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Khalerogg_Dorfenbane?action=raw",
+      "note": "P99 NPC presence/era evidence reference/p99-wiki/npc-pages/khalerogg-dorfenbane-69af121251.wiki SHA256 8fe5540c82f73de3903f53361c0a342e7ec9694cc0f2cafc9656f51619b4e039. Dialogue implementation preserved from sources/projecteq/kael/#Khalerogg_Dorfenbane.pl SHA256 bf004979a95cbcd8290071f07ad1f8adce8d323c895781ce60d112279d209ba4; P99 wording not claimed where absent."
+    },
+    {
+      "url": "https://wiki.project1999.com/Valorankt_Zekkin?action=raw",
+      "note": "P99 NPC presence/era evidence reference/p99-wiki/npc-pages/valorankt-zekkin-f3cccfa5c2.wiki SHA256 fd82a7d0e01cfc2475700e825a21f272f27cdd308ca93d6cd270fab50eb70f4d. Dialogue implementation preserved from sources/projecteq/kael/#Valorankt_Zekkin.pl SHA256 bf004979a95cbcd8290071f07ad1f8adce8d323c895781ce60d112279d209ba4; P99 wording not claimed where absent."
+    },
+    {
+      "url": "https://wiki.project1999.com/A_storm_giant_gladiator?action=raw",
+      "note": "P99 NPC presence/era evidence reference/p99-wiki/npc-pages/a-storm-giant-gladiator-5f959e6d82.wiki SHA256 f872f6e4082c58f34271ca1d5dc8d44bbcec4e5498972167de6ecfcd4923af4f. Dialogue implementation preserved from sources/projecteq/kael/a_storm_giant_gladiator.pl SHA256 2c553f41af927ac1094b387a8e355f81248c51021d24d3cd611fcd0001cd0597; P99 wording not claimed where absent."
+    },
+    {
+      "url": "https://wiki.project1999.com/Pollos_Stormkeeper?action=raw",
+      "note": "P99 NPC presence/era evidence reference/p99-wiki/npc-pages/pollos-stormkeeper-0e33e323d4.wiki SHA256 740ec4a1d7d9e97ef07c37582678974eb45e6d4d9b2940787d2a2e3202f1c5ea. Dialogue implementation preserved from sources/projecteq/kael/Pollos_Stormkeeper.pl SHA256 fd67f17683da99073206aae7d6b54bbe19ac929ef997b35543d8febf2b039726; P99 wording not claimed where absent."
+    },
+    {
+      "url": "https://wiki.project1999.com/An_ancient_sentry?action=raw",
+      "note": "P99 NPC presence/era evidence reference/p99-wiki/npc-pages/an-ancient-sentry-f6f4df4527.wiki SHA256 5517747170830b74b64c6b69ac05dcc4da19f7f8b6b6950d2c5bc78dd2c18bf2. Dialogue implementation preserved from sources/projecteq/sleeper/an_ancient_sentry.pl SHA256 4ad935ff69738de1a748fdc489d2a5bde542cde909065cb3a88891b2f4cc0de8; P99 wording not claimed where absent."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 11962,
+        "zone": "kael",
+        "name": "#Khalerogg_Dorfenbane",
+        "lua_content": null,
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 11962,
+        "zone": "kael",
+        "name": "#Khalerogg_Dorfenbane",
+        "lua_content": "-- Reviewed 2026-10-22: P99 NPC presence, ProjectEQ flavor provenance.\n-- Source: sources/projecteq/kael/#Khalerogg_Dorfenbane.pl\n-- No new faction, class, level or epic gates; no rewards invented.\n\nfunction event_aggro(e)\n    e.self:Say(\"Your bones will be crushed by the Kromrif of Kael Drakkel!\")\nend\n\nfunction event_trade(e)\n    local item_lib = require(\"items\")\n    item_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 16300,
+        "zone": "kael",
+        "name": "#Valorankt_Zekkin",
+        "lua_content": null,
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 16300,
+        "zone": "kael",
+        "name": "#Valorankt_Zekkin",
+        "lua_content": "-- Reviewed 2026-10-22: P99 NPC presence, ProjectEQ flavor provenance.\n-- Source: sources/projecteq/kael/#Valorankt_Zekkin.pl\n-- No new faction, class, level or epic gates; no rewards invented.\n\nfunction event_aggro(e)\n    e.self:Say(\"Your bones will be crushed by the Kromrif of Kael Drakkel!\")\nend\n\nfunction event_trade(e)\n    local item_lib = require(\"items\")\n    item_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 15905,
+        "zone": "kael",
+        "name": "a_storm_giant_gladiator",
+        "lua_content": null,
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 15905,
+        "zone": "kael",
+        "name": "a_storm_giant_gladiator",
+        "lua_content": "-- Reviewed 2026-10-22: P99 NPC presence, ProjectEQ flavor provenance.\n-- Source: sources/projecteq/kael/a_storm_giant_gladiator.pl\n-- No new faction, class, level or epic gates; no rewards invented.\n\nfunction event_say(e)\n    if e.message:findi(\"Hail\") then\n        e.self:Say(\"I am here to make sure no one flees the arena as a coward.\")\n    end\nend\n\nfunction event_trade(e)\n    local item_lib = require(\"items\")\n    item_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 15280,
+        "zone": "kael",
+        "name": "Pollos_Stormkeeper",
+        "lua_content": null,
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 15280,
+        "zone": "kael",
+        "name": "Pollos_Stormkeeper",
+        "lua_content": "-- Reviewed 2026-10-22: P99 NPC presence, ProjectEQ flavor provenance.\n-- Source: sources/projecteq/kael/Pollos_Stormkeeper.pl\n-- No new faction, class, level or epic gates; no rewards invented.\n\nfunction event_say(e)\n    if e.message:findi(\"Hail\") then\n        e.self:Say(\"I can place things into my vault if you so desire. \" .. e.other:GetName() .. \".\")\n    end\nend\n\nfunction event_trade(e)\n    local item_lib = require(\"items\")\n    item_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 15333,
+        "zone": "sleeper",
+        "name": "an_ancient_sentry",
+        "lua_content": null,
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 15333,
+        "zone": "sleeper",
+        "name": "an_ancient_sentry",
+        "lua_content": "-- Reviewed 2026-10-22: P99 NPC presence, ProjectEQ flavor provenance.\n-- Source: sources/projecteq/sleeper/an_ancient_sentry.pl\n-- No new faction, class, level or epic gates; no rewards invented.\n\nfunction event_slay(e)\n    e.self:Say(\"One has performed well.  An intruder is stopped.\")\nend\n\nfunction event_trade(e)\n    local item_lib = require(\"items\")\n    item_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/kael/#Khalerogg_Dorfenbane.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversions-velious-flavor-extra/kael/#Khalerogg_Dorfenbane.lua",
+      "afterSha256": "0cdc3f49ca241b232f5bb3599e7f5e4193de263410e970a93efa4a377b98bbad"
+    },
+    {
+      "target": "maintained/lua/converted-perl/kael/#Valorankt_Zekkin.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversions-velious-flavor-extra/kael/#Valorankt_Zekkin.lua",
+      "afterSha256": "bd179bf0315a979153c293a9164982c43249ede35d2b925ee70ce690b3bf9ccf"
+    },
+    {
+      "target": "maintained/lua/converted-perl/kael/a_storm_giant_gladiator.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversions-velious-flavor-extra/kael/a_storm_giant_gladiator.lua",
+      "afterSha256": "162fe4599b639ec2737ef204069a6fc97264b06f12e25ae115f1e4ceea3280b4"
+    },
+    {
+      "target": "maintained/lua/converted-perl/kael/Pollos_Stormkeeper.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversions-velious-flavor-extra/kael/Pollos_Stormkeeper.lua",
+      "afterSha256": "7278cab95cd63e2e5b519f22144877aeaaac5a1e47b6b0bcfa4e872c5b5c5975"
+    },
+    {
+      "target": "maintained/lua/converted-perl/sleeper/an_ancient_sentry.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversions-velious-flavor-extra/sleeper/an_ancient_sentry.lua",
+      "afterSha256": "9ea7d5432936afa756969d3a46c8fed841ca498a3c9fe46c01adb8aaa39d6634"
+    }
+  ]
+}

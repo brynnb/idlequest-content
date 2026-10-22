@@ -1,0 +1,4055 @@
+{
+  "schemaVersion": 1,
+  "scope": "Three bounded final followups to earlier source classifications. Not a count of every undocumented numerical value, every source uncertainty, or completed quest families.",
+  "artifacts": [
+    {
+      "file": "changes/p99-final-admission/review.json",
+      "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48"
+    },
+    {
+      "file": "changes/p99-final-chain-closure/review.json",
+      "sha256": "e911f0a956586cd6888faf8b749ba952da64b04592226b48d49fca9b38a68334"
+    },
+    {
+      "file": "changes/p99-final-uncertainty/review.json",
+      "sha256": "774bee81c4c5ff9edea2696d7c3c497f091d7ba0d5987fe86c5d58a61c84e62f"
+    }
+  ],
+  "counts": {
+    "uniqueSourceKeys": 194,
+    "dispositions": {
+      "new_later_or_event_source_disable": 151,
+      "new_mixed_source_branch_exclusion": 10,
+      "previous_owner_exclusion_retained": 2,
+      "unresolved_exact_scope_or_chain": 28,
+      "documented_unchanged_service_with_limits": 2,
+      "unresolved_documented_p99_effect_mapping": 1
+    }
+  },
+  "records": [
+    {
+      "key": "akanon/Derthix_Gibblix",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/akanon/Derthix_Gibblix.lua",
+      "baselineSourceSha256": "1a74488001d5fb4a3dea26e811c855854c551fb5c0a119065396c2aa005f31cc",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/0",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "dcb01d76eb4dce5d54df53a099c37de6cd3381bc575ff7c4b9236d14e5516314",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/akanon--Derthix_Gibblix.lua"
+      ]
+    },
+    {
+      "key": "akanon/Exterminator_VIII",
+      "category": "unresolved_exact_scope_or_chain",
+      "baselineFile": "effective/quests/akanon/Exterminator_VIII.lua",
+      "baselineSourceSha256": "b56c9692b4caaa18f7e2a66f4eafad150e9eb7987871d7ecb19946b9c1dc6dcc",
+      "reviews": [
+        {
+          "file": "changes/p99-final-uncertainty/review.json",
+          "sha256": "774bee81c4c5ff9edea2696d7c3c497f091d7ba0d5987fe86c5d58a61c84e62f",
+          "pointer": "/records/0",
+          "disposition": "unresolved_after_full_source_and_bounded_evidence_review"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "b56c9692b4caaa18f7e2a66f4eafad150e9eb7987871d7ecb19946b9c1dc6dcc",
+      "proposed": false,
+      "currentEnabled": 1,
+      "currentSourceFiles": []
+    },
+    {
+      "key": "akanon/Garret_Zethkog",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/akanon/Garret_Zethkog.lua",
+      "baselineSourceSha256": "19e6e947b7f8236e4a5eaf11a3525bfd706a835344754f95963f921f71ef1a84",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/1",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "f1c65273c84fe40cc6dfcd56c77d407ab4c7bab18e3cd2658248ee2eabe6ea45",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/akanon--Garret_Zethkog.lua"
+      ]
+    },
+    {
+      "key": "akanon/Glerbella_Gibblix",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/akanon/Glerbella_Gibblix.lua",
+      "baselineSourceSha256": "a5cb5b1fb0d6430d72255ce41d3030edab5162fd0dab3e11fe12da5d600bbbd9",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/2",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "fcb89758e5e5e21e5831d52b330158dda78601c7ce4e7b14a20854d7044a4f4e",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/akanon--Glerbella_Gibblix.lua"
+      ]
+    },
+    {
+      "key": "akanon/Lewis_Reldnok",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/akanon/Lewis_Reldnok.lua",
+      "baselineSourceSha256": "31aef25c1a32c96537334b8041d3407a0c8ccf1b9354b60ca77e11dda0d463c9",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/3",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "fc3d25462d3587ce0e967694e64ced0948bb8df31de93865889e1eb32039bb73",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/akanon--Lewis_Reldnok.lua"
+      ]
+    },
+    {
+      "key": "akanon/Lobal_Postugger",
+      "category": "unresolved_exact_scope_or_chain",
+      "baselineFile": "effective/quests/akanon/Lobal_Postugger.lua",
+      "baselineSourceSha256": "7847baf7bdb15ca989b3bc62ea8f72163709a2b529fecb09e714562d9acbb629",
+      "reviews": [
+        {
+          "file": "changes/p99-final-uncertainty/review.json",
+          "sha256": "774bee81c4c5ff9edea2696d7c3c497f091d7ba0d5987fe86c5d58a61c84e62f",
+          "pointer": "/records/1",
+          "disposition": "unresolved_after_full_source_and_bounded_evidence_review"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "7847baf7bdb15ca989b3bc62ea8f72163709a2b529fecb09e714562d9acbb629",
+      "proposed": false,
+      "currentEnabled": 1,
+      "currentSourceFiles": []
+    },
+    {
+      "key": "akanon/Mimtia_Zethkog",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/akanon/Mimtia_Zethkog.lua",
+      "baselineSourceSha256": "ed71dd22b8bd3e88572bf60f1164206c86b423fb6eff69b482e4bbac5f034417",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/4",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "63115e49ea973c5b41a3899623f6fe49945c84e9dc2ebab9d439d49870870d21",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/akanon--Mimtia_Zethkog.lua"
+      ]
+    },
+    {
+      "key": "akanon/Morlan_Tanlonikan",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/akanon/Morlan_Tanlonikan.lua",
+      "baselineSourceSha256": "b3c06648335c66e1732ca6933d46caf223bde1c755b32be4d2d95e594cc8d48e",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/5",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "d52e10ca9d721618e3cb28ecaf1ae1494a1d54e0cf43275bf1e00cd98c636a34",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/akanon--Morlan_Tanlonikan.lua"
+      ]
+    },
+    {
+      "key": "akanon/Rebbie_Romblerum",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/akanon/Rebbie_Romblerum.lua",
+      "baselineSourceSha256": "6fb19fe9c32839850cb97c4a3a18e62b3075a8fe919d66d17734b2a969a82945",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/6",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "2044fdc90c0e240b6fc3c11e8a1f174ba3704db4d4d7193890739ea25a664814",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/akanon--Rebbie_Romblerum.lua"
+      ]
+    },
+    {
+      "key": "akanon/Reuben_Reldnok",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/akanon/Reuben_Reldnok.lua",
+      "baselineSourceSha256": "ca3aefa58e602ddb5f194ef462261aec27ad158c531db08ece592f599b439fcf",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/7",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "62380fcb21068140c807743d298208fd0b52591919b4e9198b47afe9d40d8c34",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/akanon--Reuben_Reldnok.lua"
+      ]
+    },
+    {
+      "key": "akanon/Windlebeck_Tobokog",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/akanon/Windlebeck_Tobokog.lua",
+      "baselineSourceSha256": "ca52c8b8f7a4d7482e21e987b74fe1d4f3fdba71f938ee217ba046c9c2091e87",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/8",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "98c1ebb9e532ac57909cdb5af0c7bcad30bf4f3d6442689c6bc589089dc0470d",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/akanon--Windlebeck_Tobokog.lua"
+      ]
+    },
+    {
+      "key": "akanon/Xalirilan_Zarinokosalio",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/akanon/Xalirilan_Zarinokosalio.lua",
+      "baselineSourceSha256": "fbfa9d5eb5300c9adc9ad14d911f01ed2aa95eb541973863276bb4321e1f1652",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/9",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "c5566b030914a259cebf4572dd124afe1c0a2f02e50d7999515d53d71298a265",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/akanon--Xalirilan_Zarinokosalio.lua"
+      ]
+    },
+    {
+      "key": "befallen/#a_skeletal_foreman",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "sources/projecteq/befallen/#a_skeletal_foreman.lua",
+      "baselineSourceSha256": "4db814a55f0ddfc33183e81ece5b824d5c49bc602fcb82d493e5af01a3b3590f",
+      "reviews": [
+        {
+          "file": "changes/p99-final-chain-closure/review.json",
+          "sha256": "e911f0a956586cd6888faf8b749ba952da64b04592226b48d49fca9b38a68334",
+          "pointer": "/records/4",
+          "disposition": "positively_later_exclusive_helper"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "5b6cade8f2fea0856e057bf7f7ea7c379adcc807944668ebd935d25f1c734651",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-chain-closure/befallen--#a_skeletal_foreman.lua"
+      ]
+    },
+    {
+      "key": "befallen/#Sir_Ariam_Arcanum",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "sources/projecteq/befallen/#Sir_Ariam_Arcanum.lua",
+      "baselineSourceSha256": "bdffaf1403081d322ce431b3fe95329592f449cc43c7b50caf384eb64a44625a",
+      "reviews": [
+        {
+          "file": "changes/p99-final-chain-closure/review.json",
+          "sha256": "e911f0a956586cd6888faf8b749ba952da64b04592226b48d49fca9b38a68334",
+          "pointer": "/additionalRecords/3",
+          "disposition": "positively_later_exclusive_controller"
+        },
+        {
+          "file": "changes/p99-final-uncertainty/review.json",
+          "sha256": "774bee81c4c5ff9edea2696d7c3c497f091d7ba0d5987fe86c5d58a61c84e62f",
+          "pointer": "/records/2",
+          "disposition": "prior_owned_reference"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "bea36a1921acce284e87b34964a76754a88b9a3c18cb6ca7e1723f4f74cf1c5b",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-chain-closure/befallen--#Sir_Ariam_Arcanum.lua"
+      ]
+    },
+    {
+      "key": "befallen/a_skeletal_excavator",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "sources/projecteq/befallen/a_skeletal_excavator.lua",
+      "baselineSourceSha256": "a36ffb91900f9b8d8f6b454173df61c6fde73321a43824d7261c30ae85d2e240",
+      "reviews": [
+        {
+          "file": "changes/p99-final-chain-closure/review.json",
+          "sha256": "e911f0a956586cd6888faf8b749ba952da64b04592226b48d49fca9b38a68334",
+          "pointer": "/records/6",
+          "disposition": "positively_later_exclusive_helper"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "62768bafba82c5508f31edb5e5c4e6ada1607814df7cbd36362dafa8241d7c19",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-chain-closure/befallen--a_skeletal_excavator.lua"
+      ]
+    },
+    {
+      "key": "befallen/Zeek",
+      "category": "unresolved_exact_scope_or_chain",
+      "baselineFile": "effective/quests/befallen/Zeek.lua",
+      "baselineSourceSha256": "a113e5cc918001da1aa90125c4cb58ad5f441b2c228360078fe97df6effb6dfe",
+      "reviews": [
+        {
+          "file": "changes/p99-final-uncertainty/review.json",
+          "sha256": "774bee81c4c5ff9edea2696d7c3c497f091d7ba0d5987fe86c5d58a61c84e62f",
+          "pointer": "/records/3",
+          "disposition": "unresolved_after_full_source_and_bounded_evidence_review"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "a113e5cc918001da1aa90125c4cb58ad5f441b2c228360078fe97df6effb6dfe",
+      "proposed": false,
+      "currentEnabled": 1,
+      "currentSourceFiles": []
+    },
+    {
+      "key": "butcher/Dapper_Blackhammer",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/butcher/Dapper_Blackhammer.lua",
+      "baselineSourceSha256": "2e3bd9b53d264bbf57a94e5363f086432d5605736b9fd62cd800d8003f7653f9",
+      "reviews": [
+        {
+          "file": "changes/p99-final-uncertainty/review.json",
+          "sha256": "774bee81c4c5ff9edea2696d7c3c497f091d7ba0d5987fe86c5d58a61c84e62f",
+          "pointer": "/records/4",
+          "disposition": "positive_later_or_custom_event_source_only_exclusion"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "e3a07532fff688257688fc47b989e254605b004a4584d55bc1b3894879c68fa0",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-uncertainty/butcher--Dapper_Blackhammer.lua"
+      ]
+    },
+    {
+      "key": "cabeast/#Prime_Patriarch_Vuzx",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/cabeast/%23Prime_Patriarch_Vuzx.lua",
+      "baselineSourceSha256": "ea7a19a3cedd9b1f1d5369d52223919aaa303f26c4c798bf9bda3c914b267a08",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/10",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "e73e0695d8254fd17c723cf1e12d89e5c1530a1623a3f83ddd1f6fab223e3786",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/cabeast--%23Prime_Patriarch_Vuzx.lua"
+      ]
+    },
+    {
+      "key": "cabeast/Elder_Patriarch_Ixthal",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/cabeast/Elder_Patriarch_Ixthal.lua",
+      "baselineSourceSha256": "261e9cf1b3fb5e0d8089fa500f3240a3f74676e70ac592b339e5a88cd226c783",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/11",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "98468fdce9ee0638cb59514f1466cbfb6daad48d659c9ebad167ad1f8ac614cd",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/cabeast--Elder_Patriarch_Ixthal.lua"
+      ]
+    },
+    {
+      "key": "cabeast/Exterminator_Sahizz",
+      "category": "unresolved_exact_scope_or_chain",
+      "baselineFile": "effective/quests/cabeast/Exterminator_Sahizz.lua",
+      "baselineSourceSha256": "2302a1be8e127b7a2403fdb7e6b759d3f6900a7a6d009295271311761a4288ee",
+      "reviews": [
+        {
+          "file": "changes/p99-final-uncertainty/review.json",
+          "sha256": "774bee81c4c5ff9edea2696d7c3c497f091d7ba0d5987fe86c5d58a61c84e62f",
+          "pointer": "/records/5",
+          "disposition": "unresolved_after_full_source_and_bounded_evidence_review"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "2302a1be8e127b7a2403fdb7e6b759d3f6900a7a6d009295271311761a4288ee",
+      "proposed": false,
+      "currentEnabled": 1,
+      "currentSourceFiles": []
+    },
+    {
+      "key": "cabeast/Zreezas",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/cabeast/Zreezas.lua",
+      "baselineSourceSha256": "6555337fc42db518f0d2e884970d45081987f1b0fa2789cb72ca80e0789e6cd4",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/12",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "92eaf2d0ef68a242ec8e7024a2b9ddae5cac99512cb7cafd88660c11cc7ee475",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/cabeast--Zreezas.lua"
+      ]
+    },
+    {
+      "key": "cabwest/Marthor",
+      "category": "new_mixed_source_branch_exclusion",
+      "baselineFile": "effective/quests/cabwest/Marthor.lua",
+      "baselineSourceSha256": "1a709c2617d7808f377deed2ec68b6de0e1c7e965cac3eea058b18fbb3e497fa",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/13",
+          "disposition": "removed_later_branch_preserved_mixed_source"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "eeb78e18d6ef5a1eca0bbfc10b8feb29feae957040fb804c17285c4a231dfe04",
+      "proposed": true,
+      "currentEnabled": 1,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/cabwest--Marthor.lua"
+      ]
+    },
+    {
+      "key": "cazicthule/#a_Thul_Tae_Ew_High_Priest",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "sources/projecteq/cazicthule/#a_Thul_Tae_Ew_High_Priest.lua",
+      "baselineSourceSha256": "24d79ef7277e74971b472cfc48d383524bbd8bd67b4bf8dc9cd8603de2c4d647",
+      "reviews": [
+        {
+          "file": "changes/p99-final-chain-closure/review.json",
+          "sha256": "e911f0a956586cd6888faf8b749ba952da64b04592226b48d49fca9b38a68334",
+          "pointer": "/records/21",
+          "disposition": "positively_later_exclusive_helper"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "d25d8e4a66f052c7fa368b6ba23f606506b928d1ffd7e898268293d73bc2f721",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-chain-closure/cazicthule--#a_Thul_Tae_Ew_High_Priest.lua"
+      ]
+    },
+    {
+      "key": "cazicthule/#Avatar_of_Fear",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "sources/projecteq/cazicthule/#Avatar_of_Fear.lua",
+      "baselineSourceSha256": "74920fd49d046246ffc52478321731546ce760e0d99e9214813e67aeffaf3bec",
+      "reviews": [
+        {
+          "file": "changes/p99-final-chain-closure/review.json",
+          "sha256": "e911f0a956586cd6888faf8b749ba952da64b04592226b48d49fca9b38a68334",
+          "pointer": "/records/1",
+          "disposition": "positively_later_exclusive_helper"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "e0681301e2081313b6d6c2308cbdb020419572d76c792eaeca83c04a550bf12a",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-chain-closure/cazicthule--#Avatar_of_Fear.lua"
+      ]
+    },
+    {
+      "key": "cazicthule/48255",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/cazicthule/48255.lua",
+      "baselineSourceSha256": "a216aed3f10e5f53954d58ca3090a496b68cf75c4ad5a8746af2e5f1c8c0eaf5",
+      "reviews": [
+        {
+          "file": "changes/p99-final-uncertainty/review.json",
+          "sha256": "774bee81c4c5ff9edea2696d7c3c497f091d7ba0d5987fe86c5d58a61c84e62f",
+          "pointer": "/records/6",
+          "disposition": "positive_later_or_custom_event_source_only_exclusion"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "94868366935a1d762ef1b17a80b0238993d1cf31082a3f2925f031cc3260cf39",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-uncertainty/cazicthule--48255.lua"
+      ]
+    },
+    {
+      "key": "cobaltscar/Blumblum_Swigwater",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/cobaltscar/Blumblum_Swigwater.lua",
+      "baselineSourceSha256": "6dc4bf247a9f9a2871828ab9674c14d7d76a94c0c17a535e23d9676da1c52857",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/14",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "32839749f7acdb93bdae65de1057dd74c81f5a27bf5ec5f103e5fd144e5d7fbd",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/cobaltscar--Blumblum_Swigwater.lua"
+      ]
+    },
+    {
+      "key": "cobaltscar/High_Priest_Margle",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/cobaltscar/High_Priest_Margle.lua",
+      "baselineSourceSha256": "e8213cbf3bbb8e4d470ff9e81dbeb5fe9ec5a188db3508bf57e07e48beb45a01",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/15",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "72cf875a3ad559730e98a69d9276212b83bdce887b9b32587561f46fdc9e0141",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/cobaltscar--High_Priest_Margle.lua"
+      ]
+    },
+    {
+      "key": "commons/Guard_Colin",
+      "category": "unresolved_exact_scope_or_chain",
+      "baselineFile": "effective/quests/commons/Guard_Colin.lua",
+      "baselineSourceSha256": "6956e19790c5a84f3daef147925243dc11dbd573729d91f60acd9d4561203eea",
+      "reviews": [
+        {
+          "file": "changes/p99-final-uncertainty/review.json",
+          "sha256": "774bee81c4c5ff9edea2696d7c3c497f091d7ba0d5987fe86c5d58a61c84e62f",
+          "pointer": "/records/7",
+          "disposition": "unresolved_after_full_source_and_bounded_evidence_review"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "6956e19790c5a84f3daef147925243dc11dbd573729d91f60acd9d4561203eea",
+      "proposed": false,
+      "currentEnabled": 1,
+      "currentSourceFiles": []
+    },
+    {
+      "key": "droga/81182",
+      "category": "unresolved_exact_scope_or_chain",
+      "baselineFile": "effective/quests/droga/81182.lua",
+      "baselineSourceSha256": "5fef3e949f41d486be897331a1a83f2128fab14747edf8930531ad380ce711c9",
+      "reviews": [
+        {
+          "file": "changes/p99-final-uncertainty/review.json",
+          "sha256": "774bee81c4c5ff9edea2696d7c3c497f091d7ba0d5987fe86c5d58a61c84e62f",
+          "pointer": "/records/8",
+          "disposition": "unresolved_after_full_source_and_bounded_evidence_review"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "5fef3e949f41d486be897331a1a83f2128fab14747edf8930531ad380ce711c9",
+      "proposed": false,
+      "currentEnabled": 1,
+      "currentSourceFiles": []
+    },
+    {
+      "key": "droga/Jeren_Manri",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/droga/Jeren_Manri.lua",
+      "baselineSourceSha256": "d5bea509c9b1875df795e7d88cff360d2896025fbb33becac1e3de14c4c55e2a",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/16",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "56b7cb50492b7b606f2db963cf33aa12410ed775ccc756b393f0e19a7ce173b0",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/droga--Jeren_Manri.lua"
+      ]
+    },
+    {
+      "key": "emeraldjungle/Scout_Vyrak",
+      "category": "previous_owner_exclusion_retained",
+      "baselineFile": "effective/quests/emeraldjungle/Scout_Vyrak.lua",
+      "baselineSourceSha256": "0cfd4edfe284043d99e494f028371262e4863093aa85625ea0fe126c4b73e204",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/17",
+          "disposition": "already_disabled_by_existing_owner"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "8a1ae3367d66bb39d95811f86f63340250636e27fc20fa719a87da47ecc2f25b",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-support-dialogue-fixes/emeraldjungle--Scout_Vyrak.lua"
+      ]
+    },
+    {
+      "key": "feerrott/Annaelia_Wylassi",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/feerrott/Annaelia_Wylassi.lua",
+      "baselineSourceSha256": "e08888aff49ef2ea2323e39e51e985eb8df2c674c127b0279cd560282c6ddd47",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/18",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "b6cbaed0e6b39956840b7267aa7a63309e6349d1aec28dedc8d19ce7239db6b2",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/feerrott--Annaelia_Wylassi.lua"
+      ]
+    },
+    {
+      "key": "feerrott/Aqaar_Aluram",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/feerrott/Aqaar_Aluram.lua",
+      "baselineSourceSha256": "b47a32de50306a047ed16a555d7bfcbff8588e9d3a33819b4bbfc2724a9273ed",
+      "reviews": [
+        {
+          "file": "changes/p99-final-uncertainty/review.json",
+          "sha256": "774bee81c4c5ff9edea2696d7c3c497f091d7ba0d5987fe86c5d58a61c84e62f",
+          "pointer": "/records/9",
+          "disposition": "positive_later_or_custom_event_source_only_exclusion"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "45921c1ed4d588f469871be18b4765199e1c54d936fb23f83ddd5c9ef702ddf3",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-uncertainty/feerrott--Aqaar_Aluram.lua"
+      ]
+    },
+    {
+      "key": "feerrott/Scout_Ahlikal",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/feerrott/Scout_Ahlikal.lua",
+      "baselineSourceSha256": "17d5a68eb50d7e951655d941b05fc3f1e2a7bb3e34cd3f317d887b7c4e432961",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/19",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "374cfd97d1bf4920cb8c29a38d1c31317c89e47c652df8f28e3653cbd59920e1",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/feerrott--Scout_Ahlikal.lua"
+      ]
+    },
+    {
+      "key": "felwithea/Arrias_Arcanum",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/felwithea/Arrias_Arcanum.lua",
+      "baselineSourceSha256": "0460f65ac76efd17aea0a13b81d041eb82b874f8324345bf7cf8730f7702e777",
+      "reviews": [
+        {
+          "file": "changes/p99-final-uncertainty/review.json",
+          "sha256": "774bee81c4c5ff9edea2696d7c3c497f091d7ba0d5987fe86c5d58a61c84e62f",
+          "pointer": "/records/10",
+          "disposition": "positive_later_or_custom_event_source_only_exclusion"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "8355d0cbad4fa8aeafe3b34d59db6325303032e46ce357863351e1e7ecf4a645",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-uncertainty/felwithea--Arrias_Arcanum.lua"
+      ]
+    },
+    {
+      "key": "felwithea/Exterminator_Valern",
+      "category": "unresolved_exact_scope_or_chain",
+      "baselineFile": "effective/quests/felwithea/Exterminator_Valern.lua",
+      "baselineSourceSha256": "a1f9af28f11ff9bf5105bfd743da04b5e08a3f7f1d7c776058ea249340db2754",
+      "reviews": [
+        {
+          "file": "changes/p99-final-uncertainty/review.json",
+          "sha256": "774bee81c4c5ff9edea2696d7c3c497f091d7ba0d5987fe86c5d58a61c84e62f",
+          "pointer": "/records/11",
+          "disposition": "unresolved_after_full_source_and_bounded_evidence_review"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "a1f9af28f11ff9bf5105bfd743da04b5e08a3f7f1d7c776058ea249340db2754",
+      "proposed": false,
+      "currentEnabled": 1,
+      "currentSourceFiles": []
+    },
+    {
+      "key": "felwithea/Seria_Woodwind",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/felwithea/Seria_Woodwind.lua",
+      "baselineSourceSha256": "7ff4ba7045f5545c8124c432ee8998390c3b868d01627bf2aa15607b2ab0544b",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/20",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "3eede961de6255243153f060779bd3a5ef820bf32d84e5f60033ffd62322c6c0",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/felwithea--Seria_Woodwind.lua"
+      ]
+    },
+    {
+      "key": "felwithea/Terren_Starwatcher",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/felwithea/Terren_Starwatcher.lua",
+      "baselineSourceSha256": "d5f8da158bd19255ee42410d28b4dae161bf8c115f5e7e2d21a4160f49010af1",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/21",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "2628a26980ff1766a4250b3afd2b1a5f70c13ad4311d09d17f1fc527050c0773",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/felwithea--Terren_Starwatcher.lua"
+      ]
+    },
+    {
+      "key": "felwitheb/Elishia_Leafrunner",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/felwitheb/Elishia_Leafrunner.lua",
+      "baselineSourceSha256": "bbea72129d0c903d258c6edb418e9460594c918b42eb39d3feafce241a2e55dd",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/22",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "e03f9485dba5c3852804c13cb1b828eac48aa8c1b7c4725d5a8a67fa6dc6e6b0",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/felwitheb--Elishia_Leafrunner.lua"
+      ]
+    },
+    {
+      "key": "felwitheb/Yuin_Starchaser",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/felwitheb/Yuin_Starchaser.lua",
+      "baselineSourceSha256": "963da16436a037a07fb98a561e26fc73a9cab8d84db1bf948ced12be08fed3e9",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/23",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "61b26129407561d1a449321f44359f7e0c588df7be213f2119ebce2912db2778",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/felwitheb--Yuin_Starchaser.lua"
+      ]
+    },
+    {
+      "key": "fieldofbone/Trooper_Drix",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/fieldofbone/Trooper_Drix.lua",
+      "baselineSourceSha256": "42772a0d58d9c625669d8de02ea4929fba0d6244b17961f724a4274e4e1d2685",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/24",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "62ce00cb51213fbca021d263fc7d5fc0b4d02518c5fd3c99cc9eabfc4b515e75",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/fieldofbone--Trooper_Drix.lua"
+      ]
+    },
+    {
+      "key": "firiona/#Realla_Segoan",
+      "category": "unresolved_exact_scope_or_chain",
+      "baselineFile": "effective/quests/firiona/%23Realla_Segoan.lua",
+      "baselineSourceSha256": "661edbbe0238505eac929aec01f724acca83792a3d1c693a1dc00006f47982ca",
+      "reviews": [
+        {
+          "file": "changes/p99-final-uncertainty/review.json",
+          "sha256": "774bee81c4c5ff9edea2696d7c3c497f091d7ba0d5987fe86c5d58a61c84e62f",
+          "pointer": "/records/12",
+          "disposition": "unresolved_after_full_source_and_bounded_evidence_review"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "661edbbe0238505eac929aec01f724acca83792a3d1c693a1dc00006f47982ca",
+      "proposed": false,
+      "currentEnabled": 1,
+      "currentSourceFiles": []
+    },
+    {
+      "key": "firiona/Allaria_Sneakyfeet",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/firiona/Allaria_Sneakyfeet.lua",
+      "baselineSourceSha256": "2bd3be3a02776a883ee2a454fad720eb461e820095299198e4a544da426898cf",
+      "reviews": [
+        {
+          "file": "changes/p99-final-uncertainty/review.json",
+          "sha256": "774bee81c4c5ff9edea2696d7c3c497f091d7ba0d5987fe86c5d58a61c84e62f",
+          "pointer": "/records/13",
+          "disposition": "positive_later_or_custom_event_source_only_exclusion"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "2d2be23f432e2af3349ed2b53e4876db12ae1fdc0552f487537316ef0148f059",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-uncertainty/firiona--Allaria_Sneakyfeet.lua"
+      ]
+    },
+    {
+      "key": "firiona/Noilgin_Mindtune",
+      "category": "unresolved_exact_scope_or_chain",
+      "baselineFile": "effective/quests/firiona/Noilgin_Mindtune.lua",
+      "baselineSourceSha256": "036e2732fcf91dc661fb385ba848cd615f20768e55d8825e87cc090862dc51a3",
+      "reviews": [
+        {
+          "file": "changes/p99-final-uncertainty/review.json",
+          "sha256": "774bee81c4c5ff9edea2696d7c3c497f091d7ba0d5987fe86c5d58a61c84e62f",
+          "pointer": "/records/14",
+          "disposition": "unresolved_after_full_source_and_bounded_evidence_review"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "036e2732fcf91dc661fb385ba848cd615f20768e55d8825e87cc090862dc51a3",
+      "proposed": false,
+      "currentEnabled": 1,
+      "currentSourceFiles": []
+    },
+    {
+      "key": "freporte/10000",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/freporte/10000.lua",
+      "baselineSourceSha256": "3063507b9d86512afa2e8a9ebb8fdb1ebf3befdc960a076b4cfd69f51a8f354a",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/25",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "cfe329b0c129a2d29c0900c5546144b93f197b0f1bb21ff8f2fb6af7b9055da3",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/freporte--10000.lua"
+      ]
+    },
+    {
+      "key": "freporte/Exterminator_Larkey",
+      "category": "unresolved_exact_scope_or_chain",
+      "baselineFile": "effective/quests/freporte/Exterminator_Larkey.lua",
+      "baselineSourceSha256": "bc4e3c1ac983dbc66b9a847095a70fd22a04a98c3493d5ebe90a083d56e41c3a",
+      "reviews": [
+        {
+          "file": "changes/p99-final-uncertainty/review.json",
+          "sha256": "774bee81c4c5ff9edea2696d7c3c497f091d7ba0d5987fe86c5d58a61c84e62f",
+          "pointer": "/records/15",
+          "disposition": "unresolved_after_full_source_and_bounded_evidence_review"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "bc4e3c1ac983dbc66b9a847095a70fd22a04a98c3493d5ebe90a083d56e41c3a",
+      "proposed": false,
+      "currentEnabled": 1,
+      "currentSourceFiles": []
+    },
+    {
+      "key": "freporte/Gunex_Eklar",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/freporte/Gunex_Eklar.lua",
+      "baselineSourceSha256": "ee9621641cea8a08cb4c4121320aba58b487ef646488f657fd6502efd6649f51",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/26",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "8db5e27cb5a946053bf3cccf26156421173eb4554c391de7e9ad42a8c89fe9ab",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/freporte--Gunex_Eklar.lua"
+      ]
+    },
+    {
+      "key": "freporte/Jerra_Renlock",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/freporte/Jerra_Renlock.lua",
+      "baselineSourceSha256": "ef2d0ec997e6cb321df2fb04c4389f765614564ec9619aeeff8791abd66f6b50",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/27",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "9a0156b1290274fecce67714f8241d236195222f566a831aac3563d7b7c9b33b",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/freporte--Jerra_Renlock.lua"
+      ]
+    },
+    {
+      "key": "freporte/Marv_Orilis",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/freporte/Marv_Orilis.lua",
+      "baselineSourceSha256": "c672254f6ddd246fc02d83bc8c2e5f17dce1b7ce8b83c798f6c205b738053cdd",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/28",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "2abb827c0acbf6fb5a771ebf9b5a3378b02b72ac2af5afdb8973da765b371e7b",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/freporte--Marv_Orilis.lua"
+      ]
+    },
+    {
+      "key": "freporte/Quan_Nektogo",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/freporte/Quan_Nektogo.lua",
+      "baselineSourceSha256": "a51b56242e2b6bf47ac58d2784c6813ac5aa2c036356acaf6dccd18de3a18ebd",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/29",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "1f869109dc0846613bd019eae91abfd2b05b35cd9fdb990b9dbddbefaa118038",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/freporte--Quan_Nektogo.lua"
+      ]
+    },
+    {
+      "key": "freporte/Rigg_Nostra",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/freporte/Rigg_Nostra.lua",
+      "baselineSourceSha256": "5884a02de9ecc5a93abdb825588bca46f0d3aea6b5b1a7a04da809ac225acb9f",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/30",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "98bf42eb41f06cccd596c0f25685634fa50454d0b318dcc33da14f8193f5fc9a",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/freporte--Rigg_Nostra.lua"
+      ]
+    },
+    {
+      "key": "freporte/Rolfic_Gohar",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/freporte/Rolfic_Gohar.lua",
+      "baselineSourceSha256": "a80b42419a491a84bc9f2df15dd3e4101eda3bd26a7d3fa6f5b7f6d4557f357c",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/31",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "d8a8dd36dada24398722a7e42d43bf62a39f7ff6d654e2417c52f58d2e42cd01",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/freporte--Rolfic_Gohar.lua"
+      ]
+    },
+    {
+      "key": "freporte/Sir_Artanis",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/freporte/Sir_Artanis.lua",
+      "baselineSourceSha256": "8a61a11de2d5791f5e315c29bb288f2debf27be3c10dd30eed72dfaf5ba79b81",
+      "reviews": [
+        {
+          "file": "changes/p99-final-uncertainty/review.json",
+          "sha256": "774bee81c4c5ff9edea2696d7c3c497f091d7ba0d5987fe86c5d58a61c84e62f",
+          "pointer": "/records/16",
+          "disposition": "positive_later_or_custom_event_source_only_exclusion"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "c42c673e5928558c3a5ad234bfa37ef1f7760581deca40853e6dd6e4ef2cf8a1",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-uncertainty/freporte--Sir_Artanis.lua"
+      ]
+    },
+    {
+      "key": "freporte/Tovan_Tenlah",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/freporte/Tovan_Tenlah.lua",
+      "baselineSourceSha256": "0b37d61cc17efeb0d405cab39ac7f1023ee60514e9749584ad80bbf43fa7f121",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/32",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "61a7005817f30fe340ace5e5e18c2e6c9aae8daa52515c09ca91eb8026f784fc",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/freporte--Tovan_Tenlah.lua"
+      ]
+    },
+    {
+      "key": "freporte/Verona_Rankin",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/freporte/Verona_Rankin.lua",
+      "baselineSourceSha256": "0bdaaeab522d408471443a4137b662c53b854c3d3bb58658b14448326f18aa23",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/33",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "762f03e620a43e962cbd93344f9d79c4b31990bcacccad3785ec35a3569507f6",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/freporte--Verona_Rankin.lua"
+      ]
+    },
+    {
+      "key": "freporte/Zhem_Xecia",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/freporte/Zhem_Xecia.lua",
+      "baselineSourceSha256": "1ddbad85b317a1ed6757b6d4d33e0fec04551da6401d4bd6e13ef38ee2229239",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/34",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "9c85a1ae55e2a352ac2d7f3237a07304a5c6279d124e06905a271f25f2b362d3",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/freporte--Zhem_Xecia.lua"
+      ]
+    },
+    {
+      "key": "freportn/Edwardian_Holyblade",
+      "category": "new_mixed_source_branch_exclusion",
+      "baselineFile": "effective/quests/freportn/Edwardian_Holyblade.lua",
+      "baselineSourceSha256": "3ff40883557c5f303a6e5f1d24b173b6233781e22a92cf282bdfa8bf6b31bc7b",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/35",
+          "disposition": "removed_later_branch_preserved_mixed_source"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "f6864e6f0cd4df79f8a47427c62897546725ba82911a15b7be2dff3e3b3a829c",
+      "proposed": true,
+      "currentEnabled": 1,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/freportn--Edwardian_Holyblade.lua"
+      ]
+    },
+    {
+      "key": "freportn/Palious_Jarten",
+      "category": "documented_unchanged_service_with_limits",
+      "baselineFile": "effective/quests/freportn/Palious_Jarten.lua",
+      "baselineSourceSha256": "8d71907dd3ef69353b4f0d590036959bcb16e755f26f9d665701f16615856014",
+      "reviews": [
+        {
+          "file": "changes/p99-final-uncertainty/review.json",
+          "sha256": "774bee81c4c5ff9edea2696d7c3c497f091d7ba0d5987fe86c5d58a61c84e62f",
+          "pointer": "/records/17",
+          "disposition": "unchanged_exact_p99_service_documented"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "8d71907dd3ef69353b4f0d590036959bcb16e755f26f9d665701f16615856014",
+      "proposed": false,
+      "currentEnabled": 1,
+      "currentSourceFiles": []
+    },
+    {
+      "key": "freportn/Plur_Etinu",
+      "category": "unresolved_exact_scope_or_chain",
+      "baselineFile": "effective/quests/freportn/Plur_Etinu.lua",
+      "baselineSourceSha256": "4e1b901e281073bef8ed26089b8c7b5c962ab69c2f70e127a5d7db5fd6a434a1",
+      "reviews": [
+        {
+          "file": "changes/p99-final-uncertainty/review.json",
+          "sha256": "774bee81c4c5ff9edea2696d7c3c497f091d7ba0d5987fe86c5d58a61c84e62f",
+          "pointer": "/records/18",
+          "disposition": "unresolved_after_full_source_and_bounded_evidence_review"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "4e1b901e281073bef8ed26089b8c7b5c962ab69c2f70e127a5d7db5fd6a434a1",
+      "proposed": false,
+      "currentEnabled": 1,
+      "currentSourceFiles": []
+    },
+    {
+      "key": "freportn/Sir_Artanis",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/freportn/Sir_Artanis.lua",
+      "baselineSourceSha256": "2407b43d1e1d6850321c22d2760b63b3f825f4a2a59957d33b98d641ae721234",
+      "reviews": [
+        {
+          "file": "changes/p99-final-uncertainty/review.json",
+          "sha256": "774bee81c4c5ff9edea2696d7c3c497f091d7ba0d5987fe86c5d58a61c84e62f",
+          "pointer": "/records/19",
+          "disposition": "positive_later_or_custom_event_source_only_exclusion"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "1cfa87185162aaecfaa4cc29782dbd9db8f88d69660d28044be2b1bbcf4164af",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-uncertainty/freportn--Sir_Artanis.lua"
+      ]
+    },
+    {
+      "key": "freportn/Sten_Harnak",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/freportn/Sten_Harnak.lua",
+      "baselineSourceSha256": "543f424ebf1357acd629de4d6c150d6a89464a38169745f9a4e47692f1b69698",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/36",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "ef2fd36d491c0640b2007dbb37e0543c3ac358259fe24e7668dc31e133882be3",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/freportn--Sten_Harnak.lua"
+      ]
+    },
+    {
+      "key": "freportw/Arinna_Trueblade",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/freportw/Arinna_Trueblade.lua",
+      "baselineSourceSha256": "c288d10b651315ff814f4ec13fd634ff8937aad5afb2fe0b51ee4c96ac773383",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/37",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "7d1a1eff9473c260b7c1c213170d298c7af7e67b8fb27afb1aea3bf8f8996e90",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/freportw--Arinna_Trueblade.lua"
+      ]
+    },
+    {
+      "key": "freportw/Exterminator_Qalantir",
+      "category": "unresolved_exact_scope_or_chain",
+      "baselineFile": "effective/quests/freportw/Exterminator_Qalantir.lua",
+      "baselineSourceSha256": "169adbfdbf106d5cf4a7392e8d5b8c8862adf5fe4ef6f6d4186e8fa253214c70",
+      "reviews": [
+        {
+          "file": "changes/p99-final-uncertainty/review.json",
+          "sha256": "774bee81c4c5ff9edea2696d7c3c497f091d7ba0d5987fe86c5d58a61c84e62f",
+          "pointer": "/records/20",
+          "disposition": "unresolved_after_full_source_and_bounded_evidence_review"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "169adbfdbf106d5cf4a7392e8d5b8c8862adf5fe4ef6f6d4186e8fa253214c70",
+      "proposed": false,
+      "currentEnabled": 1,
+      "currentSourceFiles": []
+    },
+    {
+      "key": "freportw/Klom_Jysun",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/freportw/Klom_Jysun.lua",
+      "baselineSourceSha256": "f0063c9fa5458dcbb877321b57f5b54f6a700fd847c8512906b3b001f34812e1",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/38",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "1b46f4ea7b924dcc6443c4533cafa04ae40f9d091cf8e278e9891e362b361144",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/freportw--Klom_Jysun.lua"
+      ]
+    },
+    {
+      "key": "freportw/Lythe_Songbird",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/freportw/Lythe_Songbird.lua",
+      "baselineSourceSha256": "0bfb658378e0f6640929981c22d4cdb85fae64164ccb568af4f9127c6393989b",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/39",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "b6727f1fbfda97119d7ceffbc7f956b66dcc8542b72a30afd4256805e7b9011c",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/freportw--Lythe_Songbird.lua"
+      ]
+    },
+    {
+      "key": "freportw/Shana_Liskia",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/freportw/Shana_Liskia.lua",
+      "baselineSourceSha256": "4aac1583e35bfcfaf90dbbe1c8a137e64f91fe7cfb8966d4c6981e7575ffadf6",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/40",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "c352a891916d0f80f36d239ac2f20fd126e07bb68ed3a68b4e4b2601c6d5880b",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/freportw--Shana_Liskia.lua"
+      ]
+    },
+    {
+      "key": "frontiermtns/#a_goblin_whipcracker",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "sources/projecteq/frontiermtns/#a_goblin_whipcracker.lua",
+      "baselineSourceSha256": "d86cb2f02175a26e874c10d6fe35ab31ba53a04f4c3f4e91582b9a5b78fb7ed5",
+      "reviews": [
+        {
+          "file": "changes/p99-final-chain-closure/review.json",
+          "sha256": "e911f0a956586cd6888faf8b749ba952da64b04592226b48d49fca9b38a68334",
+          "pointer": "/records/14",
+          "disposition": "positively_later_exclusive_helper"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "ca9045cc2b1ea40a6c296ae5ffa0fbb7dc90bb23a45aa3a2a0bd1764aeb54d57",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-chain-closure/frontiermtns--#a_goblin_whipcracker.lua"
+      ]
+    },
+    {
+      "key": "frozenshadow/#Advisor_Svartmane",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/frozenshadow/%23Advisor_Svartmane.lua",
+      "baselineSourceSha256": "a19659d0cfe2219de3a7f4ef2b6aa263d6bf0522e626690e731d9a211c14ab60",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/41",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "e2773389dba9383e684a9485be92675025d8f66b12d47422c09c48f16292502b",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/frozenshadow--%23Advisor_Svartmane.lua"
+      ]
+    },
+    {
+      "key": "gfaydark/Aliafya_Mistrunner",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/gfaydark/Aliafya_Mistrunner.lua",
+      "baselineSourceSha256": "f84b3c96498e64cbf18610498d0f815fd1264d1abd9ee7ce480518522bdc994c",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/42",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "c3b3a55e66cb5670cb24964959f706dd675cb8b7859b10b13368e83e413a6aea",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/gfaydark--Aliafya_Mistrunner.lua"
+      ]
+    },
+    {
+      "key": "gfaydark/Josylyn_Greenblade",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/gfaydark/Josylyn_Greenblade.lua",
+      "baselineSourceSha256": "6975b1cbc366b70cf568c1c780c967f24e41ca0512d622b7141a404dfa9b4468",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/43",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "f10c94cccacf20c1dfc88b2827270c520adc7cfa6818ae2ebcf15eeee9c76df1",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/gfaydark--Josylyn_Greenblade.lua"
+      ]
+    },
+    {
+      "key": "gfaydark/Mazziana_Ridgerunner",
+      "category": "unresolved_exact_scope_or_chain",
+      "baselineFile": "effective/quests/gfaydark/Mazziana_Ridgerunner.lua",
+      "baselineSourceSha256": "311ef74d8e234d9b1ca7c4b07c98599c85d07a042dae644cf298b57078a51950",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/44",
+          "disposition": "unchanged_precise_admission_ambiguity"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "311ef74d8e234d9b1ca7c4b07c98599c85d07a042dae644cf298b57078a51950",
+      "proposed": false,
+      "currentEnabled": 1,
+      "currentSourceFiles": []
+    },
+    {
+      "key": "gfaydark/Sarialiyn_Tranquilsong",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/gfaydark/Sarialiyn_Tranquilsong.lua",
+      "baselineSourceSha256": "af0e41c3ea18ff9037d81c1b54cea0d48b12d39b77586aafe7bd8d9060ac8cb9",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/45",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "0696e26f617b9e0e8aa92aed4d4b9b29163fc6ee95bf98f47bb2e81a06768f34",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/gfaydark--Sarialiyn_Tranquilsong.lua"
+      ]
+    },
+    {
+      "key": "grobb/Bregna",
+      "category": "new_mixed_source_branch_exclusion",
+      "baselineFile": "effective/quests/grobb/Bregna.lua",
+      "baselineSourceSha256": "1be5eaac5953f07d451b597d8c6b76841fa1a180d63e5b75ca4ef5ed53d913ca",
+      "reviews": [
+        {
+          "file": "changes/p99-final-uncertainty/review.json",
+          "sha256": "774bee81c4c5ff9edea2696d7c3c497f091d7ba0d5987fe86c5d58a61c84e62f",
+          "pointer": "/records/21",
+          "disposition": "mixed_classic_candidate_preserved_later_branch_excluded"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "0ce1cfc0d3adb8b8baf1a71495602000df7f48c1f6255ef40a135c9814051454",
+      "proposed": true,
+      "currentEnabled": 1,
+      "currentSourceFiles": [
+        "changes/p99-final-uncertainty/grobb--Bregna.lua"
+      ]
+    },
+    {
+      "key": "grobb/Daboo_Dogak",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/grobb/Daboo_Dogak.lua",
+      "baselineSourceSha256": "5925f2584adb0e95d5a7ed9bcccace7b4701b0811cc8146877f872b2e52b33ec",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/46",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "b5d491d2f52b3afe36231835c943b510c5421564ed6d1259b6777cdaab6bffe2",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/grobb--Daboo_Dogak.lua"
+      ]
+    },
+    {
+      "key": "grobb/Exterminator_Filrog",
+      "category": "unresolved_exact_scope_or_chain",
+      "baselineFile": "effective/quests/grobb/Exterminator_Filrog.lua",
+      "baselineSourceSha256": "ab2e15b06847d6c8fc67c2d9037ef33d1c7172ba85ade7bc5de5ef3de8a81eb2",
+      "reviews": [
+        {
+          "file": "changes/p99-final-uncertainty/review.json",
+          "sha256": "774bee81c4c5ff9edea2696d7c3c497f091d7ba0d5987fe86c5d58a61c84e62f",
+          "pointer": "/records/22",
+          "disposition": "unresolved_after_full_source_and_bounded_evidence_review"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "ab2e15b06847d6c8fc67c2d9037ef33d1c7172ba85ade7bc5de5ef3de8a81eb2",
+      "proposed": false,
+      "currentEnabled": 1,
+      "currentSourceFiles": []
+    },
+    {
+      "key": "grobb/Gardunk",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/grobb/Gardunk.lua",
+      "baselineSourceSha256": "a393846e96f00ee9f00e909d1d8043fbdd62ded508c50d979c3750593999c22d",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/47",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "ee03da12003bbd8ef9239b2218ac4067d062d407fc2cf074f6b035e20911f19b",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/grobb--Gardunk.lua"
+      ]
+    },
+    {
+      "key": "grobb/Gargh",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/grobb/Gargh.lua",
+      "baselineSourceSha256": "9e4a5a4172d0957447b32ff4fc0a347089752cba2cc68b23c7b84fe250e2d6ad",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/48",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "a72c4d14cffc6cb7372661d249b675f7434df5fb740ae19b4d836187ada3973e",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/grobb--Gargh.lua"
+      ]
+    },
+    {
+      "key": "guktop/an_old_froglok",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/guktop/an_old_froglok.lua",
+      "baselineSourceSha256": "f816089abbee5ed471d2e69784fa616b5fb7c3f5880a911448b3eef607262b50",
+      "reviews": [
+        {
+          "file": "changes/p99-final-uncertainty/review.json",
+          "sha256": "774bee81c4c5ff9edea2696d7c3c497f091d7ba0d5987fe86c5d58a61c84e62f",
+          "pointer": "/records/23",
+          "disposition": "positive_later_or_custom_event_source_only_exclusion"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "bfa447bc1f9c26762b396668eaa4e3dc76b325630745c0ef4db2e739daaa177d",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-uncertainty/guktop--an_old_froglok.lua"
+      ]
+    },
+    {
+      "key": "halas/#Field_Priest_Keven",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/halas/%23Field_Priest_Keven.lua",
+      "baselineSourceSha256": "f46b85dbf530a34713ed58aa6054dcda6cd10d18839d45f69c825c79a78228db",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/49",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "2f664baed5f2d3ff08271c9dd4733e54232daeba7af465fef243ea6c714ab5e6",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/halas--%23Field_Priest_Keven.lua"
+      ]
+    },
+    {
+      "key": "halas/Hoyce_MacTaegan",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/halas/Hoyce_MacTaegan.lua",
+      "baselineSourceSha256": "fd8073312524a73ca455286354b183a010b809fede3c309a04beb0669e66094b",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/50",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "d785dde18088f03c89508407e2bc8bcb52e9b962410022731b7464671338cb23",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/halas--Hoyce_MacTaegan.lua"
+      ]
+    },
+    {
+      "key": "halas/Shanis_MacDarren",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/halas/Shanis_MacDarren.lua",
+      "baselineSourceSha256": "55c799f7ac38192583a3b85f783e6bcdf98e13615085a40a3272f8d144eab0ce",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/51",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "a17c1ae4d751eb885b46544d1c0cf02a761469688c3721df179751edbc09a8f5",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/halas--Shanis_MacDarren.lua"
+      ]
+    },
+    {
+      "key": "highkeep/Dealer_Maeline",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/highkeep/Dealer_Maeline.lua",
+      "baselineSourceSha256": "c63c0129e4e55f975bc1e0a8bd43c5a2686f100c41b1eed5c5eed4eb2af13d8f",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/52",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "7d24043dd7d0f9d33bd96d3127327c60be8aa209808b99216ac2b62e64611809",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/highkeep--Dealer_Maeline.lua"
+      ]
+    },
+    {
+      "key": "kaesora/a_tome_keeper",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/kaesora/a_tome_keeper.lua",
+      "baselineSourceSha256": "76e1cd7b272669e7a46172da81bb7905f4bfb7a943a5c0c27524767acff7c8b7",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/53",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "578a15c97926f81b88a03eb143e945c3fa6b154fd023219c92386f584a0383ba",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/kaesora--a_tome_keeper.lua"
+      ]
+    },
+    {
+      "key": "kaladima/Dirjadak_Barbrawler",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/kaladima/Dirjadak_Barbrawler.lua",
+      "baselineSourceSha256": "71e5994bb93c26021a4595f049fcf127684db29f06442ba420f867f2144ebf69",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/54",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "fc40213fbe2e90921c43a5fc9421becd0a27eab1d8aa67fb57a6ca17db89e7e3",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/kaladima--Dirjadak_Barbrawler.lua"
+      ]
+    },
+    {
+      "key": "kaladimb/Brenthalion_Aleslammer",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/kaladimb/Brenthalion_Aleslammer.lua",
+      "baselineSourceSha256": "3fa04a5293621fe65236880ccf05c75c6da8bb67cec00914799dc1b8e3bd40e9",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/55",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "f4576741cb57ea34f77dbfea331833b32031b18f89971ad60e5008eebb176ade",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/kaladimb--Brenthalion_Aleslammer.lua"
+      ]
+    },
+    {
+      "key": "kaladimb/Crovsar_Dirkbringer",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/kaladimb/Crovsar_Dirkbringer.lua",
+      "baselineSourceSha256": "b1f113e955ceb7b997096596d838a89bfefc045fffba0336834d6d6b103b89e3",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/56",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "e99822bee5c7490d716d5eba877b4f43a51d8de0a052e64d6bcb0531d5f371b9",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/kaladimb--Crovsar_Dirkbringer.lua"
+      ]
+    },
+    {
+      "key": "kaladimb/Dravel_Axethrasher",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/kaladimb/Dravel_Axethrasher.lua",
+      "baselineSourceSha256": "21d7cd3c4e9e00235e1180f84ea64b6d2349cb42be47e6a7ab3973eaa3b41666",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/57",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "e1d35c2a8803d968ff836e1e1b7b5a8d9554b7c260be72ad097a17244ae32fcf",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/kaladimb--Dravel_Axethrasher.lua"
+      ]
+    },
+    {
+      "key": "kaladimb/Exterminator_Vin",
+      "category": "unresolved_exact_scope_or_chain",
+      "baselineFile": "effective/quests/kaladimb/Exterminator_Vin.lua",
+      "baselineSourceSha256": "588856165675fd87a19f40147c9394e7dac5f59dc2f20745f5cbaf3b1c796200",
+      "reviews": [
+        {
+          "file": "changes/p99-final-uncertainty/review.json",
+          "sha256": "774bee81c4c5ff9edea2696d7c3c497f091d7ba0d5987fe86c5d58a61c84e62f",
+          "pointer": "/records/24",
+          "disposition": "unresolved_after_full_source_and_bounded_evidence_review"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "588856165675fd87a19f40147c9394e7dac5f59dc2f20745f5cbaf3b1c796200",
+      "proposed": false,
+      "currentEnabled": 1,
+      "currentSourceFiles": []
+    },
+    {
+      "key": "kaladimb/Haldorak_Foamymugs",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/kaladimb/Haldorak_Foamymugs.lua",
+      "baselineSourceSha256": "6b80f15680a9591fb352095058733d1904f923e4ed667bf77120acbc2dc62265",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/58",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "ff7f64aec7b92a0e300902af367134691f7b01c09163a3bb3bd720fa4a425f28",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/kaladimb--Haldorak_Foamymugs.lua"
+      ]
+    },
+    {
+      "key": "kaladimb/Harnoff_Splitrock",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/kaladimb/Harnoff_Splitrock.lua",
+      "baselineSourceSha256": "2cd3d9bc275c12ddb4440943d9d71f9bbe28ddce721d5997da11d2661726ec9a",
+      "reviews": [
+        {
+          "file": "changes/p99-final-uncertainty/review.json",
+          "sha256": "774bee81c4c5ff9edea2696d7c3c497f091d7ba0d5987fe86c5d58a61c84e62f",
+          "pointer": "/records/25",
+          "disposition": "positive_later_or_custom_event_source_only_exclusion"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "a3ee8e58b3c327ce6b68c03d9bf65f7fd90ca475af4cb98935dc1606f0d89daa",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-uncertainty/kaladimb--Harnoff_Splitrock.lua"
+      ]
+    },
+    {
+      "key": "kerraridge/Allix",
+      "category": "unresolved_exact_scope_or_chain",
+      "baselineFile": "effective/quests/kerraridge/Allix.lua",
+      "baselineSourceSha256": "f3137339a317e565838d1d0820f70b609cf6a0234d83ed5c59656b9f59800339",
+      "reviews": [
+        {
+          "file": "changes/p99-final-uncertainty/review.json",
+          "sha256": "774bee81c4c5ff9edea2696d7c3c497f091d7ba0d5987fe86c5d58a61c84e62f",
+          "pointer": "/records/26",
+          "disposition": "unresolved_after_full_source_and_bounded_evidence_review"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "f3137339a317e565838d1d0820f70b609cf6a0234d83ed5c59656b9f59800339",
+      "proposed": false,
+      "currentEnabled": 1,
+      "currentSourceFiles": []
+    },
+    {
+      "key": "kithicor/#Blackened_Treant",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "sources/projecteq/kithicor/#Blackened_Treant.lua",
+      "baselineSourceSha256": "a010d86ead65893b62582545afe563398b283fc8be6ae270b3c721d1d5e55cb3",
+      "reviews": [
+        {
+          "file": "changes/p99-final-chain-closure/review.json",
+          "sha256": "e911f0a956586cd6888faf8b749ba952da64b04592226b48d49fca9b38a68334",
+          "pointer": "/records/9",
+          "disposition": "positively_later_exclusive_helper"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "de309872eb5a0ba99fe476d49651b40c811269416e6d7b319a38041e3114a41c",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-chain-closure/kithicor--#Blackened_Treant.lua"
+      ]
+    },
+    {
+      "key": "kithicor/#Blackened_Tree_Limb",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "sources/projecteq/kithicor/#Blackened_Tree_Limb.lua",
+      "baselineSourceSha256": "9d9a5c48b4e1074999e91da1382560ae72b6eeb25e53ba18d176e44ef48c0038",
+      "reviews": [
+        {
+          "file": "changes/p99-final-chain-closure/review.json",
+          "sha256": "e911f0a956586cd6888faf8b749ba952da64b04592226b48d49fca9b38a68334",
+          "pointer": "/records/22",
+          "disposition": "positively_later_exclusive_helper"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "1ddb92ae442aea58d7ca07fd71fe4b1670601f0a9ee4c7ff39b1acefc7e953a9",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-chain-closure/kithicor--#Blackened_Tree_Limb.lua"
+      ]
+    },
+    {
+      "key": "kithicor/Innkeep_Min",
+      "category": "new_mixed_source_branch_exclusion",
+      "baselineFile": "effective/quests/kithicor/Innkeep_Min.lua",
+      "baselineSourceSha256": "bbbd65f399e0995b82c3cda6309c4006187bded2227bd0564bebb6a059fbaee7",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/59",
+          "disposition": "removed_later_branch_preserved_mixed_source"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "fa0063f8152f0de88e09993eaf21aa5928ac9d1e89836d5825b47117bc30aff4",
+      "proposed": true,
+      "currentEnabled": 1,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/kithicor--Innkeep_Min.lua"
+      ]
+    },
+    {
+      "key": "lakeofillomen/Impervious_Bloodbeast",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "maintained/lua/converted-perl/lakeofillomen/Impervious_Bloodbeast.lua",
+      "baselineSourceSha256": "7b012247293a46a832790f68f231d4cc4600da1c97b8d973913bc4d969dcc6ee",
+      "reviews": [
+        {
+          "file": "changes/p99-final-chain-closure/review.json",
+          "sha256": "e911f0a956586cd6888faf8b749ba952da64b04592226b48d49fca9b38a68334",
+          "pointer": "/records/17",
+          "disposition": "positively_later_exclusive_helper"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "0e773d10ecdb1aa356a460ead74d8801bc0c84ed305cd5e71abd882a040cfea7",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-chain-closure/lakeofillomen--Impervious_Bloodbeast.lua"
+      ]
+    },
+    {
+      "key": "lakerathe/#Egonis",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/lakerathe/%23Egonis.lua",
+      "baselineSourceSha256": "fb5be43bc9ac44852e887905a9c0cb060825be0a681c2165679e0315d25cef23",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/60",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "f661b45a0541851ba3d7b56c350021a632fa5559c8f8bf56e53d89ceb6f9700d",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/lakerathe--%23Egonis.lua"
+      ]
+    },
+    {
+      "key": "lakerathe/#Gnoll_Scavenger",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "maintained/lua/converted-perl/lakerathe/#Gnoll_Scavenger.lua",
+      "baselineSourceSha256": "33fb7400f6c4a648da81390d06cec7fcc94c61992c5d972581b13fb7bb02f303",
+      "reviews": [
+        {
+          "file": "changes/p99-final-chain-closure/review.json",
+          "sha256": "e911f0a956586cd6888faf8b749ba952da64b04592226b48d49fca9b38a68334",
+          "pointer": "/records/13",
+          "disposition": "positively_later_exclusive_helper"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "5fa8a2a97d8e877ff631f4b7722ebaac6e82f2fb773431598fea44f4c7fa91c7",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-chain-closure/lakerathe--#Gnoll_Scavenger.lua"
+      ]
+    },
+    {
+      "key": "lakerathe/#Triathalon_Bike",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/lakerathe/%23Triathalon_Bike.lua",
+      "baselineSourceSha256": "d3a1f842b80a864d3a0c0845add1e3bb0962bd0190979c7723d931a7e3a413f4",
+      "reviews": [
+        {
+          "file": "changes/p99-final-uncertainty/review.json",
+          "sha256": "774bee81c4c5ff9edea2696d7c3c497f091d7ba0d5987fe86c5d58a61c84e62f",
+          "pointer": "/records/27",
+          "disposition": "positive_later_or_custom_event_source_only_exclusion"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "5e907bad91abf66232af206825f7a75f5f4511a082fd86ce35ec75b7186c9161",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-uncertainty/lakerathe--#Triathalon_Bike.lua"
+      ]
+    },
+    {
+      "key": "lakerathe/#Triathalon_Swim_Goggles",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/lakerathe/%23Triathalon_Swim_Goggles.lua",
+      "baselineSourceSha256": "5a759cc1feb51f6246100351620b48c9eaf16d7fa5e9c3b4d097ebe193635133",
+      "reviews": [
+        {
+          "file": "changes/p99-final-uncertainty/review.json",
+          "sha256": "774bee81c4c5ff9edea2696d7c3c497f091d7ba0d5987fe86c5d58a61c84e62f",
+          "pointer": "/records/28",
+          "disposition": "positive_later_or_custom_event_source_only_exclusion"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "1a5dbb736b36b974bd6e7529b49514a675616b66c0f5339edec124449de921d4",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-uncertainty/lakerathe--#Triathalon_Swim_Goggles.lua"
+      ]
+    },
+    {
+      "key": "lakerathe/a_fallen_student",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/lakerathe/a_fallen_student.lua",
+      "baselineSourceSha256": "7789230f9a6b1c20037689eee9d3ed79ccd6303777368c8ae8f6ca9f4b53b121",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/61",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "6060756020b52d517720bac727a142498cc450a34bbeb6d5c599986dd9542684",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/lakerathe--a_fallen_student.lua"
+      ]
+    },
+    {
+      "key": "lavastorm/Brunnel_Kegstander",
+      "category": "unresolved_exact_scope_or_chain",
+      "baselineFile": "effective/quests/lavastorm/Brunnel_Kegstander.lua",
+      "baselineSourceSha256": "2a9910736e1d9580e714e25871dfd8c46c3a111446c9fcd2f09c7dd4cddeb27a",
+      "reviews": [
+        {
+          "file": "changes/p99-final-uncertainty/review.json",
+          "sha256": "774bee81c4c5ff9edea2696d7c3c497f091d7ba0d5987fe86c5d58a61c84e62f",
+          "pointer": "/records/29",
+          "disposition": "unresolved_after_full_source_and_bounded_evidence_review"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "2a9910736e1d9580e714e25871dfd8c46c3a111446c9fcd2f09c7dd4cddeb27a",
+      "proposed": false,
+      "currentEnabled": 1,
+      "currentSourceFiles": []
+    },
+    {
+      "key": "lavastorm/Symbell_Sunara",
+      "category": "new_mixed_source_branch_exclusion",
+      "baselineFile": "effective/quests/lavastorm/Symbell_Sunara.lua",
+      "baselineSourceSha256": "c9b1f1195c89e8ab0ead02ce29d59a87136846291c55f57c916855ebd0ac1a8e",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/62",
+          "disposition": "removed_later_branch_preserved_mixed_source"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "b13a59d7b0dddcd8b749d1992ffe61d5642aa52b9d760d99f04d099e50821ea1",
+      "proposed": true,
+      "currentEnabled": 1,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/lavastorm--Symbell_Sunara.lua"
+      ]
+    },
+    {
+      "key": "lfaydark/Scout_Rahjiq",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/lfaydark/Scout_Rahjiq.lua",
+      "baselineSourceSha256": "3bddc1a038a20f17758d3712b3da6b2eac531c25a7dc3317c32d3ab74115a507",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/63",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "659102da48fc987141b261ecd2dc6a9894b2da597ba8c194fbc00a8fb8922bde",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/lfaydark--Scout_Rahjiq.lua"
+      ]
+    },
+    {
+      "key": "mistmoore/Eirod_Haerod",
+      "category": "unresolved_exact_scope_or_chain",
+      "baselineFile": "effective/quests/mistmoore/Eirod_Haerod.lua",
+      "baselineSourceSha256": "e4b2197828aa39af5fa3d3ecb826cddcc08704600e2d13e40da0082a3c3affb2",
+      "reviews": [
+        {
+          "file": "changes/p99-final-uncertainty/review.json",
+          "sha256": "774bee81c4c5ff9edea2696d7c3c497f091d7ba0d5987fe86c5d58a61c84e62f",
+          "pointer": "/records/30",
+          "disposition": "unresolved_after_full_source_and_bounded_evidence_review"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "e4b2197828aa39af5fa3d3ecb826cddcc08704600e2d13e40da0082a3c3affb2",
+      "proposed": false,
+      "currentEnabled": 1,
+      "currentSourceFiles": []
+    },
+    {
+      "key": "necropolis/#Hsagra-s_Shade",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/necropolis/%23Hsagra-s_Shade.lua",
+      "baselineSourceSha256": "2828c97e92f22d7f28b7cb6224eddb0b543a644771f7424fd48359b6dd8e5e34",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/64",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "ee46ac59bb5b3ced0e4ad5f469de683b11faee427d740bec793555dbf0436c3b",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/necropolis--%23Hsagra-s_Shade.lua"
+      ]
+    },
+    {
+      "key": "nektulos/Kamidra_Voragone",
+      "category": "new_mixed_source_branch_exclusion",
+      "baselineFile": "effective/quests/nektulos/Kamidra_Voragone.lua",
+      "baselineSourceSha256": "d73c25482cc6c28179cbd0a9ae3751808cfc54d3b613716cb0d515ccd30074e1",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/65",
+          "disposition": "removed_later_branch_preserved_mixed_source"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "2780deb57763621f45159db61d135556788609f839258657187576809a14cf7a",
+      "proposed": true,
+      "currentEnabled": 1,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/nektulos--Kamidra_Voragone.lua"
+      ]
+    },
+    {
+      "key": "neriaka/Andara_C-Luzz",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/neriaka/Andara_C-Luzz.lua",
+      "baselineSourceSha256": "c214542a13314ef73db0e73499bc8cb74db581414ed6529c899b345c5e81476d",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/66",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "d56cc9a35d4cad177344f9a13dfc800890dbce871a4cf815146a1b15f7a03ef6",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/neriaka--Andara_C-Luzz.lua"
+      ]
+    },
+    {
+      "key": "neriaka/Bregna",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/neriaka/Bregna.lua",
+      "baselineSourceSha256": "30f7510b8d8676b57a9806de47dd46a94b2f53a5688a120db07b816833a7dcdb",
+      "reviews": [
+        {
+          "file": "changes/p99-final-uncertainty/review.json",
+          "sha256": "774bee81c4c5ff9edea2696d7c3c497f091d7ba0d5987fe86c5d58a61c84e62f",
+          "pointer": "/records/31",
+          "disposition": "positive_later_or_custom_event_source_only_exclusion"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "1d79f2d9645ddd1d747392271ec94cf1423560f1bf5a899c69969e243b47bbb2",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-uncertainty/neriaka--Bregna.lua"
+      ]
+    },
+    {
+      "key": "neriakb/Andara_C-Luzz",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/neriakb/Andara_C-Luzz.lua",
+      "baselineSourceSha256": "927bf4f380812e8d5272dec6339fb9c0cb9c0613e31e17446bb3a364af00b971",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/67",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "56d4e3c010261df5e8ca83a39c9209459d7394f146c8ff4da6e8670ef5b4b8ab",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/neriakb--Andara_C-Luzz.lua"
+      ]
+    },
+    {
+      "key": "neriakb/Exterminator_Damasi",
+      "category": "unresolved_exact_scope_or_chain",
+      "baselineFile": "effective/quests/neriakb/Exterminator_Damasi.lua",
+      "baselineSourceSha256": "2f31b27b83f41c661179ffb26d26ef5f65cd33fbd7797a8c2f661a5bfa7c9224",
+      "reviews": [
+        {
+          "file": "changes/p99-final-uncertainty/review.json",
+          "sha256": "774bee81c4c5ff9edea2696d7c3c497f091d7ba0d5987fe86c5d58a61c84e62f",
+          "pointer": "/records/32",
+          "disposition": "unresolved_after_full_source_and_bounded_evidence_review"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "2f31b27b83f41c661179ffb26d26ef5f65cd33fbd7797a8c2f661a5bfa7c9224",
+      "proposed": false,
+      "currentEnabled": 1,
+      "currentSourceFiles": []
+    },
+    {
+      "key": "neriakb/Issva_H-Rugla",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/neriakb/Issva_H-Rugla.lua",
+      "baselineSourceSha256": "b92386f7cd9109f681d1107bab5a1fca20bf18ccafc84d0f0aed0491881400c3",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/68",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "4d07c68529fe5e5c143eb41fd2d2767864d8e373aedf8b888d0e9ed7dd7b374b",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/neriakb--Issva_H-Rugla.lua"
+      ]
+    },
+    {
+      "key": "neriakb/Jarrex_N-Ryt",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/neriakb/Jarrex_N-Ryt.lua",
+      "baselineSourceSha256": "e4f737946626033a230ccf932794380d6699d13c916646c28c2bb61b07abef1f",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/69",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "aa320fdaf8e863cf06bec82254edc0a123bb22685b47c85e1651b7292cc9ad4d",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/neriakb--Jarrex_N-Ryt.lua"
+      ]
+    },
+    {
+      "key": "neriakb/Krivn_S-Tai",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/neriakb/Krivn_S-Tai.lua",
+      "baselineSourceSha256": "bd3141631107000a090234a96dafd1f56d0c8122158b2419f113352361d6d501",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/70",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "d5f888bd0480b562b7b53ef211afde426019f875c4e593a8920af1b2ad06ae53",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/neriakb--Krivn_S-Tai.lua"
+      ]
+    },
+    {
+      "key": "neriakb/Morgalanth_Tal-Raeloen",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/neriakb/Morgalanth_Tal-Raeloen.lua",
+      "baselineSourceSha256": "b09fab9fe1995b779ab1dc38f5af003908e2d18f3bf40a8ffe7b9d7278ba2253",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/71",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "99badceff3747bf196f046957e20c4d97cf4969d074f38277a3275f4b383c905",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/neriakb--Morgalanth_Tal-Raeloen.lua"
+      ]
+    },
+    {
+      "key": "neriakc/Exterminator_Gilea",
+      "category": "unresolved_exact_scope_or_chain",
+      "baselineFile": "effective/quests/neriakc/Exterminator_Gilea.lua",
+      "baselineSourceSha256": "baebb215207bf4e1ae12888d86f7c4bff58442d6f3ac22e57285ca01e62aa3b1",
+      "reviews": [
+        {
+          "file": "changes/p99-final-uncertainty/review.json",
+          "sha256": "774bee81c4c5ff9edea2696d7c3c497f091d7ba0d5987fe86c5d58a61c84e62f",
+          "pointer": "/records/33",
+          "disposition": "unresolved_after_full_source_and_bounded_evidence_review"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "baebb215207bf4e1ae12888d86f7c4bff58442d6f3ac22e57285ca01e62aa3b1",
+      "proposed": false,
+      "currentEnabled": 1,
+      "currentSourceFiles": []
+    },
+    {
+      "key": "neriakc/High_Priestess_Alexandria",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/neriakc/High_Priestess_Alexandria.lua",
+      "baselineSourceSha256": "f1d896a74613db00c5c9a34aa271f01d844bc5eb0187d953d79b692b57853999",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/72",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "36af6db388bccd2aa1d654b29bc2f78ef646b9d1b89b26d814d5892309b566f3",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/neriakc--High_Priestess_Alexandria.lua"
+      ]
+    },
+    {
+      "key": "neriakc/Kanthu_M-Rekkor",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/neriakc/Kanthu_M-Rekkor.lua",
+      "baselineSourceSha256": "6422bc10ca36cb2df3b24d0a250be7035aa9bdff3c0ffa4586d408a2b4d1144a",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/73",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "f18d11a56042a12dabe5903dd117d9085d5031564052bbb7458c45de841d4ff7",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/neriakc--Kanthu_M-Rekkor.lua"
+      ]
+    },
+    {
+      "key": "neriakc/Medron_Y-Lask",
+      "category": "new_mixed_source_branch_exclusion",
+      "baselineFile": "effective/quests/neriakc/Medron_Y-Lask.lua",
+      "baselineSourceSha256": "036eff28f5fa970afb6c664a427f7164215f3ea79a2e0d9eaac2b8a817a8d91f",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/74",
+          "disposition": "removed_later_branch_preserved_mixed_source"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "0322de446e1435c12dc493686d827a7012b5470588253f9965f129c0dc0ff183",
+      "proposed": true,
+      "currentEnabled": 1,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/neriakc--Medron_Y-Lask.lua"
+      ]
+    },
+    {
+      "key": "neriakc/Selzar_L-Crit",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/neriakc/Selzar_L-Crit.lua",
+      "baselineSourceSha256": "c9d6151b0880ae45946c69dac10b428b7c4e99f84147ad153011f387366cc577",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/75",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "3dc884b467c10f9c92f9ec4c94c6e53fb66f2a72c5429ad6e113c727cef70a2a",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/neriakc--Selzar_L-Crit.lua"
+      ]
+    },
+    {
+      "key": "neriakc/Talorial_D-Estalian",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/neriakc/Talorial_D-Estalian.lua",
+      "baselineSourceSha256": "b966563ff6419b52ec884cf4235849819ed5c3408701afbda96f0d89fd3e09fa",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/76",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "6ddc9598b20413b7999f07b1e13fcbda46cfe382a03e0aa73cd29c336ee7593d",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/neriakc--Talorial_D-Estalian.lua"
+      ]
+    },
+    {
+      "key": "neriakc/Ulraz_S-Lon",
+      "category": "new_mixed_source_branch_exclusion",
+      "baselineFile": "effective/quests/neriakc/Ulraz_S-Lon.lua",
+      "baselineSourceSha256": "e22fc7162480a3a6044789bbb6a0da9f8297d9c2c428feb1da582f676b236b32",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/77",
+          "disposition": "removed_later_branch_preserved_mixed_source"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "00a3f01d38653d1f2d0f2c3d617b5c22ff6434599910d3dce61780ad2d966d14",
+      "proposed": true,
+      "currentEnabled": 1,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/neriakc--Ulraz_S-Lon.lua"
+      ]
+    },
+    {
+      "key": "neriakc/Xantis_Ixtax",
+      "category": "documented_unchanged_service_with_limits",
+      "baselineFile": "maintained/lua/converted-perl/neriakc/Xantis_Ixtax.lua",
+      "baselineSourceSha256": "992100ee5b2dcaca62f8755105a2e78598e51a3931228765e64aeb06c945e861",
+      "reviews": [
+        {
+          "file": "changes/p99-final-chain-closure/review.json",
+          "sha256": "e911f0a956586cd6888faf8b749ba952da64b04592226b48d49fca9b38a68334",
+          "pointer": "/records/3",
+          "disposition": "p99_identity_corroborated_runtime_semantics_resolved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "992100ee5b2dcaca62f8755105a2e78598e51a3931228765e64aeb06c945e861",
+      "proposed": false,
+      "currentEnabled": 1,
+      "currentSourceFiles": []
+    },
+    {
+      "key": "northkarana/#Triathalon_Token",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/northkarana/%23Triathalon_Token.lua",
+      "baselineSourceSha256": "79e43b8eb75a67055be5ff841fa2da9a060a060e891f67ac27d1a99ffa52a2f9",
+      "reviews": [
+        {
+          "file": "changes/p99-final-uncertainty/review.json",
+          "sha256": "774bee81c4c5ff9edea2696d7c3c497f091d7ba0d5987fe86c5d58a61c84e62f",
+          "pointer": "/records/34",
+          "disposition": "positive_later_or_custom_event_source_only_exclusion"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "b440fe092bf5015fd9e145ef8ecbb872e3cf3aa72e835ec33cac549c0834e144",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-uncertainty/northkarana--#Triathalon_Token.lua"
+      ]
+    },
+    {
+      "key": "northkarana/Gorri_Fallstine",
+      "category": "unresolved_exact_scope_or_chain",
+      "baselineFile": "effective/quests/northkarana/Gorri_Fallstine.lua",
+      "baselineSourceSha256": "e4d087cb26758c202a5122b632eab26dc50c4624793cf3883c1b125ed7b558c7",
+      "reviews": [
+        {
+          "file": "changes/p99-final-uncertainty/review.json",
+          "sha256": "774bee81c4c5ff9edea2696d7c3c497f091d7ba0d5987fe86c5d58a61c84e62f",
+          "pointer": "/records/35",
+          "disposition": "unresolved_after_full_source_and_bounded_evidence_review"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "e4d087cb26758c202a5122b632eab26dc50c4624793cf3883c1b125ed7b558c7",
+      "proposed": false,
+      "currentEnabled": 1,
+      "currentSourceFiles": []
+    },
+    {
+      "key": "nro/a_guardian_tormentor",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "sources/projecteq/nro/a_guardian_tormentor.lua",
+      "baselineSourceSha256": "b9e91a7485953b39f2ce1d5ef0e9efb5756bff8560be733cc133b925e34c5e8f",
+      "reviews": [
+        {
+          "file": "changes/p99-final-chain-closure/review.json",
+          "sha256": "e911f0a956586cd6888faf8b749ba952da64b04592226b48d49fca9b38a68334",
+          "pointer": "/records/7",
+          "disposition": "positively_later_exclusive_helper"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "05c2af54db1aa8074c524e55351bdddff7a5135c262e008d0617fee9094089ac",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-chain-closure/nro--a_guardian_tormentor.lua"
+      ]
+    },
+    {
+      "key": "nro/a_haunt",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "sources/projecteq/nro/a_haunt.lua",
+      "baselineSourceSha256": "923a90dcfdf8f80c2a09a455264802c6fee5d4c1f17009437eb53681f8db46a3",
+      "reviews": [
+        {
+          "file": "changes/p99-final-chain-closure/review.json",
+          "sha256": "e911f0a956586cd6888faf8b749ba952da64b04592226b48d49fca9b38a68334",
+          "pointer": "/records/12",
+          "disposition": "positively_later_exclusive_helper"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "334d64bd5c7c18b8291b170c4539463d919d4ce0eca384940f773f9f9f27f9f0",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-chain-closure/nro--a_haunt.lua"
+      ]
+    },
+    {
+      "key": "nro/a_lamented_knight",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "sources/projecteq/nro/a_lamented_knight.lua",
+      "baselineSourceSha256": "49196a5712d661748d22fbcc1edee7b4d0a6c2ac09497f523ead33d973f9119a",
+      "reviews": [
+        {
+          "file": "changes/p99-final-chain-closure/review.json",
+          "sha256": "e911f0a956586cd6888faf8b749ba952da64b04592226b48d49fca9b38a68334",
+          "pointer": "/records/5",
+          "disposition": "positively_later_exclusive_helper"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "4f227ecae0a82a191b7a820cf856250c835cd66f8c836f3b5b13f295c7eae65d",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-chain-closure/nro--a_lamented_knight.lua"
+      ]
+    },
+    {
+      "key": "nro/a_spirit",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "sources/projecteq/nro/a_spirit.lua",
+      "baselineSourceSha256": "c6553b7fde3cc043201ee081a6c7ef1d52e7a3e6d5f808da8403bfc884907128",
+      "reviews": [
+        {
+          "file": "changes/p99-final-chain-closure/review.json",
+          "sha256": "e911f0a956586cd6888faf8b749ba952da64b04592226b48d49fca9b38a68334",
+          "pointer": "/additionalRecords/0",
+          "disposition": "positively_later_exclusive_controller"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "9a337b19bc1fab68c7fc9304f8eeae460066c44873cb18cdae78b1674936ae77",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-chain-closure/nro--a_spirit.lua"
+      ]
+    },
+    {
+      "key": "oggok/#Bordag",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/oggok/%23Bordag.lua",
+      "baselineSourceSha256": "f7e06d17d9d8a99ae6d899a8edb93fc15e54aef118596d1c5456391de5e5a13a",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/78",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "5c9f753f13a0fb3f94f1c414aeada7c02dfbeddabeb90c6d987d7128d42ce262",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/oggok--%23Bordag.lua"
+      ]
+    },
+    {
+      "key": "oggok/Baddi_Waca",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/oggok/Baddi_Waca.lua",
+      "baselineSourceSha256": "302f2363ec5bb9d1bfc623af8c8e8b94ff67506edf81b9e5f78e3d5cc92681ac",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/79",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "50e7f9a0294f235557402df1614a6cafdefbc9f286010ff30235cd6c3b93bb2d",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/oggok--Baddi_Waca.lua"
+      ]
+    },
+    {
+      "key": "oggok/Exterminator_Glurg",
+      "category": "unresolved_exact_scope_or_chain",
+      "baselineFile": "effective/quests/oggok/Exterminator_Glurg.lua",
+      "baselineSourceSha256": "3a1a59917549d51465948fb69711383c80160d5163c56a9413036e2f87f53c23",
+      "reviews": [
+        {
+          "file": "changes/p99-final-uncertainty/review.json",
+          "sha256": "774bee81c4c5ff9edea2696d7c3c497f091d7ba0d5987fe86c5d58a61c84e62f",
+          "pointer": "/records/36",
+          "disposition": "unresolved_after_full_source_and_bounded_evidence_review"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "3a1a59917549d51465948fb69711383c80160d5163c56a9413036e2f87f53c23",
+      "proposed": false,
+      "currentEnabled": 1,
+      "currentSourceFiles": []
+    },
+    {
+      "key": "oggok/Grapok",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/oggok/Grapok.lua",
+      "baselineSourceSha256": "4d78f8edbeb4e3f8cf8b9a91020d730913076167ed7fe366b6127beae89e56c5",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/80",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "047d82f497e2c50abfd1c8b4e1765ced9156719f438d880dd9376531a1818fa0",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/oggok--Grapok.lua"
+      ]
+    },
+    {
+      "key": "paineel/Librarian_Kesler",
+      "category": "unresolved_documented_p99_effect_mapping",
+      "baselineFile": "maintained/lua/converted-perl/paineel/Librarian_Kesler.lua",
+      "baselineSourceSha256": "63582a2b553ac9b7cc4d57601b9a4f0779d9aca140b15a300110077e31e5296f",
+      "reviews": [
+        {
+          "file": "changes/p99-final-chain-closure/review.json",
+          "sha256": "e911f0a956586cd6888faf8b749ba952da64b04592226b48d49fca9b38a68334",
+          "pointer": "/records/11",
+          "disposition": "p99_missing_book_grant_unresolved_mapping"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "63582a2b553ac9b7cc4d57601b9a4f0779d9aca140b15a300110077e31e5296f",
+      "proposed": false,
+      "currentEnabled": 1,
+      "currentSourceFiles": []
+    },
+    {
+      "key": "paineel/Shwara_Volerno",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/paineel/Shwara_Volerno.lua",
+      "baselineSourceSha256": "36c6cbebd0fc97ab40de9801f60473b8ae15629173998c4fff88813d2fbbae66",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/81",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "cc23b9657fc8963d922c821df5e60b0ae920f7d8161e25238750b142f2793096",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/paineel--Shwara_Volerno.lua"
+      ]
+    },
+    {
+      "key": "permafrost/Scout_Janomin",
+      "category": "previous_owner_exclusion_retained",
+      "baselineFile": "effective/quests/permafrost/Scout_Janomin.lua",
+      "baselineSourceSha256": "b14a4dddd8aeb88af480ee040d2cc2aead28ae47c5e4e98831e39f3b0dda3974",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/82",
+          "disposition": "already_disabled_by_existing_owner"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "233a04773ea5fa5241112695e1ae4ef42bc4fe7f0a5085be5b1b1b9f4fe1e9fc",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-support-dialogue-fixes/permafrost--Scout_Janomin.lua"
+      ]
+    },
+    {
+      "key": "qcat/Illie_Roln",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/qcat/Illie_Roln.lua",
+      "baselineSourceSha256": "631b2bf3c405abead37b871fecb7fce8810ecf03a07d794540b00cb270bd45dc",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/83",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "9b4851a2056ecf64d1448e3547ce87d48ee563da91ad1af9788ba0a5e4f0ebfa",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/qcat--Illie_Roln.lua"
+      ]
+    },
+    {
+      "key": "qcat/Ranthor_Bekesna",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/qcat/Ranthor_Bekesna.lua",
+      "baselineSourceSha256": "b9fcd1b275157dfb6b62957f798a350eb8024b593ce4bcbc581a3490c0f52a1f",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/84",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "1339db9076e188d9880d427c9fc408c4cf14b9dc925fd1c84e4ded8894d3a430",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/qcat--Ranthor_Bekesna.lua"
+      ]
+    },
+    {
+      "key": "qcat/Torin_Krentar",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/qcat/Torin_Krentar.lua",
+      "baselineSourceSha256": "ad4feb778e5f316ce20b27bd36ce2f573e07b59968a5639781fafa94e2e2257f",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/85",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "4dda8295f81cfcda6fa0b44f4346a8106dba259cf65a15ad9921e548a927df40",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/qcat--Torin_Krentar.lua"
+      ]
+    },
+    {
+      "key": "qcat/Unmuz_Tukore",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/qcat/Unmuz_Tukore.lua",
+      "baselineSourceSha256": "63d354c2f4fc03625946b6ee69bcd5fde262fa029d4d5e57bd84ea3810d97b6a",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/86",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "af211eea1bbc51ec5dd4fac94e7617de769bd90944cf0eaca56934f16e900102",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/qcat--Unmuz_Tukore.lua"
+      ]
+    },
+    {
+      "key": "qcat/Wellis_Pestule",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/qcat/Wellis_Pestule.lua",
+      "baselineSourceSha256": "e92a393d34187d07ffa425a9f40d20147e22ab63fe803055edb19a4dc0faf56e",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/87",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "5a543218c81db41b82000362a2b9253ac229abf17800e5f2014ef73bd0a612f4",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/qcat--Wellis_Pestule.lua"
+      ]
+    },
+    {
+      "key": "qey2hh1/12183",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "maintained/lua/converted-perl/qey2hh1/12183.lua",
+      "baselineSourceSha256": "4ea2d25fc6588caad51ad745c147a61927c985e1b0ef195cea4729383c4d649f",
+      "reviews": [
+        {
+          "file": "changes/p99-final-chain-closure/review.json",
+          "sha256": "e911f0a956586cd6888faf8b749ba952da64b04592226b48d49fca9b38a68334",
+          "pointer": "/records/18",
+          "disposition": "positively_later_exclusive_helper"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "1cd3a02296313e4a97157c02f9ac3a48529a199a9839a4e1aee92b5814f09805",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-chain-closure/qey2hh1--12183.lua"
+      ]
+    },
+    {
+      "key": "qey2hh1/12184",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "maintained/lua/converted-perl/qey2hh1/12184.lua",
+      "baselineSourceSha256": "0b746b4227e657b98f6ef233d22fc683f47dd63e14ec6f8a8a3e9d7c4ac26359",
+      "reviews": [
+        {
+          "file": "changes/p99-final-chain-closure/review.json",
+          "sha256": "e911f0a956586cd6888faf8b749ba952da64b04592226b48d49fca9b38a68334",
+          "pointer": "/records/10",
+          "disposition": "positively_later_exclusive_helper"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "da3ddcb6a83c9582915a312b543a7a71e584b5ad09da22a0bd5fe006b1812963",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-chain-closure/qey2hh1--12184.lua"
+      ]
+    },
+    {
+      "key": "qey2hh1/Tarnic_McWillows",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/qey2hh1/Tarnic_McWillows.lua",
+      "baselineSourceSha256": "06c1b7916b549f08bd55b57ffdbbd123dfa7a4974bcc4d8ba0eb4bb6305ad6d2",
+      "reviews": [
+        {
+          "file": "changes/p99-final-uncertainty/review.json",
+          "sha256": "774bee81c4c5ff9edea2696d7c3c497f091d7ba0d5987fe86c5d58a61c84e62f",
+          "pointer": "/records/37",
+          "disposition": "positive_later_or_custom_event_source_only_exclusion"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "11cf2c85477f3da40d6d6cce6355cef9bd48692b36b99066d001968ff4c12a20",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-uncertainty/qey2hh1--Tarnic_McWillows.lua"
+      ]
+    },
+    {
+      "key": "qeynos/Exterminator_Rasmon",
+      "category": "unresolved_exact_scope_or_chain",
+      "baselineFile": "effective/quests/qeynos/Exterminator_Rasmon.lua",
+      "baselineSourceSha256": "36b49baa9135b5c93cf4f42f1310346d633f29d8357841ea6ef3cb1a30f94c50",
+      "reviews": [
+        {
+          "file": "changes/p99-final-uncertainty/review.json",
+          "sha256": "774bee81c4c5ff9edea2696d7c3c497f091d7ba0d5987fe86c5d58a61c84e62f",
+          "pointer": "/records/38",
+          "disposition": "unresolved_after_full_source_and_bounded_evidence_review"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "36b49baa9135b5c93cf4f42f1310346d633f29d8357841ea6ef3cb1a30f94c50",
+      "proposed": false,
+      "currentEnabled": 1,
+      "currentSourceFiles": []
+    },
+    {
+      "key": "qeynos/Jalorin_Tar-Visgur",
+      "category": "unresolved_exact_scope_or_chain",
+      "baselineFile": "effective/quests/qeynos/Jalorin_Tar-Visgur.lua",
+      "baselineSourceSha256": "683f338dd9447c748151f62ba9d28a468d8bba49b0fcaef1d0ab7eec8f940a3a",
+      "reviews": [
+        {
+          "file": "changes/p99-final-uncertainty/review.json",
+          "sha256": "774bee81c4c5ff9edea2696d7c3c497f091d7ba0d5987fe86c5d58a61c84e62f",
+          "pointer": "/records/39",
+          "disposition": "unresolved_after_full_source_and_bounded_evidence_review"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "683f338dd9447c748151f62ba9d28a468d8bba49b0fcaef1d0ab7eec8f940a3a",
+      "proposed": false,
+      "currentEnabled": 1,
+      "currentSourceFiles": []
+    },
+    {
+      "key": "qeynos/Lord_Mrallon",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/qeynos/Lord_Mrallon.lua",
+      "baselineSourceSha256": "80fc91ca729f769468ada8e793f744f944b46ba4d94ae3b9de64dbbe0503a7f9",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/88",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "8e861b45d3531e484eb4ae37665da3654988a71a0e247928b12faf0012cd97c4",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/qeynos--Lord_Mrallon.lua"
+      ]
+    },
+    {
+      "key": "qeynos/Miltiades_Tal-Azroth",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/qeynos/Miltiades_Tal-Azroth.lua",
+      "baselineSourceSha256": "18fe0cf1ede392d9a1879ba361072875c584c54a14fa6fa086478c34949c71ad",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/89",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "28f0978cdc625bfd4b43e993ffb320131998127ba70a22022c99cbabfcdf44e8",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/qeynos--Miltiades_Tal-Azroth.lua"
+      ]
+    },
+    {
+      "key": "qeynos/Sollari_Bekines",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/qeynos/Sollari_Bekines.lua",
+      "baselineSourceSha256": "6776b0444829064a1022288397aa17c14a8e01ba575dbfdb0900ea589ad4af2d",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/90",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "7ff94bc18c4afa1f76ab436089e0c9719935260228b1b466d818128d82cbaedf",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/qeynos--Sollari_Bekines.lua"
+      ]
+    },
+    {
+      "key": "qeynos/Vansted_Rohenga",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/qeynos/Vansted_Rohenga.lua",
+      "baselineSourceSha256": "3f0f673b09af68c981340a6b3135285126e7461ee1f8352046eb857536596a6d",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/91",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "c317467bb11e26cebc89116327086f8f6187de298177ddb362f8adeea4a6a01f",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/qeynos--Vansted_Rohenga.lua"
+      ]
+    },
+    {
+      "key": "qeynos/Yakem_Oreslinger",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/qeynos/Yakem_Oreslinger.lua",
+      "baselineSourceSha256": "c54d9a394ddd4216123bcf2c529f4ed1c90a90d9d64b3993c3a1bd72c5e2d8be",
+      "reviews": [
+        {
+          "file": "changes/p99-final-uncertainty/review.json",
+          "sha256": "774bee81c4c5ff9edea2696d7c3c497f091d7ba0d5987fe86c5d58a61c84e62f",
+          "pointer": "/records/40",
+          "disposition": "positive_later_or_custom_event_source_only_exclusion"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "3376cf72ecdecc5ea4b10b24fc288ebeb8694d0407bb096a7f68e5d13aae71b2",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-uncertainty/qeynos--Yakem_Oreslinger.lua"
+      ]
+    },
+    {
+      "key": "qeynos2/Davloran_Girionlis",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/qeynos2/Davloran_Girionlis.lua",
+      "baselineSourceSha256": "eea101b98b91a0f8be619aa99131b28f2890e25497a22526fd09c87d01d9dd47",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/92",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "ba03f7991952a72a427b95cfa652168a2f393b0a63e533c49896b0bd1d4890e8",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/qeynos2--Davloran_Girionlis.lua"
+      ]
+    },
+    {
+      "key": "qeynos2/Exterminator_Wintloag",
+      "category": "unresolved_exact_scope_or_chain",
+      "baselineFile": "effective/quests/qeynos2/Exterminator_Wintloag.lua",
+      "baselineSourceSha256": "fb25c822e643233c13b07277534246f1b825c153f7c72ee4be893f6ee9789a78",
+      "reviews": [
+        {
+          "file": "changes/p99-final-uncertainty/review.json",
+          "sha256": "774bee81c4c5ff9edea2696d7c3c497f091d7ba0d5987fe86c5d58a61c84e62f",
+          "pointer": "/records/41",
+          "disposition": "unresolved_after_full_source_and_bounded_evidence_review"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "fb25c822e643233c13b07277534246f1b825c153f7c72ee4be893f6ee9789a78",
+      "proposed": false,
+      "currentEnabled": 1,
+      "currentSourceFiles": []
+    },
+    {
+      "key": "qeynos2/Filian_Weagleross",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/qeynos2/Filian_Weagleross.lua",
+      "baselineSourceSha256": "a78576ed03aa9de22bbeb67b6c97a4511fce760f761f44c8f198fd0f71e68c4b",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/93",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "dfcd5dd9ab8dd5d3863b91b5d3501cc701a1f9f20258f311f554a7a856a949f6",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/qeynos2--Filian_Weagleross.lua"
+      ]
+    },
+    {
+      "key": "qeynos2/Reldin_Harkolis",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/qeynos2/Reldin_Harkolis.lua",
+      "baselineSourceSha256": "43242df59b2caedf18f0974eae8701ea3b6f99c6404e3a61d0e0486bf0d6dc24",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/94",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "fa3fd69f885dbd861eb772f10e1cdd0a48f1dd146b9c43e124cd288cb21ff6f3",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/qeynos2--Reldin_Harkolis.lua"
+      ]
+    },
+    {
+      "key": "qeytoqrg/Rilca_Leafrunner",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/qeytoqrg/Rilca_Leafrunner.lua",
+      "baselineSourceSha256": "1052ebbd39957f95cad73c069c5ac26d13165d4b4cb80e7b2d5bfadceb91265e",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/95",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "4b8444f0b60e953df6917241f91e0bc06a500048fea6a1b03dc7de9645142370",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/qeytoqrg--Rilca_Leafrunner.lua"
+      ]
+    },
+    {
+      "key": "qrg/Errin_Pinewhisper",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/qrg/Errin_Pinewhisper.lua",
+      "baselineSourceSha256": "0b18b4e1a67437170af8cf2bceb3b400ef6e51a6f6fe527497ff947d50bf09cd",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/96",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "9a35f2a6676bc03721f1f23cc42fa000c30e269834b65cd74cefe39584f96500",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/qrg--Errin_Pinewhisper.lua"
+      ]
+    },
+    {
+      "key": "qrg/Gurrin_Nitestorm",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/qrg/Gurrin_Nitestorm.lua",
+      "baselineSourceSha256": "1319d5895c79a7e0aac6d00020b94fedb0e4b63716d4faedb090a4a77dcbf59e",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/97",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "36b83b4551641e3226f18c5ad80b506cff1cd6f142b3a25b1fe1faa8729aa9ad",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/qrg--Gurrin_Nitestorm.lua"
+      ]
+    },
+    {
+      "key": "qrg/Jhaya_Wyndrunner",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/qrg/Jhaya_Wyndrunner.lua",
+      "baselineSourceSha256": "25f063cb5bc8dda1378ba42507ff06a656fe18ed62664ec14d728a0ff27d44cc",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/98",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "77cb3ae5e9d46886b60a509adb01bcb94c34ba12353d5f834442b0f1431acae5",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/qrg--Jhaya_Wyndrunner.lua"
+      ]
+    },
+    {
+      "key": "qrg/Lerian_Wyndrunner",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/qrg/Lerian_Wyndrunner.lua",
+      "baselineSourceSha256": "0f278af774a7a21767f21c3ef57cd27f12e66ffa98fd6cc85bb1e5ae9ff02760",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/99",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "cb5cc2237200eda73c66366237dbca3a1c818994c88f48d72404c7f88289b002",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/qrg--Lerian_Wyndrunner.lua"
+      ]
+    },
+    {
+      "key": "qrg/Salmekia_Treherth",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/qrg/Salmekia_Treherth.lua",
+      "baselineSourceSha256": "1ad8cda53ae32d867c8fccab29a237e0c45be2057025cd54b509825d2540c6d3",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/100",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "d6aef9408a092806313d1268acd489c40073c3b8b450d138b831a14cd3759453",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/qrg--Salmekia_Treherth.lua"
+      ]
+    },
+    {
+      "key": "rathemtn/Rambling_Sphinx_Spiritservant",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "maintained/lua/converted-perl/rathemtn/Rambling_Sphinx_Spiritservant.lua",
+      "baselineSourceSha256": "bda83cdba9f31ee24af85d4b97b5c75077acf6941d66200e8ea84badc51401a4",
+      "reviews": [
+        {
+          "file": "changes/p99-final-chain-closure/review.json",
+          "sha256": "e911f0a956586cd6888faf8b749ba952da64b04592226b48d49fca9b38a68334",
+          "pointer": "/records/0",
+          "disposition": "positively_later_exclusive_helper"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "74e655ed4838a21d3a8e754ca340908b6836bce280da27aa2c15e55aa7357973",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-chain-closure/rathemtn--Rambling_Sphinx_Spiritservant.lua"
+      ]
+    },
+    {
+      "key": "rathemtn/Raving_Sphinx_Spiritservant",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "maintained/lua/converted-perl/rathemtn/Raving_Sphinx_Spiritservant.lua",
+      "baselineSourceSha256": "462ed67ef5d36287827ff91499358af170d347661c7f553389c090e9d3229735",
+      "reviews": [
+        {
+          "file": "changes/p99-final-chain-closure/review.json",
+          "sha256": "e911f0a956586cd6888faf8b749ba952da64b04592226b48d49fca9b38a68334",
+          "pointer": "/records/20",
+          "disposition": "positively_later_exclusive_helper"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "31df1bc1c114ee3402757990befb0f8f0a3d731142d3149524efa74a48ce568a",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-chain-closure/rathemtn--Raving_Sphinx_Spiritservant.lua"
+      ]
+    },
+    {
+      "key": "rivervale/Artisan_Bill_Whistletop",
+      "category": "new_mixed_source_branch_exclusion",
+      "baselineFile": "effective/quests/rivervale/Artisan_Bill_Whistletop.lua",
+      "baselineSourceSha256": "4aec9ef2d714c0901924b1d7f0b808b2026242dfe86efcfbf3a00839ecb0001a",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/101",
+          "disposition": "removed_later_branch_preserved_mixed_source"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "a730188865e65ec3889b278afec5e96bb79a650d75661b439bd4549f5580f7f3",
+      "proposed": true,
+      "currentEnabled": 1,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/rivervale--Artisan_Bill_Whistletop.lua"
+      ]
+    },
+    {
+      "key": "rivervale/Bartle_Barnick",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/rivervale/Bartle_Barnick.lua",
+      "baselineSourceSha256": "8bc230a5c7bec1df169bd61fa642988364e8461400dd781a3403556cbb9da28b",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/102",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "8b897a431a90c6faf9922bf1afa671aba7e72cb104aeb54711e0c8f72425b443",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/rivervale--Bartle_Barnick.lua"
+      ]
+    },
+    {
+      "key": "rivervale/Bipdo_Hargin",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/rivervale/Bipdo_Hargin.lua",
+      "baselineSourceSha256": "4d3a18751019eb63de6048b16db9a9577dbfa24fba99ccc805cce5cde1d01a3d",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/103",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "8ca0dc18d698d2e2bcd3173b49e456a495b116fcafb2d4bd3b5565a38da9b171",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/rivervale--Bipdo_Hargin.lua"
+      ]
+    },
+    {
+      "key": "rivervale/Bodbin_Gimple",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/rivervale/Bodbin_Gimple.lua",
+      "baselineSourceSha256": "59f433dc7d6093ce854851e94e60501ca3d1aa320ddf2dd886cdb82daaa3feb9",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/104",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "68235d8be175666e641ac45312c6571d0bfa12373d1b42711d47ca0c4e116350",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/rivervale--Bodbin_Gimple.lua"
+      ]
+    },
+    {
+      "key": "rivervale/Dalorio_Blistbobble",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/rivervale/Dalorio_Blistbobble.lua",
+      "baselineSourceSha256": "4bcb398ef8b4ac4a29def4f4c5d78a290426787c3199d039748032230edbc8d3",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/105",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "96313a28d18710e96e0bb585f3d17ee8b8ca8da5ee0bf11fb7c16a01b70b3217",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/rivervale--Dalorio_Blistbobble.lua"
+      ]
+    },
+    {
+      "key": "rivervale/Exterminator_Sutten",
+      "category": "unresolved_exact_scope_or_chain",
+      "baselineFile": "effective/quests/rivervale/Exterminator_Sutten.lua",
+      "baselineSourceSha256": "422d7d0f575ac86e740a7da6767a7186ec25d166b5a39eef203f2f5d405e85af",
+      "reviews": [
+        {
+          "file": "changes/p99-final-uncertainty/review.json",
+          "sha256": "774bee81c4c5ff9edea2696d7c3c497f091d7ba0d5987fe86c5d58a61c84e62f",
+          "pointer": "/records/42",
+          "disposition": "unresolved_after_full_source_and_bounded_evidence_review"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "422d7d0f575ac86e740a7da6767a7186ec25d166b5a39eef203f2f5d405e85af",
+      "proposed": false,
+      "currentEnabled": 1,
+      "currentSourceFiles": []
+    },
+    {
+      "key": "rivervale/Jimji_Bottletoe",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/rivervale/Jimji_Bottletoe.lua",
+      "baselineSourceSha256": "f16c6b4d9b3ec31acc1c931137346ed75aa7eefb1a678c92853a88d5a398beea",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/106",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "50d5907f53dc648762f36caeea7440b6d66c20072b19f31eca4649383f47f0f0",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/rivervale--Jimji_Bottletoe.lua"
+      ]
+    },
+    {
+      "key": "rivervale/Kaya_Cloudfoot",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/rivervale/Kaya_Cloudfoot.lua",
+      "baselineSourceSha256": "59f3fb324c02fe264568b8cd60ab78819fa06f629b19edaac15afb57f8419706",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/107",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "abfd74a4bf7bf0efa00f8e84b35dc2bf6c1a6bb1b534a19ca0af7a2d856e67cc",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/rivervale--Kaya_Cloudfoot.lua"
+      ]
+    },
+    {
+      "key": "rivervale/Megosh_Thistlethorn",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/rivervale/Megosh_Thistlethorn.lua",
+      "baselineSourceSha256": "56444f1ce35c9f5d98b31d29707a839892eab3279287995657adb4a40abfc757",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/108",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "51838e95d18251afb3d926287fc535867fc3bb1df05eca08c1ff7a97b3df52ea",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/rivervale--Megosh_Thistlethorn.lua"
+      ]
+    },
+    {
+      "key": "rivervale/Thekela_Meepup",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/rivervale/Thekela_Meepup.lua",
+      "baselineSourceSha256": "692040c0d181e8141c7cfaf2d4a4370618a9609dc3d6742468c7b419c8060627",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/109",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "3cd57ca37f84c246332a638d53f3400a95ade98c1dff601cf1a84b1c56ed6f07",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/rivervale--Thekela_Meepup.lua"
+      ]
+    },
+    {
+      "key": "sebilis/#froglok_krup_knight",
+      "category": "unresolved_exact_scope_or_chain",
+      "baselineFile": "maintained/lua/converted-perl/sebilis/#froglok_krup_knight.lua",
+      "baselineSourceSha256": "d1d40980941ef5b2f1f6fa6812f5066644c3a671efdaf012f009564553683fa8",
+      "reviews": [
+        {
+          "file": "changes/p99-final-chain-closure/review.json",
+          "sha256": "e911f0a956586cd6888faf8b749ba952da64b04592226b48d49fca9b38a68334",
+          "pointer": "/records/16",
+          "disposition": "unresolved_exact_event_era"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "d1d40980941ef5b2f1f6fa6812f5066644c3a671efdaf012f009564553683fa8",
+      "proposed": false,
+      "currentEnabled": 1,
+      "currentSourceFiles": []
+    },
+    {
+      "key": "sirens/a_twitching_swordfish",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/sirens/a_twitching_swordfish.lua",
+      "baselineSourceSha256": "8f1c58913a25b4b7fc58607ad35dab93c5efe057d5668822e1e9803b24e147db",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/110",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "8a29ce895f79e922223881f8b0c0643628a2039405be52aa25ddc34ba0ea4963",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/sirens--a_twitching_swordfish.lua"
+      ]
+    },
+    {
+      "key": "sirens/Ravaging_Tsunami_Elemental",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/sirens/Ravaging_Tsunami_Elemental.lua",
+      "baselineSourceSha256": "dca30aa09b2ad61ac8dd268a44953b27d6b89c5d8913469b757362ea3e72548a",
+      "reviews": [
+        {
+          "file": "changes/p99-final-uncertainty/review.json",
+          "sha256": "774bee81c4c5ff9edea2696d7c3c497f091d7ba0d5987fe86c5d58a61c84e62f",
+          "pointer": "/records/43",
+          "disposition": "positive_later_or_custom_event_source_only_exclusion"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "7435d3f12c9e5b9dfaad22e28e9933e44f2fdbf434fe7689e64944abb2e49ef2",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-uncertainty/sirens--Ravaging_Tsunami_Elemental.lua"
+      ]
+    },
+    {
+      "key": "southkarana/#Triathalon_Running_Shoes",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/southkarana/%23Triathalon_Running_Shoes.lua",
+      "baselineSourceSha256": "3544149f89efe84ef4c3618403cb97ad2cfb210cebb4d19de5c38bfb5cdbe8e9",
+      "reviews": [
+        {
+          "file": "changes/p99-final-uncertainty/review.json",
+          "sha256": "774bee81c4c5ff9edea2696d7c3c497f091d7ba0d5987fe86c5d58a61c84e62f",
+          "pointer": "/records/44",
+          "disposition": "positive_later_or_custom_event_source_only_exclusion"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "a14394b7002de4aec834cadadbf6ca8e45d33055a139fbe1aa64823723d4481a",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-uncertainty/southkarana--#Triathalon_Running_Shoes.lua"
+      ]
+    },
+    {
+      "key": "steamfont/#Biddliss_Sperandu",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/steamfont/%23Biddliss_Sperandu.lua",
+      "baselineSourceSha256": "7e4cf52936c1224e1f5a4f9daef8f9b5706d195b45cc299c5f12d8b9ef0fd4b8",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/111",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "e6de61e1d18f7d954056a030761bdbd8084560922e764ffb082c87e8c1072681",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/steamfont--%23Biddliss_Sperandu.lua"
+      ]
+    },
+    {
+      "key": "swampofnohope/Scout_Eyru",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/swampofnohope/Scout_Eyru.lua",
+      "baselineSourceSha256": "4fe2eec856063fa01d71b4e2889997221c0e441aa6721e4ed33482cbca27e680",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/112",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "0a1418d96ab10fae9d2753958ee7f1e4640edd19b81ff70aeb2c3dba49cf42e9",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/swampofnohope--Scout_Eyru.lua"
+      ]
+    },
+    {
+      "key": "thurgadina/Dardek_Bladewright",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/thurgadina/Dardek_Bladewright.lua",
+      "baselineSourceSha256": "b4b0792b7f41926e49aac0268d4f10bb4e2849602d9984e65859696f7d5b1fe9",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/113",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "ad8dadbb96d564c5f98314f1a3cd0bb8d73edd1917bf5030b97cd35ad34487af",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/thurgadina--Dardek_Bladewright.lua"
+      ]
+    },
+    {
+      "key": "timorous/an_Iksar_master",
+      "category": "new_mixed_source_branch_exclusion",
+      "baselineFile": "maintained/lua/converted-perl/timorous/an_Iksar_master.lua",
+      "baselineSourceSha256": "4b17cfed06c4d0320fa3f6cd2156c41ed0bfb3be22ef82bc5c5c75d77d584aa6",
+      "reviews": [
+        {
+          "file": "changes/p99-final-chain-closure/review.json",
+          "sha256": "e911f0a956586cd6888faf8b749ba952da64b04592226b48d49fca9b38a68334",
+          "pointer": "/additionalRecords/2",
+          "disposition": "mixed_classic_later_controller"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "16ceafc8465767a47b1f8e6602617e951874a170ef42e6513457e2f46d520568",
+      "proposed": true,
+      "currentEnabled": 1,
+      "currentSourceFiles": [
+        "changes/p99-final-chain-closure/timorous--an_Iksar_master.lua"
+      ]
+    },
+    {
+      "key": "timorous/Draz_Nurakk",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "maintained/lua/converted-perl/timorous/Draz_Nurakk.lua",
+      "baselineSourceSha256": "8016936dda407c8498e2828c550349a94e5704895545509e8cd967c245327820",
+      "reviews": [
+        {
+          "file": "changes/p99-final-chain-closure/review.json",
+          "sha256": "e911f0a956586cd6888faf8b749ba952da64b04592226b48d49fca9b38a68334",
+          "pointer": "/records/19",
+          "disposition": "positively_later_exclusive_helper"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "1ca076018d7d8bbc56b0003476c50ea7aa3edc3340209dc1ea2f7478a6b82eb9",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-chain-closure/timorous--Draz_Nurakk.lua"
+      ]
+    },
+    {
+      "key": "timorous/Grandmaster_Rinmark",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "maintained/lua/converted-perl/timorous/Grandmaster_Rinmark.lua",
+      "baselineSourceSha256": "14d3f899be6cfd55231186a17a6dd5d58f9d1495613fc16695a78ff56c5f5f61",
+      "reviews": [
+        {
+          "file": "changes/p99-final-chain-closure/review.json",
+          "sha256": "e911f0a956586cd6888faf8b749ba952da64b04592226b48d49fca9b38a68334",
+          "pointer": "/records/8",
+          "disposition": "positively_later_exclusive_helper"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "db11ef260fc9edc800b67411167bb31c62341b3337a84760a940d2bd66e09fb6",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-chain-closure/timorous--Grandmaster_Rinmark.lua"
+      ]
+    },
+    {
+      "key": "timorous/Master_Rinmark",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "maintained/lua/converted-perl/timorous/Master_Rinmark.lua",
+      "baselineSourceSha256": "d5f7eb3b9c6ea5d1cd8f1f75fb85c6432025d5ffcfcbdc4a0449655924f6e0c4",
+      "reviews": [
+        {
+          "file": "changes/p99-final-chain-closure/review.json",
+          "sha256": "e911f0a956586cd6888faf8b749ba952da64b04592226b48d49fca9b38a68334",
+          "pointer": "/records/15",
+          "disposition": "positively_later_exclusive_helper"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "40ab2be264226beed9619c7d043518740453d7dbdc3d02d4d2d08636fc137088",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-chain-closure/timorous--Master_Rinmark.lua"
+      ]
+    },
+    {
+      "key": "timorous/Rinmark",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "maintained/lua/converted-perl/timorous/Rinmark.lua",
+      "baselineSourceSha256": "3cb9ab414f947bf7cc01dc662f01f77b707971047880a4fbda0816e4f9702159",
+      "reviews": [
+        {
+          "file": "changes/p99-final-chain-closure/review.json",
+          "sha256": "e911f0a956586cd6888faf8b749ba952da64b04592226b48d49fca9b38a68334",
+          "pointer": "/additionalRecords/1",
+          "disposition": "positively_later_exclusive_controller"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "02a860d8e15a78ec8a53ac82d7904517a4191c23c85442b8070d7eed720c22e0",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-chain-closure/timorous--Rinmark.lua"
+      ]
+    },
+    {
+      "key": "timorous/Scout_Sihmoj",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/timorous/Scout_Sihmoj.lua",
+      "baselineSourceSha256": "e0f290b421cb2f10f9f55279339ad7151019e15dd4facc0e9298383da6411087",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/114",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "c8477dab12f8ce069a2f2537cb769b5c99beb37262693d73cb12695eb2b97b4b",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/timorous--Scout_Sihmoj.lua"
+      ]
+    },
+    {
+      "key": "tox/Lanivon_Baxer",
+      "category": "unresolved_exact_scope_or_chain",
+      "baselineFile": "effective/quests/tox/Lanivon_Baxer.lua",
+      "baselineSourceSha256": "149189532f714dfab532e433d5ccefb87cdef75d79e3206bc8f5819d93672701",
+      "reviews": [
+        {
+          "file": "changes/p99-final-uncertainty/review.json",
+          "sha256": "774bee81c4c5ff9edea2696d7c3c497f091d7ba0d5987fe86c5d58a61c84e62f",
+          "pointer": "/records/45",
+          "disposition": "unresolved_after_full_source_and_bounded_evidence_review"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "149189532f714dfab532e433d5ccefb87cdef75d79e3206bc8f5819d93672701",
+      "proposed": false,
+      "currentEnabled": 1,
+      "currentSourceFiles": []
+    },
+    {
+      "key": "trakanon/Crusader_Vragor",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/trakanon/Crusader_Vragor.lua",
+      "baselineSourceSha256": "9e07aebb8fc9e4e88a6bdd1bd118efc255935356b585b2c97151447cecb3efc8",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/115",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "418c0586956a4c06350ff8669a8d9234958253743132c8f68ec2969a5e1365be",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/trakanon--Crusader_Vragor.lua"
+      ]
+    },
+    {
+      "key": "wakening/#Alaurin",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/wakening/%23Alaurin.lua",
+      "baselineSourceSha256": "2027e662ab4b7fb8dc2dfeca13ad7d44cf151b5a5daabfbe0072ab0f8c5d01b5",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/116",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "f9d9e23ae5ad83d659fafa7d98e0897e682328a5742b1e744bab8a646446f0b1",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/wakening--%23Alaurin.lua"
+      ]
+    },
+    {
+      "key": "wakening/#Lantaric-Dar",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/wakening/%23Lantaric-Dar.lua",
+      "baselineSourceSha256": "1216c4ce6de386ae4ea31a35a93ee709c031432cc82644c19536d4e599fc7671",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/117",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "f7f846611b06ac9803df85af7b79d9feb8e40e6c28638ac227453fecfb4d3d43",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/wakening--%23Lantaric-Dar.lua"
+      ]
+    },
+    {
+      "key": "warslikswood/#an_injured_traveller",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/warslikswood/%23an_injured_traveller.lua",
+      "baselineSourceSha256": "9c64b57d6372d1c48fdd5fe18f26d42149c20a5c44ff9a29630cba068a42cb6d",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/118",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "497e9bd39d2dffa1acf91b23c08214e2b0a4cb6b7788c531110ce9b7eef53ef7",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/warslikswood--%23an_injured_traveller.lua"
+      ]
+    },
+    {
+      "key": "warslikswood/a_frantic_goblin",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "maintained/lua/converted-perl/warslikswood/a_frantic_goblin.lua",
+      "baselineSourceSha256": "035157961f2d4322c4e2c247b16e7c8bd3b7ffeedc5f10a76e5aa015fb64fef3",
+      "reviews": [
+        {
+          "file": "changes/p99-final-chain-closure/review.json",
+          "sha256": "e911f0a956586cd6888faf8b749ba952da64b04592226b48d49fca9b38a68334",
+          "pointer": "/records/23",
+          "disposition": "positively_later_exclusive_helper"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "c304b256593c7c762f79a2e52955babc5df339032b88586166940f09bd2874c5",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-chain-closure/warslikswood--a_frantic_goblin.lua"
+      ]
+    },
+    {
+      "key": "warslikswood/Ferocious_Goblin",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "maintained/lua/converted-perl/warslikswood/Ferocious_Goblin.lua",
+      "baselineSourceSha256": "97df52fec6602a7e8d3f0278c1df8ae8844f0f464925a34cc8a1005c94f5d6af",
+      "reviews": [
+        {
+          "file": "changes/p99-final-chain-closure/review.json",
+          "sha256": "e911f0a956586cd6888faf8b749ba952da64b04592226b48d49fca9b38a68334",
+          "pointer": "/records/2",
+          "disposition": "positively_later_exclusive_helper"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "a613cd969f1d269e9e88efed8b8ebb4ca2ae4f2f1b2529d0ac0d0b2f4df09072",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-chain-closure/warslikswood--Ferocious_Goblin.lua"
+      ]
+    },
+    {
+      "key": "westwastes/#Vohnkare",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/westwastes/%23Vohnkare.lua",
+      "baselineSourceSha256": "8bcef844198e6a74f1810691ad2ec04dd9da65cedde88dd8911791851f3f4e06",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/119",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "e1cfb15b491e9e9525e89f70ee817a99f6c1608d16e655fdb103ee646c14b312",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/westwastes--%23Vohnkare.lua"
+      ]
+    },
+    {
+      "key": "westwastes/a_Lost_Tomekeeper",
+      "category": "new_later_or_event_source_disable",
+      "baselineFile": "effective/quests/westwastes/a_Lost_Tomekeeper.lua",
+      "baselineSourceSha256": "17fe85f54f427afcc0c25fae354fc96aa96915aaf7abf5f0b6b383cc279dd81b",
+      "reviews": [
+        {
+          "file": "changes/p99-final-admission/review.json",
+          "sha256": "b3d9293d219f316abc92ae2874aab60a0b67cc5bd971391f7564e82aa160ff48",
+          "pointer": "/records/120",
+          "disposition": "disabled_sole_later_source_body_preserved"
+        }
+      ],
+      "fullP99ParityClaim": false,
+      "currentSourceSha256": "0ac0b841fc6670638cdc9b409a31f058024b490c707619bd510f61defb74ec8e",
+      "proposed": true,
+      "currentEnabled": 0,
+      "currentSourceFiles": [
+        "changes/p99-final-admission/westwastes--a_Lost_Tomekeeper.lua"
+      ]
+    }
+  ],
+  "limits": [
+    "Exact actor and chain uncertainty is distinct from absent numerical documentation. Existing values remain fallback evidence where P99 is silent.",
+    "A later-era source disable does not certify downstream runtime admission; full-body tests establish preservation, not active playability.",
+    "The missing-book grant is a known P99 effect-mapping candidate, not a proven complete quest failure.",
+    "Palious and Xantis service findings retain their stated limits; isolated behavior does not establish live settlement."
+  ]
+}

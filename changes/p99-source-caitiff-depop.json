@@ -1,0 +1,45 @@
+{
+  "format": 1,
+  "id": "p99-source-caitiff-depop",
+  "summary": "Preserve Vampire Teeth reward and existing unknown XP; depop the avenging caitiff only after the documented complete fang hand-in.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/An_avenging_caitiff?action=raw",
+      "note": "NPC description explicitly says fang turn-in despawns the actor; related quest is Vampire Teeth. Cache reference/p99-wiki/npc-pages/an-avenging-caitiff-430a83a2ca.wiki; fetched 2026-08-12T17:37:34.534Z; SHA256 1ba526a0bed4736820b623b740afb8d6d12bb14db89e0acd75f7a0fa23ef8c09; revision unavailable. Not a live wiki freshness claim."
+    },
+    {
+      "url": "https://wiki.project1999.com/Vampire_Teeth",
+      "note": "Public search-index text retrieved2026-10-22 (reported crawled7months earlier) independently documents both fangs\u2192Electrum-Bladed Wakizashi and immediate despawn. This is supplemental indexed evidence, not a fresh raw wiki/API fetch; see changes/p99-source-review/public-evidence.json."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 15459,
+        "zone": "mistmoore",
+        "name": "an_avenging_caitiff",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: mistmoore/an_avenging_caitiff.pl\n-- items: 10179, 10178, 5408\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Emote(\"an avenging caitiff glares at you with fangs bared as he draws an electrum-bladed wakizashi.\")\n\telseif e.message:findi(\"electrum-bladed wakizashi\") then\n\t\te.self:Say(\"HA! As if a mortal such as yourself is worthy of such a weapon. Leave me to my mission - my purpose in life - the slaying of those who brought me into this existence, then exiled me from this place.\")\n\telseif e.message:findi(\"mother\") then\n\t\te.self:Say(\"My mother was named Issis. She is, to my knowledge, employed as Lord Mistmoores maid.\")\n\telseif e.message:findi(\"father\") then\n\t\te.self:Say(\"Syncall is my fathers name. He serves as Lord Mistmoores butler.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 10179, item2 = 10178}) then\n\t\te.other:SummonItem(5408)\n\t\te.self:Say(\"Mother? Father? May you find peace at last. I shall avenge your suffering! I will grow stronger and set free the souls of the others.\")\n\t\te.other:AddEXP(5000)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 15459,
+        "zone": "mistmoore",
+        "name": "an_avenging_caitiff",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: mistmoore/an_avenging_caitiff.pl\n-- items: 10179, 10178, 5408\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Emote(\"an avenging caitiff glares at you with fangs bared as he draws an electrum-bladed wakizashi.\")\n\telseif e.message:findi(\"electrum-bladed wakizashi\") then\n\t\te.self:Say(\"HA! As if a mortal such as yourself is worthy of such a weapon. Leave me to my mission - my purpose in life - the slaying of those who brought me into this existence, then exiled me from this place.\")\n\telseif e.message:findi(\"mother\") then\n\t\te.self:Say(\"My mother was named Issis. She is, to my knowledge, employed as Lord Mistmoores maid.\")\n\telseif e.message:findi(\"father\") then\n\t\te.self:Say(\"Syncall is my fathers name. He serves as Lord Mistmoores butler.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 10179, item2 = 10178}) then\n\t\te.other:SummonItem(5408)\n\t\te.self:Say(\"Mother? Father? May you find peace at last. I shall avenge your suffering! I will grow stronger and set free the souls of the others.\")\n\t\te.other:AddEXP(5000)\n\t\teq.depop_with_timer() -- P99 Vampire Teeth: caitiff leaves after receiving both fangs.\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/mistmoore/an_avenging_caitiff.lua",
+      "beforeSha256": "06da30ec5f7f6c834e94bdffa42c1b4afad6ef4feaba57cc5fac84373997e862",
+      "proposedFile": "changes/p99-source-caitiff-depop/mistmoore--an_avenging_caitiff.lua",
+      "afterSha256": "17f2d9d4202b8e0aa51222cd0139442cce9acf8b5db7b125d76b748b7dea5801"
+    }
+  ]
+}

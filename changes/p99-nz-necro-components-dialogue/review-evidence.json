@@ -1,0 +1,26 @@
+{
+  "titles": [
+    "Necro Spells"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "partial",
+  "match_status": "partial",
+  "local_quest_keys": [
+    "cabwest/Keeper_Bile"
+  ],
+  "proposal": "changes/p99-nz-necro-components-dialogue.json",
+  "notes": [
+    "Restore Keeper Bile\u2019s documented collect-components dialogue while retaining legacy interested alias.",
+    "Required components are unchanged. Cache documents coin but no amount and random low-level spell without exact probabilities; absent coin and reward distribution remain unresolved. Do not interpret this source dialogue correction as complete quest alignment."
+  ],
+  "verification": {
+    "source": "Cached P99 and effective Lua reviewed; exact complete row preimages and source hashes recorded.",
+    "syntax": "pending",
+    "runtime": "Isolated mock regression pending; full game runtime unavailable.",
+    "ui": "not_run",
+    "connected_chain": "not_run"
+  },
+  "unresolved": [
+    "Ordinary source drops/spawns, recipe live behavior and rendered complete quest path not verified."
+  ]
+}

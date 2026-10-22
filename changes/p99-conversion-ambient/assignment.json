@@ -1,0 +1,2559 @@
+{
+  "scope": "Exact deterministic assignment from explicitOpenBoundaryRows; no additional keys.",
+  "rows": [
+    {
+      "key": "greatdivide/gnomish_captive",
+      "disposition": "open_bloodmaw_proximity_lifecycle",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+      "sourceFile": "sources/projecteq/greatdivide/gnomish_captive.pl",
+      "sourceSha256": "8e2201dc2caedb6df5e77c6893b796f408e218c54d74d5c0286d1f9704417b6c",
+      "originalReview": {
+        "key": "greatdivide/gnomish_captive",
+        "originalQuestId": 13245,
+        "originalEnabled": 1,
+        "originalPolicy": null,
+        "originalDisposition": {
+          "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+          "record": {
+            "key": "greatdivide/gnomish_captive",
+            "reviewed_at": "2026-10-22",
+            "source": "sources/projecteq/greatdivide/gnomish_captive.pl",
+            "source_sha256": "8e2201dc2caedb6df5e77c6893b796f408e218c54d74d5c0286d1f9704417b6c",
+            "events": [
+              "EVENT_ENTER",
+              "EVENT_SPAWN"
+            ],
+            "quest_calls": [
+              "clear_proximity",
+              "depop",
+              "emote",
+              "say",
+              "set_proximity"
+            ],
+            "npc_evidence": [
+              {
+                "title": "Gnomish captive",
+                "cachePath": "reference/p99-wiki/npc-pages/gnomish-captive-95900698be.wiki",
+                "url": "https://wiki.project1999.com/Gnomish_captive?action=raw",
+                "sha256": "9a040f1f4ad6013538ec300197d7e0b1fd12957e6f847b072319a342494ea34b",
+                "eraTags": [
+                  "Velious Era"
+                ],
+                "zone": "[[Great Divide]]",
+                "doesNotExist": false
+              }
+            ],
+            "verification": "Static source/evidence disposition only; not live mechanics or UI.",
+            "outcome": "open_bloodmaw_proximity_lifecycle",
+            "reason": "Captive proximity event speaks then clears proximity and depops; exact20-unit public trigger and relationship to Bloodmaw/quest-spawned captive need real lifecycle evidence. No assumed hail substitute.",
+            "evidence": [],
+            "source_anchors": [
+              {
+                "line": 1,
+                "text": "#Zone: Great Divide"
+              },
+              {
+                "line": 2,
+                "text": "#Short Name: greatdivide"
+              },
+              {
+                "line": 3,
+                "text": "#Zone ID: 118"
+              },
+              {
+                "line": 4,
+                "text": "#"
+              },
+              {
+                "line": 5,
+                "text": "#NPC Name: gnomish captive"
+              },
+              {
+                "line": 6,
+                "text": "#NPC ID: 118154"
+              },
+              {
+                "line": 7,
+                "text": "#"
+              },
+              {
+                "line": 12,
+                "text": "quest::set_proximity($x - 20, $x + 20, $y - 20, $y + 20);"
+              },
+              {
+                "line": 18,
+                "text": "quest::clear_proximity();"
+              },
+              {
+                "line": 19,
+                "text": "quest::depop();"
+              },
+              {
+                "line": 22,
+                "text": "#END of FILE Zone: greatdivide  ID:118154 -- gnomish_captive"
+              }
+            ]
+          }
+        },
+        "currentDispositionFollowup": null,
+        "currentProposalState": "no_proposed_lua_see_reviewed_disposition",
+        "proposedSourceSha256": null,
+        "proposedSourceFiles": []
+      }
+    },
+    {
+      "key": "iceclad/Madan_Eflik",
+      "disposition": "open_ambient_timer_implementation",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+      "sourceFile": "sources/projecteq/iceclad/Madan_Eflik.pl",
+      "sourceSha256": "e7c5fdd37c3069ef4484fc1a0c19344df329374ea145feca39013068078d782d",
+      "originalReview": {
+        "key": "iceclad/Madan_Eflik",
+        "originalQuestId": 12064,
+        "originalEnabled": 1,
+        "originalPolicy": null,
+        "originalDisposition": {
+          "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+          "record": {
+            "key": "iceclad/Madan_Eflik",
+            "reviewed_at": "2026-10-22",
+            "source": "sources/projecteq/iceclad/Madan_Eflik.pl",
+            "source_sha256": "e7c5fdd37c3069ef4484fc1a0c19344df329374ea145feca39013068078d782d",
+            "events": [
+              "EVENT_SPAWN",
+              "EVENT_TIMER"
+            ],
+            "quest_calls": [
+              "emote",
+              "settimer",
+              "signal"
+            ],
+            "npc_evidence": [
+              {
+                "title": "Madan Eflik",
+                "cachePath": "reference/p99-wiki/npc-pages/madan-eflik-dcbce5c31f.wiki",
+                "url": "https://wiki.project1999.com/Madan_Eflik?action=raw",
+                "sha256": "ad7055a45a7b53927f910cb164e9022e1d7b7347de80ac2d09ea9cf778a5cb04",
+                "eraTags": [
+                  "Velious Era"
+                ],
+                "zone": "[[Iceclad Ocean]]",
+                "doesNotExist": false
+              }
+            ],
+            "verification": "Static source/evidence disposition only; not live mechanics or UI.",
+            "outcome": "open_ambient_timer_implementation",
+            "reason": "P99-present or source-only ambient timer speech is not a hand-in. Exact source timer intervals and repeating actor lifetime must be preserved (Perl seconds -> Lua ms); Madan includes random lines and delayed Sojan signal. Straightforward implementation remains possible but no live public timer/recipient fixture yet; not declared unsupported or completed.",
+            "evidence": [],
+            "source_anchors": [
+              {
+                "line": 2,
+                "text": "quest::settimer(1,3000);"
+              },
+              {
+                "line": 14,
+                "text": "quest::signal(110066,100); # NPC: Sojan_the_Sleepless"
+              }
+            ]
+          }
+        },
+        "currentDispositionFollowup": null,
+        "currentProposalState": "no_proposed_lua_see_reviewed_disposition",
+        "proposedSourceSha256": null,
+        "proposedSourceFiles": []
+      }
+    },
+    {
+      "key": "iceclad/Novyak_the_Lookout",
+      "disposition": "open_ambient_timer_implementation",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+      "sourceFile": "sources/projecteq/iceclad/Novyak_the_Lookout.pl",
+      "sourceSha256": "55bce0c9f0d1048346d79395bce01db2f8c8577a8178cde147198d6e0d180e30",
+      "originalReview": {
+        "key": "iceclad/Novyak_the_Lookout",
+        "originalQuestId": 18491,
+        "originalEnabled": 1,
+        "originalPolicy": null,
+        "originalDisposition": {
+          "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+          "record": {
+            "key": "iceclad/Novyak_the_Lookout",
+            "reviewed_at": "2026-10-22",
+            "source": "sources/projecteq/iceclad/Novyak_the_Lookout.pl",
+            "source_sha256": "55bce0c9f0d1048346d79395bce01db2f8c8577a8178cde147198d6e0d180e30",
+            "events": [
+              "EVENT_SPAWN",
+              "EVENT_TIMER"
+            ],
+            "quest_calls": [
+              "say",
+              "settimer"
+            ],
+            "npc_evidence": [],
+            "verification": "Static source/evidence disposition only; not live mechanics or UI.",
+            "outcome": "open_ambient_timer_implementation",
+            "reason": "P99-present or source-only ambient timer speech is not a hand-in. Exact source timer intervals and repeating actor lifetime must be preserved (Perl seconds -> Lua ms); Madan includes random lines and delayed Sojan signal. Straightforward implementation remains possible but no live public timer/recipient fixture yet; not declared unsupported or completed.",
+            "evidence": [],
+            "source_anchors": [
+              {
+                "line": 2,
+                "text": "quest::settimer(1,2400);"
+              }
+            ]
+          }
+        },
+        "currentDispositionFollowup": null,
+        "currentProposalState": "no_proposed_lua_see_reviewed_disposition",
+        "proposedSourceSha256": null,
+        "proposedSourceFiles": []
+      }
+    },
+    {
+      "key": "iceclad/Ratop",
+      "disposition": "mixed_rum_and_later_shawl",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+      "sourceFile": "sources/projecteq/iceclad/Ratop.pl",
+      "sourceSha256": "5e271fc64bb7fb06c4f8686a69997c6a5ca78cbc68edb03db9a2fb47b1bd7898",
+      "originalReview": {
+        "key": "iceclad/Ratop",
+        "originalQuestId": 13481,
+        "originalEnabled": 1,
+        "originalPolicy": null,
+        "originalDisposition": {
+          "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+          "record": {
+            "key": "iceclad/Ratop",
+            "reviewed_at": "2026-10-22",
+            "source": "sources/projecteq/iceclad/Ratop.pl",
+            "source_sha256": "5e271fc64bb7fb06c4f8686a69997c6a5ca78cbc68edb03db9a2fb47b1bd7898",
+            "events": [
+              "EVENT_SIGNAL"
+            ],
+            "quest_calls": [
+              "say",
+              "signalwith",
+              "spawn2"
+            ],
+            "npc_evidence": [
+              {
+                "title": "Ratop",
+                "cachePath": "reference/p99-wiki/npc-pages/ratop-1e47033eb9.wiki",
+                "url": "https://wiki.project1999.com/Ratop?action=raw",
+                "sha256": "e921089acd86aae9cb40b7b8ba232ef614603436f760b1e6cceea47df7e526bf",
+                "eraTags": [
+                  "Velious Era"
+                ],
+                "zone": "[[Iceclad Ocean]]",
+                "doesNotExist": false
+              }
+            ],
+            "verification": "Static source/evidence disposition only; not live mechanics or UI.",
+            "outcome": "mixed_rum_and_later_shawl",
+            "reason": "Signals1/2 are rum parrot exchange with resolve-or-spawn Ritap110053 plus immediate signal. Signal101 explicitly shawl8 and excluded by cached shawl page. Separate in-era rum chain with correct spawned-recipient handle and no unsupported lookup before conversion.",
+            "evidence": [
+              {
+                "path": "reference/p99-wiki/raw-pages/coldain-prayer-shawl-quests-0117371b90.wiki",
+                "sha256": "1b96e22c683adcc22886266e556b2a0d74c7b68163edbea74b4b9e41d7bbd4c0"
+              }
+            ],
+            "source_anchors": [
+              {
+                "line": 5,
+                "text": "my $mobid = $entity_list->GetMobByNpcTypeID(110053);"
+              },
+              {
+                "line": 11,
+                "text": "my $mobid = quest::spawn2(110053, 0, 0, $x+9, $y+1, $z, $h); # NPC: Ritap"
+              },
+              {
+                "line": 12,
+                "text": "my $mob = $entity_list->GetMobID($mobid);"
+              },
+              {
+                "line": 20,
+                "text": "# shawl signal"
+              },
+              {
+                "line": 23,
+                "text": "quest::signalwith(110053,101,5); # signal Ritap"
+              },
+              {
+                "line": 27,
+                "text": "# Quest by mystic414"
+              }
+            ]
+          }
+        },
+        "currentDispositionFollowup": null,
+        "currentProposalState": "no_proposed_lua_see_reviewed_disposition",
+        "proposedSourceSha256": null,
+        "proposedSourceFiles": []
+      }
+    },
+    {
+      "key": "iceclad/Soulbinder_Cubnitskin",
+      "disposition": "open_service_plugin_authority",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+      "sourceFile": "sources/projecteq/iceclad/Soulbinder_Cubnitskin.pl",
+      "sourceSha256": "f85093c3627391fb1635a08da9c54cbcfd4962b6b0ebbb609828786702881a01",
+      "originalReview": {
+        "key": "iceclad/Soulbinder_Cubnitskin",
+        "originalQuestId": 17171,
+        "originalEnabled": 1,
+        "originalPolicy": null,
+        "originalDisposition": {
+          "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+          "record": {
+            "key": "iceclad/Soulbinder_Cubnitskin",
+            "reviewed_at": "2026-10-22",
+            "source": "sources/projecteq/iceclad/Soulbinder_Cubnitskin.pl",
+            "source_sha256": "f85093c3627391fb1635a08da9c54cbcfd4962b6b0ebbb609828786702881a01",
+            "events": [
+              "EVENT_SAY"
+            ],
+            "quest_calls": [],
+            "npc_evidence": [],
+            "verification": "Static source/evidence disposition only; not live mechanics or UI.",
+            "outcome": "open_service_plugin_authority",
+            "reason": "Only plugin::soulbinder_say; body not inline and no cached NPC identity match. Resolve existing binding service and timeline before adding duplicated or later soulbinding mechanic.",
+            "evidence": [],
+            "source_anchors": [
+              {
+                "line": 1,
+                "text": "#generic soulbinder quest"
+              },
+              {
+                "line": 3,
+                "text": "plugin::soulbinder_say($text);"
+              }
+            ]
+          }
+        },
+        "currentDispositionFollowup": null,
+        "currentProposalState": "no_proposed_lua_see_reviewed_disposition",
+        "proposedSourceSha256": null,
+        "proposedSourceFiles": []
+      }
+    },
+    {
+      "key": "thurgadina/Avalanche",
+      "disposition": "blocked_npc_target_follow",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+      "sourceFile": "sources/projecteq/thurgadina/Avalanche.pl",
+      "sourceSha256": "88a8c0fc6c8178450c6f22356802ba8257043066162833272a1b3bf267653380",
+      "originalReview": {
+        "key": "thurgadina/Avalanche",
+        "originalQuestId": 18234,
+        "originalEnabled": 1,
+        "originalPolicy": null,
+        "originalDisposition": {
+          "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+          "record": {
+            "key": "thurgadina/Avalanche",
+            "reviewed_at": "2026-10-22",
+            "source": "sources/projecteq/thurgadina/Avalanche.pl",
+            "source_sha256": "88a8c0fc6c8178450c6f22356802ba8257043066162833272a1b3bf267653380",
+            "events": [
+              "EVENT_SPAWN",
+              "EVENT_TIMER"
+            ],
+            "quest_calls": [
+              "follow",
+              "settimer",
+              "stoptimer"
+            ],
+            "npc_evidence": [],
+            "verification": "Static source/evidence disposition only; not live mechanics or UI.",
+            "outcome": "blocked_npc_target_follow",
+            "reason": "Timer resolves NPC115102/115101 then follows that NPC. Runtime follow contract supports initiating-player follow, not general NPC-target follow. Missing target lookup also unguarded. Do not substitute player follow or stationary pet.",
+            "evidence": [
+              {
+                "path": "reference/server/internal/quest/deferred_runtime_apis.json",
+                "sha256": "9a51bc095b20f7cee39453cb66d7b6bc1ec28154821b567ae570c875799168a7"
+              }
+            ],
+            "source_anchors": [
+              {
+                "line": 2,
+                "text": "quest::settimer(\"follow\", 1);"
+              },
+              {
+                "line": 8,
+                "text": "my $getmobbynpctype = $entity_list->GetMobByNpcTypeID($OpponentID);"
+              },
+              {
+                "line": 10,
+                "text": "quest::follow($follow_target);"
+              },
+              {
+                "line": 11,
+                "text": "quest::stoptimer(\"follow\");"
+              }
+            ]
+          }
+        },
+        "currentDispositionFollowup": null,
+        "currentProposalState": "no_proposed_lua_see_reviewed_disposition",
+        "proposedSourceSha256": null,
+        "proposedSourceFiles": []
+      }
+    },
+    {
+      "key": "thurgadina/Brina_Snowfox",
+      "disposition": "blocked_corrupt_upstream_dialogue",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+      "sourceFile": "sources/projecteq/thurgadina/Brina_Snowfox.pl",
+      "sourceSha256": "fbbb11119ab264f76d647657defdb71baf13fc1916ef62123704b82c274f1f3a",
+      "originalReview": {
+        "key": "thurgadina/Brina_Snowfox",
+        "originalQuestId": 18154,
+        "originalEnabled": 1,
+        "originalPolicy": null,
+        "originalDisposition": {
+          "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+          "record": {
+            "key": "thurgadina/Brina_Snowfox",
+            "reviewed_at": "2026-10-22",
+            "source": "sources/projecteq/thurgadina/Brina_Snowfox.pl",
+            "source_sha256": "fbbb11119ab264f76d647657defdb71baf13fc1916ef62123704b82c274f1f3a",
+            "events": [
+              "EVENT_SAY"
+            ],
+            "quest_calls": [
+              "say"
+            ],
+            "npc_evidence": [
+              {
+                "title": "Brina Snowfox",
+                "cachePath": "reference/p99-wiki/npc-pages/brina-snowfox-03f2d8fbdb.wiki",
+                "url": "https://wiki.project1999.com/Brina_Snowfox?action=raw",
+                "sha256": "77c4f336081ec13932cbd6d825a7f9e2e1c49313700efc25ba44394a658788fd",
+                "eraTags": [
+                  "Velious Era"
+                ],
+                "zone": "[[Thurgadin]]",
+                "doesNotExist": false
+              }
+            ],
+            "verification": "Static source/evidence disposition only; not live mechanics or UI.",
+            "outcome": "blocked_corrupt_upstream_dialogue",
+            "review_record": "changes/p99-conversions-velious-flavor/review.json",
+            "reason": "Upstream emits same sentence twice with contradictory hardcoded Wood Elf and unresolved %#1472 placeholder. Cached P99 page confirms NPC but has no dialogue. Do not invent a corrected line or enable broken token.",
+            "source_anchors": [
+              {
+                "line": 6,
+                "text": "#END of FILE Zone:thurgadina  ID:115171 -- Brina_Snowfox"
+              }
+            ],
+            "evidence": []
+          }
+        },
+        "currentDispositionFollowup": null,
+        "currentProposalState": "no_proposed_lua_see_reviewed_disposition",
+        "proposedSourceSha256": null,
+        "proposedSourceFiles": []
+      }
+    },
+    {
+      "key": "thurgadina/Doriggan",
+      "disposition": "open_ambient_waypoint_lifecycle",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+      "sourceFile": "sources/projecteq/thurgadina/Doriggan.pl",
+      "sourceSha256": "607771edcbd7d58fa1c53012735bfd48ddfd7558679cd12ec2b581dc8cd4b35e",
+      "originalReview": {
+        "key": "thurgadina/Doriggan",
+        "originalQuestId": 13915,
+        "originalEnabled": 1,
+        "originalPolicy": null,
+        "originalDisposition": {
+          "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+          "record": {
+            "key": "thurgadina/Doriggan",
+            "reviewed_at": "2026-10-22",
+            "source": "sources/projecteq/thurgadina/Doriggan.pl",
+            "source_sha256": "607771edcbd7d58fa1c53012735bfd48ddfd7558679cd12ec2b581dc8cd4b35e",
+            "events": [
+              "EVENT_SIGNAL",
+              "EVENT_SPAWN",
+              "EVENT_WAYPOINT_ARRIVE"
+            ],
+            "quest_calls": [
+              "emote",
+              "say",
+              "start",
+              "stop"
+            ],
+            "npc_evidence": [
+              {
+                "title": "Doriggan",
+                "cachePath": "reference/p99-wiki/npc-pages/doriggan-758b595e10.wiki",
+                "url": "https://wiki.project1999.com/Doriggan?action=raw",
+                "sha256": "947d87ceadd027f316a00a3e49df3191218d9b6e1008324952fb1a2aaf818604",
+                "eraTags": [
+                  "Velious Era"
+                ],
+                "zone": "[[Thurgadin]]",
+                "doesNotExist": false
+              }
+            ],
+            "verification": "Static source/evidence disposition only; not live mechanics or UI.",
+            "outcome": "open_ambient_waypoint_lifecycle",
+            "reason": "Source combines public waypoint arrivals with appearance/speech/signals; Doriggan additionally starts/stops grid11. No public patrol/recipient-chain fixture establishes natural initiation and exact recipient lifetime. Preserve full source until route/appearance semantics tested rather than drop waypoint branches.",
+            "evidence": [
+              {
+                "path": "reference/server/internal/quest/deferred_runtime_apis.json",
+                "sha256": "9a51bc095b20f7cee39453cb66d7b6bc1ec28154821b567ae570c875799168a7"
+              }
+            ],
+            "source_anchors": [
+              {
+                "line": 2,
+                "text": "$npc->SetAppearance(1);"
+              },
+              {
+                "line": 14,
+                "text": "quest::start(11);"
+              },
+              {
+                "line": 20,
+                "text": "quest::stop();"
+              },
+              {
+                "line": 21,
+                "text": "$npc->SetAppearance(1);"
+              }
+            ]
+          }
+        },
+        "currentDispositionFollowup": null,
+        "currentProposalState": "no_proposed_lua_see_reviewed_disposition",
+        "proposedSourceSha256": null,
+        "proposedSourceFiles": []
+      }
+    },
+    {
+      "key": "thurgadina/Frostpaw",
+      "disposition": "blocked_npc_target_follow",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+      "sourceFile": "sources/projecteq/thurgadina/Frostpaw.pl",
+      "sourceSha256": "4bbd6a667b193a1296867d4d594f66683bdccc8d5d040072531eef2e729256bb",
+      "originalReview": {
+        "key": "thurgadina/Frostpaw",
+        "originalQuestId": 16191,
+        "originalEnabled": 1,
+        "originalPolicy": null,
+        "originalDisposition": {
+          "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+          "record": {
+            "key": "thurgadina/Frostpaw",
+            "reviewed_at": "2026-10-22",
+            "source": "sources/projecteq/thurgadina/Frostpaw.pl",
+            "source_sha256": "4bbd6a667b193a1296867d4d594f66683bdccc8d5d040072531eef2e729256bb",
+            "events": [
+              "EVENT_SPAWN",
+              "EVENT_TIMER"
+            ],
+            "quest_calls": [
+              "follow",
+              "settimer",
+              "stoptimer"
+            ],
+            "npc_evidence": [
+              {
+                "title": "Frostpaw",
+                "cachePath": "reference/p99-wiki/npc-pages/frostpaw-dc01f78d9d.wiki",
+                "url": "https://wiki.project1999.com/Frostpaw?action=raw",
+                "sha256": "5e9d5766d40ee3e0048fa762cf6abc37a8fc351f392913106eaffed21e2ef916",
+                "eraTags": [
+                  "Velious Era"
+                ],
+                "zone": "[[Thurgadin]]",
+                "doesNotExist": false
+              }
+            ],
+            "verification": "Static source/evidence disposition only; not live mechanics or UI.",
+            "outcome": "blocked_npc_target_follow",
+            "reason": "Timer resolves NPC115102/115101 then follows that NPC. Runtime follow contract supports initiating-player follow, not general NPC-target follow. Missing target lookup also unguarded. Do not substitute player follow or stationary pet.",
+            "evidence": [
+              {
+                "path": "reference/server/internal/quest/deferred_runtime_apis.json",
+                "sha256": "9a51bc095b20f7cee39453cb66d7b6bc1ec28154821b567ae570c875799168a7"
+              }
+            ],
+            "source_anchors": [
+              {
+                "line": 2,
+                "text": "quest::settimer(\"follow\", 1);"
+              },
+              {
+                "line": 8,
+                "text": "my $getmobbynpctype = $entity_list->GetMobByNpcTypeID($OpponentID);"
+              },
+              {
+                "line": 10,
+                "text": "quest::follow($follow_target);"
+              },
+              {
+                "line": 11,
+                "text": "quest::stoptimer(\"follow\");"
+              }
+            ]
+          }
+        },
+        "currentDispositionFollowup": null,
+        "currentProposalState": "no_proposed_lua_see_reviewed_disposition",
+        "proposedSourceSha256": null,
+        "proposedSourceFiles": []
+      }
+    },
+    {
+      "key": "thurgadina/Horasug",
+      "disposition": "blocked_ambient_runtime_lifecycle",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+      "sourceFile": "sources/projecteq/thurgadina/Horasug.pl",
+      "sourceSha256": "d7054b9672ecb703a6bab4dada44a91eaba0e8faf4c548e5c8c80238718c59f7",
+      "originalReview": {
+        "key": "thurgadina/Horasug",
+        "originalQuestId": 19508,
+        "originalEnabled": 1,
+        "originalPolicy": null,
+        "originalDisposition": {
+          "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+          "record": {
+            "key": "thurgadina/Horasug",
+            "reviewed_at": "2026-10-22",
+            "source": "sources/projecteq/thurgadina/Horasug.pl",
+            "source_sha256": "d7054b9672ecb703a6bab4dada44a91eaba0e8faf4c548e5c8c80238718c59f7",
+            "events": [
+              "EVENT_SIGNAL",
+              "EVENT_WAYPOINT_ARRIVE"
+            ],
+            "quest_calls": [
+              "emote",
+              "say",
+              "SetRunning",
+              "signalwith"
+            ],
+            "npc_evidence": [
+              {
+                "title": "Horasug",
+                "cachePath": "reference/p99-wiki/npc-pages/horasug-97f370b7a0.wiki",
+                "url": "https://wiki.project1999.com/Horasug?action=raw",
+                "sha256": "8e1535cf4fecc54f84f839ed30fbf515533d5fc3f14414bff5e61f3253327def",
+                "eraTags": [],
+                "zone": "[[Thurgadin]]",
+                "doesNotExist": false
+              }
+            ],
+            "verification": "Static source/evidence disposition only; not live mechanics or UI.",
+            "outcome": "blocked_ambient_runtime_lifecycle",
+            "review_record": "changes/p99-conversions-velious/review.json",
+            "reason": "Connected public waypoint/patrol story depends on SetRunning in signal context, eq.start grids6/7/8 and natural waypoint initiation. reference/server/internal/quest/deferred_runtime_apis.json explicitly does not support uncorrelated public timer/signal speed changes or general public-world respawn grids. No no-op or partial lifecycle invented.",
+            "source_anchors": [
+              {
+                "line": 4,
+                "text": "quest::signalwith(115011,1); # NPC: Rumagur"
+              },
+              {
+                "line": 5,
+                "text": "quest::signalwith(115187,1); # NPC: Rumagur"
+              },
+              {
+                "line": 9,
+                "text": "quest::SetRunning(1);"
+              },
+              {
+                "line": 10,
+                "text": "quest::signalwith(115011,2); # NPC: Rumagur"
+              },
+              {
+                "line": 11,
+                "text": "quest::signalwith(115187,2); # NPC: Rumagur"
+              },
+              {
+                "line": 12,
+                "text": "quest::signalwith(115010,3); # NPC: Saramor"
+              },
+              {
+                "line": 13,
+                "text": "quest::signalwith(115012,2); # NPC: Jorumin"
+              },
+              {
+                "line": 14,
+                "text": "quest::signalwith(115188,2); # NPC: Jorumin"
+              },
+              {
+                "line": 17,
+                "text": "quest::SetRunning(0);"
+              },
+              {
+                "line": 19,
+                "text": "quest::signalwith(115142,1); # NPC: Doogle_McBanick"
+              },
+              {
+                "line": 22,
+                "text": "$npc->SetAppearance(1);"
+              },
+              {
+                "line": 29,
+                "text": "quest::signalwith(115010,1); # NPC: Saramor"
+              },
+              {
+                "line": 30,
+                "text": "quest::signalwith(115014,1); # NPC: Loremaster_Fronden"
+              },
+              {
+                "line": 34,
+                "text": "quest::signalwith(115010,2); # NPC: Saramor"
+              },
+              {
+                "line": 35,
+                "text": "quest::signalwith(115012,1); # NPC: Jorumin"
+              },
+              {
+                "line": 36,
+                "text": "quest::signalwith(115188,1); # NPC: Jorumin"
+              },
+              {
+                "line": 40,
+                "text": "quest::signalwith(115142,2); # NPC: Doogle_McBanick"
+              },
+              {
+                "line": 44,
+                "text": "quest::signalwith(115142,3); # NPC: Doogle_McBanick"
+              }
+            ],
+            "evidence": []
+          }
+        },
+        "currentDispositionFollowup": null,
+        "currentProposalState": "no_proposed_lua_see_reviewed_disposition",
+        "proposedSourceSha256": null,
+        "proposedSourceFiles": []
+      }
+    },
+    {
+      "key": "thurgadina/Initiate_Corrith",
+      "disposition": "open_animation_timer_effect",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+      "sourceFile": "sources/projecteq/thurgadina/Initiate_Corrith.pl",
+      "sourceSha256": "16dc1535ea3536af8a648b682b3bb7fa03138e0226bc2b5f28dff80f78dd8bad",
+      "originalReview": {
+        "key": "thurgadina/Initiate_Corrith",
+        "originalQuestId": 18599,
+        "originalEnabled": 1,
+        "originalPolicy": null,
+        "originalDisposition": {
+          "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+          "record": {
+            "key": "thurgadina/Initiate_Corrith",
+            "reviewed_at": "2026-10-22",
+            "source": "sources/projecteq/thurgadina/Initiate_Corrith.pl",
+            "source_sha256": "16dc1535ea3536af8a648b682b3bb7fa03138e0226bc2b5f28dff80f78dd8bad",
+            "events": [
+              "EVENT_SPAWN",
+              "EVENT_TIMER"
+            ],
+            "quest_calls": [
+              "doanim",
+              "settimer"
+            ],
+            "npc_evidence": [
+              {
+                "title": "Initiate Corrith",
+                "cachePath": "reference/p99-wiki/npc-pages/initiate-corrith-a444583e99.wiki",
+                "url": "https://wiki.project1999.com/Initiate_Corrith?action=raw",
+                "sha256": "ca9620b20e915d0b49ace1e1dde4952a3796fb2f102b6f63b65335defe5c7ae8",
+                "eraTags": [
+                  "Velious Era"
+                ],
+                "zone": "[[Thurgadin]]",
+                "doesNotExist": false
+              }
+            ],
+            "verification": "Static source/evidence disposition only; not live mechanics or UI.",
+            "outcome": "open_animation_timer_effect",
+            "reason": "Ambient recurring combat animation2, not actual combat. Corrith period30s; Sirchthain randomized10..50s despite comment10..40. Need supported doanim visible effect and source/P99 cadence reconciliation, not no-op animation.",
+            "evidence": [],
+            "source_anchors": [
+              {
+                "line": 1,
+                "text": "# #115040 Initiate Corrith fighting"
+              },
+              {
+                "line": 4,
+                "text": "quest::settimer(2,30); #Make them attack every 30 seconds."
+              },
+              {
+                "line": 7,
+                "text": "quest::doanim(2);"
+              },
+              {
+                "line": 8,
+                "text": "#$entity_list->GetMobByNpcTypeID(115176)->DoAnim(2);"
+              }
+            ]
+          }
+        },
+        "currentDispositionFollowup": null,
+        "currentProposalState": "no_proposed_lua_see_reviewed_disposition",
+        "proposedSourceSha256": null,
+        "proposedSourceFiles": []
+      }
+    },
+    {
+      "key": "thurgadina/Initiate_Kroskain",
+      "disposition": "open_ambient_timer_implementation",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+      "sourceFile": "sources/projecteq/thurgadina/Initiate_Kroskain.pl",
+      "sourceSha256": "b5e0d76790c675e3af90b3015fd2822a5935cb6ab73ef654792f1b1264e2a777",
+      "originalReview": {
+        "key": "thurgadina/Initiate_Kroskain",
+        "originalQuestId": 15312,
+        "originalEnabled": 1,
+        "originalPolicy": null,
+        "originalDisposition": {
+          "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+          "record": {
+            "key": "thurgadina/Initiate_Kroskain",
+            "reviewed_at": "2026-10-22",
+            "source": "sources/projecteq/thurgadina/Initiate_Kroskain.pl",
+            "source_sha256": "b5e0d76790c675e3af90b3015fd2822a5935cb6ab73ef654792f1b1264e2a777",
+            "events": [
+              "EVENT_SPAWN",
+              "EVENT_TIMER"
+            ],
+            "quest_calls": [
+              "say",
+              "settimer"
+            ],
+            "npc_evidence": [
+              {
+                "title": "Initiate Kroskain",
+                "cachePath": "reference/p99-wiki/npc-pages/initiate-kroskain-83e1a850a5.wiki",
+                "url": "https://wiki.project1999.com/Initiate_Kroskain?action=raw",
+                "sha256": "19b07023e28a4f24566aa333507a1239c9b1394685e568de525891a9e2fa07c8",
+                "eraTags": [
+                  "Velious Era"
+                ],
+                "zone": "[[Thurgadin]]",
+                "doesNotExist": false
+              }
+            ],
+            "verification": "Static source/evidence disposition only; not live mechanics or UI.",
+            "outcome": "open_ambient_timer_implementation",
+            "reason": "P99-present or source-only ambient timer speech is not a hand-in. Exact source timer intervals and repeating actor lifetime must be preserved (Perl seconds -> Lua ms); Madan includes random lines and delayed Sojan signal. Straightforward implementation remains possible but no live public timer/recipient fixture yet; not declared unsupported or completed.",
+            "evidence": [],
+            "source_anchors": [
+              {
+                "line": 1,
+                "text": "# #115038 Initiate Krostain"
+              },
+              {
+                "line": 4,
+                "text": "quest::settimer(1,320); #Make him say speech every 5 mins"
+              }
+            ]
+          }
+        },
+        "currentDispositionFollowup": null,
+        "currentProposalState": "no_proposed_lua_see_reviewed_disposition",
+        "proposedSourceSha256": null,
+        "proposedSourceFiles": []
+      }
+    },
+    {
+      "key": "thurgadina/Initiate_Sirchthain",
+      "disposition": "open_animation_timer_effect",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+      "sourceFile": "sources/projecteq/thurgadina/Initiate_Sirchthain.pl",
+      "sourceSha256": "d46b99afa8c5bd4cb1fa1c1b206380d787080b69ed443650016e5f55ac9d2207",
+      "originalReview": {
+        "key": "thurgadina/Initiate_Sirchthain",
+        "originalQuestId": 16747,
+        "originalEnabled": 1,
+        "originalPolicy": null,
+        "originalDisposition": {
+          "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+          "record": {
+            "key": "thurgadina/Initiate_Sirchthain",
+            "reviewed_at": "2026-10-22",
+            "source": "sources/projecteq/thurgadina/Initiate_Sirchthain.pl",
+            "source_sha256": "d46b99afa8c5bd4cb1fa1c1b206380d787080b69ed443650016e5f55ac9d2207",
+            "events": [
+              "EVENT_SPAWN",
+              "EVENT_TIMER"
+            ],
+            "quest_calls": [
+              "doanim",
+              "settimer"
+            ],
+            "npc_evidence": [],
+            "verification": "Static source/evidence disposition only; not live mechanics or UI.",
+            "outcome": "open_animation_timer_effect",
+            "reason": "Ambient recurring combat animation2, not actual combat. Corrith period30s; Sirchthain randomized10..50s despite comment10..40. Need supported doanim visible effect and source/P99 cadence reconciliation, not no-op animation.",
+            "evidence": [],
+            "source_anchors": [
+              {
+                "line": 1,
+                "text": "# #115176 Initiate Sircthain fighting"
+              },
+              {
+                "line": 3,
+                "text": "quest::settimer(2,(rand(40)+10)); #Make them attack every 10-40 seconds."
+              },
+              {
+                "line": 6,
+                "text": "quest::doanim(2);"
+              },
+              {
+                "line": 7,
+                "text": "#$entity_list->GetMobByNpcTypeID(115040)->DoAnim(2);"
+              },
+              {
+                "line": 8,
+                "text": "quest::settimer(2,(rand(40)+10)); #Make them attack every 10-40 seconds."
+              }
+            ]
+          }
+        },
+        "currentDispositionFollowup": null,
+        "currentProposalState": "no_proposed_lua_see_reviewed_disposition",
+        "proposedSourceSha256": null,
+        "proposedSourceFiles": []
+      }
+    },
+    {
+      "key": "thurgadina/Jorumin",
+      "disposition": "blocked_ambient_runtime_lifecycle",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+      "sourceFile": "sources/projecteq/thurgadina/Jorumin.pl",
+      "sourceSha256": "222918f7bab887e11a82a15305585bcc2dc362da272cbc687ba0584bc22dbb38",
+      "originalReview": {
+        "key": "thurgadina/Jorumin",
+        "originalQuestId": 13201,
+        "originalEnabled": 1,
+        "originalPolicy": null,
+        "originalDisposition": {
+          "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+          "record": {
+            "key": "thurgadina/Jorumin",
+            "reviewed_at": "2026-10-22",
+            "source": "sources/projecteq/thurgadina/Jorumin.pl",
+            "source_sha256": "222918f7bab887e11a82a15305585bcc2dc362da272cbc687ba0584bc22dbb38",
+            "events": [
+              "EVENT_SIGNAL",
+              "EVENT_WAYPOINT_ARRIVE"
+            ],
+            "quest_calls": [
+              "say",
+              "SetRunning",
+              "start",
+              "stop"
+            ],
+            "npc_evidence": [
+              {
+                "title": "Jorumin",
+                "cachePath": "reference/p99-wiki/npc-pages/jorumin-2fceb6b1f2.wiki",
+                "url": "https://wiki.project1999.com/Jorumin?action=raw",
+                "sha256": "7d2aa8f7b8aa3b9700d4c1dfc36c224213e152b4daa77d5c07aef91f10c8be39",
+                "eraTags": [
+                  "Velious Era"
+                ],
+                "zone": "[[Thurgadin]]",
+                "doesNotExist": false
+              }
+            ],
+            "verification": "Static source/evidence disposition only; not live mechanics or UI.",
+            "outcome": "blocked_ambient_runtime_lifecycle",
+            "review_record": "changes/p99-conversions-velious/review.json",
+            "reason": "Connected public waypoint/patrol story depends on SetRunning in signal context, eq.start grids6/7/8 and natural waypoint initiation. reference/server/internal/quest/deferred_runtime_apis.json explicitly does not support uncorrelated public timer/signal speed changes or general public-world respawn grids. No no-op or partial lifecycle invented.",
+            "source_anchors": [
+              {
+                "line": 6,
+                "text": "quest::SetRunning(1);"
+              },
+              {
+                "line": 7,
+                "text": "quest::start(8);"
+              },
+              {
+                "line": 13,
+                "text": "quest::SetRunning(0);"
+              },
+              {
+                "line": 16,
+                "text": "quest::stop();"
+              }
+            ],
+            "evidence": []
+          }
+        },
+        "currentDispositionFollowup": null,
+        "currentProposalState": "no_proposed_lua_see_reviewed_disposition",
+        "proposedSourceSha256": null,
+        "proposedSourceFiles": []
+      }
+    },
+    {
+      "key": "thurgadina/Lieutenant_Ulfur",
+      "disposition": "open_ambient_waypoint_lifecycle",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+      "sourceFile": "sources/projecteq/thurgadina/Lieutenant_Ulfur.pl",
+      "sourceSha256": "082fb9d48e3650e606019a752857fb1e429a74368aa98d98988086de50cf858e",
+      "originalReview": {
+        "key": "thurgadina/Lieutenant_Ulfur",
+        "originalQuestId": 18913,
+        "originalEnabled": 1,
+        "originalPolicy": null,
+        "originalDisposition": {
+          "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+          "record": {
+            "key": "thurgadina/Lieutenant_Ulfur",
+            "reviewed_at": "2026-10-22",
+            "source": "sources/projecteq/thurgadina/Lieutenant_Ulfur.pl",
+            "source_sha256": "082fb9d48e3650e606019a752857fb1e429a74368aa98d98988086de50cf858e",
+            "events": [
+              "EVENT_SAY",
+              "EVENT_WAYPOINT_ARRIVE"
+            ],
+            "quest_calls": [
+              "emote",
+              "say",
+              "signal"
+            ],
+            "npc_evidence": [
+              {
+                "title": "Lieutenant Ulfur",
+                "cachePath": "reference/p99-wiki/npc-pages/lieutenant-ulfur-546cecb02b.wiki",
+                "url": "https://wiki.project1999.com/Lieutenant_Ulfur?action=raw",
+                "sha256": "c442e97e1b036e965eda166a04e48e13148562ebbdc55ca307ff5a71035931c1",
+                "eraTags": [
+                  "Velious Era"
+                ],
+                "zone": "[[Thurgadin]]",
+                "doesNotExist": false
+              }
+            ],
+            "verification": "Static source/evidence disposition only; not live mechanics or UI.",
+            "outcome": "open_ambient_waypoint_lifecycle",
+            "reason": "Source combines public waypoint arrivals with appearance/speech/signals; Doriggan additionally starts/stops grid11. No public patrol/recipient-chain fixture establishes natural initiation and exact recipient lifetime. Preserve full source until route/appearance semantics tested rather than drop waypoint branches.",
+            "evidence": [
+              {
+                "path": "reference/server/internal/quest/deferred_runtime_apis.json",
+                "sha256": "9a51bc095b20f7cee39453cb66d7b6bc1ec28154821b567ae570c875799168a7"
+              }
+            ],
+            "source_anchors": [
+              {
+                "line": 19,
+                "text": "quest::signal(115104);"
+              },
+              {
+                "line": 20,
+                "text": "quest::signal(115206);"
+              },
+              {
+                "line": 21,
+                "text": "quest::signal(115105);"
+              },
+              {
+                "line": 22,
+                "text": "quest::signal(115207);"
+              },
+              {
+                "line": 23,
+                "text": "quest::signal(115107);"
+              },
+              {
+                "line": 24,
+                "text": "quest::signal(115208);"
+              },
+              {
+                "line": 25,
+                "text": "quest::signal(115109);"
+              },
+              {
+                "line": 26,
+                "text": "quest::signal(115110);"
+              },
+              {
+                "line": 27,
+                "text": "quest::signal(115209);"
+              },
+              {
+                "line": 28,
+                "text": "quest::signal(115112);"
+              },
+              {
+                "line": 29,
+                "text": "quest::signal(115113);"
+              },
+              {
+                "line": 30,
+                "text": "quest::signal(115211);"
+              },
+              {
+                "line": 34,
+                "text": "#END of FILE Zone:thurgadina  ID:115103 -- Lieutenant_Ulfur"
+              }
+            ]
+          }
+        },
+        "currentDispositionFollowup": null,
+        "currentProposalState": "no_proposed_lua_see_reviewed_disposition",
+        "proposedSourceSha256": null,
+        "proposedSourceFiles": []
+      }
+    },
+    {
+      "key": "thurgadina/Ronodun",
+      "disposition": "open_ambient_waypoint_lifecycle",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+      "sourceFile": "sources/projecteq/thurgadina/Ronodun.pl",
+      "sourceSha256": "669de25860c53c12b3dfb4b0cdb4bb3b265a6d4c9daad5d27cc6ef0f4314deb6",
+      "originalReview": {
+        "key": "thurgadina/Ronodun",
+        "originalQuestId": 17761,
+        "originalEnabled": 1,
+        "originalPolicy": null,
+        "originalDisposition": {
+          "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+          "record": {
+            "key": "thurgadina/Ronodun",
+            "reviewed_at": "2026-10-22",
+            "source": "sources/projecteq/thurgadina/Ronodun.pl",
+            "source_sha256": "669de25860c53c12b3dfb4b0cdb4bb3b265a6d4c9daad5d27cc6ef0f4314deb6",
+            "events": [
+              "EVENT_SIGNAL",
+              "EVENT_SPAWN",
+              "EVENT_WAYPOINT_ARRIVE"
+            ],
+            "quest_calls": [
+              "emote",
+              "say",
+              "signalwith"
+            ],
+            "npc_evidence": [
+              {
+                "title": "Ronodun",
+                "cachePath": "reference/p99-wiki/npc-pages/ronodun-1913ad4f8b.wiki",
+                "url": "https://wiki.project1999.com/Ronodun?action=raw",
+                "sha256": "a6d321cf040fae1a89b5e523c168128062b58d315838c50655f40f2758cdc89a",
+                "eraTags": [],
+                "zone": "[[Thurgadin]]",
+                "doesNotExist": false
+              }
+            ],
+            "verification": "Static source/evidence disposition only; not live mechanics or UI.",
+            "outcome": "open_ambient_waypoint_lifecycle",
+            "reason": "Source combines public waypoint arrivals with appearance/speech/signals; Doriggan additionally starts/stops grid11. No public patrol/recipient-chain fixture establishes natural initiation and exact recipient lifetime. Preserve full source until route/appearance semantics tested rather than drop waypoint branches.",
+            "evidence": [
+              {
+                "path": "reference/server/internal/quest/deferred_runtime_apis.json",
+                "sha256": "9a51bc095b20f7cee39453cb66d7b6bc1ec28154821b567ae570c875799168a7"
+              }
+            ],
+            "source_anchors": [
+              {
+                "line": 2,
+                "text": "$npc->SetAppearance(1);"
+              },
+              {
+                "line": 8,
+                "text": "$npc->SetAppearance(1);"
+              },
+              {
+                "line": 12,
+                "text": "quest::signalwith(115141,1,8000); # NPC: Petcas_Coldbeard"
+              },
+              {
+                "line": 15,
+                "text": "$npc->SetAppearance(1);"
+              },
+              {
+                "line": 22,
+                "text": "quest::signalwith(115141,2,8000); # NPC: Petcas_Coldbeard"
+              },
+              {
+                "line": 26,
+                "text": "quest::signalwith(115141,3,4000); # NPC: Petcas_Coldbeard"
+              },
+              {
+                "line": 30,
+                "text": "quest::signalwith(115141,4,3000); # NPC: Petcas_Coldbeard"
+              },
+              {
+                "line": 33,
+                "text": "quest::signalwith(115141,5,8000); # NPC: Petcas_Coldbeard"
+              },
+              {
+                "line": 37,
+                "text": "quest::signalwith(115141,6,7000); # NPC: Petcas_Coldbeard"
+              }
+            ]
+          }
+        },
+        "currentDispositionFollowup": null,
+        "currentProposalState": "no_proposed_lua_see_reviewed_disposition",
+        "proposedSourceSha256": null,
+        "proposedSourceFiles": []
+      }
+    },
+    {
+      "key": "thurgadina/Rumagur",
+      "disposition": "blocked_ambient_runtime_lifecycle",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+      "sourceFile": "sources/projecteq/thurgadina/Rumagur.pl",
+      "sourceSha256": "4101414207aca868cb63c1f4f530511ed1364046f5dc2aba9f43fa193dc2c221",
+      "originalReview": {
+        "key": "thurgadina/Rumagur",
+        "originalQuestId": 18268,
+        "originalEnabled": 1,
+        "originalPolicy": null,
+        "originalDisposition": {
+          "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+          "record": {
+            "key": "thurgadina/Rumagur",
+            "reviewed_at": "2026-10-22",
+            "source": "sources/projecteq/thurgadina/Rumagur.pl",
+            "source_sha256": "4101414207aca868cb63c1f4f530511ed1364046f5dc2aba9f43fa193dc2c221",
+            "events": [
+              "EVENT_SIGNAL",
+              "EVENT_WAYPOINT_ARRIVE"
+            ],
+            "quest_calls": [
+              "emote",
+              "say",
+              "SetRunning",
+              "signalwith",
+              "start",
+              "stop"
+            ],
+            "npc_evidence": [
+              {
+                "title": "Rumagur",
+                "cachePath": "reference/p99-wiki/npc-pages/rumagur-714a57b1fb.wiki",
+                "url": "https://wiki.project1999.com/Rumagur?action=raw",
+                "sha256": "6c7b0e1dfaed601e3c356ea963ec9c3af4c5da953dbdcfb0bca5f91233964af0",
+                "eraTags": [
+                  "Velious Era"
+                ],
+                "zone": "[[Thurgadin]]",
+                "doesNotExist": false
+              }
+            ],
+            "verification": "Static source/evidence disposition only; not live mechanics or UI.",
+            "outcome": "blocked_ambient_runtime_lifecycle",
+            "review_record": "changes/p99-conversions-velious/review.json",
+            "reason": "Connected public waypoint/patrol story depends on SetRunning in signal context, eq.start grids6/7/8 and natural waypoint initiation. reference/server/internal/quest/deferred_runtime_apis.json explicitly does not support uncorrelated public timer/signal speed changes or general public-world respawn grids. No no-op or partial lifecycle invented.",
+            "source_anchors": [
+              {
+                "line": 4,
+                "text": "quest::signalwith(115013,1,9000); # NPC: Horasug"
+              },
+              {
+                "line": 7,
+                "text": "quest::SetRunning(1);"
+              },
+              {
+                "line": 8,
+                "text": "quest::start(7);"
+              },
+              {
+                "line": 12,
+                "text": "quest::signalwith(115010,4,8000); # NPC: Saramor"
+              },
+              {
+                "line": 16,
+                "text": "quest::signalwith(115014,2,8000); # NPC: Loremaster_Fronden"
+              },
+              {
+                "line": 19,
+                "text": "quest::signalwith(115014,3); # NPC: Loremaster_Fronden"
+              },
+              {
+                "line": 22,
+                "text": "quest::signalwith(115014,4,50000); # NPC: Loremaster_Fronden"
+              },
+              {
+                "line": 25,
+                "text": "quest::signalwith(115014,5,50000); # NPC: Loremaster_Fronden"
+              },
+              {
+                "line": 29,
+                "text": "quest::signalwith(115014,6,8000); # NPC: Loremaster_Fronden"
+              },
+              {
+                "line": 33,
+                "text": "quest::signalwith(115014,7,8000); # NPC: Loremaster_Fronden"
+              },
+              {
+                "line": 42,
+                "text": "quest::SetRunning(0);"
+              },
+              {
+                "line": 45,
+                "text": "quest::stop();"
+              }
+            ],
+            "evidence": []
+          }
+        },
+        "currentDispositionFollowup": null,
+        "currentProposalState": "no_proposed_lua_see_reviewed_disposition",
+        "proposedSourceSha256": null,
+        "proposedSourceFiles": []
+      }
+    },
+    {
+      "key": "thurgadina/Saramor",
+      "disposition": "blocked_ambient_runtime_lifecycle",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+      "sourceFile": "sources/projecteq/thurgadina/Saramor.pl",
+      "sourceSha256": "8c4636ca85cbc93886de8212cc695487c052d5aa77c09dd399df5d46c138b724",
+      "originalReview": {
+        "key": "thurgadina/Saramor",
+        "originalQuestId": 15764,
+        "originalEnabled": 1,
+        "originalPolicy": null,
+        "originalDisposition": {
+          "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+          "record": {
+            "key": "thurgadina/Saramor",
+            "reviewed_at": "2026-10-22",
+            "source": "sources/projecteq/thurgadina/Saramor.pl",
+            "source_sha256": "8c4636ca85cbc93886de8212cc695487c052d5aa77c09dd399df5d46c138b724",
+            "events": [
+              "EVENT_SIGNAL",
+              "EVENT_WAYPOINT_ARRIVE"
+            ],
+            "quest_calls": [
+              "say",
+              "SetRunning",
+              "signalwith",
+              "start",
+              "stop"
+            ],
+            "npc_evidence": [
+              {
+                "title": "Saramor",
+                "cachePath": "reference/p99-wiki/npc-pages/saramor-44871364f4.wiki",
+                "url": "https://wiki.project1999.com/Saramor?action=raw",
+                "sha256": "a803ee54b2a554e8dcbb1543ed321dfc3623566d98fd38b47c4c705d07142499",
+                "eraTags": [
+                  "Velious Era"
+                ],
+                "zone": "[[Thurgadin]]",
+                "doesNotExist": false
+              }
+            ],
+            "verification": "Static source/evidence disposition only; not live mechanics or UI.",
+            "outcome": "blocked_ambient_runtime_lifecycle",
+            "review_record": "changes/p99-conversions-velious/review.json",
+            "reason": "Connected public waypoint/patrol story depends on SetRunning in signal context, eq.start grids6/7/8 and natural waypoint initiation. reference/server/internal/quest/deferred_runtime_apis.json explicitly does not support uncorrelated public timer/signal speed changes or general public-world respawn grids. No no-op or partial lifecycle invented.",
+            "source_anchors": [
+              {
+                "line": 9,
+                "text": "quest::SetRunning(1);"
+              },
+              {
+                "line": 10,
+                "text": "quest::start(6);"
+              },
+              {
+                "line": 14,
+                "text": "quest::signalwith(115011,4,8000); # NPC: Rumagur"
+              },
+              {
+                "line": 15,
+                "text": "quest::signalwith(115187,4,8000); # NPC: Rumagur"
+              },
+              {
+                "line": 21,
+                "text": "quest::SetRunning(0);"
+              },
+              {
+                "line": 24,
+                "text": "quest::stop();"
+              },
+              {
+                "line": 26,
+                "text": "quest::signalwith(115011,3,8000); # NPC: Rumagur"
+              },
+              {
+                "line": 27,
+                "text": "quest::signalwith(115187,3,8000); # NPC: Rumagur"
+              }
+            ],
+            "evidence": []
+          }
+        },
+        "currentDispositionFollowup": null,
+        "currentProposalState": "no_proposed_lua_see_reviewed_disposition",
+        "proposedSourceSha256": null,
+        "proposedSourceFiles": []
+      }
+    },
+    {
+      "key": "thurgadina/Templar_Franchus",
+      "disposition": "open_ambient_timer_implementation",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+      "sourceFile": "sources/projecteq/thurgadina/Templar_Franchus.pl",
+      "sourceSha256": "81002aa6b73f281e4678137e7f94f3c501f1d2d2f13f11740643b5dfc5a8393f",
+      "originalReview": {
+        "key": "thurgadina/Templar_Franchus",
+        "originalQuestId": 12067,
+        "originalEnabled": 1,
+        "originalPolicy": null,
+        "originalDisposition": {
+          "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+          "record": {
+            "key": "thurgadina/Templar_Franchus",
+            "reviewed_at": "2026-10-22",
+            "source": "sources/projecteq/thurgadina/Templar_Franchus.pl",
+            "source_sha256": "81002aa6b73f281e4678137e7f94f3c501f1d2d2f13f11740643b5dfc5a8393f",
+            "events": [
+              "EVENT_SPAWN",
+              "EVENT_TIMER"
+            ],
+            "quest_calls": [
+              "say",
+              "settimer"
+            ],
+            "npc_evidence": [
+              {
+                "title": "Templar Franchus",
+                "cachePath": "reference/p99-wiki/npc-pages/templar-franchus-0c758bb7b6.wiki",
+                "url": "https://wiki.project1999.com/Templar_Franchus?action=raw",
+                "sha256": "9ea468914ccfe7ad8d55cb06ccc326e2b21b63474e6483dda9b81c8316b86f41",
+                "eraTags": [
+                  "Velious Era"
+                ],
+                "zone": "[[Thurgadin]]",
+                "doesNotExist": false
+              }
+            ],
+            "verification": "Static source/evidence disposition only; not live mechanics or UI.",
+            "outcome": "open_ambient_timer_implementation",
+            "reason": "P99-present or source-only ambient timer speech is not a hand-in. Exact source timer intervals and repeating actor lifetime must be preserved (Perl seconds -> Lua ms); Madan includes random lines and delayed Sojan signal. Straightforward implementation remains possible but no live public timer/recipient fixture yet; not declared unsupported or completed.",
+            "evidence": [],
+            "source_anchors": [
+              {
+                "line": 1,
+                "text": "# #115204 Templar Franchus"
+              },
+              {
+                "line": 4,
+                "text": "quest::settimer(1,480); #Make him say speech every 8 mins"
+              }
+            ]
+          }
+        },
+        "currentDispositionFollowup": null,
+        "currentProposalState": "no_proposed_lua_see_reviewed_disposition",
+        "proposedSourceSha256": null,
+        "proposedSourceFiles": []
+      }
+    },
+    {
+      "key": "thurgadina/Templar_Tingar",
+      "disposition": "open_ambient_timer_implementation",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+      "sourceFile": "sources/projecteq/thurgadina/Templar_Tingar.pl",
+      "sourceSha256": "b52421beb10bf05082c3d73bb53cdcb9fd3ec7a6138586a7fda85bdccfabce90",
+      "originalReview": {
+        "key": "thurgadina/Templar_Tingar",
+        "originalQuestId": 18642,
+        "originalEnabled": 1,
+        "originalPolicy": null,
+        "originalDisposition": {
+          "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+          "record": {
+            "key": "thurgadina/Templar_Tingar",
+            "reviewed_at": "2026-10-22",
+            "source": "sources/projecteq/thurgadina/Templar_Tingar.pl",
+            "source_sha256": "b52421beb10bf05082c3d73bb53cdcb9fd3ec7a6138586a7fda85bdccfabce90",
+            "events": [
+              "EVENT_SPAWN",
+              "EVENT_TIMER"
+            ],
+            "quest_calls": [
+              "say",
+              "settimer"
+            ],
+            "npc_evidence": [
+              {
+                "title": "Templar Tingar",
+                "cachePath": "reference/p99-wiki/npc-pages/templar-tingar-9c56b9c12a.wiki",
+                "url": "https://wiki.project1999.com/Templar_Tingar?action=raw",
+                "sha256": "325f94708b44a8c665774f3fddd7d6d40ba7465ca25accf93104b56558d177ee",
+                "eraTags": [
+                  "Velious Era"
+                ],
+                "zone": "[[Thurgadin]]",
+                "doesNotExist": false
+              }
+            ],
+            "verification": "Static source/evidence disposition only; not live mechanics or UI.",
+            "outcome": "open_ambient_timer_implementation",
+            "reason": "P99-present or source-only ambient timer speech is not a hand-in. Exact source timer intervals and repeating actor lifetime must be preserved (Perl seconds -> Lua ms); Madan includes random lines and delayed Sojan signal. Straightforward implementation remains possible but no live public timer/recipient fixture yet; not declared unsupported or completed.",
+            "evidence": [],
+            "source_anchors": [
+              {
+                "line": 1,
+                "text": "# #115200 Templar Tingar"
+              },
+              {
+                "line": 4,
+                "text": "quest::settimer(1,480); #Make him say speech every 8 mins"
+              },
+              {
+                "line": 5,
+                "text": "quest::settimer(2,840); #Make him say second part speech 14 mins"
+              }
+            ]
+          }
+        },
+        "currentDispositionFollowup": null,
+        "currentProposalState": "no_proposed_lua_see_reviewed_disposition",
+        "proposedSourceSha256": null,
+        "proposedSourceFiles": []
+      }
+    },
+    {
+      "key": "thurgadinb/129097",
+      "disposition": "blocked_council_multi_actor_lifecycle",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+      "sourceFile": "sources/projecteq/thurgadinb/129097.pl",
+      "sourceSha256": "91f7c3f28905fcd49287e4ca9433f47234b1f56291023f608032159e670f910f",
+      "originalReview": {
+        "key": "thurgadinb/129097",
+        "originalQuestId": 17185,
+        "originalEnabled": 1,
+        "originalPolicy": null,
+        "originalDisposition": {
+          "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+          "record": {
+            "key": "thurgadinb/129097",
+            "reviewed_at": "2026-10-22",
+            "source": "sources/projecteq/thurgadinb/129097.pl",
+            "source_sha256": "91f7c3f28905fcd49287e4ca9433f47234b1f56291023f608032159e670f910f",
+            "events": [
+              "EVENT_SPAWN"
+            ],
+            "quest_calls": [
+              "signalwith"
+            ],
+            "npc_evidence": [],
+            "verification": "Static source/evidence disposition only; not live mechanics or UI.",
+            "outcome": "blocked_council_multi_actor_lifecycle",
+            "reason": "Spawn broadcasts signal1/2 to Dain, Aldikar, Krystorf and many duplicated councilor NPC variants. Need exact actor identity/duplicate-population policy and all recipients routed movement admission; enabling controller alone would trigger incomplete council sequence.",
+            "evidence": [
+              {
+                "path": "reference/server/internal/quest/deferred_runtime_apis.json",
+                "sha256": "9a51bc095b20f7cee39453cb66d7b6bc1ec28154821b567ae570c875799168a7"
+              }
+            ],
+            "source_anchors": [
+              {
+                "line": 2,
+                "text": "quest::signalwith(129003,1); # NPC: #Dain_Frostreaver_IV"
+              },
+              {
+                "line": 3,
+                "text": "quest::signalwith(129000,1); # NPC: Seneschal_Aldikar"
+              },
+              {
+                "line": 4,
+                "text": "quest::signalwith(129028,1); # NPC: Chamberlain_Krystorf"
+              },
+              {
+                "line": 5,
+                "text": "quest::signalwith(129035,1); # NPC: Councilor_Amberfeld"
+              },
+              {
+                "line": 6,
+                "text": "quest::signalwith(129073,1); # NPC: Councilor_Amberfeld"
+              },
+              {
+                "line": 7,
+                "text": "quest::signalwith(129037,1); # NPC: Councilor_Coldember"
+              },
+              {
+                "line": 8,
+                "text": "quest::signalwith(129075,1); # NPC: Councilor_Coldember"
+              },
+              {
+                "line": 9,
+                "text": "quest::signalwith(129043,1); # NPC: Councilor_Darakor"
+              },
+              {
+                "line": 10,
+                "text": "quest::signalwith(129041,1); # NPC: Councilor_Darkfrost"
+              },
+              {
+                "line": 11,
+                "text": "quest::signalwith(129078,1); # NPC: Councilor_Darkfrost"
+              },
+              {
+                "line": 12,
+                "text": "quest::signalwith(129036,1); # NPC: Councilor_Deynekn"
+              },
+              {
+                "line": 13,
+                "text": "quest::signalwith(129074,1); # NPC: Councilor_Deynekn"
+              },
+              {
+                "line": 14,
+                "text": "quest::signalwith(129040,1); # NPC: Councilor_Dirkins"
+              },
+              {
+                "line": 15,
+                "text": "quest::signalwith(129077,1); # NPC: Councilor_Dirkins"
+              },
+              {
+                "line": 16,
+                "text": "quest::signalwith(129039,1); # NPC: Councilor_Glacierbane"
+              },
+              {
+                "line": 17,
+                "text": "quest::signalwith(129076,1); # NPC: Councilor_Glacierbane"
+              },
+              {
+                "line": 18,
+                "text": "quest::signalwith(129038,1); # NPC: Councilor_Icelok"
+              },
+              {
+                "line": 19,
+                "text": "quest::signalwith(129034,1); # NPC: Councilor_Icepike"
+              }
+            ]
+          }
+        },
+        "currentDispositionFollowup": null,
+        "currentProposalState": "no_proposed_lua_see_reviewed_disposition",
+        "proposedSourceSha256": null,
+        "proposedSourceFiles": []
+      }
+    },
+    {
+      "key": "thurgadinb/129098",
+      "disposition": "blocked_council_multi_actor_lifecycle",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+      "sourceFile": "sources/projecteq/thurgadinb/129098.pl",
+      "sourceSha256": "72caea8438e7a732e5ec72d8c1f76af7c93cdedbd650cbfac9d997ce48d58e33",
+      "originalReview": {
+        "key": "thurgadinb/129098",
+        "originalQuestId": 12410,
+        "originalEnabled": 1,
+        "originalPolicy": null,
+        "originalDisposition": {
+          "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+          "record": {
+            "key": "thurgadinb/129098",
+            "reviewed_at": "2026-10-22",
+            "source": "sources/projecteq/thurgadinb/129098.pl",
+            "source_sha256": "72caea8438e7a732e5ec72d8c1f76af7c93cdedbd650cbfac9d997ce48d58e33",
+            "events": [
+              "EVENT_SPAWN"
+            ],
+            "quest_calls": [
+              "signalwith"
+            ],
+            "npc_evidence": [],
+            "verification": "Static source/evidence disposition only; not live mechanics or UI.",
+            "outcome": "blocked_council_multi_actor_lifecycle",
+            "reason": "Spawn broadcasts signal1/2 to Dain, Aldikar, Krystorf and many duplicated councilor NPC variants. Need exact actor identity/duplicate-population policy and all recipients routed movement admission; enabling controller alone would trigger incomplete council sequence.",
+            "evidence": [
+              {
+                "path": "reference/server/internal/quest/deferred_runtime_apis.json",
+                "sha256": "9a51bc095b20f7cee39453cb66d7b6bc1ec28154821b567ae570c875799168a7"
+              }
+            ],
+            "source_anchors": [
+              {
+                "line": 2,
+                "text": "quest::signalwith(129003,2); # NPC: #Dain_Frostreaver_IV"
+              },
+              {
+                "line": 3,
+                "text": "quest::signalwith(129000,2); # NPC: Seneschal_Aldikar"
+              },
+              {
+                "line": 4,
+                "text": "quest::signalwith(129028,2); # NPC: Chamberlain_Krystorf"
+              },
+              {
+                "line": 5,
+                "text": "quest::signalwith(129035,2); # NPC: Councilor_Amberfeld"
+              },
+              {
+                "line": 6,
+                "text": "quest::signalwith(129073,2); # NPC: Councilor_Amberfeld"
+              },
+              {
+                "line": 7,
+                "text": "quest::signalwith(129037,2); # NPC: Councilor_Coldember"
+              },
+              {
+                "line": 8,
+                "text": "quest::signalwith(129075,2); # NPC: Councilor_Coldember"
+              },
+              {
+                "line": 9,
+                "text": "quest::signalwith(129043,2); # NPC: Councilor_Darakor"
+              },
+              {
+                "line": 10,
+                "text": "quest::signalwith(129041,2); # NPC: Councilor_Darkfrost"
+              },
+              {
+                "line": 11,
+                "text": "quest::signalwith(129078,2); # NPC: Councilor_Darkfrost"
+              },
+              {
+                "line": 12,
+                "text": "quest::signalwith(129036,2); # NPC: Councilor_Deynekn"
+              },
+              {
+                "line": 13,
+                "text": "quest::signalwith(129074,2); # NPC: Councilor_Deynekn"
+              },
+              {
+                "line": 14,
+                "text": "quest::signalwith(129040,2); # NPC: Councilor_Dirkins"
+              },
+              {
+                "line": 15,
+                "text": "quest::signalwith(129077,2); # NPC: Councilor_Dirkins"
+              },
+              {
+                "line": 16,
+                "text": "quest::signalwith(129039,2); # NPC: Councilor_Glacierbane"
+              },
+              {
+                "line": 17,
+                "text": "quest::signalwith(129076,2); # NPC: Councilor_Glacierbane"
+              },
+              {
+                "line": 18,
+                "text": "quest::signalwith(129038,2); # NPC: Councilor_Icelok"
+              },
+              {
+                "line": 19,
+                "text": "quest::signalwith(129034,2); # NPC: Councilor_Icepike"
+              }
+            ]
+          }
+        },
+        "currentDispositionFollowup": null,
+        "currentProposalState": "no_proposed_lua_see_reviewed_disposition",
+        "proposedSourceSha256": null,
+        "proposedSourceFiles": []
+      }
+    },
+    {
+      "key": "thurgadinb/Councilor_Amberfeld",
+      "disposition": "open_council_movement_mapping",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+      "sourceFile": "sources/projecteq/thurgadinb/Councilor_Amberfeld.pl",
+      "sourceSha256": "c6128e4568c8b12c66d2a01939aeb1a185cd412424c6170a3ddde4827e5cb743",
+      "originalReview": {
+        "key": "thurgadinb/Councilor_Amberfeld",
+        "originalQuestId": 13607,
+        "originalEnabled": 1,
+        "originalPolicy": null,
+        "originalDisposition": {
+          "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+          "record": {
+            "key": "thurgadinb/Councilor_Amberfeld",
+            "reviewed_at": "2026-10-22",
+            "source": "sources/projecteq/thurgadinb/Councilor_Amberfeld.pl",
+            "source_sha256": "c6128e4568c8b12c66d2a01939aeb1a185cd412424c6170a3ddde4827e5cb743",
+            "events": [
+              "EVENT_SAY",
+              "EVENT_SIGNAL"
+            ],
+            "quest_calls": [
+              "moveto",
+              "say"
+            ],
+            "npc_evidence": [
+              {
+                "title": "Councilor Amberfeld",
+                "cachePath": "reference/p99-wiki/npc-pages/councilor-amberfeld-94d788d2bb.wiki",
+                "url": "https://wiki.project1999.com/Councilor_Amberfeld?action=raw",
+                "sha256": "36378c497787ac4885cfd0375444e81071975d518940085459fb056770ae1b27",
+                "eraTags": [
+                  "Velious Era"
+                ],
+                "zone": "[[Icewell Keep]]",
+                "doesNotExist": false
+              }
+            ],
+            "verification": "Static source/evidence disposition only; not live mechanics or UI.",
+            "outcome": "open_council_movement_mapping",
+            "reason": "Signal1/2 calls quest::moveto with fixed destination/heading and save-guard-position flag. Need faithful mapping to supported routed MoveTo and shared129097/129098 recipient fixture; cannot map to deferred eq.move_to or discard movement while claiming full source conversion.",
+            "evidence": [
+              {
+                "path": "reference/server/internal/quest/deferred_runtime_apis.json",
+                "sha256": "9a51bc095b20f7cee39453cb66d7b6bc1ec28154821b567ae570c875799168a7"
+              }
+            ],
+            "source_anchors": [
+              {
+                "line": 8,
+                "text": "quest::moveto(108,665,38,126,1);"
+              },
+              {
+                "line": 11,
+                "text": "quest::moveto(25,542,65,0,1);"
+              },
+              {
+                "line": 15,
+                "text": "#END of FILE Zone:thurgadinb  ID:129033 -- Councilor_Amberfeld"
+              }
+            ]
+          }
+        },
+        "currentDispositionFollowup": null,
+        "currentProposalState": "no_proposed_lua_see_reviewed_disposition",
+        "proposedSourceSha256": null,
+        "proposedSourceFiles": []
+      }
+    },
+    {
+      "key": "thurgadinb/Councilor_Coldember",
+      "disposition": "open_council_movement_mapping",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+      "sourceFile": "sources/projecteq/thurgadinb/Councilor_Coldember.pl",
+      "sourceSha256": "d256824bb077e54d7a5b77170ecdbc2e07caea24141f4e33ffbdd8e65bd69bcc",
+      "originalReview": {
+        "key": "thurgadinb/Councilor_Coldember",
+        "originalQuestId": 16734,
+        "originalEnabled": 1,
+        "originalPolicy": null,
+        "originalDisposition": {
+          "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+          "record": {
+            "key": "thurgadinb/Councilor_Coldember",
+            "reviewed_at": "2026-10-22",
+            "source": "sources/projecteq/thurgadinb/Councilor_Coldember.pl",
+            "source_sha256": "d256824bb077e54d7a5b77170ecdbc2e07caea24141f4e33ffbdd8e65bd69bcc",
+            "events": [
+              "EVENT_SAY",
+              "EVENT_SIGNAL"
+            ],
+            "quest_calls": [
+              "moveto",
+              "say"
+            ],
+            "npc_evidence": [
+              {
+                "title": "Councilor Coldember",
+                "cachePath": "reference/p99-wiki/npc-pages/councilor-coldember-8622d7c3e0.wiki",
+                "url": "https://wiki.project1999.com/Councilor_Coldember?action=raw",
+                "sha256": "aa64c7c87918cef8857a22b4d4b2aad7e3089a5be3a0b5ceb5ebdf3593e2677e",
+                "eraTags": [
+                  "Velious Era"
+                ],
+                "zone": "[[Icewell Keep]]",
+                "doesNotExist": false
+              }
+            ],
+            "verification": "Static source/evidence disposition only; not live mechanics or UI.",
+            "outcome": "open_council_movement_mapping",
+            "reason": "Signal1/2 calls quest::moveto with fixed destination/heading and save-guard-position flag. Need faithful mapping to supported routed MoveTo and shared129097/129098 recipient fixture; cannot map to deferred eq.move_to or discard movement while claiming full source conversion.",
+            "evidence": [
+              {
+                "path": "reference/server/internal/quest/deferred_runtime_apis.json",
+                "sha256": "9a51bc095b20f7cee39453cb66d7b6bc1ec28154821b567ae570c875799168a7"
+              }
+            ],
+            "source_anchors": [
+              {
+                "line": 8,
+                "text": "quest::moveto(93,655,39,488,1);"
+              },
+              {
+                "line": 11,
+                "text": "quest::moveto(15,543,66,0,1);"
+              },
+              {
+                "line": 15,
+                "text": "#END of FILE Zone:thurgadinb  ID:129035 -- Councilor_Coldember"
+              }
+            ]
+          }
+        },
+        "currentDispositionFollowup": null,
+        "currentProposalState": "no_proposed_lua_see_reviewed_disposition",
+        "proposedSourceSha256": null,
+        "proposedSourceFiles": []
+      }
+    },
+    {
+      "key": "thurgadinb/Councilor_Darakor",
+      "disposition": "open_council_movement_mapping",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+      "sourceFile": "sources/projecteq/thurgadinb/Councilor_Darakor.pl",
+      "sourceSha256": "03b908c5f8a5f3c9e8351754c86741a370c351571b171b833d2e63fde0f4bde0",
+      "originalReview": {
+        "key": "thurgadinb/Councilor_Darakor",
+        "originalQuestId": 15755,
+        "originalEnabled": 1,
+        "originalPolicy": null,
+        "originalDisposition": {
+          "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+          "record": {
+            "key": "thurgadinb/Councilor_Darakor",
+            "reviewed_at": "2026-10-22",
+            "source": "sources/projecteq/thurgadinb/Councilor_Darakor.pl",
+            "source_sha256": "03b908c5f8a5f3c9e8351754c86741a370c351571b171b833d2e63fde0f4bde0",
+            "events": [
+              "EVENT_SAY",
+              "EVENT_SIGNAL"
+            ],
+            "quest_calls": [
+              "moveto",
+              "say"
+            ],
+            "npc_evidence": [
+              {
+                "title": "Councilor Darakor",
+                "cachePath": "reference/p99-wiki/npc-pages/councilor-darakor-d25908111e.wiki",
+                "url": "https://wiki.project1999.com/Councilor_Darakor?action=raw",
+                "sha256": "89af0c7971857157830940961e8243c7041312344577faeddf4168ce4f2dc61e",
+                "eraTags": [
+                  "Velious Era"
+                ],
+                "zone": "[[Icewell Keep]]",
+                "doesNotExist": false
+              }
+            ],
+            "verification": "Static source/evidence disposition only; not live mechanics or UI.",
+            "outcome": "open_council_movement_mapping",
+            "reason": "Signal1/2 calls quest::moveto with fixed destination/heading and save-guard-position flag. Need faithful mapping to supported routed MoveTo and shared129097/129098 recipient fixture; cannot map to deferred eq.move_to or discard movement while claiming full source conversion.",
+            "evidence": [
+              {
+                "path": "reference/server/internal/quest/deferred_runtime_apis.json",
+                "sha256": "9a51bc095b20f7cee39453cb66d7b6bc1ec28154821b567ae570c875799168a7"
+              }
+            ],
+            "source_anchors": [
+              {
+                "line": 8,
+                "text": "quest::moveto(-79,656,39,0,1);"
+              },
+              {
+                "line": 11,
+                "text": "quest::moveto(-15,544,66,0,1);"
+              },
+              {
+                "line": 15,
+                "text": "#END of FILE Zone:thurgadinb  ID:129041 -- Councilor_Darakor"
+              }
+            ]
+          }
+        },
+        "currentDispositionFollowup": null,
+        "currentProposalState": "no_proposed_lua_see_reviewed_disposition",
+        "proposedSourceSha256": null,
+        "proposedSourceFiles": []
+      }
+    },
+    {
+      "key": "thurgadinb/Councilor_Darkfrost",
+      "disposition": "open_council_movement_mapping",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+      "sourceFile": "sources/projecteq/thurgadinb/Councilor_Darkfrost.pl",
+      "sourceSha256": "fe083f9d40ee4bbd7606271abbba6c9e1a612a31d8f95e96fffe6c13ff01ab0f",
+      "originalReview": {
+        "key": "thurgadinb/Councilor_Darkfrost",
+        "originalQuestId": 18502,
+        "originalEnabled": 1,
+        "originalPolicy": null,
+        "originalDisposition": {
+          "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+          "record": {
+            "key": "thurgadinb/Councilor_Darkfrost",
+            "reviewed_at": "2026-10-22",
+            "source": "sources/projecteq/thurgadinb/Councilor_Darkfrost.pl",
+            "source_sha256": "fe083f9d40ee4bbd7606271abbba6c9e1a612a31d8f95e96fffe6c13ff01ab0f",
+            "events": [
+              "EVENT_SAY",
+              "EVENT_SIGNAL"
+            ],
+            "quest_calls": [
+              "moveto",
+              "say"
+            ],
+            "npc_evidence": [
+              {
+                "title": "Councilor Darkfrost",
+                "cachePath": "reference/p99-wiki/npc-pages/councilor-darkfrost-505f353e40.wiki",
+                "url": "https://wiki.project1999.com/Councilor_Darkfrost?action=raw",
+                "sha256": "526b2512f4553953f2dcbd3afc6deff67a141c536651e7b84be75d999d19d0b8",
+                "eraTags": [
+                  "Velious Era"
+                ],
+                "zone": "[[Icewell Keep]]",
+                "doesNotExist": false
+              }
+            ],
+            "verification": "Static source/evidence disposition only; not live mechanics or UI.",
+            "outcome": "open_council_movement_mapping",
+            "reason": "Signal1/2 calls quest::moveto with fixed destination/heading and save-guard-position flag. Need faithful mapping to supported routed MoveTo and shared129097/129098 recipient fixture; cannot map to deferred eq.move_to or discard movement while claiming full source conversion.",
+            "evidence": [
+              {
+                "path": "reference/server/internal/quest/deferred_runtime_apis.json",
+                "sha256": "9a51bc095b20f7cee39453cb66d7b6bc1ec28154821b567ae570c875799168a7"
+              }
+            ],
+            "source_anchors": [
+              {
+                "line": 8,
+                "text": "quest::moveto(-4,887,-1,81,1);"
+              },
+              {
+                "line": 11,
+                "text": "quest::moveto(-5,543,66,0,1);"
+              },
+              {
+                "line": 15,
+                "text": "#END of FILE Zone:thurgadinb  ID:129039 -- Councilor_Darkfrost"
+              }
+            ]
+          }
+        },
+        "currentDispositionFollowup": null,
+        "currentProposalState": "no_proposed_lua_see_reviewed_disposition",
+        "proposedSourceSha256": null,
+        "proposedSourceFiles": []
+      }
+    },
+    {
+      "key": "thurgadinb/Councilor_Deynekn",
+      "disposition": "open_council_movement_mapping",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+      "sourceFile": "sources/projecteq/thurgadinb/Councilor_Deynekn.pl",
+      "sourceSha256": "dcbba0b4c5dc9d1c2ebcdb9769d439b01b304ea0e55a11efdaa8ac683ec8415e",
+      "originalReview": {
+        "key": "thurgadinb/Councilor_Deynekn",
+        "originalQuestId": 12167,
+        "originalEnabled": 1,
+        "originalPolicy": null,
+        "originalDisposition": {
+          "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+          "record": {
+            "key": "thurgadinb/Councilor_Deynekn",
+            "reviewed_at": "2026-10-22",
+            "source": "sources/projecteq/thurgadinb/Councilor_Deynekn.pl",
+            "source_sha256": "dcbba0b4c5dc9d1c2ebcdb9769d439b01b304ea0e55a11efdaa8ac683ec8415e",
+            "events": [
+              "EVENT_SIGNAL"
+            ],
+            "quest_calls": [
+              "moveto"
+            ],
+            "npc_evidence": [
+              {
+                "title": "Councilor Deynekn",
+                "cachePath": "reference/p99-wiki/npc-pages/councilor-deynekn-bda68eb421.wiki",
+                "url": "https://wiki.project1999.com/Councilor_Deynekn?action=raw",
+                "sha256": "3c70e0d3a001159fad489551de8a18802cfb04792c40a4ca94dfef24b293a014",
+                "eraTags": [
+                  "Velious Era"
+                ],
+                "zone": "[[Icewell Keep]]",
+                "doesNotExist": false
+              }
+            ],
+            "verification": "Static source/evidence disposition only; not live mechanics or UI.",
+            "outcome": "open_council_movement_mapping",
+            "reason": "Signal1/2 calls quest::moveto with fixed destination/heading and save-guard-position flag. Need faithful mapping to supported routed MoveTo and shared129097/129098 recipient fixture; cannot map to deferred eq.move_to or discard movement while claiming full source conversion.",
+            "evidence": [
+              {
+                "path": "reference/server/internal/quest/deferred_runtime_apis.json",
+                "sha256": "9a51bc095b20f7cee39453cb66d7b6bc1ec28154821b567ae570c875799168a7"
+              }
+            ],
+            "source_anchors": [
+              {
+                "line": 3,
+                "text": "quest::moveto(92,703,39,262,1);"
+              },
+              {
+                "line": 6,
+                "text": "quest::moveto(20,534,68,0,1);"
+              }
+            ]
+          }
+        },
+        "currentDispositionFollowup": null,
+        "currentProposalState": "no_proposed_lua_see_reviewed_disposition",
+        "proposedSourceSha256": null,
+        "proposedSourceFiles": []
+      }
+    },
+    {
+      "key": "thurgadinb/Councilor_Dirkins",
+      "disposition": "open_council_movement_mapping",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+      "sourceFile": "sources/projecteq/thurgadinb/Councilor_Dirkins.pl",
+      "sourceSha256": "d914bc0d324be6c50308f9e5b7ea1802f366c72e487dbe64d87e8fbaa91852f2",
+      "originalReview": {
+        "key": "thurgadinb/Councilor_Dirkins",
+        "originalQuestId": 18417,
+        "originalEnabled": 1,
+        "originalPolicy": null,
+        "originalDisposition": {
+          "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+          "record": {
+            "key": "thurgadinb/Councilor_Dirkins",
+            "reviewed_at": "2026-10-22",
+            "source": "sources/projecteq/thurgadinb/Councilor_Dirkins.pl",
+            "source_sha256": "d914bc0d324be6c50308f9e5b7ea1802f366c72e487dbe64d87e8fbaa91852f2",
+            "events": [
+              "EVENT_SAY",
+              "EVENT_SIGNAL"
+            ],
+            "quest_calls": [
+              "moveto",
+              "say"
+            ],
+            "npc_evidence": [
+              {
+                "title": "Councilor Dirkins",
+                "cachePath": "reference/p99-wiki/npc-pages/councilor-dirkins-738e9f8cac.wiki",
+                "url": "https://wiki.project1999.com/Councilor_Dirkins?action=raw",
+                "sha256": "ed77d2cc63561ba56efde4b647da2f47cad60b9681581164231c76fc47f04b05",
+                "eraTags": [
+                  "Velious Era"
+                ],
+                "zone": "[[Icewell Keep]]",
+                "doesNotExist": false
+              }
+            ],
+            "verification": "Static source/evidence disposition only; not live mechanics or UI.",
+            "outcome": "open_council_movement_mapping",
+            "reason": "Signal1/2 calls quest::moveto with fixed destination/heading and save-guard-position flag. Need faithful mapping to supported routed MoveTo and shared129097/129098 recipient fixture; cannot map to deferred eq.move_to or discard movement while claiming full source conversion.",
+            "evidence": [
+              {
+                "path": "reference/server/internal/quest/deferred_runtime_apis.json",
+                "sha256": "9a51bc095b20f7cee39453cb66d7b6bc1ec28154821b567ae570c875799168a7"
+              }
+            ],
+            "source_anchors": [
+              {
+                "line": 8,
+                "text": "quest::moveto(-103,703,39,264,1);"
+              },
+              {
+                "line": 11,
+                "text": "quest::moveto(0,535,68,0,1);"
+              },
+              {
+                "line": 15,
+                "text": "#END of FILE Zone:thurgadinb  ID:129038 -- Councilor_Dirkins"
+              }
+            ]
+          }
+        },
+        "currentDispositionFollowup": null,
+        "currentProposalState": "no_proposed_lua_see_reviewed_disposition",
+        "proposedSourceSha256": null,
+        "proposedSourceFiles": []
+      }
+    },
+    {
+      "key": "thurgadinb/Councilor_Glacierbane",
+      "disposition": "open_council_movement_mapping",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+      "sourceFile": "sources/projecteq/thurgadinb/Councilor_Glacierbane.pl",
+      "sourceSha256": "ca128462f797edec0caeb33c3c70a9b2626b69acc2155af431de494ef0f3d0da",
+      "originalReview": {
+        "key": "thurgadinb/Councilor_Glacierbane",
+        "originalQuestId": 18265,
+        "originalEnabled": 1,
+        "originalPolicy": null,
+        "originalDisposition": {
+          "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+          "record": {
+            "key": "thurgadinb/Councilor_Glacierbane",
+            "reviewed_at": "2026-10-22",
+            "source": "sources/projecteq/thurgadinb/Councilor_Glacierbane.pl",
+            "source_sha256": "ca128462f797edec0caeb33c3c70a9b2626b69acc2155af431de494ef0f3d0da",
+            "events": [
+              "EVENT_SAY",
+              "EVENT_SIGNAL"
+            ],
+            "quest_calls": [
+              "moveto",
+              "say"
+            ],
+            "npc_evidence": [
+              {
+                "title": "Councilor Glacierbane",
+                "cachePath": "reference/p99-wiki/npc-pages/councilor-glacierbane-f3132ef424.wiki",
+                "url": "https://wiki.project1999.com/Councilor_Glacierbane?action=raw",
+                "sha256": "62c7893b4bfe2a6faafac6f4eb328ff50e5d9ea5c81765ee0fcb95c4a368682d",
+                "eraTags": [
+                  "Velious Era"
+                ],
+                "zone": "[[Icewell Keep]]",
+                "doesNotExist": false
+              }
+            ],
+            "verification": "Static source/evidence disposition only; not live mechanics or UI.",
+            "outcome": "open_council_movement_mapping",
+            "reason": "Signal1/2 calls quest::moveto with fixed destination/heading and save-guard-position flag. Need faithful mapping to supported routed MoveTo and shared129097/129098 recipient fixture; cannot map to deferred eq.move_to or discard movement while claiming full source conversion.",
+            "evidence": [
+              {
+                "path": "reference/server/internal/quest/deferred_runtime_apis.json",
+                "sha256": "9a51bc095b20f7cee39453cb66d7b6bc1ec28154821b567ae570c875799168a7"
+              }
+            ],
+            "source_anchors": [
+              {
+                "line": 8,
+                "text": "quest::moveto(67,654,39,510,1);"
+              },
+              {
+                "line": 11,
+                "text": "quest::moveto(5,545,66,0,1);"
+              },
+              {
+                "line": 15,
+                "text": "#END of FILE Zone:thurgadinb  ID:129037 -- Councilor_Glacierbane"
+              }
+            ]
+          }
+        },
+        "currentDispositionFollowup": null,
+        "currentProposalState": "no_proposed_lua_see_reviewed_disposition",
+        "proposedSourceSha256": null,
+        "proposedSourceFiles": []
+      }
+    },
+    {
+      "key": "thurgadinb/Councilor_Icelok",
+      "disposition": "open_council_movement_mapping",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+      "sourceFile": "sources/projecteq/thurgadinb/Councilor_Icelok.pl",
+      "sourceSha256": "890c0617785982cdee2ab150a0fb60466cad95baf2acbd962eaf374dfd265832",
+      "originalReview": {
+        "key": "thurgadinb/Councilor_Icelok",
+        "originalQuestId": 19520,
+        "originalEnabled": 1,
+        "originalPolicy": null,
+        "originalDisposition": {
+          "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+          "record": {
+            "key": "thurgadinb/Councilor_Icelok",
+            "reviewed_at": "2026-10-22",
+            "source": "sources/projecteq/thurgadinb/Councilor_Icelok.pl",
+            "source_sha256": "890c0617785982cdee2ab150a0fb60466cad95baf2acbd962eaf374dfd265832",
+            "events": [
+              "EVENT_SAY",
+              "EVENT_SIGNAL"
+            ],
+            "quest_calls": [
+              "moveto",
+              "say"
+            ],
+            "npc_evidence": [
+              {
+                "title": "Councilor Icelok",
+                "cachePath": "reference/p99-wiki/npc-pages/councilor-icelok-1533bf3bee.wiki",
+                "url": "https://wiki.project1999.com/Councilor_Icelok?action=raw",
+                "sha256": "44e91e87a99b41a5a837c13b0f69d1be636ca24b53a0e630f681b6fd2da83e7c",
+                "eraTags": [
+                  "Velious Era"
+                ],
+                "zone": "[[Icewell Keep]]",
+                "doesNotExist": false
+              }
+            ],
+            "verification": "Static source/evidence disposition only; not live mechanics or UI.",
+            "outcome": "open_council_movement_mapping",
+            "reason": "Signal1/2 calls quest::moveto with fixed destination/heading and save-guard-position flag. Need faithful mapping to supported routed MoveTo and shared129097/129098 recipient fixture; cannot map to deferred eq.move_to or discard movement while claiming full source conversion.",
+            "evidence": [
+              {
+                "path": "reference/server/internal/quest/deferred_runtime_apis.json",
+                "sha256": "9a51bc095b20f7cee39453cb66d7b6bc1ec28154821b567ae570c875799168a7"
+              }
+            ],
+            "source_anchors": [
+              {
+                "line": 8,
+                "text": "quest::moveto(67,703,39,270,1);"
+              },
+              {
+                "line": 11,
+                "text": "quest::moveto(10,535,68,0,1);"
+              },
+              {
+                "line": 15,
+                "text": "#END of FILE Zone:thurgadinb  ID:129036 -- Councilor_Icelok"
+              }
+            ]
+          }
+        },
+        "currentDispositionFollowup": null,
+        "currentProposalState": "no_proposed_lua_see_reviewed_disposition",
+        "proposedSourceSha256": null,
+        "proposedSourceFiles": []
+      }
+    },
+    {
+      "key": "thurgadinb/Councilor_Icepike",
+      "disposition": "open_council_movement_mapping",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+      "sourceFile": "sources/projecteq/thurgadinb/Councilor_Icepike.pl",
+      "sourceSha256": "760413d4ee21a39da08ebd8c96900cb93b6e2870fba6467dc4692d25f47bd6ac",
+      "originalReview": {
+        "key": "thurgadinb/Councilor_Icepike",
+        "originalQuestId": 13591,
+        "originalEnabled": 1,
+        "originalPolicy": null,
+        "originalDisposition": {
+          "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+          "record": {
+            "key": "thurgadinb/Councilor_Icepike",
+            "reviewed_at": "2026-10-22",
+            "source": "sources/projecteq/thurgadinb/Councilor_Icepike.pl",
+            "source_sha256": "760413d4ee21a39da08ebd8c96900cb93b6e2870fba6467dc4692d25f47bd6ac",
+            "events": [
+              "EVENT_SAY",
+              "EVENT_SIGNAL"
+            ],
+            "quest_calls": [
+              "moveto",
+              "say"
+            ],
+            "npc_evidence": [
+              {
+                "title": "Councilor Icepike",
+                "cachePath": "reference/p99-wiki/npc-pages/councilor-icepike-c78110539e.wiki",
+                "url": "https://wiki.project1999.com/Councilor_Icepike?action=raw",
+                "sha256": "ccdc801ccd5971be631215b11f0df32b0bacec3eb3d4969aba712953e2d8aa0d",
+                "eraTags": [
+                  "Velious Era"
+                ],
+                "zone": "[[Icewell Keep]]",
+                "doesNotExist": false
+              }
+            ],
+            "verification": "Static source/evidence disposition only; not live mechanics or UI.",
+            "outcome": "open_council_movement_mapping",
+            "reason": "Signal1/2 calls quest::moveto with fixed destination/heading and save-guard-position flag. Need faithful mapping to supported routed MoveTo and shared129097/129098 recipient fixture; cannot map to deferred eq.move_to or discard movement while claiming full source conversion.",
+            "evidence": [
+              {
+                "path": "reference/server/internal/quest/deferred_runtime_apis.json",
+                "sha256": "9a51bc095b20f7cee39453cb66d7b6bc1ec28154821b567ae570c875799168a7"
+              }
+            ],
+            "source_anchors": [
+              {
+                "line": 8,
+                "text": "quest::moveto(117,701,39,256,1);"
+              },
+              {
+                "line": 11,
+                "text": "quest::moveto(30,533,68,0,1);"
+              },
+              {
+                "line": 15,
+                "text": "#END of FILE Zone:thurgadinb  ID:129032 -- Councilor_Icepike"
+              }
+            ]
+          }
+        },
+        "currentDispositionFollowup": null,
+        "currentProposalState": "no_proposed_lua_see_reviewed_disposition",
+        "proposedSourceSha256": null,
+        "proposedSourceFiles": []
+      }
+    },
+    {
+      "key": "thurgadinb/Councilor_Thubins",
+      "disposition": "open_council_movement_mapping",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+      "sourceFile": "sources/projecteq/thurgadinb/Councilor_Thubins.pl",
+      "sourceSha256": "3e6e05bbfbbaba8097f9aa0d47edf5b7a57bd338f031521cbedade4d7f0c9344",
+      "originalReview": {
+        "key": "thurgadinb/Councilor_Thubins",
+        "originalQuestId": 14382,
+        "originalEnabled": 1,
+        "originalPolicy": null,
+        "originalDisposition": {
+          "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+          "record": {
+            "key": "thurgadinb/Councilor_Thubins",
+            "reviewed_at": "2026-10-22",
+            "source": "sources/projecteq/thurgadinb/Councilor_Thubins.pl",
+            "source_sha256": "3e6e05bbfbbaba8097f9aa0d47edf5b7a57bd338f031521cbedade4d7f0c9344",
+            "events": [
+              "EVENT_SAY",
+              "EVENT_SIGNAL"
+            ],
+            "quest_calls": [
+              "moveto",
+              "say"
+            ],
+            "npc_evidence": [
+              {
+                "title": "Councilor Thubins",
+                "cachePath": "reference/p99-wiki/npc-pages/councilor-thubins-fa3674a6a8.wiki",
+                "url": "https://wiki.project1999.com/Councilor_Thubins?action=raw",
+                "sha256": "24330d0646d22dcf9867b73565c0234a7ee07b47f04f7312531a10463567c338",
+                "eraTags": [
+                  "Velious Era"
+                ],
+                "zone": "[[Icewell Keep]]",
+                "doesNotExist": false
+              }
+            ],
+            "verification": "Static source/evidence disposition only; not live mechanics or UI.",
+            "outcome": "open_council_movement_mapping",
+            "reason": "Signal1/2 calls quest::moveto with fixed destination/heading and save-guard-position flag. Need faithful mapping to supported routed MoveTo and shared129097/129098 recipient fixture; cannot map to deferred eq.move_to or discard movement while claiming full source conversion.",
+            "evidence": [
+              {
+                "path": "reference/server/internal/quest/deferred_runtime_apis.json",
+                "sha256": "9a51bc095b20f7cee39453cb66d7b6bc1ec28154821b567ae570c875799168a7"
+              }
+            ],
+            "source_anchors": [
+              {
+                "line": 8,
+                "text": "quest::moveto(-53,703,39,258,1);"
+              },
+              {
+                "line": 11,
+                "text": "quest::moveto(-20,535,68,0,1);"
+              },
+              {
+                "line": 15,
+                "text": "#END of FILE Zone:thurgadinb  ID:129042 -- Councilor_Thubins"
+              }
+            ]
+          }
+        },
+        "currentDispositionFollowup": null,
+        "currentProposalState": "no_proposed_lua_see_reviewed_disposition",
+        "proposedSourceSha256": null,
+        "proposedSourceFiles": []
+      }
+    },
+    {
+      "key": "thurgadinb/Councilor_Wintershade",
+      "disposition": "open_council_movement_mapping",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+      "sourceFile": "sources/projecteq/thurgadinb/Councilor_Wintershade.pl",
+      "sourceSha256": "e7b40fa375884ca20c35073fd4c4ec21c251ad2e68b5bb1627ffa995043caced",
+      "originalReview": {
+        "key": "thurgadinb/Councilor_Wintershade",
+        "originalQuestId": 15814,
+        "originalEnabled": 1,
+        "originalPolicy": null,
+        "originalDisposition": {
+          "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+          "record": {
+            "key": "thurgadinb/Councilor_Wintershade",
+            "reviewed_at": "2026-10-22",
+            "source": "sources/projecteq/thurgadinb/Councilor_Wintershade.pl",
+            "source_sha256": "e7b40fa375884ca20c35073fd4c4ec21c251ad2e68b5bb1627ffa995043caced",
+            "events": [
+              "EVENT_SAY",
+              "EVENT_SIGNAL"
+            ],
+            "quest_calls": [
+              "moveto",
+              "say"
+            ],
+            "npc_evidence": [
+              {
+                "title": "Councilor Wintershade",
+                "cachePath": "reference/p99-wiki/npc-pages/councilor-wintershade-ad9aec70d8.wiki",
+                "url": "https://wiki.project1999.com/Councilor_Wintershade?action=raw",
+                "sha256": "c5bec6e4eac0476b3f9323316d919ae5d86b9f92ed3cf391d6a48ba9688e4179",
+                "eraTags": [
+                  "Velious Era"
+                ],
+                "zone": "[[Icewell Keep]]",
+                "doesNotExist": false
+              }
+            ],
+            "verification": "Static source/evidence disposition only; not live mechanics or UI.",
+            "outcome": "open_council_movement_mapping",
+            "reason": "Signal1/2 calls quest::moveto with fixed destination/heading and save-guard-position flag. Need faithful mapping to supported routed MoveTo and shared129097/129098 recipient fixture; cannot map to deferred eq.move_to or discard movement while claiming full source conversion.",
+            "evidence": [
+              {
+                "path": "reference/server/internal/quest/deferred_runtime_apis.json",
+                "sha256": "9a51bc095b20f7cee39453cb66d7b6bc1ec28154821b567ae570c875799168a7"
+              }
+            ],
+            "source_anchors": [
+              {
+                "line": 8,
+                "text": "quest::moveto(6,895,-2,256,1);"
+              },
+              {
+                "line": 11,
+                "text": "quest::moveto(-10,534,67,0,1);"
+              },
+              {
+                "line": 16,
+                "text": "#END of FILE Zone:thurgadinb  ID:129040 -- Councilor_Wintershade"
+              }
+            ]
+          }
+        },
+        "currentDispositionFollowup": null,
+        "currentProposalState": "no_proposed_lua_see_reviewed_disposition",
+        "proposedSourceSha256": null,
+        "proposedSourceFiles": []
+      }
+    },
+    {
+      "key": "westwastes/Julius_Oresko",
+      "disposition": "open_flavor_identity",
+      "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+      "sourceFile": "sources/projecteq/westwastes/Julius_Oresko.pl",
+      "sourceSha256": "1cb0d742d1c47b2cd84f80ed58a75fdae0d9550301d8090f7613a55874ec554d",
+      "originalReview": {
+        "key": "westwastes/Julius_Oresko",
+        "originalQuestId": 18337,
+        "originalEnabled": 1,
+        "originalPolicy": null,
+        "originalDisposition": {
+          "artifact": "changes/p99-conversions-velious/remaining-dispositions.json",
+          "record": {
+            "key": "westwastes/Julius_Oresko",
+            "reviewed_at": "2026-10-22",
+            "source": "sources/projecteq/westwastes/Julius_Oresko.pl",
+            "source_sha256": "1cb0d742d1c47b2cd84f80ed58a75fdae0d9550301d8090f7613a55874ec554d",
+            "events": [
+              "EVENT_AGGRO"
+            ],
+            "quest_calls": [
+              "say"
+            ],
+            "npc_evidence": [],
+            "verification": "Static source/evidence disposition only; not live mechanics or UI.",
+            "outcome": "open_flavor_identity",
+            "reason": "Simple hail/aggro speech but no cached NPC identity match; no automatic exclusion. Need alias-aware name/zone evidence (Fergus Sawdust; Julius Oresko/Oresco) before enabling a guessed runtime actor.",
+            "evidence": [],
+            "source_anchors": []
+          }
+        },
+        "currentDispositionFollowup": null,
+        "currentProposalState": "no_proposed_lua_see_reviewed_disposition",
+        "proposedSourceSha256": null,
+        "proposedSourceFiles": []
+      }
+    }
+  ]
+}
