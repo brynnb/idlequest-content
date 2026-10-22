@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-weapons-voucher-freportn-groflah_steadirt",
+  "summary": "Use exact item18820 lore Voucher and book FRELarn (book row3677), whose text matches cached GROFLAHS FORGE / four raw swords / Larn Brugal. Wrong1717 is Wenglawks letter and enabled cross-quest rewards. Correct both sides and legacy aliases together; preserve actual Kael1717.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Weapons_Delivery?action=raw",
+      "note": "Cached 2026-07-17T23:41:04.320Z; revision unavailable; SHA256 500798b4d7643a494749b17c139027d59aecbec2864a70df3b6406495482c27a. Use exact item18820 lore Voucher and book FRELarn (book row3677), whose text matches cached GROFLAHS FORGE / four raw swords / Larn Brugal. Wrong1717 is Wenglawks letter and enabled cross-quest rewards. Correct both sides and legacy aliases together; preserve actual Kael1717. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 13384,
+        "zone": "freportn",
+        "name": "Groflah_Steadirt",
+        "lua_content": "-- Source: freportn/Groflah_Steadirt.lua\n-- P99 audit: Weapons Delivery\n-- items: 1717, 18818, 13919, 5418\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Greetings, adventurer! Certainly a person who looks as hardened as yourself deserves a fine blade to match your prowess. Here at Groflah's Forge, we supply you with only the finest quality weapons.\")\n\telseif(e.message:findi(\"ariska zimel\")) then\n\t\te.self:Say(\"Zimel!! I do not know who you mean. Now go away. I am very busy. I will not talk here!!\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\n\tif item_lib.check_turn_in(e.trade, {item1 = 1717}) then\n\t\te.self:Say(\"I am afraid I have some bad news, Steel Warrior. I had one of my workers take the raw blades out to be engraved by the Rivervale craftsmen. On his return, he was killed by the orcs in the Commonlands. The orcs now have the blades in their possession. I believe they have a camp nearby in the Commonlands. You may still be able to find all four blades within their camp and return them to Larn Brugal. Good luck.\")\n\t\te.other:AddEXP(100)\n\t\te.other:Ding()\n\telseif item_lib.check_turn_in(e.trade, {item1 = 13919}) then\n\t\te.self:Say(\"I heard you were on your way back. Here, then. Let us sharpen that blade for you. There you are. That should be much better in a fray now.\")\n\t\te.other:SummonItem(5418) -- Groflah's Stoutbite\n\t\te.other:Faction(229, 10, 0) -- Coalition of Tradefolk\n\t\te.other:Faction(281, 10, 0) -- Knights of Truth\n\t\te.other:Faction(291, 10, 0) -- Merchants of Qeynos\n\t\te.other:Faction(336, 10, 0) -- Coalition of Tradefolk Underground\n\t\te.other:AddEXP(500)\n\t\te.other:Ding()\n\telseif item_lib.check_turn_in(e.trade, {item1 = 18818}) then\n\t\te.self:Say(\"Where did you find this? This was the main price list of Zimel's Blades, but it should be all burnt up. I was at Zimel's right after the fire and I did not see it hanging where it should have been. The entire inside was gutted and . . . wait . . . the sequence of the dots!! Hmmm. I cannot talk with you here. Meet me at the Seafarer's by the docks at night. Give me the note when next we meet.\")\n\t\te.other:SummonItem(18818) -- Tattered Flier\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 13384,
+        "zone": "freportn",
+        "name": "Groflah_Steadirt",
+        "lua_content": "-- Source: freportn/Groflah_Steadirt.lua\n-- P99 audit: Weapons Delivery\n-- items: 18820, 18818, 13919, 5418\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Greetings, adventurer! Certainly a person who looks as hardened as yourself deserves a fine blade to match your prowess. Here at Groflah's Forge, we supply you with only the finest quality weapons.\")\n\telseif(e.message:findi(\"ariska zimel\")) then\n\t\te.self:Say(\"Zimel!! I do not know who you mean. Now go away. I am very busy. I will not talk here!!\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\n\tif item_lib.check_turn_in(e.trade, {item1 = 18820}) then\n\t\te.self:Say(\"I am afraid I have some bad news, Steel Warrior. I had one of my workers take the raw blades out to be engraved by the Rivervale craftsmen. On his return, he was killed by the orcs in the Commonlands. The orcs now have the blades in their possession. I believe they have a camp nearby in the Commonlands. You may still be able to find all four blades within their camp and return them to Larn Brugal. Good luck.\")\n\t\te.other:AddEXP(100)\n\t\te.other:Ding()\n\telseif item_lib.check_turn_in(e.trade, {item1 = 13919}) then\n\t\te.self:Say(\"I heard you were on your way back. Here, then. Let us sharpen that blade for you. There you are. That should be much better in a fray now.\")\n\t\te.other:SummonItem(5418) -- Groflah's Stoutbite\n\t\te.other:Faction(229, 10, 0) -- Coalition of Tradefolk\n\t\te.other:Faction(281, 10, 0) -- Knights of Truth\n\t\te.other:Faction(291, 10, 0) -- Merchants of Qeynos\n\t\te.other:Faction(336, 10, 0) -- Coalition of Tradefolk Underground\n\t\te.other:AddEXP(500)\n\t\te.other:Ding()\n\telseif item_lib.check_turn_in(e.trade, {item1 = 18818}) then\n\t\te.self:Say(\"Where did you find this? This was the main price list of Zimel's Blades, but it should be all burnt up. I was at Zimel's right after the fire and I did not see it hanging where it should have been. The entire inside was gutted and . . . wait . . . the sequence of the dots!! Hmmm. I cannot talk with you here. Meet me at the Seafarer's by the docks at night. Give me the note when next we meet.\")\n\t\te.other:SummonItem(18818) -- Tattered Flier\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/freportn/Groflah_Steadirt.lua",
+      "beforeSha256": "4dafc02b141b0421397d76b569cf042fe283c4fee9762f4818f829fdfd675a62",
+      "proposedFile": "changes/p99-tz-weapons-voucher-freportn-groflah_steadirt/freportn--Groflah_Steadirt.lua",
+      "afterSha256": "2828779516b776eba5d4b3cf198fc6a7424162928f1d5ace17d06ea630758c53"
+    }
+  ]
+}

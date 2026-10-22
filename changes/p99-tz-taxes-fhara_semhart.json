@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-taxes-fhara_semhart",
+  "summary": "Remove only tax_collection prerequisites: P99 expressly permits collecting without first speaking to Vicus and bypassing Mira. Preserve all original item/faction effects and unrelated quest branches. Flynn also accepts documented your-feet phrase and uses documented Shout; no numeric values invented.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Taxes?action=raw",
+      "note": "Cached 2026-07-17T23:34:37.004Z; revision unavailable; SHA256 6fc59af937f3b2dfa4313beac8b349112c500bdbff0c89109de222dc34860c9b. Remove only tax_collection prerequisites: P99 expressly permits collecting without first speaking to Vicus and bypassing Mira. Preserve all original item/faction effects and unrelated quest branches. Flynn also accepts documented your-feet phrase and uses documented Shout; no numeric values invented. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 18795,
+        "zone": "qeynos",
+        "name": "Fhara_Semhart",
+        "lua_content": "-- items: 13175\nfunction event_say(e)\n\tlocal qglobals = eq.get_qglobals(e.other);\n\t\n\tif(e.message:findi(\"tax collection\") and qglobals.tax_collection ~= nil) then\n\t\te.self:Say(\"Taxes? How can I afford more taxes? You tax us poor merchants right out of Qeynos. Freeport is looking better and better every day.\");\n\t\te.other:SummonItem(13175); -- Item: Semhart's Tax Payment\n\t\te.other:Faction(291,-10,0); -- Faction: Merchants of Qeynos\n\tend\n\t\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 18795,
+        "zone": "qeynos",
+        "name": "Fhara_Semhart",
+        "lua_content": "-- items: 13175\nfunction event_say(e)\n\tlocal qglobals = eq.get_qglobals(e.other);\n\t\n\tif(e.message:findi(\"tax collection\") ) then\n\t\te.self:Say(\"Taxes? How can I afford more taxes? You tax us poor merchants right out of Qeynos. Freeport is looking better and better every day.\");\n\t\te.other:SummonItem(13175); -- Item: Semhart's Tax Payment\n\t\te.other:Faction(291,-10,0); -- Faction: Merchants of Qeynos\n\tend\n\t\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/qeynos/Fhara_Semhart.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-tz-taxes-fhara_semhart/qeynos--Fhara_Semhart.lua",
+      "afterSha256": "f5acbff68e2a0df94238b6a3b57e8ee0549dd43231cad90b88e0c6a896ca5227"
+    }
+  ]
+}

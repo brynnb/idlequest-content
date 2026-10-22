@@ -1,0 +1,49 @@
+{
+  "format": 1,
+  "id": "p99-am-karn-crate",
+  "summary": "Restore documented end-timeline full-crate completion: seven gold and exact five faction adjustments. Explicit partial: XP magnitude remains unresolved; no removed starter dialogue or guessed XP. Explicit post_kunark_warrens_era quest exclusion preserved: source correction remains disabled pending policy review.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Muffin_Quests?action=raw",
+      "note": "Cached 2026-07-17T23:26:13.669Z; revision unavailable; SHA256 cb695617eae395e66523bd391ea6dc637e71142dadded1d037cbbebf2ad57493. Muffin Quests"
+    },
+    {
+      "url": "https://wiki.project1999.com/Fresh_Baked_Muffins_(Qeynos)?action=raw",
+      "note": "Cached 2026-07-17T23:15:22.345Z; revision unavailable; SHA256 ef47355fd3195cee4f02e737cd9912d91d7f153dc4979ab3867eaa8517ee614e. Fresh Baked Muffins (Qeynos)"
+    },
+    {
+      "url": "https://wiki.project1999.com/Muffin_Quests?action=raw",
+      "note": "Promote immutable upstream source sources/projecteq/qeynos/Karn_Tassen.lua SHA256 9e826ae295d35d59165984defb35b8ea3d7a2143d59babb092e51eb1a05d6517 to maintained modified-upstream override; baseline remains untouched."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 14977,
+        "zone": "qeynos",
+        "name": "Karn_Tassen",
+        "lua_content": "function event_signal(e)\n\te.self:Say(\"Ooh yeah! So would I, honey.\");\n\teq.signal(1066,1); -- NPC: Danaria_Hollin\nend\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(string.format(\"Hello %s! Welcome to our humble little bakery. We just got a fresh shipment of supplies in, have a look around!\",e.other:GetName()));\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib =require(\"items\");\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 0
+      },
+      "after": {
+        "id": 14977,
+        "zone": "qeynos",
+        "name": "Karn_Tassen",
+        "lua_content": "-- enabled: false\nfunction event_signal(e)\n\te.self:Say(\"Ooh yeah! So would I, honey.\");\n\teq.signal(1066,1); -- NPC: Danaria_Hollin\nend\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(string.format(\"Hello %s! Welcome to our humble little bakery. We just got a fresh shipment of supplies in, have a look around!\",e.other:GetName()));\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib =require(\"items\");\n\t-- P99 end-timeline final hand-in survives removed start dialogue.\n\tif item_lib.check_turn_in(e.trade, {item1 = 1839}) then\n\t\te.self:Say(\"Hey, thanks kid! You are one top notch baker! Here's some coin for your trouble.\")\n\t\te.other:GiveCash(0, 0, 7, 0)\n\t\te.other:Faction(291, 2, 0) -- Merchants of Qeynos\n\t\te.other:Faction(223, -1, 0) -- Circle of Unseen Hands\n\t\te.other:Faction(219, 1, 0) -- Antonius Bayle\n\t\te.other:Faction(229, 1, 0) -- Coalition of Tradefolk\n\t\te.other:Faction(262, 1, 0) -- Guards of Qeynos\n\t\t-- Partial restoration: XP magnitude absent from retained source/P99 evidence.\n\t\t-- No guessed XP reward; this is not a fully matched completion branch.\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 0
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/qeynos/Karn_Tassen.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-am-karn-crate/qeynos-Karn_Tassen.lua",
+      "afterSha256": "7bd141848d614e6a1bd09cc931229b3edfd98ac89c72f9e69ddcce5070b610d9"
+    }
+  ]
+}

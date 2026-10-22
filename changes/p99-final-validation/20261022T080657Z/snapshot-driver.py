@@ -1,0 +1,30 @@
+import pathlib,hashlib,json,shutil,time,datetime,os
+src=pathlib.Path('/tmp/idlequest-content-p99');stamp=datetime.datetime.now(datetime.timezone.utc).strftime('%Y%m%dT%H%M%SZ');dest=pathlib.Path('/tmp/p99-validation-'+stamp)
+roots=['changes','tools','validator'];basefiles=[p.name for p in src.iterdir()if p.is_file() and p.name in ['package.json','package-lock.json','manifest.json','README.md','CONTRIBUTING.md','.gitignore']]
+def fingerprints(root):
+ result={}
+ for name in roots+basefiles:
+  p=root/name
+  for f in ([p] if p.is_file() else p.rglob('*')):
+   rel=f.relative_to(root).as_posix()
+   if rel.startswith('changes/p99-final-validation/'):continue
+   if f.is_file():result[rel]=hashlib.sha256(f.read_bytes()).hexdigest()
+ return result
+attempts=[]
+for attempt in range(1,11):
+ before=fingerprints(src)
+ if dest.exists():shutil.rmtree(dest)
+ dest.mkdir()
+ for name in roots:shutil.copytree(src/name,dest/name,ignore=lambda p,ns:['p99-final-validation']if pathlib.Path(p)==src/'changes' else [])
+ for name in basefiles:shutil.copy2(src/name,dest/name)
+ after=fingerprints(src);copied=fingerprints(dest)
+ drift=sorted(k for k in before.keys()|after.keys()|copied.keys()if not(before.get(k)==after.get(k)==copied.get(k)))
+ attempts.append({'attempt':attempt,'drift':drift})
+ if not drift:break
+ time.sleep(1)
+else:raise RuntimeError('Could not capture coherent inputs; source drift persists')
+for name in ['data','docs','effective','maintained','reference','schema','sources']:
+ shutil.copytree(src/name,dest/name,copy_function=os.link)
+os.symlink(src/'node_modules',dest/'node_modules',target_is_directory=True)
+meta={'snapshot':str(dest),'capturedAt':datetime.datetime.now(datetime.timezone.utc).isoformat(),'attempts':attempts,'files':before,'inputSetSha256':hashlib.sha256(json.dumps(before,sort_keys=True,separators=(',',':')).encode()).hexdigest(),'baselineLinks':'Immutable baseline files are hard-linked and used strictly read-only. This is not a kernel read-only mount; node_modules remains a dependency symlink. No baseline writes or chmod permitted.'}
+out=src/'changes/p99-final-validation'/stamp;out.mkdir(parents=True);(out/'input-fingerprints.json.tmp').write_text(json.dumps(meta,indent=2));(out/'input-fingerprints.json.tmp').replace(out/'input-fingerprints.json');(dest/'SNAPSHOT_INPUTS.json').write_text(json.dumps(meta,indent=2));pathlib.Path('/tmp/p99-validation-current-path').write_text(str(dest));pathlib.Path('/tmp/p99-validation-current-artifacts').write_text(str(out));print(json.dumps({'snapshot':str(dest),'artifacts':str(out),'attempts':len(attempts),'files':len(before),'inputSetSha256':meta['inputSetSha256']}))

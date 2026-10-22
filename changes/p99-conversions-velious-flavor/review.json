@@ -1,0 +1,2679 @@
+{
+  "reviewed_candidates": [
+    {
+      "key": "skyshrine/a_kromzek_spy",
+      "upstream": "sources/projecteq/skyshrine/a_kromzek_spy.pl",
+      "upstream_sha256": "65d064de820896968f828cb47a0578aafe9cf21891c18475576a21814d37018c",
+      "npc_evidence": [
+        {
+          "title": "A Kromzek Spy",
+          "cachePath": "reference/p99-wiki/npc-pages/a-kromzek-spy-e13d1a47f0.wiki",
+          "url": "https://wiki.project1999.com/A_Kromzek_Spy?action=raw",
+          "sha256": "2e7c7a2b9d711f408048bf854fc12981d5504c87ed07046f6cad9f114e5790c9",
+          "eraTags": [
+            "Velious Era"
+          ],
+          "zone": "[[Skyshrine]]",
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_aggro",
+          "signal": 1,
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "Your bones will be crushed by the Kromzek of Kael Drakkel!"
+          ]
+        }
+      ],
+      "verification": {
+        "static_review": "P99 presence and source behavior; dialogue exactness not independently established where wiki absent.",
+        "isolated_behavior": "pass: every listed event branch plus negative triggers and arbitrary item/coin returns, including repeats; combined57sources/166scenarios",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards.",
+      "npc_rows": [
+        {
+          "id": 114141,
+          "name": "a_kromzek_spy"
+        },
+        {
+          "id": 114437,
+          "name": "a_Kromzek_Spy"
+        }
+      ]
+    },
+    {
+      "key": "skyshrine/Anex",
+      "upstream": "sources/projecteq/skyshrine/Anex.pl",
+      "upstream_sha256": "d1ad900314a4237ec043f361787fa07676b378d4fa0814536d0a6024c9b9a7c7",
+      "npc_evidence": [
+        {
+          "title": "Anex",
+          "cachePath": "reference/p99-wiki/npc-pages/anex-b9ad34de5a.wiki",
+          "url": "https://wiki.project1999.com/Anex?action=raw",
+          "sha256": "c6bffdbc4399a75de2c4b5eb24f4730a2b5e0141f37fb9f09ae60b806daf2134",
+          "eraTags": [
+            "Velious Era"
+          ],
+          "zone": "[[Skyshrine]]",
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_say",
+          "message": "hail",
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "Hello, Reviewer. I would be careful around the cubes. Rumor is they've gotten some kind of intelligence now."
+          ]
+        }
+      ],
+      "verification": {
+        "static_review": "P99 presence and source behavior; dialogue exactness not independently established where wiki absent.",
+        "isolated_behavior": "pass: every listed event branch plus negative triggers and arbitrary item/coin returns, including repeats; combined57sources/166scenarios",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards.",
+      "npc_rows": [
+        {
+          "id": 114524,
+          "name": "Anex"
+        }
+      ]
+    },
+    {
+      "key": "skyshrine/Grudash_the_Baker",
+      "upstream": "sources/projecteq/skyshrine/Grudash_the_Baker.pl",
+      "upstream_sha256": "8a75fe99a53d8054f68a6bb2d93e891c7fa650b6c9fbe308bdcfbb93fee40b27",
+      "npc_evidence": [
+        {
+          "title": "Grudash the Baker",
+          "cachePath": "reference/p99-wiki/npc-pages/grudash-the-baker-8b7f56609c.wiki",
+          "url": "https://wiki.project1999.com/Grudash_the_Baker?action=raw",
+          "sha256": "14903ee2f1f5391a8a32877e5e0da624a9c2f6309eb34967857c62aa9497e259",
+          "eraTags": [
+            "Velious Era"
+          ],
+          "zone": "[[Skyshrine]]",
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "blocked_removed_pie_dialogue_conflict",
+      "verification": {
+        "static_review": "conflicting evidence; not converted"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards.",
+      "npc_rows": [
+        {
+          "id": 114467,
+          "name": "Grudash_the_Baker"
+        }
+      ],
+      "reason": "Cached Boysenberry Pie Quest expressly says quest never implemented and NPC pie references removed. Historical transcript conflicts with present warning; cached NPC pages lack active dialogue corroboration. No restoration justified.",
+      "conflict_evidence": "reference/p99-wiki/raw-pages/boysenberry-pie-quest-753a2eb8eb.wiki"
+    },
+    {
+      "key": "skyshrine/Guardian_Elgoyr",
+      "upstream": "sources/projecteq/skyshrine/Guardian_Elgoyr.pl",
+      "upstream_sha256": "323c933ccf7faf2a36988f3d8ef006ba309d00e2711edd972ed8a0ca62a4e652",
+      "npc_evidence": [
+        {
+          "title": "Guardian Elgoyr",
+          "cachePath": "reference/p99-wiki/npc-pages/guardian-elgoyr-1af75d2541.wiki",
+          "url": "https://wiki.project1999.com/Guardian_Elgoyr?action=raw",
+          "sha256": "8b9cb434a4896e7b03e41ba8a956d5875a3fdd45e71d57cecf93cb2c7e821978",
+          "eraTags": [
+            "Velious Era"
+          ],
+          "zone": "[[Skyshrine]]",
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_say",
+          "message": "hail",
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "We were created to protect the Kin and the shrine from attack. This is what we've always done. Do not try to alter this."
+          ]
+        }
+      ],
+      "verification": {
+        "static_review": "P99 presence and source behavior; dialogue exactness not independently established where wiki absent.",
+        "isolated_behavior": "pass: every listed event branch plus negative triggers and arbitrary item/coin returns, including repeats; combined57sources/166scenarios",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards.",
+      "npc_rows": [
+        {
+          "id": 114431,
+          "name": "Guardian_Elgoyr"
+        }
+      ]
+    },
+    {
+      "key": "skyshrine/Guardian_Olgax",
+      "upstream": "sources/projecteq/skyshrine/Guardian_Olgax.pl",
+      "upstream_sha256": "a1e86e04ab64c6051919dd72a7f4486a6a1616d892a1dfdabb1d4c543b6e1355",
+      "npc_evidence": [
+        {
+          "title": "Guardian Olgax",
+          "cachePath": "reference/p99-wiki/npc-pages/guardian-olgax-629c1aff66.wiki",
+          "url": "https://wiki.project1999.com/Guardian_Olgax?action=raw",
+          "sha256": "971d904906ad9f54405a3ee0fd3a15729bc8d7eedb0fa27d423b371da03529b3",
+          "eraTags": [
+            "Velious Era"
+          ],
+          "zone": "[[Skyshrine]]",
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_say",
+          "message": "hail",
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "There are many places for the likes of you. Why don't you go find one right now and leave me alone."
+          ]
+        }
+      ],
+      "verification": {
+        "static_review": "P99 presence and source behavior; dialogue exactness not independently established where wiki absent.",
+        "isolated_behavior": "pass: every listed event branch plus negative triggers and arbitrary item/coin returns, including repeats; combined57sources/166scenarios",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards.",
+      "npc_rows": [
+        {
+          "id": 114550,
+          "name": "Guardian_Olgax"
+        }
+      ]
+    },
+    {
+      "key": "skyshrine/Jaylorx",
+      "upstream": "sources/projecteq/skyshrine/Jaylorx.pl",
+      "upstream_sha256": "1e50f0d6bcb6d578c2ed4216a0286caec3c4ab40b61b017ec6f8498a8377491f",
+      "npc_evidence": [
+        {
+          "title": "Jaylorx",
+          "cachePath": "reference/p99-wiki/npc-pages/jaylorx-fd8a668eee.wiki",
+          "url": "https://wiki.project1999.com/Jaylorx?action=raw",
+          "sha256": "13a95e2cb92ab07dbd915e9546d1faf0765c947255ed95466c6558747842a993",
+          "eraTags": [
+            "Velious Era"
+          ],
+          "zone": "[[Skyshrine]]",
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_say",
+          "message": "hail",
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "Watch out in the water. Yelinak keeps a few small fish there."
+          ]
+        }
+      ],
+      "verification": {
+        "static_review": "P99 presence and source behavior; dialogue exactness not independently established where wiki absent.",
+        "isolated_behavior": "pass: every listed event branch plus negative triggers and arbitrary item/coin returns, including repeats; combined57sources/166scenarios",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards.",
+      "npc_rows": [
+        {
+          "id": 114497,
+          "name": "Jaylorx"
+        }
+      ]
+    },
+    {
+      "key": "skyshrine/Pyrox",
+      "upstream": "sources/projecteq/skyshrine/Pyrox.pl",
+      "upstream_sha256": "ad39362114014a5ba17fba11bdc25029a08c31573ca1f371365fe9485aae0415",
+      "npc_evidence": [
+        {
+          "title": "Pyrox",
+          "cachePath": "reference/p99-wiki/npc-pages/pyrox-d1daa96bb3.wiki",
+          "url": "https://wiki.project1999.com/Pyrox?action=raw",
+          "sha256": "504c60200c11c18cc6923ca64861b0f8948cc9e68d07d384be147e8979d3993a",
+          "eraTags": [
+            "Velious Era"
+          ],
+          "zone": "[[Skyshrine]]",
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_say",
+          "message": "hail",
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "Greetings, traveler. I'm the keeper of possessions for the Skyshrine. Any friend of the shrine can safely store their belongings with me."
+          ]
+        },
+        {
+          "event": "event_signal",
+          "signal": 66,
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "BEWARE! BEWARE! The Sleeper has been awakened! He means death for all who remain here! Time is short, flee the Skyshrine now if you value your life!"
+          ]
+        },
+        {
+          "event": "event_signal",
+          "signal": 9999,
+          "expected": 0
+        }
+      ],
+      "verification": {
+        "static_review": "P99 presence and source behavior; dialogue exactness not independently established where wiki absent.",
+        "isolated_behavior": "pass: every listed event branch plus negative triggers and arbitrary item/coin returns, including repeats; combined57sources/166scenarios",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards.",
+      "npc_rows": [
+        {
+          "id": 114435,
+          "name": "Pyrox"
+        }
+      ]
+    },
+    {
+      "key": "skyshrine/Ruru_the_Cook",
+      "upstream": "sources/projecteq/skyshrine/Ruru_the_Cook.pl",
+      "upstream_sha256": "645a762431e7217354837deb89f86a354903f73467f619911fe3c71d826701cd",
+      "npc_evidence": [
+        {
+          "title": "Ruru the Cook",
+          "cachePath": "reference/p99-wiki/npc-pages/ruru-the-cook-0e232d729a.wiki",
+          "url": "https://wiki.project1999.com/Ruru_the_Cook?action=raw",
+          "sha256": "a76df290aaab97bcb4ac5a3c2b9b151249a9d39a1397ae0bfff1ef91e8475ff2",
+          "eraTags": [
+            "Velious Era"
+          ],
+          "zone": "[[Skyshrine]]",
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "blocked_removed_pie_dialogue_conflict",
+      "verification": {
+        "static_review": "conflicting evidence; not converted"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards.",
+      "npc_rows": [
+        {
+          "id": 114496,
+          "name": "Ruru_the_Cook"
+        }
+      ],
+      "reason": "Cached Boysenberry Pie Quest expressly says quest never implemented and NPC pie references removed. Historical transcript conflicts with present warning; cached NPC pages lack active dialogue corroboration. No restoration justified.",
+      "conflict_evidence": "reference/p99-wiki/raw-pages/boysenberry-pie-quest-753a2eb8eb.wiki"
+    },
+    {
+      "key": "skyshrine/Sentry_Drahs",
+      "upstream": "sources/projecteq/skyshrine/Sentry_Drahs.pl",
+      "upstream_sha256": "031301877c21807f5330fbdb482bcc69db14a4915ab345036578eccdb17ee135",
+      "npc_evidence": [
+        {
+          "title": "Sentry Drahs",
+          "cachePath": "reference/p99-wiki/npc-pages/sentry-drahs-0b988b8133.wiki",
+          "url": "https://wiki.project1999.com/Sentry_Drahs?action=raw",
+          "sha256": "74b3618ff3b73eb013a2ed76ad97e60e944db32c127c4c1a5aa3851761b7c307",
+          "eraTags": [
+            "Velious Era"
+          ],
+          "zone": "[[Skyshrine]]",
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_say",
+          "message": "hail",
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "I would be careful wandering the maze. Many have gotten lost and never come out the other end."
+          ]
+        }
+      ],
+      "verification": {
+        "static_review": "P99 presence and source behavior; dialogue exactness not independently established where wiki absent.",
+        "isolated_behavior": "pass: every listed event branch plus negative triggers and arbitrary item/coin returns, including repeats; combined57sources/166scenarios",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards.",
+      "npc_rows": [
+        {
+          "id": 114454,
+          "name": "Sentry_Drahs"
+        }
+      ]
+    },
+    {
+      "key": "skyshrine/Sentry_Iglotn",
+      "upstream": "sources/projecteq/skyshrine/Sentry_Iglotn.pl",
+      "upstream_sha256": "16d726c6aaca77fca32c922d7a83d42fed8ba1d53d9b012e44e43af21fb2267c",
+      "npc_evidence": [
+        {
+          "title": "Sentry Iglotn",
+          "cachePath": "reference/p99-wiki/npc-pages/sentry-iglotn-1f2445560f.wiki",
+          "url": "https://wiki.project1999.com/Sentry_Iglotn?action=raw",
+          "sha256": "d00e5db5eb209ec4fb40b364d77b337e8bfcb7228d0ce9e051a671e2dba5757e",
+          "eraTags": [
+            "Velious Era"
+          ],
+          "zone": "[[Skyshrine]]",
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_say",
+          "message": "hail",
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "Move along."
+          ]
+        }
+      ],
+      "verification": {
+        "static_review": "P99 presence and source behavior; dialogue exactness not independently established where wiki absent.",
+        "isolated_behavior": "pass: every listed event branch plus negative triggers and arbitrary item/coin returns, including repeats; combined57sources/166scenarios",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards.",
+      "npc_rows": [
+        {
+          "id": 114515,
+          "name": "Sentry_Iglotn"
+        }
+      ]
+    },
+    {
+      "key": "skyshrine/Sentry_Kaop",
+      "upstream": "sources/projecteq/skyshrine/Sentry_Kaop.pl",
+      "upstream_sha256": "1051b571895d77e5bd40d06a39316d448807d1f8b89ce3b6e8260257214fb46c",
+      "npc_evidence": [
+        {
+          "title": "Sentry Kaop",
+          "cachePath": "reference/p99-wiki/npc-pages/sentry-kaop-8a08a31470.wiki",
+          "url": "https://wiki.project1999.com/Sentry_Kaop?action=raw",
+          "sha256": "5b404f66451ef7132a92db47979e195f02c6653441a745301ac6a8b57a062e8c",
+          "eraTags": [
+            "Velious Era"
+          ],
+          "zone": "[[Skyshrine]]",
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_say",
+          "message": "hail",
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "I've seen your kind dashing about. Just watch your footing, you never know when you might slip and fall."
+          ]
+        }
+      ],
+      "verification": {
+        "static_review": "P99 presence and source behavior; dialogue exactness not independently established where wiki absent.",
+        "isolated_behavior": "pass: every listed event branch plus negative triggers and arbitrary item/coin returns, including repeats; combined57sources/166scenarios",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards.",
+      "npc_rows": [
+        {
+          "id": 114558,
+          "name": "Sentry_Kaop"
+        }
+      ]
+    },
+    {
+      "key": "skyshrine/Sentry_Maof",
+      "upstream": "sources/projecteq/skyshrine/Sentry_Maof.pl",
+      "upstream_sha256": "3aff7b3a8adadfd4759ee599166f2b2ce12effba519aaca289bd9d0ad4aa9f79",
+      "npc_evidence": [
+        {
+          "title": "Sentry Maof",
+          "cachePath": "reference/p99-wiki/npc-pages/sentry-maof-d258508d26.wiki",
+          "url": "https://wiki.project1999.com/Sentry_Maof?action=raw",
+          "sha256": "b22dce24aec8a6d2205057370dee048c22ca78a5b0e6b13c8fdb15bdbf17e1b2",
+          "eraTags": [
+            "Velious Era"
+          ],
+          "zone": "[[Skyshrine]]",
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_say",
+          "message": "hail",
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "I'd watch out for the cubes. They've been getting hostile lately."
+          ]
+        }
+      ],
+      "verification": {
+        "static_review": "P99 presence and source behavior; dialogue exactness not independently established where wiki absent.",
+        "isolated_behavior": "pass: every listed event branch plus negative triggers and arbitrary item/coin returns, including repeats; combined57sources/166scenarios",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards.",
+      "npc_rows": [
+        {
+          "id": 114468,
+          "name": "Sentry_Maof"
+        }
+      ]
+    },
+    {
+      "key": "skyshrine/Sentry_Nalox",
+      "upstream": "sources/projecteq/skyshrine/Sentry_Nalox.pl",
+      "upstream_sha256": "5239ec96105f4ce6ebfce0d2934780c888da87d20520389f9cb0fd8a4b8442c9",
+      "npc_evidence": [
+        {
+          "title": "Sentry Nalox",
+          "cachePath": "reference/p99-wiki/npc-pages/sentry-nalox-7968647850.wiki",
+          "url": "https://wiki.project1999.com/Sentry_Nalox?action=raw",
+          "sha256": "c60a27dec7d188ce7f7a526ad9b35795a71fe3934c804f897fb2278526350861",
+          "eraTags": [
+            "Velious Era"
+          ],
+          "zone": "[[Skyshrine]]",
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_say",
+          "message": "hail",
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "I have no time to talk right now. I must keep watch for hostiles."
+          ]
+        }
+      ],
+      "verification": {
+        "static_review": "P99 presence and source behavior; dialogue exactness not independently established where wiki absent.",
+        "isolated_behavior": "pass: every listed event branch plus negative triggers and arbitrary item/coin returns, including repeats; combined57sources/166scenarios",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards.",
+      "npc_rows": [
+        {
+          "id": 114466,
+          "name": "Sentry_Nalox"
+        }
+      ]
+    },
+    {
+      "key": "skyshrine/Sentry_Wegylx",
+      "upstream": "sources/projecteq/skyshrine/Sentry_Wegylx.pl",
+      "upstream_sha256": "6430b17efdda10e989609b20e3238b8e3c68ed38e6cbe714b8317c8a2bdcde86",
+      "npc_evidence": [
+        {
+          "title": "Sentry Wegylx",
+          "cachePath": "reference/p99-wiki/npc-pages/sentry-wegylx-afc94f8adc.wiki",
+          "url": "https://wiki.project1999.com/Sentry_Wegylx?action=raw",
+          "sha256": "32ee2ed0626aa73d6888bb49e21907609fd4bcb4acd5b4eac2c9cfee17795d91",
+          "eraTags": [
+            "Velious Era"
+          ],
+          "zone": "[[Skyshrine]]",
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_say",
+          "message": "hail",
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "There is rumor that a young N`Ogard is lost in the maze. Perhaps you should go find the father and see if you can help."
+          ]
+        }
+      ],
+      "verification": {
+        "static_review": "P99 presence and source behavior; dialogue exactness not independently established where wiki absent.",
+        "isolated_behavior": "pass: every listed event branch plus negative triggers and arbitrary item/coin returns, including repeats; combined57sources/166scenarios",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards.",
+      "npc_rows": [
+        {
+          "id": 114580,
+          "name": "Sentry_Wegylx"
+        }
+      ]
+    },
+    {
+      "key": "skyshrine/Sentry_Zalgoty",
+      "upstream": "sources/projecteq/skyshrine/Sentry_Zalgoty.pl",
+      "upstream_sha256": "40195fd43e24f80d584d24c0fd38dc44efb86d7e32061b1b943ef8f0a8f0ec30",
+      "npc_evidence": [
+        {
+          "title": "Sentry Zalgoty",
+          "cachePath": "reference/p99-wiki/npc-pages/sentry-zalgoty-91217a0a4b.wiki",
+          "url": "https://wiki.project1999.com/Sentry_Zalgoty?action=raw",
+          "sha256": "1bd6ecf0984880a91517768431d1b90af048c13792db1d34dcfa3f2d3c9eee2d",
+          "eraTags": [
+            "Velious Era"
+          ],
+          "zone": "[[Skyshrine]]",
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_say",
+          "message": "hail",
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "Don't mind the velium in next room. They are too caught up in their duty to pay attention to anything else."
+          ]
+        }
+      ],
+      "verification": {
+        "static_review": "P99 presence and source behavior; dialogue exactness not independently established where wiki absent.",
+        "isolated_behavior": "pass: every listed event branch plus negative triggers and arbitrary item/coin returns, including repeats; combined57sources/166scenarios",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards.",
+      "npc_rows": [
+        {
+          "id": 114495,
+          "name": "Sentry_Zalgoty"
+        }
+      ]
+    },
+    {
+      "key": "skyshrine/Suez",
+      "upstream": "sources/projecteq/skyshrine/Suez.pl",
+      "upstream_sha256": "c7efde09416a419991f01679e30052833929dbb51932422c86667b54fa63e75c",
+      "npc_evidence": [
+        {
+          "title": "Suez",
+          "cachePath": "reference/p99-wiki/npc-pages/suez-9a6afd7196.wiki",
+          "url": "https://wiki.project1999.com/Suez?action=raw",
+          "sha256": "d5e5e33d6cfb228e326efef7e761e5e194f5de2b5f2088c98812dadf17329eb7",
+          "eraTags": [
+            "Velious Era"
+          ],
+          "zone": "[[Skyshrine]]",
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_say",
+          "message": "hail",
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "Yes? Can't you see we are busy here."
+          ]
+        }
+      ],
+      "verification": {
+        "static_review": "P99 presence and source behavior; dialogue exactness not independently established where wiki absent.",
+        "isolated_behavior": "pass: every listed event branch plus negative triggers and arbitrary item/coin returns, including repeats; combined57sources/166scenarios",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards.",
+      "npc_rows": [
+        {
+          "id": 114553,
+          "name": "Suez"
+        }
+      ]
+    },
+    {
+      "key": "skyshrine/Telnaq",
+      "upstream": "sources/projecteq/skyshrine/Telnaq.pl",
+      "upstream_sha256": "0514e7ce8f0d0d11e4a0c072d355027dfc67889722dd33f9f84a9fc24df554a5",
+      "npc_evidence": [
+        {
+          "title": "Telnaq",
+          "cachePath": "reference/p99-wiki/npc-pages/telnaq-e922351fbc.wiki",
+          "url": "https://wiki.project1999.com/Telnaq?action=raw",
+          "sha256": "cc13dbae6451d1aef7581046c758946a1e59a80b60bb82a93ab66dd31e4e6c97",
+          "eraTags": [
+            "Velious Era"
+          ],
+          "zone": "[[Skyshrine]]",
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_say",
+          "message": "hail",
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "Hello, Human, did you know Lord Yelinak has built a maze to protect the upper levels of the towers from invasion. Keep that in mind when traveling through the shrine."
+          ]
+        }
+      ],
+      "verification": {
+        "static_review": "P99 presence and source behavior; dialogue exactness not independently established where wiki absent.",
+        "isolated_behavior": "pass: every listed event branch plus negative triggers and arbitrary item/coin returns, including repeats; combined57sources/166scenarios",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards.",
+      "npc_rows": [
+        {
+          "id": 114532,
+          "name": "Telnaq"
+        }
+      ]
+    },
+    {
+      "key": "thurgadina/Agar",
+      "upstream": "sources/projecteq/thurgadina/Agar.pl",
+      "upstream_sha256": "d5c21abcf3173be78466c2f2a92f0476dcf2c450cfe78ba08f6241c4893b70ea",
+      "npc_evidence": [
+        {
+          "title": "Agar",
+          "cachePath": "reference/p99-wiki/npc-pages/agar-aa07661b6f.wiki",
+          "url": "https://wiki.project1999.com/Agar?action=raw",
+          "sha256": "91a09c6484b8784685365767856cac44b940dfc916b135ca0ee387c70f998401",
+          "eraTags": [
+            "Velious Era"
+          ],
+          "zone": "[[Thurgadin]]",
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_say",
+          "message": "hail",
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "What ye want? A torch? I be puttin' that torch some place fer ya if that's what ye want. Right there in that satchel o' yers if I do say meself. Got the best prices, I do, even fer ya outlanders. Mebbe ye should take a gander round me store, ye may be openin' that coin purse then, eh?"
+          ]
+        }
+      ],
+      "verification": {
+        "static_review": "P99 presence and source behavior; dialogue exactness not independently established where wiki absent.",
+        "isolated_behavior": "pass: every listed event branch plus negative triggers and arbitrary item/coin returns, including repeats; combined57sources/166scenarios",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards.",
+      "npc_rows": [
+        {
+          "id": 115160,
+          "name": "Agar"
+        }
+      ]
+    },
+    {
+      "key": "thurgadina/Arikain",
+      "upstream": "sources/projecteq/thurgadina/Arikain.pl",
+      "upstream_sha256": "7beedaea89892144c06cc26b7df65c6ba2a9e6adfaf4f584d1828c839e608ee3",
+      "npc_evidence": [
+        {
+          "title": "Arikain",
+          "cachePath": "reference/p99-wiki/npc-pages/arikain-a2e78aa28d.wiki",
+          "url": "https://wiki.project1999.com/Arikain?action=raw",
+          "sha256": "6cbdc8d686c1aad1d948b40888b21501245f9589eb0cb9093e680f81a98228e5",
+          "eraTags": [
+            "Velious Era"
+          ],
+          "zone": "[[Thurgadin]]",
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_signal",
+          "signal": 1,
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "whispers into Lorran's ear, 'He's so wise, no wonder the Dain made him Grand Historian.'"
+          ]
+        }
+      ],
+      "verification": {
+        "static_review": "P99 presence and source behavior; dialogue exactness not independently established where wiki absent.",
+        "isolated_behavior": "pass: every listed event branch plus negative triggers and arbitrary item/coin returns, including repeats; combined57sources/166scenarios",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards.",
+      "npc_rows": [
+        {
+          "id": 115194,
+          "name": "Arikain"
+        },
+        {
+          "id": 115025,
+          "name": "Arikain"
+        }
+      ]
+    },
+    {
+      "key": "thurgadina/Bintain",
+      "upstream": "sources/projecteq/thurgadina/Bintain.pl",
+      "upstream_sha256": "c4c246676cce1ff2c044af1cefa1c5099906ea4dbdf91dc4e86845777fa50253",
+      "npc_evidence": [
+        {
+          "title": "Bintain",
+          "cachePath": "reference/p99-wiki/npc-pages/bintain-19348e650d.wiki",
+          "url": "https://wiki.project1999.com/Bintain?action=raw",
+          "sha256": "7b42488e0bde99728663ed637f2ad29ebd80b692b69bd10564a983fa206e41cc",
+          "eraTags": [
+            "Velious Era"
+          ],
+          "zone": "[[Thurgadin]]",
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_signal",
+          "signal": 1,
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "That explains why the dern Kromrif are so thickheaded..."
+          ]
+        }
+      ],
+      "verification": {
+        "static_review": "P99 presence and source behavior; dialogue exactness not independently established where wiki absent.",
+        "isolated_behavior": "pass: every listed event branch plus negative triggers and arbitrary item/coin returns, including repeats; combined57sources/166scenarios",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards.",
+      "npc_rows": [
+        {
+          "id": 115028,
+          "name": "Bintain"
+        },
+        {
+          "id": 115197,
+          "name": "Bintain"
+        }
+      ]
+    },
+    {
+      "key": "thurgadina/Boris",
+      "upstream": "sources/projecteq/thurgadina/Boris.pl",
+      "upstream_sha256": "51689701d7ddf7f3381b945e05de89bf1fe541c056c427b0571cc260d6e198d7",
+      "npc_evidence": [
+        {
+          "title": "Boris",
+          "cachePath": "reference/p99-wiki/npc-pages/boris-32a14c52b8.wiki",
+          "url": "https://wiki.project1999.com/Boris?action=raw",
+          "sha256": "180a1636d152de1c07b79edce5a8343aa8da3184bac6ae1993d6ef84f233192d",
+          "eraTags": [
+            "Velious Era"
+          ],
+          "zone": "[[Thurgadin]]",
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_say",
+          "message": "Hail",
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "Hey. you der! Dis privot propertee! Is you here to do sumthin bad to me master Valdicar?"
+          ]
+        }
+      ],
+      "verification": {
+        "static_review": "P99 presence and source behavior; dialogue exactness not independently established where wiki absent.",
+        "isolated_behavior": "pass: every listed event branch plus negative triggers and arbitrary item/coin returns, including repeats; combined57sources/166scenarios",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards.",
+      "npc_rows": [
+        {
+          "id": 115078,
+          "name": "Boris"
+        }
+      ]
+    },
+    {
+      "key": "thurgadina/Brimgald_Brightsteel",
+      "upstream": "sources/projecteq/thurgadina/Brimgald_Brightsteel.pl",
+      "upstream_sha256": "d23133364964065f290ea2cd777a8a66963bb2af73efca41f37aaede09445a9b",
+      "npc_evidence": [
+        {
+          "title": "Brimgald Brightsteel",
+          "cachePath": "reference/p99-wiki/npc-pages/brimgald-brightsteel-078218b9d7.wiki",
+          "url": "https://wiki.project1999.com/Brimgald_Brightsteel?action=raw",
+          "sha256": "74b9c09b20ab40c719e75cdb820f7c82ec50d0c06d573eb0ad995dbaed75cb27",
+          "eraTags": [
+            "Velious Era"
+          ],
+          "zone": "[[Thurgadin]]",
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_say",
+          "message": "hail",
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "Ye have the look of an aspirin' velium smith about ye, Reviewer. Well, ye won't get very far in the field without purchasin' some o' the finest smithin' molds in Thurgadin. Lucky for you I can help ye in that department, so what'll it be?"
+          ]
+        }
+      ],
+      "verification": {
+        "static_review": "P99 presence and source behavior; dialogue exactness not independently established where wiki absent.",
+        "isolated_behavior": "pass: every listed event branch plus negative triggers and arbitrary item/coin returns, including repeats; combined57sources/166scenarios",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards.",
+      "npc_rows": [
+        {
+          "id": 115169,
+          "name": "Brimgald_Brightsteel"
+        }
+      ]
+    },
+    {
+      "key": "thurgadina/Brina_Snowfox",
+      "upstream": "sources/projecteq/thurgadina/Brina_Snowfox.pl",
+      "upstream_sha256": "fbbb11119ab264f76d647657defdb71baf13fc1916ef62123704b82c274f1f3a",
+      "npc_evidence": [
+        {
+          "title": "Brina Snowfox",
+          "cachePath": "reference/p99-wiki/npc-pages/brina-snowfox-03f2d8fbdb.wiki",
+          "url": "https://wiki.project1999.com/Brina_Snowfox?action=raw",
+          "sha256": "77c4f336081ec13932cbd6d825a7f9e2e1c49313700efc25ba44394a658788fd",
+          "eraTags": [
+            "Velious Era"
+          ],
+          "zone": "[[Thurgadin]]",
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "blocked_corrupt_upstream_dialogue",
+      "reason": "Upstream emits same sentence twice with contradictory hardcoded Wood Elf and unresolved %#1472 placeholder. Cached P99 page confirms NPC but has no dialogue. Do not invent a corrected line or enable broken token.",
+      "npc_rows": [
+        {
+          "id": 115171,
+          "name": "Brina_Snowfox"
+        }
+      ]
+    },
+    {
+      "key": "thurgadina/Clifus",
+      "upstream": "sources/projecteq/thurgadina/Clifus.pl",
+      "upstream_sha256": "9b413287c0d4469a7714b3c41ecab96b159718110daaa105f093d062edd63d4b",
+      "npc_evidence": [
+        {
+          "title": "Clifus",
+          "cachePath": "reference/p99-wiki/npc-pages/clifus-b336e76ed9.wiki",
+          "url": "https://wiki.project1999.com/Clifus?action=raw",
+          "sha256": "832a9eeca86f35647bec85d60803024e33bc12b8100b88f4cd501a6b58699e45",
+          "eraTags": [],
+          "zone": "[[Thurgadin]]",
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_say",
+          "message": "hail",
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "Hey, what do ye think yer lookin' at, ugly? Yeah, that's right. I called ye ugly. You gonna make somethin of it, Human? Yeah, I didn't think ye would. The last guy that looked at me wrong took me fist right in his mouth, laid him out flat on the ground! He been drinkin' an' all but he woulda been laid out flat even if he hadna been."
+          ]
+        }
+      ],
+      "verification": {
+        "static_review": "P99 presence and source behavior; dialogue exactness not independently established where wiki absent.",
+        "isolated_behavior": "pass: every listed event branch plus negative triggers and arbitrary item/coin returns, including repeats; combined57sources/166scenarios",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards.",
+      "npc_rows": [
+        {
+          "id": 115089,
+          "name": "Clifus"
+        }
+      ]
+    },
+    {
+      "key": "thurgadina/Durfa",
+      "upstream": "sources/projecteq/thurgadina/Durfa.pl",
+      "upstream_sha256": "72da727d4978e6661c3de9e972ee4a0e8bfb60e8ec177acbcac918e7a4a71f8a",
+      "npc_evidence": [
+        {
+          "title": "Durfa",
+          "cachePath": "reference/p99-wiki/npc-pages/durfa-a0d6be5d44.wiki",
+          "url": "https://wiki.project1999.com/Durfa?action=raw",
+          "sha256": "a1580ecac1d65c0544f99784194f4c42e8903a936ce10967d66f8c5d40f88320",
+          "eraTags": [
+            "Velious Era"
+          ],
+          "zone": "[[Thurgadin]]",
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_signal",
+          "signal": 1,
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "pinches Doriggan"
+          ]
+        }
+      ],
+      "verification": {
+        "static_review": "P99 presence and source behavior; dialogue exactness not independently established where wiki absent.",
+        "isolated_behavior": "pass: every listed event branch plus negative triggers and arbitrary item/coin returns, including repeats; combined57sources/166scenarios",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards.",
+      "npc_rows": [
+        {
+          "id": 115021,
+          "name": "Durfa"
+        }
+      ]
+    },
+    {
+      "key": "thurgadina/Durgan_Bottlenip",
+      "upstream": "sources/projecteq/thurgadina/Durgan_Bottlenip.pl",
+      "upstream_sha256": "2a076287d99eeabc493d0ef3da62577a4a475d60ce7453ee04aadaf546b5b68c",
+      "npc_evidence": [
+        {
+          "title": "Durgan Bottlenip",
+          "cachePath": "reference/p99-wiki/npc-pages/durgan-bottlenip-ed6051968a.wiki",
+          "url": "https://wiki.project1999.com/Durgan_Bottlenip?action=raw",
+          "sha256": "ff8fdb3ad599d6abdcc990387c3413e855e6ecd3e6cc6f23b331c0ec884dfdc1",
+          "eraTags": [
+            "Velious Era"
+          ],
+          "zone": "[[Thurgadin]]",
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_say",
+          "message": "Hail",
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "Ye need a swig of some fine dwarven ale!"
+          ]
+        }
+      ],
+      "verification": {
+        "static_review": "P99 presence and source behavior; dialogue exactness not independently established where wiki absent.",
+        "isolated_behavior": "pass: every listed event branch plus negative triggers and arbitrary item/coin returns, including repeats; combined57sources/166scenarios",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards.",
+      "npc_rows": [
+        {
+          "id": 115163,
+          "name": "Durgan_Bottlenip"
+        }
+      ]
+    },
+    {
+      "key": "thurgadina/Elder_Reevis",
+      "upstream": "sources/projecteq/thurgadina/Elder_Reevis.pl",
+      "upstream_sha256": "f91a81741492a260dc9d526f1cc5fe50363da398910d40f30f4b3a5470bcd26b",
+      "npc_evidence": [
+        {
+          "title": "Elder Reevis",
+          "cachePath": "reference/p99-wiki/npc-pages/elder-reevis-1b53ffc10e.wiki",
+          "url": "https://wiki.project1999.com/Elder_Reevis?action=raw",
+          "sha256": "2a77abb32480b92676f56e2eaf83625aea95455f5580c3a499a493a2097d537a",
+          "eraTags": [
+            "Velious Era"
+          ],
+          "zone": "[[Thurgadin]]",
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_say",
+          "message": "hail",
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "WHY, HELLO THAR, YOUNG LAD! GREAT DAY FER IT, AIN'T IT? YESSIREE! WHY THIS REMINDS ME O' THE DAYS BACK WHEN WE'D GATHER ROUND THE FIRE LIKE THIS AND.... OH. HELLO THAR, YOUNG LAD!  ER...  WHAT WAS I SAYIN'?"
+          ]
+        }
+      ],
+      "verification": {
+        "static_review": "P99 presence and source behavior; dialogue exactness not independently established where wiki absent.",
+        "isolated_behavior": "pass: every listed event branch plus negative triggers and arbitrary item/coin returns, including repeats; combined57sources/166scenarios",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards.",
+      "npc_rows": [
+        {
+          "id": 115068,
+          "name": "Elder_Reevis"
+        }
+      ]
+    },
+    {
+      "key": "thurgadina/Guard_Baldvin",
+      "upstream": "sources/projecteq/thurgadina/Guard_Baldvin.pl",
+      "upstream_sha256": "9f6756711029e88dce2e650e3d2648329f4c3c67e6368fbbc92f3dddebe92c46",
+      "npc_evidence": [
+        {
+          "title": "Guard Baldvin",
+          "cachePath": "reference/p99-wiki/npc-pages/guard-baldvin-b503a0373a.wiki",
+          "url": "https://wiki.project1999.com/Guard_Baldvin?action=raw",
+          "sha256": "d1e8a0f5ee3f1a01dffccb44c0fff792c7541d5bea5cbca77e659bde42fedba9",
+          "eraTags": [
+            "Velious Era"
+          ],
+          "zone": "[[Thurgadin]]",
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_say",
+          "message": "hail",
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "Beyond these gates is the city of our people. Be respectful and obey our laws else I'll toss yer carcass into the pit meself."
+          ]
+        }
+      ],
+      "verification": {
+        "static_review": "P99 presence and source behavior; dialogue exactness not independently established where wiki absent.",
+        "isolated_behavior": "pass: every listed event branch plus negative triggers and arbitrary item/coin returns, including repeats; combined57sources/166scenarios",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards.",
+      "npc_rows": [
+        {
+          "id": 115132,
+          "name": "Guard_Baldvin"
+        }
+      ]
+    },
+    {
+      "key": "thurgadina/Guard_Bjorn",
+      "upstream": "sources/projecteq/thurgadina/Guard_Bjorn.pl",
+      "upstream_sha256": "819f35a111492da3d9eeb1abdd15ad29d8687193154c97cc7a2b1ecf0a9b5d73",
+      "npc_evidence": [
+        {
+          "title": "Guard Bjorn",
+          "cachePath": "reference/p99-wiki/npc-pages/guard-bjorn-bc4dea7e13.wiki",
+          "url": "https://wiki.project1999.com/Guard_Bjorn?action=raw",
+          "sha256": "b95dbbfe313b41356ec85d623d4049b31a7b75958c8d38d3c3a66a1a96f41094",
+          "eraTags": [],
+          "zone": null,
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_signal",
+          "signal": 1,
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "chuckles saying, 'Have fun Lieutenant, bring me back an ale while yer at it why don't ye!'"
+          ]
+        }
+      ],
+      "verification": {
+        "static_review": "P99 presence and source behavior; dialogue exactness not independently established where wiki absent.",
+        "isolated_behavior": "pass: every listed event branch plus negative triggers and arbitrary item/coin returns, including repeats; combined57sources/166scenarios",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards.",
+      "npc_rows": [
+        {
+          "id": 115112,
+          "name": "Guard_Bjorn"
+        }
+      ]
+    },
+    {
+      "key": "thurgadina/Guard_Clorn",
+      "upstream": "sources/projecteq/thurgadina/Guard_Clorn.pl",
+      "upstream_sha256": "819f35a111492da3d9eeb1abdd15ad29d8687193154c97cc7a2b1ecf0a9b5d73",
+      "npc_evidence": [
+        {
+          "title": "Guard Clorn",
+          "cachePath": "reference/p99-wiki/npc-pages/guard-clorn-163ee18fef.wiki",
+          "url": "https://wiki.project1999.com/Guard_Clorn?action=raw",
+          "sha256": "f1fd9ba600af2113f18206ff6c377ac7404693177c5944957b009429fe91ce65",
+          "eraTags": [],
+          "zone": null,
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_signal",
+          "signal": 1,
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "chuckles saying, 'Have fun Lieutenant, bring me back an ale while yer at it why don't ye!'"
+          ]
+        }
+      ],
+      "verification": {
+        "static_review": "P99 presence and source behavior; dialogue exactness not independently established where wiki absent.",
+        "isolated_behavior": "pass: every listed event branch plus negative triggers and arbitrary item/coin returns, including repeats; combined57sources/166scenarios",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards.",
+      "npc_rows": [
+        {
+          "id": 115211,
+          "name": "Guard_Clorn"
+        },
+        {
+          "id": 115113,
+          "name": "Guard_Clorn"
+        }
+      ]
+    },
+    {
+      "key": "thurgadina/Guard_Dobbs",
+      "upstream": "sources/projecteq/thurgadina/Guard_Dobbs.pl",
+      "upstream_sha256": "f4dff957ce8c96eb53782017585b324d06ff115daf4d36efc18559de6c624212",
+      "npc_evidence": [
+        {
+          "title": "Guard Dobbs",
+          "cachePath": "reference/p99-wiki/npc-pages/guard-dobbs-7033b418ae.wiki",
+          "url": "https://wiki.project1999.com/Guard_Dobbs?action=raw",
+          "sha256": "2ab91e6c599f2ae876c4c03002827e8d7dade6b3a756750fb044ae446c13a11c",
+          "eraTags": [],
+          "zone": null,
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_signal",
+          "signal": 1,
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "chuckles saying, 'Have fun Lieutenant, bring me back an ale while yer at it why don't ye!'"
+          ]
+        }
+      ],
+      "verification": {
+        "static_review": "P99 presence and source behavior; dialogue exactness not independently established where wiki absent.",
+        "isolated_behavior": "pass: every listed event branch plus negative triggers and arbitrary item/coin returns, including repeats; combined57sources/166scenarios",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards.",
+      "npc_rows": [
+        {
+          "id": 115104,
+          "name": "Guard_Dobbs"
+        },
+        {
+          "id": 115206,
+          "name": "Guard_Dobbs"
+        }
+      ]
+    },
+    {
+      "key": "thurgadina/Guard_Enre",
+      "upstream": "sources/projecteq/thurgadina/Guard_Enre.pl",
+      "upstream_sha256": "819f35a111492da3d9eeb1abdd15ad29d8687193154c97cc7a2b1ecf0a9b5d73",
+      "npc_evidence": [
+        {
+          "title": "Guard Enre",
+          "cachePath": "reference/p99-wiki/npc-pages/guard-enre-0578c60d2e.wiki",
+          "url": "https://wiki.project1999.com/Guard_Enre?action=raw",
+          "sha256": "f49349f940c891b50b7fee44f2aeca944915fd49677a69d606571770685d4c47",
+          "eraTags": [],
+          "zone": null,
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_signal",
+          "signal": 1,
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "chuckles saying, 'Have fun Lieutenant, bring me back an ale while yer at it why don't ye!'"
+          ]
+        }
+      ],
+      "verification": {
+        "static_review": "P99 presence and source behavior; dialogue exactness not independently established where wiki absent.",
+        "isolated_behavior": "pass: every listed event branch plus negative triggers and arbitrary item/coin returns, including repeats; combined57sources/166scenarios",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards.",
+      "npc_rows": [
+        {
+          "id": 115207,
+          "name": "Guard_Enre"
+        },
+        {
+          "id": 115105,
+          "name": "Guard_Enre"
+        }
+      ]
+    },
+    {
+      "key": "thurgadina/Guard_Eyvindur",
+      "upstream": "sources/projecteq/thurgadina/Guard_Eyvindur.pl",
+      "upstream_sha256": "056a2074430051b135abdbd33e0b0bbd29606ed9ca467f087217b200260fdd8f",
+      "npc_evidence": [
+        {
+          "title": "Guard Eyvindur",
+          "cachePath": "reference/p99-wiki/npc-pages/guard-eyvindur-0e7f195bb9.wiki",
+          "url": "https://wiki.project1999.com/Guard_Eyvindur?action=raw",
+          "sha256": "4f1a4a32fa1c202a80c14e26890fbc8571ac290e8fe09c1e782e50e5fced3951",
+          "eraTags": [
+            "Velious Era"
+          ],
+          "zone": "[[Thurgadin]]",
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_say",
+          "message": "Hail",
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "Just because the Dain ordered us to let you offlanders into our city does not mean I have to speak with ye. Now move along."
+          ]
+        }
+      ],
+      "verification": {
+        "static_review": "P99 presence and source behavior; dialogue exactness not independently established where wiki absent.",
+        "isolated_behavior": "pass: every listed event branch plus negative triggers and arbitrary item/coin returns, including repeats; combined57sources/166scenarios",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards.",
+      "npc_rows": [
+        {
+          "id": 115131,
+          "name": "Guard_Eyvindur"
+        }
+      ]
+    },
+    {
+      "key": "thurgadina/Guard_Gord",
+      "upstream": "sources/projecteq/thurgadina/Guard_Gord.pl",
+      "upstream_sha256": "819f35a111492da3d9eeb1abdd15ad29d8687193154c97cc7a2b1ecf0a9b5d73",
+      "npc_evidence": [
+        {
+          "title": "Guard Gord",
+          "cachePath": "reference/p99-wiki/npc-pages/guard-gord-f74196b2ed.wiki",
+          "url": "https://wiki.project1999.com/Guard_Gord?action=raw",
+          "sha256": "4380d21f2c1b98bc4e723174737f377c937443f626d883741a472c884cd0f826",
+          "eraTags": [],
+          "zone": null,
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_signal",
+          "signal": 1,
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "chuckles saying, 'Have fun Lieutenant, bring me back an ale while yer at it why don't ye!'"
+          ]
+        }
+      ],
+      "verification": {
+        "static_review": "P99 presence and source behavior; dialogue exactness not independently established where wiki absent.",
+        "isolated_behavior": "pass: every listed event branch plus negative triggers and arbitrary item/coin returns, including repeats; combined57sources/166scenarios",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards.",
+      "npc_rows": [
+        {
+          "id": 115209,
+          "name": "Guard_Gord"
+        },
+        {
+          "id": 115110,
+          "name": "Guard_Gord"
+        }
+      ]
+    },
+    {
+      "key": "thurgadina/Guard_Mason",
+      "upstream": "sources/projecteq/thurgadina/Guard_Mason.pl",
+      "upstream_sha256": "819f35a111492da3d9eeb1abdd15ad29d8687193154c97cc7a2b1ecf0a9b5d73",
+      "npc_evidence": [
+        {
+          "title": "Guard Mason",
+          "cachePath": "reference/p99-wiki/npc-pages/guard-mason-4e289ff806.wiki",
+          "url": "https://wiki.project1999.com/Guard_Mason?action=raw",
+          "sha256": "7ff24545a0d09ee1de3fe64f749f4b286f7048423dd3e271cb1d14042dd25b55",
+          "eraTags": [],
+          "zone": null,
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_signal",
+          "signal": 1,
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "chuckles saying, 'Have fun Lieutenant, bring me back an ale while yer at it why don't ye!'"
+          ]
+        }
+      ],
+      "verification": {
+        "static_review": "P99 presence and source behavior; dialogue exactness not independently established where wiki absent.",
+        "isolated_behavior": "pass: every listed event branch plus negative triggers and arbitrary item/coin returns, including repeats; combined57sources/166scenarios",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards.",
+      "npc_rows": [
+        {
+          "id": 115107,
+          "name": "Guard_Mason"
+        },
+        {
+          "id": 115208,
+          "name": "Guard_Mason"
+        }
+      ]
+    },
+    {
+      "key": "thurgadina/Guard_Pert",
+      "upstream": "sources/projecteq/thurgadina/Guard_Pert.pl",
+      "upstream_sha256": "819f35a111492da3d9eeb1abdd15ad29d8687193154c97cc7a2b1ecf0a9b5d73",
+      "npc_evidence": [
+        {
+          "title": "Guard Pert",
+          "cachePath": "reference/p99-wiki/npc-pages/guard-pert-d4f0844ebb.wiki",
+          "url": "https://wiki.project1999.com/Guard_Pert?action=raw",
+          "sha256": "84a5ba037b32e62cc41c95d62e26834b04385239778b303340566bc0f2e6a72c",
+          "eraTags": [],
+          "zone": null,
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_signal",
+          "signal": 1,
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "chuckles saying, 'Have fun Lieutenant, bring me back an ale while yer at it why don't ye!'"
+          ]
+        }
+      ],
+      "verification": {
+        "static_review": "P99 presence and source behavior; dialogue exactness not independently established where wiki absent.",
+        "isolated_behavior": "pass: every listed event branch plus negative triggers and arbitrary item/coin returns, including repeats; combined57sources/166scenarios",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards.",
+      "npc_rows": [
+        {
+          "id": 115109,
+          "name": "Guard_Pert"
+        }
+      ]
+    },
+    {
+      "key": "thurgadina/Hunter_Tarvin",
+      "upstream": "sources/projecteq/thurgadina/Hunter_Tarvin.pl",
+      "upstream_sha256": "f2f62a1cf90719ef3595a297ea00194ac16483ace20aa6d60bddd24ef2c83bae",
+      "npc_evidence": [
+        {
+          "title": "Hunter Tarvin",
+          "cachePath": "reference/p99-wiki/npc-pages/hunter-tarvin-d7d0347d5e.wiki",
+          "url": "https://wiki.project1999.com/Hunter_Tarvin?action=raw",
+          "sha256": "d9eb75e031c58aa5325e9ecc91391360072317e1876ce513a5eaeab293720482",
+          "eraTags": [
+            "Velious Era"
+          ],
+          "zone": "[[Thurgadin]]",
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_say",
+          "message": "hail",
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "Good day, stranger. I would love to sit and chat with you but I don't much like gabbing it up with total strangers. I have other things to think on, Good day."
+          ]
+        },
+        {
+          "event": "event_say",
+          "message": "thing",
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "Well, I am a hunter. I travel out over the wastes to the east and bring back hides and meat. The businesses pay me a bit of coin for what I bring back and I buy me a room at the inn for a little bit. Then I get low on cash and go back out into the wastes. Although lately I find myself out hunting more often than I stay in the city."
+          ]
+        }
+      ],
+      "verification": {
+        "static_review": "P99 presence and source behavior; dialogue exactness not independently established where wiki absent.",
+        "isolated_behavior": "pass: every listed event branch plus negative triggers and arbitrary item/coin returns, including repeats; combined57sources/166scenarios",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards.",
+      "npc_rows": [
+        {
+          "id": 115092,
+          "name": "Hunter_Tarvin"
+        }
+      ]
+    },
+    {
+      "key": "thurgadina/Karey",
+      "upstream": "sources/projecteq/thurgadina/Karey.pl",
+      "upstream_sha256": "b079f25458904d31bbe76b242f241f489a86f92eff2b9b78407e8216dd90398b",
+      "npc_evidence": [
+        {
+          "title": "Karey",
+          "cachePath": "reference/p99-wiki/npc-pages/karey-df2b66762e.wiki",
+          "url": "https://wiki.project1999.com/Karey?action=raw",
+          "sha256": "b5fe1e086bce84b3ace6f9e0f53d57f8cf877682d5fe1b967de94b96956ee8d4",
+          "eraTags": [
+            "Velious Era"
+          ],
+          "zone": "[[Thurgadin]]",
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_say",
+          "message": "hail",
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "Oh hello there! I'm sorta new here so I ask ye to be patient with me heheh. What kin I get fer ya, Reviewer?"
+          ]
+        }
+      ],
+      "verification": {
+        "static_review": "P99 presence and source behavior; dialogue exactness not independently established where wiki absent.",
+        "isolated_behavior": "pass: every listed event branch plus negative triggers and arbitrary item/coin returns, including repeats; combined57sources/166scenarios",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards.",
+      "npc_rows": [
+        {
+          "id": 115017,
+          "name": "Karey"
+        }
+      ]
+    },
+    {
+      "key": "thurgadina/Lieutenant_Grimur",
+      "upstream": "sources/projecteq/thurgadina/Lieutenant_Grimur.pl",
+      "upstream_sha256": "09db1958b83de573cab789ae73ccd250e47d5fc8784664a8ebaeb9c7ba2caf58",
+      "npc_evidence": [
+        {
+          "title": "Lieutenant Grimur",
+          "cachePath": "reference/p99-wiki/npc-pages/lieutenant-grimur-8b1a3e427a.wiki",
+          "url": "https://wiki.project1999.com/Lieutenant_Grimur?action=raw",
+          "sha256": "eac6cfba5c2009d66a760b822d5b12b0ff5326ff5132d41334d819cdb046432f",
+          "eraTags": [
+            "Velious Era"
+          ],
+          "zone": "[[Thurgadin]]",
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_say",
+          "message": "hail",
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "You got a dispute to settle or are ya here to yap it up?"
+          ]
+        }
+      ],
+      "verification": {
+        "static_review": "P99 presence and source behavior; dialogue exactness not independently established where wiki absent.",
+        "isolated_behavior": "pass: every listed event branch plus negative triggers and arbitrary item/coin returns, including repeats; combined57sources/166scenarios",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards.",
+      "npc_rows": [
+        {
+          "id": 115126,
+          "name": "Lieutenant_Grimur"
+        }
+      ]
+    },
+    {
+      "key": "thurgadina/Lorekeeper_Derrin",
+      "upstream": "sources/projecteq/thurgadina/Lorekeeper_Derrin.pl",
+      "upstream_sha256": "a9fb0890f810ebb0559297370dc192bc02a17a483ce12b7e0aa3b631e7580b66",
+      "npc_evidence": [
+        {
+          "title": "Lorekeeper Derrin",
+          "cachePath": "reference/p99-wiki/npc-pages/lorekeeper-derrin-1c7688f78b.wiki",
+          "url": "https://wiki.project1999.com/Lorekeeper_Derrin?action=raw",
+          "sha256": "28853942df5e82805e7108a187db289776b2ba5fbd097c1b17b06bae51662eae",
+          "eraTags": [
+            "Velious Era"
+          ],
+          "zone": "[[Thurgadin]]",
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_say",
+          "message": "hail",
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "Greetings traveler. and welcome to the Temple of Lore. This library contains the sacred scrolls and texts of our ancestors, detailing both the history of their lives and the trials of our people. Previously the lore contained within these halls was forbidden to enter the hands of outsiders such as yourself. However, his majesty Dain Frostreaver IV has recently decreed that certain tomes of our heritage should be shared with the newly arrived offlanders so that they might better understand our culture. I have recently inscribed and translated several of these books which you may purchase for a modest donation."
+          ]
+        }
+      ],
+      "verification": {
+        "static_review": "P99 presence and source behavior; dialogue exactness not independently established where wiki absent.",
+        "isolated_behavior": "pass: every listed event branch plus negative triggers and arbitrary item/coin returns, including repeats; combined57sources/166scenarios",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards.",
+      "npc_rows": [
+        {
+          "id": 115154,
+          "name": "Lorekeeper_Derrin"
+        }
+      ]
+    },
+    {
+      "key": "thurgadina/Lorekeeper_Gundlt",
+      "upstream": "sources/projecteq/thurgadina/Lorekeeper_Gundlt.pl",
+      "upstream_sha256": "efa9be81fc0f010c9b78040e074884b99f915e2817e8044a4325c5fdd4785120",
+      "npc_evidence": [
+        {
+          "title": "Lorekeeper Gundlt",
+          "cachePath": "reference/p99-wiki/npc-pages/lorekeeper-gundlt-c35784d799.wiki",
+          "url": "https://wiki.project1999.com/Lorekeeper_Gundlt?action=raw",
+          "sha256": "385f91692494a321952c194f5fa6177d6507ab5510ba03b645b257f326444f80",
+          "eraTags": [
+            "Velious Era"
+          ],
+          "zone": "[[Thurgadin]]",
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_say",
+          "message": "hail",
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "Ahem....yes, hail. I suppose that would suffice in this case. Well, then, hail to you, sir. I am Lorekeeper Gundlt, master keeper of etiquette. It is my duty, as ordained by the Grand Historian, to keep all records and rules on all royal audiences and dealings."
+          ]
+        },
+        {
+          "event": "event_say",
+          "message": "royal",
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "Why, Frostreaver IV, of course! All who wish an audience must first consult with me to be educated on the proper way to address our great Dain. Do you wish an audience with the crown?"
+          ]
+        },
+        {
+          "event": "event_say",
+          "message": "crown",
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "Very well, then. When you approach our king you must keep your head bowed and eyes focused approximately 5 to 6 feet in front of you. When you first see the boots of our Lord you must kneel before him and touch your forehead to your knee. At this point you may rise and address the king. He will not respond to the popular and mundane \"Hail.\" You must say, 'Greetings and good fortune to you, honored Dain Frostreaver IV.' Remember to mind your manners when in the presence of the Dain for his guards are fiercely protective of him."
+          ]
+        }
+      ],
+      "verification": {
+        "static_review": "P99 presence and source behavior; dialogue exactness not independently established where wiki absent.",
+        "isolated_behavior": "pass: every listed event branch plus negative triggers and arbitrary item/coin returns, including repeats; combined57sources/166scenarios",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards.",
+      "npc_rows": [
+        {
+          "id": 115007,
+          "name": "Lorekeeper_Gundlt"
+        },
+        {
+          "id": 115186,
+          "name": "Lorekeeper_Gundlt"
+        }
+      ]
+    },
+    {
+      "key": "thurgadina/Mandla_Klolp",
+      "upstream": "sources/projecteq/thurgadina/Mandla_Klolp.pl",
+      "upstream_sha256": "248764587e19129feb71f4117f9b1680e1b61ff3fa7cdca50102fbe5230707a3",
+      "npc_evidence": [
+        {
+          "title": "Mandla Klolp",
+          "cachePath": "reference/p99-wiki/npc-pages/mandla-klolp-e62f6d6e57.wiki",
+          "url": "https://wiki.project1999.com/Mandla_Klolp?action=raw",
+          "sha256": "7acdbd9192ccb7b62872b0d3781b852ac9f4be9f2435f0c8c525329dec7cc4fc",
+          "eraTags": [
+            "Velious Era"
+          ],
+          "zone": "[[Thurgadin]]",
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_say",
+          "message": "hail",
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "What can I do fer ya? If yer lookin' fer a handout I got nothin for ya. Me darn husband wastes what little money we make on gamblin'. What a sucker! I don't know why I married him."
+          ]
+        }
+      ],
+      "verification": {
+        "static_review": "P99 presence and source behavior; dialogue exactness not independently established where wiki absent.",
+        "isolated_behavior": "pass: every listed event branch plus negative triggers and arbitrary item/coin returns, including repeats; combined57sources/166scenarios",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards.",
+      "npc_rows": [
+        {
+          "id": 115064,
+          "name": "Mandla_Klolp"
+        }
+      ]
+    },
+    {
+      "key": "thurgadina/Nimren_Stonecutter",
+      "upstream": "sources/projecteq/thurgadina/Nimren_Stonecutter.pl",
+      "upstream_sha256": "0e41dfe4117e665804079166b9e7bd3ffa6b61a118b26841fa1760442d734bb3",
+      "npc_evidence": [
+        {
+          "title": "Nimren Stonecutter",
+          "cachePath": "reference/p99-wiki/npc-pages/nimren-stonecutter-7e4c1d903a.wiki",
+          "url": "https://wiki.project1999.com/Nimren_Stonecutter?action=raw",
+          "sha256": "639461f044901871d7cba625f88808bb41955231ef51240e04a355213156d9b5",
+          "eraTags": [
+            "Velious Era"
+          ],
+          "zone": "[[Thurgadin]]",
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_say",
+          "message": "hail",
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "The finest ore fresh from the mines I have! Take a look, why don't ye, Reviewer. I'm sure I've got somethin' ye be needin'."
+          ]
+        }
+      ],
+      "verification": {
+        "static_review": "P99 presence and source behavior; dialogue exactness not independently established where wiki absent.",
+        "isolated_behavior": "pass: every listed event branch plus negative triggers and arbitrary item/coin returns, including repeats; combined57sources/166scenarios",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards.",
+      "npc_rows": [
+        {
+          "id": 115170,
+          "name": "Nimren_Stonecutter"
+        }
+      ]
+    },
+    {
+      "key": "thurgadina/Perkins_Doughbeard",
+      "upstream": "sources/projecteq/thurgadina/Perkins_Doughbeard.pl",
+      "upstream_sha256": "0b28f2b79d5e64d9cfd1e5fd92d8f520f679d7cb5cb18ab98ae99b0b0afe2990",
+      "npc_evidence": [
+        {
+          "title": "Perkins Doughbeard",
+          "cachePath": "reference/p99-wiki/npc-pages/perkins-doughbeard-484a0a237e.wiki",
+          "url": "https://wiki.project1999.com/Perkins_Doughbeard?action=raw",
+          "sha256": "6878ae4650bc25346605fad51dee431e1006f4a6944e6a0e45033f02805915e3",
+          "eraTags": [
+            "Velious Era"
+          ],
+          "zone": "[[Thurgadin]]",
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_say",
+          "message": "hail",
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "As far as I'm concerned there are only two arts in this world: alcohol and food. The Velium Keg is probably the best place to go for the former but I've got all yer needs for the latter covered right here."
+          ]
+        }
+      ],
+      "verification": {
+        "static_review": "P99 presence and source behavior; dialogue exactness not independently established where wiki absent.",
+        "isolated_behavior": "pass: every listed event branch plus negative triggers and arbitrary item/coin returns, including repeats; combined57sources/166scenarios",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards.",
+      "npc_rows": [
+        {
+          "id": 115158,
+          "name": "Perkins_Doughbeard"
+        }
+      ]
+    },
+    {
+      "key": "thurgadina/Tavir",
+      "upstream": "sources/projecteq/thurgadina/Tavir.pl",
+      "upstream_sha256": "adf26c9c529bb3387cdf113fbf852c37229aff8d13f058f2e5232b2670c78ce9",
+      "npc_evidence": [
+        {
+          "title": "Tavir",
+          "cachePath": "reference/p99-wiki/npc-pages/tavir-6f1bd10a2e.wiki",
+          "url": "https://wiki.project1999.com/Tavir?action=raw",
+          "sha256": "d05abcc2fa33c6b1e4d1e7a48b0c084b9dea6fec2cf1eef4c45dd3ee407bf76c",
+          "eraTags": [
+            "Velious Era"
+          ],
+          "zone": "[[Thurgadin]]",
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_say",
+          "message": "hail",
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "I've found it at last! By calculating the aerodynamic plane of the shaft and measuring it against the wind resistance and downward pull of the head I've managed to create the perfect arrow! I suggest ye take advantage of my stock while it lasts, Reviewer. it sure as Brell won't be around for long."
+          ]
+        }
+      ],
+      "verification": {
+        "static_review": "P99 presence and source behavior; dialogue exactness not independently established where wiki absent.",
+        "isolated_behavior": "pass: every listed event branch plus negative triggers and arbitrary item/coin returns, including repeats; combined57sources/166scenarios",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards.",
+      "npc_rows": [
+        {
+          "id": 115165,
+          "name": "Tavir"
+        }
+      ]
+    },
+    {
+      "key": "thurgadina/Thermin_Wandereye",
+      "upstream": "sources/projecteq/thurgadina/Thermin_Wandereye.pl",
+      "upstream_sha256": "8a444780cc9be71d6c73793134809aa5c3f9627f49ffa5cf64f9b127ff6f9e05",
+      "npc_evidence": [
+        {
+          "title": "Thermin Wandereye",
+          "cachePath": "reference/p99-wiki/npc-pages/thermin-wandereye-7491ac322d.wiki",
+          "url": "https://wiki.project1999.com/Thermin_Wandereye?action=raw",
+          "sha256": "0343a4156c95dc8a7c9ab2b279cd7690ac7ad5822098572779d24beb621790ad",
+          "eraTags": [
+            "Velious Era"
+          ],
+          "zone": "[[Thurgadin]]",
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_say",
+          "message": "hail",
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "Oh. HI! Hey, you're an adventurer aren't you? Yeah I thought so from your worn clothes and weapons. Wow, is that a real bloodstain? Some day I'll be adventuring out there too, some day, they'll see..."
+          ]
+        }
+      ],
+      "verification": {
+        "static_review": "P99 presence and source behavior; dialogue exactness not independently established where wiki absent.",
+        "isolated_behavior": "pass: every listed event branch plus negative triggers and arbitrary item/coin returns, including repeats; combined57sources/166scenarios",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards.",
+      "npc_rows": [
+        {
+          "id": 115069,
+          "name": "Thermin_Wandereye"
+        }
+      ]
+    },
+    {
+      "key": "thurgadina/Travit_Conwil",
+      "upstream": "sources/projecteq/thurgadina/Travit_Conwil.pl",
+      "upstream_sha256": "238ddf78cdf825617d8777b8aac759fb53bd98ae56e77a68b44b18dc50e35024",
+      "npc_evidence": [
+        {
+          "title": "Travit Conwil",
+          "cachePath": "reference/p99-wiki/npc-pages/travit-conwil-513483c268.wiki",
+          "url": "https://wiki.project1999.com/Travit_Conwil?action=raw",
+          "sha256": "3bd47781a474c763e1d881865fd32d2072b838b7109f0d8a998c8eff0ab1d542",
+          "eraTags": [
+            "Velious Era"
+          ],
+          "zone": "[[Thurgadin]]",
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_say",
+          "message": "hail",
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "Uuuhh, this be a private room, me friend. Mayhap ye should leave before somethin' unfortunate happens."
+          ]
+        }
+      ],
+      "verification": {
+        "static_review": "P99 presence and source behavior; dialogue exactness not independently established where wiki absent.",
+        "isolated_behavior": "pass: every listed event branch plus negative triggers and arbitrary item/coin returns, including repeats; combined57sources/166scenarios",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards.",
+      "npc_rows": [
+        {
+          "id": 115093,
+          "name": "Travit_Conwil"
+        }
+      ]
+    },
+    {
+      "key": "thurgadina/Valdicar_Shadowfrost",
+      "upstream": "sources/projecteq/thurgadina/Valdicar_Shadowfrost.pl",
+      "upstream_sha256": "2d70d0a779c311c575d2ad406596056d6990b225cdd2270c67a6b0bbaf4f007e",
+      "npc_evidence": [
+        {
+          "title": "Valdicar Shadowfrost",
+          "cachePath": "reference/p99-wiki/npc-pages/valdicar-shadowfrost-8671cf5cfb.wiki",
+          "url": "https://wiki.project1999.com/Valdicar_Shadowfrost?action=raw",
+          "sha256": "1b5c9c9adb361971fc05d5b2162f35f81d3b6ef3a0907d766c488cd18b747706",
+          "eraTags": [
+            "Velious Era"
+          ],
+          "zone": "[[Thurgadin]]",
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_say",
+          "message": "hail",
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "Well, hello there, my good fellow. I see you've somehow found your way into my private quarters, very adventurous. Normally I'd have you removed but it's refreshing to see someone with guts like you have. Too many people in this cit... err ... world have no guts. No initiative. Someday that will change, though."
+          ]
+        }
+      ],
+      "verification": {
+        "static_review": "P99 presence and source behavior; dialogue exactness not independently established where wiki absent.",
+        "isolated_behavior": "pass: every listed event branch plus negative triggers and arbitrary item/coin returns, including repeats; combined57sources/166scenarios",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards.",
+      "npc_rows": [
+        {
+          "id": 115077,
+          "name": "Valdicar_Shadowfrost"
+        }
+      ]
+    },
+    {
+      "key": "thurgadina/Yates_the_Butler",
+      "upstream": "sources/projecteq/thurgadina/Yates_the_Butler.pl",
+      "upstream_sha256": "d47e6f3ad93adc59bf8901931ec817d70d92f90294efda0276eda5fa05a9f56d",
+      "npc_evidence": [
+        {
+          "title": "Yates the Butler",
+          "cachePath": "reference/p99-wiki/npc-pages/yates-the-butler-f416f5e56f.wiki",
+          "url": "https://wiki.project1999.com/Yates_the_Butler?action=raw",
+          "sha256": "88567315b1b3843cbf32e451b60ce71b22367cae810aca9e19c939517f910451",
+          "eraTags": [
+            "Velious Era"
+          ],
+          "zone": "[[Thurgadin]]",
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_say",
+          "message": "hail",
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "I'm terribly sorry, good fellow, but this residence is privately owned. Your presence here is quite disconcerting for my master. I implore you to take your leave. Thaaaaanks."
+          ]
+        }
+      ],
+      "verification": {
+        "static_review": "P99 presence and source behavior; dialogue exactness not independently established where wiki absent.",
+        "isolated_behavior": "pass: every listed event branch plus negative triggers and arbitrary item/coin returns, including repeats; combined57sources/166scenarios",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards.",
+      "npc_rows": [
+        {
+          "id": 115079,
+          "name": "Yates_the_Butler"
+        }
+      ]
+    },
+    {
+      "key": "thurgadinb/Sentinel_Paxin",
+      "upstream": "sources/projecteq/thurgadinb/Sentinel_Paxin.pl",
+      "upstream_sha256": "54706e67b68ca9fc37de5408492a72a6653bb2db30e3e51a663ce5d83a130971",
+      "npc_evidence": [
+        {
+          "title": "Sentinel Paxin",
+          "cachePath": "reference/p99-wiki/npc-pages/sentinel-paxin-17cdf00b40.wiki",
+          "url": "https://wiki.project1999.com/Sentinel_Paxin?action=raw",
+          "sha256": "f7798550b0b7af3282831a97808272a430eb91fcf5153b1207d558cacbba8f47",
+          "eraTags": [
+            "Velious Era"
+          ],
+          "zone": "[[Icewell Keep]]",
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_say",
+          "message": "hail",
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "Greetings offlander. I see you are exploring our beloved Keep. By order of the Dain all offlanders that have been friendly to our people are permitted to explore all parts of Icewell Keep save this door I guard. Enjoy your stay."
+          ]
+        },
+        {
+          "event": "event_say",
+          "message": "door",
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "Why this door behind me which I stand in front of course. You didn't by chance fall on the ice and hit your head I hope good Human. By order of the Dain, none are permitted to see or go beyond this entrance."
+          ]
+        },
+        {
+          "event": "event_say",
+          "message": "beyond this entrance",
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "Why beyond this door lies the most wonderous. . . oh wait, I can't tell you that Human. All I can tell you is that the door has also been magically sealed by our Grand Historian. Please move along now and enjoy the rest of the Keep."
+          ]
+        }
+      ],
+      "verification": {
+        "static_review": "P99 presence and source behavior; dialogue exactness not independently established where wiki absent.",
+        "isolated_behavior": "pass: every listed event branch plus negative triggers and arbitrary item/coin returns, including repeats; combined57sources/166scenarios",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards.",
+      "npc_rows": [
+        {
+          "id": 129057,
+          "name": "Sentinel_Paxin"
+        },
+        {
+          "id": 129089,
+          "name": "Sentinel_Paxin"
+        }
+      ]
+    },
+    {
+      "key": "thurgadinb/Watcher_Devin",
+      "upstream": "sources/projecteq/thurgadinb/Watcher_Devin.pl",
+      "upstream_sha256": "2770c2948333bfcabd12a8aa62a6fd696a6a4a90e66eeb0cb4f1ab92a46190ca",
+      "npc_evidence": [
+        {
+          "title": "Watcher Devin",
+          "cachePath": "reference/p99-wiki/npc-pages/watcher-devin-742d6dc9a3.wiki",
+          "url": "https://wiki.project1999.com/Watcher_Devin?action=raw",
+          "sha256": "997cc652ee89dce57da677342e73d0e7a23776536b678291d2de2a77bb029e1d",
+          "eraTags": [
+            "Velious Era"
+          ],
+          "zone": "[[Icewell Keep]]",
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_say",
+          "message": "Hail",
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "Greetings to you as well, Reviewer. Down these stairs lies the hall of our ancestors. May Brell guide my axe swiftly to the necks of those who dare attempt to desecrate such a sacred place."
+          ]
+        }
+      ],
+      "verification": {
+        "static_review": "P99 presence and source behavior; dialogue exactness not independently established where wiki absent.",
+        "isolated_behavior": "pass: every listed event branch plus negative triggers and arbitrary item/coin returns, including repeats; combined57sources/166scenarios",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards.",
+      "npc_rows": [
+        {
+          "id": 129056,
+          "name": "Watcher_Devin"
+        },
+        {
+          "id": 129088,
+          "name": "Watcher_Devin"
+        }
+      ]
+    },
+    {
+      "key": "wakening/#Rapticor",
+      "upstream": "sources/projecteq/wakening/#Rapticor.pl",
+      "upstream_sha256": "0c407544778f8acac8428b3163e55555263f524d13e4acf9a762e2ef333cee1c",
+      "npc_evidence": [
+        {
+          "title": "Rapticor",
+          "cachePath": "reference/p99-wiki/npc-pages/rapticor-ec8c759d43.wiki",
+          "url": "https://wiki.project1999.com/Rapticor?action=raw",
+          "sha256": "bbcc3c0119808ff7f7df16110718e618f5fa7ac897b346dc896f1488cdc48790",
+          "eraTags": [
+            "Velious Era"
+          ],
+          "zone": "[[The Wakening Land]]",
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_combat",
+          "joined": true,
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "pounces on Reviewer in a flurry of deadly claws and teeth."
+          ]
+        },
+        {
+          "event": "event_combat",
+          "joined": false,
+          "expected": 0
+        }
+      ],
+      "verification": {
+        "static_review": "P99 presence and source behavior; dialogue exactness not independently established where wiki absent.",
+        "isolated_behavior": "pass: every listed event branch plus negative triggers and arbitrary item/coin returns, including repeats; combined57sources/166scenarios",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards.",
+      "npc_rows": [
+        {
+          "id": 119116,
+          "name": "#Rapticor"
+        }
+      ]
+    },
+    {
+      "key": "wakening/a_tigeraptor",
+      "upstream": "sources/projecteq/wakening/a_tigeraptor.pl",
+      "upstream_sha256": "0c407544778f8acac8428b3163e55555263f524d13e4acf9a762e2ef333cee1c",
+      "npc_evidence": [
+        {
+          "title": "A tigeraptor",
+          "cachePath": "reference/p99-wiki/npc-pages/a-tigeraptor-cdd9e314a7.wiki",
+          "url": "https://wiki.project1999.com/A_tigeraptor?action=raw",
+          "sha256": "5cc2edc431a8e48ddac861a2c92b42fb8fc7b27bd9848aa1a408fbc24028472b",
+          "eraTags": [
+            "Velious Era"
+          ],
+          "zone": "[[The Wakening Land]]",
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_combat",
+          "joined": true,
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "pounces on Reviewer in a flurry of deadly claws and teeth."
+          ]
+        },
+        {
+          "event": "event_combat",
+          "joined": false,
+          "expected": 0
+        }
+      ],
+      "verification": {
+        "static_review": "P99 presence and source behavior; dialogue exactness not independently established where wiki absent.",
+        "isolated_behavior": "pass: every listed event branch plus negative triggers and arbitrary item/coin returns, including repeats; combined57sources/166scenarios",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards.",
+      "npc_rows": [
+        {
+          "id": 119000,
+          "name": "a_tigeraptor"
+        },
+        {
+          "id": 119001,
+          "name": "a_tigeraptor"
+        },
+        {
+          "id": 119034,
+          "name": "a_tigeraptor"
+        },
+        {
+          "id": 119035,
+          "name": "a_tigeraptor"
+        },
+        {
+          "id": 119028,
+          "name": "a_tigeraptor"
+        }
+      ]
+    },
+    {
+      "key": "wakening/a_tigesaurous",
+      "upstream": "sources/projecteq/wakening/a_tigesaurous.pl",
+      "upstream_sha256": "0c407544778f8acac8428b3163e55555263f524d13e4acf9a762e2ef333cee1c",
+      "npc_evidence": [
+        {
+          "title": "A tigesaurous",
+          "cachePath": "reference/p99-wiki/npc-pages/a-tigesaurous-f8caeaeb67.wiki",
+          "url": "https://wiki.project1999.com/A_tigesaurous?action=raw",
+          "sha256": "ebbaf5bd1bd56a496514b23de62fb6d793666f99414dad720ba662c495394a23",
+          "eraTags": [
+            "Velious Era"
+          ],
+          "zone": "[[The Wakening Land]]",
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_combat",
+          "joined": true,
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "pounces on Reviewer in a flurry of deadly claws and teeth."
+          ]
+        },
+        {
+          "event": "event_combat",
+          "joined": false,
+          "expected": 0
+        }
+      ],
+      "verification": {
+        "static_review": "P99 presence and source behavior; dialogue exactness not independently established where wiki absent.",
+        "isolated_behavior": "pass: every listed event branch plus negative triggers and arbitrary item/coin returns, including repeats; combined57sources/166scenarios",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards.",
+      "npc_rows": [
+        {
+          "id": 119036,
+          "name": "a_tigesaurous"
+        },
+        {
+          "id": 119002,
+          "name": "a_tigesaurous"
+        },
+        {
+          "id": 119033,
+          "name": "a_tigesaurous"
+        },
+        {
+          "id": 119032,
+          "name": "a_tigesaurous"
+        },
+        {
+          "id": 119105,
+          "name": "a_tigesaurous"
+        }
+      ]
+    },
+    {
+      "key": "wakening/Lady_Gelistial",
+      "upstream": "sources/projecteq/wakening/Lady_Gelistial.pl",
+      "upstream_sha256": "7200a5450869383d76f9af912a596ef00f2165b2a01f26ada4e1c87b5ac77fab",
+      "npc_evidence": [
+        {
+          "title": "Lady Gelistial",
+          "cachePath": "reference/p99-wiki/npc-pages/lady-gelistial-cf863b37a2.wiki",
+          "url": "https://wiki.project1999.com/Lady_Gelistial?action=raw",
+          "sha256": "52106558161004ee84717dbad0ddbaff4ed57807172eb9674e87b7640436b2c3",
+          "eraTags": [
+            "Velious Era"
+          ],
+          "zone": "[[The Wakening Land]]",
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_say",
+          "message": "hail",
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "Lady Gelistial nods towards Reviewer and a soft gentle voice whispers in your mind as if carried by the breeze passing through the gentle grove. You tread upon the sacred ground of Tunare. I am the Lady Gelistial, baroness of the Tunarean Unicorns. Are you a [friend] of the Tunarean Court?"
+          ]
+        },
+        {
+          "event": "event_say",
+          "message": "friend",
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "Be wary of the black unicorns then my friend. All unicorns once inspired dreams and fascination in mortals but the lineage of Lithiniath has been twisted and now inspire delusions and madness. If my duties here were not so pressing I would seek the wisdom of [Prince Thirneg] in finding a cure for the cursed bloodline of Lithiniath."
+          ]
+        },
+        {
+          "event": "event_say",
+          "message": "Prince Thirneg",
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "Prince Thirneg is the ruler of the Tunarean Court. He resides in the Plane of Growth where he is constant contact with the all mother herself."
+          ]
+        },
+        {
+          "event": "event_say",
+          "message": "lithiniath",
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "Lithiniath was once a proud and noble Unicorn until he stumbled upon the realm of Fizzlethorpe Bristlebane. The lord of mischief twisted the magical nature of Lithiniath. The once noble unicorns fur grew blacker as delusions clouded his mind and madness follows where he treads."
+          ]
+        }
+      ],
+      "verification": {
+        "static_review": "All four Gelistial dialogue branches checked against cached Crest of the Unicorn quest; no full chain claim.",
+        "isolated_behavior": "pending refreshed suite after fourth branch and dynamic-name refinement",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All three independent upstream speech branches preserved; fourth exact P99 Lithiniath branch added. Player name dynamic, standard item returns retained. Dialogue-only restoration.",
+      "npc_rows": [
+        {
+          "id": 119084,
+          "name": "Lady_Gelistial"
+        }
+      ],
+      "quest_evidence": {
+        "title": "Crest of the Unicorn Quest",
+        "url": "https://wiki.project1999.com/Crest_of_the_Unicorn_Quest?action=raw",
+        "fetchedAt": "2026-07-17T23:11:46.267Z",
+        "revision": null,
+        "sha256": "383e98863afbb73e553dd077086acdfb03151814edd12c8208936e1f3c786347",
+        "bytes": 3256,
+        "source": "raw-pages/crest-of-the-unicorn-quest-eac15ab5f3.json",
+        "cachePath": "reference/p99-wiki/raw-pages/crest-of-the-unicorn-quest-eac15ab5f3.wiki"
+      }
+    }
+  ],
+  "scope": "P99-present flavor candidates only; ambiguous upstream dialogue excluded.",
+  "policy": "Quest faction bypass and epic no-level policy unchanged.",
+  "verification_boundary": "Isolated mocked event speech and return behavior, not whole NPC progression/lifecycle/UI.",
+  "validation": {
+    "isolated_behavior": {
+      "status": "pass",
+      "command": "PATH=/tmp/p99-go-toolchain/go/bin:$PATH GOCACHE=/tmp/p99-go-cache GOPATH=/tmp/p99-go-path node --test tools/p99-velious-flavor.test.mjs",
+      "scenarios": 166,
+      "scope": "57 total sources across main52 and extra5; exact source speech, negative triggers, signal/combat states, item/coin return and repeat. Mocks only."
+    },
+    "compiler": {
+      "status": "pass",
+      "sources": 52,
+      "rows": 52
+    },
+    "live_game_runtime": "not_run",
+    "database_atomicity": "not_run",
+    "rendered_ui": "not_run"
+  }
+}

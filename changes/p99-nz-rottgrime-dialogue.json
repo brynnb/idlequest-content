@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-nz-rottgrime-dialogue",
+  "summary": "Accept the documented plural-sarnaks response as well as the displayed singular phrase.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Protect_the_Shipyard?action=raw",
+      "note": "Cached 2026-07-17T23:29:03.512Z; revision unavailable; SHA256 26339e3f7db01cd381fff3741873f1295a12f0e2cafe0aedd94206e5ecd97d04. Four12982SarnakWarBraids->12981GuardOfMarines,VenrilSathir318+5,and1\u20133gold match exact cache. Existing10EXP far below approximate level percentages, but raw amount not documented; do not invent replacement. Faction bypass unchanged."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 19747,
+        "zone": "overthere",
+        "name": "Captain_Rottgrime",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: overthere/Captain_Rottgrime.pl\n-- items: 12982, 12981\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Emote(\"has numerous cracks and holes in his skull from many battles. 'Attention, marine!! You will go into battle and fear nothing! You shall prevail over one enemy and then you shall be sent back into battle! We [shall not allow those sarnak to overtake the Danak shipyards]! Is that clear marine?!!'\")\n\telseif e.message:findi(\"shall not allow those sarnak to overtake the danak shipyards\") then\n\t\te.self:Say(\"Stand up straight!! That is correct marine!! YOU shall not allow the sarnak to overtake the shipyards!! Head out to the frontlines, marine!! Kill the berzerkers and return their war braids to me!! For every four, you shall earn your wages!! Now get to the front, marine!! Move it!! Move it!!\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 12982, item2 = 12982, item3 = 12982, item4 = 12982}) then\n\t\te.self:Say(\"Great job marine!! Word of your heroics shall be passed on to the Admiral. If you don't have a shield then take one, if you do then get back to the frontlines. There is no time for R n R!! Move it marine!! Or you'll be pushing Danak till the cockatrice crow!!\")\n\t\te.other:SummonItem(12981)\n\t\te.other:Faction(318, 5, 0)\n\t\te.other:AddEXP(10)\n\t\te.other:GiveCash(0, 0, eq.ChooseRandom(1, 2, 3), 0)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\nfunction event_waypoint_arrive(e)\n\tif e.wp == 2 then\n\t\te.self:Say(\"Atteeennntion !!\")\n\t\teq.signal(93126, 0)\n\tend\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 19747,
+        "zone": "overthere",
+        "name": "Captain_Rottgrime",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: overthere/Captain_Rottgrime.pl\n-- items: 12982, 12981\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Emote(\"has numerous cracks and holes in his skull from many battles. 'Attention, marine!! You will go into battle and fear nothing! You shall prevail over one enemy and then you shall be sent back into battle! We [shall not allow those sarnak to overtake the Danak shipyards]! Is that clear marine?!!'\")\n\telseif (e.message:findi(\"shall not allow those sarnak to overtake the danak shipyards\") or e.message:findi(\"shall not allow those sarnaks to overtake the danak shipyards\")) then\n\t\te.self:Say(\"Stand up straight!! That is correct marine!! YOU shall not allow the sarnak to overtake the shipyards!! Head out to the frontlines, marine!! Kill the berzerkers and return their war braids to me!! For every four, you shall earn your wages!! Now get to the front, marine!! Move it!! Move it!!\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 12982, item2 = 12982, item3 = 12982, item4 = 12982}) then\n\t\te.self:Say(\"Great job marine!! Word of your heroics shall be passed on to the Admiral. If you don't have a shield then take one, if you do then get back to the frontlines. There is no time for R n R!! Move it marine!! Or you'll be pushing Danak till the cockatrice crow!!\")\n\t\te.other:SummonItem(12981)\n\t\te.other:Faction(318, 5, 0)\n\t\te.other:AddEXP(10)\n\t\te.other:GiveCash(0, 0, eq.ChooseRandom(1, 2, 3), 0)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\nfunction event_waypoint_arrive(e)\n\tif e.wp == 2 then\n\t\te.self:Say(\"Atteeennntion !!\")\n\t\teq.signal(93126, 0)\n\tend\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/overthere/Captain_Rottgrime.lua",
+      "beforeSha256": "18cd5b68edc79c4c43a823ccd802e2693da24c49b2c230f5a2340e50372ef2f3",
+      "proposedFile": "changes/p99-nz-rottgrime-dialogue/overthere--Captain_Rottgrime.lua",
+      "afterSha256": "1760bcd2d3e95833899ae5f68be33dbbb0815e9917d1b7a3ad88397953c46771"
+    }
+  ]
+}

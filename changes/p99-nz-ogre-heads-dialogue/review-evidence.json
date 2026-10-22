@@ -1,0 +1,26 @@
+{
+  "titles": [
+    "Ogre Heads"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "partial",
+  "match_status": "partial",
+  "local_quest_keys": [
+    "kaladima/Byzar_Bloodforge"
+  ],
+  "proposal": "changes/p99-nz-ogre-heads-dialogue.json",
+  "notes": [
+    "Accept correct Zarchoomi spelling alongside existing misspelled Zachoomi trigger.",
+    "Two distinct Ogre Head IDs13741 and13740 lead to all seven documented Bloodforge pieces3090\u20133096. Existing Helm weighting6of12is retained as unsupported inherited approximation. All five quest faction directions match. Killing NPC faction changes/drop data not verified. Corflunk phrase unchanged."
+  ],
+  "verification": {
+    "source": "Cached P99 and effective Lua reviewed; exact complete row preimages and source hashes recorded.",
+    "syntax": "pending",
+    "runtime": "Isolated mock regression pending; full game runtime unavailable.",
+    "ui": "not_run",
+    "connected_chain": "not_run"
+  },
+  "unresolved": [
+    "Ordinary source drops/spawns, recipe live behavior and rendered complete quest path not verified."
+  ]
+}

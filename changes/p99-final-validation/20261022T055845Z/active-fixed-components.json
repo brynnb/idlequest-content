@@ -1,0 +1,80 @@
+[
+  {
+    "proposal": "changes/p99-af-erdarf-entry.json",
+    "command": [
+      "node",
+      "tools/cli.mjs",
+      "check-proposal",
+      ".",
+      "--proposal",
+      "changes/p99-af-erdarf-entry.json"
+    ],
+    "startedAt": "2026-10-22T06:16:46.873621+00:00",
+    "durationSeconds": 144.887,
+    "exitCode": 0,
+    "inputsBefore": {
+      "changes/p99-af-erdarf-entry.json": "518ad6a85b35af264a2d784cc764bf2da696d9a5f62033cbd2c3e6fb032f4a83",
+      "changes/p99-af-erdarf-entry/thurgadina-Erdarf_Restil.lua": "3bbf09cf9cf818f7972570c506d84381c0fe938ca12c7f6d9ad00a11a8e60e5c"
+    },
+    "inputsAfter": {
+      "changes/p99-af-erdarf-entry.json": "518ad6a85b35af264a2d784cc764bf2da696d9a5f62033cbd2c3e6fb032f4a83",
+      "changes/p99-af-erdarf-entry/thurgadina-Erdarf_Restil.lua": "3bbf09cf9cf818f7972570c506d84381c0fe938ca12c7f6d9ad00a11a8e60e5c"
+    },
+    "drift": false,
+    "log": "active-fixed-p99-af-erdarf-entry.log",
+    "logSha256": "62d23226eae18bb1543f77e7bcce18d9b21568a73c2c8357cef9b8a6fff93758",
+    "scope": "Actual CLI component validation in active checkout after metadata fixes; separate from preserved initial snapshot."
+  },
+  {
+    "proposal": "changes/p99-il-parity/proposal.json",
+    "command": [
+      "node",
+      "tools/cli.mjs",
+      "check-proposal",
+      ".",
+      "--proposal",
+      "changes/p99-il-parity/proposal.json"
+    ],
+    "startedAt": "2026-10-22T06:19:11.765150+00:00",
+    "durationSeconds": 136.349,
+    "exitCode": 0,
+    "inputsBefore": {
+      "changes/p99-il-parity/proposal.json": "b5dc9d069cc050e2ca221221c4fc2616cda138c22999fde3d90bf942ac9f0dc7",
+      "changes/p99-il-parity/highkeep--Lozani.lua": "4c2ed2b672d6f44246c8d8517f96e4b75ebfa64534d88d14ca145d062fd273aa",
+      "changes/p99-il-parity/freporte--Lozani.lua": "4c2ed2b672d6f44246c8d8517f96e4b75ebfa64534d88d14ca145d062fd273aa",
+      "changes/p99-il-parity/freeporteast--Lozani.lua": "4c2ed2b672d6f44246c8d8517f96e4b75ebfa64534d88d14ca145d062fd273aa",
+      "changes/p99-il-parity/neriaka--Dran_-slug-_Rembor.lua": "f05851b07922065b2b275395908ccc033084ec9b214dc89fe66c9e9dfd98f4cc",
+      "changes/p99-il-parity/cabeast--War_Historian_Kobl.lua": "63390568fbf53eddf981325d59946a6169ba87bf98c2f16991f093495d7d4fbd",
+      "changes/p99-il-parity/erudnint--Slansin.lua": "2294ba064d7f32ba726576bb467206991239d437bae914ade0f675b3487143d7",
+      "changes/p99-il-parity/erudnint--Toresian_Fhabel.lua": "3ec98b051752d231dc33de58c5524eb46623c66303f08d0c53a2c9618abf4210",
+      "changes/p99-il-parity/neriakc--Perrir_Zexus.lua": "10b057f064000245135d040c016b8783578b55310b82b47d092d9ccf89ee071e",
+      "changes/p99-il-parity/paineel--Royal_Guard_Lilkus.lua": "6217ba0572035b575be36ab0dbd87bd041d4dd8d0f0d6c60c785da590ff5cca5",
+      "changes/p99-il-parity/erudnext--Tiam_Khonsir.lua": "dc6c477fca77f4803fa3b5e7540ea2ed64b03d7696002eb8ee6f5be628a539a5",
+      "changes/p99-il-parity/nektulos--Master_Whoopal.lua": "f3831dbed54b6c45b7f2be10ceb4cf56301d9f632b52521fe72d625f4d563353",
+      "changes/p99-il-parity/skyshrine--Commander_Leuz.lua": "c9e49ab2584ab75057fa549d0f7287177299fd0310b4fcac216b6416eaab74f6",
+      "changes/p99-il-parity/skyshrine--Ziglark_Whisperwing.lua": "4f606e80da4e5fe4761e8c039f1726c929d358b6c8fa10fd731e801923cfd1e5",
+      "changes/p99-il-parity/rivervale--Marshal_Anrey.lua": "c92e2ccb22606630a7e16476073b6deb383a471a9b1b7ef58597492169b1d949"
+    },
+    "inputsAfter": {
+      "changes/p99-il-parity/proposal.json": "b5dc9d069cc050e2ca221221c4fc2616cda138c22999fde3d90bf942ac9f0dc7",
+      "changes/p99-il-parity/highkeep--Lozani.lua": "4c2ed2b672d6f44246c8d8517f96e4b75ebfa64534d88d14ca145d062fd273aa",
+      "changes/p99-il-parity/freporte--Lozani.lua": "4c2ed2b672d6f44246c8d8517f96e4b75ebfa64534d88d14ca145d062fd273aa",
+      "changes/p99-il-parity/freeporteast--Lozani.lua": "4c2ed2b672d6f44246c8d8517f96e4b75ebfa64534d88d14ca145d062fd273aa",
+      "changes/p99-il-parity/neriaka--Dran_-slug-_Rembor.lua": "f05851b07922065b2b275395908ccc033084ec9b214dc89fe66c9e9dfd98f4cc",
+      "changes/p99-il-parity/cabeast--War_Historian_Kobl.lua": "63390568fbf53eddf981325d59946a6169ba87bf98c2f16991f093495d7d4fbd",
+      "changes/p99-il-parity/erudnint--Slansin.lua": "2294ba064d7f32ba726576bb467206991239d437bae914ade0f675b3487143d7",
+      "changes/p99-il-parity/erudnint--Toresian_Fhabel.lua": "3ec98b051752d231dc33de58c5524eb46623c66303f08d0c53a2c9618abf4210",
+      "changes/p99-il-parity/neriakc--Perrir_Zexus.lua": "10b057f064000245135d040c016b8783578b55310b82b47d092d9ccf89ee071e",
+      "changes/p99-il-parity/paineel--Royal_Guard_Lilkus.lua": "6217ba0572035b575be36ab0dbd87bd041d4dd8d0f0d6c60c785da590ff5cca5",
+      "changes/p99-il-parity/erudnext--Tiam_Khonsir.lua": "dc6c477fca77f4803fa3b5e7540ea2ed64b03d7696002eb8ee6f5be628a539a5",
+      "changes/p99-il-parity/nektulos--Master_Whoopal.lua": "f3831dbed54b6c45b7f2be10ceb4cf56301d9f632b52521fe72d625f4d563353",
+      "changes/p99-il-parity/skyshrine--Commander_Leuz.lua": "c9e49ab2584ab75057fa549d0f7287177299fd0310b4fcac216b6416eaab74f6",
+      "changes/p99-il-parity/skyshrine--Ziglark_Whisperwing.lua": "4f606e80da4e5fe4761e8c039f1726c929d358b6c8fa10fd731e801923cfd1e5",
+      "changes/p99-il-parity/rivervale--Marshal_Anrey.lua": "c92e2ccb22606630a7e16476073b6deb383a471a9b1b7ef58597492169b1d949"
+    },
+    "drift": false,
+    "log": "active-fixed-p99-il-parity.log",
+    "logSha256": "6009c70c7aa6110ea76e31b2c5b0bd8e3b7b89b596e1ec353e022d6bc7140f13",
+    "scope": "Actual CLI component validation in active checkout after metadata fixes; separate from preserved initial snapshot."
+  }
+]

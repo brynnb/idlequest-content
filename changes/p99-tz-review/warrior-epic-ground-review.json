@@ -1,0 +1,57 @@
+{
+  "rows": [
+    {
+      "id": 25,
+      "zoneid": 96,
+      "version": 0,
+      "max_x": 2836.1,
+      "max_y": -6448.9,
+      "max_z": 6.8,
+      "min_x": 2836.1,
+      "min_y": -6448.9,
+      "heading": 0,
+      "name": "IT63_ACTORDEF",
+      "item": 20669,
+      "max_allowed": 1,
+      "comment": "severely damaged dragon head hilt",
+      "respawn_timer": 300,
+      "fix_z": 1,
+      "min_expansion": -1,
+      "max_expansion": -1,
+      "content_flags": null,
+      "content_flags_disabled": null
+    },
+    {
+      "id": 24,
+      "zoneid": 51,
+      "version": 0,
+      "max_x": 919.4,
+      "max_y": 2530.4,
+      "max_z": -189.1,
+      "min_x": 919.4,
+      "min_y": 2530.4,
+      "heading": 0,
+      "name": "IT63_ACTORDEF",
+      "item": 20668,
+      "max_allowed": 1,
+      "comment": "unjeweled dragon head hilt",
+      "respawn_timer": 300,
+      "fix_z": 1,
+      "min_expansion": -1,
+      "max_expansion": -1,
+      "content_flags": null,
+      "content_flags_disabled": null
+    }
+  ],
+  "allowlist": [
+    {
+      "ground_spawn_id": 25,
+      "note": "P99 Warrior Epic - Severely Damaged Dragon Head Hilt"
+    },
+    {
+      "ground_spawn_id": 24,
+      "note": "P99 Warrior Epic - Unjeweled Dragon Head Hilt"
+    }
+  ],
+  "scope": "Static rows and explicit enabled-ground allowlist only; runtime pickup and scene placement unverified."
+}

@@ -1,0 +1,93 @@
+{
+  "zones": 121,
+  "corpus": {
+    "declared": 1135,
+    "stateEntries": 1135,
+    "wikiFiles": 1135,
+    "metadataFiles": 1135,
+    "verified": 1135
+  },
+  "perlScripts": 3712,
+  "allPerlFiles": 3753,
+  "supportFiles": 65,
+  "perlClassifications": {
+    "explicit-npc-policy": 35,
+    "explicit-quest-exclusion": 59,
+    "lua-available": 1050,
+    "non-imported-version": 88,
+    "outside-p99-zone": 2028,
+    "unlinked-missing-lua-review": 415,
+    "wiki-linked-missing-lua-review": 37
+  },
+  "p99PerlClassifications": {
+    "explicit-npc-policy": 35,
+    "explicit-quest-exclusion": 59,
+    "lua-available": 1050,
+    "unlinked-missing-lua-review": 415,
+    "wiki-linked-missing-lua-review": 37
+  },
+  "sourceLua": 4187,
+  "maintained": 1591,
+  "maintainedCategories": {
+    "converted-perl": 1136,
+    "idlequest-authored": 37,
+    "modified-upstream": 418
+  },
+  "effective": 8043,
+  "effectiveStatus": {
+    "database-differs": 4,
+    "database-only": 312,
+    "matches-source": 5140,
+    "no-lua-body": 2587
+  },
+  "p99Effective": 3431,
+  "p99EffectiveStatus": {
+    "database-differs": 3,
+    "database-only": 7,
+    "matches-source": 2922,
+    "no-lua-body": 499
+  },
+  "ledgerEntries": 931,
+  "ledgerReviewStatuses": {
+    "ambiguous": 2,
+    "needs_review": 128,
+    "out_of_scope": 53,
+    "partial": 11,
+    "reviewed": 737
+  },
+  "pageReviewStatuses": {
+    "ambiguous": 2,
+    "needs_review": 128,
+    "not-recorded": 206,
+    "out_of_scope": 53,
+    "partial": 11,
+    "reviewed": 735
+  },
+  "manualEventDispositions": {
+    "empty-event-no-conversion-needed": 10,
+    "out-of-scope-beastlord-epic": 1,
+    "out-of-scope-holiday-event": 21,
+    "out-of-scope-holiday-task": 6,
+    "out-of-scope-ring-of-fear-revamp": 4,
+    "p99-npc-roaming-only-not-quest": 1,
+    "probable-later-revamp-confirm-era-before-conversion": 5,
+    "unresolved-revamp-death-trigger": 7,
+    "unresolved-roaming-only-no-p99-evidence": 2,
+    "unresolved-world-event-no-p99-evidence": 2
+  },
+  "missingLuaTriageMechanisms": {
+    "handin-reward-or-progression": 145,
+    "no-event-handler": 4,
+    "player-event": 16,
+    "speech-and-return-items-only": 87,
+    "world-event-or-service": 200
+  },
+  "missingLuaTriageDispositions": {
+    "empty-or-comment-only-no-conversion-needed": 4,
+    "later-system-or-event-evidence-review-do-not-bulk-convert": 60,
+    "p99-npc-flavor-conversion-candidate": 65,
+    "p99-npc-mechanic-review-required": 77,
+    "unresolved-no-cached-npc-name-match": 246
+  },
+  "questExclusions": 158
+}

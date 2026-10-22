@@ -1,0 +1,31 @@
+{
+  "format": 1,
+  "id": "p99-af-crusader-ground-pickups",
+  "summary": "Allowlist exactly the two documented existing classic quest ground pickups. Preserve every ground row coordinate, timer and field.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Crusader's_Tests?action=raw",
+      "note": "Cached reference/p99-wiki/raw-pages/crusader-s-tests-0ca8dd76b3.wiki SHA256 8884eee5c0ffb6a7325c6d143be047db0d54a14f7fd7006f671ae772af7b3f54."
+    }
+  ],
+  "rows": [
+    {
+      "table": "idlequest_enabled_ground_spawns",
+      "before": null,
+      "after": {
+        "ground_spawn_id": 65,
+        "note": "P99 Crusader's Tests - documented Scroll in a Bottle quest pickup; retain imported placement and timer"
+      }
+    },
+    {
+      "table": "idlequest_enabled_ground_spawns",
+      "before": null,
+      "after": {
+        "ground_spawn_id": 66,
+        "note": "P99 Crusader's Tests - documented Rile's Shattered Blade quest pickup; retain imported placement and timer"
+      }
+    }
+  ],
+  "sources": []
+}

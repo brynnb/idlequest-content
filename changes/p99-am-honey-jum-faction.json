@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-am-honey-jum-faction",
+  "summary": "Correct Joogl bandage reward loss target to documented Coalition of Tradefolk Underground instead of unrelated imported faction5015; keep magnitude. Make buggers dialogue keyword clickable.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Honey_Jum_Quest?action=raw",
+      "note": "Cached 2026-07-17T23:21:14.311Z; revision unavailable; SHA256 e8f2d1f14f1581bca94ba1b4ad6e12f52f15a38ab166c552ecdf19b100cfcc38. Honey Jum Quest"
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 16548,
+        "zone": "misty",
+        "name": "Joogl_Honeybugger",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: misty/Joogl_Honeybugger.pl\n-- items: 13009\n\nlocal function reward_bandage(e)\n\te.self:Say(\"Oh thank you, \" .. e.other:GetName() .. \".  If you are ever going to gather bixie honeycombs pray you do not run into the queen.  The only way I know of collecting the honey is by intercepting the drones and taking the honeycombs they sometimes carry.  Good luck !!\")\n\te.other:Faction(241, 1, 0)\n\te.other:Faction(263, 1, 0)\n\te.other:Faction(286, 1, 0)\n\te.other:Faction(292, 1, 0)\n\te.other:Faction(5015, -1, 0)\nend\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Hello. I would shake your hand, but it would [hurt]. Ooooh! Owwy!\")\n\telseif e.message:findi(\"hurt\") then\n\t\te.self:Say(\"I was attacked by the bixies. They swarmed on me!! I think I got too near their queen. I need that honey to make a living! Get me a bandage and I will tell you where all their worker bee's buzz around.\")\n\telseif e.message:findi(\"I need the honeycomb\") then\n\t\te.self:Say(\"If you're looking for the honeycombs, I don't have any right now. I have been unable to get any since I was attacked by the little [buggers]. I will tell you where to get some if you will only get me a bandage for my bites.\")\n\telseif e.message:findi(\"what buggers\") then\n\t\te.self:Say(\"I was attacked by the bixies. They swarmed on me!! I think I got too near their queen. I need that honey to make a living! Get me a bandage and I will tell you where all their worker bees buzz around.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 13009, item2 = 13009, item3 = 13009, item4 = 13009}) then\n\t\tfor _ = 1, 4 do\n\t\t\treward_bandage(e)\n\t\tend\n\telseif item_lib.check_turn_in(e.trade, {item1 = 13009, item2 = 13009, item3 = 13009}) then\n\t\tfor _ = 1, 3 do\n\t\t\treward_bandage(e)\n\t\tend\n\telseif item_lib.check_turn_in(e.trade, {item1 = 13009, item2 = 13009}) then\n\t\tfor _ = 1, 2 do\n\t\t\treward_bandage(e)\n\t\tend\n\telseif item_lib.check_turn_in(e.trade, {item1 = 13009}) then\n\t\treward_bandage(e)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 16548,
+        "zone": "misty",
+        "name": "Joogl_Honeybugger",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: misty/Joogl_Honeybugger.pl\n-- items: 13009\n\nlocal function reward_bandage(e)\n\te.self:Say(\"Oh thank you, \" .. e.other:GetName() .. \".  If you are ever going to gather bixie honeycombs pray you do not run into the queen.  The only way I know of collecting the honey is by intercepting the drones and taking the honeycombs they sometimes carry.  Good luck !!\")\n\te.other:Faction(241, 1, 0)\n\te.other:Faction(263, 1, 0)\n\te.other:Faction(286, 1, 0)\n\te.other:Faction(292, 1, 0)\n\te.other:Faction(336, -1, 0) -- Coalition of Tradefolk Underground (P99).\nend\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Hello. I would shake your hand, but it would [hurt]. Ooooh! Owwy!\")\n\telseif e.message:findi(\"hurt\") then\n\t\te.self:Say(\"I was attacked by the bixies. They swarmed on me!! I think I got too near their queen. I need that honey to make a living! Get me a bandage and I will tell you where all their worker bee's buzz around.\")\n\telseif e.message:findi(\"I need the honeycomb\") then\n\t\te.self:Say(\"If you're looking for the honeycombs, I don't have any right now. I have been unable to get any since I was attacked by the little [buggers]. I will tell you where to get some if you will only get me a bandage for my bites.\")\n\telseif e.message:findi(\"buggers\") then\n\t\te.self:Say(\"I was attacked by the bixies. They swarmed on me!! I think I got too near their queen. I need that honey to make a living! Get me a bandage and I will tell you where all their worker bees buzz around.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 13009, item2 = 13009, item3 = 13009, item4 = 13009}) then\n\t\tfor _ = 1, 4 do\n\t\t\treward_bandage(e)\n\t\tend\n\telseif item_lib.check_turn_in(e.trade, {item1 = 13009, item2 = 13009, item3 = 13009}) then\n\t\tfor _ = 1, 3 do\n\t\t\treward_bandage(e)\n\t\tend\n\telseif item_lib.check_turn_in(e.trade, {item1 = 13009, item2 = 13009}) then\n\t\tfor _ = 1, 2 do\n\t\t\treward_bandage(e)\n\t\tend\n\telseif item_lib.check_turn_in(e.trade, {item1 = 13009}) then\n\t\treward_bandage(e)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/misty/Joogl_Honeybugger.lua",
+      "beforeSha256": "bd2cf6d327316440f30ba109f7edb5fd76496ccde1527d14a78dc2a70f45765d",
+      "proposedFile": "changes/p99-am-honey-jum-faction/misty-Joogl_Honeybugger.lua",
+      "afterSha256": "8cffdf7f06b01db3b21c3d7ae0e680dd56bb1a354183bc77726cfce76d0139ba"
+    }
+  ]
+}

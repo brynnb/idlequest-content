@@ -1,0 +1,1982 @@
+{
+  "reviewDate": "2026-10-22",
+  "scope": "All 14 class starters named by the cached Plane of Sky Quests (Old) page, joined through exact NPC ID -> spawnentry -> dedicated spawngroup -> airplane spawn2; exclude all other room NPCs, island mobs and testers.",
+  "counts": {
+    "classStarters": 14,
+    "timerOnlyCorrections": 14,
+    "specificEvidenceConflicts": 1,
+    "cachedNpcPages": 5,
+    "generalThreeHourCorrections": 13,
+    "specificEightHourCorrections": 1
+  },
+  "broadEvidence": {
+    "title": "Plane of Sky Quests (Old)",
+    "url": "https://wiki.project1999.com/Plane_of_Sky_Quests_(Old)?action=raw",
+    "fetchedAt": "2026-07-18T00:37:28.502Z",
+    "revision": null,
+    "sha256": "cdcadb1c440984f769321fa8ede419e777c0386d1a11fef5047aac29135e5ca1",
+    "bytes": 23687,
+    "source": "raw-pages/plane-of-sky-quests-old-05dcf0a232.json",
+    "cachePath": "reference/p99-wiki/raw-pages/plane-of-sky-quests-old-05dcf0a232.wiki"
+  },
+  "broadEvidenceQuote": "Quest mobs have a 3 hour respawn time.",
+  "applicationRationale": "The same introductory section identifies the parenthesized class names as the quest-room NPCs to hail to summon the turn-in NPC. All 14 corresponding static starters depop_with_timer when summoning. The 3-hour sentence is therefore applied to natural starter respawn, not to a spawned tester lifetime; more-specific contradictions take precedence over blanket application. For Josin, the exact NPC-page 8-hour statement is stronger and is selected explicitly.",
+  "historicalSourceLimit": {
+    "ledgerFile": "reference/server/internal/quest/content_exclusions.json",
+    "ledgerEntry": {
+      "scope": "classic_kunark_reference",
+      "review_status": "reviewed",
+      "match_status": "historical_reference_not_current_p99_target",
+      "p99_source": {
+        "title": "Plane of Sky Quests (Old)",
+        "url": "https://wiki.project1999.com/Plane_of_Sky_Quests_(Old)",
+        "raw_cache": "data/p99wiki-project1999-api-cache/raw-pages/plane-of-sky-quests-old-05dcf0a232.wiki"
+      },
+      "notes": [
+        "This page documents old Plane of Sky reward versions for posterity and says those old versions became impossible after P99's July 24, 2011 upgrade patch.",
+        "The implemented Plane of Sky test audit targets the current P99 class-specific Plane of Sky pages, not this historical old-reward reference page."
+      ],
+      "reviewed_at": "2026-07-18"
+    },
+    "interpretation": "The historical classification explicitly addresses obsolete rewards, not a fast-respawn adaptation. It is neither an actual quests exclusion nor proof that every statement on the overview is obsolete. It is not permission to restore old rewards. Non-reward respawn evidence remains a scoped interpretation; Josin's exact NPC description takes precedence for his duration."
+  },
+  "runtimeUnits": {
+    "respawntime": "seconds",
+    "variance": "uniform plus/minus seconds; zero stays zero",
+    "evidence": "Coordinator verified current game downstream population service uses seconds-based timer behavior and uniform +/- variance.",
+    "verificationLimit": "Current-game verification supplied by coordinating audit; this bounded subreview did not access another checkout.",
+    "questDepopEvidence": {
+      "file": "reference/server/internal/quest/lua_bridge.go",
+      "sha256": "dd4ec84cf2450401f60b7f6068c52a0ef174cb15e9b559b0f0250ba2e6093184",
+      "fact": "depop_with_timer captures WithTimer: true; the existing starters retain this call."
+    }
+  },
+  "specificConflict": {
+    "npcId": 71052,
+    "npcName": "Josin_Faithbringer",
+    "spawn2Id": 2697,
+    "spawnGroupId": 5482,
+    "source": {
+      "title": "Josin Faithbringer",
+      "url": "https://wiki.project1999.com/Josin_Faithbringer?action=raw",
+      "fetchedAt": "2026-08-12T19:37:51.120Z",
+      "revision": null,
+      "sha256": "5b402a3105d7ea18e3c4dedf128cbaeceaa3720650534726e07b9ad19d47c39b",
+      "bytes": 1439,
+      "source": "npc-pages/josin-faithbringer-a4ab9ca466.json",
+      "cachePath": "reference/p99-wiki/npc-pages/josin-faithbringer-a4ab9ca466.wiki"
+    },
+    "quote": "His respawn time is 8 hours, making it impossible to complete back to back turn-in sky quests.",
+    "decision": "Use the more-specific, exact Josin NPC description: 28,800 seconds for spawn2 2697/group 5482. Preserve the broader 3-hour disagreement in evidence. A newer dated source or direct observation could change this precedence decision.",
+    "selectedRespawnSeconds": 28800
+  },
+  "policyLimits": [
+    "No fast-respawn adaptation was found in the supplied current game documentation or the cached class audit policies.",
+    "Preserve direct tester spawning and omitted book-return flow; do not edit any quest script, rewards, class gates, faction bypasses, population membership, coordinates, chance, variance, or content-scope ledger.",
+    "npc_types.exclude=1 is not a whole-script ban: all 14 effective quest keys are enabled; none appears in content_exclusions.json.quests or exact/pattern NPC exclusion policy.",
+    "Spawned tester Lua timers use milliseconds. A five-minute (300,000ms) tester lifetime is not a 300-second or 300,000-second static starter respawn. The Fiery Avenger specifically documents Dirkog and Inte Akera despawning after five minutes; preserve them.",
+    "The general page does not independently give exact per-NPC timer measurements or date/revision changes. Josin demonstrates that generalizing without specific-page checks would be unsafe.",
+    "No baseline sources, data, reference files or manifest changed. No SQL apply, production mutation, commit, push, PR, merge or deploy."
+  ],
+  "policySources": [
+    {
+      "file": "CONTRIBUTING.md",
+      "sha256": "d48efb500bf1939fd5a4abf27c460225dafe8e0876b8cb96648f85e0074dc4e9"
+    },
+    {
+      "file": "reference/docs/p99-quest-audit-workflow.md",
+      "sha256": "512ac395336f6783c36ee29150000d42c39dea175c5b5f28b80f0505a6c733f0"
+    },
+    {
+      "file": "reference/docs/quest-audit-review-notes.md",
+      "sha256": "8e01fe50d7715d5803fd75f269f812967d89a6f50c2f76c09c100eb18bf826c8"
+    },
+    {
+      "file": "reference/server/internal/quest/content_exclusions.json",
+      "sha256": "874b10f289c7507640a73fd4f70d0affa617f31b793f2decc2c606aad869390a"
+    },
+    {
+      "file": "reference/server/internal/contentscope/npc_exclusions.json",
+      "sha256": "392956b7e784d2d137c141fd1c868a804f0757056939661e857d53ea16ef12b9"
+    }
+  ],
+  "existingAirplaneSpawn2Proposals": [],
+  "evidence": [
+    {
+      "title": "Plane of Sky Quests (Old)",
+      "url": "https://wiki.project1999.com/Plane_of_Sky_Quests_(Old)?action=raw",
+      "fetchedAt": "2026-07-18T00:37:28.502Z",
+      "revision": null,
+      "sha256": "cdcadb1c440984f769321fa8ede419e777c0386d1a11fef5047aac29135e5ca1",
+      "bytes": 23687,
+      "source": "raw-pages/plane-of-sky-quests-old-05dcf0a232.json",
+      "cachePath": "reference/p99-wiki/raw-pages/plane-of-sky-quests-old-05dcf0a232.wiki"
+    },
+    {
+      "title": "Bard Plane of Sky Tests",
+      "url": "https://wiki.project1999.com/Bard_Plane_of_Sky_Tests?action=raw",
+      "fetchedAt": "2026-07-17T23:06:53.862Z",
+      "revision": null,
+      "sha256": "872355b2f0608841146d6eb2149405e1b14b98548c4f908a91b51fa1f26209ec",
+      "bytes": 8478,
+      "source": "raw-pages/bard-plane-of-sky-tests-bda66f3eee.json",
+      "cachePath": "reference/p99-wiki/raw-pages/bard-plane-of-sky-tests-bda66f3eee.wiki"
+    },
+    {
+      "title": "Josin Faithbringer",
+      "url": "https://wiki.project1999.com/Josin_Faithbringer?action=raw",
+      "fetchedAt": "2026-08-12T19:37:51.120Z",
+      "revision": null,
+      "sha256": "5b402a3105d7ea18e3c4dedf128cbaeceaa3720650534726e07b9ad19d47c39b",
+      "bytes": 1439,
+      "source": "npc-pages/josin-faithbringer-a4ab9ca466.json",
+      "cachePath": "reference/p99-wiki/npc-pages/josin-faithbringer-a4ab9ca466.wiki"
+    },
+    {
+      "title": "Cleric Plane of Sky Tests",
+      "url": "https://wiki.project1999.com/Cleric_Plane_of_Sky_Tests?action=raw",
+      "fetchedAt": "2026-07-17T23:10:41.963Z",
+      "revision": null,
+      "sha256": "9eb22de0ac310a3dd9eee519837092be411b447208eb83737e4f019e60d5850e",
+      "bytes": 8434,
+      "source": "raw-pages/cleric-plane-of-sky-tests-ac9df219ab.json",
+      "cachePath": "reference/p99-wiki/raw-pages/cleric-plane-of-sky-tests-ac9df219ab.wiki"
+    },
+    {
+      "title": "Druid Plane of Sky Tests",
+      "url": "https://wiki.project1999.com/Druid_Plane_of_Sky_Tests?action=raw",
+      "fetchedAt": "2026-07-17T23:13:33.114Z",
+      "revision": null,
+      "sha256": "2dcfcbb35089686d0d21815b2a05428ef6564af4ad352da157bbad44b6fc4254",
+      "bytes": 9053,
+      "source": "raw-pages/druid-plane-of-sky-tests-b93a52a3c4.json",
+      "cachePath": "reference/p99-wiki/raw-pages/druid-plane-of-sky-tests-b93a52a3c4.wiki"
+    },
+    {
+      "title": "Enchanter Plane of Sky Tests",
+      "url": "https://wiki.project1999.com/Enchanter_Plane_of_Sky_Tests?action=raw",
+      "fetchedAt": "2026-07-17T23:14:03.892Z",
+      "revision": null,
+      "sha256": "839a331ea6c4123ef90201f7cb3f54c499b6bf3be2e42b8d092dc6786204ae57",
+      "bytes": 9679,
+      "source": "raw-pages/enchanter-plane-of-sky-tests-42aa195c08.json",
+      "cachePath": "reference/p99-wiki/raw-pages/enchanter-plane-of-sky-tests-42aa195c08.wiki"
+    },
+    {
+      "title": "Magi Frinon",
+      "url": "https://wiki.project1999.com/Magi_Frinon?action=raw",
+      "fetchedAt": "2026-08-12T20:02:50.672Z",
+      "revision": null,
+      "sha256": "445698a0c193fa32b8ce39b31843d57b874db048fcc9cb1795642b5fcedddfec",
+      "bytes": 1286,
+      "source": "npc-pages/magi-frinon-ddb94dc611.json",
+      "cachePath": "reference/p99-wiki/npc-pages/magi-frinon-ddb94dc611.wiki"
+    },
+    {
+      "title": "Magus Frinon",
+      "url": "https://wiki.project1999.com/Magus_Frinon?action=raw",
+      "fetchedAt": "2026-08-12T20:03:00.241Z",
+      "revision": null,
+      "sha256": "2745d51437b8a3cb1ba1b026afe70b9cf6ea61b001458cd3465080947a66d2ed",
+      "bytes": 1291,
+      "source": "npc-pages/magus-frinon-b36e25d407.json",
+      "cachePath": "reference/p99-wiki/npc-pages/magus-frinon-b36e25d407.wiki"
+    },
+    {
+      "title": "Magician Plane of Sky Tests",
+      "url": "https://wiki.project1999.com/Magician_Plane_of_Sky_Tests?action=raw",
+      "fetchedAt": "2026-07-17T23:24:22.948Z",
+      "revision": null,
+      "sha256": "eac8a58161597dbb2fe0695666180caafe2b35181b0c4fc7c082281628083f84",
+      "bytes": 8941,
+      "source": "raw-pages/magician-plane-of-sky-tests-ad4f3cdeae.json",
+      "cachePath": "reference/p99-wiki/raw-pages/magician-plane-of-sky-tests-ad4f3cdeae.wiki"
+    },
+    {
+      "title": "Monk Plane of Sky Tests",
+      "url": "https://wiki.project1999.com/Monk_Plane_of_Sky_Tests?action=raw",
+      "fetchedAt": "2026-07-17T23:25:42.999Z",
+      "revision": null,
+      "sha256": "890706c6dafc63ef49ce650c28afc20f19ca7958e64a912bf074bf2bc765b7a4",
+      "bytes": 8699,
+      "source": "raw-pages/monk-plane-of-sky-tests-4d906cdcc8.json",
+      "cachePath": "reference/p99-wiki/raw-pages/monk-plane-of-sky-tests-4d906cdcc8.wiki"
+    },
+    {
+      "title": "Necromancer Plane of Sky Tests",
+      "url": "https://wiki.project1999.com/Necromancer_Plane_of_Sky_Tests?action=raw",
+      "fetchedAt": "2026-07-17T23:26:27.439Z",
+      "revision": null,
+      "sha256": "3694ea5a8ab4746b1ee6b814a09b01f0883f16a4c989096e15c11518bb8c955d",
+      "bytes": 8435,
+      "source": "raw-pages/necromancer-plane-of-sky-tests-6ea6b4e160.json",
+      "cachePath": "reference/p99-wiki/raw-pages/necromancer-plane-of-sky-tests-6ea6b4e160.wiki"
+    },
+    {
+      "title": "Dason Goldblade",
+      "url": "https://wiki.project1999.com/Dason_Goldblade?action=raw",
+      "fetchedAt": "2026-08-12T18:24:01.366Z",
+      "revision": null,
+      "sha256": "22e456a9cfb770f1d77ec9563bec4daeeab9d1c818dd56c733f815c863096302",
+      "bytes": 900,
+      "source": "npc-pages/dason-goldblade-03786ffad9.json",
+      "cachePath": "reference/p99-wiki/npc-pages/dason-goldblade-03786ffad9.wiki"
+    },
+    {
+      "title": "Paladin Plane of Sky Tests",
+      "url": "https://wiki.project1999.com/Paladin_Plane_of_Sky_Tests?action=raw",
+      "fetchedAt": "2026-07-17T23:28:03.543Z",
+      "revision": null,
+      "sha256": "9fbafac4cf8c397a7464b3860d53661ee08c16608546ae64eaa55bf16c36d2dc",
+      "bytes": 6795,
+      "source": "raw-pages/paladin-plane-of-sky-tests-1b7ecd455d.json",
+      "cachePath": "reference/p99-wiki/raw-pages/paladin-plane-of-sky-tests-1b7ecd455d.wiki"
+    },
+    {
+      "title": "Ranger Plane of Sky Tests",
+      "url": "https://wiki.project1999.com/Ranger_Plane_of_Sky_Tests?action=raw",
+      "fetchedAt": "2026-07-17T23:29:33.487Z",
+      "revision": null,
+      "sha256": "d5d73693c67b7d19ffc6989732eafa5b62c055db51e16cc6e38f1681a060f4aa",
+      "bytes": 8948,
+      "source": "raw-pages/ranger-plane-of-sky-tests-48fee44c95.json",
+      "cachePath": "reference/p99-wiki/raw-pages/ranger-plane-of-sky-tests-48fee44c95.wiki"
+    },
+    {
+      "title": "Rogue Plane of Sky Tests",
+      "url": "https://wiki.project1999.com/Rogue_Plane_of_Sky_Tests?action=raw",
+      "fetchedAt": "2026-07-17T23:30:59.869Z",
+      "revision": null,
+      "sha256": "603207e8a8b1274627de52b625e31bce4c094b58699fbc589c58d694c64e53ff",
+      "bytes": 8139,
+      "source": "raw-pages/rogue-plane-of-sky-tests-e82e51b589.json",
+      "cachePath": "reference/p99-wiki/raw-pages/rogue-plane-of-sky-tests-e82e51b589.wiki"
+    },
+    {
+      "title": "Shadow Knight Plane of Sky Tests",
+      "url": "https://wiki.project1999.com/Shadow_Knight_Plane_of_Sky_Tests?action=raw",
+      "fetchedAt": "2026-07-17T23:32:18.835Z",
+      "revision": null,
+      "sha256": "cf18b1c0020b061190578b1c9a4c0f9e5017be8cdd9092e34b7d18ba9c4e49d2",
+      "bytes": 9912,
+      "source": "raw-pages/shadow-knight-plane-of-sky-tests-f528b9a00a.json",
+      "cachePath": "reference/p99-wiki/raw-pages/shadow-knight-plane-of-sky-tests-f528b9a00a.wiki"
+    },
+    {
+      "title": "Shaman Plane of Sky Tests",
+      "url": "https://wiki.project1999.com/Shaman_Plane_of_Sky_Tests?action=raw",
+      "fetchedAt": "2026-07-17T23:32:41.562Z",
+      "revision": null,
+      "sha256": "d2cf8a9522bfba312b59886ff4968b2699824ca84526006ed5a5fe9b0a624d2a",
+      "bytes": 8826,
+      "source": "raw-pages/shaman-plane-of-sky-tests-55529c2980.json",
+      "cachePath": "reference/p99-wiki/raw-pages/shaman-plane-of-sky-tests-55529c2980.wiki"
+    },
+    {
+      "title": "Torgon Blademaster",
+      "url": "https://wiki.project1999.com/Torgon_Blademaster?action=raw",
+      "fetchedAt": "2026-08-12T21:15:08.408Z",
+      "revision": null,
+      "sha256": "6f9e3cb1dd7d5e7dfe3c17592ac2030e7e12a83ed921f1ab61f871b411444e38",
+      "bytes": 1341,
+      "source": "npc-pages/torgon-blademaster-1ab3ed6a2b.json",
+      "cachePath": "reference/p99-wiki/npc-pages/torgon-blademaster-1ab3ed6a2b.wiki"
+    },
+    {
+      "title": "Warrior Plane of Sky Tests",
+      "url": "https://wiki.project1999.com/Warrior_Plane_of_Sky_Tests?action=raw",
+      "fetchedAt": "2026-07-17T23:40:55.425Z",
+      "revision": null,
+      "sha256": "e62b8760abb6a3d3f6e98d7e32b032b033c177e2372c8a78290e8fd4c15fae15",
+      "bytes": 8622,
+      "source": "raw-pages/warrior-plane-of-sky-tests-584055c39c.json",
+      "cachePath": "reference/p99-wiki/raw-pages/warrior-plane-of-sky-tests-584055c39c.wiki"
+    },
+    {
+      "title": "Wizard Plane of Sky Tests",
+      "url": "https://wiki.project1999.com/Wizard_Plane_of_Sky_Tests?action=raw",
+      "fetchedAt": "2026-07-17T23:41:38.029Z",
+      "revision": null,
+      "sha256": "72c8a53a1d2376ea41b9d2fc726e76d07054941a2b45e1f500310ef728f518a3",
+      "bytes": 8601,
+      "source": "raw-pages/wizard-plane-of-sky-tests-393f4d61ad.json",
+      "cachePath": "reference/p99-wiki/raw-pages/wizard-plane-of-sky-tests-393f4d61ad.wiki"
+    },
+    {
+      "title": "The Fiery Avenger",
+      "url": "https://wiki.project1999.com/The_Fiery_Avenger?action=raw",
+      "fetchedAt": "2026-07-17T23:36:26.688Z",
+      "revision": null,
+      "sha256": "fbd53720ea426aed594745a7a648a8df898fe840990649f9cbdbdd31322f66b3",
+      "bytes": 5544,
+      "source": "raw-pages/the-fiery-avenger-8c625d8bd9.json",
+      "cachePath": "reference/p99-wiki/raw-pages/the-fiery-avenger-8c625d8bd9.wiki"
+    }
+  ],
+  "starters": [
+    {
+      "class": "Bard",
+      "npcId": 71042,
+      "npcName": "Cilin_Spellsinger",
+      "questKey": "airplane/Cilin_Spellsinger",
+      "questId": 13381,
+      "questEnabled": 1,
+      "npcAutoLevelExclude": 1,
+      "npcIsQuest": 1,
+      "spawn2Id": 2687,
+      "spawnGroup": {
+        "id": 2091,
+        "name": "airplane_43",
+        "spawn_limit": 0,
+        "dist": 0,
+        "max_x": 0,
+        "min_x": 0,
+        "max_y": 0,
+        "min_y": 0,
+        "delay": 0,
+        "mindelay": 15000,
+        "despawn": 0,
+        "despawn_timer": 100,
+        "wp_spawns": 0
+      },
+      "spawnEntry": {
+        "spawngroupID": 2091,
+        "npcID": 71042,
+        "chance": 100,
+        "condition_value_filter": 1,
+        "min_time": 0,
+        "max_time": 0,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null
+      },
+      "baselineSpawn2": {
+        "id": 2687,
+        "spawngroupID": 2091,
+        "zone": "airplane",
+        "version": 0,
+        "x": 659.880005,
+        "y": 1380,
+        "z": -762.25,
+        "heading": 384,
+        "respawntime": 640,
+        "variance": 0,
+        "pathgrid": 0,
+        "path_when_zone_idle": 0,
+        "_condition": 0,
+        "cond_value": 1,
+        "animation": 0,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null
+      },
+      "sourceFile": "effective/quests/airplane/Cilin_Spellsinger.lua",
+      "sourceSha256": "6ec5e43a7bb36c4de7ec0847772d64d2d962cc1286333e301015a8dcf3b23d6c",
+      "directTesterSpawningPreserved": true,
+      "testerNpcs": [
+        {
+          "npcId": 71081,
+          "npcName": "Clarisa_Spiritsong",
+          "questKey": "airplane/Clarisa_Spiritsong",
+          "sourceFile": "effective/quests/airplane/Clarisa_Spiritsong.lua",
+          "sourceSha256": "a206e9d97c2842f1e0744b0632605b2a79ea1c39ccad43a147959c695ab83356",
+          "staticSpawnEntries": [],
+          "scriptTimers": [
+            {
+              "name": "depop",
+              "durationMilliseconds": 300000
+            }
+          ]
+        },
+        {
+          "npcId": 71082,
+          "npcName": "Denise_Songweaver",
+          "questKey": "airplane/Denise_Songweaver",
+          "sourceFile": "effective/quests/airplane/Denise_Songweaver.lua",
+          "sourceSha256": "ab2f85fce039afc5d76ec534447a37c349c3e7afb2710b92b3df047076a5b1dd",
+          "staticSpawnEntries": [],
+          "scriptTimers": [
+            {
+              "name": "depop",
+              "durationMilliseconds": 300000
+            }
+          ]
+        }
+      ],
+      "classEvidence": {
+        "title": "Bard Plane of Sky Tests",
+        "url": "https://wiki.project1999.com/Bard_Plane_of_Sky_Tests?action=raw",
+        "fetchedAt": "2026-07-17T23:06:53.862Z",
+        "revision": null,
+        "sha256": "872355b2f0608841146d6eb2149405e1b14b98548c4f908a91b51fa1f26209ec",
+        "bytes": 8478,
+        "source": "raw-pages/bard-plane-of-sky-tests-bda66f3eee.json",
+        "cachePath": "reference/p99-wiki/raw-pages/bard-plane-of-sky-tests-bda66f3eee.wiki"
+      },
+      "classPageRespawnEvidence": "No respawn duration is stated.",
+      "npcEvidence": [],
+      "specificNpcEvidenceDisposition": "No cached NPC page with this exact emulator ID was found.",
+      "policy": {
+        "questExclusion": null,
+        "npcExclusions": [],
+        "npcNamePatternExclusions": []
+      },
+      "disposition": "timer-only-proposed",
+      "proposedRespawnSeconds": 10800,
+      "reason": "Apply the broad 3-hour natural quest-room respawn statement only to this explicitly named class starter with a dedicated static group and no contradictory exact-NPC/class-page timer. This is a scoped interpretation, not an independently measured per-NPC timer."
+    },
+    {
+      "class": "Cleric",
+      "npcId": 71052,
+      "npcName": "Josin_Faithbringer",
+      "questKey": "airplane/Josin_Faithbringer",
+      "questId": 19229,
+      "questEnabled": 1,
+      "npcAutoLevelExclude": 1,
+      "npcIsQuest": 1,
+      "spawn2Id": 2697,
+      "spawnGroup": {
+        "id": 5482,
+        "name": "airplane_53",
+        "spawn_limit": 0,
+        "dist": 0,
+        "max_x": 0,
+        "min_x": 0,
+        "max_y": 0,
+        "min_y": 0,
+        "delay": 0,
+        "mindelay": 15000,
+        "despawn": 0,
+        "despawn_timer": 100,
+        "wp_spawns": 0
+      },
+      "spawnEntry": {
+        "spawngroupID": 5482,
+        "npcID": 71052,
+        "chance": 100,
+        "condition_value_filter": 1,
+        "min_time": 0,
+        "max_time": 0,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null
+      },
+      "baselineSpawn2": {
+        "id": 2697,
+        "spawngroupID": 5482,
+        "zone": "airplane",
+        "version": 0,
+        "x": 659.880005,
+        "y": 1349.880005,
+        "z": -765.880005,
+        "heading": 384,
+        "respawntime": 640,
+        "variance": 0,
+        "pathgrid": 0,
+        "path_when_zone_idle": 0,
+        "_condition": 0,
+        "cond_value": 1,
+        "animation": 0,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null
+      },
+      "sourceFile": "effective/quests/airplane/Josin_Faithbringer.lua",
+      "sourceSha256": "4716ffb6a4c138748296410bc3d96b2d6c6a3f0b8d50d79d45f3435ec214556b",
+      "directTesterSpawningPreserved": true,
+      "testerNpcs": [
+        {
+          "npcId": 71080,
+          "npcName": "Alan_Harten",
+          "questKey": "airplane/Alan_Harten",
+          "sourceFile": "effective/quests/airplane/Alan_Harten.lua",
+          "sourceSha256": "4239802d8c6eac892326dd27511615bc3ab20ef14cce4dafee96043cc5b69aa8",
+          "staticSpawnEntries": [],
+          "scriptTimers": [
+            {
+              "name": "depop",
+              "durationMilliseconds": 300000
+            }
+          ]
+        },
+        {
+          "npcId": 71083,
+          "npcName": "Deric_Lennox",
+          "questKey": "airplane/Deric_Lennox",
+          "sourceFile": "effective/quests/airplane/Deric_Lennox.lua",
+          "sourceSha256": "9742c690a29e5977b785a1e82c3bd389dd25b8106547f1fbcffe732dae6225d8",
+          "staticSpawnEntries": [],
+          "scriptTimers": [
+            {
+              "name": "depop",
+              "durationMilliseconds": 300000
+            }
+          ]
+        }
+      ],
+      "classEvidence": {
+        "title": "Cleric Plane of Sky Tests",
+        "url": "https://wiki.project1999.com/Cleric_Plane_of_Sky_Tests?action=raw",
+        "fetchedAt": "2026-07-17T23:10:41.963Z",
+        "revision": null,
+        "sha256": "9eb22de0ac310a3dd9eee519837092be411b447208eb83737e4f019e60d5850e",
+        "bytes": 8434,
+        "source": "raw-pages/cleric-plane-of-sky-tests-ac9df219ab.json",
+        "cachePath": "reference/p99-wiki/raw-pages/cleric-plane-of-sky-tests-ac9df219ab.wiki"
+      },
+      "classPageRespawnEvidence": "No respawn duration is stated.",
+      "npcEvidence": [
+        {
+          "title": "Josin Faithbringer",
+          "url": "https://wiki.project1999.com/Josin_Faithbringer?action=raw",
+          "fetchedAt": "2026-08-12T19:37:51.120Z",
+          "revision": null,
+          "sha256": "5b402a3105d7ea18e3c4dedf128cbaeceaa3720650534726e07b9ad19d47c39b",
+          "bytes": 1439,
+          "source": "npc-pages/josin-faithbringer-a4ab9ca466.json",
+          "cachePath": "reference/p99-wiki/npc-pages/josin-faithbringer-a4ab9ca466.wiki"
+        }
+      ],
+      "specificNpcEvidenceDisposition": "Explicit 8-hour respawn contradicts the broad 3-hour sentence.",
+      "policy": {
+        "questExclusion": null,
+        "npcExclusions": [],
+        "npcNamePatternExclusions": []
+      },
+      "disposition": "timer-only-proposed-specific-exception",
+      "proposedRespawnSeconds": 28800,
+      "reason": "Prefer the exact Josin Faithbringer NPC page, which explicitly identifies the class starter and says his respawn is 8 hours. Its specific statement takes priority over the general overview's 3 hours; preserve that disagreement rather than flattening all starters to one duration. No newer class-page confirmation or measured runtime duration is claimed."
+    },
+    {
+      "class": "Druid",
+      "npcId": 71043,
+      "npcName": "Strandar_Pinemist",
+      "questKey": "airplane/Strandar_Pinemist",
+      "questId": 14765,
+      "questEnabled": 1,
+      "npcAutoLevelExclude": 1,
+      "npcIsQuest": 1,
+      "spawn2Id": 2688,
+      "spawnGroup": {
+        "id": 5473,
+        "name": "airplane_44",
+        "spawn_limit": 0,
+        "dist": 0,
+        "max_x": 0,
+        "min_x": 0,
+        "max_y": 0,
+        "min_y": 0,
+        "delay": 0,
+        "mindelay": 15000,
+        "despawn": 0,
+        "despawn_timer": 100,
+        "wp_spawns": 0
+      },
+      "spawnEntry": {
+        "spawngroupID": 5473,
+        "npcID": 71043,
+        "chance": 100,
+        "condition_value_filter": 1,
+        "min_time": 0,
+        "max_time": 0,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null
+      },
+      "baselineSpawn2": {
+        "id": 2688,
+        "spawngroupID": 5473,
+        "zone": "airplane",
+        "version": 0,
+        "x": 564,
+        "y": 1320,
+        "z": -762.25,
+        "heading": 128,
+        "respawntime": 640,
+        "variance": 0,
+        "pathgrid": 0,
+        "path_when_zone_idle": 0,
+        "_condition": 0,
+        "cond_value": 1,
+        "animation": 0,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null
+      },
+      "sourceFile": "effective/quests/airplane/Strandar_Pinemist.lua",
+      "sourceSha256": "8ba359a2ee585f73d8f2a027aa3cb166ca8056760a9f4e199c9881b90b5535da",
+      "directTesterSpawningPreserved": true,
+      "testerNpcs": [
+        {
+          "npcId": 71099,
+          "npcName": "Will_Treewalker",
+          "questKey": "airplane/Will_Treewalker",
+          "sourceFile": "effective/quests/airplane/Will_Treewalker.lua",
+          "sourceSha256": "9f69cc44b685a8348a1793e466535856afead5d8b7a634313e871b38789a53f9",
+          "staticSpawnEntries": [],
+          "scriptTimers": [
+            {
+              "name": "depop",
+              "durationMilliseconds": 300000
+            }
+          ]
+        },
+        {
+          "npcId": 71086,
+          "npcName": "Fenalla_Moonshadow",
+          "questKey": "airplane/Fenalla_Moonshadow",
+          "sourceFile": "effective/quests/airplane/Fenalla_Moonshadow.lua",
+          "sourceSha256": "27a865d3225a5e8f9986aaf1718437c17a4fb5a0d0a0436d8718f5533736f36f",
+          "staticSpawnEntries": [],
+          "scriptTimers": [
+            {
+              "name": "depop",
+              "durationMilliseconds": 300000
+            }
+          ]
+        }
+      ],
+      "classEvidence": {
+        "title": "Druid Plane of Sky Tests",
+        "url": "https://wiki.project1999.com/Druid_Plane_of_Sky_Tests?action=raw",
+        "fetchedAt": "2026-07-17T23:13:33.114Z",
+        "revision": null,
+        "sha256": "2dcfcbb35089686d0d21815b2a05428ef6564af4ad352da157bbad44b6fc4254",
+        "bytes": 9053,
+        "source": "raw-pages/druid-plane-of-sky-tests-b93a52a3c4.json",
+        "cachePath": "reference/p99-wiki/raw-pages/druid-plane-of-sky-tests-b93a52a3c4.wiki"
+      },
+      "classPageRespawnEvidence": "No respawn duration is stated.",
+      "npcEvidence": [],
+      "specificNpcEvidenceDisposition": "No cached NPC page with this exact emulator ID was found.",
+      "policy": {
+        "questExclusion": null,
+        "npcExclusions": [],
+        "npcNamePatternExclusions": []
+      },
+      "disposition": "timer-only-proposed",
+      "proposedRespawnSeconds": 10800,
+      "reason": "Apply the broad 3-hour natural quest-room respawn statement only to this explicitly named class starter with a dedicated static group and no contradictory exact-NPC/class-page timer. This is a scoped interpretation, not an independently measured per-NPC timer."
+    },
+    {
+      "class": "Enchanter",
+      "npcId": 71049,
+      "npcName": "Enchanter_Jolas",
+      "questKey": "airplane/Enchanter_Jolas",
+      "questId": 14662,
+      "questEnabled": 1,
+      "npcAutoLevelExclude": 1,
+      "npcIsQuest": 1,
+      "spawn2Id": 2694,
+      "spawnGroup": {
+        "id": 5479,
+        "name": "airplane_50",
+        "spawn_limit": 0,
+        "dist": 0,
+        "max_x": 0,
+        "min_x": 0,
+        "max_y": 0,
+        "min_y": 0,
+        "delay": 0,
+        "mindelay": 15000,
+        "despawn": 0,
+        "despawn_timer": 100,
+        "wp_spawns": 0
+      },
+      "spawnEntry": {
+        "spawngroupID": 5479,
+        "npcID": 71049,
+        "chance": 100,
+        "condition_value_filter": 1,
+        "min_time": 0,
+        "max_time": 0,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null
+      },
+      "baselineSpawn2": {
+        "id": 2694,
+        "spawngroupID": 5479,
+        "zone": "airplane",
+        "version": 0,
+        "x": 629.880005,
+        "y": 1305,
+        "z": -766,
+        "heading": 0,
+        "respawntime": 640,
+        "variance": 0,
+        "pathgrid": 0,
+        "path_when_zone_idle": 0,
+        "_condition": 0,
+        "cond_value": 1,
+        "animation": 0,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null
+      },
+      "sourceFile": "effective/quests/airplane/Enchanter_Jolas.lua",
+      "sourceSha256": "4f532d223b81638b5b99b8e9f002bda781f2d67d3735a4b7705db15c9289a4db",
+      "directTesterSpawningPreserved": true,
+      "testerNpcs": [
+        {
+          "npcId": 71085,
+          "npcName": "Enderbite",
+          "questKey": "airplane/Enderbite",
+          "sourceFile": "effective/quests/airplane/Enderbite.lua",
+          "sourceSha256": "78f8745ea92195e91223db8a43ba5c31ab0cf1c8668b69222fe385566b9f124c",
+          "staticSpawnEntries": [],
+          "scriptTimers": [
+            {
+              "name": "depop",
+              "durationMilliseconds": 300000
+            }
+          ]
+        },
+        {
+          "npcId": 71104,
+          "npcName": "Lelulean",
+          "questKey": "airplane/Lelulean",
+          "sourceFile": "effective/quests/airplane/Lelulean.lua",
+          "sourceSha256": "13875a40ff2937d59f7d0307a7c4130866d590ca55c904a3754b60868baf1f56",
+          "staticSpawnEntries": [],
+          "scriptTimers": [
+            {
+              "name": "depop",
+              "durationMilliseconds": 300000
+            }
+          ]
+        }
+      ],
+      "classEvidence": {
+        "title": "Enchanter Plane of Sky Tests",
+        "url": "https://wiki.project1999.com/Enchanter_Plane_of_Sky_Tests?action=raw",
+        "fetchedAt": "2026-07-17T23:14:03.892Z",
+        "revision": null,
+        "sha256": "839a331ea6c4123ef90201f7cb3f54c499b6bf3be2e42b8d092dc6786204ae57",
+        "bytes": 9679,
+        "source": "raw-pages/enchanter-plane-of-sky-tests-42aa195c08.json",
+        "cachePath": "reference/p99-wiki/raw-pages/enchanter-plane-of-sky-tests-42aa195c08.wiki"
+      },
+      "classPageRespawnEvidence": "No respawn duration is stated.",
+      "npcEvidence": [],
+      "specificNpcEvidenceDisposition": "No cached NPC page with this exact emulator ID was found.",
+      "policy": {
+        "questExclusion": null,
+        "npcExclusions": [],
+        "npcNamePatternExclusions": []
+      },
+      "disposition": "timer-only-proposed",
+      "proposedRespawnSeconds": 10800,
+      "reason": "Apply the broad 3-hour natural quest-room respawn statement only to this explicitly named class starter with a dedicated static group and no contradictory exact-NPC/class-page timer. This is a scoped interpretation, not an independently measured per-NPC timer."
+    },
+    {
+      "class": "Magician",
+      "npcId": 71050,
+      "npcName": "Magus_Frinon",
+      "questKey": "airplane/Magus_Frinon",
+      "questId": 13564,
+      "questEnabled": 1,
+      "npcAutoLevelExclude": 1,
+      "npcIsQuest": 1,
+      "spawn2Id": 2695,
+      "spawnGroup": {
+        "id": 5480,
+        "name": "airplane_51",
+        "spawn_limit": 0,
+        "dist": 0,
+        "max_x": 0,
+        "min_x": 0,
+        "max_y": 0,
+        "min_y": 0,
+        "delay": 0,
+        "mindelay": 15000,
+        "despawn": 0,
+        "despawn_timer": 100,
+        "wp_spawns": 0
+      },
+      "spawnEntry": {
+        "spawngroupID": 5480,
+        "npcID": 71050,
+        "chance": 100,
+        "condition_value_filter": 1,
+        "min_time": 0,
+        "max_time": 0,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null
+      },
+      "baselineSpawn2": {
+        "id": 2695,
+        "spawngroupID": 5480,
+        "zone": "airplane",
+        "version": 0,
+        "x": 604.880005,
+        "y": 1305,
+        "z": -762.25,
+        "heading": 0,
+        "respawntime": 640,
+        "variance": 0,
+        "pathgrid": 0,
+        "path_when_zone_idle": 0,
+        "_condition": 0,
+        "cond_value": 1,
+        "animation": 0,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null
+      },
+      "sourceFile": "effective/quests/airplane/Magus_Frinon.lua",
+      "sourceSha256": "b23390cc09beaa025fe0a330898e57545603910c9d96c2a39fde0f1536aa6329",
+      "directTesterSpawningPreserved": true,
+      "testerNpcs": [
+        {
+          "npcId": 71088,
+          "npcName": "Frederic_Calermin",
+          "questKey": "airplane/Frederic_Calermin",
+          "sourceFile": "effective/quests/airplane/Frederic_Calermin.lua",
+          "sourceSha256": "b34f4a7969acb05e528282af3bd86c1047f8369569299b8aadfcd249fca2d9b5",
+          "staticSpawnEntries": [],
+          "scriptTimers": [
+            {
+              "name": "depop",
+              "durationMilliseconds": 300000
+            }
+          ]
+        },
+        {
+          "npcId": 71094,
+          "npcName": "Roanis_Elindar",
+          "questKey": "airplane/Roanis_Elindar",
+          "sourceFile": "effective/quests/airplane/Roanis_Elindar.lua",
+          "sourceSha256": "de08558ac91429de8ee325c1090ce90baf272f6dab30ddd23deb09944677fb92",
+          "staticSpawnEntries": [],
+          "scriptTimers": [
+            {
+              "name": "depop",
+              "durationMilliseconds": 300000
+            }
+          ]
+        }
+      ],
+      "classEvidence": {
+        "title": "Magician Plane of Sky Tests",
+        "url": "https://wiki.project1999.com/Magician_Plane_of_Sky_Tests?action=raw",
+        "fetchedAt": "2026-07-17T23:24:22.948Z",
+        "revision": null,
+        "sha256": "eac8a58161597dbb2fe0695666180caafe2b35181b0c4fc7c082281628083f84",
+        "bytes": 8941,
+        "source": "raw-pages/magician-plane-of-sky-tests-ad4f3cdeae.json",
+        "cachePath": "reference/p99-wiki/raw-pages/magician-plane-of-sky-tests-ad4f3cdeae.wiki"
+      },
+      "classPageRespawnEvidence": "No respawn duration is stated.",
+      "npcEvidence": [
+        {
+          "title": "Magi Frinon",
+          "url": "https://wiki.project1999.com/Magi_Frinon?action=raw",
+          "fetchedAt": "2026-08-12T20:02:50.672Z",
+          "revision": null,
+          "sha256": "445698a0c193fa32b8ce39b31843d57b874db048fcc9cb1795642b5fcedddfec",
+          "bytes": 1286,
+          "source": "npc-pages/magi-frinon-ddb94dc611.json",
+          "cachePath": "reference/p99-wiki/npc-pages/magi-frinon-ddb94dc611.wiki"
+        },
+        {
+          "title": "Magus Frinon",
+          "url": "https://wiki.project1999.com/Magus_Frinon?action=raw",
+          "fetchedAt": "2026-08-12T20:03:00.241Z",
+          "revision": null,
+          "sha256": "2745d51437b8a3cb1ba1b026afe70b9cf6ea61b001458cd3465080947a66d2ed",
+          "bytes": 1291,
+          "source": "npc-pages/magus-frinon-b36e25d407.json",
+          "cachePath": "reference/p99-wiki/npc-pages/magus-frinon-b36e25d407.wiki"
+        }
+      ],
+      "specificNpcEvidenceDisposition": "No respawn duration is stated in the cached NPC page(s).",
+      "policy": {
+        "questExclusion": null,
+        "npcExclusions": [],
+        "npcNamePatternExclusions": []
+      },
+      "disposition": "timer-only-proposed",
+      "proposedRespawnSeconds": 10800,
+      "reason": "Apply the broad 3-hour natural quest-room respawn statement only to this explicitly named class starter with a dedicated static group and no contradictory exact-NPC/class-page timer. This is a scoped interpretation, not an independently measured per-NPC timer."
+    },
+    {
+      "class": "Monk",
+      "npcId": 71046,
+      "npcName": "Holwin",
+      "questKey": "airplane/Holwin",
+      "questId": 14308,
+      "questEnabled": 1,
+      "npcAutoLevelExclude": 1,
+      "npcIsQuest": 1,
+      "spawn2Id": 2691,
+      "spawnGroup": {
+        "id": 5476,
+        "name": "airplane_47",
+        "spawn_limit": 0,
+        "dist": 0,
+        "max_x": 0,
+        "min_x": 0,
+        "max_y": 0,
+        "min_y": 0,
+        "delay": 0,
+        "mindelay": 15000,
+        "despawn": 0,
+        "despawn_timer": 100,
+        "wp_spawns": 0
+      },
+      "spawnEntry": {
+        "spawngroupID": 5476,
+        "npcID": 71046,
+        "chance": 100,
+        "condition_value_filter": 1,
+        "min_time": 0,
+        "max_time": 0,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null
+      },
+      "baselineSpawn2": {
+        "id": 2691,
+        "spawngroupID": 5476,
+        "zone": "airplane",
+        "version": 0,
+        "x": 659.880005,
+        "y": 1324.880005,
+        "z": -765.880005,
+        "heading": 384,
+        "respawntime": 640,
+        "variance": 0,
+        "pathgrid": 0,
+        "path_when_zone_idle": 0,
+        "_condition": 0,
+        "cond_value": 1,
+        "animation": 0,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null
+      },
+      "sourceFile": "effective/quests/airplane/Holwin.lua",
+      "sourceSha256": "1bd671f9ca309d1620489c51507f1c706fff23c1ba36992307adf06cbd9da7b3",
+      "directTesterSpawningPreserved": true,
+      "testerNpcs": [
+        {
+          "npcId": 71097,
+          "npcName": "Wu_the_Enlightened",
+          "questKey": "airplane/Wu_the_Enlightened",
+          "sourceFile": "effective/quests/airplane/Wu_the_Enlightened.lua",
+          "sourceSha256": "0d66073bd6fb391a22686aa7dffefc0aef7d4e6a9ff52132ab83765876216cd9",
+          "staticSpawnEntries": [],
+          "scriptTimers": [
+            {
+              "name": "depop",
+              "durationMilliseconds": 300000
+            }
+          ]
+        },
+        {
+          "npcId": 71096,
+          "npcName": "Ton_Po",
+          "questKey": "airplane/Ton_Po",
+          "sourceFile": "effective/quests/airplane/Ton_Po.lua",
+          "sourceSha256": "ff9a79aa3db8d4f0966f4e9ccf629c9f076778266ce1a90aced217a34ee0e5bc",
+          "staticSpawnEntries": [],
+          "scriptTimers": [
+            {
+              "name": "depop",
+              "durationMilliseconds": 300000
+            }
+          ]
+        }
+      ],
+      "classEvidence": {
+        "title": "Monk Plane of Sky Tests",
+        "url": "https://wiki.project1999.com/Monk_Plane_of_Sky_Tests?action=raw",
+        "fetchedAt": "2026-07-17T23:25:42.999Z",
+        "revision": null,
+        "sha256": "890706c6dafc63ef49ce650c28afc20f19ca7958e64a912bf074bf2bc765b7a4",
+        "bytes": 8699,
+        "source": "raw-pages/monk-plane-of-sky-tests-4d906cdcc8.json",
+        "cachePath": "reference/p99-wiki/raw-pages/monk-plane-of-sky-tests-4d906cdcc8.wiki"
+      },
+      "classPageRespawnEvidence": "No respawn duration is stated.",
+      "npcEvidence": [],
+      "specificNpcEvidenceDisposition": "No cached NPC page with this exact emulator ID was found.",
+      "policy": {
+        "questExclusion": null,
+        "npcExclusions": [],
+        "npcNamePatternExclusions": []
+      },
+      "disposition": "timer-only-proposed",
+      "proposedRespawnSeconds": 10800,
+      "reason": "Apply the broad 3-hour natural quest-room respawn statement only to this explicitly named class starter with a dedicated static group and no contradictory exact-NPC/class-page timer. This is a scoped interpretation, not an independently measured per-NPC timer."
+    },
+    {
+      "class": "Necromancer",
+      "npcId": 71053,
+      "npcName": "Drakis_Bloodcaster",
+      "questKey": "airplane/Drakis_Bloodcaster",
+      "questId": 18181,
+      "questEnabled": 1,
+      "npcAutoLevelExclude": 1,
+      "npcIsQuest": 1,
+      "spawn2Id": 2698,
+      "spawnGroup": {
+        "id": 5483,
+        "name": "airplane_54",
+        "spawn_limit": 0,
+        "dist": 0,
+        "max_x": 0,
+        "min_x": 0,
+        "max_y": 0,
+        "min_y": 0,
+        "delay": 0,
+        "mindelay": 15000,
+        "despawn": 0,
+        "despawn_timer": 100,
+        "wp_spawns": 0
+      },
+      "spawnEntry": {
+        "spawngroupID": 5483,
+        "npcID": 71053,
+        "chance": 100,
+        "condition_value_filter": 1,
+        "min_time": 0,
+        "max_time": 0,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null
+      },
+      "baselineSpawn2": {
+        "id": 2698,
+        "spawngroupID": 5483,
+        "zone": "airplane",
+        "version": 0,
+        "x": 654.880005,
+        "y": 1305,
+        "z": -762.25,
+        "heading": 0,
+        "respawntime": 640,
+        "variance": 0,
+        "pathgrid": 0,
+        "path_when_zone_idle": 0,
+        "_condition": 0,
+        "cond_value": 1,
+        "animation": 0,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null
+      },
+      "sourceFile": "effective/quests/airplane/Drakis_Bloodcaster.lua",
+      "sourceSha256": "8831faa1646bd470b5b99fd62086371ef5455d17cad72c294798f8d204ec438b",
+      "directTesterSpawningPreserved": true,
+      "testerNpcs": [
+        {
+          "npcId": 71074,
+          "npcName": "Jzil_GSix",
+          "questKey": "airplane/Jzil_GSix",
+          "sourceFile": "effective/quests/airplane/Jzil_GSix.lua",
+          "sourceSha256": "f7175f5a78c5c3c8b75e965e62d508182236ad242513a57b67c8d0ecd18d4aae",
+          "staticSpawnEntries": [],
+          "scriptTimers": [
+            {
+              "name": "depop",
+              "durationMilliseconds": 300000
+            }
+          ]
+        },
+        {
+          "npcId": 71084,
+          "npcName": "Dugaas_Helpyre",
+          "questKey": "airplane/Dugaas_Helpyre",
+          "sourceFile": "effective/quests/airplane/Dugaas_Helpyre.lua",
+          "sourceSha256": "bee88ad2cbb933e476db259b2f0fd9114e497d495d71e362f3fff41e66025330",
+          "staticSpawnEntries": [],
+          "scriptTimers": [
+            {
+              "name": "depop",
+              "durationMilliseconds": 300000
+            }
+          ]
+        }
+      ],
+      "classEvidence": {
+        "title": "Necromancer Plane of Sky Tests",
+        "url": "https://wiki.project1999.com/Necromancer_Plane_of_Sky_Tests?action=raw",
+        "fetchedAt": "2026-07-17T23:26:27.439Z",
+        "revision": null,
+        "sha256": "3694ea5a8ab4746b1ee6b814a09b01f0883f16a4c989096e15c11518bb8c955d",
+        "bytes": 8435,
+        "source": "raw-pages/necromancer-plane-of-sky-tests-6ea6b4e160.json",
+        "cachePath": "reference/p99-wiki/raw-pages/necromancer-plane-of-sky-tests-6ea6b4e160.wiki"
+      },
+      "classPageRespawnEvidence": "No respawn duration is stated.",
+      "npcEvidence": [],
+      "specificNpcEvidenceDisposition": "No cached NPC page with this exact emulator ID was found.",
+      "policy": {
+        "questExclusion": null,
+        "npcExclusions": [],
+        "npcNamePatternExclusions": []
+      },
+      "disposition": "timer-only-proposed",
+      "proposedRespawnSeconds": 10800,
+      "reason": "Apply the broad 3-hour natural quest-room respawn statement only to this explicitly named class starter with a dedicated static group and no contradictory exact-NPC/class-page timer. This is a scoped interpretation, not an independently measured per-NPC timer."
+    },
+    {
+      "class": "Paladin",
+      "npcId": 71037,
+      "npcName": "Dason_Goldblade",
+      "questKey": "airplane/Dason_Goldblade",
+      "questId": 19575,
+      "questEnabled": 1,
+      "npcAutoLevelExclude": 1,
+      "npcIsQuest": 1,
+      "spawn2Id": 2679,
+      "spawnGroup": {
+        "id": 2087,
+        "name": "airplane_38",
+        "spawn_limit": 0,
+        "dist": 0,
+        "max_x": 0,
+        "min_x": 0,
+        "max_y": 0,
+        "min_y": 0,
+        "delay": 0,
+        "mindelay": 15000,
+        "despawn": 0,
+        "despawn_timer": 100,
+        "wp_spawns": 0
+      },
+      "spawnEntry": {
+        "spawngroupID": 2087,
+        "npcID": 71037,
+        "chance": 100,
+        "condition_value_filter": 1,
+        "min_time": 0,
+        "max_time": 0,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null
+      },
+      "baselineSpawn2": {
+        "id": 2679,
+        "spawngroupID": 2087,
+        "zone": "airplane",
+        "version": 0,
+        "x": 564,
+        "y": 1340,
+        "z": -762.25,
+        "heading": 128,
+        "respawntime": 640,
+        "variance": 0,
+        "pathgrid": 0,
+        "path_when_zone_idle": 0,
+        "_condition": 0,
+        "cond_value": 1,
+        "animation": 0,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null
+      },
+      "sourceFile": "effective/quests/airplane/Dason_Goldblade.lua",
+      "sourceSha256": "587fbd2415b43f8e0f3ba698fb08708f648ce24384a410bae454298fe0efc385",
+      "directTesterSpawningPreserved": true,
+      "testerNpcs": [
+        {
+          "npcId": 71089,
+          "npcName": "Gregori_Lightbringer",
+          "questKey": "airplane/Gregori_Lightbringer",
+          "sourceFile": "effective/quests/airplane/Gregori_Lightbringer.lua",
+          "sourceSha256": "f20e5c03c6b025d7beb9b23fe7962a24fb5da38569e0c0e758efabaada2744a9",
+          "staticSpawnEntries": [],
+          "scriptTimers": [
+            {
+              "name": "depop",
+              "durationMilliseconds": 300000
+            }
+          ]
+        },
+        {
+          "npcId": 71077,
+          "npcName": "Dirkog_Steelhand",
+          "questKey": "airplane/Dirkog_Steelhand",
+          "sourceFile": "effective/quests/airplane/Dirkog_Steelhand.lua",
+          "sourceSha256": "46f9b6b52741dcef5761186125d5fb050fd120db0e5594b3b5a7e0a3d44b12f1",
+          "staticSpawnEntries": [],
+          "scriptTimers": [
+            {
+              "name": "depop",
+              "durationMilliseconds": 300000
+            }
+          ]
+        }
+      ],
+      "classEvidence": {
+        "title": "Paladin Plane of Sky Tests",
+        "url": "https://wiki.project1999.com/Paladin_Plane_of_Sky_Tests?action=raw",
+        "fetchedAt": "2026-07-17T23:28:03.543Z",
+        "revision": null,
+        "sha256": "9fbafac4cf8c397a7464b3860d53661ee08c16608546ae64eaa55bf16c36d2dc",
+        "bytes": 6795,
+        "source": "raw-pages/paladin-plane-of-sky-tests-1b7ecd455d.json",
+        "cachePath": "reference/p99-wiki/raw-pages/paladin-plane-of-sky-tests-1b7ecd455d.wiki"
+      },
+      "classPageRespawnEvidence": "No respawn duration is stated.",
+      "npcEvidence": [
+        {
+          "title": "Dason Goldblade",
+          "url": "https://wiki.project1999.com/Dason_Goldblade?action=raw",
+          "fetchedAt": "2026-08-12T18:24:01.366Z",
+          "revision": null,
+          "sha256": "22e456a9cfb770f1d77ec9563bec4daeeab9d1c818dd56c733f815c863096302",
+          "bytes": 900,
+          "source": "npc-pages/dason-goldblade-03786ffad9.json",
+          "cachePath": "reference/p99-wiki/npc-pages/dason-goldblade-03786ffad9.wiki"
+        }
+      ],
+      "specificNpcEvidenceDisposition": "No respawn duration is stated in the cached NPC page(s).",
+      "policy": {
+        "questExclusion": null,
+        "npcExclusions": [],
+        "npcNamePatternExclusions": []
+      },
+      "disposition": "timer-only-proposed",
+      "proposedRespawnSeconds": 10800,
+      "reason": "Apply the broad 3-hour natural quest-room respawn statement only to this explicitly named class starter with a dedicated static group and no contradictory exact-NPC/class-page timer. This is a scoped interpretation, not an independently measured per-NPC timer."
+    },
+    {
+      "class": "Ranger",
+      "npcId": 71054,
+      "npcName": "Ranger_Spirit",
+      "questKey": "airplane/Ranger_Spirit",
+      "questId": 12747,
+      "questEnabled": 1,
+      "npcAutoLevelExclude": 1,
+      "npcIsQuest": 1,
+      "spawn2Id": 2699,
+      "spawnGroup": {
+        "id": 5484,
+        "name": "airplane_55",
+        "spawn_limit": 0,
+        "dist": 0,
+        "max_x": 0,
+        "min_x": 0,
+        "max_y": 0,
+        "min_y": 0,
+        "delay": 0,
+        "mindelay": 15000,
+        "despawn": 0,
+        "despawn_timer": 100,
+        "wp_spawns": 0
+      },
+      "spawnEntry": {
+        "spawngroupID": 5484,
+        "npcID": 71054,
+        "chance": 100,
+        "condition_value_filter": 1,
+        "min_time": 0,
+        "max_time": 0,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null
+      },
+      "baselineSpawn2": {
+        "id": 2699,
+        "spawngroupID": 5484,
+        "zone": "airplane",
+        "version": 0,
+        "x": 609.880005,
+        "y": 1400,
+        "z": -762.25,
+        "heading": 256,
+        "respawntime": 640,
+        "variance": 0,
+        "pathgrid": 0,
+        "path_when_zone_idle": 0,
+        "_condition": 0,
+        "cond_value": 1,
+        "animation": 0,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null
+      },
+      "sourceFile": "effective/quests/airplane/Ranger_Spirit.lua",
+      "sourceSha256": "ac8acb040bf5622d396900fa4e1e35bebea18415a63743c3fcc441a3aaa3fed5",
+      "directTesterSpawningPreserved": true,
+      "testerNpcs": [
+        {
+          "npcId": 71095,
+          "npcName": "Relinin_Skyrunner",
+          "questKey": "airplane/Relinin_Skyrunner",
+          "sourceFile": "effective/quests/airplane/Relinin_Skyrunner.lua",
+          "sourceSha256": "89d7baa9b230161bc78a3ae9c0b8d57c5ee30edc51147c1bccfc4bce7c558889",
+          "staticSpawnEntries": [],
+          "scriptTimers": [
+            {
+              "name": "depop",
+              "durationMilliseconds": 300000
+            }
+          ]
+        },
+        {
+          "npcId": 71090,
+          "npcName": "Gordon_Treecaller",
+          "questKey": "airplane/Gordon_Treecaller",
+          "sourceFile": "effective/quests/airplane/Gordon_Treecaller.lua",
+          "sourceSha256": "e207ede88cdbb8a5caa221cd0472e63d34c204fc72715aa24351190d19ed6c08",
+          "staticSpawnEntries": [],
+          "scriptTimers": [
+            {
+              "name": "depop",
+              "durationMilliseconds": 300000
+            }
+          ]
+        }
+      ],
+      "classEvidence": {
+        "title": "Ranger Plane of Sky Tests",
+        "url": "https://wiki.project1999.com/Ranger_Plane_of_Sky_Tests?action=raw",
+        "fetchedAt": "2026-07-17T23:29:33.487Z",
+        "revision": null,
+        "sha256": "d5d73693c67b7d19ffc6989732eafa5b62c055db51e16cc6e38f1681a060f4aa",
+        "bytes": 8948,
+        "source": "raw-pages/ranger-plane-of-sky-tests-48fee44c95.json",
+        "cachePath": "reference/p99-wiki/raw-pages/ranger-plane-of-sky-tests-48fee44c95.wiki"
+      },
+      "classPageRespawnEvidence": "No respawn duration is stated.",
+      "npcEvidence": [],
+      "specificNpcEvidenceDisposition": "No cached NPC page with this exact emulator ID was found.",
+      "policy": {
+        "questExclusion": null,
+        "npcExclusions": [],
+        "npcNamePatternExclusions": []
+      },
+      "disposition": "timer-only-proposed",
+      "proposedRespawnSeconds": 10800,
+      "reason": "Apply the broad 3-hour natural quest-room respawn statement only to this explicitly named class starter with a dedicated static group and no contradictory exact-NPC/class-page timer. This is a scoped interpretation, not an independently measured per-NPC timer."
+    },
+    {
+      "class": "Rogue",
+      "npcId": 71051,
+      "npcName": "Thalik_Silenthand",
+      "questKey": "airplane/Thalik_Silenthand",
+      "questId": 18196,
+      "questEnabled": 1,
+      "npcAutoLevelExclude": 1,
+      "npcIsQuest": 1,
+      "spawn2Id": 2696,
+      "spawnGroup": {
+        "id": 5481,
+        "name": "airplane_52",
+        "spawn_limit": 0,
+        "dist": 0,
+        "max_x": 0,
+        "min_x": 0,
+        "max_y": 0,
+        "min_y": 0,
+        "delay": 0,
+        "mindelay": 15000,
+        "despawn": 0,
+        "despawn_timer": 100,
+        "wp_spawns": 0
+      },
+      "spawnEntry": {
+        "spawngroupID": 5481,
+        "npcID": 71051,
+        "chance": 100,
+        "condition_value_filter": 1,
+        "min_time": 0,
+        "max_time": 0,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null
+      },
+      "baselineSpawn2": {
+        "id": 2696,
+        "spawngroupID": 5481,
+        "zone": "airplane",
+        "version": 0,
+        "x": 564,
+        "y": 1380,
+        "z": -766,
+        "heading": 128,
+        "respawntime": 640,
+        "variance": 0,
+        "pathgrid": 0,
+        "path_when_zone_idle": 0,
+        "_condition": 0,
+        "cond_value": 1,
+        "animation": 0,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null
+      },
+      "sourceFile": "effective/quests/airplane/Thalik_Silenthand.lua",
+      "sourceSha256": "49db9625e276ebb1107193236d385f3d9b1b246dd80cea32172482eddf3d2dac",
+      "directTesterSpawningPreserved": true,
+      "testerNpcs": [
+        {
+          "npcId": 71061,
+          "npcName": "Rayne",
+          "questKey": "airplane/Rayne",
+          "sourceFile": "effective/quests/airplane/Rayne.lua",
+          "sourceSha256": "93a4d663d756117d9921c7fb9f0720c97305d5945f83accbe4a2c7c0dccf90bd",
+          "staticSpawnEntries": [],
+          "scriptTimers": [
+            {
+              "name": "depop",
+              "durationMilliseconds": 300000
+            }
+          ]
+        },
+        {
+          "npcId": 71068,
+          "npcName": "Kendrick",
+          "questKey": "airplane/Kendrick",
+          "sourceFile": "effective/quests/airplane/Kendrick.lua",
+          "sourceSha256": "c627c94c6e9de6b953331fc3c98f12168b12d900b028254cb569679c02612fbc",
+          "staticSpawnEntries": [],
+          "scriptTimers": [
+            {
+              "name": "depop",
+              "durationMilliseconds": 300000
+            }
+          ]
+        }
+      ],
+      "classEvidence": {
+        "title": "Rogue Plane of Sky Tests",
+        "url": "https://wiki.project1999.com/Rogue_Plane_of_Sky_Tests?action=raw",
+        "fetchedAt": "2026-07-17T23:30:59.869Z",
+        "revision": null,
+        "sha256": "603207e8a8b1274627de52b625e31bce4c094b58699fbc589c58d694c64e53ff",
+        "bytes": 8139,
+        "source": "raw-pages/rogue-plane-of-sky-tests-e82e51b589.json",
+        "cachePath": "reference/p99-wiki/raw-pages/rogue-plane-of-sky-tests-e82e51b589.wiki"
+      },
+      "classPageRespawnEvidence": "No respawn duration is stated.",
+      "npcEvidence": [],
+      "specificNpcEvidenceDisposition": "No cached NPC page with this exact emulator ID was found.",
+      "policy": {
+        "questExclusion": null,
+        "npcExclusions": [],
+        "npcNamePatternExclusions": []
+      },
+      "disposition": "timer-only-proposed",
+      "proposedRespawnSeconds": 10800,
+      "reason": "Apply the broad 3-hour natural quest-room respawn statement only to this explicitly named class starter with a dedicated static group and no contradictory exact-NPC/class-page timer. This is a scoped interpretation, not an independently measured per-NPC timer."
+    },
+    {
+      "class": "Shadow Knight",
+      "npcId": 71048,
+      "npcName": "Sarkis_Ebonblade",
+      "questKey": "airplane/Sarkis_Ebonblade",
+      "questId": 19557,
+      "questEnabled": 1,
+      "npcAutoLevelExclude": 1,
+      "npcIsQuest": 1,
+      "spawn2Id": 2693,
+      "spawnGroup": {
+        "id": 5478,
+        "name": "airplane_49",
+        "spawn_limit": 0,
+        "dist": 0,
+        "max_x": 0,
+        "min_x": 0,
+        "max_y": 0,
+        "min_y": 0,
+        "delay": 0,
+        "mindelay": 15000,
+        "despawn": 0,
+        "despawn_timer": 100,
+        "wp_spawns": 0
+      },
+      "spawnEntry": {
+        "spawngroupID": 5478,
+        "npcID": 71048,
+        "chance": 100,
+        "condition_value_filter": 1,
+        "min_time": 0,
+        "max_time": 0,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null
+      },
+      "baselineSpawn2": {
+        "id": 2693,
+        "spawngroupID": 5478,
+        "zone": "airplane",
+        "version": 0,
+        "x": 564,
+        "y": 1360,
+        "z": -765.880005,
+        "heading": 128,
+        "respawntime": 640,
+        "variance": 0,
+        "pathgrid": 0,
+        "path_when_zone_idle": 0,
+        "_condition": 0,
+        "cond_value": 1,
+        "animation": 0,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null
+      },
+      "sourceFile": "effective/quests/airplane/Sarkis_Ebonblade.lua",
+      "sourceSha256": "c081b13006d12704fc0742df0d727dbb2c47bac4cdaa9cdcda4c3215d181d75b",
+      "directTesterSpawningPreserved": true,
+      "testerNpcs": [
+        {
+          "npcId": 71063,
+          "npcName": "Gragrot",
+          "questKey": "airplane/Gragrot",
+          "sourceFile": "effective/quests/airplane/Gragrot.lua",
+          "sourceSha256": "c7ef90a34f075368f2571347652c4e9cf62a48e73da9e97eb8c5d553e9740343",
+          "staticSpawnEntries": [],
+          "scriptTimers": [
+            {
+              "name": "depop",
+              "durationMilliseconds": 300000
+            }
+          ]
+        },
+        {
+          "npcId": 71098,
+          "npcName": "Tynicon_DLin",
+          "questKey": "airplane/Tynicon_DLin",
+          "sourceFile": "effective/quests/airplane/Tynicon_DLin.lua",
+          "sourceSha256": "9f23d2da57bad437ad84b1769ebf2b082914e01a35cfa6f82eee33fd2247ccd7",
+          "staticSpawnEntries": [],
+          "scriptTimers": [
+            {
+              "name": "depop",
+              "durationMilliseconds": 300000
+            }
+          ]
+        }
+      ],
+      "classEvidence": {
+        "title": "Shadow Knight Plane of Sky Tests",
+        "url": "https://wiki.project1999.com/Shadow_Knight_Plane_of_Sky_Tests?action=raw",
+        "fetchedAt": "2026-07-17T23:32:18.835Z",
+        "revision": null,
+        "sha256": "cf18b1c0020b061190578b1c9a4c0f9e5017be8cdd9092e34b7d18ba9c4e49d2",
+        "bytes": 9912,
+        "source": "raw-pages/shadow-knight-plane-of-sky-tests-f528b9a00a.json",
+        "cachePath": "reference/p99-wiki/raw-pages/shadow-knight-plane-of-sky-tests-f528b9a00a.wiki"
+      },
+      "classPageRespawnEvidence": "No respawn duration is stated.",
+      "npcEvidence": [],
+      "specificNpcEvidenceDisposition": "No cached NPC page with this exact emulator ID was found.",
+      "policy": {
+        "questExclusion": null,
+        "npcExclusions": [],
+        "npcNamePatternExclusions": []
+      },
+      "disposition": "timer-only-proposed",
+      "proposedRespawnSeconds": 10800,
+      "reason": "Apply the broad 3-hour natural quest-room respawn statement only to this explicitly named class starter with a dedicated static group and no contradictory exact-NPC/class-page timer. This is a scoped interpretation, not an independently measured per-NPC timer."
+    },
+    {
+      "class": "Shaman",
+      "npcId": 71044,
+      "npcName": "Medicine_Man_Veetra",
+      "questKey": "airplane/Medicine_Man_Veetra",
+      "questId": 11951,
+      "questEnabled": 1,
+      "npcAutoLevelExclude": 1,
+      "npcIsQuest": 1,
+      "spawn2Id": 2689,
+      "spawnGroup": {
+        "id": 5474,
+        "name": "airplane_45",
+        "spawn_limit": 0,
+        "dist": 0,
+        "max_x": 0,
+        "min_x": 0,
+        "max_y": 0,
+        "min_y": 0,
+        "delay": 0,
+        "mindelay": 15000,
+        "despawn": 0,
+        "despawn_timer": 100,
+        "wp_spawns": 0
+      },
+      "spawnEntry": {
+        "spawngroupID": 5474,
+        "npcID": 71044,
+        "chance": 100,
+        "condition_value_filter": 1,
+        "min_time": 0,
+        "max_time": 0,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null
+      },
+      "baselineSpawn2": {
+        "id": 2689,
+        "spawngroupID": 5474,
+        "zone": "airplane",
+        "version": 0,
+        "x": 639.880005,
+        "y": 1400,
+        "z": -762.25,
+        "heading": 256,
+        "respawntime": 640,
+        "variance": 0,
+        "pathgrid": 0,
+        "path_when_zone_idle": 0,
+        "_condition": 0,
+        "cond_value": 1,
+        "animation": 0,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null
+      },
+      "sourceFile": "effective/quests/airplane/Medicine_Man_Veetra.lua",
+      "sourceSha256": "9db907425a83d35a1ed5eec0d681e19ecba0c0d6013d4983cdfb6371a763cae3",
+      "directTesterSpawningPreserved": true,
+      "testerNpcs": [
+        {
+          "npcId": 71087,
+          "npcName": "Gina_McStargan",
+          "questKey": "airplane/Gina_McStargan",
+          "sourceFile": "effective/quests/airplane/Gina_McStargan.lua",
+          "sourceSha256": "4f9b74f65d24c0af3ac23f02bff39bc7f4ec5cab622245f7730a719b0f1b98ab",
+          "staticSpawnEntries": [],
+          "scriptTimers": [
+            {
+              "name": "depop",
+              "durationMilliseconds": 300000
+            }
+          ]
+        },
+        {
+          "npcId": 71093,
+          "npcName": "Ooga",
+          "questKey": "airplane/Ooga",
+          "sourceFile": "effective/quests/airplane/Ooga.lua",
+          "sourceSha256": "8403f8fdbc5c0c3c346589ae9985868399736a4813dd5e116d38a5b0005d7503",
+          "staticSpawnEntries": [],
+          "scriptTimers": [
+            {
+              "name": "depop",
+              "durationMilliseconds": 300000
+            }
+          ]
+        }
+      ],
+      "classEvidence": {
+        "title": "Shaman Plane of Sky Tests",
+        "url": "https://wiki.project1999.com/Shaman_Plane_of_Sky_Tests?action=raw",
+        "fetchedAt": "2026-07-17T23:32:41.562Z",
+        "revision": null,
+        "sha256": "d2cf8a9522bfba312b59886ff4968b2699824ca84526006ed5a5fe9b0a624d2a",
+        "bytes": 8826,
+        "source": "raw-pages/shaman-plane-of-sky-tests-55529c2980.json",
+        "cachePath": "reference/p99-wiki/raw-pages/shaman-plane-of-sky-tests-55529c2980.wiki"
+      },
+      "classPageRespawnEvidence": "No respawn duration is stated.",
+      "npcEvidence": [],
+      "specificNpcEvidenceDisposition": "No cached NPC page with this exact emulator ID was found.",
+      "policy": {
+        "questExclusion": null,
+        "npcExclusions": [],
+        "npcNamePatternExclusions": []
+      },
+      "disposition": "timer-only-proposed",
+      "proposedRespawnSeconds": 10800,
+      "reason": "Apply the broad 3-hour natural quest-room respawn statement only to this explicitly named class starter with a dedicated static group and no contradictory exact-NPC/class-page timer. This is a scoped interpretation, not an independently measured per-NPC timer."
+    },
+    {
+      "class": "Warrior",
+      "npcId": 71045,
+      "npcName": "Torgon_Blademaster",
+      "questKey": "airplane/Torgon_Blademaster",
+      "questId": 14405,
+      "questEnabled": 1,
+      "npcAutoLevelExclude": 1,
+      "npcIsQuest": 1,
+      "spawn2Id": 2690,
+      "spawnGroup": {
+        "id": 5475,
+        "name": "airplane_46",
+        "spawn_limit": 0,
+        "dist": 0,
+        "max_x": 0,
+        "min_x": 0,
+        "max_y": 0,
+        "min_y": 0,
+        "delay": 0,
+        "mindelay": 15000,
+        "despawn": 0,
+        "despawn_timer": 100,
+        "wp_spawns": 0
+      },
+      "spawnEntry": {
+        "spawngroupID": 5475,
+        "npcID": 71045,
+        "chance": 100,
+        "condition_value_filter": 1,
+        "min_time": 0,
+        "max_time": 0,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null
+      },
+      "baselineSpawn2": {
+        "id": 2690,
+        "spawngroupID": 5475,
+        "zone": "airplane",
+        "version": 0,
+        "x": 564,
+        "y": 1400,
+        "z": -762.25,
+        "heading": 128,
+        "respawntime": 640,
+        "variance": 0,
+        "pathgrid": 0,
+        "path_when_zone_idle": 0,
+        "_condition": 0,
+        "cond_value": 1,
+        "animation": 0,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null
+      },
+      "sourceFile": "effective/quests/airplane/Torgon_Blademaster.lua",
+      "sourceSha256": "7a0074bc8058e2ff1e2f27580b738ba50620c6c08851df6acbbf319a82c235ca",
+      "directTesterSpawningPreserved": true,
+      "testerNpcs": [
+        {
+          "npcId": 71067,
+          "npcName": "Falorn",
+          "questKey": "airplane/Falorn",
+          "sourceFile": "effective/quests/airplane/Falorn.lua",
+          "sourceSha256": "aa85dd42e7cc1188e982bae2ace5f89f129f349d843fa0f0d0d9e41e369b8cc8",
+          "staticSpawnEntries": [],
+          "scriptTimers": [
+            {
+              "name": "depop",
+              "durationMilliseconds": 300000
+            }
+          ]
+        },
+        {
+          "npcId": 71064,
+          "npcName": "Ogog",
+          "questKey": "airplane/Ogog",
+          "sourceFile": "effective/quests/airplane/Ogog.lua",
+          "sourceSha256": "f43d9c678d13cc07ab498a55f5f91396a860b7e324c44b828bbe890ee2cdcfb1",
+          "staticSpawnEntries": [],
+          "scriptTimers": [
+            {
+              "name": "depop",
+              "durationMilliseconds": 300000
+            }
+          ]
+        }
+      ],
+      "classEvidence": {
+        "title": "Warrior Plane of Sky Tests",
+        "url": "https://wiki.project1999.com/Warrior_Plane_of_Sky_Tests?action=raw",
+        "fetchedAt": "2026-07-17T23:40:55.425Z",
+        "revision": null,
+        "sha256": "e62b8760abb6a3d3f6e98d7e32b032b033c177e2372c8a78290e8fd4c15fae15",
+        "bytes": 8622,
+        "source": "raw-pages/warrior-plane-of-sky-tests-584055c39c.json",
+        "cachePath": "reference/p99-wiki/raw-pages/warrior-plane-of-sky-tests-584055c39c.wiki"
+      },
+      "classPageRespawnEvidence": "No respawn duration is stated.",
+      "npcEvidence": [
+        {
+          "title": "Torgon Blademaster",
+          "url": "https://wiki.project1999.com/Torgon_Blademaster?action=raw",
+          "fetchedAt": "2026-08-12T21:15:08.408Z",
+          "revision": null,
+          "sha256": "6f9e3cb1dd7d5e7dfe3c17592ac2030e7e12a83ed921f1ab61f871b411444e38",
+          "bytes": 1341,
+          "source": "npc-pages/torgon-blademaster-1ab3ed6a2b.json",
+          "cachePath": "reference/p99-wiki/npc-pages/torgon-blademaster-1ab3ed6a2b.wiki"
+        }
+      ],
+      "specificNpcEvidenceDisposition": "No respawn duration is stated in the cached NPC page(s).",
+      "policy": {
+        "questExclusion": null,
+        "npcExclusions": [],
+        "npcNamePatternExclusions": []
+      },
+      "disposition": "timer-only-proposed",
+      "proposedRespawnSeconds": 10800,
+      "reason": "Apply the broad 3-hour natural quest-room respawn statement only to this explicitly named class starter with a dedicated static group and no contradictory exact-NPC/class-page timer. This is a scoped interpretation, not an independently measured per-NPC timer."
+    },
+    {
+      "class": "Wizard",
+      "npcId": 71047,
+      "npcName": "Wizard_Schrock",
+      "questKey": "airplane/Wizard_Schrock",
+      "questId": 16262,
+      "questEnabled": 1,
+      "npcAutoLevelExclude": 1,
+      "npcIsQuest": 1,
+      "spawn2Id": 2692,
+      "spawnGroup": {
+        "id": 5477,
+        "name": "airplane_48",
+        "spawn_limit": 0,
+        "dist": 0,
+        "max_x": 0,
+        "min_x": 0,
+        "max_y": 0,
+        "min_y": 0,
+        "delay": 0,
+        "mindelay": 15000,
+        "despawn": 0,
+        "despawn_timer": 100,
+        "wp_spawns": 0
+      },
+      "spawnEntry": {
+        "spawngroupID": 5477,
+        "npcID": 71047,
+        "chance": 100,
+        "condition_value_filter": 1,
+        "min_time": 0,
+        "max_time": 0,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null
+      },
+      "baselineSpawn2": {
+        "id": 2692,
+        "spawngroupID": 5477,
+        "zone": "airplane",
+        "version": 0,
+        "x": 580,
+        "y": 1305,
+        "z": -766,
+        "heading": 0,
+        "respawntime": 640,
+        "variance": 0,
+        "pathgrid": 0,
+        "path_when_zone_idle": 0,
+        "_condition": 0,
+        "cond_value": 1,
+        "animation": 0,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null
+      },
+      "sourceFile": "effective/quests/airplane/Wizard_Schrock.lua",
+      "sourceSha256": "7b4affeabb6e6d88e76c5abb163861b827cfef9b829aa2354667c53c645552b2",
+      "directTesterSpawningPreserved": true,
+      "testerNpcs": [
+        {
+          "npcId": 71092,
+          "npcName": "Neasin_Leornic",
+          "questKey": "airplane/Neasin_Leornic",
+          "sourceFile": "effective/quests/airplane/Neasin_Leornic.lua",
+          "sourceSha256": "dabb94108596973401ad4cc40f6f4e170406d14170230111c42f6c9f773c3715",
+          "staticSpawnEntries": [],
+          "scriptTimers": [
+            {
+              "name": "depop",
+              "durationMilliseconds": 300000
+            }
+          ]
+        },
+        {
+          "npcId": 71079,
+          "npcName": "Abec_Ianor",
+          "questKey": "airplane/Abec_Ianor",
+          "sourceFile": "effective/quests/airplane/Abec_Ianor.lua",
+          "sourceSha256": "c8a93d23a2ad4f2ea25fa62d4eb4e9e64db3aa4e055d88c41c516a983e9e37d8",
+          "staticSpawnEntries": [],
+          "scriptTimers": [
+            {
+              "name": "depop",
+              "durationMilliseconds": 300000
+            }
+          ]
+        }
+      ],
+      "classEvidence": {
+        "title": "Wizard Plane of Sky Tests",
+        "url": "https://wiki.project1999.com/Wizard_Plane_of_Sky_Tests?action=raw",
+        "fetchedAt": "2026-07-17T23:41:38.029Z",
+        "revision": null,
+        "sha256": "72c8a53a1d2376ea41b9d2fc726e76d07054941a2b45e1f500310ef728f518a3",
+        "bytes": 8601,
+        "source": "raw-pages/wizard-plane-of-sky-tests-393f4d61ad.json",
+        "cachePath": "reference/p99-wiki/raw-pages/wizard-plane-of-sky-tests-393f4d61ad.wiki"
+      },
+      "classPageRespawnEvidence": "No respawn duration is stated.",
+      "npcEvidence": [],
+      "specificNpcEvidenceDisposition": "No cached NPC page with this exact emulator ID was found.",
+      "policy": {
+        "questExclusion": null,
+        "npcExclusions": [],
+        "npcNamePatternExclusions": []
+      },
+      "disposition": "timer-only-proposed",
+      "proposedRespawnSeconds": 10800,
+      "reason": "Apply the broad 3-hour natural quest-room respawn statement only to this explicitly named class starter with a dedicated static group and no contradictory exact-NPC/class-page timer. This is a scoped interpretation, not an independently measured per-NPC timer."
+    }
+  ],
+  "validation": {
+    "sourceReview": "completed",
+    "staticExpectationTests": {
+      "status": "passed",
+      "tests": 5,
+      "command": "node --test changes/p99-sky-timer-review/static-expectations.test.mjs",
+      "receipt": "changes/p99-sky-timer-review/static-test.log"
+    },
+    "proposalValidation": {
+      "status": "passed",
+      "rows": 14,
+      "sources": 0,
+      "luaSourcesChecked": 0,
+      "command": "node tools/cli.mjs check-proposal . --proposal changes/p99-sky-starter-respawn.json",
+      "receipt": "changes/p99-sky-timer-review/proposal-check.log"
+    },
+    "runtimeNaturalRespawn": "not run",
+    "scratchDatabase": "not run",
+    "renderedUi": "not run",
+    "baselineValidation": {
+      "status": "passed",
+      "files": 36496,
+      "tables": 53,
+      "command": "npm run validate",
+      "receipt": "changes/p99-sky-timer-review/baseline-validation.log"
+    },
+    "fullRepositoryTestSuite": "not rerun in this bounded subreview; focused test command only"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "cases": [
+    {
+      "Name": "classic strongbox no flag",
+      "Source": "-- P99 scope: later Paladin 1.5 fishing trigger removed; classic Journal Strongbox handler preserved.\n-- Converted from ProjectEQ Perl quest script.\n-- Source: oot/player.pl\n-- items: 13860\n\nfunction event_enter_zone(e)\n\tlocal qglobals = eq.get_qglobals(e.self)\n\tif qglobals[\"strongbox\"] ~= nil then\n\t\teq.create_ground_object(13860, -9200, -430, -293, 0, 3000000)\n\t\teq.delete_global(\"strongbox\")\n\tend\nend\n\n",
+      "Setup": "ground={};deleted={};player={};globals={};eq={get_qglobals=function(self)assert(self==player);return globals end,create_ground_object=function(...)table.insert(ground,{...})end,delete_global=function(g)table.insert(deleted,g)end}",
+      "Assertions": "assert(event_fish_success==nil);event_enter_zone({self=player});assert(#ground==0);assert(#deleted==0)"
+    },
+    {
+      "Name": "classic strongbox string flag",
+      "Source": "-- P99 scope: later Paladin 1.5 fishing trigger removed; classic Journal Strongbox handler preserved.\n-- Converted from ProjectEQ Perl quest script.\n-- Source: oot/player.pl\n-- items: 13860\n\nfunction event_enter_zone(e)\n\tlocal qglobals = eq.get_qglobals(e.self)\n\tif qglobals[\"strongbox\"] ~= nil then\n\t\teq.create_ground_object(13860, -9200, -430, -293, 0, 3000000)\n\t\teq.delete_global(\"strongbox\")\n\tend\nend\n\n",
+      "Setup": "ground={};deleted={};player={};globals={strongbox=\"1\"};eq={get_qglobals=function(self)assert(self==player);return globals end,create_ground_object=function(...)table.insert(ground,{...})end,delete_global=function(g)table.insert(deleted,g)end}",
+      "Assertions": "assert(event_fish_success==nil);event_enter_zone({self=player});assert(#ground==1);assert(#deleted==1); assert(deleted[1]==\"strongbox\"); local a=ground[1];assert(#a==6 and a[1]==13860 and a[2]==-9200 and a[3]==-430 and a[4]==-293 and a[5]==0 and a[6]==3000000)"
+    },
+    {
+      "Name": "classic strongbox false non-nil flag",
+      "Source": "-- P99 scope: later Paladin 1.5 fishing trigger removed; classic Journal Strongbox handler preserved.\n-- Converted from ProjectEQ Perl quest script.\n-- Source: oot/player.pl\n-- items: 13860\n\nfunction event_enter_zone(e)\n\tlocal qglobals = eq.get_qglobals(e.self)\n\tif qglobals[\"strongbox\"] ~= nil then\n\t\teq.create_ground_object(13860, -9200, -430, -293, 0, 3000000)\n\t\teq.delete_global(\"strongbox\")\n\tend\nend\n\n",
+      "Setup": "ground={};deleted={};player={};globals={strongbox=false};eq={get_qglobals=function(self)assert(self==player);return globals end,create_ground_object=function(...)table.insert(ground,{...})end,delete_global=function(g)table.insert(deleted,g)end}",
+      "Assertions": "assert(event_fish_success==nil);event_enter_zone({self=player});assert(#ground==1);assert(#deleted==1); assert(deleted[1]==\"strongbox\"); local a=ground[1];assert(#a==6 and a[1]==13860 and a[2]==-9200 and a[3]==-430 and a[4]==-293 and a[5]==0 and a[6]==3000000)"
+    },
+    {
+      "Name": "classic strongbox later epic flag only",
+      "Source": "-- P99 scope: later Paladin 1.5 fishing trigger removed; classic Journal Strongbox handler preserved.\n-- Converted from ProjectEQ Perl quest script.\n-- Source: oot/player.pl\n-- items: 13860\n\nfunction event_enter_zone(e)\n\tlocal qglobals = eq.get_qglobals(e.self)\n\tif qglobals[\"strongbox\"] ~= nil then\n\t\teq.create_ground_object(13860, -9200, -430, -293, 0, 3000000)\n\t\teq.delete_global(\"strongbox\")\n\tend\nend\n\n",
+      "Setup": "ground={};deleted={};player={};globals={paladin_epic=\"3\"};eq={get_qglobals=function(self)assert(self==player);return globals end,create_ground_object=function(...)table.insert(ground,{...})end,delete_global=function(g)table.insert(deleted,g)end}",
+      "Assertions": "assert(event_fish_success==nil);event_enter_zone({self=player});assert(#ground==0);assert(#deleted==0)"
+    }
+  ],
+  "exitCode": 0,
+  "passed": true,
+  "stdout": "PASS classic strongbox no flag\nPASS classic strongbox string flag\nPASS classic strongbox false non-nil flag\nPASS classic strongbox later epic flag only\n",
+  "stderr": "",
+  "sourceSha256": "1fa873bb1ab85f06a929fe305c97cd240af8053223b4797564c3ebd265c6a506",
+  "proposalSha256": "33be8256cea0855bb08afc6e1ae58e754a80ce1885d67cd46725776ac4e0d434",
+  "scope": "Isolated pinned Lua VM and static byte-preservation proof, not live gameplay."
+}

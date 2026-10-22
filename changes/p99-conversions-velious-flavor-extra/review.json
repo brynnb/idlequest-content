@@ -1,0 +1,224 @@
+{
+  "reviewed_candidates": [
+    {
+      "key": "kael/#Khalerogg_Dorfenbane",
+      "upstream": "sources/projecteq/kael/#Khalerogg_Dorfenbane.pl",
+      "upstream_sha256": "bf004979a95cbcd8290071f07ad1f8adce8d323c895781ce60d112279d209ba4",
+      "npc_evidence": [
+        {
+          "title": "Khalerogg Dorfenbane",
+          "cachePath": "reference/p99-wiki/npc-pages/khalerogg-dorfenbane-69af121251.wiki",
+          "url": "https://wiki.project1999.com/Khalerogg_Dorfenbane?action=raw",
+          "sha256": "8fe5540c82f73de3903f53361c0a342e7ec9694cc0f2cafc9656f51619b4e039",
+          "eraTags": [
+            "Velious Era"
+          ],
+          "zone": "[[Kael Drakkel]]",
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_aggro",
+          "signal": 1,
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "Your bones will be crushed by the Kromrif of Kael Drakkel!"
+          ]
+        }
+      ],
+      "verification": {
+        "static_review": "P99 presence and source behavior; dialogue exactness not independently established where wiki absent.",
+        "isolated_behavior": "pass: every listed event branch plus negative triggers and arbitrary item/coin returns, including repeats; combined57sources/166scenarios",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards."
+    },
+    {
+      "key": "kael/#Valorankt_Zekkin",
+      "upstream": "sources/projecteq/kael/#Valorankt_Zekkin.pl",
+      "upstream_sha256": "bf004979a95cbcd8290071f07ad1f8adce8d323c895781ce60d112279d209ba4",
+      "npc_evidence": [
+        {
+          "title": "Valorankt Zekkin",
+          "cachePath": "reference/p99-wiki/npc-pages/valorankt-zekkin-f3cccfa5c2.wiki",
+          "url": "https://wiki.project1999.com/Valorankt_Zekkin?action=raw",
+          "sha256": "fd82a7d0e01cfc2475700e825a21f272f27cdd308ca93d6cd270fab50eb70f4d",
+          "eraTags": [
+            "Velious Era"
+          ],
+          "zone": "[[Kael Drakkel]]",
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_aggro",
+          "signal": 1,
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "Your bones will be crushed by the Kromrif of Kael Drakkel!"
+          ]
+        }
+      ],
+      "verification": {
+        "static_review": "P99 presence and source behavior; dialogue exactness not independently established where wiki absent.",
+        "isolated_behavior": "pass: every listed event branch plus negative triggers and arbitrary item/coin returns, including repeats; combined57sources/166scenarios",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards."
+    },
+    {
+      "key": "kael/a_storm_giant_gladiator",
+      "upstream": "sources/projecteq/kael/a_storm_giant_gladiator.pl",
+      "upstream_sha256": "2c553f41af927ac1094b387a8e355f81248c51021d24d3cd611fcd0001cd0597",
+      "npc_evidence": [
+        {
+          "title": "A storm giant gladiator",
+          "cachePath": "reference/p99-wiki/npc-pages/a-storm-giant-gladiator-5f959e6d82.wiki",
+          "url": "https://wiki.project1999.com/A_storm_giant_gladiator?action=raw",
+          "sha256": "f872f6e4082c58f34271ca1d5dc8d44bbcec4e5498972167de6ecfcd4923af4f",
+          "eraTags": [
+            "Velious Era"
+          ],
+          "zone": "[[Kael Drakkel]]",
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_say",
+          "message": "Hail",
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "I am here to make sure no one flees the arena as a coward."
+          ]
+        }
+      ],
+      "verification": {
+        "static_review": "P99 presence and source behavior; dialogue exactness not independently established where wiki absent.",
+        "isolated_behavior": "pass: every listed event branch plus negative triggers and arbitrary item/coin returns, including repeats; combined57sources/166scenarios",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards."
+    },
+    {
+      "key": "kael/Pollos_Stormkeeper",
+      "upstream": "sources/projecteq/kael/Pollos_Stormkeeper.pl",
+      "upstream_sha256": "fd67f17683da99073206aae7d6b54bbe19ac929ef997b35543d8febf2b039726",
+      "npc_evidence": [
+        {
+          "title": "Pollos Stormkeeper",
+          "cachePath": "reference/p99-wiki/npc-pages/pollos-stormkeeper-0e33e323d4.wiki",
+          "url": "https://wiki.project1999.com/Pollos_Stormkeeper?action=raw",
+          "sha256": "740ec4a1d7d9e97ef07c37582678974eb45e6d4d9b2940787d2a2e3202f1c5ea",
+          "eraTags": [
+            "Velious Era"
+          ],
+          "zone": "[[Kael Drakkel]]",
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_say",
+          "message": "Hail",
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "I can place things into my vault if you so desire. Reviewer."
+          ]
+        }
+      ],
+      "verification": {
+        "static_review": "P99 presence and source behavior; dialogue exactness not independently established where wiki absent.",
+        "isolated_behavior": "pass: every listed event branch plus negative triggers and arbitrary item/coin returns, including repeats; combined57sources/166scenarios",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards."
+    },
+    {
+      "key": "sleeper/an_ancient_sentry",
+      "upstream": "sources/projecteq/sleeper/an_ancient_sentry.pl",
+      "upstream_sha256": "4ad935ff69738de1a748fdc489d2a5bde542cde909065cb3a88891b2f4cc0de8",
+      "npc_evidence": [
+        {
+          "title": "An ancient sentry",
+          "cachePath": "reference/p99-wiki/npc-pages/an-ancient-sentry-f6f4df4527.wiki",
+          "url": "https://wiki.project1999.com/An_ancient_sentry?action=raw",
+          "sha256": "5517747170830b74b64c6b69ac05dcc4da19f7f8b6b6950d2c5bc78dd2c18bf2",
+          "eraTags": [
+            "Velious Era"
+          ],
+          "zone": "[[Sleeper's Tomb]]",
+          "doesNotExist": false
+        }
+      ],
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "tests": [
+        {
+          "event": "event_slay",
+          "signal": 1,
+          "expected": 1,
+          "signals": [],
+          "messages": [
+            "One has performed well.  An intruder is stopped."
+          ]
+        }
+      ],
+      "verification": {
+        "static_review": "P99 presence and source behavior; dialogue exactness not independently established where wiki absent.",
+        "isolated_behavior": "pass: every listed event branch plus negative triggers and arbitrary item/coin returns, including repeats; combined57sources/166scenarios",
+        "compiler": "pass: complete proposal source set compiled with pinned gopher-lua",
+        "rendered_ui": "not_run",
+        "lifecycle": "not_run"
+      },
+      "before": "Enabled row null Lua; no maintained override.",
+      "after": "All source speech/event branches preserved; return-all event added when absent. No progression rewards."
+    }
+  ],
+  "scope": "P99-present flavor candidates only; ambiguous upstream dialogue excluded.",
+  "policy": "Quest faction bypass and epic no-level policy unchanged.",
+  "verification_boundary": "Isolated mocked event speech and return behavior, not whole NPC progression/lifecycle/UI.",
+  "validation": {
+    "isolated_behavior": {
+      "status": "pass",
+      "command": "PATH=/tmp/p99-go-toolchain/go/bin:$PATH GOCACHE=/tmp/p99-go-cache GOPATH=/tmp/p99-go-path node --test tools/p99-velious-flavor.test.mjs",
+      "scenarios": 166,
+      "scope": "57 total sources across main52 and extra5; exact source speech, negative triggers, signal/combat states, item/coin return and repeat. Mocks only."
+    },
+    "compiler": {
+      "status": "pass",
+      "sources": 5,
+      "rows": 5,
+      "command": "PATH=/tmp/p99-go-toolchain/go/bin:$PATH GOCACHE=/tmp/p99-go-cache GOPATH=/tmp/p99-go-path node tools/cli.mjs check-proposal . --proposal changes/p99-conversions-velious-flavor-extra.json"
+    },
+    "live_game_runtime": "not_run",
+    "database_atomicity": "not_run",
+    "rendered_ui": "not_run"
+  }
+}

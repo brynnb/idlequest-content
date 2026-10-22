@@ -1,0 +1,70 @@
+{
+  "format": 1,
+  "id": "p99-nz-quellious-dialogue",
+  "summary": "Align both Glyssa dialogue responses and the divergent alias faction magnitudes; Leraena stage text is integrated into the shared guild proposal.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Quellious_Symbol_Quests?action=raw",
+      "note": "Cached 2026-07-17T23:29:10.431Z; revision unavailable; SHA256 b6fe86a3c267da91baa9f3e8dab0e4cef4d0cd4d158c73c3fe1ae1235682b81a. Both Glyssa aliases now have220+10/281+2/296-1/330-1, resolved from exported faction names and explicit P99 numbers. Preserve all item/lore identities, canonical Leraena disciple30/7/-7, guard-before-consume level20 requirement, guild-note and other quest branches, and imported unquantified XP. Initiate and Regent magnitudes are retained unverified fallback. Enabled9754/9755 combine eight bone14581/bronze14584 in17090 to14582/14583; no recipe mutation. Full chain read includes unchanged Drigaz exact5/1/1/-1. Guild hail final sentence restored from its own cached page. No loot/world completion claim."
+    },
+    {
+      "url": "https://wiki.project1999.com/Guild_Summons_-_Temple_of_Divine_Light_Cleric?action=raw",
+      "note": "Cached 2026-07-17T23:19:38.624Z; revision unavailable; SHA256 22cb1f390d8c30bd46e987004c3b417e2bde12529b177d97956e049f7cc490d6. Both Glyssa aliases now have220+10/281+2/296-1/330-1, resolved from exported faction names and explicit P99 numbers. Preserve all item/lore identities, canonical Leraena disciple30/7/-7, guard-before-consume level20 requirement, guild-note and other quest branches, and imported unquantified XP. Initiate and Regent magnitudes are retained unverified fallback. Enabled9754/9755 combine eight bone14581/bronze14584 in17090 to14582/14583; no recipe mutation. Full chain read includes unchanged Drigaz exact5/1/1/-1. Guild hail final sentence restored from its own cached page. No loot/world completion claim."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 12847,
+        "zone": "freportw",
+        "name": "Glyssa_Sonshaw",
+        "lua_content": "-- Source: ProjectEQ freportw/Glyssa_Sonshaw.lua; Quellious Symbol Quests\n-- P99 preserved page: quellious-symbol-quests-56786fa4e0.wiki\n-- Corrected documented faction amounts; retained upstream XP where unspecified.\n-- items: 1772, 14585, 1779\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\tif(item_lib.check_turn_in(e.trade, {item1 = 1772, item2 = 14585})) then\n\t\te.self:Say(\"Take this new parchment and necklace to Drigaz Grumblegrowl at the bar near Ak'Anon's bank. He can explain their meaning.\");\n\t\te.other:SummonItem(14585);\n\t\te.other:SummonItem(1779);\n\t\te.other:Ding();\n\t\te.other:Faction(220,10,0);\n\t\te.other:Faction(281,2,0);\n\t\te.other:Faction(296,-1,0);\n\t\te.other:Faction(330,-1,0);\n\t\te.other:AddEXP(1000);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade);\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 12847,
+        "zone": "freportw",
+        "name": "Glyssa_Sonshaw",
+        "lua_content": "-- Source: ProjectEQ freportw/Glyssa_Sonshaw.lua; Quellious Symbol Quests\n-- P99 preserved page: quellious-symbol-quests-56786fa4e0.wiki\n-- Corrected documented faction amounts; retained upstream XP where unspecified.\n-- items: 1772, 14585, 1779\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\tif(item_lib.check_turn_in(e.trade, {item1 = 1772, item2 = 14585})) then\n\t\te.self:Say(\"Ah..yes, I have seen this symbol before. There is a kobold that lives among the gnomes of Ak'anon. He may be reluctant to speak with you but you have no need to fear him. He is a follower of Brell Serilis and a valuable source of information on kobold society and culture. I will construct a message for him. Deliver the message and necklace and perhaps he can enlighten you to its meaning.\");\n\t\te.other:SummonItem(14585);\n\t\te.other:SummonItem(1779);\n\t\te.other:Ding();\n\t\te.other:Faction(220,10,0);\n\t\te.other:Faction(281,2,0);\n\t\te.other:Faction(296,-1,0);\n\t\te.other:Faction(330,-1,0);\n\t\te.other:AddEXP(1000);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade);\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 17604,
+        "zone": "freeportwest",
+        "name": "Glyssa_Sonshaw",
+        "lua_content": "-- no response on hail from live\n-- items: 1772, 14585, 1779\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 1772,item2 = 14585})) then -- sealed parchment, Odd Cold Iron Necklace\n\t\te.self:Say(\"Ah..yes, I have seen this symbol before. There is a kobold that lives among the gnomes of Ak'anon. He may be reluctant to speak with you but you have no need to fear him. He is a follower of Brell Serilis and a valuable source of information on kobold society and culture. I will construct a message for him. Deliver the message and necklace and perhaps he can enlighten you to its meaning.\");\n\t\te.other:SummonItem(14585); -- Odd Cold Iron Necklace\n\t\te.other:SummonItem(1779); -- A Note\n\t\te.other:Ding();\n\t\te.other:Faction(220,20,0); -- Faction: Arcane Scientists\n\t\te.other:Faction(281,20,0); -- Faction: Knights of Truth\n\t\te.other:Faction(296,-20,0); -- Faction: Opal Darkbriar\n\t\te.other:Faction(330,-20,0); -- Faction: The Freeport Militia\n\t\te.other:AddEXP(1000);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\n-- END of FILE Zone:freportw -- Glyssa_Sonshaw\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 17604,
+        "zone": "freeportwest",
+        "name": "Glyssa_Sonshaw",
+        "lua_content": "-- no response on hail from live\n-- items: 1772, 14585, 1779\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 1772,item2 = 14585})) then -- sealed parchment, Odd Cold Iron Necklace\n\t\te.self:Say(\"Ah..yes, I have seen this symbol before. There is a kobold that lives among the gnomes of Ak'anon. He may be reluctant to speak with you but you have no need to fear him. He is a follower of Brell Serilis and a valuable source of information on kobold society and culture. I will construct a message for him. Deliver the message and necklace and perhaps he can enlighten you to its meaning.\");\n\t\te.other:SummonItem(14585); -- Odd Cold Iron Necklace\n\t\te.other:SummonItem(1779); -- A Note\n\t\te.other:Ding();\n\t\te.other:Faction(220,10,0); -- Faction: Arcane Scientists\n\t\te.other:Faction(281,2,0); -- Faction: Knights of Truth\n\t\te.other:Faction(296,-1,0); -- Faction: Opal Darkbriar\n\t\te.other:Faction(330,-1,0); -- Faction: The Freeport Militia\n\t\te.other:AddEXP(1000);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\n-- END of FILE Zone:freportw -- Glyssa_Sonshaw\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/freportw/Glyssa_Sonshaw.lua",
+      "beforeSha256": "8493d70bf16b22379bbe7eda4331b900f4a81f1b6ccfc8ef37b9ec09ac84bef7",
+      "proposedFile": "changes/p99-nz-quellious-dialogue/freportw--Glyssa_Sonshaw.lua",
+      "afterSha256": "f06c130eee499642670652210b681a2b130c2bb73e110c779d04535c14054de7"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freeportwest/Glyssa_Sonshaw.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-nz-quellious-dialogue/freeportwest--Glyssa_Sonshaw.lua",
+      "afterSha256": "a86a03c69630f809838ff12f064fe20d00dd73a9a8a3190061d394d0d2089633"
+    }
+  ]
+}

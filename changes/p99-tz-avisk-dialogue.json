@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-avisk-dialogue",
+  "summary": "Accept documented tune while retaining local hint and original spawn fallback.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Urako's_Big_Mistake?action=raw",
+      "note": "Cached 2026-07-17T23:40:17.020Z; revision unavailable; SHA256 c7504278e682914a6195eda6f36db21e2b1565fc1f9cfece25911850b253808f. Accept documented tune while retaining local hint and original spawn fallback. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 18206,
+        "zone": "grobb",
+        "name": "Basher_Avisk",
+        "lua_content": "function event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Ranjor tell shaddernites to gets rids of spore guardian. Ha! Gud.\");\n\telseif(e.message:findi(\"where the minstrel\")) then\n\t\te.self:Say(\"Dere stewpid skeleton singing by Basher Ganbaku. His post be up high.\");\n\t\teq.unique_spawn(52119,0,0,-182,313,26.7,459); -- NPC: a_skeleton\n\tend\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 18206,
+        "zone": "grobb",
+        "name": "Basher_Avisk",
+        "lua_content": "function event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Ranjor tell shaddernites to gets rids of spore guardian. Ha! Gud.\");\n\telseif(e.message:findi(\"where the minstrel\") or e.message:findi(\"tune\")) then\n\t\te.self:Say(\"Dere stewpid skeleton singing by Basher Ganbaku. His post be up high.\");\n\t\teq.unique_spawn(52119,0,0,-182,313,26.7,459); -- NPC: a_skeleton\n\tend\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/grobb/Basher_Avisk.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-tz-avisk-dialogue/grobb--Basher_Avisk.lua",
+      "afterSha256": "9408c653b3d9e6694fdfebbb209f04b92d5217953c8d355ac546d5c445fa1e93"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "titles": [
+    "Plane of Sky Keys"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "partial",
+  "match_status": "partial",
+  "local_quest_keys": [
+    "airplane/Sirran_the_Lunatic"
+  ],
+  "proposal": "changes/p99-nz-sirran-wall.json",
+  "notes": [
+    "Accept the documented forward wall phrase alongside the reversed phrase, retaining island-six and existing-spawn guards.",
+    "Cached page explicitly says Am I one with the wall spawns Sister of the Spire. Preserve existing reversed speech, all eight item/key exchanges,1200000ms despawn, quest globals and all other lifecycle behavior. IsMobSpawnedByNpcTypeID and spawn2 are present in the pinned bridge, but actual boss death-to-Sirran and sister spawning/world traversal still require full runtime verification."
+  ],
+  "verification": {
+    "source": "Cached P99 and effective Lua reviewed; exact complete row preimages and source hashes recorded.",
+    "syntax": "pending",
+    "runtime": "Isolated mock regression pending; full game runtime unavailable.",
+    "ui": "not_run",
+    "connected_chain": "not_run"
+  },
+  "unresolved": [
+    "Ordinary source drops/spawns, recipe live behavior and rendered complete quest path not verified."
+  ]
+}

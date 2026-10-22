@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-nanrum-dialogue",
+  "summary": "Accept P99 explicit wheres the skeleton and local skeleton hint where the skeleton, retaining prior keyword and all spawns/rewards.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Urako's_Big_Mistake?action=raw",
+      "note": "Cached 2026-07-17T23:40:17.020Z; revision unavailable; SHA256 c7504278e682914a6195eda6f36db21e2b1565fc1f9cfece25911850b253808f. Accept P99 explicit wheres the skeleton and local skeleton hint where the skeleton, retaining prior keyword and all spawns/rewards. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 12051,
+        "zone": "grobb",
+        "name": "Basher_Nanrum",
+        "lua_content": "-- Quest Name: A job for Nanrum\n-- Author: BWStripes\n-- Converted to .lua by Speedz\n-- Added support for Urako's Big Mistake\n-- items: 10307, 10351, 10026, 10060, 10018, 10006, 10017\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Peh! What am you wanted?! I am Basher Nanrum. You? \" .. e.other:GetName() .. \"? Heh, you look for works? Hmm, me tinks you too weakling for [\" .. eq.say_link(\"job\",false,\"job\") .. \"] me need done. Hmm.. You might do, mebbe.\");\n\telseif(e.message:findi(\"job\")) then\n\t\te.self:Say(\"Me in charge of making torches for basher patrols. But Nanrum is much too mighty for such stupid job and Nanrum get idea. Dem fire bugses in da desert - dem eyes glowed. And dem don't burneded like torches. If \" .. e.other:GetName() .. \" getted Nanrum three fire beetle eyes me would giveded \" .. e.other:GetName() .. \" a shiny thingie dat you wanteded. Go ahed, \" .. e.other:GetName() .. \" , an' get me da eyes.\");\n\telseif(e.message:findi(\"where is the skeleton\")) then\n\t\te.self:Say(\"Yeah!  Me see dat bone man.  He over by da Cleaver.  He tink he a butcher or sumting!\");\n\t\teq.unique_spawn(52118,0,0,-459,359,10,0); -- NPC: a_skeleton\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\tif (item_lib.check_turn_in(e.trade, {item1 = 10307, item2 = 10307, item3 = 10307})) then\n\t\te.self:Say(\"Heh heh. All da eyeballses! I didn't think ya could do it but ya did. Here is da shiny. If you gets more I always have more shinies.\");\n\t\te.other:SummonItem(eq.ChooseRandom(10351, 10026, 10060, 10018, 10006, 10017)); -- Item(s): Brass Earring (10351)\n\t\te.other:Faction(235,1,0); -- Da Bashers\n\t\te.other:Faction(222,-1,0); -- Broken Skull Clan\n\t\te.other:Ding();\n\t\te.other:AddEXP(100);\n\telseif (item_lib.check_turn_in(e.trade, {item1 = 10307, item2 = 10307})) then\n\t \te.self:Say(\"Well dat be some of da eyeballses I askeded for. But I you needs ta give me three for da shiny.\");\n\t\te.other:SummonItem(10307,2); -- Item: Fire Beetle Eye\n\telseif (item_lib.check_turn_in(e.trade, {item1 = 10307})) then\n\t \te.self:Say(\"Well dat be some of da eyeballses I askeded for. But I you needs ta give me three for da shiny.\");\n\t\te.other:SummonItem(10307); -- Item: Fire Beetle Eye\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 12051,
+        "zone": "grobb",
+        "name": "Basher_Nanrum",
+        "lua_content": "-- Quest Name: A job for Nanrum\n-- Author: BWStripes\n-- Converted to .lua by Speedz\n-- Added support for Urako's Big Mistake\n-- items: 10307, 10351, 10026, 10060, 10018, 10006, 10017\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Peh! What am you wanted?! I am Basher Nanrum. You? \" .. e.other:GetName() .. \"? Heh, you look for works? Hmm, me tinks you too weakling for [\" .. eq.say_link(\"job\",false,\"job\") .. \"] me need done. Hmm.. You might do, mebbe.\");\n\telseif(e.message:findi(\"job\")) then\n\t\te.self:Say(\"Me in charge of making torches for basher patrols. But Nanrum is much too mighty for such stupid job and Nanrum get idea. Dem fire bugses in da desert - dem eyes glowed. And dem don't burneded like torches. If \" .. e.other:GetName() .. \" getted Nanrum three fire beetle eyes me would giveded \" .. e.other:GetName() .. \" a shiny thingie dat you wanteded. Go ahed, \" .. e.other:GetName() .. \" , an' get me da eyes.\");\n\telseif(e.message:findi(\"where is the skeleton\") or e.message:findi(\"wheres the skeleton\") or e.message:findi(\"where the skeleton\")) then\n\t\te.self:Say(\"Yeah!  Me see dat bone man.  He over by da Cleaver.  He tink he a butcher or sumting!\");\n\t\teq.unique_spawn(52118,0,0,-459,359,10,0); -- NPC: a_skeleton\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\tif (item_lib.check_turn_in(e.trade, {item1 = 10307, item2 = 10307, item3 = 10307})) then\n\t\te.self:Say(\"Heh heh. All da eyeballses! I didn't think ya could do it but ya did. Here is da shiny. If you gets more I always have more shinies.\");\n\t\te.other:SummonItem(eq.ChooseRandom(10351, 10026, 10060, 10018, 10006, 10017)); -- Item(s): Brass Earring (10351)\n\t\te.other:Faction(235,1,0); -- Da Bashers\n\t\te.other:Faction(222,-1,0); -- Broken Skull Clan\n\t\te.other:Ding();\n\t\te.other:AddEXP(100);\n\telseif (item_lib.check_turn_in(e.trade, {item1 = 10307, item2 = 10307})) then\n\t \te.self:Say(\"Well dat be some of da eyeballses I askeded for. But I you needs ta give me three for da shiny.\");\n\t\te.other:SummonItem(10307,2); -- Item: Fire Beetle Eye\n\telseif (item_lib.check_turn_in(e.trade, {item1 = 10307})) then\n\t \te.self:Say(\"Well dat be some of da eyeballses I askeded for. But I you needs ta give me three for da shiny.\");\n\t\te.other:SummonItem(10307); -- Item: Fire Beetle Eye\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/grobb/Basher_Nanrum.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-tz-nanrum-dialogue/grobb--Basher_Nanrum.lua",
+      "afterSha256": "1c4a3a2dd93944d0df65e866dfd15ce496c381a371a238503580133e793d6e1a"
+    }
+  ]
+}

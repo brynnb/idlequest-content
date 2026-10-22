@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-nz-noble-crest-rewards",
+  "summary": "Include both documented bronze two-handed weapons in the Noble Crest reward pool.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Noble_Hunters?action=raw",
+      "note": "Cached 2026-07-17T23:27:03.991Z; revision unavailable; SHA256 920c58d5f3fc28060a78d84b6d33c57f1b4e6531476b674c8c0ee6266547853f. Exported5037BronzeTwoHandedBattleAxe and6021BronzeTwoHandedHammer are named byP99but absent pool. Retain existing fourbronzeweapons and13355CrudeStein because list may not exhaustive; exact weights unknown. This does not implement missing parchment/twoHumanScalp continuation; correct item rows absent, no fabricatedIDs. Guildnote branch unchanged."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 12178,
+        "zone": "oggok",
+        "name": "Guntrik",
+        "lua_content": "-- IdleQuest starting guild note turn-in plus Classic/P99 Noble Hunters.\n-- Source: oggok/Guntrik.pl\n-- P99 audit: Noble Hunters\n-- items: 18787, 13525, 13361, 5032, 5029, 5033, 5031, 13355\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Mmmph!! Who you? Oh, you \" .. e.other:GetName() .. \". You supposed to be promising Craknek. Me need you. There bad things in swamp. You want [help Crakneks] or you [want Guntrik bash your face]!!?\")\n\telseif e.message:findi(\"help crakneks\") then\n\t\te.self:Say(\"Go to swamps. Find noble hunters of humans and elves. All have house crests. Return to me and I give things. If you find special item says where hunters sleep, give to me. If meat founded then give to Clurg's cook. She make fine stew and give coins for meat.\")\n\telseif e.message:findi(\"want guntrik bash your face\") then\n\t\te.self:Say(\"OK!! Me bash!! You hurt!!\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 18787}) then\n\t\te.self:Say(\"Ahh.. good.. good.. here. take.. now you Craknek! You bash good. Bash lizards. Bash froggies. Bash mushrooms. Remember. you no help Greenbloods. Crakneks stronger than Greenbloods. When you [want to help crakneks] you tell Guntrik.\")\n\t\te.other:SummonItem(13525)\n\t\te.other:AddEXP(100)\n\t\te.other:Faction(232, 100, 0)\n\t\te.other:Faction(228, 15, 0)\n\t\te.other:Faction(261, -15, 0)\n\t\te.other:Ding()\n\telseif item_lib.check_turn_in(e.trade, {item1 = 13361}) then\n\t\te.self:Say(\"One less trouble. Hunhuh!! You do good work. Keep up. Remember to bring any special things to Guntrik. Here junk for good work. Go away now.\")\n\t\te.other:SummonItem(eq.ChooseRandom(5032, 5029, 5033, 5031, 13355))\n\t\te.other:AddEXP(100)\n\t\te.other:Faction(232, 10, 0) -- Craknek Warriors\n\t\te.other:Faction(228, 10, 0) -- Clurg\n\t\te.other:Faction(261, -10, 0) -- Green Blood Knights\n\t\te.other:Ding()\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 12178,
+        "zone": "oggok",
+        "name": "Guntrik",
+        "lua_content": "-- IdleQuest starting guild note turn-in plus Classic/P99 Noble Hunters.\n-- Source: oggok/Guntrik.pl\n-- P99 audit: Noble Hunters\n-- items: 18787, 13525, 13361, 5032, 5029, 5033, 5031, 13355\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Mmmph!! Who you? Oh, you \" .. e.other:GetName() .. \". You supposed to be promising Craknek. Me need you. There bad things in swamp. You want [help Crakneks] or you [want Guntrik bash your face]!!?\")\n\telseif e.message:findi(\"help crakneks\") then\n\t\te.self:Say(\"Go to swamps. Find noble hunters of humans and elves. All have house crests. Return to me and I give things. If you find special item says where hunters sleep, give to me. If meat founded then give to Clurg's cook. She make fine stew and give coins for meat.\")\n\telseif e.message:findi(\"want guntrik bash your face\") then\n\t\te.self:Say(\"OK!! Me bash!! You hurt!!\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 18787}) then\n\t\te.self:Say(\"Ahh.. good.. good.. here. take.. now you Craknek! You bash good. Bash lizards. Bash froggies. Bash mushrooms. Remember. you no help Greenbloods. Crakneks stronger than Greenbloods. When you [want to help crakneks] you tell Guntrik.\")\n\t\te.other:SummonItem(13525)\n\t\te.other:AddEXP(100)\n\t\te.other:Faction(232, 100, 0)\n\t\te.other:Faction(228, 15, 0)\n\t\te.other:Faction(261, -15, 0)\n\t\te.other:Ding()\n\telseif item_lib.check_turn_in(e.trade, {item1 = 13361}) then\n\t\te.self:Say(\"One less trouble. Hunhuh!! You do good work. Keep up. Remember to bring any special things to Guntrik. Here junk for good work. Go away now.\")\n\t\te.other:SummonItem(eq.ChooseRandom(5032, 5029, 5033, 5031, 13355, 5037, 6021))\n\t\te.other:AddEXP(100)\n\t\te.other:Faction(232, 10, 0) -- Craknek Warriors\n\t\te.other:Faction(228, 10, 0) -- Clurg\n\t\te.other:Faction(261, -10, 0) -- Green Blood Knights\n\t\te.other:Ding()\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/oggok/Guntrik.lua",
+      "beforeSha256": "3de4ccc352f4fffac2d40044a6a22be29a11731c587d78a574645bca8e8de70b",
+      "proposedFile": "changes/p99-nz-noble-crest-rewards/oggok--Guntrik.lua",
+      "afterSha256": "997c28aff938b81ce230fba1d4ed7291d021207b12e3ff8bab5b82f84746e50b"
+    }
+  ]
+}

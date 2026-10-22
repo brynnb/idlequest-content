@@ -1,0 +1,58 @@
+{
+  "format": 1,
+  "id": "p99-wooly-recipe",
+  "summary": "Enable the existing exact eight-fungus quest-jar combine required by the P99 Wooly Fungus Quest.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Wooly_Fungus_Quest?action=raw",
+      "note": "Cached page explicitly documents 8 Wooly Fungus in 8-slot Empty Jar -> Jar of Fungus; reference/p99-wiki/raw-pages/wooly-fungus-quest-6f33902a94.wiki SHA256 dcc92b8aa62d216c6906222f4fc4deb50a2aeb115d51971e7987b88697be3e8e"
+    }
+  ],
+  "rows": [
+    {
+      "table": "tradeskill_recipe",
+      "before": {
+        "id": 9835,
+        "name": "Jar Of Fungus",
+        "tradeskill": 75,
+        "skillneeded": 0,
+        "trivial": 0,
+        "nofail": 1,
+        "replace_container": 1,
+        "notes": "Created by Reketh",
+        "must_learn": 0,
+        "learned_by_item_id": 0,
+        "quest": 0,
+        "enabled": 0,
+        "show_in_advanced": 1,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null,
+        "category": null
+      },
+      "after": {
+        "id": 9835,
+        "name": "Jar Of Fungus",
+        "tradeskill": 75,
+        "skillneeded": 0,
+        "trivial": 0,
+        "nofail": 1,
+        "replace_container": 1,
+        "notes": "Created by Reketh",
+        "must_learn": 0,
+        "learned_by_item_id": 0,
+        "quest": 0,
+        "enabled": 1,
+        "show_in_advanced": 1,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null,
+        "category": null
+      }
+    }
+  ],
+  "sources": []
+}

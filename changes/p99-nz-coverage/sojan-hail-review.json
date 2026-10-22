@@ -1,0 +1,27 @@
+{
+  "titles": [
+    "Toolset Delivery"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "partial",
+  "match_status": "partial",
+  "local_quest_keys": [
+    "iceclad/Sojan_the_Sleepless"
+  ],
+  "proposal": "changes/p99-am-nalot-rum.json",
+  "notes": [
+    "Restore Sojan\u2019s cached P99 hail response without changing his toolset exchange.",
+    "INTEGRATION REQUIRED: mirror this say handler in server/internal/quest/velious_backlog_quests.json key iceclad/Sojan_the_Sleepless and scripts/quests/velious-backlog.mjs output. Existing inventory receipt instead of ground drop remains documented approximation; P99 experience is absent and exact amount unsupported. Wenglawks/Kellek start and completion exist but were omitted from old ledger mappings; no invented Sojan starter branch.",
+    "Superseded standalone NZ proposal merged into AM Nalot Rum source with hail preserved."
+  ],
+  "verification": {
+    "source": "Cached P99 and effective Lua reviewed; exact complete row preimages and source hashes recorded.",
+    "syntax": "pending",
+    "runtime": "Isolated mock regression pending; full game runtime unavailable.",
+    "ui": "not_run",
+    "connected_chain": "not_run"
+  },
+  "unresolved": [
+    "Ordinary source drops/spawns, recipe live behavior and rendered complete quest path not verified."
+  ]
+}

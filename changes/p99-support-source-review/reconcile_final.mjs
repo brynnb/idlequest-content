@@ -1,0 +1,40 @@
+import fs from 'node:fs/promises';
+import crypto from 'node:crypto';
+import {findProposals,mergeProposals} from '../../tools/p99-merge-proposals.mjs';
+const sha=x=>crypto.createHash('sha256').update(x).digest('hex'),dir='changes/p99-support-source-review/';
+const assignment=JSON.parse(await fs.readFile(dir+'assignment.json'));
+const files=['world-effect-review.json','lifecycle-review.json','named-review-dispositions.json','dialogue-review.json'];
+const all=new Map(), artifacts=[];
+for(const file of files){const bytes=await fs.readFile(dir+file),data=JSON.parse(bytes);artifacts.push({file:dir+file,sha256:sha(bytes),keys:data.records.length});for(const [i,r]of data.records.entries()){if(all.has(r.key))throw Error('Duplicate '+r.key);all.set(r.key,{record:r,file:dir+file,artifactSha256:sha(bytes),pointer:'/records/'+i})}}
+if(all.size!==1079)throw Error('Expected1079, got'+all.size);
+const proposed=await findProposals(process.cwd()),manifest=JSON.parse(await fs.readFile('manifest.json'));const combined=mergeProposals(proposed.map(x=>x.value),'p99-combined-audit',Object.fromEntries(Object.entries(manifest.tables).map(([k,v])=>[k,v.primaryKey])));
+const rows=new Map();for(const f of(await fs.readdir('data/quests')).filter(f=>f.endsWith('.ndjson')))for(const line of(await fs.readFile('data/quests/'+f,'utf8')).trim().split('\n')){const r=JSON.parse(line);rows.set(`${r.zone}/${r.name}`,r)}
+for(const change of combined.rows.filter(r=>r.table==='quests')){const r=change.after;if(r)rows.set(`${r.zone}/${r.name}`,r)}
+const owners=new Map();for(const p of proposed)for(const r of p.value.rows.filter(r=>r.table==='quests')){const a=r.after??r.before,k=`${a.zone}/${a.name}`;owners.set(k,[...(owners.get(k)??[]),{id:p.value.id,file:p.filename,proposalSha256:sha(await fs.readFile(p.filename)),sourceSha256:sha(a.lua_content)}])}
+const fixes=new Map();for(const p of proposed.filter(p=>p.value.id.startsWith('p99-support-')))for(const c of p.value.rows){if(c.table==='quests'){const r=c.after;fixes.set(`${r.zone}/${r.name}`,{proposal:p.filename,id:p.value.id,reviewedSourceSha256:sha(c.before.lua_content),sourceSha256:sha(r.lua_content),enabled:r.enabled,bodyPreservedByLeadingCommentPrefix:r.lua_content.endsWith(c.before.lua_content)&&r.lua_content.slice(0,r.lua_content.length-c.before.lua_content.length).split('\n').every(l=>!l.trim()||l.trim().startsWith('--'))})}}
+const duplicateGroups=new Map(assignment.duplicateGroups.map(g=>[g.sha256,g]));
+const asList=x=>x==null?[]:Array.isArray(x)?x:[x];
+const out=[];
+for(const [index,a]of assignment.records.entries()){
+ if(sha(a.text)!==a.currentSourceSha256)throw Error('Frozen full-body hash mismatch '+a.key);
+ const duplicateGroup=duplicateGroups.get(a.currentSourceSha256);
+ const found=all.get(a.key);if(!found)throw Error('Missing '+a.key);const r=found.record,disposition=r.disposition??('dialogue_'+r.classification+'__'+r.comparison?.status),reviewed=r.reviewedSourceSha256??r.sourceSha256??r.currentSourceSha256;if(reviewed!==a.currentSourceSha256)throw Error('Assignment/review hash mismatch '+a.key+' '+reviewed);
+ const current=rows.get(a.key),currentHash=sha(current.lua_content),fix=fixes.get(a.key),changed=currentHash!==reviewed;
+ if(changed&&!fix)throw Error('Unexplained reviewed-source drift '+a.key);
+ if(fix&&fix.reviewedSourceSha256!==reviewed)throw Error('Fix preimage/review hash mismatch '+a.key);
+ if(fix&&currentHash!==fix.sourceSha256)throw Error('Fix hash mismatch '+a.key);
+ out.push({key:a.key,questId:a.id,assignmentIndex:index,assignmentSourceSha256:a.currentSourceSha256,reviewedSourceSha256:reviewed,currentSourceSha256:currentHash,currentEnabled:current.enabled,fullAssignedSourceBodyRead:true,exactDuplicateRepresentative:duplicateGroup?.representative??a.key,identicalSourceKeys:duplicateGroup?.keys??[a.key],detailedReviewRepresentative:r.representativeKey??r.exactDuplicateRepresentative??r.duplicateAliases?.[0]??a.key,sourceReviewArtifact:{file:found.file,sha256:found.artifactSha256,pointer:found.pointer},disposition:fix?.enabled===0?'exclusive_later_source_disabled':disposition,originalDetailedDisposition:disposition,summary:r.behaviorSummary??r.behavior??r.sourceBehavior??r.summary??r.fullBodyBehaviorSummary??r.behavior,sourceChangedAfterReview:changed,reviewToCurrentResolution:changed?(fix.bodyPreservedByLeadingCommentPrefix?'same_complete_body_plus_verified_disabled_header':'bounded_functional_fix_with_separate_tests_and_evidence'):'exact_hash_unchanged',proposal:fix??null,currentProposalOwners:owners.get(a.key)??[],limitations:[...new Set([...asList(r.specificLimitations),...asList(r.limitations),...asList(r.globalLimitations),...asList(r.unresolved),...asList(r.comparison?.limitations),'Full P99 parity is not asserted.'])],fullP99ParityClaim:false})
+}
+const original=new Set(assignment.records.map(a=>a.key));
+const extraFile=dir+'dialogue-review.json',extraBytes=await fs.readFile(extraFile),extraData=JSON.parse(extraBytes).extraControllers;
+const allowedExtra=new Set(['emeraldjungle/Scout_Vyrak','permafrost/Scout_Janomin']);
+const extras=[...fixes].filter(([k])=>!original.has(k)).map(([key,fix])=>{
+ const i=extraData.findIndex(r=>r.key===key),r=extraData[i];
+ if(!allowedExtra.has(key)||!r||!r.fullBodyRead||r.sourceSha256!==fix.reviewedSourceSha256||r.proposedSourceSha256!==fix.sourceSha256)throw Error('Unreconciled extra controller '+key);
+ return {key,...fix,fullSourceBodyRead:true,summary:r.fullBodyBehaviorSummary,sourceReviewArtifact:{file:extraFile,sha256:sha(extraBytes),pointer:'/extraControllers/'+i},reason:'Parent explicitly authorized two exact Beastlord controllers beyond frozen1079-key inventory; complete bodies are exclusively later-era.',limitations:['Source-only disable, historical callbacks preserved; no NPC-row exclusion or removal.','No full P99 parity or live game integration claim.']};
+});
+if(extras.length!==2)throw Error('Expected exactly two separately authorized controllers');
+const counts={assignedKeys:out.length,assignedUniqueSourceHashes:new Set(out.map(r=>r.reviewedSourceSha256)).size,currentUniqueSourceHashes:new Set(out.map(r=>r.currentSourceSha256)).size,fullAssignedSourceBodiesRead:out.length,proposalCorrectedAssignedKeys:out.filter(r=>r.proposal).length,disabledAssignedSources:out.filter(r=>r.currentEnabled===0).length,functionallyChangedAssignedSources:out.filter(r=>r.sourceChangedAfterReview&&r.proposal&&!r.proposal.bodyPreservedByLeadingCommentPrefix).length,additionalAuthorizedControllers:extras.length,currentProposalCount:proposed.length};
+const report={formatVersion:1,createdAt:process.env.P99_AUDIT_REVIEW_TIMESTAMP??new Date().toISOString(),scope:'Complete-source classification of original1079 enabled non-policy sources in two formerly lexical support/name buckets; no blanket P99 parity claim.',assignmentFile:dir+'assignment.json',assignmentSha256:sha(await fs.readFile(dir+'assignment.json')),baselineManifestSha256:sha(await fs.readFile('manifest.json')),counts,splitArtifacts:artifacts,dispositionCounts:Object.fromEntries([...new Set(out.map(r=>r.disposition))].sort().map(k=>[k,out.filter(r=>r.disposition===k).length])),records:out,extraControllerCorrections:extras,limits:['Source-body inspection proves stated source behavior/classification, not exact P99 values, complete dialogue parity, correct NPC dispatch aliases or live gameplay.','Detailed records distinguish existing exact facet reviews, direct new comparisons, later-era positive dependencies, ordinary services, and unresolved actual quest/path evidence.','No literal-reward/name-only heuristic is promoted to semantic parity. Exact hashes, duplicate collapse and current overlay disposition are explicit.','No NPC rows or baseline files were edited by this support-source work. No commits, push or PR.']};
+await fs.writeFile(dir+'review-records.json',JSON.stringify(report,null,2)+'\n');
+console.log(JSON.stringify({counts,artifact:dir+'review-records.json',sha256:sha(await fs.readFile(dir+'review-records.json'))},null,2));

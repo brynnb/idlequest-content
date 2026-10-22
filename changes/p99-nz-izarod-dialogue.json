@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-nz-izarod-dialogue",
+  "summary": "Make Izarod\u2019s displayed scrolls prompt work alongside the documented What scrolls? phrase.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Necromancer_Spells_(Cabilis)?action=raw",
+      "note": "Cached 2026-07-17T23:26:38.700Z; revision unavailable; SHA256 47634a35f4f299472165629b882a8618ea05bed42fb21f84ac5c4f6dea12d29f. All4accepted scrolls19423,19296,19294,19299 and4random output scrolls19297,19421,19408,19409 independently matched item names to P99; same Vaean exchange also reviewed. Random weight and EXP amounts not specified by P99, retained fallback."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 13812,
+        "zone": "cabwest",
+        "name": "Izarod_Fristan",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: cabwest/Izarod_Fristan.pl\n-- items: 19423, 19296, 19294, 19299, 19297, 19421, 19408, 19409\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Hail there. \" .. e.other:GetName() .. \". So you are ready to learn more about our ways? Do you wish to try and expand your knowledge of our arcane arts? Then venture far from here to the darkest depths of our once great empire and seek the minions that inhabit the ruins. The arcane powers will come in the form of [scrolls].\")\n\telseif e.message:findi(\"what scrolls\") then\n\t\te.self:Say(\"Besides all the ones you will find. there are some that are only in my possession. To show that you have been successful on your journey. return one of splurt. defoliation. convergence. or thrall of bones. You then will be rewarded with one of my scrolls.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 19423}) or item_lib.check_turn_in(e.trade, {item1 = 19296}) or item_lib.check_turn_in(e.trade, {item1 = 19294}) or item_lib.check_turn_in(e.trade, {item1 = 19299}) then\n\t\te.self:Say(\"Here is the scroll that I promised. We have both gained much today. I hope to do business with you again soon. Farewell.\")\n\t\te.other:SummonItem(eq.ChooseRandom(19297, 19421, 19408, 19409))\n\t\te.other:AddEXP(1000)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 13812,
+        "zone": "cabwest",
+        "name": "Izarod_Fristan",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: cabwest/Izarod_Fristan.pl\n-- items: 19423, 19296, 19294, 19299, 19297, 19421, 19408, 19409\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Hail there. \" .. e.other:GetName() .. \". So you are ready to learn more about our ways? Do you wish to try and expand your knowledge of our arcane arts? Then venture far from here to the darkest depths of our once great empire and seek the minions that inhabit the ruins. The arcane powers will come in the form of [scrolls].\")\n\telseif e.message:findi(\"scrolls\") then\n\t\te.self:Say(\"Besides all the ones you will find. there are some that are only in my possession. To show that you have been successful on your journey. return one of splurt. defoliation. convergence. or thrall of bones. You then will be rewarded with one of my scrolls.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 19423}) or item_lib.check_turn_in(e.trade, {item1 = 19296}) or item_lib.check_turn_in(e.trade, {item1 = 19294}) or item_lib.check_turn_in(e.trade, {item1 = 19299}) then\n\t\te.self:Say(\"Here is the scroll that I promised. We have both gained much today. I hope to do business with you again soon. Farewell.\")\n\t\te.other:SummonItem(eq.ChooseRandom(19297, 19421, 19408, 19409))\n\t\te.other:AddEXP(1000)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/cabwest/Izarod_Fristan.lua",
+      "beforeSha256": "89fd6cef24603e3481e6c51b1f8f255a8b1efb77804a99bfc4f04ce9cfb3fad1",
+      "proposedFile": "changes/p99-nz-izarod-dialogue/cabwest--Izarod_Fristan.lua",
+      "afterSha256": "868dc063993a53aa132672c4ddb4cff52369e6fd5d29d56c7f4fa6b9e88868fa"
+    }
+  ]
+}

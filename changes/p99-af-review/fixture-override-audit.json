@@ -1,0 +1,108 @@
+{
+  "reviewed_at": "2026-10-22",
+  "fixture_sha256": "256b1b239eee071c1e1f591649ada52e93845a769f8653691a4a79e9447fe56d",
+  "correction": "Removed the short-lived Oxyn custom QuestReward array implementation because the exported PlayerProxy only supports scalar itemid. Explicit SummonItem source calls are now tested against the unmodified scalar-only fixture. No remaining A-F setup overrides replace reward delivery. The standard fixture itself is isolated mocked hand-in/settlement, not actual engine proof.",
+  "overrides": [
+    {
+      "name": "AF 12100 synthetic five-available cap",
+      "setupExtra": "local original=npc.CheckHandin; local injected=false; npc.CheckHandin=function(...) if not injected then remaining[12100]=5; injected=true end; return original(...) end",
+      "classification": "synthetic inventory count injection, only bounded-loop test; not a real five-slot offer"
+    },
+    {
+      "name": "AF 13030 synthetic five-available cap",
+      "setupExtra": "local original=npc.CheckHandin; local injected=false; npc.CheckHandin=function(...) if not injected then remaining[13030]=5; injected=true end; return original(...) end",
+      "classification": "synthetic inventory count injection, only bounded-loop test; not a real five-slot offer"
+    },
+    {
+      "name": "AF sash exact 18-member pool",
+      "setupExtra": "eq.ChooseRandom=function(...) if select(\"#\",...)==18 then return (select(character.poolChoice or 1,...)) end; return (select(1,...)) end",
+      "classification": "deterministic random-choice selection, no probability certification"
+    },
+    {
+      "name": "AF sash four separate random rolls",
+      "setupExtra": "local index=0; eq.ChooseRandom=function(...) if select(\"#\",...)==18 then index=index+1;return (select(index,...)) end; return (select(1,...)) end",
+      "classification": "deterministic random-choice selection, no probability certification"
+    },
+    {
+      "name": "AF Aegis corrected defend-life instructions",
+      "setupExtra": "eq.get_qglobals=function(client) assert(client==other); return {} end",
+      "classification": "explicit encounter/query stub, not live engine behavior"
+    },
+    {
+      "name": "AF misty Bronin Bloody Shank milk branch preserved",
+      "setupExtra": "calls.attacks={}; eq.attack=function(name) table.insert(calls.attacks,name) end",
+      "classification": "explicit encounter/query stub, not live engine behavior"
+    },
+    {
+      "name": "AF mistythicket Bronin Bloody Shank milk branch preserved",
+      "setupExtra": "calls.attacks={}; eq.attack=function(name) table.insert(calls.attacks,name) end",
+      "classification": "explicit encounter/query stub, not live engine behavior"
+    },
+    {
+      "name": "AF Frostbite other dog pursuit trigger retained",
+      "setupExtra": "calls.timers={}; eq.set_timer=function(name,delay) table.insert(calls.timers,{name,delay}) end",
+      "classification": "explicit encounter/query stub, not live engine behavior"
+    },
+    {
+      "name": "AF Denise_Songweaver original three complete tests preserved",
+      "setupExtra": "eq.depop=function() calls.depops=calls.depops+1 end",
+      "classification": "explicit encounter/query stub, not live engine behavior"
+    },
+    {
+      "name": "AF Alan_Harten original three complete tests preserved",
+      "setupExtra": "eq.depop=function() calls.depops=calls.depops+1 end",
+      "classification": "explicit encounter/query stub, not live engine behavior"
+    },
+    {
+      "name": "AF Deric_Lennox original three complete tests preserved",
+      "setupExtra": "eq.depop=function() calls.depops=calls.depops+1 end",
+      "classification": "explicit encounter/query stub, not live engine behavior"
+    },
+    {
+      "name": "AF Enderbite correct black sapphire and both other tests",
+      "setupExtra": "eq.depop=function() calls.depops=calls.depops+1 end",
+      "classification": "explicit encounter/query stub, not live engine behavior"
+    },
+    {
+      "name": "AF Shmendrik_Lavawalker death with Natasha absent",
+      "setupExtra": "calls.spawns={};eq.spawn2=function(...)table.insert(calls.spawns,{...})end",
+      "classification": "Explicit encounter capture stubs: spawn, signal, timer, target lookup and IsEngaged only. No reward or consumption override; no live NPC lifecycle proof."
+    },
+    {
+      "name": "AF Shmendrik_Lavawalker normal crown then death capture",
+      "setupExtra": "calls.spawns={};eq.spawn2=function(...)table.insert(calls.spawns,{...})end",
+      "classification": "Explicit encounter capture stubs: spawn, signal, timer, target lookup and IsEngaged only. No reward or consumption override; no live NPC lifecycle proof."
+    },
+    {
+      "name": "AF Shmendrik_Lavawalker wrong crown and retained signal exchange",
+      "setupExtra": "calls.spawns={};eq.spawn2=function(...)table.insert(calls.spawns,{...})end",
+      "classification": "Explicit encounter capture stubs: spawn, signal, timer, target lookup and IsEngaged only. No reward or consumption override; no live NPC lifecycle proof."
+    },
+    {
+      "name": "AF #Natasha_Whitewater timer respects combat without post-combat timing claim",
+      "setupExtra": "eq.depop=function()calls.depops=calls.depops+1 end;npc.IsEngaged=function()return character.engaged or false end",
+      "classification": "Explicit encounter capture stubs: spawn, signal, timer, target lookup and IsEngaged only. No reward or consumption override; no live NPC lifecycle proof."
+    },
+    {
+      "name": "AF #Natasha_Whitewater crown reward still depops and extras return",
+      "setupExtra": "eq.depop=function()calls.depops=calls.depops+1 end;npc.IsEngaged=function()return character.engaged or false end",
+      "classification": "Explicit encounter capture stubs: spawn, signal, timer, target lookup and IsEngaged only. No reward or consumption override; no live NPC lifecycle proof."
+    },
+    {
+      "name": "AF #Natasha_Whitewater signals retain dialogue and never duplicate Spirit",
+      "setupExtra": "eq.depop=function()calls.depops=calls.depops+1 end;npc.IsEngaged=function()return character.engaged or false end;calls.spawns={};eq.spawn2=function(...)table.insert(calls.spawns,{...})end",
+      "classification": "Explicit encounter capture stubs: spawn, signal, timer, target lookup and IsEngaged only. No reward or consumption override; no live NPC lifecycle proof."
+    },
+    {
+      "name": "AF #Natasha_Whitewater original five-minute timer retained",
+      "setupExtra": "eq.depop=function()calls.depops=calls.depops+1 end;npc.IsEngaged=function()return character.engaged or false end;calls.timers={};eq.set_timer=function(...)table.insert(calls.timers,{...})end;MT={Shout=1};eq.zone_emote=function()end",
+      "classification": "Explicit encounter capture stubs: spawn, signal, timer, target lookup and IsEngaged only. No reward or consumption override; no live NPC lifecycle proof."
+    },
+    {
+      "name": "AF Fenalla all three original tests preserved",
+      "setupExtra": "eq.depop=function() calls.depops=calls.depops+1 end",
+      "classification": "Explicit encounter depop-call capture only; not live despawn proof."
+    }
+  ],
+  "case_count": 111
+}

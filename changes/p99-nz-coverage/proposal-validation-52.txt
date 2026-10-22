@@ -1,0 +1,11 @@
+file:///tmp/idlequest-content-p99/tools/source-policy.mjs:11
+  throw new Error(`Unsupported source target: ${target}`);
+        ^
+
+Error: Unsupported source target: maintained/lua/p99-dialogue/firiona/Guard_Frandan.lua
+    at sourceKind (file:///tmp/idlequest-content-p99/tools/source-policy.mjs:11:9)
+    at readProposal (file:///tmp/idlequest-content-p99/tools/proposal.mjs:64:16)
+    at async file:///tmp/idlequest-content-p99/tools/cli.mjs:20:18
+
+Node.js v24.19.0
+Proposal validator exit: 1

@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-banished-kerran-dialogue",
+  "summary": "Restore documented Puab sent me response and named four component requirements, leaving all hand-ins unchanged.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/The_Treant_Fists?action=raw",
+      "note": "Cached 2026-07-17T23:38:42.110Z; revision unavailable; SHA256 35c449b37ea6c60fe86e98db758f58f72b57eedcd2abb905b73f213865acef10. Restore documented Puab sent me response and named four component requirements, leaving all hand-ins unchanged. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 17988,
+        "zone": "kerraridge",
+        "name": "a_banished_Kerran",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: kerraridge/a_banished_Kerran.pl\n-- items: 12369, 17985, 12371, 28055\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Rrrrrr..  Away frrrom this isle of death and.. prrrr.. punishment.\")\n\telseif e.message:findi(\"remains of Thipt\") then\n\t\te.self:Say(\"Clawknight Thipt wished to learn the ways of Ashen.  Prrr.. Together we go into green goblins' lair to train.  Prrr.. We find too many and he is too weak.  Separated and unable to find him, I hear his death cry.  Prr.. I cannot make it back, eyes upon me.  Now I must find one sent by Ashen to aid in the recoverrry of his remains.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 12369}) then\n\t\te.self:Say(\"Ashen Order!!  Prrr.. My order.  I have been expecting one of us.  Prrr.. Help me rejoin my native land.  Take this box.  Combine all the [remains of Thipt] within the box and return it to me.  This shall aid me in my redemption.\")\n\t\te.other:SummonItem(17985)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 12371}) then\n\t\te.self:Say(\"Prrr.. Thank you brother of Ashen. I can now spend my time upon this island in peace, until my penance is serrrved. He dabs his paw into the mud and places it upon a tattered parchment. Take this message to Puab. Farrrwell.\")\n\t\te.other:SummonItem(28055)\n\t\te.other:AddEXP(100)\n\t\te.other:Ding()\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 17988,
+        "zone": "kerraridge",
+        "name": "a_banished_Kerran",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: kerraridge/a_banished_Kerran.pl\n-- items: 12369, 17985, 12371, 28055\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Rrrrrr..  Away frrrom this isle of death and.. prrrr.. punishment.\")\n\telseif e.message:findi(\"puab sent me\") then\n\t\te.self:Say(\"Prrr.. Master Puab? Show me prrroof.\")\n\telseif e.message:findi(\"remains of Thipt\") then\n\t\te.self:Say(\"Clawknight Thipt wished to learn the ways of Ashen.  Prrr.. Together we go into green goblins' lair to train.  Prrr.. We find too many and he is too weak.  Separated and unable to find him, I hear his death cry.  Prr.. I cannot make it back, eyes upon me.  Now I must find one sent by Ashen to aid in the recoverrry of his remains - his Humerus Handled Mace, Ribcage Chest Armor, Cat Skull Cap and Fractured Femur.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 12369}) then\n\t\te.self:Say(\"Ashen Order!!  Prrr.. My order.  I have been expecting one of us.  Prrr.. Help me rejoin my native land.  Take this box.  Combine all the [remains of Thipt] within the box and return it to me.  This shall aid me in my redemption.\")\n\t\te.other:SummonItem(17985)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 12371}) then\n\t\te.self:Say(\"Prrr.. Thank you brother of Ashen. I can now spend my time upon this island in peace, until my penance is serrrved. He dabs his paw into the mud and places it upon a tattered parchment. Take this message to Puab. Farrrwell.\")\n\t\te.other:SummonItem(28055)\n\t\te.other:AddEXP(100)\n\t\te.other:Ding()\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/kerraridge/a_banished_Kerran.lua",
+      "beforeSha256": "3560e8c1121db6e1ecb7ba912552b98405c0ee845dce581f52bca5c22bd27a85",
+      "proposedFile": "changes/p99-tz-banished-kerran-dialogue/kerraridge--a_banished_Kerran.lua",
+      "afterSha256": "4c26294c7eb0b51faaf0cca2e5bf09e0210acda39a45191bc657031681333f88"
+    }
+  ]
+}

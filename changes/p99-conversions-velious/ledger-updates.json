@@ -1,0 +1,235 @@
+{
+  "Souvenir Mugs": {
+    "scope": "velious",
+    "review_status": "partial",
+    "match_status": "proposed_documented_mug_exchanges_not_live_verified",
+    "local_quest_keys": [
+      "thurgadina/Tobart_Dirkins",
+      "thurgadina/Loremaster_Fronden",
+      "thurgadina/Doogle_McBanick",
+      "thurgadina/Adia_Coldbeard"
+    ],
+    "local_quest_files": [
+      "server/internal/quest/overrides/lua/converted-perl/thurgadina/Tobart_Dirkins.lua",
+      "server/internal/quest/overrides/lua/converted-perl/thurgadina/Loremaster_Fronden.lua",
+      "server/internal/quest/overrides/lua/converted-perl/thurgadina/Doogle_McBanick.lua",
+      "server/internal/quest/overrides/lua/idlequest-authored/thurgadina/Adia_Coldbeard.lua"
+    ],
+    "notes": [
+      "P99 cached2026-07-17 documents four exchanges: Tobart/Fronden1platinum->30146, Doogle3gold->30147, Adia5gold->30145. Fronden wrong-tavern mug intentionally follows wiki. Adia source is newly authored; other sources previously null Lua.",
+      "Existing ProjectEQ Fronden/Doogle ambient signals preserved exactly, but broader Horasug/Rumagur public patrol story remains runtime-unverified. No XP/faction/cash rewards or new level gates invented.",
+      "Unsolved page does not justify removing documented exchanges or inventing downstream use. Velium Keg mug acquisition remains unknown. Petcas mixed Special Beans/mug/ambient source is separately unresolved, not blindly enabled.",
+      "Proposals only; static/compiler and isolated mocked Lua assertions do not establish live commerce, money settlement, NPC spawns or rendered UI."
+    ],
+    "p99_source": {
+      "title": "Souvenir Mugs",
+      "url": "https://wiki.project1999.com/Souvenir_Mugs",
+      "raw_cache": "data/p99wiki-project1999-api-cache/raw-pages/souvenir-mugs-366e530108.wiki"
+    },
+    "reviewed_at": "2026-10-22",
+    "scope_reassessment": {
+      "at": "2026-10-02",
+      "status": "reopened",
+      "previous": {
+        "scope": "post_kunark_velious",
+        "review_status": "out_of_scope",
+        "match_status": "not_reviewed_out_of_scope",
+        "reviewed_at": "2026-07-19"
+      },
+      "reason": "Classic-through-Velious audit includes this content; the older era-only exclusion is not a completion or enablement decision."
+    },
+    "focused_2026_10_22_review": {
+      "record": "changes/p99-conversions-velious/review.json",
+      "proposal": "changes/p99-conversions-velious.json",
+      "verification": {
+        "source_review": "complete for listed actors and branches only",
+        "lua_compiler": "passed7sources",
+        "isolated_lua_mock_tests": "pass for all7 initial sources per runtime reviewer2026-10-22; tools/p99-content-behavior.test.mjs, not game settlement/lifecycle guarantee",
+        "database_transaction_rollback": "not_run",
+        "rendered_ui": "not_run",
+        "connected_chain": "not_run"
+      }
+    },
+    "previous_review_2026_10_22": {
+      "review_status": "needs_review",
+      "match_status": "velious_scope_reopened",
+      "notes": [
+        "P99 marks this page Velious Era, starts in Thurgadin, and marks the page unsolved/no known reward; it is outside IdleQuest's current Classic/Kunark quest scope."
+      ],
+      "local_enabled": false
+    }
+  },
+  "Learn the Ways of Skinning and Tailoring": {
+    "scope": "velious",
+    "review_status": "partial",
+    "match_status": "proposed_handin_and_dialogue_not_live_verified",
+    "p99_source": {
+      "title": "Learn the Ways of Skinning and Tailoring",
+      "url": "https://wiki.project1999.com/Learn_the_Ways_of_Skinning_and_Tailoring",
+      "raw_cache": "data/p99wiki-project1999-api-cache/raw-pages/learn-the-ways-of-skinning-and-tailoring-2868fb301f.wiki"
+    },
+    "notes": [
+      "Cached P99 page documents High Quality Dire Wolf Fur30023->Wolf Fur Earcovers30037. Proposal supplies complete documented learning/cleaning/headcoverings dialogue and shared-helper hand-in; unknown faction/XP/cash rewards not invented.",
+      "NPC110009 and110084 variants, input/reward item rows and matching spawngroup14405 placement23363 exist in exported baseline. Static rows do not establish runtime spawn selection or actual acquisition/loot probabilities.",
+      "Compiler and isolated mocked item/extra/repeat cases are distinct from game inventory rollback, rendered Give/dialogue, full Captain Nalot rum chain or natural fur acquisition; those remain unverified."
+    ],
+    "reviewed_at": "2026-10-22",
+    "scope_reassessment": {
+      "at": "2026-10-02",
+      "status": "reopened",
+      "previous": {
+        "scope": "post_kunark_velious",
+        "review_status": "out_of_scope",
+        "match_status": "out_of_scope_velious_zone",
+        "reviewed_at": "2026-07-18"
+      },
+      "reason": "Classic-through-Velious audit includes this content; the older era-only exclusion is not a completion or enablement decision."
+    },
+    "focused_2026_10_22_review": {
+      "record": "changes/p99-conversions-velious/review.json",
+      "proposal": "changes/p99-conversions-velious.json",
+      "verification": {
+        "source_review": "complete for listed actors and branches only",
+        "lua_compiler": "passed7sources",
+        "isolated_lua_mock_tests": "pass for all7 initial sources per runtime reviewer2026-10-22; tools/p99-content-behavior.test.mjs, not game settlement/lifecycle guarantee",
+        "database_transaction_rollback": "not_run",
+        "rendered_ui": "not_run",
+        "connected_chain": "not_run"
+      }
+    },
+    "previous_review_2026_10_22": {
+      "review_status": "needs_review",
+      "match_status": "velious_scope_reopened",
+      "notes": [
+        "This quest starts in Iceclad Ocean and is Velious content, outside IdleQuest Classic/Kunark scope."
+      ],
+      "local_enabled": false
+    },
+    "local_quest_keys": [
+      "iceclad/Errgriz"
+    ],
+    "local_quest_files": [
+      "server/internal/quest/overrides/lua/converted-perl/iceclad/Errgriz.lua"
+    ]
+  },
+  "Tiny Savages": {
+    "scope": "velious",
+    "review_status": "reviewed",
+    "match_status": "implemented_verified_local",
+    "notes": [
+      "Reviewed against pinned P99 cache and preserved ProjectEQ Perl sources; maintained Lua generated from velious_backlog_quests.json. Existing quest-only faction bypass remains intentional.",
+      "Verified in the isolated worktree: actual Lua exchanges, Docker Give/dialogue/Combine/encounter checks, and relog persistence. Raw prerequisite acquisition and natural camping/drop rates are not covered. No production deployment. See docs/velious-perl-backlog.md for exact chain boundaries and receipts.",
+      "2026-10-22 additional source review: Royal Scribe Kaavin129021 and Grand Huntsman Darral129022 were null-Lua kill targets. Proposed flavor hails and return-all only; no invented reward/death script. Kaavin hail corroborated by cached NPC page, Darral wording is explicitly ProjectEQ fallback. Existing Yetarr quest unchanged.",
+      "Prior implemented_verified_local claim is historical evidence from2026-10-20; this pass adds isolated flavor coverage only and does not rerun entire Tiny Savages chain."
+    ],
+    "p99_source": {
+      "title": "Tiny Savages",
+      "url": "https://wiki.project1999.com/Tiny_Savages",
+      "raw_cache": "data/p99wiki-project1999-api-cache/raw-pages/tiny-savages-dc5b0ab47b.wiki"
+    },
+    "reviewed_at": "2026-10-22",
+    "scope_reassessment": {
+      "at": "2026-10-02",
+      "status": "reopened",
+      "previous": {
+        "scope": "velious",
+        "review_status": "out_of_scope",
+        "match_status": "not_reviewed_out_of_scope",
+        "reviewed_at": "2026-07-19"
+      },
+      "reason": "Classic-through-Velious audit includes this content; the older era-only exclusion is not a completion or enablement decision."
+    },
+    "velious_backlog_previous_review": {
+      "review_status": "needs_review",
+      "match_status": "velious_scope_reopened",
+      "notes": [
+        "P99 marks this page Velious Era and starts in Kael Drakkel."
+      ],
+      "reviewed_at": "2026-07-19"
+    },
+    "local_quest_keys": [
+      "kael/Yetarr"
+    ],
+    "local_quest_files": [
+      "server/internal/quest/overrides/lua/converted-perl/kael/Yetarr.lua"
+    ],
+    "local_enabled": true,
+    "focused_2026_10_22_review": {
+      "record": "changes/p99-conversions-velious/review.json",
+      "proposal": "changes/p99-conversions-velious.json",
+      "verification": {
+        "source_review": "complete for listed actors and branches only",
+        "lua_compiler": "passed7sources",
+        "isolated_lua_mock_tests": "pass for all7 initial sources per runtime reviewer2026-10-22; tools/p99-content-behavior.test.mjs, not game settlement/lifecycle guarantee",
+        "database_transaction_rollback": "not_run",
+        "rendered_ui": "not_run",
+        "connected_chain": "not_run"
+      },
+      "supporting_quest_keys": [
+        "thurgadinb/Royal_Scribe_Kaavin",
+        "thurgadinb/Grand_Huntsman_Darral"
+      ]
+    }
+  },
+  "Ralgyn's Promise": {
+    "scope": "velious",
+    "review_status": "reviewed",
+    "match_status": "implemented_verified_local",
+    "p99_source": {
+      "title": "Ralgyn's Promise",
+      "url": "https://wiki.project1999.com/Ralgyn%27s_Promise",
+      "raw_cache": "data/p99wiki-project1999-api-cache/raw-pages/ralgyn-s-promise-83eec9bd3b.wiki"
+    },
+    "local_quest_keys": [
+      "skyshrine/#Ralgyn",
+      "wakening/Rolandal"
+    ],
+    "local_quest_files": [
+      "server/internal/quest/overrides/lua/converted-perl/skyshrine/#Ralgyn.lua",
+      "server/internal/quest/overrides/lua/converted-perl/wakening/Rolandal.lua"
+    ],
+    "local_enabled": true,
+    "notes": [
+      "Reviewed against pinned P99 cache and preserved ProjectEQ Perl sources; maintained Lua generated from velious_backlog_quests.json. Existing quest-only faction bypass remains intentional.",
+      "Verified in the isolated worktree: actual Lua exchanges, Docker Give/dialogue/Combine/encounter checks, and relog persistence. Raw prerequisite acquisition and natural camping/drop rates are not covered. No production deployment. See docs/velious-perl-backlog.md for exact chain boundaries and receipts.",
+      "No later-era CircletFalinkan flag gate; the earned imbued talisman is the prerequisite.",
+      "P99 requires only the three dropped items; worn talisman and Kardakor quest flags are post-Velious prerequisites and deliberately excluded.",
+      "2026-10-22: reviewed missing greatdivide/Kardakor source. Cached checklist and Great Divide section expressly exclude this post-Velious prerequisite branch. No Kardakor Lua/flag/item conversion proposed. Existing Ralgyn/Rolandal maintained overrides untouched; no restoration of faction or minimum-level blockers.",
+      "Prior local verification remains historical. This source exclusion review does not rerun the entire Ralgyn chain."
+    ],
+    "reviewed_at": "2026-10-22",
+    "scope_reassessment": {
+      "at": "2026-10-02",
+      "status": "reopened",
+      "previous": {
+        "scope": "post_kunark_velious",
+        "review_status": "out_of_scope",
+        "match_status": "out_of_scope_velious_zone",
+        "reviewed_at": "2026-07-18"
+      },
+      "reason": "Classic-through-Velious audit includes this content; the older era-only exclusion is not a completion or enablement decision."
+    },
+    "velious_backlog_previous_review": {
+      "review_status": "needs_review",
+      "match_status": "velious_scope_reopened",
+      "local_enabled": false,
+      "notes": [
+        "P99 page is Velious/Skyshrine content and outside current Classic/Kunark IdleQuest scope."
+      ],
+      "reviewed_at": "2026-07-18"
+    },
+    "focused_2026_10_22_review": {
+      "record": "changes/p99-conversions-velious/review.json",
+      "proposal": null,
+      "verification": {
+        "source_review": "complete for listed actors and branches only",
+        "lua_compiler": "passed7sources",
+        "isolated_lua_mock_tests": "pass for all7 initial sources per runtime reviewer2026-10-22; tools/p99-content-behavior.test.mjs, not game settlement/lifecycle guarantee",
+        "database_transaction_rollback": "not_run",
+        "rendered_ui": "not_run",
+        "connected_chain": "not_run"
+      },
+      "excluded_key": "greatdivide/Kardakor"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-taxes-captain_rohand",
+  "summary": "Remove only tax_collection prerequisites: P99 expressly permits collecting without first speaking to Vicus and bypassing Mira. Preserve all original item/faction effects and unrelated quest branches. Flynn also accepts documented your-feet phrase and uses documented Shout; no numeric values invented.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Taxes?action=raw",
+      "note": "Cached 2026-07-17T23:34:37.004Z; revision unavailable; SHA256 6fc59af937f3b2dfa4313beac8b349112c500bdbff0c89109de222dc34860c9b. Remove only tax_collection prerequisites: P99 expressly permits collecting without first speaking to Vicus and bypassing Mira. Preserve all original item/faction effects and unrelated quest branches. Flynn also accepts documented your-feet phrase and uses documented Shout; no numeric values invented. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 17760,
+        "zone": "qeynos",
+        "name": "Captain_Rohand",
+        "lua_content": "-- Modified from ProjectEQ Lua.\n-- Source: qeynos/Captain_Rohand.lua\n-- P99 audit: Rohand's Brandy\n-- items: 13177, 13034\n\nfunction event_say(e)\n\tlocal qglobals = eq.get_qglobals(e.other)\n\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Greetings, friend, and welcome to the Mermaid's Lure. Here, we sell fishing supplies and some imported goods from far-off lands. And, if you've got a few minutes, I could even tell you a [story] or two.\")\n\telseif(e.message:findi(\"story\")) then\n\t\te.self:Say(\"Stories? Stories? I saw more adventure before I was ten years tall than you'll see in your whole miserable existence. I've been everywhere, [Odus], [Faydwer], [Kunark]. . . You name it, and I can tell ya a little something 'bout it. . . If you buy me a sip of brandy, of course!\")\n\telseif(e.message:findi(\"odus\")) then\n\t\te.self:Say(\"You haven't lived until you've seen Odus. Erud was the first human to cross the sea, and he founded the great city of Erudin. The trade routes from here to Odus are busy and prosperous, but can also be very dangerous.\")\n\telseif(e.message:findi(\"faydwer\")) then\n\t\te.self:Say(\"I call Faydwer the home of the little people. They say the continent was named by the high elves when they landed on its shores long ago. I've even heard tales of an ancient elven vampire who lives there. . . Just another Felwithe legend, I'll bet!\")\n\telseif(e.message:findi(\"kunark\")) then\n\t\te.self:Say(\"Even I can't tell you much about that continent. Kunark is a tough place, populated by even tougher creatures. I hear the high elves of Faydwer have been trying for years to establish a small port on Kunark's hostile shores.\")\n\telseif(e.message:findi(\"tax collection\") and qglobals.tax_collection ~= nil) then\n\t\te.self:Say(\"Argh! You curvy sea goblin! Taxes, you say?! Peh! I got your taxes right here! I sure don't get the services those taxes are supposed to provide! You can tell them ol' Captain Rohand said so!\")\n\t\te.other:SummonItem(13177) -- Rohand's Tax Payment\n\t\te.other:Faction(291,-10,0) -- Merchants of Qeynos\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 13034})) then\n\t\te.self:Say(\"Yeah, this is just what I've been craving!\")\n\t\te.other:SendSound()\n\t\te.other:Faction(291,10,0) -- Merchants of Qeynos\n\t\te.other:Faction(223,-30,0) -- Circle of Unseen Hands\n\t\te.other:Faction(219,10,0) -- Antonius Bayle\n\t\te.other:Faction(5015,2,0) -- Coalition of TradeFolk III\n\t\te.other:Faction(262,10,0) -- Guards of Qeynos\n\t\te.other:AddEXP(10)\n\tend\n\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 17760,
+        "zone": "qeynos",
+        "name": "Captain_Rohand",
+        "lua_content": "-- Modified from ProjectEQ Lua.\n-- Source: qeynos/Captain_Rohand.lua\n-- P99 audit: Rohand's Brandy\n-- items: 13177, 13034\n\nfunction event_say(e)\n\tlocal qglobals = eq.get_qglobals(e.other)\n\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Greetings, friend, and welcome to the Mermaid's Lure. Here, we sell fishing supplies and some imported goods from far-off lands. And, if you've got a few minutes, I could even tell you a [story] or two.\")\n\telseif(e.message:findi(\"story\")) then\n\t\te.self:Say(\"Stories? Stories? I saw more adventure before I was ten years tall than you'll see in your whole miserable existence. I've been everywhere, [Odus], [Faydwer], [Kunark]. . . You name it, and I can tell ya a little something 'bout it. . . If you buy me a sip of brandy, of course!\")\n\telseif(e.message:findi(\"odus\")) then\n\t\te.self:Say(\"You haven't lived until you've seen Odus. Erud was the first human to cross the sea, and he founded the great city of Erudin. The trade routes from here to Odus are busy and prosperous, but can also be very dangerous.\")\n\telseif(e.message:findi(\"faydwer\")) then\n\t\te.self:Say(\"I call Faydwer the home of the little people. They say the continent was named by the high elves when they landed on its shores long ago. I've even heard tales of an ancient elven vampire who lives there. . . Just another Felwithe legend, I'll bet!\")\n\telseif(e.message:findi(\"kunark\")) then\n\t\te.self:Say(\"Even I can't tell you much about that continent. Kunark is a tough place, populated by even tougher creatures. I hear the high elves of Faydwer have been trying for years to establish a small port on Kunark's hostile shores.\")\n\telseif(e.message:findi(\"tax collection\") ) then\n\t\te.self:Say(\"Argh! You curvy sea goblin! Taxes, you say?! Peh! I got your taxes right here! I sure don't get the services those taxes are supposed to provide! You can tell them ol' Captain Rohand said so!\")\n\t\te.other:SummonItem(13177) -- Rohand's Tax Payment\n\t\te.other:Faction(291,-10,0) -- Merchants of Qeynos\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 13034})) then\n\t\te.self:Say(\"Yeah, this is just what I've been craving!\")\n\t\te.other:SendSound()\n\t\te.other:Faction(291,10,0) -- Merchants of Qeynos\n\t\te.other:Faction(223,-30,0) -- Circle of Unseen Hands\n\t\te.other:Faction(219,10,0) -- Antonius Bayle\n\t\te.other:Faction(5015,2,0) -- Coalition of TradeFolk III\n\t\te.other:Faction(262,10,0) -- Guards of Qeynos\n\t\te.other:AddEXP(10)\n\tend\n\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/qeynos/Captain_Rohand.lua",
+      "beforeSha256": "b02d8410eaef916b662d00fb52568db1af1fce703b87523baca17dabebc574ac",
+      "proposedFile": "changes/p99-tz-taxes-captain_rohand/qeynos--Captain_Rohand.lua",
+      "afterSha256": "f12f0c354ac9044bbc4c08172e663963f0e4d41bcbf934448b912eb2dedfbff4"
+    }
+  ]
+}

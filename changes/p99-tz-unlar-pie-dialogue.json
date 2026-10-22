@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-unlar-pie-dialogue",
+  "summary": "Restore the documented hail clue and accept the pie keyword while preserving exact12676 hand-in and Bugrin spawn. Do not infer escape path coordinates or actual actor availability.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Warrior_Pike_Quests?action=raw",
+      "note": "Cached 2026-07-17T23:40:52.408Z; revision unavailable; SHA256 647599fece23146d400d837b85160dc7db18e33c93b7a4f54dacebcdcab40014. Restore the documented hail clue and accept the pie keyword while preserving exact12676 hand-in and Bugrin spawn. Do not infer escape path coordinates or actual actor availability. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 13753,
+        "zone": "cabeast",
+        "name": "Klok_Unlar",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: cabeast/Klok_Unlar.pl\n-- items: 12676\n\nfunction event_say(e)\n\tif e.message:findi(\"what bixie berry pie\") then\n\t\te.self:Say(\"Bixie berry pie?!! It is no treat and is poisonous to the Iksar. We use it to keep our froglok slaves nourished. My apprentice baker. Bugrin. bakes them and delivers them to the slaves. Only he has access to the bixie berry pie recipe. All the pies are eaten by the slaves. If you think you have one. you must be mistaken. Let me see it if you believe you have one.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 12676}) then\n\t\te.self:Emote(\"breaks open the crust of the pie.\")\n\t\te.self:Say(\"Wait! What is this? A device of some kind? It looks kind of like some sort of lockpick. BUGRIN!! Get in here and answer some questions at once!!\")\n\t\teq.spawn2(106302, 0, 0, 120, 563, 4, 0) -- Bugrin\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 13753,
+        "zone": "cabeast",
+        "name": "Klok_Unlar",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: cabeast/Klok_Unlar.pl\n-- items: 12676\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n        e.self:Emote(\"wipes flour from his hands and turns to greet you.\")\n        e.self:Say(\"Welcome! Please look over my many treats. Do not think of the coin you shall spend. Heavy coin buys the finest and sweetest of treats. Feel free to ask me about any of the rare pies you see as I can tell you exactly how I make them.\")\n    elseif e.message:findi(\"bixie berry pie\") then\n\t\te.self:Say(\"Bixie berry pie?!! It is no treat and is poisonous to the Iksar. We use it to keep our froglok slaves nourished. My apprentice baker. Bugrin. bakes them and delivers them to the slaves. Only he has access to the bixie berry pie recipe. All the pies are eaten by the slaves. If you think you have one. you must be mistaken. Let me see it if you believe you have one.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 12676}) then\n\t\te.self:Emote(\"breaks open the crust of the pie.\")\n\t\te.self:Say(\"Wait! What is this? A device of some kind? It looks kind of like some sort of lockpick. BUGRIN!! Get in here and answer some questions at once!!\")\n\t\teq.spawn2(106302, 0, 0, 120, 563, 4, 0) -- Bugrin\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/cabeast/Klok_Unlar.lua",
+      "beforeSha256": "584ddc4e737599c8261cd168bd12baf0bf8a6120a3abd44c37203050696d73b6",
+      "proposedFile": "changes/p99-tz-unlar-pie-dialogue/cabeast--Klok_Unlar.lua",
+      "afterSha256": "5ac041a53297bcbeadf05ea4032b17afbb37e33369251c3f6b282038cc118b1c"
+    }
+  ]
+}

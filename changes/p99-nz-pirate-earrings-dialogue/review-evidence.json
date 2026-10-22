@@ -1,0 +1,27 @@
+{
+  "titles": [
+    "Pirate Earrings"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "partial",
+  "match_status": "partial",
+  "local_quest_keys": [
+    "oot/Styria_Fearnon",
+    "oceanoftears/Styria_Fearnon"
+  ],
+  "proposal": "changes/p99-nz-pirate-earrings-dialogue.json",
+  "notes": [
+    "Accept the documented hunt-the-pirates phrase and restore the earring-specific completion response.",
+    "Existing adventurer keyword still works. Earring 13336 reward pool13339AviakFeather,13342ConchShell,7017FishingSpear,13340KiolaNut matches page, Conch marked uncertain. Five faction directions match; cash4gold1silver,100EXP and weights not documented, left unchanged. Bracers and SentryXyrin branches untouched."
+  ],
+  "verification": {
+    "source": "Cached P99 and effective Lua reviewed; exact complete row preimages and source hashes recorded.",
+    "syntax": "pending",
+    "runtime": "Isolated mock regression pending; full game runtime unavailable.",
+    "ui": "not_run",
+    "connected_chain": "not_run"
+  },
+  "unresolved": [
+    "Ordinary source drops/spawns, recipe live behavior and rendered complete quest path not verified."
+  ]
+}

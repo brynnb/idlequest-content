@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-vek-trooper",
+  "summary": "Restore documented vambrace knife and four-item reference exchange, plus pauldron note/lore and Froglok Goo with TWO Fire Emeralds reference. Exact items/counts, no invented XP/factions. Preserve guild branch; froglok encounter acquisition remains separate.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Trooper_Scale_Armor?action=raw",
+      "note": "Cached 2026-07-17T23:39:47.938Z; revision unavailable; SHA256 afb9c525fe7e71ec1799feae381412fd13dafe12a792f3ea7e161ab4f3a144fe. Restore documented vambrace knife and four-item reference exchange, plus pauldron note/lore and Froglok Goo with TWO Fire Emeralds reference. Exact items/counts, no invented XP/factions. Preserve guild branch; froglok encounter acquisition remains separate. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 13629,
+        "zone": "cabeast",
+        "name": "Prime_Hierophant_Vek",
+        "lua_content": "-- IdleQuest starting guild note turn-in.\n-- Source: cabeast/Prime_Hierophant_Vek.pl\n-- items: 18206, 5140\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 18206}) then\n\t\te.self:Say(\"Welcome, young petitioner. You have been summoned to this temple to join with the Scaled Mystics. Ours is the way of pain and suffering. Here is the weapon of a petitioner. Through you the power of our ancestors shall flow. As your wisdom grows, so shall your power. Someday you may be a vessel for the supreme might of the ancients. Seek knowledge with Oxyn, he is here to help you.\")\n\t\te.other:SummonItem(5140)\n\t\te.other:AddEXP(500)\n\t\te.other:Faction(445, 100, 0)\n\t\te.other:Faction(441, 25, 0)\n\t\te.other:Ding()\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 13629,
+        "zone": "cabeast",
+        "name": "Prime_Hierophant_Vek",
+        "lua_content": "-- IdleQuest starting guild note turn-in.\n-- Source: cabeast/Prime_Hierophant_Vek.pl\n-- items: 18206, 5140\n\nfunction event_say(e)\n\tif e.message:findi(\"special potion\") then\n\t\te.self:Say(\"It is a most lecherous distillment and has been the savior of many. Making it is a complicated procedure and collecting the ingredients is a task not for the average scholar. First one must melt the rare [gray ice] in a pot and boil 2 [pondfish spines] until the poison is extracted. Then take the extraction along with a portion of Hopeless Willow Moss and brew this with plain water in a common bottle. After you have the potion force one of our froglok workers to drink it. As it suffers and its life melts into a puddle you must quickly collect the remains. Bring back the ultimate product of that suffering, along with 2 fire emeralds and you will know sacrifice.\")\n\telseif e.message:findi(\"gray ice\") then\n\t\te.self:Say(\"Gray ice is a very rare element found only atop the highest peaks in the region known as Frontier Mountains. It is valued for its very caustic nature and is used in many ways by our alchemists.\")\n\telseif e.message:findi(\"pondfish spines\") then\n\t\te.self:Say(\"There is a small spring that is the father of two streams. One leads to the ocean while the other is a tributary to the great Lake of Ill Omen. Due to the mineral-rich waters of the spring, many fish in the area have developed poison-based defenses. Some of the larger fish are adorned with spines that carry a deadly poison. These are the spines you must gather.\")\n\telseif e.message:findi(\"unique weapon\") then\n\t\te.self:Say(\"This goblin is known as a pit fighter. Though they are small, weak, and unintelligent, they still maintain a level of ferocity that surpasses that of most wild animals. This, along with a disgusting and perverse imagination, has allowed these pit fighters to reach heights of physical power most Iksar never see. This particular fighter uses his tongue liberally while fighting. He has ingested many deadly contagions and licked things from the slimy surfaces of the darkest and dankest crevasses imaginable. His tongue will do well to further our cause in pain and suffering.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 18206}) then\n\t\te.self:Say(\"Welcome, young petitioner. You have been summoned to this temple to join with the Scaled Mystics. Ours is the way of pain and suffering. Here is the weapon of a petitioner. Through you the power of our ancestors shall flow. As your wisdom grows, so shall your power. Someday you may be a vessel for the supreme might of the ancients. Seek knowledge with Oxyn, he is here to help you.\")\n\t\te.other:SummonItem(5140)\n\t\te.other:AddEXP(500)\n\t\te.other:Faction(445, 100, 0)\n\t\te.other:Faction(441, 25, 0)\n\t\te.other:Ding()\n\telseif item_lib.check_turn_in(e.trade, {item1 = 14790}) then\n\t\te.self:Say(\"You spoke to the Brothers? You, a simple Legionnaire? You are here to test your virtue of sacrifice. There is a goblin famed for his [unique weapon]. Take this knife and return his weapon, the knife, a sapphire, and an opal to me.\")\n\t\te.other:SummonItem(14784)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 14784, item2 = 14785, item3 = 10034, item4 = 10030}) then\n\t\te.self:Say(\"We thank you. It is indeed a lovely specimen. Take your reference and leave this place.\")\n\t\te.other:SummonItem(14786)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 14795}) then\n\t\te.self:Say(\"The brothers still seek their redemption? You must brew a [special potion] for us and make use of it in the name of the Mystics.\")\n\telseif item_lib.check_turn_in(e.trade, {item1 = 14805, item2 = 10033, item3 = 10033}) then\n\t\te.self:Say(\"Wonderful work, Legionnaire. Here is your reference. Remember the suffering you have caused in the name of your creator.\")\n\t\te.other:SummonItem(14787)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/cabeast/Prime_Hierophant_Vek.lua",
+      "beforeSha256": "271aa985fa6367fd1d718470848b6fb9afe1133b6a3e2588b4242627c770b9ae",
+      "proposedFile": "changes/p99-tz-vek-trooper/cabeast--Prime_Hierophant_Vek.lua",
+      "afterSha256": "5a1a7696edbda05c6c55a56b6822eba0b22c78f80b36c9c1ab37935e113692e0"
+    }
+  ]
+}

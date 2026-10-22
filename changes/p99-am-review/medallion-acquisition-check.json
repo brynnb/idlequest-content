@@ -1,0 +1,311 @@
+{
+  "kind": "Read-only three medallion acquisition identity audit; no encounter runtime or rate parity claim",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "npcs": [
+    {
+      "id": 85180,
+      "name": "a_bloodgill_marauder",
+      "loottable_id": 12330
+    },
+    {
+      "id": 86152,
+      "name": "rotting_skeleton",
+      "loottable_id": 12331
+    },
+    {
+      "id": 102106,
+      "name": "Verix_Kyloxs_remains",
+      "loottable_id": 12332
+    },
+    {
+      "id": 95180,
+      "name": "pained_soul",
+      "loottable_id": 12319
+    },
+    {
+      "id": 84256,
+      "name": "an_ancient_Jarsath",
+      "loottable_id": 12329
+    }
+  ],
+  "loottableEntries": [
+    {
+      "loottable_id": 12319,
+      "lootdrop_id": 20226,
+      "multiplier": 1,
+      "droplimit": 1,
+      "mindrop": 1,
+      "probability": 100
+    },
+    {
+      "loottable_id": 12331,
+      "lootdrop_id": 20258,
+      "multiplier": 1,
+      "droplimit": 1,
+      "mindrop": 1,
+      "probability": 100
+    },
+    {
+      "loottable_id": 12329,
+      "lootdrop_id": 20256,
+      "multiplier": 1,
+      "droplimit": 1,
+      "mindrop": 1,
+      "probability": 100
+    },
+    {
+      "loottable_id": 12330,
+      "lootdrop_id": 158459,
+      "multiplier": 1,
+      "droplimit": 1,
+      "mindrop": 0,
+      "probability": 100
+    },
+    {
+      "loottable_id": 12332,
+      "lootdrop_id": 20259,
+      "multiplier": 1,
+      "droplimit": 1,
+      "mindrop": 1,
+      "probability": 100
+    },
+    {
+      "loottable_id": 12330,
+      "lootdrop_id": 158458,
+      "multiplier": 1,
+      "droplimit": 2,
+      "mindrop": 0,
+      "probability": 100
+    },
+    {
+      "loottable_id": 12330,
+      "lootdrop_id": 20257,
+      "multiplier": 1,
+      "droplimit": 1,
+      "mindrop": 1,
+      "probability": 100
+    }
+  ],
+  "questDrops": [
+    {
+      "lootdrop_id": 20256,
+      "item_id": 19960,
+      "item_charges": 1,
+      "equip_item": 0,
+      "chance": 100,
+      "disabled_chance": 0,
+      "trivial_min_level": 0,
+      "trivial_max_level": 0,
+      "multiplier": 1,
+      "npc_min_level": 0,
+      "npc_max_level": 0,
+      "min_expansion": -1,
+      "max_expansion": -1,
+      "content_flags": null,
+      "content_flags_disabled": null
+    },
+    {
+      "lootdrop_id": 20257,
+      "item_id": 19959,
+      "item_charges": 1,
+      "equip_item": 0,
+      "chance": 100,
+      "disabled_chance": 0,
+      "trivial_min_level": 0,
+      "trivial_max_level": 0,
+      "multiplier": 1,
+      "npc_min_level": 0,
+      "npc_max_level": 0,
+      "min_expansion": -1,
+      "max_expansion": -1,
+      "content_flags": null,
+      "content_flags_disabled": null
+    },
+    {
+      "lootdrop_id": 20259,
+      "item_id": 19963,
+      "item_charges": 1,
+      "equip_item": 0,
+      "chance": 100,
+      "disabled_chance": 0,
+      "trivial_min_level": 0,
+      "trivial_max_level": 0,
+      "multiplier": 1,
+      "npc_min_level": 0,
+      "npc_max_level": 0,
+      "min_expansion": -1,
+      "max_expansion": -1,
+      "content_flags": null,
+      "content_flags_disabled": null
+    },
+    {
+      "lootdrop_id": 20226,
+      "item_id": 19956,
+      "item_charges": 1,
+      "equip_item": 0,
+      "chance": 100,
+      "disabled_chance": 0,
+      "trivial_min_level": 0,
+      "trivial_max_level": 0,
+      "multiplier": 1,
+      "npc_min_level": 0,
+      "npc_max_level": 0,
+      "min_expansion": -1,
+      "max_expansion": -1,
+      "content_flags": null,
+      "content_flags_disabled": null
+    },
+    {
+      "lootdrop_id": 20258,
+      "item_id": 19957,
+      "item_charges": 1,
+      "equip_item": 0,
+      "chance": 100,
+      "disabled_chance": 0,
+      "trivial_min_level": 0,
+      "trivial_max_level": 0,
+      "multiplier": 1,
+      "npc_min_level": 0,
+      "npc_max_level": 0,
+      "min_expansion": -1,
+      "max_expansion": -1,
+      "content_flags": null,
+      "content_flags_disabled": null
+    }
+  ],
+  "items": [
+    {
+      "id": 19962,
+      "Name": "Piece of a medallion",
+      "lore": "Bottom shard of the Kylong medallion",
+      "loregroup": -1,
+      "nodrop": 0
+    },
+    {
+      "id": 19958,
+      "Name": "Piece of a medallion",
+      "lore": "Top shard of the Obulus Medallion",
+      "loregroup": -1,
+      "nodrop": 0
+    },
+    {
+      "id": 19957,
+      "Name": "Piece of a medallion",
+      "lore": "Middle shard of the Obulus Medallion",
+      "loregroup": -1,
+      "nodrop": 0
+    },
+    {
+      "id": 19963,
+      "Name": "Piece of a medallion",
+      "lore": "Middle shard of the Kylong medallion",
+      "loregroup": -1,
+      "nodrop": 0
+    },
+    {
+      "id": 19954,
+      "Name": "Medallion of the Jarsath",
+      "lore": "Medallion of the Jarsath",
+      "loregroup": -1,
+      "nodrop": 0
+    },
+    {
+      "id": 19953,
+      "Name": "Medallion of the Obulus",
+      "lore": "Medallion of the Obulus",
+      "loregroup": -1,
+      "nodrop": 0
+    },
+    {
+      "id": 19960,
+      "Name": "Piece of a medallion",
+      "lore": "Middle shard of the Jarsath Medallion",
+      "loregroup": -1,
+      "nodrop": 0
+    },
+    {
+      "id": 19959,
+      "Name": "Piece of a medallion",
+      "lore": "Bottom shard of the Jarsath Medallion",
+      "loregroup": -1,
+      "nodrop": 0
+    },
+    {
+      "id": 19961,
+      "Name": "Piece of a medallion",
+      "lore": "Top shard of the Jarsath Medallion",
+      "loregroup": -1,
+      "nodrop": 0
+    },
+    {
+      "id": 19964,
+      "Name": "Piece of a medallion",
+      "lore": "Top shard of the Kylong medallion",
+      "loregroup": -1,
+      "nodrop": 0
+    },
+    {
+      "id": 19955,
+      "Name": "Medallion of the Kylong",
+      "lore": "Medallion of the Kylong",
+      "loregroup": -1,
+      "nodrop": 0
+    },
+    {
+      "id": 19956,
+      "Name": "Piece of a medallion",
+      "lore": "Bottom shard of the Obulus Medallion",
+      "loregroup": -1,
+      "nodrop": 0
+    }
+  ],
+  "groundSpawns": [
+    {
+      "id": 11,
+      "zoneid": 88,
+      "version": 0,
+      "max_x": -444,
+      "max_y": 57,
+      "max_z": -73,
+      "min_x": -444,
+      "min_y": 57,
+      "heading": 0,
+      "name": "IT63_ACTORDEF",
+      "item": 19962,
+      "max_allowed": 1,
+      "comment": "Part of quest for Veeshans Peak key",
+      "respawn_timer": 300,
+      "fix_z": 1,
+      "min_expansion": -1,
+      "max_expansion": -1,
+      "content_flags": null,
+      "content_flags_disabled": null
+    },
+    {
+      "id": 12,
+      "zoneid": 83,
+      "version": 0,
+      "max_x": 2935,
+      "max_y": 50,
+      "max_z": 0,
+      "min_x": 2935,
+      "min_y": 50,
+      "heading": 0,
+      "name": "IT63_ACTORDEF",
+      "item": 19961,
+      "max_allowed": 1,
+      "comment": "Part of quest for Veeshans Peak key",
+      "respawn_timer": 300,
+      "fix_z": 1,
+      "min_expansion": -1,
+      "max_expansion": -1,
+      "content_flags": null,
+      "content_flags_disabled": null
+    }
+  ],
+  "unresolved": [
+    "Baseline Swamp Jarsath ground19961respawn300seconds differs from P99eight hours; changes/p99-am-jarsath-respawn.json proposes28800, actual natural respawn not executed.",
+    "Exclude1 on NPC rows is not sufficient evidence of active runtime exclusion.",
+    "List queue behavior, spawn chances and actual encounter availability not independently exercised."
+  ]
+}

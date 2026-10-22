@@ -1,0 +1,826 @@
+{
+  "scope": "Isolated normalized Lua source-bound tests. Disabled scripts are force-loaded only to verify retained body; not live dispatch, settlement or UI validation.",
+  "caseCount": 95,
+  "cases": [
+    {
+      "key": "akanon/Exterminator_VIII",
+      "name": "akanon/Exterminator_VIII baseline characterization: full source loads all preserved handlers",
+      "sourceSha256": "b56c9692b4caaa18f7e2a66f4eafad150e9eb7987871d7ecb19946b9c1dc6dcc",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "assert(type(event_say)==\"function\");assert(type(event_trade)==\"function\");equal(next(calls.rewards),nil)",
+      "file": "effective/quests/akanon/Exterminator_VIII.lua",
+      "coverageKind": "baseline_verification",
+      "coverageNote": "Unchanged exact-source characterization only, not proposed-source coverage or P99 parity certification."
+    },
+    {
+      "key": "akanon/Lobal_Postugger",
+      "name": "akanon/Lobal_Postugger baseline characterization: full source loads all preserved handlers",
+      "sourceSha256": "7847baf7bdb15ca989b3bc62ea8f72163709a2b529fecb09e714562d9acbb629",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "assert(type(event_say)==\"function\");assert(type(event_trade)==\"function\");equal(next(calls.rewards),nil)",
+      "file": "effective/quests/akanon/Lobal_Postugger.lua",
+      "coverageKind": "baseline_verification",
+      "coverageNote": "Unchanged exact-source characterization only, not proposed-source coverage or P99 parity certification."
+    },
+    {
+      "key": "befallen/#Sir_Ariam_Arcanum",
+      "name": "befallen/#Sir_Ariam_Arcanum baseline characterization: full source loads all preserved handlers",
+      "sourceSha256": "bdffaf1403081d322ce431b3fe95329592f449cc43c7b50caf384eb64a44625a",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "assert(type(spawn_event)==\"function\");assert(type(event_say)==\"function\");assert(type(event_trade)==\"function\");assert(type(event_timer)==\"function\");equal(next(calls.rewards),nil)",
+      "file": "effective/quests/befallen/%23Sir_Ariam_Arcanum.lua",
+      "coverageKind": "baseline_verification",
+      "coverageNote": "Unchanged exact-source characterization only, not proposed-source coverage or P99 parity certification."
+    },
+    {
+      "key": "befallen/Zeek",
+      "name": "befallen/Zeek baseline characterization: full source loads all preserved handlers",
+      "sourceSha256": "a113e5cc918001da1aa90125c4cb58ad5f441b2c228360078fe97df6effb6dfe",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "assert(type(event_say)==\"function\");assert(type(event_trade)==\"function\");equal(next(calls.rewards),nil)",
+      "file": "effective/quests/befallen/Zeek.lua",
+      "coverageKind": "baseline_verification",
+      "coverageNote": "Unchanged exact-source characterization only, not proposed-source coverage or P99 parity certification."
+    },
+    {
+      "key": "butcher/Dapper_Blackhammer",
+      "name": "butcher/Dapper_Blackhammer full source loads all preserved handlers",
+      "sourceSha256": "e3a07532fff688257688fc47b989e254605b004a4584d55bc1b3894879c68fa0",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "assert(type(event_say)==\"function\");assert(type(event_trade)==\"function\");equal(next(calls.rewards),nil)",
+      "proposedFile": "changes/p99-final-uncertainty/butcher--Dapper_Blackhammer.lua"
+    },
+    {
+      "key": "butcher/Dapper_Blackhammer",
+      "name": "butcher/Dapper_Blackhammer unmatched offer retains item and cash",
+      "sourceSha256": "e3a07532fff688257688fc47b989e254605b004a4584d55bc1b3894879c68fa0",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "trade({99999},{gold=10});equal(remaining[99999],1);equal(remaining.gold,10);equal(calls.returns,1);equal(next(calls.rewards),nil)",
+      "proposedFile": "changes/p99-final-uncertainty/butcher--Dapper_Blackhammer.lua"
+    },
+    {
+      "key": "butcher/Dapper_Blackhammer",
+      "name": "butcher/Dapper_Blackhammer preserved level40 historical recipe",
+      "sourceSha256": "e3a07532fff688257688fc47b989e254605b004a4584d55bc1b3894879c68fa0",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "trade({12880,6552},{platinum=500});reward(6551,1);equal(calls.exp,25000)",
+      "proposedFile": "changes/p99-final-uncertainty/butcher--Dapper_Blackhammer.lua"
+    },
+    {
+      "key": "cabeast/Exterminator_Sahizz",
+      "name": "cabeast/Exterminator_Sahizz baseline characterization: full source loads all preserved handlers",
+      "sourceSha256": "2302a1be8e127b7a2403fdb7e6b759d3f6900a7a6d009295271311761a4288ee",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "assert(type(event_say)==\"function\");assert(type(event_trade)==\"function\");equal(next(calls.rewards),nil)",
+      "file": "effective/quests/cabeast/Exterminator_Sahizz.lua",
+      "coverageKind": "baseline_verification",
+      "coverageNote": "Unchanged exact-source characterization only, not proposed-source coverage or P99 parity certification."
+    },
+    {
+      "key": "cazicthule/48255",
+      "name": "cazicthule/48255 full source loads all preserved handlers",
+      "sourceSha256": "94868366935a1d762ef1b17a80b0238993d1cf31082a3f2925f031cc3260cf39",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "assert(type(event_trade)==\"function\");assert(type(event_spawn)==\"function\");assert(type(event_timer)==\"function\");equal(next(calls.rewards),nil)",
+      "proposedFile": "changes/p99-final-uncertainty/cazicthule--48255.lua"
+    },
+    {
+      "key": "cazicthule/48255",
+      "name": "cazicthule/48255 unmatched offer retains item and cash",
+      "sourceSha256": "94868366935a1d762ef1b17a80b0238993d1cf31082a3f2925f031cc3260cf39",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "trade({99999},{gold=10});equal(remaining[99999],1);equal(remaining.gold,10);equal(calls.returns,1);equal(next(calls.rewards),nil)",
+      "proposedFile": "changes/p99-final-uncertainty/cazicthule--48255.lua"
+    },
+    {
+      "key": "cazicthule/48255",
+      "name": "cazicthule/48255 forced historical exact trade extra repeat 8723",
+      "sourceSha256": "94868366935a1d762ef1b17a80b0238993d1cf31082a3f2925f031cc3260cf39",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "trade({8723,99999},{gold=10});reward(8730,1);equal(remaining[8723],0);equal(remaining[99999],1);equal(remaining.gold,10);trade({8723});reward(8730,2)",
+      "proposedFile": "changes/p99-final-uncertainty/cazicthule--48255.lua"
+    },
+    {
+      "key": "cazicthule/48255",
+      "name": "cazicthule/48255 preserved terminal timer",
+      "sourceSha256": "94868366935a1d762ef1b17a80b0238993d1cf31082a3f2925f031cc3260cf39",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "event_spawn({self=npc});equal(timers.depop,600000);event_timer({self=npc,timer=\"depop\"});equal(stops.depop,true);equal(calls.depops,1)",
+      "proposedFile": "changes/p99-final-uncertainty/cazicthule--48255.lua"
+    },
+    {
+      "key": "cazicthule/48255",
+      "name": "cazicthule/48255 preserved random reward option 1",
+      "sourceSha256": "94868366935a1d762ef1b17a80b0238993d1cf31082a3f2925f031cc3260cf39",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "character.choice=1;trade({8723});reward(8730,1);equal(calls.depops,1)",
+      "proposedFile": "changes/p99-final-uncertainty/cazicthule--48255.lua"
+    },
+    {
+      "key": "cazicthule/48255",
+      "name": "cazicthule/48255 preserved random reward option 2",
+      "sourceSha256": "94868366935a1d762ef1b17a80b0238993d1cf31082a3f2925f031cc3260cf39",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "character.choice=2;trade({8723});reward(8728,1);equal(calls.depops,1)",
+      "proposedFile": "changes/p99-final-uncertainty/cazicthule--48255.lua"
+    },
+    {
+      "key": "cazicthule/48255",
+      "name": "cazicthule/48255 preserved random reward option 3",
+      "sourceSha256": "94868366935a1d762ef1b17a80b0238993d1cf31082a3f2925f031cc3260cf39",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "character.choice=3;trade({8723});reward(8727,1);equal(calls.depops,1)",
+      "proposedFile": "changes/p99-final-uncertainty/cazicthule--48255.lua"
+    },
+    {
+      "key": "cazicthule/48255",
+      "name": "cazicthule/48255 preserved random reward option 4",
+      "sourceSha256": "94868366935a1d762ef1b17a80b0238993d1cf31082a3f2925f031cc3260cf39",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "character.choice=4;trade({8723});reward(8726,1);equal(calls.depops,1)",
+      "proposedFile": "changes/p99-final-uncertainty/cazicthule--48255.lua"
+    },
+    {
+      "key": "cazicthule/48255",
+      "name": "cazicthule/48255 preserved random reward option 5",
+      "sourceSha256": "94868366935a1d762ef1b17a80b0238993d1cf31082a3f2925f031cc3260cf39",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "character.choice=5;trade({8723});reward(8729,1);equal(calls.depops,1)",
+      "proposedFile": "changes/p99-final-uncertainty/cazicthule--48255.lua"
+    },
+    {
+      "key": "commons/Guard_Colin",
+      "name": "commons/Guard_Colin baseline characterization: full source loads all preserved handlers",
+      "sourceSha256": "6956e19790c5a84f3daef147925243dc11dbd573729d91f60acd9d4561203eea",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "assert(type(event_say)==\"function\");assert(type(event_trade)==\"function\");equal(next(calls.rewards),nil)",
+      "file": "effective/quests/commons/Guard_Colin.lua",
+      "coverageKind": "baseline_verification",
+      "coverageNote": "Unchanged exact-source characterization only, not proposed-source coverage or P99 parity certification."
+    },
+    {
+      "key": "droga/81182",
+      "name": "droga/81182 baseline characterization: full source loads all preserved handlers",
+      "sourceSha256": "5fef3e949f41d486be897331a1a83f2128fab14747edf8930531ad380ce711c9",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "assert(type(event_say)==\"function\");assert(type(event_trade)==\"function\");equal(next(calls.rewards),nil)",
+      "file": "effective/quests/droga/81182.lua",
+      "coverageKind": "baseline_verification",
+      "coverageNote": "Unchanged exact-source characterization only, not proposed-source coverage or P99 parity certification."
+    },
+    {
+      "key": "feerrott/Aqaar_Aluram",
+      "name": "feerrott/Aqaar_Aluram full source loads all preserved handlers",
+      "sourceSha256": "45921c1ed4d588f469871be18b4765199e1c54d936fb23f83ddd5c9ef702ddf3",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "assert(type(event_say)==\"function\");assert(type(event_trade)==\"function\");equal(next(calls.rewards),nil)",
+      "proposedFile": "changes/p99-final-uncertainty/feerrott--Aqaar_Aluram.lua"
+    },
+    {
+      "key": "feerrott/Aqaar_Aluram",
+      "name": "feerrott/Aqaar_Aluram unmatched offer retains item and cash",
+      "sourceSha256": "45921c1ed4d588f469871be18b4765199e1c54d936fb23f83ddd5c9ef702ddf3",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "trade({99999},{gold=10});equal(remaining[99999],1);equal(remaining.gold,10);equal(calls.returns,1);equal(next(calls.rewards),nil)",
+      "proposedFile": "changes/p99-final-uncertainty/feerrott--Aqaar_Aluram.lua"
+    },
+    {
+      "key": "feerrott/Aqaar_Aluram",
+      "name": "feerrott/Aqaar_Aluram forced historical exact trade extra repeat 8720",
+      "sourceSha256": "45921c1ed4d588f469871be18b4765199e1c54d936fb23f83ddd5c9ef702ddf3",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "trade({8720,99999},{gold=10});reward(8732,1);equal(remaining[8720],0);equal(remaining[99999],1);equal(remaining.gold,10);trade({8720});reward(8732,2)",
+      "proposedFile": "changes/p99-final-uncertainty/feerrott--Aqaar_Aluram.lua"
+    },
+    {
+      "key": "felwithea/Arrias_Arcanum",
+      "name": "felwithea/Arrias_Arcanum full source loads all preserved handlers",
+      "sourceSha256": "8355d0cbad4fa8aeafe3b34d59db6325303032e46ce357863351e1e7ecf4a645",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "assert(type(event_say)==\"function\");assert(type(event_trade)==\"function\");equal(next(calls.rewards),nil)",
+      "proposedFile": "changes/p99-final-uncertainty/felwithea--Arrias_Arcanum.lua"
+    },
+    {
+      "key": "felwithea/Arrias_Arcanum",
+      "name": "felwithea/Arrias_Arcanum unmatched offer retains item and cash",
+      "sourceSha256": "8355d0cbad4fa8aeafe3b34d59db6325303032e46ce357863351e1e7ecf4a645",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "trade({99999},{gold=10});equal(remaining[99999],1);equal(remaining.gold,10);equal(calls.returns,1);equal(next(calls.rewards),nil)",
+      "proposedFile": "changes/p99-final-uncertainty/felwithea--Arrias_Arcanum.lua"
+    },
+    {
+      "key": "felwithea/Arrias_Arcanum",
+      "name": "felwithea/Arrias_Arcanum forced historical exact trade extra repeat 31493",
+      "sourceSha256": "8355d0cbad4fa8aeafe3b34d59db6325303032e46ce357863351e1e7ecf4a645",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "trade({31493,99999},{gold=10});reward(31495,1);equal(remaining[31493],0);equal(remaining[99999],1);equal(remaining.gold,10);trade({31493});reward(31495,2)",
+      "proposedFile": "changes/p99-final-uncertainty/felwithea--Arrias_Arcanum.lua"
+    },
+    {
+      "key": "felwithea/Exterminator_Valern",
+      "name": "felwithea/Exterminator_Valern baseline characterization: full source loads all preserved handlers",
+      "sourceSha256": "a1f9af28f11ff9bf5105bfd743da04b5e08a3f7f1d7c776058ea249340db2754",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "assert(type(event_say)==\"function\");assert(type(event_trade)==\"function\");equal(next(calls.rewards),nil)",
+      "file": "effective/quests/felwithea/Exterminator_Valern.lua",
+      "coverageKind": "baseline_verification",
+      "coverageNote": "Unchanged exact-source characterization only, not proposed-source coverage or P99 parity certification."
+    },
+    {
+      "key": "firiona/#Realla_Segoan",
+      "name": "firiona/#Realla_Segoan baseline characterization: full source loads all preserved handlers",
+      "sourceSha256": "661edbbe0238505eac929aec01f724acca83792a3d1c693a1dc00006f47982ca",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "assert(type(event_say)==\"function\");equal(next(calls.rewards),nil)",
+      "file": "effective/quests/firiona/%23Realla_Segoan.lua",
+      "coverageKind": "baseline_verification",
+      "coverageNote": "Unchanged exact-source characterization only, not proposed-source coverage or P99 parity certification."
+    },
+    {
+      "key": "firiona/Allaria_Sneakyfeet",
+      "name": "firiona/Allaria_Sneakyfeet full source loads all preserved handlers",
+      "sourceSha256": "2d2be23f432e2af3349ed2b53e4876db12ae1fdc0552f487537316ef0148f059",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "assert(type(event_say)==\"function\");equal(next(calls.rewards),nil)",
+      "proposedFile": "changes/p99-final-uncertainty/firiona--Allaria_Sneakyfeet.lua"
+    },
+    {
+      "key": "firiona/Allaria_Sneakyfeet",
+      "name": "firiona/Allaria_Sneakyfeet preserved Whistler plans",
+      "sourceSha256": "2d2be23f432e2af3349ed2b53e4876db12ae1fdc0552f487537316ef0148f059",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "say(\"i am worthy\");reward(18347,1)",
+      "proposedFile": "changes/p99-final-uncertainty/firiona--Allaria_Sneakyfeet.lua"
+    },
+    {
+      "key": "firiona/Noilgin_Mindtune",
+      "name": "firiona/Noilgin_Mindtune baseline characterization: full source loads all preserved handlers",
+      "sourceSha256": "036e2732fcf91dc661fb385ba848cd615f20768e55d8825e87cc090862dc51a3",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "assert(type(event_say)==\"function\");assert(type(event_trade)==\"function\");equal(next(calls.rewards),nil)",
+      "file": "effective/quests/firiona/Noilgin_Mindtune.lua",
+      "coverageKind": "baseline_verification",
+      "coverageNote": "Unchanged exact-source characterization only, not proposed-source coverage or P99 parity certification."
+    },
+    {
+      "key": "freporte/Exterminator_Larkey",
+      "name": "freporte/Exterminator_Larkey baseline characterization: full source loads all preserved handlers",
+      "sourceSha256": "bc4e3c1ac983dbc66b9a847095a70fd22a04a98c3493d5ebe90a083d56e41c3a",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "assert(type(event_say)==\"function\");assert(type(event_trade)==\"function\");equal(next(calls.rewards),nil)",
+      "file": "effective/quests/freporte/Exterminator_Larkey.lua",
+      "coverageKind": "baseline_verification",
+      "coverageNote": "Unchanged exact-source characterization only, not proposed-source coverage or P99 parity certification."
+    },
+    {
+      "key": "freporte/Sir_Artanis",
+      "name": "freporte/Sir_Artanis full source loads all preserved handlers",
+      "sourceSha256": "c42c673e5928558c3a5ad234bfa37ef1f7760581deca40853e6dd6e4ef2cf8a1",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "assert(type(event_say)==\"function\");assert(type(event_trade)==\"function\");equal(next(calls.rewards),nil)",
+      "proposedFile": "changes/p99-final-uncertainty/freporte--Sir_Artanis.lua"
+    },
+    {
+      "key": "freporte/Sir_Artanis",
+      "name": "freporte/Sir_Artanis unmatched offer retains item and cash",
+      "sourceSha256": "c42c673e5928558c3a5ad234bfa37ef1f7760581deca40853e6dd6e4ef2cf8a1",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "trade({99999},{gold=10});equal(remaining[99999],1);equal(remaining.gold,10);equal(calls.returns,1);equal(next(calls.rewards),nil)",
+      "proposedFile": "changes/p99-final-uncertainty/freporte--Sir_Artanis.lua"
+    },
+    {
+      "key": "freporte/Sir_Artanis",
+      "name": "freporte/Sir_Artanis forced historical exact trade extra repeat 31492",
+      "sourceSha256": "c42c673e5928558c3a5ad234bfa37ef1f7760581deca40853e6dd6e4ef2cf8a1",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "trade({31492,99999},{gold=10});reward(31496,1);equal(remaining[31492],0);equal(remaining[99999],1);equal(remaining.gold,10);trade({31492});reward(31496,2)",
+      "proposedFile": "changes/p99-final-uncertainty/freporte--Sir_Artanis.lua"
+    },
+    {
+      "key": "freportn/Palious_Jarten",
+      "name": "freportn/Palious_Jarten baseline characterization: full source loads all preserved handlers",
+      "sourceSha256": "8d71907dd3ef69353b4f0d590036959bcb16e755f26f9d665701f16615856014",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "assert(type(event_say)==\"function\");assert(type(event_trade)==\"function\");equal(next(calls.rewards),nil)",
+      "file": "effective/quests/freportn/Palious_Jarten.lua",
+      "coverageKind": "baseline_verification",
+      "coverageNote": "Unchanged exact-source characterization only, not proposed-source coverage or P99 parity certification."
+    },
+    {
+      "key": "freportn/Palious_Jarten",
+      "name": "freportn/Palious_Jarten baseline characterization: documented ten-gold service extra repeat",
+      "sourceSha256": "8d71907dd3ef69353b4f0d590036959bcb16e755f26f9d665701f16615856014",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "trade({99999},{gold=11});equal(remaining[99999],1);equal(remaining.gold,1);equal(calls.spells[1][1],213);equal(calls.spells[1][2],42);trade({},{gold=10});equal(#calls.spells,2)",
+      "file": "effective/quests/freportn/Palious_Jarten.lua",
+      "coverageKind": "baseline_verification",
+      "coverageNote": "Unchanged exact-source characterization only, not proposed-source coverage or P99 parity certification."
+    },
+    {
+      "key": "freportn/Palious_Jarten",
+      "name": "freportn/Palious_Jarten baseline characterization: underpayment retained",
+      "sourceSha256": "8d71907dd3ef69353b4f0d590036959bcb16e755f26f9d665701f16615856014",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "trade({99999},{gold=9});equal(remaining.gold,9);equal(#calls.spells,0)",
+      "file": "effective/quests/freportn/Palious_Jarten.lua",
+      "coverageKind": "baseline_verification",
+      "coverageNote": "Unchanged exact-source characterization only, not proposed-source coverage or P99 parity certification."
+    },
+    {
+      "key": "freportn/Plur_Etinu",
+      "name": "freportn/Plur_Etinu baseline characterization: full source loads all preserved handlers",
+      "sourceSha256": "4e1b901e281073bef8ed26089b8c7b5c962ab69c2f70e127a5d7db5fd6a434a1",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "assert(type(event_say)==\"function\");assert(type(event_trade)==\"function\");equal(next(calls.rewards),nil)",
+      "file": "effective/quests/freportn/Plur_Etinu.lua",
+      "coverageKind": "baseline_verification",
+      "coverageNote": "Unchanged exact-source characterization only, not proposed-source coverage or P99 parity certification."
+    },
+    {
+      "key": "freportn/Sir_Artanis",
+      "name": "freportn/Sir_Artanis full source loads all preserved handlers",
+      "sourceSha256": "1cfa87185162aaecfaa4cc29782dbd9db8f88d69660d28044be2b1bbcf4164af",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "assert(type(event_say)==\"function\");assert(type(event_trade)==\"function\");equal(next(calls.rewards),nil)",
+      "proposedFile": "changes/p99-final-uncertainty/freportn--Sir_Artanis.lua"
+    },
+    {
+      "key": "freportn/Sir_Artanis",
+      "name": "freportn/Sir_Artanis unmatched offer retains item and cash",
+      "sourceSha256": "1cfa87185162aaecfaa4cc29782dbd9db8f88d69660d28044be2b1bbcf4164af",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "trade({99999},{gold=10});equal(remaining[99999],1);equal(remaining.gold,10);equal(calls.returns,1);equal(next(calls.rewards),nil)",
+      "proposedFile": "changes/p99-final-uncertainty/freportn--Sir_Artanis.lua"
+    },
+    {
+      "key": "freportn/Sir_Artanis",
+      "name": "freportn/Sir_Artanis forced historical exact trade extra repeat 31492",
+      "sourceSha256": "1cfa87185162aaecfaa4cc29782dbd9db8f88d69660d28044be2b1bbcf4164af",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "trade({31492,99999},{gold=10});reward(31496,1);equal(remaining[31492],0);equal(remaining[99999],1);equal(remaining.gold,10);trade({31492});reward(31496,2)",
+      "proposedFile": "changes/p99-final-uncertainty/freportn--Sir_Artanis.lua"
+    },
+    {
+      "key": "freportw/Exterminator_Qalantir",
+      "name": "freportw/Exterminator_Qalantir baseline characterization: full source loads all preserved handlers",
+      "sourceSha256": "169adbfdbf106d5cf4a7392e8d5b8c8862adf5fe4ef6f6d4186e8fa253214c70",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "assert(type(event_say)==\"function\");assert(type(event_trade)==\"function\");equal(next(calls.rewards),nil)",
+      "file": "effective/quests/freportw/Exterminator_Qalantir.lua",
+      "coverageKind": "baseline_verification",
+      "coverageNote": "Unchanged exact-source characterization only, not proposed-source coverage or P99 parity certification."
+    },
+    {
+      "key": "grobb/Bregna",
+      "name": "grobb/Bregna full source loads all preserved handlers",
+      "sourceSha256": "0ce1cfc0d3adb8b8baf1a71495602000df7f48c1f6255ef40a135c9814051454",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "assert(type(event_say)==\"function\");assert(type(event_trade)==\"function\");equal(next(calls.rewards),nil)",
+      "proposedFile": "changes/p99-final-uncertainty/grobb--Bregna.lua"
+    },
+    {
+      "key": "grobb/Bregna",
+      "name": "grobb/Bregna unmatched offer retains item and cash",
+      "sourceSha256": "0ce1cfc0d3adb8b8baf1a71495602000df7f48c1f6255ef40a135c9814051454",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "trade({99999},{gold=10});equal(remaining[99999],1);equal(remaining.gold,10);equal(calls.returns,1);equal(next(calls.rewards),nil)",
+      "proposedFile": "changes/p99-final-uncertainty/grobb--Bregna.lua"
+    },
+    {
+      "key": "grobb/Bregna",
+      "name": "grobb/Bregna later receipt blocked without consumption",
+      "sourceSha256": "0ce1cfc0d3adb8b8baf1a71495602000df7f48c1f6255ef40a135c9814051454",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "trade({26662,29921,26640,26632});reward(28740,0);for _,i in ipairs({26662,29921,26640,26632}) do equal(remaining[i],1) end",
+      "proposedFile": "changes/p99-final-uncertainty/grobb--Bregna.lua"
+    },
+    {
+      "key": "grobb/Bregna",
+      "name": "grobb/Bregna independent belt branch unchanged extra repeat",
+      "sourceSha256": "0ce1cfc0d3adb8b8baf1a71495602000df7f48c1f6255ef40a135c9814051454",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "trade({13916,99999},{gold=10});reward(15272,1);equal(remaining[99999],1);equal(remaining.gold,10);equal(calls.exp,100);faction(251,-1);faction(237,5);faction(308,1);trade({13916});reward(15272,2);equal(calls.exp,200)",
+      "proposedFile": "changes/p99-final-uncertainty/grobb--Bregna.lua"
+    },
+    {
+      "key": "grobb/Exterminator_Filrog",
+      "name": "grobb/Exterminator_Filrog baseline characterization: full source loads all preserved handlers",
+      "sourceSha256": "ab2e15b06847d6c8fc67c2d9037ef33d1c7172ba85ade7bc5de5ef3de8a81eb2",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "assert(type(event_say)==\"function\");assert(type(event_trade)==\"function\");equal(next(calls.rewards),nil)",
+      "file": "effective/quests/grobb/Exterminator_Filrog.lua",
+      "coverageKind": "baseline_verification",
+      "coverageNote": "Unchanged exact-source characterization only, not proposed-source coverage or P99 parity certification."
+    },
+    {
+      "key": "guktop/an_old_froglok",
+      "name": "guktop/an_old_froglok full source loads all preserved handlers",
+      "sourceSha256": "bfa447bc1f9c26762b396668eaa4e3dc76b325630745c0ef4db2e739daaa177d",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "assert(type(event_say)==\"function\");assert(type(event_trade)==\"function\");equal(next(calls.rewards),nil)",
+      "proposedFile": "changes/p99-final-uncertainty/guktop--an_old_froglok.lua"
+    },
+    {
+      "key": "guktop/an_old_froglok",
+      "name": "guktop/an_old_froglok unmatched offer retains item and cash",
+      "sourceSha256": "bfa447bc1f9c26762b396668eaa4e3dc76b325630745c0ef4db2e739daaa177d",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "trade({99999},{gold=10});equal(remaining[99999],1);equal(remaining.gold,10);equal(calls.returns,1);equal(next(calls.rewards),nil)",
+      "proposedFile": "changes/p99-final-uncertainty/guktop--an_old_froglok.lua"
+    },
+    {
+      "key": "guktop/an_old_froglok",
+      "name": "guktop/an_old_froglok forced historical exact trade extra repeat 11275",
+      "sourceSha256": "bfa447bc1f9c26762b396668eaa4e3dc76b325630745c0ef4db2e739daaa177d",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "trade({11275,99999},{gold=10});reward(18499,1);equal(remaining[11275],0);equal(remaining[99999],1);equal(remaining.gold,10);trade({11275});reward(18499,2)",
+      "proposedFile": "changes/p99-final-uncertainty/guktop--an_old_froglok.lua"
+    },
+    {
+      "key": "guktop/an_old_froglok",
+      "name": "guktop/an_old_froglok preserved complete crown hand-in",
+      "sourceSha256": "bfa447bc1f9c26762b396668eaa4e3dc76b325630745c0ef4db2e739daaa177d",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "trade({11274,11276,10254,26999});reward(11277,1);equal(calls.exp,500)",
+      "proposedFile": "changes/p99-final-uncertainty/guktop--an_old_froglok.lua"
+    },
+    {
+      "key": "guktop/an_old_froglok",
+      "name": "guktop/an_old_froglok partial crown returns",
+      "sourceSha256": "bfa447bc1f9c26762b396668eaa4e3dc76b325630745c0ef4db2e739daaa177d",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "trade({11274,11276,10254});reward(11277,0);equal(remaining[11274],1)",
+      "proposedFile": "changes/p99-final-uncertainty/guktop--an_old_froglok.lua"
+    },
+    {
+      "key": "kaladimb/Exterminator_Vin",
+      "name": "kaladimb/Exterminator_Vin baseline characterization: full source loads all preserved handlers",
+      "sourceSha256": "588856165675fd87a19f40147c9394e7dac5f59dc2f20745f5cbaf3b1c796200",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "assert(type(event_say)==\"function\");assert(type(event_trade)==\"function\");assert(type(event_combat)==\"function\");assert(type(event_slay)==\"function\");equal(next(calls.rewards),nil)",
+      "file": "effective/quests/kaladimb/Exterminator_Vin.lua",
+      "coverageKind": "baseline_verification",
+      "coverageNote": "Unchanged exact-source characterization only, not proposed-source coverage or P99 parity certification."
+    },
+    {
+      "key": "kaladimb/Harnoff_Splitrock",
+      "name": "kaladimb/Harnoff_Splitrock full source loads all preserved handlers",
+      "sourceSha256": "a3ee8e58b3c327ce6b68c03d9bf65f7fd90ca475af4cb98935dc1606f0d89daa",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "assert(type(event_say)==\"function\");assert(type(event_trade)==\"function\");equal(next(calls.rewards),nil)",
+      "proposedFile": "changes/p99-final-uncertainty/kaladimb--Harnoff_Splitrock.lua"
+    },
+    {
+      "key": "kaladimb/Harnoff_Splitrock",
+      "name": "kaladimb/Harnoff_Splitrock unmatched offer retains item and cash",
+      "sourceSha256": "a3ee8e58b3c327ce6b68c03d9bf65f7fd90ca475af4cb98935dc1606f0d89daa",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "trade({99999},{gold=10});equal(remaining[99999],1);equal(remaining.gold,10);equal(calls.returns,1);equal(next(calls.rewards),nil)",
+      "proposedFile": "changes/p99-final-uncertainty/kaladimb--Harnoff_Splitrock.lua"
+    },
+    {
+      "key": "kaladimb/Harnoff_Splitrock",
+      "name": "kaladimb/Harnoff_Splitrock preserved restock container",
+      "sourceSha256": "a3ee8e58b3c327ce6b68c03d9bf65f7fd90ca475af4cb98935dc1606f0d89daa",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "say(\"run an errand\");reward(17814,1)",
+      "proposedFile": "changes/p99-final-uncertainty/kaladimb--Harnoff_Splitrock.lua"
+    },
+    {
+      "key": "kaladimb/Harnoff_Splitrock",
+      "name": "kaladimb/Harnoff_Splitrock preserved shipment 10952",
+      "sourceSha256": "a3ee8e58b3c327ce6b68c03d9bf65f7fd90ca475af4cb98935dc1606f0d89daa",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "trade({10952,99999});equal(remaining[10952],0);equal(remaining[99999],1);equal(#calls.cash,1)",
+      "proposedFile": "changes/p99-final-uncertainty/kaladimb--Harnoff_Splitrock.lua"
+    },
+    {
+      "key": "kaladimb/Harnoff_Splitrock",
+      "name": "kaladimb/Harnoff_Splitrock preserved shipment 10953",
+      "sourceSha256": "a3ee8e58b3c327ce6b68c03d9bf65f7fd90ca475af4cb98935dc1606f0d89daa",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "trade({10953,99999});equal(remaining[10953],0);equal(remaining[99999],1);equal(#calls.cash,1)",
+      "proposedFile": "changes/p99-final-uncertainty/kaladimb--Harnoff_Splitrock.lua"
+    },
+    {
+      "key": "kerraridge/Allix",
+      "name": "kerraridge/Allix baseline characterization: full source loads all preserved handlers",
+      "sourceSha256": "f3137339a317e565838d1d0820f70b609cf6a0234d83ed5c59656b9f59800339",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "assert(type(event_say)==\"function\");assert(type(event_trade)==\"function\");equal(next(calls.rewards),nil)",
+      "file": "effective/quests/kerraridge/Allix.lua",
+      "coverageKind": "baseline_verification",
+      "coverageNote": "Unchanged exact-source characterization only, not proposed-source coverage or P99 parity certification."
+    },
+    {
+      "key": "lakerathe/#Triathalon_Bike",
+      "name": "lakerathe/#Triathalon_Bike full source loads all preserved handlers",
+      "sourceSha256": "5e907bad91abf66232af206825f7a75f5f4511a082fd86ce35ec75b7186c9161",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "assert(type(event_say)==\"function\");assert(type(event_trade)==\"function\");equal(next(calls.rewards),nil)",
+      "proposedFile": "changes/p99-final-uncertainty/lakerathe--#Triathalon_Bike.lua"
+    },
+    {
+      "key": "lakerathe/#Triathalon_Bike",
+      "name": "lakerathe/#Triathalon_Bike unmatched offer retains item and cash",
+      "sourceSha256": "5e907bad91abf66232af206825f7a75f5f4511a082fd86ce35ec75b7186c9161",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "trade({99999},{gold=10});equal(remaining[99999],1);equal(remaining.gold,10);equal(calls.returns,1);equal(next(calls.rewards),nil)",
+      "proposedFile": "changes/p99-final-uncertainty/lakerathe--#Triathalon_Bike.lua"
+    },
+    {
+      "key": "lakerathe/#Triathalon_Bike",
+      "name": "lakerathe/#Triathalon_Bike forced historical exact trade extra repeat 16889",
+      "sourceSha256": "5e907bad91abf66232af206825f7a75f5f4511a082fd86ce35ec75b7186c9161",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "trade({16889,99999},{gold=10});reward(21800,1);equal(remaining[16889],0);equal(remaining[99999],1);equal(remaining.gold,10);trade({16889});reward(21800,2)",
+      "proposedFile": "changes/p99-final-uncertainty/lakerathe--#Triathalon_Bike.lua"
+    },
+    {
+      "key": "lakerathe/#Triathalon_Swim_Goggles",
+      "name": "lakerathe/#Triathalon_Swim_Goggles full source loads all preserved handlers",
+      "sourceSha256": "1a5dbb736b36b974bd6e7529b49514a675616b66c0f5339edec124449de921d4",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "assert(type(event_say)==\"function\");equal(next(calls.rewards),nil)",
+      "proposedFile": "changes/p99-final-uncertainty/lakerathe--#Triathalon_Swim_Goggles.lua"
+    },
+    {
+      "key": "lakerathe/#Triathalon_Swim_Goggles",
+      "name": "lakerathe/#Triathalon_Swim_Goggles preserved event hail",
+      "sourceSha256": "1a5dbb736b36b974bd6e7529b49514a675616b66c0f5339edec124449de921d4",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "say(\"hail\");reward(16889,1)",
+      "proposedFile": "changes/p99-final-uncertainty/lakerathe--#Triathalon_Swim_Goggles.lua"
+    },
+    {
+      "key": "lavastorm/Brunnel_Kegstander",
+      "name": "lavastorm/Brunnel_Kegstander baseline characterization: full source loads all preserved handlers",
+      "sourceSha256": "2a9910736e1d9580e714e25871dfd8c46c3a111446c9fcd2f09c7dd4cddeb27a",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "assert(type(event_say)==\"function\");assert(type(event_trade)==\"function\");equal(next(calls.rewards),nil)",
+      "file": "effective/quests/lavastorm/Brunnel_Kegstander.lua",
+      "coverageKind": "baseline_verification",
+      "coverageNote": "Unchanged exact-source characterization only, not proposed-source coverage or P99 parity certification."
+    },
+    {
+      "key": "mistmoore/Eirod_Haerod",
+      "name": "mistmoore/Eirod_Haerod baseline characterization: full source loads all preserved handlers",
+      "sourceSha256": "e4b2197828aa39af5fa3d3ecb826cddcc08704600e2d13e40da0082a3c3affb2",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "assert(type(event_say)==\"function\");assert(type(event_trade)==\"function\");equal(next(calls.rewards),nil)",
+      "file": "effective/quests/mistmoore/Eirod_Haerod.lua",
+      "coverageKind": "baseline_verification",
+      "coverageNote": "Unchanged exact-source characterization only, not proposed-source coverage or P99 parity certification."
+    },
+    {
+      "key": "neriaka/Bregna",
+      "name": "neriaka/Bregna full source loads all preserved handlers",
+      "sourceSha256": "1d79f2d9645ddd1d747392271ec94cf1423560f1bf5a899c69969e243b47bbb2",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "assert(type(event_say)==\"function\");assert(type(event_trade)==\"function\");equal(next(calls.rewards),nil)",
+      "proposedFile": "changes/p99-final-uncertainty/neriaka--Bregna.lua"
+    },
+    {
+      "key": "neriaka/Bregna",
+      "name": "neriaka/Bregna unmatched offer retains item and cash",
+      "sourceSha256": "1d79f2d9645ddd1d747392271ec94cf1423560f1bf5a899c69969e243b47bbb2",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "trade({99999},{gold=10});equal(remaining[99999],1);equal(remaining.gold,10);equal(calls.returns,1);equal(next(calls.rewards),nil)",
+      "proposedFile": "changes/p99-final-uncertainty/neriaka--Bregna.lua"
+    },
+    {
+      "key": "neriaka/Bregna",
+      "name": "neriaka/Bregna preserved exact later receipt",
+      "sourceSha256": "1d79f2d9645ddd1d747392271ec94cf1423560f1bf5a899c69969e243b47bbb2",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "trade({26662,29921,26640,26632});reward(28740,1)",
+      "proposedFile": "changes/p99-final-uncertainty/neriaka--Bregna.lua"
+    },
+    {
+      "key": "neriakb/Exterminator_Damasi",
+      "name": "neriakb/Exterminator_Damasi baseline characterization: full source loads all preserved handlers",
+      "sourceSha256": "2f31b27b83f41c661179ffb26d26ef5f65cd33fbd7797a8c2f661a5bfa7c9224",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "assert(type(event_say)==\"function\");assert(type(event_trade)==\"function\");equal(next(calls.rewards),nil)",
+      "file": "effective/quests/neriakb/Exterminator_Damasi.lua",
+      "coverageKind": "baseline_verification",
+      "coverageNote": "Unchanged exact-source characterization only, not proposed-source coverage or P99 parity certification."
+    },
+    {
+      "key": "neriakc/Exterminator_Gilea",
+      "name": "neriakc/Exterminator_Gilea baseline characterization: full source loads all preserved handlers",
+      "sourceSha256": "baebb215207bf4e1ae12888d86f7c4bff58442d6f3ac22e57285ca01e62aa3b1",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "assert(type(event_say)==\"function\");assert(type(event_trade)==\"function\");equal(next(calls.rewards),nil)",
+      "file": "effective/quests/neriakc/Exterminator_Gilea.lua",
+      "coverageKind": "baseline_verification",
+      "coverageNote": "Unchanged exact-source characterization only, not proposed-source coverage or P99 parity certification."
+    },
+    {
+      "key": "northkarana/#Triathalon_Token",
+      "name": "northkarana/#Triathalon_Token full source loads all preserved handlers",
+      "sourceSha256": "b440fe092bf5015fd9e145ef8ecbb872e3cf3aa72e835ec33cac549c0834e144",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "assert(type(event_say)==\"function\");assert(type(event_trade)==\"function\");equal(next(calls.rewards),nil)",
+      "proposedFile": "changes/p99-final-uncertainty/northkarana--#Triathalon_Token.lua"
+    },
+    {
+      "key": "northkarana/#Triathalon_Token",
+      "name": "northkarana/#Triathalon_Token unmatched offer retains item and cash",
+      "sourceSha256": "b440fe092bf5015fd9e145ef8ecbb872e3cf3aa72e835ec33cac549c0834e144",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "trade({99999},{gold=10});equal(remaining[99999],1);equal(remaining.gold,10);equal(calls.returns,1);equal(next(calls.rewards),nil)",
+      "proposedFile": "changes/p99-final-uncertainty/northkarana--#Triathalon_Token.lua"
+    },
+    {
+      "key": "northkarana/#Triathalon_Token",
+      "name": "northkarana/#Triathalon_Token forced historical exact trade extra repeat 2300",
+      "sourceSha256": "b440fe092bf5015fd9e145ef8ecbb872e3cf3aa72e835ec33cac549c0834e144",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "trade({2300,99999},{gold=10});reward(20695,1);equal(remaining[2300],0);equal(remaining[99999],1);equal(remaining.gold,10);trade({2300});reward(20695,2)",
+      "proposedFile": "changes/p99-final-uncertainty/northkarana--#Triathalon_Token.lua"
+    },
+    {
+      "key": "northkarana/Gorri_Fallstine",
+      "name": "northkarana/Gorri_Fallstine baseline characterization: full source loads all preserved handlers",
+      "sourceSha256": "e4d087cb26758c202a5122b632eab26dc50c4624793cf3883c1b125ed7b558c7",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "assert(type(event_say)==\"function\");assert(type(event_trade)==\"function\");equal(next(calls.rewards),nil)",
+      "file": "effective/quests/northkarana/Gorri_Fallstine.lua",
+      "coverageKind": "baseline_verification",
+      "coverageNote": "Unchanged exact-source characterization only, not proposed-source coverage or P99 parity certification."
+    },
+    {
+      "key": "oggok/Exterminator_Glurg",
+      "name": "oggok/Exterminator_Glurg baseline characterization: full source loads all preserved handlers",
+      "sourceSha256": "3a1a59917549d51465948fb69711383c80160d5163c56a9413036e2f87f53c23",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "assert(type(event_say)==\"function\");assert(type(event_trade)==\"function\");equal(next(calls.rewards),nil)",
+      "file": "effective/quests/oggok/Exterminator_Glurg.lua",
+      "coverageKind": "baseline_verification",
+      "coverageNote": "Unchanged exact-source characterization only, not proposed-source coverage or P99 parity certification."
+    },
+    {
+      "key": "qey2hh1/Tarnic_McWillows",
+      "name": "qey2hh1/Tarnic_McWillows full source loads all preserved handlers",
+      "sourceSha256": "11cf2c85477f3da40d6d6cce6355cef9bd48692b36b99066d001968ff4c12a20",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "assert(type(event_trade)==\"function\");equal(next(calls.rewards),nil)",
+      "proposedFile": "changes/p99-final-uncertainty/qey2hh1--Tarnic_McWillows.lua"
+    },
+    {
+      "key": "qey2hh1/Tarnic_McWillows",
+      "name": "qey2hh1/Tarnic_McWillows unmatched offer retains item and cash",
+      "sourceSha256": "11cf2c85477f3da40d6d6cce6355cef9bd48692b36b99066d001968ff4c12a20",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "trade({99999},{gold=10});equal(remaining[99999],1);equal(remaining.gold,10);equal(calls.returns,1);equal(next(calls.rewards),nil)",
+      "proposedFile": "changes/p99-final-uncertainty/qey2hh1--Tarnic_McWillows.lua"
+    },
+    {
+      "key": "qey2hh1/Tarnic_McWillows",
+      "name": "qey2hh1/Tarnic_McWillows forced historical exact trade extra repeat 21987",
+      "sourceSha256": "11cf2c85477f3da40d6d6cce6355cef9bd48692b36b99066d001968ff4c12a20",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "trade({21987,99999},{gold=10});reward(21988,1);equal(remaining[21987],0);equal(remaining[99999],1);equal(remaining.gold,10);trade({21987});reward(21988,2)",
+      "proposedFile": "changes/p99-final-uncertainty/qey2hh1--Tarnic_McWillows.lua"
+    },
+    {
+      "key": "qeynos/Exterminator_Rasmon",
+      "name": "qeynos/Exterminator_Rasmon baseline characterization: full source loads all preserved handlers",
+      "sourceSha256": "36b49baa9135b5c93cf4f42f1310346d633f29d8357841ea6ef3cb1a30f94c50",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "assert(type(event_say)==\"function\");assert(type(event_trade)==\"function\");equal(next(calls.rewards),nil)",
+      "file": "effective/quests/qeynos/Exterminator_Rasmon.lua",
+      "coverageKind": "baseline_verification",
+      "coverageNote": "Unchanged exact-source characterization only, not proposed-source coverage or P99 parity certification."
+    },
+    {
+      "key": "qeynos/Jalorin_Tar-Visgur",
+      "name": "qeynos/Jalorin_Tar-Visgur baseline characterization: full source loads all preserved handlers",
+      "sourceSha256": "683f338dd9447c748151f62ba9d28a468d8bba49b0fcaef1d0ab7eec8f940a3a",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "assert(type(event_say)==\"function\");assert(type(event_trade)==\"function\");equal(next(calls.rewards),nil)",
+      "file": "effective/quests/qeynos/Jalorin_Tar-Visgur.lua",
+      "coverageKind": "baseline_verification",
+      "coverageNote": "Unchanged exact-source characterization only, not proposed-source coverage or P99 parity certification."
+    },
+    {
+      "key": "qeynos/Yakem_Oreslinger",
+      "name": "qeynos/Yakem_Oreslinger full source loads all preserved handlers",
+      "sourceSha256": "3376cf72ecdecc5ea4b10b24fc288ebeb8694d0407bb096a7f68e5d13aae71b2",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "assert(type(event_say)==\"function\");assert(type(event_trade)==\"function\");equal(next(calls.rewards),nil)",
+      "proposedFile": "changes/p99-final-uncertainty/qeynos--Yakem_Oreslinger.lua"
+    },
+    {
+      "key": "qeynos/Yakem_Oreslinger",
+      "name": "qeynos/Yakem_Oreslinger unmatched offer retains item and cash",
+      "sourceSha256": "3376cf72ecdecc5ea4b10b24fc288ebeb8694d0407bb096a7f68e5d13aae71b2",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "trade({99999},{gold=10});equal(remaining[99999],1);equal(remaining.gold,10);equal(calls.returns,1);equal(next(calls.rewards),nil)",
+      "proposedFile": "changes/p99-final-uncertainty/qeynos--Yakem_Oreslinger.lua"
+    },
+    {
+      "key": "qeynos/Yakem_Oreslinger",
+      "name": "qeynos/Yakem_Oreslinger preserved restock container",
+      "sourceSha256": "3376cf72ecdecc5ea4b10b24fc288ebeb8694d0407bb096a7f68e5d13aae71b2",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "say(\"looking for a job\");reward(17814,1)",
+      "proposedFile": "changes/p99-final-uncertainty/qeynos--Yakem_Oreslinger.lua"
+    },
+    {
+      "key": "qeynos/Yakem_Oreslinger",
+      "name": "qeynos/Yakem_Oreslinger preserved shipment 10952",
+      "sourceSha256": "3376cf72ecdecc5ea4b10b24fc288ebeb8694d0407bb096a7f68e5d13aae71b2",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "trade({10952,99999});equal(remaining[10952],0);equal(remaining[99999],1);equal(#calls.cash,1)",
+      "proposedFile": "changes/p99-final-uncertainty/qeynos--Yakem_Oreslinger.lua"
+    },
+    {
+      "key": "qeynos/Yakem_Oreslinger",
+      "name": "qeynos/Yakem_Oreslinger preserved shipment 10953",
+      "sourceSha256": "3376cf72ecdecc5ea4b10b24fc288ebeb8694d0407bb096a7f68e5d13aae71b2",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "trade({10953,99999});equal(remaining[10953],0);equal(remaining[99999],1);equal(#calls.cash,1)",
+      "proposedFile": "changes/p99-final-uncertainty/qeynos--Yakem_Oreslinger.lua"
+    },
+    {
+      "key": "qeynos2/Exterminator_Wintloag",
+      "name": "qeynos2/Exterminator_Wintloag baseline characterization: full source loads all preserved handlers",
+      "sourceSha256": "fb25c822e643233c13b07277534246f1b825c153f7c72ee4be893f6ee9789a78",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "assert(type(event_say)==\"function\");assert(type(event_trade)==\"function\");equal(next(calls.rewards),nil)",
+      "file": "effective/quests/qeynos2/Exterminator_Wintloag.lua",
+      "coverageKind": "baseline_verification",
+      "coverageNote": "Unchanged exact-source characterization only, not proposed-source coverage or P99 parity certification."
+    },
+    {
+      "key": "rivervale/Exterminator_Sutten",
+      "name": "rivervale/Exterminator_Sutten baseline characterization: full source loads all preserved handlers",
+      "sourceSha256": "422d7d0f575ac86e740a7da6767a7186ec25d166b5a39eef203f2f5d405e85af",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "assert(type(event_say)==\"function\");assert(type(event_trade)==\"function\");equal(next(calls.rewards),nil)",
+      "file": "effective/quests/rivervale/Exterminator_Sutten.lua",
+      "coverageKind": "baseline_verification",
+      "coverageNote": "Unchanged exact-source characterization only, not proposed-source coverage or P99 parity certification."
+    },
+    {
+      "key": "sirens/Ravaging_Tsunami_Elemental",
+      "name": "sirens/Ravaging_Tsunami_Elemental full source loads all preserved handlers",
+      "sourceSha256": "7435d3f12c9e5b9dfaad22e28e9933e44f2fdbf434fe7689e64944abb2e49ef2",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "assert(type(event_trade)==\"function\");equal(next(calls.rewards),nil)",
+      "proposedFile": "changes/p99-final-uncertainty/sirens--Ravaging_Tsunami_Elemental.lua"
+    },
+    {
+      "key": "sirens/Ravaging_Tsunami_Elemental",
+      "name": "sirens/Ravaging_Tsunami_Elemental unmatched offer retains item and cash",
+      "sourceSha256": "7435d3f12c9e5b9dfaad22e28e9933e44f2fdbf434fe7689e64944abb2e49ef2",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "trade({99999},{gold=10});equal(remaining[99999],1);equal(remaining.gold,10);equal(calls.returns,1);equal(next(calls.rewards),nil)",
+      "proposedFile": "changes/p99-final-uncertainty/sirens--Ravaging_Tsunami_Elemental.lua"
+    },
+    {
+      "key": "sirens/Ravaging_Tsunami_Elemental",
+      "name": "sirens/Ravaging_Tsunami_Elemental preserved vial aggro and return",
+      "sourceSha256": "7435d3f12c9e5b9dfaad22e28e9933e44f2fdbf434fe7689e64944abb2e49ef2",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;SpecialAbility={immune_aggro=1,no_harm_from_client=2};abilities={};npc.SetSpecialAbility=function(_,a,b) table.insert(abilities,{a,b}) end;npc.AddToHateList=function(_,who,n) hate=n end;",
+      "assertions": "trade({11304,99999});reward(11304,1);equal(abilities[1][2],0);equal(abilities[2][2],0);equal(hate,1);equal(remaining[99999],1)",
+      "proposedFile": "changes/p99-final-uncertainty/sirens--Ravaging_Tsunami_Elemental.lua"
+    },
+    {
+      "key": "southkarana/#Triathalon_Running_Shoes",
+      "name": "southkarana/#Triathalon_Running_Shoes full source loads all preserved handlers",
+      "sourceSha256": "a14394b7002de4aec834cadadbf6ca8e45d33055a139fbe1aa64823723d4481a",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "assert(type(event_say)==\"function\");assert(type(event_trade)==\"function\");equal(next(calls.rewards),nil)",
+      "proposedFile": "changes/p99-final-uncertainty/southkarana--#Triathalon_Running_Shoes.lua"
+    },
+    {
+      "key": "southkarana/#Triathalon_Running_Shoes",
+      "name": "southkarana/#Triathalon_Running_Shoes unmatched offer retains item and cash",
+      "sourceSha256": "a14394b7002de4aec834cadadbf6ca8e45d33055a139fbe1aa64823723d4481a",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "trade({99999},{gold=10});equal(remaining[99999],1);equal(remaining.gold,10);equal(calls.returns,1);equal(next(calls.rewards),nil)",
+      "proposedFile": "changes/p99-final-uncertainty/southkarana--#Triathalon_Running_Shoes.lua"
+    },
+    {
+      "key": "southkarana/#Triathalon_Running_Shoes",
+      "name": "southkarana/#Triathalon_Running_Shoes forced historical exact trade extra repeat 21800",
+      "sourceSha256": "a14394b7002de4aec834cadadbf6ca8e45d33055a139fbe1aa64823723d4481a",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "trade({21800,99999},{gold=10});reward(2300,1);equal(remaining[21800],0);equal(remaining[99999],1);equal(remaining.gold,10);trade({21800});reward(2300,2)",
+      "proposedFile": "changes/p99-final-uncertainty/southkarana--#Triathalon_Running_Shoes.lua"
+    },
+    {
+      "key": "tox/Lanivon_Baxer",
+      "name": "tox/Lanivon_Baxer baseline characterization: full source loads all preserved handlers",
+      "sourceSha256": "149189532f714dfab532e433d5ccefb87cdef75d79e3206bc8f5819d93672701",
+      "setupExtra": "timers={};stops={};eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop=function() calls.depops=calls.depops+1 end;other.Race=function() return \"Human\" end;",
+      "assertions": "assert(type(event_say)==\"function\");assert(type(event_trade)==\"function\");equal(next(calls.rewards),nil)",
+      "file": "effective/quests/tox/Lanivon_Baxer.lua",
+      "coverageKind": "baseline_verification",
+      "coverageNote": "Unchanged exact-source characterization only, not proposed-source coverage or P99 parity certification."
+    }
+  ]
+}

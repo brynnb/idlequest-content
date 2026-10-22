@@ -1,0 +1,27 @@
+{
+  "titles": [
+    "Paw of Opolla Quest"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "partial",
+  "match_status": "partial",
+  "local_quest_keys": [
+    "qcat/Vin_Moltor",
+    "qey2hh1/Caninel"
+  ],
+  "proposal": "changes/p99-nz-paw-opolla.json",
+  "notes": [
+    "Require the actual Rat Ear Pie rather than its recipe book, and restore Caninel\u2019s documented completion lore.",
+    "Exported food13192 has book0/itemtype14; same-named18103 has lore Rephas Rat Ear Pie Recipe, book1/itemtype11. P99 explicitly requires baked pie with three Kalish13016. Remove only recipe-book alternative; valid food exchange and safe surplus return remain. Caninel three gems10019/10070/10021 unchanged. Documented descendent prompt has no response on P99, so no new invented branch. Supporting enabled recipe10263 consumes rings13731/13732/13733/13734 in17014 to13730; recipes2360/2361/25151 match both ear alternatives and final baking. Ground spawns, loot distributions, NPC movement, cross-NPC banter and live combine behavior remain unverified."
+  ],
+  "verification": {
+    "source": "Cached P99 and effective Lua reviewed; exact complete row preimages and source hashes recorded.",
+    "syntax": "pending",
+    "runtime": "Isolated mock regression pending; full game runtime unavailable.",
+    "ui": "not_run",
+    "connected_chain": "not_run"
+  },
+  "unresolved": [
+    "Ordinary source drops/spawns, recipe live behavior and rendered complete quest path not verified."
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "format": 1,
+  "id": "p99-af-wafer-recipe",
+  "summary": "Enable existing exact two wings, mud crabs and bone chips in Component Mortar combine. Preserve every other recipe field.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Cursed_Wafers_Quest?action=raw",
+      "note": "Cached reference/p99-wiki/raw-pages/cursed-wafers-quest-71bc5f3cce.wiki SHA256 481acd8b8d1c2ae89ff9e89a720096b03706eb646ce975c946b1968a2e381bdd."
+    }
+  ],
+  "rows": [
+    {
+      "table": "tradeskill_recipe",
+      "before": {
+        "id": 9770,
+        "name": "Full Component Mortar",
+        "tradeskill": 75,
+        "skillneeded": 0,
+        "trivial": 0,
+        "nofail": 1,
+        "replace_container": 1,
+        "notes": "Cursed Wafers Quest",
+        "must_learn": 0,
+        "learned_by_item_id": 0,
+        "quest": 1,
+        "enabled": 0,
+        "show_in_advanced": 1,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null,
+        "category": "Quest"
+      },
+      "after": {
+        "id": 9770,
+        "name": "Full Component Mortar",
+        "tradeskill": 75,
+        "skillneeded": 0,
+        "trivial": 0,
+        "nofail": 1,
+        "replace_container": 1,
+        "notes": "Cursed Wafers Quest",
+        "must_learn": 0,
+        "learned_by_item_id": 0,
+        "quest": 1,
+        "enabled": 1,
+        "show_in_advanced": 1,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null,
+        "category": "Quest"
+      }
+    }
+  ],
+  "sources": []
+}

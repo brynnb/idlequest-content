@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-nz-eldreth-faction",
+  "summary": "Correct Opal Dark Briar faction direction on Eldreth translation hand-in.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Rogue_Epic_Quest?action=raw",
+      "note": "Cached 2026-07-17T23:30:51.367Z; revision unavailable; SHA256 81b10c82371644b0c6bb652e80b3b84063dca62d52ec3708e4cc6ea85f92a933. Cached Rogue Epic detailed walkthrough explicitly says Opal Dark Briar got worse. Existing code/comments identify296but apply+10; flip sign only and retain undocumented magnitude10.100platinum,two13087milk,28012CombinedParchment ->28053ScribbledParchment and allotherrewards unchanged. Do not add epicminimumlevel."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 17843,
+        "zone": "lakerathe",
+        "name": "Eldreth",
+        "lua_content": "-- Source: lakerathe/Eldreth.pl\n-- Rogue Epic 1.0: Eldreth translates Stanos' combined parchment.\n-- Converted from ProjectEQ Perl quest script.\n-- P99 Rogue Epic specifies departure after the completed translation hand-in.\n-- items: 13087, 28012, 28053\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Go away! I'm busy! I don't have time for scoundrels like you! Leave me alone or I shall, um..turn you into, er, a fish or something! That is what us powerful wizards do to those who annoy us! Yes, that is it. A fish! Did that sound scary enough?\")\n\telseif e.message:findi(\"that was scary\") then\n\t\te.self:Say(\"Ha! I knew it. I could see you trembling! Everyone fears an angry wizard and nobody wants to be a fish. I know I detest fish, it is always fish fish fish around here. Fish cakes, fish stew, fish wine, I am sick of fish. But alas, while I am a powerful wizard, I am also a poor one. Oh well, good things come to those who wait. So, why are you here, $race?\")\n\telseif e.message:findi(\"stanos sent me\") then\n\t\te.self:Say(\"Stanos? Stanos Herkanor? I thought he was long dead. He nearly got me killed, in any case. What does the old fool want of me now?\")\n\telseif e.message:findi(\"translate\") then\n\t\te.self:Say(\"Ah, codes are my specialty! It's what I did for the Circle before Hanns took over. But the Fox is wrong. I owe him nothing! As a fact, he owes me! He wants this translated - he will have to pay!\")\n\telseif e.message:findi(\"pay\") then\n\t\te.self:Say(\"Aye, pay, and pay you must. I need 100 platinum pieces to begin my work. This tower is old and drafty and it will take that much to make it bearable. And while you're at it, I need something else. I am very busy here and have no time to shop, so bring me back a couple bottles of milk along with your very large bag of platinum, and I will translate anything you wish at that time.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 13087, item2 = 13087, item3 = 28012, platinum = 100}) then\n\t\te.self:Say(\"Hmm, interesting. This document is not only encoded, but written in a very obscure language. From what I can gather, it's a variant of elder Teir'Dal, but not one I've encountered. I can not fully translate this, but I know one who can. Find Yendar and give him this.\")\n\t\te.other:Ding()\n\t\te.other:AddEXP(500)\n\t\te.other:SummonItem(28053) -- Scribbled Parchment\n\t\te.other:Faction(342, 20, 0) -- Order of Three\n\t\te.other:Faction(221, -10, 0) -- Blood Sabers\n\t\te.other:Faction(262, 10, 0) -- Guards of Qeynos\n\t\te.other:Faction(296, 10, 0) -- Opal Dark Briar\n\t\teq.depop()\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 17843,
+        "zone": "lakerathe",
+        "name": "Eldreth",
+        "lua_content": "-- Source: lakerathe/Eldreth.pl\n-- Rogue Epic 1.0: Eldreth translates Stanos' combined parchment.\n-- Converted from ProjectEQ Perl quest script.\n-- P99 Rogue Epic specifies departure after the completed translation hand-in.\n-- items: 13087, 28012, 28053\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Go away! I'm busy! I don't have time for scoundrels like you! Leave me alone or I shall, um..turn you into, er, a fish or something! That is what us powerful wizards do to those who annoy us! Yes, that is it. A fish! Did that sound scary enough?\")\n\telseif e.message:findi(\"that was scary\") then\n\t\te.self:Say(\"Ha! I knew it. I could see you trembling! Everyone fears an angry wizard and nobody wants to be a fish. I know I detest fish, it is always fish fish fish around here. Fish cakes, fish stew, fish wine, I am sick of fish. But alas, while I am a powerful wizard, I am also a poor one. Oh well, good things come to those who wait. So, why are you here, $race?\")\n\telseif e.message:findi(\"stanos sent me\") then\n\t\te.self:Say(\"Stanos? Stanos Herkanor? I thought he was long dead. He nearly got me killed, in any case. What does the old fool want of me now?\")\n\telseif e.message:findi(\"translate\") then\n\t\te.self:Say(\"Ah, codes are my specialty! It's what I did for the Circle before Hanns took over. But the Fox is wrong. I owe him nothing! As a fact, he owes me! He wants this translated - he will have to pay!\")\n\telseif e.message:findi(\"pay\") then\n\t\te.self:Say(\"Aye, pay, and pay you must. I need 100 platinum pieces to begin my work. This tower is old and drafty and it will take that much to make it bearable. And while you're at it, I need something else. I am very busy here and have no time to shop, so bring me back a couple bottles of milk along with your very large bag of platinum, and I will translate anything you wish at that time.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 13087, item2 = 13087, item3 = 28012, platinum = 100}) then\n\t\te.self:Say(\"Hmm, interesting. This document is not only encoded, but written in a very obscure language. From what I can gather, it's a variant of elder Teir'Dal, but not one I've encountered. I can not fully translate this, but I know one who can. Find Yendar and give him this.\")\n\t\te.other:Ding()\n\t\te.other:AddEXP(500)\n\t\te.other:SummonItem(28053) -- Scribbled Parchment\n\t\te.other:Faction(342, 20, 0) -- Order of Three\n\t\te.other:Faction(221, -10, 0) -- Blood Sabers\n\t\te.other:Faction(262, 10, 0) -- Guards of Qeynos\n\t\te.other:Faction(296, -10, 0) -- Opal Dark Briar\n\t\teq.depop()\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/lakerathe/Eldreth.lua",
+      "beforeSha256": "2678a737329489998c3661564db0cbd62f2a1a99df00054254774e7fa6948e55",
+      "proposedFile": "changes/p99-nz-eldreth-faction/lakerathe--Eldreth.lua",
+      "afterSha256": "9351fcea529ef9a1d1ba606b253a86cf40096da3861707aa4490e3e0edcb87a5"
+    }
+  ]
+}

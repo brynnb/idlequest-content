@@ -1,0 +1,113 @@
+{
+  "format": 1,
+  "id": "p99-nz-regal-respawn",
+  "summary": "Restore the documented shady-goblin 24-hour timer and the angry-goblin three-day-to-three-day-plus-7h12m respawn window.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Regal_Band_of_Bathezid_Quest?action=raw",
+      "note": "Cached P99 page explicitly says a shady goblin is a 24 hour spawn. SHA256 1d13de10bb6d4c9ab7770595b7c96a1f8bd37898470b4eedbf5d4df6d94ad85e. Canonical NPC79056 is the sole 100-percent member of group12902 used by row20769."
+    },
+    {
+      "url": "https://wiki.project1999.com/An_angry_goblin?action=raw",
+      "note": "NPC page explicitly says the window begins three days after turn-in and lasts seven hours twelve minutes. SHA256 3db46981031e3481dce3785657cf53ce845f60b456b234e58f736f2b40be4f3f. Endpoints 259200 and285120 seconds yield symmetric-runtime center272160 and half-width12960. This is not plus/minus ten percent. The runtime currently begins this clock at despawn rather than initial turn-in; that lifecycle difference remains open."
+    },
+    {
+      "url": "https://wiki.project1999.com/A_shady_goblin?action=raw",
+      "note": "Independent cached NPC page confirms 24 hours and explicitly says there is no longer variance. SHA256 ed04cca41f607f9f5a19f2339d8df9f861dc53750cd2342afb95fbf1417007cb. Existing variance0 remains unchanged."
+    }
+  ],
+  "rows": [
+    {
+      "table": "spawn2",
+      "before": {
+        "id": 20769,
+        "spawngroupID": 12902,
+        "zone": "warslikswood",
+        "version": 0,
+        "x": -1134,
+        "y": -1647,
+        "z": 307.380005,
+        "heading": 131,
+        "respawntime": 640,
+        "variance": 0,
+        "pathgrid": 0,
+        "path_when_zone_idle": 0,
+        "_condition": 0,
+        "cond_value": 1,
+        "animation": 0,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null
+      },
+      "after": {
+        "id": 20769,
+        "spawngroupID": 12902,
+        "zone": "warslikswood",
+        "version": 0,
+        "x": -1134,
+        "y": -1647,
+        "z": 307.380005,
+        "heading": 131,
+        "respawntime": 86400,
+        "variance": 0,
+        "pathgrid": 0,
+        "path_when_zone_idle": 0,
+        "_condition": 0,
+        "cond_value": 1,
+        "animation": 0,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null
+      }
+    },
+    {
+      "table": "spawn2",
+      "before": {
+        "id": 3265320,
+        "spawngroupID": 3288030,
+        "zone": "droga",
+        "version": 0,
+        "x": 1930,
+        "y": 116,
+        "z": -283.399994,
+        "heading": 4.07932,
+        "respawntime": 259200,
+        "variance": 2592,
+        "pathgrid": 0,
+        "path_when_zone_idle": 0,
+        "_condition": 0,
+        "cond_value": 1,
+        "animation": 0,
+        "min_expansion": 0,
+        "max_expansion": 5,
+        "content_flags": null,
+        "content_flags_disabled": null
+      },
+      "after": {
+        "id": 3265320,
+        "spawngroupID": 3288030,
+        "zone": "droga",
+        "version": 0,
+        "x": 1930,
+        "y": 116,
+        "z": -283.399994,
+        "heading": 4.07932,
+        "respawntime": 272160,
+        "variance": 12960,
+        "pathgrid": 0,
+        "path_when_zone_idle": 0,
+        "_condition": 0,
+        "cond_value": 1,
+        "animation": 0,
+        "min_expansion": 0,
+        "max_expansion": 5,
+        "content_flags": null,
+        "content_flags_disabled": null
+      }
+    }
+  ],
+  "sources": []
+}

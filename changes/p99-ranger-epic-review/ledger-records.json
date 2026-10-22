@@ -1,0 +1,66 @@
+{
+  "Ranger Epic Quest": {
+    "review_status": "partial",
+    "match_status": "source_discrepancy_or_ambiguity",
+    "reviewed_at": "2026-10-22",
+    "local_quest_keys": [
+      "airplane/a_soul_carrier",
+      "airplane/an_essence_carrier",
+      "burningwood/Faelin_Bloodbriar",
+      "burningwood/Telin_Darkforest",
+      "citymist/90000",
+      "citymist/90010",
+      "citymist/90012",
+      "citymist/90199",
+      "eastkarana/Althele",
+      "eastkarana/Dark_Elf_Corruptor",
+      "eastkarana/Dark_Elf_Reaver",
+      "eastkarana/Nuien",
+      "eastkarana/Sionae",
+      "eastkarana/Teloa",
+      "eastkarana/Tholris",
+      "erudnint/Mairee_Silentone",
+      "felwithea/Merchant_Nora",
+      "felwitheb/Farios_Elianos",
+      "firiona/Foloal_Stormforest",
+      "frontiermtns/a_human_skeleton",
+      "gfaydark/Faelin_Bloodbriar",
+      "hole/Jaeil_the_Wretched",
+      "kaladimb/Kinlo_Strongarm",
+      "kaladimb/Usbak_the_Old",
+      "karnor/#Venril_Sathir",
+      "karnor/Spirit_of_Venril_Sathir",
+      "karnor/Venril_Sathir",
+      "karnor/Venril_Sathirs_remains",
+      "kithicor/Giz_X-Tin",
+      "misty/Ella_Foodcrafter",
+      "mistythicket/Ella_Foodcrafter",
+      "northkarana/Xanuusus",
+      "qrg/Merdan_Fleetfoot",
+      "qrg/Niera_Farbreeze",
+      "timorous/Alrik_Farsight"
+    ],
+    "notes": [
+      "Full cached primary page and exact current source graph reviewed, including supported aliases and acquisition/recipe sidecars; no longer a screen-only page.",
+      "Bounded four-source Ranger dialogue proposal plus amended shared Alrik exact prompt alias. Item, faction, epic-level and East Karana adaptations preserved.",
+      "Known raid timer/HP, forage, dialogue and acquisition uncertainties remain explicit. Source-facet completion is not full P99 playability or connected-chain completion."
+    ],
+    "verification": {
+      "current_ranger_review": {
+        "level": "substantive_manual_source_facets_and_isolated_script_behavior",
+        "date": "2026-10-22",
+        "evidence": "changes/p99-ranger-epic-review/manual-facet-review.json",
+        "runtime": {
+          "kind": "isolated_strict_fixture",
+          "scenarios": 98,
+          "proposed_file_scenarios": 42,
+          "baseline_verification_scenarios": 56,
+          "baseline_reproduction_scenarios": 0,
+          "receipt": "changes/p99-ranger-epic-review/runtime-diagnostic.log"
+        },
+        "ui": "not_run",
+        "connected_chain": "not_run"
+      }
+    }
+  }
+}

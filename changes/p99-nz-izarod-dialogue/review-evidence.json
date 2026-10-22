@@ -1,0 +1,26 @@
+{
+  "titles": [
+    "Necromancer Spells (Cabilis)"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "partial",
+  "match_status": "partial",
+  "local_quest_keys": [
+    "cabwest/Izarod_Fristan"
+  ],
+  "proposal": "changes/p99-nz-izarod-dialogue.json",
+  "notes": [
+    "Make Izarod\u2019s displayed scrolls prompt work alongside the documented What scrolls? phrase.",
+    "All4accepted scrolls19423,19296,19294,19299 and4random output scrolls19297,19421,19408,19409 independently matched item names to P99; same Vaean exchange also reviewed. Random weight and EXP amounts not specified by P99, retained fallback."
+  ],
+  "verification": {
+    "source": "Cached P99 and effective Lua reviewed; exact complete row preimages and source hashes recorded.",
+    "syntax": "pending",
+    "runtime": "Isolated mock regression pending; full game runtime unavailable.",
+    "ui": "not_run",
+    "connected_chain": "not_run"
+  },
+  "unresolved": [
+    "Ordinary source drops/spawns, recipe live behavior and rendered complete quest path not verified."
+  ]
+}

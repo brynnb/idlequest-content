@@ -1,0 +1,10 @@
+{
+  "checkedAt": "2026-10-22T03:35:00Z",
+  "purpose": "Check whether the live P99 quest-category index can establish freshness beyond the repository's cached corpus.",
+  "attempts": [
+    {"url": "https://wiki.project1999.com/Category:Quests", "outcome": "Web retrieval returned HTTP 502 Bad Gateway."},
+    {"url": "https://wiki.project1999.com/index.php?title=Category:Quests", "outcome": "Web retrieval reported URL inaccessible."},
+    {"url": "https://wiki.project1999.com/api.php?action=query&list=categorymembers&cmtitle=Category%3AQuests&cmlimit=500&format=json", "outcome": "Web retrieval reported URL inaccessible."}
+  ],
+  "interpretation": "Live completeness and subsequent wiki revisions are not established. The auditable scope is the 1,135 cached quest-related pages, 8,911 cached evidence pages overall, and the exported source/database inventory; individual public lookups supplement but do not replace this snapshot. These are retrieval failures, not evidence that the public wiki is generally offline."
+}

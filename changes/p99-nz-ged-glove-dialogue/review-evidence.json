@@ -1,0 +1,27 @@
+{
+  "titles": [
+    "Ratskin Gloves Quest",
+    "Wolfskin Gloves Quest"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "partial",
+  "match_status": "partial",
+  "local_quest_keys": [
+    "kithicor/Ged_Twigborn"
+  ],
+  "proposal": "changes/p99-nz-ged-glove-dialogue.json",
+  "notes": [
+    "Allow garments prompt and route species-specific glove requests before the generic gloves branch.",
+    "P99 What ratskin gloves and wolfskin gloves currently hit generic gloves first and give lion recipe. Species branches now precede generic gloves; all costs, items, rewards and faction/experience unchanged. Existing non-P99 exact wording retained, so source dialogue prose still differs."
+  ],
+  "verification": {
+    "source": "Cached P99 and effective Lua reviewed; exact complete row preimages and source hashes recorded.",
+    "syntax": "pending",
+    "runtime": "Isolated mock regression pending; full game runtime unavailable.",
+    "ui": "not_run",
+    "connected_chain": "not_run"
+  },
+  "unresolved": [
+    "Ordinary source drops/spawns, recipe live behavior and rendered complete quest path not verified."
+  ]
+}

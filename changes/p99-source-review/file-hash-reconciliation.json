@@ -1,0 +1,32 @@
+{
+  "completedAt": "2026-10-22T05:21:35.648008+00:00",
+  "fileByteHashesVerified": 213,
+  "normalizedContentHashesVerified": 213,
+  "normalization": "UTF-8 decoding followed by CRLF and standalone CR to LF only; not parsing or source normalization",
+  "correction": "Initial scanner used Python text-mode universal-newline translation before hashing. Three mislabeled baseline file hashes were corrected; prior normalized-content hashes remain separately labeled. Baseline files were not modified.",
+  "correctedRecords": [
+    {
+      "key": "cobaltscar/High_Priest_Margle",
+      "baselineFile": "effective/quests/cobaltscar/High_Priest_Margle.lua",
+      "fileBytesSha256": "e8213cbf3bbb8e4d470ff9e81dbeb5fe9ec5a188db3508bf57e07e48beb45a01",
+      "normalizedLfContentSha256": "7d6f00f5740a40038cb401e10334159d56ab024613e10e81de3fa84e34ea2401",
+      "crlfPairs": 20
+    },
+    {
+      "key": "sirens/a_twitching_swordfish",
+      "baselineFile": "effective/quests/sirens/a_twitching_swordfish.lua",
+      "fileBytesSha256": "8f1c58913a25b4b7fc58607ad35dab93c5efe057d5668822e1e9803b24e147db",
+      "normalizedLfContentSha256": "7aad9089097eedfab09fc080831a32ea186e7fdee36ebb217a18bbfbfec9b3a6",
+      "crlfPairs": 34
+    },
+    {
+      "key": "westwastes/a_Lost_Tomekeeper",
+      "baselineFile": "effective/quests/westwastes/a_Lost_Tomekeeper.lua",
+      "fileBytesSha256": "17fe85f54f427afcc0c25fae354fc96aa96915aaf7abf5f0b6b383cc279dd81b",
+      "normalizedLfContentSha256": "858ee9fe55e610792b90afe4ca3423d4305ee7c1c07603325aada9fade981d17",
+      "crlfPairs": 5
+    }
+  ],
+  "cachedPageByteHashesReverified": 8911,
+  "integrationTest": "hash-integration-test.txt"
+}

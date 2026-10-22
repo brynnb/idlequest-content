@@ -1,0 +1,575 @@
+[
+  {
+    "name": "p99-am-karn-crate:maintained/lua/modified-upstream/qeynos/Karn_Tassen.lua",
+    "proposedFile": "changes/p99-am-karn-crate/qeynos-Karn_Tassen.lua",
+    "sourceSha256": "7bd141848d614e6a1bd09cc931229b3edfd98ac89c72f9e69ddcce5070b610d9",
+    "assertions": "trade({13014}); equal(#calls.cash,0); equal(remaining[13014],1); trade({1839,999999}); equal(calls.cash[1][3],7); faction(291,2); faction(223,-1); faction(219,1); faction(229,1); faction(262,1); equal(remaining[999999],1); trade({1839}); equal(calls.cash[2][3],7); faction(291,4); equal(calls.exp,0) -- Explicit current omission, not claimed P99 XP parity."
+  },
+  {
+    "name": "p99-am-renth-dialogue:maintained/lua/modified-upstream/halas/Renth_McLanis.lua",
+    "proposedFile": "changes/p99-am-renth-dialogue/halas-Renth_McLanis.lua",
+    "sourceSha256": "134f297debaecdcd4f1bf3b3b1a2cc1bc5c60d2eb76140b2b34c6f9e3aa84ea9",
+    "assertions": "say('I will search for the courier'); equal(#calls.speech,1); say('search fer the courier'); equal(#calls.speech,2); trade({13246}); reward(17009,1); equal(calls.cash[1][1],1); trade({12227}); reward(5367,1); faction(320,-10); trade({12225}); reward(5368,1); faction(320,-30); equal(calls.cash[2][4],4)"
+  },
+  {
+    "name": "p99-am-honey-mead-dialogue:maintained/lua/modified-upstream/qeynos/Trumpy_Irontoe.lua",
+    "proposedFile": "changes/p99-am-honey-mead-dialogue/qeynos-Trumpy_Irontoe.lua",
+    "sourceSha256": "69a47f01ac6a1005ea7bc02ecfe8f5184887155a66011509acd4ae59451b94dd",
+    "assertions": "say('What is honey mead?'); equal(#calls.speech,1); trade({13033,13033,13033}); faction(223,0); trade({13033}); faction(223,0); trade({13033,13033,13033,13033}); faction(223,2); equal(calls.exp,200); trade({13033,13033,13033,13033}); faction(223,4); equal(calls.exp,400); trade({999999}); equal(remaining[999999],1)"
+  },
+  {
+    "name": "p99-am-indaria-dialogue:maintained/lua/modified-upstream/qeynos/Indaria.lua",
+    "proposedFile": "changes/p99-am-indaria-dialogue/qeynos-Indaria.lua",
+    "sourceSha256": "d5cc3dbd1f9932110626498ad430272f9e10217178dc08b37518ba6cc0d89c4b",
+    "assertions": "say('daughter'); equal(#calls.speech,0); say('hail'); equal(#calls.speech,1); trade({999999}); reward(1316,0); trade({13712,999999}); reward(1316,1); equal(remaining[999999],1); trade({13712}); reward(1316,2); equal(calls.exp,54880)"
+  },
+  {
+    "name": "p99-am-lenka-pouch:maintained/lua/modified-upstream/freporte/Olunea_Miltin.lua",
+    "proposedFile": "changes/p99-am-lenka-pouch/freporte-Olunea_Miltin.lua",
+    "sourceSha256": "c2384b77f138622bc9e8426d72f9951a86508bc9e5b5688792dac0d46c34ee63",
+    "assertions": "trade({999999}); reward(13100,0); trade({13922,999999}); reward(13100,1); equal(calls.cash[1][1],50); equal(remaining[999999],1); trade({13922}); reward(13100,2); equal(calls.cash[2][1],50)"
+  },
+  {
+    "name": "p99-am-lenka-pouch:maintained/lua/modified-upstream/freeporteast/Olunea_Miltin.lua",
+    "proposedFile": "changes/p99-am-lenka-pouch/freeporteast-Olunea_Miltin.lua",
+    "sourceSha256": "c2384b77f138622bc9e8426d72f9951a86508bc9e5b5688792dac0d46c34ee63",
+    "assertions": "trade({999999}); reward(13100,0); trade({13922,999999}); reward(13100,1); equal(calls.cash[1][1],50); equal(remaining[999999],1); trade({13922}); reward(13100,2); equal(calls.cash[2][1],50)"
+  },
+  {
+    "name": "p99-am-lenka-pouch:maintained/lua/modified-upstream/freporte/Lenka_Stoutheart.lua",
+    "proposedFile": "changes/p99-am-lenka-pouch/freporte-Lenka_Stoutheart.lua",
+    "sourceSha256": "2d477ab84b5fdeffd35a38d12fd0057b038eaadbe7f45c85fc4902bbfbf6b802",
+    "assertions": "say('What is the Beast?'); equal(#calls.speech,1); trade({999999}); reward(12146,0); trade({13818,999999}); reward(12146,1); faction(328,1); faction(311,1); faction(265,0); faction(267,0); equal(remaining[999999],1); trade({13818}); reward(12146,2); faction(328,2); faction(311,2); trade({13814}); reward(13922,1); faction(328,4)"
+  },
+  {
+    "name": "p99-am-lenka-pouch:maintained/lua/modified-upstream/freeporteast/Lenka_Stoutheart.lua",
+    "proposedFile": "changes/p99-am-lenka-pouch/freeporteast-Lenka_Stoutheart.lua",
+    "sourceSha256": "8da0e28eb8779e0b0b712117526c6fb1a74b56e8195093ffed18a36e850ba953",
+    "assertions": "say('What is the Beast?'); equal(#calls.speech,1); trade({999999}); reward(12146,0); trade({13818,999999}); reward(12146,1); faction(328,1); faction(311,1); faction(265,0); faction(267,0); equal(remaining[999999],1); trade({13818}); reward(12146,2); faction(328,2); faction(311,2); trade({13814}); reward(13922,1); faction(328,4)"
+  },
+  {
+    "name": "p99-am-hogcaller-faction:maintained/lua/modified-upstream/freportw/Lady_Shae.lua",
+    "proposedFile": "changes/p99-am-hogcaller-faction/freportw-Lady_Shae.lua",
+    "sourceSha256": "5460ea42c3c15c4d26e70044cbbe52f74d91d1a25c661f3c95f875beeca26457",
+    "assertions": "trade({999999}); faction(246,0); trade({13031,999999}); faction(246,2); faction(156,0); equal(remaining[999999],1); trade({13031}); faction(246,4)"
+  },
+  {
+    "name": "p99-am-hogcaller-faction:maintained/lua/modified-upstream/freeportwest/Lady_Shae.lua",
+    "proposedFile": "changes/p99-am-hogcaller-faction/freeportwest-Lady_Shae.lua",
+    "sourceSha256": "5c9b0dc63aad508e115ffc6026202fc2ce9e642cc70db71b4a4d9a3e3ec08ce9",
+    "assertions": "trade({999999}); faction(246,0); trade({13031,999999}); faction(246,2); faction(156,0); equal(remaining[999999],1); trade({13031}); faction(246,4)"
+  },
+  {
+    "name": "p99-am-honey-jum-faction:maintained/lua/converted-perl/misty/Joogl_Honeybugger.lua",
+    "proposedFile": "changes/p99-am-honey-jum-faction/misty-Joogl_Honeybugger.lua",
+    "sourceSha256": "8cffdf7f06b01db3b21c3d7ae0e680dd56bb1a354183bc77726cfce76d0139ba",
+    "assertions": "say('buggers'); equal(#calls.speech,1); trade({999999}); faction(336,0); trade({13009,999999}); faction(336,-1); faction(5015,0); equal(remaining[999999],1); trade({13009}); faction(336,-2); trade({13009,13009,13009,13009}); faction(336,-6)"
+  },
+  {
+    "name": "p99-am-lizard-dialogue:maintained/lua/converted-perl/oggok/Kogna.lua",
+    "proposedFile": "changes/p99-am-lizard-dialogue/oggok-Kogna.lua",
+    "sourceSha256": "d973512a989f4710eaf29d036fb5ef463fa6902014568d28bd400001e373c9f4",
+    "assertions": "say('real tuff craknek'); equal(#calls.speech,1); trade({13410,13410,13410}); reward(5025,0); trade({13410,13410,13410,13410}); reward(5025,1); trade({13410,13410,13410,13410}); reward(5025,2)"
+  },
+  {
+    "name": "p99-am-lizard-dialogue:maintained/lua/converted-perl/oggok/Grevak.lua",
+    "proposedFile": "changes/p99-am-lizard-dialogue/oggok-Grevak.lua",
+    "sourceSha256": "c900cc90a0814169db04caccedf1c7a39ee371d7639585b157c272b6a1ef6ce5",
+    "assertions": "say('new peon'); equal(#calls.speech,1); say('outsider'); equal(#calls.speech,2)"
+  },
+  {
+    "name": "p99-am-hehe-meat:maintained/lua/modified-upstream/grobb/Carver_Cagrek.lua",
+    "proposedFile": "changes/p99-am-hehe-meat/grobb-Carver_Cagrek.lua",
+    "sourceSha256": "35ba243ee8b2d0960fd3869bbde8dca82559cf9f0dec96b63b5765c9e920ab49",
+    "assertions": "trade({13368,13368,18940}); reward(5413,0); equal(#calls.cash,0); trade({13368,13368,13368,999999}); reward(5413,0); equal(remaining[999999],1); trade({13368,13368,13368,18940}); reward(5413,1); equal(calls.cash[1][4],3); trade({13368,13368,13368,18940}); reward(5413,2); equal(calls.cash[2][4],3); trade({12191,12191,12191,12191}); reward(12210,1); equal(calls.cash[3][3],5)"
+  },
+  {
+    "name": "p99-am-hehe-meat:maintained/lua/converted-perl/oot/Nerbilik.lua",
+    "proposedFile": "changes/p99-am-hehe-meat/oot-Nerbilik.lua",
+    "sourceSha256": "ae62772c841c31ea725fa3964789c8f392d55363ec72348ede2299dfc531fe81",
+    "assertions": "trade({999999}); faction(222,0); trade({12203,999999}); faction(222,-10); faction(235,10); equal(calls.cash[1][4],2); equal(remaining[999999],1); trade({12203}); faction(222,-20); equal(calls.cash[2][4],2)"
+  },
+  {
+    "name": "p99-am-living-granite:maintained/lua/converted-perl/wakening/#a_storm_giant_architect.lua",
+    "proposedFile": "changes/p99-am-living-granite/wakening-#a_storm_giant_architect.lua",
+    "sourceSha256": "ae54966c24d32d567315d7ee3f2e598e67e44e364bb2c78580a61c9e93f23bcd",
+    "assertions": "trade({24872,24872,24872}); reward(24877,0); faction(430,0); trade({24872,24872,24872,24872}); reward(24877,1); faction(430,-10); trade({24872,24872,24872,24872}); reward(24877,2); faction(430,-20)"
+  },
+  {
+    "name": "p99-am-incandescent-wand:maintained/lua/converted-perl/soltemple/Sultin.lua",
+    "proposedFile": "changes/p99-am-incandescent-wand/soltemple-Sultin.lua",
+    "sourceSha256": "3fc3bf62f9ff603ecd62e1fbd0a466a87acdea63d33b064def7135e2a217f311",
+    "assertions": "say('wand'); say('mask'); say('gloves'); equal(#calls.speech,3); trade({10087,6340}); reward(6334,0); equal(remaining[10087],1); equal(remaining[6340],1); trade({12240}); reward(6334,0); trade({12240,6340,999999}); reward(6334,1); equal(remaining[999999],1); trade({12240,6340}); reward(6334,2); trade({10087,6337}); reward(6329,1)"
+  },
+  {
+    "name": "p99-am-gnoll-paw-faction:maintained/lua/modified-upstream/qrg/Corun_Finisc.lua",
+    "proposedFile": "changes/p99-am-gnoll-paw-faction/qrg-Corun_Finisc.lua",
+    "sourceSha256": "7915254ac86ddedd95c81c30ed4e3d2dc85d4f1ab69db3c50c7ab92c34378e26",
+    "assertions": "trade({999999}); faction(324,0); trade({13700,999999}); faction(324,-30); faction(306,0); equal(remaining[999999],1); trade({13700}); faction(324,-60); faction(302,20); faction(262,20)"
+  },
+  {
+    "name": "p99-am-hall-steel-note:maintained/lua/modified-upstream/qeynos/Tabure_Ahendle.lua",
+    "proposedFile": "changes/p99-am-hall-steel-note/qeynos-Tabure_Ahendle.lua",
+    "sourceSha256": "755e631e828e8a99e4fe88359ed79fe7c2252b7347b9906a27f363bfc4d4d4b9",
+    "assertions": "equal(event_enter,nil); equal(event_spawn,nil); trade({18707}); reward(13572,0); equal(remaining[18707],1); trade({13424,13424,13424}); equal(next(calls.rewards),nil); trade({13423,999999}); reward(5082,1); equal(remaining[999999],1); trade({13423}); reward(5082,2); say('I am a member of the Steel Warriors'); assert(calls.speech[#calls.speech]:find('[assist]',1,true)); say('I will assist you'); assert(calls.speech[#calls.speech]:find('four Kobold Hides',1,true))"
+  },
+  {
+    "name": "p99-am-cain-note:maintained/lua/modified-upstream/freportw/Cain_Darkmoore.lua",
+    "proposedFile": "changes/p99-am-cain-note/freportw-Cain_Darkmoore.lua",
+    "sourceSha256": "9e29139edef7e3ef5193bff85d61a6de4fe7f60b601b247a5f2c6e848fbe7731",
+    "assertions": "trade({18742}); reward(13572,0); equal(remaining[18742],1); trade({18748,999999}); reward(13572,1); equal(remaining[999999],1); trade({18748}); reward(13572,2); faction(311,200)"
+  },
+  {
+    "name": "p99-am-neriak-dialogue:maintained/lua/converted-perl/neriakc/Loveal_S-Nez.lua",
+    "proposedFile": "changes/p99-am-neriak-dialogue/neriakc-Loveal_S-Nez.lua",
+    "sourceSha256": "52062d9ba22ef125ec5922ee96e2edb50e0d52789ec26b8af5291a17b0c408a1",
+    "assertions": "say('Befallen'); equal(#calls.speech,1); assert(calls.speech[1]:find('Commander Windstream',1,true)); trade({18889,999999}); reward(13009,2); reward(13005,2); reward(13002,1); equal(remaining[999999],1); assert(calls.speech[#calls.speech]:find('[Befallen]',1,true))"
+  },
+  {
+    "name": "p99-am-muffin-recipients:qeynos/Voleen_Tassen",
+    "proposedFile": "changes/p99-am-muffin-recipients/qeynos-Voleen_Tassen.lua",
+    "sourceSha256": "23a9e82bddd5c31178fe24c4b82622a0eca4113bec9ef139b9ec56a0dbcba80b",
+    "assertions": "trade({13014}); equal(#calls.cash,0); equal(remaining[13014],1); trade({1839,999999}); equal(remaining[999999],1); equal(calls.cash[1][1],0); equal(calls.cash[1][2],0); equal(calls.cash[1][3],6); equal(calls.cash[1][4],0); faction(291,5); faction(229,1); faction(219,1); faction(262,1); faction(223,-1); trade({1839}); equal(#calls.cash,2); faction(291,10); faction(229,2); faction(219,2); faction(262,2); faction(223,-2); equal(calls.exp,0) -- Explicit omitted XP, not a P99 parity claim."
+  },
+  {
+    "name": "p99-am-muffin-recipients:feerrott/Innkeep_Gub",
+    "proposedFile": "changes/p99-am-muffin-recipients/feerrott-Innkeep_Gub.lua",
+    "sourceSha256": "53bf6e590879cd23113cde103a36f4fd7161715ae24887f29efbcea7216949f7",
+    "assertions": "trade({13014}); equal(#calls.cash,0); equal(remaining[13014],1); trade({1839,999999}); equal(remaining[999999],1); equal(calls.cash[1][1],0); equal(calls.cash[1][2],0); equal(calls.cash[1][3],8); equal(calls.cash[1][4],0); faction(338,2); faction(228,1); faction(337,1); trade({1839}); equal(#calls.cash,2); faction(338,4); faction(228,2); faction(337,2); equal(calls.exp,0) -- Explicit omitted XP, not a P99 parity claim."
+  },
+  {
+    "name": "p99-am-muffin-recipients:halas/Hetie_McDonald",
+    "proposedFile": "changes/p99-am-muffin-recipients/halas-Hetie_McDonald.lua",
+    "sourceSha256": "9c2ff4dc0f23063edb6b8cba19bd0d08202950d81482f86749520cb39d08210a",
+    "assertions": "trade({13014}); equal(#calls.cash,0); equal(remaining[13014],1); trade({1839,999999}); equal(remaining[999999],1); equal(calls.cash[1][1],0); equal(calls.cash[1][2],0); equal(calls.cash[1][3],7); equal(calls.cash[1][4],0); faction(328,2); faction(320,1); faction(327,1); trade({1839}); equal(#calls.cash,2); faction(328,4); faction(320,2); faction(327,2); equal(calls.exp,0) -- Explicit omitted XP, not a P99 parity claim."
+  },
+  {
+    "name": "p99-am-muffin-recipients:neriaka/Sal_Drana",
+    "proposedFile": "changes/p99-am-muffin-recipients/neriaka-Sal_Drana.lua",
+    "sourceSha256": "81a578b213287ed53d0b2967aa13bd9bcfece1fb1a773efdcf488ead16268f37",
+    "assertions": "trade({13014}); equal(#calls.cash,0); equal(remaining[13014],1); trade({1839,999999}); equal(remaining[999999],1); equal(calls.cash[1][1],0); equal(calls.cash[1][2],0); equal(calls.cash[1][3],7); equal(calls.cash[1][4],0); faction(236,2); faction(334,1); faction(370,1); trade({1839}); equal(#calls.cash,2); faction(236,4); faction(334,2); faction(370,2); equal(calls.exp,0) -- Explicit omitted XP, not a P99 parity claim."
+  },
+  {
+    "name": "p99-am-muffin-recipients:erudnext/Beth_Breadmaker",
+    "proposedFile": "changes/p99-am-muffin-recipients/erudnext-Beth_Breadmaker.lua",
+    "sourceSha256": "43b0661dd892b87e9e79f2f13657b85164222e5451bf180919cc44400163af31",
+    "assertions": "trade({13014}); equal(#calls.cash,0); equal(remaining[13014],1); trade({1839,999999}); equal(remaining[999999],1); equal(calls.cash[1][1],0); equal(calls.cash[1][2],0); equal(calls.cash[1][3],0); equal(calls.cash[1][4],1); faction(289,2); faction(266,1); faction(267,1); trade({1839}); equal(#calls.cash,2); faction(289,4); faction(266,2); faction(267,2); equal(calls.exp,0) -- Explicit omitted XP, not a P99 parity claim."
+  },
+  {
+    "name": "p99-am-muffin-recipients:qey2hh1/Innkeep_Rislarn",
+    "proposedFile": "changes/p99-am-muffin-recipients/qey2hh1-Innkeep_Rislarn.lua",
+    "sourceSha256": "4147cd1a5f1fce3d227d2429b93c512900f486029399d5ffe9a80ff67ed867ee",
+    "assertions": "trade({13014}); equal(#calls.cash,0); equal(remaining[13014],1); trade({1839,999999}); equal(remaining[999999],1); equal(calls.cash[1][1],0); equal(calls.cash[1][2],0); equal(calls.cash[1][3],8); equal(calls.cash[1][4],0); faction(291,2); faction(223,-1); faction(219,1); faction(229,1); faction(262,1); trade({1839}); equal(#calls.cash,2); faction(291,4); faction(223,-2); faction(219,2); faction(229,2); faction(262,2); equal(calls.exp,0) -- Explicit omitted XP, not a P99 parity claim."
+  },
+  {
+    "name": "p99-am-muffin-new-recipients:northkarana/Innkeep_James",
+    "proposedFile": "changes/p99-am-muffin-new-recipients/northkarana-Innkeep_James.lua",
+    "sourceSha256": "d6682a11ad16fc6c80251a18a390ac86e0ac81cfd1fc392e9a5fb7226f709475",
+    "assertions": "trade({13014}); equal(#calls.cash,0); equal(remaining[13014],1); trade({1839,999999}); equal(remaining[999999],1); equal(calls.cash[1][3],8); faction(291,2); faction(223,-1); faction(219,1); faction(229,1); faction(262,1); trade({1839}); equal(#calls.cash,2); faction(291,4); faction(223,-2); faction(219,2); faction(229,2); faction(262,2); equal(calls.exp,0) -- Explicit current omission, not P99 XP parity."
+  },
+  {
+    "name": "p99-am-muffin-new-recipients:freporte/Innkeep_Nasumi",
+    "proposedFile": "changes/p99-am-muffin-new-recipients/freporte-Innkeep_Nasumi.lua",
+    "sourceSha256": "122c566a07da2967319023c593204cdc90864568e15c6c1e1620e7b75d1a6e2d",
+    "assertions": "trade({13014}); equal(#calls.cash,0); equal(remaining[13014],1); trade({1839,999999}); equal(remaining[999999],1); equal(calls.cash[1][3],6); faction(330,1); faction(336,1); faction(281,1); faction(362,1); trade({1839}); equal(#calls.cash,2); faction(330,2); faction(336,2); faction(281,2); faction(362,2); equal(calls.exp,0) -- Explicit current omission, not P99 XP parity."
+  },
+  {
+    "name": "p99-am-muffin-new-recipients:freeporteast/Innkeep_Nasumi",
+    "proposedFile": "changes/p99-am-muffin-new-recipients/freeporteast-Innkeep_Nasumi.lua",
+    "sourceSha256": "122c566a07da2967319023c593204cdc90864568e15c6c1e1620e7b75d1a6e2d",
+    "assertions": "trade({13014}); equal(#calls.cash,0); equal(remaining[13014],1); trade({1839,999999}); equal(remaining[999999],1); equal(calls.cash[1][3],6); faction(330,1); faction(336,1); faction(281,1); faction(362,1); trade({1839}); equal(#calls.cash,2); faction(330,2); faction(336,2); faction(281,2); faction(362,2); equal(calls.exp,0) -- Explicit current omission, not P99 XP parity."
+  },
+  {
+    "name": "p99-am-muffin-new-recipients:freportn/Gern_Tassel",
+    "proposedFile": "changes/p99-am-muffin-new-recipients/freportn-Gern_Tassel.lua",
+    "sourceSha256": "0dc7b746d9c3454ff73c00d836e2ba854cf7b187734edc6aecf049cff1e979bc",
+    "assertions": "trade({13014}); equal(#calls.cash,0); equal(remaining[13014],1); trade({1839,999999}); equal(remaining[999999],1); equal(calls.cash[1][3],6); faction(229,2); faction(281,2); faction(291,1); faction(336,2); trade({1839}); equal(#calls.cash,2); faction(229,4); faction(281,4); faction(291,2); faction(336,4); equal(calls.exp,0) -- Explicit current omission, not P99 XP parity."
+  },
+  {
+    "name": "p99-am-muffin-new-recipients:freeportwest/Gern_Tassel",
+    "proposedFile": "changes/p99-am-muffin-new-recipients/freeportwest-Gern_Tassel.lua",
+    "sourceSha256": "0dc7b746d9c3454ff73c00d836e2ba854cf7b187734edc6aecf049cff1e979bc",
+    "assertions": "trade({13014}); equal(#calls.cash,0); equal(remaining[13014],1); trade({1839,999999}); equal(remaining[999999],1); equal(calls.cash[1][3],6); faction(229,2); faction(281,2); faction(291,1); faction(336,2); trade({1839}); equal(#calls.cash,2); faction(229,4); faction(281,4); faction(291,2); faction(336,4); equal(calls.exp,0) -- Explicit current omission, not P99 XP parity."
+  },
+  {
+    "name": "Herb Shop advertised choices",
+    "proposedFile": "changes/p99-am-herb-shop/paineel-Yvonne_Ani.lua",
+    "sourceSha256": "4ea5d821237fc956f725b33e27f78381b0a6604c7c6631ebb70eee5b69babf67",
+    "assertions": "say('the Seekers of the Dark Truth'); equal(#calls.speech,1); assert(calls.speech[1]:find('[herbs]',1,true)); say('herbs'); equal(#calls.speech,2); assert(calls.speech[2]:find('preservation',1,true)); equal(next(calls.rewards),nil); equal(event_trade,nil)"
+  },
+  {
+    "name": "Shilster exact known faction amounts",
+    "proposedFile": "changes/p99-am-shilster-factions/northkarana-Guard_Shilster.lua",
+    "sourceSha256": "468f06e723016ca14998d6c78c502597646710c3f47862160da76710fc1ca811",
+    "assertions": "trade({}, {gold=4}); reward(13107,0); faction(262,0); trade({999999},{gold=5}); reward(13107,1); faction(262,-1); faction(230,1); equal(remaining[999999],1); trade({}, {gold=5}); reward(13107,2); faction(262,-2); faction(230,2); faction(273,20); faction(223,20); faction(221,20)"
+  },
+  {
+    "name": "Sojan Toolset receipt drops on ground, not in inventory",
+    "proposedFile": "changes/p99-am-nalot-rum/iceclad-Sojan_the_Sleepless.lua",
+    "sourceSha256": "e6d3b1a4740e7b54bac56c3789755eb6d1c188197769f51429036b2cc3587b50",
+    "setupExtra": "calls.ground={}; npc.GetX=function() return 11 end; npc.GetY=function() return 22 end; npc.GetZ=function() return 33 end; npc.GetHeading=function() return 44 end; eq.create_ground_object=function(id,x,y,z,h) table.insert(calls.ground,{id,x,y,z,h}) end",
+    "assertions": "character.level=1; character.class=1; trade({69333}); equal(#calls.ground,0); equal(remaining[69333],1); trade({25104,999999}); equal(#calls.ground,1); equal(calls.ground[1][1],20474); equal(calls.ground[1][2],11); equal(calls.ground[1][3],22); equal(calls.ground[1][4],33); equal(calls.ground[1][5],44); equal(remaining[999999],1); reward(20474,0); trade({25104}); equal(#calls.ground,2); reward(20474,0); equal(calls.exp,0)"
+  },
+  {
+    "name": "Plagus note location precedence maintained/lua/modified-upstream/freportw/Plagus_Ladeson.lua",
+    "proposedFile": "changes/p99-am-plagus-note/freportw-Plagus_Ladeson.lua",
+    "sourceSha256": "4b8b25a6192b15ed8eb26df43a97005f1d923307bcf672b6345a1896c02663d0",
+    "assertions": "say(\"Milea\"); reward(18934,0); say(\"Milea is in East Karana\"); reward(18934,1); say(\"Milea is in East Karana\"); reward(18934,2); say(\"Toala\"); reward(18934,2); trade({999999}); equal(remaining[999999],1); trade({18814,999999}); reward(18814,1); equal(remaining[999999],1)"
+  },
+  {
+    "name": "Plagus note location precedence maintained/lua/modified-upstream/freeporteast/Plagus_Ladeson.lua",
+    "proposedFile": "changes/p99-am-plagus-note/freeporteast-Plagus_Ladeson.lua",
+    "sourceSha256": "4b8b25a6192b15ed8eb26df43a97005f1d923307bcf672b6345a1896c02663d0",
+    "assertions": "say(\"Milea\"); reward(18934,0); say(\"Milea is in East Karana\"); reward(18934,1); say(\"Milea is in East Karana\"); reward(18934,2); say(\"Toala\"); reward(18934,2); trade({999999}); equal(remaining[999999],1); trade({18814,999999}); reward(18814,1); equal(remaining[999999],1)"
+  },
+  {
+    "name": "Magician armor component dialogue maintained/lua/converted-perl/thurgadina/Kyla_Frostbeard.lua",
+    "proposedFile": "changes/p99-am-mage-armor-dialogue/thurgadina-Kyla_Frostbeard.lua",
+    "sourceSha256": "696499192d5016230904007de46ca073d327b435540460699a0c08fb8ecc4422",
+    "assertions": "say(\"What wristbands?\"); assert(calls.speech[#calls.speech]:find(\"torn enchanted silk wristband\",1,true)); say(\"What leggings?\"); assert(calls.speech[#calls.speech]:find(\"pantaloons\",1,true)); trade({24953,25841,25841}); reward(31073,0); equal(remaining[24953],1); trade({24953,25841,25841,25841}); reward(31073,1); equal(calls.speech[#calls.speech],\"You have done well, Reviewer.\"); faction(406,20); faction(448,-60); trade({24953,25841,25841,25841}); reward(31073,2)"
+  },
+  {
+    "name": "Magician armor component dialogue maintained/lua/converted-perl/kael/Mjeldor_Felstorm.lua",
+    "proposedFile": "changes/p99-am-mage-armor-dialogue/kael-Mjeldor_Felstorm.lua",
+    "sourceSha256": "6974750e94d1960520a3ab2ae3e08f4505e7a83612b523314ad21ed041b5b5fc",
+    "assertions": "say(\"What gloves?\"); assert(calls.speech[#calls.speech]:find(\"three crushed topaz\",1,true)); trade({24927,25832}); reward(25423,0); equal(remaining[24927],1); trade({24927,25832,25832,25832}); reward(25423,1); faction(429,20); faction(430,-20); trade({24927,25832,25832,25832}); reward(25423,2)"
+  },
+  {
+    "name": "Monk armor completion maintained/lua/converted-perl/kael/Dagron_Stonecutter.lua",
+    "proposedFile": "changes/p99-am-monk-armor-dialogue/kael-Dagron_Stonecutter.lua",
+    "sourceSha256": "e02f1582ef12c3f56972d158b8e9e19c8f19e1dc4d07d76ca5313193b0f17ffd",
+    "assertions": "trade({24919,25831,25831}); reward(25440,0); equal(remaining[24919],1); trade({24919,25831,25831,25831}); reward(25440,1); equal(calls.speech[#calls.speech],\"You have done well, Reviewer.\"); equal(calls.speech[#calls.speech-1],\"smiles warmly as he hands you your reward.\"); trade({24919,25831,25831,25831}); reward(25440,2)"
+  },
+  {
+    "name": "Monk armor completion maintained/lua/converted-perl/thurgadina/Lorekeeper_Einar.lua",
+    "proposedFile": "changes/p99-am-monk-armor-dialogue/thurgadina-Lorekeeper_Einar.lua",
+    "sourceSha256": "ba8f5c515444095cff2e14804d4f9b98204bb29a9b59a219d0d46d32ada4ce5f",
+    "assertions": "trade({24947,25831,25831}); reward(31091,0); equal(remaining[24947],1); trade({24947,25831,25831,25831}); reward(31091,1); equal(calls.speech[#calls.speech],\"You have done well, Reviewer.\"); equal(calls.speech[#calls.speech-1],\"smiles warmly as he hands you your reward.\"); trade({24947,25831,25831,25831}); reward(31091,2)"
+  },
+  {
+    "name": "Grik vial no-faction exchange maintained/lua/modified-upstream/innothule/Forager_Grik.lua",
+    "proposedFile": "changes/p99-am-grik-faction/innothule-Forager_Grik.lua",
+    "sourceSha256": "025161dff1e259aeb90b5a99cb4ebab98336703f6089cf6f581c7a41580bfe0d",
+    "assertions": "trade({999999}); reward(13376,0); equal(remaining[999999],1); trade({13375,999999}); reward(13376,1); faction(251,0); equal(remaining[999999],1); equal(calls.exp,500); trade({13375}); reward(13376,2); faction(251,0); equal(calls.exp,1000)"
+  },
+  {
+    "name": "Grik vial no-faction exchange maintained/lua/modified-upstream/innothuleb/Forager_Grik.lua",
+    "proposedFile": "changes/p99-am-grik-faction/innothuleb-Forager_Grik.lua",
+    "sourceSha256": "025161dff1e259aeb90b5a99cb4ebab98336703f6089cf6f581c7a41580bfe0d",
+    "assertions": "trade({999999}); reward(13376,0); equal(remaining[999999],1); trade({13375,999999}); reward(13376,1); faction(251,0); equal(remaining[999999],1); equal(calls.exp,500); trade({13375}); reward(13376,2); faction(251,0); equal(calls.exp,1000)"
+  },
+  {
+    "name": "p99-am-kcor-rewards documented effects or disabled historical preservation",
+    "proposedFile": "changes/p99-am-kcor-rewards/skyshrine-Sentry_Kcor.lua",
+    "sourceSha256": "dc65b3c199394d5d0b4ff20684a2ab2389f207ffbbc8950502c982fe20bdf710",
+    "setupExtra": "other.AddMoneyToPP=function(_,c,s,g,p) table.insert(calls.cash,{c,s,g,p}) end",
+    "assertions": "character.level=1; character.class=1; say('worthy'); assert(calls.speech[#calls.speech]:find('Their warriors wear helms',1,true)); trade({999999,29124}); faction(430,0); equal(remaining[29124],1); equal(remaining[999999],1); trade({29062,29062,29062,29062}); faction(430,60); faction(436,12); faction(448,-28); equal(calls.exp,0); equal(remaining[29062],0); trade({29062,999999}); faction(430,75); faction(436,15); faction(448,-35); equal(remaining[999999],1); equal(calls.exp,0); calls.factions={}; trade({29624,29624,29624,29624}); faction(430,24); faction(436,24); faction(448,-20); equal(remaining[29624],0); equal(#calls.cash,4); equal(calls.cash[1][1],13); equal(calls.cash[1][2],6); equal(calls.cash[1][3],6); trade({29624,999999}); faction(430,30); faction(436,30); equal(remaining[999999],1); trade({29062,29624}); equal(remaining[29624],1); equal(remaining[29062],0)"
+  },
+  {
+    "name": "p99-am-milven-disable documented effects or disabled historical preservation",
+    "proposedFile": "changes/p99-am-milven-disable/skyshrine-Lieutenant_Milven.lua",
+    "sourceSha256": "7e5de838a9925ef1674bcbfc841d962db85851b754c35a0271ad54fb92218425",
+    "setupExtra": "other.AddMoneyToPP=function(_,c,s,g,p) table.insert(calls.cash,{c,s,g,p}) end",
+    "assertions": "trade({29062}); faction(430,15); faction(436,3); faction(448,-7); equal(calls.exp,10000); trade({999999}); equal(remaining[999999],1)"
+  },
+  {
+    "name": "p99-am-dorn-dialogue:nro/Dorn_B-Dynn",
+    "proposedFile": "changes/p99-am-dorn-dialogue/nro-Dorn_B-Dynn.lua",
+    "sourceSha256": "a2f289281da52cbcdd387dfbab05f4a9d2fa63d70a8627f7819e28954de48ddd",
+    "assertions": "character.level=1; character.class=1; say('hail'); say('business'); say('Zimbittle sent me'); reward(18886,0); say('Mukk'); reward(18886,1); say('Who is Goonda?'); assert(calls.speech[#calls.speech]:find('western planes',1,true)); say('Mukk'); reward(18886,2); trade({18885,18886,999999}); equal(remaining[18885],1); equal(remaining[18886],1); equal(remaining[999999],1); equal(calls.exp,0)"
+  },
+  {
+    "name": "p99-am-dorn-dialogue:northro/Dorn_B-Dynn",
+    "proposedFile": "changes/p99-am-dorn-dialogue/northro-Dorn_B-Dynn.lua",
+    "sourceSha256": "a2f289281da52cbcdd387dfbab05f4a9d2fa63d70a8627f7819e28954de48ddd",
+    "assertions": "character.level=1; character.class=1; say('hail'); say('business'); say('Zimbittle sent me'); reward(18886,0); say('Mukk'); reward(18886,1); say('Who is Goonda?'); assert(calls.speech[#calls.speech]:find('western planes',1,true)); say('Mukk'); reward(18886,2); trade({18885,18886,999999}); equal(remaining[18885],1); equal(remaining[18886],1); equal(remaining[999999],1); equal(calls.exp,0)"
+  },
+  {
+    "name": "Geozite reachable dialogue maintained/lua/converted-perl/cabeast/Drill_Master_Vygan.lua",
+    "proposedFile": "changes/p99-am-geozite-dialogue/cabeast-Drill_Master_Vygan.lua",
+    "sourceSha256": "8ffd3f131f44a69d0f546322824cb08a040474e6c1d2d41ae996dbff48a9f7f3",
+    "assertions": "character.level=1; character.class=1; say('What geozite tool?'); reward(17993,0); say('I want a geozite tool.'); reward(17993,1); say('want a geozite tool'); reward(17993,2); trade({12658,999999}); equal(remaining[999999],1); reward(18213,1); equal(calls.cash[1][3],1); equal(calls.exp,200); faction(441,2); trade({18203}); reward(5130,1); faction(441,102); trade({12675,5130,999999}); reward(5131,0); equal(remaining[12675],1); equal(remaining[5130],1); trade({12675,12677,5130,999999}); reward(5131,1); equal(remaining[999999],1); assert(calls.speech[#calls.speech]:find('[geozite tool]',1,true)); trade({12675,12677,5130}); reward(5131,2); faction(441,106); for _,id in ipairs({440,445,444,442}) do faction(id,31) end; equal(calls.exp,700)"
+  },
+  {
+    "name": "Geozite reachable dialogue maintained/lua/converted-perl/swampofnohope/Warlord_Hikyg.lua",
+    "proposedFile": "changes/p99-am-geozite-dialogue/swampofnohope-Warlord_Hikyg.lua",
+    "sourceSha256": "6a5f76bd1ff1589106827d672442049f8cda604e06324ad1cac81838dab0da57",
+    "assertions": "say('I am prepared to hunt escaped froglok slaves'); assert(calls.speech[#calls.speech]:find('running in packs',1,true)); trade({18211}); reward(17994,1); trade({12661,999999}); reward(12657,1); equal(remaining[999999],1); equal(calls.cash[1][3],1); equal(calls.exp,200); faction(441,2); trade({12661}); reward(12657,2); faction(441,4)"
+  },
+  {
+    "name": "Gnoll guard and numerical corrections maintained/lua/modified-upstream/halas/Ysanna_MacGibbon.lua",
+    "proposedFile": "changes/p99-am-gnoll-guard-factions/halas-Ysanna_MacGibbon.lua",
+    "sourceSha256": "afa5ca5dd3386e3ba281af10bd1c4c204e7e440c626bb0b14d67cbd769f67bd5",
+    "assertions": "other.GetFaction=function() return 9 end; trade({1330,7507,999999}); equal(remaining[1330],1); equal(remaining[7507],1); equal(remaining[999999],1); reward(1349,0); reward(24097,0); equal(calls.exp,0); other.GetFaction=function() return 1 end; trade({1330,999999}); reward(1349,1); faction(305,5); equal(remaining[999999],1); equal(calls.exp,125); trade({1330}); reward(1349,2); faction(305,10); trade({7507}); reward(24097,1)"
+  },
+  {
+    "name": "Gnoll guard and numerical corrections maintained/lua/modified-upstream/highpass/Captain_Orben.lua",
+    "proposedFile": "changes/p99-am-gnoll-guard-factions/highpass-Captain_Orben.lua",
+    "sourceSha256": "29e5caa373e2413022448f09cf892963e36df81c7fcb6983aee16e2393400dfd",
+    "assertions": "other.GetFaction=function() return 9 end; trade({13792,13792,13792,13792}); equal(remaining[13792],4); equal(calls.exp,0); faction(332,0); other.GetFaction=function() return 1 end; trade({13792,13792,13792,13792}); equal(remaining[13792],0); faction(332,4); faction(329,4); faction(331,4); faction(230,8); faction(330,4); equal(calls.exp,100); trade({13792,999999}); faction(332,5); faction(230,10); equal(remaining[999999],1); trade({999999}); equal(remaining[999999],1)"
+  },
+  {
+    "name": "Gnoll guard and numerical corrections maintained/lua/modified-upstream/highpasshold/Captain_Orben.lua",
+    "proposedFile": "changes/p99-am-gnoll-guard-factions/highpasshold-Captain_Orben.lua",
+    "sourceSha256": "f038435b399f2348148aa4a415ba78f94c643a626c6f2e4c04baa509681069f5",
+    "assertions": "other.GetFaction=function() return 9 end; trade({13792,13792,13792,13792}); equal(remaining[13792],4); equal(calls.exp,0); faction(332,0); other.GetFaction=function() return 1 end; trade({13792,13792,13792,13792}); equal(remaining[13792],0); faction(332,4); faction(329,4); faction(331,4); faction(230,8); faction(330,4); equal(calls.exp,4000); trade({13792,999999}); faction(332,5); faction(230,10); equal(remaining[999999],1); trade({999999}); equal(remaining[999999],1)"
+  },
+  {
+    "name": "Shamus normalized class rewards and documented aliases",
+    "proposedFile": "changes/p99-am-shamus-reward/halas-Shamus_Felligan.lua",
+    "sourceSha256": "668dd4f4ad5ec76202bbee2cd4e780f3ec4dcdbd8f95553b62d10242ac2560ce",
+    "assertions": "character.class=10; say('ice goblins'); assert(calls.speech[#calls.speech]:find('young shamans',1,true)); say('hunt the goblin casters'); assert(calls.speech[#calls.speech]:find('Justice awaits',1,true)); trade({999999}); reward(6028,0); equal(remaining[999999],1); trade({13969,999999}); reward(6028,1); equal(remaining[999999],1); trade({13969}); reward(6028,2); calls.factions={}; local pool={15270,15275,15075,15271,15279,15212,15079}; for i,id in ipairs(pool) do character.choice=i; trade({13968}); reward(id,1) end; faction(229,-21); faction(336,0); equal(calls.exp,24000); character.class=15; trade({13969}); reward(6028,3); character.class=1; trade({13969}); reward(6028,3); equal(calls.exp,36800)",
+    "setupExtra": "other.GetClassName=function() return ({[1]=\"Warrior\",[4]=\"Ranger\",[10]=\"Shaman\",[15]=\"Beastlord\"})[character.class] or \"Unknown\" end"
+  },
+  {
+    "name": "Shamus existing string class comparisons work through runtime normalizer",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/halas/Shamus_Felligan.lua",
+    "sourceSha256": "87284bda911ad973b25d0d820a5ddfb2e06b4b247cfed45b4d89f83303baf448",
+    "setupExtra": "other.GetClassName=function() return ({[1]=\"Warrior\",[4]=\"Ranger\",[10]=\"Shaman\",[15]=\"Beastlord\"})[character.class] or \"Unknown\" end",
+    "assertions": "character.class=10; trade({13969}); reward(6028,1); trade({13968}); reward(15270,1); character.class=15; trade({13969}); reward(6028,2)"
+  },
+  {
+    "name": "G dialogue and retained trade: changes/p99-am-g-dialogue/kaladima-Kilam_Oresinger.lua",
+    "proposedFile": "changes/p99-am-g-dialogue/kaladima-Kilam_Oresinger.lua",
+    "sourceSha256": "ddd57f29ce9e2984e25c2b64f42a64cb7615899897e5f327a44301ad40b12b6e",
+    "assertions": "say('mail'); assert(calls.speech[#calls.speech]:find('courier',1,true)); say('interested'); reward(18162,0); say('I will deliver mail to Kelethin'); reward(18162,1); say('deliver'); reward(18162,2); say('Kelethin'); reward(18162,3)"
+  },
+  {
+    "name": "G dialogue and retained trade: changes/p99-am-g-dialogue/oggok-Bonlarg.lua",
+    "proposedFile": "changes/p99-am-g-dialogue/oggok-Bonlarg.lua",
+    "sourceSha256": "3a314a84af90e5e1b57bf0559afad8ccc032deb1613c307701904c97ad3a30e2",
+    "assertions": "say('want black shadow tunic'); assert(calls.speech[#calls.speech]:find('three lizard scout fifes',1,true)); trade({12198,12198,12198}); reward(12199,0); equal(remaining[12198],3); trade({12198,12198,13527,999999}); reward(12199,0); equal(remaining[999999],1); trade({12198,12198,12198,13527}); reward(12199,1); trade({12198,12198,12198,13527}); reward(12199,2); other.GetFaction=function() return 5 end; trade({12198,12198,12198,13527}); reward(12199,2); equal(remaining[13527],1)"
+  },
+  {
+    "name": "G dialogue and retained trade: changes/p99-am-g-dialogue/firiona-Gearin_Gaxx.lua",
+    "proposedFile": "changes/p99-am-g-dialogue/firiona-Gearin_Gaxx.lua",
+    "sourceSha256": "ded62a7809a7ed98e18c452542ca830e53d7e11bc330a91918d370220fe2098a",
+    "assertions": "say('what rare armor'); assert(calls.speech[#calls.speech]:find('[Guard of Ik]',1,true)); say('Guard of Ik'); assert(calls.speech[#calls.speech]:find('two more shields',1,true)); trade({12883,12883}); reward(12972,0); equal(remaining[12883],2); trade({12883,12883,12971,999999}); reward(12972,1); equal(remaining[999999],1); trade({12883,12883,12971}); reward(12972,2)"
+  },
+  {
+    "name": "G dialogue and retained trade: changes/p99-am-g-dialogue/freporte-Netuk_Phenzon.lua",
+    "proposedFile": "changes/p99-am-g-dialogue/freporte-Netuk_Phenzon.lua",
+    "sourceSha256": "841981c7fda6382aaaf975aba84fc31f50231355999ee030b269d5f19672e3c0",
+    "assertions": "say('mission'); assert(calls.speech[#calls.speech]:find('weapons shop',1,true)); trade({18818,999999}); reward(15343,1); equal(calls.cash[1][3],6); equal(remaining[999999],1); trade({18818}); reward(15343,2)"
+  },
+  {
+    "name": "G dialogue and retained trade: changes/p99-am-g-dialogue/freeporteast-Netuk_Phenzon.lua",
+    "proposedFile": "changes/p99-am-g-dialogue/freeporteast-Netuk_Phenzon.lua",
+    "sourceSha256": "f51010d1b587b242c1119b1290a76424fa3c6e134e89663e65c16cbb0c6a9eb8",
+    "assertions": "say('mission'); assert(calls.speech[#calls.speech]:find('weapons shop',1,true)); trade({18818,999999}); reward(15343,1); equal(calls.cash[1][3],6); equal(remaining[999999],1); trade({18818}); reward(15343,2)"
+  },
+  {
+    "name": "Heretic Battle changes/p99-am-heretic-dialogue/erudnint-Markus_Jaevins.lua",
+    "proposedFile": "changes/p99-am-heretic-dialogue/erudnint-Markus_Jaevins.lua",
+    "sourceSha256": "bca4d81c8da8af1c16584fd607cda45107cc77535c45a2be383a2fb74f9d0c5b",
+    "assertions": "say('Who are you?'); assert(calls.speech[#calls.speech]:find('highest ranking',1,true)); say('Where is Jail Master Lius?'); assert(calls.speech[#calls.speech]:find('lower level',1,true)); say('What about the heretics?'); assert(calls.speech[#calls.speech]:find('[prisoner]',1,true)); say('The heretic has escaped.'); assert(calls.speech[#calls.speech]:find('release his soul',1,true)); trade({13128,999999}); faction(254,10); equal(remaining[999999],1); trade({13128}); faction(254,20); trade({999999}); faction(254,20)"
+  },
+  {
+    "name": "Heretic Battle changes/p99-am-heretic-dialogue/erudnint-Warden_Lius.lua",
+    "proposedFile": "changes/p99-am-heretic-dialogue/erudnint-Warden_Lius.lua",
+    "sourceSha256": "2b037b19fc42958dd4d62355f10ba1f462a45d6df5b94a78bd5ebe611135ed2a",
+    "assertions": "say('I need the heretic remains.'); assert(calls.speech[#calls.speech]:find('prisoner has escaped',1,true)); say(\"heretic's remains\"); assert(calls.speech[#calls.speech]:find('prisoner has escaped',1,true)); equal(next(calls.rewards),nil)"
+  },
+  {
+    "name": "p99-am-holy-armor-guard:changes/p99-am-holy-armor-guard/qeynos-Daedet_Losaren.lua",
+    "proposedFile": "changes/p99-am-holy-armor-guard/qeynos-Daedet_Losaren.lua",
+    "sourceSha256": "2bf793db50e53e7e914b858c19db06e2d0640ea4f78ea19292b2a7ab9f0916ad",
+    "assertions": "other.GetFaction=function() return 6 end; trade({}, {gold=10}); equal(remaining.gold,10); equal(#calls.spells,0); other.GetFaction=function() return 5 end; trade({}, {gold=9}); equal(remaining.gold,9); equal(#calls.spells,0); trade({999999}, {gold=11}); equal(calls.spells[1],11); equal(remaining.gold,1); equal(remaining[999999],1); trade({}, {gold=10}); equal(#calls.spells,2); trade({13395}); reward(15011,1); trade({13289}); reward(15218,1)",
+    "setupExtra": "other.SelfCast=function(_,id) table.insert(calls.spells,id) end"
+  },
+  {
+    "name": "p99-am-hsagra-dialogue:changes/p99-am-hsagra-dialogue/skyshrine-Lawyla.lua",
+    "proposedFile": "changes/p99-am-hsagra-dialogue/skyshrine-Lawyla.lua",
+    "sourceSha256": "2b1acf7968d188f4d099ea28e2fbccf11353e70791fa0df3f982f2d04d4dcca5",
+    "assertions": "say('study the art of sorcery'); assert(calls.speech[#calls.speech]:find('beloved Hsagra',1,true)); say('wish to avenge Hsagra'); assert(calls.speech[#calls.speech]:find('prove your allegiance',1,true)); say('wish to prove your allegiance'); assert(calls.speech[#calls.speech]:find('[lorekeeper]',1,true)); say('yes, I wish to prove my allegiance'); assert(calls.speech[#calls.speech]:find('[lorekeeper]',1,true)); say('problems'); assert(calls.speech[#calls.speech]:find('head of a Kromzek spy',1,true)); say('with Kromzek spies'); assert(calls.speech[#calls.speech]:find('head of a Kromzek spy',1,true)); trade({1897,1898}); reward(19470,0); trade({1897,1898,1899,999999}); reward(19470,1); equal(remaining[999999],1); trade({1897,1898,1899}); reward(19470,2)",
+    "setupExtra": ""
+  },
+  {
+    "name": "p99-am-hsagra-dialogue:changes/p99-am-hsagra-dialogue/skyshrine-Jualicn.lua",
+    "proposedFile": "changes/p99-am-hsagra-dialogue/skyshrine-Jualicn.lua",
+    "sourceSha256": "3bf536601099be22240c0498cbeaa81362a77ab1cf62ac3a220cbf6fef1873ba",
+    "assertions": "say('treasure'); reward(1908,1); say('ready to receive the lexicon'); reward(17061,1); reward(1908,1); say('I am ready to receive the lexicon'); reward(17061,2); say('unrelated'); reward(17061,2)",
+    "setupExtra": ""
+  },
+  {
+    "name": "Hsagra existing token protocol Derasinal",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/westwastes/Derasinal.lua",
+    "sourceSha256": "117b193c57eddaed54a17d5cec896034a64476f667d1b344af444d83b7511a86",
+    "assertions": "trade({999999}); reward(1895,0); equal(remaining[999999],1); trade({1908,999999}); reward(1895,1); reward(1908,0); equal(remaining[1908],0); equal(remaining[999999],1); equal(calls.depops,1)"
+  },
+  {
+    "name": "Hsagra existing token protocol Draazak",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/westwastes/Draazak.lua",
+    "sourceSha256": "9044f81f519a03359f722dbbb99d88d2feb6e56bf726b61c0391086e8d7c0f9a",
+    "assertions": "trade({999999}); reward(1896,0); equal(remaining[999999],1); trade({1908,999999}); reward(1896,1); reward(1908,1); equal(remaining[1908],0); equal(remaining[999999],1); equal(calls.depops,1)"
+  },
+  {
+    "name": "Hsagra existing token protocol Entariz",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/westwastes/Entariz.lua",
+    "sourceSha256": "03cacb03148640a84a65711594a430c536a086469ed5cc6a25292fa34e3ca586",
+    "assertions": "trade({999999}); reward(1893,0); equal(remaining[999999],1); trade({1908,999999}); reward(1893,1); reward(1908,1); equal(remaining[1908],0); equal(remaining[999999],1); equal(calls.depops,1)"
+  },
+  {
+    "name": "Hsagra existing token protocol Ionat",
+    "coverageKind": "baseline_reproduction",
+    "file": "effective/quests/westwastes/Ionat.lua",
+    "sourceSha256": "ec962d8873da28bffa2fc44b941c0b5b61fd552f522dc86893f1092cac764c1a",
+    "assertions": "trade({999999}); reward(1894,0); equal(remaining[999999],1); trade({1908,999999}); reward(1894,1); reward(1908,1); equal(remaining[1908],0); equal(remaining[999999],1); equal(calls.depops,1)"
+  },
+  {
+    "name": "Hukulk final fifty faction and separate branch preservation",
+    "proposedFile": "changes/p99-am-hukulk-faction/grobb-Hukulk.lua",
+    "sourceSha256": "6603aad6c71ebe6b71261c4d8e47356a2ba5aa323933557ddf90948913774d57",
+    "assertions": "trade({12201}); reward(3316,0); equal(remaining[12201],1); trade({12201,12202,999999}); reward(3316,1); faction(308,50); equal(remaining[999999],1); trade({12201,12202}); reward(3316,2); faction(308,100); other.GetFaction=function() return 6 end; trade({12201,12202}); reward(3316,2); equal(remaining[12201],1); other.GetFaction=function() return 1 end; trade({13073,13073,13073,13073}); reward(5023,1); faction(308,105)"
+  },
+  {
+    "name": "Glorin documented possessive and legacy plural clue",
+    "proposedFile": "changes/p99-am-miner-directions/butcher-Glorin_Binfurr.lua",
+    "sourceSha256": "da5faa646909c4b461ecf42d9373d23651cd2a4acbd4ec77c1aa698f616fc5e0",
+    "assertions": "say(\"Do you know of the Mudtoe's whereabouts?\"); assert(calls.speech[#calls.speech]:find('Ocean of Tears',1,true)); say('mudtoes'); assert(calls.speech[#calls.speech]:find('Ocean of Tears',1,true)); equal(next(calls.rewards),nil)"
+  },
+  {
+    "name": "Slicia documented phrases and all four scroll choices",
+    "proposedFile": "changes/p99-am-magician-scroll-dialogue/overthere-Slicia_J-Singe.lua",
+    "sourceSha256": "b800eda6798b765707e52655cbe90b39b5c5e884b2a775f6c1c2582429a39068",
+    "assertions": "for _, phrase in ipairs({'What something do you need?','have something I need','I have something you need'}) do say(phrase); assert(calls.speech[#calls.speech]:find('Gift of Xev',1,true)) end; local inputs={19351,19347,19354,19358}; local outputs={19368,19346,19355,19357}; for i=1,4 do character.choice=i; trade({inputs[i],999999}); reward(outputs[i],1); equal(remaining[999999],1) end; trade({999999}); equal(remaining[999999],1); trade({19351}); reward(19357,2)"
+  },
+  {
+    "name": "Dal advertised task and five Marauder rewards",
+    "proposedFile": "changes/p99-am-dal-task-dialogue/cabeast-Drill_Master_Dal.lua",
+    "sourceSha256": "7529e53da0af1c79c51d7adff7448363f9ade7e9dcbb82fa04e04a91d29fb7de",
+    "assertions": "say('ready for your task'); reward(17997,1); say('ready for my task'); reward(17997,2); trade({12915,12915,12915,999999}); equal(remaining[12915],3); equal(remaining[999999],1); for i=1,5 do character.choice=i; trade({12915,12915,12915,12915}); reward(12916+i,1) end; trade({12673}); reward(12674,1); faction(441,52); faction(440,52); faction(445,52); faction(442,52); faction(444,52)"
+  },
+  {
+    "name": "AM monk branch regression maintained/lua/converted-perl/cabeast/Master_Raska.lua",
+    "proposedFile": "changes/p99-am-shackle-cash/cabeast-Master_Raska.lua",
+    "sourceSha256": "8ac74e5f4a4056b327dd007dd1876db280aa7221a8dcb256a7e2d9728c7cb0b0",
+    "assertions": "say('second shackle'); reward(17026,1); assert(calls.speech[#calls.speech]:find('full first rite pack',1,true)); trade({12427,999999}); reward(4191,1); equal(calls.cash[1][3],4); equal(remaining[999999],1); trade({4190,4191,12428,999999}); reward(4192,0); equal(remaining[12428],1); trade({4190,4191,12428,12428}); reward(4192,1); equal(calls.cash[2][3],3); trade({12427}); reward(4191,2); equal(calls.cash[3][3],4); faction(444,30); faction(441,6)"
+  },
+  {
+    "name": "AM monk branch regression maintained/lua/converted-perl/cabeast/Master_Niska.lua",
+    "proposedFile": "changes/p99-am-shackle-cash/cabeast-Master_Niska.lua",
+    "sourceSha256": "ce2addeff808e760836ca0e7ee1eb6dc5faf34eabef67d057d9549daeef3025c",
+    "assertions": "trade({12821,4192,999999}); reward(4194,0); equal(remaining[12821],1); trade({12821,4192,4193,999999}); reward(4194,1); equal(calls.cash[1][3],15); equal(remaining[999999],1); trade({12821,4192,4193}); reward(4194,2); trade({12797,12798,12799}); reward(4193,1); equal(calls.cash[3][3],1); faction(444,30); faction(441,6); say('personal courier'); reward(12829,1)"
+  },
+  {
+    "name": "AM monk branch regression maintained/lua/modified-upstream/freeportwest/Velan_Torresk.lua",
+    "proposedFile": "changes/p99-am-monk-dialogue/freeportwest-Velan_Torresk.lua",
+    "sourceSha256": "e380e76bf1f8d7f5c5dc75490b2cc297ce4fece42025273eda11dde15adf2a4b",
+    "assertions": "say('white training sash'); assert(calls.speech[#calls.speech]:find('two Deathfist pawn scalps',1,true)); say('yellow sash of order'); assert(calls.speech[#calls.speech]:find('giant snake rattle',1,true)); trade({13794,13794,13067,13073}); reward(10130,1); trade({10130,13058,13916,20901}); reward(10131,1); assert(calls.speech[#calls.speech]:find('yellow Sash of Order',1,true)); faction(361,7); faction(281,7); faction(309,7); other.GetFaction=function()return 4 end; trade({13794,13794,13067,13073}); reward(10130,1); equal(remaining[13794],2)"
+  },
+  {
+    "name": "AM monk branch regression maintained/lua/modified-upstream/freportw/Reyia_Beslin.lua",
+    "proposedFile": "changes/p99-am-monk-dialogue/freportw-Reyia_Beslin.lua",
+    "sourceSha256": "2b0637cf55d361af2a0b230f500d72176adffaca27ad532b91d8f420b31d03f0",
+    "assertions": "for _,p in ipairs({'Who is Marnek Jauli?','Marnek Jaull'}) do say(p); assert(calls.speech[#calls.speech]:find('cult of necromancers',1,true)) end; trade({10400,1903,2299,10131}); reward(10132,1); trade({13237,13238,10132,999999}); reward(10133,1); equal(remaining[999999],1); other.GetFaction=function()return 4 end; trade({13237,13238,10132}); reward(10133,1); equal(remaining[13237],1); other.GetFaction=function()return 1 end; trade({13237,13238,10132}); reward(10133,2)"
+  },
+  {
+    "name": "AM monk branch regression maintained/lua/modified-upstream/freeportwest/Reyia_Beslin.lua",
+    "proposedFile": "changes/p99-am-monk-dialogue/freeportwest-Reyia_Beslin.lua",
+    "sourceSha256": "126cff035dbde2e6d9ac26d4357452df376e19f8427d8971cab6c040291ec530",
+    "assertions": "for _,p in ipairs({'Who is Marnek Jauli?','Marnek Jaull'}) do say(p); assert(calls.speech[#calls.speech]:find('cult of necromancers',1,true)) end; trade({10400,1903,2299,10131}); reward(10132,1); trade({13237,13238,10132,999999}); reward(10133,1); equal(remaining[999999],1); other.GetFaction=function()return 4 end; trade({13237,13238,10132}); reward(10133,1); equal(remaining[13237],1); other.GetFaction=function()return 1 end; trade({13237,13238,10132}); reward(10133,2)"
+  },
+  {
+    "name": "AM monk branch regression maintained/lua/converted-perl/rathemtn/Brother_Zephyl.lua",
+    "proposedFile": "changes/p99-am-monk-dialogue/rathemtn-Brother_Zephyl.lua",
+    "sourceSha256": "8dd91ee099307035c8dfbc411e2bf948135a883f12104a25b810e0a96ba53ab5",
+    "assertions": "say('interested monk'); assert(calls.speech[#calls.speech]:find('red sash earned from the Ashen Order',1,true)); trade({12317}); reward(12315,0); equal(remaining[12317],1); trade({12317,10133,999999}); reward(12315,1); equal(remaining[999999],1); assert(calls.speech[#calls.speech]:find('shadow silk',1,true)); trade({12315}); reward(10133,1); trade({12256}); reward(10133,2); trade({12317,10133}); reward(12315,2); equal(calls.exp,400)"
+  },
+  {
+    "name": "AM monk branch regression maintained/lua/converted-perl/timorous/a_dancing_skeleton.lua",
+    "proposedFile": "changes/p99-am-monk-dialogue/timorous-a_dancing_skeleton.lua",
+    "sourceSha256": "3c5234e671f6f8b78b08c67f56e1adc122ded648d154bc4cbdb0f0571142292a",
+    "assertions": "say('hail'); assert(calls.speech[1]:find('Teedle dee',1,true)); equal(calls.speech[2],'A dancing skeleton am I.'); equal(calls.speech[3],'Dancing for you and dancing for me.'); say('I will return the hand to Cabilis'); reward(17037,1); equal(calls.last_timer[1],'100'); equal(calls.last_timer[2],4000); say('I will return the hand to Cabilis'); reward(17037,2)",
+    "setupExtra": "\neq.set_timer=function(n,ms) calls.last_timer={n,ms} end\neq.stop_timer=function() end\n"
+  },
+  {
+    "name": "Oowomp exact500c equivalent payment and preserved spell exchange",
+    "proposedFile": "changes/p99-am-oowomp-payment/timorous-The_Great_Oowomp.lua",
+    "sourceSha256": "6cc790ca90f0f1c27b807e4861c25496ce9f36eb6d6ec4287fd197b80060b833",
+    "setupExtra": "\ncalls.spawns={}\neq.spawn2=function(id,grid,unused,x,y,z,h) table.insert(calls.spawns,{id,x,y,z,h}) end\neq.set_timer=function(n,ms) calls.last_timer={n,ms} end\n",
+    "assertions": "trade({}, {gold=4}); equal(#calls.spawns,0); equal(remaining.gold,4); trade({999999},{gold=5}); equal(#calls.spawns,1); equal(remaining.gold,0); equal(remaining[999999],1); trade({}, {silver=50}); equal(#calls.spawns,2); equal(remaining.silver,0); trade({}, {copper=500}); equal(#calls.spawns,3); equal(remaining.copper,0); trade({}, {platinum=1}); equal(#calls.spawns,4); equal(calls.cash[1][3],5); equal(calls.cash[1][4],0); trade({}, {gold=2,silver=20,copper=100}); equal(#calls.spawns,5); trade({}, {platinum=2}); equal(#calls.spawns,6); equal(calls.cash[2][3],5); equal(calls.cash[2][4],1); for _,v in ipairs(calls.spawns) do equal(v[1],96088) end; equal(calls.last_timer[1],'1'); equal(calls.last_timer[2],3000); trade({12942,12945,12944,12943},{copper=499}); reward(12941,1); equal(remaining.copper,499); equal(#calls.spawns,6); equal(calls.exp,45000)"
+  },
+  {
+    "name": "AM final Monk Epic regression maintained/lua/converted-perl/timorous/Lheao.lua",
+    "proposedFile": "changes/p99-am-monk-epic-dialogue/timorous-Lheao.lua",
+    "sourceSha256": "14a72e535c752950c9bc7c7b853aaef7bd5de1be7c45f7a74da479ccc636ea8a",
+    "setupExtra": "\nother.GetClassName=function() return character.class==7 and 'Monk' or 'Warrior' end\nother.HasItem=function(_,id) return character.book and id==1689 end\ncalls.spawns={};calls.globals={}\neq.spawn2=function(id,grid,u,x,y,z,h) table.insert(calls.spawns,{id,x,y,z,h}) end\neq.attack=function(n) calls.attack=n end\neq.depop=function() calls.depops=calls.depops+1 end\neq.set_timer=function(n,ms) calls.timer={n,ms} end\neq.stop_timer=function()end\neq.set_global=function(k,v) calls.globals[k]=v end\nnpc.GetX=function()return 1 end; npc.GetY=function()return 2 end; npc.GetZ=function()return 3 end; npc.GetHeading=function()return 4 end\nnpc.SetAppearance=function(_,v) calls.appearance=v end\n",
+    "assertions": "say('hail'); assert(calls.speech[#calls.speech]:find('telling everyone',1,true)); say('I have found the book of immortals'); assert(calls.speech[#calls.speech]:find('[take this responsibility]',1,true)); say('take this responsibility'); assert(calls.speech[#calls.speech]:find('Reviewer',1,true)); trade({12970}); reward(1683,0); equal(remaining[12970],1); trade({12970,1682,999999}); reward(1683,1); equal(remaining[999999],1); trade({12970,1682}); reward(1683,2)"
+  },
+  {
+    "name": "AM final Monk Epic regression maintained/lua/converted-perl/trakanon/#Kaiaren.lua",
+    "proposedFile": "changes/p99-am-monk-epic-dialogue/trakanon-#Kaiaren.lua",
+    "sourceSha256": "9d50cd006a3af7cbf55b4902720c0948c90359ec3582326553ecafb9cde2dbe1",
+    "setupExtra": "\nother.GetClassName=function() return character.class==7 and 'Monk' or 'Warrior' end\nother.HasItem=function(_,id) return character.book and id==1689 end\ncalls.spawns={};calls.globals={}\neq.spawn2=function(id,grid,u,x,y,z,h) table.insert(calls.spawns,{id,x,y,z,h}) end\neq.attack=function(n) calls.attack=n end\neq.depop=function() calls.depops=calls.depops+1 end\neq.set_timer=function(n,ms) calls.timer={n,ms} end\neq.stop_timer=function()end\neq.set_global=function(k,v) calls.globals[k]=v end\nnpc.GetX=function()return 1 end; npc.GetY=function()return 2 end; npc.GetZ=function()return 3 end; npc.GetHeading=function()return 4 end\nnpc.SetAppearance=function(_,v) calls.appearance=v end\n",
+    "assertions": "event_spawn({}); equal(calls.timer[2],1800000); trade({1683}); reward(1689,0); equal(remaining[1683],1); character.class=7; character.level=1; trade({1683,999999}); reward(1689,1); equal(remaining[999999],1); say('Lheao'); equal(#calls.speech,1); character.book=true; say('Lheao'); assert(calls.speech[#calls.speech]:find('[have a nice chat with them]',1,true)); say('have a nice chat with them'); assert(calls.speech[#calls.speech]:find('[how you can do this]',1,true)); for _,p in ipairs({'how can I do this','how you can do this'}) do say(p); assert(calls.speech[#calls.speech]:find('Eejag',1,true)) end; trade({1688}); reward(10652,0); equal(remaining[1688],1); trade({1688,1689,999999}); reward(10652,1); equal(remaining[999999],1); equal(calls.globals.MnkEpic1,'1'); trade({1688,1689}); reward(10652,2); trade({1684}); reward(1684,1); event_timer({timer='depop'}); equal(calls.depops,1)"
+  },
+  {
+    "name": "AM final Monk Epic regression maintained/lua/converted-perl/trakanon/Kaiaren.lua",
+    "proposedFile": "changes/p99-am-monk-epic-dialogue/trakanon-Kaiaren.lua",
+    "sourceSha256": "419b07b1f65de8173be86fa63f2f14c251289cbceb2431704e935e8fcdb8d209",
+    "setupExtra": "\nother.GetClassName=function() return character.class==7 and 'Monk' or 'Warrior' end\nother.HasItem=function(_,id) return character.book and id==1689 end\ncalls.spawns={};calls.globals={}\neq.spawn2=function(id,grid,u,x,y,z,h) table.insert(calls.spawns,{id,x,y,z,h}) end\neq.attack=function(n) calls.attack=n end\neq.depop=function() calls.depops=calls.depops+1 end\neq.set_timer=function(n,ms) calls.timer={n,ms} end\neq.stop_timer=function()end\neq.set_global=function(k,v) calls.globals[k]=v end\nnpc.GetX=function()return 1 end; npc.GetY=function()return 2 end; npc.GetZ=function()return 3 end; npc.GetHeading=function()return 4 end\nnpc.SetAppearance=function(_,v) calls.appearance=v end\n",
+    "assertions": "say('celestial fists'); assert(calls.speech[#calls.speech]:find('HELP!!!',1,true)); trade({1683}); reward(1683,0); equal(remaining[1683],1); character.class=7; character.level=1; trade({1683,999999}); reward(1683,1); equal(remaining[999999],1); equal(calls.attack,'Reviewer'); equal(calls.spawns[1][1],95183); trade({1683}); reward(1683,2); trade({1684}); reward(1684,1)"
+  },
+  {
+    "name": "AM final Monk Epic regression maintained/lua/converted-perl/lakerathe/Deep.lua",
+    "proposedFile": "changes/p99-am-monk-epic-dialogue/lakerathe-Deep.lua",
+    "sourceSha256": "63579074ae9c47a47795bba2bfcde2267112773e5ddab647f53f2bde793bcb23",
+    "setupExtra": "\nother.GetClassName=function() return character.class==7 and 'Monk' or 'Warrior' end\nother.HasItem=function(_,id) return character.book and id==1689 end\ncalls.spawns={};calls.globals={}\neq.spawn2=function(id,grid,u,x,y,z,h) table.insert(calls.spawns,{id,x,y,z,h}) end\neq.attack=function(n) calls.attack=n end\neq.depop=function() calls.depops=calls.depops+1 end\neq.set_timer=function(n,ms) calls.timer={n,ms} end\neq.stop_timer=function()end\neq.set_global=function(k,v) calls.globals[k]=v end\nnpc.GetX=function()return 1 end; npc.GetY=function()return 2 end; npc.GetZ=function()return 3 end; npc.GetHeading=function()return 4 end\nnpc.SetAppearance=function(_,v) calls.appearance=v end\n",
+    "assertions": "trade({1686}); equal(remaining[1686],1); reward(1686,0); assert(calls.speech[#calls.speech]:find('Reviewer',1,true)); character.class=7; character.level=1; trade({1686,999999}); reward(1686,1); equal(remaining[999999],1); equal(calls.globals.Trunt,'1'); equal(calls.depops,1); assert(calls.speech[#calls.speech]:find('Find him and show him the head',1,true)); trade({1686}); reward(1686,2)"
+  },
+  {
+    "name": "AM final Monk Epic regression maintained/lua/converted-perl/lakeofillomen/Astral_Projection.lua",
+    "proposedFile": "changes/p99-am-monk-epic-dialogue/lakeofillomen-Astral_Projection.lua",
+    "sourceSha256": "771362071ff9f578b5a2d191c48472b360546653e97b52e089ffe2872d1d8604",
+    "setupExtra": "\nother.GetClassName=function() return character.class==7 and 'Monk' or 'Warrior' end\nother.HasItem=function(_,id) return character.book and id==1689 end\ncalls.spawns={};calls.globals={}\neq.spawn2=function(id,grid,u,x,y,z,h) table.insert(calls.spawns,{id,x,y,z,h}) end\neq.attack=function(n) calls.attack=n end\neq.depop=function() calls.depops=calls.depops+1 end\neq.set_timer=function(n,ms) calls.timer={n,ms} end\neq.stop_timer=function()end\neq.set_global=function(k,v) calls.globals[k]=v end\nnpc.GetX=function()return 1 end; npc.GetY=function()return 2 end; npc.GetZ=function()return 3 end; npc.GetHeading=function()return 4 end\nnpc.SetAppearance=function(_,v) calls.appearance=v end\n",
+    "assertions": "trade({1687}); equal(remaining[1687],1); equal(#calls.spawns,0); assert(calls.speech[#calls.speech]:find('Reviewer',1,true)); character.class=7; character.level=1; trade({1687,999999}); equal(#calls.spawns,2); equal(calls.spawns[1][1],85211); equal(calls.spawns[2][1],85223); equal(remaining[999999],1); equal(calls.depops,1); trade({1687}); equal(#calls.spawns,4)"
+  },
+  {
+    "name": "AM final Monk Epic regression maintained/lua/modified-upstream/nurga/a_sleeping_ogre.lua",
+    "proposedFile": "changes/p99-am-trunt-replacement/nurga-a_sleeping_ogre.lua",
+    "sourceSha256": "f2e805abf1fab323aeba4d4d7545b12b47a1ff5b91c4a22f4dddb9d62f035fad",
+    "setupExtra": "\nother.GetClassName=function() return character.class==7 and 'Monk' or 'Warrior' end\nother.HasItem=function(_,id) return character.book and id==1689 end\ncalls.spawns={};calls.globals={}\neq.spawn2=function(id,grid,u,x,y,z,h) table.insert(calls.spawns,{id,x,y,z,h}) end\neq.attack=function(n) calls.attack=n end\neq.depop=function() calls.depops=calls.depops+1 end\neq.set_timer=function(n,ms) calls.timer={n,ms} end\neq.stop_timer=function()end\neq.set_global=function(k,v) calls.globals[k]=v end\nnpc.GetX=function()return 1 end; npc.GetY=function()return 2 end; npc.GetZ=function()return 3 end; npc.GetHeading=function()return 4 end\nnpc.SetAppearance=function(_,v) calls.appearance=v end\n",
+    "assertions": "trade({999999}); equal(#calls.spawns,0); equal(remaining[999999],1); character.level=1; trade({1685,999999}); equal(remaining[1685],0); equal(remaining[999999],1); equal(calls.spawns[1][1],107161); equal(calls.spawns[1][2],1); equal(calls.depops,1); equal(calls.appearance,0); trade({1685}); equal(#calls.spawns,2); equal(calls.depops,2)"
+  },
+  {
+    "name": "AM final Monk Epic regression maintained/lua/idlequest-authored/nurga/Trunt.lua",
+    "proposedFile": "changes/p99-am-trunt-replacement/nurga-Trunt.lua",
+    "sourceSha256": "10bf81c017f978cc7d5de5433336572af0251d7a9f43c17272d03248989e4f0b",
+    "setupExtra": "\nother.GetClassName=function() return character.class==7 and 'Monk' or 'Warrior' end\nother.HasItem=function(_,id) return character.book and id==1689 end\ncalls.spawns={};calls.globals={}\neq.spawn2=function(id,grid,u,x,y,z,h) table.insert(calls.spawns,{id,x,y,z,h}) end\neq.attack=function(n) calls.attack=n end\neq.depop=function() calls.depops=calls.depops+1 end\neq.set_timer=function(n,ms) calls.timer={n,ms} end\neq.stop_timer=function()end\neq.set_global=function(k,v) calls.globals[k]=v end\nnpc.GetX=function()return 1 end; npc.GetY=function()return 2 end; npc.GetZ=function()return 3 end; npc.GetHeading=function()return 4 end\nnpc.SetAppearance=function(_,v) calls.appearance=v end\n",
+    "assertions": "event_spawn({self=npc,other=other}); equal(calls.attack,'Reviewer'); equal(calls.depops,0)"
+  },
+  {
+    "name": "AM all Sky test exchanges airplane/Frederic_Calermin",
+    "setupExtra": "\nother.GetClassName=function() return character.class==7 and 'Monk' or 'Warrior' end\nother.HasItem=function(_,id) return character.book and id==1689 end\ncalls.spawns={};calls.globals={}\neq.spawn2=function(id,grid,u,x,y,z,h) table.insert(calls.spawns,{id,x,y,z,h}) end\neq.attack=function(n) calls.attack=n end\neq.depop=function() calls.depops=calls.depops+1 end\neq.set_timer=function(n,ms) calls.timer={n,ms} end\neq.stop_timer=function()end\neq.set_global=function(k,v) calls.globals[k]=v end\nnpc.GetX=function()return 1 end; npc.GetY=function()return 2 end; npc.GetZ=function()return 3 end; npc.GetHeading=function()return 4 end\nnpc.SetAppearance=function(_,v) calls.appearance=v end\n",
+    "proposedFile": "changes/p99-am-frederic-dialogue/airplane-Frederic_Calermin.lua",
+    "sourceSha256": "f001a4640fc403366a41cff462b57abdd50b98d0e30732d381765fe8bb747c95",
+    "assertions": "event_spawn({}); equal(calls.timer[2],300000); say('hail'); assert(calls.speech[#calls.speech]:find('test your powers',1,true)); say('I wish to test my powers'); assert(calls.speech[#calls.speech]:find('Clarification',1,true)); trade({20931,20754,999999}); reward(1274,0); equal(remaining[20931],1); trade({20931,20754,20755,999999}); reward(1274,1); equal(remaining[999999],1); trade({20931,20754,20755}); reward(1274,2); trade({20937,20756,999999}); reward(2707,0); equal(remaining[20937],1); trade({20937,20756,20757,999999}); reward(2707,1); equal(remaining[999999],1); trade({20937,20756,20757}); reward(2707,2); trade({20870,20966,20871,999999}); reward(11650,0); equal(remaining[20870],1); trade({20870,20966,20871,20872}); reward(11650,1); trade({20870,20966,20871,20872}); reward(11650,2); trade({20944,20758,999999}); reward(14557,0); equal(remaining[20944],1); trade({20944,20758,20759,999999}); reward(14557,1); equal(remaining[999999],1); trade({20944,20758,20759}); reward(14557,2); equal(calls.exp,800000); equal(calls.depops,8);"
+  },
+  {
+    "name": "AM all Sky test exchanges airplane/Roanis_Elindar",
+    "file": "sources/projecteq/airplane/Roanis_Elindar.lua",
+    "setupExtra": "\nother.GetClassName=function() return character.class==7 and 'Monk' or 'Warrior' end\nother.HasItem=function(_,id) return character.book and id==1689 end\ncalls.spawns={};calls.globals={}\neq.spawn2=function(id,grid,u,x,y,z,h) table.insert(calls.spawns,{id,x,y,z,h}) end\neq.attack=function(n) calls.attack=n end\neq.depop=function() calls.depops=calls.depops+1 end\neq.set_timer=function(n,ms) calls.timer={n,ms} end\neq.stop_timer=function()end\neq.set_global=function(k,v) calls.globals[k]=v end\nnpc.GetX=function()return 1 end; npc.GetY=function()return 2 end; npc.GetZ=function()return 3 end; npc.GetHeading=function()return 4 end\nnpc.SetAppearance=function(_,v) calls.appearance=v end\n",
+    "sourceSha256": "de08558ac91429de8ee325c1090ce90baf272f6dab30ddd23deb09944677fb92",
+    "assertions": "event_spawn({}); equal(calls.timer[2],300000); trade({20952,20760,999999}); reward(2708,0); equal(remaining[20952],1); trade({20952,20760,20761,999999}); reward(2708,1); equal(remaining[999999],1); trade({20952,20760,20761}); reward(2708,2); trade({20959,20762,999999}); reward(11687,0); equal(remaining[20959],1); trade({20959,20762,20763,999999}); reward(11687,1); equal(remaining[999999],1); trade({20959,20762,20763}); reward(11687,2); trade({20966,20764,20766,999999}); reward(11568,0); equal(remaining[20966],1); trade({20966,20764,20766,20765}); reward(11568,1); trade({20966,20764,20766,20765}); reward(11568,2); equal(calls.exp,600000); equal(calls.depops,6);",
+    "coverageKind": "baseline_verification"
+  },
+  {
+    "name": "AM all Sky test exchanges airplane/Ton_Po",
+    "setupExtra": "\nother.GetClassName=function() return character.class==7 and 'Monk' or 'Warrior' end\nother.HasItem=function(_,id) return character.book and id==1689 end\ncalls.spawns={};calls.globals={}\neq.spawn2=function(id,grid,u,x,y,z,h) table.insert(calls.spawns,{id,x,y,z,h}) end\neq.attack=function(n) calls.attack=n end\neq.depop=function() calls.depops=calls.depops+1 end\neq.set_timer=function(n,ms) calls.timer={n,ms} end\neq.stop_timer=function()end\neq.set_global=function(k,v) calls.globals[k]=v end\nnpc.GetX=function()return 1 end; npc.GetY=function()return 2 end; npc.GetZ=function()return 3 end; npc.GetHeading=function()return 4 end\nnpc.SetAppearance=function(_,v) calls.appearance=v end\n",
+    "sourceSha256": "d8fe202e461135d3f180aa1a00d09947e0671e98ac1a067b6e3546a2f4b6acc2",
+    "assertions": "event_spawn({}); equal(calls.timer[2],300000); trade({20793,20794,999999}); reward(27714,0); equal(remaining[20793],1); trade({20793,20794,20932,999999}); reward(27714,1); equal(remaining[999999],1); trade({20793,20794,20932}); reward(27714,2); trade({20796,20939,999999}); reward(1281,0); equal(remaining[20796],1); trade({20796,20939,20795,999999}); reward(1281,1); equal(remaining[999999],1); trade({20796,20939,20795}); reward(1281,2); trade({20946,20798,999999}); reward(1280,0); equal(remaining[20946],1); trade({20946,20798,20797,999999}); reward(1280,1); equal(remaining[999999],1); trade({20946,20798,20797}); reward(1280,2); equal(calls.exp,600000); equal(calls.depops,6); say('I would like to see something new'); assert(calls.speech[#calls.speech]:find('Mystical Back Straps',1,true)); trade({999999}); reward(27714,2); equal(remaining[999999],1); trade({1282,999999}); reward(27714,3); equal(remaining[1282],0); equal(remaining[999999],1); trade({1282,1282}); reward(27714,4); equal(remaining[1282],1); trade({1282}); reward(27714,5); equal(calls.exp,600000); equal(calls.depops,6); equal(#calls.cash,0)",
+    "proposedFile": "changes/p99-am-monk-sky-upgrades/airplane-Ton_Po.lua"
+  },
+  {
+    "name": "AM all Sky test exchanges airplane/Wu_the_Enlightened",
+    "setupExtra": "\nother.GetClassName=function() return character.class==7 and 'Monk' or 'Warrior' end\nother.HasItem=function(_,id) return character.book and id==1689 end\ncalls.spawns={};calls.globals={}\neq.spawn2=function(id,grid,u,x,y,z,h) table.insert(calls.spawns,{id,x,y,z,h}) end\neq.attack=function(n) calls.attack=n end\neq.depop=function() calls.depops=calls.depops+1 end\neq.set_timer=function(n,ms) calls.timer={n,ms} end\neq.stop_timer=function()end\neq.set_global=function(k,v) calls.globals[k]=v end\nnpc.GetX=function()return 1 end; npc.GetY=function()return 2 end; npc.GetZ=function()return 3 end; npc.GetHeading=function()return 4 end\nnpc.SetAppearance=function(_,v) calls.appearance=v end\n",
+    "sourceSha256": "d860ae7e59d1258b42a92a53154ce82b847542a4176b1dafb52326b8e4b669e7",
+    "assertions": "event_spawn({}); equal(calls.timer[2],300000); trade({20800,20954,999999}); reward(1283,0); equal(remaining[20800],1); trade({20800,20954,20799,999999}); reward(1283,1); equal(remaining[999999],1); trade({20800,20954,20799}); reward(1283,2); trade({20803,20801,20802,999999}); reward(27715,0); equal(remaining[20803],1); trade({20803,20801,20802,20960}); reward(27715,1); trade({20803,20801,20802,20960}); reward(27715,2); trade({20967,20804,999999}); reward(11698,0); equal(remaining[20967],1); trade({20967,20804,20805,999999}); reward(11698,1); equal(remaining[999999],1); trade({20967,20804,20805}); reward(11698,2); equal(calls.exp,600000); equal(calls.depops,6); say('yes I am interested in trade'); assert(calls.speech[#calls.speech]:find('Wus Tranquil Fist',1,true)); trade({999999}); reward(27715,2); equal(remaining[999999],1); trade({11690,999999}); reward(27715,3); equal(remaining[11690],0); equal(remaining[999999],1); trade({11690,11690}); reward(27715,4); equal(remaining[11690],1); trade({11690}); reward(27715,5); equal(calls.exp,600000); equal(calls.depops,6); equal(#calls.cash,0)",
+    "proposedFile": "changes/p99-am-monk-sky-upgrades/airplane-Wu_the_Enlightened.lua"
+  }
+]

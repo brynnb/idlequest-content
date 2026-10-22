@@ -1,0 +1,774 @@
+{
+  "evidence": {
+    "title": "Enchanter Epic Quest",
+    "url": "https://wiki.project1999.com/Enchanter_Epic_Quest?action=raw",
+    "fetchedAt": "2026-07-17T23:13:58.276Z",
+    "revision": null,
+    "sha256": "f7c386cf985d156a94debb469987b9e390a4cbd5abfd4ecade38d4992d46724f",
+    "bytes": 28720,
+    "source": "raw-pages/enchanter-epic-quest-f79986087a.json",
+    "cachePath": "reference/p99-wiki/raw-pages/enchanter-epic-quest-f79986087a.wiki"
+  },
+  "proposal": "p99-af-enchanter-ground-timers",
+  "verified": "All five four-component sack recipes; four already-allowlisted pickups. P99 explicitly24h for One Key, Lost Scroll, Charm and Sacrifice; no timer claim for Large Muddy Sandals. Proposed timer metadata does not establish actual pickup placement/visibility or live settlement.",
+  "rows": [
+    {
+      "table": "ground_spawns",
+      "path": "data/ground_spawns/f.ndjson",
+      "line": 40,
+      "sha256": "ea013429b11404e02cf7bef1324ddea71e5a70f2ba6156176c3dcb3ed1ce4aa2",
+      "row": {
+        "id": 16,
+        "zoneid": 71,
+        "version": 0,
+        "max_x": 560,
+        "max_y": 1297,
+        "max_z": -763.4,
+        "min_x": 560,
+        "min_y": 1297,
+        "heading": 0,
+        "name": "IT63_ACTORDEF",
+        "item": 10617,
+        "max_allowed": 1,
+        "comment": "book of charm and sacrifice",
+        "respawn_timer": 864,
+        "fix_z": 1,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null
+      }
+    },
+    {
+      "table": "ground_spawns",
+      "path": "data/ground_spawns/b.ndjson",
+      "line": 33,
+      "sha256": "690cdb76f4969bdc91636db1f699d329539b367a20e0b4ba07d552ba446c8ed4",
+      "row": {
+        "id": 14,
+        "zoneid": 93,
+        "version": 0,
+        "max_x": -384,
+        "max_y": -194,
+        "max_z": -206,
+        "min_x": -384,
+        "min_y": -194,
+        "heading": 0,
+        "name": "IT63_ACTORDEF",
+        "item": 10615,
+        "max_allowed": 1,
+        "comment": "the one key",
+        "respawn_timer": 3600,
+        "fix_z": 1,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null
+      }
+    },
+    {
+      "table": "ground_spawns",
+      "path": "data/ground_spawns/5.ndjson",
+      "line": 18,
+      "sha256": "863862a68a46ec479f97dc0b8ae40717a35d0f6654ecdd26531fed2aefdcdf74",
+      "row": {
+        "id": 13,
+        "zoneid": 49,
+        "version": 0,
+        "max_x": 387,
+        "max_y": 216,
+        "max_z": 59.1,
+        "min_x": 387,
+        "min_y": 216,
+        "heading": 0,
+        "name": "IT63_ACTORDEF",
+        "item": 10628,
+        "max_allowed": 1,
+        "comment": "large muddy sandals",
+        "respawn_timer": 300,
+        "fix_z": 1,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null
+      }
+    },
+    {
+      "table": "ground_spawns",
+      "path": "data/ground_spawns/3.ndjson",
+      "line": 35,
+      "sha256": "99fefbcce0eb91294e7b176192d73f400805365ecf3a0763ac9135eb382d559b",
+      "row": {
+        "id": 15,
+        "zoneid": 104,
+        "version": 0,
+        "max_x": 54.02,
+        "max_y": -17.33,
+        "max_z": -181.3,
+        "min_x": 54.02,
+        "min_y": -17.33,
+        "heading": 0,
+        "name": "IT63_ACTORDEF",
+        "item": 10616,
+        "max_allowed": 1,
+        "comment": "the lost scroll",
+        "respawn_timer": 300,
+        "fix_z": 1,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null
+      }
+    },
+    {
+      "table": "idlequest_enabled_ground_spawns",
+      "path": "data/idlequest_enabled_ground_spawns/f.ndjson",
+      "line": 1,
+      "sha256": "b44c927f23782d380e2865d9f9c6479166a4256f273eec0dba354a9d8255bed2",
+      "row": {
+        "ground_spawn_id": 16,
+        "note": "P99 Enchanter/Shaman Epic - Charm and Sacrifice"
+      }
+    },
+    {
+      "table": "idlequest_enabled_ground_spawns",
+      "path": "data/idlequest_enabled_ground_spawns/b.ndjson",
+      "line": 1,
+      "sha256": "693c4ede510b14a8042dd1bd43f4171757384f0cdf8a90e5ab7d4af6fe42a3b7",
+      "row": {
+        "ground_spawn_id": 14,
+        "note": "P99 Enchanter/Shaman Epic - The One Key"
+      }
+    },
+    {
+      "table": "idlequest_enabled_ground_spawns",
+      "path": "data/idlequest_enabled_ground_spawns/5.ndjson",
+      "line": 1,
+      "sha256": "19bd2497545f859fb703d86f045cf3e83dc8f0fa752c5c0cba291f446b16839a",
+      "row": {
+        "ground_spawn_id": 13,
+        "note": "P99 Enchanter/Shaman Epic - Large Muddy Sandals"
+      }
+    },
+    {
+      "table": "idlequest_enabled_ground_spawns",
+      "path": "data/idlequest_enabled_ground_spawns/3.ndjson",
+      "line": 1,
+      "sha256": "6047fecd2788912b421e5e916555de51b76f356267f0a620e32622bd371a99cb",
+      "row": {
+        "ground_spawn_id": 15,
+        "note": "P99 Enchanter/Shaman Epic - Lost Scroll"
+      }
+    },
+    {
+      "table": "tradeskill_recipe",
+      "path": "data/tradeskill_recipe/c.ndjson",
+      "line": 1394,
+      "sha256": "03b805d556e6e530e5e6c905092635a32aa6abbf82d3b3cea2722659429ed195",
+      "row": {
+        "id": 9644,
+        "name": "A Sack For Polzin",
+        "tradeskill": 75,
+        "skillneeded": 0,
+        "trivial": 0,
+        "nofail": 1,
+        "replace_container": 1,
+        "notes": "Created by ylosh",
+        "must_learn": 0,
+        "learned_by_item_id": 0,
+        "quest": 0,
+        "enabled": 1,
+        "show_in_advanced": 1,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null,
+        "category": "Epic Quest"
+      }
+    },
+    {
+      "table": "tradeskill_recipe",
+      "path": "data/tradeskill_recipe/a.ndjson",
+      "line": 1458,
+      "sha256": "3926ad434d1463a828063b09d905ee646b71456accc5bb14a5c3ac51cc869499",
+      "row": {
+        "id": 9642,
+        "name": "A Sack For Modani",
+        "tradeskill": 75,
+        "skillneeded": 0,
+        "trivial": 0,
+        "nofail": 1,
+        "replace_container": 1,
+        "notes": "Created by ylosh",
+        "must_learn": 0,
+        "learned_by_item_id": 0,
+        "quest": 0,
+        "enabled": 1,
+        "show_in_advanced": 1,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null,
+        "category": "Epic Quest"
+      }
+    },
+    {
+      "table": "tradeskill_recipe",
+      "path": "data/tradeskill_recipe/6.ndjson",
+      "line": 1451,
+      "sha256": "a175d5b3557229d7f33b65253f8fe3c34950e68bebbcb5a8f712830c94490fc1",
+      "row": {
+        "id": 9632,
+        "name": "A Bundle Of Staves",
+        "tradeskill": 75,
+        "skillneeded": 0,
+        "trivial": 0,
+        "nofail": 1,
+        "replace_container": 1,
+        "notes": null,
+        "must_learn": 0,
+        "learned_by_item_id": 0,
+        "quest": 0,
+        "enabled": 1,
+        "show_in_advanced": 1,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null,
+        "category": "Epic Quest"
+      }
+    },
+    {
+      "table": "tradeskill_recipe",
+      "path": "data/tradeskill_recipe/5.ndjson",
+      "line": 1401,
+      "sha256": "bc82da8ab45ae95367cefd84f3d2f7246b1896b34469ddb0f6cb101067908452",
+      "row": {
+        "id": 9641,
+        "name": "A Sack For Mizzle",
+        "tradeskill": 75,
+        "skillneeded": 0,
+        "trivial": 0,
+        "nofail": 1,
+        "replace_container": 1,
+        "notes": "Created by ylosh",
+        "must_learn": 0,
+        "learned_by_item_id": 0,
+        "quest": 0,
+        "enabled": 1,
+        "show_in_advanced": 1,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null,
+        "category": "Epic Quest"
+      }
+    },
+    {
+      "table": "tradeskill_recipe",
+      "path": "data/tradeskill_recipe/3.ndjson",
+      "line": 1398,
+      "sha256": "5c45d8d1292fb09ed512b9344fdb8f6156c22d25f8e24d28f8011ea25e3a3ca1",
+      "row": {
+        "id": 9643,
+        "name": "A Sack For Nadia",
+        "tradeskill": 75,
+        "skillneeded": 0,
+        "trivial": 0,
+        "nofail": 1,
+        "replace_container": 1,
+        "notes": "Created by ylosh",
+        "must_learn": 0,
+        "learned_by_item_id": 0,
+        "quest": 0,
+        "enabled": 1,
+        "show_in_advanced": 1,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null,
+        "category": "Epic Quest"
+      }
+    },
+    {
+      "table": "tradeskill_recipe_entries",
+      "path": "data/tradeskill_recipe_entries/f.ndjson",
+      "line": 10854,
+      "sha256": "99e3afd9131c9d33a598afc6bfc65b16a5d2c06adc4d0ef7760e7607ca9755be",
+      "row": {
+        "id": 84770,
+        "recipe_id": 9642,
+        "item_id": 10606,
+        "successcount": 0,
+        "failcount": 0,
+        "componentcount": 1,
+        "salvagecount": 1,
+        "iscontainer": 0
+      }
+    },
+    {
+      "table": "tradeskill_recipe_entries",
+      "path": "data/tradeskill_recipe_entries/e.ndjson",
+      "line": 10762,
+      "sha256": "cc0e79ba0445f58da89038ab6336e7ce1c5d1eb02551a9cc9de5981e8d07a7f8",
+      "row": {
+        "id": 84784,
+        "recipe_id": 9644,
+        "item_id": 10624,
+        "successcount": 0,
+        "failcount": 0,
+        "componentcount": 1,
+        "salvagecount": 1,
+        "iscontainer": 0
+      }
+    },
+    {
+      "table": "tradeskill_recipe_entries",
+      "path": "data/tradeskill_recipe_entries/d.ndjson",
+      "line": 10665,
+      "sha256": "a81b510327786d9655e163e76fc3b076d3f88948dd70897dd6cfdc02b808ab9b",
+      "row": {
+        "id": 84771,
+        "recipe_id": 9642,
+        "item_id": 10607,
+        "successcount": 0,
+        "failcount": 0,
+        "componentcount": 1,
+        "salvagecount": 1,
+        "iscontainer": 0
+      }
+    },
+    {
+      "table": "tradeskill_recipe_entries",
+      "path": "data/tradeskill_recipe_entries/d.ndjson",
+      "line": 10666,
+      "sha256": "51a0fc93336e13e66c2ac70c5e8f07b6863a6f546610c46057fa309d4f092297",
+      "row": {
+        "id": 84774,
+        "recipe_id": 9642,
+        "item_id": 10635,
+        "successcount": 1,
+        "failcount": 0,
+        "componentcount": 0,
+        "salvagecount": 0,
+        "iscontainer": 0
+      }
+    },
+    {
+      "table": "tradeskill_recipe_entries",
+      "path": "data/tradeskill_recipe_entries/d.ndjson",
+      "line": 10667,
+      "sha256": "dd1dbea45e349e09e9e166875f01812a741fef1496220f4230e60cc02964ba72",
+      "row": {
+        "id": 84785,
+        "recipe_id": 9644,
+        "item_id": 10625,
+        "successcount": 0,
+        "failcount": 0,
+        "componentcount": 1,
+        "salvagecount": 1,
+        "iscontainer": 0
+      }
+    },
+    {
+      "table": "tradeskill_recipe_entries",
+      "path": "data/tradeskill_recipe_entries/c.ndjson",
+      "line": 10684,
+      "sha256": "9ceb102c39daa35eae7e3a68c3e115deb227a0479cbb984fee671a64b62a971f",
+      "row": {
+        "id": 84768,
+        "recipe_id": 9641,
+        "item_id": 10636,
+        "successcount": 1,
+        "failcount": 0,
+        "componentcount": 0,
+        "salvagecount": 0,
+        "iscontainer": 0
+      }
+    },
+    {
+      "table": "tradeskill_recipe_entries",
+      "path": "data/tradeskill_recipe_entries/c.ndjson",
+      "line": 10685,
+      "sha256": "b11609f35c0ace1034551d78f456c42bd29c42d383e6280f39651767ed55abb0",
+      "row": {
+        "id": 84775,
+        "recipe_id": 9642,
+        "item_id": 17861,
+        "successcount": 0,
+        "failcount": 0,
+        "componentcount": 0,
+        "salvagecount": 0,
+        "iscontainer": 1
+      }
+    },
+    {
+      "table": "tradeskill_recipe_entries",
+      "path": "data/tradeskill_recipe_entries/c.ndjson",
+      "line": 10686,
+      "sha256": "d03f7e36e35517add0e85d6147914d00eb3ec1ad3e52caed18efc8062233de58",
+      "row": {
+        "id": 84780,
+        "recipe_id": 9643,
+        "item_id": 10637,
+        "successcount": 1,
+        "failcount": 0,
+        "componentcount": 0,
+        "salvagecount": 0,
+        "iscontainer": 0
+      }
+    },
+    {
+      "table": "tradeskill_recipe_entries",
+      "path": "data/tradeskill_recipe_entries/c.ndjson",
+      "line": 10687,
+      "sha256": "8946e88ebe85956dcc2b7803549902964a9f479edd6f2fa1e62e6074c2b6f2cd",
+      "row": {
+        "id": 84781,
+        "recipe_id": 9643,
+        "item_id": 17861,
+        "successcount": 0,
+        "failcount": 0,
+        "componentcount": 0,
+        "salvagecount": 0,
+        "iscontainer": 1
+      }
+    },
+    {
+      "table": "tradeskill_recipe_entries",
+      "path": "data/tradeskill_recipe_entries/b.ndjson",
+      "line": 10513,
+      "sha256": "3ac0941b6e082fd63e5a09f47cd7a50754d714e0f7e97db3528d3202b46d59ad",
+      "row": {
+        "id": 84764,
+        "recipe_id": 9641,
+        "item_id": 10614,
+        "successcount": 0,
+        "failcount": 0,
+        "componentcount": 1,
+        "salvagecount": 1,
+        "iscontainer": 0
+      }
+    },
+    {
+      "table": "tradeskill_recipe_entries",
+      "path": "data/tradeskill_recipe_entries/b.ndjson",
+      "line": 10514,
+      "sha256": "d2af61cefece69fc8de7966fcde88edef231963fbcebf300498d7f9a2ec06139",
+      "row": {
+        "id": 84769,
+        "recipe_id": 9641,
+        "item_id": 17861,
+        "successcount": 0,
+        "failcount": 0,
+        "componentcount": 0,
+        "salvagecount": 0,
+        "iscontainer": 1
+      }
+    },
+    {
+      "table": "tradeskill_recipe_entries",
+      "path": "data/tradeskill_recipe_entries/a.ndjson",
+      "line": 10820,
+      "sha256": "3a1b0b1f0fa65feb3a8e0add97561f60a1bf62533b6fb2b8c90d73e5de1fb54e",
+      "row": {
+        "id": 84772,
+        "recipe_id": 9642,
+        "item_id": 10608,
+        "successcount": 0,
+        "failcount": 0,
+        "componentcount": 1,
+        "salvagecount": 1,
+        "iscontainer": 0
+      }
+    },
+    {
+      "table": "tradeskill_recipe_entries",
+      "path": "data/tradeskill_recipe_entries/9.ndjson",
+      "line": 10809,
+      "sha256": "a25e7668c68994f6851f3968bbdac913fd54c9b2727e92aba4f205501fb01870",
+      "row": {
+        "id": 84776,
+        "recipe_id": 9643,
+        "item_id": 10618,
+        "successcount": 0,
+        "failcount": 0,
+        "componentcount": 1,
+        "salvagecount": 1,
+        "iscontainer": 0
+      }
+    },
+    {
+      "table": "tradeskill_recipe_entries",
+      "path": "data/tradeskill_recipe_entries/8.ndjson",
+      "line": 10688,
+      "sha256": "bcebcb7f4e1f2283b8a0c3ab3906ede9345f88acaeefd6aaa7a0cac6ce5e3239",
+      "row": {
+        "id": 84786,
+        "recipe_id": 9644,
+        "item_id": 10638,
+        "successcount": 1,
+        "failcount": 0,
+        "componentcount": 0,
+        "salvagecount": 0,
+        "iscontainer": 0
+      }
+    },
+    {
+      "table": "tradeskill_recipe_entries",
+      "path": "data/tradeskill_recipe_entries/8.ndjson",
+      "line": 10689,
+      "sha256": "dd2e494306fe63991e25085bf3357b7a44fd53da09564fafceded85a8a24b8a8",
+      "row": {
+        "id": 84787,
+        "recipe_id": 9644,
+        "item_id": 17861,
+        "successcount": 0,
+        "failcount": 0,
+        "componentcount": 0,
+        "salvagecount": 0,
+        "iscontainer": 1
+      }
+    },
+    {
+      "table": "tradeskill_recipe_entries",
+      "path": "data/tradeskill_recipe_entries/7.ndjson",
+      "line": 10682,
+      "sha256": "d329d459971028555a88d9b8facfa7b2dc2f3cca9fff49ac267fec7f408cd7a1",
+      "row": {
+        "id": 84702,
+        "recipe_id": 9632,
+        "item_id": 10613,
+        "successcount": 0,
+        "failcount": 0,
+        "componentcount": 1,
+        "salvagecount": 1,
+        "iscontainer": 0
+      }
+    },
+    {
+      "table": "tradeskill_recipe_entries",
+      "path": "data/tradeskill_recipe_entries/7.ndjson",
+      "line": 10689,
+      "sha256": "b0e480e02280aab451818a9b1ee98d383801cf7ff7cf9671e1efc6b1254f5fe6",
+      "row": {
+        "id": 84767,
+        "recipe_id": 9641,
+        "item_id": 10617,
+        "successcount": 0,
+        "failcount": 0,
+        "componentcount": 1,
+        "salvagecount": 1,
+        "iscontainer": 0
+      }
+    },
+    {
+      "table": "tradeskill_recipe_entries",
+      "path": "data/tradeskill_recipe_entries/7.ndjson",
+      "line": 10690,
+      "sha256": "61d3a88df3f3500dc876047768598f20c0f71187ce6793af191c1d033e2fd4da",
+      "row": {
+        "id": 84783,
+        "recipe_id": 9644,
+        "item_id": 10623,
+        "successcount": 0,
+        "failcount": 0,
+        "componentcount": 1,
+        "salvagecount": 1,
+        "iscontainer": 0
+      }
+    },
+    {
+      "table": "tradeskill_recipe_entries",
+      "path": "data/tradeskill_recipe_entries/5.ndjson",
+      "line": 10658,
+      "sha256": "1344e4b2ad9c2e913ef55e65d4f65d18b93523116223dc4d09a7be2b18757396",
+      "row": {
+        "id": 84779,
+        "recipe_id": 9643,
+        "item_id": 10621,
+        "successcount": 0,
+        "failcount": 0,
+        "componentcount": 1,
+        "salvagecount": 1,
+        "iscontainer": 0
+      }
+    },
+    {
+      "table": "tradeskill_recipe_entries",
+      "path": "data/tradeskill_recipe_entries/4.ndjson",
+      "line": 10641,
+      "sha256": "003a8f39042ff65408a364e2eb0a7f42d2936251df80b3f975b007a8392c43fc",
+      "row": {
+        "id": 84703,
+        "recipe_id": 9632,
+        "item_id": 10639,
+        "successcount": 1,
+        "failcount": 0,
+        "componentcount": 0,
+        "salvagecount": 0,
+        "iscontainer": 0
+      }
+    },
+    {
+      "table": "tradeskill_recipe_entries",
+      "path": "data/tradeskill_recipe_entries/4.ndjson",
+      "line": 10644,
+      "sha256": "5a0d1efb78dd4c46489329d7833c1f3a2b2f304b5a1e595e71825bf145091f3f",
+      "row": {
+        "id": 84777,
+        "recipe_id": 9643,
+        "item_id": 10619,
+        "successcount": 0,
+        "failcount": 0,
+        "componentcount": 1,
+        "salvagecount": 1,
+        "iscontainer": 0
+      }
+    },
+    {
+      "table": "tradeskill_recipe_entries",
+      "path": "data/tradeskill_recipe_entries/3.ndjson",
+      "line": 10719,
+      "sha256": "154630a79382271839cae1edabe7c0e14d4afb65d8c91e694dbc015e040801be",
+      "row": {
+        "id": 84701,
+        "recipe_id": 9632,
+        "item_id": 10612,
+        "successcount": 0,
+        "failcount": 0,
+        "componentcount": 1,
+        "salvagecount": 1,
+        "iscontainer": 0
+      }
+    },
+    {
+      "table": "tradeskill_recipe_entries",
+      "path": "data/tradeskill_recipe_entries/3.ndjson",
+      "line": 10724,
+      "sha256": "08935e087e6ace73e7fc45fb270d1ca3116806cb354bea1debfcc6cb4ee7120a",
+      "row": {
+        "id": 84765,
+        "recipe_id": 9641,
+        "item_id": 10615,
+        "successcount": 0,
+        "failcount": 0,
+        "componentcount": 1,
+        "salvagecount": 1,
+        "iscontainer": 0
+      }
+    },
+    {
+      "table": "tradeskill_recipe_entries",
+      "path": "data/tradeskill_recipe_entries/2.ndjson",
+      "line": 10810,
+      "sha256": "b478e1e74ee893d23792cc81d6f7621e3c9e6e009e045773382dbbe55d91d85b",
+      "row": {
+        "id": 84704,
+        "recipe_id": 9632,
+        "item_id": 17861,
+        "successcount": 0,
+        "failcount": 0,
+        "componentcount": 0,
+        "salvagecount": 0,
+        "iscontainer": 1
+      }
+    },
+    {
+      "table": "tradeskill_recipe_entries",
+      "path": "data/tradeskill_recipe_entries/2.ndjson",
+      "line": 10815,
+      "sha256": "60c0c615606a861ebb15e519f06ba539891416eb7cb382805fee0ae03e164b4a",
+      "row": {
+        "id": 84766,
+        "recipe_id": 9641,
+        "item_id": 10616,
+        "successcount": 0,
+        "failcount": 0,
+        "componentcount": 1,
+        "salvagecount": 1,
+        "iscontainer": 0
+      }
+    },
+    {
+      "table": "tradeskill_recipe_entries",
+      "path": "data/tradeskill_recipe_entries/2.ndjson",
+      "line": 10816,
+      "sha256": "46cdfb7139c8a5b959a6ea5aecc58ef80852c0632bcbe174837b167b36c14d49",
+      "row": {
+        "id": 84778,
+        "recipe_id": 9643,
+        "item_id": 10620,
+        "successcount": 0,
+        "failcount": 0,
+        "componentcount": 1,
+        "salvagecount": 1,
+        "iscontainer": 0
+      }
+    },
+    {
+      "table": "tradeskill_recipe_entries",
+      "path": "data/tradeskill_recipe_entries/1.ndjson",
+      "line": 10824,
+      "sha256": "8f57e300a02b3641f7e4a001808f1804842f0622891786ed740860f3c6238987",
+      "row": {
+        "id": 84782,
+        "recipe_id": 9644,
+        "item_id": 10622,
+        "successcount": 0,
+        "failcount": 0,
+        "componentcount": 1,
+        "salvagecount": 1,
+        "iscontainer": 0
+      }
+    },
+    {
+      "table": "tradeskill_recipe_entries",
+      "path": "data/tradeskill_recipe_entries/0.ndjson",
+      "line": 10848,
+      "sha256": "9ad68d4a49b41f744e48f7b8f6ac9e9b03979840323f13a213036665241d8508",
+      "row": {
+        "id": 84699,
+        "recipe_id": 9632,
+        "item_id": 10610,
+        "successcount": 0,
+        "failcount": 0,
+        "componentcount": 1,
+        "salvagecount": 1,
+        "iscontainer": 0
+      }
+    },
+    {
+      "table": "tradeskill_recipe_entries",
+      "path": "data/tradeskill_recipe_entries/0.ndjson",
+      "line": 10849,
+      "sha256": "02b71af070382863d284bf443e9b608b4a29cf33c13dc8f71d4a27c3b972b5e5",
+      "row": {
+        "id": 84700,
+        "recipe_id": 9632,
+        "item_id": 10611,
+        "successcount": 0,
+        "failcount": 0,
+        "componentcount": 1,
+        "salvagecount": 1,
+        "iscontainer": 0
+      }
+    },
+    {
+      "table": "tradeskill_recipe_entries",
+      "path": "data/tradeskill_recipe_entries/0.ndjson",
+      "line": 10857,
+      "sha256": "3a4235e5e970de533e9df56e3ae76172741164943bad8c010bb88b25035fceab",
+      "row": {
+        "id": 84773,
+        "recipe_id": 9642,
+        "item_id": 10609,
+        "successcount": 0,
+        "failcount": 0,
+        "componentcount": 1,
+        "salvagecount": 1,
+        "iscontainer": 0
+      }
+    }
+  ]
+}

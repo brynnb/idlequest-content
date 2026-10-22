@@ -1,0 +1,52 @@
+{
+  "format": 1,
+  "id": "p99-am-dorn-dialogue",
+  "summary": "Restore documented Dorn B Dynn dialogue and Mukk password grant of Sealed Letter18886 in both existing zone aliases. No invented reward magnitudes, NPCs, spawn or exclusion changes; Marda alternate-note path remains unresolved.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Marda's_Secret_Mission?action=raw",
+      "note": "Cached 2026-07-17T23:24:47.837Z; SHA256 a22968f7aa4493ae237533e5bccd5808cc87e16a79560e79706b59c6e9da4a7a. Existing NPC34082/spawngroup3340/spawn474 in nro and NPC392072/group67688/spawn105854 in northro. Item18886 filenameNeriakToBDynn resolves book4114 with Nezzka/Marda plot text. Item18885 filenameMeetBDynn/book4063 identifies B Dynn camp and MUKK password. npc_types.exclude1 retained; no explicit quest/NPC runtime exclusion found. Actual runtime availability unverified. No retained Perl/Lua or quests row for this actor."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": null,
+      "after": {
+        "id": 503534,
+        "zone": "nro",
+        "name": "Dorn_B-Dynn",
+        "lua_content": "-- Authored from cached P99 Marda's Secret Mission; no retained upstream source exists.\n-- Existing Dorn NPC/spawn records only; no new NPC or exclusion removal.\n-- Public password dialogue only. Missing Marda note odds/XP/faction magnitudes are not invented.\nfunction event_say(e)\n  if e.message:findi(\"hail\") then\n    e.self:Say(\"Just who are you? Do you expect some sort of courteous greeting? I have no time for idle chitchat!! Either you are here to attend to [business] or you seek shelter, which is it?\")\n  elseif e.message:findi(\"business\") then\n    e.self:Say(\"So, business is your mission! I have never met you. Who sent you?\")\n  elseif e.message:findi(\"zimbittle sent me\") then\n    e.self:Say(\"I do not know if I could trust you. You certainly do not look as though you are from Grobb, although your stench does hint of that place. If you are truly sent by Zimbittle, what is the passwrod?\")\n  elseif e.message:findi(\"mukk\") then\n    e.self:Say(\"So you were sent by Zimbittle. Take this note Kraagia of Da Bashers in Grobb. Do not lose the note. If it were to fall into the wrong hands of [Goonda], this whole plan could be disrupted. Now, leave, I can no longer tolerate you foul stench!\")\n    e.other:SummonItem(18886) -- Sealed Letter; Marda does not accept this note on P99.\n  elseif e.message:findi(\"goonda\") then\n    e.self:Say(\"In the western planes of Karana, you will find Goonda. He seems to be the Ogre shaman in charge out there.\")\n  end\nend\n\nfunction event_trade(e)\n  local item_lib = require(\"items\")\n  item_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": null,
+      "after": {
+        "id": 503535,
+        "zone": "northro",
+        "name": "Dorn_B-Dynn",
+        "lua_content": "-- Authored from cached P99 Marda's Secret Mission; no retained upstream source exists.\n-- Existing Dorn NPC/spawn records only; no new NPC or exclusion removal.\n-- Public password dialogue only. Missing Marda note odds/XP/faction magnitudes are not invented.\nfunction event_say(e)\n  if e.message:findi(\"hail\") then\n    e.self:Say(\"Just who are you? Do you expect some sort of courteous greeting? I have no time for idle chitchat!! Either you are here to attend to [business] or you seek shelter, which is it?\")\n  elseif e.message:findi(\"business\") then\n    e.self:Say(\"So, business is your mission! I have never met you. Who sent you?\")\n  elseif e.message:findi(\"zimbittle sent me\") then\n    e.self:Say(\"I do not know if I could trust you. You certainly do not look as though you are from Grobb, although your stench does hint of that place. If you are truly sent by Zimbittle, what is the passwrod?\")\n  elseif e.message:findi(\"mukk\") then\n    e.self:Say(\"So you were sent by Zimbittle. Take this note Kraagia of Da Bashers in Grobb. Do not lose the note. If it were to fall into the wrong hands of [Goonda], this whole plan could be disrupted. Now, leave, I can no longer tolerate you foul stench!\")\n    e.other:SummonItem(18886) -- Sealed Letter; Marda does not accept this note on P99.\n  elseif e.message:findi(\"goonda\") then\n    e.self:Say(\"In the western planes of Karana, you will find Goonda. He seems to be the Ogre shaman in charge out there.\")\n  end\nend\n\nfunction event_trade(e)\n  local item_lib = require(\"items\")\n  item_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/idlequest-authored/nro/Dorn_B-Dynn.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-am-dorn-dialogue/nro-Dorn_B-Dynn.lua",
+      "afterSha256": "a2f289281da52cbcdd387dfbab05f4a9d2fa63d70a8627f7819e28954de48ddd"
+    },
+    {
+      "target": "maintained/lua/idlequest-authored/northro/Dorn_B-Dynn.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-am-dorn-dialogue/northro-Dorn_B-Dynn.lua",
+      "afterSha256": "a2f289281da52cbcdd387dfbab05f4a9d2fa63d70a8627f7819e28954de48ddd"
+    }
+  ]
+}

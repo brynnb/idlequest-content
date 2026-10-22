@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-hermit-dialogue",
+  "summary": "Support documented Winds of Karana request and full help promise. Talym head branch uses explicit Alternative route+20Unkempt,-5Qeynos,-15Jaggedpine,+10QRG. Preserve HumanHeart branch and complementary sheet identity despite page naming contradiction.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Winds_of_Karana?action=raw",
+      "note": "Cached 2026-07-17T23:41:20.851Z; revision unavailable; SHA256 6078913ded228c1160a47e69613c20b819440dc64cd0faff833f2c454396098c. Support documented Winds of Karana request and full help promise. Talym head branch uses explicit Alternative route+20Unkempt,-5Qeynos,-15Jaggedpine,+10QRG. Preserve HumanHeart branch and complementary sheet identity despite page naming contradiction. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 14060,
+        "zone": "southkarana",
+        "name": "a_hermit",
+        "lua_content": "-- Source: southkarana/a_hermit.lua\n-- P99 audit: Unkempt Druids (Quest)\n-- items: 13854, 13116, 13913, 13310\n-- Note: P99 documents the Jale Phlintoes spawn branch as unsolved/not implemented, so the local speculative spawn phrase is intentionally omitted.\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Huh!? Get out of my house before I have my pets devour you!!\")\n\telseif(e.message:findi(\"sheet\")) then\n\t\te.self:Say(\"So you seek the two song sheets? If you truly want them, you will help the cause of the Unkempt Druids. Otherwise, you would have to fight me for it. So, which will it be? Will you help the Unkempt Druids or will you fight me?\")\n\telseif(e.message:findi(\"unkempt druids\")) then\n\t\te.self:Say(\"The Unkempt Druids are the voices of the trees and the animals. We fight for the hunted prey and the vanishing forests. We are the true druids and rangers who fight for the preservation of nature. If humanoid lives must be sacrificed to meet this goal, then so be it!\")\n\telseif(e.message:findi(\"will help\")) then\n\t\te.self:Say(\"Wise decision. I ask you then, to go to the western plains of Karana. Seek a farmer called Linaya Sowlin. Bring me her heart. A heart for a song sheet. Fitting, don't you think?\")\n\telseif(e.message:findi(\"flute\")) then\n\t\te.self:Say(\"'A flute, eh? I do have a flute I got from a bard named Cordelia. You can have it if you do me a favor.\")\n\telseif(e.message:findi(\"favor\")) then\n\t\te.self:Say(\"Oh!! Will you? Well then, go into the Plains of Karana and search for a man named Talym Shoontar. He is a murderer of Norrath's creatures. He must be stopped! Bring me his head and you shall have your flute.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\n\tif item_lib.check_turn_in(e.trade, {item1 = 13854}) then -- Human Heart\n\t\te.self:Say(\"Good work, my friend! I thank you and the Unkempt Druids thank you. Unfortunately I have sold the other song sheet to a traveling bard of the plains. I believe her name was Cordelia. Now be on your way. Unless you plan to join the Unkempt Druids..?\")\n\t\te.other:SummonItem(13116) -- Winds of Karana sheet 1\n\t\te.other:Ding()\n\t\te.other:Faction(324, 10, 0) -- Unkempt Druids\n\t\te.other:Faction(262, -10, 0) -- Guards of Qeynos\n\t\te.other:Faction(272, -10, 0) -- Jaggedpine Treefolk\n\t\te.other:Faction(343, 10, 0) -- QRG Protected Animals\n\t\te.other:AddEXP(1000)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 13913}) then -- Talym's Head\n\t\te.self:Say(\"What fine work you do! In the name of all Norrath's beasts and of the Unkempt Druids, I thank you. No longer will there be senseless slaughter. Here is the flute.\")\n\t\te.other:SummonItem(13310) -- A Cracked Flute\n\t\te.other:Ding()\n\t\te.other:Faction(324, 10, 0) -- Unkempt Druids\n\t\te.other:Faction(262, -10, 0) -- Guards of Qeynos\n\t\te.other:Faction(272, -10, 0) -- Jaggedpine Treefolk\n\t\te.other:Faction(343, 10, 0) -- QRG Protected Animals\n\t\te.other:AddEXP(1000)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 14060,
+        "zone": "southkarana",
+        "name": "a_hermit",
+        "lua_content": "-- Source: southkarana/a_hermit.lua\n-- P99 audit: Unkempt Druids (Quest)\n-- items: 13854, 13116, 13913, 13310\n-- Note: P99 documents the Jale Phlintoes spawn branch as unsolved/not implemented, so the local speculative spawn phrase is intentionally omitted.\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Huh!? Get out of my house before I have my pets devour you!!\")\n\telseif(e.message:findi(\"sheet\") or e.message:findi(\"winds of karana\")) then\n\t\te.self:Say(\"So you seek the two song sheets? If you truly want them, you will help the cause of the Unkempt Druids. Otherwise, you would have to fight me for it. So, which will it be? Will you help the Unkempt Druids or will you fight me?\")\n\telseif(e.message:findi(\"unkempt druids\") and not e.message:findi(\"will help\")) then\n\t\te.self:Say(\"The Unkempt Druids are the voices of the trees and the animals. We fight for the hunted prey and the vanishing forests. We are the true druids and rangers who fight for the preservation of nature. If humanoid lives must be sacrificed to meet this goal, then so be it!\")\n\telseif(e.message:findi(\"will help\")) then\n\t\te.self:Say(\"Wise decision. I ask you then, to go to the western plains of Karana. Seek a farmer called Linaya Sowlin. Bring me her heart. A heart for a song sheet. Fitting, don't you think?\")\n\telseif(e.message:findi(\"flute\")) then\n\t\te.self:Say(\"'A flute, eh? I do have a flute I got from a bard named Cordelia. You can have it if you do me a favor.\")\n\telseif(e.message:findi(\"favor\")) then\n\t\te.self:Say(\"Oh!! Will you? Well then, go into the Plains of Karana and search for a man named Talym Shoontar. He is a murderer of Norrath's creatures. He must be stopped! Bring me his head and you shall have your flute.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\n\tif item_lib.check_turn_in(e.trade, {item1 = 13854}) then -- Human Heart\n\t\te.self:Say(\"Good work, my friend! I thank you and the Unkempt Druids thank you. Unfortunately I have sold the other song sheet to a traveling bard of the plains. I believe her name was Cordelia. Now be on your way. Unless you plan to join the Unkempt Druids..?\")\n\t\te.other:SummonItem(13116) -- Winds of Karana sheet 1\n\t\te.other:Ding()\n\t\te.other:Faction(324, 10, 0) -- Unkempt Druids\n\t\te.other:Faction(262, -10, 0) -- Guards of Qeynos\n\t\te.other:Faction(272, -10, 0) -- Jaggedpine Treefolk\n\t\te.other:Faction(343, 10, 0) -- QRG Protected Animals\n\t\te.other:AddEXP(1000)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 13913}) then -- Talym's Head\n\t\te.self:Say(\"What fine work you do! In the name of all Norrath's beasts and of the Unkempt Druids, I thank you. No longer will there be senseless slaughter. Here is the flute.\")\n\t\te.other:SummonItem(13310) -- A Cracked Flute\n\t\te.other:Ding()\n\t\te.other:Faction(324, 20, 0) -- Unkempt Druids\n\t\te.other:Faction(262, -5, 0) -- Guards of Qeynos\n\t\te.other:Faction(272, -15, 0) -- Jaggedpine Treefolk\n\t\te.other:Faction(343, 10, 0) -- QRG Protected Animals\n\t\te.other:AddEXP(1000)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/southkarana/a_hermit.lua",
+      "beforeSha256": "90fd9ab0b3f45719eb3bfd5240b25a78db923c6963883c1287b02f6516543465",
+      "proposedFile": "changes/p99-tz-hermit-dialogue/southkarana--a_hermit.lua",
+      "afterSha256": "b22656047ab131b6fdeb8201408bd8f165caa6819d17ccaccdfb8a0d82055234"
+    }
+  ]
+}

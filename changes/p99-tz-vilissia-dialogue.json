@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-vilissia-dialogue",
+  "summary": "Accept documented possessive Tishans kilt phrase with apostrophe as well as legacy unpunctuated keyword; no other branch changes.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Tishan's_Kilt_Quest?action=raw",
+      "note": "Cached 2026-07-17T23:39:11.148Z; revision unavailable; SHA256 c696aec864837b43e5238f0e60d13370e99e25d5b0b5feb77cd3de8b2bad06c8. Accept documented possessive Tishans kilt phrase with apostrophe as well as legacy unpunctuated keyword; no other branch changes. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 13210,
+        "zone": "soltemple",
+        "name": "Vilissia",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: soltemple/Vilissia.pl\n-- items: 2366, 2364, 10118, 19048\n\nlocal function temple_faction(e)\n\te.other:Faction(415, 15, 0)\n\te.other:Faction(416, -15, 0)\n\te.other:AddEXP(1000)\nend\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"I am Vilissia, chosen of Solusek Ro. I am a practitioner in the Wizardly arts, and keeper of lore for the [Runescale Cloak], [Tishans Kilt] and the [Acumen Mask].\")\n\telseif e.message:findi(\"runescale cloak\") then\n\t\te.self:Say(\"The Runescale cloak is a wonderful item of defense for any Wizard. Are you [interested in the cloak]?\")\n\telseif e.message:findi(\"interested in the cloak\") then\n\t\te.self:Say(\"I can assemble for you a Runescale Cloak - but you will need to bring me the necessary components. I will need a Lizardscale Cloak from the Feerrott and the three Runes of Scale. All three can be found on Crocodiles - Saltwater Crocodiles in the Caverns of Guk, Deepwater Crocodiles in the Oasis of Marr and Firescale Crocodiles in the mountains of Lavastorm. Bring me these items, and I will make for you a Runescale Cloak.\")\n\telseif e.message:findi(\"tishans kilt\") then\n\t\te.self:Say(\"Tishan was once counted among the mightiest of wiards - and his items are items of power. If you are interested in acquiring Tishans Kilt, you must take a Shadowed Ball from our mortal enemies the Shadowed Men and bring it to Trankia in the Everfrost Mountains.\")\n\telseif e.message:findi(\"acumen mask\") or e.message:findi(\"interested in the mask\") then\n\t\te.self:Say(\"I can make for you an Acumen Mask, but you will need to bring me the proper components. I will need a Glowing Mask from a Skeletal Monk in the Caverns of Guk, A Patch of Shadow from our mortal enemies the Shadowed Men, a Darkbone Skull from a Darkbone Skeleton in the Estate of Unrest and a Bonechipped Mask from a Goblin Headmaster in the Ocean of Tears. Bring me these four items, and I will make for you an Acumen Mask.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 2352, item2 = 2368, item3 = 10558, item4 = 2367}) then\n\t\te.self:Say(\"Well done \" .. e.other:GetName() .. \". You truly are a powerful wizard. I have crafted your mask. Take it.\")\n\t\te.other:SummonItem(2366)\n\t\ttemple_faction(e)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 2332, item2 = 10553, item3 = 10554, item4 = 10555}) then\n\t\te.self:Say(\"Well done \" .. e.other:GetName() .. \". You truly are a powerful wizard. I have crafted your cloak. Take it.\")\n\t\te.other:SummonItem(2364)\n\t\ttemple_faction(e)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 10035, item2 = 10035, item3 = 10000}) then\n\t\te.self:Say(\"Okay, here is your Lambent Ruby.\")\n\t\te.other:SummonItem(10118)\n\t\ttemple_faction(e)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 16507}) then\n\t\te.self:Say(\"I see that Gavel has sent you to me. Very well, I have vulcanized your platinum bar - take it.\")\n\t\te.other:SummonItem(19048)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 13210,
+        "zone": "soltemple",
+        "name": "Vilissia",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: soltemple/Vilissia.pl\n-- items: 2366, 2364, 10118, 19048\n\nlocal function temple_faction(e)\n\te.other:Faction(415, 15, 0)\n\te.other:Faction(416, -15, 0)\n\te.other:AddEXP(1000)\nend\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"I am Vilissia, chosen of Solusek Ro. I am a practitioner in the Wizardly arts, and keeper of lore for the [Runescale Cloak], [Tishans Kilt] and the [Acumen Mask].\")\n\telseif e.message:findi(\"runescale cloak\") then\n\t\te.self:Say(\"The Runescale cloak is a wonderful item of defense for any Wizard. Are you [interested in the cloak]?\")\n\telseif e.message:findi(\"interested in the cloak\") then\n\t\te.self:Say(\"I can assemble for you a Runescale Cloak - but you will need to bring me the necessary components. I will need a Lizardscale Cloak from the Feerrott and the three Runes of Scale. All three can be found on Crocodiles - Saltwater Crocodiles in the Caverns of Guk, Deepwater Crocodiles in the Oasis of Marr and Firescale Crocodiles in the mountains of Lavastorm. Bring me these items, and I will make for you a Runescale Cloak.\")\n\telseif e.message:findi(\"tishans kilt\") or e.message:findi(\"tishan's kilt\") then\n\t\te.self:Say(\"Tishan was once counted among the mightiest of wiards - and his items are items of power. If you are interested in acquiring Tishans Kilt, you must take a Shadowed Ball from our mortal enemies the Shadowed Men and bring it to Trankia in the Everfrost Mountains.\")\n\telseif e.message:findi(\"acumen mask\") or e.message:findi(\"interested in the mask\") then\n\t\te.self:Say(\"I can make for you an Acumen Mask, but you will need to bring me the proper components. I will need a Glowing Mask from a Skeletal Monk in the Caverns of Guk, A Patch of Shadow from our mortal enemies the Shadowed Men, a Darkbone Skull from a Darkbone Skeleton in the Estate of Unrest and a Bonechipped Mask from a Goblin Headmaster in the Ocean of Tears. Bring me these four items, and I will make for you an Acumen Mask.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 2352, item2 = 2368, item3 = 10558, item4 = 2367}) then\n\t\te.self:Say(\"Well done \" .. e.other:GetName() .. \". You truly are a powerful wizard. I have crafted your mask. Take it.\")\n\t\te.other:SummonItem(2366)\n\t\ttemple_faction(e)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 2332, item2 = 10553, item3 = 10554, item4 = 10555}) then\n\t\te.self:Say(\"Well done \" .. e.other:GetName() .. \". You truly are a powerful wizard. I have crafted your cloak. Take it.\")\n\t\te.other:SummonItem(2364)\n\t\ttemple_faction(e)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 10035, item2 = 10035, item3 = 10000}) then\n\t\te.self:Say(\"Okay, here is your Lambent Ruby.\")\n\t\te.other:SummonItem(10118)\n\t\ttemple_faction(e)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 16507}) then\n\t\te.self:Say(\"I see that Gavel has sent you to me. Very well, I have vulcanized your platinum bar - take it.\")\n\t\te.other:SummonItem(19048)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/soltemple/Vilissia.lua",
+      "beforeSha256": "bdc132d026aee5c5c3e605095f816f522987735671df57964dd9b7affed61bbe",
+      "proposedFile": "changes/p99-tz-vilissia-dialogue/soltemple--Vilissia.lua",
+      "afterSha256": "1cc9d9b9d730ba04de2fc9285a82a5a9171b2c6b932127e4bb10b544b1941a5c"
+    }
+  ]
+}

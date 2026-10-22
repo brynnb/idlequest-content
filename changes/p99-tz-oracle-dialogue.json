@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-oracle-dialogue",
+  "summary": "Accept documented singular Book of Ages question in existing seven-book lore branch, preserve all other branch precedence and leave missing Scale numeric rewards unresolved.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Tome_of_Ages?action=raw",
+      "note": "Cached 2026-07-17T23:39:21.634Z; revision unavailable; SHA256 0c7945688cf612b760dd771962faa99efc62d8eaee3c031d66a1968300bb5d3b. Accept documented singular Book of Ages question in existing seven-book lore branch, preserve all other branch precedence and leave missing Scale numeric rewards unresolved. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 17993,
+        "zone": "oot",
+        "name": "Oracle_of_K-Arnon",
+        "lua_content": "-- Source: oot/Oracle_of_K-Arnon.pl\n-- Converted from ProjectEQ Perl quest script.\n-- items: 18302, 19072, 18202, 10071\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Greetings, \" .. e.other:GetName() .. \", I am the Oracle of K'Arnon. Do you quest for knowledge yourself, or do you offer that which I seek?\")\n\telseif e.message:findi(\"knowledge\") then\n\t\te.self:Say(\"I have lived long and have insight into many matters, yet I despise charity. To learn from me, you must first bring me that which I seek.\")\n\telseif e.message:findi(\"seek\") then\n\t\te.self:Say(\"I seek knowledge, which is superior to all things. And no knowledge is greater than that which is contained within the Tome of Ages.\")\n\telseif e.message:findi(\"tome of ages\") then\n\t\te.self:Say(\"The Tome of Ages has been compiled over the millennia by the Scribes of Dal. It was divided into seven distinct books by the scribes to keep the knowledge from one such as me. That said, with aid, I shall unite these books and the Tome of Ages shall be mine.\")\n\telseif e.message:findi(\"dal\") then\n\t\te.self:Say(\"They were elves once, but now are Teir'Dal, and as evil as they are wise. Many tomes have they written, but none greater than the Tome of Ages.\")\n\telseif e.message:findi(\"books\") then\n\t\te.self:Say(\"The seven books that make up the Tome of Ages are those of Enlightenment, Scale, Turmoil, Monuments, Elders, Blood, and the Lost.\")\n\telseif e.message:findi(\"enlightenment\") then\n\t\te.self:Say(\"I do not seek the Book of Enlightenment at this time, but I might have need of it in the future.\")\n\telseif e.message:findi(\"scale\") then\n\t\te.self:Say(\"Ah, the Book of Scale.. It would be wondrous indeed if you could recover the Book of Scale for me. If you do manage to procure the Book of Scale, I will gladly part with an artifact of my own that may be of interest to you.\")\n\telseif e.message:findi(\"turmoil\") then\n\t\te.self:Say(\"Ah, yes! The Book of Turmoil. I seek this book, and should you find it and return it to me, I will reward you with secret knowledge.\")\n\telseif e.message:findi(\"monuments\") then\n\t\te.self:Say(\"I do not seek the Book of Monuments at this time, but I might have need of it in the future.\")\n\telseif e.message:findi(\"elders\") then\n\t\te.self:Say(\"I do not seek the Book of Elders at this time, but I might have need of it in the future.\")\n\telseif e.message:findi(\"blood\") then\n\t\te.self:Say(\"I do not seek the Book of Blood at this time, but I might have need of it in the future.\")\n\telseif e.message:findi(\"lost\") then\n\t\te.self:Say(\"I do not seek the Lost Book at this time, but I might have need of it in the future.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 18302}) then\n\t\te.other:SummonItem(19072) -- Miragul's Phylactery\n\telseif item_lib.check_turn_in(e.trade, {item1 = 18202}) then\n\t\te.self:Say(\"Thank thee for this tome. Be sure to check back with me later, as I might have another task for thee.\")\n\t\te.other:SummonItem(10071) -- Glowing Torch\n\t\te.other:Faction(402, 5)\n\t\te.other:Faction(403, -10)\n\t\te.other:AddEXP(72900)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 17993,
+        "zone": "oot",
+        "name": "Oracle_of_K-Arnon",
+        "lua_content": "-- Source: oot/Oracle_of_K-Arnon.pl\n-- Converted from ProjectEQ Perl quest script.\n-- items: 18302, 19072, 18202, 10071\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Greetings, \" .. e.other:GetName() .. \", I am the Oracle of K'Arnon. Do you quest for knowledge yourself, or do you offer that which I seek?\")\n\telseif e.message:findi(\"knowledge\") then\n\t\te.self:Say(\"I have lived long and have insight into many matters, yet I despise charity. To learn from me, you must first bring me that which I seek.\")\n\telseif e.message:findi(\"seek\") then\n\t\te.self:Say(\"I seek knowledge, which is superior to all things. And no knowledge is greater than that which is contained within the Tome of Ages.\")\n\telseif e.message:findi(\"tome of ages\") then\n\t\te.self:Say(\"The Tome of Ages has been compiled over the millennia by the Scribes of Dal. It was divided into seven distinct books by the scribes to keep the knowledge from one such as me. That said, with aid, I shall unite these books and the Tome of Ages shall be mine.\")\n\telseif e.message:findi(\"dal\") then\n\t\te.self:Say(\"They were elves once, but now are Teir'Dal, and as evil as they are wise. Many tomes have they written, but none greater than the Tome of Ages.\")\n\telseif e.message:findi(\"books\") or e.message:findi(\"book of ages\") then\n\t\te.self:Say(\"The seven books that make up the Tome of Ages are those of Enlightenment, Scale, Turmoil, Monuments, Elders, Blood, and the Lost.\")\n\telseif e.message:findi(\"enlightenment\") then\n\t\te.self:Say(\"I do not seek the Book of Enlightenment at this time, but I might have need of it in the future.\")\n\telseif e.message:findi(\"scale\") then\n\t\te.self:Say(\"Ah, the Book of Scale.. It would be wondrous indeed if you could recover the Book of Scale for me. If you do manage to procure the Book of Scale, I will gladly part with an artifact of my own that may be of interest to you.\")\n\telseif e.message:findi(\"turmoil\") then\n\t\te.self:Say(\"Ah, yes! The Book of Turmoil. I seek this book, and should you find it and return it to me, I will reward you with secret knowledge.\")\n\telseif e.message:findi(\"monuments\") then\n\t\te.self:Say(\"I do not seek the Book of Monuments at this time, but I might have need of it in the future.\")\n\telseif e.message:findi(\"elders\") then\n\t\te.self:Say(\"I do not seek the Book of Elders at this time, but I might have need of it in the future.\")\n\telseif e.message:findi(\"blood\") then\n\t\te.self:Say(\"I do not seek the Book of Blood at this time, but I might have need of it in the future.\")\n\telseif e.message:findi(\"lost\") then\n\t\te.self:Say(\"I do not seek the Lost Book at this time, but I might have need of it in the future.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 18302}) then\n\t\te.other:SummonItem(19072) -- Miragul's Phylactery\n\telseif item_lib.check_turn_in(e.trade, {item1 = 18202}) then\n\t\te.self:Say(\"Thank thee for this tome. Be sure to check back with me later, as I might have another task for thee.\")\n\t\te.other:SummonItem(10071) -- Glowing Torch\n\t\te.other:Faction(402, 5)\n\t\te.other:Faction(403, -10)\n\t\te.other:AddEXP(72900)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/oot/Oracle_of_K-Arnon.lua",
+      "beforeSha256": "58f8edcb96edf98fd06a1cdcde36a2a858eeba0107b2c00ec304860471644ce9",
+      "proposedFile": "changes/p99-tz-oracle-dialogue/oot--Oracle_of_K-Arnon.lua",
+      "afterSha256": "901a3752935ca97b4f0aed544d10e47d1b05357e1a80b93f7d7d457ca5065345"
+    }
+  ]
+}

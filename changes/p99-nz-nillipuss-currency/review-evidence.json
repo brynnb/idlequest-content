@@ -1,0 +1,27 @@
+{
+  "titles": [
+    "Nillipuss the Brownie",
+    "Reebo's Carrots"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "partial",
+  "match_status": "partial",
+  "local_quest_keys": [
+    "rivervale/Reebo_Leafsway"
+  ],
+  "proposal": "changes/p99-nz-nillipuss-currency.json",
+  "notes": [
+    "Restore documented Nillipuss currency and unblock the Reebo carrot-delivery start.",
+    "P99 Nillipuss four-jumjum return gives 15 silver, not 6 gold 4 silver. Reebo Carrots documented trail to Karana wisdom phrase was shadowed by generic Karana lore; exclude trail from that generic predicate. Carrot branch item IDs and all other rewards unchanged. All six carrot transitions and exported same-name rotten crate IDs were compared separately; faction magnitudes and tiny XP values are not documented. Nillipuss random pool still lacks a mentioned compass with unknown odds; no invented weighting."
+  ],
+  "verification": {
+    "source": "Cached P99 and effective Lua reviewed; exact complete row preimages and source hashes recorded.",
+    "syntax": "pending",
+    "runtime": "Isolated mock regression pending; full game runtime unavailable.",
+    "ui": "not_run",
+    "connected_chain": "not_run"
+  },
+  "unresolved": [
+    "Ordinary source drops/spawns, recipe live behavior and rendered complete quest path not verified."
+  ]
+}

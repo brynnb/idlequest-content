@@ -1,0 +1,26 @@
+{
+  "kind": "actual-content-proposal-validator-not-live-game",
+  "checkedAt": "2026-10-22",
+  "checks": [
+    {
+      "proposal": "changes/p99-conversion-ambient.json",
+      "proposalSha256": "4e3c4cd857daba035ad285680e7c8fcb51edb8315332b3ddd4e2fd87c35c9f7b",
+      "log": "changes/p99-conversion-ambient/public-validation.log",
+      "logSha256": "8035f5f1df99c7be6860e7aef7d14816f1f0b752a9dd734017ff913775415426",
+      "checkedRows": 21,
+      "checkedSources": 21,
+      "passed": true,
+      "command": "node tools/cli.mjs check-proposal . --proposal changes/p99-conversion-ambient.json"
+    },
+    {
+      "proposal": "changes/p99-conversions-velious-flavor.json",
+      "proposalSha256": "f63f2df238b56ea347d76ad877ddb75ff9a399e8da6261d57093d104db485556",
+      "log": "changes/p99-conversion-ambient/guard-proposal-validation.log",
+      "logSha256": "91963c8cfd2d46405877bdf4991e32b1c68b361a1638e1cda3c5aa960b59966d",
+      "checkedRows": 52,
+      "checkedSources": 52,
+      "passed": true,
+      "command": "node tools/cli.mjs check-proposal . --proposal changes/p99-conversions-velious-flavor.json"
+    }
+  ]
+}

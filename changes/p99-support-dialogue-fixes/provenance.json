@@ -1,0 +1,287 @@
+[
+  {
+    "key": "lfaydark/Grynnaf_Einoom",
+    "questId": 18370,
+    "beforeFile": "effective/quests/lfaydark/Grynnaf_Einoom.lua",
+    "beforeSha256": "a61dfc26057b3df8600cacdbf561f7a8248b2d05f33ba7053bcd0d3517e30baa",
+    "preferredSource": "maintained/lua/converted-perl/lfaydark/Grynnaf_Einoom.lua",
+    "preferredSourceSha256": "a61dfc26057b3df8600cacdbf561f7a8248b2d05f33ba7053bcd0d3517e30baa",
+    "afterFile": "changes/p99-support-dialogue-fixes/lfaydark--Grynnaf_Einoom.lua",
+    "afterSha256": "1328f8fe3010f9c40512937b3f6c4293f9bba9285f07bea9ac18926ebca88e06",
+    "currentProposalOwners": [],
+    "facts": "Restore only the NPC page documented hail emote. Existing Nortlav and rusty-weapon directions remain byte-preserved after inserted branch. Page spells display name Grynnaf Einoo but also names Grynnaf Einoom and Lesser Faydark identity; both exported same-name NPC identities are documented, not silently interchanged.",
+    "evidence": [
+      {
+        "title": "Grynnaf Einoom",
+        "url": "https://wiki.project1999.com/Grynnaf_Einoom?action=raw",
+        "fetchedAt": "2026-08-12T19:01:15.805Z",
+        "httpStatus": 200,
+        "contentType": "text/x-wiki; charset=UTF-8",
+        "bytes": 869,
+        "sha256": "6b29fdb319e1074694fc61fadb9a743488f913c0f6f54512d787337882d4abc1",
+        "index": 3936,
+        "path": "reference/p99-wiki/npc-pages/grynnaf-einoom-7ebd33467c.wiki"
+      }
+    ],
+    "limits": [
+      "Source/body and isolated mocked Lua tests only; no live game bridge, rendered UI, pathing, spawned actor or merchant inventory test.",
+      "No numeric rewards, prices, XP, faction deltas or encounter values changed.",
+      "npc_types.exclude=1 is not interpreted as a quest ban."
+    ]
+  },
+  {
+    "key": "cabwest/Jaxxtz",
+    "questId": 13638,
+    "beforeFile": "effective/quests/cabwest/Jaxxtz.lua",
+    "beforeSha256": "fbd109a5cf6a597a89615091d0de93695e7d539e67333986068471dd88c1cbb6",
+    "preferredSource": "sources/projecteq/cabwest/Jaxxtz.lua",
+    "preferredSourceSha256": "fbd109a5cf6a597a89615091d0de93695e7d539e67333986068471dd88c1cbb6",
+    "afterFile": "changes/p99-support-dialogue-fixes/cabwest--Jaxxtz.lua",
+    "afterSha256": "1cc9f089cabc48bbe8fa0e03d1de2956c01e7613f05a0a8f16ee585ae8c6f015",
+    "currentProposalOwners": [],
+    "facts": "Preserve documented Kunark merchant hail; remove only Vagnar and Dragon kin directions. NPC page maps these to Shaman Skull Quest No.6; primary quest page explicitly excludes quests beyond five as Luclin. No merchant row, inventory, faction value or NPC availability changed.",
+    "evidence": [
+      {
+        "title": "Jaxxtz",
+        "url": "https://wiki.project1999.com/Jaxxtz?action=raw",
+        "fetchedAt": "2026-08-12T19:35:28.426Z",
+        "httpStatus": 200,
+        "contentType": "text/x-wiki; charset=UTF-8",
+        "bytes": 2845,
+        "sha256": "62835d6e0f5adcb1eefadcfc079f34fa3d4030763b5581f129c99d7c18a60aee",
+        "index": 4747,
+        "path": "reference/p99-wiki/npc-pages/jaxxtz-f966d40991.wiki"
+      },
+      {
+        "title": "Shaman Skull Quests",
+        "url": "https://wiki.project1999.com/Shaman_Skull_Quests?action=raw",
+        "fetchedAt": "2026-07-17T23:32:43.944Z",
+        "httpStatus": 200,
+        "contentType": "text/x-wiki; charset=UTF-8",
+        "bytes": 15510,
+        "sha256": "58e529950f5736a98c7deac45fbf8897833cae17bfcf08706222406a34ab791c",
+        "index": 668,
+        "path": "reference/p99-wiki/raw-pages/shaman-skull-quests-b63ed30880.wiki"
+      }
+    ],
+    "limits": [
+      "Source/body and isolated mocked Lua tests only; no live game bridge, rendered UI, pathing, spawned actor or merchant inventory test.",
+      "No numeric rewards, prices, XP, faction deltas or encounter values changed.",
+      "npc_types.exclude=1 is not interpreted as a quest ban."
+    ]
+  },
+  {
+    "key": "grobb/Kragia",
+    "questId": 12331,
+    "assignmentScope": "original dialogue assignment",
+    "beforeFile": "effective/quests/grobb/Kragia.lua",
+    "beforeSha256": "ce1e93b3d56ecdebb61827fc2174ac1a69f4d47d829c2252d6ed0cdc140b7356",
+    "afterFile": "changes/p99-support-dialogue-fixes/grobb--Kragia.lua",
+    "afterSha256": "7cc52f5530d7b014108ab68c94deeecc0800d9eaba90ca8a2ad1d1531eeadbce",
+    "preferredSource": "sources/projecteq/grobb/Kragia.lua",
+    "preferredSourceSha256": "ce1e93b3d56ecdebb61827fc2174ac1a69f4d47d829c2252d6ed0cdc140b7356",
+    "change": "quests.enabled 1->0 plus source-persistent disable header; complete callbacks byte-identical",
+    "facts": "Complete source only teaches troll cultural acrylia weapons. Primary P99 Skill Blacksmithing explicitly says troll cultural smithing is not in game due to timeline; classic warrior trainer NPC is preserved.",
+    "currentProposalOwners": [],
+    "evidence": [
+      {
+        "path": "reference/p99-wiki/crafting-restoration-2026-10-09/Skill_Blacksmithing.wiki",
+        "sha256": "cc4e26bf2463242c2c53ab9ecb577590ae4a6ceef8d99afbb512ac448aa942f8"
+      },
+      {
+        "path": "reference/p99-wiki/npc-pages/kragia-c945028d43.wiki",
+        "sha256": "263887e2427e37b1f2b29a9284d1bd993d2413fa8587b73922e22e1141feb09c"
+      }
+    ],
+    "limits": [
+      "Quest-source activation flag only; no NPC row, exclusion bit, spawn, loot, merchant or training data changed.",
+      "Prior enabled controllers are deliberately corrected here; no claim that historical policy already excluded them.",
+      "Positive exact chain dependency, not class/name resemblance or absence from a wiki list.",
+      "Isolated package/VM validation, not a live-engine test."
+    ]
+  },
+  {
+    "key": "emeraldjungle/The_Spirit_of_Rage",
+    "questId": 15692,
+    "assignmentScope": "original dialogue assignment",
+    "beforeFile": "effective/quests/emeraldjungle/The_Spirit_of_Rage.lua",
+    "beforeSha256": "277f8a7bfd4f34e3a5acad62ad0cf740f35e30d80992658c9c6d89a215b61c1a",
+    "afterFile": "changes/p99-support-dialogue-fixes/emeraldjungle--The_Spirit_of_Rage.lua",
+    "afterSha256": "d587348ea709da8f59c9cf1a1a044a77a3cbb82b80b080ce8f36056eed328148",
+    "preferredSource": "maintained/lua/converted-perl/emeraldjungle/The_Spirit_of_Rage.lua",
+    "preferredSourceSha256": "277f8a7bfd4f34e3a5acad62ad0cf740f35e30d80992658c9c6d89a215b61c1a",
+    "change": "quests.enabled 1->0 plus source-persistent disable header; complete callbacks byte-identical",
+    "facts": "Death-only Omakin farewell helper. Scout Vyrak takes9031 and spawns NPC94126, whose exact exported name is #The_Spirit_of_Rage. Helper key lacks # and inspected runtime does not prove alias dispatch; preventive later-only helper suppression, not a claim this body currently executes. Not a Druid1.0 spirit.",
+    "currentProposalOwners": [],
+    "evidence": [
+      {
+        "path": "effective/quests/emeraldjungle/Scout_Vyrak.lua",
+        "sha256": "0cfd4edfe284043d99e494f028371262e4863093aa85625ea0fe126c4b73e204"
+      },
+      {
+        "path": "effective/quests/permafrost/Scout_Janomin.lua",
+        "sha256": "b14a4dddd8aeb88af480ee040d2cc2aead28ae47c5e4e98831e39f3b0dda3974"
+      },
+      {
+        "path": "sources/projecteq/sharvahl/Elder_Animist_Dumul.pl",
+        "sha256": "e187a33ec17ff0c7451c7e7788792f46f053e2ef1caaff5543948382ce140efe"
+      },
+      {
+        "path": "sources/projecteq/stonebrunt/Scout_Malom.pl",
+        "sha256": "df28c96f2f9371063d7b8e6585519451d11f3a6ca1cd5b066c46e7c0b7f444b5"
+      },
+      {
+        "path": "reference/server/internal/contentscope/npc_exclusions.json",
+        "sha256": "392956b7e784d2d137c141fd1c868a804f0757056939661e857d53ea16ef12b9"
+      },
+      {
+        "path": "changes/p99-support-source-review/dialogue-review-additional-evidence.json",
+        "sha256": "97720801c7265e4616c733695006cfcbb9e7e7857e018926acbc0c398bcd9272"
+      }
+    ],
+    "limits": [
+      "Quest-source activation flag only; no NPC row, exclusion bit, spawn, loot, merchant or training data changed.",
+      "Prior enabled controllers are deliberately corrected here; no claim that historical policy already excluded them.",
+      "Positive exact chain dependency, not class/name resemblance or absence from a wiki list.",
+      "Isolated package/VM validation, not a live-engine test."
+    ]
+  },
+  {
+    "key": "permafrost/The_Icebound_Spirit",
+    "questId": 16152,
+    "assignmentScope": "original dialogue assignment",
+    "beforeFile": "effective/quests/permafrost/The_Icebound_Spirit.lua",
+    "beforeSha256": "827140a9850d9341b9ed4ea61bacff5621cad2c63a07b1652d25597897db87c7",
+    "afterFile": "changes/p99-support-dialogue-fixes/permafrost--The_Icebound_Spirit.lua",
+    "afterSha256": "3edcc11eaf362cc35f0dcfe60916a0d227c26cc485812877f0904f2b3a0565a7",
+    "preferredSource": "maintained/lua/converted-perl/permafrost/The_Icebound_Spirit.lua",
+    "preferredSourceSha256": "827140a9850d9341b9ed4ea61bacff5621cad2c63a07b1652d25597897db87c7",
+    "change": "quests.enabled 1->0 plus source-persistent disable header; complete callbacks byte-identical",
+    "facts": "Death-only Zehkes farewell helper. Scout Janomin takes9031 and spawns exact NPC73107 The_Icebound_Spirit. Not a Druid1.0 spirit.",
+    "currentProposalOwners": [],
+    "evidence": [
+      {
+        "path": "effective/quests/emeraldjungle/Scout_Vyrak.lua",
+        "sha256": "0cfd4edfe284043d99e494f028371262e4863093aa85625ea0fe126c4b73e204"
+      },
+      {
+        "path": "effective/quests/permafrost/Scout_Janomin.lua",
+        "sha256": "b14a4dddd8aeb88af480ee040d2cc2aead28ae47c5e4e98831e39f3b0dda3974"
+      },
+      {
+        "path": "sources/projecteq/sharvahl/Elder_Animist_Dumul.pl",
+        "sha256": "e187a33ec17ff0c7451c7e7788792f46f053e2ef1caaff5543948382ce140efe"
+      },
+      {
+        "path": "sources/projecteq/stonebrunt/Scout_Malom.pl",
+        "sha256": "df28c96f2f9371063d7b8e6585519451d11f3a6ca1cd5b066c46e7c0b7f444b5"
+      },
+      {
+        "path": "reference/server/internal/contentscope/npc_exclusions.json",
+        "sha256": "392956b7e784d2d137c141fd1c868a804f0757056939661e857d53ea16ef12b9"
+      },
+      {
+        "path": "changes/p99-support-source-review/dialogue-review-additional-evidence.json",
+        "sha256": "97720801c7265e4616c733695006cfcbb9e7e7857e018926acbc0c398bcd9272"
+      }
+    ],
+    "limits": [
+      "Quest-source activation flag only; no NPC row, exclusion bit, spawn, loot, merchant or training data changed.",
+      "Prior enabled controllers are deliberately corrected here; no claim that historical policy already excluded them.",
+      "Positive exact chain dependency, not class/name resemblance or absence from a wiki list.",
+      "Isolated package/VM validation, not a live-engine test."
+    ]
+  },
+  {
+    "key": "emeraldjungle/Scout_Vyrak",
+    "questId": 16018,
+    "assignmentScope": "explicitly authorized EXTRA controller outside original312",
+    "beforeFile": "effective/quests/emeraldjungle/Scout_Vyrak.lua",
+    "beforeSha256": "0cfd4edfe284043d99e494f028371262e4863093aa85625ea0fe126c4b73e204",
+    "afterFile": "changes/p99-support-dialogue-fixes/emeraldjungle--Scout_Vyrak.lua",
+    "afterSha256": "8a1ae3367d66bb39d95811f86f63340250636e27fc20fa719a87da47ecc2f25b",
+    "preferredSource": "maintained/lua/converted-perl/emeraldjungle/Scout_Vyrak.lua",
+    "preferredSourceSha256": "0cfd4edfe284043d99e494f028371262e4863093aa85625ea0fe126c4b73e204",
+    "change": "quests.enabled 1->0 plus source-persistent disable header; complete callbacks byte-identical",
+    "facts": "Full source has only Shar Vahl greeting, seal9031 encounter94126 spawn, and gorilla totem9038 to9031+9039 wrapping. No independent classic branch.",
+    "currentProposalOwners": [],
+    "evidence": [
+      {
+        "path": "effective/quests/emeraldjungle/Scout_Vyrak.lua",
+        "sha256": "0cfd4edfe284043d99e494f028371262e4863093aa85625ea0fe126c4b73e204"
+      },
+      {
+        "path": "effective/quests/permafrost/Scout_Janomin.lua",
+        "sha256": "b14a4dddd8aeb88af480ee040d2cc2aead28ae47c5e4e98831e39f3b0dda3974"
+      },
+      {
+        "path": "sources/projecteq/sharvahl/Elder_Animist_Dumul.pl",
+        "sha256": "e187a33ec17ff0c7451c7e7788792f46f053e2ef1caaff5543948382ce140efe"
+      },
+      {
+        "path": "sources/projecteq/stonebrunt/Scout_Malom.pl",
+        "sha256": "df28c96f2f9371063d7b8e6585519451d11f3a6ca1cd5b066c46e7c0b7f444b5"
+      },
+      {
+        "path": "reference/server/internal/contentscope/npc_exclusions.json",
+        "sha256": "392956b7e784d2d137c141fd1c868a804f0757056939661e857d53ea16ef12b9"
+      },
+      {
+        "path": "changes/p99-support-source-review/dialogue-review-additional-evidence.json",
+        "sha256": "97720801c7265e4616c733695006cfcbb9e7e7857e018926acbc0c398bcd9272"
+      }
+    ],
+    "limits": [
+      "Quest-source activation flag only; no NPC row, exclusion bit, spawn, loot, merchant or training data changed.",
+      "Prior enabled controllers are deliberately corrected here; no claim that historical policy already excluded them.",
+      "Positive exact chain dependency, not class/name resemblance or absence from a wiki list.",
+      "Isolated package/VM validation, not a live-engine test."
+    ]
+  },
+  {
+    "key": "permafrost/Scout_Janomin",
+    "questId": 18286,
+    "assignmentScope": "explicitly authorized EXTRA controller outside original312",
+    "beforeFile": "effective/quests/permafrost/Scout_Janomin.lua",
+    "beforeSha256": "b14a4dddd8aeb88af480ee040d2cc2aead28ae47c5e4e98831e39f3b0dda3974",
+    "afterFile": "changes/p99-support-dialogue-fixes/permafrost--Scout_Janomin.lua",
+    "afterSha256": "233a04773ea5fa5241112695e1ae4ef42bc4fe7f0a5085be5b1b1b9f4fe1e9fc",
+    "preferredSource": "maintained/lua/converted-perl/permafrost/Scout_Janomin.lua",
+    "preferredSourceSha256": "b14a4dddd8aeb88af480ee040d2cc2aead28ae47c5e4e98831e39f3b0dda3974",
+    "change": "quests.enabled 1->0 plus source-persistent disable header; complete callbacks byte-identical",
+    "facts": "Full source has only Shar Vahl greeting, seal9031 encounter73107 spawn/return9031, and ice bear totem9036 to9037 wrapping. No independent classic branch.",
+    "currentProposalOwners": [],
+    "evidence": [
+      {
+        "path": "effective/quests/emeraldjungle/Scout_Vyrak.lua",
+        "sha256": "0cfd4edfe284043d99e494f028371262e4863093aa85625ea0fe126c4b73e204"
+      },
+      {
+        "path": "effective/quests/permafrost/Scout_Janomin.lua",
+        "sha256": "b14a4dddd8aeb88af480ee040d2cc2aead28ae47c5e4e98831e39f3b0dda3974"
+      },
+      {
+        "path": "sources/projecteq/sharvahl/Elder_Animist_Dumul.pl",
+        "sha256": "e187a33ec17ff0c7451c7e7788792f46f053e2ef1caaff5543948382ce140efe"
+      },
+      {
+        "path": "sources/projecteq/stonebrunt/Scout_Malom.pl",
+        "sha256": "df28c96f2f9371063d7b8e6585519451d11f3a6ca1cd5b066c46e7c0b7f444b5"
+      },
+      {
+        "path": "reference/server/internal/contentscope/npc_exclusions.json",
+        "sha256": "392956b7e784d2d137c141fd1c868a804f0757056939661e857d53ea16ef12b9"
+      },
+      {
+        "path": "changes/p99-support-source-review/dialogue-review-additional-evidence.json",
+        "sha256": "97720801c7265e4616c733695006cfcbb9e7e7857e018926acbc0c398bcd9272"
+      }
+    ],
+    "limits": [
+      "Quest-source activation flag only; no NPC row, exclusion bit, spawn, loot, merchant or training data changed.",
+      "Prior enabled controllers are deliberately corrected here; no claim that historical policy already excluded them.",
+      "Positive exact chain dependency, not class/name resemblance or absence from a wiki list.",
+      "Isolated package/VM validation, not a live-engine test."
+    ]
+  }
+]

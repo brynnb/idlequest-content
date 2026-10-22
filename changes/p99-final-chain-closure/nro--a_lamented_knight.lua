@@ -1,0 +1,10 @@
+-- enabled: false
+-- Post-Velious exact chain; complete historical callback body retained.
+-- Evidence: changes/p99-final-chain-closure/review.json
+function event_death_complete(e)
+    eq.signal(392057, 0); -- NPC: #a_madman
+end
+
+function event_spawn(e)
+	e.self:Say("Destroy me, if you must. I cannot hold him alone. We do not blame you for what you do, for you have great need and you seek to save others. Do not allow this to weigh heavily upon you.");
+end

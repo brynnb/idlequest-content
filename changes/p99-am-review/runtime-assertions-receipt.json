@@ -1,0 +1,564 @@
+{
+  "reviewed_at": "2026-10-22",
+  "passed": 91,
+  "failed": 0,
+  "assertionsSha256": "5a3302ac49b33285d6a3d07a5d71614dfc8ea0d3d2038e4d467faab11664cace",
+  "fixtureSha256": "256b1b239eee071c1e1f591649ada52e93845a769f8653691a4a79e9447fe56d",
+  "itemsModuleSha256": "7bfcd2948fa69535a070333840e86875c4eb0755a047e77302ca336e7fce1f9a",
+  "runnerBinarySha256": "0803c389614b80ebf23eb21d2962668614045ce5e32889390381ac8a26aa47d6",
+  "limits": "Actual pinned source normalization and Lua VM, strict mocked NPC/character/quest APIs only. No live transaction settlement, owner-scoped encounter execution, inventory persistence, natural respawn, renderer or connected full-chain claim. Numeric assertions preserve explicit source fallbacks and do not certify undocumented P99 magnitudes.",
+  "cases": [
+    {
+      "name": "p99-am-karn-crate:maintained/lua/modified-upstream/qeynos/Karn_Tassen.lua",
+      "source": "changes/p99-am-karn-crate/qeynos-Karn_Tassen.lua",
+      "sourceSha256": "7bd141848d614e6a1bd09cc931229b3edfd98ac89c72f9e69ddcce5070b610d9",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "p99-am-renth-dialogue:maintained/lua/modified-upstream/halas/Renth_McLanis.lua",
+      "source": "changes/p99-am-renth-dialogue/halas-Renth_McLanis.lua",
+      "sourceSha256": "134f297debaecdcd4f1bf3b3b1a2cc1bc5c60d2eb76140b2b34c6f9e3aa84ea9",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "p99-am-honey-mead-dialogue:maintained/lua/modified-upstream/qeynos/Trumpy_Irontoe.lua",
+      "source": "changes/p99-am-honey-mead-dialogue/qeynos-Trumpy_Irontoe.lua",
+      "sourceSha256": "69a47f01ac6a1005ea7bc02ecfe8f5184887155a66011509acd4ae59451b94dd",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "p99-am-indaria-dialogue:maintained/lua/modified-upstream/qeynos/Indaria.lua",
+      "source": "changes/p99-am-indaria-dialogue/qeynos-Indaria.lua",
+      "sourceSha256": "d5cc3dbd1f9932110626498ad430272f9e10217178dc08b37518ba6cc0d89c4b",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "p99-am-lenka-pouch:maintained/lua/modified-upstream/freporte/Olunea_Miltin.lua",
+      "source": "changes/p99-am-lenka-pouch/freporte-Olunea_Miltin.lua",
+      "sourceSha256": "c2384b77f138622bc9e8426d72f9951a86508bc9e5b5688792dac0d46c34ee63",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "p99-am-lenka-pouch:maintained/lua/modified-upstream/freeporteast/Olunea_Miltin.lua",
+      "source": "changes/p99-am-lenka-pouch/freeporteast-Olunea_Miltin.lua",
+      "sourceSha256": "c2384b77f138622bc9e8426d72f9951a86508bc9e5b5688792dac0d46c34ee63",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "p99-am-lenka-pouch:maintained/lua/modified-upstream/freporte/Lenka_Stoutheart.lua",
+      "source": "changes/p99-am-lenka-pouch/freporte-Lenka_Stoutheart.lua",
+      "sourceSha256": "2d477ab84b5fdeffd35a38d12fd0057b038eaadbe7f45c85fc4902bbfbf6b802",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "p99-am-lenka-pouch:maintained/lua/modified-upstream/freeporteast/Lenka_Stoutheart.lua",
+      "source": "changes/p99-am-lenka-pouch/freeporteast-Lenka_Stoutheart.lua",
+      "sourceSha256": "8da0e28eb8779e0b0b712117526c6fb1a74b56e8195093ffed18a36e850ba953",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "p99-am-hogcaller-faction:maintained/lua/modified-upstream/freportw/Lady_Shae.lua",
+      "source": "changes/p99-am-hogcaller-faction/freportw-Lady_Shae.lua",
+      "sourceSha256": "5460ea42c3c15c4d26e70044cbbe52f74d91d1a25c661f3c95f875beeca26457",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "p99-am-hogcaller-faction:maintained/lua/modified-upstream/freeportwest/Lady_Shae.lua",
+      "source": "changes/p99-am-hogcaller-faction/freeportwest-Lady_Shae.lua",
+      "sourceSha256": "5c9b0dc63aad508e115ffc6026202fc2ce9e642cc70db71b4a4d9a3e3ec08ce9",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "p99-am-honey-jum-faction:maintained/lua/converted-perl/misty/Joogl_Honeybugger.lua",
+      "source": "changes/p99-am-honey-jum-faction/misty-Joogl_Honeybugger.lua",
+      "sourceSha256": "8cffdf7f06b01db3b21c3d7ae0e680dd56bb1a354183bc77726cfce76d0139ba",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "p99-am-lizard-dialogue:maintained/lua/converted-perl/oggok/Kogna.lua",
+      "source": "changes/p99-am-lizard-dialogue/oggok-Kogna.lua",
+      "sourceSha256": "d973512a989f4710eaf29d036fb5ef463fa6902014568d28bd400001e373c9f4",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "p99-am-lizard-dialogue:maintained/lua/converted-perl/oggok/Grevak.lua",
+      "source": "changes/p99-am-lizard-dialogue/oggok-Grevak.lua",
+      "sourceSha256": "c900cc90a0814169db04caccedf1c7a39ee371d7639585b157c272b6a1ef6ce5",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "p99-am-hehe-meat:maintained/lua/modified-upstream/grobb/Carver_Cagrek.lua",
+      "source": "changes/p99-am-hehe-meat/grobb-Carver_Cagrek.lua",
+      "sourceSha256": "35ba243ee8b2d0960fd3869bbde8dca82559cf9f0dec96b63b5765c9e920ab49",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "p99-am-hehe-meat:maintained/lua/converted-perl/oot/Nerbilik.lua",
+      "source": "changes/p99-am-hehe-meat/oot-Nerbilik.lua",
+      "sourceSha256": "ae62772c841c31ea725fa3964789c8f392d55363ec72348ede2299dfc531fe81",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "p99-am-living-granite:maintained/lua/converted-perl/wakening/#a_storm_giant_architect.lua",
+      "source": "changes/p99-am-living-granite/wakening-#a_storm_giant_architect.lua",
+      "sourceSha256": "ae54966c24d32d567315d7ee3f2e598e67e44e364bb2c78580a61c9e93f23bcd",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "p99-am-incandescent-wand:maintained/lua/converted-perl/soltemple/Sultin.lua",
+      "source": "changes/p99-am-incandescent-wand/soltemple-Sultin.lua",
+      "sourceSha256": "3fc3bf62f9ff603ecd62e1fbd0a466a87acdea63d33b064def7135e2a217f311",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "p99-am-gnoll-paw-faction:maintained/lua/modified-upstream/qrg/Corun_Finisc.lua",
+      "source": "changes/p99-am-gnoll-paw-faction/qrg-Corun_Finisc.lua",
+      "sourceSha256": "7915254ac86ddedd95c81c30ed4e3d2dc85d4f1ab69db3c50c7ab92c34378e26",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "p99-am-hall-steel-note:maintained/lua/modified-upstream/qeynos/Tabure_Ahendle.lua",
+      "source": "changes/p99-am-hall-steel-note/qeynos-Tabure_Ahendle.lua",
+      "sourceSha256": "755e631e828e8a99e4fe88359ed79fe7c2252b7347b9906a27f363bfc4d4d4b9",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "p99-am-cain-note:maintained/lua/modified-upstream/freportw/Cain_Darkmoore.lua",
+      "source": "changes/p99-am-cain-note/freportw-Cain_Darkmoore.lua",
+      "sourceSha256": "9e29139edef7e3ef5193bff85d61a6de4fe7f60b601b247a5f2c6e848fbe7731",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "p99-am-neriak-dialogue:maintained/lua/converted-perl/neriakc/Loveal_S-Nez.lua",
+      "source": "changes/p99-am-neriak-dialogue/neriakc-Loveal_S-Nez.lua",
+      "sourceSha256": "52062d9ba22ef125ec5922ee96e2edb50e0d52789ec26b8af5291a17b0c408a1",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "p99-am-muffin-recipients:qeynos/Voleen_Tassen",
+      "source": "changes/p99-am-muffin-recipients/qeynos-Voleen_Tassen.lua",
+      "sourceSha256": "23a9e82bddd5c31178fe24c4b82622a0eca4113bec9ef139b9ec56a0dbcba80b",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "p99-am-muffin-recipients:feerrott/Innkeep_Gub",
+      "source": "changes/p99-am-muffin-recipients/feerrott-Innkeep_Gub.lua",
+      "sourceSha256": "53bf6e590879cd23113cde103a36f4fd7161715ae24887f29efbcea7216949f7",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "p99-am-muffin-recipients:halas/Hetie_McDonald",
+      "source": "changes/p99-am-muffin-recipients/halas-Hetie_McDonald.lua",
+      "sourceSha256": "9c2ff4dc0f23063edb6b8cba19bd0d08202950d81482f86749520cb39d08210a",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "p99-am-muffin-recipients:neriaka/Sal_Drana",
+      "source": "changes/p99-am-muffin-recipients/neriaka-Sal_Drana.lua",
+      "sourceSha256": "81a578b213287ed53d0b2967aa13bd9bcfece1fb1a773efdcf488ead16268f37",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "p99-am-muffin-recipients:erudnext/Beth_Breadmaker",
+      "source": "changes/p99-am-muffin-recipients/erudnext-Beth_Breadmaker.lua",
+      "sourceSha256": "43b0661dd892b87e9e79f2f13657b85164222e5451bf180919cc44400163af31",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "p99-am-muffin-recipients:qey2hh1/Innkeep_Rislarn",
+      "source": "changes/p99-am-muffin-recipients/qey2hh1-Innkeep_Rislarn.lua",
+      "sourceSha256": "4147cd1a5f1fce3d227d2429b93c512900f486029399d5ffe9a80ff67ed867ee",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "p99-am-muffin-new-recipients:northkarana/Innkeep_James",
+      "source": "changes/p99-am-muffin-new-recipients/northkarana-Innkeep_James.lua",
+      "sourceSha256": "d6682a11ad16fc6c80251a18a390ac86e0ac81cfd1fc392e9a5fb7226f709475",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "p99-am-muffin-new-recipients:freporte/Innkeep_Nasumi",
+      "source": "changes/p99-am-muffin-new-recipients/freporte-Innkeep_Nasumi.lua",
+      "sourceSha256": "122c566a07da2967319023c593204cdc90864568e15c6c1e1620e7b75d1a6e2d",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "p99-am-muffin-new-recipients:freeporteast/Innkeep_Nasumi",
+      "source": "changes/p99-am-muffin-new-recipients/freeporteast-Innkeep_Nasumi.lua",
+      "sourceSha256": "122c566a07da2967319023c593204cdc90864568e15c6c1e1620e7b75d1a6e2d",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "p99-am-muffin-new-recipients:freportn/Gern_Tassel",
+      "source": "changes/p99-am-muffin-new-recipients/freportn-Gern_Tassel.lua",
+      "sourceSha256": "0dc7b746d9c3454ff73c00d836e2ba854cf7b187734edc6aecf049cff1e979bc",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "p99-am-muffin-new-recipients:freeportwest/Gern_Tassel",
+      "source": "changes/p99-am-muffin-new-recipients/freeportwest-Gern_Tassel.lua",
+      "sourceSha256": "0dc7b746d9c3454ff73c00d836e2ba854cf7b187734edc6aecf049cff1e979bc",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "Herb Shop advertised choices",
+      "source": "changes/p99-am-herb-shop/paineel-Yvonne_Ani.lua",
+      "sourceSha256": "4ea5d821237fc956f725b33e27f78381b0a6604c7c6631ebb70eee5b69babf67",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "Shilster exact known faction amounts",
+      "source": "changes/p99-am-shilster-factions/northkarana-Guard_Shilster.lua",
+      "sourceSha256": "468f06e723016ca14998d6c78c502597646710c3f47862160da76710fc1ca811",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "Sojan Toolset receipt drops on ground, not in inventory",
+      "source": "changes/p99-am-nalot-rum/iceclad-Sojan_the_Sleepless.lua",
+      "sourceSha256": "e6d3b1a4740e7b54bac56c3789755eb6d1c188197769f51429036b2cc3587b50",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "Plagus note location precedence maintained/lua/modified-upstream/freportw/Plagus_Ladeson.lua",
+      "source": "changes/p99-am-plagus-note/freportw-Plagus_Ladeson.lua",
+      "sourceSha256": "4b8b25a6192b15ed8eb26df43a97005f1d923307bcf672b6345a1896c02663d0",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "Plagus note location precedence maintained/lua/modified-upstream/freeporteast/Plagus_Ladeson.lua",
+      "source": "changes/p99-am-plagus-note/freeporteast-Plagus_Ladeson.lua",
+      "sourceSha256": "4b8b25a6192b15ed8eb26df43a97005f1d923307bcf672b6345a1896c02663d0",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "Magician armor component dialogue maintained/lua/converted-perl/thurgadina/Kyla_Frostbeard.lua",
+      "source": "changes/p99-am-mage-armor-dialogue/thurgadina-Kyla_Frostbeard.lua",
+      "sourceSha256": "696499192d5016230904007de46ca073d327b435540460699a0c08fb8ecc4422",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "Magician armor component dialogue maintained/lua/converted-perl/kael/Mjeldor_Felstorm.lua",
+      "source": "changes/p99-am-mage-armor-dialogue/kael-Mjeldor_Felstorm.lua",
+      "sourceSha256": "6974750e94d1960520a3ab2ae3e08f4505e7a83612b523314ad21ed041b5b5fc",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "Monk armor completion maintained/lua/converted-perl/kael/Dagron_Stonecutter.lua",
+      "source": "changes/p99-am-monk-armor-dialogue/kael-Dagron_Stonecutter.lua",
+      "sourceSha256": "e02f1582ef12c3f56972d158b8e9e19c8f19e1dc4d07d76ca5313193b0f17ffd",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "Monk armor completion maintained/lua/converted-perl/thurgadina/Lorekeeper_Einar.lua",
+      "source": "changes/p99-am-monk-armor-dialogue/thurgadina-Lorekeeper_Einar.lua",
+      "sourceSha256": "ba8f5c515444095cff2e14804d4f9b98204bb29a9b59a219d0d46d32ada4ce5f",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "Grik vial no-faction exchange maintained/lua/modified-upstream/innothule/Forager_Grik.lua",
+      "source": "changes/p99-am-grik-faction/innothule-Forager_Grik.lua",
+      "sourceSha256": "025161dff1e259aeb90b5a99cb4ebab98336703f6089cf6f581c7a41580bfe0d",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "Grik vial no-faction exchange maintained/lua/modified-upstream/innothuleb/Forager_Grik.lua",
+      "source": "changes/p99-am-grik-faction/innothuleb-Forager_Grik.lua",
+      "sourceSha256": "025161dff1e259aeb90b5a99cb4ebab98336703f6089cf6f581c7a41580bfe0d",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "p99-am-kcor-rewards documented effects or disabled historical preservation",
+      "source": "changes/p99-am-kcor-rewards/skyshrine-Sentry_Kcor.lua",
+      "sourceSha256": "dc65b3c199394d5d0b4ff20684a2ab2389f207ffbbc8950502c982fe20bdf710",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "p99-am-milven-disable documented effects or disabled historical preservation",
+      "source": "changes/p99-am-milven-disable/skyshrine-Lieutenant_Milven.lua",
+      "sourceSha256": "7e5de838a9925ef1674bcbfc841d962db85851b754c35a0271ad54fb92218425",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "p99-am-dorn-dialogue:nro/Dorn_B-Dynn",
+      "source": "changes/p99-am-dorn-dialogue/nro-Dorn_B-Dynn.lua",
+      "sourceSha256": "a2f289281da52cbcdd387dfbab05f4a9d2fa63d70a8627f7819e28954de48ddd",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "p99-am-dorn-dialogue:northro/Dorn_B-Dynn",
+      "source": "changes/p99-am-dorn-dialogue/northro-Dorn_B-Dynn.lua",
+      "sourceSha256": "a2f289281da52cbcdd387dfbab05f4a9d2fa63d70a8627f7819e28954de48ddd",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "Geozite reachable dialogue maintained/lua/converted-perl/cabeast/Drill_Master_Vygan.lua",
+      "source": "changes/p99-am-geozite-dialogue/cabeast-Drill_Master_Vygan.lua",
+      "sourceSha256": "8ffd3f131f44a69d0f546322824cb08a040474e6c1d2d41ae996dbff48a9f7f3",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "Geozite reachable dialogue maintained/lua/converted-perl/swampofnohope/Warlord_Hikyg.lua",
+      "source": "changes/p99-am-geozite-dialogue/swampofnohope-Warlord_Hikyg.lua",
+      "sourceSha256": "6a5f76bd1ff1589106827d672442049f8cda604e06324ad1cac81838dab0da57",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "Gnoll guard and numerical corrections maintained/lua/modified-upstream/halas/Ysanna_MacGibbon.lua",
+      "source": "changes/p99-am-gnoll-guard-factions/halas-Ysanna_MacGibbon.lua",
+      "sourceSha256": "afa5ca5dd3386e3ba281af10bd1c4c204e7e440c626bb0b14d67cbd769f67bd5",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "Gnoll guard and numerical corrections maintained/lua/modified-upstream/highpass/Captain_Orben.lua",
+      "source": "changes/p99-am-gnoll-guard-factions/highpass-Captain_Orben.lua",
+      "sourceSha256": "29e5caa373e2413022448f09cf892963e36df81c7fcb6983aee16e2393400dfd",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "Gnoll guard and numerical corrections maintained/lua/modified-upstream/highpasshold/Captain_Orben.lua",
+      "source": "changes/p99-am-gnoll-guard-factions/highpasshold-Captain_Orben.lua",
+      "sourceSha256": "f038435b399f2348148aa4a415ba78f94c643a626c6f2e4c04baa509681069f5",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "Shamus normalized class rewards and documented aliases",
+      "source": "changes/p99-am-shamus-reward/halas-Shamus_Felligan.lua",
+      "sourceSha256": "668dd4f4ad5ec76202bbee2cd4e780f3ec4dcdbd8f95553b62d10242ac2560ce",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "Shamus existing string class comparisons work through runtime normalizer",
+      "source": "effective/quests/halas/Shamus_Felligan.lua",
+      "sourceSha256": "87284bda911ad973b25d0d820a5ddfb2e06b4b247cfed45b4d89f83303baf448",
+      "coverageKind": "baseline_reproduction"
+    },
+    {
+      "name": "G dialogue and retained trade: changes/p99-am-g-dialogue/kaladima-Kilam_Oresinger.lua",
+      "source": "changes/p99-am-g-dialogue/kaladima-Kilam_Oresinger.lua",
+      "sourceSha256": "ddd57f29ce9e2984e25c2b64f42a64cb7615899897e5f327a44301ad40b12b6e",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "G dialogue and retained trade: changes/p99-am-g-dialogue/oggok-Bonlarg.lua",
+      "source": "changes/p99-am-g-dialogue/oggok-Bonlarg.lua",
+      "sourceSha256": "3a314a84af90e5e1b57bf0559afad8ccc032deb1613c307701904c97ad3a30e2",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "G dialogue and retained trade: changes/p99-am-g-dialogue/firiona-Gearin_Gaxx.lua",
+      "source": "changes/p99-am-g-dialogue/firiona-Gearin_Gaxx.lua",
+      "sourceSha256": "ded62a7809a7ed98e18c452542ca830e53d7e11bc330a91918d370220fe2098a",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "G dialogue and retained trade: changes/p99-am-g-dialogue/freporte-Netuk_Phenzon.lua",
+      "source": "changes/p99-am-g-dialogue/freporte-Netuk_Phenzon.lua",
+      "sourceSha256": "841981c7fda6382aaaf975aba84fc31f50231355999ee030b269d5f19672e3c0",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "G dialogue and retained trade: changes/p99-am-g-dialogue/freeporteast-Netuk_Phenzon.lua",
+      "source": "changes/p99-am-g-dialogue/freeporteast-Netuk_Phenzon.lua",
+      "sourceSha256": "f51010d1b587b242c1119b1290a76424fa3c6e134e89663e65c16cbb0c6a9eb8",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "Heretic Battle changes/p99-am-heretic-dialogue/erudnint-Markus_Jaevins.lua",
+      "source": "changes/p99-am-heretic-dialogue/erudnint-Markus_Jaevins.lua",
+      "sourceSha256": "bca4d81c8da8af1c16584fd607cda45107cc77535c45a2be383a2fb74f9d0c5b",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "Heretic Battle changes/p99-am-heretic-dialogue/erudnint-Warden_Lius.lua",
+      "source": "changes/p99-am-heretic-dialogue/erudnint-Warden_Lius.lua",
+      "sourceSha256": "2b037b19fc42958dd4d62355f10ba1f462a45d6df5b94a78bd5ebe611135ed2a",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "p99-am-holy-armor-guard:changes/p99-am-holy-armor-guard/qeynos-Daedet_Losaren.lua",
+      "source": "changes/p99-am-holy-armor-guard/qeynos-Daedet_Losaren.lua",
+      "sourceSha256": "2bf793db50e53e7e914b858c19db06e2d0640ea4f78ea19292b2a7ab9f0916ad",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "p99-am-hsagra-dialogue:changes/p99-am-hsagra-dialogue/skyshrine-Lawyla.lua",
+      "source": "changes/p99-am-hsagra-dialogue/skyshrine-Lawyla.lua",
+      "sourceSha256": "2b1acf7968d188f4d099ea28e2fbccf11353e70791fa0df3f982f2d04d4dcca5",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "p99-am-hsagra-dialogue:changes/p99-am-hsagra-dialogue/skyshrine-Jualicn.lua",
+      "source": "changes/p99-am-hsagra-dialogue/skyshrine-Jualicn.lua",
+      "sourceSha256": "3bf536601099be22240c0498cbeaa81362a77ab1cf62ac3a220cbf6fef1873ba",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "Hsagra existing token protocol Derasinal",
+      "source": "effective/quests/westwastes/Derasinal.lua",
+      "sourceSha256": "117b193c57eddaed54a17d5cec896034a64476f667d1b344af444d83b7511a86",
+      "coverageKind": "baseline_reproduction"
+    },
+    {
+      "name": "Hsagra existing token protocol Draazak",
+      "source": "effective/quests/westwastes/Draazak.lua",
+      "sourceSha256": "9044f81f519a03359f722dbbb99d88d2feb6e56bf726b61c0391086e8d7c0f9a",
+      "coverageKind": "baseline_reproduction"
+    },
+    {
+      "name": "Hsagra existing token protocol Entariz",
+      "source": "effective/quests/westwastes/Entariz.lua",
+      "sourceSha256": "03cacb03148640a84a65711594a430c536a086469ed5cc6a25292fa34e3ca586",
+      "coverageKind": "baseline_reproduction"
+    },
+    {
+      "name": "Hsagra existing token protocol Ionat",
+      "source": "effective/quests/westwastes/Ionat.lua",
+      "sourceSha256": "ec962d8873da28bffa2fc44b941c0b5b61fd552f522dc86893f1092cac764c1a",
+      "coverageKind": "baseline_reproduction"
+    },
+    {
+      "name": "Hukulk final fifty faction and separate branch preservation",
+      "source": "changes/p99-am-hukulk-faction/grobb-Hukulk.lua",
+      "sourceSha256": "6603aad6c71ebe6b71261c4d8e47356a2ba5aa323933557ddf90948913774d57",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "Glorin documented possessive and legacy plural clue",
+      "source": "changes/p99-am-miner-directions/butcher-Glorin_Binfurr.lua",
+      "sourceSha256": "da5faa646909c4b461ecf42d9373d23651cd2a4acbd4ec77c1aa698f616fc5e0",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "Slicia documented phrases and all four scroll choices",
+      "source": "changes/p99-am-magician-scroll-dialogue/overthere-Slicia_J-Singe.lua",
+      "sourceSha256": "b800eda6798b765707e52655cbe90b39b5c5e884b2a775f6c1c2582429a39068",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "Dal advertised task and five Marauder rewards",
+      "source": "changes/p99-am-dal-task-dialogue/cabeast-Drill_Master_Dal.lua",
+      "sourceSha256": "7529e53da0af1c79c51d7adff7448363f9ade7e9dcbb82fa04e04a91d29fb7de",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "AM monk branch regression maintained/lua/converted-perl/cabeast/Master_Raska.lua",
+      "source": "changes/p99-am-shackle-cash/cabeast-Master_Raska.lua",
+      "sourceSha256": "8ac74e5f4a4056b327dd007dd1876db280aa7221a8dcb256a7e2d9728c7cb0b0",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "AM monk branch regression maintained/lua/converted-perl/cabeast/Master_Niska.lua",
+      "source": "changes/p99-am-shackle-cash/cabeast-Master_Niska.lua",
+      "sourceSha256": "ce2addeff808e760836ca0e7ee1eb6dc5faf34eabef67d057d9549daeef3025c",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "AM monk branch regression maintained/lua/modified-upstream/freeportwest/Velan_Torresk.lua",
+      "source": "changes/p99-am-monk-dialogue/freeportwest-Velan_Torresk.lua",
+      "sourceSha256": "e380e76bf1f8d7f5c5dc75490b2cc297ce4fece42025273eda11dde15adf2a4b",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "AM monk branch regression maintained/lua/modified-upstream/freportw/Reyia_Beslin.lua",
+      "source": "changes/p99-am-monk-dialogue/freportw-Reyia_Beslin.lua",
+      "sourceSha256": "2b0637cf55d361af2a0b230f500d72176adffaca27ad532b91d8f420b31d03f0",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "AM monk branch regression maintained/lua/modified-upstream/freeportwest/Reyia_Beslin.lua",
+      "source": "changes/p99-am-monk-dialogue/freeportwest-Reyia_Beslin.lua",
+      "sourceSha256": "126cff035dbde2e6d9ac26d4357452df376e19f8427d8971cab6c040291ec530",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "AM monk branch regression maintained/lua/converted-perl/rathemtn/Brother_Zephyl.lua",
+      "source": "changes/p99-am-monk-dialogue/rathemtn-Brother_Zephyl.lua",
+      "sourceSha256": "8dd91ee099307035c8dfbc411e2bf948135a883f12104a25b810e0a96ba53ab5",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "AM monk branch regression maintained/lua/converted-perl/timorous/a_dancing_skeleton.lua",
+      "source": "changes/p99-am-monk-dialogue/timorous-a_dancing_skeleton.lua",
+      "sourceSha256": "3c5234e671f6f8b78b08c67f56e1adc122ded648d154bc4cbdb0f0571142292a",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "Oowomp exact500c equivalent payment and preserved spell exchange",
+      "source": "changes/p99-am-oowomp-payment/timorous-The_Great_Oowomp.lua",
+      "sourceSha256": "6cc790ca90f0f1c27b807e4861c25496ce9f36eb6d6ec4287fd197b80060b833",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "AM final Monk Epic regression maintained/lua/converted-perl/timorous/Lheao.lua",
+      "source": "changes/p99-am-monk-epic-dialogue/timorous-Lheao.lua",
+      "sourceSha256": "14a72e535c752950c9bc7c7b853aaef7bd5de1be7c45f7a74da479ccc636ea8a",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "AM final Monk Epic regression maintained/lua/converted-perl/trakanon/#Kaiaren.lua",
+      "source": "changes/p99-am-monk-epic-dialogue/trakanon-#Kaiaren.lua",
+      "sourceSha256": "9d50cd006a3af7cbf55b4902720c0948c90359ec3582326553ecafb9cde2dbe1",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "AM final Monk Epic regression maintained/lua/converted-perl/trakanon/Kaiaren.lua",
+      "source": "changes/p99-am-monk-epic-dialogue/trakanon-Kaiaren.lua",
+      "sourceSha256": "419b07b1f65de8173be86fa63f2f14c251289cbceb2431704e935e8fcdb8d209",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "AM final Monk Epic regression maintained/lua/converted-perl/lakerathe/Deep.lua",
+      "source": "changes/p99-am-monk-epic-dialogue/lakerathe-Deep.lua",
+      "sourceSha256": "63579074ae9c47a47795bba2bfcde2267112773e5ddab647f53f2bde793bcb23",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "AM final Monk Epic regression maintained/lua/converted-perl/lakeofillomen/Astral_Projection.lua",
+      "source": "changes/p99-am-monk-epic-dialogue/lakeofillomen-Astral_Projection.lua",
+      "sourceSha256": "771362071ff9f578b5a2d191c48472b360546653e97b52e089ffe2872d1d8604",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "AM final Monk Epic regression maintained/lua/modified-upstream/nurga/a_sleeping_ogre.lua",
+      "source": "changes/p99-am-trunt-replacement/nurga-a_sleeping_ogre.lua",
+      "sourceSha256": "f2e805abf1fab323aeba4d4d7545b12b47a1ff5b91c4a22f4dddb9d62f035fad",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "AM final Monk Epic regression maintained/lua/idlequest-authored/nurga/Trunt.lua",
+      "source": "changes/p99-am-trunt-replacement/nurga-Trunt.lua",
+      "sourceSha256": "10bf81c017f978cc7d5de5433336572af0251d7a9f43c17272d03248989e4f0b",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "AM all Sky test exchanges airplane/Frederic_Calermin",
+      "source": "changes/p99-am-frederic-dialogue/airplane-Frederic_Calermin.lua",
+      "sourceSha256": "f001a4640fc403366a41cff462b57abdd50b98d0e30732d381765fe8bb747c95",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "AM all Sky test exchanges airplane/Roanis_Elindar",
+      "source": "sources/projecteq/airplane/Roanis_Elindar.lua",
+      "sourceSha256": "de08558ac91429de8ee325c1090ce90baf272f6dab30ddd23deb09944677fb92",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "AM all Sky test exchanges airplane/Ton_Po",
+      "source": "changes/p99-am-monk-sky-upgrades/airplane-Ton_Po.lua",
+      "sourceSha256": "d8fe202e461135d3f180aa1a00d09947e0671e98ac1a067b6e3546a2f4b6acc2",
+      "coverageKind": "proposal_source"
+    },
+    {
+      "name": "AM all Sky test exchanges airplane/Wu_the_Enlightened",
+      "source": "changes/p99-am-monk-sky-upgrades/airplane-Wu_the_Enlightened.lua",
+      "sourceSha256": "d860ae7e59d1258b42a92a53154ce82b847542a4176b1dafb52326b8e4b669e7",
+      "coverageKind": "proposal_source"
+    }
+  ],
+  "latest_refresh": "All91 cases rerun after restoring the two documented legacy Monk Sky exchanges. Ton Po and Wu cases now cover proposed sources; unchanged Roanis remains baseline_verification.",
+  "coverageKinds": {
+    "proposal_source": 85,
+    "baseline_reproduction": 5,
+    "baseline_verification": 1
+  }
+}

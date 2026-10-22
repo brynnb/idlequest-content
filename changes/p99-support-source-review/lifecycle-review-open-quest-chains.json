@@ -1,0 +1,232 @@
+{
+  "scope": "Unresolved identity/era after targeted closure; full main bodies read. Not complete list of unproven numeric/P99 facets, which remain in lifecycle-review.json.",
+  "count": 22,
+  "records": [
+    {
+      "key": "befallen/#a_skeletal_foreman",
+      "sha256": "4db814a55f0ddfc33183e81ece5b824d5c49bc602fcb82d493e5af01a3b3590f",
+      "behavior": "Excavator death has20% foreman spawn; foreman death uniquely spawns Sir Ariam Arcanum. Ariam current source uses Ghostly Bridle31492, Scroll18474 and Token31493.",
+      "limitations": [
+        "The Burning Dead cache is Opal/Marnek, not proof for this bridle chain. Existing Ariam review explicitly leaves P99 implementation unproved; do not disable this classic-zone NPC family by name/absence."
+      ],
+      "evidence": [
+        {
+          "artifact": "changes/p99-source-review/review-records.json",
+          "recordKey": "befallen/#Sir_Ariam_Arcanum",
+          "fact": "unresolved_no_exact_p99_implementation_proof; adjacent review does not certify these two source keys."
+        },
+        {
+          "title": "The Burning Dead",
+          "path": "reference/p99-wiki/raw-pages/the-burning-dead-7cdacc0dd3.wiki",
+          "sha256": "0f78b670fcb51427e1e10a0918f8df8eeac83ca023738085452ac9efeb26712d",
+          "fact": "Unsolved Opal/Marnek quest, not Sir Ariam evidence.",
+          "freshness": "cached snapshot, not newly fetched wiki",
+          "metadata": "reference/p99-wiki/raw-pages/the-burning-dead-7cdacc0dd3.json"
+        }
+      ]
+    },
+    {
+      "key": "befallen/a_skeletal_excavator",
+      "sha256": "a36ffb91900f9b8d8f6b454173df61c6fde73321a43824d7261c30ae85d2e240",
+      "behavior": "Excavator death has20% foreman spawn; foreman death uniquely spawns Sir Ariam Arcanum. Ariam current source uses Ghostly Bridle31492, Scroll18474 and Token31493.",
+      "limitations": [
+        "The Burning Dead cache is Opal/Marnek, not proof for this bridle chain. Existing Ariam review explicitly leaves P99 implementation unproved; do not disable this classic-zone NPC family by name/absence."
+      ],
+      "evidence": [
+        {
+          "artifact": "changes/p99-source-review/review-records.json",
+          "recordKey": "befallen/#Sir_Ariam_Arcanum",
+          "fact": "unresolved_no_exact_p99_implementation_proof; adjacent review does not certify these two source keys."
+        },
+        {
+          "title": "The Burning Dead",
+          "path": "reference/p99-wiki/raw-pages/the-burning-dead-7cdacc0dd3.wiki",
+          "sha256": "0f78b670fcb51427e1e10a0918f8df8eeac83ca023738085452ac9efeb26712d",
+          "fact": "Unsolved Opal/Marnek quest, not Sir Ariam evidence.",
+          "freshness": "cached snapshot, not newly fetched wiki",
+          "metadata": "reference/p99-wiki/raw-pages/the-burning-dead-7cdacc0dd3.json"
+        }
+      ]
+    },
+    {
+      "key": "cazicthule/#a_Thul_Tae_Ew_High_Priest",
+      "sha256": "24d79ef7277e74971b472cfc48d383524bbd8bd67b4bf8dc9cd8603de2c4d647",
+      "behavior": "Cazic Thule revamp encounters: High Priest creates Tahia/guard groups; Avatar waypoint waves add Dread/Fright/Terror and later becomes attackable.",
+      "limitations": [
+        "Source explicitly calls revamp; exact P99-versus-later version and NPC IDs unresolved. Do not disable on revamp label alone."
+      ],
+      "evidence": []
+    },
+    {
+      "key": "cazicthule/#Avatar_of_Fear",
+      "sha256": "74920fd49d046246ffc52478321731546ce760e0d99e9214813e67aeffaf3bec",
+      "behavior": "Cazic Thule revamp encounters: High Priest creates Tahia/guard groups; Avatar waypoint waves add Dread/Fright/Terror and later becomes attackable.",
+      "limitations": [
+        "Source explicitly calls revamp; exact P99-versus-later version and NPC IDs unresolved. Do not disable on revamp label alone."
+      ],
+      "evidence": []
+    },
+    {
+      "key": "frontiermtns/#a_goblin_whipcracker",
+      "sha256": "d86cb2f02175a26e874c10d6fe35ab31ba53a04f4c3f4e91582b9a5b78fb7ed5",
+      "behavior": "Goblin-language contest at19:00 requires language100 and buff5574; speech spawns Dronan92198/Garzul92199/Hunknort92200; includes testquest/debug branch.",
+      "limitations": [
+        "Behavior is a quest event, not ambient. Quest era and spell5574 relationship unresolved; no disabling based solely on language gate or numeric ID."
+      ],
+      "evidence": []
+    },
+    {
+      "key": "kithicor/#Blackened_Treant",
+      "sha256": "a010d86ead65893b62582545afe563398b283fc8be6ae270b3c721d1d5e55cb3",
+      "behavior": "Blackened Treant creates ten limbs20300 on death; last limb death counts remaining limbs then creates Dryad20301.",
+      "limitations": [
+        "Quest-like multi-stage death chain; final dryad body is combat spell5801 only. Exact epic identity/era not independently established; leave unresolved rather than guessing ranger1.5."
+      ],
+      "evidence": []
+    },
+    {
+      "key": "kithicor/#Blackened_Tree_Limb",
+      "sha256": "9d9a5c48b4e1074999e91da1382560ae72b6eeb25e53ba18d176e44ef48c0038",
+      "behavior": "Blackened Treant creates ten limbs20300 on death; last limb death counts remaining limbs then creates Dryad20301.",
+      "limitations": [
+        "Quest-like multi-stage death chain; final dryad body is combat spell5801 only. Exact epic identity/era not independently established; leave unresolved rather than guessing ranger1.5."
+      ],
+      "evidence": []
+    },
+    {
+      "key": "lakeofillomen/Impervious_Bloodbeast",
+      "sha256": "7b012247293a46a832790f68f231d4cc4600da1c97b8d973913bc4d969dcc6ee",
+      "behavior": "Impervious Bloodbeast death signals Lingering Axefall85091.",
+      "limitations": [
+        "Recipient effective Lua body empty; chain/era/reward semantics not established, and NPC exclusion cannot stand in for quest ban."
+      ],
+      "evidence": []
+    },
+    {
+      "key": "lakerathe/#Gnoll_Scavenger",
+      "sha256": "33fb7400f6c4a648da81390d06cec7fcc94c61992c5d972581b13fb7bb02f303",
+      "behavior": "Gnoll Scavenger death signals Worboli51156.",
+      "limitations": [
+        "Recipient effective Lua body empty; cannot infer exact quest/era from the signal or name alone."
+      ],
+      "evidence": []
+    },
+    {
+      "key": "nro/a_guardian_tormentor",
+      "sha256": "b9e91a7485953b39f2ce1d5ef0e9efb5756bff8560be733cc133b925e34c5e8f",
+      "behavior": "Northern Ro haunt/tormentor/knight death chain: haunt creates392105; tormentor creates392107; lamented knight signals392057.",
+      "limitations": [
+        "Likely quest support, but not sufficient exact-key evidence to assign P99 or later era from actor names; left enabled pending chain identification."
+      ],
+      "evidence": []
+    },
+    {
+      "key": "nro/a_haunt",
+      "sha256": "923a90dcfdf8f80c2a09a455264802c6fee5d4c1f17009437eb53681f8db46a3",
+      "behavior": "Northern Ro haunt/tormentor/knight death chain: haunt creates392105; tormentor creates392107; lamented knight signals392057.",
+      "limitations": [
+        "Likely quest support, but not sufficient exact-key evidence to assign P99 or later era from actor names; left enabled pending chain identification."
+      ],
+      "evidence": []
+    },
+    {
+      "key": "nro/a_lamented_knight",
+      "sha256": "49196a5712d661748d22fbcc1edee7b4d0a6c2ac09497f523ead33d973f9119a",
+      "behavior": "Northern Ro haunt/tormentor/knight death chain: haunt creates392105; tormentor creates392107; lamented knight signals392057.",
+      "limitations": [
+        "Likely quest support, but not sufficient exact-key evidence to assign P99 or later era from actor names; left enabled pending chain identification."
+      ],
+      "evidence": []
+    },
+    {
+      "key": "qey2hh1/12183",
+      "sha256": "4ea2d25fc6588caad51ad745c147a61927c985e1b0ef195cea4729383c4d649f",
+      "behavior": "Western Karana werewolf/curse event: one source counts deaths toward four then creates Shady12185; other death creates same; HP thresholds raise max hit1400/1600/1800.",
+      "limitations": [
+        "Quest identity/era and whether death counter persists across instances unresolved; do not silently certify or rewrite to inferred later quest."
+      ],
+      "evidence": []
+    },
+    {
+      "key": "qey2hh1/12184",
+      "sha256": "0b746b4227e657b98f6ef233d22fc683f47dd63e14ec6f8a8a3e9d7c4ac26359",
+      "behavior": "Western Karana werewolf/curse event: one source counts deaths toward four then creates Shady12185; other death creates same; HP thresholds raise max hit1400/1600/1800.",
+      "limitations": [
+        "Quest identity/era and whether death counter persists across instances unresolved; do not silently certify or rewrite to inferred later quest."
+      ],
+      "evidence": []
+    },
+    {
+      "key": "rathemtn/Rambling_Sphinx_Spiritservant",
+      "sha256": "bda83cdba9f31ee24af85d4b97b5c75077acf6941d66200e8ea84badc51401a4",
+      "behavior": "Rambling/Raving Sphinx Spiritservant deaths create Zazamoukh50230 or Ankhefenmut50231.",
+      "limitations": [
+        "Exact quest family, era and intended drop/reward chain unresolved; no automatic later exclusion by naming."
+      ],
+      "evidence": []
+    },
+    {
+      "key": "rathemtn/Raving_Sphinx_Spiritservant",
+      "sha256": "462ed67ef5d36287827ff91499358af170d347661c7f553389c090e9d3229735",
+      "behavior": "Rambling/Raving Sphinx Spiritservant deaths create Zazamoukh50230 or Ankhefenmut50231.",
+      "limitations": [
+        "Exact quest family, era and intended drop/reward chain unresolved; no automatic later exclusion by naming."
+      ],
+      "evidence": []
+    },
+    {
+      "key": "sebilis/#froglok_krup_knight",
+      "sha256": "d1d40980941ef5b2f1f6fa6812f5066644c3a671efdaf012f009564553683fa8",
+      "behavior": "Froglok krup knight death has10% chance to create watcher89182.",
+      "limitations": [
+        "Exact quest relationship and probability not established by existing manual review; retain as open spawn-support source."
+      ],
+      "evidence": []
+    },
+    {
+      "key": "timorous/Draz_Nurakk",
+      "sha256": "8016936dda407c8498e2828c550349a94e5704895545509e8cd967c245327820",
+      "behavior": "Timorous Draz Nurakk death creates six images; Grandmaster\u2192Master\u2192Rinmark idle90second transition stages. an Iksar master source mixes classic shackle hand-ins with test-of-patience activation.",
+      "limitations": [
+        "Do not disable classic Rinmark family. Need prove these specific stages belong exclusively to post-Velious Tynnonium rather than classic shackles; current classic cache references are insufficient."
+      ],
+      "evidence": []
+    },
+    {
+      "key": "timorous/Grandmaster_Rinmark",
+      "sha256": "14d3f899be6cfd55231186a17a6dd5d58f9d1495613fc16695a78ff56c5f5f61",
+      "behavior": "Timorous Draz Nurakk death creates six images; Grandmaster\u2192Master\u2192Rinmark idle90second transition stages. an Iksar master source mixes classic shackle hand-ins with test-of-patience activation.",
+      "limitations": [
+        "Do not disable classic Rinmark family. Need prove these specific stages belong exclusively to post-Velious Tynnonium rather than classic shackles; current classic cache references are insufficient."
+      ],
+      "evidence": []
+    },
+    {
+      "key": "timorous/Master_Rinmark",
+      "sha256": "d5f7eb3b9c6ea5d1cd8f1f75fb85c6432025d5ffcfcbdc4a0449655924f6e0c4",
+      "behavior": "Timorous Draz Nurakk death creates six images; Grandmaster\u2192Master\u2192Rinmark idle90second transition stages. an Iksar master source mixes classic shackle hand-ins with test-of-patience activation.",
+      "limitations": [
+        "Do not disable classic Rinmark family. Need prove these specific stages belong exclusively to post-Velious Tynnonium rather than classic shackles; current classic cache references are insufficient."
+      ],
+      "evidence": []
+    },
+    {
+      "key": "warslikswood/a_frantic_goblin",
+      "sha256": "035157961f2d4322c4e2c247b16e7c8bd3b7ffeedc5f10a76e5aa015fb64fef3",
+      "behavior": "Frantic/Ferocious goblin waits60seconds, signals Raving Goblinmaster79127; death sends different signal and received signal depops.",
+      "limitations": [
+        "Recipient full source not available under searched exact name; event identity/era unresolved. Do not label this ambient simply because no reward call occurs."
+      ],
+      "evidence": []
+    },
+    {
+      "key": "warslikswood/Ferocious_Goblin",
+      "sha256": "97df52fec6602a7e8d3f0278c1df8ae8844f0f464925a34cc8a1005c94f5d6af",
+      "behavior": "Frantic/Ferocious goblin waits60seconds, signals Raving Goblinmaster79127; death sends different signal and received signal depops.",
+      "limitations": [
+        "Recipient full source not available under searched exact name; event identity/era unresolved. Do not label this ambient simply because no reward call occurs."
+      ],
+      "evidence": []
+    }
+  ]
+}

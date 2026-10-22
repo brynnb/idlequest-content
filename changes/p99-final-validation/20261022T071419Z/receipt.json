@@ -1,0 +1,43 @@
+{
+  "status": "interim_diagnostic_complete_with_documented_failures",
+  "capturedAt": "2026-10-22T07:14:35.666515+00:00",
+  "completedAt": "2026-10-22T07:41:13.513856+00:00",
+  "inputSetSha256": "7a482105afb79c6976cbff2c4634e298892e57bdc224d5782583c99e7c355936",
+  "preparedInputSetSha256": "e6e942e1f043e02a532029080a1d1a376c839952de033b1d8c66ae6bbbb46a63",
+  "postPreparationDrift": [],
+  "rows": 896,
+  "sources": 817,
+  "proposedLuaSources": 816,
+  "npm": {
+    "passed": 76,
+    "failed": 3,
+    "skipped": 1
+  },
+  "mainBehavior": "Blocked before execution by missing Mazziana source identity; no main behavior receipt produced.",
+  "actualCombinedCLI": "Failed on unsupported Dapper source target. Owner corrected targets later; this old snapshot remains failed.",
+  "baseline": {
+    "files": 36496,
+    "tables": 53,
+    "validated": true,
+    "gitDiffEmpty": true
+  },
+  "byteExactCompile": {
+    "checked": 8885,
+    "passed": 8884,
+    "failed": 1,
+    "allProposedPassed": true,
+    "knownBaselineFailure": "effective/quests/utility/comments-helper-generator.lua is a disabled baseline Perl utility, not valid Lua."
+  },
+  "references": {
+    "declaredRowLinksChecked": 45,
+    "missingRowLinks": 0,
+    "missingLiteralOccurrences": 33,
+    "classification": "All 33 are retained historical references in eight disabled rows, with original callback bodies preserved. Snapshot checker predates classification and exits nonzero.",
+    "postSnapshotToolCheck": "New checker and four focused tests passed separately; post-snapshot artifacts do not claim the new tool was part of the captured snapshot."
+  },
+  "limits": [
+    "Not final-set certification.",
+    "No live game, database transaction, crafting, pickup, world activation, persistent encounter or UI proof.",
+    "No private raw runtime evidence copied. Publication-pattern scan is a guard, not proof of absence of arbitrary confidential information."
+  ]
+}

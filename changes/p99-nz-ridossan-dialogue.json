@@ -1,0 +1,116 @@
+{
+  "format": 1,
+  "id": "p99-nz-ridossan-dialogue",
+  "summary": "Restore documented Ridossan quest conversations, transformation and death/ghost acknowledgements.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Ridossan's_Spirit?action=raw",
+      "note": "Cached 2026-07-17T23:30:43.548Z; revision unavailable; SHA256 a6abef8cc80588a22b07b0d5e1d44201d75fe92b1b533908bf11ecfda86f92ee. Items2100GrimyLance->2297IdolFear->2099SoulfiendLance verified against exported rows. Restore earlier-campaign clue and separate form/revenge response. Preserve existing movement, timers, spawns and one-minute ghost window. Final ghost XP and five faction rewards documented by P99 are missing; upstream Perl also has no values, so no guessed amounts added. Full combat, actual loot, movement and transactions unverified. This is dialogue parity only, not a complete playable-path repair."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 13637,
+        "zone": "stonebrunt",
+        "name": "a_spirit",
+        "lua_content": "-- P99: https://wiki.project1999.com/Ridossan%27s_Spirit\n-- Ported from upstream/projecteq/stonebrunt; existing faction convenience retained.\nlocal item_lib = require(\"items\")\nfunction event_say(e)\n  if e.message:findi(\"hail\") then\n    e.self:Emote(\"whispers of the Kejekan who slew him. He cannot take revenge in this [form].\")\n  elseif e.message:findi(\"form\") or e.message:findi(\"revenge\") then\n    e.self:Emote(\"whispers that his lost weapon will let him become whole again. Return the Grimy Lance and help him take revenge.\")\n  end\nend\nfunction event_trade(e)\n  if item_lib.check_turn_in(e.trade, {item1=2100}) then\n    e.self:Say(\"Yes! The lance.\")\n    e.other:AddEXP(10000)\n    e.other:SummonItem(2297)\n    eq.set_timer(\"turn\", 2000)\n  end\n  item_lib.return_items(e.self, e.other, e.trade)\nend\nfunction event_timer(e)\n  if e.timer == \"turn\" then\n    eq.stop_timer(\"turn\")\n    eq.unique_spawn(100221, 323, 0, -70, 474, 509, e.self:GetHeading())\n    eq.depop_with_timer()\n  end\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 13637,
+        "zone": "stonebrunt",
+        "name": "a_spirit",
+        "lua_content": "-- P99: https://wiki.project1999.com/Ridossan%27s_Spirit\n-- Ported from upstream/projecteq/stonebrunt; existing faction convenience retained.\nlocal item_lib = require(\"items\")\nfunction event_say(e)\n  if e.message:findi(\"hail\") then\n    e.self:Emote(\"flares brightly as you attempt to speak with it. By listening very closely you're barely able to make out it's frantic whispering. It keeps referring to one of the Kejekans, one that apparently slew him as he attempted to cleanse the land of them. It wants nothing more than to destroy who killed him, but it cannot in this [form].\")\n  elseif e.message:findi(\"form\") then\n    e.self:Emote(\"flares brightly again as it explains there isn't enough time for it to explain. It then begins to whisper again, telling you that it commands you to aid it in its [revenge]. You make out, through the barely audible whispering, that if you do help it, you will be rewarded.\")\n  elseif e.message:findi(\"revenge\") then\n    e.self:Emote(\"whispers that he will need to become whole again before he can defeat the fool animal that slew him. The spirit admits to one mistake before coming here to wipe the Kejekans. In an [earlier campaign], he lost a very powerful weapon. That weapon would enable him to take on a form likened to his former self. If you return this weapon to the spirit, and then help him to defeat his enemy, the reward will be yours.\")\n  elseif e.message:findi(\"earlier campaign\") then\n    e.self:Emote(\"seems hesitant to go into details and reacts harshly when asked further. He does say that he went to enlist an army of lesser beings to do its bidding, but they refused. The spirit scoffs and says they believed the lord they shared favored them more than it. It goes on, explaining their utter foolishness and eventual demise in great detail.\")\n  end\nend\nfunction event_trade(e)\n  if item_lib.check_turn_in(e.trade, {item1=2100}) then\n    e.self:Say(\"Yes, the lance!\")\n    e.self:Emote(\"begins to glow as it draws power from the lance, which now floats in mid air next to the spirit. The form of the spirit expands and takes on a humanoid shape. The air itself then seems to condense about the spirit as bits of matter appear within the glowing form. The bits soon take the shape of bones and ropes of muscle. Within minutes, an emaciated Erudite male stands before you. Despite his frail appearance, he stands upright and strong, a fierce red light burning in his eyes.\")\n    e.other:AddEXP(10000)\n    e.other:SummonItem(2297)\n    eq.set_timer(\"turn\", 2000)\n  end\n  item_lib.return_items(e.self, e.other, e.trade)\nend\nfunction event_timer(e)\n  if e.timer == \"turn\" then\n    eq.stop_timer(\"turn\")\n    eq.unique_spawn(100221, 323, 0, -70, 474, 509, e.self:GetHeading())\n    eq.depop_with_timer()\n  end\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 15408,
+        "zone": "stonebrunt",
+        "name": "Ridossan_the_Unliving",
+        "lua_content": "-- P99: https://wiki.project1999.com/Ridossan%27s_Spirit\n-- Ported from upstream/projecteq/stonebrunt; existing faction convenience retained.\nfunction event_spawn(e)\n  e.self:Shout(\"I shall have my revenge!!\")\n  e.self:SetRunning(true)\nend\nfunction event_waypoint_arrive(e)\n  if e.wp == 6 then eq.unique_spawn(100133, 0, 0, -629, 1219, 1028, 79) end\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 15408,
+        "zone": "stonebrunt",
+        "name": "Ridossan_the_Unliving",
+        "lua_content": "-- P99: https://wiki.project1999.com/Ridossan%27s_Spirit\n-- Ported from upstream/projecteq/stonebrunt; existing faction convenience retained.\nfunction event_spawn(e)\n  e.self:Emote(\"gazes upon his lance and begins to laugh maniacally.\")\n  e.self:Say(\"AH HAH! I am corporeal once more! I cannot hold this form for long, but it will be long enough for me to rip open that flea brothel and... well, I won't spoil it for you, heheheheh. Come! Assist me in the attack on the Kejekan village! The one that wears the iron beads must die at my hands and NO OTHER! Just make sure I get to him and you will be rewarded.\")\n  e.self:SetRunning(true)\nend\nfunction event_waypoint_arrive(e)\n  if e.wp == 6 then eq.unique_spawn(100133, 0, 0, -629, 1219, 1028, 79) end\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 17512,
+        "zone": "stonebrunt",
+        "name": "Disciple_Okarote",
+        "lua_content": "-- P99: https://wiki.project1999.com/Ridossan%27s_Spirit\n-- Ported from upstream/projecteq/stonebrunt; existing faction convenience retained.\nfunction event_spawn(e) eq.set_timer(\"depop\", 300000) end\nfunction event_timer(e)\n  if e.timer == \"depop\" then eq.stop_timer(\"depop\"); eq.depop() end\nend\nfunction event_death_complete(e)\n  eq.unique_spawn(100222, 0, 0, e.self:GetX(), e.self:GetY(), e.self:GetZ(), e.self:GetHeading())\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 17512,
+        "zone": "stonebrunt",
+        "name": "Disciple_Okarote",
+        "lua_content": "-- P99: https://wiki.project1999.com/Ridossan%27s_Spirit\n-- Ported from upstream/projecteq/stonebrunt; existing faction convenience retained.\nfunction event_spawn(e) eq.set_timer(\"depop\", 300000) end\nfunction event_timer(e)\n  if e.timer == \"depop\" then eq.stop_timer(\"depop\"); eq.depop() end\nend\nfunction event_death_complete(e)\n  e.self:Say(\"You may have slain me, but your conscience will slay you in the end, and it will be a hundred times more painful.\")\n  eq.unique_spawn(100222, 0, 0, e.self:GetX(), e.self:GetY(), e.self:GetZ(), e.self:GetHeading())\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 12552,
+        "zone": "stonebrunt",
+        "name": "Ghost_of_Ridossan",
+        "lua_content": "-- P99: https://wiki.project1999.com/Ridossan%27s_Spirit\n-- Ported from upstream/projecteq/stonebrunt; existing faction convenience retained.\nlocal item_lib = require(\"items\")\nfunction event_spawn(e)\n  -- P99 documents a roughly one-minute hand-in window.\n  eq.set_timer(\"depop\", 60000)\n  e.self:Say(\"Before I leave, hand me the token of Cazic-Thule, and I shall pass you the spear I once used.\")\nend\nfunction event_trade(e)\n  if item_lib.check_turn_in(e.trade, {item1=2297}) then\n    e.self:Emote(\"takes the idol and shoves the lance into your arms. As he fades away, he whispers, 'Suffer.'\")\n    e.other:SummonItem(2099)\n    eq.stop_timer(\"depop\")\n    eq.depop()\n  end\n  item_lib.return_items(e.self, e.other, e.trade)\nend\nfunction event_timer(e)\n  if e.timer == \"depop\" then eq.stop_timer(\"depop\"); eq.depop() end\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 12552,
+        "zone": "stonebrunt",
+        "name": "Ghost_of_Ridossan",
+        "lua_content": "-- P99: https://wiki.project1999.com/Ridossan%27s_Spirit\n-- Ported from upstream/projecteq/stonebrunt; existing faction convenience retained.\nlocal item_lib = require(\"items\")\nfunction event_spawn(e)\n  -- P99 documents a roughly one-minute hand-in window.\n  eq.set_timer(\"depop\", 60000)\n  e.self:Say(\"I will soon move on from this world to meet my ultimate fate. But before I go, I must reward the stranger that assisted me. Hand me the idol I gave you and you will be rewarded.\")\nend\nfunction event_trade(e)\n  if item_lib.check_turn_in(e.trade, {item1=2297}) then\n    e.self:Emote(\"takes the idol into his spectral hand and shoves the lance into your arms. After letting go of the lance, the ghost immediately begins to fade away. Before it is gone completely, it looks into your eyes and says, 'Suffer.'\")\n    e.other:SummonItem(2099)\n    eq.stop_timer(\"depop\")\n    eq.depop()\n  end\n  item_lib.return_items(e.self, e.other, e.trade)\nend\nfunction event_timer(e)\n  if e.timer == \"depop\" then eq.stop_timer(\"depop\"); eq.depop() end\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/stonebrunt/a_spirit.lua",
+      "beforeSha256": "b2d47c19f25b8aa81a8918e206a46025a2c509ff61abb10c3318e424ebb8aa55",
+      "proposedFile": "changes/p99-nz-ridossan-dialogue/stonebrunt--a_spirit.lua",
+      "afterSha256": "fc7fc6a46d8701d895195f54f088d4282b062e739efad0a7bf283efff5ccd2c0"
+    },
+    {
+      "target": "maintained/lua/converted-perl/stonebrunt/Ridossan_the_Unliving.lua",
+      "beforeSha256": "3822faf9dadd76c450bd8ea55cac233212ef351308743a6469fe13c5a407d6df",
+      "proposedFile": "changes/p99-nz-ridossan-dialogue/stonebrunt--Ridossan_the_Unliving.lua",
+      "afterSha256": "9d48a80f4c8c1bd7b1e4d4da18b2d4f9b6ceb3c765835a08a05da117e1029d1e"
+    },
+    {
+      "target": "maintained/lua/converted-perl/stonebrunt/Disciple_Okarote.lua",
+      "beforeSha256": "661c72ac78c97956c1fbeeef44030e43e2f60e66192966bd8657a101de27180a",
+      "proposedFile": "changes/p99-nz-ridossan-dialogue/stonebrunt--Disciple_Okarote.lua",
+      "afterSha256": "159cebfa2c11e00e290370d9b39cc3186c016e8822dc08c5b9fbc27d3c053555"
+    },
+    {
+      "target": "maintained/lua/converted-perl/stonebrunt/Ghost_of_Ridossan.lua",
+      "beforeSha256": "61f4eedee5c1a13dc897ba5a3827a415180f6269fce061a7583f8badf9018b55",
+      "proposedFile": "changes/p99-nz-ridossan-dialogue/stonebrunt--Ghost_of_Ridossan.lua",
+      "afterSha256": "81fb48988e7c70bb57de3d253572d3dd58fee6e9f0d763f589ff6bd5aebfd249"
+    }
+  ]
+}

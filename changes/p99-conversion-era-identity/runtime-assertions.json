@@ -1,0 +1,121 @@
+[
+  {
+    "name": "Bidils hail exact, repeated and case-insensitive",
+    "proposedFile": "changes/p99-conversion-era-identity/misty/Bidils_the_Quickhand.lua",
+    "sourceSha256": "62f3461821f1f0b2adedc2b196e90cfb26e268c55cdfb690b90b4fcd5d3c3418",
+    "setupExtra": "other.GetRaceName=function() return \"Halfling\" end\n",
+    "assertions": "calls.speech={}\nsay(\"hail\")\nequal(#calls.speech,1)\nequal(calls.speech[1],\"Why, hello there Reviewer! And what brings ya to see little old me? Oh, let me guess! I am sure it is because ya wish t'buy a good spot of Jumjum and listen to [my tale]? Oh, quite lovely so! Why else would one well rounded Halfling come to see the great Bidils the Quickhand other than to hear of this rogue's great adventures!\")\ncalls.speech={}\nsay(\"HAIL\")\nequal(#calls.speech,1)\nequal(calls.speech[1],\"Why, hello there Reviewer! And what brings ya to see little old me? Oh, let me guess! I am sure it is because ya wish t'buy a good spot of Jumjum and listen to [my tale]? Oh, quite lovely so! Why else would one well rounded Halfling come to see the great Bidils the Quickhand other than to hear of this rogue's great adventures!\")\nequal(calls.exp,0)\nassert(next(calls.rewards)==nil)\nassert(next(calls.factions)==nil)"
+  },
+  {
+    "name": "Bidils my tale exact, repeated and case-insensitive",
+    "proposedFile": "changes/p99-conversion-era-identity/misty/Bidils_the_Quickhand.lua",
+    "sourceSha256": "62f3461821f1f0b2adedc2b196e90cfb26e268c55cdfb690b90b4fcd5d3c3418",
+    "setupExtra": "other.GetRaceName=function() return \"Halfling\" end\n",
+    "assertions": "calls.speech={}\nsay(\"my tale\")\nequal(#calls.speech,1)\nequal(calls.speech[1],\"Ahhh. . . I see the gods have found the time to be now for a good ear to lend to my words! So long as ya share the Jumjum, I can speak t'ya of the endless adventures and triumphs of Bidils the Quickhand! Now. . . where shall I begin? Yes! [The beginning], of course! Indeed, quite lovely so.\")\ncalls.speech={}\nsay(\"MY TALE\")\nequal(#calls.speech,1)\nequal(calls.speech[1],\"Ahhh. . . I see the gods have found the time to be now for a good ear to lend to my words! So long as ya share the Jumjum, I can speak t'ya of the endless adventures and triumphs of Bidils the Quickhand! Now. . . where shall I begin? Yes! [The beginning], of course! Indeed, quite lovely so.\")\nequal(calls.exp,0)\nassert(next(calls.rewards)==nil)\nassert(next(calls.factions)==nil)"
+  },
+  {
+    "name": "Bidils The beginning exact, repeated and case-insensitive",
+    "proposedFile": "changes/p99-conversion-era-identity/misty/Bidils_the_Quickhand.lua",
+    "sourceSha256": "62f3461821f1f0b2adedc2b196e90cfb26e268c55cdfb690b90b4fcd5d3c3418",
+    "setupExtra": "other.GetRaceName=function() return \"Halfling\" end\n",
+    "assertions": "calls.speech={}\nsay(\"The beginning\")\nequal(#calls.speech,1)\nequal(calls.speech[1],\"Yes, of course I shall begin at the beginning! No proper tale would begin anywhere other than the beginning! You see, good Halfling, I was once a humble rog. . . [merchant] within this here fair   city. Oh, how the Jumjum and gol. . . merchandise flowed in then! Quite lovely, indeed, it was. Well then, where was I?\")\ncalls.speech={}\nsay(\"THE BEGINNING\")\nequal(#calls.speech,1)\nequal(calls.speech[1],\"Yes, of course I shall begin at the beginning! No proper tale would begin anywhere other than the beginning! You see, good Halfling, I was once a humble rog. . . [merchant] within this here fair   city. Oh, how the Jumjum and gol. . . merchandise flowed in then! Quite lovely, indeed, it was. Well then, where was I?\")\nequal(calls.exp,0)\nassert(next(calls.rewards)==nil)\nassert(next(calls.factions)==nil)"
+  },
+  {
+    "name": "Bidils merchant exact, repeated and case-insensitive",
+    "proposedFile": "changes/p99-conversion-era-identity/misty/Bidils_the_Quickhand.lua",
+    "sourceSha256": "62f3461821f1f0b2adedc2b196e90cfb26e268c55cdfb690b90b4fcd5d3c3418",
+    "setupExtra": "other.GetRaceName=function() return \"Halfling\" end\n",
+    "assertions": "calls.speech={}\nsay(\"merchant\")\nequal(#calls.speech,1)\nequal(calls.speech[1],\"hhh yes! Those days were fair indeed. How I do miss them! Of course, that is not to say that Bidils the Quickhand does not appreciate the eyes and favor of [Bristlebane] upon him! In fact, it is quite the contrary! I do love a good prank! Yes, quite lovely so!\")\ncalls.speech={}\nsay(\"MERCHANT\")\nequal(#calls.speech,1)\nequal(calls.speech[1],\"hhh yes! Those days were fair indeed. How I do miss them! Of course, that is not to say that Bidils the Quickhand does not appreciate the eyes and favor of [Bristlebane] upon him! In fact, it is quite the contrary! I do love a good prank! Yes, quite lovely so!\")\nequal(calls.exp,0)\nassert(next(calls.rewards)==nil)\nassert(next(calls.factions)==nil)"
+  },
+  {
+    "name": "Bidils Bristlebane exact, repeated and case-insensitive",
+    "proposedFile": "changes/p99-conversion-era-identity/misty/Bidils_the_Quickhand.lua",
+    "sourceSha256": "62f3461821f1f0b2adedc2b196e90cfb26e268c55cdfb690b90b4fcd5d3c3418",
+    "setupExtra": "other.GetRaceName=function() return \"Halfling\" end\n",
+    "assertions": "calls.speech={}\nsay(\"Bristlebane\")\nequal(#calls.speech,1)\nequal(calls.speech[1],\"Fizzlethorp Bristlebane, indeed quite the trickster and with a sense of humor! I bet you could not have seen that Bidils the Quickhand would have caught the eye of such a dignified individual, now did ya? Yes, The King of Thieves. . . and merchants finds it amusing when one [takes his possessions]!\")\ncalls.speech={}\nsay(\"BRISTLEBANE\")\nequal(#calls.speech,1)\nequal(calls.speech[1],\"Fizzlethorp Bristlebane, indeed quite the trickster and with a sense of humor! I bet you could not have seen that Bidils the Quickhand would have caught the eye of such a dignified individual, now did ya? Yes, The King of Thieves. . . and merchants finds it amusing when one [takes his possessions]!\")\nequal(calls.exp,0)\nassert(next(calls.rewards)==nil)\nassert(next(calls.factions)==nil)"
+  },
+  {
+    "name": "Bidils takes his possessions exact, repeated and case-insensitive",
+    "proposedFile": "changes/p99-conversion-era-identity/misty/Bidils_the_Quickhand.lua",
+    "sourceSha256": "62f3461821f1f0b2adedc2b196e90cfb26e268c55cdfb690b90b4fcd5d3c3418",
+    "setupExtra": "other.GetRaceName=function() return \"Halfling\" end\n",
+    "assertions": "calls.speech={}\nsay(\"takes his possessions\")\nequal(#calls.speech,2)\nequal(calls.speech[1],\"eyes grow wide with an eager, child-like anticipation.\")\nequal(calls.speech[2],\"Oh yes! Upon one of my several adventures through this great, glorious land of Norrath, I did stumble upon a [lovely treasure], indeed! Great skill and cunning was used, skill that belonged only to Bidils the Quickhand, and has yet to be surpassed within this realm!\")\ncalls.speech={}\nsay(\"TAKES HIS POSSESSIONS\")\nequal(#calls.speech,2)\nequal(calls.speech[1],\"eyes grow wide with an eager, child-like anticipation.\")\nequal(calls.speech[2],\"Oh yes! Upon one of my several adventures through this great, glorious land of Norrath, I did stumble upon a [lovely treasure], indeed! Great skill and cunning was used, skill that belonged only to Bidils the Quickhand, and has yet to be surpassed within this realm!\")\nequal(calls.exp,0)\nassert(next(calls.rewards)==nil)\nassert(next(calls.factions)==nil)"
+  },
+  {
+    "name": "Bidils lovely treasure exact, repeated and case-insensitive",
+    "proposedFile": "changes/p99-conversion-era-identity/misty/Bidils_the_Quickhand.lua",
+    "sourceSha256": "62f3461821f1f0b2adedc2b196e90cfb26e268c55cdfb690b90b4fcd5d3c3418",
+    "setupExtra": "other.GetRaceName=function() return \"Halfling\" end\n",
+    "assertions": "calls.speech={}\nsay(\"lovely treasure\")\nequal(#calls.speech,1)\nequal(calls.speech[1],\"A lovely gem, far more beautiful than even the most delicate and fury feet of a halfling lass! It was larger than my face, and sparkled more than the most pure of Jumjum catching the rays of Karana's blessed skies! Indeed, it was a divine treasure to behold. . . but little then did I know that such a treasure truly belonged to the King of Thieves. . . and merchants himself! But no, such truths still would not have [stopped me]!\")\ncalls.speech={}\nsay(\"LOVELY TREASURE\")\nequal(#calls.speech,1)\nequal(calls.speech[1],\"A lovely gem, far more beautiful than even the most delicate and fury feet of a halfling lass! It was larger than my face, and sparkled more than the most pure of Jumjum catching the rays of Karana's blessed skies! Indeed, it was a divine treasure to behold. . . but little then did I know that such a treasure truly belonged to the King of Thieves. . . and merchants himself! But no, such truths still would not have [stopped me]!\")\nequal(calls.exp,0)\nassert(next(calls.rewards)==nil)\nassert(next(calls.factions)==nil)"
+  },
+  {
+    "name": "Bidils stopped me exact, repeated and case-insensitive",
+    "proposedFile": "changes/p99-conversion-era-identity/misty/Bidils_the_Quickhand.lua",
+    "sourceSha256": "62f3461821f1f0b2adedc2b196e90cfb26e268c55cdfb690b90b4fcd5d3c3418",
+    "setupExtra": "other.GetRaceName=function() return \"Halfling\" end\n",
+    "assertions": "calls.speech={}\nsay(\"stopped me\")\nequal(#calls.speech,1)\nequal(calls.speech[1],\"Ahh ha! I was not stopped, and the gem was mine! Right from beneath the arms of Bristlebane   himself did I take it! That was when he noticed me. . . and that is when I was taken from the humble life of a merchant and placed within the glorious [realm of heroes]! Of course. . . Bristlebane took back the gem. What a shame. Indeed, quite so.\")\ncalls.speech={}\nsay(\"STOPPED ME\")\nequal(#calls.speech,1)\nequal(calls.speech[1],\"Ahh ha! I was not stopped, and the gem was mine! Right from beneath the arms of Bristlebane   himself did I take it! That was when he noticed me. . . and that is when I was taken from the humble life of a merchant and placed within the glorious [realm of heroes]! Of course. . . Bristlebane took back the gem. What a shame. Indeed, quite so.\")\nequal(calls.exp,0)\nassert(next(calls.rewards)==nil)\nassert(next(calls.factions)==nil)"
+  },
+  {
+    "name": "Bidils realm of heroes exact, repeated and case-insensitive",
+    "proposedFile": "changes/p99-conversion-era-identity/misty/Bidils_the_Quickhand.lua",
+    "sourceSha256": "62f3461821f1f0b2adedc2b196e90cfb26e268c55cdfb690b90b4fcd5d3c3418",
+    "setupExtra": "other.GetRaceName=function() return \"Halfling\" end\n",
+    "assertions": "calls.speech={}\nsay(\"realm of heroes\")\nequal(#calls.speech,1)\nequal(calls.speech[1],\"The realm of heroes, that is my new home. . . Well, it was. Ahhh, indeed, it is quite lovely! It is where all that catch the eyes of the gods in favor ascend if their deeds be true and worthy   enough for note! Perhaps one day, Reviewer , you shall rise as well!! Look at Bidils the Quickhand, once a sturdy merchant and now a [humble servant] and rewarder of deeds!\")\ncalls.speech={}\nsay(\"REALM OF HEROES\")\nequal(#calls.speech,1)\nequal(calls.speech[1],\"The realm of heroes, that is my new home. . . Well, it was. Ahhh, indeed, it is quite lovely! It is where all that catch the eyes of the gods in favor ascend if their deeds be true and worthy   enough for note! Perhaps one day, Reviewer , you shall rise as well!! Look at Bidils the Quickhand, once a sturdy merchant and now a [humble servant] and rewarder of deeds!\")\nequal(calls.exp,0)\nassert(next(calls.rewards)==nil)\nassert(next(calls.factions)==nil)"
+  },
+  {
+    "name": "Bidils humble servant exact, repeated and case-insensitive",
+    "proposedFile": "changes/p99-conversion-era-identity/misty/Bidils_the_Quickhand.lua",
+    "sourceSha256": "62f3461821f1f0b2adedc2b196e90cfb26e268c55cdfb690b90b4fcd5d3c3418",
+    "setupExtra": "other.GetRaceName=function() return \"Halfling\" end\n",
+    "assertions": "calls.speech={}\nsay(\"humble servant\")\nequal(#calls.speech,1)\nequal(calls.speech[1],\"Yes! Indeed, a humble servant I am! I complain not for my occupation. . . as I am humble. I   collect [deeds and make recognition] of those who have caught the eyes of the gods. Why the gods do it not themselves, I am lost for answers. . . but, I do not complain. They are gods, you know. Quite busy! Indeed, lovely so!\")\ncalls.speech={}\nsay(\"HUMBLE SERVANT\")\nequal(#calls.speech,1)\nequal(calls.speech[1],\"Yes! Indeed, a humble servant I am! I complain not for my occupation. . . as I am humble. I   collect [deeds and make recognition] of those who have caught the eyes of the gods. Why the gods do it not themselves, I am lost for answers. . . but, I do not complain. They are gods, you know. Quite busy! Indeed, lovely so!\")\nequal(calls.exp,0)\nassert(next(calls.rewards)==nil)\nassert(next(calls.factions)==nil)"
+  },
+  {
+    "name": "Bidils deeds and make recognition exact, repeated and case-insensitive",
+    "proposedFile": "changes/p99-conversion-era-identity/misty/Bidils_the_Quickhand.lua",
+    "sourceSha256": "62f3461821f1f0b2adedc2b196e90cfb26e268c55cdfb690b90b4fcd5d3c3418",
+    "setupExtra": "other.GetRaceName=function() return \"Halfling\" end\n",
+    "assertions": "calls.speech={}\nsay(\"deeds and make recognition\")\nequal(#calls.speech,1)\nequal(calls.speech[1],\"Deeds! Yes, the gods are quite tricky and intelligent you know! They have found a way to mark deeds in the form of a coin! A [coin] in which one who has been so fortunate enough as to accept would give to me. . . or one of the [other Heroes] that have recently come to this land.\")\ncalls.speech={}\nsay(\"DEEDS AND MAKE RECOGNITION\")\nequal(#calls.speech,1)\nequal(calls.speech[1],\"Deeds! Yes, the gods are quite tricky and intelligent you know! They have found a way to mark deeds in the form of a coin! A [coin] in which one who has been so fortunate enough as to accept would give to me. . . or one of the [other Heroes] that have recently come to this land.\")\nequal(calls.exp,0)\nassert(next(calls.rewards)==nil)\nassert(next(calls.factions)==nil)"
+  },
+  {
+    "name": "Bidils other Heroes exact, repeated and case-insensitive",
+    "proposedFile": "changes/p99-conversion-era-identity/misty/Bidils_the_Quickhand.lua",
+    "sourceSha256": "62f3461821f1f0b2adedc2b196e90cfb26e268c55cdfb690b90b4fcd5d3c3418",
+    "setupExtra": "other.GetRaceName=function() return \"Halfling\" end\n",
+    "assertions": "calls.speech={}\nsay(\"other Heroes\")\nequal(#calls.speech,1)\nequal(calls.speech[1],\"Oh yes! I am not the only one who has returned to Norrath in search of Heroes! There are many others, indeed! Although, as the gods, their colors vary. Some are [kind and gentle] while some are [vile and nasty] beings of which ya should watch ya'r back for.\")\ncalls.speech={}\nsay(\"OTHER HEROES\")\nequal(#calls.speech,1)\nequal(calls.speech[1],\"Oh yes! I am not the only one who has returned to Norrath in search of Heroes! There are many others, indeed! Although, as the gods, their colors vary. Some are [kind and gentle] while some are [vile and nasty] beings of which ya should watch ya'r back for.\")\nequal(calls.exp,0)\nassert(next(calls.rewards)==nil)\nassert(next(calls.factions)==nil)"
+  },
+  {
+    "name": "Bidils kind and gentle exact, repeated and case-insensitive",
+    "proposedFile": "changes/p99-conversion-era-identity/misty/Bidils_the_Quickhand.lua",
+    "sourceSha256": "62f3461821f1f0b2adedc2b196e90cfb26e268c55cdfb690b90b4fcd5d3c3418",
+    "setupExtra": "other.GetRaceName=function() return \"Halfling\" end\n",
+    "assertions": "calls.speech={}\nsay(\"kind and gentle\")\nequal(#calls.speech,2)\nequal(calls.speech[1],\"sighs heavily, a twinkle in his eye and warm smile upon his heavy cheeks.\")\nequal(calls.speech[2],\"Yes. . . none so as Ailerina the Gentle, as she was so rightfully named. A lovely lass. Tender as a gentle morning mist. . . Yes. . . Indeed, quite lovely so. An enchanting creature. . . and as pure as Tunare's good grace itself. It is no wonder she caught the Earth Mother's eye.\")\ncalls.speech={}\nsay(\"KIND AND GENTLE\")\nequal(#calls.speech,2)\nequal(calls.speech[1],\"sighs heavily, a twinkle in his eye and warm smile upon his heavy cheeks.\")\nequal(calls.speech[2],\"Yes. . . none so as Ailerina the Gentle, as she was so rightfully named. A lovely lass. Tender as a gentle morning mist. . . Yes. . . Indeed, quite lovely so. An enchanting creature. . . and as pure as Tunare's good grace itself. It is no wonder she caught the Earth Mother's eye.\")\nequal(calls.exp,0)\nassert(next(calls.rewards)==nil)\nassert(next(calls.factions)==nil)"
+  },
+  {
+    "name": "Bidils vile and nasty exact, repeated and case-insensitive",
+    "proposedFile": "changes/p99-conversion-era-identity/misty/Bidils_the_Quickhand.lua",
+    "sourceSha256": "62f3461821f1f0b2adedc2b196e90cfb26e268c55cdfb690b90b4fcd5d3c3418",
+    "setupExtra": "other.GetRaceName=function() return \"Halfling\" end\n",
+    "assertions": "calls.speech={}\nsay(\"vile and nasty\")\nequal(#calls.speech,2)\nequal(calls.speech[1],\"glares and spits on the ground beside him.\")\nequal(calls.speech[2],\"I know not why some of these. . . villains are called heroes. It is all part of the fold and plan, I am sure. However, I shall give ya this warning of one of them, perhaps the most vile of all, and that is Kizrak the Tyrant, a brutal creature of the Warlord who has quite the taste for halflings. . . and I mean not in the sense of good grace and kindness\")\ncalls.speech={}\nsay(\"VILE AND NASTY\")\nequal(#calls.speech,2)\nequal(calls.speech[1],\"glares and spits on the ground beside him.\")\nequal(calls.speech[2],\"I know not why some of these. . . villains are called heroes. It is all part of the fold and plan, I am sure. However, I shall give ya this warning of one of them, perhaps the most vile of all, and that is Kizrak the Tyrant, a brutal creature of the Warlord who has quite the taste for halflings. . . and I mean not in the sense of good grace and kindness\")\nequal(calls.exp,0)\nassert(next(calls.rewards)==nil)\nassert(next(calls.factions)==nil)"
+  },
+  {
+    "name": "Bidils unknown/coin text invents no missing reward branch",
+    "proposedFile": "changes/p99-conversion-era-identity/misty/Bidils_the_Quickhand.lua",
+    "sourceSha256": "62f3461821f1f0b2adedc2b196e90cfb26e268c55cdfb690b90b4fcd5d3c3418",
+    "setupExtra": "other.GetRaceName=function() return \"Halfling\" end\n",
+    "assertions": "say(\"coin\")\nsay(\"unrelated\")\nequal(#calls.speech,0)\nequal(calls.exp,0)\nassert(next(calls.rewards)==nil)"
+  },
+  {
+    "name": "Bidils preserves independent if branches on multiple keywords",
+    "proposedFile": "changes/p99-conversion-era-identity/misty/Bidils_the_Quickhand.lua",
+    "sourceSha256": "62f3461821f1f0b2adedc2b196e90cfb26e268c55cdfb690b90b4fcd5d3c3418",
+    "setupExtra": "other.GetRaceName=function() return \"Halfling\" end\n",
+    "assertions": "say(\"hail my tale\")\nequal(#calls.speech,2)\nequal(calls.speech[1],\"Why, hello there Reviewer! And what brings ya to see little old me? Oh, let me guess! I am sure it is because ya wish t'buy a good spot of Jumjum and listen to [my tale]? Oh, quite lovely so! Why else would one well rounded Halfling come to see the great Bidils the Quickhand other than to hear of this rogue's great adventures!\")\nequal(calls.speech[2],\"Ahhh. . . I see the gods have found the time to be now for a good ear to lend to my words! So long as ya share the Jumjum, I can speak t'ya of the endless adventures and triumphs of Bidils the Quickhand! Now. . . where shall I begin? Yes! [The beginning], of course! Indeed, quite lovely so.\")"
+  },
+  {
+    "name": "Bidils unrelated extra/partial/repeat offers are returned without reward",
+    "proposedFile": "changes/p99-conversion-era-identity/misty/Bidils_the_Quickhand.lua",
+    "sourceSha256": "62f3461821f1f0b2adedc2b196e90cfb26e268c55cdfb690b90b4fcd5d3c3418",
+    "setupExtra": "other.GetRaceName=function() return \"Halfling\" end\n",
+    "assertions": "trade({1001,1001,1002},{platinum=7})\nequal(remaining[1001],2)\nequal(remaining[1002],1)\nequal(remaining.platinum,7)\ntrade({1001})\nequal(remaining[1001],1)\ntrade({})\nequal(calls.returns,3)\nequal(calls.exp,0)\nequal(#calls.cash,0)\nassert(next(calls.rewards)==nil)\nassert(next(calls.factions)==nil)"
+  }
+]

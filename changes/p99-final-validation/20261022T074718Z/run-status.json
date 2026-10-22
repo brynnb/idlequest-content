@@ -1,0 +1,161 @@
+{
+  "snapshot": "/tmp/p99-validation-20261022T074718Z",
+  "steps": [
+    {
+      "name": "regenerate-inventory",
+      "command": [
+        "node",
+        "tools/p99-quest-inventory.mjs",
+        ".",
+        "--write"
+      ],
+      "startedAt": "2026-10-22T07:48:10.125059+00:00",
+      "durationSeconds": 43.686,
+      "exitCode": 0,
+      "log": "regenerate-inventory.log",
+      "logSha256": "1e6cd2d0fd73ab1874b24347c73003ae5a8f181a2dcf782ff35303da5aee9834"
+    },
+    {
+      "name": "regenerate-coverage",
+      "command": [
+        "node",
+        "tools/p99-review-coverage.mjs",
+        "."
+      ],
+      "startedAt": "2026-10-22T07:48:53.816799+00:00",
+      "durationSeconds": 1.99,
+      "exitCode": 0,
+      "log": "regenerate-coverage.log",
+      "logSha256": "ebf77265e3689106e9742cfec8658587e821aa4079720e3589cd3e4b6ae3a5b5"
+    },
+    {
+      "name": "regenerate-ledger",
+      "command": [
+        "node",
+        "tools/p99-build-ledger.mjs",
+        "."
+      ],
+      "startedAt": "2026-10-22T07:48:55.813560+00:00",
+      "durationSeconds": 3.681,
+      "exitCode": 0,
+      "log": "regenerate-ledger.log",
+      "logSha256": "647b7e35f5fa10701abaa71fbdfd9d596c3fdf6549512e40070649f78c4a35a7"
+    },
+    {
+      "name": "regenerate-source-coverage",
+      "command": [
+        "node",
+        "tools/p99-source-coverage.mjs",
+        "."
+      ],
+      "startedAt": "2026-10-22T07:48:59.506248+00:00",
+      "durationSeconds": 20.24,
+      "exitCode": 0,
+      "log": "regenerate-source-coverage.log",
+      "logSha256": "28ca6994474bb890dd46f4d8d170e812c545310a7500c3a649323935c2d39285"
+    },
+    {
+      "name": "regenerate-resolution",
+      "command": [
+        "node",
+        "tools/p99-resolution-report.mjs",
+        "."
+      ],
+      "startedAt": "2026-10-22T07:49:19.749012+00:00",
+      "durationSeconds": 9.064,
+      "exitCode": 0,
+      "log": "regenerate-resolution.log",
+      "logSha256": "2d22dd498a5ff1b4cb828b8d71b41207e0320ba19b2ba35423a4241a855bb133"
+    },
+    {
+      "name": "regenerate-downstream",
+      "command": [
+        "node",
+        "tools/p99-refresh-downstream.mjs",
+        "."
+      ],
+      "startedAt": "2026-10-22T07:49:28.814985+00:00",
+      "durationSeconds": 34.05,
+      "exitCode": 0,
+      "log": "regenerate-downstream.log",
+      "logSha256": "e70057f794d5debfd4ee5dddf8034c7300a0637cbdf385ff822f2a1600e46be5"
+    },
+    {
+      "name": "regenerate-containers",
+      "command": [
+        "node",
+        "tools/p99-container-compatibility.mjs",
+        "."
+      ],
+      "startedAt": "2026-10-22T07:50:02.870302+00:00",
+      "durationSeconds": 8.76,
+      "exitCode": 0,
+      "log": "regenerate-containers.log",
+      "logSha256": "cedfe1adee8fea55d32d178b79d5d4a0c56c624f7ec642d22b1f18acc4e06ccc"
+    },
+    {
+      "name": "regenerate-closure",
+      "command": [
+        "node",
+        "tools/p99-conversion-closure-report.mjs",
+        "."
+      ],
+      "startedAt": "2026-10-22T07:50:11.644075+00:00",
+      "durationSeconds": 0.929,
+      "exitCode": 0,
+      "log": "regenerate-closure.log",
+      "logSha256": "3248de930bd0f5f27bf6eb9619a0e82348b019a2e28b762ecc318fc6ff614e32"
+    },
+    {
+      "name": "regenerate-final-source-closure",
+      "command": [
+        "node",
+        "tools/p99-final-source-closure.mjs",
+        "."
+      ],
+      "startedAt": "2026-10-22T07:50:12.575265+00:00",
+      "durationSeconds": 7.083,
+      "exitCode": 0,
+      "log": "regenerate-final-source-closure.log",
+      "logSha256": "f000d2b768f76a29bd70c5b05849ccecd9c966625156367f3a5ba57c186482a0"
+    },
+    {
+      "name": "regenerate-combined",
+      "command": [
+        "node",
+        "tools/p99-merge-proposals.mjs",
+        "."
+      ],
+      "startedAt": "2026-10-22T07:50:19.659928+00:00",
+      "durationSeconds": 12.14,
+      "exitCode": 0,
+      "log": "regenerate-combined.log",
+      "logSha256": "fcce192ed4e47510970680bb6671856ee44838b1870588bcd069dd24ac1de2a4"
+    },
+    {
+      "name": "bind-prepared-inputs",
+      "command": [
+        "python",
+        "/tmp/p99-bind-prepared-inputs.py"
+      ],
+      "startedAt": "2026-10-22T07:50:31.810501+00:00",
+      "durationSeconds": 0.862,
+      "exitCode": 0,
+      "log": "bind-prepared-inputs.log",
+      "logSha256": "80478e2a3eaa266d56a01de367af83424fa99fbd71bd693d8e8f941848be5dc3"
+    },
+    {
+      "name": "public-safety",
+      "command": [
+        "node",
+        "tools/p99-public-safety.mjs",
+        "."
+      ],
+      "startedAt": "2026-10-22T07:50:32.674474+00:00",
+      "durationSeconds": 7.353,
+      "exitCode": 0,
+      "log": "public-safety.log",
+      "logSha256": "32de23a1583e63cf83e4d664bf9ba049ebd9a3047b65099fb37ec9eccc5d040a"
+    }
+  ]
+}

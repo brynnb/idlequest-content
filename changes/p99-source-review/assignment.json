@@ -1,0 +1,4613 @@
+{
+  "scope": "Unchanged enabled P99-zone Lua lacking historical page links or exact-name wiki link matches; lexical triage, not a parity judgment. Current review artifacts may already cover aliases.",
+  "records": [
+    {
+      "key": "akanon/Derthix_Gibblix",
+      "id": 18685,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/akanon/Derthix_Gibblix.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "akanon/Exterminator_VIII",
+      "id": 14897,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/akanon/Exterminator_VIII.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "Faction",
+        "GiveCash"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "akanon/Garret_Zethkog",
+      "id": 13011,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/akanon/Garret_Zethkog.lua",
+      "handlers": [
+        "event_enter",
+        "event_say",
+        "event_spawn",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "Faction",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "akanon/Glerbella_Gibblix",
+      "id": 18046,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/akanon/Glerbella_Gibblix.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "akanon/Lewis_Reldnok",
+      "id": 14460,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/akanon/Lewis_Reldnok.lua",
+      "handlers": [
+        "event_enter",
+        "event_spawn",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "Faction",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "akanon/Lobal_Postugger",
+      "id": 18458,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/akanon/Lobal_Postugger.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "akanon/Mimtia_Zethkog",
+      "id": 14043,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/akanon/Mimtia_Zethkog.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "akanon/Morlan_Tanlonikan",
+      "id": 12734,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/akanon/Morlan_Tanlonikan.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "akanon/Rebbie_Romblerum",
+      "id": 13874,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/akanon/Rebbie_Romblerum.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "akanon/Reuben_Reldnok",
+      "id": 15424,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/akanon/Reuben_Reldnok.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "akanon/Windlebeck_Tobokog",
+      "id": 17867,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/akanon/Windlebeck_Tobokog.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "akanon/Xalirilan_Zarinokosalio",
+      "id": 19008,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/akanon/Xalirilan_Zarinokosalio.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "Faction",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "befallen/#Sir_Ariam_Arcanum",
+      "id": 19363,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/befallen/%23Sir_Ariam_Arcanum.lua",
+      "handlers": [
+        "event_say",
+        "event_timer",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "befallen/Zeek",
+      "id": 16085,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/befallen/Zeek.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "QuestReward"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "butcher/a_greedy_beggar",
+      "id": 18624,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/butcher/a_greedy_beggar.lua",
+      "handlers": [
+        "event_aggro",
+        "event_say",
+        "event_spawn",
+        "event_timer",
+        "event_trade"
+      ],
+      "rewardCalls": [],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_no_literal_reward_calls_requires_inspection"
+    },
+    {
+      "key": "butcher/Dapper_Blackhammer",
+      "id": 19781,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/butcher/Dapper_Blackhammer.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "QuestReward",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "butcher/Vedico_Windwisper",
+      "id": 13407,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/butcher/Vedico_Windwisper.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "cabeast/#Prime_Patriarch_Vuzx",
+      "id": 12423,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/cabeast/%23Prime_Patriarch_Vuzx.lua",
+      "handlers": [
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "Faction",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "cabeast/Elder_Patriarch_Ixthal",
+      "id": 17702,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/cabeast/Elder_Patriarch_Ixthal.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "cabeast/Exterminator_Sahizz",
+      "id": 18068,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/cabeast/Exterminator_Sahizz.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "Faction",
+        "GiveCash"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "cabeast/Zreezas",
+      "id": 15274,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/cabeast/Zreezas.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "cabwest/Marthor",
+      "id": 17060,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/cabwest/Marthor.lua",
+      "handlers": [
+        "event_say",
+        "event_timer",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "cazicthule/48255",
+      "id": 15090,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/cazicthule/48255.lua",
+      "handlers": [
+        "event_spawn",
+        "event_timer",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "charasis/An_Iksar_Apparition",
+      "id": 19589,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/charasis/An_Iksar_Apparition.lua",
+      "handlers": [
+        "event_trade"
+      ],
+      "rewardCalls": [],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_no_literal_reward_calls_requires_inspection"
+    },
+    {
+      "key": "charasis/Gandan_Tailfist",
+      "id": 12161,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/charasis/Gandan_Tailfist.lua",
+      "handlers": [
+        "event_say",
+        "event_spawn",
+        "event_timer",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "charasis/the_spirit_of_Rile",
+      "id": 17081,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/charasis/the_spirit_of_Rile.lua",
+      "handlers": [
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "QuestReward"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "citymist/#Neh-Ashiir",
+      "id": 18069,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/citymist/%23Neh-Ashiir.lua",
+      "handlers": [
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "Faction",
+        "QuestReward"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "cobaltscar/Blumblum_Swigwater",
+      "id": 14027,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/cobaltscar/Blumblum_Swigwater.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "cobaltscar/High_Priest_Margle",
+      "id": 13797,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/cobaltscar/High_Priest_Margle.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_no_literal_reward_calls_requires_inspection"
+    },
+    {
+      "key": "commons/Guard_Colin",
+      "id": 15225,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/commons/Guard_Colin.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_no_literal_reward_calls_requires_inspection"
+    },
+    {
+      "key": "dalnir/a_coerced_channeler",
+      "id": 14637,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/dalnir/a_coerced_channeler.lua",
+      "handlers": [
+        "event_death_complete",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "QuestReward"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "dreadlands/Veltar",
+      "id": 12631,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/dreadlands/Veltar.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "Faction",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "droga/81182",
+      "id": 207951,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/droga/81182.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "QuestReward"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "droga/Jeren_Manri",
+      "id": 15212,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/droga/Jeren_Manri.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "QuestReward"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "emeraldjungle/Scout_Vyrak",
+      "id": 16018,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/emeraldjungle/Scout_Vyrak.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "erudsxing/a_greater_spirit",
+      "id": 19310,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/erudsxing/a_greater_spirit.lua",
+      "handlers": [
+        "event_say"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_reward_without_trade_requires_disposition"
+    },
+    {
+      "key": "erudsxing/Abe_the_Abandoned",
+      "id": 18092,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/erudsxing/Abe_the_Abandoned.lua",
+      "handlers": [
+        "event_say",
+        "event_spawn",
+        "event_timer"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_reward_without_trade_requires_disposition"
+    },
+    {
+      "key": "feerrott/Annaelia_Wylassi",
+      "id": 17974,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/feerrott/Annaelia_Wylassi.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "feerrott/Aqaar_Aluram",
+      "id": 15990,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/feerrott/Aqaar_Aluram.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "feerrott/Scout_Ahlikal",
+      "id": 19202,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/feerrott/Scout_Ahlikal.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "felwithea/Arrias_Arcanum",
+      "id": 14329,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/felwithea/Arrias_Arcanum.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "Faction",
+        "GiveCash",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "felwithea/Exterminator_Valern",
+      "id": 19373,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/felwithea/Exterminator_Valern.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "Faction",
+        "GiveCash"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "felwithea/Seria_Woodwind",
+      "id": 11949,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/felwithea/Seria_Woodwind.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "Faction",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "felwithea/Terren_Starwatcher",
+      "id": 12578,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/felwithea/Terren_Starwatcher.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "Faction",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "felwitheb/Elishia_Leafrunner",
+      "id": 14402,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/felwitheb/Elishia_Leafrunner.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "Faction",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "felwitheb/Yuin_Starchaser",
+      "id": 16990,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/felwitheb/Yuin_Starchaser.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "Faction",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "fieldofbone/Oracle_Qulin",
+      "id": 15469,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/fieldofbone/Oracle_Qulin.lua",
+      "handlers": [
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "QuestReward"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "fieldofbone/Oracle_Vauris",
+      "id": 18512,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/fieldofbone/Oracle_Vauris.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "QuestReward"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "fieldofbone/Trooper_Drix",
+      "id": 13950,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/fieldofbone/Trooper_Drix.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "firiona/#Realla_Segoan",
+      "id": 15973,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/firiona/%23Realla_Segoan.lua",
+      "handlers": [
+        "event_say"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_reward_without_trade_requires_disposition"
+    },
+    {
+      "key": "firiona/Allaria_Sneakyfeet",
+      "id": 13327,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/firiona/Allaria_Sneakyfeet.lua",
+      "handlers": [
+        "event_say"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_reward_without_trade_requires_disposition"
+    },
+    {
+      "key": "firiona/Drake_Mountainstorm",
+      "id": 12162,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/firiona/Drake_Mountainstorm.lua",
+      "handlers": [
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "firiona/Noilgin_Mindtune",
+      "id": 18185,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/firiona/Noilgin_Mindtune.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "freporte/10000",
+      "id": 15217,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/freporte/10000.lua",
+      "handlers": [
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "freporte/Exterminator_Larkey",
+      "id": 12275,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/freporte/Exterminator_Larkey.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "Faction",
+        "GiveCash"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "freporte/Gunex_Eklar",
+      "id": 14867,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/freporte/Gunex_Eklar.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "Faction",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "freporte/Jerra_Renlock",
+      "id": 18862,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/freporte/Jerra_Renlock.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "freporte/Marv_Orilis",
+      "id": 19149,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/freporte/Marv_Orilis.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "Faction",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "freporte/Quan_Nektogo",
+      "id": 15832,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/freporte/Quan_Nektogo.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "freporte/Rigg_Nostra",
+      "id": 15684,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/freporte/Rigg_Nostra.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "freporte/Rolfic_Gohar",
+      "id": 12148,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/freporte/Rolfic_Gohar.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "freporte/Sir_Artanis",
+      "id": 13957,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/freporte/Sir_Artanis.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "freporte/Tovan_Tenlah",
+      "id": 15489,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/freporte/Tovan_Tenlah.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "freporte/Verona_Rankin",
+      "id": 16596,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/freporte/Verona_Rankin.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "Faction",
+        "QuestReward",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "freporte/Zhem_Xecia",
+      "id": 17190,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/freporte/Zhem_Xecia.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "freportn/Edwardian_Holyblade",
+      "id": 16023,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/freportn/Edwardian_Holyblade.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "freportn/Palious_Jarten",
+      "id": 15928,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/freportn/Palious_Jarten.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_no_literal_reward_calls_requires_inspection"
+    },
+    {
+      "key": "freportn/Plur_Etinu",
+      "id": 16556,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/freportn/Plur_Etinu.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_no_literal_reward_calls_requires_inspection"
+    },
+    {
+      "key": "freportn/Sir_Artanis",
+      "id": 17728,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/freportn/Sir_Artanis.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "Faction",
+        "GiveCash",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "freportn/Sten_Harnak",
+      "id": 17458,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/freportn/Sten_Harnak.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "freportw/Arinna_Trueblade",
+      "id": 18188,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/freportw/Arinna_Trueblade.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "freportw/Exterminator_Qalantir",
+      "id": 14446,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/freportw/Exterminator_Qalantir.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "Faction",
+        "GiveCash"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "freportw/Janam_Rekish",
+      "id": 12985,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/freportw/Janam_Rekish.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "freportw/Klom_Jysun",
+      "id": 12934,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/freportw/Klom_Jysun.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "freportw/Lythe_Songbird",
+      "id": 14587,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/freportw/Lythe_Songbird.lua",
+      "handlers": [
+        "event_say",
+        "event_timer",
+        "event_trade"
+      ],
+      "rewardCalls": [],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_no_literal_reward_calls_requires_inspection"
+    },
+    {
+      "key": "freportw/Rebby_Willend",
+      "id": 18725,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/freportw/Rebby_Willend.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "freportw/Shana_Liskia",
+      "id": 19534,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/freportw/Shana_Liskia.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "frozenshadow/#Advisor_Svartmane",
+      "id": 15172,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/frozenshadow/%23Advisor_Svartmane.lua",
+      "handlers": [
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "gfaydark/Aliafya_Mistrunner",
+      "id": 12459,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/gfaydark/Aliafya_Mistrunner.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "gfaydark/Josylyn_Greenblade",
+      "id": 16888,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/gfaydark/Josylyn_Greenblade.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "gfaydark/Mazziana_Ridgerunner",
+      "id": 16781,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/gfaydark/Mazziana_Ridgerunner.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_no_literal_reward_calls_requires_inspection"
+    },
+    {
+      "key": "gfaydark/Samatansyn_Flamecaller",
+      "id": 12398,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/gfaydark/Samatansyn_Flamecaller.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "gfaydark/Sarialiyn_Tranquilsong",
+      "id": 19393,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/gfaydark/Sarialiyn_Tranquilsong.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "grobb/Bregna",
+      "id": 13689,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/grobb/Bregna.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "Faction",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "grobb/Daboo_Dogak",
+      "id": 16320,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/grobb/Daboo_Dogak.lua",
+      "handlers": [
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "grobb/Exterminator_Filrog",
+      "id": 14875,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/grobb/Exterminator_Filrog.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "Faction",
+        "GiveCash"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "grobb/Gardunk",
+      "id": 14140,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/grobb/Gardunk.lua",
+      "handlers": [
+        "event_enter",
+        "event_spawn",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "Faction",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "grobb/Gargh",
+      "id": 19384,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/grobb/Gargh.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "Faction",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "guktop/an_old_froglok",
+      "id": 13574,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/guktop/an_old_froglok.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "Faction",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "halas/#Field_Priest_Keven",
+      "id": 17156,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/halas/%23Field_Priest_Keven.lua",
+      "handlers": [
+        "event_enter",
+        "event_spawn",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "Faction",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "halas/Hoyce_MacTaegan",
+      "id": 19623,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/halas/Hoyce_MacTaegan.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "Faction",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "halas/Shanis_MacDarren",
+      "id": 12062,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/halas/Shanis_MacDarren.lua",
+      "handlers": [
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "highkeep/Dealer_Maeline",
+      "id": 19455,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/highkeep/Dealer_Maeline.lua",
+      "handlers": [
+        "event_say",
+        "event_spawn",
+        "event_timer",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "GiveCash"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "highpass/Jovan",
+      "id": 13026,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/highpass/Jovan.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "kaesora/a_tome_keeper",
+      "id": 16679,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/kaesora/a_tome_keeper.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "kaladima/Dirjadak_Barbrawler",
+      "id": 15178,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/kaladima/Dirjadak_Barbrawler.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "kaladimb/Brenthalion_Aleslammer",
+      "id": 15452,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/kaladimb/Brenthalion_Aleslammer.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "kaladimb/Crovsar_Dirkbringer",
+      "id": 15688,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/kaladimb/Crovsar_Dirkbringer.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "kaladimb/Dravel_Axethrasher",
+      "id": 19583,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/kaladimb/Dravel_Axethrasher.lua",
+      "handlers": [
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "kaladimb/Exterminator_Vin",
+      "id": 15440,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/kaladimb/Exterminator_Vin.lua",
+      "handlers": [
+        "event_combat",
+        "event_say",
+        "event_slay",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "Faction",
+        "GiveCash"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "kaladimb/Haldorak_Foamymugs",
+      "id": 19197,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/kaladimb/Haldorak_Foamymugs.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "kaladimb/Harnoff_Splitrock",
+      "id": 19483,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/kaladimb/Harnoff_Splitrock.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "Faction",
+        "GiveCash",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "kerraridge/Allix",
+      "id": 15570,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/kerraridge/Allix.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "kithicor/#Advisor_C-zatl",
+      "id": 16020,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/kithicor/%23Advisor_C-zatl.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "kithicor/#Brigadier_G-tav",
+      "id": 18267,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/kithicor/%23Brigadier_G-tav.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "kithicor/#Coercer_Q-ioul",
+      "id": 16843,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/kithicor/%23Coercer_Q-ioul.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "kithicor/#Ioltos_V-ghera",
+      "id": 14461,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/kithicor/%23Ioltos_V-ghera.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "kithicor/#Tasi_V-ghera",
+      "id": 13257,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/kithicor/%23Tasi_V-ghera.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "kithicor/#War_Priestess_T-zan",
+      "id": 17961,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/kithicor/%23War_Priestess_T-zan.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "kithicor/Innkeep_Min",
+      "id": 19198,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/kithicor/Innkeep_Min.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "lakerathe/#Egonis",
+      "id": 14921,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/lakerathe/%23Egonis.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_no_literal_reward_calls_requires_inspection"
+    },
+    {
+      "key": "lakerathe/#Triathalon_Bike",
+      "id": 16387,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/lakerathe/%23Triathalon_Bike.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "lakerathe/#Triathalon_Swim_Goggles",
+      "id": 18852,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/lakerathe/%23Triathalon_Swim_Goggles.lua",
+      "handlers": [
+        "event_say"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_reward_without_trade_requires_disposition"
+    },
+    {
+      "key": "lakerathe/51138",
+      "id": 13575,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/lakerathe/51138.lua",
+      "handlers": [
+        "event_say",
+        "event_signal",
+        "event_spawn",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "lakerathe/a_fallen_student",
+      "id": 15218,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/lakerathe/a_fallen_student.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_no_literal_reward_calls_requires_inspection"
+    },
+    {
+      "key": "lakerathe/Misty_Tekcihta",
+      "id": 12837,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/lakerathe/Misty_Tekcihta.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "lakerathe/Turgan",
+      "id": 18164,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/lakerathe/Turgan.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "lavastorm/Brunnel_Kegstander",
+      "id": 31456,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/lavastorm/Brunnel_Kegstander.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "lavastorm/Symbell_Sunara",
+      "id": 31458,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/lavastorm/Symbell_Sunara.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "lfaydark/Scout_Rahjiq",
+      "id": 18828,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/lfaydark/Scout_Rahjiq.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "mistmoore/an_avenging_caitiff",
+      "id": 15459,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/mistmoore/an_avenging_caitiff.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "mistmoore/Eirod_Haerod",
+      "id": 19120,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/mistmoore/Eirod_Haerod.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "necropolis/#a_ghostly_presence",
+      "id": 13541,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/necropolis/%23a_ghostly_presence.lua",
+      "handlers": [
+        "event_spawn",
+        "event_timer",
+        "event_trade"
+      ],
+      "rewardCalls": [],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_no_literal_reward_calls_requires_inspection"
+    },
+    {
+      "key": "necropolis/#Hsagra-s_Shade",
+      "id": 13899,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/necropolis/%23Hsagra-s_Shade.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "QuestReward"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "necropolis/#Spirit_of_Garzicor",
+      "id": 13635,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/necropolis/%23Spirit_of_Garzicor.lua",
+      "handlers": [
+        "event_spawn",
+        "event_timer",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "QuestReward"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "necropolis/#Spirit_of_Garzicor_",
+      "id": 13942,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/necropolis/%23Spirit_of_Garzicor_.lua",
+      "handlers": [
+        "event_spawn",
+        "event_timer",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "QuestReward"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "nektulos/Kamidra_Voragone",
+      "id": 16309,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/nektulos/Kamidra_Voragone.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_no_literal_reward_calls_requires_inspection"
+    },
+    {
+      "key": "neriaka/Andara_C-Luzz",
+      "id": 12102,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/neriaka/Andara_C-Luzz.lua",
+      "handlers": [
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "neriaka/Bregna",
+      "id": 14222,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/neriaka/Bregna.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "neriakb/Andara_C-Luzz",
+      "id": 12280,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/neriakb/Andara_C-Luzz.lua",
+      "handlers": [
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "neriakb/Exterminator_Damasi",
+      "id": 15453,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/neriakb/Exterminator_Damasi.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "Faction",
+        "GiveCash"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "neriakb/Issva_H-Rugla",
+      "id": 16727,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/neriakb/Issva_H-Rugla.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "neriakb/Jarrex_N-Ryt",
+      "id": 15612,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/neriakb/Jarrex_N-Ryt.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "neriakb/Krivn_S-Tai",
+      "id": 13343,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/neriakb/Krivn_S-Tai.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "neriakb/Morgalanth_Tal-Raeloen",
+      "id": 18945,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/neriakb/Morgalanth_Tal-Raeloen.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "neriakc/Exterminator_Gilea",
+      "id": 12367,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/neriakc/Exterminator_Gilea.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "Faction",
+        "GiveCash"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "neriakc/High_Priestess_Alexandria",
+      "id": 17607,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/neriakc/High_Priestess_Alexandria.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "neriakc/Kanthu_M-Rekkor",
+      "id": 13397,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/neriakc/Kanthu_M-Rekkor.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "neriakc/Medron_Y-Lask",
+      "id": 16384,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/neriakc/Medron_Y-Lask.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "Faction",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "neriakc/Nallar_Q-Tentu",
+      "id": 12781,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/neriakc/Nallar_Q-Tentu.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "neriakc/Selzar_L-Crit",
+      "id": 15471,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/neriakc/Selzar_L-Crit.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "neriakc/Talorial_D-Estalian",
+      "id": 12889,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/neriakc/Talorial_D-Estalian.lua",
+      "handlers": [
+        "event_say"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_reward_without_trade_requires_disposition"
+    },
+    {
+      "key": "neriakc/Ulraz_S-Lon",
+      "id": 18898,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/neriakc/Ulraz_S-Lon.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "Faction",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "northkarana/#Triathalon_Token",
+      "id": 14501,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/northkarana/%23Triathalon_Token.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "northkarana/Gorri_Fallstine",
+      "id": 19037,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/northkarana/Gorri_Fallstine.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_no_literal_reward_calls_requires_inspection"
+    },
+    {
+      "key": "oggok/#Bordag",
+      "id": 12302,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/oggok/%23Bordag.lua",
+      "handlers": [
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "Faction",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "oggok/Baddi_Waca",
+      "id": 15420,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/oggok/Baddi_Waca.lua",
+      "handlers": [
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "oggok/Exterminator_Glurg",
+      "id": 14884,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/oggok/Exterminator_Glurg.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "Faction",
+        "GiveCash"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "oggok/Grapok",
+      "id": 12098,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/oggok/Grapok.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "overthere/Dom_K-Perl",
+      "id": 13605,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/overthere/Dom_K-Perl.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "paineel/Guard_Heridion",
+      "id": 15830,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/paineel/Guard_Heridion.lua",
+      "handlers": [
+        "event_say"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_reward_without_trade_requires_disposition"
+    },
+    {
+      "key": "paineel/Guard_Korlack",
+      "id": 12560,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/paineel/Guard_Korlack.lua",
+      "handlers": [
+        "event_say"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_reward_without_trade_requires_disposition"
+    },
+    {
+      "key": "paineel/Guard_Lecknar",
+      "id": 17997,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/paineel/Guard_Lecknar.lua",
+      "handlers": [
+        "event_say"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_reward_without_trade_requires_disposition"
+    },
+    {
+      "key": "paineel/Guard_Menbuknar",
+      "id": 15119,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/paineel/Guard_Menbuknar.lua",
+      "handlers": [
+        "event_say"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_reward_without_trade_requires_disposition"
+    },
+    {
+      "key": "paineel/Shwara_Volerno",
+      "id": 16806,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/paineel/Shwara_Volerno.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "Faction",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "permafrost/Scout_Janomin",
+      "id": 18286,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/permafrost/Scout_Janomin.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "qcat/Illie_Roln",
+      "id": 15069,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/qcat/Illie_Roln.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "qcat/Ranthor_Bekesna",
+      "id": 14956,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/qcat/Ranthor_Bekesna.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "Faction",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "qcat/Torin_Krentar",
+      "id": 14193,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/qcat/Torin_Krentar.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "qcat/Unmuz_Tukore",
+      "id": 15438,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/qcat/Unmuz_Tukore.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "Faction",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "qcat/Wellis_Pestule",
+      "id": 18259,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/qcat/Wellis_Pestule.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "qey2hh1/Tarnic_McWillows",
+      "id": 14569,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/qey2hh1/Tarnic_McWillows.lua",
+      "handlers": [
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "qeynos/Dionna",
+      "id": 14855,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/qeynos/Dionna.lua",
+      "handlers": [
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "Faction",
+        "QuestReward"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "qeynos/Exterminator_Rasmon",
+      "id": 13039,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/qeynos/Exterminator_Rasmon.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "Faction",
+        "GiveCash"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "qeynos/Jalorin_Tar-Visgur",
+      "id": 15640,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/qeynos/Jalorin_Tar-Visgur.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "qeynos/Lord_Mrallon",
+      "id": 15128,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/qeynos/Lord_Mrallon.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "Faction",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "qeynos/Miltiades_Tal-Azroth",
+      "id": 15340,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/qeynos/Miltiades_Tal-Azroth.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "qeynos/Sollari_Bekines",
+      "id": 15011,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/qeynos/Sollari_Bekines.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "Faction",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "qeynos/Vansted_Rohenga",
+      "id": 17786,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/qeynos/Vansted_Rohenga.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "Faction",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "qeynos/Yakem_Oreslinger",
+      "id": 12711,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/qeynos/Yakem_Oreslinger.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "Faction",
+        "GiveCash",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "qeynos2/Davloran_Girionlis",
+      "id": 13372,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/qeynos2/Davloran_Girionlis.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "Faction",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "qeynos2/Exterminator_Wintloag",
+      "id": 19033,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/qeynos2/Exterminator_Wintloag.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "Faction",
+        "GiveCash"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "qeynos2/Filian_Weagleross",
+      "id": 14483,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/qeynos2/Filian_Weagleross.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "qeynos2/Reldin_Harkolis",
+      "id": 13609,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/qeynos2/Reldin_Harkolis.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "qeytoqrg/Rilca_Leafrunner",
+      "id": 15474,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/qeytoqrg/Rilca_Leafrunner.lua",
+      "handlers": [
+        "event_say",
+        "event_spawn",
+        "event_timer",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "qrg/Errin_Pinewhisper",
+      "id": 18779,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/qrg/Errin_Pinewhisper.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "Faction",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "qrg/Gurrin_Nitestorm",
+      "id": 13879,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/qrg/Gurrin_Nitestorm.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "Faction",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "qrg/Jhaya_Wyndrunner",
+      "id": 17579,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/qrg/Jhaya_Wyndrunner.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "Faction",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "qrg/Lerian_Wyndrunner",
+      "id": 14544,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/qrg/Lerian_Wyndrunner.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "Faction",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "qrg/Salmekia_Treherth",
+      "id": 16449,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/qrg/Salmekia_Treherth.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "Faction",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "rathemtn/Lianna_Ferasa",
+      "id": 12297,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/rathemtn/Lianna_Ferasa.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "rivervale/Artisan_Bill_Whistletop",
+      "id": 14176,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/rivervale/Artisan_Bill_Whistletop.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "rivervale/Bartle_Barnick",
+      "id": 13712,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/rivervale/Bartle_Barnick.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "rivervale/Bipdo_Hargin",
+      "id": 15189,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/rivervale/Bipdo_Hargin.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "rivervale/Bodbin_Gimple",
+      "id": 17314,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/rivervale/Bodbin_Gimple.lua",
+      "handlers": [
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "Faction",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "rivervale/Dalorio_Blistbobble",
+      "id": 15345,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/rivervale/Dalorio_Blistbobble.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "rivervale/Exterminator_Sutten",
+      "id": 16952,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/rivervale/Exterminator_Sutten.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "Faction",
+        "GiveCash"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "rivervale/Jimji_Bottletoe",
+      "id": 15544,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/rivervale/Jimji_Bottletoe.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "rivervale/Kaya_Cloudfoot",
+      "id": 19017,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/rivervale/Kaya_Cloudfoot.lua",
+      "handlers": [
+        "event_enter",
+        "event_say",
+        "event_spawn",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "Faction",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "rivervale/Lendel_Deeppockets",
+      "id": 12020,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/rivervale/Lendel_Deeppockets.lua",
+      "handlers": [
+        "event_enter",
+        "event_say",
+        "event_signal",
+        "event_spawn",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "Faction",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "rivervale/Megosh_Thistlethorn",
+      "id": 13439,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/rivervale/Megosh_Thistlethorn.lua",
+      "handlers": [
+        "event_enter",
+        "event_say",
+        "event_spawn",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "Faction",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "rivervale/Thekela_Meepup",
+      "id": 16413,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/rivervale/Thekela_Meepup.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "sebilis/a_fallen_monk",
+      "id": 16513,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/sebilis/a_fallen_monk.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_no_literal_reward_calls_requires_inspection"
+    },
+    {
+      "key": "sirens/a_twitching_swordfish",
+      "id": 18109,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/sirens/a_twitching_swordfish.lua",
+      "handlers": [
+        "event_combat",
+        "event_death",
+        "event_hp",
+        "event_timer"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_reward_without_trade_requires_disposition"
+    },
+    {
+      "key": "sirens/Ravaging_Tsunami_Elemental",
+      "id": 19388,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/sirens/Ravaging_Tsunami_Elemental.lua",
+      "handlers": [
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "skyshrine/#Eldriaks_Fe-Dhar",
+      "id": 12074,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/skyshrine/%23Eldriaks_Fe-Dhar.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "Faction",
+        "QuestReward",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "soltemple/80002",
+      "id": 16872,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/soltemple/80002.lua",
+      "handlers": [
+        "event_say",
+        "event_spawn",
+        "event_timer",
+        "event_trade"
+      ],
+      "rewardCalls": [],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_no_literal_reward_calls_requires_inspection"
+    },
+    {
+      "key": "soltemple/Tazgar",
+      "id": 16619,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/soltemple/Tazgar.lua",
+      "handlers": [
+        "event_say"
+      ],
+      "rewardCalls": [
+        "Faction"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_reward_without_trade_requires_disposition"
+    },
+    {
+      "key": "southkarana/#Triathalon_Running_Shoes",
+      "id": 17511,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/southkarana/%23Triathalon_Running_Shoes.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "steamfont/#Biddliss_Sperandu",
+      "id": 12733,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/steamfont/%23Biddliss_Sperandu.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "swampofnohope/Scout_Eyru",
+      "id": 12222,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/swampofnohope/Scout_Eyru.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "thurgadina/Dardek_Bladewright",
+      "id": 16673,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/thurgadina/Dardek_Bladewright.lua",
+      "handlers": [
+        "event_say",
+        "event_trade",
+        "event_waypoint_arrive"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "thurgadina/Talem_Tucter",
+      "id": 14696,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/thurgadina/Talem_Tucter.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "thurgadina/Trademaster_Kroven",
+      "id": 18593,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/thurgadina/Trademaster_Kroven.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "thurgadinb/Councilor_Juliah_Lockheart",
+      "id": 12401,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/thurgadinb/Councilor_Juliah_Lockheart.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_no_literal_reward_calls_requires_inspection"
+    },
+    {
+      "key": "timorous/Scout_Sihmoj",
+      "id": 12427,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/timorous/Scout_Sihmoj.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "tox/Lanivon_Baxer",
+      "id": 18922,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/tox/Lanivon_Baxer.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "trakanon/Crusader_Vragor",
+      "id": 17969,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/trakanon/Crusader_Vragor.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "Faction"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "wakening/#Alaurin",
+      "id": 17455,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/wakening/%23Alaurin.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "wakening/#Lantaric-Dar",
+      "id": 18706,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/wakening/%23Lantaric-Dar.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "QuestReward"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "warslikswood/#an_injured_traveller",
+      "id": 17283,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/warslikswood/%23an_injured_traveller.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "westwastes/#Vohnkare",
+      "id": 16220,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/westwastes/%23Vohnkare.lua",
+      "handlers": [
+        "event_say",
+        "event_trade"
+      ],
+      "rewardCalls": [
+        "AddEXP",
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_trade_with_reward_calls_requires_disposition"
+    },
+    {
+      "key": "westwastes/a_Lost_Tomekeeper",
+      "id": 13735,
+      "baselineEnabled": 1,
+      "currentEnabled": 1,
+      "proposed": false,
+      "baselineFile": "effective/quests/westwastes/a_Lost_Tomekeeper.lua",
+      "handlers": [
+        "event_say"
+      ],
+      "rewardCalls": [
+        "SummonItem"
+      ],
+      "questPolicy": null,
+      "npcPolicyCandidates": [],
+      "namePatterns": [],
+      "historicalPageReferences": [],
+      "nameMentionPages": [],
+      "structuralDisposition": "unmapped_reward_without_trade_requires_disposition"
+    }
+  ]
+}

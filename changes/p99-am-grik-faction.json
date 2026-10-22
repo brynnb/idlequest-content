@@ -1,0 +1,74 @@
+{
+  "format": 1,
+  "id": "p99-am-grik-faction",
+  "summary": "Remove Forager Grik faction gain from the vial exchange because P99 explicitly reports no faction hit. Preserve both aliases, item exchange and unquantified upstream500XP.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Marda's_Secret_Mission?action=raw",
+      "note": "Cached 2026-07-17T23:24:47.837Z; revision unavailable; SHA256 a22968f7aa4493ae237533e5bccd5808cc87e16a79560e79706b59c6e9da4a7a. Marda's Secret Mission"
+    },
+    {
+      "url": "https://wiki.project1999.com/Marda's_Secret_Mission?action=raw",
+      "note": "Promote immutable upstream source sources/projecteq/innothule/Forager_Grik.lua SHA256 e9ab847924f6aa1b45f4e26cc38207262d24050fe29aa8045a4798f22edc95e9 to maintained modified-upstream override; baseline remains untouched."
+    },
+    {
+      "url": "https://wiki.project1999.com/Marda's_Secret_Mission?action=raw",
+      "note": "Promote immutable upstream source sources/projecteq/innothuleb/Forager_Grik.lua SHA256 e9ab847924f6aa1b45f4e26cc38207262d24050fe29aa8045a4798f22edc95e9 to maintained modified-upstream override; baseline remains untouched."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 16480,
+        "zone": "innothule",
+        "name": "Forager_Grik",
+        "lua_content": "-- items: 13375, 13376\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Grikk.. Please leave me be. I but a humble forager. My people are starving.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 13375})) then\n\t\te.self:Say(\"Grrrikk.. This is Groak's vial!! He must be in danger. Here. Return this liquid to him. Be quick!\");\n\t\te.other:SummonItem(13376); -- Item: Ochre Liquid\n\t\te.other:Ding();\n\t\te.other:Faction(251,20,0); -- Faction: Frogloks of Guk\n\t\te.other:AddEXP(500);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 16480,
+        "zone": "innothule",
+        "name": "Forager_Grik",
+        "lua_content": "-- items: 13375, 13376\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Grikk.. Please leave me be. I but a humble forager. My people are starving.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 13375})) then\n\t\te.self:Say(\"Grrrikk.. This is Groak's vial!! He must be in danger. Here. Return this liquid to him. Be quick!\");\n\t\te.other:SummonItem(13376); -- Item: Ochre Liquid\n\t\te.other:Ding();\n\n\t\te.other:AddEXP(500);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 16097,
+        "zone": "innothuleb",
+        "name": "Forager_Grik",
+        "lua_content": "-- items: 13375, 13376\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Grikk.. Please leave me be. I but a humble forager. My people are starving.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 13375})) then\n\t\te.self:Say(\"Grrrikk.. This is Groak's vial!! He must be in danger. Here. Return this liquid to him. Be quick!\");\n\t\te.other:SummonItem(13376); -- Item: Ochre Liquid\n\t\te.other:Ding();\n\t\te.other:Faction(251,20,0); -- Faction: Frogloks of Guk\n\t\te.other:AddEXP(500);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 16097,
+        "zone": "innothuleb",
+        "name": "Forager_Grik",
+        "lua_content": "-- items: 13375, 13376\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Grikk.. Please leave me be. I but a humble forager. My people are starving.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 13375})) then\n\t\te.self:Say(\"Grrrikk.. This is Groak's vial!! He must be in danger. Here. Return this liquid to him. Be quick!\");\n\t\te.other:SummonItem(13376); -- Item: Ochre Liquid\n\t\te.other:Ding();\n\n\t\te.other:AddEXP(500);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/innothule/Forager_Grik.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-am-grik-faction/innothule-Forager_Grik.lua",
+      "afterSha256": "025161dff1e259aeb90b5a99cb4ebab98336703f6089cf6f581c7a41580bfe0d"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/innothuleb/Forager_Grik.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-am-grik-faction/innothuleb-Forager_Grik.lua",
+      "afterSha256": "025161dff1e259aeb90b5a99cb4ebab98336703f6089cf6f581c7a41580bfe0d"
+    }
+  ]
+}

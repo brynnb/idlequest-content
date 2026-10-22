@@ -1,0 +1,66 @@
+{
+  "format": 1,
+  "id": "p99-nz-rebby-factions",
+  "summary": "Correct both Tradefolk faction gains from10to7 for Rebby\u2019s Rat Whiskers on both Nestral aliases.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Note_for_Rebby?action=raw",
+      "note": "Cached 2026-07-17T23:27:10.822Z; revision unavailable; SHA256 d969f732a57bc62de97334246b1556090d7b6a038b52834dd864d8812040b1cc. Cached page explicitly gives+7 Coalition Underground,+7 Coalition of Tradefolk,+1Carson,+1Corrupt Guards,+1Freeport Militia and7copper. Other three deltas and7copper already match. Note18923->whiskers13158 exchange verified in Rebby, no change to EXP amounts absent P99."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 14782,
+        "zone": "freeporteast",
+        "name": "Nestral_TGaza",
+        "lua_content": "-- items: 18923, 13158\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Hey, hello there, \" .. e.other:GetName() .. \". It's been so busy around here lately! Barely time to eat and sleep, let alone have any fun. Oh well, it keeps me employed. But, I really could use someone to [help] me out around here.\");\n\telseif(e.message:findi(\"help\")) then\n\t\te.self:Say(\"Yea and if you can help me out with A few things that'd be great. Geez and where do we Start? I need someone to run over to [Janam and Rebby's]? Can you do that for me?\");\n\telseif(e.message:findi(\"janam and rebby\")) then\n\t\te.self:Say(\"Janam and Rebby are A couple of merchants working the area around the Theater of the Tranquil and the Ashen Order, in West Freeport. It's part of my job to keep tabs on those two rascals. I need someone to take this note to Rebby for me. Don't worry, your efforts won't go unnoticed \" .. e.other:GetName() .. \".\");\n\t\te.other:SummonItem(18923); -- Message to Rebby\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 13158})) then -- Rebby's Rat Whiskers\n\t\te.self:Say(\"Thank you \" .. e.other:GetName() .. \", You have done well.\");\n\t\te.other:Ding();\n\t\te.other:Faction(336,10,0); -- Faction: Coalition of Tradefolk Underground\n\t\te.other:Faction(229,10,0); -- Faction: Coalition of Tradefolk\n\t\te.other:Faction(329,1,0); -- Faction: Carson McCabe\n\t\te.other:Faction(230,1,0); -- Faction: Corrupt Qeynos Guards\n\t\te.other:Faction(330,1,0); -- Faction: The Freeport Militia\n\t\te.other:AddEXP(62);\n\t\te.other:GiveCash(7,0,0,0);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade);\nend\n\n-- END of FILE Zone:freporte  ID:10105 -- Nestral_TGaza\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 14782,
+        "zone": "freeporteast",
+        "name": "Nestral_TGaza",
+        "lua_content": "-- items: 18923, 13158\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Hey, hello there, \" .. e.other:GetName() .. \". It's been so busy around here lately! Barely time to eat and sleep, let alone have any fun. Oh well, it keeps me employed. But, I really could use someone to [help] me out around here.\");\n\telseif(e.message:findi(\"help\")) then\n\t\te.self:Say(\"Yea and if you can help me out with A few things that'd be great. Geez and where do we Start? I need someone to run over to [Janam and Rebby's]? Can you do that for me?\");\n\telseif(e.message:findi(\"janam and rebby\")) then\n\t\te.self:Say(\"Janam and Rebby are A couple of merchants working the area around the Theater of the Tranquil and the Ashen Order, in West Freeport. It's part of my job to keep tabs on those two rascals. I need someone to take this note to Rebby for me. Don't worry, your efforts won't go unnoticed \" .. e.other:GetName() .. \".\");\n\t\te.other:SummonItem(18923); -- Message to Rebby\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 13158})) then -- Rebby's Rat Whiskers\n\t\te.self:Say(\"Thank you \" .. e.other:GetName() .. \", You have done well.\");\n\t\te.other:Ding();\n\t\te.other:Faction(336,7,0); -- Faction: Coalition of Tradefolk Underground\n\t\te.other:Faction(229,7,0); -- Faction: Coalition of Tradefolk\n\t\te.other:Faction(329,1,0); -- Faction: Carson McCabe\n\t\te.other:Faction(230,1,0); -- Faction: Corrupt Qeynos Guards\n\t\te.other:Faction(330,1,0); -- Faction: The Freeport Militia\n\t\te.other:AddEXP(62);\n\t\te.other:GiveCash(7,0,0,0);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade);\nend\n\n-- END of FILE Zone:freporte  ID:10105 -- Nestral_TGaza\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 15822,
+        "zone": "freporte",
+        "name": "Nestral_TGaza",
+        "lua_content": "-- items: 18923, 13158\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Hey, hello there, \" .. e.other:GetName() .. \". It's been so busy around here lately! Barely time to eat and sleep, let alone have any fun. Oh well, it keeps me employed. But, I really could use someone to [help] me out around here.\");\n\telseif(e.message:findi(\"help\")) then\n\t\te.self:Say(\"Yea and if you can help me out with A few things that'd be great. Geez and where do we Start? I need someone to run over to [Janam and Rebby's]? Can you do that for me?\");\n\telseif(e.message:findi(\"janam and rebby\")) then\n\t\te.self:Say(\"Janam and Rebby are A couple of merchants working the area around the Theater of the Tranquil and the Ashen Order, in West Freeport. It's part of my job to keep tabs on those two rascals. I need someone to take this note to Rebby for me. Don't worry, your efforts won't go unnoticed \" .. e.other:GetName() .. \".\");\n\t\te.other:SummonItem(18923); -- Message to Rebby\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 13158})) then -- Rebby's Rat Whiskers\n\t\te.self:Say(\"Thank you \" .. e.other:GetName() .. \", You have done well.\");\n\t\te.other:Ding();\n\t\te.other:Faction(336,10,0); -- Faction: Coalition of Tradefolk Underground\n\t\te.other:Faction(229,10,0); -- Faction: Coalition of Tradefolk\n\t\te.other:Faction(329,1,0); -- Faction: Carson McCabe\n\t\te.other:Faction(230,1,0); -- Faction: Corrupt Qeynos Guards\n\t\te.other:Faction(330,1,0); -- Faction: The Freeport Militia\n\t\te.other:AddEXP(62);\n\t\te.other:GiveCash(7,0,0,0);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade);\nend\n\n-- END of FILE Zone:freporte  ID:10105 -- Nestral_TGaza\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 15822,
+        "zone": "freporte",
+        "name": "Nestral_TGaza",
+        "lua_content": "-- items: 18923, 13158\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Hey, hello there, \" .. e.other:GetName() .. \". It's been so busy around here lately! Barely time to eat and sleep, let alone have any fun. Oh well, it keeps me employed. But, I really could use someone to [help] me out around here.\");\n\telseif(e.message:findi(\"help\")) then\n\t\te.self:Say(\"Yea and if you can help me out with A few things that'd be great. Geez and where do we Start? I need someone to run over to [Janam and Rebby's]? Can you do that for me?\");\n\telseif(e.message:findi(\"janam and rebby\")) then\n\t\te.self:Say(\"Janam and Rebby are A couple of merchants working the area around the Theater of the Tranquil and the Ashen Order, in West Freeport. It's part of my job to keep tabs on those two rascals. I need someone to take this note to Rebby for me. Don't worry, your efforts won't go unnoticed \" .. e.other:GetName() .. \".\");\n\t\te.other:SummonItem(18923); -- Message to Rebby\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 13158})) then -- Rebby's Rat Whiskers\n\t\te.self:Say(\"Thank you \" .. e.other:GetName() .. \", You have done well.\");\n\t\te.other:Ding();\n\t\te.other:Faction(336,7,0); -- Faction: Coalition of Tradefolk Underground\n\t\te.other:Faction(229,7,0); -- Faction: Coalition of Tradefolk\n\t\te.other:Faction(329,1,0); -- Faction: Carson McCabe\n\t\te.other:Faction(230,1,0); -- Faction: Corrupt Qeynos Guards\n\t\te.other:Faction(330,1,0); -- Faction: The Freeport Militia\n\t\te.other:AddEXP(62);\n\t\te.other:GiveCash(7,0,0,0);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade);\nend\n\n-- END of FILE Zone:freporte  ID:10105 -- Nestral_TGaza\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/freeporteast/Nestral_TGaza.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-nz-rebby-factions/freeporteast--Nestral_TGaza.lua",
+      "afterSha256": "50bfe78bbf999a70668f45b0a137652ec3c995bee7f1db55852f3d2c07abae23"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freporte/Nestral_TGaza.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-nz-rebby-factions/freporte--Nestral_TGaza.lua",
+      "afterSha256": "50bfe78bbf999a70668f45b0a137652ec3c995bee7f1db55852f3d2c07abae23"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "format": 1,
+  "id": "p99-trade-scope-disables",
+  "summary": "Disable two additional exclusively later-era source surfaces identified by the complete refund-handler review. Preserve every historical callback and NPC row.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Shaman_Skull_Quests?action=raw",
+      "note": "P99 explicitly states only Shaman Skull steps1\u20135 exist and later steps were added in Luclin. Bruiser_Noz explicitly identifies itself as Skull Quest6 and contains only the later combat lifecycle plus refund callback. Cache reference/p99-wiki/raw-pages/shaman-skull-quests-b63ed30880.wiki; fetched2026-07-17T23:32:43.944Z; SHA256 58e529950f5736a98c7deac45fbf8897833cae17bfcf08706222406a34ab791c; revision unavailable. Not a live wiki freshness claim."
+    },
+    {
+      "url": "https://wiki.project1999.com/Guard_Gregor?action=raw",
+      "note": "Cached NPC page explicitly marks DNE/delete, identifies NPC12116 and June2002 introduction. Exact cache: reference/p99-wiki/npc-pages/guard-gregor-57e0bdc04c.wiki; SHA256 bd015185fff86a18ecb337e4ad24824f35cf08b8f78d643f71aa698e36d17b74; fetched2026-08-12. Its complete source offers only later task500143 plus generic combat/refund callbacks. No absence-based scope inference."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 13934,
+        "zone": "lakeofillomen",
+        "name": "Bruiser_Noz",
+        "lua_content": "--Shaman Skull Quest 6\nfunction event_spawn(e)\n\te.self:Emote(\"is a battle-scared lizard with arms the size of tree trunks. He approaches and speaks. You feel the lager-tinged breeze blast your skin. 'Stay out of this, Klok!! I didn't spend 30 seasons in the legion to be pestered by the likes of you!! Here I am, you little croak!! You want my skull? Come and get it!!'\");\nend\n\nfunction event_signal(e)\n\te.self:Say(\"Ha!! Who dares to take what is Bruiser's!! I will make swamp mush out of them!!\");\n\teq.attack(e.other:GetName());\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 13934,
+        "zone": "lakeofillomen",
+        "name": "Bruiser_Noz",
+        "lua_content": "-- enabled: false\n-- P99 Shaman Skull Quests explicitly excludes later stages; this complete source is exclusively labeled Skull Quest6. Historical callbacks retained below.\n--Shaman Skull Quest 6\nfunction event_spawn(e)\n\te.self:Emote(\"is a battle-scared lizard with arms the size of tree trunks. He approaches and speaks. You feel the lager-tinged breeze blast your skin. 'Stay out of this, Klok!! I didn't spend 30 seasons in the legion to be pestered by the likes of you!! Here I am, you little croak!! You want my skull? Come and get it!!'\");\nend\n\nfunction event_signal(e)\n\te.self:Say(\"Ha!! Who dares to take what is Bruiser's!! I will make swamp mush out of them!!\");\n\teq.attack(e.other:GetName());\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 18326,
+        "zone": "qey2hh1",
+        "name": "Guard_Gregor",
+        "lua_content": "function event_combat(e)\n\tif e.joined then\n\t\te.self:Say(string.format(\"Time to die %s!\",e.other:GetCleanName()));\n\tend\nend\n\nfunction event_say(e)\n\tif(e.other:GetLevel() >= 20 and e.other:GetLevel() <= 30) then\n\t\tif(e.message:findi(\"hail\")) then\n\t\t\te.self:Say(string.format(\"Oh, hello %s. Would you like to assist me in a [task]?\",e.other:GetName()));\n\t\telseif(e.message:findi(\"task\")) then\n\t\t\te.self:Say(\"Excellent! I was hoping you would be able to help me.\");\n\t\t\teq.task_selector({500143}); -- Task: Bringing Goods to the Karanas\n\t\tend\n\telse\n\t\te.self:Say(string.format(\"Sorry, %s. I am quite busy...\",e.other:GetName()));\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 18326,
+        "zone": "qey2hh1",
+        "name": "Guard_Gregor",
+        "lua_content": "-- enabled: false\n-- P99 Guard Gregor NPC page explicitly marks this June2002 actor DNE; its only quest surface is later task500143. Historical callbacks retained below.\nfunction event_combat(e)\n\tif e.joined then\n\t\te.self:Say(string.format(\"Time to die %s!\",e.other:GetCleanName()));\n\tend\nend\n\nfunction event_say(e)\n\tif(e.other:GetLevel() >= 20 and e.other:GetLevel() <= 30) then\n\t\tif(e.message:findi(\"hail\")) then\n\t\t\te.self:Say(string.format(\"Oh, hello %s. Would you like to assist me in a [task]?\",e.other:GetName()));\n\t\telseif(e.message:findi(\"task\")) then\n\t\t\te.self:Say(\"Excellent! I was hoping you would be able to help me.\");\n\t\t\teq.task_selector({500143}); -- Task: Bringing Goods to the Karanas\n\t\tend\n\telse\n\t\te.self:Say(string.format(\"Sorry, %s. I am quite busy...\",e.other:GetName()));\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 0
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/lakeofillomen/Bruiser_Noz.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-trade-scope-disables/lakeofillomen--Bruiser_Noz.lua",
+      "afterSha256": "3d6ad259ce261e2a26237065dce66592bff5e87f9c39b843b981a10b50dae9bd"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qey2hh1/Guard_Gregor.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-trade-scope-disables/qey2hh1--Guard_Gregor.lua",
+      "afterSha256": "2f685e97b734f170a01c224a21bbec7dd93b02036bf186244207fef766d8d30b"
+    }
+  ]
+}

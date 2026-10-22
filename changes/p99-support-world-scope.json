@@ -1,0 +1,928 @@
+{
+  "format": 1,
+  "id": "p99-support-world-scope",
+  "summary": "Disable36 exclusively later-era task, epic or event quest sources missed by lexical support classification. Preserve all historical callback bytes and all NPC/world rows; no blanket era inference by NPC exclusion or item IDs.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://www.everquest.com/news/imported-eq-enus-50720",
+      "note": "Official EverQuest guide dated2007-12-11 states that the Task System was introduced with Omens of War. Retrieved2026-10-22 via web tool. Applied only to complete imported task-only impression-book callbacks, not every source containing a word task."
+    },
+    {
+      "url": "https://www.everquest.com/news/imported-eq-enus-62693",
+      "note": "Official EverQuest character-art update dated2004-06-30 discusses new Epic2.0 weapons as part of Omens of War. Retrieved2026-10-22. Later1.5 exclusions also explicitly preserved in repository quest scope policy; exact source/body dependency proof is recorded separately."
+    },
+    {
+      "url": "https://sony.mediaroom.com/2003-12-17-Sony-Online-Entertainment-Unlocks-the-Gates-of-Discord-for-EverQuest",
+      "note": "Official Sony2003-12-17 announcement introduces Berserker in Gates of Discord, plannedFebruary2004. Retrieved2026-10-22; only explicitly Berserker-exclusive source is disabled here."
+    },
+    {
+      "url": "https://github.com/brynnb/idlequest-content",
+      "note": "Pinned local CONTRIBUTING.md and reference/docs/p99-quest-audit-workflow.md define Classic-through-Velious scope and retain actual later-era/event exclusions. See changes/p99-support-source-review/world-scope-dispositions.json for exact proof and limitations."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 18397,
+        "zone": "burningwood",
+        "name": "#a_crippled_wurm",
+        "lua_content": "local kick_avail;\n\nfunction event_combat(e)\n\tif e.joined then\n\t\tkick_avail=1;\n\t\teq.set_timer(\"kickthatface\",1000)\n\tend\nend\n\nfunction event_timer(e)\n\tif e.timer==\"kickthatface\" then\n\t\tif (e.self:CombatRange(e.self:GetTarget()) and kick_avail==1) then\n\t\t\te.self:DoMeleeSkillAttackDmg(e.self:GetTarget(), 3500, 30);\n\t\t\tkick_avail=0;\n\t\t\teq.set_timer(\"resetkick\",8*1000);\n\t\tend\n\telseif e.timer==\"resetkick\" then\n\t\tkick_avail=1;\n\tend\nend",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 18397,
+        "zone": "burningwood",
+        "name": "#a_crippled_wurm",
+        "lua_content": "-- enabled: false\n-- P99 scope: exclusive later epic hook. Historical callbacks retained below; see p99-support-source-review/world-scope-dispositions.json.\nlocal kick_avail;\n\nfunction event_combat(e)\n\tif e.joined then\n\t\tkick_avail=1;\n\t\teq.set_timer(\"kickthatface\",1000)\n\tend\nend\n\nfunction event_timer(e)\n\tif e.timer==\"kickthatface\" then\n\t\tif (e.self:CombatRange(e.self:GetTarget()) and kick_avail==1) then\n\t\t\te.self:DoMeleeSkillAttackDmg(e.self:GetTarget(), 3500, 30);\n\t\t\tkick_avail=0;\n\t\t\teq.set_timer(\"resetkick\",8*1000);\n\t\tend\n\telseif e.timer==\"resetkick\" then\n\t\tkick_avail=1;\n\tend\nend",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 16568,
+        "zone": "burningwood",
+        "name": "a_sarnak_champion",
+        "lua_content": "function event_killed_merit(e)\n\tif e.other:IsTaskActive(5788) then\n\t\tif math.random(100) <= 20 then\n\t\t\tif e.other:HasItem(34998) then\n\t\t\t\te.other:UpdateTaskActivity(5788,3,1);\n\t\t\telse\n\t\t\t\te.other:Message(MT.Yellow, \"You see the perfect pattern, but as you search your bags you cannot find your impression book.\");\n\t\t\tend\n\t\tend\n\tend\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 16568,
+        "zone": "burningwood",
+        "name": "a_sarnak_champion",
+        "lua_content": "-- enabled: false\n-- P99 scope: exclusive later task hook. Historical callbacks retained below; see p99-support-source-review/world-scope-dispositions.json.\nfunction event_killed_merit(e)\n\tif e.other:IsTaskActive(5788) then\n\t\tif math.random(100) <= 20 then\n\t\t\tif e.other:HasItem(34998) then\n\t\t\t\te.other:UpdateTaskActivity(5788,3,1);\n\t\t\telse\n\t\t\t\te.other:Message(MT.Yellow, \"You see the perfect pattern, but as you search your bags you cannot find your impression book.\");\n\t\t\tend\n\t\tend\n\tend\nend\n",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 17037,
+        "zone": "crushbone",
+        "name": "#Orc_Messenger",
+        "lua_content": "function event_spawn(e)\n\teq.set_timer(\"depop\",15*60*1000);\nend\n\nfunction event_timer(e)\n\tif e.timer==\"depop\" then\n\t\teq.depop();\n\tend\nend",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 17037,
+        "zone": "crushbone",
+        "name": "#Orc_Messenger",
+        "lua_content": "-- enabled: false\n-- P99 scope: exclusive later epic hook. Historical callbacks retained below; see p99-support-source-review/world-scope-dispositions.json.\nfunction event_spawn(e)\n\teq.set_timer(\"depop\",15*60*1000);\nend\n\nfunction event_timer(e)\n\tif e.timer==\"depop\" then\n\t\teq.depop();\n\tend\nend",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 13901,
+        "zone": "crushbone",
+        "name": "player",
+        "lua_content": "function event_enter_zone(e)\n\tlocal qglobals = eq.get_qglobals(e.self);\n\tlocal el = eq.get_entity_list();\n\t\n\tif(qglobals[\"paladin_epic\"] == \"9\" and qglobals[\"paladin_epic_crushbone\"] == nil and not el:IsMobSpawnedByNpcTypeID(58060)) then\n\t\teq.unique_spawn(58060,21,0,166.4,153.3,18.2,384); -- NPC: #Orc_Messenger\n\t\teq.set_global(\"paladin_epic_crushbone\",\"1\",3,\"H2\");\n\tend\t\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 13901,
+        "zone": "crushbone",
+        "name": "player",
+        "lua_content": "-- enabled: false\n-- P99 scope: exclusive later epic hook. Historical callbacks retained below; see p99-support-source-review/world-scope-dispositions.json.\nfunction event_enter_zone(e)\n\tlocal qglobals = eq.get_qglobals(e.self);\n\tlocal el = eq.get_entity_list();\n\t\n\tif(qglobals[\"paladin_epic\"] == \"9\" and qglobals[\"paladin_epic_crushbone\"] == nil and not el:IsMobSpawnedByNpcTypeID(58060)) then\n\t\teq.unique_spawn(58060,21,0,166.4,153.3,18.2,384); -- NPC: #Orc_Messenger\n\t\teq.set_global(\"paladin_epic_crushbone\",\"1\",3,\"H2\");\n\tend\t\nend\n",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 14925,
+        "zone": "dreadlands",
+        "name": "#mage_trap",
+        "lua_content": "function event_spawn(e)\n\teq.set_proximity(e.self:GetX() - 500, e.self:GetX() + 500, e.self:GetY() - 500, e.self:GetY() + 500);\nend\n\nfunction event_enter(e)\n\tif(e.other:Class() == \"Magician\") then\n\t\tlocal qglobals = eq.get_qglobals(e.self,e.other);\n\t\tif(qglobals[\"mage_epic\"] == \"10\" and qglobals[\"mage_epic_dl\"] == nil and not eq.get_entity_list():IsMobSpawnedByNpcTypeID(86174)) then\t\n\t\t\tif(e.self:GetY()==635) then\t\t\t\t\t\n\t\t\t\te.other:Message(MT.Yellow,\"You see the burning manifestation of Chaos appear before you.\");\t\n\t\t\t\teq.set_global(\"mage_epic_dl\",\"1\",3,\"H2\");\n\t\t\t\teq.set_timer(\"mage_epic_depop\",30*60*1000);\n\t\t\t\teq.spawn2(86174, 0, 0, 8877,363.5,1158,0); -- NPC: #Chaos_Elemental\n\t\t\telse\t\t\t\t\n\t\t\t\te.other:Message(MT.Yellow,\"The red gem on your staff glows.\")\n\t\t\tend\n\t\tend\n\tend\nend\n\nfunction event_timer(e)\n\tif (e.timer==\"mage_epic_depop\") then\n\t\teq.stop_timer(\"mage_epic_depop\");\n\t\teq.depop_all(86174); \n\tend\nend",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 14925,
+        "zone": "dreadlands",
+        "name": "#mage_trap",
+        "lua_content": "-- enabled: false\n-- P99 scope: exclusive later epic hook. Historical callbacks retained below; see p99-support-source-review/world-scope-dispositions.json.\nfunction event_spawn(e)\n\teq.set_proximity(e.self:GetX() - 500, e.self:GetX() + 500, e.self:GetY() - 500, e.self:GetY() + 500);\nend\n\nfunction event_enter(e)\n\tif(e.other:Class() == \"Magician\") then\n\t\tlocal qglobals = eq.get_qglobals(e.self,e.other);\n\t\tif(qglobals[\"mage_epic\"] == \"10\" and qglobals[\"mage_epic_dl\"] == nil and not eq.get_entity_list():IsMobSpawnedByNpcTypeID(86174)) then\t\n\t\t\tif(e.self:GetY()==635) then\t\t\t\t\t\n\t\t\t\te.other:Message(MT.Yellow,\"You see the burning manifestation of Chaos appear before you.\");\t\n\t\t\t\teq.set_global(\"mage_epic_dl\",\"1\",3,\"H2\");\n\t\t\t\teq.set_timer(\"mage_epic_depop\",30*60*1000);\n\t\t\t\teq.spawn2(86174, 0, 0, 8877,363.5,1158,0); -- NPC: #Chaos_Elemental\n\t\t\telse\t\t\t\t\n\t\t\t\te.other:Message(MT.Yellow,\"The red gem on your staff glows.\")\n\t\t\tend\n\t\tend\n\tend\nend\n\nfunction event_timer(e)\n\tif (e.timer==\"mage_epic_depop\") then\n\t\teq.stop_timer(\"mage_epic_depop\");\n\t\teq.depop_all(86174); \n\tend\nend",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 19353,
+        "zone": "dreadlands",
+        "name": "a_drolvarg_rager",
+        "lua_content": "function event_killed_merit(e)\n\tif e.other:IsTaskActive(5789) then\n\t\tif math.random(100) <= 20 then\n\t\t\tif e.other:HasItem(34998) then\n\t\t\t\te.other:UpdateTaskActivity(5789,3,1);\n\t\t\telse\n\t\t\t\te.other:Message(MT.Yellow, \"You see the perfect pattern, but as you search your bags you cannot find your impression book.\");\n\t\t\tend\n\t\tend\n\tend\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 19353,
+        "zone": "dreadlands",
+        "name": "a_drolvarg_rager",
+        "lua_content": "-- enabled: false\n-- P99 scope: exclusive later task hook. Historical callbacks retained below; see p99-support-source-review/world-scope-dispositions.json.\nfunction event_killed_merit(e)\n\tif e.other:IsTaskActive(5789) then\n\t\tif math.random(100) <= 20 then\n\t\t\tif e.other:HasItem(34998) then\n\t\t\t\te.other:UpdateTaskActivity(5789,3,1);\n\t\t\telse\n\t\t\t\te.other:Message(MT.Yellow, \"You see the perfect pattern, but as you search your bags you cannot find your impression book.\");\n\t\t\tend\n\t\tend\n\tend\nend\n",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 17939,
+        "zone": "dreadlands",
+        "name": "a_petrifier_cockatrice",
+        "lua_content": "function event_killed_merit(e)\n\tif e.other:IsTaskActive(5787) then\n\t\tif math.random(100) <= 20 then\n\t\t\tif e.other:HasItem(34998) then\n\t\t\t\te.other:UpdateTaskActivity(5787,31,1);\n\t\t\telse\n\t\t\t\te.other:Message(MT.Yellow, \"You see the perfect pattern, but as you search your bags you cannot find your impression book.\");\n\t\t\tend\n\t\tend\n\tend\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 17939,
+        "zone": "dreadlands",
+        "name": "a_petrifier_cockatrice",
+        "lua_content": "-- enabled: false\n-- P99 scope: exclusive later task hook. Historical callbacks retained below; see p99-support-source-review/world-scope-dispositions.json.\nfunction event_killed_merit(e)\n\tif e.other:IsTaskActive(5787) then\n\t\tif math.random(100) <= 20 then\n\t\t\tif e.other:HasItem(34998) then\n\t\t\t\te.other:UpdateTaskActivity(5787,31,1);\n\t\t\telse\n\t\t\t\te.other:Message(MT.Yellow, \"You see the perfect pattern, but as you search your bags you cannot find your impression book.\");\n\t\t\tend\n\t\tend\n\tend\nend\n",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 16697,
+        "zone": "eastkarana",
+        "name": "a_crag_spider",
+        "lua_content": "function event_killed_merit(e)\n\tif e.other:IsTaskActive(5786) then\n\t\tif math.random(100) <= 20 then\n\t\t\tif e.other:HasItem(34997) then\n\t\t\t\te.other:UpdateTaskActivity(5786,3,1);\n\t\t\telse\n\t\t\t\te.other:Message(MT.Yellow, \"You see the perfect pattern, but as you search your bags you cannot find your impression book.\");\n\t\t\tend\n\t\tend\n\telseif e.other:IsTaskActive(5784) then\n\t\tif math.random(100) <= 20 then\n\t\t\tif e.other:HasItem(34997) then\n\t\t\t\te.other:UpdateTaskActivity(5784,3,1);\n\t\t\telse\n\t\t\t\te.other:Message(MT.Yellow, \"You see the perfect pattern, but as you search your bags you cannot find your impression book.\");\n\t\t\tend\n\t\tend\n\tend\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 16697,
+        "zone": "eastkarana",
+        "name": "a_crag_spider",
+        "lua_content": "-- enabled: false\n-- P99 scope: exclusive later task hook. Historical callbacks retained below; see p99-support-source-review/world-scope-dispositions.json.\nfunction event_killed_merit(e)\n\tif e.other:IsTaskActive(5786) then\n\t\tif math.random(100) <= 20 then\n\t\t\tif e.other:HasItem(34997) then\n\t\t\t\te.other:UpdateTaskActivity(5786,3,1);\n\t\t\telse\n\t\t\t\te.other:Message(MT.Yellow, \"You see the perfect pattern, but as you search your bags you cannot find your impression book.\");\n\t\t\tend\n\t\tend\n\telseif e.other:IsTaskActive(5784) then\n\t\tif math.random(100) <= 20 then\n\t\t\tif e.other:HasItem(34997) then\n\t\t\t\te.other:UpdateTaskActivity(5784,3,1);\n\t\t\telse\n\t\t\t\te.other:Message(MT.Yellow, \"You see the perfect pattern, but as you search your bags you cannot find your impression book.\");\n\t\t\tend\n\t\tend\n\tend\nend\n",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 19262,
+        "zone": "eastwastes",
+        "name": "#warr_trap",
+        "lua_content": "--eastwastes/#Larnik_Trigger.lua NPCID \n--Warrior Epic 2.0\nfunction event_spawn(e)\n\tlocal xloc = e.self:GetX();\n\tlocal yloc = e.self:GetY();\n\teq.set_proximity(xloc - 100, xloc + 100, yloc - 100, yloc + 100);\nend\n\nfunction event_enter(e)\nlocal zone_time = eq.get_zone_time();\t\n\tif(e.other:HasItem(60324) and zone_time[\"zone_hour\"]>=20 and zone_time[\"zone_hour\"]<= 23 and not eq.get_entity_list():IsMobSpawnedByNpcTypeID(116609)) then --Fazzle's Map of East Wastes\n\t\teq.spawn2(116609,270,0,e.self:GetX(),e.self:GetY(),e.self:GetZ(),e.self:GetHeading()); --Larnik_the_Recluse\n\t\teq.depop_with_timer();\n\tend\nend\n\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 19262,
+        "zone": "eastwastes",
+        "name": "#warr_trap",
+        "lua_content": "-- enabled: false\n-- P99 scope: exclusive later epic hook. Historical callbacks retained below; see p99-support-source-review/world-scope-dispositions.json.\n--eastwastes/#Larnik_Trigger.lua NPCID \n--Warrior Epic 2.0\nfunction event_spawn(e)\n\tlocal xloc = e.self:GetX();\n\tlocal yloc = e.self:GetY();\n\teq.set_proximity(xloc - 100, xloc + 100, yloc - 100, yloc + 100);\nend\n\nfunction event_enter(e)\nlocal zone_time = eq.get_zone_time();\t\n\tif(e.other:HasItem(60324) and zone_time[\"zone_hour\"]>=20 and zone_time[\"zone_hour\"]<= 23 and not eq.get_entity_list():IsMobSpawnedByNpcTypeID(116609)) then --Fazzle's Map of East Wastes\n\t\teq.spawn2(116609,270,0,e.self:GetX(),e.self:GetY(),e.self:GetZ(),e.self:GetHeading()); --Larnik_the_Recluse\n\t\teq.depop_with_timer();\n\tend\nend\n\n",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 17673,
+        "zone": "eastwastes",
+        "name": "Larnik_the_Recluse",
+        "lua_content": "--eastwastes/Larnik_the_Recluse.lua NPCID \n--Warrior Epic 2.0\nfunction event_say(e)\n\tlocal qglobals = eq.get_qglobals(e.other);\n\tif(e.message:findi(\"hail\") and qglobals[\"warrior_epic\"] == \"18\") then\n\t\te.self:Say(\"Ahh! I've been found out! Who are you and where did you come from? How did you find me? It was that bothersome Fazzle, wasn't it? I knew he couldn't be trusted with the map! I knew it! Leave me alone, I don't want to be bothered! Away, away!\");\n\telseif(e.message:findi(\"korbuk sent me\") and qglobals[\"warrior_epic\"] == \"18\") then\n\t\te.self:Say(\"What? What did you say? Who sent you? Korbuk sent you? That's impossible. I told him to be gone long ago. I told him never to speak of me or send anyone my way ever again! That fool! Why would he send you here?\");\n\t\te.self:SetWaypointPause();\n\t\te.self:PauseWandering(5000);\n\t\teq.set_timer(\"depop\",60*1000);\n\telseif(e.message:findi(\"the great purification\") and qglobals[\"warrior_epic\"] == \"18\") then\n\t\te.self:Say(\"Raaaa! I'm out of that business! I'll never help him or anyone else purify another thing so long as I live! Get away from me!\");\n\t\te.self:Say(\"I'll not be hunted any more! Begone with you!\");\n\t\te.self:SetSpecialAbility(19, 0);\n\t\te.self:SetSpecialAbility(20, 0);\n\t\te.self:SetSpecialAbility(24, 0);\n\t\te.self:SetSpecialAbility(25, 0);\n\t\te.self:SetSpecialAbility(35, 0);\n\t\te.self:AddToHateList(e.other);\n\tend\t\nend\n\nfunction event_spawn(e)\n\te.self:SetRunning(true);\nend;\n\nfunction event_waypoint_arrive(e)\t\n\tif (e.wp == 5) then\n\t\teq.depop();\n\tend;\nend;\n\nfunction event_timer(e)\n\teq.depop()\nend\n\nfunction event_combat(e)\n\tif e.joined then \n\t\teq.stop_timer(\"depop\");\n\telse \n\t\teq.set_timer(\"depop\",60*1000)\n\tend\nend;\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 17673,
+        "zone": "eastwastes",
+        "name": "Larnik_the_Recluse",
+        "lua_content": "-- enabled: false\n-- P99 scope: exclusive later epic hook. Historical callbacks retained below; see p99-support-source-review/world-scope-dispositions.json.\n--eastwastes/Larnik_the_Recluse.lua NPCID \n--Warrior Epic 2.0\nfunction event_say(e)\n\tlocal qglobals = eq.get_qglobals(e.other);\n\tif(e.message:findi(\"hail\") and qglobals[\"warrior_epic\"] == \"18\") then\n\t\te.self:Say(\"Ahh! I've been found out! Who are you and where did you come from? How did you find me? It was that bothersome Fazzle, wasn't it? I knew he couldn't be trusted with the map! I knew it! Leave me alone, I don't want to be bothered! Away, away!\");\n\telseif(e.message:findi(\"korbuk sent me\") and qglobals[\"warrior_epic\"] == \"18\") then\n\t\te.self:Say(\"What? What did you say? Who sent you? Korbuk sent you? That's impossible. I told him to be gone long ago. I told him never to speak of me or send anyone my way ever again! That fool! Why would he send you here?\");\n\t\te.self:SetWaypointPause();\n\t\te.self:PauseWandering(5000);\n\t\teq.set_timer(\"depop\",60*1000);\n\telseif(e.message:findi(\"the great purification\") and qglobals[\"warrior_epic\"] == \"18\") then\n\t\te.self:Say(\"Raaaa! I'm out of that business! I'll never help him or anyone else purify another thing so long as I live! Get away from me!\");\n\t\te.self:Say(\"I'll not be hunted any more! Begone with you!\");\n\t\te.self:SetSpecialAbility(19, 0);\n\t\te.self:SetSpecialAbility(20, 0);\n\t\te.self:SetSpecialAbility(24, 0);\n\t\te.self:SetSpecialAbility(25, 0);\n\t\te.self:SetSpecialAbility(35, 0);\n\t\te.self:AddToHateList(e.other);\n\tend\t\nend\n\nfunction event_spawn(e)\n\te.self:SetRunning(true);\nend;\n\nfunction event_waypoint_arrive(e)\t\n\tif (e.wp == 5) then\n\t\teq.depop();\n\tend;\nend;\n\nfunction event_timer(e)\n\teq.depop()\nend\n\nfunction event_combat(e)\n\tif e.joined then \n\t\teq.stop_timer(\"depop\");\n\telse \n\t\teq.set_timer(\"depop\",60*1000)\n\tend\nend;\n",
+        "has_say_event": 1,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 14625,
+        "zone": "eastwastes",
+        "name": "player",
+        "lua_content": "--eastwastes/player.lua  \n--Warrior Epic 2.0\nfunction event_enter_zone(e)\n\tlocal qglobals = eq.get_qglobals(e.self);\n\t\n\t--on druid 1.5 and has Waterproof Collection Bag\n\tif(qglobals[\"druid_epic\"] == \"1\" and qglobals[\"druid_epic_ew\"] == nil and e.self:HasItem(62812)) then\n\t\teq.spawn2(116608,0,0,4752,-9171,259,344);  -- #Ulthork_Raider\n\t\teq.spawn2(116066,0,0,4750,-9150,259,344); -- an_ulthork_man_o_war\n\t\teq.spawn2(116066,0,0,4750,-9192,259,344); -- an_ulthork_man_o_war\n\t\teq.set_global(\"druid_epic_ew\",\"1\",3,\"H2\");\n\tend\t\nend\n\t\n-- Not sure how to make map lead u to the trigger, after 8pm game time\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 14625,
+        "zone": "eastwastes",
+        "name": "player",
+        "lua_content": "-- enabled: false\n-- P99 scope: exclusive later epic hook. Historical callbacks retained below; see p99-support-source-review/world-scope-dispositions.json.\n--eastwastes/player.lua  \n--Warrior Epic 2.0\nfunction event_enter_zone(e)\n\tlocal qglobals = eq.get_qglobals(e.self);\n\t\n\t--on druid 1.5 and has Waterproof Collection Bag\n\tif(qglobals[\"druid_epic\"] == \"1\" and qglobals[\"druid_epic_ew\"] == nil and e.self:HasItem(62812)) then\n\t\teq.spawn2(116608,0,0,4752,-9171,259,344);  -- #Ulthork_Raider\n\t\teq.spawn2(116066,0,0,4750,-9150,259,344); -- an_ulthork_man_o_war\n\t\teq.spawn2(116066,0,0,4750,-9192,259,344); -- an_ulthork_man_o_war\n\t\teq.set_global(\"druid_epic_ew\",\"1\",3,\"H2\");\n\tend\t\nend\n\t\n-- Not sure how to make map lead u to the trigger, after 8pm game time\n",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 18745,
+        "zone": "emeraldjungle",
+        "name": "a_soulsipper",
+        "lua_content": "function event_killed_merit(e)\n\tif e.other:IsTaskActive(5788) then\n\t\tif math.random(100) <= 30 then\n\t\t\tif e.other:HasItem(34998) then\n\t\t\t\te.other:UpdateTaskActivity(5788,1,1);\n\t\t\telse\n\t\t\t\te.other:Message(MT.Yellow, \"You see the perfect pattern, but as you search your bags you cannot find your impression book.\");\n\t\t\tend\n\t\tend\n\tend\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 18745,
+        "zone": "emeraldjungle",
+        "name": "a_soulsipper",
+        "lua_content": "-- enabled: false\n-- P99 scope: exclusive later task hook. Historical callbacks retained below; see p99-support-source-review/world-scope-dispositions.json.\nfunction event_killed_merit(e)\n\tif e.other:IsTaskActive(5788) then\n\t\tif math.random(100) <= 30 then\n\t\t\tif e.other:HasItem(34998) then\n\t\t\t\te.other:UpdateTaskActivity(5788,1,1);\n\t\t\telse\n\t\t\t\te.other:Message(MT.Yellow, \"You see the perfect pattern, but as you search your bags you cannot find your impression book.\");\n\t\t\tend\n\t\tend\n\tend\nend\n",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 15242,
+        "zone": "fieldofbone",
+        "name": "#Berserker-s_Image",
+        "lua_content": "--[[\n#Berserker-s_Image\n\nBerserker 1.0 rewrite\n\nDrogerin\n--]]\n\nfunction event_death_complete(e)\n\tlocal qglobals = eq.get_qglobals(e.self);\n\t\tif (qglobals['bersolo'] == nil) then\n\t\t\teq.set_global(\"bersolo\",\"1\",5,\"F\");\n\t\t\teq.signal(78100,15,10); --NPC: Mardic_Crimsonsteel\n\t\tend\nend\n\nfunction event_spawn(e)\n\teq.set_next_hp_event(50);\nend\n\n\nfunction event_hp(e)\n\te.self:Say(\"You cannot overcome my infinite rage!\");\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 15242,
+        "zone": "fieldofbone",
+        "name": "#Berserker-s_Image",
+        "lua_content": "-- enabled: false\n-- P99 scope: exclusive later class epic hook. Historical callbacks retained below; see p99-support-source-review/world-scope-dispositions.json.\n--[[\n#Berserker-s_Image\n\nBerserker 1.0 rewrite\n\nDrogerin\n--]]\n\nfunction event_death_complete(e)\n\tlocal qglobals = eq.get_qglobals(e.self);\n\t\tif (qglobals['bersolo'] == nil) then\n\t\t\teq.set_global(\"bersolo\",\"1\",5,\"F\");\n\t\t\teq.signal(78100,15,10); --NPC: Mardic_Crimsonsteel\n\t\tend\nend\n\nfunction event_spawn(e)\n\teq.set_next_hp_event(50);\nend\n\n\nfunction event_hp(e)\n\te.self:Say(\"You cannot overcome my infinite rage!\");\nend\n",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 15457,
+        "zone": "freportn",
+        "name": "#Elder_Spirit_of_Might",
+        "lua_content": "function event_signal(e)\n\tif e.signal==1 then\n\t\te.self:Say(\"How can you forgive me? I turned on you and I do remember trying to harm the very one you asked to save me. That shaman risked all to take part in saving me.\");\n\tend\nend\n\nfunction event_spawn(e)\n\teq.set_timer(\"setapp\",1000);\nend\n\nfunction event_timer(e)\n\te.self:SetAppearance(3);\nend",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 15457,
+        "zone": "freportn",
+        "name": "#Elder_Spirit_of_Might",
+        "lua_content": "-- enabled: false\n-- P99 scope: exclusive later epic hook. Historical callbacks retained below; see p99-support-source-review/world-scope-dispositions.json.\nfunction event_signal(e)\n\tif e.signal==1 then\n\t\te.self:Say(\"How can you forgive me? I turned on you and I do remember trying to harm the very one you asked to save me. That shaman risked all to take part in saving me.\");\n\tend\nend\n\nfunction event_spawn(e)\n\teq.set_timer(\"setapp\",1000);\nend\n\nfunction event_timer(e)\n\te.self:SetAppearance(3);\nend",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 19070,
+        "zone": "freportn",
+        "name": "#Elder_Spirit_of_Patience",
+        "lua_content": "function event_spawn(e)\n\teq.set_timer(\"setapp\",1000);\nend\n\nfunction event_timer(e)\n\te.self:SetAppearance(3);\nend",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 19070,
+        "zone": "freportn",
+        "name": "#Elder_Spirit_of_Patience",
+        "lua_content": "-- enabled: false\n-- P99 scope: exclusive later epic hook. Historical callbacks retained below; see p99-support-source-review/world-scope-dispositions.json.\nfunction event_spawn(e)\n\teq.set_timer(\"setapp\",1000);\nend\n\nfunction event_timer(e)\n\te.self:SetAppearance(3);\nend",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 15143,
+        "zone": "freportn",
+        "name": "#Elder_Spirit_of_Perseverance",
+        "lua_content": "function event_signal(e)\n\tif e.signal==1 then\n\t\te.self:Say(\"The spirits and heyokah call upon the greatness of Might. Turn your back on the way of the wasichu and return your steadfast spirit to us all.\");\n\tend\nend",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 15143,
+        "zone": "freportn",
+        "name": "#Elder_Spirit_of_Perseverance",
+        "lua_content": "-- enabled: false\n-- P99 scope: exclusive later epic hook. Historical callbacks retained below; see p99-support-source-review/world-scope-dispositions.json.\nfunction event_signal(e)\n\tif e.signal==1 then\n\t\te.self:Say(\"The spirits and heyokah call upon the greatness of Might. Turn your back on the way of the wasichu and return your steadfast spirit to us all.\");\n\tend\nend",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 19482,
+        "zone": "freportn",
+        "name": "#Elder_Spirit_of_Wisdom",
+        "lua_content": "function event_signal(e)\n\tif e.signal==1 then\n\t\te.self:Say(\"I am truly here. I have truly made it back to my home and those I respect most. I understand I have you to thank, dear heyokah. A thousand blessings upon you.\");\n\tend\nend\n\nfunction event_spawn(e)\n\teq.set_timer(\"setapp\",1000);\nend\n\nfunction event_timer(e)\n\te.self:SetAppearance(3);\nend",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 19482,
+        "zone": "freportn",
+        "name": "#Elder_Spirit_of_Wisdom",
+        "lua_content": "-- enabled: false\n-- P99 scope: exclusive later epic hook. Historical callbacks retained below; see p99-support-source-review/world-scope-dispositions.json.\nfunction event_signal(e)\n\tif e.signal==1 then\n\t\te.self:Say(\"I am truly here. I have truly made it back to my home and those I respect most. I understand I have you to thank, dear heyokah. A thousand blessings upon you.\");\n\tend\nend\n\nfunction event_spawn(e)\n\teq.set_timer(\"setapp\",1000);\nend\n\nfunction event_timer(e)\n\te.self:SetAppearance(3);\nend",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 15880,
+        "zone": "guktop",
+        "name": "a_froglok_gaz_knight",
+        "lua_content": "function event_killed_merit(e)\n\tif e.other:IsTaskActive(5786) then\n\t\tif math.random(100) <= 30 then\n\t\t\tif e.other:HasItem(34997) then\n\t\t\t\te.other:UpdateTaskActivity(5786,1,1);\n\t\t\telse\n\t\t\t\te.other:Message(MT.Yellow, \"You see the perfect pattern, but as you search your bags you cannot find your impression book.\");\n\t\t\tend\n\t\tend\n\tend\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 15880,
+        "zone": "guktop",
+        "name": "a_froglok_gaz_knight",
+        "lua_content": "-- enabled: false\n-- P99 scope: exclusive later task hook. Historical callbacks retained below; see p99-support-source-review/world-scope-dispositions.json.\nfunction event_killed_merit(e)\n\tif e.other:IsTaskActive(5786) then\n\t\tif math.random(100) <= 30 then\n\t\t\tif e.other:HasItem(34997) then\n\t\t\t\te.other:UpdateTaskActivity(5786,1,1);\n\t\t\telse\n\t\t\t\te.other:Message(MT.Yellow, \"You see the perfect pattern, but as you search your bags you cannot find your impression book.\");\n\t\t\tend\n\t\tend\n\tend\nend\n",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 16283,
+        "zone": "guktop",
+        "name": "a_froglok_gaz_shaman",
+        "lua_content": "function event_killed_merit(e)\n\tif e.other:IsTaskActive(5786) then\n\t\tif math.random(100) <= 30 then\n\t\t\tif e.other:HasItem(34997) then\n\t\t\t\te.other:UpdateTaskActivity(5786,1,1);\n\t\t\telse\n\t\t\t\te.other:Message(MT.Yellow, \"You see the perfect pattern, but as you search your bags you cannot find your impression book.\");\n\t\t\tend\n\t\tend\n\tend\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 16283,
+        "zone": "guktop",
+        "name": "a_froglok_gaz_shaman",
+        "lua_content": "-- enabled: false\n-- P99 scope: exclusive later task hook. Historical callbacks retained below; see p99-support-source-review/world-scope-dispositions.json.\nfunction event_killed_merit(e)\n\tif e.other:IsTaskActive(5786) then\n\t\tif math.random(100) <= 30 then\n\t\t\tif e.other:HasItem(34997) then\n\t\t\t\te.other:UpdateTaskActivity(5786,1,1);\n\t\t\telse\n\t\t\t\te.other:Message(MT.Yellow, \"You see the perfect pattern, but as you search your bags you cannot find your impression book.\");\n\t\t\tend\n\t\tend\n\tend\nend\n",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 17462,
+        "zone": "guktop",
+        "name": "a_froglok_gaz_squire",
+        "lua_content": "function event_killed_merit(e)\n\tif e.other:IsTaskActive(5786) then\n\t\tif math.random(100) <= 30 then\n\t\t\tif e.other:HasItem(34997) then\n\t\t\t\te.other:UpdateTaskActivity(5786,1,1);\n\t\t\telse\n\t\t\t\te.other:Message(MT.Yellow, \"You see the perfect pattern, but as you search your bags you cannot find your impression book.\");\n\t\t\tend\n\t\tend\n\tend\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 17462,
+        "zone": "guktop",
+        "name": "a_froglok_gaz_squire",
+        "lua_content": "-- enabled: false\n-- P99 scope: exclusive later task hook. Historical callbacks retained below; see p99-support-source-review/world-scope-dispositions.json.\nfunction event_killed_merit(e)\n\tif e.other:IsTaskActive(5786) then\n\t\tif math.random(100) <= 30 then\n\t\t\tif e.other:HasItem(34997) then\n\t\t\t\te.other:UpdateTaskActivity(5786,1,1);\n\t\t\telse\n\t\t\t\te.other:Message(MT.Yellow, \"You see the perfect pattern, but as you search your bags you cannot find your impression book.\");\n\t\t\tend\n\t\tend\n\tend\nend\n",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 17110,
+        "zone": "guktop",
+        "name": "a_froglok_gaz_warrior",
+        "lua_content": "function event_killed_merit(e)\n\tif e.other:IsTaskActive(5786) then\n\t\tif math.random(100) <= 30 then\n\t\t\tif e.other:HasItem(34997) then\n\t\t\t\te.other:UpdateTaskActivity(5786,1,1);\n\t\t\telse\n\t\t\t\te.other:Message(MT.Yellow, \"You see the perfect pattern, but as you search your bags you cannot find your impression book.\");\n\t\t\tend\n\t\tend\n\tend\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 17110,
+        "zone": "guktop",
+        "name": "a_froglok_gaz_warrior",
+        "lua_content": "-- enabled: false\n-- P99 scope: exclusive later task hook. Historical callbacks retained below; see p99-support-source-review/world-scope-dispositions.json.\nfunction event_killed_merit(e)\n\tif e.other:IsTaskActive(5786) then\n\t\tif math.random(100) <= 30 then\n\t\t\tif e.other:HasItem(34997) then\n\t\t\t\te.other:UpdateTaskActivity(5786,1,1);\n\t\t\telse\n\t\t\t\te.other:Message(MT.Yellow, \"You see the perfect pattern, but as you search your bags you cannot find your impression book.\");\n\t\t\tend\n\t\tend\n\tend\nend\n",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 13516,
+        "zone": "guktop",
+        "name": "a_froglok_ton_warrior",
+        "lua_content": "function event_killed_merit(e)\n\tif e.other:IsTaskActive(5785) then\n\t\tif math.random(100) <= 20 then\n\t\t\tif e.other:HasItem(34997) then\n\t\t\t\te.other:UpdateTaskActivity(5785,3,1);\n\t\t\telse\n\t\t\t\te.other:Message(MT.Yellow, \"You see the perfect pattern, but as you search your bags you cannot find your impression book.\");\n\t\t\tend\n\t\tend\n\tend\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 13516,
+        "zone": "guktop",
+        "name": "a_froglok_ton_warrior",
+        "lua_content": "-- enabled: false\n-- P99 scope: exclusive later task hook. Historical callbacks retained below; see p99-support-source-review/world-scope-dispositions.json.\nfunction event_killed_merit(e)\n\tif e.other:IsTaskActive(5785) then\n\t\tif math.random(100) <= 20 then\n\t\t\tif e.other:HasItem(34997) then\n\t\t\t\te.other:UpdateTaskActivity(5785,3,1);\n\t\t\telse\n\t\t\t\te.other:Message(MT.Yellow, \"You see the perfect pattern, but as you search your bags you cannot find your impression book.\");\n\t\t\tend\n\t\tend\n\tend\nend\n",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 18843,
+        "zone": "lakeofillomen",
+        "name": "#_",
+        "lua_content": "-- Source: lakeofillomen/#_.pl\n-- Converted from ProjectEQ Perl quest script.\n-- items: 16675\n\nlocal character_active = false\n\nfunction event_spawn(e)\n\teq.set_timer(\"laydown\", 1)\nend\n\nfunction event_timer(e)\n\tif e.timer == \"laydown\" then\n\t\teq.stop_timer(\"laydown\")\n\t\te.self:SetAppearance(3)\n\tend\nend\n\nfunction event_combat(e)\n\tcharacter_active = e.joined == true\nend\n\nfunction event_death_complete(e)\n\tif character_active and e.other:GetGlobal(\"wiz_epic_pre\") == \"2\" then\n\t\tlocal scorpions = {\n\t\t\teq.spawn2(85240, 0, 0, 4949.8014, -2423.8932, 225, 321.5),\n\t\t\teq.spawn2(85240, 0, 0, 4905.3961, -2404.0442, 225, 259),\n\t\t\teq.spawn2(85240, 0, 0, 4859.6490, -2420.5676, 225, 196.5),\n\t\t\teq.spawn2(85240, 0, 0, 4838.1767, -2464.2111, 225, 134),\n\t\t\teq.spawn2(85240, 0, 0, 4853.0025, -2510.5362, 225, 71.5),\n\t\t\teq.spawn2(85240, 0, 0, 4895.8248, -2533.6028, 225, 9),\n\t\t\teq.spawn2(85240, 0, 0, 4942.6649, -2520.4946, 225, 458.5),\n\t\t\teq.spawn2(85240, 0, 0, 4967.2944, -2478.5517, 225, 396),\n\t\t\teq.spawn2(85240, 0, 0, 4955.9218, -2431.2603, 225, 333.5),\n\t\t\teq.spawn2(85240, 0, 0, 4914.9153, -2405.1014, 225, 271),\n\t\t\teq.spawn2(85240, 0, 0, 4867.2368, -2414.7230, 225, 208.5),\n\t\t\teq.spawn2(85240, 0, 0, 4839.5841, -2454.7374, 225, 146),\n\t\t\teq.spawn2(85240, 0, 0, 4847.4416, -2502.7382, 225, 83.5),\n\t\t\teq.spawn2(85240, 0, 0, 4886.4094, -2531.8470, 225, 21),\n\t\t\teq.spawn2(85240, 0, 0, 4934.6672, -2525.7643, 225, 470.5),\n\t\t\teq.spawn2(85240, 0, 0, 4965.1928, -2487.8960, 225, 408),\n\t\t\teq.spawn2(85240, 0, 0, 4960.8931, -2439.4468, 225, 345.5),\n\t\t\teq.spawn2(85240, 0, 0, 4924.1758, -2407.5461, 225, 283),\n\t\t\teq.spawn2(85240, 0, 0, 4875.6010, -2410.0569, 225, 220.5),\n\t\t\teq.spawn2(85240, 0, 0, 4842.3684, -2445.5733, 225, 158),\n\t\t\teq.spawn2(85240, 0, 0, 4843.0869, -2494.2076, 225, 95.5),\n\t\t\teq.spawn2(85240, 0, 0, 4877.3541, -2528.7268, 225, 33),\n\t\t\teq.spawn2(85240, 0, 0, 4925.9819, -2529.8016, 225, 482.5),\n\t\t\teq.spawn2(85240, 0, 0, 4961.7408, -2496.8301, 225, 420),\n\t\t\teq.spawn2(85240, 0, 0, 4964.6074, -2448.2750, 225, 357.5),\n\t\t\teq.spawn2(85240, 0, 0, 4932.9765, -2411.3250, 225, 295),\n\t\t\teq.spawn2(85240, 0, 0, 4884.5601, -2406.6705, 225, 232.5),\n\t\t}\n\t\tlocal random = math.random(#scorpions)\n\t\tfor index, scorpion in ipairs(scorpions) do\n\t\t\tscorpion:AddToHateList(e.other, 1)\n\t\t\tif index == random then\n\t\t\t\tscorpion:AddItem(16675, 1) -- Cursed Talisman\n\t\t\tend\n\t\tend\n\tend\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 18843,
+        "zone": "lakeofillomen",
+        "name": "#_",
+        "lua_content": "-- enabled: false\n-- P99 scope: exclusive later epic hook. Historical callbacks retained below; see p99-support-source-review/world-scope-dispositions.json.\n-- Source: lakeofillomen/#_.pl\n-- Converted from ProjectEQ Perl quest script.\n-- items: 16675\n\nlocal character_active = false\n\nfunction event_spawn(e)\n\teq.set_timer(\"laydown\", 1)\nend\n\nfunction event_timer(e)\n\tif e.timer == \"laydown\" then\n\t\teq.stop_timer(\"laydown\")\n\t\te.self:SetAppearance(3)\n\tend\nend\n\nfunction event_combat(e)\n\tcharacter_active = e.joined == true\nend\n\nfunction event_death_complete(e)\n\tif character_active and e.other:GetGlobal(\"wiz_epic_pre\") == \"2\" then\n\t\tlocal scorpions = {\n\t\t\teq.spawn2(85240, 0, 0, 4949.8014, -2423.8932, 225, 321.5),\n\t\t\teq.spawn2(85240, 0, 0, 4905.3961, -2404.0442, 225, 259),\n\t\t\teq.spawn2(85240, 0, 0, 4859.6490, -2420.5676, 225, 196.5),\n\t\t\teq.spawn2(85240, 0, 0, 4838.1767, -2464.2111, 225, 134),\n\t\t\teq.spawn2(85240, 0, 0, 4853.0025, -2510.5362, 225, 71.5),\n\t\t\teq.spawn2(85240, 0, 0, 4895.8248, -2533.6028, 225, 9),\n\t\t\teq.spawn2(85240, 0, 0, 4942.6649, -2520.4946, 225, 458.5),\n\t\t\teq.spawn2(85240, 0, 0, 4967.2944, -2478.5517, 225, 396),\n\t\t\teq.spawn2(85240, 0, 0, 4955.9218, -2431.2603, 225, 333.5),\n\t\t\teq.spawn2(85240, 0, 0, 4914.9153, -2405.1014, 225, 271),\n\t\t\teq.spawn2(85240, 0, 0, 4867.2368, -2414.7230, 225, 208.5),\n\t\t\teq.spawn2(85240, 0, 0, 4839.5841, -2454.7374, 225, 146),\n\t\t\teq.spawn2(85240, 0, 0, 4847.4416, -2502.7382, 225, 83.5),\n\t\t\teq.spawn2(85240, 0, 0, 4886.4094, -2531.8470, 225, 21),\n\t\t\teq.spawn2(85240, 0, 0, 4934.6672, -2525.7643, 225, 470.5),\n\t\t\teq.spawn2(85240, 0, 0, 4965.1928, -2487.8960, 225, 408),\n\t\t\teq.spawn2(85240, 0, 0, 4960.8931, -2439.4468, 225, 345.5),\n\t\t\teq.spawn2(85240, 0, 0, 4924.1758, -2407.5461, 225, 283),\n\t\t\teq.spawn2(85240, 0, 0, 4875.6010, -2410.0569, 225, 220.5),\n\t\t\teq.spawn2(85240, 0, 0, 4842.3684, -2445.5733, 225, 158),\n\t\t\teq.spawn2(85240, 0, 0, 4843.0869, -2494.2076, 225, 95.5),\n\t\t\teq.spawn2(85240, 0, 0, 4877.3541, -2528.7268, 225, 33),\n\t\t\teq.spawn2(85240, 0, 0, 4925.9819, -2529.8016, 225, 482.5),\n\t\t\teq.spawn2(85240, 0, 0, 4961.7408, -2496.8301, 225, 420),\n\t\t\teq.spawn2(85240, 0, 0, 4964.6074, -2448.2750, 225, 357.5),\n\t\t\teq.spawn2(85240, 0, 0, 4932.9765, -2411.3250, 225, 295),\n\t\t\teq.spawn2(85240, 0, 0, 4884.5601, -2406.6705, 225, 232.5),\n\t\t}\n\t\tlocal random = math.random(#scorpions)\n\t\tfor index, scorpion in ipairs(scorpions) do\n\t\t\tscorpion:AddToHateList(e.other, 1)\n\t\t\tif index == random then\n\t\t\t\tscorpion:AddItem(16675, 1) -- Cursed Talisman\n\t\t\tend\n\t\tend\n\tend\nend\n",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 16918,
+        "zone": "lakeofillomen",
+        "name": "a_bloodgill_goblin",
+        "lua_content": "function event_killed_merit(e)\n\tif e.other:IsTaskActive(5787) then\n\t\tif math.random(100) <= 30 then\n\t\t\tif e.other:HasItem(34998) then\n\t\t\t\te.other:UpdateTaskActivity(5787,1,1);\n\t\t\telse\n\t\t\t\te.other:Message(MT.Yellow, \"You see the perfect pattern, but as you search your bags you cannot find your impression book.\");\n\t\t\tend\n\t\tend\n\tend\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 16918,
+        "zone": "lakeofillomen",
+        "name": "a_bloodgill_goblin",
+        "lua_content": "-- enabled: false\n-- P99 scope: exclusive later task hook. Historical callbacks retained below; see p99-support-source-review/world-scope-dispositions.json.\nfunction event_killed_merit(e)\n\tif e.other:IsTaskActive(5787) then\n\t\tif math.random(100) <= 30 then\n\t\t\tif e.other:HasItem(34998) then\n\t\t\t\te.other:UpdateTaskActivity(5787,1,1);\n\t\t\telse\n\t\t\t\te.other:Message(MT.Yellow, \"You see the perfect pattern, but as you search your bags you cannot find your impression book.\");\n\t\t\tend\n\t\tend\n\tend\nend\n",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 14908,
+        "zone": "lakerathe",
+        "name": "Vortix",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: lakerathe/Vortix.pl\n\nfunction event_say(e)\n\tif e.message:findi(\"diary\") then\n\t\te.self:Say(\"Kaiaren's Diary? I haven't seen it in some time now. If I were not such a coward, I would have kept it. I have heard rumors of it being torn in half. Some students that wanted to learn the ways of the Celestial Fists were looking for it a while back. One was a pirate that wanted to only learn the Path of the Silent to gain more treasures than he had. The other, wanted to become the most powerful fighter alive. You may want to seek them out and see if they have located pieces of it. I am sorry I could not be of more help. If you do happen to locate the two pieces, bring them back to me and maybe I will be able to aid you further. Now that you know my secret, there is no reason to remain hidden from the world. You will be able to find me resting in the Plane of Tranquility. Be safe, \" .. e.other:GetCleanName() .. \" .\")\n\t\teq.set_global(\"monk_epic\", \"4\", 5, \"F\")\n\t\teq.depop()\n\tend\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 14908,
+        "zone": "lakerathe",
+        "name": "Vortix",
+        "lua_content": "-- enabled: false\n-- P99 scope: exclusive later epic hook. Historical callbacks retained below; see p99-support-source-review/world-scope-dispositions.json.\n-- Converted from ProjectEQ Perl quest script.\n-- Source: lakerathe/Vortix.pl\n\nfunction event_say(e)\n\tif e.message:findi(\"diary\") then\n\t\te.self:Say(\"Kaiaren's Diary? I haven't seen it in some time now. If I were not such a coward, I would have kept it. I have heard rumors of it being torn in half. Some students that wanted to learn the ways of the Celestial Fists were looking for it a while back. One was a pirate that wanted to only learn the Path of the Silent to gain more treasures than he had. The other, wanted to become the most powerful fighter alive. You may want to seek them out and see if they have located pieces of it. I am sorry I could not be of more help. If you do happen to locate the two pieces, bring them back to me and maybe I will be able to aid you further. Now that you know my secret, there is no reason to remain hidden from the world. You will be able to find me resting in the Plane of Tranquility. Be safe, \" .. e.other:GetCleanName() .. \" .\")\n\t\teq.set_global(\"monk_epic\", \"4\", 5, \"F\")\n\t\teq.depop()\n\tend\nend\n",
+        "has_say_event": 1,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 14945,
+        "zone": "lfaydark",
+        "name": "Reanimated_Minion",
+        "lua_content": "function event_timer(e)\n\tif (e.timer == \"aggrolink\") then\n\t\tlocal npc_list =  eq.get_entity_list():GetNPCList();\n\t\tfor npc in npc_list.entries do\n\t\tif (npc.valid and not npc:IsEngaged() and (npc:GetNPCTypeID() == 57154) or (npc:GetNPCTypeID() == 57155) or (npc:GetNPCTypeID() == 57151)) then\n\t\t\tnpc:AddToHateList(e.self:GetHateRandom(),1); -- add Reanimated_Minion /Taskmaster to aggro list if alive\n\t\tend\n\t\tend\n\tend\nend\n\n\nfunction event_combat(e)\n  if e.joined then\n    eq.set_timer(\"aggrolink\", 3 * 1000);\n  else\n    eq.stop_timer(\"aggrolink\");\n  end\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 14945,
+        "zone": "lfaydark",
+        "name": "Reanimated_Minion",
+        "lua_content": "-- enabled: false\n-- P99 scope: exclusive later epic hook. Historical callbacks retained below; see p99-support-source-review/world-scope-dispositions.json.\nfunction event_timer(e)\n\tif (e.timer == \"aggrolink\") then\n\t\tlocal npc_list =  eq.get_entity_list():GetNPCList();\n\t\tfor npc in npc_list.entries do\n\t\tif (npc.valid and not npc:IsEngaged() and (npc:GetNPCTypeID() == 57154) or (npc:GetNPCTypeID() == 57155) or (npc:GetNPCTypeID() == 57151)) then\n\t\t\tnpc:AddToHateList(e.self:GetHateRandom(),1); -- add Reanimated_Minion /Taskmaster to aggro list if alive\n\t\tend\n\t\tend\n\tend\nend\n\n\nfunction event_combat(e)\n  if e.joined then\n    eq.set_timer(\"aggrolink\", 3 * 1000);\n  else\n    eq.stop_timer(\"aggrolink\");\n  end\nend\n",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 15953,
+        "zone": "misty",
+        "name": "Crysta_Tagglefoot",
+        "lua_content": "--[[\n\n\n\nHalloween2018 by Drogerin\n\n--]]\n\nlocal event_started=0;\n\nfunction event_spawn(e)\n\tevent_started=0;\n\teq.debug(\"Event Started \" .. event_started);\nend\n\nfunction event_say(e)\n\tlocal qglobals = eq.get_qglobals(e.other);\n\tif (e.message:findi(\"hail\") and qglobals[\"Halloween2018\"] == \"4\") then\n\t\te.self:Say(\"I'm so happy you were able to find me, just around the corner is the thief, We can end his parade of theft right this minute!\");\n\t\teq.set_global(\"Halloween2018\",\"5\",5,\"h3\");\n\t\te.self:Say(\"We only have a few hours, so make sure to be quick!\");\n\t\te.self:Say(\"Tell me when you're ready! [\" .. eq.say_link(\"Extreme\") .. \"] (Recommended 36+ players)\");\n\telseif (e.message:findi(\"extreme\") and event_started == 0 and qglobals[\"Halloween2018\"] == \"5\") then\n\t\te.self:Say(\"Lets try to summon him first, I don't know what I'm doing by the way. Lets just wing it! I call upon you, whoever has been stealing my goods. Show yourself!\");\n\t\te.self:Say(\"This may take a few seconds!\");\n\t\teq.set_timer(\"Summonone\", 15000);\n\t\tevent_started=1;\n\t\teq.debug(\"Event Started \" .. event_started);\n\tend\nend\n\n\nfunction event_timer(e)\n\tif (e.timer == \"Summonone\") then\n\teq.spawn2(357010,0,0,e.self:GetX(),e.self:GetY(),e.self:GetZ(),e.self:GetHeading()); -- NPC: Sendaii,_the_Hive_Queen\n\teq.stop_timer(\"Summonone\");\n\teq.set_timer(\"Uhoh\",8000);\n\telseif (e.timer == \"Uhoh\") then\n\te.self:Say(\"OH GOD, WRONG EXPANSION!!\");\n\teq.stop_timer(\"Uhoh\");\n\teq.depop(357010);\n\teq.set_timer(\"Retry\",10000);\n\tevent_started=0;\n\teq.debug(\"Event Started \" .. event_started);\n\telseif (e.timer == \"Retry\") then\n\te.self:Say(\"Yuck I hate spiders!!  Look over there by the entrance of Rivervale, I think I see someone coming out of the city. Could that be him?\");\n\teq.stop_timer(\"Retry\");\n\teq.spawn2(33165,0,0,-2395.99,757.44,-2.00,253.3); -- NPC: Crysta_Tagglefoot\n\teq.spawn2(33161,0,0,-2395.84,496.42,-453,123.3); -- NPC: Deputy?\n\te.self:Shout(\"Hey over here, thief!! Don't think we can't see you!\");\n\te.self:Say(\"I hope you're ready for this!\");\n\teq.depop_with_timer(33164);\n\tend\nend\n\t\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 15953,
+        "zone": "misty",
+        "name": "Crysta_Tagglefoot",
+        "lua_content": "-- enabled: false\n-- P99 scope: exclusive later event hook. Historical callbacks retained below; see p99-support-source-review/world-scope-dispositions.json.\n--[[\n\n\n\nHalloween2018 by Drogerin\n\n--]]\n\nlocal event_started=0;\n\nfunction event_spawn(e)\n\tevent_started=0;\n\teq.debug(\"Event Started \" .. event_started);\nend\n\nfunction event_say(e)\n\tlocal qglobals = eq.get_qglobals(e.other);\n\tif (e.message:findi(\"hail\") and qglobals[\"Halloween2018\"] == \"4\") then\n\t\te.self:Say(\"I'm so happy you were able to find me, just around the corner is the thief, We can end his parade of theft right this minute!\");\n\t\teq.set_global(\"Halloween2018\",\"5\",5,\"h3\");\n\t\te.self:Say(\"We only have a few hours, so make sure to be quick!\");\n\t\te.self:Say(\"Tell me when you're ready! [\" .. eq.say_link(\"Extreme\") .. \"] (Recommended 36+ players)\");\n\telseif (e.message:findi(\"extreme\") and event_started == 0 and qglobals[\"Halloween2018\"] == \"5\") then\n\t\te.self:Say(\"Lets try to summon him first, I don't know what I'm doing by the way. Lets just wing it! I call upon you, whoever has been stealing my goods. Show yourself!\");\n\t\te.self:Say(\"This may take a few seconds!\");\n\t\teq.set_timer(\"Summonone\", 15000);\n\t\tevent_started=1;\n\t\teq.debug(\"Event Started \" .. event_started);\n\tend\nend\n\n\nfunction event_timer(e)\n\tif (e.timer == \"Summonone\") then\n\teq.spawn2(357010,0,0,e.self:GetX(),e.self:GetY(),e.self:GetZ(),e.self:GetHeading()); -- NPC: Sendaii,_the_Hive_Queen\n\teq.stop_timer(\"Summonone\");\n\teq.set_timer(\"Uhoh\",8000);\n\telseif (e.timer == \"Uhoh\") then\n\te.self:Say(\"OH GOD, WRONG EXPANSION!!\");\n\teq.stop_timer(\"Uhoh\");\n\teq.depop(357010);\n\teq.set_timer(\"Retry\",10000);\n\tevent_started=0;\n\teq.debug(\"Event Started \" .. event_started);\n\telseif (e.timer == \"Retry\") then\n\te.self:Say(\"Yuck I hate spiders!!  Look over there by the entrance of Rivervale, I think I see someone coming out of the city. Could that be him?\");\n\teq.stop_timer(\"Retry\");\n\teq.spawn2(33165,0,0,-2395.99,757.44,-2.00,253.3); -- NPC: Crysta_Tagglefoot\n\teq.spawn2(33161,0,0,-2395.84,496.42,-453,123.3); -- NPC: Deputy?\n\te.self:Shout(\"Hey over here, thief!! Don't think we can't see you!\");\n\te.self:Say(\"I hope you're ready for this!\");\n\teq.depop_with_timer(33164);\n\tend\nend\n\t\n",
+        "has_say_event": 1,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 16351,
+        "zone": "necropolis",
+        "name": "a_Chetari_warrior",
+        "lua_content": "function event_killed_merit(e)\n\tif e.other:IsTaskActive(5790) then\n\t\tif math.random(100) <= 30 then\n\t\t\tif e.other:HasItem(34999) then\n\t\t\t\te.other:UpdateTaskActivity(5790,1,1);\n\t\t\telse\n\t\t\t\te.other:Message(MT.Yellow, \"You see the perfect pattern, but as you search your bags you cannot find your impression book.\");\n\t\t\tend\n\t\tend\n\tend\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 16351,
+        "zone": "necropolis",
+        "name": "a_Chetari_warrior",
+        "lua_content": "-- enabled: false\n-- P99 scope: exclusive later task hook. Historical callbacks retained below; see p99-support-source-review/world-scope-dispositions.json.\nfunction event_killed_merit(e)\n\tif e.other:IsTaskActive(5790) then\n\t\tif math.random(100) <= 30 then\n\t\t\tif e.other:HasItem(34999) then\n\t\t\t\te.other:UpdateTaskActivity(5790,1,1);\n\t\t\telse\n\t\t\t\te.other:Message(MT.Yellow, \"You see the perfect pattern, but as you search your bags you cannot find your impression book.\");\n\t\t\tend\n\t\tend\n\tend\nend\n",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 16814,
+        "zone": "necropolis",
+        "name": "player",
+        "lua_content": "function event_loot(e)\n    -- bard 1.5 Drac chest\n    if e.self:GetClass() == Class.BARD and e.item:GetID() == 77613 then\n        local qglobals = eq.get_qglobals(e.self)\n        if qglobals[\"bard15\"] ~= nil and qglobals[\"bard15\"] >= \"3\" and qglobals[\"bard15_dracchest\"] == nil then\n            eq.spawn2(283157, 0, 0, e.self:GetX(), e.self:GetY(), e.self:GetZ(), e.self:GetHeading())\n            eq.set_global(\"bard15_dracchest\", \"1\", 5, \"F\")\n        end\n    end\nend\n\nfunction event_enter_zone(e)\n    -- bard 1.5 flagged spawns\n    -- #Hsagra`s_Shade (123172) Vesthon event 1\n    -- #Vesthon_Marijakin (123173) Vesthon event 2\n    -- #Hsagra`s_Relics (123174) Vesthon event 2\n    if e.self:GetClass() == Class.BARD then\n        local qglobals = eq.get_qglobals(e.self)\n        if qglobals[\"hsagra_cooldown\"] == nil and qglobals[\"bard15\"] == \"2\" then\n            eq.unique_spawn(123172, 0, 0, -2716, -293, 12, 82)\n        end\n        -- we want to let them respawn the event if they deleted the orb so they can do 2.0\n        -- Should probably add a 2.0 check here eventually\n        if qglobals[\"drac_cooldown\"] == nil and qglobals[\"bard15\"] ~= nil and qglobals[\"bard15\"] >= \"3\" and not e.self:HasItem(77613) and not e.self:HasItem(77640) then\n            local entity_list = eq.get_entity_list()\n            -- we can probably get away with just doing unique_spawn but lets just be safe\n            if not entity_list:IsMobSpawnedByNpcTypeID(123173) and not entity_list:IsMobSpawnedByNpcTypeID(123174) then\n                eq.unique_spawn(123173, 0, 0, -1050, 1388, 13, 510) -- he will spawn the rest\n            end\n        end\n    end\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 16814,
+        "zone": "necropolis",
+        "name": "player",
+        "lua_content": "-- enabled: false\n-- P99 scope: exclusive later epic hook. Historical callbacks retained below; see p99-support-source-review/world-scope-dispositions.json.\nfunction event_loot(e)\n    -- bard 1.5 Drac chest\n    if e.self:GetClass() == Class.BARD and e.item:GetID() == 77613 then\n        local qglobals = eq.get_qglobals(e.self)\n        if qglobals[\"bard15\"] ~= nil and qglobals[\"bard15\"] >= \"3\" and qglobals[\"bard15_dracchest\"] == nil then\n            eq.spawn2(283157, 0, 0, e.self:GetX(), e.self:GetY(), e.self:GetZ(), e.self:GetHeading())\n            eq.set_global(\"bard15_dracchest\", \"1\", 5, \"F\")\n        end\n    end\nend\n\nfunction event_enter_zone(e)\n    -- bard 1.5 flagged spawns\n    -- #Hsagra`s_Shade (123172) Vesthon event 1\n    -- #Vesthon_Marijakin (123173) Vesthon event 2\n    -- #Hsagra`s_Relics (123174) Vesthon event 2\n    if e.self:GetClass() == Class.BARD then\n        local qglobals = eq.get_qglobals(e.self)\n        if qglobals[\"hsagra_cooldown\"] == nil and qglobals[\"bard15\"] == \"2\" then\n            eq.unique_spawn(123172, 0, 0, -2716, -293, 12, 82)\n        end\n        -- we want to let them respawn the event if they deleted the orb so they can do 2.0\n        -- Should probably add a 2.0 check here eventually\n        if qglobals[\"drac_cooldown\"] == nil and qglobals[\"bard15\"] ~= nil and qglobals[\"bard15\"] >= \"3\" and not e.self:HasItem(77613) and not e.self:HasItem(77640) then\n            local entity_list = eq.get_entity_list()\n            -- we can probably get away with just doing unique_spawn but lets just be safe\n            if not entity_list:IsMobSpawnedByNpcTypeID(123173) and not entity_list:IsMobSpawnedByNpcTypeID(123174) then\n                eq.unique_spawn(123173, 0, 0, -1050, 1388, 13, 510) -- he will spawn the rest\n            end\n        end\n    end\nend\n",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 15742,
+        "zone": "northkarana",
+        "name": "#a_plains_dragon",
+        "lua_content": "-- bard 1.5\n-- no pre-reqs\nlocal dire_id = 250027 -- spawn2 ID\n\nfunction event_combat(e)\n    if not e.joined and e.self:GetHPRatio() < 97 then\n        eq.set_timer(\"depop\", 12000)\n    elseif e.joined then\n        eq.stop_timer(\"depop)\")\n    end\nend\n\nfunction event_timer(e)\n    if (e.self:GetHPRatio() == 100) then\n        eq.update_spawn_timer(dire_id, 1000)\n        eq.depop()\n    end\nend\n\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 15742,
+        "zone": "northkarana",
+        "name": "#a_plains_dragon",
+        "lua_content": "-- enabled: false\n-- P99 scope: exclusive later epic hook. Historical callbacks retained below; see p99-support-source-review/world-scope-dispositions.json.\n-- bard 1.5\n-- no pre-reqs\nlocal dire_id = 250027 -- spawn2 ID\n\nfunction event_combat(e)\n    if not e.joined and e.self:GetHPRatio() < 97 then\n        eq.set_timer(\"depop\", 12000)\n    elseif e.joined then\n        eq.stop_timer(\"depop)\")\n    end\nend\n\nfunction event_timer(e)\n    if (e.self:GetHPRatio() == 100) then\n        eq.update_spawn_timer(dire_id, 1000)\n        eq.depop()\n    end\nend\n\n",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 12408,
+        "zone": "southkarana",
+        "name": "an_adult_elephant",
+        "lua_content": "function event_killed_merit(e)\n\tif e.other:IsTaskActive(5785) then\n\t\tif math.random(100) <= 30 then\n\t\t\tif e.other:HasItem(34997) then\n\t\t\t\te.other:UpdateTaskActivity(5785,1,1);\n\t\t\telse\n\t\t\t\te.other:Message(MT.Yellow, \"You see the perfect pattern, but as you search your bags you cannot find your impression book.\");\n\t\t\tend\n\t\tend\n\tend\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 12408,
+        "zone": "southkarana",
+        "name": "an_adult_elephant",
+        "lua_content": "-- enabled: false\n-- P99 scope: exclusive later task hook. Historical callbacks retained below; see p99-support-source-review/world-scope-dispositions.json.\nfunction event_killed_merit(e)\n\tif e.other:IsTaskActive(5785) then\n\t\tif math.random(100) <= 30 then\n\t\t\tif e.other:HasItem(34997) then\n\t\t\t\te.other:UpdateTaskActivity(5785,1,1);\n\t\t\telse\n\t\t\t\te.other:Message(MT.Yellow, \"You see the perfect pattern, but as you search your bags you cannot find your impression book.\");\n\t\t\tend\n\t\tend\n\tend\nend\n",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 16278,
+        "zone": "swampofnohope",
+        "name": "#a_swamp_dragon",
+        "lua_content": "-- bard 1.5\n-- no pre-reqs\nlocal dire_id = 250031 -- spawn2 ID\n\nfunction event_combat(e)\n    if not e.joined and e.self:GetHPRatio() < 97 then\n        eq.set_timer(\"depop\", 12000)\n    elseif e.joined then\n        eq.stop_timer(\"depop)\")\n    end\nend\n\nfunction event_timer(e)\n    if (e.self:GetHPRatio() == 100) then\n        eq.update_spawn_timer(dire_id, 1000)\n        eq.depop()\n    end\nend\n\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 16278,
+        "zone": "swampofnohope",
+        "name": "#a_swamp_dragon",
+        "lua_content": "-- enabled: false\n-- P99 scope: exclusive later epic hook. Historical callbacks retained below; see p99-support-source-review/world-scope-dispositions.json.\n-- bard 1.5\n-- no pre-reqs\nlocal dire_id = 250031 -- spawn2 ID\n\nfunction event_combat(e)\n    if not e.joined and e.self:GetHPRatio() < 97 then\n        eq.set_timer(\"depop\", 12000)\n    elseif e.joined then\n        eq.stop_timer(\"depop)\")\n    end\nend\n\nfunction event_timer(e)\n    if (e.self:GetHPRatio() == 100) then\n        eq.update_spawn_timer(dire_id, 1000)\n        eq.depop()\n    end\nend\n\n",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 14773,
+        "zone": "timorous",
+        "name": "player",
+        "lua_content": "function event_loot(e)\n    if (e.item:GetID() == 56014 and e.corpse:GetNPCTypeID() == 96368) then\n        local qglobals = eq.get_qglobals(e.self);\n        if (qglobals[\"cleric20\"] ~= nil and qglobals[\"cleric20\"] >= \"3\") then\n            if (qglobals[\"cleric20_td_chest\"] == nil) then\n                eq.spawn2(893, 0, 0, e.self:GetX(), e.self:GetY(), e.self:GetZ(), e.self:GetHeading()); -- a chest (epic 2.0)\n                eq.set_global(\"cleric20_td_chest\", \"1\", 5, \"F\");\n            end\n            return 0;\n        else\n            return 1;\n        end\n    end\nend\n\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 14773,
+        "zone": "timorous",
+        "name": "player",
+        "lua_content": "-- enabled: false\n-- P99 scope: exclusive later epic hook. Historical callbacks retained below; see p99-support-source-review/world-scope-dispositions.json.\nfunction event_loot(e)\n    if (e.item:GetID() == 56014 and e.corpse:GetNPCTypeID() == 96368) then\n        local qglobals = eq.get_qglobals(e.self);\n        if (qglobals[\"cleric20\"] ~= nil and qglobals[\"cleric20\"] >= \"3\") then\n            if (qglobals[\"cleric20_td_chest\"] == nil) then\n                eq.spawn2(893, 0, 0, e.self:GetX(), e.self:GetY(), e.self:GetZ(), e.self:GetHeading()); -- a chest (epic 2.0)\n                eq.set_global(\"cleric20_td_chest\", \"1\", 5, \"F\");\n            end\n            return 0;\n        else\n            return 1;\n        end\n    end\nend\n\n",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 19179,
+        "zone": "tox",
+        "name": "#Fleshless_Servant",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: tox/#Fleshless_Servant.pl\n\nfunction event_death_complete(e)\n\teq.set_global(\"grisk\", \"1\", 5, \"f\")\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 19179,
+        "zone": "tox",
+        "name": "#Fleshless_Servant",
+        "lua_content": "-- enabled: false\n-- P99 scope: exclusive excluded chain hook. Historical callbacks retained below; see p99-support-source-review/world-scope-dispositions.json.\n-- Converted from ProjectEQ Perl quest script.\n-- Source: tox/#Fleshless_Servant.pl\n\nfunction event_death_complete(e)\n\teq.set_global(\"grisk\", \"1\", 5, \"f\")\nend\n",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 17102,
+        "zone": "trakanon",
+        "name": "sabretooth_tiger",
+        "lua_content": "function event_killed_merit(e)\n\tif e.other:IsTaskActive(5789) then\n\t\tif math.random(100) <= 30 then\n\t\t\tif e.other:HasItem(34998) then\n\t\t\t\te.other:UpdateTaskActivity(5789,1,1);\n\t\t\telse\n\t\t\t\te.other:Message(MT.Yellow, \"You see the perfect pattern, but as you search your bags you cannot find your impression book.\");\n\t\t\tend\n\t\tend\n\tend\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 17102,
+        "zone": "trakanon",
+        "name": "sabretooth_tiger",
+        "lua_content": "-- enabled: false\n-- P99 scope: exclusive later task hook. Historical callbacks retained below; see p99-support-source-review/world-scope-dispositions.json.\nfunction event_killed_merit(e)\n\tif e.other:IsTaskActive(5789) then\n\t\tif math.random(100) <= 30 then\n\t\t\tif e.other:HasItem(34998) then\n\t\t\t\te.other:UpdateTaskActivity(5789,1,1);\n\t\t\telse\n\t\t\t\te.other:Message(MT.Yellow, \"You see the perfect pattern, but as you search your bags you cannot find your impression book.\");\n\t\t\tend\n\t\tend\n\tend\nend\n",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 19052,
+        "zone": "westwastes",
+        "name": "Disciple_of_Moon",
+        "lua_content": "function event_combat(e)\r\n  if e.joined then\r\n\teq.set_timer(\"depop\", 1800 * 1000);\r\n\te.self:Say(\"Very well then. Prepare your soul to be cleansed.\");\r\n  end\r\nend\r\n\r\nfunction event_timer(e)\r\n\tif(e.timer==\"depop\") then\r\n\t\teq.depop();\r\n\tend\r\nend\r\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 19052,
+        "zone": "westwastes",
+        "name": "Disciple_of_Moon",
+        "lua_content": "-- enabled: false\n-- P99 scope: exclusive later epic hook. Historical callbacks retained below; see p99-support-source-review/world-scope-dispositions.json.\nfunction event_combat(e)\r\n  if e.joined then\r\n\teq.set_timer(\"depop\", 1800 * 1000);\r\n\te.self:Say(\"Very well then. Prepare your soul to be cleansed.\");\r\n  end\r\nend\r\n\r\nfunction event_timer(e)\r\n\tif(e.timer==\"depop\") then\r\n\t\teq.depop();\r\n\tend\r\nend\r\n",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/burningwood/#a_crippled_wurm.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-world-scope/burningwood--#a_crippled_wurm.lua",
+      "afterSha256": "f968a6962f0c9061419a914a9050a3c574f0b7fb6c455fd938951d5a79096376"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/burningwood/a_sarnak_champion.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-world-scope/burningwood--a_sarnak_champion.lua",
+      "afterSha256": "a9943b142173106c2f4dc13c5ac357d291449a252cc724c34f25f7cba8c3b388"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/crushbone/#Orc_Messenger.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-world-scope/crushbone--#Orc_Messenger.lua",
+      "afterSha256": "e205c7a820d3687959cc96dc1dcb7cbe744beae22ffe69bbab371c8494ea4afe"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/crushbone/player.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-world-scope/crushbone--player.lua",
+      "afterSha256": "6588537a3022c803728835ce8b552d655076c6f6f1645dcfb69d5f6c7d02974c"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/dreadlands/#mage_trap.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-world-scope/dreadlands--#mage_trap.lua",
+      "afterSha256": "da1fb285ea1e68cc89eccfa3147d4bc7511328122141d79f6358c492a87f3cd4"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/dreadlands/a_drolvarg_rager.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-world-scope/dreadlands--a_drolvarg_rager.lua",
+      "afterSha256": "30b45bdecea1f2a63bac51e831308ebd287b528f3bd5ebb215a6626573083d5f"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/dreadlands/a_petrifier_cockatrice.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-world-scope/dreadlands--a_petrifier_cockatrice.lua",
+      "afterSha256": "8fe273291b35548266e75ddca57479d3fdb4db40655c87626c8aa242ce496b46"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/eastkarana/a_crag_spider.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-world-scope/eastkarana--a_crag_spider.lua",
+      "afterSha256": "690a87d7dbb763df3dbf5558112c8e7ad4ef313af29bbd821746ccce52eab730"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/eastwastes/#warr_trap.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-world-scope/eastwastes--#warr_trap.lua",
+      "afterSha256": "b05d2a25bc5f939db35d7f1883acc7515fe588a9c27bdc95a7256479829e823d"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/eastwastes/Larnik_the_Recluse.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-world-scope/eastwastes--Larnik_the_Recluse.lua",
+      "afterSha256": "3d37826ed8f9c5f6f1a0df8f6c749875dd844d52ed96a8c67b5605edb7f15716"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/eastwastes/player.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-world-scope/eastwastes--player.lua",
+      "afterSha256": "ec8ca6f5ae3154e49aa1bf05d0032d8d16c99adff261c348defddc166fcf9020"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/emeraldjungle/a_soulsipper.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-world-scope/emeraldjungle--a_soulsipper.lua",
+      "afterSha256": "629377fbf1f7e78c7a0cb72934eef579165a2c1db1fd4082f9b0ebe75a1418d7"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/fieldofbone/#Berserker-s_Image.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-world-scope/fieldofbone--#Berserker-s_Image.lua",
+      "afterSha256": "e1cb1786eb4693fa0b325ae8086c7f832b7eb3d9fefdfd29d99baa102fa8cc16"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freportn/#Elder_Spirit_of_Might.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-world-scope/freportn--#Elder_Spirit_of_Might.lua",
+      "afterSha256": "ada2933224eec22076c385c023ea78f80f39fcb73254f0479faff3c230eee8f6"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freportn/#Elder_Spirit_of_Patience.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-world-scope/freportn--#Elder_Spirit_of_Patience.lua",
+      "afterSha256": "d3e15ab19edc166044629fe64f416f66a9bb068c5e1f4e5c246d3851aebe94e2"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freportn/#Elder_Spirit_of_Perseverance.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-world-scope/freportn--#Elder_Spirit_of_Perseverance.lua",
+      "afterSha256": "318615d1045623806b6115a5a9aeebf5ea718e9d217687f9db25ba60202f2f69"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freportn/#Elder_Spirit_of_Wisdom.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-world-scope/freportn--#Elder_Spirit_of_Wisdom.lua",
+      "afterSha256": "3348288f0b3f8aedd94e65ee1af3f113065a334a556bfef98e04adec35c47bc8"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/guktop/a_froglok_gaz_knight.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-world-scope/guktop--a_froglok_gaz_knight.lua",
+      "afterSha256": "e48181c8cd62795bd585062d1562862606ff4e68a618b93bda25433271ecbd7f"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/guktop/a_froglok_gaz_shaman.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-world-scope/guktop--a_froglok_gaz_shaman.lua",
+      "afterSha256": "e48181c8cd62795bd585062d1562862606ff4e68a618b93bda25433271ecbd7f"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/guktop/a_froglok_gaz_squire.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-world-scope/guktop--a_froglok_gaz_squire.lua",
+      "afterSha256": "e48181c8cd62795bd585062d1562862606ff4e68a618b93bda25433271ecbd7f"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/guktop/a_froglok_gaz_warrior.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-world-scope/guktop--a_froglok_gaz_warrior.lua",
+      "afterSha256": "e48181c8cd62795bd585062d1562862606ff4e68a618b93bda25433271ecbd7f"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/guktop/a_froglok_ton_warrior.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-world-scope/guktop--a_froglok_ton_warrior.lua",
+      "afterSha256": "f887266488a84d07517bbe80a74983a74752b5e78a959152746eb9c428736905"
+    },
+    {
+      "target": "maintained/lua/converted-perl/lakeofillomen/#_.lua",
+      "beforeSha256": "8b1286e746a1c44c6345ac5968106bf07029898b4db7fa4b12b036fe6ded7902",
+      "proposedFile": "changes/p99-support-world-scope/lakeofillomen--#_.lua",
+      "afterSha256": "30dbeed41ddc8d8b72598b1c5205a61bdca9f94f95402f570cf276b0dcf242e1"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/lakeofillomen/a_bloodgill_goblin.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-world-scope/lakeofillomen--a_bloodgill_goblin.lua",
+      "afterSha256": "f4e39ca456d6ea183b6d3242cddd7fa24024a87a1679e736bb8000e589fdaf8a"
+    },
+    {
+      "target": "maintained/lua/converted-perl/lakerathe/Vortix.lua",
+      "beforeSha256": "661c8fe0461dd343ff477829385d56ca59629a7b4b6c3d237f711f531e3d8d6a",
+      "proposedFile": "changes/p99-support-world-scope/lakerathe--Vortix.lua",
+      "afterSha256": "e0c70bf050113988509645e2c4016abeb6fae2a8d7ae0544823875020201c576"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/lfaydark/Reanimated_Minion.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-world-scope/lfaydark--Reanimated_Minion.lua",
+      "afterSha256": "20f472a796d5aafd8d7452a0da102288068917b016e09b0e4f371246ddbbcc45"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/misty/Crysta_Tagglefoot.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-world-scope/misty--Crysta_Tagglefoot.lua",
+      "afterSha256": "bd19463e6e1cde6f512a95b6bdc776c21f1b012262944e8214e229d6106b767d"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/necropolis/a_Chetari_warrior.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-world-scope/necropolis--a_Chetari_warrior.lua",
+      "afterSha256": "00bd026f5a7463a8890ca9607ed1668dc0c731c1916c6181828cc910bdc2703b"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/necropolis/player.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-world-scope/necropolis--player.lua",
+      "afterSha256": "0ce96763f440e08a2e65ff649128b749ff13b196cb3913d08a0a463c4b08e4d9"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/northkarana/#a_plains_dragon.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-world-scope/northkarana--#a_plains_dragon.lua",
+      "afterSha256": "1b16e27c858a70e2a562574d79999332cdbc75d809e8fd389dbcaa8c4c0fedac"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/southkarana/an_adult_elephant.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-world-scope/southkarana--an_adult_elephant.lua",
+      "afterSha256": "bf4274ba19de8926a315d3ab7a36334da5309039452392207e2825c212cc47d1"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/swampofnohope/#a_swamp_dragon.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-world-scope/swampofnohope--#a_swamp_dragon.lua",
+      "afterSha256": "53fde7487e6ecbb60851e5d5b0ee856efd7adda66bb8810d1e214c5042e6d49c"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/timorous/player.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-world-scope/timorous--player.lua",
+      "afterSha256": "1495dc163e74538d46afbf68bb9abc0bd0d347c4c6c63fe2553de4a996f7b789"
+    },
+    {
+      "target": "maintained/lua/converted-perl/tox/#Fleshless_Servant.lua",
+      "beforeSha256": "1022523394972c7ac2f910111aee843ba830fc9403c096099d6c70196a1eecb3",
+      "proposedFile": "changes/p99-support-world-scope/tox--#Fleshless_Servant.lua",
+      "afterSha256": "893cc6637b72262566a0df8ed9154d4fdac61e4e5a40bea1a264b96906a0e6bf"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/trakanon/sabretooth_tiger.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-world-scope/trakanon--sabretooth_tiger.lua",
+      "afterSha256": "680508d2abded5708d811ec314256a2f8f6c0620cdb3ab846151f8a42b55db7f"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/westwastes/Disciple_of_Moon.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-world-scope/westwastes--Disciple_of_Moon.lua",
+      "afterSha256": "cc7e91d930d18084d08f30487a6d67439fcbb69c1af7e93d4d0971ddb04509de"
+    }
+  ]
+}

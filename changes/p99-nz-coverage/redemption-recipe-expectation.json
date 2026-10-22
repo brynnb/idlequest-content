@@ -1,0 +1,89 @@
+{
+  "recipeId": 9710,
+  "nofail": 1,
+  "enabled": 1,
+  "mustLearn": 0,
+  "replaceContainer": 1,
+  "components": [
+    [
+      12239,
+      1
+    ],
+    [
+      12331,
+      1
+    ],
+    [
+      12356,
+      1
+    ],
+    [
+      12359,
+      1
+    ],
+    [
+      12360,
+      1
+    ],
+    [
+      12361,
+      1
+    ],
+    [
+      12362,
+      1
+    ],
+    [
+      12363,
+      1
+    ],
+    [
+      12364,
+      1
+    ],
+    [
+      13126,
+      1
+    ]
+  ],
+  "containers": [
+    [
+      17984,
+      1
+    ]
+  ],
+  "outputs": [
+    [
+      12365,
+      1
+    ]
+  ],
+  "failureOutputs": [],
+  "evidence": {
+    "title": "Rogue Redemption",
+    "url": "https://wiki.project1999.com/Rogue_Redemption?action=raw",
+    "fetchedAt": "2026-07-17T23:31:02.613Z",
+    "revision": null,
+    "sha256": "da5d495b42a470e540b8d069efd35efd06d3089fc60ef35537e395ac693900df",
+    "bytes": 18356,
+    "source": "raw-pages/rogue-redemption-03247a6d3a.json",
+    "cachePath": "reference/p99-wiki/raw-pages/rogue-redemption-03247a6d3a.wiki",
+    "interpretation": "Exact ten named drinks, one each, combined in Bottle Crate to Case of Spirits; only enabled flag corrected."
+  },
+  "resolvedItemNames": {
+    "12331": "Lendel's Grand Lager",
+    "12364": "Blood Spirit",
+    "12239": "Blackburrow Swig",
+    "12360": "Tunare's Finest",
+    "12365": "Case of Spirits",
+    "13126": "Vasty Deep Ale",
+    "12361": "Underfoot Triple Bock",
+    "12363": "The Oblong Bottle",
+    "12359": "Clockwork Oil Stout",
+    "12362": "Frozen Toe Rum",
+    "12356": "Gator Gulp Ale",
+    "17984": "Bottle Crate"
+  },
+  "identityResolution": "All item IDs and names resolved from immutable exported item rows; all recipe entries match cached P99 checklist.",
+  "limits": "Structural regression only. Bottle Crate17984 missing from pinned game container registry; downstream registry integration required. Not a working live-combine claim."
+}

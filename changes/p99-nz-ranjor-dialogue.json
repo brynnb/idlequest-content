@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-nz-ranjor-dialogue",
+  "summary": "Accept the explicitly documented standard-English test phrase alongside the troll dialect.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Ranjor's_Test?action=raw",
+      "note": "Cached 2026-07-17T23:29:38.273Z; revision unavailable; SHA256 53a3c246d32435ff4ff764e39f2280405c1c650ab6f403ef59973bc78543c80a. P99 specifically says I am willing to test also works. Existing predicate accepts only willin ta test. All hand-ins, guildnote, faction policy, and rewards unchanged; exported13409FroglokMeat +two13187FroglokTadpoleFlesh ->5025RustyTwoHandedBattleAxe verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 16454,
+        "zone": "grobb",
+        "name": "Ranjor",
+        "lua_content": "-- Source: grobb/Ranjor.lua\n-- P99 audit: Ranjor's Test\n-- items: 18790, 13528, 13409, 13187, 5025\n\nfunction event_spawn(e)\n\tlocal xloc = e.self:GetX();\n\tlocal yloc = e.self:GetY();\n\teq.set_proximity(xloc - 50, xloc + 50, yloc - 50, yloc + 50);\nend\n\nfunction event_enter(e)\n\tif(e.other:HasItem(18790)) then\n\t\te.other:Message(MT.Yellow,\"As your eyes adjust to the darkness, a large troll decked out in grimy metal armor turns towards you. 'I be Ranjor. You look weak now but mebbe me can make you strong! You read note in inventory and hand to me to start training!'\");\n\tend\nend\n\nfunction event_say(e)\n\tlocal pfaction = e.other:GetFaction(e.self);\n\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Ya wanna be a member a Da Bashers. duz ya?  What making ya tink yooz is good nuff ta be one o' us?  Can ya proves ta me why I shouldn't oughtta just eat yer smelly hide?  I gonna tests ya. ya big. ugly peece o' meet.  Ya [willin ta test] or duz I just eats ya now?\");\n\telseif(pfaction > 5) then\n\t\te.self:Say(\"I wonder how much I could get for the tongue of a blithering fool?  Leave before I decide to find out for myself.\");\n\telseif(pfaction > 4) then\n\t\te.self:Say(\"You need to prove your dedication to our cause before I can discuss such matters with you.\");\n\telseif(e.message:findi(\"willin ta test\")) then\n\t\te.self:Say(\"Stoopid meat.  I gonna eats ya anyways sumday.  Brings me a froglok meat and two dem li'l froglok tadpole fleshes.  Dey berry good.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\tlocal pfaction = e.other:GetFaction(e.self);\n\n\tif (item_lib.check_turn_in(e.trade, {item1 = 18790})) then -- Tattered Note\n\t\te.self:Say(\"Arhh.. Ranjor mighty warrior.. Ranjor teach you warrior.. you fight for Ranjor now.\");\n\t\te.other:Ding();\n\t\te.other:SummonItem(13528);  -- Mud Covered Tunic\n\t\te.other:Faction(235,100,0);  \t-- Da Basher\n\t\te.other:Faction(222,-15,0);  -- Broken Skull Clan\n\t\te.other:AddEXP(100);\n\telseif (pfaction > 4) then\n\t\te.self:Say(\"You not friend.  Yuz take back.\");\n\telseif (item_lib.check_turn_in(e.trade, {item1 = 13409, item2 = 13187, item3 = 13187})) then\n\t\te.self:Say(\"You is berry slow. Me too hungry. Me shood eats you for being slow. Gib me dat stuff. Here, take dis and git more stuff fer us. You much kllin, come backs sees me. I teeches ya hows ta kill bedder. Now git and kill stuff. We be Da Bashers fer a reesun.\");\n\t\te.other:Faction(235,5,0);  \t-- Da Basher\n\t\te.other:Faction(222,-1,0);  -- Broken Skull Clan\n\t\te.other:Ding();\n\t\te.other:AddEXP(100);\n\t\te.other:SummonItem(5025); -- Item: Rusty Two Handed Battle Axe\n\tend\n\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\n-- END of FILE Zone:grobb ID:40024 -- Ranjor\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 16454,
+        "zone": "grobb",
+        "name": "Ranjor",
+        "lua_content": "-- Source: grobb/Ranjor.lua\n-- P99 audit: Ranjor's Test\n-- items: 18790, 13528, 13409, 13187, 5025\n\nfunction event_spawn(e)\n\tlocal xloc = e.self:GetX();\n\tlocal yloc = e.self:GetY();\n\teq.set_proximity(xloc - 50, xloc + 50, yloc - 50, yloc + 50);\nend\n\nfunction event_enter(e)\n\tif(e.other:HasItem(18790)) then\n\t\te.other:Message(MT.Yellow,\"As your eyes adjust to the darkness, a large troll decked out in grimy metal armor turns towards you. 'I be Ranjor. You look weak now but mebbe me can make you strong! You read note in inventory and hand to me to start training!'\");\n\tend\nend\n\nfunction event_say(e)\n\tlocal pfaction = e.other:GetFaction(e.self);\n\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Ya wanna be a member a Da Bashers. duz ya?  What making ya tink yooz is good nuff ta be one o' us?  Can ya proves ta me why I shouldn't oughtta just eat yer smelly hide?  I gonna tests ya. ya big. ugly peece o' meet.  Ya [willin ta test] or duz I just eats ya now?\");\n\telseif(pfaction > 5) then\n\t\te.self:Say(\"I wonder how much I could get for the tongue of a blithering fool?  Leave before I decide to find out for myself.\");\n\telseif(pfaction > 4) then\n\t\te.self:Say(\"You need to prove your dedication to our cause before I can discuss such matters with you.\");\n\telseif(e.message:findi(\"willin ta test\") or e.message:findi(\"willing to test\")) then\n\t\te.self:Say(\"Stoopid meat.  I gonna eats ya anyways sumday.  Brings me a froglok meat and two dem li'l froglok tadpole fleshes.  Dey berry good.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\tlocal pfaction = e.other:GetFaction(e.self);\n\n\tif (item_lib.check_turn_in(e.trade, {item1 = 18790})) then -- Tattered Note\n\t\te.self:Say(\"Arhh.. Ranjor mighty warrior.. Ranjor teach you warrior.. you fight for Ranjor now.\");\n\t\te.other:Ding();\n\t\te.other:SummonItem(13528);  -- Mud Covered Tunic\n\t\te.other:Faction(235,100,0);  \t-- Da Basher\n\t\te.other:Faction(222,-15,0);  -- Broken Skull Clan\n\t\te.other:AddEXP(100);\n\telseif (pfaction > 4) then\n\t\te.self:Say(\"You not friend.  Yuz take back.\");\n\telseif (item_lib.check_turn_in(e.trade, {item1 = 13409, item2 = 13187, item3 = 13187})) then\n\t\te.self:Say(\"You is berry slow. Me too hungry. Me shood eats you for being slow. Gib me dat stuff. Here, take dis and git more stuff fer us. You much kllin, come backs sees me. I teeches ya hows ta kill bedder. Now git and kill stuff. We be Da Bashers fer a reesun.\");\n\t\te.other:Faction(235,5,0);  \t-- Da Basher\n\t\te.other:Faction(222,-1,0);  -- Broken Skull Clan\n\t\te.other:Ding();\n\t\te.other:AddEXP(100);\n\t\te.other:SummonItem(5025); -- Item: Rusty Two Handed Battle Axe\n\tend\n\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\n-- END of FILE Zone:grobb ID:40024 -- Ranjor\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/grobb/Ranjor.lua",
+      "beforeSha256": "187bcd40c8fad69a26609ff2bea5fb41771f9bb609e9663c1635bce80ae1aaa8",
+      "proposedFile": "changes/p99-nz-ranjor-dialogue/grobb--Ranjor.lua",
+      "afterSha256": "749a9367dbbf5e999fa04c4582f683aa17bb251673e45dc1a8939c65b4b243b5"
+    }
+  ]
+}

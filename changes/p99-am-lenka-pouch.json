@@ -1,0 +1,136 @@
+{
+  "format": 1,
+  "id": "p99-am-lenka-pouch",
+  "summary": "Restore documented Fishing Pole after Olunea receives Snapped Pole, both aliases; let Lenka accept the documented Beast question and advertised keyword without requiring an exact two-word phrase.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Lenka's_Pouch?action=raw",
+      "note": "Cached 2026-07-17T23:23:26.758Z; revision unavailable; SHA256 24d3d5097cc2c0532f372481e4eafd7ec86d45067d692d7c255404a0cecbd6e3. Lenka's Pouch"
+    },
+    {
+      "url": "https://wiki.project1999.com/The_Painting?action=raw",
+      "note": "Cached 2026-07-17T23:37:38.718Z; revision unavailable; SHA256 0d2c3ff3c738f6aeb008909949a0c8a66f1362bd753e2adb0826e21759067796. The Painting"
+    },
+    {
+      "url": "https://wiki.project1999.com/Lenka's_Pouch?action=raw",
+      "note": "Promote immutable upstream source sources/projecteq/freporte/Olunea_Miltin.lua SHA256 380eee8e3f381bb8fd8e5de65a1cc1db32cb8c8433db06685fdb10b3a16fc16f to maintained modified-upstream override; baseline remains untouched."
+    },
+    {
+      "url": "https://wiki.project1999.com/Lenka's_Pouch?action=raw",
+      "note": "Promote immutable upstream source sources/projecteq/freeporteast/Olunea_Miltin.lua SHA256 380eee8e3f381bb8fd8e5de65a1cc1db32cb8c8433db06685fdb10b3a16fc16f to maintained modified-upstream override; baseline remains untouched."
+    },
+    {
+      "url": "https://wiki.project1999.com/Lenka's_Pouch?action=raw",
+      "note": "Promote immutable upstream source sources/projecteq/freporte/Lenka_Stoutheart.lua SHA256 d9ea5bb15a07f7425127bdaf7ce496211ff5bc10523cf1341f5c499cf9f067db to maintained modified-upstream override; baseline remains untouched."
+    },
+    {
+      "url": "https://wiki.project1999.com/Lenka's_Pouch?action=raw",
+      "note": "Promote immutable upstream source sources/projecteq/freeporteast/Lenka_Stoutheart.lua SHA256 fe9fbe646a9a659caf5b681b399f9a434a244ac9cd180140f5df473be6c30735 to maintained modified-upstream override; baseline remains untouched."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 13550,
+        "zone": "freporte",
+        "name": "Olunea_Miltin",
+        "lua_content": "-- items: 13922\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Hello. It is good to meet you. Try not to scare the fish away. This is A good spot I supply fish to the Grub N' Grog. The patrons there love me!\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 13922})) then -- Snapped Pole\n\t\te.self:Say(\"Great! Thank you stranger. The rogues must have broken it. At least I could repair it. It would be seasons before I could afford another pole.\");\n\t\te.other:Ding();\n\t\te.other:Faction(330,1,0); -- Freeport Militia\n\t\te.other:Faction(336,1,0); -- Coalition of Tradefolk Underground\n\t\te.other:Faction(281,-1,0); -- Knights of Truth\n\t\te.other:Faction(362,-1,0); -- Priests of Marr\n\t\te.other:AddEXP(100);\n\t\te.other:GiveCash(50,0,0,0);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\n-- END of FILE Zone:freporte -- Olunea_Miltin\n\n\n\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 13550,
+        "zone": "freporte",
+        "name": "Olunea_Miltin",
+        "lua_content": "-- items: 13922\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Hello. It is good to meet you. Try not to scare the fish away. This is A good spot I supply fish to the Grub N' Grog. The patrons there love me!\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 13922})) then -- Snapped Pole\n\t\te.self:Say(\"Great! Thank you stranger. The rogues must have broken it. At least I could repair it. It would be seasons before I could afford another pole.\");\n\t\te.other:Ding();\n\t\te.other:Faction(330,1,0); -- Freeport Militia\n\t\te.other:Faction(336,1,0); -- Coalition of Tradefolk Underground\n\t\te.other:Faction(281,-1,0); -- Knights of Truth\n\t\te.other:Faction(362,-1,0); -- Priests of Marr\n\t\te.other:AddEXP(100);\n\t\te.other:GiveCash(50,0,0,0);\n\t\te.other:SummonItem(13100); -- P99: Fishing Pole returned after Snapped Pole.\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\n-- END of FILE Zone:freporte -- Olunea_Miltin\n\n\n\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 14444,
+        "zone": "freeporteast",
+        "name": "Olunea_Miltin",
+        "lua_content": "-- items: 13922\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Hello. It is good to meet you. Try not to scare the fish away. This is A good spot I supply fish to the Grub N' Grog. The patrons there love me!\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 13922})) then -- Snapped Pole\n\t\te.self:Say(\"Great! Thank you stranger. The rogues must have broken it. At least I could repair it. It would be seasons before I could afford another pole.\");\n\t\te.other:Ding();\n\t\te.other:Faction(330,1,0); -- Freeport Militia\n\t\te.other:Faction(336,1,0); -- Coalition of Tradefolk Underground\n\t\te.other:Faction(281,-1,0); -- Knights of Truth\n\t\te.other:Faction(362,-1,0); -- Priests of Marr\n\t\te.other:AddEXP(100);\n\t\te.other:GiveCash(50,0,0,0);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\n-- END of FILE Zone:freporte -- Olunea_Miltin\n\n\n\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 14444,
+        "zone": "freeporteast",
+        "name": "Olunea_Miltin",
+        "lua_content": "-- items: 13922\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Hello. It is good to meet you. Try not to scare the fish away. This is A good spot I supply fish to the Grub N' Grog. The patrons there love me!\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 13922})) then -- Snapped Pole\n\t\te.self:Say(\"Great! Thank you stranger. The rogues must have broken it. At least I could repair it. It would be seasons before I could afford another pole.\");\n\t\te.other:Ding();\n\t\te.other:Faction(330,1,0); -- Freeport Militia\n\t\te.other:Faction(336,1,0); -- Coalition of Tradefolk Underground\n\t\te.other:Faction(281,-1,0); -- Knights of Truth\n\t\te.other:Faction(362,-1,0); -- Priests of Marr\n\t\te.other:AddEXP(100);\n\t\te.other:GiveCash(50,0,0,0);\n\t\te.other:SummonItem(13100); -- P99: Fishing Pole returned after Snapped Pole.\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\n-- END of FILE Zone:freporte -- Olunea_Miltin\n\n\n\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 18367,
+        "zone": "freporte",
+        "name": "Lenka_Stoutheart",
+        "lua_content": "-- items: 13818, 12146, 13814, 13922, 13923\nfunction event_say(e)\n\tlocal fac = e.other:GetFaction(e.self);\n\n\tif(e.message:findi(\"hail\") and (fac <= 5)) then\n\t\te.self:Say(\"Hi, kid! You seem to be a stranger in these parts. Heed my words, this city is dangerous to new blood!\");\n\t\teq.signal(10135,10); -- NPC: Bronto_Thudfoot\n\telseif(e.message:findi(\"hail\") and (fac > 5)) then\n\t\te.self:Say(\"Run while ye still can!!  The Wolves o' the North will not tolerate yer presence!\");\n\telseif(e.message:findi(\"toala sent me\")) then\n\t\te.self:Say(\"She does not even have the courtesy to come herself. Some old friend!! Listen, some rogue in this city broke into the [Beast] and stole a pouch containing a voucher ticket for a part I need to repair the Beast. I can't get the part back without the ticket. I did not see the rogue. I did not sleep on the Beast that night. Bronto was there. Ask him if he saw the rogue.\");\n\telseif(e.message:findi(\"what beast\")) then\n\t\te.self:Say(\"You're joking, right? You have never heard of the Blue Beast?!! She is the fastest ship in Norrath. She made the [Kunark run] in under three weeks. She was designed by [Bronto].\");\n\telseif(e.message:findi(\"kunark run\")) then\n\t\te.self:Say(\"The Kunark run is the most dangerous run between Freeport and [Firiona Vie], in Kunark. If the seas don't rip your hull to splinters and the pirates and sea wyrms don't kill you, you can make a quick run back and forth, avoiding any unwanted inspections.\");\n\telseif(e.message:findi(\"Firiona Vie\")) then\n\t\te.self:Say(\"Firiona Vie is an elven outpost on the continent of Kunark. Every so often I run supplies to and from there. Do not even think about asking me to take you there. It will be months before I can make improvements on the Blue Beast to make it impervious to aerial attacks.\");\n\telseif(e.message:findi(\"journal strongbox\")) then\n\t\te.self:Say(\"You must be from the Academy of Arcane Science.  Well, kid, bad news.  I was docked at the isle in the Ocean of Tears when I was boarded by the Freeport Militia.  To say the least, I panicked and dropped all my cargo.  It is still there.  Mostly illegal alcohol, but the strongbox is still out there, too.  Directly out from the dock.\");\n\t\teq.set_global(\"strongbox\",\"1\",7,\"H1\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 13818})) then -- Boat Beakon\n\t\te.self:Say(\"Oh!! You must work for that Erudite named Palatos. I guess he won't have to spend anymore money drinking in Freeport. Here. Here is the portrait I kept until he could get me a new boat beacon.\");\n\t\te.other:SummonItem(12146); -- A'kanon's Portrait\n\t\te.other:Ding();\n\t\te.other:Faction(320,1,0); -- Faction: Wolves of the North\n\t\te.other:Faction(327,1,0); -- Faction: Shamen of Justice\n\t\te.other:Faction(265,1,0); -- Faction: Heretics\n\t\te.other:Faction(267,1,0); -- Faction: High Guard of Erudin\n\t\te.other:AddEXP(100);\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 13814})) then -- L.S. Pouch\n\t\te.self:Say(\"You found my pouch! Thanks kid. Let me buy you A drink and this is for the good work. Hmmmm. It looks as though they took my voucher. Darn it! Hey... It looks like they were using my bag to hold items they were stealing. Here you go. You can have it. It looks like junk.\");\n\t\te.other:SummonItem(eq.ChooseRandom(13922,13923)); -- Snapped Pole or Moggok's Right Eye\n\t\te.other:Ding();\n\t\te.other:Faction(320,2,0); -- Faction: Wolves of the North\n\t\te.other:Faction(327,2,0); -- Faction: Shamen of Justice\n\t\te.other:Faction(328,2,0); -- Faction: Merchants of Halas\n\t\te.other:Faction(311,2,0); -- Faction: Steel Warriors\n\t\te.other:Faction(305,-2,0); -- Faction: Rogues of the White Rose\n\t\te.other:AddEXP(200);\n\t\te.other:GiveCash(0,2,0,0);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 18367,
+        "zone": "freporte",
+        "name": "Lenka_Stoutheart",
+        "lua_content": "-- items: 13818, 12146, 13814, 13922, 13923\nfunction event_say(e)\n\tlocal fac = e.other:GetFaction(e.self);\n\n\tif(e.message:findi(\"hail\") and (fac <= 5)) then\n\t\te.self:Say(\"Hi, kid! You seem to be a stranger in these parts. Heed my words, this city is dangerous to new blood!\");\n\t\teq.signal(10135,10); -- NPC: Bronto_Thudfoot\n\telseif(e.message:findi(\"hail\") and (fac > 5)) then\n\t\te.self:Say(\"Run while ye still can!!  The Wolves o' the North will not tolerate yer presence!\");\n\telseif(e.message:findi(\"toala sent me\")) then\n\t\te.self:Say(\"She does not even have the courtesy to come herself. Some old friend!! Listen, some rogue in this city broke into the [Beast] and stole a pouch containing a voucher ticket for a part I need to repair the Beast. I can't get the part back without the ticket. I did not see the rogue. I did not sleep on the Beast that night. Bronto was there. Ask him if he saw the rogue.\");\n\telseif(e.message:findi(\"beast\")) then\n\t\te.self:Say(\"You're joking, right? You have never heard of the Blue Beast?!! She is the fastest ship in Norrath. She made the [Kunark run] in under three weeks. She was designed by [Bronto].\");\n\telseif(e.message:findi(\"kunark run\")) then\n\t\te.self:Say(\"The Kunark run is the most dangerous run between Freeport and [Firiona Vie], in Kunark. If the seas don't rip your hull to splinters and the pirates and sea wyrms don't kill you, you can make a quick run back and forth, avoiding any unwanted inspections.\");\n\telseif(e.message:findi(\"Firiona Vie\")) then\n\t\te.self:Say(\"Firiona Vie is an elven outpost on the continent of Kunark. Every so often I run supplies to and from there. Do not even think about asking me to take you there. It will be months before I can make improvements on the Blue Beast to make it impervious to aerial attacks.\");\n\telseif(e.message:findi(\"journal strongbox\")) then\n\t\te.self:Say(\"You must be from the Academy of Arcane Science.  Well, kid, bad news.  I was docked at the isle in the Ocean of Tears when I was boarded by the Freeport Militia.  To say the least, I panicked and dropped all my cargo.  It is still there.  Mostly illegal alcohol, but the strongbox is still out there, too.  Directly out from the dock.\");\n\t\teq.set_global(\"strongbox\",\"1\",7,\"H1\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 13818})) then -- Boat Beakon\n\t\te.self:Say(\"Oh!! You must work for that Erudite named Palatos. I guess he won't have to spend anymore money drinking in Freeport. Here. Here is the portrait I kept until he could get me a new boat beacon.\");\n\t\te.other:SummonItem(12146); -- A'kanon's Portrait\n\t\te.other:Ding();\n\t\te.other:Faction(320,1,0); -- Faction: Wolves of the North\n\t\te.other:Faction(327,1,0); -- Faction: Shamen of Justice\n\t\te.other:Faction(328,1,0); -- Faction: Merchants of Halas\n\t\te.other:Faction(311,1,0); -- Faction: Steel Warriors\n\t\te.other:AddEXP(100);\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 13814})) then -- L.S. Pouch\n\t\te.self:Say(\"You found my pouch! Thanks kid. Let me buy you A drink and this is for the good work. Hmmmm. It looks as though they took my voucher. Darn it! Hey... It looks like they were using my bag to hold items they were stealing. Here you go. You can have it. It looks like junk.\");\n\t\te.other:SummonItem(eq.ChooseRandom(13922,13923)); -- Snapped Pole or Moggok's Right Eye\n\t\te.other:Ding();\n\t\te.other:Faction(320,2,0); -- Faction: Wolves of the North\n\t\te.other:Faction(327,2,0); -- Faction: Shamen of Justice\n\t\te.other:Faction(328,2,0); -- Faction: Merchants of Halas\n\t\te.other:Faction(311,2,0); -- Faction: Steel Warriors\n\t\te.other:Faction(305,-2,0); -- Faction: Rogues of the White Rose\n\t\te.other:AddEXP(200);\n\t\te.other:GiveCash(0,2,0,0);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 14926,
+        "zone": "freeporteast",
+        "name": "Lenka_Stoutheart",
+        "lua_content": "-- items: 13818, 12146, 13814, 13922, 13923\nfunction event_say(e)\n\tlocal fac = e.other:GetFaction(e.self);\n\n\tif(e.message:findi(\"hail\") and (fac <= 5)) then\n\t\te.self:Say(\"Hi, kid! You seem to be a stranger in these parts. Heed my words, this city is dangerous to new blood!\");\n\t\teq.signal(382254,1); -- NPC: Bronto_Thudfoot\n\telseif(e.message:findi(\"hail\") and (fac > 5)) then\n\t\te.self:Say(\"Run while ye still can!!  The Wolves o' the North will not tolerate yer presence!\");\n\telseif(e.message:findi(\"toala sent me\")) then\n\t\te.self:Say(\"She does not even have the courtesy to come herself. Some old friend!! Listen, some rogue in this city broke into the [Beast] and stole a pouch containing a voucher ticket for a part I need to repair the Beast. I can't get the part back without the ticket. I did not see the rogue. I did not sleep on the Beast that night. Bronto was there. Ask him if he saw the rogue.\");\n\telseif(e.message:findi(\"what beast\")) then\n\t\te.self:Say(\"You're joking, right? You have never heard of the Blue Beast?!! She is the fastest ship in Norrath. She made the [Kunark run] in under three weeks. She was designed by [Bronto].\");\n\telseif(e.message:findi(\"kunark run\")) then\n\t\te.self:Say(\"The Kunark run is the most dangerous run between Freeport and [Firiona Vie], in Kunark. If the seas don't rip your hull to splinters and the pirates and sea wyrms don't kill you, you can make a quick run back and forth, avoiding any unwanted inspections.\");\n\telseif(e.message:findi(\"Firiona Vie\")) then\n\t\te.self:Say(\"Firiona Vie is an elven outpost on the continent of Kunark. Every so often I run supplies to and from there. Do not even think about asking me to take you there. It will be months before I can make improvements on the Blue Beast to make it impervious to aerial attacks.\");\n\telseif(e.message:findi(\"journal strongbox\")) then\n\t\te.self:Say(\"You must be from the Academy of Arcane Science.  Well, kid, bad news.  I was docked at the isle in the Ocean of Tears when I was boarded by the Freeport Militia.  To say the least, I panicked and dropped all my cargo.  It is still there.  Mostly illegal alcohol, but the strongbox is still out there, too.  Directly out from the dock.\");\n\t\teq.set_global(\"strongbox\",\"1\",7,\"H1\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 13818})) then -- Boat Beakon\n\t\te.self:Say(\"Oh!! You must work for that Erudite named Palatos. I guess he won't have to spend anymore money drinking in Freeport. Here. Here is the portrait I kept until he could get me a new boat beacon.\");\n\t\te.other:SummonItem(12146); -- A'kanon's Portrait\n\t\te.other:Ding();\n\t\te.other:Faction(320,1,0); -- Faction: Wolves of the North\n\t\te.other:Faction(327,1,0); -- Faction: Shamen of Justice\n\t\te.other:Faction(265,1,0); -- Faction: Heretics\n\t\te.other:Faction(267,1,0); -- Faction: High Guard of Erudin\n\t\te.other:AddEXP(100);\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 13814})) then -- L.S. Pouch\n\t\te.self:Say(\"You found my pouch! Thanks kid. Let me buy you A drink and this is for the good work. Hmmmm. It looks as though they took my voucher. Darn it! Hey... It looks like they were using my bag to hold items they were stealing. Here you go. You can have it. It looks like junk.\");\n\t\te.other:SummonItem(eq.ChooseRandom(13922,13923)); -- Snapped Pole or Moggok's Right Eye\n\t\te.other:Ding();\n\t\te.other:Faction(320,2,0); -- Faction: Wolves of the North\n\t\te.other:Faction(327,2,0); -- Faction: Shamen of Justice\n\t\te.other:Faction(328,2,0); -- Faction: Merchants of Halas\n\t\te.other:Faction(311,2,0); -- Faction: Steel Warriors\n\t\te.other:Faction(305,-2,0); -- Faction: Rogues of the White Rose\n\t\te.other:AddEXP(200);\n\t\te.other:GiveCash(0,2,0,0);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 14926,
+        "zone": "freeporteast",
+        "name": "Lenka_Stoutheart",
+        "lua_content": "-- items: 13818, 12146, 13814, 13922, 13923\nfunction event_say(e)\n\tlocal fac = e.other:GetFaction(e.self);\n\n\tif(e.message:findi(\"hail\") and (fac <= 5)) then\n\t\te.self:Say(\"Hi, kid! You seem to be a stranger in these parts. Heed my words, this city is dangerous to new blood!\");\n\t\teq.signal(382254,1); -- NPC: Bronto_Thudfoot\n\telseif(e.message:findi(\"hail\") and (fac > 5)) then\n\t\te.self:Say(\"Run while ye still can!!  The Wolves o' the North will not tolerate yer presence!\");\n\telseif(e.message:findi(\"toala sent me\")) then\n\t\te.self:Say(\"She does not even have the courtesy to come herself. Some old friend!! Listen, some rogue in this city broke into the [Beast] and stole a pouch containing a voucher ticket for a part I need to repair the Beast. I can't get the part back without the ticket. I did not see the rogue. I did not sleep on the Beast that night. Bronto was there. Ask him if he saw the rogue.\");\n\telseif(e.message:findi(\"beast\")) then\n\t\te.self:Say(\"You're joking, right? You have never heard of the Blue Beast?!! She is the fastest ship in Norrath. She made the [Kunark run] in under three weeks. She was designed by [Bronto].\");\n\telseif(e.message:findi(\"kunark run\")) then\n\t\te.self:Say(\"The Kunark run is the most dangerous run between Freeport and [Firiona Vie], in Kunark. If the seas don't rip your hull to splinters and the pirates and sea wyrms don't kill you, you can make a quick run back and forth, avoiding any unwanted inspections.\");\n\telseif(e.message:findi(\"Firiona Vie\")) then\n\t\te.self:Say(\"Firiona Vie is an elven outpost on the continent of Kunark. Every so often I run supplies to and from there. Do not even think about asking me to take you there. It will be months before I can make improvements on the Blue Beast to make it impervious to aerial attacks.\");\n\telseif(e.message:findi(\"journal strongbox\")) then\n\t\te.self:Say(\"You must be from the Academy of Arcane Science.  Well, kid, bad news.  I was docked at the isle in the Ocean of Tears when I was boarded by the Freeport Militia.  To say the least, I panicked and dropped all my cargo.  It is still there.  Mostly illegal alcohol, but the strongbox is still out there, too.  Directly out from the dock.\");\n\t\teq.set_global(\"strongbox\",\"1\",7,\"H1\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 13818})) then -- Boat Beakon\n\t\te.self:Say(\"Oh!! You must work for that Erudite named Palatos. I guess he won't have to spend anymore money drinking in Freeport. Here. Here is the portrait I kept until he could get me a new boat beacon.\");\n\t\te.other:SummonItem(12146); -- A'kanon's Portrait\n\t\te.other:Ding();\n\t\te.other:Faction(320,1,0); -- Faction: Wolves of the North\n\t\te.other:Faction(327,1,0); -- Faction: Shamen of Justice\n\t\te.other:Faction(328,1,0); -- Faction: Merchants of Halas\n\t\te.other:Faction(311,1,0); -- Faction: Steel Warriors\n\t\te.other:AddEXP(100);\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 13814})) then -- L.S. Pouch\n\t\te.self:Say(\"You found my pouch! Thanks kid. Let me buy you A drink and this is for the good work. Hmmmm. It looks as though they took my voucher. Darn it! Hey... It looks like they were using my bag to hold items they were stealing. Here you go. You can have it. It looks like junk.\");\n\t\te.other:SummonItem(eq.ChooseRandom(13922,13923)); -- Snapped Pole or Moggok's Right Eye\n\t\te.other:Ding();\n\t\te.other:Faction(320,2,0); -- Faction: Wolves of the North\n\t\te.other:Faction(327,2,0); -- Faction: Shamen of Justice\n\t\te.other:Faction(328,2,0); -- Faction: Merchants of Halas\n\t\te.other:Faction(311,2,0); -- Faction: Steel Warriors\n\t\te.other:Faction(305,-2,0); -- Faction: Rogues of the White Rose\n\t\te.other:AddEXP(200);\n\t\te.other:GiveCash(0,2,0,0);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/freporte/Olunea_Miltin.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-am-lenka-pouch/freporte-Olunea_Miltin.lua",
+      "afterSha256": "c2384b77f138622bc9e8426d72f9951a86508bc9e5b5688792dac0d46c34ee63"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freeporteast/Olunea_Miltin.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-am-lenka-pouch/freeporteast-Olunea_Miltin.lua",
+      "afterSha256": "c2384b77f138622bc9e8426d72f9951a86508bc9e5b5688792dac0d46c34ee63"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freporte/Lenka_Stoutheart.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-am-lenka-pouch/freporte-Lenka_Stoutheart.lua",
+      "afterSha256": "2d477ab84b5fdeffd35a38d12fd0057b038eaadbe7f45c85fc4902bbfbf6b802"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freeporteast/Lenka_Stoutheart.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-am-lenka-pouch/freeporteast-Lenka_Stoutheart.lua",
+      "afterSha256": "8da0e28eb8779e0b0b712117526c6fb1a74b56e8195093ffed18a36e850ba953"
+    }
+  ]
+}

@@ -1,0 +1,410 @@
+{
+  "kind": "coherent-initial-snapshot-validation-not-final-source-closure",
+  "completedAt": "2026-10-22T06:18:40.456495+00:00",
+  "snapshot": "/tmp/p99-validation-20261022T055845Z",
+  "status": "completed with two proposal metadata defects and documented unchanged-baseline diagnostics",
+  "capturedInputSetSha256": "3148049d743dd2f5b37c80ebd008f5405c6f6c6e4b2b9bd52a88fbf1e4b18f74",
+  "preparedInputSetSha256": "d4a59c2607a020623a07d08fa6e2f2187079dd70654b3eac6039f6da47ef903f",
+  "inputStability": {
+    "allLuaToolsAndValidatorInputsUnchanged": true,
+    "testGeneratedReportUpdates": [
+      "changes/p99-armor-review/runtime-receipt.json"
+    ]
+  },
+  "tests": {
+    "npm": {
+      "tests": 34,
+      "passed": 33,
+      "failed": 0,
+      "skipped": 1,
+      "skipReason": "Optional MySQL integration unavailable; no database execution claimed"
+    },
+    "nestedNode": {
+      "tests": 13,
+      "passed": 13,
+      "failed": 0
+    },
+    "mainVM": {
+      "passed": 1802,
+      "proposedSourceCasesCorrected": 1484,
+      "baselineVerificationsCorrected": 223,
+      "baselineReproductions": 95,
+      "rawReceiptMisclassifiedBaselineCases": 10
+    },
+    "flavorVM": {
+      "passed": 167
+    },
+    "classicNestedVM": {
+      "passed": 19
+    },
+    "armorStandaloneVM": {
+      "passed": 368,
+      "overlapsMainVM": true
+    },
+    "armorEvidence": {
+      "independentlyMatchedExchanges": 77,
+      "pages": 11
+    },
+    "paladinStandaloneVM": {
+      "passed": 45,
+      "overlapsMainVM": true
+    },
+    "recipes": {
+      "centralStaticExpectations": 154,
+      "paladinAdditionalStructuralChecks": [
+        1858,
+        9809,
+        7597
+      ]
+    }
+  },
+  "proposedSourceCoverage": {
+    "luaSources": 509,
+    "uncovered": [],
+    "proof": "proposed-source-proof.json"
+  },
+  "immutableBaseline": {
+    "files": 36496,
+    "tables": 53,
+    "manifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+    "validationPassed": true,
+    "trackedBaselineDiff": "",
+    "linkLayout": "Hard-linked files used read-only by task discipline, not kernel-enforced read-only mounts"
+  },
+  "combinedProposal": {
+    "rows": 589,
+    "sources": 510,
+    "validated": false,
+    "defects": [
+      {
+        "key": "thurgadina/Erdarf_Restil",
+        "issue": "enabled-header-mismatch",
+        "rowEnabled": 0,
+        "headerEnabled": true,
+        "source": "changes/p99-af-erdarf-entry/thurgadina-Erdarf_Restil.lua"
+      },
+      {
+        "key": "erudnext/Tiam_Khonsir",
+        "issue": "enabled-header-mismatch",
+        "rowEnabled": 0,
+        "headerEnabled": true,
+        "source": "changes/p99-il-parity/erudnext--Tiam_Khonsir.lua"
+      }
+    ]
+  },
+  "compile": {
+    "checked": 8578,
+    "failures": [
+      {
+        "error": "effective/quests/utility/comments-helper-generator.lua line:1(column:1) near '#':   syntax error\n",
+        "name": "effective/quests/utility/comments-helper-generator.lua"
+      }
+    ],
+    "all509ProposedLuaCompiled": true,
+    "knownBaselineException": {
+      "file": "effective/quests/utility/comments-helper-generator.lua",
+      "sha256": "85c0b4e7501110a0b0dd78369acdd667cb96caeb50ba6df6f90badfa2c5acdef",
+      "questRowId": 12299,
+      "enabled": 0,
+      "explanation": "Pre-existing Perl comment-helper utility stored with .lua extension. No baseline edits made."
+    }
+  },
+  "referenceChecks": {
+    "proposedLiteralMatches": 4641,
+    "proposedMissing": [],
+    "changedRowStaticLinks": {
+      "scope": "Declared static ID links on all proposed after-rows against frozen export plus proposed target changes. No database transaction, dynamic Lua or composite grid proof.",
+      "checked": 45,
+      "missing": []
+    },
+    "baselineRawUnmatchedLiterals": 2031,
+    "baselineDiagnosticFile": "full-reference-diagnostic.json"
+  },
+  "supersededInfrastructureFailures": [
+    "Initial symlink layout was rejected by safeFile as designed; baseline hard-link rerun passed. Combined hard-link rerun exposed actual metadata defects."
+  ],
+  "pending": [
+    "Parent requested fixes for Erdarf and Tiam; active component CLI checks are separately recorded and do not alter this snapshot.",
+    "Final source-closure freeze and new coherent full-set validation remain pending.",
+    "Post-capture timer/recipe assertions, expanded npm suite and receipt classification fix require final refresh."
+  ],
+  "limits": [
+    "Pinned gopher-lua normalization and strict capture mocks with actual unchanged items module, not the live game bridge.",
+    "No database transaction, inventory settlement, rollback, persistent multiquest, ground pickup, crafting, world activation, acquisition, rendered UI or end-to-end playability proof.",
+    "Literal reference scanning excludes dynamic expressions/random pools/keyed tables and may include comments or disabled/out-of-scope baseline code.",
+    "Passing script execution does not establish reward value provenance or random probabilities; retained fallback values remain disclosed."
+  ],
+  "commands": [
+    {
+      "name": "regenerate-inventory",
+      "command": [
+        "node",
+        "tools/p99-quest-inventory.mjs",
+        ".",
+        "--write"
+      ],
+      "startedAt": "2026-10-22T05:59:56.228005+00:00",
+      "durationSeconds": 34.723,
+      "exitCode": 0,
+      "log": "regenerate-inventory.log",
+      "logSha256": "1e6cd2d0fd73ab1874b24347c73003ae5a8f181a2dcf782ff35303da5aee9834"
+    },
+    {
+      "name": "regenerate-coverage",
+      "command": [
+        "node",
+        "tools/p99-review-coverage.mjs",
+        "."
+      ],
+      "startedAt": "2026-10-22T06:00:30.956815+00:00",
+      "durationSeconds": 0.62,
+      "exitCode": 0,
+      "log": "regenerate-coverage.log",
+      "logSha256": "ebf77265e3689106e9742cfec8658587e821aa4079720e3589cd3e4b6ae3a5b5"
+    },
+    {
+      "name": "regenerate-ledger",
+      "command": [
+        "node",
+        "tools/p99-build-ledger.mjs",
+        "."
+      ],
+      "startedAt": "2026-10-22T06:00:31.580741+00:00",
+      "durationSeconds": 0.8,
+      "exitCode": 0,
+      "log": "regenerate-ledger.log",
+      "logSha256": "647b7e35f5fa10701abaa71fbdfd9d596c3fdf6549512e40070649f78c4a35a7"
+    },
+    {
+      "name": "regenerate-source-coverage",
+      "command": [
+        "node",
+        "tools/p99-source-coverage.mjs",
+        "."
+      ],
+      "startedAt": "2026-10-22T06:00:32.383266+00:00",
+      "durationSeconds": 4.978,
+      "exitCode": 0,
+      "log": "regenerate-source-coverage.log",
+      "logSha256": "be86c8a1c53bd68f7b5409717f9d18517b24049eed113238eb61a0ab3b5790bc"
+    },
+    {
+      "name": "regenerate-resolution",
+      "command": [
+        "node",
+        "tools/p99-resolution-report.mjs",
+        "."
+      ],
+      "startedAt": "2026-10-22T06:00:37.371556+00:00",
+      "durationSeconds": 5.965,
+      "exitCode": 0,
+      "log": "regenerate-resolution.log",
+      "logSha256": "c0cbbba205ce768d7f66d2fb3826c704fcc1fcc52131426f57a21f394361dcfe"
+    },
+    {
+      "name": "regenerate-downstream",
+      "command": [
+        "node",
+        "tools/p99-refresh-downstream.mjs",
+        "."
+      ],
+      "startedAt": "2026-10-22T06:00:43.337561+00:00",
+      "durationSeconds": 9.841,
+      "exitCode": 0,
+      "log": "regenerate-downstream.log",
+      "logSha256": "e70057f794d5debfd4ee5dddf8034c7300a0637cbdf385ff822f2a1600e46be5"
+    },
+    {
+      "name": "regenerate-containers",
+      "command": [
+        "node",
+        "tools/p99-container-compatibility.mjs",
+        "."
+      ],
+      "startedAt": "2026-10-22T06:00:53.183599+00:00",
+      "durationSeconds": 2.434,
+      "exitCode": 0,
+      "log": "regenerate-containers.log",
+      "logSha256": "cedfe1adee8fea55d32d178b79d5d4a0c56c624f7ec642d22b1f18acc4e06ccc"
+    },
+    {
+      "name": "regenerate-combined",
+      "command": [
+        "node",
+        "tools/p99-merge-proposals.mjs",
+        "."
+      ],
+      "startedAt": "2026-10-22T06:00:55.620766+00:00",
+      "durationSeconds": 1.546,
+      "exitCode": 0,
+      "log": "regenerate-combined.log",
+      "logSha256": "7e9ad10e1aa785649c297f546012e21cb33a15931e6ed983cbb3fdb32b601494"
+    },
+    {
+      "name": "npm-tests",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "startedAt": "2026-10-22T06:00:57.168478+00:00",
+      "durationSeconds": 368.167,
+      "exitCode": 0,
+      "log": "npm-tests.log",
+      "logSha256": "4e2f04e8b6acf123dfac69f9d1fb9e288e76acac4f538dd8df4e21a41bf8dbb3"
+    },
+    {
+      "name": "nested-tests",
+      "command": [
+        "node",
+        "--test",
+        "changes/p99-classic-conversions/behavior.test.mjs",
+        "changes/p99-classic-conversions/triage.test.mjs",
+        "changes/p99-conversions-velious/coverage.test.mjs",
+        "changes/p99-audit/inventory.test.mjs",
+        "changes/p99-sky-timer-review/static-expectations.test.mjs"
+      ],
+      "startedAt": "2026-10-22T06:07:05.343489+00:00",
+      "durationSeconds": 17.866,
+      "exitCode": 0,
+      "log": "nested-tests.log",
+      "logSha256": "5548adfbc7ca2c04bca9b8aa2e54d9893213bffd1edd1ce6b7ef69a969012427"
+    },
+    {
+      "name": "armor-evidence",
+      "command": [
+        "node",
+        "changes/p99-armor-review/verify-evidence.mjs"
+      ],
+      "startedAt": "2026-10-22T06:07:23.210529+00:00",
+      "durationSeconds": 6.676,
+      "exitCode": 0,
+      "log": "armor-evidence.log",
+      "logSha256": "4fad857017b91e7c2013657038eae27c167bddca4559e243c0378a9584ce7b68"
+    },
+    {
+      "name": "armor-runtime",
+      "command": [
+        "node",
+        "changes/p99-armor-review/run-tests.mjs"
+      ],
+      "startedAt": "2026-10-22T06:07:29.887523+00:00",
+      "durationSeconds": 157.715,
+      "exitCode": 0,
+      "log": "armor-runtime.log",
+      "logSha256": "8a2f0f75f6480bc901a9f917de881fe63366302e8abdf6ba92fc648711a918a2"
+    },
+    {
+      "name": "paladin-runtime",
+      "command": [
+        "node",
+        "changes/p99-paladin-epic-review/test-review.mjs"
+      ],
+      "startedAt": "2026-10-22T06:10:07.637696+00:00",
+      "durationSeconds": 3.283,
+      "exitCode": 0,
+      "log": "paladin-runtime.log",
+      "logSha256": "fe2001159e6d42718e30299820d9685a22cbd5d1033cc468408d02904c451a8e"
+    },
+    {
+      "name": "paladin-recipes",
+      "command": [
+        "node",
+        "changes/p99-paladin-epic-review/test-recipes.mjs"
+      ],
+      "startedAt": "2026-10-22T06:10:10.922765+00:00",
+      "durationSeconds": 3.023,
+      "exitCode": 0,
+      "log": "paladin-recipes.log",
+      "logSha256": "4d80fc08853aa367e2b531fa36c63e9995dd1f71911f7bac3f0a4d8f1cf43721"
+    },
+    {
+      "name": "combined-validation",
+      "command": [
+        "node",
+        "tools/cli.mjs",
+        "check-proposal",
+        ".",
+        "--proposal",
+        "changes/p99-combined-audit.json"
+      ],
+      "startedAt": "2026-10-22T06:10:13.947369+00:00",
+      "durationSeconds": 0.448,
+      "exitCode": 1,
+      "log": "combined-validation.log",
+      "logSha256": "fb44dfafcdb23fe9bf7c0cb64a59eb813cd29700b4c1a8828b0a70585f2f81a4"
+    },
+    {
+      "name": "baseline-validation",
+      "command": [
+        "npm",
+        "run",
+        "validate"
+      ],
+      "startedAt": "2026-10-22T06:10:14.398840+00:00",
+      "durationSeconds": 1.445,
+      "exitCode": 1,
+      "log": "baseline-validation.log",
+      "logSha256": "8b4066aefdb047ea93e0643ddc7afac8486804dc68ed1adb6b1daa8d85fd52b6"
+    },
+    {
+      "name": "reference-integrity",
+      "command": [
+        "node",
+        "tools/p99-reference-check.mjs",
+        "."
+      ],
+      "startedAt": "2026-10-22T06:10:15.847841+00:00",
+      "durationSeconds": 3.984,
+      "exitCode": 0,
+      "log": "reference-integrity.log",
+      "logSha256": "c8607539272137789977c59da6c9a871d352d48e8059e8835f9e821033934d5a"
+    },
+    {
+      "name": "full-lua-compile",
+      "command": [
+        "go",
+        "run",
+        "."
+      ],
+      "cwd": "validator",
+      "scripts": 8578,
+      "durationSeconds": 5.948,
+      "exitCode": 1,
+      "log": "full-lua-compile.log",
+      "logSha256": "6a2be47cdb838554e6f0857b71d6ba38b445aa9bd3fc38867e5937d6a29278d5"
+    },
+    {
+      "name": "combined-validation-hardlinks",
+      "command": [
+        "node",
+        "tools/cli.mjs",
+        "check-proposal",
+        ".",
+        "--proposal",
+        "changes/p99-combined-audit.json"
+      ],
+      "startedAt": "2026-10-22T06:12:12.304288+00:00",
+      "durationSeconds": 93.689,
+      "exitCode": 1,
+      "log": "combined-validation-hardlinks.log",
+      "logSha256": "8406a8ed4bed6237d3917db290b7f14a7d90d0c43462b8e85d6f54c29bbf8c79",
+      "supersedes": "combined-validation",
+      "reason": "Only baseline link topology changed; no content changes or validator bypass."
+    },
+    {
+      "name": "baseline-validation-hardlinks",
+      "command": [
+        "npm",
+        "run",
+        "validate"
+      ],
+      "startedAt": "2026-10-22T06:13:45.994456+00:00",
+      "durationSeconds": 80.693,
+      "exitCode": 0,
+      "log": "baseline-validation-hardlinks.log",
+      "logSha256": "4d419bb904028297d3bb73671d7eb0c202541454feb73e02f7ea0a2d56059e07",
+      "supersedes": "baseline-validation",
+      "reason": "Only baseline link topology changed; no content changes or validator bypass."
+    }
+  ]
+}

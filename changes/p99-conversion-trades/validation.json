@@ -1,0 +1,27 @@
+{
+  "completedAt": "2026-10-22T06:31:39.974243+00:00",
+  "proposal": "changes/p99-conversion-trades.json",
+  "proposalSha256": "1aed23b8e5b9e4c3d03a8257886ec32c8226008e0a478539531049df0f9aec4a",
+  "cli": {
+    "command": "PATH=/tmp/p99-go-toolchain/go/bin:$PATH GOCACHE=/tmp/p99-go-cache GOPATH=/tmp/p99-go-path node tools/cli.mjs check-proposal . --proposal changes/p99-conversion-trades.json",
+    "exitCode": 0,
+    "stdout": "{ checked: 8, failures: null }\nValidated proposal p99-conversion-trades: 8 rows, 8 sources\n",
+    "note": "Actual CLI completed after final source regeneration. Baseline validation occurs before proposal read; source and proposal hashes match focused-test receipt."
+  },
+  "isolatedBehavior": {
+    "command": "PATH=/tmp/p99-go-toolchain/go/bin:$PATH GOCACHE=/tmp/p99-go-cache GOPATH=/tmp/p99-go-path node changes/p99-conversion-trades/run-focused-tests.mjs",
+    "exitCode": 0,
+    "scenarios": 38,
+    "receipt": "changes/p99-conversion-trades/behavior-receipt.json",
+    "receiptSha256": "f9aeefaf7b31bd78e8e890ec0f133e6628ce5906e89c6c4a36b0f592de9665ee",
+    "output": "changes/p99-conversion-trades/behavior-output.txt",
+    "outputSha256": "ec67fdc1bb89146a494c5b9307e7452beccce5218c31ba2d284f0e19c34c25f4"
+  },
+  "notTested": [
+    "Live game bridge settlement and rollback",
+    "World actor availability or enabled spawns",
+    "Timed signal delivery in a running zone",
+    "Rendered UI",
+    "Full progression: none of these eight bounded scripts adds a reward"
+  ]
+}

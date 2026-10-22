@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-taxes-nesiff_tallaherd",
+  "summary": "Remove only tax_collection prerequisites: P99 expressly permits collecting without first speaking to Vicus and bypassing Mira. Preserve all original item/faction effects and unrelated quest branches. Flynn also accepts documented your-feet phrase and uses documented Shout; no numeric values invented.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Taxes?action=raw",
+      "note": "Cached 2026-07-17T23:34:37.004Z; revision unavailable; SHA256 6fc59af937f3b2dfa4313beac8b349112c500bdbff0c89109de222dc34860c9b. Remove only tax_collection prerequisites: P99 expressly permits collecting without first speaking to Vicus and bypassing Mira. Preserve all original item/faction effects and unrelated quest branches. Flynn also accepts documented your-feet phrase and uses documented Shout; no numeric values invented. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 17177,
+        "zone": "qeynos",
+        "name": "Nesiff_Tallaherd",
+        "lua_content": "-- Source: qeynos/Nesiff_Tallaherd.lua\n-- P99 audit: Nesiff's Statue\n-- items: 13173, 13925, 18824, 18012, 13864\n\nfunction event_say(e)\n\tlocal qglobals = eq.get_qglobals(e.other);\n\t\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(string.format(\"Greetings, %s! Nesiff Tallaherd, owner and operator of Nesiff's Wooden Weapons, at your service. I am the finest woodworker in all of Qeynos. Even the Qeynos Guard uses my arrows, thanks to [Guard Weleth].\",e.other:GetName()));\n\telseif(e.message:findi(\"guard weleth\")) then\n\t\te.self:Say(\"Guard Weleth is like a son to me. He is responsible for purchasing supplies for the Qeynos Guard. He buys arrows from me. He is usually stationed near the North Gate.\");\n\telseif(e.message:findi(\"tax collection\") and qglobals.tax_collection ~= nil) then\n\t\te.self:Say(\"Tax time again already?? It seems like I just paid yesterday.. High taxes and low sales mean I won't be able to stay in business much longer. Good thing ol' Weleth is taking care of me. Here are my taxes.\");\n\t\te.other:Faction(291,-10,0); -- Faction: Merchants of Qeynos\n\t\te.other:SummonItem(13173); -- Item: Tallaherd's Tax Payment\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\t\n\tif(item_lib.check_turn_in(e.trade, {item1 = 13925})) then -- Crate of Defective Arrows\n\t\te.self:Say(\"Oh dear. I hope my mistake will not bring too much grief down on poor Weleth. He was told not to order arrows from me after the last time I fouled up their shipment. But Weleth knew I needed the account to stay in business. Could you please rush this new invoice to him right away? Thank you.\");\n\t\te.other:SummonItem(18824); -- Slip of Parchment\n\t\te.other:Ding();\n\t\te.other:Faction(291,10,0); -- Merchants of Qeynos\n\t\te.other:Faction(223,-20,0); -- Circle Of Unseen Hands\n\t\te.other:Faction(219,10,0); -- Antonius Bayle\n\t\te.other:Faction(229,10,0); -- Coalition of Tradefolk\n\t\te.other:Faction(262,10,0); -- Guards of Qeynos\n\t\te.other:AddEXP(8000);\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 18012})) then -- Claim Check\n\t\te.self:Say(\"Oh. Vesteri sent you? Here you go. I hope Te'Anara likes it.\");\n\t\te.other:SummonItem(13864); -- Wooden Statue\n\t\te.other:Ding();\n\t\te.other:Faction(291,10,0); -- Merchants of Qeynos\n\t\te.other:Faction(223,-20,0); -- Circle Of Unseen Hands\n\t\te.other:Faction(219,10,0); -- Antonius Bayle\n\t\te.other:Faction(229,10,0); -- Coalition of Tradefolk\n\t\te.other:Faction(262,10,0); -- Guards of Qeynos\n\t\te.other:AddEXP(250);\n\tend\n\t\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 17177,
+        "zone": "qeynos",
+        "name": "Nesiff_Tallaherd",
+        "lua_content": "-- Source: qeynos/Nesiff_Tallaherd.lua\n-- P99 audit: Nesiff's Statue\n-- items: 13173, 13925, 18824, 18012, 13864\n\nfunction event_say(e)\n\tlocal qglobals = eq.get_qglobals(e.other);\n\t\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(string.format(\"Greetings, %s! Nesiff Tallaherd, owner and operator of Nesiff's Wooden Weapons, at your service. I am the finest woodworker in all of Qeynos. Even the Qeynos Guard uses my arrows, thanks to [Guard Weleth].\",e.other:GetName()));\n\telseif(e.message:findi(\"guard weleth\")) then\n\t\te.self:Say(\"Guard Weleth is like a son to me. He is responsible for purchasing supplies for the Qeynos Guard. He buys arrows from me. He is usually stationed near the North Gate.\");\n\telseif(e.message:findi(\"tax collection\") ) then\n\t\te.self:Say(\"Tax time again already?? It seems like I just paid yesterday.. High taxes and low sales mean I won't be able to stay in business much longer. Good thing ol' Weleth is taking care of me. Here are my taxes.\");\n\t\te.other:Faction(291,-10,0); -- Faction: Merchants of Qeynos\n\t\te.other:SummonItem(13173); -- Item: Tallaherd's Tax Payment\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\t\n\tif(item_lib.check_turn_in(e.trade, {item1 = 13925})) then -- Crate of Defective Arrows\n\t\te.self:Say(\"Oh dear. I hope my mistake will not bring too much grief down on poor Weleth. He was told not to order arrows from me after the last time I fouled up their shipment. But Weleth knew I needed the account to stay in business. Could you please rush this new invoice to him right away? Thank you.\");\n\t\te.other:SummonItem(18824); -- Slip of Parchment\n\t\te.other:Ding();\n\t\te.other:Faction(291,10,0); -- Merchants of Qeynos\n\t\te.other:Faction(223,-20,0); -- Circle Of Unseen Hands\n\t\te.other:Faction(219,10,0); -- Antonius Bayle\n\t\te.other:Faction(229,10,0); -- Coalition of Tradefolk\n\t\te.other:Faction(262,10,0); -- Guards of Qeynos\n\t\te.other:AddEXP(8000);\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 18012})) then -- Claim Check\n\t\te.self:Say(\"Oh. Vesteri sent you? Here you go. I hope Te'Anara likes it.\");\n\t\te.other:SummonItem(13864); -- Wooden Statue\n\t\te.other:Ding();\n\t\te.other:Faction(291,10,0); -- Merchants of Qeynos\n\t\te.other:Faction(223,-20,0); -- Circle Of Unseen Hands\n\t\te.other:Faction(219,10,0); -- Antonius Bayle\n\t\te.other:Faction(229,10,0); -- Coalition of Tradefolk\n\t\te.other:Faction(262,10,0); -- Guards of Qeynos\n\t\te.other:AddEXP(250);\n\tend\n\t\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/qeynos/Nesiff_Tallaherd.lua",
+      "beforeSha256": "182bd3aca33d75e4e1e4db817e850026896f3ee11df8298a22e9542a276715a3",
+      "proposedFile": "changes/p99-tz-taxes-nesiff_tallaherd/qeynos--Nesiff_Tallaherd.lua",
+      "afterSha256": "62ebd9e74ebab21cc73258696e66d3dcf3ddca89dd43305df61a6bb61d867b60"
+    }
+  ]
+}

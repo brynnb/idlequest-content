@@ -1,0 +1,45 @@
+{
+  "format": 1,
+  "id": "p99-am-honey-mead-dialogue",
+  "summary": "Accept documented honey mead question alongside drinks; preserve simultaneous four-mead reward and all trade values.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Honey_Mead_for_Trumpy?action=raw",
+      "note": "Cached 2026-07-17T23:21:17.350Z; revision unavailable; SHA256 e20ddd573d703bf6666af1b434f3dea08e635f7cf40f3970b8e9cb79d5a77fc2. Honey Mead for Trumpy"
+    },
+    {
+      "url": "https://wiki.project1999.com/Honey_Mead_for_Trumpy?action=raw",
+      "note": "Promote immutable upstream source sources/projecteq/qeynos/Trumpy_Irontoe.lua SHA256 a61ee11cfecf4ac930ef916e5aaab16dba175660142d5b3bf0e81223aa695066 to maintained modified-upstream override; baseline remains untouched."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 18696,
+        "zone": "qeynos",
+        "name": "Trumpy_Irontoe",
+        "lua_content": "-- items: 13033\nfunction event_say(e)\n\tlocal fac = e.other:GetFaction(e.self);\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(string.format(\"Heh? What's yer name? %s? Never heard of ya. Now quit breathin' on me and buy us some [drinks]!\",e.other:GetName()));\n\telseif(e.message:findi(\"drinks\")) then\n\t\te.self:Say(\"<BURP!> Yeah. Gimme a.. <BURP!> er.. honey mead.\");\n\telseif(e.message:findi(\"kaladim\")) then\n\t\te.self:Say(string.format(\"Heh? Kaladim, you say? It's a long way from here, I tell you.. Home to us dwarves it is. I miss it sometimes though.. Its tough being a swashbuckling dwarf with my rugged good looks when all the other dwarves are so envious. Cripes, %s... You got me all misty-eyed now.. <BURP> Peh! Buy me a honey mead, will ya?\",e.other:GetName()));\n\telseif(fac < 4) then\n\t\tif(e.message:findi(\"skippy\")) then\n\t\t\te.self:Say(\"Skippy? You mean that fish farmer? Heh heh heh. What a moron. And his brother [Beren] has the nerve to actually threaten ME!?.. Burp.. Bah. Remind me to tell [Kane] about that steaming pile of gnoll dung.\");\n\t\telseif(e.message:findi(\"beren\")) then\n\t\t\te.self:Say(\"Don't even mention that weakling's name. He.. burp.. Keeps threatening me. ME! Trumpy IRONTOE!!! Peh! That useless son of a goblin had better wise up and realize that in this burg if you ain't with [Kane], you are against him. And if you are against him.. burp.. you ain't nothing but a corpse.\");\t\t\n\t\telseif(e.message:findi(\"kane\")) then\n\t\t\te.self:Say(\"Ah.. burp.. that piece of cr.. eh? Oh its you.. Kane runs this burg.. or at least he will.. if [Sragg] can get his act together.\");\t\t\n\t\telseif(e.message:findi(\"sragg\")) then\n\t\t\te.self:Say(\"Where did you hear that name?!? Not from me! I didn't say nothing about Sragg or those Bloodsabers or their dang temple in the sewers! Get away from me ya hobgoblins! I don't wants no trouble!\");\n\t\tend\n\telse\n\t\te.self:Say(\"You had better just be.. <BURP!>.. minding your own business if you know what is good for you. Gnollbreath. We Irontoes are proud and strong bunch of dwarves from [Kaladim]. We crush weaklings like you. <BURP>\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal drinks = 0;\n\tlocal moredrinks = 0;\n\tlocal item_lib = require(\"items\");\n\tif(item_lib.check_turn_in(e.trade, {item1 = 13033, item2 = 13033, item3 = 13033, item4 = 13033})) then\n\t\tmoredrinks = 4;\n\t\tdrinks = 3;\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 13033, item2 = 13033, item3 = 13033})) then\n\t\tdrinks = 3;\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 13033, item2 = 13033})) then\n\t\tdrinks = 2;\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 13033})) then\n\t\tdrinks = 1;\n\tend\n\tif(drinks > 0) then\n\t\trepeat\n\t\t\te.self:Say(\"Beh! Thanks, Skippy. Why don't ya buy yourself one? And.. <gulp>.. <burp>.. get me another!\");\n\t\t\tdrinks = drinks - 1;\n\t\tuntil drinks == 0\n\tend\n\tif(moredrinks == 4) then\n\t\te.self:Say(\"BWAH hah hah! I knew you wasn't the loser you.. <gulp>.. <gulp>.. appear to be! I will have to tell [Kane].. <burp>.. all about you. Maybe get you in the gang!\");\n\t\te.other:Ding();\n\t\te.other:Faction(223,2,0); -- Faction: Circle of Unseen Hands\n\t\te.other:Faction(291,-2,0); -- Faction: Merchants of Qeynos\n\t\te.other:Faction(230,2,0); -- Faction: Corrupt Qeynos Guards\n\t\te.other:Faction(262,-2,0); -- Faction: Guards of Qeynos\n\t\te.other:Faction(273,2,0); -- Faction: Kane Bayle\n\t\te.other:AddEXP(200);\t\n\tend\n\tdrinks = 0;\n\tmoredrinks = 0;\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 18696,
+        "zone": "qeynos",
+        "name": "Trumpy_Irontoe",
+        "lua_content": "-- items: 13033\nfunction event_say(e)\n\tlocal fac = e.other:GetFaction(e.self);\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(string.format(\"Heh? What's yer name? %s? Never heard of ya. Now quit breathin' on me and buy us some [drinks]!\",e.other:GetName()));\n\telseif(e.message:findi(\"drinks\") or e.message:findi(\"honey mead\")) then\n\t\te.self:Say(\"<BURP!> Yeah. Gimme a.. <BURP!> er.. honey mead.\");\n\telseif(e.message:findi(\"kaladim\")) then\n\t\te.self:Say(string.format(\"Heh? Kaladim, you say? It's a long way from here, I tell you.. Home to us dwarves it is. I miss it sometimes though.. Its tough being a swashbuckling dwarf with my rugged good looks when all the other dwarves are so envious. Cripes, %s... You got me all misty-eyed now.. <BURP> Peh! Buy me a honey mead, will ya?\",e.other:GetName()));\n\telseif(fac < 4) then\n\t\tif(e.message:findi(\"skippy\")) then\n\t\t\te.self:Say(\"Skippy? You mean that fish farmer? Heh heh heh. What a moron. And his brother [Beren] has the nerve to actually threaten ME!?.. Burp.. Bah. Remind me to tell [Kane] about that steaming pile of gnoll dung.\");\n\t\telseif(e.message:findi(\"beren\")) then\n\t\t\te.self:Say(\"Don't even mention that weakling's name. He.. burp.. Keeps threatening me. ME! Trumpy IRONTOE!!! Peh! That useless son of a goblin had better wise up and realize that in this burg if you ain't with [Kane], you are against him. And if you are against him.. burp.. you ain't nothing but a corpse.\");\t\t\n\t\telseif(e.message:findi(\"kane\")) then\n\t\t\te.self:Say(\"Ah.. burp.. that piece of cr.. eh? Oh its you.. Kane runs this burg.. or at least he will.. if [Sragg] can get his act together.\");\t\t\n\t\telseif(e.message:findi(\"sragg\")) then\n\t\t\te.self:Say(\"Where did you hear that name?!? Not from me! I didn't say nothing about Sragg or those Bloodsabers or their dang temple in the sewers! Get away from me ya hobgoblins! I don't wants no trouble!\");\n\t\tend\n\telse\n\t\te.self:Say(\"You had better just be.. <BURP!>.. minding your own business if you know what is good for you. Gnollbreath. We Irontoes are proud and strong bunch of dwarves from [Kaladim]. We crush weaklings like you. <BURP>\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal drinks = 0;\n\tlocal moredrinks = 0;\n\tlocal item_lib = require(\"items\");\n\tif(item_lib.check_turn_in(e.trade, {item1 = 13033, item2 = 13033, item3 = 13033, item4 = 13033})) then\n\t\tmoredrinks = 4;\n\t\tdrinks = 3;\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 13033, item2 = 13033, item3 = 13033})) then\n\t\tdrinks = 3;\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 13033, item2 = 13033})) then\n\t\tdrinks = 2;\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 13033})) then\n\t\tdrinks = 1;\n\tend\n\tif(drinks > 0) then\n\t\trepeat\n\t\t\te.self:Say(\"Beh! Thanks, Skippy. Why don't ya buy yourself one? And.. <gulp>.. <burp>.. get me another!\");\n\t\t\tdrinks = drinks - 1;\n\t\tuntil drinks == 0\n\tend\n\tif(moredrinks == 4) then\n\t\te.self:Say(\"BWAH hah hah! I knew you wasn't the loser you.. <gulp>.. <gulp>.. appear to be! I will have to tell [Kane].. <burp>.. all about you. Maybe get you in the gang!\");\n\t\te.other:Ding();\n\t\te.other:Faction(223,2,0); -- Faction: Circle of Unseen Hands\n\t\te.other:Faction(291,-2,0); -- Faction: Merchants of Qeynos\n\t\te.other:Faction(230,2,0); -- Faction: Corrupt Qeynos Guards\n\t\te.other:Faction(262,-2,0); -- Faction: Guards of Qeynos\n\t\te.other:Faction(273,2,0); -- Faction: Kane Bayle\n\t\te.other:AddEXP(200);\t\n\tend\n\tdrinks = 0;\n\tmoredrinks = 0;\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/qeynos/Trumpy_Irontoe.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-am-honey-mead-dialogue/qeynos-Trumpy_Irontoe.lua",
+      "afterSha256": "69a47f01ac6a1005ea7bc02ecfe8f5184887155a66011509acd4ae59451b94dd"
+    }
+  ]
+}

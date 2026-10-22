@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-ryshon-sword-phrase",
+  "summary": "Support documented What sword question without shadowing later sword of nobility note issuance. Preserve original phrase and all progression.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/The_Sword_of_Nobility?action=raw",
+      "note": "Cached 2026-07-17T23:38:21.797Z; revision unavailable; SHA256 75ec79c07c0b26f697eb8d80888fa239454850a2024514bdae012b08cd9aa45d. Support documented What sword question without shadowing later sword of nobility note issuance. Preserve original phrase and all progression. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 18695,
+        "zone": "qey2hh1",
+        "name": "Ryshon_Hunsti",
+        "lua_content": "-- Part of Ghoulbane quest\n-- items: 2416\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(string.format(\"Hello, %s. What brings you to the Karanas? Do you seek [enlightenment]?\",e.other:GetName()));\n\telseif(e.message:findi(\"enlightenment\")) then\n\t\te.self:Say(\"Ahh, i could see by the look in your eyes that you are looking for something more than just enlightenment. Perhaps you are looking for a [sword] crafted by a noble man.\");\n\telseif(e.message:findi(\"looking for a sword\")) then\n\t\te.self:Say(\"It is not just a sword friend. It is much more than that. This sword carries with it special [power], something unlike anything else within this realm.\");\n\telseif(e.message:findi(\"power\")) then\n\t\te.self:Say(\"It is an instrument fashioned together by a noble man. It is said to be blessed by the gods themselves. Only a man who comes from nobility may wield it. Do you seek the [sword of nobility]?\");\n\telseif(e.message:findi(\"sword of nobility\")) then\n\t\te.self:Say(\"I see.  Then take this note to Kanthuk Ogrebane. I've been told he can be found fishing not far from the dwarven city.\");\n\t\te.other:SummonItem(2416); -- Item: Note to Kanthuk\n\tend\nend\n\n-- Quest edited by mystic414\n-- Converted to Lua by robregen",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 18695,
+        "zone": "qey2hh1",
+        "name": "Ryshon_Hunsti",
+        "lua_content": "-- Part of Ghoulbane quest\n-- items: 2416\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(string.format(\"Hello, %s. What brings you to the Karanas? Do you seek [enlightenment]?\",e.other:GetName()));\n\telseif(e.message:findi(\"enlightenment\")) then\n\t\te.self:Say(\"Ahh, i could see by the look in your eyes that you are looking for something more than just enlightenment. Perhaps you are looking for a [sword] crafted by a noble man.\");\n\telseif(e.message:findi(\"looking for a sword\") or e.message:lower():match(\"^what sword%??$\")) then\n\t\te.self:Say(\"It is not just a sword friend. It is much more than that. This sword carries with it special [power], something unlike anything else within this realm.\");\n\telseif(e.message:findi(\"power\")) then\n\t\te.self:Say(\"It is an instrument fashioned together by a noble man. It is said to be blessed by the gods themselves. Only a man who comes from nobility may wield it. Do you seek the [sword of nobility]?\");\n\telseif(e.message:findi(\"sword of nobility\")) then\n\t\te.self:Say(\"I see.  Then take this note to Kanthuk Ogrebane. I've been told he can be found fishing not far from the dwarven city.\");\n\t\te.other:SummonItem(2416); -- Item: Note to Kanthuk\n\tend\nend\n\n-- Quest edited by mystic414\n-- Converted to Lua by robregen",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/qey2hh1/Ryshon_Hunsti.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-tz-ryshon-sword-phrase/qey2hh1--Ryshon_Hunsti.lua",
+      "afterSha256": "7ee562c8d848066feccd7147bb6bdb9d045ad260726ae78160f7933151aa4226"
+    }
+  ]
+}

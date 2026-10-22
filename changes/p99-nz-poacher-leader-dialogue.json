@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-nz-poacher-leader-dialogue",
+  "summary": "Restore the documented Barbarian Head completion dialogue without changing rewards.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Poacher_Leader?action=raw",
+      "note": "Cached 2026-07-17T23:28:39.692Z; revision unavailable; SHA256 36fe7afa450742985d5c93774a507434edc15516b08ab2afd4ac1d84db0fe77e. 13913 Barbarian Head currently gives Holy Armor15011, while cached page says random low-level spell without naming complete pool. Do not invent a spell distribution. Three faction directions and EXP presence match. Poacher Head13825 branch unchanged."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 13884,
+        "zone": "erudnext",
+        "name": "Jras_Solsier",
+        "lua_content": "-- Source: erudnext/Jras_Solsier.lua\n-- P99 audits: Poacher's Head Quest (Erudin), Poacher Leader\n-- items: 13825, 10004, 10015, 7017, 7008, 13003, 13913, 15011\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Welcome to the Temple of Divine Light.  We are the Peacekeepers. followers of Quellious.  If you are a paladin of this temple. you can assist us by showing a desire to [protect the peace].\");\n\telseif(e.message:findi(\"protect the peace\")) then\n\t\te.self:Say(\"It was a fine decision.  We are in need of your services.  It seems there is a disturbance in Toxxulia Forest.  There are poachers from other nations who have sought to cause turbulence among the creatures there.  Will you help us [catch the poachers] or are you skeptical about this mission?\");\n\telseif(e.message:findi(\"catch the poachers\")) then\n\t\te.self:Say(\"The infidels are in Toxxulia Forest.  They have begun hunting the kobolds.  We have no love of the kobolds. but cannot allow the lands of Odus to be overrun by outsiders.  The ways of tranquility are balanced with harmony.  We will not allow chaos to take hold of our land.  Go and find these poachers.  Bring me their heads!!\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 13825})) then\n\t\te.self:Say(\"You have served us well. The harmony of the forest shall be preserved. I have word that theses infidels were all working for one man. Find me evidence pertaining to this man. Surely one of these poachers has something which could aid in finding this man. We must stop him to stop the poachers. Go in peace.\");\n\t\te.other:SummonItem(eq.ChooseRandom(10004, 10015, 7017, 7008, 13003)); -- Copper Band, Malachite, Fishing Spear, Rusty Rapier, or Small Lantern\n\t\te.other:Ding();\n\t\te.other:Faction(298,20,0); -- Faction: Peace Keepers\n\t\te.other:Faction(266,20,0); -- Faction: High Council of Erudin\n\t\te.other:Faction(265,-20,0); -- Faction: Heretics\n\t\te.other:AddEXP(500);\n\t\te.other:GiveCash(eq.ChooseRandom(1, 2, 3, 4, 5, 6, 7, 8, 9), 0, 0, 0);\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 13913})) then\n\t\te.self:Say(\"You found the man?  That is excellent work, young Paladin, here take this for your trouble and we thank you once again.\");\n\t\te.other:SummonItem(15011); -- Item: Spell: Holy Armor\n\t\te.other:Ding();\n\t\te.other:Faction(298,20,0); -- Faction: Peace Keepers\n\t\te.other:Faction(266,20,0); -- Faction: High Council of Erudin\n\t\te.other:Faction(265,-20,0); -- Faction: Heretics\n\t\te.other:AddEXP(500);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade);\nend\n\n-- END of FILE Zone:erudnext  ID:98041 -- Jras_Solsier\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 13884,
+        "zone": "erudnext",
+        "name": "Jras_Solsier",
+        "lua_content": "-- Source: erudnext/Jras_Solsier.lua\n-- P99 audits: Poacher's Head Quest (Erudin), Poacher Leader\n-- items: 13825, 10004, 10015, 7017, 7008, 13003, 13913, 15011\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Welcome to the Temple of Divine Light.  We are the Peacekeepers. followers of Quellious.  If you are a paladin of this temple. you can assist us by showing a desire to [protect the peace].\");\n\telseif(e.message:findi(\"protect the peace\")) then\n\t\te.self:Say(\"It was a fine decision.  We are in need of your services.  It seems there is a disturbance in Toxxulia Forest.  There are poachers from other nations who have sought to cause turbulence among the creatures there.  Will you help us [catch the poachers] or are you skeptical about this mission?\");\n\telseif(e.message:findi(\"catch the poachers\")) then\n\t\te.self:Say(\"The infidels are in Toxxulia Forest.  They have begun hunting the kobolds.  We have no love of the kobolds. but cannot allow the lands of Odus to be overrun by outsiders.  The ways of tranquility are balanced with harmony.  We will not allow chaos to take hold of our land.  Go and find these poachers.  Bring me their heads!!\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 13825})) then\n\t\te.self:Say(\"You have served us well. The harmony of the forest shall be preserved. I have word that theses infidels were all working for one man. Find me evidence pertaining to this man. Surely one of these poachers has something which could aid in finding this man. We must stop him to stop the poachers. Go in peace.\");\n\t\te.other:SummonItem(eq.ChooseRandom(10004, 10015, 7017, 7008, 13003)); -- Copper Band, Malachite, Fishing Spear, Rusty Rapier, or Small Lantern\n\t\te.other:Ding();\n\t\te.other:Faction(298,20,0); -- Faction: Peace Keepers\n\t\te.other:Faction(266,20,0); -- Faction: High Council of Erudin\n\t\te.other:Faction(265,-20,0); -- Faction: Heretics\n\t\te.other:AddEXP(500);\n\t\te.other:GiveCash(eq.ChooseRandom(1, 2, 3, 4, 5, 6, 7, 8, 9), 0, 0, 0);\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 13913})) then\n\t\te.self:Say(\"It is done! Quellious will look favorably upon our church and we will look favorably upon you. Go in peace.\");\n\t\te.other:SummonItem(15011); -- Item: Spell: Holy Armor\n\t\te.other:Ding();\n\t\te.other:Faction(298,20,0); -- Faction: Peace Keepers\n\t\te.other:Faction(266,20,0); -- Faction: High Council of Erudin\n\t\te.other:Faction(265,-20,0); -- Faction: Heretics\n\t\te.other:AddEXP(500);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade);\nend\n\n-- END of FILE Zone:erudnext  ID:98041 -- Jras_Solsier\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/erudnext/Jras_Solsier.lua",
+      "beforeSha256": "6fa38b8428051600ea1c0da76df599071962af9cb238723ceb691c8f733de157",
+      "proposedFile": "changes/p99-nz-poacher-leader-dialogue/erudnext--Jras_Solsier.lua",
+      "afterSha256": "7b25a580f1dfd9931a2cd6ada0cd512ef4e903aea25167e8f9132e63c401a11e"
+    }
+  ]
+}

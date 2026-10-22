@@ -1,0 +1,23 @@
+{
+  "titles": [
+    "Odd Items"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "reviewed",
+  "match_status": "dialogue_only",
+  "local_quest_keys": [
+    "firiona/Guard_Frandan"
+  ],
+  "proposal": "changes/p99-nz-frandan-lore.json",
+  "notes": [
+    "Exact actor NPC84141 Guard_Frandan has positive100% spawnentry9630 and version0 spawn14679 in firiona. No exact quest-policy exclusion is present. No prior quest row/source exists. Reserved quest ID503551. The entire cached page questions whether this is a quest; only two documented dialogue branches are restored. Unsupported trades are returned as the safe runtime convention, not a claim about historical item loss. No reward, experience, faction, NPC or spawn data is invented."
+  ],
+  "verification": {
+    "syntax": "pending",
+    "runtime": "Isolated dialogue and unsupported-trade checks pending; no live game test.",
+    "connected_chain": "Not applicable: no confirmed hand-in chain is documented."
+  },
+  "unresolved": [
+    "This does not establish a completable quest. Actual spawn interaction and rendered dialogue untested."
+  ]
+}

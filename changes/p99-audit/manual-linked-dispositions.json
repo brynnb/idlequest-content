@@ -1,0 +1,384 @@
+[
+  {
+    "key": "cauldron/#a_cauldron_rat",
+    "source": "sources/projecteq/cauldron/#a_cauldron_rat.pl",
+    "sha256": "4584ad4c877a62a40b1b3ddc11485341215a20890c32008cf60a8816f5946e0b",
+    "reviewedAt": "2026-10-22",
+    "disposition": "blocked-mixed-era-spawn-cycle",
+    "reason": "Entire script is Bilge/Fabled Bilge spawn logic, not Rat Ear Pie hand-in. Source explicitly warns IDs are not PEQ IDs. Fabled branch is not P99; no supported exact replacement probabilities or mapped source NPC lifecycle established. Do not bulk convert or enable invented spawn odds.",
+    "evidence": [
+      {
+        "title": "Rat Ear Pie Quest",
+        "url": "https://wiki.project1999.com/Rat_Ear_Pie_Quest?action=raw",
+        "fetchedAt": "2026-07-17T23:29:42.856Z",
+        "revision": null,
+        "sha256": "10f35fa2158cd3cb08319af4b51d0a5069b2003f747f96581372f40a83b38a32",
+        "bytes": 3685,
+        "source": "raw-pages/rat-ear-pie-quest-566858ddc8.json",
+        "cachePath": "reference/p99-wiki/raw-pages/rat-ear-pie-quest-566858ddc8.wiki"
+      },
+      {
+        "title": "Bilge Farfathom",
+        "url": "https://wiki.project1999.com/Bilge_Farfathom?action=raw",
+        "fetchedAt": "2026-08-12T17:57:39.287Z",
+        "revision": null,
+        "sha256": "6cf9d0f65a8978821ea7de1d1894c5ae0f9753e0fe863784b363a53536cf815e",
+        "bytes": 3246,
+        "source": "npc-pages/bilge-farfathom-b970fa3b8b.json",
+        "cachePath": "reference/p99-wiki/npc-pages/bilge-farfathom-b970fa3b8b.wiki"
+      }
+    ],
+    "verification": "Full source read and cached evidence inspection; no runtime/world execution."
+  },
+  {
+    "key": "cazicthule/#Avatar_of_Dread",
+    "source": "sources/projecteq/cazicthule/#Avatar_of_Dread.pl",
+    "sha256": "1929a811b6927e3066f5c1d666fd9e4f1de293f29bc666533086d2b995971eb7",
+    "reviewedAt": "2026-10-22",
+    "disposition": "later-revamp-encounter-reference",
+    "reason": "These exact hash-prefixed sources have only empty spawn and signal1 special-ability toggles in RoF (Ring of Fear) encounter. Quest-page plain-name link does not identify these later encounter actors. Retain as reference pending exact actor/era mapping; no conversion.",
+    "evidence": [
+      {
+        "title": "The Summoning of Dread",
+        "url": "https://wiki.project1999.com/The_Summoning_of_Dread?action=raw",
+        "fetchedAt": "2026-07-17T23:38:08.848Z",
+        "revision": null,
+        "sha256": "5533cdc993c0da616728c796158b51092d46155963ff2a451d86cc795aa294e0",
+        "bytes": 5169,
+        "source": "raw-pages/the-summoning-of-dread-ed1799f588.json",
+        "cachePath": "reference/p99-wiki/raw-pages/the-summoning-of-dread-ed1799f588.wiki"
+      },
+      {
+        "title": "The Summoning of Fright",
+        "url": "https://wiki.project1999.com/The_Summoning_of_Fright?action=raw",
+        "fetchedAt": "2026-07-17T23:38:10.698Z",
+        "revision": null,
+        "sha256": "07bc447f385d596f7383362f5706d7ef3f18c8a6373ca83f2fff16f82a725430",
+        "bytes": 4861,
+        "source": "raw-pages/the-summoning-of-fright-684d675e90.json",
+        "cachePath": "reference/p99-wiki/raw-pages/the-summoning-of-fright-684d675e90.wiki"
+      },
+      {
+        "title": "The Summoning of Terror",
+        "url": "https://wiki.project1999.com/The_Summoning_of_Terror?action=raw",
+        "fetchedAt": "2026-07-17T23:38:12.740Z",
+        "revision": null,
+        "sha256": "b1054077a0f88325f520e6c6619e153afb74b91ac6948f37198caefe50c4af3d",
+        "bytes": 5660,
+        "source": "raw-pages/the-summoning-of-terror-15d7f615d2.json",
+        "cachePath": "reference/p99-wiki/raw-pages/the-summoning-of-terror-15d7f615d2.wiki"
+      }
+    ],
+    "verification": "Full source read and cached evidence inspection; no runtime/world execution."
+  },
+  {
+    "key": "cazicthule/#Avatar_of_Fright",
+    "source": "sources/projecteq/cazicthule/#Avatar_of_Fright.pl",
+    "sha256": "4bf38631ad08f6a8c9a65e6094b042deb3701768132d2583d46da7e0b32ddfd7",
+    "reviewedAt": "2026-10-22",
+    "disposition": "later-revamp-encounter-reference",
+    "reason": "These exact hash-prefixed sources have only empty spawn and signal1 special-ability toggles in RoF (Ring of Fear) encounter. Quest-page plain-name link does not identify these later encounter actors. Retain as reference pending exact actor/era mapping; no conversion.",
+    "evidence": [
+      {
+        "title": "The Summoning of Dread",
+        "url": "https://wiki.project1999.com/The_Summoning_of_Dread?action=raw",
+        "fetchedAt": "2026-07-17T23:38:08.848Z",
+        "revision": null,
+        "sha256": "5533cdc993c0da616728c796158b51092d46155963ff2a451d86cc795aa294e0",
+        "bytes": 5169,
+        "source": "raw-pages/the-summoning-of-dread-ed1799f588.json",
+        "cachePath": "reference/p99-wiki/raw-pages/the-summoning-of-dread-ed1799f588.wiki"
+      },
+      {
+        "title": "The Summoning of Fright",
+        "url": "https://wiki.project1999.com/The_Summoning_of_Fright?action=raw",
+        "fetchedAt": "2026-07-17T23:38:10.698Z",
+        "revision": null,
+        "sha256": "07bc447f385d596f7383362f5706d7ef3f18c8a6373ca83f2fff16f82a725430",
+        "bytes": 4861,
+        "source": "raw-pages/the-summoning-of-fright-684d675e90.json",
+        "cachePath": "reference/p99-wiki/raw-pages/the-summoning-of-fright-684d675e90.wiki"
+      },
+      {
+        "title": "The Summoning of Terror",
+        "url": "https://wiki.project1999.com/The_Summoning_of_Terror?action=raw",
+        "fetchedAt": "2026-07-17T23:38:12.740Z",
+        "revision": null,
+        "sha256": "b1054077a0f88325f520e6c6619e153afb74b91ac6948f37198caefe50c4af3d",
+        "bytes": 5660,
+        "source": "raw-pages/the-summoning-of-terror-15d7f615d2.json",
+        "cachePath": "reference/p99-wiki/raw-pages/the-summoning-of-terror-15d7f615d2.wiki"
+      }
+    ],
+    "verification": "Full source read and cached evidence inspection; no runtime/world execution."
+  },
+  {
+    "key": "cazicthule/#Avatar_of_Terror",
+    "source": "sources/projecteq/cazicthule/#Avatar_of_Terror.pl",
+    "sha256": "c1155c0fa6e1f4f5f76d8e6ae9b596873e2ab1a63f678799b103e7f489ed3366",
+    "reviewedAt": "2026-10-22",
+    "disposition": "later-revamp-encounter-reference",
+    "reason": "These exact hash-prefixed sources have only empty spawn and signal1 special-ability toggles in RoF (Ring of Fear) encounter. Quest-page plain-name link does not identify these later encounter actors. Retain as reference pending exact actor/era mapping; no conversion.",
+    "evidence": [
+      {
+        "title": "The Summoning of Dread",
+        "url": "https://wiki.project1999.com/The_Summoning_of_Dread?action=raw",
+        "fetchedAt": "2026-07-17T23:38:08.848Z",
+        "revision": null,
+        "sha256": "5533cdc993c0da616728c796158b51092d46155963ff2a451d86cc795aa294e0",
+        "bytes": 5169,
+        "source": "raw-pages/the-summoning-of-dread-ed1799f588.json",
+        "cachePath": "reference/p99-wiki/raw-pages/the-summoning-of-dread-ed1799f588.wiki"
+      },
+      {
+        "title": "The Summoning of Fright",
+        "url": "https://wiki.project1999.com/The_Summoning_of_Fright?action=raw",
+        "fetchedAt": "2026-07-17T23:38:10.698Z",
+        "revision": null,
+        "sha256": "07bc447f385d596f7383362f5706d7ef3f18c8a6373ca83f2fff16f82a725430",
+        "bytes": 4861,
+        "source": "raw-pages/the-summoning-of-fright-684d675e90.json",
+        "cachePath": "reference/p99-wiki/raw-pages/the-summoning-of-fright-684d675e90.wiki"
+      },
+      {
+        "title": "The Summoning of Terror",
+        "url": "https://wiki.project1999.com/The_Summoning_of_Terror?action=raw",
+        "fetchedAt": "2026-07-17T23:38:12.740Z",
+        "revision": null,
+        "sha256": "b1054077a0f88325f520e6c6619e153afb74b91ac6948f37198caefe50c4af3d",
+        "bytes": 5660,
+        "source": "raw-pages/the-summoning-of-terror-15d7f615d2.json",
+        "cachePath": "reference/p99-wiki/raw-pages/the-summoning-of-terror-15d7f615d2.wiki"
+      }
+    ],
+    "verification": "Full source read and cached evidence inspection; no runtime/world execution."
+  },
+  {
+    "key": "kithicor/##a_Zombie",
+    "source": "sources/projecteq/kithicor/##a_Zombie.pl",
+    "sha256": "1107a21608609fdc4ac2b048077451bcab0f0037e4dffee0892c51ad03eb2d6d",
+    "reviewedAt": "2026-10-22",
+    "disposition": "empty-handler-no-conversion",
+    "reason": "EVENT_SPAWN contains only commented moveto. No executable behavior to translate. Double-hash holiday actor must not be conflated with ordinary zombie quest drop NPC.",
+    "evidence": [
+      {
+        "title": "Zombie Flesh Quest",
+        "url": "https://wiki.project1999.com/Zombie_Flesh_Quest?action=raw",
+        "fetchedAt": "2026-07-17T23:42:17.345Z",
+        "revision": null,
+        "sha256": "07b5e891c0f2048ab608a4762836bd53d1323b987e3b7674ed5ac84ddf007015",
+        "bytes": 2553,
+        "source": "raw-pages/zombie-flesh-quest-2411798f18.json",
+        "cachePath": "reference/p99-wiki/raw-pages/zombie-flesh-quest-2411798f18.wiki"
+      }
+    ],
+    "verification": "Full source read and cached evidence inspection; no runtime/world execution."
+  },
+  {
+    "key": "lakeofillomen/#Spirit_Sentinel",
+    "source": "sources/projecteq/lakeofillomen/#Spirit_Sentinel.pl",
+    "sha256": "b22624739d64583d3529586778e9d03690d67b342df35fec8949579013ef83a2",
+    "reviewedAt": "2026-10-22",
+    "disposition": "later-era-epic-prequest",
+    "reason": "Source shaman_pre globals, Elder Spirit of Enlightenment, Plane of Valor/Disease and Taelosia ingredients establish later epic prequest, not the P99 Shaman Epic actor. The shared name link is not conversion evidence.",
+    "evidence": [
+      {
+        "title": "Shaman Epic Quest",
+        "url": "https://wiki.project1999.com/Shaman_Epic_Quest?action=raw",
+        "fetchedAt": "2026-07-17T23:32:36.817Z",
+        "revision": null,
+        "sha256": "980bbec1be2843071e4ef2e6681257cb331c33337519392918e13c63964e3e06",
+        "bytes": 73964,
+        "source": "raw-pages/shaman-epic-quest-33bc181dd2.json",
+        "cachePath": "reference/p99-wiki/raw-pages/shaman-epic-quest-33bc181dd2.wiki"
+      }
+    ],
+    "verification": "Full source read and cached evidence inspection; no runtime/world execution."
+  },
+  {
+    "key": "lfaydark/Kalayia_Woodwhisper",
+    "source": "sources/projecteq/lfaydark/Kalayia_Woodwhisper.pl",
+    "sha256": "539cf216ff7e0d7e553f509216b829f720f7cbc66f69e7eb993b9597be845c19",
+    "reviewedAt": "2026-10-22",
+    "disposition": "blocked-roaming-path-evidence",
+    "reason": "Source has only RandomRoam(500,500) every randomly chosen1\u20134 seconds. Cached P99 documents a specific7\u20138 minute placeholder route with map image, not this random movement. Loot NPC requires no hand-in script; exact P99 path and public roaming runtime not established. Preserve rather than fabricate a route.",
+    "evidence": [
+      {
+        "title": "The Summoning of Fright",
+        "url": "https://wiki.project1999.com/The_Summoning_of_Fright?action=raw",
+        "fetchedAt": "2026-07-17T23:38:10.698Z",
+        "revision": null,
+        "sha256": "07bc447f385d596f7383362f5706d7ef3f18c8a6373ca83f2fff16f82a725430",
+        "bytes": 4861,
+        "source": "raw-pages/the-summoning-of-fright-684d675e90.json",
+        "cachePath": "reference/p99-wiki/raw-pages/the-summoning-of-fright-684d675e90.wiki"
+      },
+      {
+        "title": "Kalayia Woodwhisper",
+        "url": "https://wiki.project1999.com/Kalayia_Woodwhisper?action=raw",
+        "fetchedAt": "2026-08-12T19:39:39.616Z",
+        "revision": null,
+        "sha256": "6c608785231384fb2a02233548728d21bcff3dc1dd517231158908bb7a53ff80",
+        "bytes": 1521,
+        "source": "npc-pages/kalayia-woodwhisper-550ec02697.json",
+        "cachePath": "reference/p99-wiki/npc-pages/kalayia-woodwhisper-550ec02697.wiki"
+      }
+    ],
+    "verification": "Full source read and cached evidence inspection; no runtime/world execution."
+  },
+  {
+    "key": "neriaka/Hukulk",
+    "source": "sources/projecteq/neriaka/Hukulk.pl",
+    "sha256": "cf63e953d7fefaae9aa45df6b3632d138cc2bc684744d67ea6d7050d836ddd37",
+    "reviewedAt": "2026-10-22",
+    "disposition": "later-service-or-relocation-reference",
+    "reason": "Exact Neriak sources only generic guild hail and try_tome_handins discipline service. P99 original guild actors and quest links are in Grobb, whose maintained scripts must not be overwritten or conflated with these Neriak records. No P99 evidence for Neriak relocation/tome service; leave reference.",
+    "evidence": [
+      {
+        "title": "Hukulk",
+        "url": "https://wiki.project1999.com/Hukulk?action=raw",
+        "fetchedAt": "2026-08-12T19:27:06.964Z",
+        "revision": null,
+        "sha256": "c82c9b4ba4f834bfacaae5e1b40f4eaf43d2191c95087833aaf2bcc007072229",
+        "bytes": 1006,
+        "source": "npc-pages/hukulk-208c3c98bd.json",
+        "cachePath": "reference/p99-wiki/npc-pages/hukulk-208c3c98bd.wiki"
+      },
+      {
+        "title": "Ranjor",
+        "url": "https://wiki.project1999.com/Ranjor?action=raw",
+        "fetchedAt": "2026-08-12T20:33:33.133Z",
+        "revision": null,
+        "sha256": "4f32a6a515d222b7f6a6c6939f2509ffa82698f12c6b641bc80eaf2fe037ccf0",
+        "bytes": 894,
+        "source": "npc-pages/ranjor-5e4b8af666.json",
+        "cachePath": "reference/p99-wiki/npc-pages/ranjor-5e4b8af666.wiki"
+      }
+    ],
+    "verification": "Full source read and cached evidence inspection; no runtime/world execution."
+  },
+  {
+    "key": "neriaka/Ranjor",
+    "source": "sources/projecteq/neriaka/Ranjor.pl",
+    "sha256": "ff1cc4fbc61fbc0345c76bc8056a67ffc1a77e29f5a510fb96ac5d33f8cc7b11",
+    "reviewedAt": "2026-10-22",
+    "disposition": "later-service-or-relocation-reference",
+    "reason": "Exact Neriak sources only generic guild hail and try_tome_handins discipline service. P99 original guild actors and quest links are in Grobb, whose maintained scripts must not be overwritten or conflated with these Neriak records. No P99 evidence for Neriak relocation/tome service; leave reference.",
+    "evidence": [
+      {
+        "title": "Hukulk",
+        "url": "https://wiki.project1999.com/Hukulk?action=raw",
+        "fetchedAt": "2026-08-12T19:27:06.964Z",
+        "revision": null,
+        "sha256": "c82c9b4ba4f834bfacaae5e1b40f4eaf43d2191c95087833aaf2bcc007072229",
+        "bytes": 1006,
+        "source": "npc-pages/hukulk-208c3c98bd.json",
+        "cachePath": "reference/p99-wiki/npc-pages/hukulk-208c3c98bd.wiki"
+      },
+      {
+        "title": "Ranjor",
+        "url": "https://wiki.project1999.com/Ranjor?action=raw",
+        "fetchedAt": "2026-08-12T20:33:33.133Z",
+        "revision": null,
+        "sha256": "4f32a6a515d222b7f6a6c6939f2509ffa82698f12c6b641bc80eaf2fe037ccf0",
+        "bytes": 894,
+        "source": "npc-pages/ranjor-5e4b8af666.json",
+        "cachePath": "reference/p99-wiki/npc-pages/ranjor-5e4b8af666.wiki"
+      }
+    ],
+    "verification": "Full source read and cached evidence inspection; no runtime/world execution."
+  },
+  {
+    "key": "lakeofillomen/#tainted_barracuda",
+    "source": "sources/projecteq/lakeofillomen/#tainted_barracuda.pl",
+    "sha256": "869973c7fd3131dea2b1c36f0c0cdf635f0f34c3741f3bea2ea2de5ba83daa4d",
+    "reviewedAt": "2026-10-22",
+    "disposition": "converted-proposal",
+    "reason": "Exact actor key independently reviewed and implemented under changes/p99-classic-conversions/proposal.json; see its dependency evidence and isolated behavior tests. Hash-prefixed epic actors deliberately retained distinct from plain names.",
+    "evidence": [
+      {
+        "title": "Druid Epic Quest",
+        "url": "https://wiki.project1999.com/Druid_Epic_Quest?action=raw",
+        "fetchedAt": "2026-07-17T23:13:27.635Z",
+        "revision": null,
+        "sha256": "2db1c51e34386f54d5e8d0c0f0f27518c4239872d7f7e5379f0a3ce709b6eb28",
+        "bytes": 71858,
+        "source": "raw-pages/druid-epic-quest-5c6300a3aa.json",
+        "cachePath": "reference/p99-wiki/raw-pages/druid-epic-quest-5c6300a3aa.wiki"
+      },
+      {
+        "title": "Minotaur Lord",
+        "url": "https://wiki.project1999.com/Minotaur_Lord?action=raw",
+        "fetchedAt": "2026-08-12T20:11:30.698Z",
+        "revision": null,
+        "sha256": "fb9eb447dfe908afb5f982805fbfa13bfea1a209f671e20aeefc169d2377df2d",
+        "bytes": 1879,
+        "source": "npc-pages/minotaur-lord-1d6e6d53b1.json",
+        "cachePath": "reference/p99-wiki/npc-pages/minotaur-lord-1d6e6d53b1.wiki"
+      }
+    ],
+    "verification": "Full source read and cached evidence inspection; no runtime/world execution."
+  },
+  {
+    "key": "lakerathe/#tainted_aquagoblin",
+    "source": "sources/projecteq/lakerathe/#tainted_aquagoblin.pl",
+    "sha256": "38e2cc14262377c47959a4951f00a1c924aea9c79d1564b0b53db65ffaaf2cb5",
+    "reviewedAt": "2026-10-22",
+    "disposition": "converted-proposal",
+    "reason": "Exact actor key independently reviewed and implemented under changes/p99-classic-conversions/proposal.json; see its dependency evidence and isolated behavior tests. Hash-prefixed epic actors deliberately retained distinct from plain names.",
+    "evidence": [
+      {
+        "title": "Druid Epic Quest",
+        "url": "https://wiki.project1999.com/Druid_Epic_Quest?action=raw",
+        "fetchedAt": "2026-07-17T23:13:27.635Z",
+        "revision": null,
+        "sha256": "2db1c51e34386f54d5e8d0c0f0f27518c4239872d7f7e5379f0a3ce709b6eb28",
+        "bytes": 71858,
+        "source": "raw-pages/druid-epic-quest-5c6300a3aa.json",
+        "cachePath": "reference/p99-wiki/raw-pages/druid-epic-quest-5c6300a3aa.wiki"
+      },
+      {
+        "title": "Minotaur Lord",
+        "url": "https://wiki.project1999.com/Minotaur_Lord?action=raw",
+        "fetchedAt": "2026-08-12T20:11:30.698Z",
+        "revision": null,
+        "sha256": "fb9eb447dfe908afb5f982805fbfa13bfea1a209f671e20aeefc169d2377df2d",
+        "bytes": 1879,
+        "source": "npc-pages/minotaur-lord-1d6e6d53b1.json",
+        "cachePath": "reference/p99-wiki/npc-pages/minotaur-lord-1d6e6d53b1.wiki"
+      }
+    ],
+    "verification": "Full source read and cached evidence inspection; no runtime/world execution."
+  },
+  {
+    "key": "steamfont/Minotaur_Lord",
+    "source": "sources/projecteq/steamfont/Minotaur_Lord.pl",
+    "sha256": "7170d687c9f9f8feb183c77544bce05ad379f2443ea6dc26207cf1ef547eb8b0",
+    "reviewedAt": "2026-10-22",
+    "disposition": "converted-proposal",
+    "reason": "Exact actor key independently reviewed and implemented under changes/p99-classic-conversions/proposal.json; see its dependency evidence and isolated behavior tests. Hash-prefixed epic actors deliberately retained distinct from plain names.",
+    "evidence": [
+      {
+        "title": "Druid Epic Quest",
+        "url": "https://wiki.project1999.com/Druid_Epic_Quest?action=raw",
+        "fetchedAt": "2026-07-17T23:13:27.635Z",
+        "revision": null,
+        "sha256": "2db1c51e34386f54d5e8d0c0f0f27518c4239872d7f7e5379f0a3ce709b6eb28",
+        "bytes": 71858,
+        "source": "raw-pages/druid-epic-quest-5c6300a3aa.json",
+        "cachePath": "reference/p99-wiki/raw-pages/druid-epic-quest-5c6300a3aa.wiki"
+      },
+      {
+        "title": "Minotaur Lord",
+        "url": "https://wiki.project1999.com/Minotaur_Lord?action=raw",
+        "fetchedAt": "2026-08-12T20:11:30.698Z",
+        "revision": null,
+        "sha256": "fb9eb447dfe908afb5f982805fbfa13bfea1a209f671e20aeefc169d2377df2d",
+        "bytes": 1879,
+        "source": "npc-pages/minotaur-lord-1d6e6d53b1.json",
+        "cachePath": "reference/p99-wiki/npc-pages/minotaur-lord-1d6e6d53b1.wiki"
+      }
+    ],
+    "verification": "Full source read and cached evidence inspection; no runtime/world execution."
+  }
+]

@@ -1,0 +1,16 @@
+node:internal/fs/promises:1086
+  const result = await PromisePrototypeThen(
+                 ^
+
+Error: ENOENT: no such file or directory, lstat '/tmp/idlequest-content-p99/changes/p99-af-gelistial-dialogue.json'
+    at async Object.lstat (node:internal/fs/promises:1086:18)
+    at async safeFile (file:///tmp/idlequest-content-p99/tools/dataset.mjs:22:10)
+    at async readProposal (file:///tmp/idlequest-content-p99/tools/proposal.mjs:17:49)
+    at async file:///tmp/idlequest-content-p99/tools/cli.mjs:20:18 {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'lstat',
+  path: '/tmp/idlequest-content-p99/changes/p99-af-gelistial-dialogue.json'
+}
+
+Node.js v24.19.0

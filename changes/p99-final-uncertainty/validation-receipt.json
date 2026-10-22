@@ -1,0 +1,26 @@
+{
+  "completedAt": "2026-10-22T07:30:24.171084+00:00",
+  "command": "node tools/cli.mjs check-proposal . --proposal changes/p99-final-uncertainty.json",
+  "exitCode": 0,
+  "checkedSources": 18,
+  "checkedRows": 18,
+  "runtimeCasesPassed": 95,
+  "reviewRecords": 46,
+  "proposalOverlapKeys": [],
+  "bindings": {
+    "changes/p99-final-uncertainty.json": "1ac662965343bf1297f81a28db47cd43c0e3460b2373c7cbfc1e2c2c05f161e5",
+    "changes/p99-final-uncertainty/review.json": "774bee81c4c5ff9edea2696d7c3c497f091d7ba0d5987fe86c5d58a61c84e62f",
+    "changes/p99-final-uncertainty/public-evidence.json": "1b70d6f979994cac5e7e876b72b524afb34ed2550e3d71f09a76d52f1152be8a",
+    "changes/p99-final-uncertainty/runtime-assertions.json": "6ced2c2a6d9426d6c04da9ad2d009e00cdf7195860c0599a628a3a13f1b312c6",
+    "changes/p99-final-uncertainty/runtime-validation.txt": "7d856777963261477dab0a75a1cb7372f9e09a253552ce31dfda480fe55673b8",
+    "changes/p99-final-uncertainty/cli-validation.txt": "f487c00eb609f255497f562793feeeb4bf782be47141ed7e51a134481fa7486a",
+    "changes/p99-final-uncertainty/check.mjs": "402553bc6c66bb3f6ef6cb6d1f2532c90ae3bdad6e0418494dac2e8aa35ffa81",
+    "changes/p99-final-uncertainty/triathalon-item-identity.json": "26c6cd329a7fa7b8deaf8920beb1471c00a91f551e7a29541e47860f98699420",
+    "changes/p99-final-uncertainty/local-evidence-bindings.json": "f4ba0904f7155220b113028a7e16dff9426961b8549fd1aa002617c92f7a649c",
+    "changes/p99-final-uncertainty/build-tests.py": "38b8a3b12947b9423113546077920c0b3519f0e3cf5af47ba21c0de585519f6d"
+  },
+  "runtimeRevalidatedAt": "2026-10-22T07:43:52.121480+00:00",
+  "runtimeRevalidationNote": "Metadata-only case classification correction; all95 runtime cases and source/row/evidence bindings passed again. Prior CLI receipt remains valid for unchanged proposal and Lua sources.",
+  "baselineCharacterizationCases": 30,
+  "proposedSourceCases": 65
+}

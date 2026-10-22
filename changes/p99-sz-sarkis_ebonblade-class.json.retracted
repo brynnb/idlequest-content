@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-sz-sarkis_ebonblade-class",
+  "summary": "Compare numeric runtime class ID, preserving intended eligibility; book-return step still unresolved.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Shadow_Knight_Plane_of_Sky_Tests?action=raw",
+      "note": "Cached 2026-07-17T23:32:18.835Z; revision unavailable; SHA256 cf18b1c0020b061190578b1c9a4c0f9e5017be8cdd9092e34b7d18ba9c4e49d2. Source-only correction; full runtime and UI not executed. Undocumented numerical values unchanged."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 19557,
+        "zone": "airplane",
+        "name": "Sarkis_Ebonblade",
+        "lua_content": "function event_say(e)\n\tif(e.message:findi(\"Hail\")) then\n\t\te.self:Say(\"Greetings. \" .. e.other:GetName() .. \".  Have you come here to test your dark powers of skill and spell casting?\");\n\telseif(e.message:findi(\"dark powers of skill\")) then\n\t\te.self:Say(\"You will be tested by either Gragrot or Tynicon.  Choose one!\");\n\telseif((e.message:findi(\"Gragrot\")) and (e.other:Class() == \"Shadowknight\")) then\n\t\te.self:Say(\"I will summon him for you then\");\n\t\teq.spawn2(71063,0,0,563.3,1351.9,-766.9,126.8); -- NPC: Gragrot\n\t\teq.depop_with_timer();\n\telseif((e.message:findi(\"Tynicon\")) and (e.other:Class() == \"Shadowknight\")) then\n\t\te.self:Say(\"I will summon him for you then\");\n\t\teq.spawn2(71098,0,0,563.3,1351.9,-766.9,126.8); -- NPC: Tynicon_DLin\n\t\teq.depop_with_timer();\n\tend\nend\n\n-------------------------------------------------------------------------------------------------\n-- Converted to .lua using MATLAB converter written by Stryd\n-- Find/replace data for .pl --> .lua conversions provided by Speedz, Stryd, Sorvani and Robregen\n-------------------------------------------------------------------------------------------------\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 19557,
+        "zone": "airplane",
+        "name": "Sarkis_Ebonblade",
+        "lua_content": "function event_say(e)\n\tif(e.message:findi(\"Hail\")) then\n\t\te.self:Say(\"Greetings. \" .. e.other:GetName() .. \".  Have you come here to test your dark powers of skill and spell casting?\");\n\telseif(e.message:findi(\"dark powers of skill\")) then\n\t\te.self:Say(\"You will be tested by either Gragrot or Tynicon.  Choose one!\");\n\telseif((e.message:findi(\"Gragrot\")) and (e.other:GetClass() == 5)) then\n\t\te.self:Say(\"I will summon him for you then\");\n\t\teq.spawn2(71063,0,0,563.3,1351.9,-766.9,126.8); -- NPC: Gragrot\n\t\teq.depop_with_timer();\n\telseif((e.message:findi(\"Tynicon\")) and (e.other:GetClass() == 5)) then\n\t\te.self:Say(\"I will summon him for you then\");\n\t\teq.spawn2(71098,0,0,563.3,1351.9,-766.9,126.8); -- NPC: Tynicon_DLin\n\t\teq.depop_with_timer();\n\tend\nend\n\n-------------------------------------------------------------------------------------------------\n-- Converted to .lua using MATLAB converter written by Stryd\n-- Find/replace data for .pl --> .lua conversions provided by Speedz, Stryd, Sorvani and Robregen\n-------------------------------------------------------------------------------------------------\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/airplane/Sarkis_Ebonblade.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-sz-sarkis_ebonblade-class/airplane--Sarkis_Ebonblade.lua",
+      "afterSha256": "378b44ae3c565eefb9db26dc53279ac364d6654c74293933910c5a266f1b9da3"
+    }
+  ]
+}

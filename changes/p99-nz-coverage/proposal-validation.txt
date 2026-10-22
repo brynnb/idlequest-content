@@ -1,0 +1,11 @@
+{ checked: 28, failures: null }
+Validated proposal p99-nz-batch: 29 rows, 28 sources
+taset path: ${relative}`);
+          ^
+
+Error: Unsafe dataset path: /tmp/p99-nz-batch.json
+    at safeFile (file:///tmp/idlequest-content-p99/tools/dataset.mjs:17:11)
+    at readProposal (file:///tmp/idlequest-content-p99/tools/proposal.mjs:17:55)
+    at async file:///tmp/idlequest-content-p99/tools/cli.mjs:20:18
+
+Node.js v24.19.0

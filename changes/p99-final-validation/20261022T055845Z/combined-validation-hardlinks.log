@@ -1,0 +1,9 @@
+file:///tmp/p99-validation-20261022T055845Z/tools/proposal.mjs:78
+    if (![0,1].includes(matching[0].after.enabled)||Boolean(matching[0].after.enabled)!==sourceEnabled(source.content)) throw new Error(`Enabled state must match source header: ${key}`);
+                                                                                                                              ^
+
+Error: Enabled state must match source header: thurgadina/Erdarf_Restil
+    at readProposal (file:///tmp/p99-validation-20261022T055845Z/tools/proposal.mjs:78:127)
+    at async file:///tmp/p99-validation-20261022T055845Z/tools/cli.mjs:20:18
+
+Node.js v24.19.0

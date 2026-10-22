@@ -1,0 +1,58 @@
+{
+  "format": 1,
+  "id": "p99-tz-recipe-7703",
+  "summary": "Enable documented exact quest combine, preserving existing failure outputs, probabilities and all other recipe fields.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Trooper_Scale_Armor?action=raw",
+      "note": "Full cached page SHA256 afb9c525fe7e71ec1799feae381412fd13dafe12a792f3ea7e161ab4f3a144fe. Exact named components {12785: 1, 13006: 1, 14798: 1, 16598: 1} and quest output {14799: 1} verified. Existing containers [19], failure outputs {16598: 1}, skill/trivial and nofail retained, not invented or presented as full live crafting proof."
+    }
+  ],
+  "rows": [
+    {
+      "table": "tradeskill_recipe",
+      "before": {
+        "id": 7703,
+        "name": "Grayish Liquid",
+        "tradeskill": 65,
+        "skillneeded": 0,
+        "trivial": 21,
+        "nofail": 0,
+        "replace_container": 0,
+        "notes": null,
+        "must_learn": 0,
+        "learned_by_item_id": 0,
+        "quest": 0,
+        "enabled": 0,
+        "show_in_advanced": 1,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null,
+        "category": "General"
+      },
+      "after": {
+        "id": 7703,
+        "name": "Grayish Liquid",
+        "tradeskill": 65,
+        "skillneeded": 0,
+        "trivial": 21,
+        "nofail": 0,
+        "replace_container": 0,
+        "notes": null,
+        "must_learn": 0,
+        "learned_by_item_id": 0,
+        "quest": 0,
+        "enabled": 1,
+        "show_in_advanced": 1,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null,
+        "category": "General"
+      }
+    }
+  ],
+  "sources": []
+}

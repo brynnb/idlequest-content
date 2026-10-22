@@ -1,0 +1,695 @@
+[
+  {
+    "name": "AF sash 1 independent exchanges",
+    "proposedFile": "changes/p99-af-bandit-sashes/qeynos-Chesgard_Sydwen.lua",
+    "assertions": "trade({12100}); reward(7013,1); equal(calls.exp,6200); faction(280,20); faction(221,-20); equal(#calls.cash,1); equal(remaining[12100],0); equal(calls.returns,1)",
+    "sourceSha256": "1dc39649e1d6417fcb0c721ee0665f4e9f37a844cf1ac706aa2530f3ee219b35"
+  },
+  {
+    "name": "AF wine 1 independent exchanges",
+    "proposedFile": "changes/p99-af-red-wine/neriakc-Lokar_To-Biath.lua",
+    "assertions": "trade({13030}); equal(calls.exp,150); faction(236,10); faction(334,1); faction(370,1); equal(remaining[13030],0); equal(calls.returns,1)",
+    "sourceSha256": "eebb543a54d2b24d788994dcada43c1d6d1328ee727648a143b63c86d8fefbfb"
+  },
+  {
+    "name": "AF sash 2 independent exchanges",
+    "proposedFile": "changes/p99-af-bandit-sashes/qeynos-Chesgard_Sydwen.lua",
+    "assertions": "trade({12100,12100}); reward(7013,2); equal(calls.exp,12400); faction(280,40); faction(221,-40); equal(#calls.cash,2); equal(remaining[12100],0); equal(calls.returns,1)",
+    "sourceSha256": "1dc39649e1d6417fcb0c721ee0665f4e9f37a844cf1ac706aa2530f3ee219b35"
+  },
+  {
+    "name": "AF wine 2 independent exchanges",
+    "proposedFile": "changes/p99-af-red-wine/neriakc-Lokar_To-Biath.lua",
+    "assertions": "trade({13030,13030}); equal(calls.exp,300); faction(236,20); faction(334,2); faction(370,2); equal(remaining[13030],0); equal(calls.returns,1)",
+    "sourceSha256": "eebb543a54d2b24d788994dcada43c1d6d1328ee727648a143b63c86d8fefbfb"
+  },
+  {
+    "name": "AF sash 3 independent exchanges",
+    "proposedFile": "changes/p99-af-bandit-sashes/qeynos-Chesgard_Sydwen.lua",
+    "assertions": "trade({12100,12100,12100}); reward(7013,3); equal(calls.exp,18600); faction(280,60); faction(221,-60); equal(#calls.cash,3); equal(remaining[12100],0); equal(calls.returns,1)",
+    "sourceSha256": "1dc39649e1d6417fcb0c721ee0665f4e9f37a844cf1ac706aa2530f3ee219b35"
+  },
+  {
+    "name": "AF wine 3 independent exchanges",
+    "proposedFile": "changes/p99-af-red-wine/neriakc-Lokar_To-Biath.lua",
+    "assertions": "trade({13030,13030,13030}); equal(calls.exp,450); faction(236,30); faction(334,3); faction(370,3); equal(remaining[13030],0); equal(calls.returns,1)",
+    "sourceSha256": "eebb543a54d2b24d788994dcada43c1d6d1328ee727648a143b63c86d8fefbfb"
+  },
+  {
+    "name": "AF sash 4 independent exchanges",
+    "proposedFile": "changes/p99-af-bandit-sashes/qeynos-Chesgard_Sydwen.lua",
+    "assertions": "trade({12100,12100,12100,12100}); reward(7013,4); equal(calls.exp,24800); faction(280,80); faction(221,-80); equal(#calls.cash,4); equal(remaining[12100],0); equal(calls.returns,1)",
+    "sourceSha256": "1dc39649e1d6417fcb0c721ee0665f4e9f37a844cf1ac706aa2530f3ee219b35"
+  },
+  {
+    "name": "AF wine 4 independent exchanges",
+    "proposedFile": "changes/p99-af-red-wine/neriakc-Lokar_To-Biath.lua",
+    "assertions": "trade({13030,13030,13030,13030}); equal(calls.exp,600); faction(236,40); faction(334,4); faction(370,4); equal(remaining[13030],0); equal(calls.returns,1)",
+    "sourceSha256": "eebb543a54d2b24d788994dcada43c1d6d1328ee727648a143b63c86d8fefbfb"
+  },
+  {
+    "name": "AF 12100 synthetic five-available cap",
+    "proposedFile": "changes/p99-af-bandit-sashes/qeynos-Chesgard_Sydwen.lua",
+    "assertions": "trade({12100,12100,12100,12100}); equal(calls.exp,24800); equal(remaining[12100],1)",
+    "sourceSha256": "1dc39649e1d6417fcb0c721ee0665f4e9f37a844cf1ac706aa2530f3ee219b35",
+    "setupExtra": "local original=npc.CheckHandin; local injected=false; npc.CheckHandin=function(...) if not injected then remaining[12100]=5; injected=true end; return original(...) end"
+  },
+  {
+    "name": "AF 12100 wrong mixed repeated trades",
+    "proposedFile": "changes/p99-af-bandit-sashes/qeynos-Chesgard_Sydwen.lua",
+    "assertions": "trade({99999}); equal(calls.exp,0); equal(remaining[99999],1); trade({12100,99999,12100}); equal(calls.exp,12400); equal(remaining[99999],1); trade({12100}); equal(calls.exp,18600); equal(calls.returns,3)",
+    "sourceSha256": "1dc39649e1d6417fcb0c721ee0665f4e9f37a844cf1ac706aa2530f3ee219b35"
+  },
+  {
+    "name": "AF 13030 synthetic five-available cap",
+    "proposedFile": "changes/p99-af-red-wine/neriakc-Lokar_To-Biath.lua",
+    "assertions": "trade({13030,13030,13030,13030}); equal(calls.exp,600); equal(remaining[13030],1)",
+    "sourceSha256": "eebb543a54d2b24d788994dcada43c1d6d1328ee727648a143b63c86d8fefbfb",
+    "setupExtra": "local original=npc.CheckHandin; local injected=false; npc.CheckHandin=function(...) if not injected then remaining[13030]=5; injected=true end; return original(...) end"
+  },
+  {
+    "name": "AF 13030 wrong mixed repeated trades",
+    "proposedFile": "changes/p99-af-red-wine/neriakc-Lokar_To-Biath.lua",
+    "assertions": "trade({99999}); equal(calls.exp,0); equal(remaining[99999],1); trade({13030,99999,13030}); equal(calls.exp,300); equal(remaining[99999],1); trade({13030}); equal(calls.exp,450); equal(calls.returns,3)",
+    "sourceSha256": "eebb543a54d2b24d788994dcada43c1d6d1328ee727648a143b63c86d8fefbfb"
+  },
+  {
+    "name": "AF sash exact 18-member pool",
+    "proposedFile": "changes/p99-af-bandit-sashes/qeynos-Chesgard_Sydwen.lua",
+    "assertions": "local expected={7013,7012,5037,5032,5026,6019,7014,7015,6024,5030,5027,5036,5033,6021,5029,7016,6022,5028}; for i,id in ipairs(expected) do character.poolChoice=i; trade({12100}); reward(id,1) end; local n=0; for _,count in pairs(calls.rewards) do n=n+count end; equal(n,18)",
+    "sourceSha256": "1dc39649e1d6417fcb0c721ee0665f4e9f37a844cf1ac706aa2530f3ee219b35",
+    "setupExtra": "eq.ChooseRandom=function(...) if select(\"#\",...)==18 then return (select(character.poolChoice or 1,...)) end; return (select(1,...)) end"
+  },
+  {
+    "name": "AF sash four separate random rolls",
+    "proposedFile": "changes/p99-af-bandit-sashes/qeynos-Chesgard_Sydwen.lua",
+    "assertions": "trade({12100,12100,12100,12100}); reward(7013,1); reward(7012,1); reward(5037,1); reward(5032,1); equal(calls.exp,24800)",
+    "sourceSha256": "1dc39649e1d6417fcb0c721ee0665f4e9f37a844cf1ac706aa2530f3ee219b35",
+    "setupExtra": "local index=0; eq.ChooseRandom=function(...) if select(\"#\",...)==18 then index=index+1;return (select(index,...)) end; return (select(1,...)) end"
+  },
+  {
+    "name": "AF sash keeps original sash-over-letter branch priority",
+    "proposedFile": "changes/p99-af-bandit-sashes/qeynos-Chesgard_Sydwen.lua",
+    "assertions": "trade({12100,18839}); reward(7013,1); reward(2139,0); equal(remaining[18839],1); trade({18839}); reward(2139,1); equal(calls.exp,7700)",
+    "sourceSha256": "1dc39649e1d6417fcb0c721ee0665f4e9f37a844cf1ac706aa2530f3ee219b35"
+  },
+  {
+    "name": "AF wine keeps 70-gold note priority",
+    "proposedFile": "changes/p99-af-red-wine/neriakc-Lokar_To-Biath.lua",
+    "assertions": "trade({13030},{gold=70}); reward(18200,1); equal(calls.exp,100); equal(remaining[13030],1); equal(remaining.gold,0)",
+    "sourceSha256": "eebb543a54d2b24d788994dcada43c1d6d1328ee727648a143b63c86d8fefbfb"
+  },
+  {
+    "name": "AF Cromil evidence-selected Spook scroll",
+    "proposedFile": "changes/p99-af-cromil-reward/kaladimb-Gunlok_Jure.lua",
+    "assertions": "trade({13332,99999}); reward(15209,1); reward(15201,0); reward(15223,0); equal(calls.exp,10000); equal(calls.cash[1][3],2); equal(remaining[99999],1); trade({13332}); reward(15209,2)",
+    "sourceSha256": "6b94e176c48d6fe9f44d4f1b9ebc33e206109a50fef3f576057ae981aa39c4a5"
+  },
+  {
+    "name": "AF Cromil wrong partial and bone branch unchanged",
+    "proposedFile": "changes/p99-af-cromil-reward/kaladimb-Gunlok_Jure.lua",
+    "assertions": "trade({13073,13073,13073}); equal(calls.exp,0); equal(remaining[13073],3); trade({13073,13073,13073,13073}); reward(2113,1); equal(calls.exp,250); equal(calls.cash[1][1],6); equal(calls.cash[1][2],15); reward(15209,0)",
+    "sourceSha256": "6b94e176c48d6fe9f44d4f1b9ebc33e206109a50fef3f576057ae981aa39c4a5"
+  },
+  {
+    "name": "AF Aegis corrected defend-life instructions",
+    "proposedFile": "changes/p99-af-aegis-dialogue/qeynos2-Camlend_Serbold.lua",
+    "assertions": "say(\"defend life\"); assert(string.find(calls.speech[1],\"Lord Grimrot\",1,true)); assert(string.find(calls.speech[1],\"scythe and his heart\",1,true)); say(\"rodcet nife\"); assert(not string.find(calls.speech[2],\"Lord Grimrot\",1,true))",
+    "sourceSha256": "a1b63ca5e3e356928e5ffdaf9d67fcffeed645a38790560f3afffdc3b8c9d428",
+    "setupExtra": "eq.get_qglobals=function(client) assert(client==other); return {} end"
+  },
+  {
+    "name": "AF Aegis reward and partial handling unchanged",
+    "proposedFile": "changes/p99-af-aegis-dialogue/qeynos2-Camlend_Serbold.lua",
+    "assertions": "trade({13324}); reward(12238,0); equal(remaining[13324],1); trade({13324,13325,99999}); reward(12238,1); faction(341,30); faction(221,-55); equal(remaining[99999],1)",
+    "sourceSha256": "a1b63ca5e3e356928e5ffdaf9d67fcffeed645a38790560f3afffdc3b8c9d428"
+  },
+  {
+    "name": "AF oasis Taldrik requires note and three drinks",
+    "proposedFile": "changes/p99-af-taldrik-note/oasis-Taldrik_Stumpystout.lua",
+    "assertions": "trade({13943,13036,13035}); equal(calls.exp,0); equal(remaining[13943],1); trade({13943,13036,13035,2429}); equal(calls.exp,100); equal(remaining[2429],0); equal(remaining[13943],0)",
+    "sourceSha256": "00a804ffbe02aeea01c6f7f5495b42e32cead1ec9fe3496fca6798995cab1216"
+  },
+  {
+    "name": "AF oasis Taldrik wrong note and final branch",
+    "proposedFile": "changes/p99-af-taldrik-note/oasis-Taldrik_Stumpystout.lua",
+    "assertions": "trade({13943,13036,13035,99999}); equal(calls.exp,0); equal(remaining[99999],1); say(\"cask\"); reward(17070,1); trade({2440,13474,1430,99999}); reward(1431,1); equal(remaining[99999],1); equal(calls.exp,0)",
+    "sourceSha256": "00a804ffbe02aeea01c6f7f5495b42e32cead1ec9fe3496fca6798995cab1216"
+  },
+  {
+    "name": "AF southro Taldrik requires note and three drinks",
+    "proposedFile": "changes/p99-af-taldrik-note/southro-Taldrik_Stumpystout.lua",
+    "assertions": "trade({13943,13036,13035}); equal(calls.exp,0); equal(remaining[13943],1); trade({13943,13036,13035,2429}); equal(calls.exp,100); equal(remaining[2429],0); equal(remaining[13943],0)",
+    "sourceSha256": "00a804ffbe02aeea01c6f7f5495b42e32cead1ec9fe3496fca6798995cab1216"
+  },
+  {
+    "name": "AF southro Taldrik wrong note and final branch",
+    "proposedFile": "changes/p99-af-taldrik-note/southro-Taldrik_Stumpystout.lua",
+    "assertions": "trade({13943,13036,13035,99999}); equal(calls.exp,0); equal(remaining[99999],1); say(\"cask\"); reward(17070,1); trade({2440,13474,1430,99999}); reward(1431,1); equal(remaining[99999],1); equal(calls.exp,0)",
+    "sourceSha256": "00a804ffbe02aeea01c6f7f5495b42e32cead1ec9fe3496fca6798995cab1216"
+  },
+  {
+    "name": "AF Cheslin sequential set resets once",
+    "proposedFile": "changes/p99-af-cheslin-state/qeytoqrg-Guard_Cheslin.lua",
+    "assertions": "trade({13906}); trade({13907}); trade({13904}); reward(18839,0); trade({13905}); reward(18839,1); equal(calls.exp,1500); equal(calls.cash[1][3],2); trade({99999}); trade({}); reward(18839,1); equal(calls.exp,1500); trade({13906,13907,13904,13905}); reward(18839,2); equal(calls.exp,3000)",
+    "sourceSha256": "6bbf84ebab3cce11394f6a607091d6c224bd0b1ac5aa0681bca6de8929c01535"
+  },
+  {
+    "name": "AF Cheslin simultaneous set duplicate extra and second set",
+    "proposedFile": "changes/p99-af-cheslin-state/qeytoqrg-Guard_Cheslin.lua",
+    "assertions": "trade({13906,13906,99999}); reward(18839,0); equal(remaining[13906],1); equal(remaining[99999],1); trade({13907,13904,13905}); reward(18839,1); trade({13906}); reward(18839,1); trade({13907,13904,13905}); reward(18839,2)",
+    "sourceSha256": "6bbf84ebab3cce11394f6a607091d6c224bd0b1ac5aa0681bca6de8929c01535"
+  },
+  {
+    "name": "AF Cheslin preserves historical global Chrono checkpoint",
+    "proposedFile": "changes/p99-af-cheslin-state/qeytoqrg-Guard_Cheslin.lua",
+    "assertions": "chronoReturned=1; trade({13907,13904,13905}); reward(18839,1); equal(chronoReturned,0); trade({99999}); reward(18839,1)",
+    "sourceSha256": "6bbf84ebab3cce11394f6a607091d6c224bd0b1ac5aa0681bca6de8929c01535"
+  },
+  {
+    "name": "AF freportn Jemoz head exact pool and Dismal Rage",
+    "proposedFile": "changes/p99-af-jemoz-faction/freportn-Jemoz_Lerkarson.lua",
+    "assertions": "trade({12142,99999}); reward(15053,1); faction(271,-10); faction(336,0); equal(remaining[99999],1); equal(calls.exp,5000); character.choice=2; trade({12142}); reward(15480,1); character.choice=3; trade({12142}); reward(15135,1)",
+    "sourceSha256": "5c7a3ec37da176a5a2278cf3d0f743bfae1e89942e0e32237fa8de32421a8f5b"
+  },
+  {
+    "name": "AF freportn Jemoz helm healing and fallback scroll",
+    "proposedFile": "changes/p99-af-jemoz-faction/freportn-Jemoz_Lerkarson.lua",
+    "assertions": "trade({13921,99999}); reward(15560,1); equal(calls.spells[1][1],200); equal(calls.spells[1][2],42); faction(271,-10); faction(336,0); equal(remaining[99999],1); trade({99999}); reward(15560,1); equal(calls.exp,5000)",
+    "sourceSha256": "5c7a3ec37da176a5a2278cf3d0f743bfae1e89942e0e32237fa8de32421a8f5b"
+  },
+  {
+    "name": "AF freeportwest Jemoz head exact pool and Dismal Rage",
+    "proposedFile": "changes/p99-af-jemoz-faction/freeportwest-Jemoz_Lerkarson.lua",
+    "assertions": "trade({12142,99999}); reward(15053,1); faction(271,-10); faction(336,0); equal(remaining[99999],1); equal(calls.exp,5000); character.choice=2; trade({12142}); reward(15480,1); character.choice=3; trade({12142}); reward(15135,1)",
+    "sourceSha256": "a8bd8d17aa77875bd63bcbaa58dc54b6d8228605b18e08b594e28d3975efcc83"
+  },
+  {
+    "name": "AF freeportwest Jemoz helm healing and fallback scroll",
+    "proposedFile": "changes/p99-af-jemoz-faction/freeportwest-Jemoz_Lerkarson.lua",
+    "assertions": "trade({13921,99999}); reward(15560,1); equal(calls.spells[1][1],200); equal(calls.spells[1][2],42); faction(271,-10); faction(336,0); equal(remaining[99999],1); trade({99999}); reward(15560,1); equal(calls.exp,5000)",
+    "sourceSha256": "a8bd8d17aa77875bd63bcbaa58dc54b6d8228605b18e08b594e28d3975efcc83"
+  },
+  {
+    "name": "AF Gelistial all four documented dialogue branches",
+    "proposedFile": "changes/p99-conversions-velious-flavor/wakening/Lady_Gelistial.lua",
+    "sourceSha256": "4b06ece9b323607bfe6e629d55a7dba09a5bbe456c7c0d97ef1e6057893b8555",
+    "assertions": "say(\"hail\"); assert(string.find(calls.speech[1],\"Reviewer\",1,true)); assert(not string.find(calls.speech[1],\"Pharos\",1,true)); say(\"friend\"); assert(string.find(calls.speech[2],\"Prince Thirneg\",1,true)); say(\"lithiniath\"); assert(string.find(calls.speech[3],\"realm of Fizzlethorpe Bristlebane\",1,true)); say(\"prince thirneg\"); assert(string.find(calls.speech[4],\"Plane of Growth\",1,true)); equal(#calls.speech,4)"
+  },
+  {
+    "name": "AF Gelistial wrong dialogue and complete trade return",
+    "proposedFile": "changes/p99-conversions-velious-flavor/wakening/Lady_Gelistial.lua",
+    "sourceSha256": "4b06ece9b323607bfe6e629d55a7dba09a5bbe456c7c0d97ef1e6057893b8555",
+    "assertions": "say(\"unrelated\"); equal(#calls.speech,0); trade({22856,99999},{gold=5}); equal(remaining[22856],1); equal(remaining[99999],1); equal(remaining.gold,5); equal(calls.exp,0); equal(calls.returns,1); reward(24869,0)"
+  },
+  {
+    "name": "AF Erdarf 30269 exact route surplus and repeat",
+    "proposedFile": "changes/p99-af-erdarf-entry/thurgadina-Erdarf_Restil.lua",
+    "sourceSha256": "3bbf09cf9cf818f7972570c506d84381c0fe938ca12c7f6d9ad00a11a8e60e5c",
+    "assertions": "trade({30269,30269,99999},{gold=3}); reward(30270,1); equal(remaining[30269],1); equal(remaining[99999],1); equal(remaining.gold,3); equal(calls.exp,25000); equal(calls.depops,1); trade({30269}); reward(30270,2); equal(calls.exp,50000); equal(calls.depops,2)"
+  },
+  {
+    "name": "AF Erdarf 30271 exact route surplus and repeat",
+    "proposedFile": "changes/p99-af-erdarf-entry/thurgadina-Erdarf_Restil.lua",
+    "sourceSha256": "3bbf09cf9cf818f7972570c506d84381c0fe938ca12c7f6d9ad00a11a8e60e5c",
+    "assertions": "trade({30271,30271,99999},{gold=3}); reward(30270,1); equal(remaining[30271],1); equal(remaining[99999],1); equal(remaining.gold,3); equal(calls.exp,25000); equal(calls.depops,1); trade({30271}); reward(30270,2); equal(calls.exp,50000); equal(calls.depops,2)"
+  },
+  {
+    "name": "AF Erdarf four dialogues and invalid offers",
+    "proposedFile": "changes/p99-af-erdarf-entry/thurgadina-Erdarf_Restil.lua",
+    "sourceSha256": "3bbf09cf9cf818f7972570c506d84381c0fe938ca12c7f6d9ad00a11a8e60e5c",
+    "assertions": "say(\"hail\"); say(\"priestly magic\"); say(\"old one\"); say(\"haven't done\"); equal(#calls.speech,4); say(\"unrelated\"); equal(#calls.speech,4); trade({30270,99999}); reward(30270,0); equal(remaining[30270],1); equal(calls.exp,0); equal(calls.depops,0)"
+  },
+  {
+    "name": "AF Erdarf original independent alternative routes",
+    "proposedFile": "changes/p99-af-erdarf-entry/thurgadina-Erdarf_Restil.lua",
+    "sourceSha256": "3bbf09cf9cf818f7972570c506d84381c0fe938ca12c7f6d9ad00a11a8e60e5c",
+    "assertions": "trade({30269,30271}); reward(30270,2); equal(calls.exp,50000); equal(calls.depops,2); equal(calls.returns,1)"
+  },
+  {
+    "name": "AF freporte Giz both documented mission phrases",
+    "proposedFile": "changes/p99-af-giz-dialogue/freporte-Giz_Dinree.lua",
+    "sourceSha256": "8c0dabc31539e2d2199bf3e243c1263e8a9a06784cb99c209c38aef0e03a9115",
+    "assertions": "say(\"Tani sent me\"); assert(string.find(calls.speech[1],\"return Lyda's head to Tani\",1,true)); say(\"sent by Tani\"); equal(calls.speech[1],calls.speech[2]); say(\"unrelated\"); equal(#calls.speech,2); equal(calls.exp,0); equal(next(calls.rewards),nil)"
+  },
+  {
+    "name": "AF Giz existing courier letter branch preserved",
+    "proposedFile": "changes/p99-af-giz-dialogue/freporte-Giz_Dinree.lua",
+    "sourceSha256": "8c0dabc31539e2d2199bf3e243c1263e8a9a06784cb99c209c38aef0e03a9115",
+    "assertions": "trade({18844,99999}); assert(string.find(calls.speech[1],\"last runner\",1,true)); equal(remaining[18844],0); equal(remaining[99999],1); equal(calls.exp,0); equal(calls.returns,1)"
+  },
+  {
+    "name": "AF freeporteast Giz both documented mission phrases",
+    "proposedFile": "changes/p99-af-giz-dialogue/freeporteast-Giz_Dinree.lua",
+    "sourceSha256": "385680af576a3530ea081e263e9bd77ab363b81facf4408bd0f0be8969379848",
+    "assertions": "say(\"Tani sent me\"); assert(string.find(calls.speech[1],\"return Lyda's head to Tani\",1,true)); say(\"sent by Tani\"); equal(calls.speech[1],calls.speech[2]); say(\"unrelated\"); equal(#calls.speech,2); equal(calls.exp,0); equal(next(calls.rewards),nil)"
+  },
+  {
+    "name": "AF Vaurk excluded Luclin knives returned",
+    "proposedFile": "changes/p99-af-vaurk-exclusion/lakeofillomen-Trooper_Vaurk.lua",
+    "sourceSha256": "a5a74a502901eb44173e20b44eb4a6531a3ce1ae365b391728e58ba5b5387bbe",
+    "assertions": "trade({8004,8004,8004,8004},{gold=5}); equal(remaining[8004],4); equal(remaining.gold,5); equal(calls.exp,0); equal(next(calls.factions),nil); equal(next(calls.rewards),nil); equal(calls.returns,1); trade({8004,99999}); equal(remaining[8004],1); equal(remaining[99999],1); equal(calls.exp,0); equal(calls.returns,2)"
+  },
+  {
+    "name": "AF Vaurk no excluded quest advertisement",
+    "proposedFile": "changes/p99-af-vaurk-exclusion/lakeofillomen-Trooper_Vaurk.lua",
+    "sourceSha256": "a5a74a502901eb44173e20b44eb4a6531a3ce1ae365b391728e58ba5b5387bbe",
+    "assertions": "say(\"hail\"); say(\"assist\"); say(\"unrelated\"); equal(#calls.speech,0); equal(calls.exp,0); equal(next(calls.rewards),nil)"
+  },
+  {
+    "name": "AF freportn Eestyana correct delivery pool and independent repeats",
+    "proposedFile": "changes/p99-af-eestyana-note/freportn-Eestyana_Naestra.lua",
+    "sourceSha256": "ddcb1b98cd1e0d2ee96ed7c45c2342100823730a3133fd275b596f2c6443fda5",
+    "assertions": "for i=1,3 do character.choice=i; trade({6537,6537,18804,99999}); equal(remaining[6537],1); equal(remaining[18804],1); equal(remaining[99999],1) end; reward(6016,1); reward(13296,1); reward(13003,1); equal(calls.exp,3000); faction(281,30); faction(271,-45); faction(330,-45); faction(362,30); faction(311,30); equal(#calls.cash,3); for _,c in ipairs(calls.cash) do equal(c[1],0); equal(c[2],0); equal(c[3],0); equal(c[4],1) end"
+  },
+  {
+    "name": "AF freportn Eestyana Drosco starter rejected",
+    "proposedFile": "changes/p99-af-eestyana-note/freportn-Eestyana_Naestra.lua",
+    "sourceSha256": "ddcb1b98cd1e0d2ee96ed7c45c2342100823730a3133fd275b596f2c6443fda5",
+    "assertions": "trade({18804,99999},{gold=1}); equal(remaining[18804],1); equal(remaining[99999],1); equal(remaining.gold,1); equal(next(calls.rewards),nil); equal(next(calls.factions),nil); equal(calls.exp,0); equal(calls.returns,1)"
+  },
+  {
+    "name": "AF freportn Eestyana other note and guild branches retained",
+    "proposedFile": "changes/p99-af-eestyana-note/freportn-Eestyana_Naestra.lua",
+    "sourceSha256": "ddcb1b98cd1e0d2ee96ed7c45c2342100823730a3133fd275b596f2c6443fda5",
+    "assertions": "trade({18822}); reward(9985,1); equal(calls.exp,500); equal(calls.cash[1][1],9); trade({18735}); reward(13554,1); equal(calls.exp,600); equal(calls.returns,2)"
+  },
+  {
+    "name": "AF freeportwest Eestyana correct delivery pool and independent repeats",
+    "proposedFile": "changes/p99-af-eestyana-note/freeportwest-Eestyana_Naestra.lua",
+    "sourceSha256": "fed6b0e2f6991d1577ba6d459adec314d195262e50cbaec0c47e5d95ff9fa00c",
+    "assertions": "for i=1,3 do character.choice=i; trade({6537,6537,18804,99999}); equal(remaining[6537],1); equal(remaining[18804],1); equal(remaining[99999],1) end; reward(6016,1); reward(13296,1); reward(13003,1); equal(calls.exp,3000); faction(281,30); faction(271,-45); faction(330,-45); faction(362,30); faction(311,30); equal(#calls.cash,3); for _,c in ipairs(calls.cash) do equal(c[1],0); equal(c[2],0); equal(c[3],0); equal(c[4],1) end"
+  },
+  {
+    "name": "AF freeportwest Eestyana Drosco starter rejected",
+    "proposedFile": "changes/p99-af-eestyana-note/freeportwest-Eestyana_Naestra.lua",
+    "sourceSha256": "fed6b0e2f6991d1577ba6d459adec314d195262e50cbaec0c47e5d95ff9fa00c",
+    "assertions": "trade({18804,99999},{gold=1}); equal(remaining[18804],1); equal(remaining[99999],1); equal(remaining.gold,1); equal(next(calls.rewards),nil); equal(next(calls.factions),nil); equal(calls.exp,0); equal(calls.returns,1)"
+  },
+  {
+    "name": "AF freeportwest Eestyana other note and guild branches retained",
+    "proposedFile": "changes/p99-af-eestyana-note/freeportwest-Eestyana_Naestra.lua",
+    "sourceSha256": "fed6b0e2f6991d1577ba6d459adec314d195262e50cbaec0c47e5d95ff9fa00c",
+    "assertions": "trade({18822}); reward(9985,1); equal(calls.exp,500); equal(calls.cash[1][1],9); trade({18735}); reward(13554,1); equal(calls.exp,600); equal(calls.returns,2)"
+  },
+  {
+    "name": "AF misty Bronin leg points to classic bank clerk",
+    "proposedFile": "changes/p99-af-bronin-dialogue/misty-Bronin_Higginsbot.lua",
+    "sourceSha256": "7cbc4efd9ebb525221edd2225ccaaf35dded351e35d7d4b3f95eed3ab6dcbbbd",
+    "assertions": "trade({12192,12192,99999}); assert(string.find(calls.speech[1],\"Give the Bank Clerk this key.\",1,true)); assert(not string.find(calls.speech[1],\"Kiolna\",1,true)); reward(12193,1); equal(remaining[12192],1); equal(remaining[99999],1); equal(calls.exp,500); faction(241,10); faction(223,10); faction(292,-10); faction(336,10); faction(329,10); trade({12192}); reward(12193,2); equal(calls.exp,1000)"
+  },
+  {
+    "name": "AF misty Bronin wrong offer returned",
+    "proposedFile": "changes/p99-af-bronin-dialogue/misty-Bronin_Higginsbot.lua",
+    "sourceSha256": "7cbc4efd9ebb525221edd2225ccaaf35dded351e35d7d4b3f95eed3ab6dcbbbd",
+    "assertions": "trade({12193,99999}); equal(remaining[12193],1); equal(remaining[99999],1); equal(calls.exp,0); equal(next(calls.rewards),nil); equal(calls.returns,1)"
+  },
+  {
+    "name": "AF misty Bronin Bloody Shank milk branch preserved",
+    "proposedFile": "changes/p99-af-bronin-dialogue/misty-Bronin_Higginsbot.lua",
+    "sourceSha256": "7cbc4efd9ebb525221edd2225ccaaf35dded351e35d7d4b3f95eed3ab6dcbbbd",
+    "assertions": "trade({13110}); equal(calls.attacks[1],\"Reviewer\"); faction(241,-25); faction(223,-25); faction(292,25); faction(336,-25); faction(329,-25); equal(calls.exp,0); equal(next(calls.rewards),nil)",
+    "setupExtra": "calls.attacks={}; eq.attack=function(name) table.insert(calls.attacks,name) end"
+  },
+  {
+    "name": "AF mistythicket Bronin leg points to classic bank clerk",
+    "proposedFile": "changes/p99-af-bronin-dialogue/mistythicket-Bronin_Higginsbot.lua",
+    "sourceSha256": "6ccd61326a63bfb565e5d4d74c87f4f790110c67d683701a79c0092f21e49115",
+    "assertions": "trade({12192,12192,99999}); assert(string.find(calls.speech[1],\"Give the Bank Clerk this key.\",1,true)); assert(not string.find(calls.speech[1],\"Kiolna\",1,true)); reward(12193,1); equal(remaining[12192],1); equal(remaining[99999],1); equal(calls.exp,500); faction(241,10); faction(223,10); faction(292,-10); faction(336,10); faction(329,10); trade({12192}); reward(12193,2); equal(calls.exp,1000)"
+  },
+  {
+    "name": "AF mistythicket Bronin wrong offer returned",
+    "proposedFile": "changes/p99-af-bronin-dialogue/mistythicket-Bronin_Higginsbot.lua",
+    "sourceSha256": "6ccd61326a63bfb565e5d4d74c87f4f790110c67d683701a79c0092f21e49115",
+    "assertions": "trade({12193,99999}); equal(remaining[12193],1); equal(remaining[99999],1); equal(calls.exp,0); equal(next(calls.rewards),nil); equal(calls.returns,1)"
+  },
+  {
+    "name": "AF mistythicket Bronin Bloody Shank milk branch preserved",
+    "proposedFile": "changes/p99-af-bronin-dialogue/mistythicket-Bronin_Higginsbot.lua",
+    "sourceSha256": "6ccd61326a63bfb565e5d4d74c87f4f790110c67d683701a79c0092f21e49115",
+    "assertions": "trade({13110}); equal(calls.attacks[1],\"Reviewer\"); faction(241,-25); faction(223,-25); faction(292,25); faction(336,-25); faction(329,-25); equal(calls.exp,0); equal(next(calls.rewards),nil)",
+    "setupExtra": "calls.attacks={}; eq.attack=function(name) table.insert(calls.attacks,name) end"
+  },
+  {
+    "name": "AF Frostbite good tonic independent repeats and extras",
+    "proposedFile": "changes/p99-af-frostbite-tonic/qey2hh1-Frostbite.lua",
+    "sourceSha256": "980ac1248c7127946f50c4c053f0b265d1733dead43504c8cfc9c9f8d532a9db",
+    "assertions": "trade({12139,12139,12140,99999}); reward(13383,1); equal(remaining[12139],1); equal(remaining[12140],1); equal(remaining[99999],1); trade({12139}); reward(13383,2); equal(calls.exp,0); equal(next(calls.factions),nil)"
+  },
+  {
+    "name": "AF Frostbite bad tonic safely returned",
+    "proposedFile": "changes/p99-af-frostbite-tonic/qey2hh1-Frostbite.lua",
+    "sourceSha256": "980ac1248c7127946f50c4c053f0b265d1733dead43504c8cfc9c9f8d532a9db",
+    "assertions": "trade({12140,99999},{gold=1}); equal(remaining[12140],1); equal(remaining[99999],1); equal(remaining.gold,1); equal(next(calls.rewards),nil); equal(calls.exp,0); equal(calls.returns,1)"
+  },
+  {
+    "name": "AF Frostbite other dog pursuit trigger retained",
+    "proposedFile": "changes/p99-af-frostbite-tonic/qey2hh1-Frostbite.lua",
+    "sourceSha256": "980ac1248c7127946f50c4c053f0b265d1733dead43504c8cfc9c9f8d532a9db",
+    "assertions": "trade({12226,99999}); equal(remaining[12226],0); equal(remaining[99999],1); equal(calls.timers[1][1],\"go\"); equal(calls.timers[1][2],15000); equal(next(calls.rewards),nil)",
+    "setupExtra": "calls.timers={}; eq.set_timer=function(name,delay) table.insert(calls.timers,{name,delay}) end"
+  },
+  {
+    "name": "AF Denise_Songweaver legacy upgrade 2711 repeats and surplus",
+    "proposedFile": "changes/p99-af-sky-upgrades/airplane-Denise_Songweaver.lua",
+    "sourceSha256": "1fa1437fa33a9c6d2d814d61fa2f617b7e16083bddaeb30e86676b2cb7763842",
+    "assertions": "trade({2711,2711,99999}); reward(27720,1); equal(remaining[2711],1); equal(remaining[99999],1); trade({2711}); reward(27720,2); equal(calls.exp,0); equal(next(calls.factions),nil); equal(next(calls.cash),nil); equal(calls.depops,0)"
+  },
+  {
+    "name": "AF Denise_Songweaver legacy upgrade 2710 repeats and surplus",
+    "proposedFile": "changes/p99-af-sky-upgrades/airplane-Denise_Songweaver.lua",
+    "sourceSha256": "1fa1437fa33a9c6d2d814d61fa2f617b7e16083bddaeb30e86676b2cb7763842",
+    "assertions": "trade({2710,2710,99999}); reward(27721,1); equal(remaining[2710],1); equal(remaining[99999],1); trade({2710}); reward(27721,2); equal(calls.exp,0); equal(next(calls.factions),nil); equal(next(calls.cash),nil); equal(calls.depops,0)"
+  },
+  {
+    "name": "AF Denise_Songweaver legacy upgrade 14564 repeats and surplus",
+    "proposedFile": "changes/p99-af-sky-upgrades/airplane-Denise_Songweaver.lua",
+    "sourceSha256": "1fa1437fa33a9c6d2d814d61fa2f617b7e16083bddaeb30e86676b2cb7763842",
+    "assertions": "trade({14564,14564,99999}); reward(27722,1); equal(remaining[14564],1); equal(remaining[99999],1); trade({14564}); reward(27722,2); equal(calls.exp,0); equal(next(calls.factions),nil); equal(next(calls.cash),nil); equal(calls.depops,0)"
+  },
+  {
+    "name": "AF Denise_Songweaver upgraded and wrong items returned",
+    "proposedFile": "changes/p99-af-sky-upgrades/airplane-Denise_Songweaver.lua",
+    "sourceSha256": "1fa1437fa33a9c6d2d814d61fa2f617b7e16083bddaeb30e86676b2cb7763842",
+    "assertions": "trade({27720,27721,27722,99999}); equal(next(calls.rewards),nil); equal(calls.exp,0); equal(calls.returns,1); equal(remaining[27720],1); equal(remaining[27721],1); equal(remaining[27722],1)"
+  },
+  {
+    "name": "AF Alan_Harten legacy upgrade 9201 repeats and surplus",
+    "proposedFile": "changes/p99-af-sky-upgrades/airplane-Alan_Harten.lua",
+    "sourceSha256": "dd6780653e52e5e662c25066351240cb06aaa48014eec74ba89e5267adc2377a",
+    "assertions": "trade({9201,9201,99999}); reward(27716,1); equal(remaining[9201],1); equal(remaining[99999],1); trade({9201}); reward(27716,2); equal(calls.exp,0); equal(next(calls.factions),nil); equal(next(calls.cash),nil); equal(calls.depops,0)"
+  },
+  {
+    "name": "AF Alan_Harten legacy upgrade 4323 repeats and surplus",
+    "proposedFile": "changes/p99-af-sky-upgrades/airplane-Alan_Harten.lua",
+    "sourceSha256": "dd6780653e52e5e662c25066351240cb06aaa48014eec74ba89e5267adc2377a",
+    "assertions": "trade({4323,4323,99999}); reward(27717,1); equal(remaining[4323],1); equal(remaining[99999],1); trade({4323}); reward(27717,2); equal(calls.exp,0); equal(next(calls.factions),nil); equal(next(calls.cash),nil); equal(calls.depops,0)"
+  },
+  {
+    "name": "AF Alan_Harten upgraded and wrong items returned",
+    "proposedFile": "changes/p99-af-sky-upgrades/airplane-Alan_Harten.lua",
+    "sourceSha256": "dd6780653e52e5e662c25066351240cb06aaa48014eec74ba89e5267adc2377a",
+    "assertions": "trade({27716,27717,99999}); equal(next(calls.rewards),nil); equal(calls.exp,0); equal(calls.returns,1); equal(remaining[27716],1); equal(remaining[27717],1)"
+  },
+  {
+    "name": "AF Deric_Lennox legacy upgrade 11692 repeats and surplus",
+    "proposedFile": "changes/p99-af-sky-upgrades/airplane-Deric_Lennox.lua",
+    "sourceSha256": "d26c05bf53663b5adc74f6172a0f26f345c9e83d2ee7072be655bd05c75da940",
+    "assertions": "trade({11692,11692,99999}); reward(27718,1); equal(remaining[11692],1); equal(remaining[99999],1); trade({11692}); reward(27718,2); equal(calls.exp,0); equal(next(calls.factions),nil); equal(next(calls.cash),nil); equal(calls.depops,0)"
+  },
+  {
+    "name": "AF Deric_Lennox upgraded and wrong items returned",
+    "proposedFile": "changes/p99-af-sky-upgrades/airplane-Deric_Lennox.lua",
+    "sourceSha256": "d26c05bf53663b5adc74f6172a0f26f345c9e83d2ee7072be655bd05c75da940",
+    "assertions": "trade({27718,99999}); equal(next(calls.rewards),nil); equal(calls.exp,0); equal(calls.returns,1); equal(remaining[27718],1)"
+  },
+  {
+    "name": "AF Denise_Songweaver original three complete tests preserved",
+    "proposedFile": "changes/p99-af-sky-upgrades/airplane-Denise_Songweaver.lua",
+    "sourceSha256": "1fa1437fa33a9c6d2d814d61fa2f617b7e16083bddaeb30e86676b2cb7763842",
+    "setupExtra": "eq.depop=function() calls.depops=calls.depops+1 end",
+    "assertions": "trade({20947,20824,20825}); reward(27722,1); trade({20940,20822,20823}); reward(27721,1); trade({20933,20820,20821}); reward(27720,1); equal(calls.exp,300000); equal(calls.depops,3)"
+  },
+  {
+    "name": "AF Denise_Songweaver partial original test returned",
+    "proposedFile": "changes/p99-af-sky-upgrades/airplane-Denise_Songweaver.lua",
+    "sourceSha256": "1fa1437fa33a9c6d2d814d61fa2f617b7e16083bddaeb30e86676b2cb7763842",
+    "assertions": "trade({20947,20824,99999}); equal(next(calls.rewards),nil); equal(calls.exp,0); equal(remaining[20947],1); equal(remaining[20824],1); equal(remaining[99999],1)"
+  },
+  {
+    "name": "AF Alan_Harten original three complete tests preserved",
+    "proposedFile": "changes/p99-af-sky-upgrades/airplane-Alan_Harten.lua",
+    "sourceSha256": "dd6780653e52e5e662c25066351240cb06aaa48014eec74ba89e5267adc2377a",
+    "setupExtra": "eq.depop=function() calls.depops=calls.depops+1 end",
+    "assertions": "trade({20933,20807,20806}); reward(14563,1); trade({20808,20939,20809}); reward(27716,1); trade({20946,20810,20811}); reward(27717,1); equal(calls.exp,300000); equal(calls.depops,3)"
+  },
+  {
+    "name": "AF Alan_Harten partial original test returned",
+    "proposedFile": "changes/p99-af-sky-upgrades/airplane-Alan_Harten.lua",
+    "sourceSha256": "dd6780653e52e5e662c25066351240cb06aaa48014eec74ba89e5267adc2377a",
+    "assertions": "trade({20933,20807,99999}); equal(next(calls.rewards),nil); equal(calls.exp,0); equal(remaining[20933],1); equal(remaining[20807],1); equal(remaining[99999],1)"
+  },
+  {
+    "name": "AF Deric_Lennox original three complete tests preserved",
+    "proposedFile": "changes/p99-af-sky-upgrades/airplane-Deric_Lennox.lua",
+    "sourceSha256": "d26c05bf53663b5adc74f6172a0f26f345c9e83d2ee7072be655bd05c75da940",
+    "setupExtra": "eq.depop=function() calls.depops=calls.depops+1 end",
+    "assertions": "trade({20813,20812,20954}); reward(14562,1); trade({20815,20816,20814,20961}); reward(27718,1); trade({20817,20968,20819,20818}); reward(11691,1); equal(calls.exp,300000); equal(calls.depops,3)"
+  },
+  {
+    "name": "AF Deric_Lennox partial original test returned",
+    "proposedFile": "changes/p99-af-sky-upgrades/airplane-Deric_Lennox.lua",
+    "sourceSha256": "d26c05bf53663b5adc74f6172a0f26f345c9e83d2ee7072be655bd05c75da940",
+    "assertions": "trade({20813,20812,99999}); equal(next(calls.rewards),nil); equal(calls.exp,0); equal(remaining[20813],1); equal(remaining[20812],1); equal(remaining[99999],1)"
+  },
+  {
+    "name": "AF Enderbite correct black sapphire and both other tests",
+    "proposedFile": "changes/p99-af-sky-upgrades/airplane-Enderbite.lua",
+    "sourceSha256": "008bcd624f67e6a747d3b55838ec23e5f20d2d6d33e1c9e5af9e0c45ac51b639",
+    "assertions": "trade({20774,20952,20773,99999}); reward(14559,1); equal(remaining[99999],1); trade({20959,20775,20776}); reward(14558,1); trade({20777,20779,20778,20966}); reward(27711,1); equal(calls.exp,300000); equal(calls.depops,3)",
+    "setupExtra": "eq.depop=function() calls.depops=calls.depops+1 end"
+  },
+  {
+    "name": "AF Enderbite wrong plain sapphire and partial refunded",
+    "proposedFile": "changes/p99-af-sky-upgrades/airplane-Enderbite.lua",
+    "sourceSha256": "008bcd624f67e6a747d3b55838ec23e5f20d2d6d33e1c9e5af9e0c45ac51b639",
+    "assertions": "trade({20774,20952,20802}); equal(next(calls.rewards),nil); equal(remaining[20802],1); equal(remaining[20774],1); equal(remaining[20952],1); trade({20773,20952}); equal(remaining[20773],1); equal(remaining[20952],1); equal(calls.exp,0)"
+  },
+  {
+    "name": "AF Enderbite old rod upgrades independently and returns extra",
+    "proposedFile": "changes/p99-af-sky-upgrades/airplane-Enderbite.lua",
+    "sourceSha256": "008bcd624f67e6a747d3b55838ec23e5f20d2d6d33e1c9e5af9e0c45ac51b639",
+    "assertions": "trade({11688,11688,99999}); reward(27711,1); equal(remaining[11688],1); equal(remaining[99999],1); trade({11688}); reward(27711,2); equal(calls.exp,0); equal(next(calls.cash),nil); equal(next(calls.factions),nil); equal(calls.depops,0)"
+  },
+  {
+    "name": "AF Enderbite new rod and unrelated item not upgraded",
+    "proposedFile": "changes/p99-af-sky-upgrades/airplane-Enderbite.lua",
+    "sourceSha256": "008bcd624f67e6a747d3b55838ec23e5f20d2d6d33e1c9e5af9e0c45ac51b639",
+    "assertions": "trade({27711,99999}); equal(next(calls.rewards),nil); equal(remaining[27711],1); equal(remaining[99999],1); equal(calls.returns,1)"
+  },
+  {
+    "name": "AF Garadain documented mission and ready replies",
+    "proposedFile": "changes/p99-af-garadain-dialogue/eastwastes-Garadain_Glacierbane.lua",
+    "sourceSha256": "5c0f79880705dadc9e5e4da4f82f3cf14711e7ba3b34576f66529b153dd5272f",
+    "assertions": "say('What mission?'); assert(string.find(calls.speech[1],'Corbin Blackwell is safe',1,true)); say('I am ready.'); assert(string.find(calls.speech[2],\"head of Chief Ry'Gorr\",1,true)); assert(string.find(calls.speech[2],other:GetCleanName(),1,true)); equal(next(calls.rewards),nil); equal(calls.exp,0)"
+  },
+  {
+    "name": "AF Garadain all eight original exchanges preserved",
+    "proposedFile": "changes/p99-af-garadain-dialogue/eastwastes-Garadain_Glacierbane.lua",
+    "sourceSha256": "5c0f79880705dadc9e5e4da4f82f3cf14711e7ba3b34576f66529b153dd5272f",
+    "assertions": "for _,v in ipairs({{30135,30131},{30267,30131,30133},{30133,30137,30132},{30140,30132,30134},{30141,30134,30268},{1045,18084,30268,30162},{1047,30163},{30163,1093}}) do local result=table.remove(v);table.insert(v,99999);trade(v);reward(result,1);equal(remaining[99999],1)end;faction(406,240);faction(405,240);faction(419,-60);faction(448,-240)"
+  },
+  {
+    "name": "AF Garadain partial and wrong head returned",
+    "proposedFile": "changes/p99-af-garadain-dialogue/eastwastes-Garadain_Glacierbane.lua",
+    "sourceSha256": "5c0f79880705dadc9e5e4da4f82f3cf14711e7ba3b34576f66529b153dd5272f",
+    "assertions": "trade({30267,99999});equal(remaining[30267],1);equal(remaining[99999],1);trade({1092});equal(remaining[1092],1);equal(next(calls.rewards),nil);equal(calls.exp,0);say('unrelated');equal(#calls.speech,0)"
+  },
+  {
+    "name": "AF steamfont/Forpar_Fizfla documented and retained final-component prompts",
+    "proposedFile": "changes/p99-af-forpar-dialogue/steamfont-Forpar_Fizfla.lua",
+    "sourceSha256": "3d8df6f4e58c8a82d659eeb2403e371582e75e131b7a09e4aa69ed43c99282b0",
+    "assertions": "say('What one more piece to go?');say('one more to go');equal(#calls.speech,2);for _,s in ipairs(calls.speech) do assert(string.find(s,'undead dragon gut',1,true)) end;equal(next(calls.rewards),nil)"
+  },
+  {
+    "name": "AF steamfont/Forpar_Fizfla all four preserved hand-ins and partial return",
+    "proposedFile": "changes/p99-af-forpar-dialogue/steamfont-Forpar_Fizfla.lua",
+    "sourceSha256": "3d8df6f4e58c8a82d659eeb2403e371582e75e131b7a09e4aa69ed43c99282b0",
+    "assertions": "trade({20378});reward(20380,1);trade({20380,20524,20525,5520});reward(20535,1);trade({11602,11622,16905,99999});reward(20536,1);equal(remaining[99999],1);trade({20535,20536,20526,99999});reward(20538,1);equal(remaining[99999],1);trade({20380,20524,20525,99999});equal(remaining[20380],1);equal(remaining[20524],1);equal(remaining[20525],1);reward(20535,1);equal(calls.exp,0)"
+  },
+  {
+    "name": "AF steamfontmts/Forpar_Fizfla documented and retained final-component prompts",
+    "proposedFile": "changes/p99-af-forpar-dialogue/steamfontmts-Forpar_Fizfla.lua",
+    "sourceSha256": "02de18bdf8e32d54adf9ac9f83f030e9aa991919ad8363b9b0d325d605918774",
+    "assertions": "say('What one more piece to go?');say('one more to go');equal(#calls.speech,2);for _,s in ipairs(calls.speech) do assert(string.find(s,'undead dragon gut',1,true)) end;equal(next(calls.rewards),nil)"
+  },
+  {
+    "name": "AF steamfontmts/Forpar_Fizfla all four preserved hand-ins and partial return",
+    "proposedFile": "changes/p99-af-forpar-dialogue/steamfontmts-Forpar_Fizfla.lua",
+    "sourceSha256": "02de18bdf8e32d54adf9ac9f83f030e9aa991919ad8363b9b0d325d605918774",
+    "assertions": "trade({20378});reward(20380,1);trade({20380,20524,20525,5520});reward(20535,1);trade({11602,11622,16905,99999});reward(20536,1);equal(remaining[99999],1);trade({20535,20536,20526,99999});reward(20538,1);equal(remaining[99999],1);trade({20380,20524,20525,99999});equal(remaining[20380],1);equal(remaining[20524],1);equal(remaining[20525],1);reward(20535,1);equal(calls.exp,0)"
+  },
+  {
+    "name": "AF cabeast/Librarian_Zimor history book faction identity",
+    "proposedFile": "changes/p99-af-greenmist-factions/cabeast-Librarian_Zimor.lua",
+    "sourceSha256": "1d14d4e0709063e3e22ad7360090db3e81b5728e0dbe66dddeac40b117f05aec",
+    "assertions": "trade({3887,99999});reward(3895,1);faction(443,20);faction(442,0);faction(441,10);equal(calls.exp,5000);equal(remaining[99999],1)"
+  },
+  {
+    "name": "AF cabeast/Librarian_Zimor returned note faction identity",
+    "proposedFile": "changes/p99-af-greenmist-factions/cabeast-Librarian_Zimor.lua",
+    "sourceSha256": "1d14d4e0709063e3e22ad7360090db3e81b5728e0dbe66dddeac40b117f05aec",
+    "assertions": "trade({3893,99999});reward(18320,1);faction(443,20);faction(442,0);faction(441,10);equal(calls.exp,5000);equal(remaining[99999],1)"
+  },
+  {
+    "name": "AF cabeast/Librarian_Zimor wrong input and repeated legitimate book",
+    "proposedFile": "changes/p99-af-greenmist-factions/cabeast-Librarian_Zimor.lua",
+    "sourceSha256": "1d14d4e0709063e3e22ad7360090db3e81b5728e0dbe66dddeac40b117f05aec",
+    "assertions": "trade({99999});equal(remaining[99999],1);equal(next(calls.rewards),nil);trade({3887});trade({3887});reward(3895,2);faction(443,40);faction(441,20)"
+  },
+  {
+    "name": "AF cabeast/Hierophant_Oxyn tynnonium faction and both returned rewards",
+    "proposedFile": "changes/p99-af-greenmist-factions/cabeast-Hierophant_Oxyn.lua",
+    "sourceSha256": "791057f2a7de5af65466e957455effc831cd82eae1ea3512738bbfc76816cc11",
+    "assertions": "trade({3886,99999});reward(3893,1);reward(3886,1);faction(445,20);faction(442,0);faction(441,10);equal(calls.exp,5000);equal(remaining[99999],1)"
+  },
+  {
+    "name": "AF cabeast/Hierophant_Oxyn unchanged introductory note branch",
+    "proposedFile": "changes/p99-af-greenmist-factions/cabeast-Hierophant_Oxyn.lua",
+    "sourceSha256": "791057f2a7de5af65466e957455effc831cd82eae1ea3512738bbfc76816cc11",
+    "assertions": "trade({3895});reward(3892,1);faction(442,20);faction(445,0);faction(441,10);equal(calls.exp,5000)"
+  },
+  {
+    "name": "AF cabeast/Hierophant_Oxyn faction gate and wrong item refunds",
+    "proposedFile": "changes/p99-af-greenmist-factions/cabeast-Hierophant_Oxyn.lua",
+    "sourceSha256": "791057f2a7de5af65466e957455effc831cd82eae1ea3512738bbfc76816cc11",
+    "assertions": "other.GetFaction=function()return 5 end;trade({3886,99999});equal(remaining[3886],1);equal(remaining[99999],1);equal(next(calls.rewards),nil);equal(calls.exp,0);other.GetFaction=function()return 1 end;trade({99999});equal(remaining[99999],1);equal(next(calls.factions),nil)"
+  },
+  {
+    "name": "AF cabeast/Hierophant_Oxyn unchanged wafer branch",
+    "proposedFile": "changes/p99-af-greenmist-factions/cabeast-Hierophant_Oxyn.lua",
+    "sourceSha256": "791057f2a7de5af65466e957455effc831cd82eae1ea3512738bbfc76816cc11",
+    "assertions": "other.GetClassName=function()return 'Shaman'end;trade({12403});reward(12406,2);faction(445,2);faction(441,1);faction(442,0);equal(calls.exp,50)"
+  },
+  {
+    "name": "AF Shmendrik_Lavawalker death with Natasha absent",
+    "proposedFile": "changes/p99-af-cleric-spirit-lifecycle/lakerathe-Shmendrik_Lavawalker.lua",
+    "sourceSha256": "a36e0551ed2c2f93f1f18f3b8230cdab454fa0593e15ae4212875eb3f78fb5af",
+    "assertions": "eq.signal=function(id,value,delay)equal(id,51138);equal(value,599);equal(delay,2000)end;event_death_complete({self=npc,other=other});equal(#calls.spawns,1);equal(calls.spawns[1][1],51145);equal(calls.spawns[1][4],33);equal(calls.spawns[1][5],3619)",
+    "setupExtra": "calls.spawns={};eq.spawn2=function(...)table.insert(calls.spawns,{...})end",
+    "limits": "Isolated normalized capture test, not live NPC encounter or exact timer settlement."
+  },
+  {
+    "name": "AF Shmendrik_Lavawalker normal crown then death capture",
+    "proposedFile": "changes/p99-af-cleric-spirit-lifecycle/lakerathe-Shmendrik_Lavawalker.lua",
+    "sourceSha256": "a36e0551ed2c2f93f1f18f3b8230cdab454fa0593e15ae4212875eb3f78fb5af",
+    "assertions": "trade({28044,99999});reward(28045,1);equal(remaining[99999],1);equal(calls.spawns[1][1],51138);event_death_complete({self=npc,other=other});equal(#calls.spawns,2);equal(calls.spawns[2][1],51145);equal(calls.signals[1][2],599)",
+    "setupExtra": "calls.spawns={};eq.spawn2=function(...)table.insert(calls.spawns,{...})end",
+    "limits": "Isolated normalized capture test, not live NPC encounter or exact timer settlement."
+  },
+  {
+    "name": "AF Shmendrik_Lavawalker wrong crown and retained signal exchange",
+    "proposedFile": "changes/p99-af-cleric-spirit-lifecycle/lakerathe-Shmendrik_Lavawalker.lua",
+    "sourceSha256": "a36e0551ed2c2f93f1f18f3b8230cdab454fa0593e15ae4212875eb3f78fb5af",
+    "assertions": "trade({99999});equal(remaining[99999],1);equal(#calls.spawns,0);event_signal({self=npc,other=other,signal=99});event_signal({self=npc,other=other,signal=299});event_signal({self=npc,other=other,signal=499});equal(#calls.signals,2);equal(calls.signals[1][2],199);equal(calls.signals[2][2],399);equal(#calls.spawns,0)",
+    "setupExtra": "calls.spawns={};eq.spawn2=function(...)table.insert(calls.spawns,{...})end",
+    "limits": "Isolated normalized capture test, not live NPC encounter or exact timer settlement."
+  },
+  {
+    "name": "AF #Natasha_Whitewater timer respects combat without post-combat timing claim",
+    "proposedFile": "changes/p99-af-cleric-spirit-lifecycle/lakerathe-%23Natasha_Whitewater.lua",
+    "sourceSha256": "8f09e87a3febda4dda1e25df29175542c9440b7a13e3b1fb46e26435afba54cb",
+    "assertions": "character.engaged=true;event_timer({self=npc,timer='depop'});equal(calls.depops,0);character.engaged=false;event_timer({self=npc,timer='wrong'});equal(calls.depops,0);event_timer({self=npc,timer='depop'});equal(calls.depops,1)",
+    "setupExtra": "eq.depop=function()calls.depops=calls.depops+1 end;npc.IsEngaged=function()return character.engaged or false end",
+    "limits": "Isolated normalized capture test, not live NPC encounter or exact timer settlement."
+  },
+  {
+    "name": "AF #Natasha_Whitewater crown reward still depops and extras return",
+    "proposedFile": "changes/p99-af-cleric-spirit-lifecycle/lakerathe-%23Natasha_Whitewater.lua",
+    "sourceSha256": "8f09e87a3febda4dda1e25df29175542c9440b7a13e3b1fb46e26435afba54cb",
+    "assertions": "character.engaged=true;trade({28046,99999});reward(28047,1);equal(remaining[99999],1);equal(calls.depops,1);trade({28044});equal(remaining[28044],1);reward(28047,1);equal(calls.depops,1)",
+    "setupExtra": "eq.depop=function()calls.depops=calls.depops+1 end;npc.IsEngaged=function()return character.engaged or false end",
+    "limits": "Isolated normalized capture test, not live NPC encounter or exact timer settlement."
+  },
+  {
+    "name": "AF #Natasha_Whitewater signals retain dialogue and never duplicate Spirit",
+    "proposedFile": "changes/p99-af-cleric-spirit-lifecycle/lakerathe-%23Natasha_Whitewater.lua",
+    "sourceSha256": "8f09e87a3febda4dda1e25df29175542c9440b7a13e3b1fb46e26435afba54cb",
+    "assertions": "event_signal({self=npc,signal=199});event_signal({self=npc,signal=399});event_signal({self=npc,signal=599});equal(#calls.signals,2);equal(calls.signals[1][2],299);equal(calls.signals[2][2],499);equal(#calls.spawns,0);equal(#calls.speech,2)",
+    "setupExtra": "eq.depop=function()calls.depops=calls.depops+1 end;npc.IsEngaged=function()return character.engaged or false end;calls.spawns={};eq.spawn2=function(...)table.insert(calls.spawns,{...})end",
+    "limits": "Isolated normalized capture test, not live NPC encounter or exact timer settlement."
+  },
+  {
+    "name": "AF #Natasha_Whitewater original five-minute timer retained",
+    "proposedFile": "changes/p99-af-cleric-spirit-lifecycle/lakerathe-%23Natasha_Whitewater.lua",
+    "sourceSha256": "8f09e87a3febda4dda1e25df29175542c9440b7a13e3b1fb46e26435afba54cb",
+    "assertions": "event_spawn({self=npc,other=other});equal(calls.timers[1][1],'depop');equal(calls.timers[1][2],300000);equal(calls.signals[1][2],99)",
+    "setupExtra": "eq.depop=function()calls.depops=calls.depops+1 end;npc.IsEngaged=function()return character.engaged or false end;calls.timers={};eq.set_timer=function(...)table.insert(calls.timers,{...})end;MT={Shout=1};eq.zone_emote=function()end",
+    "limits": "Isolated normalized capture test, not live NPC encounter or exact timer settlement."
+  },
+  {
+    "name": "AF timorous/Alrik_Farsight artifact and bowl directions",
+    "proposedFile": "changes/p99-af-druid-progression-dialogue/timorous-Alrik_Farsight.lua",
+    "sourceSha256": "365704dbc93ad8408d189ebfb6a47532ecb6bb4d80dea135858a003ff4fd82bc",
+    "assertions": "say('What ancient artifacts?');say('What ancient bowls?');equal(#calls.speech,2);assert(string.find(calls.speech[1],'pattern',1,true));assert(string.find(calls.speech[2],'return with the receipt',1,true));equal(next(calls.rewards),nil)"
+  },
+  {
+    "name": "AF timorous/Alrik_Farsight unchanged pot and pattern exchanges",
+    "proposedFile": "changes/p99-af-druid-progression-dialogue/timorous-Alrik_Farsight.lua",
+    "sourceSha256": "365704dbc93ad8408d189ebfb6a47532ecb6bb4d80dea135858a003ff4fd82bc",
+    "assertions": "say('I will take the artifact');reward(20457,1);assert(string.find(calls.speech[1],'He will give you the receipt.',1,true));trade({20474,99999});reward(18960,1);equal(remaining[99999],1);trade({20457});equal(remaining[20457],1);reward(18960,1);equal(calls.exp,0)"
+  },
+  {
+    "name": "AF firiona/Foloal_Stormforest complete documented conversation",
+    "proposedFile": "changes/p99-af-druid-progression-dialogue/firiona-Foloal_Stormforest.lua",
+    "sourceSha256": "25bc081a44724ac83b2dbf36a77f3dd7ca52f0918263403bc4f8183737314c8e",
+    "assertions": "say('Are you one such as myself?');say('What answers?');say('Who is Venril Sathir?');equal(#calls.speech,3);assert(string.find(calls.speech[1],'seeking answers',1,true));assert(string.find(calls.speech[2],'Venril Sathir',1,true));assert(string.find(calls.speech[3],'half of the stone',1,true));equal(next(calls.rewards),nil)"
+  },
+  {
+    "name": "AF firiona/Foloal_Stormforest two-stone hand-in and partial refunds",
+    "proposedFile": "changes/p99-af-druid-progression-dialogue/firiona-Foloal_Stormforest.lua",
+    "sourceSha256": "25bc081a44724ac83b2dbf36a77f3dd7ca52f0918263403bc4f8183737314c8e",
+    "assertions": "trade({20462});equal(remaining[20462],1);equal(next(calls.rewards),nil);trade({20462,20461,99999});reward(20468,1);equal(remaining[99999],1);assert(string.find(calls.speech[1],'walk your path',1,true));equal(calls.exp,0)"
+  },
+  {
+    "name": "AF misty/Ella_Foodcrafter bowl protocol and directions preserved",
+    "proposedFile": "changes/p99-af-druid-progression-dialogue/misty-Ella_Foodcrafter.lua",
+    "sourceSha256": "8e5ab9e78ea7b14cb105f10277b122eb2b6e215339f2278498d490d91d94cd49",
+    "assertions": "trade({18959});equal(calls.rewards[17860],nil);say('two tasks');reward(17860,1);say('second task');assert(string.find(calls.speech[3],'elves of old',1,true));trade({20473,99999});equal(remaining[20473],1);equal(remaining[99999],1);equal(calls.rewards[20462],nil)"
+  },
+  {
+    "name": "AF misty/Ella_Foodcrafter stone and final destination instructions",
+    "proposedFile": "changes/p99-af-druid-progression-dialogue/misty-Ella_Foodcrafter.lua",
+    "sourceSha256": "8e5ab9e78ea7b14cb105f10277b122eb2b6e215339f2278498d490d91d94cd49",
+    "assertions": "trade({20473,20460,99999});reward(20462,1);equal(remaining[99999],1);assert(string.find(calls.speech[1],'ones such as yourself',1,true));trade({20468});reward(20440,1);assert(string.find(calls.speech[2],'Faydwer, Antonica, and Kunark',1,true));assert(string.find(calls.speech[2],'Xanuusus',1,true));assert(not string.find(calls.speech[2],'______',1,true));equal(calls.exp,0)"
+  },
+  {
+    "name": "AF mistythicket/Ella_Foodcrafter bowl protocol and directions preserved",
+    "proposedFile": "changes/p99-af-druid-progression-dialogue/mistythicket-Ella_Foodcrafter.lua",
+    "sourceSha256": "dfa95747eeae4e4bc81b13ef6a96972eea09d0883ff2acb2a576a33d3fa8e2a5",
+    "assertions": "trade({18959});equal(calls.rewards[17860],nil);say('two tasks');reward(17860,1);say('second task');assert(string.find(calls.speech[3],'elves of old',1,true));trade({20473,99999});equal(remaining[20473],1);equal(remaining[99999],1);equal(calls.rewards[20462],nil)"
+  },
+  {
+    "name": "AF mistythicket/Ella_Foodcrafter stone and final destination instructions",
+    "proposedFile": "changes/p99-af-druid-progression-dialogue/mistythicket-Ella_Foodcrafter.lua",
+    "sourceSha256": "dfa95747eeae4e4bc81b13ef6a96972eea09d0883ff2acb2a576a33d3fa8e2a5",
+    "assertions": "trade({20473,20460,99999});reward(20462,1);equal(remaining[99999],1);assert(string.find(calls.speech[1],'ones such as yourself',1,true));trade({20468});reward(20440,1);assert(string.find(calls.speech[2],'Faydwer, Antonica, and Kunark',1,true));assert(string.find(calls.speech[2],'Xanuusus',1,true));assert(not string.find(calls.speech[2],'______',1,true));equal(calls.exp,0)"
+  },
+  {
+    "name": "AF neriakc/Noxhil_V-Sek documented and retained eye prompts",
+    "proposedFile": "changes/p99-af-noxhil-phrase/neriakc-Noxhil_V-Sek.lua",
+    "sourceSha256": "d2b890136ca9b4d145c95b519791b8c8cb3442466dbb85ca44460151541bf102",
+    "assertions": "say('Collecting fire beetle eyes?');say('collecting beetle eyes');reward(17930,2);equal(#calls.speech,2);other.GetFaction=function()return 5 end;say('collecting fire beetle eyes');reward(17930,2);equal(calls.exp,0)"
+  },
+  {
+    "name": "AF neriakc/Noxhil_V-Sek preserved eye reward and unrelated scroll branch",
+    "proposedFile": "changes/p99-af-noxhil-phrase/neriakc-Noxhil_V-Sek.lua",
+    "sourceSha256": "d2b890136ca9b4d145c95b519791b8c8cb3442466dbb85ca44460151541bf102",
+    "assertions": "trade({13389,99999});reward(13021,1);equal(remaining[99999],1);equal(calls.exp,6400);equal(calls.cash[1][2],16);trade({13395,10124,99999});reward(15355,1);equal(remaining[99999],1);equal(calls.exp,23550);say('courier duties');reward(18890,1);say('other components');reward(17934,1);trade({99999});equal(remaining[99999],1)"
+  },
+  {
+    "name": "AF Fenalla legacy cloak repeated and surplus",
+    "proposedFile": "changes/p99-af-sky-upgrades/airplane-Fenalla_Moonshadow.lua",
+    "sourceSha256": "21053e5a93d3054540c0c435932a332f88cba6f1242e5a15cc795c2629dbffc1",
+    "assertions": "trade({2322,2322,99999});reward(14555,1);equal(remaining[2322],1);equal(remaining[99999],1);trade({2322});reward(14555,2);equal(calls.exp,0);equal(next(calls.factions),nil);equal(next(calls.cash),nil);equal(calls.depops,0)"
+  },
+  {
+    "name": "AF Fenalla upgraded and wrong items returned",
+    "proposedFile": "changes/p99-af-sky-upgrades/airplane-Fenalla_Moonshadow.lua",
+    "sourceSha256": "21053e5a93d3054540c0c435932a332f88cba6f1242e5a15cc795c2629dbffc1",
+    "assertions": "trade({14555,99999});equal(remaining[14555],1);equal(remaining[99999],1);equal(next(calls.rewards),nil);equal(calls.exp,0)"
+  },
+  {
+    "name": "AF Fenalla all three original tests preserved",
+    "proposedFile": "changes/p99-af-sky-upgrades/airplane-Fenalla_Moonshadow.lua",
+    "sourceSha256": "21053e5a93d3054540c0c435932a332f88cba6f1242e5a15cc795c2629dbffc1",
+    "assertions": "trade({20739,20738,20965,20740});reward(11683,1);trade({20735,20951,20734,99999});reward(11684,1);equal(remaining[99999],1);trade({20736,20737,20867,20958});reward(14555,1);equal(calls.exp,300000);equal(calls.depops,3)",
+    "setupExtra": "eq.depop=function() calls.depops=calls.depops+1 end"
+  },
+  {
+    "name": "AF Fenalla partial eagle and wrong-weight ruby",
+    "proposedFile": "changes/p99-af-sky-upgrades/airplane-Fenalla_Moonshadow.lua",
+    "sourceSha256": "21053e5a93d3054540c0c435932a332f88cba6f1242e5a15cc795c2629dbffc1",
+    "assertions": "trade({20736,20737,20867,99999});equal(remaining[20736],1);equal(remaining[20737],1);equal(remaining[20867],1);equal(remaining[99999],1);equal(next(calls.rewards),nil);trade({20739,20848,20965,20740});equal(remaining[20739],1);equal(remaining[20848],1);equal(remaining[20965],1);equal(remaining[20740],1);equal(next(calls.rewards),nil);equal(calls.exp,0)"
+  }
+]

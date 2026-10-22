@@ -1,0 +1,145 @@
+{
+  "format": 1,
+  "id": "p99-am-monk-epic-dialogue",
+  "summary": "Restore documented Monk Epic dialogue and real player-name substitutions while preserving eligibility, no-level policy, all item exchanges, spawn/state ordering and other timers; use the specific confirmed30-minute sane-Kaiaren warning.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Monk_Epic_Quest?action=raw",
+      "note": "Cached 2026-07-17T23:25:34.139Z; revision unavailable; SHA256 ba4b460c745371d1dbd96436158a46dc932bc5514384a2e3618dfab0a71ab651. Monk Epic Quest"
+    },
+    {
+      "url": "https://wiki.project1999.com/Monk_Epic_Quest?action=raw",
+      "note": "Timer conflict: specific warning says sane Kaiaren despawns within30minutes, confirmed9/30/17; later prose vaguely says several hours. Choose explicit dated30-minute warning over vague prose and old one-hour source value; this is a documented conflict resolution, not direct runtime timing observation."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 14780,
+        "zone": "timorous",
+        "name": "Lheao",
+        "lua_content": "-- Source: timorous/Lheao.pl\n-- Monk Epic 1.0: Lheao gives the Celestial Fists book.\n-- Converted from ProjectEQ Perl quest script.\n-- items: 12970, 1682, 1683\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Emote(\"jumps at your voice and begins laughing at his skittishness.\")\n\t\te.self:Say(\"Ahh, hello there. Not many people know of this place, so visitors are quite rare.\")\n\telseif e.message:findi(\"i have found the book of immortals\") or (e.message:findi(\"found\") and e.message:findi(\"immortals\")) then\n\t\te.self:Emote(\"looks up at you, eyes wide in astonishment.\")\n\t\te.self:Say(\"My god, you found Immortals?! I need an individual to watch over this book and make sure it is protected. Would you be willing to take this responsibility?\")\n\telseif e.message:findi(\"responsibility\") then\n\t\te.self:Say(\"I'm sorry, \" .. e.other:GetName() .. \", but I could only give this book to a true master, such as a member of the Whistling Fists Order. Unless you can give me proof that you are one, in addition to Danl's reference, there is no way I'll let you take charge of the Celestial Fists.\")\n\telseif e.message:findi(\"celestial fists\") then\n\t\te.self:Say(\"The Celestial Fists is the title of a book written by an unknown author. Its rarity commands top dollar in the scholarly community but the secrets revealed in the book are what truly makes it dangerous.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 12970, item2 = 1682}) then\n\t\te.self:Say(\"Astonishing! I believe you are indeed worthy to be given the responsibility of watching over this book. Take great care that it does not fall into the wrong hands.\")\n\t\te.other:SummonItem(1683) -- Celestial Fists book\n\t\te.other:Ding()\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 14780,
+        "zone": "timorous",
+        "name": "Lheao",
+        "lua_content": "-- Source: timorous/Lheao.pl\n-- Monk Epic 1.0: Lheao gives the Celestial Fists book.\n-- Converted from ProjectEQ Perl quest script.\n-- items: 12970, 1682, 1683\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Emote(\"jumps at your voice and begins laughing at his skittishness.\")\n\t\te.self:Say(\"Ahh, hello there. Not many people know of this place, so visitors are quite rare. Hehehe. It's a very beautiful place indeed, so, ummm, please don't go telling everyone you know about it. Heheh. Thanks, friend.\")\n\telseif e.message:findi(\"i have found the book of immortals\") or (e.message:findi(\"found\") and e.message:findi(\"immortals\")) then\n\t\te.self:Emote(\"looks up at you, eyes wide in astonishment.\")\n\t\te.self:Say(\"My god, you found 'Immortals'?! Where did you find it? Never mind, that is unimportant. I have in my possession a book that explains more about these individuals. Its value is unimaginable as well as the impact it is capable of. As you can see, I grow old. I need an individual to watch over this book and make sure it is protected. Would you be willing to [take this responsibility]?\")\n\telseif e.message:findi(\"responsibility\") then\n\t\te.self:Say(\"I'm sorry, \" .. e.other:GetName() .. \", but I could only give this book to a true master, such as a member of the Whistling Fists Order. Unless you can give me proof that you are one, in addition to Danl's reference, there is no way I'll let you take charge of the Celestial Fists.\")\n\telseif e.message:findi(\"celestial fists\") then\n\t\te.self:Say(\"The Celestial Fists is the title of a book written by an unknown author. His writing is sub par but the legend is interesting from a biographical standpoint alone. Its rarity commands top dollar in the scholarly community but the secrets revealed in the book are what truly makes it dangerous. I've thought many times to destroy it but just couldn't. I hope I'm able to find someone to watch over it soon.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 12970, item2 = 1682}) then\n\t\te.self:Say(\"Astonishing! To think that you are a master of an order thought to be lost to our world. Forgive my earlier doubts. I believe you are indeed worthy to be given the responsibility of watching over this book. Take great care that it does not fall into the wrong hands as it would be truly disastrous.\")\n\t\te.other:SummonItem(1683) -- Celestial Fists book\n\t\te.other:Ding()\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 11924,
+        "zone": "trakanon",
+        "name": "#Kaiaren",
+        "lua_content": "-- IdleQuest epic 1.0 steps have no minimum level; preserve class and item checks.\n-- Source: trakanon/#Kaiaren.pl\n-- Monk Epic 1.0: true Kaiaren converts the book and performs final turn-in.\n-- Converted from ProjectEQ Perl quest script.\n-- Check eligibility before the consuming hand-in matcher; reject without item loss.\n-- items: 1683, 1684, 1688, 1689, 10652\n\nfunction event_spawn(e)\n\teq.set_timer(\"depop\", 3600000)\nend\n\nfunction event_say(e)\n\tif e.other:HasItem(1689) then\n\t\tif e.message:findi(\"lheao\") then\n\t\t\te.self:Say(\"Hmmm, never heard of him. Well, it doesn't matter, the book is here now. I suppose you'd like to find the Fists and have a nice chat with them, eh?\")\n\t\telseif e.message:findi(\"have a nice chat with them\") then\n\t\t\te.self:Say(\"No, you will need to get their attention. Fortunately, I know how you can do this.\")\n\t\telseif e.message:findi(\"how can i do this\") then\n\t\t\te.self:Say(\"If you use his true name, Eejag, in your formal challenge, he will respond.\")\n\t\tend\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif e.other:Class() == \"Monk\" and item_lib.check_turn_in(e.trade, {item1 = 1683}) then\n\t\te.self:Say(\"Now, then. Where did you find this, monk? This is not just some light reading to be borrowed from the town library. Who gave this to you?\")\n\t\te.other:SummonItem(1689) -- Book of Celestial Fists\n\telseif e.other:Class() == \"Monk\" and item_lib.check_turn_in(e.trade, {item1 = 1684}) then\n\t\te.self:Say(\"Ahhh, impressive indeed! Take this scale and show it to the Fist of Air wherever he may be. Good luck.\")\n\t\te.other:SummonItem(1684)\n\telseif e.other:Class() == \"Monk\" and item_lib.check_turn_in(e.trade, {item1 = 1688, item2 = 1689}) then\n\t\te.self:Say(\"I honestly did not believe you could have defeated Vorash. I will sew these fangs into magical fist wraps and they shall be yours.\")\n\t\te.other:SummonItem(10652) -- Celestial Fists epic\n\t\teq.set_global(\"MnkEpic1\", \"1\", 5, \"Y1\")\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\nfunction event_timer(e)\n\tif e.timer == \"depop\" then\n\t\teq.depop()\n\tend\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 11924,
+        "zone": "trakanon",
+        "name": "#Kaiaren",
+        "lua_content": "-- IdleQuest epic 1.0 steps have no minimum level; preserve class and item checks.\n-- Source: trakanon/#Kaiaren.pl\n-- Monk Epic 1.0: true Kaiaren converts the book and performs final turn-in.\n-- Converted from ProjectEQ Perl quest script.\n-- Check eligibility before the consuming hand-in matcher; reject without item loss.\n-- items: 1683, 1684, 1688, 1689, 10652\n\nfunction event_spawn(e)\n\teq.set_timer(\"depop\", 1800000)\nend\n\nfunction event_say(e)\n\tif e.other:HasItem(1689) then\n\t\tif e.message:findi(\"lheao\") then\n\t\t\te.self:Say(\"Hmmm, never heard of him. Well, it doesn't matter, the book is here now. Curse that idiot for writing it in the first place. Not even sure why I let him stick around. If you ever see that clown monk Aradiel kick him in the shins for me! At any rate, I suppose you'd like to find the Fists and [have a nice chat with them], eh? Their master owes me much. I would reward you well if you were to bring me proof of the master's defeat\")\n\t\telseif e.message:findi(\"have a nice chat with them\") then\n\t\t\te.self:Say(\"Yes, I suppose you would. All you children looking for fame and glory will eventually learn the poison of ambition. But how will you find them? They are able to meld with their elements seamlessly and they certainly have no interest in fooling with the likes of you. No, you will need to get their attention. Fortunately, I know [how you can do this].\")\n\t\telseif e.message:findi(\"how can i do this\") or e.message:findi(\"how you can do this\") then\n\t\t\te.self:Say(\"My guess is that the weakest of the Fists will be the easiest to draw out. He is egotistical and arrogant. How he came to master the Discipline of Fire, I do not know. He will most likely be in another form, one of his element. When you find the one you believe to be the Fist, you must challenge him. If you use his true name, Eejag, in your formal challenge, he will respond. A flame can burn intensely but it cannot last for long. Know this when you battle him.\")\n\t\tend\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif e.other:Class() == \"Monk\" and item_lib.check_turn_in(e.trade, {item1 = 1683}) then\n\t\te.self:Say(\"Now, then. Where did you find this, monk? This is not just some light reading to be borrowed from the town library. Who gave this to you?\")\n\t\te.other:SummonItem(1689) -- Book of Celestial Fists\n\telseif e.other:Class() == \"Monk\" and item_lib.check_turn_in(e.trade, {item1 = 1684}) then\n\t\te.self:Say(\"Ahhh, impressive indeed! Take this scale and show it to the Fist of Air wherever he may be. Good luck.\")\n\t\te.other:SummonItem(1684)\n\telseif e.other:Class() == \"Monk\" and item_lib.check_turn_in(e.trade, {item1 = 1688, item2 = 1689}) then\n\t\te.self:Emote(\"bows his head and breathes a long sigh as if relieved of a great weight. He then looks up at you.\")\n\t\te.self:Say(\"I honestly did not believe you could have defeated Vorash. Even though he sought nothing but war and bloodshed, it is a life nonetheless and we must mourn him. I will sew these fangs into magical fist wraps and they shall be yours. Remember Xenevorash. A purpose can be found for every situation and individual. To achieve perfection is to perceive this truth.\")\n\t\te.other:SummonItem(10652) -- Celestial Fists epic\n\t\teq.set_global(\"MnkEpic1\", \"1\", 5, \"Y1\")\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\nfunction event_timer(e)\n\tif e.timer == \"depop\" then\n\t\teq.depop()\n\tend\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 17338,
+        "zone": "trakanon",
+        "name": "Kaiaren",
+        "lua_content": "-- IdleQuest epic 1.0 steps have no minimum level; preserve class and item checks.\n-- Source: trakanon/Kaiaren.pl\n-- Monk Epic 1.0: mad Kaiaren returns Celestial Fists and spawns true Kaiaren.\n-- Converted from ProjectEQ Perl quest script.\n-- Check eligibility before the consuming hand-in matcher; reject without item loss.\n-- items: 1683, 1684\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"AHHH get it away from me go away .. leave me alone\")\n\telseif e.message:findi(\"celestial fists\") then\n\t\te.self:Say(\"Eh? What's that? Bah! That was destroyed long ago. Don't waste my time with fairy taAAAAAGGHHH GET IT AWAY!!!!\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif e.other:Class() == \"Monk\" and item_lib.check_turn_in(e.trade, {item1 = 1683}) then\n\t\te.self:Emote(\"eyes open wide and he attacks you!\")\n\t\te.other:SummonItem(1683) -- Celestial Fists book\n\t\teq.attack(e.other:GetName())\n\t\teq.spawn2(95183, 0, 0, 2470, 306, -339, 0) -- true Kaiaren\n\telseif e.other:Class() == \"Monk\" and item_lib.check_turn_in(e.trade, {item1 = 1684}) then\n\t\te.self:Say(\"Ahhh, impressive indeed! Take this scale and show it to the Fist of Air wherever he may be. Good luck.\")\n\t\te.other:SummonItem(1684)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\nfunction event_death_complete(e)\n\te.self:Say(\"Not bad.. Now lets see if you can find my trueform if you do we discuss this further.\")\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 17338,
+        "zone": "trakanon",
+        "name": "Kaiaren",
+        "lua_content": "-- IdleQuest epic 1.0 steps have no minimum level; preserve class and item checks.\n-- Source: trakanon/Kaiaren.pl\n-- Monk Epic 1.0: mad Kaiaren returns Celestial Fists and spawns true Kaiaren.\n-- Converted from ProjectEQ Perl quest script.\n-- Check eligibility before the consuming hand-in matcher; reject without item loss.\n-- items: 1683, 1684\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"AHHH get it away from me go away .. leave me alone\")\n\telseif e.message:findi(\"celestial fists\") then\n\t\te.self:Say(\"Eh? What's that? Bah! That was destroyed long ago. Don't waste my time with fairy taAAAAAGGHHH GET IT AWAY!!!! HELP!!! They're all over MEHEHEHEHEEEEEEee!!\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif e.other:Class() == \"Monk\" and item_lib.check_turn_in(e.trade, {item1 = 1683}) then\n\t\te.self:Emote(\"eyes open wide and he attacks you!\")\n\t\te.other:SummonItem(1683) -- Celestial Fists book\n\t\teq.attack(e.other:GetName())\n\t\teq.spawn2(95183, 0, 0, 2470, 306, -339, 0) -- true Kaiaren\n\telseif e.other:Class() == \"Monk\" and item_lib.check_turn_in(e.trade, {item1 = 1684}) then\n\t\te.self:Say(\"Ahhh, impressive indeed! Take this scale and show it to the Fist of Air wherever he may be. Good luck.\")\n\t\te.other:SummonItem(1684)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\nfunction event_death_complete(e)\n\te.self:Say(\"Not bad.. Now lets see if you can find my trueform if you do we discuss this further.\")\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 19738,
+        "zone": "lakerathe",
+        "name": "Deep",
+        "lua_content": "-- IdleQuest epic 1.0 steps have no minimum level; preserve class and item checks.\n-- Source: lakerathe/Deep.pl\n-- Monk Epic 1.0: Deep grants access to Astral Projection.\n-- Converted from ProjectEQ Perl quest script.\n-- Validate eligibility before consuming the head.\n-- items: 1686\n\nfunction event_say(e)\n\te.self:Emote(\"ignores you.\")\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif e.other:Class() == \"Monk\" and item_lib.check_turn_in(e.trade, {item1 = 1686}) then\n\t\te.self:Emote(\"slowly opens her eyes and looks up at you.\")\n\t\te.self:Say(\"Very well, $name, if you wish death so greatly, we will be happy to oblige. Find my master in the Overthere and show him the head.\")\n\t\te.other:SummonItem(1686)\n\t\teq.set_global(\"Trunt\", \"1\", 5, \"F\")\n\t\teq.depop()\n\telse\n\t\te.self:Say(\"I have no use for this, $name.\")\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 19738,
+        "zone": "lakerathe",
+        "name": "Deep",
+        "lua_content": "-- IdleQuest epic 1.0 steps have no minimum level; preserve class and item checks.\n-- Source: lakerathe/Deep.pl\n-- Monk Epic 1.0: Deep grants access to Astral Projection.\n-- Converted from ProjectEQ Perl quest script.\n-- Validate eligibility before consuming the head.\n-- items: 1686\n\nfunction event_say(e)\n\te.self:Emote(\"ignores you.\")\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif e.other:Class() == \"Monk\" and item_lib.check_turn_in(e.trade, {item1 = 1686}) then\n\t\te.self:Emote(\"slowly opens her eyes and looks up at you. She stares at you a long while and then closes her eyes and lowers her head again.\")\n\t\te.self:Say(\"Very well, if you wish death so greatly, we will be happy to oblige. My master projects part of himself in the wilder lands known as the Overthere. He has granted you an audience. Find him and show him the head of our earth brother. At that point, we will discuss how we will end your life.\")\n\t\te.other:SummonItem(1686)\n\t\teq.set_global(\"Trunt\", \"1\", 5, \"F\")\n\t\teq.depop()\n\telse\n\t\te.self:Say(\"I have no use for this, \" .. e.other:GetName() .. \".\")\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 15449,
+        "zone": "lakeofillomen",
+        "name": "Astral_Projection",
+        "lua_content": "-- IdleQuest epic 1.0 steps have no minimum level; preserve class and item checks.\n-- Source: lakeofillomen/Astral_Projection.pl\n-- Monk Epic 1.0: Astral Projection spawns Vorash and Deep.\n-- Converted from ProjectEQ Perl quest script.\n-- Reject ineligible characters before consuming their quest token.\n-- items: 1687\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Emote(\"ignores you.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif e.other:Class() == \"Monk\" and item_lib.check_turn_in(e.trade, {item1 = 1687}) then\n\t\tlocal x = e.self:GetX()\n\t\tlocal y = e.self:GetY()\n\t\tlocal z = e.self:GetZ()\n\t\tlocal h = e.self:GetHeading()\n\t\teq.depop()\n\t\teq.spawn2(85211, 0, 0, x, y, z, h) -- Vorash\n\t\teq.spawn2(85223, 0, 0, x, y, z, h) -- Deep\n\telse\n\t\te.self:Say(\"I have no use for this, $name.\")\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 15449,
+        "zone": "lakeofillomen",
+        "name": "Astral_Projection",
+        "lua_content": "-- IdleQuest epic 1.0 steps have no minimum level; preserve class and item checks.\n-- Source: lakeofillomen/Astral_Projection.pl\n-- Monk Epic 1.0: Astral Projection spawns Vorash and Deep.\n-- Converted from ProjectEQ Perl quest script.\n-- Reject ineligible characters before consuming their quest token.\n-- items: 1687\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Emote(\"ignores you.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif e.other:Class() == \"Monk\" and item_lib.check_turn_in(e.trade, {item1 = 1687}) then\n\t\tlocal x = e.self:GetX()\n\t\tlocal y = e.self:GetY()\n\t\tlocal z = e.self:GetZ()\n\t\tlocal h = e.self:GetHeading()\n\t\teq.depop()\n\t\teq.spawn2(85211, 0, 0, x, y, z, h) -- Vorash\n\t\teq.spawn2(85223, 0, 0, x, y, z, h) -- Deep\n\telse\n\t\te.self:Say(\"I have no use for this, \" .. e.other:GetName() .. \".\")\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/timorous/Lheao.lua",
+      "beforeSha256": "e76a86fce02df71f0b890df9c4cda444d560a140a2ad2864ed4f843c5a5e0b93",
+      "proposedFile": "changes/p99-am-monk-epic-dialogue/timorous-Lheao.lua",
+      "afterSha256": "14a72e535c752950c9bc7c7b853aaef7bd5de1be7c45f7a74da479ccc636ea8a"
+    },
+    {
+      "target": "maintained/lua/converted-perl/trakanon/#Kaiaren.lua",
+      "beforeSha256": "0c9f38998c7724a9874067d30d3c1dc1483a14be45f6d39c763c8f4cd3601dee",
+      "proposedFile": "changes/p99-am-monk-epic-dialogue/trakanon-#Kaiaren.lua",
+      "afterSha256": "9d50cd006a3af7cbf55b4902720c0948c90359ec3582326553ecafb9cde2dbe1"
+    },
+    {
+      "target": "maintained/lua/converted-perl/trakanon/Kaiaren.lua",
+      "beforeSha256": "dc82e24f1b81612d1e4f633c3dbfb34fbf1071583919ca1f2948b3ab3e9c9f32",
+      "proposedFile": "changes/p99-am-monk-epic-dialogue/trakanon-Kaiaren.lua",
+      "afterSha256": "419b07b1f65de8173be86fa63f2f14c251289cbceb2431704e935e8fcdb8d209"
+    },
+    {
+      "target": "maintained/lua/converted-perl/lakerathe/Deep.lua",
+      "beforeSha256": "0cd38f3dd9eb23874a15f357f3c3c5a67017f9c42d818e23a37805b1599d0050",
+      "proposedFile": "changes/p99-am-monk-epic-dialogue/lakerathe-Deep.lua",
+      "afterSha256": "63579074ae9c47a47795bba2bfcde2267112773e5ddab647f53f2bde793bcb23"
+    },
+    {
+      "target": "maintained/lua/converted-perl/lakeofillomen/Astral_Projection.lua",
+      "beforeSha256": "55a57234a18807c68a1967e2517d208de2b6fe964d5d543cad35f7f8fecdc637",
+      "proposedFile": "changes/p99-am-monk-epic-dialogue/lakeofillomen-Astral_Projection.lua",
+      "afterSha256": "771362071ff9f578b5a2d191c48472b360546653e97b52e089ffe2872d1d8604"
+    }
+  ]
+}

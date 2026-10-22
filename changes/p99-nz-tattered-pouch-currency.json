@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-nz-tattered-pouch-currency",
+  "summary": "Constrain Tattered Leather Pouch cash to documented3\u20135gold rather than six gold.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/The_Tattered_Pouch?action=raw",
+      "note": "Cached 2026-07-17T23:38:24.642Z; revision unavailable; SHA256 ae8e9e813b555682677c708b3b02c3ec34768c162cfb61ea26bf9d304b133d16. P99 supplies the range but not probabilities. Equal selection across3,4,5 is an explicit IdleQuest approximation using the established helper; it is not asserted as P99 distribution. Preserve pouch17600, brew13901, factions/experience and unrelated Crow branches."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 12438,
+        "zone": "qeynos2",
+        "name": "Crow",
+        "lua_content": "-- items: 17600, 13901\nfunction event_say(e)\n\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Welcome to Crow's! If you're thirsty, we have a fine selection of brews and ales.\");\n\tend\n\t\nend\n\nfunction event_trade(e)\n\n\tlocal item_lib = require(\"items\");\n\t\n\tif(item_lib.check_turn_in(e.trade, {item1 = 17600})) then\n\t\te.self:Say(\"What are you? The Rat's new bag man? Peh, he is useless. That bum drinks any gold he gets. Here ya go, kid!\");\n\t\te.other:Ding();\n\t\te.other:SummonItem(13901); -- Item: Crow's Special Brew\n\t\te.other:Faction(223,10,0); -- +Circle of Unseen Hands\n\t\te.other:Faction(291,-10,0); -- -Merchants of Qeynos\n\t\te.other:Faction(230,10,0); -- Corrupt Qeynos Guards\n\t\te.other:Faction(262,-10,0); -- -Guards of Qeynos\n\t\te.other:Faction(273,10,0); -- Kane Bayle\n\t\te.other:AddEXP(250);\n\t\te.other:GiveCash(0,0,6,0);\n\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 9816})) then --sealed package rog prequest, add global check , add npc check?\n\t\tif eq.get_entity_list():IsMobSpawnedByNpcTypeID(2031) then --check if an npc from event is active \n\t\t\te.other:Message(MT.Yellow,\"You have smuggled the mysterious package into Qeynos, completing the third task for the Smuggler's Camp.\");\n\t\t\te.self:Emote(\"opens the package and examines the contents, then quickly shuts it again. 'You can go now.'\");\n\t\t\t--add global\n\t\t\teq.signal(2134, 2); --2134 a gruff voice\n\t\telse \n\t\t\te.self:Say(\"I wasn't expecting another package from you, \".. e.other:GetCleanName() ..\". What exactly is going on here?\");\n\t\tend\n\tend\n\t\n\titem_lib.return_items(e.self, e.other, e.trade)\n\t\nend\n\nfunction event_signal(e)\n\n\tif(e.signal == 1) then\n\t\te.self:Say(\"You ok Sabs?\");\n\t\teq.signal(2083, 2); -- NPC: Sabnie_Blagard General Supplies\n\telseif(e.signal == 2) then\n\t\te.self:Say(\"Testing one two three four\");\n\t\teq.signal(2083,5); -- NPC: Sabnie_Blagard General Supplies\n\telseif(e.signal == 3) then\n\t\te.self:Say(\"Excellent. To think that he thought he could stroll in here from Highpass and take over my action. He will learn the hard way what happens to merchants who think they can operate here without our support and protection.\");\n\telseif(e.signal == 4) then\n\t\te.self:Say(\"Anything you say, my love.\");\n\telseif(e.signal == 5) then\n\t\te.self:Say(\"Bwah! Ha! Ha! I love it when he does that! HA HA HA! You are too much, Flynn!\");\n\tend\n\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 12438,
+        "zone": "qeynos2",
+        "name": "Crow",
+        "lua_content": "-- items: 17600, 13901\nfunction event_say(e)\n\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Welcome to Crow's! If you're thirsty, we have a fine selection of brews and ales.\");\n\tend\n\t\nend\n\nfunction event_trade(e)\n\n\tlocal item_lib = require(\"items\");\n\t\n\tif(item_lib.check_turn_in(e.trade, {item1 = 17600})) then\n\t\te.self:Say(\"What are you? The Rat's new bag man? Peh, he is useless. That bum drinks any gold he gets. Here ya go, kid!\");\n\t\te.other:Ding();\n\t\te.other:SummonItem(13901); -- Item: Crow's Special Brew\n\t\te.other:Faction(223,10,0); -- +Circle of Unseen Hands\n\t\te.other:Faction(291,-10,0); -- -Merchants of Qeynos\n\t\te.other:Faction(230,10,0); -- Corrupt Qeynos Guards\n\t\te.other:Faction(262,-10,0); -- -Guards of Qeynos\n\t\te.other:Faction(273,10,0); -- Kane Bayle\n\t\te.other:AddEXP(250);\n\t\te.other:GiveCash(0,0,eq.ChooseRandom(3,4,5),0);\n\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 9816})) then --sealed package rog prequest, add global check , add npc check?\n\t\tif eq.get_entity_list():IsMobSpawnedByNpcTypeID(2031) then --check if an npc from event is active \n\t\t\te.other:Message(MT.Yellow,\"You have smuggled the mysterious package into Qeynos, completing the third task for the Smuggler's Camp.\");\n\t\t\te.self:Emote(\"opens the package and examines the contents, then quickly shuts it again. 'You can go now.'\");\n\t\t\t--add global\n\t\t\teq.signal(2134, 2); --2134 a gruff voice\n\t\telse \n\t\t\te.self:Say(\"I wasn't expecting another package from you, \".. e.other:GetCleanName() ..\". What exactly is going on here?\");\n\t\tend\n\tend\n\t\n\titem_lib.return_items(e.self, e.other, e.trade)\n\t\nend\n\nfunction event_signal(e)\n\n\tif(e.signal == 1) then\n\t\te.self:Say(\"You ok Sabs?\");\n\t\teq.signal(2083, 2); -- NPC: Sabnie_Blagard General Supplies\n\telseif(e.signal == 2) then\n\t\te.self:Say(\"Testing one two three four\");\n\t\teq.signal(2083,5); -- NPC: Sabnie_Blagard General Supplies\n\telseif(e.signal == 3) then\n\t\te.self:Say(\"Excellent. To think that he thought he could stroll in here from Highpass and take over my action. He will learn the hard way what happens to merchants who think they can operate here without our support and protection.\");\n\telseif(e.signal == 4) then\n\t\te.self:Say(\"Anything you say, my love.\");\n\telseif(e.signal == 5) then\n\t\te.self:Say(\"Bwah! Ha! Ha! I love it when he does that! HA HA HA! You are too much, Flynn!\");\n\tend\n\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/qeynos2/Crow.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-nz-tattered-pouch-currency/qeynos2--Crow.lua",
+      "afterSha256": "2a2508c733dd45637fde347d38524bccc256d425cdb4499cde13e7c0b1a181af"
+    }
+  ]
+}

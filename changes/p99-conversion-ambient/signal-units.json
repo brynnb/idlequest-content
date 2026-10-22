@@ -1,0 +1,6 @@
+{
+  "source": "https://github.com/EQEmu/EQEmu/blob/4aceae18b94ffaafc08e2b17bc41cd72c77f795d/zone/questmgr.cpp",
+  "retrievedAt": "2026-10-22",
+  "sourceSha256": "7414819412c326cd5b36cf49cfa7fc764eb06f1640bb56a38c67408f2aab2232",
+  "finding": "QuestManager signalwith and signal take wait_ms unchanged; settimer uses seconds. Lua signal delays remain milliseconds."
+}

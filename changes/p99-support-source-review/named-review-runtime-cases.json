@@ -1,0 +1,935 @@
+{
+  "kind": "isolated mocks, not engine runtime",
+  "cases": [
+    {
+      "key": "akanon/Lyra_Lyrestringer",
+      "name": "akanon/Lyra_Lyrestringer delivery kelethin",
+      "assertions": "say(\"kelethin\"); reward(18163,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/akanon--Lyra_Lyrestringer.lua",
+      "sourceSha256": "fb73395c7bfa114de164cc229d7fbf0112502ea3c365627ac1a7713e6e093031",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "akanon/Lyra_Lyrestringer",
+      "name": "akanon/Lyra_Lyrestringer delivery to kelethin",
+      "assertions": "say(\"to kelethin\"); reward(18163,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/akanon--Lyra_Lyrestringer.lua",
+      "sourceSha256": "fb73395c7bfa114de164cc229d7fbf0112502ea3c365627ac1a7713e6e093031",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "akanon/Lyra_Lyrestringer",
+      "name": "akanon/Lyra_Lyrestringer delivery I will deliver mail to kelethin.",
+      "assertions": "say(\"I will deliver mail to kelethin.\"); reward(18163,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/akanon--Lyra_Lyrestringer.lua",
+      "sourceSha256": "fb73395c7bfa114de164cc229d7fbf0112502ea3c365627ac1a7713e6e093031",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "akanon/Lyra_Lyrestringer",
+      "name": "akanon/Lyra_Lyrestringer delivery deliver",
+      "assertions": "say(\"deliver\"); reward(18163,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/akanon--Lyra_Lyrestringer.lua",
+      "sourceSha256": "fb73395c7bfa114de164cc229d7fbf0112502ea3c365627ac1a7713e6e093031",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "akanon/Lyra_Lyrestringer",
+      "name": "akanon/Lyra_Lyrestringer advertised interested link",
+      "assertions": "say(\"interested\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/akanon--Lyra_Lyrestringer.lua",
+      "sourceSha256": "fb73395c7bfa114de164cc229d7fbf0112502ea3c365627ac1a7713e6e093031",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "butcher/Siltria_Marwind",
+      "name": "butcher/Siltria_Marwind delivery kelethin",
+      "assertions": "say(\"kelethin\"); reward(18160,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/butcher--Siltria_Marwind.lua",
+      "sourceSha256": "70648534ac1b3b2484427a63ad6a703324362b8003dc73f7b88bc9c5e90fb065",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "butcher/Siltria_Marwind",
+      "name": "butcher/Siltria_Marwind delivery to kelethin",
+      "assertions": "say(\"to kelethin\"); reward(18160,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/butcher--Siltria_Marwind.lua",
+      "sourceSha256": "70648534ac1b3b2484427a63ad6a703324362b8003dc73f7b88bc9c5e90fb065",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "butcher/Siltria_Marwind",
+      "name": "butcher/Siltria_Marwind delivery I will deliver mail to kelethin.",
+      "assertions": "say(\"I will deliver mail to kelethin.\"); reward(18160,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/butcher--Siltria_Marwind.lua",
+      "sourceSha256": "70648534ac1b3b2484427a63ad6a703324362b8003dc73f7b88bc9c5e90fb065",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "butcher/Siltria_Marwind",
+      "name": "butcher/Siltria_Marwind delivery deliver",
+      "assertions": "say(\"deliver\"); reward(18160,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/butcher--Siltria_Marwind.lua",
+      "sourceSha256": "70648534ac1b3b2484427a63ad6a703324362b8003dc73f7b88bc9c5e90fb065",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "butcher/Siltria_Marwind",
+      "name": "butcher/Siltria_Marwind advertised interested link",
+      "assertions": "say(\"interested\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/butcher--Siltria_Marwind.lua",
+      "sourceSha256": "70648534ac1b3b2484427a63ad6a703324362b8003dc73f7b88bc9c5e90fb065",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "erudnext/Ticar_Lorestring",
+      "name": "erudnext/Ticar_Lorestring delivery qeynos",
+      "assertions": "say(\"qeynos\"); reward(18151,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/erudnext--Ticar_Lorestring.lua",
+      "sourceSha256": "a91104b7c9efda980445a565b3be533c426f5d64a2f36e76ec2a0fd1b33549d1",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "erudnext/Ticar_Lorestring",
+      "name": "erudnext/Ticar_Lorestring delivery to qeynos",
+      "assertions": "say(\"to qeynos\"); reward(18151,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/erudnext--Ticar_Lorestring.lua",
+      "sourceSha256": "a91104b7c9efda980445a565b3be533c426f5d64a2f36e76ec2a0fd1b33549d1",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "erudnext/Ticar_Lorestring",
+      "name": "erudnext/Ticar_Lorestring delivery I will deliver mail to qeynos.",
+      "assertions": "say(\"I will deliver mail to qeynos.\"); reward(18151,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/erudnext--Ticar_Lorestring.lua",
+      "sourceSha256": "a91104b7c9efda980445a565b3be533c426f5d64a2f36e76ec2a0fd1b33549d1",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "erudnext/Ticar_Lorestring",
+      "name": "erudnext/Ticar_Lorestring delivery deliver",
+      "assertions": "say(\"deliver\"); reward(18151,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/erudnext--Ticar_Lorestring.lua",
+      "sourceSha256": "a91104b7c9efda980445a565b3be533c426f5d64a2f36e76ec2a0fd1b33549d1",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "erudnext/Ticar_Lorestring",
+      "name": "erudnext/Ticar_Lorestring advertised interested link",
+      "assertions": "say(\"interested\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/erudnext--Ticar_Lorestring.lua",
+      "sourceSha256": "a91104b7c9efda980445a565b3be533c426f5d64a2f36e76ec2a0fd1b33549d1",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "feerrott/Drizda_Tunesinger",
+      "name": "feerrott/Drizda_Tunesinger delivery freeport",
+      "assertions": "say(\"freeport\"); reward(18157,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/feerrott--Drizda_Tunesinger.lua",
+      "sourceSha256": "8ee53b5b046df59fca6ab46e36711826d6aa847f88a24a4fb187ea99775b9973",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "feerrott/Drizda_Tunesinger",
+      "name": "feerrott/Drizda_Tunesinger delivery to freeport",
+      "assertions": "say(\"to freeport\"); reward(18157,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/feerrott--Drizda_Tunesinger.lua",
+      "sourceSha256": "8ee53b5b046df59fca6ab46e36711826d6aa847f88a24a4fb187ea99775b9973",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "feerrott/Drizda_Tunesinger",
+      "name": "feerrott/Drizda_Tunesinger delivery I will deliver mail to freeport.",
+      "assertions": "say(\"I will deliver mail to freeport.\"); reward(18157,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/feerrott--Drizda_Tunesinger.lua",
+      "sourceSha256": "8ee53b5b046df59fca6ab46e36711826d6aa847f88a24a4fb187ea99775b9973",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "feerrott/Drizda_Tunesinger",
+      "name": "feerrott/Drizda_Tunesinger delivery deliver",
+      "assertions": "say(\"deliver\"); reward(18157,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/feerrott--Drizda_Tunesinger.lua",
+      "sourceSha256": "8ee53b5b046df59fca6ab46e36711826d6aa847f88a24a4fb187ea99775b9973",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "feerrott/Drizda_Tunesinger",
+      "name": "feerrott/Drizda_Tunesinger advertised interested link",
+      "assertions": "say(\"interested\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/feerrott--Drizda_Tunesinger.lua",
+      "sourceSha256": "8ee53b5b046df59fca6ab46e36711826d6aa847f88a24a4fb187ea99775b9973",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "gfaydark/Idia",
+      "name": "gfaydark/Idia delivery freeport",
+      "assertions": "say(\"freeport\"); reward(18166,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/gfaydark--Idia.lua",
+      "sourceSha256": "af8733a8c875aeac710a81a80d0facb678f66a646523e8deca83a795a020b129",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "gfaydark/Idia",
+      "name": "gfaydark/Idia delivery to freeport",
+      "assertions": "say(\"to freeport\"); reward(18166,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/gfaydark--Idia.lua",
+      "sourceSha256": "af8733a8c875aeac710a81a80d0facb678f66a646523e8deca83a795a020b129",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "gfaydark/Idia",
+      "name": "gfaydark/Idia delivery I will deliver mail to freeport.",
+      "assertions": "say(\"I will deliver mail to freeport.\"); reward(18166,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/gfaydark--Idia.lua",
+      "sourceSha256": "af8733a8c875aeac710a81a80d0facb678f66a646523e8deca83a795a020b129",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "gfaydark/Idia",
+      "name": "gfaydark/Idia delivery deliver",
+      "assertions": "say(\"deliver\"); reward(18166,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/gfaydark--Idia.lua",
+      "sourceSha256": "af8733a8c875aeac710a81a80d0facb678f66a646523e8deca83a795a020b129",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "gfaydark/Idia",
+      "name": "gfaydark/Idia advertised interested link",
+      "assertions": "say(\"interested\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/gfaydark--Idia.lua",
+      "sourceSha256": "af8733a8c875aeac710a81a80d0facb678f66a646523e8deca83a795a020b129",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "halas/Marton_Stringsinger",
+      "name": "halas/Marton_Stringsinger delivery qeynos",
+      "assertions": "say(\"qeynos\"); reward(18153,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/halas--Marton_Stringsinger.lua",
+      "sourceSha256": "a20eb14ee9e1251a84a997c48baf88ca79216ba896452789a6b791cfb273d32f",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "halas/Marton_Stringsinger",
+      "name": "halas/Marton_Stringsinger delivery to qeynos",
+      "assertions": "say(\"to qeynos\"); reward(18153,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/halas--Marton_Stringsinger.lua",
+      "sourceSha256": "a20eb14ee9e1251a84a997c48baf88ca79216ba896452789a6b791cfb273d32f",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "halas/Marton_Stringsinger",
+      "name": "halas/Marton_Stringsinger delivery I will deliver mail to qeynos.",
+      "assertions": "say(\"I will deliver mail to qeynos.\"); reward(18153,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/halas--Marton_Stringsinger.lua",
+      "sourceSha256": "a20eb14ee9e1251a84a997c48baf88ca79216ba896452789a6b791cfb273d32f",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "halas/Marton_Stringsinger",
+      "name": "halas/Marton_Stringsinger delivery deliver",
+      "assertions": "say(\"deliver\"); reward(18153,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/halas--Marton_Stringsinger.lua",
+      "sourceSha256": "a20eb14ee9e1251a84a997c48baf88ca79216ba896452789a6b791cfb273d32f",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "halas/Marton_Stringsinger",
+      "name": "halas/Marton_Stringsinger advertised interested link",
+      "assertions": "say(\"interested\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/halas--Marton_Stringsinger.lua",
+      "sourceSha256": "a20eb14ee9e1251a84a997c48baf88ca79216ba896452789a6b791cfb273d32f",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "nektulos/Travis_Two_Tone",
+      "name": "nektulos/Travis_Two_Tone delivery freeport",
+      "assertions": "say(\"freeport\"); reward(18158,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/nektulos--Travis_Two_Tone.lua",
+      "sourceSha256": "d2862d0d1496e4bd5abe1fcdb1c6ab9c992b64da492a8e97b1d152505dc53d68",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "nektulos/Travis_Two_Tone",
+      "name": "nektulos/Travis_Two_Tone delivery to freeport",
+      "assertions": "say(\"to freeport\"); reward(18158,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/nektulos--Travis_Two_Tone.lua",
+      "sourceSha256": "d2862d0d1496e4bd5abe1fcdb1c6ab9c992b64da492a8e97b1d152505dc53d68",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "nektulos/Travis_Two_Tone",
+      "name": "nektulos/Travis_Two_Tone delivery I will deliver mail to freeport.",
+      "assertions": "say(\"I will deliver mail to freeport.\"); reward(18158,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/nektulos--Travis_Two_Tone.lua",
+      "sourceSha256": "d2862d0d1496e4bd5abe1fcdb1c6ab9c992b64da492a8e97b1d152505dc53d68",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "nektulos/Travis_Two_Tone",
+      "name": "nektulos/Travis_Two_Tone delivery deliver",
+      "assertions": "say(\"deliver\"); reward(18158,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/nektulos--Travis_Two_Tone.lua",
+      "sourceSha256": "d2862d0d1496e4bd5abe1fcdb1c6ab9c992b64da492a8e97b1d152505dc53d68",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "nektulos/Travis_Two_Tone",
+      "name": "nektulos/Travis_Two_Tone advertised interested link",
+      "assertions": "say(\"interested\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/nektulos--Travis_Two_Tone.lua",
+      "sourceSha256": "d2862d0d1496e4bd5abe1fcdb1c6ab9c992b64da492a8e97b1d152505dc53d68",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "qey2hh1/Mistrana_Two_Notes",
+      "name": "qey2hh1/Mistrana_Two_Notes delivery qeynos",
+      "assertions": "say(\"qeynos\"); reward(18150,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/qey2hh1--Mistrana_Two_Notes.lua",
+      "sourceSha256": "2d1acda0618c89f03323e07a9d022dde421982cac5c70321d6adae61ea885768",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "qey2hh1/Mistrana_Two_Notes",
+      "name": "qey2hh1/Mistrana_Two_Notes delivery to qeynos",
+      "assertions": "say(\"to qeynos\"); reward(18150,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/qey2hh1--Mistrana_Two_Notes.lua",
+      "sourceSha256": "2d1acda0618c89f03323e07a9d022dde421982cac5c70321d6adae61ea885768",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "qey2hh1/Mistrana_Two_Notes",
+      "name": "qey2hh1/Mistrana_Two_Notes delivery I will deliver mail to qeynos.",
+      "assertions": "say(\"I will deliver mail to qeynos.\"); reward(18150,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/qey2hh1--Mistrana_Two_Notes.lua",
+      "sourceSha256": "2d1acda0618c89f03323e07a9d022dde421982cac5c70321d6adae61ea885768",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "qey2hh1/Mistrana_Two_Notes",
+      "name": "qey2hh1/Mistrana_Two_Notes delivery deliver",
+      "assertions": "say(\"deliver\"); reward(18150,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/qey2hh1--Mistrana_Two_Notes.lua",
+      "sourceSha256": "2d1acda0618c89f03323e07a9d022dde421982cac5c70321d6adae61ea885768",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "qey2hh1/Mistrana_Two_Notes",
+      "name": "qey2hh1/Mistrana_Two_Notes advertised interested link",
+      "assertions": "say(\"interested\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/qey2hh1--Mistrana_Two_Notes.lua",
+      "sourceSha256": "2d1acda0618c89f03323e07a9d022dde421982cac5c70321d6adae61ea885768",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "qeynos/Eve_Marsinger",
+      "name": "qeynos/Eve_Marsinger delivery highpass",
+      "assertions": "say(\"highpass\"); reward(18152,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/qeynos--Eve_Marsinger.lua",
+      "sourceSha256": "482ebe989733bd54c073d75b41d68b18b7dc1f164eeb06b3303480223780727c",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "qeynos/Eve_Marsinger",
+      "name": "qeynos/Eve_Marsinger delivery to highpass",
+      "assertions": "say(\"to highpass\"); reward(18152,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/qeynos--Eve_Marsinger.lua",
+      "sourceSha256": "482ebe989733bd54c073d75b41d68b18b7dc1f164eeb06b3303480223780727c",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "qeynos/Eve_Marsinger",
+      "name": "qeynos/Eve_Marsinger delivery I will deliver mail to highpass.",
+      "assertions": "say(\"I will deliver mail to highpass.\"); reward(18152,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/qeynos--Eve_Marsinger.lua",
+      "sourceSha256": "482ebe989733bd54c073d75b41d68b18b7dc1f164eeb06b3303480223780727c",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "qeynos/Eve_Marsinger",
+      "name": "qeynos/Eve_Marsinger delivery deliver",
+      "assertions": "say(\"deliver\"); reward(18152,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/qeynos--Eve_Marsinger.lua",
+      "sourceSha256": "482ebe989733bd54c073d75b41d68b18b7dc1f164eeb06b3303480223780727c",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "qeynos/Eve_Marsinger",
+      "name": "qeynos/Eve_Marsinger advertised interested link",
+      "assertions": "say(\"interested\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/qeynos--Eve_Marsinger.lua",
+      "sourceSha256": "482ebe989733bd54c073d75b41d68b18b7dc1f164eeb06b3303480223780727c",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "qrg/Sivina_Lutewhisper",
+      "name": "qrg/Sivina_Lutewhisper delivery qeynos",
+      "assertions": "say(\"qeynos\"); reward(18150,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/qrg--Sivina_Lutewhisper.lua",
+      "sourceSha256": "2d1acda0618c89f03323e07a9d022dde421982cac5c70321d6adae61ea885768",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "qrg/Sivina_Lutewhisper",
+      "name": "qrg/Sivina_Lutewhisper delivery to qeynos",
+      "assertions": "say(\"to qeynos\"); reward(18150,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/qrg--Sivina_Lutewhisper.lua",
+      "sourceSha256": "2d1acda0618c89f03323e07a9d022dde421982cac5c70321d6adae61ea885768",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "qrg/Sivina_Lutewhisper",
+      "name": "qrg/Sivina_Lutewhisper delivery I will deliver mail to qeynos.",
+      "assertions": "say(\"I will deliver mail to qeynos.\"); reward(18150,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/qrg--Sivina_Lutewhisper.lua",
+      "sourceSha256": "2d1acda0618c89f03323e07a9d022dde421982cac5c70321d6adae61ea885768",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "qrg/Sivina_Lutewhisper",
+      "name": "qrg/Sivina_Lutewhisper delivery deliver",
+      "assertions": "say(\"deliver\"); reward(18150,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/qrg--Sivina_Lutewhisper.lua",
+      "sourceSha256": "2d1acda0618c89f03323e07a9d022dde421982cac5c70321d6adae61ea885768",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "qrg/Sivina_Lutewhisper",
+      "name": "qrg/Sivina_Lutewhisper advertised interested link",
+      "assertions": "say(\"interested\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/qrg--Sivina_Lutewhisper.lua",
+      "sourceSha256": "2d1acda0618c89f03323e07a9d022dde421982cac5c70321d6adae61ea885768",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "rivervale/Silna_Songsmith",
+      "name": "rivervale/Silna_Songsmith delivery freeport",
+      "assertions": "say(\"freeport\"); reward(18164,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/rivervale--Silna_Songsmith.lua",
+      "sourceSha256": "553adecf88834db51715036d48493b27e9ce50d2d29e2288fa5f92f6b9da34f3",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "rivervale/Silna_Songsmith",
+      "name": "rivervale/Silna_Songsmith delivery to freeport",
+      "assertions": "say(\"to freeport\"); reward(18164,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/rivervale--Silna_Songsmith.lua",
+      "sourceSha256": "553adecf88834db51715036d48493b27e9ce50d2d29e2288fa5f92f6b9da34f3",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "rivervale/Silna_Songsmith",
+      "name": "rivervale/Silna_Songsmith delivery I will deliver mail to freeport.",
+      "assertions": "say(\"I will deliver mail to freeport.\"); reward(18164,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/rivervale--Silna_Songsmith.lua",
+      "sourceSha256": "553adecf88834db51715036d48493b27e9ce50d2d29e2288fa5f92f6b9da34f3",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "rivervale/Silna_Songsmith",
+      "name": "rivervale/Silna_Songsmith delivery deliver",
+      "assertions": "say(\"deliver\"); reward(18164,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/rivervale--Silna_Songsmith.lua",
+      "sourceSha256": "553adecf88834db51715036d48493b27e9ce50d2d29e2288fa5f92f6b9da34f3",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "rivervale/Silna_Songsmith",
+      "name": "rivervale/Silna_Songsmith advertised interested link",
+      "assertions": "say(\"interested\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/rivervale--Silna_Songsmith.lua",
+      "sourceSha256": "553adecf88834db51715036d48493b27e9ce50d2d29e2288fa5f92f6b9da34f3",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "freportn/Ton_Twostring",
+      "name": "freportn/Ton_Twostring delivery kelethin",
+      "assertions": "say(\"kelethin\"); reward(18167,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/freportn--Ton_Twostring.lua",
+      "sourceSha256": "7f47b8eda38f0659cbfca9645f39df0392adf3972461925b691fb508a6f94132",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "freportn/Ton_Twostring",
+      "name": "freportn/Ton_Twostring delivery to kelethin",
+      "assertions": "say(\"to kelethin\"); reward(18167,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/freportn--Ton_Twostring.lua",
+      "sourceSha256": "7f47b8eda38f0659cbfca9645f39df0392adf3972461925b691fb508a6f94132",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "freportn/Ton_Twostring",
+      "name": "freportn/Ton_Twostring delivery I will deliver mail to kelethin.",
+      "assertions": "say(\"I will deliver mail to kelethin.\"); reward(18167,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/freportn--Ton_Twostring.lua",
+      "sourceSha256": "7f47b8eda38f0659cbfca9645f39df0392adf3972461925b691fb508a6f94132",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "freportn/Ton_Twostring",
+      "name": "freportn/Ton_Twostring delivery highpass",
+      "assertions": "say(\"highpass\"); reward(18156,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/freportn--Ton_Twostring.lua",
+      "sourceSha256": "7f47b8eda38f0659cbfca9645f39df0392adf3972461925b691fb508a6f94132",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "freportn/Ton_Twostring",
+      "name": "freportn/Ton_Twostring delivery to highpass",
+      "assertions": "say(\"to highpass\"); reward(18156,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/freportn--Ton_Twostring.lua",
+      "sourceSha256": "7f47b8eda38f0659cbfca9645f39df0392adf3972461925b691fb508a6f94132",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "freportn/Ton_Twostring",
+      "name": "freportn/Ton_Twostring delivery I will deliver mail to highpass.",
+      "assertions": "say(\"I will deliver mail to highpass.\"); reward(18156,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/freportn--Ton_Twostring.lua",
+      "sourceSha256": "7f47b8eda38f0659cbfca9645f39df0392adf3972461925b691fb508a6f94132",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "freportn/Ton_Twostring",
+      "name": "freportn/Ton_Twostring delivery qeynos",
+      "assertions": "say(\"qeynos\"); reward(18165,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/freportn--Ton_Twostring.lua",
+      "sourceSha256": "7f47b8eda38f0659cbfca9645f39df0392adf3972461925b691fb508a6f94132",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "freportn/Ton_Twostring",
+      "name": "freportn/Ton_Twostring delivery to qeynos",
+      "assertions": "say(\"to qeynos\"); reward(18165,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/freportn--Ton_Twostring.lua",
+      "sourceSha256": "7f47b8eda38f0659cbfca9645f39df0392adf3972461925b691fb508a6f94132",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "freportn/Ton_Twostring",
+      "name": "freportn/Ton_Twostring delivery I will deliver mail to qeynos.",
+      "assertions": "say(\"I will deliver mail to qeynos.\"); reward(18165,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/freportn--Ton_Twostring.lua",
+      "sourceSha256": "7f47b8eda38f0659cbfca9645f39df0392adf3972461925b691fb508a6f94132",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "freportn/Ton_Twostring",
+      "name": "freportn/Ton_Twostring advertised interested link",
+      "assertions": "say(\"interested\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/freportn--Ton_Twostring.lua",
+      "sourceSha256": "7f47b8eda38f0659cbfca9645f39df0392adf3972461925b691fb508a6f94132",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "highkeep/Lislia_Goldtune",
+      "name": "highkeep/Lislia_Goldtune delivery freeport",
+      "assertions": "say(\"freeport\"); reward(18164,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/highkeep--Lislia_Goldtune.lua",
+      "sourceSha256": "82bf68146bd9aecdd977d55a3932597bc5b694cfeed7833048695e9003bb4cca",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "highkeep/Lislia_Goldtune",
+      "name": "highkeep/Lislia_Goldtune delivery to freeport",
+      "assertions": "say(\"to freeport\"); reward(18164,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/highkeep--Lislia_Goldtune.lua",
+      "sourceSha256": "82bf68146bd9aecdd977d55a3932597bc5b694cfeed7833048695e9003bb4cca",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "highkeep/Lislia_Goldtune",
+      "name": "highkeep/Lislia_Goldtune delivery I will deliver mail to freeport.",
+      "assertions": "say(\"I will deliver mail to freeport.\"); reward(18164,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/highkeep--Lislia_Goldtune.lua",
+      "sourceSha256": "82bf68146bd9aecdd977d55a3932597bc5b694cfeed7833048695e9003bb4cca",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "highkeep/Lislia_Goldtune",
+      "name": "highkeep/Lislia_Goldtune delivery qeynos",
+      "assertions": "say(\"qeynos\"); reward(18154,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/highkeep--Lislia_Goldtune.lua",
+      "sourceSha256": "82bf68146bd9aecdd977d55a3932597bc5b694cfeed7833048695e9003bb4cca",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "highkeep/Lislia_Goldtune",
+      "name": "highkeep/Lislia_Goldtune delivery to qeynos",
+      "assertions": "say(\"to qeynos\"); reward(18154,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/highkeep--Lislia_Goldtune.lua",
+      "sourceSha256": "82bf68146bd9aecdd977d55a3932597bc5b694cfeed7833048695e9003bb4cca",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "highkeep/Lislia_Goldtune",
+      "name": "highkeep/Lislia_Goldtune delivery I will deliver mail to qeynos.",
+      "assertions": "say(\"I will deliver mail to qeynos.\"); reward(18154,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/highkeep--Lislia_Goldtune.lua",
+      "sourceSha256": "82bf68146bd9aecdd977d55a3932597bc5b694cfeed7833048695e9003bb4cca",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "highkeep/Lislia_Goldtune",
+      "name": "highkeep/Lislia_Goldtune advertised interested link",
+      "assertions": "say(\"interested\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/highkeep--Lislia_Goldtune.lua",
+      "sourceSha256": "82bf68146bd9aecdd977d55a3932597bc5b694cfeed7833048695e9003bb4cca",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "innothule/Dark_Deathsinger",
+      "name": "innothule/Dark_Deathsinger delivery qeynos",
+      "assertions": "say(\"qeynos\"); reward(18154,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/innothule--Dark_Deathsinger.lua",
+      "sourceSha256": "a5d4c6fc24e387a511cc99191d2cc9427aa69d3d5636eb5ecfa663e798a25c6a",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "innothule/Dark_Deathsinger",
+      "name": "innothule/Dark_Deathsinger delivery to qeynos",
+      "assertions": "say(\"to qeynos\"); reward(18154,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/innothule--Dark_Deathsinger.lua",
+      "sourceSha256": "a5d4c6fc24e387a511cc99191d2cc9427aa69d3d5636eb5ecfa663e798a25c6a",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "innothule/Dark_Deathsinger",
+      "name": "innothule/Dark_Deathsinger delivery I will deliver mail to qeynos.",
+      "assertions": "say(\"I will deliver mail to qeynos.\"); reward(18154,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/innothule--Dark_Deathsinger.lua",
+      "sourceSha256": "a5d4c6fc24e387a511cc99191d2cc9427aa69d3d5636eb5ecfa663e798a25c6a",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "innothule/Dark_Deathsinger",
+      "name": "innothule/Dark_Deathsinger delivery freeport",
+      "assertions": "say(\"freeport\"); reward(18155,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/innothule--Dark_Deathsinger.lua",
+      "sourceSha256": "a5d4c6fc24e387a511cc99191d2cc9427aa69d3d5636eb5ecfa663e798a25c6a",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "innothule/Dark_Deathsinger",
+      "name": "innothule/Dark_Deathsinger delivery to freeport",
+      "assertions": "say(\"to freeport\"); reward(18155,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/innothule--Dark_Deathsinger.lua",
+      "sourceSha256": "a5d4c6fc24e387a511cc99191d2cc9427aa69d3d5636eb5ecfa663e798a25c6a",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "innothule/Dark_Deathsinger",
+      "name": "innothule/Dark_Deathsinger delivery I will deliver mail to freeport.",
+      "assertions": "say(\"I will deliver mail to freeport.\"); reward(18155,1); equal(calls.exp,0)",
+      "proposedFile": "changes/p99-support-named-fixes/innothule--Dark_Deathsinger.lua",
+      "sourceSha256": "a5d4c6fc24e387a511cc99191d2cc9427aa69d3d5636eb5ecfa663e798a25c6a",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "innothule/Dark_Deathsinger",
+      "name": "innothule/Dark_Deathsinger advertised interested link",
+      "assertions": "say(\"interested\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/innothule--Dark_Deathsinger.lua",
+      "sourceSha256": "a5d4c6fc24e387a511cc99191d2cc9427aa69d3d5636eb5ecfa663e798a25c6a",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "rathemtn/Tabien_the_Goodly",
+      "name": "Tabien interpolates player name",
+      "assertions": "say(\"hail\"); assert(calls.speech[1]:find(\"Reviewer\",1,true)); assert(not calls.speech[1]:find(\"$name\",1,true))",
+      "proposedFile": "changes/p99-support-named-fixes/rathemtn--Tabien_the_Goodly.lua",
+      "sourceSha256": "bc74742517d39c01849e545d0acb73455eaa76b0ab9453aad9d7563fc17f484c",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "freportn/Ton_Twostring",
+      "name": "Ton each independent mail and combined hand-in correct factions",
+      "proposedFile": "changes/p99-support-named-fixes/freportn--Ton_Twostring.lua",
+      "sourceSha256": "7f47b8eda38f0659cbfca9645f39df0392adf3972461925b691fb508a6f94132",
+      "assertions": "trade({18164,18166}); faction(284,10); faction(281,2); faction(262,2); faction(304,-2); faction(285,-2); equal(calls.exp,200); equal(#calls.cash,2); equal(calls.returns,1)"
+    },
+    {
+      "key": "freportn/Ton_Twostring",
+      "name": "Ton incorrect hand-in no reward",
+      "proposedFile": "changes/p99-support-named-fixes/freportn--Ton_Twostring.lua",
+      "sourceSha256": "7f47b8eda38f0659cbfca9645f39df0392adf3972461925b691fb508a6f94132",
+      "assertions": "trade({999}); equal(calls.exp,0); equal(#calls.cash,0); equal(calls.returns,1)"
+    },
+    {
+      "key": "everfrost/Granin_O'Gill",
+      "name": "Granin ration heals once",
+      "proposedFile": "changes/p99-support-named-fixes/everfrost--Granin_O'Gill.lua",
+      "sourceSha256": "1abf37c1f6df61f0adce789833fe087bb0ad32767dc02badd5863d6a7bd89932",
+      "assertions": "trade({13005}); equal(#calls.spells,1); equal(calls.spells[1][1],200); equal(calls.spells[1][2],42); equal(calls.returns,1)"
+    },
+    {
+      "key": "everfrost/Granin_O'Gill",
+      "name": "Granin wrong item returned",
+      "proposedFile": "changes/p99-support-named-fixes/everfrost--Granin_O'Gill.lua",
+      "sourceSha256": "1abf37c1f6df61f0adce789833fe087bb0ad32767dc02badd5863d6a7bd89932",
+      "assertions": "trade({999}); equal(#calls.spells,0); equal(calls.returns,1)"
+    },
+    {
+      "key": "everfrost/Granin_O'Gill",
+      "name": "Granin extra item remains",
+      "proposedFile": "changes/p99-support-named-fixes/everfrost--Granin_O'Gill.lua",
+      "sourceSha256": "1abf37c1f6df61f0adce789833fe087bb0ad32767dc02badd5863d6a7bd89932",
+      "assertions": "trade({13005,999}); equal(#calls.spells,1); equal(remaining[999],1); equal(calls.returns,1)"
+    },
+    {
+      "key": "everfrost/Granin_O'Gill",
+      "name": "Granin repeat ration works",
+      "proposedFile": "changes/p99-support-named-fixes/everfrost--Granin_O'Gill.lua",
+      "sourceSha256": "1abf37c1f6df61f0adce789833fe087bb0ad32767dc02badd5863d6a7bd89932",
+      "assertions": "trade({13005}); trade({13005}); equal(#calls.spells,2); equal(calls.returns,2)"
+    },
+    {
+      "key": "akanon/Lyra_Lyrestringer",
+      "name": "akanon/Lyra_Lyrestringer mail link",
+      "assertions": "say(\"mail\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/akanon--Lyra_Lyrestringer.lua",
+      "sourceSha256": "fb73395c7bfa114de164cc229d7fbf0112502ea3c365627ac1a7713e6e093031",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "akanon/Lyra_Lyrestringer",
+      "name": "akanon/Lyra_Lyrestringer full interested phrase",
+      "assertions": "say(\"I am interested in delivering mail\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/akanon--Lyra_Lyrestringer.lua",
+      "sourceSha256": "fb73395c7bfa114de164cc229d7fbf0112502ea3c365627ac1a7713e6e093031",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "butcher/Siltria_Marwind",
+      "name": "butcher/Siltria_Marwind mail link",
+      "assertions": "say(\"mail\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/butcher--Siltria_Marwind.lua",
+      "sourceSha256": "70648534ac1b3b2484427a63ad6a703324362b8003dc73f7b88bc9c5e90fb065",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "butcher/Siltria_Marwind",
+      "name": "butcher/Siltria_Marwind full interested phrase",
+      "assertions": "say(\"I am interested in delivering mail\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/butcher--Siltria_Marwind.lua",
+      "sourceSha256": "70648534ac1b3b2484427a63ad6a703324362b8003dc73f7b88bc9c5e90fb065",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "erudnext/Ticar_Lorestring",
+      "name": "erudnext/Ticar_Lorestring mail link",
+      "assertions": "say(\"mail\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/erudnext--Ticar_Lorestring.lua",
+      "sourceSha256": "a91104b7c9efda980445a565b3be533c426f5d64a2f36e76ec2a0fd1b33549d1",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "erudnext/Ticar_Lorestring",
+      "name": "erudnext/Ticar_Lorestring full interested phrase",
+      "assertions": "say(\"I am interested in delivering mail\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/erudnext--Ticar_Lorestring.lua",
+      "sourceSha256": "a91104b7c9efda980445a565b3be533c426f5d64a2f36e76ec2a0fd1b33549d1",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "feerrott/Drizda_Tunesinger",
+      "name": "feerrott/Drizda_Tunesinger mail link",
+      "assertions": "say(\"mail\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/feerrott--Drizda_Tunesinger.lua",
+      "sourceSha256": "8ee53b5b046df59fca6ab46e36711826d6aa847f88a24a4fb187ea99775b9973",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "feerrott/Drizda_Tunesinger",
+      "name": "feerrott/Drizda_Tunesinger full interested phrase",
+      "assertions": "say(\"I am interested in delivering mail\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/feerrott--Drizda_Tunesinger.lua",
+      "sourceSha256": "8ee53b5b046df59fca6ab46e36711826d6aa847f88a24a4fb187ea99775b9973",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "freportn/Ton_Twostring",
+      "name": "freportn/Ton_Twostring mail link",
+      "assertions": "say(\"mail\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/freportn--Ton_Twostring.lua",
+      "sourceSha256": "7f47b8eda38f0659cbfca9645f39df0392adf3972461925b691fb508a6f94132",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "freportn/Ton_Twostring",
+      "name": "freportn/Ton_Twostring full interested phrase",
+      "assertions": "say(\"I am interested in delivering mail\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/freportn--Ton_Twostring.lua",
+      "sourceSha256": "7f47b8eda38f0659cbfca9645f39df0392adf3972461925b691fb508a6f94132",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "freportn/Ton_Twostring",
+      "name": "freportn/Ton_Twostring ambiguous deliver shows destinations",
+      "assertions": "say(\"deliver\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/freportn--Ton_Twostring.lua",
+      "sourceSha256": "7f47b8eda38f0659cbfca9645f39df0392adf3972461925b691fb508a6f94132",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "gfaydark/Idia",
+      "name": "gfaydark/Idia mail link",
+      "assertions": "say(\"mail\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/gfaydark--Idia.lua",
+      "sourceSha256": "af8733a8c875aeac710a81a80d0facb678f66a646523e8deca83a795a020b129",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "gfaydark/Idia",
+      "name": "gfaydark/Idia full interested phrase",
+      "assertions": "say(\"I am interested in delivering mail\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/gfaydark--Idia.lua",
+      "sourceSha256": "af8733a8c875aeac710a81a80d0facb678f66a646523e8deca83a795a020b129",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "halas/Marton_Stringsinger",
+      "name": "halas/Marton_Stringsinger mail link",
+      "assertions": "say(\"mail\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/halas--Marton_Stringsinger.lua",
+      "sourceSha256": "a20eb14ee9e1251a84a997c48baf88ca79216ba896452789a6b791cfb273d32f",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "halas/Marton_Stringsinger",
+      "name": "halas/Marton_Stringsinger full interested phrase",
+      "assertions": "say(\"I am interested in delivering mail\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/halas--Marton_Stringsinger.lua",
+      "sourceSha256": "a20eb14ee9e1251a84a997c48baf88ca79216ba896452789a6b791cfb273d32f",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "highkeep/Lislia_Goldtune",
+      "name": "highkeep/Lislia_Goldtune mail link",
+      "assertions": "say(\"mail\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/highkeep--Lislia_Goldtune.lua",
+      "sourceSha256": "82bf68146bd9aecdd977d55a3932597bc5b694cfeed7833048695e9003bb4cca",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "highkeep/Lislia_Goldtune",
+      "name": "highkeep/Lislia_Goldtune full interested phrase",
+      "assertions": "say(\"I am interested in delivering mail\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/highkeep--Lislia_Goldtune.lua",
+      "sourceSha256": "82bf68146bd9aecdd977d55a3932597bc5b694cfeed7833048695e9003bb4cca",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "highkeep/Lislia_Goldtune",
+      "name": "highkeep/Lislia_Goldtune ambiguous deliver shows destinations",
+      "assertions": "say(\"deliver\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/highkeep--Lislia_Goldtune.lua",
+      "sourceSha256": "82bf68146bd9aecdd977d55a3932597bc5b694cfeed7833048695e9003bb4cca",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "innothule/Dark_Deathsinger",
+      "name": "innothule/Dark_Deathsinger mail link",
+      "assertions": "say(\"mail\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/innothule--Dark_Deathsinger.lua",
+      "sourceSha256": "a5d4c6fc24e387a511cc99191d2cc9427aa69d3d5636eb5ecfa663e798a25c6a",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "innothule/Dark_Deathsinger",
+      "name": "innothule/Dark_Deathsinger full interested phrase",
+      "assertions": "say(\"I am interested in delivering mail\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/innothule--Dark_Deathsinger.lua",
+      "sourceSha256": "a5d4c6fc24e387a511cc99191d2cc9427aa69d3d5636eb5ecfa663e798a25c6a",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "innothule/Dark_Deathsinger",
+      "name": "innothule/Dark_Deathsinger ambiguous deliver shows destinations",
+      "assertions": "say(\"deliver\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/innothule--Dark_Deathsinger.lua",
+      "sourceSha256": "a5d4c6fc24e387a511cc99191d2cc9427aa69d3d5636eb5ecfa663e798a25c6a",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "nektulos/Travis_Two_Tone",
+      "name": "nektulos/Travis_Two_Tone mail link",
+      "assertions": "say(\"mail\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/nektulos--Travis_Two_Tone.lua",
+      "sourceSha256": "d2862d0d1496e4bd5abe1fcdb1c6ab9c992b64da492a8e97b1d152505dc53d68",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "nektulos/Travis_Two_Tone",
+      "name": "nektulos/Travis_Two_Tone full interested phrase",
+      "assertions": "say(\"I am interested in delivering mail\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/nektulos--Travis_Two_Tone.lua",
+      "sourceSha256": "d2862d0d1496e4bd5abe1fcdb1c6ab9c992b64da492a8e97b1d152505dc53d68",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "qey2hh1/Mistrana_Two_Notes",
+      "name": "qey2hh1/Mistrana_Two_Notes mail link",
+      "assertions": "say(\"mail\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/qey2hh1--Mistrana_Two_Notes.lua",
+      "sourceSha256": "2d1acda0618c89f03323e07a9d022dde421982cac5c70321d6adae61ea885768",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "qey2hh1/Mistrana_Two_Notes",
+      "name": "qey2hh1/Mistrana_Two_Notes full interested phrase",
+      "assertions": "say(\"I am interested in delivering mail\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/qey2hh1--Mistrana_Two_Notes.lua",
+      "sourceSha256": "2d1acda0618c89f03323e07a9d022dde421982cac5c70321d6adae61ea885768",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "qeynos/Eve_Marsinger",
+      "name": "qeynos/Eve_Marsinger mail link",
+      "assertions": "say(\"mail\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/qeynos--Eve_Marsinger.lua",
+      "sourceSha256": "482ebe989733bd54c073d75b41d68b18b7dc1f164eeb06b3303480223780727c",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "qeynos/Eve_Marsinger",
+      "name": "qeynos/Eve_Marsinger full interested phrase",
+      "assertions": "say(\"I am interested in delivering mail\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/qeynos--Eve_Marsinger.lua",
+      "sourceSha256": "482ebe989733bd54c073d75b41d68b18b7dc1f164eeb06b3303480223780727c",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "qrg/Sivina_Lutewhisper",
+      "name": "qrg/Sivina_Lutewhisper mail link",
+      "assertions": "say(\"mail\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/qrg--Sivina_Lutewhisper.lua",
+      "sourceSha256": "2d1acda0618c89f03323e07a9d022dde421982cac5c70321d6adae61ea885768",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "qrg/Sivina_Lutewhisper",
+      "name": "qrg/Sivina_Lutewhisper full interested phrase",
+      "assertions": "say(\"I am interested in delivering mail\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/qrg--Sivina_Lutewhisper.lua",
+      "sourceSha256": "2d1acda0618c89f03323e07a9d022dde421982cac5c70321d6adae61ea885768",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "rivervale/Silna_Songsmith",
+      "name": "rivervale/Silna_Songsmith mail link",
+      "assertions": "say(\"mail\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/rivervale--Silna_Songsmith.lua",
+      "sourceSha256": "553adecf88834db51715036d48493b27e9ce50d2d29e2288fa5f92f6b9da34f3",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    },
+    {
+      "key": "rivervale/Silna_Songsmith",
+      "name": "rivervale/Silna_Songsmith full interested phrase",
+      "assertions": "say(\"I am interested in delivering mail\"); assert(#calls.speech > 0); for _,n in pairs(calls.rewards) do equal(n,0) end",
+      "proposedFile": "changes/p99-support-named-fixes/rivervale--Silna_Songsmith.lua",
+      "sourceSha256": "553adecf88834db51715036d48493b27e9ce50d2d29e2288fa5f92f6b9da34f3",
+      "setupExtra": "eq.say_link=function(s) return s end; eq.depop=function() calls.depops=calls.depops+1 end"
+    }
+  ]
+}

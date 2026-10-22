@@ -1,0 +1,31 @@
+{
+  "titles": [
+    "Quellious Symbol Quests",
+    "Guild Summons - Temple of Divine Light Cleric"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "partial",
+  "match_status": "partial",
+  "local_quest_keys": [
+    "erudnext/Leraena_Shelyrak",
+    "freportw/Glyssa_Sonshaw",
+    "freeportwest/Glyssa_Sonshaw"
+  ],
+  "proposal": "changes/p99-nz-quellious-dialogue.json",
+  "notes": [
+    "Restore documented Quellious dialogue and align the Glyssa alias with the exact four faction magnitudes.",
+    "Both Glyssa aliases now have220+10/281+2/296-1/330-1, resolved from exported faction names and explicit P99 numbers. Preserve all item/lore identities, canonical Leraena disciple30/7/-7, guard-before-consume level20 requirement, guild-note and other quest branches, and imported unquantified XP. Initiate and Regent magnitudes are retained unverified fallback. Enabled9754/9755 combine eight bone14581/bronze14584 in17090 to14582/14583; no recipe mutation. Full chain read includes unchanged Drigaz exact5/1/1/-1. Guild hail final sentence restored from its own cached page. No loot/world completion claim.",
+    "Leraena row12097 and source are owned only by shared guild proposal, preserving its complete verified hail change. NZ proposal now contains only the two Glyssa rows."
+  ],
+  "verification": {
+    "source": "Cached P99 and effective Lua reviewed; exact complete row preimages and source hashes recorded.",
+    "syntax": "pending",
+    "runtime": "Isolated mock regression pending; full game runtime unavailable.",
+    "ui": "not_run",
+    "connected_chain": "not_run"
+  },
+  "unresolved": [
+    "Ordinary source drops/spawns, recipe live behavior and rendered complete quest path not verified."
+  ],
+  "integrated_proposal": "changes/p99-guild-review/proposal.json"
+}

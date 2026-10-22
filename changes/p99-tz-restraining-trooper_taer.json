@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-restraining-trooper_taer",
+  "summary": "Support documented sign this restraining order phrase alongside existing sign the restraining order, only lore/requirements response. No new reward or itemgrant route; all sequential trade conditions unchanged.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/The_Restraining_Order?action=raw",
+      "note": "Cached 2026-07-17T23:37:55.399Z; revision unavailable; SHA256 e4a24f856e44c7cec752b6501686b06243a9be01bf578245f610362916c467e3. Support documented sign this restraining order phrase alongside existing sign the restraining order, only lore/requirements response. No new reward or itemgrant route; all sequential trade conditions unchanged. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 12787,
+        "zone": "fieldofbone",
+        "name": "Trooper_Taer",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: fieldofbone/Trooper_Taer.pl\n-- items: 18249, 18250\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Hail! I suggest you stay within the walls of Cabilis. This is no place for you. The Field of Bone is far too close.\")\n\telseif e.message:findi(\"sign the restraining order\") then\n\t\te.self:Say(\"Oh, no! My good times have come to an end. Hand me the note and I shall sign it.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 18249}) then\n\t\te.self:Say(\"Ha ha! Look at all the names. Ozlot and Frogzin. What lushes. Here you are. I can't imagine there being any others to sign. This is the entire Cabilis brew brigade. Alas... Disbanded forever.\")\n\t\te.other:SummonItem(18250)\n\t\te.other:Faction(441, 5, 0)\n\t\te.other:Faction(440, 5, 0)\n\t\te.other:Faction(445, 5, 0)\n\t\te.other:Faction(442, 5, 0)\n\t\te.other:Faction(444, 5, 0)\n\t\te.other:AddEXP(200)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 12787,
+        "zone": "fieldofbone",
+        "name": "Trooper_Taer",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: fieldofbone/Trooper_Taer.pl\n-- items: 18249, 18250\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Hail! I suggest you stay within the walls of Cabilis. This is no place for you. The Field of Bone is far too close.\")\n\telseif e.message:findi(\"sign the restraining order\") or e.message:findi(\"sign this restraining order\") then\n\t\te.self:Say(\"Oh, no! My good times have come to an end. Hand me the note and I shall sign it.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 18249}) then\n\t\te.self:Say(\"Ha ha! Look at all the names. Ozlot and Frogzin. What lushes. Here you are. I can't imagine there being any others to sign. This is the entire Cabilis brew brigade. Alas... Disbanded forever.\")\n\t\te.other:SummonItem(18250)\n\t\te.other:Faction(441, 5, 0)\n\t\te.other:Faction(440, 5, 0)\n\t\te.other:Faction(445, 5, 0)\n\t\te.other:Faction(442, 5, 0)\n\t\te.other:Faction(444, 5, 0)\n\t\te.other:AddEXP(200)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/fieldofbone/Trooper_Taer.lua",
+      "beforeSha256": "d67cc06f2e68cca98a9301cf202c5bdf8e45b4bcf1c8b62c43813f27947a1fde",
+      "proposedFile": "changes/p99-tz-restraining-trooper_taer/fieldofbone--Trooper_Taer.lua",
+      "afterSha256": "ae65e7c228e70242b575aa396c5a7cb0e5cc16988eabcb672f9824a63d67cba1"
+    }
+  ]
+}

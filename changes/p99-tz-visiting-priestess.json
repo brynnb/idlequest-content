@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-visiting-priestess",
+  "summary": "Restore documented champion and heard-this-relic lore prompts. Four staffs create one ground scroll at NPC coordinates rather than directly summoning; preserve all faction/XP fallbacks and depop. Omitted decay uses runtime default300000ms, unknown P99 duration. Whole-inventory pickup runtime and split-hand-in MQ remain unverified.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/The_Visiting_Priestess?action=raw",
+      "note": "Cached 2026-07-17T23:38:51.949Z; revision unavailable; SHA256 afb57799ad1e5aa37e4a4b19e08bac0fb4cf15bb8cff5b6cbd0d4021776a98d2. Restore documented champion and heard-this-relic lore prompts. Four staffs create one ground scroll at NPC coordinates rather than directly summoning; preserve all faction/XP fallbacks and depop. Omitted decay uses runtime default300000ms, unknown P99 duration. Whole-inventory pickup runtime and split-hand-in MQ remain unverified. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 18357,
+        "zone": "najena",
+        "name": "a_visiting_priestess",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: najena/a_visiting_priestess.pl\n-- items: 6323, 6324, 6335, 6336, 18401\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Hail, \" .. e.other:GetName() .. \"! Are you the champion Najena sent for?\")\n\telseif e.message:findi(\"champion of Najena\") then\n\t\te.self:Say(\"Very well champion.  Have you heard of The Staff of Ankexfen?\")\n\telseif e.message:findi(\"not heard of the staff\") then\n\t\te.self:Say(\"No? Why am I not surprised? You look too weak and frail to be of any use. You probably could not even best one of those intoxicated, weak-minded goblins controlled by that pathetic eye called Xxorb. Away with you, useless creature!\")\n\telseif e.message:findi(\"happened to the Ankexfen\") then\n\t\te.self:Say(\"The wrath of the unnamed gods was grim. Thousands of ogres were instantly slain - their empire left to crumble under the hand of retribution. The giants were flung across the face of Norrath like seeds to the wind. The Ankexfen's fates were more severe. The entire race was exterminated, but from the ashes were born the four goblin races. What is known is that each goblin clan was stripped of any knowledge and was neither informed of the other clans nor of their own origins. Each clan was then transported to a separate environment to help preserve the gods' will. However, the gods were not without mercy and each clan was granted a section of the staff. Upon each staff, a crystal was placed. These staves served to aid the goblin clans in understanding their environments. These remnants of the staff of Ankexfen are what I desire. Bring them to me and the Priests of Innoruuk shall reward you.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 6323, item2 = 6324, item3 = 6335, item4 = 6336}) then\n\t\te.self:Emote(\"cackles with glee as she slowly assembles the runed rods, and with a muttered incantation and a flash of light, disappears, leaving only a note that slowly drifts to the ground.\")\n\t\te.other:SummonItem(18401)\n\t\te.other:Faction(340, 20, 0)\n\t\te.other:Faction(278, 20, 0)\n\t\te.other:Faction(362, -60, 0)\n\t\te.other:Faction(226, -60, 0)\n\t\te.other:Faction(341, -60, 0)\n\t\te.other:Faction(1522, -60, 0)\n\t\te.other:AddEXP(132775)\n\t\teq.depop_with_timer()\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 18357,
+        "zone": "najena",
+        "name": "a_visiting_priestess",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: najena/a_visiting_priestess.pl\n-- items: 6323, 6324, 6335, 6336, 18401\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Hail, \" .. e.other:GetName() .. \"! Are you the champion Najena sent for?\")\n\telseif e.message:findi(\"champion\") then\n\t\te.self:Say(\"Very well champion.  Have you heard of The Staff of Ankexfen?\")\n\telseif e.message:findi(\"not heard of the staff\") or e.message:findi(\"not heard of this relic\") then\n\t\te.self:Say(\"No? Why am I not surprised? You look too weak and frail to be of any use. You probably could not even best one of those intoxicated, weak-minded goblins controlled by that pathetic eye called Xxorb. Away with you, useless creature!\")\n\telseif e.message:findi(\"have heard of this relic\") then\n\t\te.self:Say(\"Long ago, there existed a race known as the Ankexfen, after their progenitor Hazeg Ankexfen, who were created by Rallos Zek during the Elder Age. This race was quite intelligent and cunning. They quickly expanded their knowledge of magic and the other planes, yet constantly yearned for more power. So, along with their ogre counterparts, they set out to master the Plane of Earth. Alas, their attempts proved futile and the combined might of the other gods forced Rallos Zek back to the Planes of Power, leaving his creations to the whims of the other gods.\")\n\telseif e.message:findi(\"happened to the Ankexfen\") then\n\t\te.self:Say(\"The wrath of the unnamed gods was grim. Thousands of ogres were instantly slain - their empire left to crumble under the hand of retribution. The giants were flung across the face of Norrath like seeds to the wind. The Ankexfen's fates were more severe. The entire race was exterminated, but from the ashes were born the four goblin races. What is known is that each goblin clan was stripped of any knowledge and was neither informed of the other clans nor of their own origins. Each clan was then transported to a separate environment to help preserve the gods' will. However, the gods were not without mercy and each clan was granted a section of the staff. Upon each staff, a crystal was placed. These staves served to aid the goblin clans in understanding their environments. These remnants of the staff of Ankexfen are what I desire. Bring them to me and the Priests of Innoruuk shall reward you.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 6323, item2 = 6324, item3 = 6335, item4 = 6336}) then\n\t\te.self:Emote(\"cackles with glee as she slowly assembles the runed rods, and with a muttered incantation and a flash of light, disappears, leaving only a note that slowly drifts to the ground.\")\n\t\teq.create_ground_object(18401, e.self:GetX(), e.self:GetY(), e.self:GetZ(), e.self:GetHeading()) -- Runtime default decay300000ms is not P99-established.\n\t\te.other:Faction(340, 20, 0)\n\t\te.other:Faction(278, 20, 0)\n\t\te.other:Faction(362, -60, 0)\n\t\te.other:Faction(226, -60, 0)\n\t\te.other:Faction(341, -60, 0)\n\t\te.other:Faction(1522, -60, 0)\n\t\te.other:AddEXP(132775)\n\t\teq.depop_with_timer()\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/najena/a_visiting_priestess.lua",
+      "beforeSha256": "735988902901571941f08363edc487127f2a3827e471562f38d4a02189b1330d",
+      "proposedFile": "changes/p99-tz-visiting-priestess/najena--a_visiting_priestess.lua",
+      "afterSha256": "4a69dc1c53eb295f8f980db901440bf6941ca66acd1580a42e842b1963441427"
+    }
+  ]
+}

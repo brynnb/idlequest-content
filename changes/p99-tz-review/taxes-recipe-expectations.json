@@ -1,0 +1,76 @@
+[
+  {
+    "recipeId": 13008,
+    "nofail": 1,
+    "enabled": 1,
+    "mustLearn": 0,
+    "replaceContainer": 1,
+    "components": [
+      [
+        13170,
+        1
+      ],
+      [
+        13171,
+        1
+      ],
+      [
+        13172,
+        1
+      ],
+      [
+        13173,
+        1
+      ],
+      [
+        13174,
+        1
+      ],
+      [
+        13175,
+        1
+      ],
+      [
+        13176,
+        1
+      ],
+      [
+        13177,
+        1
+      ],
+      [
+        13178,
+        1
+      ],
+      [
+        13179,
+        1
+      ]
+    ],
+    "containers": [
+      [
+        17012,
+        1
+      ]
+    ],
+    "outputs": [
+      [
+        13181,
+        1
+      ]
+    ],
+    "failureOutputs": [],
+    "evidence": {
+      "title": "Taxes",
+      "url": "https://wiki.project1999.com/Taxes?action=raw",
+      "fetchedAt": "2026-07-17T23:34:37.004Z",
+      "revision": null,
+      "sha256": "6fc59af937f3b2dfa4313beac8b349112c500bdbff0c89109de222dc34860c9b",
+      "bytes": 10677,
+      "source": "raw-pages/taxes-7e36e3192e.json",
+      "cachePath": "reference/p99-wiki/raw-pages/taxes-7e36e3192e.wiki"
+    },
+    "reviewArtifact": "changes/p99-tz-review/taxes-recipe-review.json",
+    "limits": "Exact ten distinct payments, container and quest output manually checked. Preserve existing nofail/replacement metadata; runtime world container and crafting remain unverified."
+  }
+]

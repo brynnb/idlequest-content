@@ -1,0 +1,310 @@
+{
+  "ingredient_items": [
+    {
+      "id": 22571,
+      "Name": "Thick Caustic Liquid"
+    },
+    {
+      "id": 31828,
+      "Name": "Venomous Spikefish Poison Sac"
+    },
+    {
+      "id": 6950,
+      "Name": "Ancient Snake Fang"
+    },
+    {
+      "id": 6949,
+      "Name": "Ancient Venom Sack"
+    },
+    {
+      "id": 22570,
+      "Name": "Necromancer Blood"
+    }
+  ],
+  "npcs": [
+    {
+      "id": 100076,
+      "name": "#Slyder_the_Ancient",
+      "loottable_id": 649,
+      "exclude": 1
+    },
+    {
+      "id": 414090,
+      "name": "a_venomous_spikefish",
+      "loottable_id": 93236,
+      "exclude": 1
+    },
+    {
+      "id": 74083,
+      "name": "a_venomous_spikefish",
+      "loottable_id": 0,
+      "exclude": 1
+    },
+    {
+      "id": 100188,
+      "name": "a_heretic_invader",
+      "loottable_id": 2001244,
+      "exclude": 1
+    }
+  ],
+  "loottable_entries": [
+    {
+      "loottable_id": 93236,
+      "lootdrop_id": 111779,
+      "multiplier": 1,
+      "droplimit": 1,
+      "mindrop": 0,
+      "probability": 100
+    },
+    {
+      "loottable_id": 2001244,
+      "lootdrop_id": 2001345,
+      "multiplier": 1,
+      "droplimit": 1,
+      "mindrop": 1,
+      "probability": 32.4
+    },
+    {
+      "loottable_id": 2001244,
+      "lootdrop_id": 2001349,
+      "multiplier": 1,
+      "droplimit": 1,
+      "mindrop": 1,
+      "probability": 100
+    },
+    {
+      "loottable_id": 2001244,
+      "lootdrop_id": 4549,
+      "multiplier": 1,
+      "droplimit": 0,
+      "mindrop": 0,
+      "probability": 100
+    },
+    {
+      "loottable_id": 2001244,
+      "lootdrop_id": 4550,
+      "multiplier": 1,
+      "droplimit": 1,
+      "mindrop": 0,
+      "probability": 100
+    },
+    {
+      "loottable_id": 649,
+      "lootdrop_id": 1399,
+      "multiplier": 1,
+      "droplimit": 1,
+      "mindrop": 0,
+      "probability": 100
+    },
+    {
+      "loottable_id": 649,
+      "lootdrop_id": 1398,
+      "multiplier": 1,
+      "droplimit": 1,
+      "mindrop": 1,
+      "probability": 100
+    }
+  ],
+  "ingredient_lootdrops": [
+    {
+      "lootdrop_id": 2001345,
+      "item_id": 22570,
+      "item_charges": 1,
+      "equip_item": 0,
+      "chance": 6.2,
+      "disabled_chance": 0,
+      "trivial_min_level": 0,
+      "trivial_max_level": 0,
+      "multiplier": 1,
+      "npc_min_level": 0,
+      "npc_max_level": 0,
+      "min_expansion": 2,
+      "max_expansion": -1,
+      "content_flags": null,
+      "content_flags_disabled": null
+    },
+    {
+      "lootdrop_id": 111779,
+      "item_id": 31828,
+      "item_charges": 1,
+      "equip_item": 1,
+      "chance": 50,
+      "disabled_chance": 0,
+      "trivial_min_level": 0,
+      "trivial_max_level": 0,
+      "multiplier": 1,
+      "npc_min_level": 0,
+      "npc_max_level": 0,
+      "min_expansion": -1,
+      "max_expansion": -1,
+      "content_flags": null,
+      "content_flags_disabled": null
+    },
+    {
+      "lootdrop_id": 1398,
+      "item_id": 6950,
+      "item_charges": 1,
+      "equip_item": 1,
+      "chance": 50,
+      "disabled_chance": 0,
+      "trivial_min_level": 0,
+      "trivial_max_level": 0,
+      "multiplier": 1,
+      "npc_min_level": 0,
+      "npc_max_level": 0,
+      "min_expansion": -1,
+      "max_expansion": -1,
+      "content_flags": null,
+      "content_flags_disabled": null
+    },
+    {
+      "lootdrop_id": 1399,
+      "item_id": 6949,
+      "item_charges": 1,
+      "equip_item": 0,
+      "chance": 29.7,
+      "disabled_chance": 0,
+      "trivial_min_level": 0,
+      "trivial_max_level": 0,
+      "multiplier": 2,
+      "npc_min_level": 0,
+      "npc_max_level": 0,
+      "min_expansion": -1,
+      "max_expansion": -1,
+      "content_flags": null,
+      "content_flags_disabled": null
+    }
+  ],
+  "recipes": [
+    {
+      "id": 3784,
+      "name": "Bloodclaw Scimitar",
+      "tradeskill": 63,
+      "skillneeded": 0,
+      "trivial": 0,
+      "nofail": 1,
+      "replace_container": 0,
+      "notes": "Created by Giren",
+      "must_learn": 0,
+      "learned_by_item_id": 0,
+      "quest": 0,
+      "enabled": 0,
+      "show_in_advanced": 1,
+      "min_expansion": -1,
+      "max_expansion": -1,
+      "content_flags": null,
+      "content_flags_disabled": null,
+      "category": "General"
+    },
+    {
+      "id": 3783,
+      "name": "Bloodclaw Long Sword",
+      "tradeskill": 63,
+      "skillneeded": 0,
+      "trivial": 0,
+      "nofail": 1,
+      "replace_container": 0,
+      "notes": "Created by Giren",
+      "must_learn": 0,
+      "learned_by_item_id": 0,
+      "quest": 0,
+      "enabled": 0,
+      "show_in_advanced": 1,
+      "min_expansion": -1,
+      "max_expansion": -1,
+      "content_flags": null,
+      "content_flags_disabled": null,
+      "category": "General"
+    }
+  ],
+  "recipe_entries": [
+    {
+      "id": 38222,
+      "recipe_id": 3784,
+      "item_id": 2565,
+      "successcount": 1,
+      "failcount": 0,
+      "componentcount": 0,
+      "salvagecount": 0,
+      "iscontainer": 0,
+      "item_name": "Bloodclaw Scimitar"
+    },
+    {
+      "id": 38217,
+      "recipe_id": 3783,
+      "item_id": 22571,
+      "successcount": 0,
+      "failcount": 0,
+      "componentcount": 1,
+      "salvagecount": 1,
+      "iscontainer": 0,
+      "item_name": "Thick Caustic Liquid"
+    },
+    {
+      "id": 38223,
+      "recipe_id": 3784,
+      "item_id": 17,
+      "successcount": 0,
+      "failcount": 0,
+      "componentcount": 0,
+      "salvagecount": 0,
+      "iscontainer": 1,
+      "item_name": null
+    },
+    {
+      "id": 38220,
+      "recipe_id": 3784,
+      "item_id": 5009,
+      "successcount": 0,
+      "failcount": 0,
+      "componentcount": 1,
+      "salvagecount": 1,
+      "iscontainer": 0,
+      "item_name": null
+    },
+    {
+      "id": 38219,
+      "recipe_id": 3783,
+      "item_id": 17,
+      "successcount": 0,
+      "failcount": 0,
+      "componentcount": 0,
+      "salvagecount": 0,
+      "iscontainer": 1,
+      "item_name": null
+    },
+    {
+      "id": 38221,
+      "recipe_id": 3784,
+      "item_id": 22571,
+      "successcount": 0,
+      "failcount": 0,
+      "componentcount": 1,
+      "salvagecount": 1,
+      "iscontainer": 0,
+      "item_name": "Thick Caustic Liquid"
+    },
+    {
+      "id": 38216,
+      "recipe_id": 3783,
+      "item_id": 5002,
+      "successcount": 0,
+      "failcount": 0,
+      "componentcount": 1,
+      "salvagecount": 1,
+      "iscontainer": 0,
+      "item_name": null
+    },
+    {
+      "id": 38218,
+      "recipe_id": 3783,
+      "item_id": 2567,
+      "successcount": 1,
+      "failcount": 0,
+      "componentcount": 0,
+      "salvagecount": 0,
+      "iscontainer": 0,
+      "item_name": "Bloodclaw Long Sword"
+    }
+  ]
+}

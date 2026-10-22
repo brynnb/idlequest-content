@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-restraining-trooper_gummin",
+  "summary": "Support documented sign this restraining order phrase alongside existing sign the restraining order, only lore/requirements response. No new reward or itemgrant route; all sequential trade conditions unchanged.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/The_Restraining_Order?action=raw",
+      "note": "Cached 2026-07-17T23:37:55.399Z; revision unavailable; SHA256 e4a24f856e44c7cec752b6501686b06243a9be01bf578245f610362916c467e3. Support documented sign this restraining order phrase alongside existing sign the restraining order, only lore/requirements response. No new reward or itemgrant route; all sequential trade conditions unchanged. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 19361,
+        "zone": "fieldofbone",
+        "name": "Trooper_Gummin",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: fieldofbone/Trooper_Gummin.pl\n-- items: 18242, 12463, 18243\n\nlocal function legion_faction(e)\n\te.other:Faction(441, 5, 0)\n\te.other:Faction(440, 5, 0)\n\te.other:Faction(445, 5, 0)\n\te.other:Faction(442, 5, 0)\n\te.other:Faction(444, 5, 0)\nend\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Beware the bone field beyond the path. It is said that the bones of a thousand fallen warriors walk its grounds at night.\")\n\telseif e.message:findi(\"sign the restraining order\") then\n\t\te.self:Say(\"Blast! The masters have condemned me to a life of sobriety and bloodshed! At least I still have bloodshed. But I would like one last drink. I would like a bottle of Legion Lager from Cabilis. Bring me the lager and the legion order and then I shall sign it.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 18242, item2 = 12463}) then\n\t\te.self:Emote(\"slowly signs the order. '...Love, Innoruuk. There you go. Now run along. Let me enjoy my last brew alone.'\")\n\t\te.other:SummonItem(18243)\n\t\tlegion_faction(e)\n\t\te.other:AddEXP(500)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 18242}) then\n\t\te.self:Say(\"What?! I need the Legion Lager and the legion order.\")\n\t\te.other:SummonItem(18242)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 12463}) then\n\t\te.self:Say(\"What?! I need the Legion Lager and the legion order.\")\n\t\te.other:SummonItem(12463)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 19361,
+        "zone": "fieldofbone",
+        "name": "Trooper_Gummin",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: fieldofbone/Trooper_Gummin.pl\n-- items: 18242, 12463, 18243\n\nlocal function legion_faction(e)\n\te.other:Faction(441, 5, 0)\n\te.other:Faction(440, 5, 0)\n\te.other:Faction(445, 5, 0)\n\te.other:Faction(442, 5, 0)\n\te.other:Faction(444, 5, 0)\nend\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Beware the bone field beyond the path. It is said that the bones of a thousand fallen warriors walk its grounds at night.\")\n\telseif e.message:findi(\"sign the restraining order\") or e.message:findi(\"sign this restraining order\") then\n\t\te.self:Say(\"Blast! The masters have condemned me to a life of sobriety and bloodshed! At least I still have bloodshed. But I would like one last drink. I would like a bottle of Legion Lager from Cabilis. Bring me the lager and the legion order and then I shall sign it.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 18242, item2 = 12463}) then\n\t\te.self:Emote(\"slowly signs the order. '...Love, Innoruuk. There you go. Now run along. Let me enjoy my last brew alone.'\")\n\t\te.other:SummonItem(18243)\n\t\tlegion_faction(e)\n\t\te.other:AddEXP(500)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 18242}) then\n\t\te.self:Say(\"What?! I need the Legion Lager and the legion order.\")\n\t\te.other:SummonItem(18242)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 12463}) then\n\t\te.self:Say(\"What?! I need the Legion Lager and the legion order.\")\n\t\te.other:SummonItem(12463)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/fieldofbone/Trooper_Gummin.lua",
+      "beforeSha256": "fe25a55ade02e6418d0fa339e98e52e0109150d19141b0614efbe29f39734b2f",
+      "proposedFile": "changes/p99-tz-restraining-trooper_gummin/fieldofbone--Trooper_Gummin.lua",
+      "afterSha256": "297e2350d92754aa97579c87e3f35f188457f161ee1471ea14502f017eb7607f"
+    }
+  ]
+}

@@ -1,0 +1,2586 @@
+{
+  "reviewedAt": "2026-10-22",
+  "scope": "Exactly46 assigned existing Lua sources, full bodies reviewed; one prior-owned reference. No NPC rows, no private runtime material.",
+  "counts": {
+    "unresolved_after_full_source_and_bounded_evidence_review": 26,
+    "prior_owned_reference": 1,
+    "positive_later_or_custom_event_source_only_exclusion": 17,
+    "unchanged_exact_p99_service_documented": 1,
+    "mixed_classic_candidate_preserved_later_branch_excluded": 1
+  },
+  "records": [
+    {
+      "key": "akanon/Exterminator_VIII",
+      "questId": 14897,
+      "baselineFile": "effective/quests/akanon/Exterminator_VIII.lua",
+      "baselineSourceSha256": "b56c9692b4caaa18f7e2a66f4eafad150e9eb7987871d7ecb19946b9c1dc6dcc",
+      "fullSourceReviewed": true,
+      "handlersReviewed": [
+        "event_say",
+        "event_trade"
+      ],
+      "sourceLines": 24,
+      "sourceSpecificReview": "Clockwork rat-leg quartet 10967 grants coin/XP/factions. The VII-titled NPC page actually names VIII, but documents no hand-in values.",
+      "cachedActorEvidence": [
+        {
+          "title": "Exterminator VII",
+          "url": "https://wiki.project1999.com/Exterminator_VII?action=raw",
+          "fetchedAt": "2026-08-12T18:39:59.517Z",
+          "revision": null,
+          "sha256": "084f69b937baf70b83285d08ec01479fd408862f270a69b73a292bfce537022b",
+          "bytes": 2356,
+          "source": "npc-pages/exterminator-vii-55b5129797.json",
+          "cachePath": "reference/p99-wiki/npc-pages/exterminator-vii-55b5129797.wiki",
+          "match": "normalized full NPC name in title/body; identity still requires verification"
+        }
+      ],
+      "cachedItemNavigation": {
+        "key": "akanon/Exterminator_VIII",
+        "itemNameMatches": [
+          {
+            "id": 10967,
+            "name": "Clockwork Rat Leg Section",
+            "pages": []
+          }
+        ]
+      },
+      "action": "unchanged",
+      "disposition": "unresolved_after_full_source_and_bounded_evidence_review",
+      "evidenceIds": [
+        "rodents",
+        "sahizz"
+      ],
+      "reason": "Contemporary 2003 city-vermin accounts suggest later family, but exact actor/version timing remains insufficient; actor wiki pages may exist without exchange documentation. Preserve distinct factions, XP, coin and unrelated combat/slay callbacks rather than extrapolate one actor or database entry date to all."
+    },
+    {
+      "key": "akanon/Lobal_Postugger",
+      "questId": 18458,
+      "baselineFile": "effective/quests/akanon/Lobal_Postugger.lua",
+      "baselineSourceSha256": "7847baf7bdb15ca989b3bc62ea8f72163709a2b529fecb09e714562d9acbb629",
+      "fullSourceReviewed": true,
+      "handlersReviewed": [
+        "event_say",
+        "event_trade"
+      ],
+      "sourceLines": 22,
+      "sourceSpecificReview": "Bundle of Poisons 9470\u2192Dip Resist Sketch 24096. P99 confirms rogue guildmaster only, not this poison-recipe exchange.",
+      "cachedActorEvidence": [
+        {
+          "title": "Lobal Postugger",
+          "url": "https://wiki.project1999.com/Lobal_Postugger?action=raw",
+          "fetchedAt": "2026-08-12T19:58:11.921Z",
+          "revision": null,
+          "sha256": "555066cc8bbfce6162631803aeb3fcab746d1d514cfa27ad5e17e49f7b4d65f9",
+          "bytes": 977,
+          "source": "npc-pages/lobal-postugger-22e7804738.json",
+          "cachePath": "reference/p99-wiki/npc-pages/lobal-postugger-22e7804738.wiki",
+          "match": "normalized full NPC name in title/body; identity still requires verification"
+        }
+      ],
+      "cachedItemNavigation": {
+        "key": "akanon/Lobal_Postugger",
+        "itemNameMatches": [
+          {
+            "id": 9470,
+            "name": "Bundle of Poisons",
+            "pages": []
+          },
+          {
+            "id": 24096,
+            "name": "Dip Resist Sketch",
+            "pages": []
+          }
+        ]
+      },
+      "action": "unchanged",
+      "disposition": "unresolved_after_full_source_and_bounded_evidence_review",
+      "evidenceIds": [
+        "helper-lobal-sketch-later",
+        "helper-lobal-exact-exchange"
+      ],
+      "reason": "Original source-specific uncertainty remains after full callback review, cached actor/item evidence and bounded public chain research. Absence or other emulator numeric values do not establish P99 parity."
+    },
+    {
+      "key": "befallen/#Sir_Ariam_Arcanum",
+      "questId": 19363,
+      "baselineFile": "effective/quests/befallen/%23Sir_Ariam_Arcanum.lua",
+      "baselineSourceSha256": "bdffaf1403081d322ce431b3fe95329592f449cc43c7b50caf384eb64a44625a",
+      "fullSourceReviewed": true,
+      "handlersReviewed": [
+        "spawn_event",
+        "event_say",
+        "event_trade",
+        "event_timer"
+      ],
+      "sourceLines": 35,
+      "sourceSpecificReview": "Sir Ariam bridle/token chain 31492/18474/31493, with spawn_event and timed depop; do not repair an unverified P99 branch merely from a code smell.",
+      "cachedActorEvidence": [],
+      "cachedItemNavigation": {
+        "key": "befallen/#Sir_Ariam_Arcanum",
+        "itemNameMatches": [
+          {
+            "id": 18474,
+            "name": "Scroll of the Burning Dead",
+            "pages": []
+          },
+          {
+            "id": 31492,
+            "name": "Ghostly Bridle",
+            "pages": []
+          },
+          {
+            "id": 31493,
+            "name": "Arrialla's Expended Token",
+            "pages": []
+          }
+        ]
+      },
+      "action": "unchanged",
+      "disposition": "prior_owned_reference",
+      "evidenceIds": [],
+      "reason": "Source-only disable owned by changes/p99-final-chain-closure.json; no duplicate proposal.",
+      "owner": "changes/p99-final-chain-closure.json"
+    },
+    {
+      "key": "befallen/Zeek",
+      "questId": 16085,
+      "baselineFile": "effective/quests/befallen/Zeek.lua",
+      "baselineSourceSha256": "a113e5cc918001da1aa90125c4cb58ad5f441b2c228360078fe97df6effb6dfe",
+      "fullSourceReviewed": true,
+      "handlersReviewed": [
+        "event_say",
+        "event_trade"
+      ],
+      "sourceLines": 17,
+      "sourceSpecificReview": "Four clue pages 18651\u201318654\u2192crate 13984. P99 Zeek page expressly requests confirmation of his presence, not definitive absence.",
+      "cachedActorEvidence": [
+        {
+          "title": "Zeek",
+          "url": "https://wiki.project1999.com/Zeek?action=raw",
+          "fetchedAt": "2026-08-12T21:40:51.804Z",
+          "revision": null,
+          "sha256": "be2ecdda163dcbf20379427687de6be6bd8b8574cb15dac1506581fddb4db994",
+          "bytes": 772,
+          "source": "npc-pages/zeek-4759a42fc4.json",
+          "cachePath": "reference/p99-wiki/npc-pages/zeek-4759a42fc4.wiki",
+          "match": "normalized full NPC name in title/body; identity still requires verification"
+        }
+      ],
+      "cachedItemNavigation": {
+        "key": "befallen/Zeek",
+        "itemNameMatches": [
+          {
+            "id": 13984,
+            "name": "Crate of Potions",
+            "pages": []
+          },
+          {
+            "id": 18651,
+            "name": "Note to the Troll",
+            "pages": []
+          },
+          {
+            "id": 18652,
+            "name": "First Riddle for the Troll",
+            "pages": [
+              "Gollee",
+              "Himmel",
+              "Initiate Pool",
+              "Initiate Umbra"
+            ]
+          },
+          {
+            "id": 18653,
+            "name": "Second Riddle for the Troll",
+            "pages": [
+              "A Fire Drake"
+            ]
+          },
+          {
+            "id": 18654,
+            "name": "Third Riddle for the Troll",
+            "pages": []
+          }
+        ]
+      },
+      "action": "unchanged",
+      "disposition": "unresolved_after_full_source_and_bounded_evidence_review",
+      "evidenceIds": [],
+      "reason": "Original source-specific uncertainty remains after full callback review, cached actor/item evidence and bounded public chain research. Absence or other emulator numeric values do not establish P99 parity."
+    },
+    {
+      "key": "butcher/Dapper_Blackhammer",
+      "questId": 19781,
+      "baselineFile": "effective/quests/butcher/Dapper_Blackhammer.lua",
+      "baselineSourceSha256": "2e3bd9b53d264bbf57a94e5363f086432d5605736b9fd62cd800d8003f7653f9",
+      "fullSourceReviewed": true,
+      "handlersReviewed": [
+        "event_say",
+        "event_trade"
+      ],
+      "sourceLines": 26,
+      "sourceSpecificReview": "Rozzut's Whistler 6551 exchange requires ore 12880, nimble gem 6552,500pp and level 40; alternate branch suspiciously grants same reward and refunds. Scope not established, so no speculative repair.",
+      "cachedActorEvidence": [],
+      "cachedItemNavigation": {
+        "key": "butcher/Dapper_Blackhammer",
+        "itemNameMatches": [
+          {
+            "id": 6551,
+            "name": "Rozzut's Whistler",
+            "pages": []
+          },
+          {
+            "id": 6552,
+            "name": "Gem of Nimbleness",
+            "pages": []
+          },
+          {
+            "id": 12880,
+            "name": "Frontier Ore",
+            "pages": []
+          }
+        ]
+      },
+      "action": "disable_preserve_full_body",
+      "disposition": "positive_later_or_custom_event_source_only_exclusion",
+      "evidenceIds": [
+        "whistler"
+      ],
+      "reason": "All dialogue and level-conditioned hand-ins belong to Rozzut Whistler; developer P99 research identifies 2002 chain. Preserve suspicious low-level refund/reward branch only as disabled history.",
+      "upstreamBaselineFile": "sources/projecteq/butcher/Dapper_Blackhammer.lua",
+      "upstreamBaselineSourceSha256": "2e3bd9b53d264bbf57a94e5363f086432d5605736b9fd62cd800d8003f7653f9",
+      "proposedFile": "changes/p99-final-uncertainty/butcher--Dapper_Blackhammer.lua",
+      "proposedSourceSha256": "e3a07532fff688257688fc47b989e254605b004a4584d55bc1b3894879c68fa0",
+      "proposedEnabled": 0
+    },
+    {
+      "key": "cabeast/Exterminator_Sahizz",
+      "questId": 18068,
+      "baselineFile": "effective/quests/cabeast/Exterminator_Sahizz.lua",
+      "baselineSourceSha256": "2302a1be8e127b7a2403fdb7e6b759d3f6900a7a6d009295271311761a4288ee",
+      "fullSourceReviewed": true,
+      "handlersReviewed": [
+        "event_say",
+        "event_trade"
+      ],
+      "sourceLines": 24,
+      "sourceSpecificReview": "Four loose scales 12466\u2192coin/XP/Cabilis faction. No documented P99 hand-in located; preserve numeric unknowns.",
+      "cachedActorEvidence": [],
+      "cachedItemNavigation": {
+        "key": "cabeast/Exterminator_Sahizz",
+        "itemNameMatches": [
+          {
+            "id": 12466,
+            "name": "Loose Scale",
+            "pages": [
+              "Shestar's Scaled Coif Quest",
+              "A scaled wolf",
+              "A scaled wolf cub",
+              "A scaled wolf elder",
+              "A scaled wolf hunter",
+              "A scaled wolf prowler",
+              "A scaled wolf pup",
+              "A scaled wolf stalker",
+              "A scaled wolf tracker",
+              "A young scaled wolf"
+            ]
+          }
+        ]
+      },
+      "action": "unchanged",
+      "disposition": "unresolved_after_full_source_and_bounded_evidence_review",
+      "evidenceIds": [
+        "rodents",
+        "sahizz"
+      ],
+      "reason": "Contemporary 2003 city-vermin accounts suggest later family, but exact actor/version timing remains insufficient; actor wiki pages may exist without exchange documentation. Preserve distinct factions, XP, coin and unrelated combat/slay callbacks rather than extrapolate one actor or database entry date to all."
+    },
+    {
+      "key": "cazicthule/48255",
+      "questId": 15090,
+      "baselineFile": "effective/quests/cazicthule/48255.lua",
+      "baselineSourceSha256": "a216aed3f10e5f53954d58ca3090a496b68cf75c4ad5a8746af2e5f1c8c0eaf5",
+      "fullSourceReviewed": true,
+      "handlersReviewed": [
+        "event_trade",
+        "event_spawn",
+        "event_timer"
+      ],
+      "sourceLines": 19,
+      "sourceSpecificReview": "Numeric 48255 is Gimlik;8723\u2192five-way random CT-revamp equipment. Identity and era must be established beyond source path.",
+      "cachedActorEvidence": [],
+      "cachedItemNavigation": {
+        "key": "cazicthule/48255",
+        "itemNameMatches": [
+          {
+            "id": 8723,
+            "name": "Tiny Metal Quill",
+            "pages": []
+          },
+          {
+            "id": 8726,
+            "name": "Tiny Gear Shaped Earring",
+            "pages": []
+          },
+          {
+            "id": 8727,
+            "name": "Rough Steel Cog Earring",
+            "pages": []
+          },
+          {
+            "id": 8728,
+            "name": "Iron Cog Earring",
+            "pages": []
+          },
+          {
+            "id": 8729,
+            "name": "Shiny Cog Earring",
+            "pages": []
+          },
+          {
+            "id": 8730,
+            "name": "Cogboggle's Clockwork Contraption",
+            "pages": []
+          }
+        ],
+        "numericNpcIdentity": {
+          "npcId": 48255,
+          "name": "Gimlik_Cogboggle_"
+        },
+        "numericNpcNamePages": []
+      },
+      "action": "disable_preserve_full_body",
+      "disposition": "positive_later_or_custom_event_source_only_exclusion",
+      "evidenceIds": [
+        "ct-era",
+        "ct-spawns"
+      ],
+      "reason": "Exact Gimlik escort terminal: 48040 -> 48254 -> tracker48209 -> quill8723 ->48255 -> five cog rewards. event_spawn/event_timer only bound this same escort terminal.",
+      "upstreamBaselineFile": "sources/projecteq/cazicthule/48255.lua",
+      "upstreamBaselineSourceSha256": "a216aed3f10e5f53954d58ca3090a496b68cf75c4ad5a8746af2e5f1c8c0eaf5",
+      "proposedFile": "changes/p99-final-uncertainty/cazicthule--48255.lua",
+      "proposedSourceSha256": "94868366935a1d762ef1b17a80b0238993d1cf31082a3f2925f031cc3260cf39",
+      "proposedEnabled": 0
+    },
+    {
+      "key": "commons/Guard_Colin",
+      "questId": 15225,
+      "baselineFile": "effective/quests/commons/Guard_Colin.lua",
+      "baselineSourceSha256": "6956e19790c5a84f3daef147925243dc11dbd573729d91f60acd9d4561203eea",
+      "fullSourceReviewed": true,
+      "handlersReviewed": [
+        "event_say",
+        "event_trade"
+      ],
+      "sourceLines": 16,
+      "sourceSpecificReview": "Guard Colin toll 1gold only, no reward. P99 confirms tollbooth actor; exact toll amount not verified. Not automatically a missing quest.",
+      "cachedActorEvidence": [
+        {
+          "title": "Guard Colin",
+          "url": "https://wiki.project1999.com/Guard_Colin?action=raw",
+          "fetchedAt": "2026-08-12T19:03:58.518Z",
+          "revision": null,
+          "sha256": "e0a023dbdc43835d370e0ef1d59fe9d8ecea6ba68091fbb1399817beaf9f02ff",
+          "bytes": 2975,
+          "source": "npc-pages/guard-colin-039679c449.json",
+          "cachePath": "reference/p99-wiki/npc-pages/guard-colin-039679c449.wiki",
+          "match": "normalized full NPC name in title/body; identity still requires verification"
+        },
+        {
+          "title": "Guard Valon",
+          "url": "https://wiki.project1999.com/Guard_Valon?action=raw",
+          "fetchedAt": "2026-08-12T19:18:36.295Z",
+          "revision": null,
+          "sha256": "19b0c0ff2c00fe58e7816c51920e7fd5775c2161088cde3f40bc60eadb622e08",
+          "bytes": 2292,
+          "source": "npc-pages/guard-valon-4cb91123e9.json",
+          "cachePath": "reference/p99-wiki/npc-pages/guard-valon-4cb91123e9.wiki",
+          "match": "normalized full NPC name in title/body; identity still requires verification"
+        }
+      ],
+      "cachedItemNavigation": {
+        "key": "commons/Guard_Colin",
+        "itemNameMatches": []
+      },
+      "action": "unchanged",
+      "disposition": "unresolved_after_full_source_and_bounded_evidence_review",
+      "evidenceIds": [],
+      "reason": "Original source-specific uncertainty remains after full callback review, cached actor/item evidence and bounded public chain research. Absence or other emulator numeric values do not establish P99 parity."
+    },
+    {
+      "key": "droga/81182",
+      "questId": 207951,
+      "baselineFile": "effective/quests/droga/81182.lua",
+      "baselineSourceSha256": "5fef3e949f41d486be897331a1a83f2128fab14747edf8930531ad380ce711c9",
+      "fullSourceReviewed": true,
+      "handlersReviewed": [
+        "event_say",
+        "event_trade"
+      ],
+      "sourceLines": 23,
+      "sourceSpecificReview": "Numeric 81182 maps to an_Iksar_slave and accepts 12839+4195+4194\u21924196 Steel. P99 NPC pages confirm Droga versions but give 81164 and warn about wrong variants; quest prose also says Frontier Mountains. Exact numeric/spawn identity remains unresolved, not presumed later-era.",
+      "cachedActorEvidence": [],
+      "cachedItemNavigation": {
+        "key": "droga/81182",
+        "itemNameMatches": [
+          {
+            "id": 4194,
+            "name": "Shackle of Copper",
+            "pages": [
+              "Monk Shackle Quests",
+              "Popular Quests by Reward",
+              "Klok Ephmir",
+              "Kwinn the Outlander",
+              "Master Niska"
+            ]
+          },
+          {
+            "id": 4195,
+            "name": "Shackle of Bronze",
+            "pages": [
+              "Monk Shackle Quests",
+              "Popular Quests by Reward",
+              "A Burynai miner",
+              "A burynai miner",
+              "A drolvarg scavenger",
+              "A goblin priest",
+              "A spiked succulent",
+              "An Iksar Master",
+              "Icebone Skeleton",
+              "Master Niska",
+              "Tektite"
+            ]
+          },
+          {
+            "id": 4196,
+            "name": "Shackle of Steel",
+            "pages": [
+              "Monk Shackle Quests",
+              "Popular Quests by Level",
+              "Popular Quests by Reward",
+              "A coerced penkeeper",
+              "A goblin interrogator",
+              "An Iksar Master",
+              "An iksar slave",
+              "An Iksar slave"
+            ]
+          },
+          {
+            "id": 12839,
+            "name": "Coppernickel Key",
+            "pages": [
+              "Monk Shackle Quests"
+            ]
+          }
+        ],
+        "numericNpcIdentity": {
+          "npcId": 81182,
+          "name": "an_Iksar_slave"
+        },
+        "numericNpcNamePages": [
+          "Crusader's Tests",
+          "Monk Shackle Quests",
+          "A crazed iksar slave",
+          "An iksar slave",
+          "An Iksar slave"
+        ]
+      },
+      "action": "unchanged",
+      "disposition": "unresolved_after_full_source_and_bounded_evidence_review",
+      "evidenceIds": [],
+      "reason": "Original source-specific uncertainty remains after full callback review, cached actor/item evidence and bounded public chain research. Absence or other emulator numeric values do not establish P99 parity."
+    },
+    {
+      "key": "feerrott/Aqaar_Aluram",
+      "questId": 15990,
+      "baselineFile": "effective/quests/feerrott/Aqaar_Aluram.lua",
+      "baselineSourceSha256": "b47a32de50306a047ed16a555d7bfcbff8588e9d3a33819b4bbfc2724a9273ed",
+      "fullSourceReviewed": true,
+      "handlersReviewed": [
+        "event_say",
+        "event_trade"
+      ],
+      "sourceLines": 36,
+      "sourceSpecificReview": "Phobonomicon 8720\u2192Arcane Scientists medallion 8732,100000XP; CT-revamp connection, not established P99 hand-in.",
+      "cachedActorEvidence": [
+        {
+          "title": "Aqaar Aluram",
+          "url": "https://wiki.project1999.com/Aqaar_Aluram?action=raw",
+          "fetchedAt": "2026-08-12T17:49:20.995Z",
+          "revision": null,
+          "sha256": "b201f3885d7b913d380ae981149f10a878d1ef8c0d3ae19ff4b7ab50de48fada",
+          "bytes": 754,
+          "source": "npc-pages/aqaar-aluram-83a92d7e12.json",
+          "cachePath": "reference/p99-wiki/npc-pages/aqaar-aluram-83a92d7e12.wiki",
+          "match": "normalized full NPC name in title/body; identity still requires verification"
+        }
+      ],
+      "cachedItemNavigation": {
+        "key": "feerrott/Aqaar_Aluram",
+        "itemNameMatches": [
+          {
+            "id": 8720,
+            "name": "Phobonomicon of Thul Tae Ew",
+            "pages": []
+          },
+          {
+            "id": 8732,
+            "name": "Medallion of the Arcane Scientists",
+            "pages": []
+          }
+        ]
+      },
+      "action": "disable_preserve_full_body",
+      "disposition": "positive_later_or_custom_event_source_only_exclusion",
+      "evidenceIds": [
+        "helper-aqaar-pqdi",
+        "helper-aqaar-reward-nonp99",
+        "ct-era"
+      ],
+      "reason": "Sole trade Phobonomicon8720 to excluded Medallion8732; entire dialogue describes same CT expedition/visions/Phobonomicon, not independent classic quest. NPC rows preserved.",
+      "upstreamBaselineFile": "sources/projecteq/feerrott/Aqaar_Aluram.lua",
+      "upstreamBaselineSourceSha256": "b47a32de50306a047ed16a555d7bfcbff8588e9d3a33819b4bbfc2724a9273ed",
+      "proposedFile": "changes/p99-final-uncertainty/feerrott--Aqaar_Aluram.lua",
+      "proposedSourceSha256": "45921c1ed4d588f469871be18b4765199e1c54d936fb23f83ddd5c9ef702ddf3",
+      "proposedEnabled": 0
+    },
+    {
+      "key": "felwithea/Arrias_Arcanum",
+      "questId": 14329,
+      "baselineFile": "effective/quests/felwithea/Arrias_Arcanum.lua",
+      "baselineSourceSha256": "0460f65ac76efd17aea0a13b81d041eb82b874f8324345bf7cf8730f7702e777",
+      "fullSourceReviewed": true,
+      "handlersReviewed": [
+        "event_say",
+        "event_trade"
+      ],
+      "sourceLines": 24,
+      "sourceSpecificReview": "Arrias bridle quest token 31493\u219231495 with cash/factions/XP. NPC page flags uncertainty of presence; no absence conclusion.",
+      "cachedActorEvidence": [
+        {
+          "title": "Arrias Arcanum",
+          "url": "https://wiki.project1999.com/Arrias_Arcanum?action=raw",
+          "fetchedAt": "2026-08-12T17:50:22.495Z",
+          "revision": null,
+          "sha256": "a011a6cea2ba4a86719afd1a0d00e604110fa6626ddfb5f1b220b02c94719934",
+          "bytes": 1149,
+          "source": "npc-pages/arrias-arcanum-620668021f.json",
+          "cachePath": "reference/p99-wiki/npc-pages/arrias-arcanum-620668021f.wiki",
+          "match": "normalized full NPC name in title/body; identity still requires verification"
+        }
+      ],
+      "cachedItemNavigation": {
+        "key": "felwithea/Arrias_Arcanum",
+        "itemNameMatches": [
+          {
+            "id": 31493,
+            "name": "Arrialla's Expended Token",
+            "pages": []
+          },
+          {
+            "id": 31495,
+            "name": "Arrialla's Token",
+            "pages": []
+          }
+        ]
+      },
+      "action": "disable_preserve_full_body",
+      "disposition": "positive_later_or_custom_event_source_only_exclusion",
+      "evidenceIds": [
+        "ariam",
+        "ariam-sequence"
+      ],
+      "reason": "Both dialogue and sole token31493->31495 exchange refer exclusively to Sir Ariam. No classic independent branch; retained NPC row.",
+      "upstreamBaselineFile": "sources/projecteq/felwithea/Arrias_Arcanum.lua",
+      "upstreamBaselineSourceSha256": "0460f65ac76efd17aea0a13b81d041eb82b874f8324345bf7cf8730f7702e777",
+      "proposedFile": "changes/p99-final-uncertainty/felwithea--Arrias_Arcanum.lua",
+      "proposedSourceSha256": "8355d0cbad4fa8aeafe3b34d59db6325303032e46ce357863351e1e7ecf4a645",
+      "proposedEnabled": 0
+    },
+    {
+      "key": "felwithea/Exterminator_Valern",
+      "questId": 19373,
+      "baselineFile": "effective/quests/felwithea/Exterminator_Valern.lua",
+      "baselineSourceSha256": "a1f9af28f11ff9bf5105bfd743da04b5e08a3f7f1d7c776058ea249340db2754",
+      "fullSourceReviewed": true,
+      "handlersReviewed": [
+        "event_say",
+        "event_trade"
+      ],
+      "sourceLines": 21,
+      "sourceSpecificReview": "Four rat whiskers 13071\u2192coin/faction, no XP; actor-name cache absence is not quest absence.",
+      "cachedActorEvidence": [],
+      "cachedItemNavigation": {
+        "key": "felwithea/Exterminator_Valern",
+        "itemNameMatches": [
+          {
+            "id": 13071,
+            "name": "Rat Whiskers",
+            "pages": [
+              "Bat Fur Quest",
+              "Note for Rebby",
+              "Rat's Foot Necklace Quest",
+              "Unsar's Glory",
+              "Unser's Call",
+              "A cauldron rat",
+              "A Female Rat",
+              "A frenzied rat",
+              "A giant diseased rat",
+              "A giant plague rat",
+              "A Giant Sewer Rat",
+              "A giant thicket rat",
+              "A large plague rat",
+              "A Large Rat",
+              "A plague rat",
+              "A rodent",
+              "A scalded rat",
+              "A young plague rat",
+              "An infected rat",
+              "An undead rat",
+              "Cinder goblin shaman",
+              "Cinder goblin wizard",
+              "Cuburt",
+              "Fire goblin wizard",
+              "Flame goblin shaman",
+              "Flame goblin wizard",
+              "Infected Rat",
+              "Inferno goblin shaman",
+              "Jeena Firechaser",
+              "Meldrath The Malignant",
+              "Scruffy",
+              "Wharf rat",
+              "Young goblin shaman"
+            ]
+          }
+        ]
+      },
+      "action": "unchanged",
+      "disposition": "unresolved_after_full_source_and_bounded_evidence_review",
+      "evidenceIds": [
+        "rodents",
+        "sahizz"
+      ],
+      "reason": "Contemporary 2003 city-vermin accounts suggest later family, but exact actor/version timing remains insufficient; actor wiki pages may exist without exchange documentation. Preserve distinct factions, XP, coin and unrelated combat/slay callbacks rather than extrapolate one actor or database entry date to all."
+    },
+    {
+      "key": "firiona/#Realla_Segoan",
+      "questId": 15973,
+      "baselineFile": "effective/quests/firiona/%23Realla_Segoan.lua",
+      "baselineSourceSha256": "661edbbe0238505eac929aec01f724acca83792a3d1c693a1dc00006f47982ca",
+      "fullSourceReviewed": true,
+      "handlersReviewed": [
+        "event_say"
+      ],
+      "sourceLines": 22,
+      "sourceSpecificReview": "Realla missing Al'Kabor notes/binder 17088 chain dialogue. No exact P99 quest evidence located; name absence is not exclusion.",
+      "cachedActorEvidence": [],
+      "cachedItemNavigation": {
+        "key": "firiona/#Realla_Segoan",
+        "itemNameMatches": [
+          {
+            "id": 17088,
+            "name": "Research Binder",
+            "pages": []
+          }
+        ]
+      },
+      "action": "unchanged",
+      "disposition": "unresolved_after_full_source_and_bounded_evidence_review",
+      "evidenceIds": [
+        "helper-research-uncertainty"
+      ],
+      "reason": "Exact Al Kabor research chain has November2001/pre-Luclin reward reports but current P99 acquisition report is incomplete. Preserve three linked handlers without declaring later or numeric parity."
+    },
+    {
+      "key": "firiona/Allaria_Sneakyfeet",
+      "questId": 13327,
+      "baselineFile": "effective/quests/firiona/Allaria_Sneakyfeet.lua",
+      "baselineSourceSha256": "2bd3be3a02776a883ee2a454fad720eb461e820095299198e4a544da426898cf",
+      "fullSourceReviewed": true,
+      "handlersReviewed": [
+        "event_say"
+      ],
+      "sourceLines": 14,
+      "sourceSpecificReview": "Allaria supplies Whistler plans 18347; connected to Dapper, not established as a P99 chain.",
+      "cachedActorEvidence": [],
+      "cachedItemNavigation": {
+        "key": "firiona/Allaria_Sneakyfeet",
+        "itemNameMatches": [
+          {
+            "id": 18347,
+            "name": "Rozzuts plans",
+            "pages": []
+          }
+        ]
+      },
+      "action": "disable_preserve_full_body",
+      "disposition": "positive_later_or_custom_event_source_only_exclusion",
+      "evidenceIds": [
+        "whistler"
+      ],
+      "reason": "All dialogue and plans18347 grant belong to exact Dapper/Rozzut Whistler later chain.",
+      "upstreamBaselineFile": "maintained/lua/converted-perl/firiona/Allaria_Sneakyfeet.lua",
+      "upstreamBaselineSourceSha256": "2bd3be3a02776a883ee2a454fad720eb461e820095299198e4a544da426898cf",
+      "proposedFile": "changes/p99-final-uncertainty/firiona--Allaria_Sneakyfeet.lua",
+      "proposedSourceSha256": "2d2be23f432e2af3349ed2b53e4876db12ae1fdc0552f487537316ef0148f059",
+      "proposedEnabled": 0
+    },
+    {
+      "key": "firiona/Noilgin_Mindtune",
+      "questId": 18185,
+      "baselineFile": "effective/quests/firiona/Noilgin_Mindtune.lua",
+      "baselineSourceSha256": "036e2732fcf91dc661fb385ba848cd615f20768e55d8825e87cc090862dc51a3",
+      "fullSourceReviewed": true,
+      "handlersReviewed": [
+        "event_say",
+        "event_trade"
+      ],
+      "sourceLines": 18,
+      "sourceSpecificReview": "Bound Research Notes 6067\u2192Packaged Research Notes 6069. Kunark NPC page confirms Noilgin, not amounts/quest timing.",
+      "cachedActorEvidence": [
+        {
+          "title": "Noilgin Mindtune",
+          "url": "https://wiki.project1999.com/Noilgin_Mindtune?action=raw",
+          "fetchedAt": "2026-08-12T20:18:40.586Z",
+          "revision": null,
+          "sha256": "f8d91a1cc4dfc28840b7a89a85afbf4412fc95ffd84fd420c2d179648d33a19c",
+          "bytes": 757,
+          "source": "npc-pages/noilgin-mindtune-6ea1f61b8b.json",
+          "cachePath": "reference/p99-wiki/npc-pages/noilgin-mindtune-6ea1f61b8b.wiki",
+          "match": "normalized full NPC name in title/body; identity still requires verification"
+        }
+      ],
+      "cachedItemNavigation": {
+        "key": "firiona/Noilgin_Mindtune",
+        "itemNameMatches": [
+          {
+            "id": 6067,
+            "name": "Bound Research Notes",
+            "pages": []
+          },
+          {
+            "id": 6069,
+            "name": "Packaged Research Notes",
+            "pages": []
+          }
+        ]
+      },
+      "action": "unchanged",
+      "disposition": "unresolved_after_full_source_and_bounded_evidence_review",
+      "evidenceIds": [
+        "helper-research-uncertainty"
+      ],
+      "reason": "Exact Al Kabor research chain has November2001/pre-Luclin reward reports but current P99 acquisition report is incomplete. Preserve three linked handlers without declaring later or numeric parity."
+    },
+    {
+      "key": "freporte/Exterminator_Larkey",
+      "questId": 12275,
+      "baselineFile": "effective/quests/freporte/Exterminator_Larkey.lua",
+      "baselineSourceSha256": "bc4e3c1ac983dbc66b9a847095a70fd22a04a98c3493d5ebe90a083d56e41c3a",
+      "fullSourceReviewed": true,
+      "handlersReviewed": [
+        "event_say",
+        "event_trade"
+      ],
+      "sourceLines": 22,
+      "sourceSpecificReview": "Larkey rat-whisker quartet\u2192coin/XP/factions. Not established by actor-name absence.",
+      "cachedActorEvidence": [],
+      "cachedItemNavigation": {
+        "key": "freporte/Exterminator_Larkey",
+        "itemNameMatches": [
+          {
+            "id": 13071,
+            "name": "Rat Whiskers",
+            "pages": [
+              "Bat Fur Quest",
+              "Note for Rebby",
+              "Rat's Foot Necklace Quest",
+              "Unsar's Glory",
+              "Unser's Call",
+              "A cauldron rat",
+              "A Female Rat",
+              "A frenzied rat",
+              "A giant diseased rat",
+              "A giant plague rat",
+              "A Giant Sewer Rat",
+              "A giant thicket rat",
+              "A large plague rat",
+              "A Large Rat",
+              "A plague rat",
+              "A rodent",
+              "A scalded rat",
+              "A young plague rat",
+              "An infected rat",
+              "An undead rat",
+              "Cinder goblin shaman",
+              "Cinder goblin wizard",
+              "Cuburt",
+              "Fire goblin wizard",
+              "Flame goblin shaman",
+              "Flame goblin wizard",
+              "Infected Rat",
+              "Inferno goblin shaman",
+              "Jeena Firechaser",
+              "Meldrath The Malignant",
+              "Scruffy",
+              "Wharf rat",
+              "Young goblin shaman"
+            ]
+          }
+        ]
+      },
+      "action": "unchanged",
+      "disposition": "unresolved_after_full_source_and_bounded_evidence_review",
+      "evidenceIds": [
+        "rodents",
+        "sahizz"
+      ],
+      "reason": "Contemporary 2003 city-vermin accounts suggest later family, but exact actor/version timing remains insufficient; actor wiki pages may exist without exchange documentation. Preserve distinct factions, XP, coin and unrelated combat/slay callbacks rather than extrapolate one actor or database entry date to all."
+    },
+    {
+      "key": "freporte/Sir_Artanis",
+      "questId": 13957,
+      "baselineFile": "effective/quests/freporte/Sir_Artanis.lua",
+      "baselineSourceSha256": "8a61a11de2d5791f5e315c29bb288f2debf27be3c10dd30eed72dfaf5ba79b81",
+      "fullSourceReviewed": true,
+      "handlersReviewed": [
+        "event_say",
+        "event_trade"
+      ],
+      "sourceLines": 19,
+      "sourceSpecificReview": "East Freeport SirArtanis bridle exchange. Different zone variant from North Freeport; do not deduplicate without admission proof.",
+      "cachedActorEvidence": [
+        {
+          "title": "Sir Artanis",
+          "url": "https://wiki.project1999.com/Sir_Artanis?action=raw",
+          "fetchedAt": "2026-08-12T20:53:38.846Z",
+          "revision": null,
+          "sha256": "fc1390c37c1f65e37be9e30b356b745ed04b58befb759f27d7b1bcb2746fa32a",
+          "bytes": 2197,
+          "source": "npc-pages/sir-artanis-6ca43da4c8.json",
+          "cachePath": "reference/p99-wiki/npc-pages/sir-artanis-6ca43da4c8.wiki",
+          "match": "normalized full NPC name in title/body; identity still requires verification"
+        }
+      ],
+      "cachedItemNavigation": {
+        "key": "freporte/Sir_Artanis",
+        "itemNameMatches": [
+          {
+            "id": 18474,
+            "name": "Scroll of the Burning Dead",
+            "pages": []
+          },
+          {
+            "id": 31492,
+            "name": "Ghostly Bridle",
+            "pages": []
+          },
+          {
+            "id": 31496,
+            "name": "Bridle of Sir Ariam",
+            "pages": []
+          }
+        ]
+      },
+      "action": "disable_preserve_full_body",
+      "disposition": "positive_later_or_custom_event_source_only_exclusion",
+      "evidenceIds": [
+        "ariam",
+        "ariam-sequence"
+      ],
+      "reason": "All dialogue and both18474/31492 exchanges belong to later Sir Ariam horse chain; preserve East Freeport historical variant unchanged under disable.",
+      "upstreamBaselineFile": "sources/projecteq/freporte/Sir_Artanis.lua",
+      "upstreamBaselineSourceSha256": "8a61a11de2d5791f5e315c29bb288f2debf27be3c10dd30eed72dfaf5ba79b81",
+      "proposedFile": "changes/p99-final-uncertainty/freporte--Sir_Artanis.lua",
+      "proposedSourceSha256": "c42c673e5928558c3a5ad234bfa37ef1f7760581deca40853e6dd6e4ef2cf8a1",
+      "proposedEnabled": 0
+    },
+    {
+      "key": "freportn/Palious_Jarten",
+      "questId": 15928,
+      "baselineFile": "effective/quests/freportn/Palious_Jarten.lua",
+      "baselineSourceSha256": "8d71907dd3ef69353b4f0d590036959bcb16e755f26f9d665701f16615856014",
+      "fullSourceReviewed": true,
+      "handlersReviewed": [
+        "event_say",
+        "event_trade"
+      ],
+      "sourceLines": 17,
+      "sourceSpecificReview": "Ten-gold Cure Disease 213 service; not an item reward quest. P99 NPC presence alone does not verify price.",
+      "cachedActorEvidence": [
+        {
+          "title": "Palious Jarten",
+          "url": "https://wiki.project1999.com/Palious_Jarten?action=raw",
+          "fetchedAt": "2026-08-12T20:24:24.844Z",
+          "revision": null,
+          "sha256": "7777d20915dc8e0c33cd9594998a0a1e3f398b8a07318ae78ee73b9839d6ce14",
+          "bytes": 1406,
+          "source": "npc-pages/palious-jarten-29d4155813.json",
+          "cachePath": "reference/p99-wiki/npc-pages/palious-jarten-29d4155813.wiki",
+          "match": "normalized full NPC name in title/body; identity still requires verification"
+        }
+      ],
+      "cachedItemNavigation": {
+        "key": "freportn/Palious_Jarten",
+        "itemNameMatches": []
+      },
+      "action": "unchanged",
+      "disposition": "unchanged_exact_p99_service_documented",
+      "evidenceIds": [
+        "palious"
+      ],
+      "reason": "Official P99 patch explicitly confirms10gold Cure Disease. Source matches price and spell213; runtime tests verify no underpayment and unrelated return. Not a missing reward quest."
+    },
+    {
+      "key": "freportn/Plur_Etinu",
+      "questId": 16556,
+      "baselineFile": "effective/quests/freportn/Plur_Etinu.lua",
+      "baselineSourceSha256": "4e1b901e281073bef8ed26089b8c7b5c962ab69c2f70e127a5d7db5fd6a434a1",
+      "fullSourceReviewed": true,
+      "handlersReviewed": [
+        "event_say",
+        "event_trade"
+      ],
+      "sourceLines": 31,
+      "sourceSpecificReview": "Two zombie skins\u2192CureDisease 213,three bixie stingers\u2192CurePoison 203,10gold\u2192LightHealing 17. Treat services separately; values unverified.",
+      "cachedActorEvidence": [],
+      "cachedItemNavigation": {
+        "key": "freportn/Plur_Etinu",
+        "itemNameMatches": [
+          {
+            "id": 13074,
+            "name": "Zombie Skin",
+            "pages": [
+              "Mining Caps",
+              "The Summoning of Fright",
+              "Zombie Flesh Quest",
+              "A Drowned Citizen",
+              "A greater zombie",
+              "A Parched Zombie",
+              "A Rotting Citizen",
+              "A Rotting Initiate",
+              "A Zombie",
+              "A Zombie Sailor",
+              "A zombie yeoman",
+              "Cinder goblin shaman",
+              "Cinder goblin wizard",
+              "Fire goblin wizard",
+              "Flame goblin shaman",
+              "Flame goblin wizard",
+              "Inferno goblin shaman",
+              "Monstrous zombie",
+              "Regis the Reverent",
+              "Tormented Dead",
+              "Young goblin shaman",
+              "Young goblin wizard",
+              "Zombie Advisor",
+              "Zombie Commander",
+              "Zombie Infantry",
+              "Zombie Trooper"
+            ]
+          },
+          {
+            "id": 14029,
+            "name": "Bixie Stinger",
+            "pages": [
+              "Healing Spells from Hendi",
+              "Plane of Sky Quests (Old)",
+              "Rogue Plane of Sky Tests",
+              "A Bixie",
+              "A Bixie Drone (Kithicor Forest)",
+              "A Bixie Drone (Misty Thicket)",
+              "Bazzt Zzzt"
+            ]
+          }
+        ]
+      },
+      "action": "unchanged",
+      "disposition": "unresolved_after_full_source_and_bounded_evidence_review",
+      "evidenceIds": [],
+      "reason": "Original source-specific uncertainty remains after full callback review, cached actor/item evidence and bounded public chain research. Absence or other emulator numeric values do not establish P99 parity."
+    },
+    {
+      "key": "freportn/Sir_Artanis",
+      "questId": 17728,
+      "baselineFile": "effective/quests/freportn/Sir_Artanis.lua",
+      "baselineSourceSha256": "2407b43d1e1d6850321c22d2760b63b3f825f4a2a59957d33b98d641ae721234",
+      "fullSourceReviewed": true,
+      "handlersReviewed": [
+        "event_say",
+        "event_trade"
+      ],
+      "sourceLines": 34,
+      "sourceSpecificReview": "North Freeport SirArtanis bridle variant adds 6400XP; do not flatten zone-specific variants or claim XP parity.",
+      "cachedActorEvidence": [
+        {
+          "title": "Sir Artanis",
+          "url": "https://wiki.project1999.com/Sir_Artanis?action=raw",
+          "fetchedAt": "2026-08-12T20:53:38.846Z",
+          "revision": null,
+          "sha256": "fc1390c37c1f65e37be9e30b356b745ed04b58befb759f27d7b1bcb2746fa32a",
+          "bytes": 2197,
+          "source": "npc-pages/sir-artanis-6ca43da4c8.json",
+          "cachePath": "reference/p99-wiki/npc-pages/sir-artanis-6ca43da4c8.wiki",
+          "match": "normalized full NPC name in title/body; identity still requires verification"
+        }
+      ],
+      "cachedItemNavigation": {
+        "key": "freportn/Sir_Artanis",
+        "itemNameMatches": [
+          {
+            "id": 18474,
+            "name": "Scroll of the Burning Dead",
+            "pages": []
+          },
+          {
+            "id": 31492,
+            "name": "Ghostly Bridle",
+            "pages": []
+          },
+          {
+            "id": 31496,
+            "name": "Bridle of Sir Ariam",
+            "pages": []
+          }
+        ]
+      },
+      "action": "disable_preserve_full_body",
+      "disposition": "positive_later_or_custom_event_source_only_exclusion",
+      "evidenceIds": [
+        "ariam",
+        "ariam-sequence"
+      ],
+      "reason": "All dialogue and both18474/31492 exchanges belong to later Sir Ariam horse chain; retain distinct6400XP/factions/cash history, do not flatten variants.",
+      "upstreamBaselineFile": "maintained/lua/modified-upstream/freportn/Sir_Artanis.lua",
+      "upstreamBaselineSourceSha256": "2407b43d1e1d6850321c22d2760b63b3f825f4a2a59957d33b98d641ae721234",
+      "proposedFile": "changes/p99-final-uncertainty/freportn--Sir_Artanis.lua",
+      "proposedSourceSha256": "1cfa87185162aaecfaa4cc29782dbd9db8f88d69660d28044be2b1bbcf4164af",
+      "proposedEnabled": 0
+    },
+    {
+      "key": "freportw/Exterminator_Qalantir",
+      "questId": 14446,
+      "baselineFile": "effective/quests/freportw/Exterminator_Qalantir.lua",
+      "baselineSourceSha256": "169adbfdbf106d5cf4a7392e8d5b8c8862adf5fe4ef6f6d4186e8fa253214c70",
+      "fullSourceReviewed": true,
+      "handlersReviewed": [
+        "event_say",
+        "event_trade"
+      ],
+      "sourceLines": 25,
+      "sourceSpecificReview": "Qalantir rat-whisker quartet has zero-item fix already; no new issue established, rewards remain unverified.",
+      "cachedActorEvidence": [],
+      "cachedItemNavigation": {
+        "key": "freportw/Exterminator_Qalantir",
+        "itemNameMatches": [
+          {
+            "id": 13071,
+            "name": "Rat Whiskers",
+            "pages": [
+              "Bat Fur Quest",
+              "Note for Rebby",
+              "Rat's Foot Necklace Quest",
+              "Unsar's Glory",
+              "Unser's Call",
+              "A cauldron rat",
+              "A Female Rat",
+              "A frenzied rat",
+              "A giant diseased rat",
+              "A giant plague rat",
+              "A Giant Sewer Rat",
+              "A giant thicket rat",
+              "A large plague rat",
+              "A Large Rat",
+              "A plague rat",
+              "A rodent",
+              "A scalded rat",
+              "A young plague rat",
+              "An infected rat",
+              "An undead rat",
+              "Cinder goblin shaman",
+              "Cinder goblin wizard",
+              "Cuburt",
+              "Fire goblin wizard",
+              "Flame goblin shaman",
+              "Flame goblin wizard",
+              "Infected Rat",
+              "Inferno goblin shaman",
+              "Jeena Firechaser",
+              "Meldrath The Malignant",
+              "Scruffy",
+              "Wharf rat",
+              "Young goblin shaman"
+            ]
+          }
+        ]
+      },
+      "action": "unchanged",
+      "disposition": "unresolved_after_full_source_and_bounded_evidence_review",
+      "evidenceIds": [
+        "rodents",
+        "sahizz"
+      ],
+      "reason": "Contemporary 2003 city-vermin accounts suggest later family, but exact actor/version timing remains insufficient; actor wiki pages may exist without exchange documentation. Preserve distinct factions, XP, coin and unrelated combat/slay callbacks rather than extrapolate one actor or database entry date to all."
+    },
+    {
+      "key": "grobb/Bregna",
+      "questId": 13689,
+      "baselineFile": "effective/quests/grobb/Bregna.lua",
+      "baselineSourceSha256": "1be5eaac5953f07d451b597d8c6b76841fa1a180d63e5b75ca4ef5ed53d913ca",
+      "fullSourceReviewed": true,
+      "handlersReviewed": [
+        "event_say",
+        "event_trade"
+      ],
+      "sourceLines": 32,
+      "sourceSpecificReview": "Grobb Bregna 13916\u2192SpiritPouch 15272 reproduces More Help for Innoruuk but P99 assigns it to Kaglari, not Bregna. Separate Aid Garuuk receipt 28740 branch. Actor identity/admission is unresolved; do not retune the copied branch from Kaglari alone.",
+      "cachedActorEvidence": [
+        {
+          "title": "Bregna",
+          "url": "https://wiki.project1999.com/Bregna?action=raw",
+          "fetchedAt": "2026-08-12T18:02:27.764Z",
+          "revision": null,
+          "sha256": "4a858e3d8d109f06b7ac54e3d6bda6af36a7bffc64277df70e13f9a77eb937b2",
+          "bytes": 801,
+          "source": "npc-pages/bregna-b605c98b17.json",
+          "cachePath": "reference/p99-wiki/npc-pages/bregna-b605c98b17.wiki",
+          "match": "normalized full NPC name in title/body; identity still requires verification"
+        }
+      ],
+      "cachedItemNavigation": {
+        "key": "grobb/Bregna",
+        "itemNameMatches": [
+          {
+            "id": 13916,
+            "name": "Deathfist Slashed Belt",
+            "pages": [
+              "Deathfist Slashed Belts",
+              "Monk Sash Quests",
+              "Mooto's Proof",
+              "More Help for Innoruuk",
+              "Orc Belt Quests",
+              "Orc Belts",
+              "Orc Vest",
+              "Popular Quests by Reward",
+              "Cain Darkmoore",
+              "Captain Hazran",
+              "Lord Shin Ree",
+              "Orc Apprentice",
+              "Orc Centurion (Crushbone)",
+              "Orc Centurion (Deathfist)",
+              "Orc Oracle (Deathfist)",
+              "Orc Pawn (Deathfist)",
+              "Orc Weaponsmith"
+            ]
+          },
+          {
+            "id": 15272,
+            "name": "Spell: Spirit Pouch",
+            "pages": [
+              "More Help for Innoruuk",
+              "Corak",
+              "Tokun - Ogre",
+              "Tokun - Troll",
+              "Vessel Kabda"
+            ]
+          },
+          {
+            "id": 26632,
+            "name": "Blood Raven Tailfeather",
+            "pages": []
+          },
+          {
+            "id": 26640,
+            "name": "Wrulon Claw",
+            "pages": []
+          },
+          {
+            "id": 26662,
+            "name": "Swirling Banshee Essence",
+            "pages": []
+          },
+          {
+            "id": 28740,
+            "name": "Troll Receipt",
+            "pages": []
+          },
+          {
+            "id": 29921,
+            "name": "Arachnae Fangs",
+            "pages": []
+          }
+        ]
+      },
+      "action": "guard_only_later_branch",
+      "disposition": "mixed_classic_candidate_preserved_later_branch_excluded",
+      "evidenceIds": [
+        "garuuk"
+      ],
+      "reason": "Only PoK Aid Garuuk four-item receipt branch gated. Full hail/help, belt13916->15272/factions/XP left byte-equivalent; actor assignment to Bregna versus Kaglari unresolved, not retuned.",
+      "upstreamBaselineFile": "sources/projecteq/grobb/Bregna.lua",
+      "upstreamBaselineSourceSha256": "1be5eaac5953f07d451b597d8c6b76841fa1a180d63e5b75ca4ef5ed53d913ca",
+      "proposedFile": "changes/p99-final-uncertainty/grobb--Bregna.lua",
+      "proposedSourceSha256": "0ce1cfc0d3adb8b8baf1a71495602000df7f48c1f6255ef40a135c9814051454",
+      "proposedEnabled": 1
+    },
+    {
+      "key": "grobb/Exterminator_Filrog",
+      "questId": 14875,
+      "baselineFile": "effective/quests/grobb/Exterminator_Filrog.lua",
+      "baselineSourceSha256": "ab2e15b06847d6c8fc67c2d9037ef33d1c7172ba85ade7bc5de5ef3de8a81eb2",
+      "fullSourceReviewed": true,
+      "handlersReviewed": [
+        "event_say",
+        "event_trade"
+      ],
+      "sourceLines": 21,
+      "sourceSpecificReview": "Four spiderling eyes\u2192coin/XP/Merchant faction; P99 NPC exists but does not document this exchange.",
+      "cachedActorEvidence": [
+        {
+          "title": "Exterminator Filrog",
+          "url": "https://wiki.project1999.com/Exterminator_Filrog?action=raw",
+          "fetchedAt": "2026-08-12T18:39:53.746Z",
+          "revision": null,
+          "sha256": "75d55c41ad3ac69d90fd71903b108e71bc59512d5ff3dd86220d98cd3bcbc499",
+          "bytes": 942,
+          "source": "npc-pages/exterminator-filrog-df66f39301.json",
+          "cachePath": "reference/p99-wiki/npc-pages/exterminator-filrog-df66f39301.wiki",
+          "match": "normalized full NPC name in title/body; identity still requires verification"
+        }
+      ],
+      "cachedItemNavigation": {
+        "key": "grobb/Exterminator_Filrog",
+        "itemNameMatches": [
+          {
+            "id": 13253,
+            "name": "Spiderling Eye",
+            "pages": [
+              "Bug Collection",
+              "Emerald Warriors' Items",
+              "Guild Summons - Emerald Warriors",
+              "A large widow",
+              "A large wood spider",
+              "A Rock Spiderling",
+              "A Spiderling",
+              "A Widow Hatchling (Greater Faydark)",
+              "A Widow Hatchling (Toxxulia Forest)",
+              "A Wooly Spiderling",
+              "An araneidae spiderling",
+              "Bonecrawler hatchling"
+            ]
+          }
+        ]
+      },
+      "action": "unchanged",
+      "disposition": "unresolved_after_full_source_and_bounded_evidence_review",
+      "evidenceIds": [
+        "rodents",
+        "sahizz"
+      ],
+      "reason": "Contemporary 2003 city-vermin accounts suggest later family, but exact actor/version timing remains insufficient; actor wiki pages may exist without exchange documentation. Preserve distinct factions, XP, coin and unrelated combat/slay callbacks rather than extrapolate one actor or database entry date to all."
+    },
+    {
+      "key": "guktop/an_old_froglok",
+      "questId": 13574,
+      "baselineFile": "effective/quests/guktop/an_old_froglok.lua",
+      "baselineSourceSha256": "f816089abbee5ed471d2e69784fa616b5fb7c3f5880a911448b3eef607262b50",
+      "fullSourceReviewed": true,
+      "handlersReviewed": [
+        "event_say",
+        "event_trade"
+      ],
+      "sourceLines": 36,
+      "sourceSpecificReview": "Old froglok CrownDeceit chain 11275\u219218499 recipe and 11274+11276+10254+26999\u219211277; full P99 evidence not established, do not tune numbers.",
+      "cachedActorEvidence": [],
+      "cachedItemNavigation": {
+        "key": "guktop/an_old_froglok",
+        "itemNameMatches": [
+          {
+            "id": 10254,
+            "name": "Vial of Purified Mana",
+            "pages": []
+          },
+          {
+            "id": 11274,
+            "name": "Elf Essence",
+            "pages": []
+          },
+          {
+            "id": 11275,
+            "name": "Picturebook",
+            "pages": []
+          },
+          {
+            "id": 11276,
+            "name": "Reet Froglok Crown",
+            "pages": [
+              "Froglok Reet Knight",
+              "Froglok Reet Shaman",
+              "Froglok Reet Wizard"
+            ]
+          },
+          {
+            "id": 11277,
+            "name": "Crown of Deceit",
+            "pages": []
+          },
+          {
+            "id": 18499,
+            "name": "Elf Essence Recipe",
+            "pages": []
+          },
+          {
+            "id": 26999,
+            "name": "Velium Mastodon Fur Cloak",
+            "pages": []
+          }
+        ]
+      },
+      "action": "disable_preserve_full_body",
+      "disposition": "positive_later_or_custom_event_source_only_exclusion",
+      "evidenceIds": [
+        "crown"
+      ],
+      "reason": "Entire book11275->recipe18499 and four-item Crown of Deceit exchange are PoP-dependent chain; both say/trade callbacks retained.",
+      "upstreamBaselineFile": "sources/projecteq/guktop/an_old_froglok.lua",
+      "upstreamBaselineSourceSha256": "f816089abbee5ed471d2e69784fa616b5fb7c3f5880a911448b3eef607262b50",
+      "proposedFile": "changes/p99-final-uncertainty/guktop--an_old_froglok.lua",
+      "proposedSourceSha256": "bfa447bc1f9c26762b396668eaa4e3dc76b325630745c0ef4db2e739daaa177d",
+      "proposedEnabled": 0
+    },
+    {
+      "key": "kaladimb/Exterminator_Vin",
+      "questId": 15440,
+      "baselineFile": "effective/quests/kaladimb/Exterminator_Vin.lua",
+      "baselineSourceSha256": "588856165675fd87a19f40147c9394e7dac5f59dc2f20745f5cbaf3b1c796200",
+      "fullSourceReviewed": true,
+      "handlersReviewed": [
+        "event_say",
+        "event_trade",
+        "event_combat",
+        "event_slay"
+      ],
+      "sourceLines": 33,
+      "sourceSpecificReview": "Vin rat-whisker exchange plus combat/slay handlers. Preserve unrelated handlers even if exchange scope is later resolved.",
+      "cachedActorEvidence": [],
+      "cachedItemNavigation": {
+        "key": "kaladimb/Exterminator_Vin",
+        "itemNameMatches": [
+          {
+            "id": 13071,
+            "name": "Rat Whiskers",
+            "pages": [
+              "Bat Fur Quest",
+              "Note for Rebby",
+              "Rat's Foot Necklace Quest",
+              "Unsar's Glory",
+              "Unser's Call",
+              "A cauldron rat",
+              "A Female Rat",
+              "A frenzied rat",
+              "A giant diseased rat",
+              "A giant plague rat",
+              "A Giant Sewer Rat",
+              "A giant thicket rat",
+              "A large plague rat",
+              "A Large Rat",
+              "A plague rat",
+              "A rodent",
+              "A scalded rat",
+              "A young plague rat",
+              "An infected rat",
+              "An undead rat",
+              "Cinder goblin shaman",
+              "Cinder goblin wizard",
+              "Cuburt",
+              "Fire goblin wizard",
+              "Flame goblin shaman",
+              "Flame goblin wizard",
+              "Infected Rat",
+              "Inferno goblin shaman",
+              "Jeena Firechaser",
+              "Meldrath The Malignant",
+              "Scruffy",
+              "Wharf rat",
+              "Young goblin shaman"
+            ]
+          }
+        ]
+      },
+      "action": "unchanged",
+      "disposition": "unresolved_after_full_source_and_bounded_evidence_review",
+      "evidenceIds": [
+        "rodents",
+        "sahizz"
+      ],
+      "reason": "Contemporary 2003 city-vermin accounts suggest later family, but exact actor/version timing remains insufficient; actor wiki pages may exist without exchange documentation. Preserve distinct factions, XP, coin and unrelated combat/slay callbacks rather than extrapolate one actor or database entry date to all."
+    },
+    {
+      "key": "kaladimb/Harnoff_Splitrock",
+      "questId": 19483,
+      "baselineFile": "effective/quests/kaladimb/Harnoff_Splitrock.lua",
+      "baselineSourceSha256": "2cd3d9bc275c12ddb4440943d9d71f9bbe28ddce721d5997da11d2661726ec9a",
+      "fullSourceReviewed": true,
+      "handlersReviewed": [
+        "event_say",
+        "event_trade"
+      ],
+      "sourceLines": 32,
+      "sourceSpecificReview": "HQ ore shipments 10952/10953\u21928/14pp and 2000/3500XP;17814 container. Exact P99 delivery quest not established.",
+      "cachedActorEvidence": [],
+      "cachedItemNavigation": {
+        "key": "kaladimb/Harnoff_Splitrock",
+        "itemNameMatches": [
+          {
+            "id": 10952,
+            "name": "Small Shipment of High Quality Ore",
+            "pages": []
+          },
+          {
+            "id": 10953,
+            "name": "Large Shipment of High Quality Ore",
+            "pages": []
+          },
+          {
+            "id": 17814,
+            "name": "Empty Ore Crate",
+            "pages": []
+          }
+        ]
+      },
+      "action": "disable_preserve_full_body",
+      "disposition": "positive_later_or_custom_event_source_only_exclusion",
+      "evidenceIds": [
+        "ore",
+        "ore-patch"
+      ],
+      "reason": "All dialogue/container17814 and shipments10952/10953 concern later limited-supply HQ ore restock quest; source disable leaves merchant NPC and inventory alone.",
+      "upstreamBaselineFile": "maintained/lua/converted-perl/kaladimb/Harnoff_Splitrock.lua",
+      "upstreamBaselineSourceSha256": "2cd3d9bc275c12ddb4440943d9d71f9bbe28ddce721d5997da11d2661726ec9a",
+      "proposedFile": "changes/p99-final-uncertainty/kaladimb--Harnoff_Splitrock.lua",
+      "proposedSourceSha256": "a3ee8e58b3c327ce6b68c03d9bf65f7fd90ca475af4cb98935dc1606f0d89daa",
+      "proposedEnabled": 0
+    },
+    {
+      "key": "kerraridge/Allix",
+      "questId": 15570,
+      "baselineFile": "effective/quests/kerraridge/Allix.lua",
+      "baselineSourceSha256": "f3137339a317e565838d1d0820f70b609cf6a0234d83ed5c59656b9f59800339",
+      "fullSourceReviewed": true,
+      "handlersReviewed": [
+        "event_say",
+        "event_trade"
+      ],
+      "sourceLines": 23,
+      "sourceSpecificReview": "Ajrah Leaf 6349\u2192Erudehide Tunic 1120,25XP; P99 confirms Allix NPC but not this hand-in.",
+      "cachedActorEvidence": [
+        {
+          "title": "Allix",
+          "url": "https://wiki.project1999.com/Allix?action=raw",
+          "fetchedAt": "2026-08-12T17:34:37.042Z",
+          "revision": null,
+          "sha256": "08fea392a032840287c21a8ea128ce8c5d3fe2781135ef418dd335c63ae7c4b3",
+          "bytes": 883,
+          "source": "npc-pages/allix-9deb278ab7.json",
+          "cachePath": "reference/p99-wiki/npc-pages/allix-9deb278ab7.wiki",
+          "match": "normalized full NPC name in title/body; identity still requires verification"
+        }
+      ],
+      "cachedItemNavigation": {
+        "key": "kerraridge/Allix",
+        "itemNameMatches": [
+          {
+            "id": 1120,
+            "name": "Erudehide Tunic",
+            "pages": []
+          },
+          {
+            "id": 6349,
+            "name": "Ajrah Leaf",
+            "pages": []
+          }
+        ]
+      },
+      "action": "unchanged",
+      "disposition": "unresolved_after_full_source_and_bounded_evidence_review",
+      "evidenceIds": [
+        "allix"
+      ],
+      "reason": "Original source-specific uncertainty remains after full callback review, cached actor/item evidence and bounded public chain research. Absence or other emulator numeric values do not establish P99 parity."
+    },
+    {
+      "key": "lakerathe/#Triathalon_Bike",
+      "questId": 16387,
+      "baselineFile": "effective/quests/lakerathe/%23Triathalon_Bike.lua",
+      "baselineSourceSha256": "d3a1f842b80a864d3a0c0845add1e3bb0962bd0190979c7723d931a7e3a413f4",
+      "fullSourceReviewed": true,
+      "handlersReviewed": [
+        "event_say",
+        "event_trade"
+      ],
+      "sourceLines": 18,
+      "sourceSpecificReview": "Triathalon bicycle actor trades rebreather 16889 for horse 21800; custom GM event, not documented P99 quest.",
+      "cachedActorEvidence": [],
+      "cachedItemNavigation": {
+        "key": "lakerathe/#Triathalon_Bike",
+        "itemNameMatches": [
+          {
+            "id": 16889,
+            "name": "Rebreather",
+            "pages": [
+              "Warrior Epic Quest"
+            ]
+          },
+          {
+            "id": 21800,
+            "name": "Tan Rope Bridle",
+            "pages": []
+          }
+        ]
+      },
+      "action": "disable_preserve_full_body",
+      "disposition": "positive_later_or_custom_event_source_only_exclusion",
+      "evidenceIds": [
+        "triathalon",
+        "luclin-features"
+      ],
+      "reason": "Exact four-source custom GM race: goggles16889 ->horse21800 ->boots2300 ->heart20695. All four original ProjectEQ sources explicitly identify the same custom GM event by Shadowblade. Crucially21800 is Tan Rope Bridle with mount click2919; Bike grants the horse and Shoes consumes it. Official Luclin introduction of mounts independently puts this entire linked race beyond Velious, not just the GM label. No ordinary P99 branch.",
+      "upstreamBaselineFile": "maintained/lua/converted-perl/lakerathe/#Triathalon_Bike.lua",
+      "upstreamBaselineSourceSha256": "d3a1f842b80a864d3a0c0845add1e3bb0962bd0190979c7723d931a7e3a413f4",
+      "proposedFile": "changes/p99-final-uncertainty/lakerathe--#Triathalon_Bike.lua",
+      "proposedSourceSha256": "5e907bad91abf66232af206825f7a75f5f4511a082fd86ce35ec75b7186c9161",
+      "proposedEnabled": 0
+    },
+    {
+      "key": "lakerathe/#Triathalon_Swim_Goggles",
+      "questId": 18852,
+      "baselineFile": "effective/quests/lakerathe/%23Triathalon_Swim_Goggles.lua",
+      "baselineSourceSha256": "5a759cc1feb51f6246100351620b48c9eaf16d7fa5e9c3b4d097ebe193635133",
+      "fullSourceReviewed": true,
+      "handlersReviewed": [
+        "event_say"
+      ],
+      "sourceLines": 10,
+      "sourceSpecificReview": "Triathalon swimming actor issues 16889 on hail; custom GM event.",
+      "cachedActorEvidence": [],
+      "cachedItemNavigation": {
+        "key": "lakerathe/#Triathalon_Swim_Goggles",
+        "itemNameMatches": [
+          {
+            "id": 16889,
+            "name": "Rebreather",
+            "pages": [
+              "Warrior Epic Quest"
+            ]
+          }
+        ]
+      },
+      "action": "disable_preserve_full_body",
+      "disposition": "positive_later_or_custom_event_source_only_exclusion",
+      "evidenceIds": [
+        "triathalon",
+        "luclin-features"
+      ],
+      "reason": "Exact four-source custom GM race: goggles16889 ->horse21800 ->boots2300 ->heart20695. All four original ProjectEQ sources explicitly identify the same custom GM event by Shadowblade. Crucially21800 is Tan Rope Bridle with mount click2919; Bike grants the horse and Shoes consumes it. Official Luclin introduction of mounts independently puts this entire linked race beyond Velious, not just the GM label. No ordinary P99 branch.",
+      "upstreamBaselineFile": "maintained/lua/converted-perl/lakerathe/#Triathalon_Swim_Goggles.lua",
+      "upstreamBaselineSourceSha256": "5a759cc1feb51f6246100351620b48c9eaf16d7fa5e9c3b4d097ebe193635133",
+      "proposedFile": "changes/p99-final-uncertainty/lakerathe--#Triathalon_Swim_Goggles.lua",
+      "proposedSourceSha256": "1a5dbb736b36b974bd6e7529b49514a675616b66c0f5339edec124449de921d4",
+      "proposedEnabled": 0
+    },
+    {
+      "key": "lavastorm/Brunnel_Kegstander",
+      "questId": 31456,
+      "baselineFile": "effective/quests/lavastorm/Brunnel_Kegstander.lua",
+      "baselineSourceSha256": "2a9910736e1d9580e714e25871dfd8c46c3a111446c9fcd2f09c7dd4cddeb27a",
+      "fullSourceReviewed": true,
+      "handlersReviewed": [
+        "event_say",
+        "event_trade"
+      ],
+      "sourceLines": 25,
+      "sourceSpecificReview": "Brunnel v 1 ForgedFirebrand materials 7882/7885/7886\u2192random 7888\u20137901; version marker alone is not conclusive P99 exclusion.",
+      "cachedActorEvidence": [],
+      "cachedItemNavigation": {
+        "key": "lavastorm/Brunnel_Kegstander",
+        "itemNameMatches": [
+          {
+            "id": 7882,
+            "name": "Fiery Ore",
+            "pages": [
+              "A Fire Goblin",
+              "Cinder Goblin",
+              "Cinder goblin shaman",
+              "Cinder goblin wizard",
+              "Fire goblin wizard",
+              "Flame Goblin",
+              "Flame goblin shaman",
+              "Flame goblin wizard",
+              "Inferno Goblin",
+              "Inferno goblin shaman",
+              "Inferno Goblin Torturer",
+              "Large fire goblin"
+            ]
+          },
+          {
+            "id": 7885,
+            "name": "Imp Blood",
+            "pages": [
+              "A fire imp",
+              "Imp Protector"
+            ]
+          },
+          {
+            "id": 7886,
+            "name": "Essence of Fire",
+            "pages": [
+              "A Fire Elemental",
+              "Blazing Elemental",
+              "Lava guardian"
+            ]
+          },
+          {
+            "id": 7888,
+            "name": "Forged Firebrand Scimitar",
+            "pages": []
+          },
+          {
+            "id": 7889,
+            "name": "Forged Firebrand Bastard Sword",
+            "pages": []
+          },
+          {
+            "id": 7890,
+            "name": "Forged Firebrand Battle Axe",
+            "pages": []
+          },
+          {
+            "id": 7891,
+            "name": "Forged Firebrand Short Sword",
+            "pages": []
+          },
+          {
+            "id": 7892,
+            "name": "Forged Firebrand Long Sword",
+            "pages": []
+          },
+          {
+            "id": 7893,
+            "name": "Forged Firebrand Pick",
+            "pages": []
+          },
+          {
+            "id": 7894,
+            "name": "Forged Firebrand Mace",
+            "pages": []
+          },
+          {
+            "id": 7895,
+            "name": "Forged Firebrand Morning Star",
+            "pages": []
+          },
+          {
+            "id": 7896,
+            "name": "Forged Firebrand Warhammer",
+            "pages": []
+          },
+          {
+            "id": 7897,
+            "name": "Forged Firebrand Dagger",
+            "pages": []
+          },
+          {
+            "id": 7898,
+            "name": "Forged Firebrand Spear",
+            "pages": []
+          },
+          {
+            "id": 7899,
+            "name": "Forged Firebrand Rapier",
+            "pages": []
+          },
+          {
+            "id": 7900,
+            "name": "Forged Firebrand Two Handed Sword",
+            "pages": []
+          },
+          {
+            "id": 7901,
+            "name": "Forged Firebrand Halberd",
+            "pages": []
+          }
+        ]
+      },
+      "action": "unchanged",
+      "disposition": "unresolved_after_full_source_and_bounded_evidence_review",
+      "evidenceIds": [
+        "helper-brunnel-unresolved",
+        "helper-brunnel-gating"
+      ],
+      "reason": "Original source-specific uncertainty remains after full callback review, cached actor/item evidence and bounded public chain research. Absence or other emulator numeric values do not establish P99 parity."
+    },
+    {
+      "key": "mistmoore/Eirod_Haerod",
+      "questId": 19120,
+      "baselineFile": "effective/quests/mistmoore/Eirod_Haerod.lua",
+      "baselineSourceSha256": "e4b2197828aa39af5fa3d3ecb826cddcc08704600e2d13e40da0082a3c3affb2",
+      "fullSourceReviewed": true,
+      "handlersReviewed": [
+        "event_say",
+        "event_trade"
+      ],
+      "sourceLines": 51,
+      "sourceSpecificReview": "Eirod IndigoBrother task/global 21972 and torso 21973\u00d72 consume-before-global-check hazard; no P99 hand-in evidence, so do not conflate code hazard with established P99 defect.",
+      "cachedActorEvidence": [],
+      "cachedItemNavigation": {
+        "key": "mistmoore/Eirod_Haerod",
+        "itemNameMatches": [
+          {
+            "id": 21972,
+            "name": "Symbol of the Brotherhood",
+            "pages": []
+          },
+          {
+            "id": 21973,
+            "name": "Brownie Torso",
+            "pages": []
+          },
+          {
+            "id": 21974,
+            "name": "Sealed War Documents",
+            "pages": []
+          }
+        ]
+      },
+      "action": "unchanged",
+      "disposition": "unresolved_after_full_source_and_bounded_evidence_review",
+      "evidenceIds": [],
+      "reason": "Original source-specific uncertainty remains after full callback review, cached actor/item evidence and bounded public chain research. Absence or other emulator numeric values do not establish P99 parity."
+    },
+    {
+      "key": "neriaka/Bregna",
+      "questId": 14222,
+      "baselineFile": "effective/quests/neriaka/Bregna.lua",
+      "baselineSourceSha256": "30f7510b8d8676b57a9806de47dd46a94b2f53a5688a120db07b816833a7dcdb",
+      "fullSourceReviewed": true,
+      "handlersReviewed": [
+        "event_say",
+        "event_trade"
+      ],
+      "sourceLines": 20,
+      "sourceSpecificReview": "Neriak Bregna only AidGaruuk four-item receipt 28740, unlike Grobb mixed actor; not interchangeable identities.",
+      "cachedActorEvidence": [
+        {
+          "title": "Bregna",
+          "url": "https://wiki.project1999.com/Bregna?action=raw",
+          "fetchedAt": "2026-08-12T18:02:27.764Z",
+          "revision": null,
+          "sha256": "4a858e3d8d109f06b7ac54e3d6bda6af36a7bffc64277df70e13f9a77eb937b2",
+          "bytes": 801,
+          "source": "npc-pages/bregna-b605c98b17.json",
+          "cachePath": "reference/p99-wiki/npc-pages/bregna-b605c98b17.wiki",
+          "match": "normalized full NPC name in title/body; identity still requires verification"
+        }
+      ],
+      "cachedItemNavigation": {
+        "key": "neriaka/Bregna",
+        "itemNameMatches": [
+          {
+            "id": 26632,
+            "name": "Blood Raven Tailfeather",
+            "pages": []
+          },
+          {
+            "id": 26640,
+            "name": "Wrulon Claw",
+            "pages": []
+          },
+          {
+            "id": 26662,
+            "name": "Swirling Banshee Essence",
+            "pages": []
+          },
+          {
+            "id": 28740,
+            "name": "Troll Receipt",
+            "pages": []
+          },
+          {
+            "id": 29921,
+            "name": "Arachnae Fangs",
+            "pages": []
+          }
+        ]
+      },
+      "action": "disable_preserve_full_body",
+      "disposition": "positive_later_or_custom_event_source_only_exclusion",
+      "evidenceIds": [
+        "garuuk"
+      ],
+      "reason": "Only trade is exact four ingredients to Troll Receipt for PoK Aid Garuuk. Generic shaman greeting is context for this sole later quest, not a documented classic exchange.",
+      "upstreamBaselineFile": "maintained/lua/converted-perl/neriaka/Bregna.lua",
+      "upstreamBaselineSourceSha256": "30f7510b8d8676b57a9806de47dd46a94b2f53a5688a120db07b816833a7dcdb",
+      "proposedFile": "changes/p99-final-uncertainty/neriaka--Bregna.lua",
+      "proposedSourceSha256": "1d79f2d9645ddd1d747392271ec94cf1423560f1bf5a899c69969e243b47bbb2",
+      "proposedEnabled": 0
+    },
+    {
+      "key": "neriakb/Exterminator_Damasi",
+      "questId": 15453,
+      "baselineFile": "effective/quests/neriakb/Exterminator_Damasi.lua",
+      "baselineSourceSha256": "2f31b27b83f41c661179ffb26d26ef5f65cd33fbd7797a8c2f661a5bfa7c9224",
+      "fullSourceReviewed": true,
+      "handlersReviewed": [
+        "event_say",
+        "event_trade"
+      ],
+      "sourceLines": 23,
+      "sourceSpecificReview": "Damasi rat quartet 13071\u2192coin/XP/factions; no P99 hand-in documentation located.",
+      "cachedActorEvidence": [],
+      "cachedItemNavigation": {
+        "key": "neriakb/Exterminator_Damasi",
+        "itemNameMatches": [
+          {
+            "id": 13071,
+            "name": "Rat Whiskers",
+            "pages": [
+              "Bat Fur Quest",
+              "Note for Rebby",
+              "Rat's Foot Necklace Quest",
+              "Unsar's Glory",
+              "Unser's Call",
+              "A cauldron rat",
+              "A Female Rat",
+              "A frenzied rat",
+              "A giant diseased rat",
+              "A giant plague rat",
+              "A Giant Sewer Rat",
+              "A giant thicket rat",
+              "A large plague rat",
+              "A Large Rat",
+              "A plague rat",
+              "A rodent",
+              "A scalded rat",
+              "A young plague rat",
+              "An infected rat",
+              "An undead rat",
+              "Cinder goblin shaman",
+              "Cinder goblin wizard",
+              "Cuburt",
+              "Fire goblin wizard",
+              "Flame goblin shaman",
+              "Flame goblin wizard",
+              "Infected Rat",
+              "Inferno goblin shaman",
+              "Jeena Firechaser",
+              "Meldrath The Malignant",
+              "Scruffy",
+              "Wharf rat",
+              "Young goblin shaman"
+            ]
+          }
+        ]
+      },
+      "action": "unchanged",
+      "disposition": "unresolved_after_full_source_and_bounded_evidence_review",
+      "evidenceIds": [
+        "rodents",
+        "sahizz"
+      ],
+      "reason": "Contemporary 2003 city-vermin accounts suggest later family, but exact actor/version timing remains insufficient; actor wiki pages may exist without exchange documentation. Preserve distinct factions, XP, coin and unrelated combat/slay callbacks rather than extrapolate one actor or database entry date to all."
+    },
+    {
+      "key": "neriakc/Exterminator_Gilea",
+      "questId": 12367,
+      "baselineFile": "effective/quests/neriakc/Exterminator_Gilea.lua",
+      "baselineSourceSha256": "baebb215207bf4e1ae12888d86f7c4bff58442d6f3ac22e57285ca01e62aa3b1",
+      "fullSourceReviewed": true,
+      "handlersReviewed": [
+        "event_say",
+        "event_trade"
+      ],
+      "sourceLines": 23,
+      "sourceSpecificReview": "Gilea rat quartet\u2192coin/XP/factions; no P99 exchange evidence found.",
+      "cachedActorEvidence": [],
+      "cachedItemNavigation": {
+        "key": "neriakc/Exterminator_Gilea",
+        "itemNameMatches": [
+          {
+            "id": 13071,
+            "name": "Rat Whiskers",
+            "pages": [
+              "Bat Fur Quest",
+              "Note for Rebby",
+              "Rat's Foot Necklace Quest",
+              "Unsar's Glory",
+              "Unser's Call",
+              "A cauldron rat",
+              "A Female Rat",
+              "A frenzied rat",
+              "A giant diseased rat",
+              "A giant plague rat",
+              "A Giant Sewer Rat",
+              "A giant thicket rat",
+              "A large plague rat",
+              "A Large Rat",
+              "A plague rat",
+              "A rodent",
+              "A scalded rat",
+              "A young plague rat",
+              "An infected rat",
+              "An undead rat",
+              "Cinder goblin shaman",
+              "Cinder goblin wizard",
+              "Cuburt",
+              "Fire goblin wizard",
+              "Flame goblin shaman",
+              "Flame goblin wizard",
+              "Infected Rat",
+              "Inferno goblin shaman",
+              "Jeena Firechaser",
+              "Meldrath The Malignant",
+              "Scruffy",
+              "Wharf rat",
+              "Young goblin shaman"
+            ]
+          }
+        ]
+      },
+      "action": "unchanged",
+      "disposition": "unresolved_after_full_source_and_bounded_evidence_review",
+      "evidenceIds": [
+        "rodents",
+        "sahizz"
+      ],
+      "reason": "Contemporary 2003 city-vermin accounts suggest later family, but exact actor/version timing remains insufficient; actor wiki pages may exist without exchange documentation. Preserve distinct factions, XP, coin and unrelated combat/slay callbacks rather than extrapolate one actor or database entry date to all."
+    },
+    {
+      "key": "northkarana/#Triathalon_Token",
+      "questId": 14501,
+      "baselineFile": "effective/quests/northkarana/%23Triathalon_Token.lua",
+      "baselineSourceSha256": "79e43b8eb75a67055be5ff841fa2da9a060a060e891f67ac27d1a99ffa52a2f9",
+      "fullSourceReviewed": true,
+      "handlersReviewed": [
+        "event_say",
+        "event_trade"
+      ],
+      "sourceLines": 19,
+      "sourceSpecificReview": "Triathalon token actor explicitly custom GM event;2300boots\u219220695heart.",
+      "cachedActorEvidence": [],
+      "cachedItemNavigation": {
+        "key": "northkarana/#Triathalon_Token",
+        "itemNameMatches": [
+          {
+            "id": 2300,
+            "name": "Journeyman's Boots",
+            "pages": [
+              "Journeyman's Boots Quest",
+              "Popular Quests by Reward",
+              "A Kunark rhino",
+              "A shadowed man (Innothule Swamp)",
+              "A shadowed man (Lavastorm Mountains)",
+              "A shadowed man (Lesser Faydark)",
+              "A shadowed man (Nektulos Forest)",
+              "A shadowed man (South Karana)",
+              "A shadowed man (West Commonlands)",
+              "An ancient cyclops (Ocean of Tears)",
+              "An ancient cyclops (Southern Ro)",
+              "Drelzna",
+              "Hasten Bootstrutter",
+              "Ytyrs Reborn"
+            ]
+          },
+          {
+            "id": 20695,
+            "name": "Warm Pulsing Treant Heart",
+            "pages": [
+              "Druid Epic Quest",
+              "Withered treant",
+              "Yeka Ias"
+            ]
+          }
+        ]
+      },
+      "action": "disable_preserve_full_body",
+      "disposition": "positive_later_or_custom_event_source_only_exclusion",
+      "evidenceIds": [
+        "triathalon",
+        "luclin-features"
+      ],
+      "reason": "Exact four-source custom GM race: goggles16889 ->horse21800 ->boots2300 ->heart20695. All four original ProjectEQ sources explicitly identify the same custom GM event by Shadowblade. Crucially21800 is Tan Rope Bridle with mount click2919; Bike grants the horse and Shoes consumes it. Official Luclin introduction of mounts independently puts this entire linked race beyond Velious, not just the GM label. No ordinary P99 branch.",
+      "upstreamBaselineFile": "sources/projecteq/northkarana/#Triathalon_Token.lua",
+      "upstreamBaselineSourceSha256": "79e43b8eb75a67055be5ff841fa2da9a060a060e891f67ac27d1a99ffa52a2f9",
+      "proposedFile": "changes/p99-final-uncertainty/northkarana--#Triathalon_Token.lua",
+      "proposedSourceSha256": "b440fe092bf5015fd9e145ef8ecbb872e3cf3aa72e835ec33cac549c0834e144",
+      "proposedEnabled": 0
+    },
+    {
+      "key": "northkarana/Gorri_Fallstine",
+      "questId": 19037,
+      "baselineFile": "effective/quests/northkarana/Gorri_Fallstine.lua",
+      "baselineSourceSha256": "e4d087cb26758c202a5122b632eab26dc50c4624793cf3883c1b125ed7b558c7",
+      "fullSourceReviewed": true,
+      "handlersReviewed": [
+        "event_say",
+        "event_trade"
+      ],
+      "sourceLines": 19,
+      "sourceSpecificReview": "Gorri consumes one to four fire-beetle eyes 10307 and Dings, no reward; no documented P99 objective located.",
+      "cachedActorEvidence": [],
+      "cachedItemNavigation": {
+        "key": "northkarana/Gorri_Fallstine",
+        "itemNameMatches": [
+          {
+            "id": 10307,
+            "name": "Fire Beetle Eye",
+            "pages": [
+              "A Job for Nanrum",
+              "Assist the Great Xelha",
+              "Bat Fur Quest",
+              "Bug Collection",
+              "Fire Beetle Eyes",
+              "Holy Armor Scroll",
+              "Mammoth Tusks Quest",
+              "Neonate Cowardice",
+              "Popular Quests by Reward",
+              "The Summoning of Dread",
+              "The Summoning of Fright",
+              "The Summoning of Terror",
+              "Wizard's First Assignment",
+              "Yegek's Test, Part 1",
+              "Zimel's Blades (SoulFire)",
+              "A borer beetle",
+              "A Fire Beetle",
+              "A giant beetle",
+              "A Klicnik Drone",
+              "A Klicnik Worker",
+              "A minor scarab",
+              "A pincer beetle",
+              "A pyre beetle",
+              "A scythe beetle",
+              "Blixkin Entopop",
+              "Noxhil V`Sek",
+              "Prince Klaknak",
+              "Prince Klicnik",
+              "Princess Klaknak",
+              "Princess Klicnik",
+              "Queen Klaknak",
+              "Queen Klicnik"
+            ]
+          }
+        ]
+      },
+      "action": "unchanged",
+      "disposition": "unresolved_after_full_source_and_bounded_evidence_review",
+      "evidenceIds": [],
+      "reason": "Original source-specific uncertainty remains after full callback review, cached actor/item evidence and bounded public chain research. Absence or other emulator numeric values do not establish P99 parity."
+    },
+    {
+      "key": "oggok/Exterminator_Glurg",
+      "questId": 14884,
+      "baselineFile": "effective/quests/oggok/Exterminator_Glurg.lua",
+      "baselineSourceSha256": "3a1a59917549d51465948fb69711383c80160d5163c56a9413036e2f87f53c23",
+      "fullSourceReviewed": true,
+      "handlersReviewed": [
+        "event_say",
+        "event_trade"
+      ],
+      "sourceLines": 22,
+      "sourceSpecificReview": "Glurg four armadillo husks 19195\u2192coin/XP/faction. P99 NPC confirmation does not verify hand-in.",
+      "cachedActorEvidence": [
+        {
+          "title": "Exterminator Glurg",
+          "url": "https://wiki.project1999.com/Exterminator_Glurg?action=raw",
+          "fetchedAt": "2026-08-12T18:39:57.175Z",
+          "revision": null,
+          "sha256": "0ef929051b032e226afde61bacf0a257e8a6a0c61e560b0549be064d7f5e4d97",
+          "bytes": 853,
+          "source": "npc-pages/exterminator-glurg-80e4fe83d0.json",
+          "cachePath": "reference/p99-wiki/npc-pages/exterminator-glurg-80e4fe83d0.wiki",
+          "match": "normalized full NPC name in title/body; identity still requires verification"
+        }
+      ],
+      "cachedItemNavigation": {
+        "key": "oggok/Exterminator_Glurg",
+        "itemNameMatches": [
+          {
+            "id": 19195,
+            "name": "Armadillo Husk",
+            "pages": [
+              "An Armadillo",
+              "Dunedigger"
+            ]
+          }
+        ]
+      },
+      "action": "unchanged",
+      "disposition": "unresolved_after_full_source_and_bounded_evidence_review",
+      "evidenceIds": [
+        "rodents",
+        "sahizz"
+      ],
+      "reason": "Contemporary 2003 city-vermin accounts suggest later family, but exact actor/version timing remains insufficient; actor wiki pages may exist without exchange documentation. Preserve distinct factions, XP, coin and unrelated combat/slay callbacks rather than extrapolate one actor or database entry date to all."
+    },
+    {
+      "key": "qey2hh1/Tarnic_McWillows",
+      "questId": 14569,
+      "baselineFile": "effective/quests/qey2hh1/Tarnic_McWillows.lua",
+      "baselineSourceSha256": "06c1b7916b549f08bd55b57ffdbbd123dfa7a4974bcc4d8ba0eb4bb6305ad6d2",
+      "fullSourceReviewed": true,
+      "handlersReviewed": [
+        "event_trade"
+      ],
+      "sourceLines": 12,
+      "sourceSpecificReview": "Medicine bag 21987\u2192Antidotewind 21988,zeroXP. No exact P99 evidence located; preserve without parity claim.",
+      "cachedActorEvidence": [],
+      "cachedItemNavigation": {
+        "key": "qey2hh1/Tarnic_McWillows",
+        "itemNameMatches": [
+          {
+            "id": 21987,
+            "name": "Elven Medicine Bag",
+            "pages": []
+          },
+          {
+            "id": 21988,
+            "name": "Antidote of the wind",
+            "pages": []
+          }
+        ]
+      },
+      "action": "disable_preserve_full_body",
+      "disposition": "positive_later_or_custom_event_source_only_exclusion",
+      "evidenceIds": [
+        "tarnic"
+      ],
+      "reason": "Only callback medicine bag21987->antidote21988 matches Ykesha Gandak/Dulak/Torgiran charm chain.",
+      "upstreamBaselineFile": "sources/projecteq/qey2hh1/Tarnic_McWillows.lua",
+      "upstreamBaselineSourceSha256": "06c1b7916b549f08bd55b57ffdbbd123dfa7a4974bcc4d8ba0eb4bb6305ad6d2",
+      "proposedFile": "changes/p99-final-uncertainty/qey2hh1--Tarnic_McWillows.lua",
+      "proposedSourceSha256": "11cf2c85477f3da40d6d6cce6355cef9bd48692b36b99066d001968ff4c12a20",
+      "proposedEnabled": 0
+    },
+    {
+      "key": "qeynos/Exterminator_Rasmon",
+      "questId": 13039,
+      "baselineFile": "effective/quests/qeynos/Exterminator_Rasmon.lua",
+      "baselineSourceSha256": "36b49baa9135b5c93cf4f42f1310346d633f29d8357841ea6ef3cb1a30f94c50",
+      "fullSourceReviewed": true,
+      "handlersReviewed": [
+        "event_say",
+        "event_trade"
+      ],
+      "sourceLines": 22,
+      "sourceSpecificReview": "Rasmon rat quartet\u21924silver/XP/faction; code comments mislabel some IDs but no P99 numeric evidence supports changing actual values.",
+      "cachedActorEvidence": [],
+      "cachedItemNavigation": {
+        "key": "qeynos/Exterminator_Rasmon",
+        "itemNameMatches": [
+          {
+            "id": 13071,
+            "name": "Rat Whiskers",
+            "pages": [
+              "Bat Fur Quest",
+              "Note for Rebby",
+              "Rat's Foot Necklace Quest",
+              "Unsar's Glory",
+              "Unser's Call",
+              "A cauldron rat",
+              "A Female Rat",
+              "A frenzied rat",
+              "A giant diseased rat",
+              "A giant plague rat",
+              "A Giant Sewer Rat",
+              "A giant thicket rat",
+              "A large plague rat",
+              "A Large Rat",
+              "A plague rat",
+              "A rodent",
+              "A scalded rat",
+              "A young plague rat",
+              "An infected rat",
+              "An undead rat",
+              "Cinder goblin shaman",
+              "Cinder goblin wizard",
+              "Cuburt",
+              "Fire goblin wizard",
+              "Flame goblin shaman",
+              "Flame goblin wizard",
+              "Infected Rat",
+              "Inferno goblin shaman",
+              "Jeena Firechaser",
+              "Meldrath The Malignant",
+              "Scruffy",
+              "Wharf rat",
+              "Young goblin shaman"
+            ]
+          }
+        ]
+      },
+      "action": "unchanged",
+      "disposition": "unresolved_after_full_source_and_bounded_evidence_review",
+      "evidenceIds": [
+        "rodents",
+        "sahizz"
+      ],
+      "reason": "Contemporary 2003 city-vermin accounts suggest later family, but exact actor/version timing remains insufficient; actor wiki pages may exist without exchange documentation. Preserve distinct factions, XP, coin and unrelated combat/slay callbacks rather than extrapolate one actor or database entry date to all."
+    },
+    {
+      "key": "qeynos/Jalorin_Tar-Visgur",
+      "questId": 15640,
+      "baselineFile": "effective/quests/qeynos/Jalorin_Tar-Visgur.lua",
+      "baselineSourceSha256": "683f338dd9447c748151f62ba9d28a468d8bba49b0fcaef1d0ab7eec8f940a3a",
+      "fullSourceReviewed": true,
+      "handlersReviewed": [
+        "event_say",
+        "event_trade"
+      ],
+      "sourceLines": 28,
+      "sourceSpecificReview": "Jalorin Erudin medal 21971/Brianna note 21969/Elisi attack story; no exact P99 chain evidence found.",
+      "cachedActorEvidence": [],
+      "cachedItemNavigation": {
+        "key": "qeynos/Jalorin_Tar-Visgur",
+        "itemNameMatches": [
+          {
+            "id": 21699,
+            "name": "Scribbled Parchment",
+            "pages": [
+              "Enchanter Epic Quest",
+              "Rogue Epic Quest",
+              "Rohane's Rogue Epic Guide",
+              "Scribbled Parchment",
+              "Stanos' Head"
+            ]
+          },
+          {
+            "id": 21969,
+            "name": "Note From Brianna",
+            "pages": []
+          },
+          {
+            "id": 21971,
+            "name": "Tarnished Erudin Medal",
+            "pages": []
+          }
+        ]
+      },
+      "action": "unchanged",
+      "disposition": "unresolved_after_full_source_and_bounded_evidence_review",
+      "evidenceIds": [],
+      "reason": "Original source-specific uncertainty remains after full callback review, cached actor/item evidence and bounded public chain research. Absence or other emulator numeric values do not establish P99 parity."
+    },
+    {
+      "key": "qeynos/Yakem_Oreslinger",
+      "questId": 12711,
+      "baselineFile": "effective/quests/qeynos/Yakem_Oreslinger.lua",
+      "baselineSourceSha256": "c54d9a394ddd4216123bcf2c529f4ed1c90a90d9d64b3993c3a1bd72c5e2d8be",
+      "fullSourceReviewed": true,
+      "handlersReviewed": [
+        "event_say",
+        "event_trade"
+      ],
+      "sourceLines": 31,
+      "sourceSpecificReview": "Yakem HQ ore shipments 10952/10953\u2192random coin,500XP and 17814container. Different payouts from Harnoff do not establish a bug.",
+      "cachedActorEvidence": [],
+      "cachedItemNavigation": {
+        "key": "qeynos/Yakem_Oreslinger",
+        "itemNameMatches": [
+          {
+            "id": 10952,
+            "name": "Small Shipment of High Quality Ore",
+            "pages": []
+          },
+          {
+            "id": 10953,
+            "name": "Large Shipment of High Quality Ore",
+            "pages": []
+          },
+          {
+            "id": 17814,
+            "name": "Empty Ore Crate",
+            "pages": []
+          }
+        ]
+      },
+      "action": "disable_preserve_full_body",
+      "disposition": "positive_later_or_custom_event_source_only_exclusion",
+      "evidenceIds": [
+        "ore",
+        "ore-patch"
+      ],
+      "reason": "All dialogue/container17814 and shipments10952/10953 concern same positively2002 HQ ore restock quest; random payouts retained historically.",
+      "upstreamBaselineFile": "sources/projecteq/qeynos/Yakem_Oreslinger.lua",
+      "upstreamBaselineSourceSha256": "c54d9a394ddd4216123bcf2c529f4ed1c90a90d9d64b3993c3a1bd72c5e2d8be",
+      "proposedFile": "changes/p99-final-uncertainty/qeynos--Yakem_Oreslinger.lua",
+      "proposedSourceSha256": "3376cf72ecdecc5ea4b10b24fc288ebeb8694d0407bb096a7f68e5d13aae71b2",
+      "proposedEnabled": 0
+    },
+    {
+      "key": "qeynos2/Exterminator_Wintloag",
+      "questId": 19033,
+      "baselineFile": "effective/quests/qeynos2/Exterminator_Wintloag.lua",
+      "baselineSourceSha256": "fb25c822e643233c13b07277534246f1b825c153f7c72ee4be893f6ee9789a78",
+      "fullSourceReviewed": true,
+      "handlersReviewed": [
+        "event_say",
+        "event_trade"
+      ],
+      "sourceLines": 22,
+      "sourceSpecificReview": "Wintloag rat quartet\u21924silver/XP/\u00b15factions; do not standardize to other exterminators without evidence.",
+      "cachedActorEvidence": [],
+      "cachedItemNavigation": {
+        "key": "qeynos2/Exterminator_Wintloag",
+        "itemNameMatches": [
+          {
+            "id": 13071,
+            "name": "Rat Whiskers",
+            "pages": [
+              "Bat Fur Quest",
+              "Note for Rebby",
+              "Rat's Foot Necklace Quest",
+              "Unsar's Glory",
+              "Unser's Call",
+              "A cauldron rat",
+              "A Female Rat",
+              "A frenzied rat",
+              "A giant diseased rat",
+              "A giant plague rat",
+              "A Giant Sewer Rat",
+              "A giant thicket rat",
+              "A large plague rat",
+              "A Large Rat",
+              "A plague rat",
+              "A rodent",
+              "A scalded rat",
+              "A young plague rat",
+              "An infected rat",
+              "An undead rat",
+              "Cinder goblin shaman",
+              "Cinder goblin wizard",
+              "Cuburt",
+              "Fire goblin wizard",
+              "Flame goblin shaman",
+              "Flame goblin wizard",
+              "Infected Rat",
+              "Inferno goblin shaman",
+              "Jeena Firechaser",
+              "Meldrath The Malignant",
+              "Scruffy",
+              "Wharf rat",
+              "Young goblin shaman"
+            ]
+          }
+        ]
+      },
+      "action": "unchanged",
+      "disposition": "unresolved_after_full_source_and_bounded_evidence_review",
+      "evidenceIds": [
+        "rodents",
+        "sahizz"
+      ],
+      "reason": "Contemporary 2003 city-vermin accounts suggest later family, but exact actor/version timing remains insufficient; actor wiki pages may exist without exchange documentation. Preserve distinct factions, XP, coin and unrelated combat/slay callbacks rather than extrapolate one actor or database entry date to all."
+    },
+    {
+      "key": "rivervale/Exterminator_Sutten",
+      "questId": 16952,
+      "baselineFile": "effective/quests/rivervale/Exterminator_Sutten.lua",
+      "baselineSourceSha256": "422d7d0f575ac86e740a7da6767a7186ec25d166b5a39eef203f2f5d405e85af",
+      "fullSourceReviewed": true,
+      "handlersReviewed": [
+        "event_say",
+        "event_trade"
+      ],
+      "sourceLines": 24,
+      "sourceSpecificReview": "Sutten rat quartet\u2192coin/XP/Rivervale factions; no exact P99 exchange documentation found.",
+      "cachedActorEvidence": [],
+      "cachedItemNavigation": {
+        "key": "rivervale/Exterminator_Sutten",
+        "itemNameMatches": [
+          {
+            "id": 13071,
+            "name": "Rat Whiskers",
+            "pages": [
+              "Bat Fur Quest",
+              "Note for Rebby",
+              "Rat's Foot Necklace Quest",
+              "Unsar's Glory",
+              "Unser's Call",
+              "A cauldron rat",
+              "A Female Rat",
+              "A frenzied rat",
+              "A giant diseased rat",
+              "A giant plague rat",
+              "A Giant Sewer Rat",
+              "A giant thicket rat",
+              "A large plague rat",
+              "A Large Rat",
+              "A plague rat",
+              "A rodent",
+              "A scalded rat",
+              "A young plague rat",
+              "An infected rat",
+              "An undead rat",
+              "Cinder goblin shaman",
+              "Cinder goblin wizard",
+              "Cuburt",
+              "Fire goblin wizard",
+              "Flame goblin shaman",
+              "Flame goblin wizard",
+              "Infected Rat",
+              "Inferno goblin shaman",
+              "Jeena Firechaser",
+              "Meldrath The Malignant",
+              "Scruffy",
+              "Wharf rat",
+              "Young goblin shaman"
+            ]
+          }
+        ]
+      },
+      "action": "unchanged",
+      "disposition": "unresolved_after_full_source_and_bounded_evidence_review",
+      "evidenceIds": [
+        "rodents",
+        "sahizz"
+      ],
+      "reason": "Contemporary 2003 city-vermin accounts suggest later family, but exact actor/version timing remains insufficient; actor wiki pages may exist without exchange documentation. Preserve distinct factions, XP, coin and unrelated combat/slay callbacks rather than extrapolate one actor or database entry date to all."
+    },
+    {
+      "key": "sirens/Ravaging_Tsunami_Elemental",
+      "questId": 19388,
+      "baselineFile": "effective/quests/sirens/Ravaging_Tsunami_Elemental.lua",
+      "baselineSourceSha256": "dca30aa09b2ad61ac8dd268a44953b27d6b89c5d8913469b757362ea3e72548a",
+      "fullSourceReviewed": true,
+      "handlersReviewed": [
+        "event_trade"
+      ],
+      "sourceLines": 11,
+      "sourceSpecificReview": "Ravaging Tsunami Elemental 11304 vial returns itself and removes immunity/aggros; encounter hand-in, not reward quest. P99 exact presence/admission unverified.",
+      "cachedActorEvidence": [],
+      "cachedItemNavigation": {
+        "key": "sirens/Ravaging_Tsunami_Elemental",
+        "itemNameMatches": [
+          {
+            "id": 11304,
+            "name": "Vial of Elemental Binding",
+            "pages": []
+          }
+        ]
+      },
+      "action": "disable_preserve_full_body",
+      "disposition": "positive_later_or_custom_event_source_only_exclusion",
+      "evidenceIds": [
+        "magician"
+      ],
+      "reason": "Single vial11304 immunity-removal/aggro/refund callback is exact Magician Epic1.5 prequest, not ordinary sirens combat.",
+      "upstreamBaselineFile": "sources/projecteq/sirens/Ravaging_Tsunami_Elemental.lua",
+      "upstreamBaselineSourceSha256": "dca30aa09b2ad61ac8dd268a44953b27d6b89c5d8913469b757362ea3e72548a",
+      "proposedFile": "changes/p99-final-uncertainty/sirens--Ravaging_Tsunami_Elemental.lua",
+      "proposedSourceSha256": "7435d3f12c9e5b9dfaad22e28e9933e44f2fdbf434fe7689e64944abb2e49ef2",
+      "proposedEnabled": 0
+    },
+    {
+      "key": "southkarana/#Triathalon_Running_Shoes",
+      "questId": 17511,
+      "baselineFile": "effective/quests/southkarana/%23Triathalon_Running_Shoes.lua",
+      "baselineSourceSha256": "3544149f89efe84ef4c3618403cb97ad2cfb210cebb4d19de5c38bfb5cdbe8e9",
+      "fullSourceReviewed": true,
+      "handlersReviewed": [
+        "event_say",
+        "event_trade"
+      ],
+      "sourceLines": 19,
+      "sourceSpecificReview": "Triathalon shoes actor explicitly custom GM event;horse 21800\u2192JBoots 2300.",
+      "cachedActorEvidence": [],
+      "cachedItemNavigation": {
+        "key": "southkarana/#Triathalon_Running_Shoes",
+        "itemNameMatches": [
+          {
+            "id": 2300,
+            "name": "Journeyman's Boots",
+            "pages": [
+              "Journeyman's Boots Quest",
+              "Popular Quests by Reward",
+              "A Kunark rhino",
+              "A shadowed man (Innothule Swamp)",
+              "A shadowed man (Lavastorm Mountains)",
+              "A shadowed man (Lesser Faydark)",
+              "A shadowed man (Nektulos Forest)",
+              "A shadowed man (South Karana)",
+              "A shadowed man (West Commonlands)",
+              "An ancient cyclops (Ocean of Tears)",
+              "An ancient cyclops (Southern Ro)",
+              "Drelzna",
+              "Hasten Bootstrutter",
+              "Ytyrs Reborn"
+            ]
+          },
+          {
+            "id": 21800,
+            "name": "Tan Rope Bridle",
+            "pages": []
+          }
+        ]
+      },
+      "action": "disable_preserve_full_body",
+      "disposition": "positive_later_or_custom_event_source_only_exclusion",
+      "evidenceIds": [
+        "triathalon",
+        "luclin-features"
+      ],
+      "reason": "Exact four-source custom GM race: goggles16889 ->horse21800 ->boots2300 ->heart20695. All four original ProjectEQ sources explicitly identify the same custom GM event by Shadowblade. Crucially21800 is Tan Rope Bridle with mount click2919; Bike grants the horse and Shoes consumes it. Official Luclin introduction of mounts independently puts this entire linked race beyond Velious, not just the GM label. No ordinary P99 branch.",
+      "upstreamBaselineFile": "sources/projecteq/southkarana/#Triathalon_Running_Shoes.lua",
+      "upstreamBaselineSourceSha256": "3544149f89efe84ef4c3618403cb97ad2cfb210cebb4d19de5c38bfb5cdbe8e9",
+      "proposedFile": "changes/p99-final-uncertainty/southkarana--#Triathalon_Running_Shoes.lua",
+      "proposedSourceSha256": "a14394b7002de4aec834cadadbf6ca8e45d33055a139fbe1aa64823723d4481a",
+      "proposedEnabled": 0
+    },
+    {
+      "key": "tox/Lanivon_Baxer",
+      "questId": 18922,
+      "baselineFile": "effective/quests/tox/Lanivon_Baxer.lua",
+      "baselineSourceSha256": "149189532f714dfab532e433d5ccefb87cdef75d79e3206bc8f5819d93672701",
+      "fullSourceReviewed": true,
+      "handlersReviewed": [
+        "event_say",
+        "event_trade"
+      ],
+      "sourceLines": 19,
+      "sourceSpecificReview": "Lanivon PackagedNotes 6069\u2192RingMessenger 1573 and 85000XP. P99 NPC page links a research quest but does not establish these exact values or complete acquisition chain.",
+      "cachedActorEvidence": [
+        {
+          "title": "Lanivon Baxer",
+          "url": "https://wiki.project1999.com/Lanivon_Baxer?action=raw",
+          "fetchedAt": "2026-08-12T19:51:55.606Z",
+          "revision": null,
+          "sha256": "fd3cc474fe452d06cd5ce9309df7d6bdea426c45fddd1cc25670996198f0e22e",
+          "bytes": 977,
+          "source": "npc-pages/lanivon-baxer-e25a419635.json",
+          "cachePath": "reference/p99-wiki/npc-pages/lanivon-baxer-e25a419635.wiki",
+          "match": "normalized full NPC name in title/body; identity still requires verification"
+        }
+      ],
+      "cachedItemNavigation": {
+        "key": "tox/Lanivon_Baxer",
+        "itemNameMatches": [
+          {
+            "id": 1573,
+            "name": "Ring of the Messenger",
+            "pages": []
+          },
+          {
+            "id": 6069,
+            "name": "Packaged Research Notes",
+            "pages": []
+          }
+        ]
+      },
+      "action": "unchanged",
+      "disposition": "unresolved_after_full_source_and_bounded_evidence_review",
+      "evidenceIds": [
+        "helper-research-uncertainty"
+      ],
+      "reason": "Exact Al Kabor research chain has November2001/pre-Luclin reward reports but current P99 acquisition report is incomplete. Preserve three linked handlers without declaring later or numeric parity."
+    }
+  ]
+}

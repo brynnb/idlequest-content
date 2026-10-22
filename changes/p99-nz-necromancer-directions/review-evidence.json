@@ -1,0 +1,29 @@
+{
+  "titles": [
+    "Necromancer Epic Quest"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "partial",
+  "match_status": "partial",
+  "local_quest_keys": [
+    "nektulos/Venenzi_Oberzendi",
+    "lakerathe/Kazen_Fecae",
+    "timorous/Drendico_Metalbones"
+  ],
+  "proposal": "changes/p99-nz-necromancer-directions.json",
+  "notes": [
+    "Repair the exact Apprentice Symbol prompt and essential next-step discovery while preserving intentional condensed epic prose.",
+    "Pinned review notes explicitly preserve condensed Necromancer dialogue. Do not expand unrelated text. Add master/task links for Venenzi, exact symbol-of-the-apprentice alias and advance prompt for Kazen, and documented return-to-Kazen direction for Drendico. Every item, reward, class check, inventory requirement and no-minimum-level policy is unchanged; raid-side-effect adaptations remain."
+  ],
+  "verification": {
+    "proposalValidation": "changes/p99-nz-coverage/proposal-validation-67.txt",
+    "isolatedScenarioReceipt": "changes/p99-nz-coverage/isolated-reviewer-tests.json",
+    "isolatedScenarioCount": 229,
+    "scope": "Receipt contains hash-bound scenarios; data-only rows have structural proposal validation, not live gameplay.",
+    "fullGameRuntime": "not_run",
+    "ui": "not_run"
+  },
+  "unresolved": [
+    "Ordinary source drops/spawns, recipe live behavior and rendered complete quest path not verified."
+  ]
+}

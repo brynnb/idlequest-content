@@ -1,0 +1,216 @@
+{
+  "format": 1,
+  "id": "p99-sz-sentry-factions",
+  "summary": "Correct each of eight Sentry Xyrin quest steps to documented faction +1/-1/+1. Xyrin uses supported six-minute timer and current-position single harpoon drop with persistent closure guard; exact XP and live lifecycle remain unresolved.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Sentry_Xyrin_Quest?action=raw",
+      "note": "Cached 2026-07-17T23:32:08.976Z; revision unavailable; SHA256 b074004955675583ee63fde3fdbcf46ada74a9aad96e48c47a1adf345a9489fe. Source-only correction; full runtime and UI not executed. Undocumented numerical values unchanged."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 12841,
+        "zone": "freportn",
+        "name": "Sentry_Andlin",
+        "lua_content": "-- items: 12127, 12128\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Greetings! I would love to converse with you, but as you cansee, I am standing my watch.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 12127})) then\n\t\te.self:Say(\"My thanks to you. I feel much strength. You may take the bottle to the next sentry.\");\n\t\te.other:SummonItem(12128); -- Item: Part of Potion of Marr\n\t\te.other:Ding();\n\t\te.other:Faction(362,5,0); -- Faction: Priests of Marr\n\t\te.other:Faction(330,-10,0); -- Faction: The Freeport Militia\n\t\te.other:Faction(281,5,0); -- Faction: Knights of Truth\n\t\te.other:AddEXP(100);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 12841,
+        "zone": "freportn",
+        "name": "Sentry_Andlin",
+        "lua_content": "-- items: 12127, 12128\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Greetings! I would love to converse with you, but as you cansee, I am standing my watch.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 12127})) then\n\t\te.self:Say(\"My thanks to you. I feel much strength. You may take the bottle to the next sentry.\");\n\t\te.other:SummonItem(12128); -- Item: Part of Potion of Marr\n\t\te.other:Ding();\n\t\te.other:Faction(362,1,0); -- Faction: Priests of Marr\n\t\te.other:Faction(330,-1,0); -- Faction: The Freeport Militia\n\t\te.other:Faction(281,1,0); -- Faction: Knights of Truth\n\t\te.other:AddEXP(100);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 16170,
+        "zone": "freportn",
+        "name": "Sentry_Boris",
+        "lua_content": "-- items: 12128, 12129\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Please seek guidance from the clerics within this temple.  I am but a Sentry of Passion and my duty is to protect this temple.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 12128})) then\n\t\te.self:Say(\"Ahhh!! That has given me back lost energy. Thank you. Please take this to the next sentry.\");\n\t\te.other:SummonItem(12129); -- Item: Part of Potion of Marr\n\t\te.other:Ding();\n\t\te.other:Faction(362,5,0); -- Faction: Priests of Marr\n\t\te.other:Faction(330,-10,0); -- Faction: The Freeport Militia\n\t\te.other:Faction(281,5,0); -- Faction: Knights of Truth\n\t\te.other:AddEXP(100);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 16170,
+        "zone": "freportn",
+        "name": "Sentry_Boris",
+        "lua_content": "-- items: 12128, 12129\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Please seek guidance from the clerics within this temple.  I am but a Sentry of Passion and my duty is to protect this temple.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 12128})) then\n\t\te.self:Say(\"Ahhh!! That has given me back lost energy. Thank you. Please take this to the next sentry.\");\n\t\te.other:SummonItem(12129); -- Item: Part of Potion of Marr\n\t\te.other:Ding();\n\t\te.other:Faction(362,1,0); -- Faction: Priests of Marr\n\t\te.other:Faction(330,-1,0); -- Faction: The Freeport Militia\n\t\te.other:Faction(281,1,0); -- Faction: Knights of Truth\n\t\te.other:AddEXP(100);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 12617,
+        "zone": "freportn",
+        "name": "Sentry_Gallius",
+        "lua_content": "-- items: 12129, 12130\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"I welcome you to the Temple of Marr. home to clerics of the deities Erollisi and Mithaniel Marr.  Please seek guidance from the clerics.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 12129})) then\n\t\te.self:Say(\"Excellent!! I feel quite refreshed with but a sip. You may take this to the next sentry.\");\n\t\te.other:SummonItem(12130); -- Item: Part of Potion of Marr\n\t\te.other:Ding();\n\t\te.other:Faction(362,5,0); -- Faction: Priests of Marr\n\t\te.other:Faction(330,-10,0); -- Faction: The Freeport Militia\n\t\te.other:Faction(281,5,0); -- Faction: Knights of Truth\n\t\te.other:AddEXP(100);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 12617,
+        "zone": "freportn",
+        "name": "Sentry_Gallius",
+        "lua_content": "-- items: 12129, 12130\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"I welcome you to the Temple of Marr. home to clerics of the deities Erollisi and Mithaniel Marr.  Please seek guidance from the clerics.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 12129})) then\n\t\te.self:Say(\"Excellent!! I feel quite refreshed with but a sip. You may take this to the next sentry.\");\n\t\te.other:SummonItem(12130); -- Item: Part of Potion of Marr\n\t\te.other:Ding();\n\t\te.other:Faction(362,1,0); -- Faction: Priests of Marr\n\t\te.other:Faction(330,-1,0); -- Faction: The Freeport Militia\n\t\te.other:Faction(281,1,0); -- Faction: Knights of Truth\n\t\te.other:AddEXP(100);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 16717,
+        "zone": "freportn",
+        "name": "Sentry_Janeal",
+        "lua_content": "-- items: 12130, 12131\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Welcome. friend!  Please seek the words of the clerics of Marr.  Their words are the words which will set us free from the tyranny of the Freeport Militia.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 12130})) then\n\t\te.self:Say(\"I feel quite alert now. Thank you. You should take this to the next sentry.\");\n\t\te.other:SummonItem(12131); -- Item: Half of Potion of Marr\n\t\te.other:Ding();\n\t\te.other:Faction(362,5,0); -- Faction: Priests of Marr\n\t\te.other:Faction(330,-10,0); -- Faction: The Freeport Militia\n\t\te.other:Faction(281,5,0); -- Faction: Knights of Truth\n\t\te.other:AddEXP(100);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 16717,
+        "zone": "freportn",
+        "name": "Sentry_Janeal",
+        "lua_content": "-- items: 12130, 12131\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Welcome. friend!  Please seek the words of the clerics of Marr.  Their words are the words which will set us free from the tyranny of the Freeport Militia.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 12130})) then\n\t\te.self:Say(\"I feel quite alert now. Thank you. You should take this to the next sentry.\");\n\t\te.other:SummonItem(12131); -- Item: Half of Potion of Marr\n\t\te.other:Ding();\n\t\te.other:Faction(362,1,0); -- Faction: Priests of Marr\n\t\te.other:Faction(330,-1,0); -- Faction: The Freeport Militia\n\t\te.other:Faction(281,1,0); -- Faction: Knights of Truth\n\t\te.other:AddEXP(100);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 19493,
+        "zone": "freportn",
+        "name": "Sentry_Meighan",
+        "lua_content": "-- items: 12131, 12132\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Please speak no further.  I am nothing more than a defender of this temple.  The words of Marr lie with the masters and clerics of this temple.  They await you.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 12131})) then\n\t\te.self:Say(\"Very good. Nothing more than a sip and I feel much more alert. The next sentry awaits you.\");\n\t\te.other:SummonItem(12132); -- Item: Part of Potion of Marr\n\t\te.other:Ding();\n\t\te.other:Faction(362,5,0); -- Faction: Priests of Marr\n\t\te.other:Faction(330,-10,0); -- Faction: The Freeport Militia\n\t\te.other:Faction(281,5,0); -- Faction: Knights of Truth\n\t\te.other:AddEXP(100);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 19493,
+        "zone": "freportn",
+        "name": "Sentry_Meighan",
+        "lua_content": "-- items: 12131, 12132\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Please speak no further.  I am nothing more than a defender of this temple.  The words of Marr lie with the masters and clerics of this temple.  They await you.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 12131})) then\n\t\te.self:Say(\"Very good. Nothing more than a sip and I feel much more alert. The next sentry awaits you.\");\n\t\te.other:SummonItem(12132); -- Item: Part of Potion of Marr\n\t\te.other:Ding();\n\t\te.other:Faction(362,1,0); -- Faction: Priests of Marr\n\t\te.other:Faction(330,-1,0); -- Faction: The Freeport Militia\n\t\te.other:Faction(281,1,0); -- Faction: Knights of Truth\n\t\te.other:AddEXP(100);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 16128,
+        "zone": "freportn",
+        "name": "Sentry_Theo",
+        "lua_content": "-- items: 12132, 12133\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Please speak with the masters. I am on watch and have no time to converse.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 12132})) then\n\t\te.self:Say(\"That gives me new life. Take it to the next sentry.\");\n\t\te.other:SummonItem(12133); -- Item: Part of Potion of Marr\n\t\te.other:Ding();\n\t\te.other:Faction(362,5,0); -- Faction: Priests of Marr\n\t\te.other:Faction(330,-10,0); -- Faction: The Freeport Militia\n\t\te.other:Faction(281,5,0); -- Faction: Knights of Truth\n\t\te.other:AddEXP(100);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 16128,
+        "zone": "freportn",
+        "name": "Sentry_Theo",
+        "lua_content": "-- items: 12132, 12133\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Please speak with the masters. I am on watch and have no time to converse.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 12132})) then\n\t\te.self:Say(\"That gives me new life. Take it to the next sentry.\");\n\t\te.other:SummonItem(12133); -- Item: Part of Potion of Marr\n\t\te.other:Ding();\n\t\te.other:Faction(362,1,0); -- Faction: Priests of Marr\n\t\te.other:Faction(330,-1,0); -- Faction: The Freeport Militia\n\t\te.other:Faction(281,1,0); -- Faction: Knights of Truth\n\t\te.other:AddEXP(100);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 18709,
+        "zone": "freportn",
+        "name": "Sentry_Warren",
+        "lua_content": "-- items: 12133, 12134\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"May the words of Marr be passed on to you.  Please seek knowledge from the masters of this temple.\");\n\telseif(e.message:findi(\"sisterhood of erollisi\")) then\n\t\te.self:Say(\"The Sisterhood of Erollisi is a band of female warriors. Their founders hail from Kelethin. They now train and live upon an island in the Ocean of Tears. We often check up on them. We share the same deity.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 12133})) then\n\t\te.self:Say(\"Thank you. I believe you need to seek out Sentry Xyrin. She is not at the temple. I believe she left to speak with [Sisterhood of Erollisi]. She was to speak with Styria.\");\n\t\te.other:SummonItem(12134); -- Item: Last of Potion of Marr\n\t\te.other:Ding();\n\t\te.other:Faction(362,5,0); -- Faction: Priests of Marr\n\t\te.other:Faction(330,-10,0); -- Faction: The Freeport Militia\n\t\te.other:Faction(281,5,0); -- Faction: Knights of Truth\n\t\te.other:AddEXP(100);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 18709,
+        "zone": "freportn",
+        "name": "Sentry_Warren",
+        "lua_content": "-- items: 12133, 12134\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"May the words of Marr be passed on to you.  Please seek knowledge from the masters of this temple.\");\n\telseif(e.message:findi(\"sisterhood of erollisi\")) then\n\t\te.self:Say(\"The Sisterhood of Erollisi is a band of female warriors. Their founders hail from Kelethin. They now train and live upon an island in the Ocean of Tears. We often check up on them. We share the same deity.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 12133})) then\n\t\te.self:Say(\"Thank you. I believe you need to seek out Sentry Xyrin. She is not at the temple. I believe she left to speak with [Sisterhood of Erollisi]. She was to speak with Styria.\");\n\t\te.other:SummonItem(12134); -- Item: Last of Potion of Marr\n\t\te.other:Ding();\n\t\te.other:Faction(362,1,0); -- Faction: Priests of Marr\n\t\te.other:Faction(330,-1,0); -- Faction: The Freeport Militia\n\t\te.other:Faction(281,1,0); -- Faction: Knights of Truth\n\t\te.other:AddEXP(100);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 15265,
+        "zone": "oot",
+        "name": "Sentry_Xyrin",
+        "lua_content": "-- Modified from ProjectEQ Lua.\n-- Source: oot/Sentry_Xyrin.lua\n-- P99 audit: Sentry Xyrin Quest\n-- items: 12134, 12135, 5414\n\nfunction event_spawn(e)\n\teq.set_timer(\"depop\",3600000);\nend\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Shhhh!! Keep quiet! Can you not tell this island is inhabited by undead? I wish to take the fight to them, but I am weak from the [boat disaster].\");\n\telseif(e.message:findi(\"boat disaster\")) then\n\t\te.self:Say(\"I was returning to my temple in Freeport in a small boat when the storm hit. I soon found myself shipwrecked on this evil island of undead. The words of Marr tell me to destroy these beings, but I am far too weak. If I only had a sip of the [Potion of Marr].\");\n\telseif(e.message:findi(\"potion of marr\")) then\n\t\te.self:Say(\"The Potion of Marr was created for the Sentries of Passion. It makes us alert and energetic. It will work only on sentries such as myself. It is distributed by Serna Tasknon of the Temple of Marr in Freeport.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 12134})) then\n\t\te.self:Say(\"Ahhhh! I am energized! Come! Let us show these undead the greatness of Erollisi Marr!\");\n\t\te.other:SummonItem(12135); -- Empty Potion of Marr\n\t\te.other:Ding();\n\t\te.other:Faction(362,5,0); -- Priests of Marr\n\t\te.other:Faction(330,-10,0); -- The Freeport Militia\n\t\te.other:Faction(281,5,0); -- Knights of Truth\n\t\teq.start(62);\n\t\te.self:SetRunning(true);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\nfunction event_waypoint_arrive(e)\n\tif(e.wp == 4) then\n\t\te.self:Shout(\"Long live Marr !!\");\n\telseif(e.wp == 5) then\n\t\te.self:Say(\"Many thanks to all who aided in this battle. I offer you this, a weapon I found on a slain Erudite paladin. May Marr watch over his soul and may Marr guide yours. Now I must go.\");\n\t\teq.create_ground_object(5414,-6963,-886,139,0,1800000); -- Deepwater Harpoon\n\t\teq.depop();\n\tend\nend\n\nfunction event_timer(e)\n\tif(e.timer == \"depop\") then\n\t\teq.depop();\n\tend\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 15265,
+        "zone": "oot",
+        "name": "Sentry_Xyrin",
+        "lua_content": "-- Modified from ProjectEQ Lua.\n-- Source: oot/Sentry_Xyrin.lua\n-- P99 audit: Sentry Xyrin Quest\n-- items: 12134, 12135, 5414\n\nlocal escort_stage = 0 -- persisted closure state; 0=waiting, 1=escort, 2=finished\n\nfunction event_spawn(e)\n\tescort_stage = 0\n\teq.set_timer(\"depop\",3600000);\nend\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Shhhh!! Keep quiet! Can you not tell this island is inhabited by undead? I wish to take the fight to them, but I am weak from the [boat disaster].\");\n\telseif(e.message:findi(\"boat disaster\")) then\n\t\te.self:Say(\"I was returning to my temple in Freeport in a small boat when the storm hit. I soon found myself shipwrecked on this evil island of undead. The words of Marr tell me to destroy these beings, but I am far too weak. If I only had a sip of the [Potion of Marr].\");\n\telseif(e.message:findi(\"potion of marr\")) then\n\t\te.self:Say(\"The Potion of Marr was created for the Sentries of Passion. It makes us alert and energetic. It will work only on sentries such as myself. It is distributed by Serna Tasknon of the Temple of Marr in Freeport.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(escort_stage == 0 and item_lib.check_turn_in(e.trade, {item1 = 12134})) then\n\t\tescort_stage = 1\n\t\teq.stop_timer(\"depop\");\n\t\teq.set_timer(\"escort_complete\",360000);\n\t\te.self:Say(\"Ahhhh! I am energized! Come! Let us show these undead the greatness of Erollisi Marr!\");\n\t\te.other:SummonItem(12135); -- Empty Potion of Marr\n\t\te.other:Ding();\n\t\te.other:Faction(362,1,0); -- Priests of Marr\n\t\te.other:Faction(330,-1,0); -- The Freeport Militia\n\t\te.other:Faction(281,1,0); -- Knights of Truth\n\t\teq.start(62);\n\t\te.self:SetRunning(true);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\nfunction event_waypoint_arrive(e)\n\tif(e.wp == 4) then\n\t\te.self:Shout(\"Long live Marr !!\");\n\n\tend\nend\n\nfunction event_timer(e)\n\tif(e.timer == \"escort_complete\" and escort_stage == 1) then\n\t\tescort_stage = 2\n\t\teq.stop_timer(\"escort_complete\");\n\t\teq.stop_timer(\"depop\");\n\t\te.self:Say(\"Many thanks to all who aided in this battle. I offer you this, a weapon I found on a slain Erudite paladin. May Marr watch over his soul and may Marr guide yours. Now I must go.\");\n\t\t-- P99: after six minutes, drop at current position, regardless of aggro.\n\t\t-- Existing thirty-minute item decay retained; P99 does not document decay.\n\t\teq.create_ground_object(5414,e.self:GetX(),e.self:GetY(),e.self:GetZ(),e.self:GetHeading(),1800000);\n\t\teq.depop();\n\telseif(e.timer == \"depop\" and escort_stage == 0) then\n\t\teq.stop_timer(\"depop\");\n\t\teq.depop();\n\tend\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/freportn/Sentry_Andlin.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-sz-sentry-andlin/freportn--Sentry_Andlin.lua",
+      "afterSha256": "2c5cadaa9171e323b9c33fca607f6a6ce60cf3e0f10fd9b1dcc5f9b823ef0823"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freportn/Sentry_Boris.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-sz-sentry-boris/freportn--Sentry_Boris.lua",
+      "afterSha256": "b74a1e3ef28428aaaac12d346ecd9ecc80b952b8a39287252502ca35a672ef65"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freportn/Sentry_Gallius.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-sz-sentry-gallius/freportn--Sentry_Gallius.lua",
+      "afterSha256": "53581585c225efcd2067fe53a9aeb4bcf3c5f0a114db929a9aebe48255765f19"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freportn/Sentry_Janeal.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-sz-sentry-janeal/freportn--Sentry_Janeal.lua",
+      "afterSha256": "e9796c10e9d464c49a054e7a227f0eb0ada8e5182fb35f1ab4e9f5bee16835f1"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freportn/Sentry_Meighan.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-sz-sentry-meighan/freportn--Sentry_Meighan.lua",
+      "afterSha256": "1521c7a44d6a99de844b6cf8e53cd97e8a134dfa679420147169b1b13b76abf5"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freportn/Sentry_Theo.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-sz-sentry-theo/freportn--Sentry_Theo.lua",
+      "afterSha256": "71d1e2fffd61b35c4f92ac3f481f41d7c4531c8c305ca5a18aaa8c962413a5e3"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freportn/Sentry_Warren.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-sz-sentry-warren/freportn--Sentry_Warren.lua",
+      "afterSha256": "8b9534adebe9e914b00e1bfa43f42809e2ad12c37d61ece3292b575377c53cc5"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/oot/Sentry_Xyrin.lua",
+      "beforeSha256": "e33a90096af0b9e6df84bd4aa89243b7d384324e66bd559be2318ddbdaec13fc",
+      "proposedFile": "changes/p99-sz-sentry-xyrin/oot--Sentry_Xyrin.lua",
+      "afterSha256": "f1f24bef35571632681d4977c888186fc79a31ae39fe506ad8d4940a68effff8"
+    }
+  ]
+}

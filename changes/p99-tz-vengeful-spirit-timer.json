@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-vengeful-spirit-timer",
+  "summary": "Restrict despawn to its named timer; retain unknown6000000ms duration rather than invent exact P99 short-lived interval. Preserve final reward and XP; uncertain missing faction remains open.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/The_Visiting_Priestess?action=raw",
+      "note": "Cached 2026-07-17T23:38:51.949Z; revision unavailable; SHA256 afb57799ad1e5aa37e4a4b19e08bac0fb4cf15bb8cff5b6cbd0d4021776a98d2. Restrict despawn to its named timer; retain unknown6000000ms duration rather than invent exact P99 short-lived interval. Preserve final reward and XP; uncertain missing faction remains open. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 15771,
+        "zone": "neriakb",
+        "name": "vengeful_spirit",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: neriakb/vengeful_spirit.pl\n-- items: 18401, 6403\n\nfunction event_spawn(e)\n\teq.set_timer(\"despawn\", 6000000)\nend\n\nfunction event_timer(e)\n\teq.stop_timer(\"despawn\")\n\teq.depop()\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 18401}) then\n\t\teq.stop_timer(\"despawn\")\n\t\te.self:Emote(\"flares brightly as you place the scroll into the blue flames of the forge. The scroll quickly catches fire and burns out in a flash of white fire. In it's place is left a hammer. As you snatch the hammer from the flames you hear the spirit begin to cackle wildly and fade away.\")\n\t\te.other:SummonItem(6403)\n\t\te.other:AddEXP(132775)\n\t\teq.depop()\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 15771,
+        "zone": "neriakb",
+        "name": "vengeful_spirit",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: neriakb/vengeful_spirit.pl\n-- items: 18401, 6403\n\nfunction event_spawn(e)\n\teq.set_timer(\"despawn\", 6000000)\nend\n\nfunction event_timer(e)\n\tif e.timer == \"despawn\" then\n\t\teq.stop_timer(\"despawn\")\n\t\teq.depop()\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 18401}) then\n\t\teq.stop_timer(\"despawn\")\n\t\te.self:Emote(\"flares brightly as you place the scroll into the blue flames of the forge. The scroll quickly catches fire and burns out in a flash of white fire. In it's place is left a hammer. As you snatch the hammer from the flames you hear the spirit begin to cackle wildly and fade away.\")\n\t\te.other:SummonItem(6403)\n\t\te.other:AddEXP(132775)\n\t\teq.depop()\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/neriakb/vengeful_spirit.lua",
+      "beforeSha256": "5c97127ddff7ddf067f32fb49b6a16be8fd4be4f6e8d625f77047f6f9b0844ae",
+      "proposedFile": "changes/p99-tz-vengeful-spirit-timer/neriakb--vengeful_spirit.lua",
+      "afterSha256": "6a98fe254007c7d04f5831f8e7c2bc77467dbc74f39a5c5dde8e637997247203"
+    }
+  ]
+}

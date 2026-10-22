@@ -1,0 +1,106 @@
+{
+  "format": 1,
+  "id": "p99-am-muffin-new-recipients",
+  "summary": "Add five source-authored quest rows for three documented muffin recipients and existing zone aliases. Exact cash/factions restored; XP and actual runtime NPC availability remain explicit gaps. No NPC/spawn/exclusion rows changed.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Muffin_Quests?action=raw",
+      "note": "Cached 2026-07-17T23:26:13.669Z; SHA256 cb695617eae395e66523bd391ea6dc637e71142dadded1d037cbbebf2ad57493. No retained Perl/Lua or quest rows for these recipients. Existing NPC/spawn identity checked: James13074 northkarana5936; Nasumi10058 freporte2998 and382121 freeporteast105420; Gern8014 freportn8846 and383129 freeportwest107500. npc_types.exclude1 left unchanged; actual runtime availability not claimed."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": null,
+      "after": {
+        "id": 503529,
+        "zone": "northkarana",
+        "name": "Innkeep_James",
+        "lua_content": "-- Authored from P99 Muffin Quests; no retained upstream script exists.\n-- Partial: documented cash/factions only; raw XP and runtime NPC availability unverified.\n-- Deliberate IdleQuest faction bypass; removed starter dialogue not restored.\nfunction event_trade(e)\n  local item_lib = require(\"items\")\n  if item_lib.check_turn_in(e.trade, {item1 = 1839}) then\n    e.self:Say(\"Ah, praise Karana! These muffins look good enough to eat, har har har! Here is your payment and you have my deepest gratitude. We have to stick together in these times of turmoil you know.\")\n    e.other:GiveCash(0, 0, 8, 0)\n    e.other:Faction(291, 2, 0)\n    e.other:Faction(223, -1, 0)\n    e.other:Faction(219, 1, 0)\n    e.other:Faction(229, 1, 0)\n    e.other:Faction(262, 1, 0)\n    -- XP unverified and omitted, not a P99 zero-XP assertion.\n  end\n  item_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": null,
+      "after": {
+        "id": 503530,
+        "zone": "freporte",
+        "name": "Innkeep_Nasumi",
+        "lua_content": "-- Authored from P99 Muffin Quests; no retained upstream script exists.\n-- Partial: documented cash/factions only; raw XP and runtime NPC availability unverified.\n-- Deliberate IdleQuest faction bypass; removed starter dialogue not restored.\nfunction event_trade(e)\n  local item_lib = require(\"items\")\n  if item_lib.check_turn_in(e.trade, {item1 = 1839}) then\n    e.self:Say(\"Ah yes! This is exactly what I am looking for, dear. Let me put these on the shelf right away. Here is some coin for your trouble. Perhaps we can do business again sometime.\")\n    e.other:GiveCash(0, 0, 6, 0)\n    e.other:Faction(330, 1, 0)\n    e.other:Faction(336, 1, 0)\n    e.other:Faction(281, 1, 0)\n    e.other:Faction(362, 1, 0)\n    -- XP unverified and omitted, not a P99 zero-XP assertion.\n  end\n  item_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": null,
+      "after": {
+        "id": 503531,
+        "zone": "freeporteast",
+        "name": "Innkeep_Nasumi",
+        "lua_content": "-- Authored from P99 Muffin Quests; no retained upstream script exists.\n-- Partial: documented cash/factions only; raw XP and runtime NPC availability unverified.\n-- Deliberate IdleQuest faction bypass; removed starter dialogue not restored.\nfunction event_trade(e)\n  local item_lib = require(\"items\")\n  if item_lib.check_turn_in(e.trade, {item1 = 1839}) then\n    e.self:Say(\"Ah yes! This is exactly what I am looking for, dear. Let me put these on the shelf right away. Here is some coin for your trouble. Perhaps we can do business again sometime.\")\n    e.other:GiveCash(0, 0, 6, 0)\n    e.other:Faction(330, 1, 0)\n    e.other:Faction(336, 1, 0)\n    e.other:Faction(281, 1, 0)\n    e.other:Faction(362, 1, 0)\n    -- XP unverified and omitted, not a P99 zero-XP assertion.\n  end\n  item_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": null,
+      "after": {
+        "id": 503532,
+        "zone": "freportn",
+        "name": "Gern_Tassel",
+        "lua_content": "-- Authored from P99 Muffin Quests; no retained upstream script exists.\n-- Partial: documented cash/factions only; raw XP and runtime NPC availability unverified.\n-- Deliberate IdleQuest faction bypass; removed starter dialogue not restored.\nfunction event_trade(e)\n  local item_lib = require(\"items\")\n  if item_lib.check_turn_in(e.trade, {item1 = 1839}) then\n    e.self:Say(\"These are quality muffins! You are obviously quite a skilled baker. Here is your payment as promised. Now I can get back to business again.\")\n    e.other:GiveCash(0, 0, 6, 0)\n    e.other:Faction(229, 2, 0)\n    e.other:Faction(281, 2, 0)\n    e.other:Faction(291, 1, 0)\n    e.other:Faction(336, 2, 0)\n    -- XP unverified and omitted, not a P99 zero-XP assertion.\n  end\n  item_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": null,
+      "after": {
+        "id": 503533,
+        "zone": "freeportwest",
+        "name": "Gern_Tassel",
+        "lua_content": "-- Authored from P99 Muffin Quests; no retained upstream script exists.\n-- Partial: documented cash/factions only; raw XP and runtime NPC availability unverified.\n-- Deliberate IdleQuest faction bypass; removed starter dialogue not restored.\nfunction event_trade(e)\n  local item_lib = require(\"items\")\n  if item_lib.check_turn_in(e.trade, {item1 = 1839}) then\n    e.self:Say(\"These are quality muffins! You are obviously quite a skilled baker. Here is your payment as promised. Now I can get back to business again.\")\n    e.other:GiveCash(0, 0, 6, 0)\n    e.other:Faction(229, 2, 0)\n    e.other:Faction(281, 2, 0)\n    e.other:Faction(291, 1, 0)\n    e.other:Faction(336, 2, 0)\n    -- XP unverified and omitted, not a P99 zero-XP assertion.\n  end\n  item_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/idlequest-authored/northkarana/Innkeep_James.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-am-muffin-new-recipients/northkarana-Innkeep_James.lua",
+      "afterSha256": "d6682a11ad16fc6c80251a18a390ac86e0ac81cfd1fc392e9a5fb7226f709475"
+    },
+    {
+      "target": "maintained/lua/idlequest-authored/freporte/Innkeep_Nasumi.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-am-muffin-new-recipients/freporte-Innkeep_Nasumi.lua",
+      "afterSha256": "122c566a07da2967319023c593204cdc90864568e15c6c1e1620e7b75d1a6e2d"
+    },
+    {
+      "target": "maintained/lua/idlequest-authored/freeporteast/Innkeep_Nasumi.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-am-muffin-new-recipients/freeporteast-Innkeep_Nasumi.lua",
+      "afterSha256": "122c566a07da2967319023c593204cdc90864568e15c6c1e1620e7b75d1a6e2d"
+    },
+    {
+      "target": "maintained/lua/idlequest-authored/freportn/Gern_Tassel.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-am-muffin-new-recipients/freportn-Gern_Tassel.lua",
+      "afterSha256": "0dc7b746d9c3454ff73c00d836e2ba854cf7b187734edc6aecf049cff1e979bc"
+    },
+    {
+      "target": "maintained/lua/idlequest-authored/freeportwest/Gern_Tassel.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-am-muffin-new-recipients/freeportwest-Gern_Tassel.lua",
+      "afterSha256": "0dc7b746d9c3454ff73c00d836e2ba854cf7b187734edc6aecf049cff1e979bc"
+    }
+  ]
+}

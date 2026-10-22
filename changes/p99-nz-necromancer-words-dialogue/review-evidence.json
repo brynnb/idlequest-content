@@ -1,0 +1,30 @@
+{
+  "titles": [
+    "Necromancer Words - X`Ta Tempi",
+    "Necromancer Words - X`Ta Timpi",
+    "Necromancer Words - X`Ta Tompi"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "partial",
+  "match_status": "partial",
+  "local_quest_keys": [
+    "neriaka/X-Ta_Tempi",
+    "neriaka/X-Ta_Timpi",
+    "neriaka/X-Ta_Tompi"
+  ],
+  "proposal": "changes/p99-nz-necromancer-words-dialogue.json",
+  "notes": [
+    "Make displayed individual word-reward prompts route to their existing requirement responses, retaining full Words of phrases.",
+    "Bare Possession/Haunting/Collection etc currently fail while full words-of phrases work. Add bare Word/Words lore prompt without intercepting full reward phrases. Tempi requirement prose now specifies two chips as cached page and unchanged handler require. All twelve component/reward sets checked separately in facet report. Full missing lead-in prose not invented: Timpi cache warns some copied lead-in phrases fail. Factions/EXP unchanged, magnitudes not P99-specified."
+  ],
+  "verification": {
+    "source": "Cached P99 and effective Lua reviewed; exact complete row preimages and source hashes recorded.",
+    "syntax": "pending",
+    "runtime": "Isolated mock regression pending; full game runtime unavailable.",
+    "ui": "not_run",
+    "connected_chain": "not_run"
+  },
+  "unresolved": [
+    "Ordinary source drops/spawns, recipe live behavior and rendered complete quest path not verified."
+  ]
+}

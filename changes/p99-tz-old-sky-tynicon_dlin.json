@@ -1,0 +1,45 @@
+{
+  "format": 1,
+  "id": "p99-tz-old-sky-tynicon_dlin",
+  "summary": "Restore only the documented legacy-to-current Sky item exchanges [(11679, 27707)]. Old Sky page names this original quest NPC for upgrades. No corresponding Perl file or existing upgrade branch supplies numeric fallback, so do not invent XP, faction, cash or depop side effects; these are unquantified. Preserve every current multi-item test and all other events.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Shadow_Knight_Plane_of_Sky_Tests?action=raw",
+      "note": "Cached 2026-07-17T23:32:18.835Z; revision unavailable; SHA256 cf18b1c0020b061190578b1c9a4c0f9e5017be8cdd9092e34b7d18ba9c4e49d2. Restore only the documented legacy-to-current Sky item exchanges [(11679, 27707)]. Old Sky page names this original quest NPC for upgrades. No corresponding Perl file or existing upgrade branch supplies numeric fallback, so do not invent XP, faction, cash or depop side effects; these are unquantified. Preserve every current multi-item test and all other events. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    },
+    {
+      "url": "https://wiki.project1999.com/Plane_of_Sky_Quests_(Old)",
+      "note": "Intro explicitly allows exchanging old rewards at the same NPC; Shadow Knight and Shaman tables map exact old/current named items. Cached SHA256 cdcadb1c440984f769321fa8ede419e777c0386d1a11fef5047aac29135e5ca1. Gina MacStargan spelling resolves to existing Shaman actor Gina_McStargan. Ooga Spiroc Warhammer identity remains unresolved; no inferred replacement ID."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 19073,
+        "zone": "airplane",
+        "name": "Tynicon_DLin",
+        "lua_content": "-- Modified from ProjectEQ Lua.\n-- Source: airplane/Tynicon_DLin.lua\n-- P99 audit: Shadow Knight Plane of Sky Tests\n-- items: 20950, 20703, 20704, 4322, 20705, 20957, 20706, 11678, 20707, 20708, 20709, 20710, 11699, 20711, 20964, 20713, 20712, 27707\n\nfunction event_spawn(e)\n\teq.set_timer(\"depop\",300000);\nend\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Great, let us waste no more time! I offer to you four challenges. Disempowement, Envenoming, Raising of the Dead, or Necropotence. Choose one to be tested on.\");\n\telseif(e.message:findi(\"disempowerment\")) then\n\t\te.self:Say(\"Disempowerment, destroying good magic. Proceed upward through the sky and return to me a Griffon Statuette, a Blood Sky Emerald, and Rusted Pauldrons. This will prove your abilities to me and I will reward you with Blood Sky Face plate.\");\n\telseif(e.message:findi(\"envenoming\")) then\n\t\te.self:Say(\"Venom and hate permeates us more than our dumber, larger brohers. Return to me a Efreeti War Shield, a Dark Spiroc Feather, and an Obsidian shard and prove that your soul is envenomed with hatred. If you do so the Obtenebrate Mithril Guard shall be yours.\");\n\telseif(e.message:findi(\"raising of the dead\")) then\n\t\te.self:Say(\"The dead are our allies against those that would oppose us. Proceed upward through the sky and return to me a Large Sky Pearl, a Jar of Honey, a Sphinxian Ring, and Fae Pauldrons. This will prove your abilities to me and I will reward you with an Pearlescent Pauldrons.\");\n\telseif(e.message:findi(\"necropotence\")) then\n\t\te.self:Say(\"Only the most powerful and vile of shadow knights manage to complete this test. Return to me an Efreeti War Axe, some Dulcet Nectar, a Bloodstained Hilt, and a Blood Sky Ruby. Doing so will earn you the right to wield Khyldorn the Blood Drinker.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\tif(item_lib.check_turn_in(e.trade, {item1 = 20950, item2 = 20703, item3 = 20704})) then\n\t\te.other:SummonItem(4322); -- Blood Sky Face Plate\n\t\te.other:AddEXP(100000);\n\t\te.self:Say(\"You have learned the ways of Disempowerment.\");\n\t\teq.depop();\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 20705, item2 = 20957, item3 = 20706})) then\n\t\te.other:SummonItem(11678); -- Obtenebrate Mithril Guard\n\t\te.other:AddEXP(100000);\n\t\te.self:Say(\"You soul is truly envenomed with hate.\");\n\t\teq.depop();\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 20707, item2 = 20708, item3 = 20709, item4 = 20710})) then\n\t\te.other:SummonItem(11699); -- Pearlescent Pauldrons\n\t\te.other:AddEXP(100000);\n\t\te.self:Say(\"You have proven your abilities.\");\n\t\teq.depop();\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 20711, item2 = 20964, item3 = 20713, item4 = 20712})) then\n\t\te.other:SummonItem(27707); -- Khyldorn the Blood Drinker\n\t\te.other:AddEXP(100000);\n\t\te.self:Say(\"You have truly earned this.\");\n\t\teq.depop();\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\nfunction event_timer(e)\n\teq.stop_timer(\"depop\");\n\teq.depop();\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 19073,
+        "zone": "airplane",
+        "name": "Tynicon_DLin",
+        "lua_content": "-- Modified from ProjectEQ Lua.\n-- Source: airplane/Tynicon_DLin.lua\n-- P99 audit: Shadow Knight Plane of Sky Tests\n-- items: 20950, 20703, 20704, 4322, 20705, 20957, 20706, 11678, 20707, 20708, 20709, 20710, 11699, 20711, 20964, 20713, 20712, 27707\n\nfunction event_spawn(e)\n\teq.set_timer(\"depop\",300000);\nend\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Great, let us waste no more time! I offer to you four challenges. Disempowement, Envenoming, Raising of the Dead, or Necropotence. Choose one to be tested on.\");\n\telseif(e.message:findi(\"disempowerment\")) then\n\t\te.self:Say(\"Disempowerment, destroying good magic. Proceed upward through the sky and return to me a Griffon Statuette, a Blood Sky Emerald, and Rusted Pauldrons. This will prove your abilities to me and I will reward you with Blood Sky Face plate.\");\n\telseif(e.message:findi(\"envenoming\")) then\n\t\te.self:Say(\"Venom and hate permeates us more than our dumber, larger brohers. Return to me a Efreeti War Shield, a Dark Spiroc Feather, and an Obsidian shard and prove that your soul is envenomed with hatred. If you do so the Obtenebrate Mithril Guard shall be yours.\");\n\telseif(e.message:findi(\"raising of the dead\")) then\n\t\te.self:Say(\"The dead are our allies against those that would oppose us. Proceed upward through the sky and return to me a Large Sky Pearl, a Jar of Honey, a Sphinxian Ring, and Fae Pauldrons. This will prove your abilities to me and I will reward you with an Pearlescent Pauldrons.\");\n\telseif(e.message:findi(\"necropotence\")) then\n\t\te.self:Say(\"Only the most powerful and vile of shadow knights manage to complete this test. Return to me an Efreeti War Axe, some Dulcet Nectar, a Bloodstained Hilt, and a Blood Sky Ruby. Doing so will earn you the right to wield Khyldorn the Blood Drinker.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\tif(item_lib.check_turn_in(e.trade, {item1 = 20950, item2 = 20703, item3 = 20704})) then\n\t\te.other:SummonItem(4322); -- Blood Sky Face Plate\n\t\te.other:AddEXP(100000);\n\t\te.self:Say(\"You have learned the ways of Disempowerment.\");\n\t\teq.depop();\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 20705, item2 = 20957, item3 = 20706})) then\n\t\te.other:SummonItem(11678); -- Obtenebrate Mithril Guard\n\t\te.other:AddEXP(100000);\n\t\te.self:Say(\"You soul is truly envenomed with hate.\");\n\t\teq.depop();\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 20707, item2 = 20708, item3 = 20709, item4 = 20710})) then\n\t\te.other:SummonItem(11699); -- Pearlescent Pauldrons\n\t\te.other:AddEXP(100000);\n\t\te.self:Say(\"You have proven your abilities.\");\n\t\teq.depop();\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 20711, item2 = 20964, item3 = 20713, item4 = 20712})) then\n\t\te.other:SummonItem(27707); -- Khyldorn the Blood Drinker\n\t\te.other:AddEXP(100000);\n\t\te.self:Say(\"You have truly earned this.\");\n\t\teq.depop();\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 11679})) then\n\t\te.other:SummonItem(27707); -- Documented Old Sky upgrade; no quantified extra rewards.\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\nfunction event_timer(e)\n\teq.stop_timer(\"depop\");\n\teq.depop();\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/airplane/Tynicon_DLin.lua",
+      "beforeSha256": "9f23d2da57bad437ad84b1769ebf2b082914e01a35cfa6f82eee33fd2247ccd7",
+      "proposedFile": "changes/p99-tz-old-sky-tynicon_dlin/airplane--Tynicon_DLin.lua",
+      "afterSha256": "89246653140482fdfbe9ccf2c5fb8c29b524bc75b9b0e1543d6eef2de2cc8683"
+    }
+  ]
+}

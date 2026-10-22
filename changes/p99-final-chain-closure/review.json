@@ -1,0 +1,871 @@
+{
+  "reviewedAt": "2026-10-22",
+  "assignedCount": 24,
+  "originalLifecycleCount": 22,
+  "approvedExtensionCount": 4,
+  "scope": "Bounded final era/identity closure, not whole-zone cleanup or complete P99 parity. Immutable baseline retained. Current composed proposal source reviewed before edits.",
+  "records": [
+    {
+      "key": "rathemtn/Rambling_Sphinx_Spiritservant",
+      "questId": 15048,
+      "sourceSha256": "bda83cdba9f31ee24af85d4b97b5c75077acf6941d66200e8ea84badc51401a4",
+      "fullSourceBodyRead": true,
+      "ownersAtSnapshot": [],
+      "assignment": "original24",
+      "completeP99ParityClaim": false,
+      "status": "positively_later_exclusive_helper",
+      "action": "disable_preserve_full_body",
+      "evidenceIds": [
+        "beast-sphinx",
+        "luclin-features"
+      ],
+      "finding": "Exclusive Beastlord1.5 spiritservants: source Zazamoukh beast_epic12 creates50326, Ankhefenmut beast_epic13 creates50327; death handlers restore50230/50231. Ordinary sphinx NPCs are retained.",
+      "remaining": "No later-era combat, timer, spawn probability or reward-value parity claim. NPC/loot/spawn data are unchanged; scope edit prevents script dispatch only.",
+      "baselineFile": "maintained/lua/converted-perl/rathemtn/Rambling_Sphinx_Spiritservant.lua",
+      "baselineSourceSha256": "bda83cdba9f31ee24af85d4b97b5c75077acf6941d66200e8ea84badc51401a4",
+      "beforeSourceSha256": "bda83cdba9f31ee24af85d4b97b5c75077acf6941d66200e8ea84badc51401a4",
+      "disposition": "positively_later_exclusive_helper",
+      "evidence": [
+        "beast-sphinx",
+        "luclin-features"
+      ],
+      "proposedFile": "changes/p99-final-chain-closure/rathemtn--Rambling_Sphinx_Spiritservant.lua",
+      "proposedSourceSha256": "74e655ed4838a21d3a8e754ca340908b6836bce280da27aa2c15e55aa7357973",
+      "afterSourceSha256": "74e655ed4838a21d3a8e754ca340908b6836bce280da27aa2c15e55aa7357973",
+      "proposedEnabled": 0,
+      "sourceTarget": "maintained/lua/converted-perl/rathemtn/Rambling_Sphinx_Spiritservant.lua",
+      "sourceBeforeSha256": "bda83cdba9f31ee24af85d4b97b5c75077acf6941d66200e8ea84badc51401a4"
+    },
+    {
+      "key": "cazicthule/#Avatar_of_Fear",
+      "questId": 19751,
+      "sourceSha256": "74920fd49d046246ffc52478321731546ce760e0d99e9214813e67aeffaf3bec",
+      "fullSourceBodyRead": true,
+      "ownersAtSnapshot": [],
+      "assignment": "original24",
+      "completeP99ParityClaim": false,
+      "status": "positively_later_exclusive_helper",
+      "action": "disable_preserve_full_body",
+      "evidenceIds": [
+        "ct-era",
+        "ct-ring",
+        "ct-actors",
+        "ct-coordinates"
+      ],
+      "finding": "Exclusive Accursed Temple Ring of Fear: High Priest creates Tahia48057 and four Justicars48029; Avatar rotates wave phases with Dread48237/Fright48239/Terror48240. Original static Avatar NPC content is not disabled wholesale.",
+      "remaining": "No later-era combat, timer, spawn probability or reward-value parity claim. NPC/loot/spawn data are unchanged; scope edit prevents script dispatch only.",
+      "baselineFile": "sources/projecteq/cazicthule/#Avatar_of_Fear.lua",
+      "baselineSourceSha256": "74920fd49d046246ffc52478321731546ce760e0d99e9214813e67aeffaf3bec",
+      "beforeSourceSha256": "74920fd49d046246ffc52478321731546ce760e0d99e9214813e67aeffaf3bec",
+      "disposition": "positively_later_exclusive_helper",
+      "evidence": [
+        "ct-era",
+        "ct-ring",
+        "ct-actors",
+        "ct-coordinates"
+      ],
+      "proposedFile": "changes/p99-final-chain-closure/cazicthule--#Avatar_of_Fear.lua",
+      "proposedSourceSha256": "e0681301e2081313b6d6c2308cbdb020419572d76c792eaeca83c04a550bf12a",
+      "afterSourceSha256": "e0681301e2081313b6d6c2308cbdb020419572d76c792eaeca83c04a550bf12a",
+      "proposedEnabled": 0,
+      "sourceTarget": "maintained/lua/modified-upstream/cazicthule/#Avatar_of_Fear.lua",
+      "sourceBeforeSha256": null
+    },
+    {
+      "key": "warslikswood/Ferocious_Goblin",
+      "questId": 15446,
+      "sourceSha256": "97df52fec6602a7e8d3f0278c1df8ae8844f0f464925a34cc8a1005c94f5d6af",
+      "fullSourceBodyRead": true,
+      "ownersAtSnapshot": [],
+      "assignment": "original24",
+      "completeP99ParityClaim": false,
+      "status": "positively_later_exclusive_helper",
+      "action": "disable_preserve_full_body",
+      "evidenceIds": [
+        "berserker-chain",
+        "berserker-era"
+      ],
+      "finding": "Exclusive Berserker epic wave helpers signal Raving Goblinmaster79127 on timeout or death. Frantic and Ferocious names and wave types match the Berserker final trial, not ordinary goblin behavior.",
+      "remaining": "No later-era combat, timer, spawn probability or reward-value parity claim. NPC/loot/spawn data are unchanged; scope edit prevents script dispatch only.",
+      "baselineFile": "maintained/lua/converted-perl/warslikswood/Ferocious_Goblin.lua",
+      "baselineSourceSha256": "97df52fec6602a7e8d3f0278c1df8ae8844f0f464925a34cc8a1005c94f5d6af",
+      "beforeSourceSha256": "97df52fec6602a7e8d3f0278c1df8ae8844f0f464925a34cc8a1005c94f5d6af",
+      "disposition": "positively_later_exclusive_helper",
+      "evidence": [
+        "berserker-chain",
+        "berserker-era"
+      ],
+      "proposedFile": "changes/p99-final-chain-closure/warslikswood--Ferocious_Goblin.lua",
+      "proposedSourceSha256": "a613cd969f1d269e9e88efed8b8ebb4ca2ae4f2f1b2529d0ac0d0b2f4df09072",
+      "afterSourceSha256": "a613cd969f1d269e9e88efed8b8ebb4ca2ae4f2f1b2529d0ac0d0b2f4df09072",
+      "proposedEnabled": 0,
+      "sourceTarget": "maintained/lua/converted-perl/warslikswood/Ferocious_Goblin.lua",
+      "sourceBeforeSha256": "97df52fec6602a7e8d3f0278c1df8ae8844f0f464925a34cc8a1005c94f5d6af"
+    },
+    {
+      "key": "neriakc/Xantis_Ixtax",
+      "questId": 12519,
+      "sourceSha256": "992100ee5b2dcaca62f8755105a2e78598e51a3931228765e64aeb06c945e861",
+      "fullSourceBodyRead": true,
+      "ownersAtSnapshot": [],
+      "assignment": "original24",
+      "completeP99ParityClaim": false,
+      "status": "p99_identity_corroborated_runtime_semantics_resolved",
+      "action": "unchanged",
+      "evidenceIds": [
+        "xantis-p99"
+      ],
+      "finding": "P99 forum corroborates Xantis and recharge offer; public reward-creation contract gives charged item templates their configured full charges. Item13394 maxcharges1 and summoning one fresh replacement is compatible with recharge, not evidence that quantity1 means charges1. Existing ten-gold branch and friendly faction adaptation retained.",
+      "remaining": "Successful P99 transaction and exact currency-denomination handling remain unproved. Isolated positive/negative/repeat tests do not establish actual charge settlement or live Bind Affinity effect.",
+      "baselineFile": "maintained/lua/converted-perl/neriakc/Xantis_Ixtax.lua",
+      "baselineSourceSha256": "992100ee5b2dcaca62f8755105a2e78598e51a3931228765e64aeb06c945e861",
+      "beforeSourceSha256": "992100ee5b2dcaca62f8755105a2e78598e51a3931228765e64aeb06c945e861",
+      "disposition": "p99_identity_corroborated_runtime_semantics_resolved",
+      "evidence": [
+        "xantis-p99"
+      ]
+    },
+    {
+      "key": "befallen/#a_skeletal_foreman",
+      "questId": 12723,
+      "sourceSha256": "4db814a55f0ddfc33183e81ece5b824d5c49bc602fcb82d493e5af01a3b3590f",
+      "fullSourceBodyRead": true,
+      "ownersAtSnapshot": [],
+      "assignment": "original24",
+      "completeP99ParityClaim": false,
+      "status": "positively_later_exclusive_helper",
+      "action": "disable_preserve_full_body",
+      "evidenceIds": [
+        "ariam",
+        "ariam-sequence",
+        "luclin-features"
+      ],
+      "finding": "Exclusive excavator→foreman36092→Sir Ariam36091 chain. Ariam grants Ghostly Bridle31492 (Summon Horse2867), Scroll18474 and Arrialla Token31493. Contemporary mounted-lore chain is not the old unsolved Opal/Marnek quest.",
+      "remaining": "No later-era combat, timer, spawn probability or reward-value parity claim. NPC/loot/spawn data are unchanged; scope edit prevents script dispatch only.",
+      "baselineFile": "sources/projecteq/befallen/#a_skeletal_foreman.lua",
+      "baselineSourceSha256": "4db814a55f0ddfc33183e81ece5b824d5c49bc602fcb82d493e5af01a3b3590f",
+      "beforeSourceSha256": "4db814a55f0ddfc33183e81ece5b824d5c49bc602fcb82d493e5af01a3b3590f",
+      "disposition": "positively_later_exclusive_helper",
+      "evidence": [
+        "ariam",
+        "ariam-sequence",
+        "luclin-features"
+      ],
+      "proposedFile": "changes/p99-final-chain-closure/befallen--#a_skeletal_foreman.lua",
+      "proposedSourceSha256": "5b6cade8f2fea0856e057bf7f7ea7c379adcc807944668ebd935d25f1c734651",
+      "afterSourceSha256": "5b6cade8f2fea0856e057bf7f7ea7c379adcc807944668ebd935d25f1c734651",
+      "proposedEnabled": 0,
+      "sourceTarget": "maintained/lua/modified-upstream/befallen/#a_skeletal_foreman.lua",
+      "sourceBeforeSha256": null
+    },
+    {
+      "key": "nro/a_lamented_knight",
+      "questId": 14651,
+      "sourceSha256": "49196a5712d661748d22fbcc1edee7b4d0a6c2ac09497f523ead33d973f9119a",
+      "fullSourceBodyRead": true,
+      "ownersAtSnapshot": [],
+      "assignment": "original24",
+      "completeP99ParityClaim": false,
+      "status": "positively_later_exclusive_helper",
+      "action": "disable_preserve_full_body",
+      "evidenceIds": [
+        "druid-haunts",
+        "druid-haunts-detail"
+      ],
+      "finding": "Exclusive Druid1.5 madman392057 chain: haunt→spirit392105→tormentor392106→knight392107→madman signal. No same-name classic NPC row is removed.",
+      "remaining": "No later-era combat, timer, spawn probability or reward-value parity claim. NPC/loot/spawn data are unchanged; scope edit prevents script dispatch only.",
+      "baselineFile": "sources/projecteq/nro/a_lamented_knight.lua",
+      "baselineSourceSha256": "49196a5712d661748d22fbcc1edee7b4d0a6c2ac09497f523ead33d973f9119a",
+      "beforeSourceSha256": "49196a5712d661748d22fbcc1edee7b4d0a6c2ac09497f523ead33d973f9119a",
+      "disposition": "positively_later_exclusive_helper",
+      "evidence": [
+        "druid-haunts",
+        "druid-haunts-detail"
+      ],
+      "proposedFile": "changes/p99-final-chain-closure/nro--a_lamented_knight.lua",
+      "proposedSourceSha256": "4f227ecae0a82a191b7a820cf856250c835cd66f8c836f3b5b13f295c7eae65d",
+      "afterSourceSha256": "4f227ecae0a82a191b7a820cf856250c835cd66f8c836f3b5b13f295c7eae65d",
+      "proposedEnabled": 0,
+      "sourceTarget": "maintained/lua/modified-upstream/nro/a_lamented_knight.lua",
+      "sourceBeforeSha256": null
+    },
+    {
+      "key": "befallen/a_skeletal_excavator",
+      "questId": 14772,
+      "sourceSha256": "a36ffb91900f9b8d8f6b454173df61c6fde73321a43824d7261c30ae85d2e240",
+      "fullSourceBodyRead": true,
+      "ownersAtSnapshot": [],
+      "assignment": "original24",
+      "completeP99ParityClaim": false,
+      "status": "positively_later_exclusive_helper",
+      "action": "disable_preserve_full_body",
+      "evidenceIds": [
+        "ariam",
+        "ariam-sequence",
+        "luclin-features"
+      ],
+      "finding": "Exclusive excavator→foreman36092→Sir Ariam36091 chain. Ariam grants Ghostly Bridle31492 (Summon Horse2867), Scroll18474 and Arrialla Token31493. Contemporary mounted-lore chain is not the old unsolved Opal/Marnek quest.",
+      "remaining": "No later-era combat, timer, spawn probability or reward-value parity claim. NPC/loot/spawn data are unchanged; scope edit prevents script dispatch only.",
+      "baselineFile": "sources/projecteq/befallen/a_skeletal_excavator.lua",
+      "baselineSourceSha256": "a36ffb91900f9b8d8f6b454173df61c6fde73321a43824d7261c30ae85d2e240",
+      "beforeSourceSha256": "a36ffb91900f9b8d8f6b454173df61c6fde73321a43824d7261c30ae85d2e240",
+      "disposition": "positively_later_exclusive_helper",
+      "evidence": [
+        "ariam",
+        "ariam-sequence",
+        "luclin-features"
+      ],
+      "proposedFile": "changes/p99-final-chain-closure/befallen--a_skeletal_excavator.lua",
+      "proposedSourceSha256": "62768bafba82c5508f31edb5e5c4e6ada1607814df7cbd36362dafa8241d7c19",
+      "afterSourceSha256": "62768bafba82c5508f31edb5e5c4e6ada1607814df7cbd36362dafa8241d7c19",
+      "proposedEnabled": 0,
+      "sourceTarget": "maintained/lua/modified-upstream/befallen/a_skeletal_excavator.lua",
+      "sourceBeforeSha256": null
+    },
+    {
+      "key": "nro/a_guardian_tormentor",
+      "questId": 12433,
+      "sourceSha256": "b9e91a7485953b39f2ce1d5ef0e9efb5756bff8560be733cc133b925e34c5e8f",
+      "fullSourceBodyRead": true,
+      "ownersAtSnapshot": [],
+      "assignment": "original24",
+      "completeP99ParityClaim": false,
+      "status": "positively_later_exclusive_helper",
+      "action": "disable_preserve_full_body",
+      "evidenceIds": [
+        "druid-haunts",
+        "druid-haunts-detail"
+      ],
+      "finding": "Exclusive Druid1.5 madman392057 chain: haunt→spirit392105→tormentor392106→knight392107→madman signal. No same-name classic NPC row is removed.",
+      "remaining": "No later-era combat, timer, spawn probability or reward-value parity claim. NPC/loot/spawn data are unchanged; scope edit prevents script dispatch only.",
+      "baselineFile": "sources/projecteq/nro/a_guardian_tormentor.lua",
+      "baselineSourceSha256": "b9e91a7485953b39f2ce1d5ef0e9efb5756bff8560be733cc133b925e34c5e8f",
+      "beforeSourceSha256": "b9e91a7485953b39f2ce1d5ef0e9efb5756bff8560be733cc133b925e34c5e8f",
+      "disposition": "positively_later_exclusive_helper",
+      "evidence": [
+        "druid-haunts",
+        "druid-haunts-detail"
+      ],
+      "proposedFile": "changes/p99-final-chain-closure/nro--a_guardian_tormentor.lua",
+      "proposedSourceSha256": "05c2af54db1aa8074c524e55351bdddff7a5135c262e008d0617fee9094089ac",
+      "afterSourceSha256": "05c2af54db1aa8074c524e55351bdddff7a5135c262e008d0617fee9094089ac",
+      "proposedEnabled": 0,
+      "sourceTarget": "maintained/lua/modified-upstream/nro/a_guardian_tormentor.lua",
+      "sourceBeforeSha256": null
+    },
+    {
+      "key": "timorous/Grandmaster_Rinmark",
+      "questId": 15386,
+      "sourceSha256": "14d3f899be6cfd55231186a17a6dd5d58f9d1495613fc16695a78ff56c5f5f61",
+      "fullSourceBodyRead": true,
+      "ownersAtSnapshot": [],
+      "assignment": "original24",
+      "completeP99ParityClaim": false,
+      "status": "positively_later_exclusive_helper",
+      "action": "disable_preserve_full_body",
+      "evidenceIds": [
+        "tynnonium-p99",
+        "rinmark-sequence"
+      ],
+      "finding": "Exclusive Trial of Patience helper in post-Velious Tynnonium chain96318→96319→96320; terminal Rinmark loot87574→23301→Mark of Patience7880 binds the exact trial. Classic Iksar master shackle branches remain active.",
+      "remaining": "No later-era combat, timer, spawn probability or reward-value parity claim. NPC/loot/spawn data are unchanged; scope edit prevents script dispatch only.",
+      "baselineFile": "maintained/lua/converted-perl/timorous/Grandmaster_Rinmark.lua",
+      "baselineSourceSha256": "14d3f899be6cfd55231186a17a6dd5d58f9d1495613fc16695a78ff56c5f5f61",
+      "beforeSourceSha256": "14d3f899be6cfd55231186a17a6dd5d58f9d1495613fc16695a78ff56c5f5f61",
+      "disposition": "positively_later_exclusive_helper",
+      "evidence": [
+        "tynnonium-p99",
+        "rinmark-sequence"
+      ],
+      "proposedFile": "changes/p99-final-chain-closure/timorous--Grandmaster_Rinmark.lua",
+      "proposedSourceSha256": "db11ef260fc9edc800b67411167bb31c62341b3337a84760a940d2bd66e09fb6",
+      "afterSourceSha256": "db11ef260fc9edc800b67411167bb31c62341b3337a84760a940d2bd66e09fb6",
+      "proposedEnabled": 0,
+      "sourceTarget": "maintained/lua/converted-perl/timorous/Grandmaster_Rinmark.lua",
+      "sourceBeforeSha256": "14d3f899be6cfd55231186a17a6dd5d58f9d1495613fc16695a78ff56c5f5f61"
+    },
+    {
+      "key": "kithicor/#Blackened_Treant",
+      "questId": 13429,
+      "sourceSha256": "a010d86ead65893b62582545afe563398b283fc8be6ae270b3c721d1d5e55cb3",
+      "fullSourceBodyRead": true,
+      "ownersAtSnapshot": [],
+      "assignment": "original24",
+      "completeP99ParityClaim": false,
+      "status": "positively_later_exclusive_helper",
+      "action": "disable_preserve_full_body",
+      "evidenceIds": [
+        "druid-tree"
+      ],
+      "finding": "Exclusive Druid1.5 Blackened Treant→ten limb20300→Dryad20301 sequence. No numeric values are imported from the later guide.",
+      "remaining": "No later-era combat, timer, spawn probability or reward-value parity claim. NPC/loot/spawn data are unchanged; scope edit prevents script dispatch only.",
+      "baselineFile": "sources/projecteq/kithicor/#Blackened_Treant.lua",
+      "baselineSourceSha256": "a010d86ead65893b62582545afe563398b283fc8be6ae270b3c721d1d5e55cb3",
+      "beforeSourceSha256": "a010d86ead65893b62582545afe563398b283fc8be6ae270b3c721d1d5e55cb3",
+      "disposition": "positively_later_exclusive_helper",
+      "evidence": [
+        "druid-tree"
+      ],
+      "proposedFile": "changes/p99-final-chain-closure/kithicor--#Blackened_Treant.lua",
+      "proposedSourceSha256": "de309872eb5a0ba99fe476d49651b40c811269416e6d7b319a38041e3114a41c",
+      "afterSourceSha256": "de309872eb5a0ba99fe476d49651b40c811269416e6d7b319a38041e3114a41c",
+      "proposedEnabled": 0,
+      "sourceTarget": "maintained/lua/modified-upstream/kithicor/#Blackened_Treant.lua",
+      "sourceBeforeSha256": null
+    },
+    {
+      "key": "qey2hh1/12184",
+      "questId": 15831,
+      "sourceSha256": "0b746b4227e657b98f6ef233d22fc683f47dd63e14ec6f8a8a3e9d7c4ac26359",
+      "fullSourceBodyRead": true,
+      "ownersAtSnapshot": [],
+      "assignment": "original24",
+      "completeP99ParityClaim": false,
+      "status": "positively_later_exclusive_helper",
+      "action": "disable_preserve_full_body",
+      "evidenceIds": [
+        "necro-prequest"
+      ],
+      "finding": "Exclusive Necromancer1.5 prequest helpers: Yuanda Note15809 creates four12183 and one12184; both lead to Shady12185. Current Yuanda and Shady sources are already enabled0; helper disables complete their scope boundary.",
+      "remaining": "No later-era combat, timer, spawn probability or reward-value parity claim. NPC/loot/spawn data are unchanged; scope edit prevents script dispatch only.",
+      "baselineFile": "maintained/lua/converted-perl/qey2hh1/12184.lua",
+      "baselineSourceSha256": "0b746b4227e657b98f6ef233d22fc683f47dd63e14ec6f8a8a3e9d7c4ac26359",
+      "beforeSourceSha256": "0b746b4227e657b98f6ef233d22fc683f47dd63e14ec6f8a8a3e9d7c4ac26359",
+      "disposition": "positively_later_exclusive_helper",
+      "evidence": [
+        "necro-prequest"
+      ],
+      "proposedFile": "changes/p99-final-chain-closure/qey2hh1--12184.lua",
+      "proposedSourceSha256": "da3ddcb6a83c9582915a312b543a7a71e584b5ad09da22a0bd5fe006b1812963",
+      "afterSourceSha256": "da3ddcb6a83c9582915a312b543a7a71e584b5ad09da22a0bd5fe006b1812963",
+      "proposedEnabled": 0,
+      "sourceTarget": "maintained/lua/converted-perl/qey2hh1/12184.lua",
+      "sourceBeforeSha256": "0b746b4227e657b98f6ef233d22fc683f47dd63e14ec6f8a8a3e9d7c4ac26359"
+    },
+    {
+      "key": "paineel/Librarian_Kesler",
+      "questId": 15620,
+      "sourceSha256": "63582a2b553ac9b7cc4d57601b9a4f0779d9aca140b15a300110077e31e5296f",
+      "fullSourceBodyRead": true,
+      "ownersAtSnapshot": [],
+      "assignment": "original24",
+      "completeP99ParityClaim": false,
+      "status": "p99_missing_book_grant_unresolved_mapping",
+      "action": "unchanged",
+      "evidenceIds": [
+        "kesler-p99"
+      ],
+      "finding": "P99 confirms book giving, while all four current topic branches and original Perl only speak. Candidate books18091 History of the Hole,18092 Old Paineel,18093 History of Paineel,18094 Underfoot Musings have matching stored book filenames, but no independent topic-to-ID/quantity grant authority was found.",
+      "remaining": "Genuine missing-effect candidate, not an era exclusion. Do not invent grants from title resemblance. Need P99 capture or source documenting exact topic-to-book mapping.",
+      "baselineFile": "maintained/lua/converted-perl/paineel/Librarian_Kesler.lua",
+      "baselineSourceSha256": "63582a2b553ac9b7cc4d57601b9a4f0779d9aca140b15a300110077e31e5296f",
+      "beforeSourceSha256": "63582a2b553ac9b7cc4d57601b9a4f0779d9aca140b15a300110077e31e5296f",
+      "disposition": "p99_missing_book_grant_unresolved_mapping",
+      "evidence": [
+        "kesler-p99"
+      ]
+    },
+    {
+      "key": "nro/a_haunt",
+      "questId": 16399,
+      "sourceSha256": "923a90dcfdf8f80c2a09a455264802c6fee5d4c1f17009437eb53681f8db46a3",
+      "fullSourceBodyRead": true,
+      "ownersAtSnapshot": [],
+      "assignment": "original24",
+      "completeP99ParityClaim": false,
+      "status": "positively_later_exclusive_helper",
+      "action": "disable_preserve_full_body",
+      "evidenceIds": [
+        "druid-haunts",
+        "druid-haunts-detail"
+      ],
+      "finding": "Exclusive Druid1.5 madman392057 chain: haunt→spirit392105→tormentor392106→knight392107→madman signal. No same-name classic NPC row is removed.",
+      "remaining": "No later-era combat, timer, spawn probability or reward-value parity claim. NPC/loot/spawn data are unchanged; scope edit prevents script dispatch only.",
+      "baselineFile": "sources/projecteq/nro/a_haunt.lua",
+      "baselineSourceSha256": "923a90dcfdf8f80c2a09a455264802c6fee5d4c1f17009437eb53681f8db46a3",
+      "beforeSourceSha256": "923a90dcfdf8f80c2a09a455264802c6fee5d4c1f17009437eb53681f8db46a3",
+      "disposition": "positively_later_exclusive_helper",
+      "evidence": [
+        "druid-haunts",
+        "druid-haunts-detail"
+      ],
+      "proposedFile": "changes/p99-final-chain-closure/nro--a_haunt.lua",
+      "proposedSourceSha256": "334d64bd5c7c18b8291b170c4539463d919d4ce0eca384940f773f9f9f27f9f0",
+      "afterSourceSha256": "334d64bd5c7c18b8291b170c4539463d919d4ce0eca384940f773f9f9f27f9f0",
+      "proposedEnabled": 0,
+      "sourceTarget": "maintained/lua/modified-upstream/nro/a_haunt.lua",
+      "sourceBeforeSha256": null
+    },
+    {
+      "key": "lakerathe/#Gnoll_Scavenger",
+      "questId": 15205,
+      "sourceSha256": "33fb7400f6c4a648da81390d06cec7fcc94c61992c5d972581b13fb7bb02f303",
+      "fullSourceBodyRead": true,
+      "ownersAtSnapshot": [],
+      "assignment": "original24",
+      "completeP99ParityClaim": false,
+      "status": "positively_later_exclusive_helper",
+      "action": "disable_preserve_full_body",
+      "evidenceIds": [
+        "necro-prequest"
+      ],
+      "finding": "Exclusive Necromancer1.5 prequest: Worboli51156 with NecroPre1 creates Gnoll Scavenger51157; helper death signals Worboli, which creates shark51158. This source skips the guide fish hand-in, but later-era mechanics are not repaired or activated.",
+      "remaining": "No later-era combat, timer, spawn probability or reward-value parity claim. NPC/loot/spawn data are unchanged; scope edit prevents script dispatch only.",
+      "baselineFile": "maintained/lua/converted-perl/lakerathe/#Gnoll_Scavenger.lua",
+      "baselineSourceSha256": "33fb7400f6c4a648da81390d06cec7fcc94c61992c5d972581b13fb7bb02f303",
+      "beforeSourceSha256": "33fb7400f6c4a648da81390d06cec7fcc94c61992c5d972581b13fb7bb02f303",
+      "disposition": "positively_later_exclusive_helper",
+      "evidence": [
+        "necro-prequest"
+      ],
+      "proposedFile": "changes/p99-final-chain-closure/lakerathe--#Gnoll_Scavenger.lua",
+      "proposedSourceSha256": "5fa8a2a97d8e877ff631f4b7722ebaac6e82f2fb773431598fea44f4c7fa91c7",
+      "afterSourceSha256": "5fa8a2a97d8e877ff631f4b7722ebaac6e82f2fb773431598fea44f4c7fa91c7",
+      "proposedEnabled": 0,
+      "sourceTarget": "maintained/lua/converted-perl/lakerathe/#Gnoll_Scavenger.lua",
+      "sourceBeforeSha256": "33fb7400f6c4a648da81390d06cec7fcc94c61992c5d972581b13fb7bb02f303"
+    },
+    {
+      "key": "frontiermtns/#a_goblin_whipcracker",
+      "questId": 19494,
+      "sourceSha256": "d86cb2f02175a26e874c10d6fe35ab31ba53a04f4c3f4e91582b9a5b78fb7ed5",
+      "fullSourceBodyRead": true,
+      "ownersAtSnapshot": [],
+      "assignment": "original24",
+      "completeP99ParityClaim": false,
+      "status": "positively_later_exclusive_helper",
+      "action": "disable_preserve_full_body",
+      "evidenceIds": [
+        "druid-contest"
+      ],
+      "finding": "Exclusive Druid1.5 goblin-disguise contest: language14, buff5574, Dronan92198, Garzul92199 and Hunknort92200. Ordinary goblin population is unchanged.",
+      "remaining": "No later-era combat, timer, spawn probability or reward-value parity claim. NPC/loot/spawn data are unchanged; scope edit prevents script dispatch only.",
+      "baselineFile": "sources/projecteq/frontiermtns/#a_goblin_whipcracker.lua",
+      "baselineSourceSha256": "d86cb2f02175a26e874c10d6fe35ab31ba53a04f4c3f4e91582b9a5b78fb7ed5",
+      "beforeSourceSha256": "d86cb2f02175a26e874c10d6fe35ab31ba53a04f4c3f4e91582b9a5b78fb7ed5",
+      "disposition": "positively_later_exclusive_helper",
+      "evidence": [
+        "druid-contest"
+      ],
+      "proposedFile": "changes/p99-final-chain-closure/frontiermtns--#a_goblin_whipcracker.lua",
+      "proposedSourceSha256": "ca9045cc2b1ea40a6c296ae5ffa0fbb7dc90bb23a45aa3a2a0bd1764aeb54d57",
+      "afterSourceSha256": "ca9045cc2b1ea40a6c296ae5ffa0fbb7dc90bb23a45aa3a2a0bd1764aeb54d57",
+      "proposedEnabled": 0,
+      "sourceTarget": "maintained/lua/modified-upstream/frontiermtns/#a_goblin_whipcracker.lua",
+      "sourceBeforeSha256": null
+    },
+    {
+      "key": "timorous/Master_Rinmark",
+      "questId": 17781,
+      "sourceSha256": "d5f7eb3b9c6ea5d1cd8f1f75fb85c6432025d5ffcfcbdc4a0449655924f6e0c4",
+      "fullSourceBodyRead": true,
+      "ownersAtSnapshot": [],
+      "assignment": "original24",
+      "completeP99ParityClaim": false,
+      "status": "positively_later_exclusive_helper",
+      "action": "disable_preserve_full_body",
+      "evidenceIds": [
+        "tynnonium-p99",
+        "rinmark-sequence"
+      ],
+      "finding": "Exclusive Trial of Patience helper in post-Velious Tynnonium chain96318→96319→96320; terminal Rinmark loot87574→23301→Mark of Patience7880 binds the exact trial. Classic Iksar master shackle branches remain active.",
+      "remaining": "No later-era combat, timer, spawn probability or reward-value parity claim. NPC/loot/spawn data are unchanged; scope edit prevents script dispatch only.",
+      "baselineFile": "maintained/lua/converted-perl/timorous/Master_Rinmark.lua",
+      "baselineSourceSha256": "d5f7eb3b9c6ea5d1cd8f1f75fb85c6432025d5ffcfcbdc4a0449655924f6e0c4",
+      "beforeSourceSha256": "d5f7eb3b9c6ea5d1cd8f1f75fb85c6432025d5ffcfcbdc4a0449655924f6e0c4",
+      "disposition": "positively_later_exclusive_helper",
+      "evidence": [
+        "tynnonium-p99",
+        "rinmark-sequence"
+      ],
+      "proposedFile": "changes/p99-final-chain-closure/timorous--Master_Rinmark.lua",
+      "proposedSourceSha256": "40ab2be264226beed9619c7d043518740453d7dbdc3d02d4d2d08636fc137088",
+      "afterSourceSha256": "40ab2be264226beed9619c7d043518740453d7dbdc3d02d4d2d08636fc137088",
+      "proposedEnabled": 0,
+      "sourceTarget": "maintained/lua/converted-perl/timorous/Master_Rinmark.lua",
+      "sourceBeforeSha256": "d5f7eb3b9c6ea5d1cd8f1f75fb85c6432025d5ffcfcbdc4a0449655924f6e0c4"
+    },
+    {
+      "key": "sebilis/#froglok_krup_knight",
+      "questId": 18104,
+      "sourceSha256": "d1d40980941ef5b2f1f6fa6812f5066644c3a671efdaf012f009564553683fa8",
+      "fullSourceBodyRead": true,
+      "ownersAtSnapshot": [],
+      "assignment": "original24",
+      "completeP99ParityClaim": false,
+      "status": "unresolved_exact_event_era",
+      "action": "unchanged",
+      "evidenceIds": [],
+      "finding": "Exact spawn89182 is #Froglok_Krup_Watcher, not the regular krup knight/observer/protector. Its baseline loot14403→22953 contains Dragon Touched Mask32977 and Sebilite Leather Wraps32927. No reliable public authority found tying this exact ten-percent death-trigger encounter to a P99 or later introduction; name, stats, IDs, loot naming and absence are not era proof.",
+      "remaining": "Need dated exact encounter evidence, or P99 confirmation, including whether any death trigger exists. Leave ten-percent probability and all row/source values unchanged.",
+      "baselineFile": "maintained/lua/converted-perl/sebilis/#froglok_krup_knight.lua",
+      "baselineSourceSha256": "d1d40980941ef5b2f1f6fa6812f5066644c3a671efdaf012f009564553683fa8",
+      "beforeSourceSha256": "d1d40980941ef5b2f1f6fa6812f5066644c3a671efdaf012f009564553683fa8",
+      "disposition": "unresolved_exact_event_era",
+      "evidence": []
+    },
+    {
+      "key": "lakeofillomen/Impervious_Bloodbeast",
+      "questId": 16001,
+      "sourceSha256": "7b012247293a46a832790f68f231d4cc4600da1c97b8d973913bc4d969dcc6ee",
+      "fullSourceBodyRead": true,
+      "ownersAtSnapshot": [],
+      "assignment": "original24",
+      "completeP99ParityClaim": false,
+      "status": "positively_later_exclusive_helper",
+      "action": "disable_preserve_full_body",
+      "evidenceIds": [
+        "berserker-chain",
+        "berserker-era"
+      ],
+      "finding": "Exclusive Berserker epic helper: Bloodbeast85225 death signals Lingering Axefall85091. Full Axefall Perl checks Berserker and creates that exact target.",
+      "remaining": "No later-era combat, timer, spawn probability or reward-value parity claim. NPC/loot/spawn data are unchanged; scope edit prevents script dispatch only.",
+      "baselineFile": "maintained/lua/converted-perl/lakeofillomen/Impervious_Bloodbeast.lua",
+      "baselineSourceSha256": "7b012247293a46a832790f68f231d4cc4600da1c97b8d973913bc4d969dcc6ee",
+      "beforeSourceSha256": "7b012247293a46a832790f68f231d4cc4600da1c97b8d973913bc4d969dcc6ee",
+      "disposition": "positively_later_exclusive_helper",
+      "evidence": [
+        "berserker-chain",
+        "berserker-era"
+      ],
+      "proposedFile": "changes/p99-final-chain-closure/lakeofillomen--Impervious_Bloodbeast.lua",
+      "proposedSourceSha256": "0e773d10ecdb1aa356a460ead74d8801bc0c84ed305cd5e71abd882a040cfea7",
+      "afterSourceSha256": "0e773d10ecdb1aa356a460ead74d8801bc0c84ed305cd5e71abd882a040cfea7",
+      "proposedEnabled": 0,
+      "sourceTarget": "maintained/lua/converted-perl/lakeofillomen/Impervious_Bloodbeast.lua",
+      "sourceBeforeSha256": "7b012247293a46a832790f68f231d4cc4600da1c97b8d973913bc4d969dcc6ee"
+    },
+    {
+      "key": "qey2hh1/12183",
+      "questId": 19185,
+      "sourceSha256": "4ea2d25fc6588caad51ad745c147a61927c985e1b0ef195cea4729383c4d649f",
+      "fullSourceBodyRead": true,
+      "ownersAtSnapshot": [],
+      "assignment": "original24",
+      "completeP99ParityClaim": false,
+      "status": "positively_later_exclusive_helper",
+      "action": "disable_preserve_full_body",
+      "evidenceIds": [
+        "necro-prequest"
+      ],
+      "finding": "Exclusive Necromancer1.5 prequest helpers: Yuanda Note15809 creates four12183 and one12184; both lead to Shady12185. Current Yuanda and Shady sources are already enabled0; helper disables complete their scope boundary.",
+      "remaining": "No later-era combat, timer, spawn probability or reward-value parity claim. NPC/loot/spawn data are unchanged; scope edit prevents script dispatch only.",
+      "baselineFile": "maintained/lua/converted-perl/qey2hh1/12183.lua",
+      "baselineSourceSha256": "4ea2d25fc6588caad51ad745c147a61927c985e1b0ef195cea4729383c4d649f",
+      "beforeSourceSha256": "4ea2d25fc6588caad51ad745c147a61927c985e1b0ef195cea4729383c4d649f",
+      "disposition": "positively_later_exclusive_helper",
+      "evidence": [
+        "necro-prequest"
+      ],
+      "proposedFile": "changes/p99-final-chain-closure/qey2hh1--12183.lua",
+      "proposedSourceSha256": "1cd3a02296313e4a97157c02f9ac3a48529a199a9839a4e1aee92b5814f09805",
+      "afterSourceSha256": "1cd3a02296313e4a97157c02f9ac3a48529a199a9839a4e1aee92b5814f09805",
+      "proposedEnabled": 0,
+      "sourceTarget": "maintained/lua/converted-perl/qey2hh1/12183.lua",
+      "sourceBeforeSha256": "4ea2d25fc6588caad51ad745c147a61927c985e1b0ef195cea4729383c4d649f"
+    },
+    {
+      "key": "timorous/Draz_Nurakk",
+      "questId": 17573,
+      "sourceSha256": "8016936dda407c8498e2828c550349a94e5704895545509e8cd967c245327820",
+      "fullSourceBodyRead": true,
+      "ownersAtSnapshot": [],
+      "assignment": "original24",
+      "completeP99ParityClaim": false,
+      "status": "positively_later_exclusive_helper",
+      "action": "disable_preserve_full_body",
+      "evidenceIds": [
+        "beast-draz",
+        "luclin-features"
+      ],
+      "finding": "Exclusive Beastlord epic Timorous target96321 creates six images96322. Scout Sihmoj source uses Seal9045 and black silk sack17360, and the public walkthrough matches six shards and Elder Dumul. Do not confuse with Fungus Grove Draz.",
+      "remaining": "No later-era combat, timer, spawn probability or reward-value parity claim. NPC/loot/spawn data are unchanged; scope edit prevents script dispatch only.",
+      "baselineFile": "maintained/lua/converted-perl/timorous/Draz_Nurakk.lua",
+      "baselineSourceSha256": "8016936dda407c8498e2828c550349a94e5704895545509e8cd967c245327820",
+      "beforeSourceSha256": "8016936dda407c8498e2828c550349a94e5704895545509e8cd967c245327820",
+      "disposition": "positively_later_exclusive_helper",
+      "evidence": [
+        "beast-draz",
+        "luclin-features"
+      ],
+      "proposedFile": "changes/p99-final-chain-closure/timorous--Draz_Nurakk.lua",
+      "proposedSourceSha256": "1ca076018d7d8bbc56b0003476c50ea7aa3edc3340209dc1ea2f7478a6b82eb9",
+      "afterSourceSha256": "1ca076018d7d8bbc56b0003476c50ea7aa3edc3340209dc1ea2f7478a6b82eb9",
+      "proposedEnabled": 0,
+      "sourceTarget": "maintained/lua/converted-perl/timorous/Draz_Nurakk.lua",
+      "sourceBeforeSha256": "8016936dda407c8498e2828c550349a94e5704895545509e8cd967c245327820"
+    },
+    {
+      "key": "rathemtn/Raving_Sphinx_Spiritservant",
+      "questId": 16853,
+      "sourceSha256": "462ed67ef5d36287827ff91499358af170d347661c7f553389c090e9d3229735",
+      "fullSourceBodyRead": true,
+      "ownersAtSnapshot": [],
+      "assignment": "original24",
+      "completeP99ParityClaim": false,
+      "status": "positively_later_exclusive_helper",
+      "action": "disable_preserve_full_body",
+      "evidenceIds": [
+        "beast-sphinx",
+        "luclin-features"
+      ],
+      "finding": "Exclusive Beastlord1.5 spiritservants: source Zazamoukh beast_epic12 creates50326, Ankhefenmut beast_epic13 creates50327; death handlers restore50230/50231. Ordinary sphinx NPCs are retained.",
+      "remaining": "No later-era combat, timer, spawn probability or reward-value parity claim. NPC/loot/spawn data are unchanged; scope edit prevents script dispatch only.",
+      "baselineFile": "maintained/lua/converted-perl/rathemtn/Raving_Sphinx_Spiritservant.lua",
+      "baselineSourceSha256": "462ed67ef5d36287827ff91499358af170d347661c7f553389c090e9d3229735",
+      "beforeSourceSha256": "462ed67ef5d36287827ff91499358af170d347661c7f553389c090e9d3229735",
+      "disposition": "positively_later_exclusive_helper",
+      "evidence": [
+        "beast-sphinx",
+        "luclin-features"
+      ],
+      "proposedFile": "changes/p99-final-chain-closure/rathemtn--Raving_Sphinx_Spiritservant.lua",
+      "proposedSourceSha256": "31df1bc1c114ee3402757990befb0f8f0a3d731142d3149524efa74a48ce568a",
+      "afterSourceSha256": "31df1bc1c114ee3402757990befb0f8f0a3d731142d3149524efa74a48ce568a",
+      "proposedEnabled": 0,
+      "sourceTarget": "maintained/lua/converted-perl/rathemtn/Raving_Sphinx_Spiritservant.lua",
+      "sourceBeforeSha256": "462ed67ef5d36287827ff91499358af170d347661c7f553389c090e9d3229735"
+    },
+    {
+      "key": "cazicthule/#a_Thul_Tae_Ew_High_Priest",
+      "questId": 18163,
+      "sourceSha256": "24d79ef7277e74971b472cfc48d383524bbd8bd67b4bf8dc9cd8603de2c4d647",
+      "fullSourceBodyRead": true,
+      "ownersAtSnapshot": [],
+      "assignment": "original24",
+      "completeP99ParityClaim": false,
+      "status": "positively_later_exclusive_helper",
+      "action": "disable_preserve_full_body",
+      "evidenceIds": [
+        "ct-era",
+        "ct-ring",
+        "ct-actors",
+        "ct-coordinates"
+      ],
+      "finding": "Exclusive Accursed Temple Ring of Fear: High Priest creates Tahia48057 and four Justicars48029; Avatar rotates wave phases with Dread48237/Fright48239/Terror48240. Original static Avatar NPC content is not disabled wholesale.",
+      "remaining": "No later-era combat, timer, spawn probability or reward-value parity claim. NPC/loot/spawn data are unchanged; scope edit prevents script dispatch only.",
+      "baselineFile": "sources/projecteq/cazicthule/#a_Thul_Tae_Ew_High_Priest.lua",
+      "baselineSourceSha256": "24d79ef7277e74971b472cfc48d383524bbd8bd67b4bf8dc9cd8603de2c4d647",
+      "beforeSourceSha256": "24d79ef7277e74971b472cfc48d383524bbd8bd67b4bf8dc9cd8603de2c4d647",
+      "disposition": "positively_later_exclusive_helper",
+      "evidence": [
+        "ct-era",
+        "ct-ring",
+        "ct-actors",
+        "ct-coordinates"
+      ],
+      "proposedFile": "changes/p99-final-chain-closure/cazicthule--#a_Thul_Tae_Ew_High_Priest.lua",
+      "proposedSourceSha256": "d25d8e4a66f052c7fa368b6ba23f606506b928d1ffd7e898268293d73bc2f721",
+      "afterSourceSha256": "d25d8e4a66f052c7fa368b6ba23f606506b928d1ffd7e898268293d73bc2f721",
+      "proposedEnabled": 0,
+      "sourceTarget": "maintained/lua/modified-upstream/cazicthule/#a_Thul_Tae_Ew_High_Priest.lua",
+      "sourceBeforeSha256": null
+    },
+    {
+      "key": "kithicor/#Blackened_Tree_Limb",
+      "questId": 19368,
+      "sourceSha256": "9d9a5c48b4e1074999e91da1382560ae72b6eeb25e53ba18d176e44ef48c0038",
+      "fullSourceBodyRead": true,
+      "ownersAtSnapshot": [],
+      "assignment": "original24",
+      "completeP99ParityClaim": false,
+      "status": "positively_later_exclusive_helper",
+      "action": "disable_preserve_full_body",
+      "evidenceIds": [
+        "druid-tree"
+      ],
+      "finding": "Exclusive Druid1.5 Blackened Treant→ten limb20300→Dryad20301 sequence. No numeric values are imported from the later guide.",
+      "remaining": "No later-era combat, timer, spawn probability or reward-value parity claim. NPC/loot/spawn data are unchanged; scope edit prevents script dispatch only.",
+      "baselineFile": "sources/projecteq/kithicor/#Blackened_Tree_Limb.lua",
+      "baselineSourceSha256": "9d9a5c48b4e1074999e91da1382560ae72b6eeb25e53ba18d176e44ef48c0038",
+      "beforeSourceSha256": "9d9a5c48b4e1074999e91da1382560ae72b6eeb25e53ba18d176e44ef48c0038",
+      "disposition": "positively_later_exclusive_helper",
+      "evidence": [
+        "druid-tree"
+      ],
+      "proposedFile": "changes/p99-final-chain-closure/kithicor--#Blackened_Tree_Limb.lua",
+      "proposedSourceSha256": "1ddb92ae442aea58d7ca07fd71fe4b1670601f0a9ee4c7ff39b1acefc7e953a9",
+      "afterSourceSha256": "1ddb92ae442aea58d7ca07fd71fe4b1670601f0a9ee4c7ff39b1acefc7e953a9",
+      "proposedEnabled": 0,
+      "sourceTarget": "maintained/lua/modified-upstream/kithicor/#Blackened_Tree_Limb.lua",
+      "sourceBeforeSha256": null
+    },
+    {
+      "key": "warslikswood/a_frantic_goblin",
+      "questId": 19547,
+      "sourceSha256": "035157961f2d4322c4e2c247b16e7c8bd3b7ffeedc5f10a76e5aa015fb64fef3",
+      "fullSourceBodyRead": true,
+      "ownersAtSnapshot": [],
+      "assignment": "original24",
+      "completeP99ParityClaim": false,
+      "status": "positively_later_exclusive_helper",
+      "action": "disable_preserve_full_body",
+      "evidenceIds": [
+        "berserker-chain",
+        "berserker-era"
+      ],
+      "finding": "Exclusive Berserker epic wave helpers signal Raving Goblinmaster79127 on timeout or death. Frantic and Ferocious names and wave types match the Berserker final trial, not ordinary goblin behavior.",
+      "remaining": "No later-era combat, timer, spawn probability or reward-value parity claim. NPC/loot/spawn data are unchanged; scope edit prevents script dispatch only.",
+      "baselineFile": "maintained/lua/converted-perl/warslikswood/a_frantic_goblin.lua",
+      "baselineSourceSha256": "035157961f2d4322c4e2c247b16e7c8bd3b7ffeedc5f10a76e5aa015fb64fef3",
+      "beforeSourceSha256": "035157961f2d4322c4e2c247b16e7c8bd3b7ffeedc5f10a76e5aa015fb64fef3",
+      "disposition": "positively_later_exclusive_helper",
+      "evidence": [
+        "berserker-chain",
+        "berserker-era"
+      ],
+      "proposedFile": "changes/p99-final-chain-closure/warslikswood--a_frantic_goblin.lua",
+      "proposedSourceSha256": "c304b256593c7c762f79a2e52955babc5df339032b88586166940f09bd2874c5",
+      "afterSourceSha256": "c304b256593c7c762f79a2e52955babc5df339032b88586166940f09bd2874c5",
+      "proposedEnabled": 0,
+      "sourceTarget": "maintained/lua/converted-perl/warslikswood/a_frantic_goblin.lua",
+      "sourceBeforeSha256": "035157961f2d4322c4e2c247b16e7c8bd3b7ffeedc5f10a76e5aa015fb64fef3"
+    }
+  ],
+  "limitations": [
+    "Live P99 wiki unavailable; preserved cache and explicitly marked public search excerpts used.",
+    "Krup watcher remains exact-era unknown; Kesler remains genuine missing-effect candidate with unproved grant mapping; Xantis successful P99 settlement remains unproved.",
+    "Disabled source bodies are archival and not claimed executable through a disabled row. Isolated historical callback assertions do not prove game dispatch."
+  ],
+  "additionalRecords": [
+    {
+      "key": "nro/a_spirit",
+      "questId": 19018,
+      "sourceSha256": "c6553b7fde3cc043201ee081a6c7ef1d52e7a3e6d5f808da8403bfc884907128",
+      "fullSourceBodyRead": true,
+      "assignment": "approved_extension",
+      "status": "positively_later_exclusive_controller",
+      "action": "disable_preserve_full_body",
+      "evidenceIds": [
+        "druid-haunts",
+        "druid-haunts-detail"
+      ],
+      "finding": "Missing middle actor in exact madman spirit chain; death creates tormentor392106.",
+      "completeP99ParityClaim": false,
+      "baselineFile": "sources/projecteq/nro/a_spirit.lua",
+      "baselineSourceSha256": "c6553b7fde3cc043201ee081a6c7ef1d52e7a3e6d5f808da8403bfc884907128",
+      "beforeSourceSha256": "c6553b7fde3cc043201ee081a6c7ef1d52e7a3e6d5f808da8403bfc884907128",
+      "disposition": "positively_later_exclusive_controller",
+      "evidence": [
+        "druid-haunts",
+        "druid-haunts-detail"
+      ],
+      "proposedFile": "changes/p99-final-chain-closure/nro--a_spirit.lua",
+      "proposedSourceSha256": "9a337b19bc1fab68c7fc9304f8eeae460066c44873cb18cdae78b1674936ae77",
+      "afterSourceSha256": "9a337b19bc1fab68c7fc9304f8eeae460066c44873cb18cdae78b1674936ae77",
+      "proposedEnabled": 0,
+      "sourceTarget": "maintained/lua/modified-upstream/nro/a_spirit.lua",
+      "sourceBeforeSha256": null
+    },
+    {
+      "key": "timorous/Rinmark",
+      "questId": 13872,
+      "sourceSha256": "3cb9ab414f947bf7cc01dc662f01f77b707971047880a4fbda0816e4f9702159",
+      "fullSourceBodyRead": true,
+      "assignment": "approved_extension",
+      "status": "positively_later_exclusive_controller",
+      "action": "disable_preserve_full_body",
+      "evidenceIds": [
+        "tynnonium-p99",
+        "rinmark-sequence"
+      ],
+      "finding": "Terminal Tynnonium trial actor96320 has Mark of Patience7880 loot.",
+      "completeP99ParityClaim": false,
+      "baselineFile": "maintained/lua/converted-perl/timorous/Rinmark.lua",
+      "baselineSourceSha256": "3cb9ab414f947bf7cc01dc662f01f77b707971047880a4fbda0816e4f9702159",
+      "beforeSourceSha256": "3cb9ab414f947bf7cc01dc662f01f77b707971047880a4fbda0816e4f9702159",
+      "disposition": "positively_later_exclusive_controller",
+      "evidence": [
+        "tynnonium-p99",
+        "rinmark-sequence"
+      ],
+      "proposedFile": "changes/p99-final-chain-closure/timorous--Rinmark.lua",
+      "proposedSourceSha256": "02a860d8e15a78ec8a53ac82d7904517a4191c23c85442b8070d7eed720c22e0",
+      "afterSourceSha256": "02a860d8e15a78ec8a53ac82d7904517a4191c23c85442b8070d7eed720c22e0",
+      "proposedEnabled": 0,
+      "sourceTarget": "maintained/lua/converted-perl/timorous/Rinmark.lua",
+      "sourceBeforeSha256": "3cb9ab414f947bf7cc01dc662f01f77b707971047880a4fbda0816e4f9702159"
+    },
+    {
+      "key": "timorous/an_Iksar_master",
+      "questId": 19270,
+      "sourceSha256": "4b17cfed06c4d0320fa3f6cd2156c41ed0bfb3be22ef82bc5c5c75d77d584aa6",
+      "fullSourceBodyRead": true,
+      "assignment": "approved_extension",
+      "status": "mixed_classic_later_controller",
+      "action": "guard_only_later_entry",
+      "evidenceIds": [
+        "tynnonium-p99",
+        "rinmark-sequence"
+      ],
+      "finding": "Mixed controller: only the test-of-patience entry creates later trial96318. Preserve classic copper/bronze/steel setup and all existing rewards, refunds and dialogue.",
+      "completeP99ParityClaim": false,
+      "baselineFile": "maintained/lua/converted-perl/timorous/an_Iksar_master.lua",
+      "baselineSourceSha256": "4b17cfed06c4d0320fa3f6cd2156c41ed0bfb3be22ef82bc5c5c75d77d584aa6",
+      "beforeSourceSha256": "4b17cfed06c4d0320fa3f6cd2156c41ed0bfb3be22ef82bc5c5c75d77d584aa6",
+      "disposition": "mixed_classic_later_controller",
+      "evidence": [
+        "tynnonium-p99",
+        "rinmark-sequence"
+      ],
+      "proposedFile": "changes/p99-final-chain-closure/timorous--an_Iksar_master.lua",
+      "proposedSourceSha256": "16ceafc8465767a47b1f8e6602617e951874a170ef42e6513457e2f46d520568",
+      "afterSourceSha256": "16ceafc8465767a47b1f8e6602617e951874a170ef42e6513457e2f46d520568",
+      "proposedEnabled": 1,
+      "sourceTarget": "maintained/lua/converted-perl/timorous/an_Iksar_master.lua",
+      "sourceBeforeSha256": "4b17cfed06c4d0320fa3f6cd2156c41ed0bfb3be22ef82bc5c5c75d77d584aa6"
+    },
+    {
+      "key": "befallen/#Sir_Ariam_Arcanum",
+      "questId": 19363,
+      "sourceSha256": "bdffaf1403081d322ce431b3fe95329592f449cc43c7b50caf384eb64a44625a",
+      "fullSourceBodyRead": true,
+      "assignment": "approved_extension",
+      "status": "positively_later_exclusive_controller",
+      "action": "disable_preserve_full_body",
+      "evidenceIds": [
+        "ariam",
+        "ariam-sequence",
+        "luclin-features"
+      ],
+      "finding": "Exclusive mounted-lore controller grants bridle/scroll or token for the post-Velious chain.",
+      "completeP99ParityClaim": false,
+      "baselineFile": "sources/projecteq/befallen/#Sir_Ariam_Arcanum.lua",
+      "baselineSourceSha256": "bdffaf1403081d322ce431b3fe95329592f449cc43c7b50caf384eb64a44625a",
+      "beforeSourceSha256": "bdffaf1403081d322ce431b3fe95329592f449cc43c7b50caf384eb64a44625a",
+      "disposition": "positively_later_exclusive_controller",
+      "evidence": [
+        "ariam",
+        "ariam-sequence",
+        "luclin-features"
+      ],
+      "proposedFile": "changes/p99-final-chain-closure/befallen--#Sir_Ariam_Arcanum.lua",
+      "proposedSourceSha256": "bea36a1921acce284e87b34964a76754a88b9a3c18cb6ca7e1723f4f74cf1c5b",
+      "afterSourceSha256": "bea36a1921acce284e87b34964a76754a88b9a3c18cb6ca7e1723f4f74cf1c5b",
+      "proposedEnabled": 0,
+      "sourceTarget": "maintained/lua/modified-upstream/befallen/#Sir_Ariam_Arcanum.lua",
+      "sourceBeforeSha256": null
+    }
+  ],
+  "counts": {
+    "originalRecords": 24,
+    "positiveLaterOriginalChains": 21,
+    "unresolvedExactEraChains": 1,
+    "unchangedNamedReviews": 2,
+    "approvedExtensions": 4,
+    "disabledSources": 24,
+    "mixedControllerEdits": 1,
+    "changedRows": 25,
+    "sourceChanges": 25,
+    "newMaintainedOverrides": 12,
+    "modifiedMaintainedSources": 13
+  },
+  "extensionApproval": "Parent scope coordination confirmed exact four keys before edits; not additional user-facing authorization or blanket controller cleanup.",
+  "identityEvidenceFiles": [
+    "changes/p99-final-chain-closure/controller-sources.json",
+    "changes/p99-final-chain-closure/npc-identities.json",
+    "changes/p99-final-chain-closure/item-identities.json",
+    "changes/p99-final-chain-closure/local-evidence-bindings.json",
+    "changes/p99-final-chain-closure/chain-data-bindings.json"
+  ]
+}

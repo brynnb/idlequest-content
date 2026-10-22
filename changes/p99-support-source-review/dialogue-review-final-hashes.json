@@ -1,0 +1,74 @@
+{
+  "dialogueReviewSha256": "3f192fcf06ed93934e68f39d4e16cd6d9235fd35ebe51676510c06b765d9e05f",
+  "proposalSha256": "001b265ca77a05c69e4a4e2fea7588e19f18f79c2dadeb9f41f6a304b3a60c77",
+  "completeAssignedKeys": 312,
+  "uniqueAssignedHashes": 260,
+  "extraControllerKeys": 2,
+  "tests": {
+    "status": "passed",
+    "nodeTests": 2,
+    "isolatedLuaCases": 15,
+    "command": "GO_BINARY=/tmp/p99-go-toolchain/go/bin/go GOPATH=/tmp/p99-go-path GOCACHE=/tmp/p99-go-cache node --test changes/p99-support-dialogue-fixes/dialogue.test.mjs",
+    "log": "changes/p99-support-dialogue-fixes/test.log",
+    "logSha256": "831b8091865faabbf2a4bab3644c00031e7a7ad0bf63f92fef42b05d6b49bee8",
+    "proposalValidator": {
+      "status": "passed",
+      "checked": 7,
+      "failures": null,
+      "rows": 7,
+      "sources": 7,
+      "log": "changes/p99-support-dialogue-fixes/validation.log",
+      "logSha256": "1a6ff321367d511704ef6f4c0a60e3d7fd3a7884378c740afe66fa211a473ad4"
+    }
+  },
+  "finalSources": [
+    {
+      "key": "lfaydark/Grynnaf_Einoom",
+      "beforeSha256": "a61dfc26057b3df8600cacdbf561f7a8248b2d05f33ba7053bcd0d3517e30baa",
+      "afterSha256": "1328f8fe3010f9c40512937b3f6c4293f9bba9285f07bea9ac18926ebca88e06",
+      "path": "changes/p99-support-dialogue-fixes/lfaydark--Grynnaf_Einoom.lua"
+    },
+    {
+      "key": "cabwest/Jaxxtz",
+      "beforeSha256": "fbd109a5cf6a597a89615091d0de93695e7d539e67333986068471dd88c1cbb6",
+      "afterSha256": "1cc9f089cabc48bbe8fa0e03d1de2956c01e7613f05a0a8f16ee585ae8c6f015",
+      "path": "changes/p99-support-dialogue-fixes/cabwest--Jaxxtz.lua"
+    },
+    {
+      "key": "grobb/Kragia",
+      "beforeSha256": "ce1e93b3d56ecdebb61827fc2174ac1a69f4d47d829c2252d6ed0cdc140b7356",
+      "afterSha256": "7cc52f5530d7b014108ab68c94deeecc0800d9eaba90ca8a2ad1d1531eeadbce",
+      "path": "changes/p99-support-dialogue-fixes/grobb--Kragia.lua"
+    },
+    {
+      "key": "emeraldjungle/The_Spirit_of_Rage",
+      "beforeSha256": "277f8a7bfd4f34e3a5acad62ad0cf740f35e30d80992658c9c6d89a215b61c1a",
+      "afterSha256": "d587348ea709da8f59c9cf1a1a044a77a3cbb82b80b080ce8f36056eed328148",
+      "path": "changes/p99-support-dialogue-fixes/emeraldjungle--The_Spirit_of_Rage.lua"
+    },
+    {
+      "key": "permafrost/The_Icebound_Spirit",
+      "beforeSha256": "827140a9850d9341b9ed4ea61bacff5621cad2c63a07b1652d25597897db87c7",
+      "afterSha256": "3edcc11eaf362cc35f0dcfe60916a0d227c26cc485812877f0904f2b3a0565a7",
+      "path": "changes/p99-support-dialogue-fixes/permafrost--The_Icebound_Spirit.lua"
+    },
+    {
+      "key": "emeraldjungle/Scout_Vyrak",
+      "beforeSha256": "0cfd4edfe284043d99e494f028371262e4863093aa85625ea0fe126c4b73e204",
+      "afterSha256": "8a1ae3367d66bb39d95811f86f63340250636e27fc20fa719a87da47ecc2f25b",
+      "path": "changes/p99-support-dialogue-fixes/emeraldjungle--Scout_Vyrak.lua"
+    },
+    {
+      "key": "permafrost/Scout_Janomin",
+      "beforeSha256": "b14a4dddd8aeb88af480ee040d2cc2aead28ae47c5e4e98831e39f3b0dda3974",
+      "afterSha256": "233a04773ea5fa5241112695e1ae4ef42bc4fe7f0a5085be5b1b1b9f4fe1e9fc",
+      "path": "changes/p99-support-dialogue-fixes/permafrost--Scout_Janomin.lua"
+    }
+  ],
+  "parentOwnedPerseverance": {
+    "key": "freportn/#Elder_Spirit_of_Perseverance",
+    "reviewedSourceSha256": "ff5c28dcf7de6239b63119c4bacbcba156c5018b6ce5c31fa63023c69e33ec24",
+    "proposedSourceSha256": "318615d1045623806b6115a5a9aeebf5ea718e9d217687f9db25ba60202f2f69",
+    "proposal": "changes/p99-support-world-scope.json"
+  }
+}

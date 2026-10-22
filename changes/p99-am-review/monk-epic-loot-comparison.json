@@ -1,0 +1,235 @@
+{
+  "evidence": {
+    "title": "Monk Epic Quest",
+    "url": "https://wiki.project1999.com/Monk_Epic_Quest?action=raw",
+    "fetchedAt": "2026-07-17T23:25:34.139Z",
+    "revision": null,
+    "sha256": "ba4b460c745371d1dbd96436158a46dc932bc5514384a2e3618dfab0a71ab651",
+    "bytes": 21682,
+    "source": "raw-pages/monk-epic-quest-935a84afd5.json",
+    "cachePath": "reference/p99-wiki/raw-pages/monk-epic-quest-935a84afd5.wiki"
+  },
+  "limits": "Static candidate NPC/loot links for named required drops. No spawn availability, kill credit, loot settlement or probability parity established. Named variants are static candidates only, not certified P99 natural spawns.",
+  "items": {
+    "1684": {
+      "expected_npc_name_fragments": [
+        "Eejag"
+      ],
+      "candidate_npcs": [
+        {
+          "npc": {
+            "id": 27119,
+            "name": "Eejag",
+            "level": 55,
+            "loottable_id": 13543
+          },
+          "npc_evidence": {
+            "path": "data/npc_types/4.ndjson",
+            "line": 1851,
+            "sha256": "cbc572de063b15b4719e29f80680b39e42fc84baa2eb1ff58d34c3772f00cbe3"
+          },
+          "loottable_entry": {
+            "loottable_id": 13543,
+            "lootdrop_id": 22344,
+            "multiplier": 1,
+            "droplimit": 1,
+            "mindrop": 1,
+            "probability": 100
+          },
+          "loottable_evidence": {
+            "path": "data/loottable_entries/4.ndjson",
+            "line": 1106,
+            "sha256": "08e2fa6b07bc05facc420198a6638323b475ff831282668d33c6a312a03ecf52"
+          },
+          "lootdrop_entry": {
+            "lootdrop_id": 22344,
+            "item_id": 1684,
+            "item_charges": 1,
+            "equip_item": 0,
+            "chance": 100,
+            "disabled_chance": 0,
+            "trivial_min_level": 0,
+            "trivial_max_level": 0,
+            "multiplier": 1,
+            "npc_min_level": 0,
+            "npc_max_level": 0,
+            "min_expansion": -1,
+            "max_expansion": -1,
+            "content_flags": null,
+            "content_flags_disabled": null
+          },
+          "lootdrop_evidence": {
+            "path": "data/lootdrop_entries/b.ndjson",
+            "line": 28098,
+            "sha256": "ead29ed25eaeb2a25b4cfbb53820455a9c61dbe297056d9f6778b9e9c9814f09"
+          }
+        }
+      ]
+    },
+    "1685": {
+      "expected_npc_name_fragments": [
+        "Gwan"
+      ],
+      "candidate_npcs": [
+        {
+          "npc": {
+            "id": 71069,
+            "name": "Gwan",
+            "level": 57,
+            "loottable_id": 374
+          },
+          "npc_evidence": {
+            "path": "data/npc_types/c.ndjson",
+            "line": 3723,
+            "sha256": "f08810e7bb85aba6d554f14ff754a9cc8805bccb5141dd741b7af341f1e6f491"
+          },
+          "loottable_entry": {
+            "loottable_id": 374,
+            "lootdrop_id": 845,
+            "multiplier": 1,
+            "droplimit": 1,
+            "mindrop": 1,
+            "probability": 100
+          },
+          "loottable_evidence": {
+            "path": "data/loottable_entries/b.ndjson",
+            "line": 1524,
+            "sha256": "4559bcbbc3ddd5b81c1524a93872672c08aedb61268de376e04b4d34ce6d30fa"
+          },
+          "lootdrop_entry": {
+            "lootdrop_id": 845,
+            "item_id": 1685,
+            "item_charges": 1,
+            "equip_item": 0,
+            "chance": 100,
+            "disabled_chance": 0,
+            "trivial_min_level": 0,
+            "trivial_max_level": 0,
+            "multiplier": 1,
+            "npc_min_level": 0,
+            "npc_max_level": 0,
+            "min_expansion": -1,
+            "max_expansion": -1,
+            "content_flags": null,
+            "content_flags_disabled": null
+          },
+          "lootdrop_evidence": {
+            "path": "data/lootdrop_entries/b.ndjson",
+            "line": 29851,
+            "sha256": "154a21999cedd374fef1c95316cfd2def89f52f941e6ec90e543f5710a7d75a8"
+          }
+        }
+      ]
+    },
+    "1686": {
+      "expected_npc_name_fragments": [
+        "Trunt"
+      ],
+      "candidate_npcs": [
+        {
+          "npc": {
+            "id": 107161,
+            "name": "Trunt",
+            "level": 59,
+            "loottable_id": 375
+          },
+          "npc_evidence": {
+            "path": "data/npc_types/d.ndjson",
+            "line": 101,
+            "sha256": "107cdca2a916870ff5989d20b36d8066af25423a2338fa25e4a7c596cc4349f6"
+          },
+          "loottable_entry": {
+            "loottable_id": 375,
+            "lootdrop_id": 847,
+            "multiplier": 1,
+            "droplimit": 1,
+            "mindrop": 1,
+            "probability": 100
+          },
+          "loottable_evidence": {
+            "path": "data/loottable_entries/c.ndjson",
+            "line": 1577,
+            "sha256": "91311af30866bb4f3f4ac7ed8c78e855ef96fa4153730d15e084896fd150141a"
+          },
+          "lootdrop_entry": {
+            "lootdrop_id": 847,
+            "item_id": 1686,
+            "item_charges": 1,
+            "equip_item": 0,
+            "chance": 100,
+            "disabled_chance": 0,
+            "trivial_min_level": 0,
+            "trivial_max_level": 0,
+            "multiplier": 1,
+            "npc_min_level": 0,
+            "npc_max_level": 0,
+            "min_expansion": -1,
+            "max_expansion": -1,
+            "content_flags": null,
+            "content_flags_disabled": null
+          },
+          "lootdrop_evidence": {
+            "path": "data/lootdrop_entries/1.ndjson",
+            "line": 29602,
+            "sha256": "7e9ea5c42225e84a1b018962ab58fa61087aa62c4e9f80278a84c0bd84925eb4"
+          }
+        }
+      ]
+    },
+    "1688": {
+      "expected_npc_name_fragments": [
+        "Xenevorash"
+      ],
+      "candidate_npcs": [
+        {
+          "npc": {
+            "id": 85208,
+            "name": "Xenevorash",
+            "level": 65,
+            "loottable_id": 376
+          },
+          "npc_evidence": {
+            "path": "data/npc_types/3.ndjson",
+            "line": 4127,
+            "sha256": "7398d4b54435729c5447746ef4ae1fe804692572cd7a0657117c2d332ef82849"
+          },
+          "loottable_entry": {
+            "loottable_id": 376,
+            "lootdrop_id": 848,
+            "multiplier": 1,
+            "droplimit": 1,
+            "mindrop": 1,
+            "probability": 100
+          },
+          "loottable_evidence": {
+            "path": "data/loottable_entries/7.ndjson",
+            "line": 1577,
+            "sha256": "7e30edd9fcec4e9c44fd075e558a5c9131c37c0383f01488fdb2657aad3a75e0"
+          },
+          "lootdrop_entry": {
+            "lootdrop_id": 848,
+            "item_id": 1688,
+            "item_charges": 1,
+            "equip_item": 0,
+            "chance": 100,
+            "disabled_chance": 0,
+            "trivial_min_level": 0,
+            "trivial_max_level": 0,
+            "multiplier": 1,
+            "npc_min_level": 0,
+            "npc_max_level": 0,
+            "min_expansion": -1,
+            "max_expansion": -1,
+            "content_flags": null,
+            "content_flags_disabled": null
+          },
+          "lootdrop_evidence": {
+            "path": "data/lootdrop_entries/d.ndjson",
+            "line": 29793,
+            "sha256": "c749477ab429d65b013167fa4a6b95e1a55c7ee1d2c5cd601f5b133e3d1c8923"
+          }
+        }
+      ]
+    }
+  }
+}

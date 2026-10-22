@@ -1,0 +1,563 @@
+{
+  "format": 1,
+  "id": "p99-support-named-fixes",
+  "summary": "Bounded mail dialogue/faction fixes, Tabien interpolation, unmatched-handin safety, and exclusive post-P99 source exclusions. No NPC edits; preserve undocumented numbers and established routing adaptations.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Going_Postal?action=raw",
+      "note": "Cached reference/p99-wiki/raw-pages/going-postal-11ac473bc4.wiki sha256 bf3c9fbde7ca6fb078739aa0837daf9cc7eff3dd0acf2db202ac21cb06f6bd7b: courier dialogue/routes and faction gains +5/+1/+1/-1/-1. Exact XP and per-route money probability unknown. Keep existing IdleQuest Ton recipient adaptation and documented destinations."
+    },
+    {
+      "url": "https://wiki.project1999.com/Shaman_Skull_Quests?action=raw",
+      "note": "Cached reference/p99-wiki/raw-pages/shaman-skull-quests-b63ed30880.wiki sha256 58e529950f5736a98c7deac45fbf8897833cae17bfcf08706222406a34ab791c line26 explicitly limits P99 to first five steps. Attributed later era is wiki statement, not independent chronology claim. Exact stage6 source comments, items and inter-NPC signals establish three exclusive helper scripts."
+    },
+    {
+      "url": "https://www.everquest.com/news/imported-eq-enus-62693",
+      "note": "Official Character Art Team Update, June30 2004, ties new Epic2.0 effects to Omens of War. oot/#Kaiaren source exclusively monk_epic completion and mnk_epic20 progression; no classic quest branch. Disable script only, retain body."
+    },
+    {
+      "url": "https://wiki.project1999.com/Tabien_the_Goodly",
+      "note": "Cached NPC dialogue uses a player-name placeholder. Repair converted Perl literal $name to Lua GetName; no quest mechanics changed."
+    },
+    {
+      "url": "https://wiki.project1999.com/Granin_O%27Gill",
+      "note": "P99 NPC/head quest pages do not verify the source ration healing exchange. Only add repository-standard unmatched-item return, preserving IronRation13005, quantity1 and MinorHealing200. No P99 cost/spell parity claim."
+    },
+    {
+      "file": "changes/p99-support-source-review/lifecycle-review.json",
+      "pointer": "/records/157",
+      "note": "Exclusive Druid Epic 1.5 coven helper: Glenfire signal14196, corrupted_spirit47209, and global recipe19888 explicitly labelled druid1.5. Outside Classic-through-Velious. Dependency hashes and exact source pointers are recorded in this Glenfire review. This source is not the Qcat Badge Azibelle actor; only southkarana/#Azibelle_Spavin is disabled.",
+      "url": "https://www.everquest.com/news/imported-eq-enus-62693"
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 14937,
+        "zone": "akanon",
+        "name": "Lyra_Lyrestringer",
+        "lua_content": "-- Author: RealityIncarnate\n-- Converted to .lua by Speedz\n-- items: 18163\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Hail \" .. e.other:GetName() .. \". Are you [interested] in helping the League of Antonican Bards by delivering some [mail]?\");\n\telseif(e.message:findi(\"mail\")) then\n\t\te.self:Say(\"The League of Antonican Bards has a courier system made up of travelers and adventurers. We pay good gold to anyone who will take messages from bards such as myself to one of our more central offices. Are you [interested]?\");\n\telseif(e.message:findi(\"interested\")) then\n\t\te.self:Say(\"I have messages that need to go to... well, right now I have one that needs to go to Kelethin. Will you [deliver] mail to [Kelethin] for me?\");\n\telseif(e.message:findi(\"kelethin\")) then\n\t\te.self:Say(\"Take this letter to Jakum Webdancer in Kelethin. You can find him at the bard guild hall. I am sure he will compensate you for your troubles.\");\n\t\te.other:SummonItem(18163); -- Item: Bardic Letter (Kelethin)\n\t\te.other:Ding();\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 14937,
+        "zone": "akanon",
+        "name": "Lyra_Lyrestringer",
+        "lua_content": "-- Author: RealityIncarnate\n-- Converted to .lua by Speedz\n-- items: 18163\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Hail \" .. e.other:GetName() .. \". Are you [interested] in helping the League of Antonican Bards by delivering some [mail]?\");\n\telseif((e.message:findi(\"mail\") and not e.message:findi(\"deliver\") and not e.message:findi(\"interested\") and not e.message:findi(\"kelethin\"))) then\n\t\te.self:Say(\"The League of Antonican Bards has a courier system made up of travelers and adventurers. We pay good gold to anyone who will take messages from bards such as myself to one of our more central offices. Are you [interested]?\");\n\telseif(e.message:findi(\"interested\")) then\n\t\te.self:Say(\"I have messages that need to go to... well, right now I have one that needs to go to Kelethin. Will you [deliver] mail to [Kelethin] for me?\");\n\telseif (e.message:findi(\"deliver\") or e.message:findi(\"kelethin\")) then\n\t\te.self:Say(\"Take this letter to Jakum Webdancer in Kelethin. You can find him at the bard guild hall. I am sure he will compensate you for your troubles.\");\n\t\te.other:SummonItem(18163); -- Item: Bardic Letter (Kelethin)\n\t\te.other:Ding();\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 16803,
+        "zone": "burningwood",
+        "name": "Atheling_Plague",
+        "lua_content": "--Shaman Skull Quest 6\n-- items: 12764\n\n\nfunction event_say(e)\n\tif(e.other:HasItem(5145)) then\n\t\tif(e.message:findi(\"hail\")) then\n\t\t\te.self:Say(\"Ahh!! A conversationalist. How good to meet you, \" .. e.other:GetCleanName() .. \". Yes. I have heard of you. Go ahead and ask for that which has brought you to my tower and emboldened you to slay my weaker minions.\");\n\t\telseif(e.message:findi(\"sisters of scale\")) then\n\t\t\te.self:Say(\"What a coincidence! I, too, seek a skull. Perhaps you might help me [obtain the skull]. Perhaps then you shall have the skull you desire.\");\n\t\telseif(e.message:findi(\"obtain the skull\")) then\n\t\t\te.self:Say(\"I am sure you would not mind removing the head of a scaled mystic. I hope not. There is an old Iksar who once called me slave. Now he shall adorn my wall, mounted on a fine plaque. His name is Digalis. Find him. Do not return until your task is complete.\");\n\t\tend\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(e.other:HasItem(5145)) then\n\t\tif(item_lib.check_turn_in(e.trade, {item1 = 12764})) then\n\t\t\te.other:QuestReward(e.self,0,0,0,0,12750);\n\t\t\te.self:Shout(\"Excellent. You show signs of a true Iksar slayer. Too, bad I have already given the skull of the Sister of Scale to another. Perhaps you would like to meet him before he departs. Say hello, Doval.\");\n\t\t\teq.unique_spawn(87154,0,0,-4067,6351,-53,0);\n\t\t\teq.set_timer(\"heal\",20000);\n\t\tend\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade);\nend\n\nfunction event_timer(e)\n\tif(e.timer == \"heal\") then\n\t\tlocal el = eq.get_entity_list();\n\t\tlocal doval = el:GetNPCByNPCTypeID(87154);\n\t\tif (doval.valid) then\n\t\t\te.self:CastSpell(12, doval:GetID()); -- Spell: Healing\n\t\tend\n\tend\nend\n\nfunction event_signal(e)\n\tif(e.signal == 1) then\n\t\teq.stop_timer(\"heal\");\n\tend\nend\n\nfunction event_death_complete(e)\n\teq.stop_timer(\"heal\");\nend\n\n-------------------------------------------------------------------------------------------------\n-- Converted to .lua using MATLAB converter written by Stryd\n-- Find/replace data for .pl --> .lua conversions provided by Speedz, Stryd, Sorvani and Robregen\n-------------------------------------------------------------------------------------------------\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 16803,
+        "zone": "burningwood",
+        "name": "Atheling_Plague",
+        "lua_content": "-- enabled: false\n-- P99 source-only scope exclusion: Exclusive Shaman Skull step 6 helper, absent from P99 (first five only).\n-- Body preserved; no NPC availability or world-table changes.\n--Shaman Skull Quest 6\n-- items: 12764\n\n\nfunction event_say(e)\n\tif(e.other:HasItem(5145)) then\n\t\tif(e.message:findi(\"hail\")) then\n\t\t\te.self:Say(\"Ahh!! A conversationalist. How good to meet you, \" .. e.other:GetCleanName() .. \". Yes. I have heard of you. Go ahead and ask for that which has brought you to my tower and emboldened you to slay my weaker minions.\");\n\t\telseif(e.message:findi(\"sisters of scale\")) then\n\t\t\te.self:Say(\"What a coincidence! I, too, seek a skull. Perhaps you might help me [obtain the skull]. Perhaps then you shall have the skull you desire.\");\n\t\telseif(e.message:findi(\"obtain the skull\")) then\n\t\t\te.self:Say(\"I am sure you would not mind removing the head of a scaled mystic. I hope not. There is an old Iksar who once called me slave. Now he shall adorn my wall, mounted on a fine plaque. His name is Digalis. Find him. Do not return until your task is complete.\");\n\t\tend\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(e.other:HasItem(5145)) then\n\t\tif(item_lib.check_turn_in(e.trade, {item1 = 12764})) then\n\t\t\te.other:QuestReward(e.self,0,0,0,0,12750);\n\t\t\te.self:Shout(\"Excellent. You show signs of a true Iksar slayer. Too, bad I have already given the skull of the Sister of Scale to another. Perhaps you would like to meet him before he departs. Say hello, Doval.\");\n\t\t\teq.unique_spawn(87154,0,0,-4067,6351,-53,0);\n\t\t\teq.set_timer(\"heal\",20000);\n\t\tend\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade);\nend\n\nfunction event_timer(e)\n\tif(e.timer == \"heal\") then\n\t\tlocal el = eq.get_entity_list();\n\t\tlocal doval = el:GetNPCByNPCTypeID(87154);\n\t\tif (doval.valid) then\n\t\t\te.self:CastSpell(12, doval:GetID()); -- Spell: Healing\n\t\tend\n\tend\nend\n\nfunction event_signal(e)\n\tif(e.signal == 1) then\n\t\teq.stop_timer(\"heal\");\n\tend\nend\n\nfunction event_death_complete(e)\n\teq.stop_timer(\"heal\");\nend\n\n-------------------------------------------------------------------------------------------------\n-- Converted to .lua using MATLAB converter written by Stryd\n-- Find/replace data for .pl --> .lua conversions provided by Speedz, Stryd, Sorvani and Robregen\n-------------------------------------------------------------------------------------------------\n",
+        "has_say_event": 1,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 12473,
+        "zone": "burningwood",
+        "name": "Clerk_Doval",
+        "lua_content": "function event_death_complete(e)\n\te.self:Say(\"All Iksar residents.. shall learn.. of my demise. Ungghh!!\");\n\teq.signal(87101,1); -- NPC: Atheling_Plague\nend\n\n-------------------------------------------------------------------------------------------------\n-- Converted to .lua using MATLAB converter written by Stryd\n-- Find/replace data for .pl --> .lua conversions provided by Speedz, Stryd, Sorvani and Robregen\n-------------------------------------------------------------------------------------------------\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 12473,
+        "zone": "burningwood",
+        "name": "Clerk_Doval",
+        "lua_content": "-- enabled: false\n-- P99 source-only scope exclusion: Exclusive Shaman Skull step 6 helper, absent from P99 (first five only).\n-- Body preserved; no NPC availability or world-table changes.\nfunction event_death_complete(e)\n\te.self:Say(\"All Iksar residents.. shall learn.. of my demise. Ungghh!!\");\n\teq.signal(87101,1); -- NPC: Atheling_Plague\nend\n\n-------------------------------------------------------------------------------------------------\n-- Converted to .lua using MATLAB converter written by Stryd\n-- Find/replace data for .pl --> .lua conversions provided by Speedz, Stryd, Sorvani and Robregen\n-------------------------------------------------------------------------------------------------\n",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 18211,
+        "zone": "butcher",
+        "name": "Siltria_Marwind",
+        "lua_content": "-- items: 18160\nfunction event_say(e)\n\tif(e.message:findi(\"Hail\")) then\n\t\te.self:Say(\"Hail. \" .. e.other:GetName() .. \" - Are you [interested] in helping the League of Antonican Bards by delivering some [mail]?\");\n\telseif(e.message:findi(\"am interested\")) then\n\t\te.self:Say(\"I have messages that need to go to - well. right now I have one that needs to go to Kelethin.  Will you [deliver] mail [to Kelethin] for me?\");\n\telseif(e.message:findi(\"What mail\")) then\n\t\te.self:Say(\"The League of Antonican Bards has a courier system made up of travelers, adventurers, and agents.  We pay good gold to anyone who will take messages from bards such as myself to one of our more distant offices.  Are you [interested]?\");\n\telseif(e.message:findi(\"deliver kelethin\")) then\n\t\te.self:Say(\"Take this letter to Jakum Webdancer. You can find him at the bard guild hall. I'm sure he will compensate you for your trouble.\");\n\t\te.other:SummonItem(18160); -- Item: Bardic Letter (Kelethin)\n\tend\n\nend\n\n--Author: RealityIncarnate\n-------------------------------------------------------------------------------------------------\n-- Converted to .lua using MATLAB converter written by Stryd\n-- Find/replace data for .pl --> .lua conversions provided by Speedz, Stryd, Sorvani and Robregen\n-------------------------------------------------------------------------------------------------\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 18211,
+        "zone": "butcher",
+        "name": "Siltria_Marwind",
+        "lua_content": "-- items: 18160\nfunction event_say(e)\n\tif(e.message:findi(\"Hail\")) then\n\t\te.self:Say(\"Hail. \" .. e.other:GetName() .. \" - Are you [interested] in helping the League of Antonican Bards by delivering some [mail]?\");\n\telseif(e.message:findi(\"interested\")) then\n\t\te.self:Say(\"I have messages that need to go to - well. right now I have one that needs to go to Kelethin.  Will you [deliver] mail [to Kelethin] for me?\");\n\telseif((e.message:findi(\"mail\") and not e.message:findi(\"deliver\") and not e.message:findi(\"interested\") and not e.message:findi(\"kelethin\"))) then\n\t\te.self:Say(\"The League of Antonican Bards has a courier system made up of travelers, adventurers, and agents.  We pay good gold to anyone who will take messages from bards such as myself to one of our more distant offices.  Are you [interested]?\");\n\telseif (e.message:findi(\"deliver\") or e.message:findi(\"kelethin\")) then\n\t\te.self:Say(\"Take this letter to Jakum Webdancer. You can find him at the bard guild hall. I'm sure he will compensate you for your trouble.\");\n\t\te.other:SummonItem(18160); -- Item: Bardic Letter (Kelethin)\n\tend\n\nend\n\n--Author: RealityIncarnate\n-------------------------------------------------------------------------------------------------\n-- Converted to .lua using MATLAB converter written by Stryd\n-- Find/replace data for .pl --> .lua conversions provided by Speedz, Stryd, Sorvani and Robregen\n-------------------------------------------------------------------------------------------------\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 12646,
+        "zone": "erudnext",
+        "name": "Ticar_Lorestring",
+        "lua_content": "-- items: 18151\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Hail, \" .. e.other:GetName() .. \" - Are you [interested] in helping the League of Antonican Bards by delivering some [mail]?\");\n\telseif(e.message:findi(\"mail\")) then\n\t\te.self:Say(\"The League of Antonican Bards has a courier system made up of travelers and adventurers.  We pay good gold to anyone who will take messages from bards such as myself to one of our more central offices.  Are you [interested]?\");\n\telseif(e.message:findi(\"interested\")) then\n\t\te.self:Say(\"I have messages that need to go to - well, right now I have one that needs to go to Qeynos.  Will you [deliver] mail to [Qeynos] for me?\");\n\telseif(e.message:findi(\"deliver to qeynos\")) then\n\t\te.self:Say(\"Take this letter to Tralyn Marsinger in Qeynos.  You can find him at the bard guild hall.  I am sure he will compensate you for your troubles.\"); \n\t\te.other:SummonItem(18151); -- Item: Bardic Letter (Qeynos)\n\tend\nend\n\n-- END of FILE Zone:erudnext",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 12646,
+        "zone": "erudnext",
+        "name": "Ticar_Lorestring",
+        "lua_content": "-- items: 18151\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Hail, \" .. e.other:GetName() .. \" - Are you [interested] in helping the League of Antonican Bards by delivering some [mail]?\");\n\telseif((e.message:findi(\"mail\") and not e.message:findi(\"deliver\") and not e.message:findi(\"interested\") and not e.message:findi(\"qeynos\"))) then\n\t\te.self:Say(\"The League of Antonican Bards has a courier system made up of travelers and adventurers.  We pay good gold to anyone who will take messages from bards such as myself to one of our more central offices.  Are you [interested]?\");\n\telseif(e.message:findi(\"interested\")) then\n\t\te.self:Say(\"I have messages that need to go to - well, right now I have one that needs to go to Qeynos.  Will you [deliver] mail to [Qeynos] for me?\");\n\telseif (e.message:findi(\"deliver\") or e.message:findi(\"qeynos\")) then\n\t\te.self:Say(\"Take this letter to Tralyn Marsinger in Qeynos.  You can find him at the bard guild hall.  I am sure he will compensate you for your troubles.\"); \n\t\te.other:SummonItem(18151); -- Item: Bardic Letter (Qeynos)\n\tend\nend\n\n-- END of FILE Zone:erudnext",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 12203,
+        "zone": "feerrott",
+        "name": "Drizda_Tunesinger",
+        "lua_content": "-- items: 18157\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Hail. \" .. e.other:GetName() .. \" - Are you [interested] in helping the League of Antonican Bards by delivering some [mail]?\");\n\telseif(e.message:findi(\"interested\")) then\n\t\te.self:Say(\"I have messages that need to go to - well, right now I have one that needs to go to Freeport.  Will you [deliver] mail [to Freeport] for me?\");\n\telseif(e.message:findi(\"mail\")) then\n\t\te.self:Say(\"The League of Antonican Bards has a courier system made up of travelers and adventurers.  We pay good gold to anyone who will take messages from bards such as myself to one of our more distant offices.  Are you [interested]?\");\n\telseif(e.message:findi(\"deliver to freeport\")) then\n\t\te.self:Say(\"Take this letter to Felisity Starbright. You can find her at the bard guild hall. I'm sure she will compensate you for your trouble.\");\n\t\te.other:SummonItem(18157); -- Item: Bardic Letter (Freeport)\n\tend\nend\n\n-- END OF FILE Drizda_Tunesinger",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 12203,
+        "zone": "feerrott",
+        "name": "Drizda_Tunesinger",
+        "lua_content": "-- items: 18157\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Hail. \" .. e.other:GetName() .. \" - Are you [interested] in helping the League of Antonican Bards by delivering some [mail]?\");\n\telseif(e.message:findi(\"interested\")) then\n\t\te.self:Say(\"I have messages that need to go to - well, right now I have one that needs to go to Freeport.  Will you [deliver] mail [to Freeport] for me?\");\n\telseif((e.message:findi(\"mail\") and not e.message:findi(\"deliver\") and not e.message:findi(\"interested\") and not e.message:findi(\"freeport\"))) then\n\t\te.self:Say(\"The League of Antonican Bards has a courier system made up of travelers and adventurers.  We pay good gold to anyone who will take messages from bards such as myself to one of our more distant offices.  Are you [interested]?\");\n\telseif (e.message:findi(\"deliver\") or e.message:findi(\"freeport\")) then\n\t\te.self:Say(\"Take this letter to Felisity Starbright. You can find her at the bard guild hall. I'm sure she will compensate you for your trouble.\");\n\t\te.other:SummonItem(18157); -- Item: Bardic Letter (Freeport)\n\tend\nend\n\n-- END OF FILE Drizda_Tunesinger",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 15598,
+        "zone": "freportn",
+        "name": "Ton_Twostring",
+        "lua_content": "-- Source: ProjectEQ freportn/Ton_Twostring.lua.\n-- Each sender issues an independent delivery, not a two-pouch recipe.\n-- items: 18167, 18156, 18165, 18164, 18166\nfunction event_say(e) \n\tif(e.message:findi(\"Hail\")) then\n\t\te.self:Say(\"Hail. \" .. e.other:GetName() .. \" - Are you [interested] in helping the League of Antonican Bards by delivering some [mail]?\");\n\telseif(e.message:findi(\"what mail\")) then\n\t\te.self:Say(\"The League of Antonican Bards has a courier system made up of travelers and adventurers.  We pay good gold to anyone who will take messages from bards such as myself to one of our more distant offices.  Are you [interested]?\");\n\telseif(e.message:findi(\"i am interested\")) then\n\t\te.self:Say(\"I have messages that need to go to Highpass, Kelethin, and Qeynos.  Will you [deliver] mail to [Kelethin], [Highpass], or [Qeynos] for me?\");\n\telseif(e.message:findi(\"deliver to kelethin\")) then\n\t\te.self:Say(\"Take this pouch to Idia in Kelethin.  You can find her at the bard guild hall.  I am sure she will compensate you for your troubles.\");\n\t\te.other:SummonItem(18167); -- Item: Pouch of Mail (Kelethin)\n\telseif(e.message:findi(\"deliver to highpass\")) then\n\t\te.self:Say(\"Take this pouch to Lislia Goldtune in Highpass.  You can find her at the entrance to HighKeep.  I am sure she will compensate you for your troubles.\"); \n\t\te.other:SummonItem(18156); -- Item: Pouch of Mail (Highpass)\n\telseif(e.message:findi(\"deliver to qeynos\")) then\n\t\te.self:Say(\"Take this pouch to Eve Marsinger in Qeynos.  You can find her at the bard guild hall.  I am sure she will compensate you for your troubles.\");\n\t\te.other:SummonItem(18165); -- Item: Pouch of Mail (Qeynos)\n\tend\nend\n\nlocal function reward_delivery(e)\n\te.self:Say(\"More mail - you have done us a noteworthy service!  Please take this gold for your troubles.  If you are interested in more work, just ask me.\");\n\te.other:Ding();\n\te.other:Faction(284,10,0); -- league of antonican bards\n\te.other:Faction(281,10,0); -- knights of truth\n\te.other:Faction(262,10,0); -- guards of qeynos\n\te.other:Faction(304,-30,0); -- ring of scale\n\te.other:Faction(285,-30,0); -- mayong mistmoore\n\te.other:AddEXP(100);\n\te.other:GiveCash(0,0,eq.ChooseRandom(8,9,10,11,12),0);\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 18164}) then\n\t\treward_delivery(e)\n\tend\n\tif item_lib.check_turn_in(e.trade, {item1 = 18166}) then\n\t\treward_delivery(e)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 15598,
+        "zone": "freportn",
+        "name": "Ton_Twostring",
+        "lua_content": "-- Source: ProjectEQ freportn/Ton_Twostring.lua.\n-- Each sender issues an independent delivery, not a two-pouch recipe.\n-- items: 18167, 18156, 18165, 18164, 18166\nfunction event_say(e) \n\tif(e.message:findi(\"Hail\")) then\n\t\te.self:Say(\"Hail. \" .. e.other:GetName() .. \" - Are you [interested] in helping the League of Antonican Bards by delivering some [mail]?\");\n\telseif((e.message:findi(\"mail\") and not e.message:findi(\"deliver\") and not e.message:findi(\"interested\") and not e.message:findi(\"kelethin\") and not e.message:findi(\"highpass\") and not e.message:findi(\"qeynos\"))) then\n\t\te.self:Say(\"The League of Antonican Bards has a courier system made up of travelers and adventurers.  We pay good gold to anyone who will take messages from bards such as myself to one of our more distant offices.  Are you [interested]?\");\n\telseif((e.message:findi(\"interested\") or (e.message:findi(\"deliver\") and not e.message:findi(\"kelethin\") and not e.message:findi(\"highpass\") and not e.message:findi(\"qeynos\")))) then\n\t\te.self:Say(\"I have messages that need to go to Highpass, Kelethin, and Qeynos.  Will you [deliver] mail to [Kelethin], [Highpass], or [Qeynos] for me?\");\n\telseif e.message:findi(\"kelethin\") then\n\t\te.self:Say(\"Take this pouch to Idia in Kelethin.  You can find her at the bard guild hall.  I am sure she will compensate you for your troubles.\");\n\t\te.other:SummonItem(18167); -- Item: Pouch of Mail (Kelethin)\n\telseif e.message:findi(\"highpass\") then\n\t\te.self:Say(\"Take this pouch to Lislia Goldtune in Highpass.  You can find her at the entrance to HighKeep.  I am sure she will compensate you for your troubles.\"); \n\t\te.other:SummonItem(18156); -- Item: Pouch of Mail (Highpass)\n\telseif e.message:findi(\"qeynos\") then\n\t\te.self:Say(\"Take this pouch to Eve Marsinger in Qeynos.  You can find her at the bard guild hall.  I am sure she will compensate you for your troubles.\");\n\t\te.other:SummonItem(18165); -- Item: Pouch of Mail (Qeynos)\n\tend\nend\n\nlocal function reward_delivery(e)\n\te.self:Say(\"More mail - you have done us a noteworthy service!  Please take this gold for your troubles.  If you are interested in more work, just ask me.\");\n\te.other:Ding();\n\te.other:Faction(284,5,0); -- league of antonican bards\n\te.other:Faction(281,1,0); -- knights of truth\n\te.other:Faction(262,1,0); -- guards of qeynos\n\te.other:Faction(304,-1,0); -- ring of scale\n\te.other:Faction(285,-1,0); -- mayong mistmoore\n\te.other:AddEXP(100);\n\te.other:GiveCash(0,0,eq.ChooseRandom(8,9,10,11,12),0);\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 18164}) then\n\t\treward_delivery(e)\n\tend\n\tif item_lib.check_turn_in(e.trade, {item1 = 18166}) then\n\t\treward_delivery(e)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 14573,
+        "zone": "gfaydark",
+        "name": "Idia",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: gfaydark/Idia.pl\n-- items: 18166, 18167\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Hail. \" .. e.other:GetName() .. \" - Are you [interested] in helping the League of Antonican Bards by delivering some [mail]?\")\n\telseif e.message:findi(\"am interested\") then\n\t\te.self:Say(\"I have messages that need to go to - well. right now I have one that needs to go to Freeport.  Will you [deliver] mail to [Freeport] for me?\")\n\telseif e.message:findi(\"what mail\") then\n\t\te.self:Say(\"The League of Antonican Bards has a courier system made up of travelers, adventurers, and [agents].  We pay good gold to anyone who will take messages from bards such as myself to one of our more distant offices.  Are you [interested]?\")\n\telseif e.message:findi(\"agents\") then\n\t\te.self:Say(\"Lyra Lyrestringer, Tacar Tissleplay, Kilam Oresinger and Siltria Marwind all report to Jakum Webdancer.\")\n\telseif e.message:findi(\"deliver to freeport\") then\n\t\te.self:Say(\"Take this pouch of mail to Ton Twostring. You can find him at the bard guild hall. I'm sure he will compensate you for your trouble.\")\n\t\te.other:SummonItem(18166)\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 18167}) then\n\t\te.self:Say(\"More mail - you have done us a noteworthy service!  Please take this gold for your troubles.  If you are interested in more work, just ask me.\")\n\t\te.other:GiveCash(0, 0, eq.ChooseRandom(8, 9, 10, 11, 12), 0)\n\t\te.other:AddEXP(1550)\n\t\te.other:Faction(284, 5, 0)\n\t\te.other:Faction(281, 1, 0)\n\t\te.other:Faction(262, 1, 0)\n\t\te.other:Faction(304, -1, 0)\n\t\te.other:Faction(285, -1, 0)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 14573,
+        "zone": "gfaydark",
+        "name": "Idia",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: gfaydark/Idia.pl\n-- items: 18166, 18167\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Hail. \" .. e.other:GetName() .. \" - Are you [interested] in helping the League of Antonican Bards by delivering some [mail]?\")\n\telseif e.message:findi(\"interested\") then\n\t\te.self:Say(\"I have messages that need to go to - well. right now I have one that needs to go to Freeport.  Will you [deliver] mail to [Freeport] for me?\")\n\telseif (e.message:findi(\"mail\") and not e.message:findi(\"deliver\") and not e.message:findi(\"interested\") and not e.message:findi(\"freeport\")) then\n\t\te.self:Say(\"The League of Antonican Bards has a courier system made up of travelers, adventurers, and [agents].  We pay good gold to anyone who will take messages from bards such as myself to one of our more distant offices.  Are you [interested]?\")\n\telseif e.message:findi(\"agents\") then\n\t\te.self:Say(\"Lyra Lyrestringer, Tacar Tissleplay, Kilam Oresinger and Siltria Marwind all report to Jakum Webdancer.\")\n\telseif (e.message:findi(\"deliver\") or e.message:findi(\"freeport\")) then\n\t\te.self:Say(\"Take this pouch of mail to Ton Twostring. You can find him at the bard guild hall. I'm sure he will compensate you for your trouble.\")\n\t\te.other:SummonItem(18166)\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 18167}) then\n\t\te.self:Say(\"More mail - you have done us a noteworthy service!  Please take this gold for your troubles.  If you are interested in more work, just ask me.\")\n\t\te.other:GiveCash(0, 0, eq.ChooseRandom(8, 9, 10, 11, 12), 0)\n\t\te.other:AddEXP(1550)\n\t\te.other:Faction(284, 5, 0)\n\t\te.other:Faction(281, 1, 0)\n\t\te.other:Faction(262, 1, 0)\n\t\te.other:Faction(304, -1, 0)\n\t\te.other:Faction(285, -1, 0)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 17947,
+        "zone": "halas",
+        "name": "Marton_Stringsinger",
+        "lua_content": "-- items: 18153\nfunction event_say(e)\n\tif(e.message:findi(\"Hail\")) then\n\t\te.self:Say(\"Hail. \" .. e.other:GetName() .. \" - Are you interested in helping the League of Antonican Bards by delivering some [mail]?\");\n\telseif(e.message:findi(\"mail\")) then\n\t\te.self:Say(\"The League of Antonican Bards has a courier system made up of travelers and adventurers. We pay good gold to anyone who will take messages from bards such as myself to one of our more central offices. Are you [interested]?\");\n\telseif(e.message:findi(\"interested\")) then\n\t\te.self:Say(\"I have messages that need to go to - well, right now I have one that needs to go to Qeynos. Will you [deliver] mail to [Qeynos] for me?\");\n\telseif(e.message:findi(\"deliver\")) then\n\t\te.self:Say(\"Take this letter to Tralyn Marsinger in Qeynos. You can find him at the bard guild hall. I am sure he will compensate you for your troubles.\");\n\t\te.other:SummonItem(18153); -- Item: Bardic Letter (Qeynos)\n\tend\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 17947,
+        "zone": "halas",
+        "name": "Marton_Stringsinger",
+        "lua_content": "-- items: 18153\nfunction event_say(e)\n\tif(e.message:findi(\"Hail\")) then\n\t\te.self:Say(\"Hail. \" .. e.other:GetName() .. \" - Are you interested in helping the League of Antonican Bards by delivering some [mail]?\");\n\telseif((e.message:findi(\"mail\") and not e.message:findi(\"deliver\") and not e.message:findi(\"interested\") and not e.message:findi(\"qeynos\"))) then\n\t\te.self:Say(\"The League of Antonican Bards has a courier system made up of travelers and adventurers. We pay good gold to anyone who will take messages from bards such as myself to one of our more central offices. Are you [interested]?\");\n\telseif(e.message:findi(\"interested\")) then\n\t\te.self:Say(\"I have messages that need to go to - well, right now I have one that needs to go to Qeynos. Will you [deliver] mail to [Qeynos] for me?\");\n\telseif (e.message:findi(\"deliver\") or e.message:findi(\"qeynos\")) then\n\t\te.self:Say(\"Take this letter to Tralyn Marsinger in Qeynos. You can find him at the bard guild hall. I am sure he will compensate you for your troubles.\");\n\t\te.other:SummonItem(18153); -- Item: Bardic Letter (Qeynos)\n\tend\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 15929,
+        "zone": "highkeep",
+        "name": "Lislia_Goldtune",
+        "lua_content": "-- items: 18164, 18154, 18152, 18156\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(string.format(\"Hail. %s - Are you [interested] in helping the League of Antonican Bards by delivering some [mail]?\",e.other:GetName()));\n\telseif(e.message:findi(\"I am interested in delivering mail\")) then\n\t\te.self:Say(\"I have messages that need to go to Freeport and to Qeynos.  Will you [deliver] mail [to Freeport] or [to Qeynos] for me?\"); \n\telseif(e.message:findi(\"deliver to freeport\")) then\n\t\te.self:Say(\"Take this pouch of mail to Ton Twostring. You can find him at the bard guild hall. I'm sure he will compensate you for your trouble.\");\n\t\te.other:SummonItem(18164); -- Item: Pouch of Mail (Freeport)\n\telseif(e.message:findi(\"deliver to qeynos\")) then\n\t\te.self:Say(\"Take this letter to Tralyn Marsinger. You can find him at the bard guild hall. I'm sure she will compensate you for your trouble.\");\n\t\te.other:SummonItem(18154); -- Item: Bardic Letter (Qeynos)\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 18152}) or item_lib.check_turn_in(e.trade, {item1 = 18156})) then\n\t\te.self:Say(\"More mail - you have done us a noteworthy service!  Please take this gold for your troubles.  If you are interested in more work, just ask me.\");\n\t\te.other:Ding();\n\t\te.other:Faction(284,5,0); -- Faction: League of Antonican Bards\n\t\te.other:Faction(281,1,0); -- Faction: Knights of Truth\n\t\te.other:Faction(262,1,0); -- Faction: Guards of Qeynos\n\t\te.other:Faction(304,-1,0); -- Faction: Ring of Scale\n\t\te.other:Faction(285,-1,0); -- Faction: Mayong Mistmoore\n\t\te.other:AddEXP(1550);\n\t\te.other:GiveCash(0,0,eq.ChooseRandom(8,9,10,11,12),0);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 15929,
+        "zone": "highkeep",
+        "name": "Lislia_Goldtune",
+        "lua_content": "-- items: 18164, 18154, 18152, 18156\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(string.format(\"Hail. %s - Are you [interested] in helping the League of Antonican Bards by delivering some [mail]?\",e.other:GetName()));\n\telseif((e.message:findi(\"interested\") or (e.message:findi(\"deliver\") and not e.message:findi(\"freeport\") and not e.message:findi(\"qeynos\")))) then\n\t\te.self:Say(\"I have messages that need to go to Freeport and to Qeynos.  Will you [deliver] mail [to Freeport] or [to Qeynos] for me?\"); \n\telseif (e.message:findi(\"mail\") and not e.message:findi(\"deliver\") and not e.message:findi(\"freeport\") and not e.message:findi(\"qeynos\")) then\n\t\te.self:Say(\"The League of Antonican Bards has a courier system made up of travelers and adventurers. We pay good gold to anyone who will take messages from bards such as myself to one of our more central offices. Are you [interested]?\");\n\telseif e.message:findi(\"freeport\") then\n\t\te.self:Say(\"Take this pouch of mail to Ton Twostring. You can find him at the bard guild hall. I'm sure he will compensate you for your trouble.\");\n\t\te.other:SummonItem(18164); -- Item: Pouch of Mail (Freeport)\n\telseif e.message:findi(\"qeynos\") then\n\t\te.self:Say(\"Take this letter to Tralyn Marsinger. You can find him at the bard guild hall. I'm sure she will compensate you for your trouble.\");\n\t\te.other:SummonItem(18154); -- Item: Bardic Letter (Qeynos)\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 18152}) or item_lib.check_turn_in(e.trade, {item1 = 18156})) then\n\t\te.self:Say(\"More mail - you have done us a noteworthy service!  Please take this gold for your troubles.  If you are interested in more work, just ask me.\");\n\t\te.other:Ding();\n\t\te.other:Faction(284,5,0); -- Faction: League of Antonican Bards\n\t\te.other:Faction(281,1,0); -- Faction: Knights of Truth\n\t\te.other:Faction(262,1,0); -- Faction: Guards of Qeynos\n\t\te.other:Faction(304,-1,0); -- Faction: Ring of Scale\n\t\te.other:Faction(285,-1,0); -- Faction: Mayong Mistmoore\n\t\te.other:AddEXP(1550);\n\t\te.other:GiveCash(0,0,eq.ChooseRandom(8,9,10,11,12),0);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 13545,
+        "zone": "innothule",
+        "name": "Dark_Deathsinger",
+        "lua_content": "-- items: 18154, 18155\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Hail, \" .. e.other:GetName() .. \" - Are you [interested] in helping the League of Antonican Bards by delivering some [mail]?\");\n\telseif(e.message:findi(\"interested\")) then\n\t\te.self:Say(\"I have messages that need to go to Highpass and to Freeport.  Will you [deliver] mail to [Highpass] or [Freeport] for me?\");\n\telseif(e.message:findi(\"mail\")) then\n\t\te.self:Say(\"The League of Antonican Bards has a courier system made up of travelers and adventurers.  We pay good gold to anyone who will take messages from bards such as myself to one of our more distant offices.  Are you [interested]?\");\n\telseif(e.message:findi(\"deliver to qeynos\")) then\n\t\te.self:Say(\"Take this letter to Tralyn Marsinger. You can find him at the bard guild hall. I'm sure she will compensate you for your trouble.\");\n\t\te.other:SummonItem(18154); -- Item: Bardic Letter (Qeynos)\n\telseif(e.message:findi(\"deliver to freeport\")) then\n\t\te.self:Say(\"Take this letter to Felisity Starbright in Freeport.  You can find her at the bard guild hall.  I am sure she will compensate you for your troubles.\");\n\t\te.other:SummonItem(18155); -- Item: Bardic Letter (Freeport)\n\tend\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 13545,
+        "zone": "innothule",
+        "name": "Dark_Deathsinger",
+        "lua_content": "-- items: 18154, 18155\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Hail, \" .. e.other:GetName() .. \" - Are you [interested] in helping the League of Antonican Bards by delivering some [mail]?\");\n\telseif((e.message:findi(\"interested\") or (e.message:findi(\"deliver\") and not e.message:findi(\"qeynos\") and not e.message:findi(\"freeport\")))) then\n\t\te.self:Say(\"I have messages that need to go to Qeynos and to Freeport.  Will you [deliver] mail to [Qeynos] or [Freeport] for me?\");\n\telseif((e.message:findi(\"mail\") and not e.message:findi(\"deliver\") and not e.message:findi(\"interested\") and not e.message:findi(\"qeynos\") and not e.message:findi(\"freeport\"))) then\n\t\te.self:Say(\"The League of Antonican Bards has a courier system made up of travelers and adventurers.  We pay good gold to anyone who will take messages from bards such as myself to one of our more distant offices.  Are you [interested]?\");\n\telseif e.message:findi(\"qeynos\") then\n\t\te.self:Say(\"Take this letter to Tralyn Marsinger. You can find him at the bard guild hall. I'm sure she will compensate you for your trouble.\");\n\t\te.other:SummonItem(18154); -- Item: Bardic Letter (Qeynos)\n\telseif e.message:findi(\"freeport\") then\n\t\te.self:Say(\"Take this letter to Felisity Starbright in Freeport.  You can find her at the bard guild hall.  I am sure she will compensate you for your troubles.\");\n\t\te.other:SummonItem(18155); -- Item: Bardic Letter (Freeport)\n\tend\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 14404,
+        "zone": "lakeofillomen",
+        "name": "Klok_Sargin",
+        "lua_content": "--Shaman Skull Quest 6\n-- items: 12761\nfunction event_say(e)\n\tif(e.message:findi(\"Sisters of Scale\") and e.other:GetFaction(e.self) <= 5) then\n\t\te.self:Say(\"Looking for the skull I had for sale? I am afraid I sold it to a staunch lizard champion. I would gladly give you his name if you would do me a [slight favor].\");\n\telseif(e.message:findi(\"slight favor\") and e.other:GetFaction(e.self) <= 5) then\n\t\te.self:Say(\"The lake garrison has requested that I work on a helm similar to the ones worn by sarnak dragoons. The problem is.. I need one to examine. You go get me one and I will tell you who purchased the skull.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\t--Turn in the Sarnak Dragoon Helm  dropped off of Sarnak Dragoons in lake of ill omen\n\tif(e.other:GetFaction(e.self) <= 5 and item_lib.check_turn_in(e.trade, {item1 = 12761})) then\n\t\te.self:Say(\"Uhh. Thanks. I sort of told the lizard who bought the skull that you were asking for him, and, well, he was kinda mad, and... \" .. e.other:GetCleanName() .. \", meet Bruiser.\");\n\t\teq.unique_spawn(85226,0,0,e.self:GetX() + 5,e.self:GetY(),e.self:GetZ(),e.self:GetHeading()); -- Bruiser Noz\n\t\teq.set_timer(\"emote\", 10000);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade) --return items if not the ones required\nend\n\nfunction event_timer(e)\n\teq.stop_timer(\"emote\")\n\te.self:Emote(\"shakes with fear. A dark stain begins to spread across the front of his trousers. 'Ye.. Ye.. Yes.. Yes, Bruiser.\");\n\teq.signal(85226,51); -- NPC: Bruiser_Noz\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 14404,
+        "zone": "lakeofillomen",
+        "name": "Klok_Sargin",
+        "lua_content": "-- enabled: false\n-- P99 source-only scope exclusion: Exclusive Shaman Skull step 6 helper, absent from P99 (first five only).\n-- Body preserved; no NPC availability or world-table changes.\n--Shaman Skull Quest 6\n-- items: 12761\nfunction event_say(e)\n\tif(e.message:findi(\"Sisters of Scale\") and e.other:GetFaction(e.self) <= 5) then\n\t\te.self:Say(\"Looking for the skull I had for sale? I am afraid I sold it to a staunch lizard champion. I would gladly give you his name if you would do me a [slight favor].\");\n\telseif(e.message:findi(\"slight favor\") and e.other:GetFaction(e.self) <= 5) then\n\t\te.self:Say(\"The lake garrison has requested that I work on a helm similar to the ones worn by sarnak dragoons. The problem is.. I need one to examine. You go get me one and I will tell you who purchased the skull.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\t--Turn in the Sarnak Dragoon Helm  dropped off of Sarnak Dragoons in lake of ill omen\n\tif(e.other:GetFaction(e.self) <= 5 and item_lib.check_turn_in(e.trade, {item1 = 12761})) then\n\t\te.self:Say(\"Uhh. Thanks. I sort of told the lizard who bought the skull that you were asking for him, and, well, he was kinda mad, and... \" .. e.other:GetCleanName() .. \", meet Bruiser.\");\n\t\teq.unique_spawn(85226,0,0,e.self:GetX() + 5,e.self:GetY(),e.self:GetZ(),e.self:GetHeading()); -- Bruiser Noz\n\t\teq.set_timer(\"emote\", 10000);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade) --return items if not the ones required\nend\n\nfunction event_timer(e)\n\teq.stop_timer(\"emote\")\n\te.self:Emote(\"shakes with fear. A dark stain begins to spread across the front of his trousers. 'Ye.. Ye.. Yes.. Yes, Bruiser.\");\n\teq.signal(85226,51); -- NPC: Bruiser_Noz\nend\n",
+        "has_say_event": 1,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 19064,
+        "zone": "nektulos",
+        "name": "Travis_Two_Tone",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: nektulos/Travis_Two_Tone.pl\n-- items: 18158\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Hail, \" .. e.other:GetCleanName() .. \" - Are you [interested] in helping the League of Antonican Bards by delivering some [mail]?\")\n\telseif e.message:findi(\"what mail\") then\n\t\te.self:Say(\"The League of Antonican Bards has a courier system made up of travelers and adventurers.  We pay good gold to anyone who will take messages from bards such as myself to one of our more central offices.  Are you [interested]?\")\n\telseif e.message:findi(\"i am interested\") then\n\t\te.self:Say(\"I have messages that need to go to - well, right now I have one that needs to go to Freeport.  Will you [deliver] mail to [Freeport] for me?\")\n\telseif e.message:findi(\"deliver to freeport\") then\n\t\te.self:Say(\"Take this letter to Felisity Starbright in Freeport.  You can find her at the bard guild hall.  I am sure she will compensate you for your troubles.\")\n\t\te.other:SummonItem(18158) -- Bardic Letter (Freeport)\n\tend\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 19064,
+        "zone": "nektulos",
+        "name": "Travis_Two_Tone",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: nektulos/Travis_Two_Tone.pl\n-- items: 18158\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Hail, \" .. e.other:GetCleanName() .. \" - Are you [interested] in helping the League of Antonican Bards by delivering some [mail]?\")\n\telseif (e.message:findi(\"mail\") and not e.message:findi(\"deliver\") and not e.message:findi(\"interested\") and not e.message:findi(\"freeport\")) then\n\t\te.self:Say(\"The League of Antonican Bards has a courier system made up of travelers and adventurers.  We pay good gold to anyone who will take messages from bards such as myself to one of our more central offices.  Are you [interested]?\")\n\telseif e.message:findi(\"interested\") then\n\t\te.self:Say(\"I have messages that need to go to - well, right now I have one that needs to go to Freeport.  Will you [deliver] mail to [Freeport] for me?\")\n\telseif (e.message:findi(\"deliver\") or e.message:findi(\"freeport\")) then\n\t\te.self:Say(\"Take this letter to Felisity Starbright in Freeport.  You can find her at the bard guild hall.  I am sure she will compensate you for your troubles.\")\n\t\te.other:SummonItem(18158) -- Bardic Letter (Freeport)\n\tend\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 17845,
+        "zone": "oot",
+        "name": "#Kaiaren",
+        "lua_content": "-- items: 48127, 48119, 48120, 48129, 48130\nlocal char_id = 0;\nlocal spawn_chest = false;\nlocal update_global = false;\n\nfunction event_spawn(e)\n    char_id = 0;\n    spawn_chest = false;\n    update_global = false;\nend\n\nfunction event_say(e)\n    local qglobals = eq.get_qglobals(e.other);\n\n    -- 1.5 done\n    if (qglobals[\"monk_epic\"] == \"9\") then\n        if (e.message:findi(\"hail\")) then\n            e.self:Say(\"Hello, \" .. e.other:GetName() .. \", I have been [\" .. eq.say_link(\"expecting\") .. \"] you.\");\n        elseif (e.message:findi(\"expecting\")) then\n            e.self:Say(\"There is still much that needs to be done and I lack the strength still to continue it myself. If you choose to you can first begin by completing a [\" .. eq.say_link(\"simple task\") .. \"] for me.\");\n        elseif (e.message:findi(\"simple task\")) then\n            e.self:Say(\"I need you to gather some rare [I need you to gather some rare [\" .. eq.say_link(\"delicacies\") .. \"] and bring them back to me. This meal has been passed down the Order for ages. This meal is said to grant strength back to the feeble. It is the only way possible for us to combat this [\" .. eq.say_link(\"menace\") .. \"].\");\n        elseif (e.message:findi(\"delicacies\")) then\n            e.self:Say(\"I will need to you to gather some [\" .. eq.say_link(\"sunless nectar\") .. \"] and some meat from and some meat from an [\" .. eq.say_link(\"ancient creature\") .. \"].\");\n        elseif (e.message:findi(\"menace\")) then\n            e.self:Say(\"What menace? For sure Vortix has mentioned to you his dreams? His dreams provide a rare gift of forsight into what lies ahead. There is a dark threat that looms over the Order's head like a vice. It wants nothing more than to destroy all that know of it's existence.\");\n            if (qglobals['mnk_epic20'] == nil) then\n              eq.set_global(\"mnk_epic20\", \"1\", 5, \"F\");\n            end\n        elseif (e.message:findi(\"sunless nectar\")) then\n            e.self:Say(\"The sunless nectar comes from the darkest parts of Norrath. Once you find it you must combine it with some spices and a pie tin to make a Sugar and Spice Nectar Pie. Please return soon after you have both items.\");\n        elseif (e.message:findi(\"ancient creature\")) then\n            e.self:Say(\"The creature you seek has been living for as long as any can remember. It can be found surrounded by water. You will need to take it's meat and combine it with grilling sauce, a loaf of bread, and some cheese to make a Grilled Aged Meat and Cheese Sandwich. Please return soon after you have both items.\");\n        elseif (qglobals[\"mnk_epic20\"] ~= nil) then\n            if (e.message:findi(\"choose to continue\") and qglobals[\"mnk_epic20\"] >= \"2\") then\n                e.self:Say(\"As I thought you would; you will find them as you did the others, in their natural essence. You will find the Disciple of Focus in the hills and mountains training diligently. The Disciple of Tranquility you shall find in a clearing where many do not travel without knowing valor and courage. It is there that you will be able to find your calmness. Please return to me when you have gained their respect as well as their symbols. I will also require your sash.\");\n                -- bug fix, missing sash and on this exact step!\n                if (not e.other:HasItem(48127) and qglobals[\"mnk_epic20\"] == \"2\") then\n                    e.other:SummonItem(48127); -- Item: Initiate's Sash of the Celestial Order\n                end\n                eq.set_global(\"mnk_epic20\", \"3\", 5, \"F\"); -- can activate Disciples now\n            elseif (e.message:findi(\"final task\") and qglobals[\"mnk_epic20\"] >= \"4\") then\n                e.self:Say(\"Yes, you must combat an enlightened one. It is our way that balance must be kept. Without good, evil cannot exist. We are but a small part in the cycle of true immortality. If you are [\" .. eq.say_link(\"ready to begin\") .. \"] I will battle you. Please do not worry, if you defeat me, my being will continue to exist within you as that is the way of our Order. If you fall however, it was meant to be.\");\n            elseif (e.message:findi(\"ready to begin\") and qglobals[\"mnk_epic20\"] >= \"4\") then\n                e.self:Say(\"Stand fast and ready to prove your worth now \" .. e.other:GetName() .. \"!\");\n                e.self:SetSpecialAbility(SpecialAbility.immune_aggro, 0);\n                e.self:SetSpecialAbility(SpecialAbility.no_harm_from_client, 0);\n                char_id = e.other:CharacterID();\n                eq.attack(e.other:GetName());\n                if (qglobals[\"mnk20_oot_chest\"] == nil) then\n                    spawn_chest = true;\n                end\n\n                if (qglobals[\"mnk_epic20\"] == \"4\") then\n                    update_global = true;\n                end\n            end\n        end\n    end\nend\n\nfunction event_trade(e)\n    local qglobals = eq.get_qglobals(e.other);\n    local item_lib = require(\"items\");\n\n    if (qglobals[\"mnk_epic20\"] ~= nil and qglobals[\"mnk_epic20\"] >= \"1\") then\n        if (item_lib.check_turn_in(e.trade, {item1 = 48119, item2 = 48120})) then -- Sugar and Spice Nectar Pie and Aged Meat and Cheese Sandwich\n            e.self:Say(\"Ah, thank you. These will help me greatly but I am afraid I will still lack the strength needed to combat this evil. You will have to go in my place until at least I have had a little longer to rest and train. If you [\" .. eq.say_link(\"choose to continue\") .. \"], there are two more Disciples that you must face in order to reach the point of transcendence.\");\n            e.other:QuestReward(e.self, 0, 0, 0, 0, 0, 1000); -- adjust EXP\n            eq.set_global(\"mnk_epic20\", \"2\", 5, \"F\"); -- flags to continue dialog\n        elseif (qglobals[\"mnk_epic20\"] >= \"3\" and item_lib.check_turn_in(e.trade, {item1 = 48129, item2 = 48130, item3 = 48127})) then -- Polished Symbol of Focus, Polished Symbol of Tranquility, Initiate's Sash of the Celestial Order\n            e.self:Say(\"I see you are ready to assume the [\" .. eq.say_link(\"final task\") .. \"] before facing the Dark Foe that will forever change our way of life here.\");\n            e.other:QuestReward(e.self, 0, 0, 0, 0, 0, 1000); -- adjust EXP\n            eq.set_global(\"mnk_epic20\", \"4\", 5, \"F\"); -- flags to continue dialog\n        end\n    end\n\n    item_lib.return_items(e.self, e.other, e.trade);\nend\n\nfunction event_combat(e)\n    if not e.joined then\n        eq.stop_all_timers();\n        eq.set_timer(\"reset\", 900000); -- 15 mins\n    end\nend\n\nfunction event_timer(e)\n    if (e.timer == \"reset\") then\n        e.self:SetSpecialAbility(SpecialAbility.immune_aggro, 1);\n        e.self:SetSpecialAbility(SpecialAbility.no_harm_from_client, 1);\n        char_id = 0;\n        spawn_chest = false;\n        update_global = false;\n    end\nend\n\nfunction event_death_complete(e)\n    local entity_list = eq.get_entity_list();\n    -- if someone comes along before he resets, I guess you get the globals set ... oh well\n    if (spawn_chest) then\n        eq.spawn2(893, 0, 0, e.self:GetX(), e.self:GetY(), e.self:GetZ(), e.self:GetHeading()); -- a chest (epic 2.0)\n        eq.target_global(\"mnk20_oot_chest\", \"1\", \"F\", 0, char_id, 0);\n    end\n    if (update_global) then\n        eq.target_global(\"mnk_epic20\", \"5\", \"F\", 0, char_id, 0);\n    end\n    char_id = 0;\n    spawn_chest = false;\n    update_global = false;\nend\n\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 17845,
+        "zone": "oot",
+        "name": "#Kaiaren",
+        "lua_content": "-- enabled: false\n-- P99 source-only scope exclusion: Exclusive monk epic 2.0 script, outside Classic-through-Velious.\n-- Body preserved; no NPC availability or world-table changes.\n-- items: 48127, 48119, 48120, 48129, 48130\nlocal char_id = 0;\nlocal spawn_chest = false;\nlocal update_global = false;\n\nfunction event_spawn(e)\n    char_id = 0;\n    spawn_chest = false;\n    update_global = false;\nend\n\nfunction event_say(e)\n    local qglobals = eq.get_qglobals(e.other);\n\n    -- 1.5 done\n    if (qglobals[\"monk_epic\"] == \"9\") then\n        if (e.message:findi(\"hail\")) then\n            e.self:Say(\"Hello, \" .. e.other:GetName() .. \", I have been [\" .. eq.say_link(\"expecting\") .. \"] you.\");\n        elseif (e.message:findi(\"expecting\")) then\n            e.self:Say(\"There is still much that needs to be done and I lack the strength still to continue it myself. If you choose to you can first begin by completing a [\" .. eq.say_link(\"simple task\") .. \"] for me.\");\n        elseif (e.message:findi(\"simple task\")) then\n            e.self:Say(\"I need you to gather some rare [I need you to gather some rare [\" .. eq.say_link(\"delicacies\") .. \"] and bring them back to me. This meal has been passed down the Order for ages. This meal is said to grant strength back to the feeble. It is the only way possible for us to combat this [\" .. eq.say_link(\"menace\") .. \"].\");\n        elseif (e.message:findi(\"delicacies\")) then\n            e.self:Say(\"I will need to you to gather some [\" .. eq.say_link(\"sunless nectar\") .. \"] and some meat from and some meat from an [\" .. eq.say_link(\"ancient creature\") .. \"].\");\n        elseif (e.message:findi(\"menace\")) then\n            e.self:Say(\"What menace? For sure Vortix has mentioned to you his dreams? His dreams provide a rare gift of forsight into what lies ahead. There is a dark threat that looms over the Order's head like a vice. It wants nothing more than to destroy all that know of it's existence.\");\n            if (qglobals['mnk_epic20'] == nil) then\n              eq.set_global(\"mnk_epic20\", \"1\", 5, \"F\");\n            end\n        elseif (e.message:findi(\"sunless nectar\")) then\n            e.self:Say(\"The sunless nectar comes from the darkest parts of Norrath. Once you find it you must combine it with some spices and a pie tin to make a Sugar and Spice Nectar Pie. Please return soon after you have both items.\");\n        elseif (e.message:findi(\"ancient creature\")) then\n            e.self:Say(\"The creature you seek has been living for as long as any can remember. It can be found surrounded by water. You will need to take it's meat and combine it with grilling sauce, a loaf of bread, and some cheese to make a Grilled Aged Meat and Cheese Sandwich. Please return soon after you have both items.\");\n        elseif (qglobals[\"mnk_epic20\"] ~= nil) then\n            if (e.message:findi(\"choose to continue\") and qglobals[\"mnk_epic20\"] >= \"2\") then\n                e.self:Say(\"As I thought you would; you will find them as you did the others, in their natural essence. You will find the Disciple of Focus in the hills and mountains training diligently. The Disciple of Tranquility you shall find in a clearing where many do not travel without knowing valor and courage. It is there that you will be able to find your calmness. Please return to me when you have gained their respect as well as their symbols. I will also require your sash.\");\n                -- bug fix, missing sash and on this exact step!\n                if (not e.other:HasItem(48127) and qglobals[\"mnk_epic20\"] == \"2\") then\n                    e.other:SummonItem(48127); -- Item: Initiate's Sash of the Celestial Order\n                end\n                eq.set_global(\"mnk_epic20\", \"3\", 5, \"F\"); -- can activate Disciples now\n            elseif (e.message:findi(\"final task\") and qglobals[\"mnk_epic20\"] >= \"4\") then\n                e.self:Say(\"Yes, you must combat an enlightened one. It is our way that balance must be kept. Without good, evil cannot exist. We are but a small part in the cycle of true immortality. If you are [\" .. eq.say_link(\"ready to begin\") .. \"] I will battle you. Please do not worry, if you defeat me, my being will continue to exist within you as that is the way of our Order. If you fall however, it was meant to be.\");\n            elseif (e.message:findi(\"ready to begin\") and qglobals[\"mnk_epic20\"] >= \"4\") then\n                e.self:Say(\"Stand fast and ready to prove your worth now \" .. e.other:GetName() .. \"!\");\n                e.self:SetSpecialAbility(SpecialAbility.immune_aggro, 0);\n                e.self:SetSpecialAbility(SpecialAbility.no_harm_from_client, 0);\n                char_id = e.other:CharacterID();\n                eq.attack(e.other:GetName());\n                if (qglobals[\"mnk20_oot_chest\"] == nil) then\n                    spawn_chest = true;\n                end\n\n                if (qglobals[\"mnk_epic20\"] == \"4\") then\n                    update_global = true;\n                end\n            end\n        end\n    end\nend\n\nfunction event_trade(e)\n    local qglobals = eq.get_qglobals(e.other);\n    local item_lib = require(\"items\");\n\n    if (qglobals[\"mnk_epic20\"] ~= nil and qglobals[\"mnk_epic20\"] >= \"1\") then\n        if (item_lib.check_turn_in(e.trade, {item1 = 48119, item2 = 48120})) then -- Sugar and Spice Nectar Pie and Aged Meat and Cheese Sandwich\n            e.self:Say(\"Ah, thank you. These will help me greatly but I am afraid I will still lack the strength needed to combat this evil. You will have to go in my place until at least I have had a little longer to rest and train. If you [\" .. eq.say_link(\"choose to continue\") .. \"], there are two more Disciples that you must face in order to reach the point of transcendence.\");\n            e.other:QuestReward(e.self, 0, 0, 0, 0, 0, 1000); -- adjust EXP\n            eq.set_global(\"mnk_epic20\", \"2\", 5, \"F\"); -- flags to continue dialog\n        elseif (qglobals[\"mnk_epic20\"] >= \"3\" and item_lib.check_turn_in(e.trade, {item1 = 48129, item2 = 48130, item3 = 48127})) then -- Polished Symbol of Focus, Polished Symbol of Tranquility, Initiate's Sash of the Celestial Order\n            e.self:Say(\"I see you are ready to assume the [\" .. eq.say_link(\"final task\") .. \"] before facing the Dark Foe that will forever change our way of life here.\");\n            e.other:QuestReward(e.self, 0, 0, 0, 0, 0, 1000); -- adjust EXP\n            eq.set_global(\"mnk_epic20\", \"4\", 5, \"F\"); -- flags to continue dialog\n        end\n    end\n\n    item_lib.return_items(e.self, e.other, e.trade);\nend\n\nfunction event_combat(e)\n    if not e.joined then\n        eq.stop_all_timers();\n        eq.set_timer(\"reset\", 900000); -- 15 mins\n    end\nend\n\nfunction event_timer(e)\n    if (e.timer == \"reset\") then\n        e.self:SetSpecialAbility(SpecialAbility.immune_aggro, 1);\n        e.self:SetSpecialAbility(SpecialAbility.no_harm_from_client, 1);\n        char_id = 0;\n        spawn_chest = false;\n        update_global = false;\n    end\nend\n\nfunction event_death_complete(e)\n    local entity_list = eq.get_entity_list();\n    -- if someone comes along before he resets, I guess you get the globals set ... oh well\n    if (spawn_chest) then\n        eq.spawn2(893, 0, 0, e.self:GetX(), e.self:GetY(), e.self:GetZ(), e.self:GetHeading()); -- a chest (epic 2.0)\n        eq.target_global(\"mnk20_oot_chest\", \"1\", \"F\", 0, char_id, 0);\n    end\n    if (update_global) then\n        eq.target_global(\"mnk_epic20\", \"5\", \"F\", 0, char_id, 0);\n    end\n    char_id = 0;\n    spawn_chest = false;\n    update_global = false;\nend\n\n",
+        "has_say_event": 1,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 13467,
+        "zone": "qey2hh1",
+        "name": "Mistrana_Two_Notes",
+        "lua_content": "-- items: 18150\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(string.format(\"Hail, %s - Are you [interested] in helping the League of Antonican Bards by delivering some [mail]?\",e.other:GetName()));\n\telseif(e.message:findi(\"mail\")) then\n\t\te.self:Say(\"The League of Antonican Bards has a courier system made up of travelers and adventurers.  We pay good gold to anyone who will take messages from bards such as myself to one of our more central offices.  Are you [interested]?\");\n\telseif(e.message:findi(\"interested\")) then\n\t\te.self:Say(\"I have messages that need to go to - well, right now I have one that needs to go to Qeynos.  Will you [deliver] mail to [Qeynos] for me?\");\n\telseif(e.message:findi(\"deliver to qeynos\")) then\n\t\te.self:Say(\"Take this letter to Tralyn Marsinger in Qeynos.  You can find him at the bard guild hall.  I am sure he will compensate you for your troubles.\");\n\t\te.other:SummonItem(18150); -- Item: Bardic Letter (Qeynos)\n\tend\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 13467,
+        "zone": "qey2hh1",
+        "name": "Mistrana_Two_Notes",
+        "lua_content": "-- items: 18150\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(string.format(\"Hail, %s - Are you [interested] in helping the League of Antonican Bards by delivering some [mail]?\",e.other:GetName()));\n\telseif((e.message:findi(\"mail\") and not e.message:findi(\"deliver\") and not e.message:findi(\"interested\") and not e.message:findi(\"qeynos\"))) then\n\t\te.self:Say(\"The League of Antonican Bards has a courier system made up of travelers and adventurers.  We pay good gold to anyone who will take messages from bards such as myself to one of our more central offices.  Are you [interested]?\");\n\telseif(e.message:findi(\"interested\")) then\n\t\te.self:Say(\"I have messages that need to go to - well, right now I have one that needs to go to Qeynos.  Will you [deliver] mail to [Qeynos] for me?\");\n\telseif (e.message:findi(\"deliver\") or e.message:findi(\"qeynos\")) then\n\t\te.self:Say(\"Take this letter to Tralyn Marsinger in Qeynos.  You can find him at the bard guild hall.  I am sure he will compensate you for your troubles.\");\n\t\te.other:SummonItem(18150); -- Item: Bardic Letter (Qeynos)\n\tend\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 15707,
+        "zone": "qeynos",
+        "name": "Eve_Marsinger",
+        "lua_content": "-- items: 18152, 18165\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(string.format(\"Hail, %s - Are you [interested] in helping the League of Antonican Bards by delivering some [mail]?\",e.other:GetName()));\n\telseif(e.message:findi(\"interested\")) then\n\t\te.self:Say(\"'I have messages that need to go to - well, right now I have one that needs to go to Highpass. Will you [deliver] mail to [Highpass] for me?\");\n\telseif(e.message:findi(\"agents\")) then\n\t\te.self:Say(\"Sivina Lutewhisper, Marton Stringsinger, Ticar Lorestring and Mistrana Two-Notes all report to my husband, Tralyn.\");\n\telseif(e.message:findi(\"mail\")) then\n\t\te.self:Say(\"'The League of Antonican Bards has a courier system made up of travelers, adventurers and [agents]. We pay good gold to anyone who will take messages from bards such as myself to one of our more distant offices. Are you [interested]\");\n\telseif(e.message:findi(\"deliver\")) then\n\t\te.self:Say(\"Take this pouch to Lislia Goldtune in Highpass. You can find her at the entrance to HighKeep. I am sure she will compensate you for your troubles.\");\n\t\te.other:SummonItem(18152); -- Item: Pouch of Mail (Highpass)\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib =require(\"items\");\n\tif(item_lib.check_turn_in(e.trade, {item1 = 18165})) then\n\t\te.self:Say(\"Incoming mail - very good! Please take this gold for your troubles.\");\n\t\tlocal gp = math.random(15);\n\t\te.other:Ding();\n\t\te.other:Faction(284,5,0); -- Faction: League of Antonican Bards\n\t\te.other:Faction(281,1,0); -- Faction: Knights of Truth\n\t\te.other:Faction(262,1,0); -- Faction: Guards of Qeynos\n\t\te.other:Faction(304,-1,0); -- Faction: Ring of Scale\n\t\te.other:Faction(285,-1,0); -- Faction: Mayong Mistmoore\n\t\te.other:AddEXP(1550);\n\t\te.other:GiveCash(0,0,gp,0);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 15707,
+        "zone": "qeynos",
+        "name": "Eve_Marsinger",
+        "lua_content": "-- items: 18152, 18165\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(string.format(\"Hail, %s - Are you [interested] in helping the League of Antonican Bards by delivering some [mail]?\",e.other:GetName()));\n\telseif(e.message:findi(\"interested\")) then\n\t\te.self:Say(\"'I have messages that need to go to - well, right now I have one that needs to go to Highpass. Will you [deliver] mail to [Highpass] for me?\");\n\telseif(e.message:findi(\"agents\")) then\n\t\te.self:Say(\"Sivina Lutewhisper, Marton Stringsinger, Ticar Lorestring and Mistrana Two-Notes all report to my husband, Tralyn.\");\n\telseif((e.message:findi(\"mail\") and not e.message:findi(\"deliver\") and not e.message:findi(\"interested\") and not e.message:findi(\"highpass\"))) then\n\t\te.self:Say(\"'The League of Antonican Bards has a courier system made up of travelers, adventurers and [agents]. We pay good gold to anyone who will take messages from bards such as myself to one of our more distant offices. Are you [interested]\");\n\telseif (e.message:findi(\"deliver\") or e.message:findi(\"highpass\")) then\n\t\te.self:Say(\"Take this pouch to Lislia Goldtune in Highpass. You can find her at the entrance to HighKeep. I am sure she will compensate you for your troubles.\");\n\t\te.other:SummonItem(18152); -- Item: Pouch of Mail (Highpass)\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib =require(\"items\");\n\tif(item_lib.check_turn_in(e.trade, {item1 = 18165})) then\n\t\te.self:Say(\"Incoming mail - very good! Please take this gold for your troubles.\");\n\t\tlocal gp = math.random(15);\n\t\te.other:Ding();\n\t\te.other:Faction(284,5,0); -- Faction: League of Antonican Bards\n\t\te.other:Faction(281,1,0); -- Faction: Knights of Truth\n\t\te.other:Faction(262,1,0); -- Faction: Guards of Qeynos\n\t\te.other:Faction(304,-1,0); -- Faction: Ring of Scale\n\t\te.other:Faction(285,-1,0); -- Faction: Mayong Mistmoore\n\t\te.other:AddEXP(1550);\n\t\te.other:GiveCash(0,0,gp,0);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 18103,
+        "zone": "qrg",
+        "name": "Sivina_Lutewhisper",
+        "lua_content": "-- items: 18150\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(string.format(\"Hail, %s - Are you [interested] in helping the League of Antonican Bards by delivering some [mail]?\",e.other:GetName()));\n\telseif(e.message:findi(\"mail\")) then\n\t\te.self:Say(\"The League of Antonican Bards has a courier system made up of travelers and adventurers.  We pay good gold to anyone who will take messages from bards such as myself to one of our more central offices.  Are you [interested]?\");\n\telseif(e.message:findi(\"interested\")) then\n\t\te.self:Say(\"I have messages that need to go to - well, right now I have one that needs to go to Qeynos.  Will you [deliver] mail to [Qeynos] for me?\");\n\telseif(e.message:findi(\"deliver to qeynos\")) then\n\t\te.self:Say(\"Take this letter to Tralyn Marsinger in Qeynos.  You can find him at the bard guild hall.  I am sure he will compensate you for your troubles.\");\n\t\te.other:SummonItem(18150); -- Item: Bardic Letter (Qeynos)\n\tend\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 18103,
+        "zone": "qrg",
+        "name": "Sivina_Lutewhisper",
+        "lua_content": "-- items: 18150\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(string.format(\"Hail, %s - Are you [interested] in helping the League of Antonican Bards by delivering some [mail]?\",e.other:GetName()));\n\telseif((e.message:findi(\"mail\") and not e.message:findi(\"deliver\") and not e.message:findi(\"interested\") and not e.message:findi(\"qeynos\"))) then\n\t\te.self:Say(\"The League of Antonican Bards has a courier system made up of travelers and adventurers.  We pay good gold to anyone who will take messages from bards such as myself to one of our more central offices.  Are you [interested]?\");\n\telseif(e.message:findi(\"interested\")) then\n\t\te.self:Say(\"I have messages that need to go to - well, right now I have one that needs to go to Qeynos.  Will you [deliver] mail to [Qeynos] for me?\");\n\telseif (e.message:findi(\"deliver\") or e.message:findi(\"qeynos\")) then\n\t\te.self:Say(\"Take this letter to Tralyn Marsinger in Qeynos.  You can find him at the bard guild hall.  I am sure he will compensate you for your troubles.\");\n\t\te.other:SummonItem(18150); -- Item: Bardic Letter (Qeynos)\n\tend\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 18750,
+        "zone": "rathemtn",
+        "name": "Tabien_the_Goodly",
+        "lua_content": "-- Source: rathemtn/Tabien_the_Goodly.pl\n-- Shaman Epic 1.0: Tabien gives the Marble Pebble.\n-- Converted from ProjectEQ Perl quest script.\n-- items: 1676, 1677, 1670\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Oh thank Marr you are here, $name. I have a task for you to complete in the name of my patron Mithaniel Marr.\")\n\telseif e.message:findi(\"task\") then\n\t\te.self:Emote(\"displays his battered shield.\")\n\t\te.self:Say(\"This shield is known as Marr's Promise. A patriarch of the false god, Bertoxxulous, is after my shield and me. He must be stopped!\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 1676, item2 = 1677}) then\n\t\te.self:Say(\"Ahh, thank Mithaniel you have put Glaron and his terrible reign to an end! Take this gem and give it to the one who sent you.\")\n\t\te.other:SummonItem(1670) -- Marble Pebble\n\t\teq.depop()\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 18750,
+        "zone": "rathemtn",
+        "name": "Tabien_the_Goodly",
+        "lua_content": "-- Source: rathemtn/Tabien_the_Goodly.pl\n-- Shaman Epic 1.0: Tabien gives the Marble Pebble.\n-- Converted from ProjectEQ Perl quest script.\n-- items: 1676, 1677, 1670\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Oh thank Marr you are here, \" .. e.other:GetName() .. \". I have a task for you to complete in the name of my patron Mithaniel Marr.\")\n\telseif e.message:findi(\"task\") then\n\t\te.self:Emote(\"displays his battered shield.\")\n\t\te.self:Say(\"This shield is known as Marr's Promise. A patriarch of the false god, Bertoxxulous, is after my shield and me. He must be stopped!\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 1676, item2 = 1677}) then\n\t\te.self:Say(\"Ahh, thank Mithaniel you have put Glaron and his terrible reign to an end! Take this gem and give it to the one who sent you.\")\n\t\te.other:SummonItem(1670) -- Marble Pebble\n\t\teq.depop()\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 18564,
+        "zone": "rivervale",
+        "name": "Silna_Songsmith",
+        "lua_content": "--#############\n--#Quest Name: Bard Mail Quest\n--#Author: RealityIncarnate\n--#Converted to Lua: robregen\n--#NPCs Involved: Tralyn Marsinger, Eve Marsinger, Lislia Goldtune, Felisity Starbright, Jakum Webdancer, Ton Twostring, Idia, Sivina Lutewhisper, Ticar Lorestring, Marton Stringsinger, Drizda Tunesinger, Travis Two Tone, Silna Songsmith, Siltria Marwind, Tacar Tissleplay, Kilam Oresinger, Lyra Lyrestringer \n--#Items Involved: Bardic letters: 18150-18167\n--#################\n-- items: 18164\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Hail, \" .. e.other:GetName() .. \" - Are you [\" .. eq.say_link(\"interested\",false,\"interested\") .. \"] in helping the League of Antonican Bards by delivering some [\" .. eq.say_link(\"mail\",false,\"mail\") .. \"]?\");\n\telseif(e.message:findi(\"mail\")) then\n\t\te.self:Say(\"The League of Antonican Bards has a courier system made up of travelers and adventurers. We pay good gold to anyone who will take messages from bards such as myself to one of our more central offices. Are you [\" .. eq.say_link(\"interested\",false,\"interested\") .. \"]?\");\n\telseif(e.message:findi(\"interested\")) then\n\t\te.self:Say(\"I have messages that need to go to - well, right now I have one that needs to go to Freeport. Will you [\" .. eq.say_link(\"deliver\",false,\"deliver\") .. \"] mail to [\" .. eq.say_link(\"Freeport\",false,\"Freeport\") .. \"] for me?\");\n\telseif(e.message:findi(\"deliver\") or e.message:findi(\"freeport\")) then\n\t\te.self:Say(\"Take this pouch of mail to Ton Twostring. You can find him at the bard guild hall. I'm sure he will compensate you for your trouble.\");\n\t\te.other:SummonItem(18164); -- Pouch of Mail (Freeport)\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\n-- END of FILE Zone:rivervale NPC:Silna_Songsmith",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 18564,
+        "zone": "rivervale",
+        "name": "Silna_Songsmith",
+        "lua_content": "--#############\n--#Quest Name: Bard Mail Quest\n--#Author: RealityIncarnate\n--#Converted to Lua: robregen\n--#NPCs Involved: Tralyn Marsinger, Eve Marsinger, Lislia Goldtune, Felisity Starbright, Jakum Webdancer, Ton Twostring, Idia, Sivina Lutewhisper, Ticar Lorestring, Marton Stringsinger, Drizda Tunesinger, Travis Two Tone, Silna Songsmith, Siltria Marwind, Tacar Tissleplay, Kilam Oresinger, Lyra Lyrestringer \n--#Items Involved: Bardic letters: 18150-18167\n--#################\n-- items: 18164\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Hail, \" .. e.other:GetName() .. \" - Are you [\" .. eq.say_link(\"interested\",false,\"interested\") .. \"] in helping the League of Antonican Bards by delivering some [\" .. eq.say_link(\"mail\",false,\"mail\") .. \"]?\");\n\telseif((e.message:findi(\"mail\") and not e.message:findi(\"deliver\") and not e.message:findi(\"interested\") and not e.message:findi(\"freeport\"))) then\n\t\te.self:Say(\"The League of Antonican Bards has a courier system made up of travelers and adventurers. We pay good gold to anyone who will take messages from bards such as myself to one of our more central offices. Are you [\" .. eq.say_link(\"interested\",false,\"interested\") .. \"]?\");\n\telseif(e.message:findi(\"interested\")) then\n\t\te.self:Say(\"I have messages that need to go to - well, right now I have one that needs to go to Freeport. Will you [\" .. eq.say_link(\"deliver\",false,\"deliver\") .. \"] mail to [\" .. eq.say_link(\"Freeport\",false,\"Freeport\") .. \"] for me?\");\n\telseif (e.message:findi(\"deliver\") or e.message:findi(\"freeport\")) then\n\t\te.self:Say(\"Take this pouch of mail to Ton Twostring. You can find him at the bard guild hall. I'm sure he will compensate you for your trouble.\");\n\t\te.other:SummonItem(18164); -- Pouch of Mail (Freeport)\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\n-- END of FILE Zone:rivervale NPC:Silna_Songsmith",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 12286,
+        "zone": "everfrost",
+        "name": "Granin_O'Gill",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: everfrost/Granin_O'Gill.pl\n-- name: Granin_O'Gill\n-- items: 13005\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Brrr... Good to meet another upon this wasteland.  You would not by any chance have any iron rations on you, would you?  If so, I shall heal you in trade.  I am in need of provisions.\")\n\tend\nend\n\nfunction event_aggro(e)\n\te.self:Say(\"Great Tribunal, help me smite this foe!\")\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 13005}) then\n\t\te.self:Say(\"Great Tribunal... Give me strength to bind this good person's wounds.\")\n\t\te.self:CastSpell(200, e.other:GetID()) -- Minor Healing\n\tend\nend\n\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 12286,
+        "zone": "everfrost",
+        "name": "Granin_O'Gill",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: everfrost/Granin_O'Gill.pl\n-- name: Granin_O'Gill\n-- items: 13005\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Brrr... Good to meet another upon this wasteland.  You would not by any chance have any iron rations on you, would you?  If so, I shall heal you in trade.  I am in need of provisions.\")\n\tend\nend\n\nfunction event_aggro(e)\n\te.self:Say(\"Great Tribunal, help me smite this foe!\")\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 13005}) then\n\t\te.self:Say(\"Great Tribunal... Give me strength to bind this good person's wounds.\")\n\t\te.self:CastSpell(200, e.other:GetID()) -- Minor Healing\n\tend\n\t-- IdleQuest safety: return unrelated items; preserve the ration/healing branch.\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 14271,
+        "zone": "southkarana",
+        "name": "#Azibelle_Spavin",
+        "lua_content": "--14196\nfunction event_spawn(e)\n\teq.set_timer(\"gate\",6*60*1000);\nend\n\nfunction event_timer(e)\n\tif(e.timer==\"gate\") then\n\t\te.self:CastSpell(36, 0); -- Spell: Gate\n\t\teq.set_timer(\"depop\",3000);\n\telseif(e.timer==\"gate\") then\n\t\teq.stop_timer(\"gate\");\n\t\te.self:CastSpell(36, 0); -- Spell: Gate\n\t\teq.set_timer(\"depop\",3000);\n\telseif(e.timer==\"depop\") then\n\t\teq.stop_timer(\"depop\");\n\t\teq.depop_with_timer();\n\telseif(e.timer==\"dialog1\") then\n\t\teq.stop_timer(\"dialog1\");\n\t\te.self:Say(\"That's long enough. Let's go. It's his fate if he doesn't show up soon.\");\t\t\n\tend\nend\n\nfunction event_signal(e)\n\tif(e.signal == 1) then\n\t\teq.set_timer(\"dialog1\",5*60*1000);\t\t\t\n\tend\nend\n\t",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 14271,
+        "zone": "southkarana",
+        "name": "#Azibelle_Spavin",
+        "lua_content": "-- enabled: false\n-- P99 source-only scope exclusion: Exclusive Druid Epic 1.5 coven helper: Glenfire signal14196, corrupted_spirit47209, and global recipe19888 explicitly labelled druid1.5. Outside Classic-through-Velious.\n-- Body preserved; no NPC availability or world-table changes.\n--14196\nfunction event_spawn(e)\n\teq.set_timer(\"gate\",6*60*1000);\nend\n\nfunction event_timer(e)\n\tif(e.timer==\"gate\") then\n\t\te.self:CastSpell(36, 0); -- Spell: Gate\n\t\teq.set_timer(\"depop\",3000);\n\telseif(e.timer==\"gate\") then\n\t\teq.stop_timer(\"gate\");\n\t\te.self:CastSpell(36, 0); -- Spell: Gate\n\t\teq.set_timer(\"depop\",3000);\n\telseif(e.timer==\"depop\") then\n\t\teq.stop_timer(\"depop\");\n\t\teq.depop_with_timer();\n\telseif(e.timer==\"dialog1\") then\n\t\teq.stop_timer(\"dialog1\");\n\t\te.self:Say(\"That's long enough. Let's go. It's his fate if he doesn't show up soon.\");\t\t\n\tend\nend\n\nfunction event_signal(e)\n\tif(e.signal == 1) then\n\t\teq.set_timer(\"dialog1\",5*60*1000);\t\t\t\n\tend\nend\n\t",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/akanon/Lyra_Lyrestringer.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-named-fixes/akanon--Lyra_Lyrestringer.lua",
+      "afterSha256": "fb73395c7bfa114de164cc229d7fbf0112502ea3c365627ac1a7713e6e093031"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/burningwood/Atheling_Plague.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-named-fixes/burningwood--Atheling_Plague.lua",
+      "afterSha256": "8741f07028e4a137118de56fae42840506908e3452d3ac89bca7b68fef03374c"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/burningwood/Clerk_Doval.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-named-fixes/burningwood--Clerk_Doval.lua",
+      "afterSha256": "905ddc813ab2e1e9a62792ffda1cb1e9de099475c51da9cfa9d99573b2ca112a"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/butcher/Siltria_Marwind.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-named-fixes/butcher--Siltria_Marwind.lua",
+      "afterSha256": "70648534ac1b3b2484427a63ad6a703324362b8003dc73f7b88bc9c5e90fb065"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/erudnext/Ticar_Lorestring.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-named-fixes/erudnext--Ticar_Lorestring.lua",
+      "afterSha256": "a91104b7c9efda980445a565b3be533c426f5d64a2f36e76ec2a0fd1b33549d1"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/feerrott/Drizda_Tunesinger.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-named-fixes/feerrott--Drizda_Tunesinger.lua",
+      "afterSha256": "8ee53b5b046df59fca6ab46e36711826d6aa847f88a24a4fb187ea99775b9973"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freportn/Ton_Twostring.lua",
+      "beforeSha256": "9f10dc06184e359a57b17e5c6b178fd704f72319d232ef59cafba12a7ead354e",
+      "proposedFile": "changes/p99-support-named-fixes/freportn--Ton_Twostring.lua",
+      "afterSha256": "7f47b8eda38f0659cbfca9645f39df0392adf3972461925b691fb508a6f94132"
+    },
+    {
+      "target": "maintained/lua/converted-perl/gfaydark/Idia.lua",
+      "beforeSha256": "7adbce8ccd67ee8c81fd5cf7a803003f5337b1ce7f0303e48d7e7856653e302b",
+      "proposedFile": "changes/p99-support-named-fixes/gfaydark--Idia.lua",
+      "afterSha256": "af8733a8c875aeac710a81a80d0facb678f66a646523e8deca83a795a020b129"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/halas/Marton_Stringsinger.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-named-fixes/halas--Marton_Stringsinger.lua",
+      "afterSha256": "a20eb14ee9e1251a84a997c48baf88ca79216ba896452789a6b791cfb273d32f"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/highkeep/Lislia_Goldtune.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-named-fixes/highkeep--Lislia_Goldtune.lua",
+      "afterSha256": "82bf68146bd9aecdd977d55a3932597bc5b694cfeed7833048695e9003bb4cca"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/innothule/Dark_Deathsinger.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-named-fixes/innothule--Dark_Deathsinger.lua",
+      "afterSha256": "a5d4c6fc24e387a511cc99191d2cc9427aa69d3d5636eb5ecfa663e798a25c6a"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/lakeofillomen/Klok_Sargin.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-named-fixes/lakeofillomen--Klok_Sargin.lua",
+      "afterSha256": "2cfa82442b230eb94d497a2da34cddcb14cd276d71fc670812ccc1ea046dc633"
+    },
+    {
+      "target": "maintained/lua/converted-perl/nektulos/Travis_Two_Tone.lua",
+      "beforeSha256": "91352c543e20be2b4a281093c08f4368b1141e00d37c90b22cb211fe61620f9b",
+      "proposedFile": "changes/p99-support-named-fixes/nektulos--Travis_Two_Tone.lua",
+      "afterSha256": "d2862d0d1496e4bd5abe1fcdb1c6ab9c992b64da492a8e97b1d152505dc53d68"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/oot/#Kaiaren.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-named-fixes/oot--#Kaiaren.lua",
+      "afterSha256": "1272ca7c101471b98046af45d57c07558bf1da9c4219045a9f895df84cd917bc"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qey2hh1/Mistrana_Two_Notes.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-named-fixes/qey2hh1--Mistrana_Two_Notes.lua",
+      "afterSha256": "2d1acda0618c89f03323e07a9d022dde421982cac5c70321d6adae61ea885768"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qeynos/Eve_Marsinger.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-named-fixes/qeynos--Eve_Marsinger.lua",
+      "afterSha256": "482ebe989733bd54c073d75b41d68b18b7dc1f164eeb06b3303480223780727c"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qrg/Sivina_Lutewhisper.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-named-fixes/qrg--Sivina_Lutewhisper.lua",
+      "afterSha256": "2d1acda0618c89f03323e07a9d022dde421982cac5c70321d6adae61ea885768"
+    },
+    {
+      "target": "maintained/lua/converted-perl/rathemtn/Tabien_the_Goodly.lua",
+      "beforeSha256": "80ea4e59d92cec092d5b3b989cea066758a860d2eeb78f1a910e609861758549",
+      "proposedFile": "changes/p99-support-named-fixes/rathemtn--Tabien_the_Goodly.lua",
+      "afterSha256": "bc74742517d39c01849e545d0acb73455eaa76b0ab9453aad9d7563fc17f484c"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/rivervale/Silna_Songsmith.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-named-fixes/rivervale--Silna_Songsmith.lua",
+      "afterSha256": "553adecf88834db51715036d48493b27e9ce50d2d29e2288fa5f92f6b9da34f3"
+    },
+    {
+      "target": "maintained/lua/converted-perl/everfrost/30103.lua",
+      "beforeSha256": "bda7361339132c0b738a792a9d037e0c3bedf8e208d8ef40aaeb1904043eaeab",
+      "proposedFile": "changes/p99-support-named-fixes/everfrost--Granin_O'Gill.lua",
+      "afterSha256": "1abf37c1f6df61f0adce789833fe087bb0ad32767dc02badd5863d6a7bd89932"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/southkarana/#Azibelle_Spavin.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-support-named-fixes/southkarana--#Azibelle_Spavin.lua",
+      "afterSha256": "bb4364e6a99a780422257132dd46ae4e9005e73567f1b45ecac90543b9851a36"
+    }
+  ]
+}

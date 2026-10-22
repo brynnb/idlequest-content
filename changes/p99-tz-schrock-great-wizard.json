@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-schrock-great-wizard",
+  "summary": "Accept exact documented great and powerful wizard phrase alongside existing phrase. Preserve class checks and documented direct tester-spawn adaptation.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Wizard_Plane_of_Sky_Tests?action=raw",
+      "note": "Cached 2026-07-17T23:41:38.029Z; revision unavailable; SHA256 72c8a53a1d2376ea41b9d2fc726e76d07054941a2b45e1f500310ef728f518a3. Accept exact documented great and powerful wizard phrase alongside existing phrase. Preserve class checks and documented direct tester-spawn adaptation. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 16262,
+        "zone": "airplane",
+        "name": "Wizard_Schrock",
+        "lua_content": "function event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Greetings, \" .. e.other:GetName() .. \". Do you believe that you are a [great Wizard]?\");\n\telseif(e.message:findi(\"great wizard\")) then\n\t\te.self:Say(\"I will not take your word for it! You must prove your greatness to my apprentices. Do you wish to be tested by Neasin or by Abec?\");\n\telseif((e.message:findi(\"Neasin\")) and (e.other:Class() == \"Wizard\")) then\n\t\te.self:Say(\"I will summon him for you then\");\n\t\teq.spawn2(71092,0,0,585,1304.3,-766.9,0.2); -- NPC: Neasin_Leornic\n\t\teq.depop_with_timer();\n\telseif((e.message:findi(\"Abec\")) and (e.other:Class() == \"Wizard\")) then\n\t\te.self:Say(\"I will summon him for you then\");\n\t\teq.spawn2(71079,0,0,585,1304.3,-766.9,0.2); -- NPC: Abec_Ianor\n\t\teq.depop_with_timer();\n\tend\nend\n\n-------------------------------------------------------------------------------------------------\n-- Converted to .lua using MATLAB converter written by Stryd\n-- Find/replace data for .pl --> .lua conversions provided by Speedz, Stryd, Sorvani and Robregen\n-------------------------------------------------------------------------------------------------\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 16262,
+        "zone": "airplane",
+        "name": "Wizard_Schrock",
+        "lua_content": "function event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Greetings, \" .. e.other:GetName() .. \". Do you believe that you are a [great Wizard]?\");\n\telseif(e.message:findi(\"great wizard\") or e.message:findi(\"great and powerful wizard\")) then\n\t\te.self:Say(\"I will not take your word for it! You must prove your greatness to my apprentices. Do you wish to be tested by Neasin or by Abec?\");\n\telseif((e.message:findi(\"Neasin\")) and (e.other:Class() == \"Wizard\")) then\n\t\te.self:Say(\"I will summon him for you then\");\n\t\teq.spawn2(71092,0,0,585,1304.3,-766.9,0.2); -- NPC: Neasin_Leornic\n\t\teq.depop_with_timer();\n\telseif((e.message:findi(\"Abec\")) and (e.other:Class() == \"Wizard\")) then\n\t\te.self:Say(\"I will summon him for you then\");\n\t\teq.spawn2(71079,0,0,585,1304.3,-766.9,0.2); -- NPC: Abec_Ianor\n\t\teq.depop_with_timer();\n\tend\nend\n\n-------------------------------------------------------------------------------------------------\n-- Converted to .lua using MATLAB converter written by Stryd\n-- Find/replace data for .pl --> .lua conversions provided by Speedz, Stryd, Sorvani and Robregen\n-------------------------------------------------------------------------------------------------\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/airplane/Wizard_Schrock.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-tz-schrock-great-wizard/airplane--Wizard_Schrock.lua",
+      "afterSha256": "2ec474813e2eb1598f841b540b957fa8b0d9cc10e75354617115ad2a31f0a346"
+    }
+  ]
+}

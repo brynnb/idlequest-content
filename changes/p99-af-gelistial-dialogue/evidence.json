@@ -1,0 +1,62 @@
+{
+  "evidence": {
+    "title": "Crest of the Unicorn Quest",
+    "url": "https://wiki.project1999.com/Crest_of_the_Unicorn_Quest?action=raw",
+    "fetchedAt": "2026-07-17T23:11:46.267Z",
+    "revision": null,
+    "sha256": "383e98863afbb73e553dd077086acdfb03151814edd12c8208936e1f3c786347",
+    "bytes": 3256,
+    "source": "raw-pages/crest-of-the-unicorn-quest-eac15ab5f3.json",
+    "cachePath": "reference/p99-wiki/raw-pages/crest-of-the-unicorn-quest-eac15ab5f3.wiki"
+  },
+  "upstream": "sources/projecteq/wakening/Lady_Gelistial.pl",
+  "upstream_sha256": "7200a5450869383d76f9af912a596ef00f2165b2a01f26ada4e1c87b5ac77fab",
+  "baseline_effective_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "original_inventory": "changes/p99-audit/inventory.json: wakening/Lady_Gelistial, wiki-linked-missing-lua-review",
+  "scope": "Only dialogue restored; source Perl has no additional handlers. Player-name substitution avoids hardcoding transcript player Pharos. Full chain lifecycle and XP remain unresolved.",
+  "original_triage_record": "changes/p99-conversions-velious/remaining-dispositions.json: wakening/Lady_Gelistial",
+  "overlap": "Earlier flavor proposal restored three Perl branches. This new four-branch exact P99 proposal requires explicit single-actor supersession or consolidation at merge; it is not additive.",
+  "consolidated_into": "changes/p99-conversions-velious-flavor.json",
+  "source_sha256": "4b06ece9b323607bfe6e629d55a7dba09a5bbe456c7c0d97ef1e6057893b8555",
+  "superseded_draft_not_for_merge": {
+    "format": 1,
+    "id": "p99-af-gelistial-dialogue",
+    "summary": "Restore four P99-documented Lady Gelistial introductory dialogue branches and standard item returns; no new state or gates.",
+    "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+    "evidence": [
+      {
+        "url": "https://wiki.project1999.com/Crest_of_the_Unicorn_Quest?action=raw",
+        "note": "Cached reference/p99-wiki/raw-pages/crest-of-the-unicorn-quest-eac15ab5f3.wiki SHA256 383e98863afbb73e553dd077086acdfb03151814edd12c8208936e1f3c786347."
+      }
+    ],
+    "rows": [
+      {
+        "table": "quests",
+        "before": {
+          "id": 15270,
+          "zone": "wakening",
+          "name": "Lady_Gelistial",
+          "lua_content": null,
+          "has_say_event": 1,
+          "enabled": 1
+        },
+        "after": {
+          "id": 15270,
+          "zone": "wakening",
+          "name": "Lady_Gelistial",
+          "lua_content": "-- P99-backed dialogue-only restoration; no full Crest chain parity claim.\n-- Source: wakening/Lady_Gelistial.pl; P99 also documents the Lithiniath branch.\nfunction event_say(e)\n  if e.message:findi(\"hail\") then\n    e.self:Emote(\"nods towards \" .. e.other:GetCleanName() .. \" and a soft gentle voice whispers in your mind as if carried by the breeze passing through the gentle grove. You tread upon the sacred ground of Tunare. I am the Lady Gelistial, baroness of the Tunarean Unicorns. Are you a friend of the Tunarean Court?\")\n  elseif e.message:findi(\"friend\") then\n    e.self:Say(\"Be wary of the black unicorns then my friend. All unicorns once inspired dreams and fascination in mortals but the lineage of Lithiniath has been twisted and now inspire delusions and madness. If my duties here were not so pressing I would seek the wisdom of Prince Thirneg in finding a cure for the cursed bloodline of Lithiniath.\")\n  elseif e.message:findi(\"lithiniath\") then\n    e.self:Say(\"Lithiniath was once a proud and noble Unicorn until he stumbled upon the realm of Fizzlethorpe Bristlebane. The lord of mischief twisted the magical nature of Lithiniath. The once noble unicorns fur grew blacker as delusions clouded his mind and madness follows where he treads.\")\n  elseif e.message:findi(\"prince thirneg\") then\n    e.self:Say(\"Prince Thirneg is the ruler of the Tunarean Court. He resides in the Plane of Growth where he is constant contact with the all mother herself.\")\n  end\nend\n\nfunction event_trade(e)\n  local item_lib = require(\"items\")\n  item_lib.return_items(e.self, e.other, e.trade)\nend\n",
+          "has_say_event": 1,
+          "enabled": 1
+        }
+      }
+    ],
+    "sources": [
+      {
+        "target": "maintained/lua/converted-perl/wakening/Lady_Gelistial.lua",
+        "beforeSha256": null,
+        "proposedFile": "changes/p99-af-gelistial-dialogue/wakening-Lady_Gelistial.lua",
+        "afterSha256": "ab9221af87ede05d6ab7a79e706c2e68c9103de08577003d3e11a02c5e1f11c3"
+      }
+    ]
+  }
+}

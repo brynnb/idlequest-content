@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-nz-emissary-currency",
+  "summary": "Correct Emissary Glib necklace cash to documented 7 silver for slayer necklace and 1 silver for captain necklace. Apply documented +1/+2 standing magnitudes while retaining local target374.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/The_Emissary?action=raw",
+      "note": "Cached 2026-07-17T23:36:16.219Z; revision unavailable; SHA256 61dc9cd5ed364b6930e8f2e773cfc023504a9150b5b77b5bd45dda6002075aac. Retain existing experience and reward selection. The page names Oggok Citizens +1/+2 but the script uses374 Oggok Resident+20; faction143 Oggok Citizen and374 differ in this snapshot, so identity/magnitudes remain unresolved rather than guessed. Marda level gate, spawn duration/path and full reward pool are separate open findings; this is not full quest parity."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 16188,
+        "zone": "oggok",
+        "name": "Emissary_Glib",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: oggok/Emissary_Glib.pl\n-- items: 13369, 13370, 17928, 13371\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Gloop.. Are you the one? Who sent you?\")\n\telseif e.message:findi(\"the greenblood shaman sent me\") then\n\t\te.self:Say(\"Gloop.. Good. I am the secret emissary of the frogloks of Guk. I have come to help your community, provided, that is, that you help mine. Gloop.. I want you to track down and kill the troll hunters called 'slayers.' They are capturing our foragers in the swamps. Return their slayer necklaces to me and I shall pay you, but most important, find the slayer captain. Bring me his captain's necklace and I shall give you a secret. I must leave soon. If you need me, just ask Marda where I am.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 13369}) then\n\t\te.self:Say(\"Good work. That is one less troll slayer. My people shall learn of your good deed. Please search for the slayer captain. He must be stopped.\")\n\t\te.other:Faction(374, 20, 0)\n\t\te.other:AddEXP(200)\n\t\te.other:GiveCash(0, 0, 7, 5)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 13370}) then\n\t\te.self:Say(\"'Oooh!! .. You have dispatched the slayer captain. It will take them time to reorganize the slayers. During this time the froglok foragers can gather more provisions for Guk. Please take this as a token of my people's appreciation. Your standing with my brethren has grown. As for Marda's information.. within Grobb lies my aide, Groak. He was captured. Tell him Glib sent you.\")\n\t\te.other:Faction(374, 20, 0)\n\t\te.other:AddEXP(200)\n\t\te.other:GiveCash(0, 0, 1, 0)\n\t\te.other:SummonItem(eq.ChooseRandom(17928, 13371))\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 16188,
+        "zone": "oggok",
+        "name": "Emissary_Glib",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: oggok/Emissary_Glib.pl\n-- items: 13369, 13370, 17928, 13371\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Gloop.. Are you the one? Who sent you?\")\n\telseif e.message:findi(\"the greenblood shaman sent me\") then\n\t\te.self:Say(\"Gloop.. Good. I am the secret emissary of the frogloks of Guk. I have come to help your community, provided, that is, that you help mine. Gloop.. I want you to track down and kill the troll hunters called 'slayers.' They are capturing our foragers in the swamps. Return their slayer necklaces to me and I shall pay you, but most important, find the slayer captain. Bring me his captain's necklace and I shall give you a secret. I must leave soon. If you need me, just ask Marda where I am.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 13369}) then\n\t\te.self:Say(\"Good work. That is one less troll slayer. My people shall learn of your good deed. Please search for the slayer captain. He must be stopped.\")\n\t\te.other:Faction(374, 1, 0)\n\t\te.other:AddEXP(200)\n\t\te.other:GiveCash(0, 7, 0, 0)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 13370}) then\n\t\te.self:Say(\"'Oooh!! .. You have dispatched the slayer captain. It will take them time to reorganize the slayers. During this time the froglok foragers can gather more provisions for Guk. Please take this as a token of my people's appreciation. Your standing with my brethren has grown. As for Marda's information.. within Grobb lies my aide, Groak. He was captured. Tell him Glib sent you.\")\n\t\te.other:Faction(374, 2, 0)\n\t\te.other:AddEXP(200)\n\t\te.other:GiveCash(0, 1, 0, 0)\n\t\te.other:SummonItem(eq.ChooseRandom(17928, 13371))\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/oggok/Emissary_Glib.lua",
+      "beforeSha256": "d6fded0becd376c2bd45d9f2fc257fbf4a4ca7f5b0f54ed6af2938536f355cc9",
+      "proposedFile": "changes/p99-nz-emissary-currency/oggok--Emissary_Glib.lua",
+      "afterSha256": "33a8d9ca9d17c04d368a8327ed58408cab0782feb38d8cbda51d0b03ab0124d9"
+    }
+  ]
+}

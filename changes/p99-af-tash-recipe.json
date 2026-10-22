@@ -1,0 +1,58 @@
+{
+  "format": 1,
+  "id": "p99-af-tash-recipe",
+  "summary": "Enable the exact P99-documented existing combine; preserve all other recipe fields and component/success/failure entries.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Coin_of_Tash_(Tashania)?action=raw",
+      "note": "Cached reference/p99-wiki/raw-pages/coin-of-tash-tashania-2e72ae9283.wiki SHA256 f7a7e465b34d037aed3fd26dae68ae2a2fb3e96d4b075fa8b1ac61e0ef4182bf."
+    }
+  ],
+  "rows": [
+    {
+      "table": "tradeskill_recipe",
+      "before": {
+        "id": 9717,
+        "name": "Coin Of Tash",
+        "tradeskill": 75,
+        "skillneeded": 0,
+        "trivial": 0,
+        "nofail": 1,
+        "replace_container": 1,
+        "notes": "Container used to combine 10 Old Silver Coins to make Coin of Tash for the Tashania Quest",
+        "must_learn": 0,
+        "learned_by_item_id": 0,
+        "quest": 1,
+        "enabled": 0,
+        "show_in_advanced": 1,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null,
+        "category": "Quest"
+      },
+      "after": {
+        "id": 9717,
+        "name": "Coin Of Tash",
+        "tradeskill": 75,
+        "skillneeded": 0,
+        "trivial": 0,
+        "nofail": 1,
+        "replace_container": 1,
+        "notes": "Container used to combine 10 Old Silver Coins to make Coin of Tash for the Tashania Quest",
+        "must_learn": 0,
+        "learned_by_item_id": 0,
+        "quest": 1,
+        "enabled": 1,
+        "show_in_advanced": 1,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null,
+        "category": "Quest"
+      }
+    }
+  ],
+  "sources": []
+}

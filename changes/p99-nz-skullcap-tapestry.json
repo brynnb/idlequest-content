@@ -1,0 +1,58 @@
+{
+  "format": 1,
+  "id": "p99-nz-skullcap-tapestry",
+  "summary": "Use the Skullcap page\u2019s explicitly quoted tailoring trivial 23 for Mended Tapestry, preserving nofail and all other recipe fields.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Necromancer_Skullcap_Quests?action=raw",
+      "note": "Cached SHA256 ebe60bdefd86b8e6cfe472e1981fe8d110b1a0a81e6148b5ffedcf5e7ea13610. The page explicitly attributes trivial 23 to EQTraders; secondary origin retained, not direct proof of P99 failure behavior."
+    }
+  ],
+  "rows": [
+    {
+      "table": "tradeskill_recipe",
+      "before": {
+        "id": 2916,
+        "name": "Mended Tapestry",
+        "tradeskill": 61,
+        "skillneeded": 0,
+        "trivial": 0,
+        "nofail": 1,
+        "replace_container": 0,
+        "notes": "Created by Kilelen",
+        "must_learn": 0,
+        "learned_by_item_id": 0,
+        "quest": 0,
+        "enabled": 1,
+        "show_in_advanced": 1,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null,
+        "category": "Quest Items"
+      },
+      "after": {
+        "id": 2916,
+        "name": "Mended Tapestry",
+        "tradeskill": 61,
+        "skillneeded": 0,
+        "trivial": 23,
+        "nofail": 1,
+        "replace_container": 0,
+        "notes": "Created by Kilelen",
+        "must_learn": 0,
+        "learned_by_item_id": 0,
+        "quest": 0,
+        "enabled": 1,
+        "show_in_advanced": 1,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null,
+        "category": "Quest Items"
+      }
+    }
+  ],
+  "sources": []
+}

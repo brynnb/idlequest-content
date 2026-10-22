@@ -1,0 +1,58 @@
+{
+  "format": 1,
+  "id": "p99-tz-recipe-10001",
+  "summary": "Enable exact documented ten-rod combine; retain known-conflicting nofail fallback explicitly, no invented research chance.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Tarton's_Wheel?action=raw",
+      "note": "Cached SHA256 a2872f71b8d269432d3e4319c6588ce7ef365daebdd1a7add56393705750b54e. Ten rods14350-14359 in GlowingChest17510 produce Staff14360 and Star14361, consuming chest. P99 explicitly warns research-dependent failure; current nofail1 is known conflict retained because no supported research skill/trivial/failure probability is supplied. Enabling only, NOT complete crafting parity; actual runtime combine untested."
+    }
+  ],
+  "rows": [
+    {
+      "table": "tradeskill_recipe",
+      "before": {
+        "id": 10001,
+        "name": "Staff Of The Wheel",
+        "tradeskill": 75,
+        "skillneeded": 0,
+        "trivial": 0,
+        "nofail": 1,
+        "replace_container": 1,
+        "notes": null,
+        "must_learn": 0,
+        "learned_by_item_id": 0,
+        "quest": 1,
+        "enabled": 0,
+        "show_in_advanced": 1,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null,
+        "category": "Quest"
+      },
+      "after": {
+        "id": 10001,
+        "name": "Staff Of The Wheel",
+        "tradeskill": 75,
+        "skillneeded": 0,
+        "trivial": 0,
+        "nofail": 1,
+        "replace_container": 1,
+        "notes": null,
+        "must_learn": 0,
+        "learned_by_item_id": 0,
+        "quest": 1,
+        "enabled": 1,
+        "show_in_advanced": 1,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null,
+        "category": "Quest"
+      }
+    }
+  ],
+  "sources": []
+}

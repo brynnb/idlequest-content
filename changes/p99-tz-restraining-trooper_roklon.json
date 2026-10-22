@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-restraining-trooper_roklon",
+  "summary": "Support documented sign this restraining order phrase alongside existing sign the restraining order, only lore/requirements response. No new reward or itemgrant route; all sequential trade conditions unchanged.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/The_Restraining_Order?action=raw",
+      "note": "Cached 2026-07-17T23:37:55.399Z; revision unavailable; SHA256 e4a24f856e44c7cec752b6501686b06243a9be01bf578245f610362916c467e3. Support documented sign this restraining order phrase alongside existing sign the restraining order, only lore/requirements response. No new reward or itemgrant route; all sequential trade conditions unchanged. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 12115,
+        "zone": "warslikswood",
+        "name": "Trooper_Roklon",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: warslikswood/Trooper_Roklon.pl\n-- items: 18247, 12672, 18248\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Hail! Beware the giants of the woods. They have a dwelling somewhere out there. Should you stumble upon it, run! Leave the fighting to us.\")\n\telseif e.message:findi(\"sign the restraining order\") then\n\t\te.self:Say(\"I've been ratted out! Very well. I shall sign the order, but first I shall force you to fetch me a set of goblin scout beads. I hear they make fine counters. Bring me the beads and that despicable order and I shall do as instructed.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 18247, item2 = 12672}) then\n\t\te.other:SummonItem(18248)\n\t\te.other:AddEXP(500)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 18247}) then\n\t\te.self:Say(\"No, NO! I want the goblin scout beads and the legion order.\")\n\t\te.other:SummonItem(18247)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 12672}) then\n\t\te.self:Say(\"No, NO! I want the goblin scout beads and the legion order.\")\n\t\te.other:SummonItem(12672)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 12115,
+        "zone": "warslikswood",
+        "name": "Trooper_Roklon",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: warslikswood/Trooper_Roklon.pl\n-- items: 18247, 12672, 18248\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Hail! Beware the giants of the woods. They have a dwelling somewhere out there. Should you stumble upon it, run! Leave the fighting to us.\")\n\telseif e.message:findi(\"sign the restraining order\") or e.message:findi(\"sign this restraining order\") then\n\t\te.self:Say(\"I've been ratted out! Very well. I shall sign the order, but first I shall force you to fetch me a set of goblin scout beads. I hear they make fine counters. Bring me the beads and that despicable order and I shall do as instructed.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 18247, item2 = 12672}) then\n\t\te.other:SummonItem(18248)\n\t\te.other:AddEXP(500)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 18247}) then\n\t\te.self:Say(\"No, NO! I want the goblin scout beads and the legion order.\")\n\t\te.other:SummonItem(18247)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 12672}) then\n\t\te.self:Say(\"No, NO! I want the goblin scout beads and the legion order.\")\n\t\te.other:SummonItem(12672)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/warslikswood/Trooper_Roklon.lua",
+      "beforeSha256": "35777fc81aae337b9722a053e0591b3851a098c5b0df0d87dbce9c4a7812db28",
+      "proposedFile": "changes/p99-tz-restraining-trooper_roklon/warslikswood--Trooper_Roklon.lua",
+      "afterSha256": "f22c0b6668a63583acf7625c0d30eba979de3f8a3c514880a55b6e74c8256db3"
+    }
+  ]
+}

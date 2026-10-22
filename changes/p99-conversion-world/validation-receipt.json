@@ -1,0 +1,16 @@
+{
+  "kind": "validation-receipt-not-live-runtime",
+  "proposal": "changes/p99-conversion-world.json",
+  "proposalSha256": "ff425e795bb172f00dc761decc4150b0ec83b27a02788dc98ca6250348b53dcd",
+  "cliCommand": "node tools/cli.mjs check-proposal . --proposal changes/p99-conversion-world.json",
+  "cliResult": "Validated 24 rows and 24 sources",
+  "cliOutputSha256": "590797902f2fc7dd60298bc26b574a77feee4cd9440e7c08042de3d665e725d1",
+  "staticTestsPassed": 5,
+  "staticTestSha256": "3a7e3c263ca8ec6e4badd122bf2aeed80cee6efaa0b7c9fd8350303abbbdc6f5",
+  "staticOutputSha256": "8ed9715ed24740d805301df1e74f0a81609af999115a2a6f494d0711a3a98ebd",
+  "behaviorTestsPassed": 24,
+  "behaviorManifestSha256": "b31d7568fd513a17636ec0a0c16ed7d07fd3dd6f22bb6b9c540d8a61d2afae29",
+  "behaviorOutputSha256": "05ad6fe4eec56cf42948d904a392ba42aa2eee4adbc419c8513aac37ee1ab290",
+  "reviewSha256": "e9e6101dff71940a456ba7f5819c1200fba0cc766941bac70054e0c27110acb6",
+  "liveServerVerified": false
+}

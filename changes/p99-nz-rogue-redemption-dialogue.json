@@ -1,0 +1,84 @@
+{
+  "format": 1,
+  "id": "p99-nz-rogue-redemption-dialogue",
+  "summary": "Restore Bubar gem-case clue and enable exact documented Case of Spirits combine.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Rogue_Redemption?action=raw",
+      "note": "Cached 2026-07-17T23:31:02.613Z; revision unavailable; SHA256 da5d495b42a470e540b8d069efd35efd06d3089fc60ef35537e395ac693900df. Restore Bubar missing gem-case clue verbatim. All hand-ins and rewards unchanged. Toxdil comparison is normalized by runtime and is not a proven defect; no Toxdil edits retained. Recipe9710 exactly matches all ten documented drinks once each in Bottle Crate17984 ->Case of Spirits12365. Only enabled0->1; supporting recipes9688 and7766 already enabled and matched. INTEGRATION BLOCKER: Bottle Crate17984 is absent from pinned game container registry. Enabled-only data proposal does not establish functional live combine; downstream registry support required."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 14943,
+        "zone": "ecommons",
+        "name": "Bubar",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: ecommons/Bubar.pl\n-- items: 12351, 12352, 12350, 12349\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Greetings, friend! I am Bubar, merchant from the burning sands. You must be thirsty or, perhaps, hungry. Please look over my goods.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 12351, item2 = 12352, item3 = 12350}) then\n\t\te.self:Say(\"Mmmph!!.. *Pop!!* Ouch, my thumb!! Here you are. You had a gem inside.\")\n\t\te.other:Ding()\n\t\te.other:SummonItem(12349)\n\t\te.other:AddEXP(15000)\n\telse\n\t\te.self:Say(\"I need at least two of the case keys and the gem case.\")\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 14943,
+        "zone": "ecommons",
+        "name": "Bubar",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: ecommons/Bubar.pl\n-- items: 12351, 12352, 12350, 12349\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Greetings, friend! I am Bubar, merchant from the burning sands. You must be thirsty or, perhaps, hungry. Please look over my goods.\")\n\telseif e.message:findi(\"gem case\") then\n\t\te.self:Say(\"Talking of containers? I do not make containers any longer. Provisions are much more profitable. Do you have one of my containers? Most likely you have locked yourself out then. My specialty was the three-lock case. They always lose one of the keys. Hand me the case and at least two of the keys and I can open it for you.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 12351, item2 = 12352, item3 = 12350}) then\n\t\te.self:Say(\"Mmmph!!.. *Pop!!* Ouch, my thumb!! Here you are. You had a gem inside.\")\n\t\te.other:Ding()\n\t\te.other:SummonItem(12349)\n\t\te.other:AddEXP(15000)\n\telse\n\t\te.self:Say(\"I need at least two of the case keys and the gem case.\")\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "tradeskill_recipe",
+      "before": {
+        "id": 9710,
+        "name": "Case Of Spirits",
+        "tradeskill": 75,
+        "skillneeded": 0,
+        "trivial": 0,
+        "nofail": 1,
+        "replace_container": 1,
+        "notes": "part of rogue redemption",
+        "must_learn": 0,
+        "learned_by_item_id": 0,
+        "quest": 0,
+        "enabled": 0,
+        "show_in_advanced": 1,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null,
+        "category": null
+      },
+      "after": {
+        "id": 9710,
+        "name": "Case Of Spirits",
+        "tradeskill": 75,
+        "skillneeded": 0,
+        "trivial": 0,
+        "nofail": 1,
+        "replace_container": 1,
+        "notes": "part of rogue redemption",
+        "must_learn": 0,
+        "learned_by_item_id": 0,
+        "quest": 0,
+        "enabled": 1,
+        "show_in_advanced": 1,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null,
+        "category": null
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/ecommons/Bubar.lua",
+      "beforeSha256": "8e80e7fd199d57ddafb72c220339ec416aef85085f3230a72d67ef8d4f980d55",
+      "proposedFile": "changes/p99-nz-rogue-redemption-dialogue/ecommons--Bubar.lua",
+      "afterSha256": "87a11fe7da390bf9af81300298af2eab3cb8218b51a88ec4243abb0cebfcb679"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-nz-fisherman-reward",
+  "summary": "Restore documented four-gold nine-copper reward and completion speech for Aglthin\u2019s Fishing Pole.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/The_Fisherman?action=raw",
+      "note": "Cached 2026-07-17T23:36:32.013Z; revision unavailable; SHA256 ff93db63033232fe0e138cb7c9539c03f065c97f76cfa84622f8979bfe2a84d8. Item9969 is Aglthin\u2019s Fishing Pole and13697 is Staff of the Abattoir Initiate in exported items. Unrelated Karran head9967 reward remains unchanged. P99 also promises experience, absent in this branch; exact amount unsupported, left explicitly unresolved instead of inventing it."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 14399,
+        "zone": "paineel",
+        "name": "Antus_Shelbra",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: paineel/Antus_Shelbra.pl\n-- items: 9968, 9969, 13697, 9967\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Greetings, \" .. e.other:GetName() .. \". You have come to me searching for tasks and tasks I have. Would you judge yourself an [experienced heretic] or one who has [much to learn]?\")\n\telseif e.message:findi(\"much to learn\") then\n\t\te.self:Say(\"Very well, \" .. e.other:GetName() .. \". I do have a task for you. There is an old and frail Erudite male who now lives in Toxxulia named Aglthin Dasmore. He has left the ways of Cazic-Thule and no longer practices our craft. He has been stripped of his power and wealth, so he spends his time fishing by the river. Our great Lord of Fear has decreed that his life is forfeit. Slay him, and bring me proof of the deed.\")\n\telseif e.message:findi(\"experienced heretic\") then\n\t\te.self:Say(\"Ah. Excellent. I have just the task for you, \" .. e.other:GetName() .. \". In Kerra Ridge, there is a particular cat named Kirran Mirrah that we have been using to gather information about, well, certain aspects of cat society. He is no longer providing information for us and we have something for him that may encourage him to assist again. Ha! Hand him this sealed bag for us. It may just change his point of view. Hahaha!\")\n\t\te.other:SummonItem(9968)\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 9969}) then\n\t\te.self:Say(\"Yes, this will do.\")\n\t\te.other:SummonItem(13697)\n\t\te.other:Faction(265, 10, 0)\n\t\te.other:Faction(254, -30, 0)\n\t\te.other:Faction(242, -30, 0)\n\t\te.other:Faction(231, -30, 0)\n\t\te.other:Faction(233, -30, 0)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 9967}) then\n\t\te.self:Say(\"Ah, it seems as if he was not a very cooperative kitty. So much for family. Oh well, take this token change as a show of my appreciation. Cazic-Thule shines on you in all his glorious fear this day, young one.\")\n\t\te.other:Faction(265, 10, 0)\n\t\te.other:Faction(254, -30, 0)\n\t\te.other:Faction(242, -30, 0)\n\t\te.other:Faction(231, -30, 0)\n\t\te.other:Faction(233, -30, 0)\n\t\te.other:GiveCash(2, 8, 0, 2)\n\t\te.other:AddEXP(1000)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 14399,
+        "zone": "paineel",
+        "name": "Antus_Shelbra",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: paineel/Antus_Shelbra.pl\n-- items: 9968, 9969, 13697, 9967\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Greetings, \" .. e.other:GetName() .. \". You have come to me searching for tasks and tasks I have. Would you judge yourself an [experienced heretic] or one who has [much to learn]?\")\n\telseif e.message:findi(\"much to learn\") then\n\t\te.self:Say(\"Very well, \" .. e.other:GetName() .. \". I do have a task for you. There is an old and frail Erudite male who now lives in Toxxulia named Aglthin Dasmore. He has left the ways of Cazic-Thule and no longer practices our craft. He has been stripped of his power and wealth, so he spends his time fishing by the river. Our great Lord of Fear has decreed that his life is forfeit. Slay him, and bring me proof of the deed.\")\n\telseif e.message:findi(\"experienced heretic\") then\n\t\te.self:Say(\"Ah. Excellent. I have just the task for you, \" .. e.other:GetName() .. \". In Kerra Ridge, there is a particular cat named Kirran Mirrah that we have been using to gather information about, well, certain aspects of cat society. He is no longer providing information for us and we have something for him that may encourage him to assist again. Ha! Hand him this sealed bag for us. It may just change his point of view. Hahaha!\")\n\t\te.other:SummonItem(9968)\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 9969}) then\n\t\te.self:Say(\"Excellent, \" .. e.other:GetName() .. \". You have proven yourself to be a true follower of Cazic-Thule. Continue on the path you have chosen, and you will surely become one of the mightiest in the land.\")\n\t\te.other:GiveCash(9, 0, 4, 0) -- P99: 4 gold, 9 copper\n\t\te.other:SummonItem(13697)\n\t\te.other:Faction(265, 10, 0)\n\t\te.other:Faction(254, -30, 0)\n\t\te.other:Faction(242, -30, 0)\n\t\te.other:Faction(231, -30, 0)\n\t\te.other:Faction(233, -30, 0)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 9967}) then\n\t\te.self:Say(\"Ah, it seems as if he was not a very cooperative kitty. So much for family. Oh well, take this token change as a show of my appreciation. Cazic-Thule shines on you in all his glorious fear this day, young one.\")\n\t\te.other:Faction(265, 10, 0)\n\t\te.other:Faction(254, -30, 0)\n\t\te.other:Faction(242, -30, 0)\n\t\te.other:Faction(231, -30, 0)\n\t\te.other:Faction(233, -30, 0)\n\t\te.other:GiveCash(2, 8, 0, 2)\n\t\te.other:AddEXP(1000)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/paineel/Antus_Shelbra.lua",
+      "beforeSha256": "7e422f268e276dac194d00ec83b3143e4b9caf0878acfe07ca28e5dc167e8f18",
+      "proposedFile": "changes/p99-nz-fisherman-reward/paineel--Antus_Shelbra.lua",
+      "afterSha256": "683feb8865e62bca69e3654add437c6ed333655c8ab3ab78f5da22f0e2ec08e3"
+    }
+  ]
+}

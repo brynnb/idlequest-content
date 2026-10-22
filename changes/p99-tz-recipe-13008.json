@@ -1,0 +1,58 @@
+{
+  "format": 1,
+  "id": "p99-tz-recipe-13008",
+  "summary": "Enable exact documented ten-payment Tax Collection Box combine; preserve every other recipe field.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Taxes?action=raw",
+      "note": "Full cached page SHA256 6fc59af937f3b2dfa4313beac8b349112c500bdbff0c89109de222dc34860c9b requires one each of ten payments13170-13179 in Tax Collection Box17012, producing Full Box13181. No odds, skills, container metadata or other fields changed; static recipe correction is not live crafting proof."
+    }
+  ],
+  "rows": [
+    {
+      "table": "tradeskill_recipe",
+      "before": {
+        "id": 13008,
+        "name": "Full Tax Collection Box",
+        "tradeskill": 75,
+        "skillneeded": 0,
+        "trivial": 0,
+        "nofail": 1,
+        "replace_container": 1,
+        "notes": "",
+        "must_learn": 0,
+        "learned_by_item_id": 0,
+        "quest": 1,
+        "enabled": 0,
+        "show_in_advanced": 1,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null,
+        "category": "Quest"
+      },
+      "after": {
+        "id": 13008,
+        "name": "Full Tax Collection Box",
+        "tradeskill": 75,
+        "skillneeded": 0,
+        "trivial": 0,
+        "nofail": 1,
+        "replace_container": 1,
+        "notes": "",
+        "must_learn": 0,
+        "learned_by_item_id": 0,
+        "quest": 1,
+        "enabled": 1,
+        "show_in_advanced": 1,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null,
+        "category": "Quest"
+      }
+    }
+  ],
+  "sources": []
+}

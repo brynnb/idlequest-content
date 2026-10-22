@@ -1,0 +1,63 @@
+{
+  "titles": [
+    "Regal Band of Bathezid Quest"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "partial",
+  "match_status": "partial",
+  "local_quest_keys": [
+    "warslikswood/a_shady_goblin",
+    "droga/an_angry_goblin"
+  ],
+  "proposal": "changes/p99-nz-regal-respawn.json",
+  "notes": [
+    "Restore the documented shady-goblin 24-hour timer and the angry-goblin three-day-to-three-day-plus-7h12m respawn window.",
+    "The item hand-in and despawn Lua are unchanged. Respawn clock units were independently verified by the parent against the linked runtime source.",
+    "The stronger cached angry-goblin NPC page resolves the generic quest-page percentage ambiguity: a positive seven-hour-twelve-minute window after three days. Current runtime offset is symmetric, so the proposed center and half-width reproduce both exact bounds."
+  ],
+  "verification": {
+    "syntax": "Not applicable: data-only proposal.",
+    "structural": "Complete row preimage and explicit expected seconds preserved.",
+    "runtime": "Natural 24-hour death/depop cycle not observed; no fresh live test."
+  },
+  "unresolved": [
+    "Natural spawn cycles and runtime population publication remain untested.",
+    "The angry-goblin lifecycle starts its timer at despawn after the walk, not at the documented initial hand-in. This bounded data correction does not claim to fix that residual timing offset."
+  ],
+  "respawnExpectations": [
+    {
+      "spawn2Id": 20769,
+      "respawntime": 86400,
+      "variance": 0,
+      "minimumSeconds": 86400,
+      "maximumSeconds": 86400
+    },
+    {
+      "spawn2Id": 3265320,
+      "respawntime": 272160,
+      "variance": 12960,
+      "minimumSeconds": 259200,
+      "maximumSeconds": 285120
+    }
+  ],
+  "npcEvidence": {
+    "title": "An angry goblin",
+    "url": "https://wiki.project1999.com/An_angry_goblin?action=raw",
+    "fetchedAt": "2026-08-12T17:36:45.736Z",
+    "revision": null,
+    "sha256": "3db46981031e3481dce3785657cf53ce845f60b456b234e58f736f2b40be4f3f",
+    "bytes": 1239,
+    "source": "npc-pages/an-angry-goblin-e5ff0bf1ce.json",
+    "cachePath": "reference/p99-wiki/npc-pages/an-angry-goblin-e5ff0bf1ce.wiki"
+  },
+  "shadyNpcEvidence": {
+    "title": "A shady goblin",
+    "url": "https://wiki.project1999.com/A_shady_goblin?action=raw",
+    "fetchedAt": "2026-08-12T17:17:13.944Z",
+    "revision": null,
+    "sha256": "ed04cca41f607f9f5a19f2339d8df9f861dc53750cd2342afb95fbf1417007cb",
+    "bytes": 1685,
+    "source": "npc-pages/a-shady-goblin-aeb5f42ad3.json",
+    "cachePath": "reference/p99-wiki/npc-pages/a-shady-goblin-aeb5f42ad3.wiki"
+  }
+}

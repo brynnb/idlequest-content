@@ -1,0 +1,45 @@
+{
+  "format": 1,
+  "id": "p99-am-miner-directions",
+  "summary": "Accept documented possessive Mudtoe phrase as well as existing plural in Glorin Binfurr optional Mining Pick clue; no reward change.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Miners_Pick?action=raw",
+      "note": "Cached 2026-07-17T23:25:18.082Z; revision unavailable; SHA256 b2b8250718871c53a602a41c4a4848427642a358c7291f97bf97b5baff995d29. Miners Pick"
+    },
+    {
+      "url": "https://wiki.project1999.com/Miners_Pick?action=raw",
+      "note": "Promote immutable upstream source sources/projecteq/butcher/Glorin_Binfurr.lua SHA256 ba3de8d0bad4a53cdd9104a581cc8d07da368230bfccdc1be2d7f280eb21bee7 to maintained modified-upstream override; baseline remains untouched."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 16363,
+        "zone": "butcher",
+        "name": "Glorin_Binfurr",
+        "lua_content": "function event_say(e)\n\tif e.message:findi(\"Hail\") then\n\t\te.self:Say(\"Pleasure to meet you.  Keep your eye out for the ship.  You don't want to miss it.\");\n\telseif e.message:findi(\"mudtoes\") then\n\t\te.self:Say(\"Mudtoes!! I have heard tales of that foul clan of ogres. A few passengers aboard the ships have claimed to have seen one of them, off and on, amongst the pirates in the Ocean of Tears!!\");\n\telseif e.message:findi(\"love you\") then\n\t\te.self:Say(\"Glorin and \" .. e.other:GetCleanName() .. \".  We would make a fine couple.\");\n\tend\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 16363,
+        "zone": "butcher",
+        "name": "Glorin_Binfurr",
+        "lua_content": "function event_say(e)\n\tif e.message:findi(\"Hail\") then\n\t\te.self:Say(\"Pleasure to meet you.  Keep your eye out for the ship.  You don't want to miss it.\");\n\telseif e.message:findi(\"mudtoe\") then\n\t\te.self:Say(\"Mudtoes!! I have heard tales of that foul clan of ogres. A few passengers aboard the ships have claimed to have seen one of them, off and on, amongst the pirates in the Ocean of Tears!!\");\n\telseif e.message:findi(\"love you\") then\n\t\te.self:Say(\"Glorin and \" .. e.other:GetCleanName() .. \".  We would make a fine couple.\");\n\tend\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/butcher/Glorin_Binfurr.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-am-miner-directions/butcher-Glorin_Binfurr.lua",
+      "afterSha256": "da5faa646909c4b461ecf42d9373d23651cd2a4acbd4ec77c1aa698f616fc5e0"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "retrievedAt": "2026-10-22",
+  "retrievalMethod": "Public web tool retrieved official article text; this artifact preserves concise finding and URL, not an asserted raw response content hash.",
+  "sources": [
+    {"id":"official-task-system","url":"https://www.everquest.com/news/imported-eq-enus-50720","title":"Tip of the Week – The Task System - 12/11/07","publicationDate":"2007-12-11","quote":"The Task System was introduced with the Omens of War expansion.","application":"Positive later-era evidence for complete imported IsTaskActive/UpdateTaskActivity impression-book callbacks, not every mention of task."},
+    {"id":"official-epic-two","url":"https://www.everquest.com/news/imported-eq-enus-62693","title":"Character Art Team Update","publicationDate":"2004-06-30","finding":"Official developer art update places new Epic2.0 weapons in the forthcoming Omens of War expansion.","application":"Only explicit later epic bodies or exact callback state/item/target chains, combined with existing repository exclusions. Generic variable names are not sufficient."},
+    {"id":"official-berserker-announcement","url":"https://sony.mediaroom.com/2003-12-17-Sony-Online-Entertainment-Unlocks-the-Gates-of-Discord-for-EverQuest","title":"Sony Online Entertainment Unlocks the Gates of Discord for EverQuest","publicationDate":"2003-12-17","finding":"Official Sony announcement describes the new Berserker class in Gates of Discord, planned for February2004.","application":"Berserker-exclusive source classification. Does not exclude original P99 classes' Epic1.0."},
+    {"id":"repository-era-scope","files":["CONTRIBUTING.md","reference/docs/p99-quest-audit-workflow.md","reference/server/internal/quest/content_exclusions.json"],"finding":"Existing Classic/Kunark/Velious project scope and explicit retained later-era quest exclusions; no inferred NPC ban from npc_types.exclude."}
+  ]
+}

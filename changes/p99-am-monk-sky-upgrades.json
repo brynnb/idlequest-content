@@ -1,0 +1,74 @@
+{
+  "format": 1,
+  "id": "p99-am-monk-sky-upgrades",
+  "summary": "Restore explicitly documented old-to-new Monk Sky reward exchanges and upgrade dialogue; preserve existing six tests and direct tester-spawn adaptation.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Monk_Plane_of_Sky_Tests?action=raw",
+      "note": "Cached 2026-07-17T23:25:42.999Z; revision unavailable; SHA256 890706c6dafc63ef49ce650c28afc20f19ca7958e64a912bf074bf2bc765b7a4. Monk Plane of Sky Tests"
+    },
+    {
+      "url": "https://wiki.project1999.com/Plane_of_Sky_Quests_(Old)?action=raw",
+      "note": "Cached 2026-07-18T00:37:28.502Z; revision unavailable; SHA256 cdcadb1c440984f769321fa8ede419e777c0386d1a11fef5047aac29135e5ca1. Plane of Sky Quests (Old)"
+    },
+    {
+      "url": "https://wiki.project1999.com/Plane_of_Sky_Quests_(Old)?action=raw",
+      "note": "Full introductory rule explicitly permits upgrading old rewards at the same NPC; table pairs Mystical Back Straps1282 with Back Straps of Mastery27714, and Wu Tranquil Fist11690 with Wu Fist of Mastery27715. Exact IDs independently checked against data items, not inferred by ordinal naming. New exchange implements only documented item effects: no numerical XP/cash/faction fallback exists for these legacy exchanges, and no despawn effect is invented. Existing test EXP100000 and five-minute tester lifetime remain retained unverified values."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 16295,
+        "zone": "airplane",
+        "name": "Ton_Po",
+        "lua_content": "-- Source: airplane/Ton_Po.lua\n-- Monk Plane of Sky tests: current P99 page names Back Straps of Mastery for Test of Strength.\n-- items: 20793, 20794, 20932, 27714, 20796, 20939, 20795, 1281, 20946, 20798, 20797, 1280\n\nfunction event_spawn(e)\n\teq.set_timer(\"depop\",300000);\nend\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"So, I have been called upon to test you, and test you I shall. I will give you the option of choosing your test though, enlightened one. Shall you take the test of strength, sight, or speed?\");\n\telseif(e.message:findi(\"strength\")) then\n\t\te.self:Say(\"So be it, the test of strength you shall have. Bring to me a verdant tessera, some finely woven gold mesh, and some silken strands. The task will not be easy, but it should serve as an adequate test of strength, for one of your abilities.\");\n\telseif(e.message:findi(\"sight\")) then\n\t\te.self:Say(\"The test of sight is a test of both body and mind. The mind will allow you to see that which is usually invisible. Bring me a gold disc, a tiny ruby, and a cracked leather eyepatch and I will assist you in seeing what should not be seen.\");\n\telseif(e.message:findi(\"speed\")) then\n\t\te.self:Say(\"The test of speed. Every monk must be swift if he is to best his opponent. Speed in both mind and body is essential in many facets of life. Return to me an adumbrate globe, a shimmering opal, and some dove slippers and I shall aid your speed of mind.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\tif(item_lib.check_turn_in(e.trade, {item1 = 20793, item2 = 20794, item3 = 20932})) then\n\t\te.other:SummonItem(27714); -- Back Straps of Mastery\n\t\te.other:AddEXP(100000);\n\t\te.self:Say(\"You have done well, \" .. e.other:GetName() .. \".\");\n\t\teq.depop();\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 20796, item2 = 20939, item3 = 20795})) then\n\t\te.other:SummonItem(1281); -- Ton Po's Eye Patch\n\t\te.other:AddEXP(100000);\n\t\te.self:Say(\"You have done well, \" .. e.other:GetName() .. \".\");\n\t\teq.depop();\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 20946, item2 = 20798, item3 = 20797})) then\n\t\te.other:SummonItem(1280); -- Sandals of Alacrity\n\t\te.other:AddEXP(100000);\n\t\te.self:Say(\"You have done well, \" .. e.other:GetName() .. \".\");\n\t\teq.depop();\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\nfunction event_timer(e)\n\teq.stop_timer(\"depop\");\n\teq.depop();\nend\n\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 16295,
+        "zone": "airplane",
+        "name": "Ton_Po",
+        "lua_content": "-- Source: airplane/Ton_Po.lua\n-- Monk Plane of Sky tests: current P99 page names Back Straps of Mastery for Test of Strength.\n-- items: 1282, 20793, 20794, 20932, 27714, 20796, 20939, 20795, 1281, 20946, 20798, 20797, 1280\n\nfunction event_spawn(e)\n\teq.set_timer(\"depop\",300000);\nend\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"So, I have been called upon to test you, and test you I shall. I will give you the option of choosing your test though, enlightened one. Shall you take the test of strength, sight, or speed or would you like to see something new I have just gotten.\");\n\telseif(e.message:findi(\"something new\")) then\n\t\te.self:Say(\"I am currently looking for Mystical Back Straps that I've misplaced. If you could find one Ill be glad to compensate you for it.\");\n\telseif(e.message:findi(\"strength\")) then\n\t\te.self:Say(\"So be it, the test of strength you shall have. Bring to me a verdant tessera, some finely woven gold mesh, and some silken strands. The task will not be easy, but it should serve as an adequate test of strength, for one of your abilities.\");\n\telseif(e.message:findi(\"sight\")) then\n\t\te.self:Say(\"The test of sight is a test of both body and mind. The mind will allow you to see that which is usually invisible. Bring me a gold disc, a tiny ruby, and a cracked leather eyepatch and I will assist you in seeing what should not be seen.\");\n\telseif(e.message:findi(\"speed\")) then\n\t\te.self:Say(\"The test of speed. Every monk must be swift if he is to best his opponent. Speed in both mind and body is essential in many facets of life. Return to me an adumbrate globe, a shimmering opal, and some dove slippers and I shall aid your speed of mind.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\t-- P99 Old Sky explicitly permits one old reward for its listed upgrade.\n\t-- No XP, cash, faction or despawn value for this exchange is documented.\n\tif(item_lib.check_turn_in(e.trade, {item1 = 1282})) then\n\t\te.other:SummonItem(27714);\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 20793, item2 = 20794, item3 = 20932})) then\n\t\te.other:SummonItem(27714); -- Back Straps of Mastery\n\t\te.other:AddEXP(100000);\n\t\te.self:Say(\"You have done well, \" .. e.other:GetName() .. \".\");\n\t\teq.depop();\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 20796, item2 = 20939, item3 = 20795})) then\n\t\te.other:SummonItem(1281); -- Ton Po's Eye Patch\n\t\te.other:AddEXP(100000);\n\t\te.self:Say(\"You have done well, \" .. e.other:GetName() .. \".\");\n\t\teq.depop();\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 20946, item2 = 20798, item3 = 20797})) then\n\t\te.other:SummonItem(1280); -- Sandals of Alacrity\n\t\te.other:AddEXP(100000);\n\t\te.self:Say(\"You have done well, \" .. e.other:GetName() .. \".\");\n\t\teq.depop();\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\nfunction event_timer(e)\n\teq.stop_timer(\"depop\");\n\teq.depop();\nend\n\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 13463,
+        "zone": "airplane",
+        "name": "Wu_the_Enlightened",
+        "lua_content": "-- Source: airplane/Wu_the_Enlightened.lua\n-- Monk Plane of Sky tests: current P99 page names Wu's Fist of Mastery for Test of Fists.\n-- items: 20800, 20954, 20799, 1283, 20803, 20801, 20802, 20960, 27715, 20967, 20804, 20805, 11698\n\nfunction event_spawn(e)\n\teq.set_timer(\"depop\",300000);\nend\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Greetings Warrior of mind and body. To prove your worth to me, you must complete a test. Which test do you wish to take? I will permit you to take the test of tears, fists, or tranquility.\");\n\telseif(e.message:findi(\"tears\")) then\n\t\te.self:Say(\"The test of tears involves knowing when to release, and when to provide a shoulder for another. Bring me a spiroc statuette, a spiroc talon, and a silken wrap. I will teach you the way.\");\n\telseif(e.message:findi(\"fists\")) then\n\t\te.self:Say(\"A monk must know when to use his or her fists, and when to use the mind. In this endeavor, you must decide which you shall use. Return to me, once you have found them, a pair of brass knuckles, a white spiroc feather, an ethereal amethyst, and a nebulous sapphire.\");\n\telseif(e.message:findi(\"tranquility\")) then\n\t\te.self:Say(\"Ah, the test of tranquility. Only the tranquil monk can achieve enlightenment. Are you such an individual? Time shall tell. Retrieve these items for me. Bring an aged nectar, a Writ or Decree of Quellious, and a Tear of Quellious. Then we shall assess your ability.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\tif(item_lib.check_turn_in(e.trade, {item1 = 20800, item2 = 20954, item3 = 20799})) then\n\t\te.other:SummonItem(1283); -- Ton Po's Shoulder Wraps\n\t\te.other:AddEXP(100000);\n\t\te.self:Say(\"You have moved closer to enlightenment.\");\n\t\teq.depop();\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 20803, item2 = 20801, item3 = 20802, item4 = 20960})) then\n\t\te.other:SummonItem(27715); -- Wu's Fist of Mastery\n\t\te.other:AddEXP(100000);\n\t\te.self:Say(\"You have moved closer to enlightenment.\");\n\t\teq.depop();\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 20967, item2 = 20804, item3 = 20805})) then\n\t\te.other:SummonItem(11698); -- Golden Sash of Tranquility\n\t\te.other:AddEXP(100000);\n\t\te.self:Say(\"You have moved closer to enlightenment.\");\n\t\teq.depop();\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\nfunction event_timer(e)\n\teq.stop_timer(\"depop\");\n\teq.depop();\nend\n\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 13463,
+        "zone": "airplane",
+        "name": "Wu_the_Enlightened",
+        "lua_content": "-- Source: airplane/Wu_the_Enlightened.lua\n-- Monk Plane of Sky tests: current P99 page names Wu's Fist of Mastery for Test of Fists.\n-- items: 11690, 20800, 20954, 20799, 1283, 20803, 20801, 20802, 20960, 27715, 20967, 20804, 20805, 11698\n\nfunction event_spawn(e)\n\teq.set_timer(\"depop\",300000);\nend\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Greetings Warrior of mind and body. To prove your worth to me, you must complete a test. Which test do you wish to take? I will permit you to take the test of tears, fists, or tranquility.\");\n\telseif(e.message:findi(\"interested in trade\")) then\n\t\te.self:Say(\"I am searching for my weapon Wus Tranquil Fist. It seems there has been a complaint made about their performance so I have taken some steps to improve them. If you bring what I've asked you will be rewarded.\");\n\telseif(e.message:findi(\"tears\")) then\n\t\te.self:Say(\"The test of tears involves knowing when to release, and when to provide a shoulder for another. Bring me a spiroc statuette, a spiroc talon, and a silken wrap. I will teach you the way.\");\n\telseif(e.message:findi(\"fists\")) then\n\t\te.self:Say(\"A monk must know when to use his or her fists, and when to use the mind. In this endeavor, you must decide which you shall use. Return to me, once you have found them, a pair of brass knuckles, a white spiroc feather, an ethereal amethyst, and a nebulous sapphire.\");\n\telseif(e.message:findi(\"tranquility\")) then\n\t\te.self:Say(\"Ah, the test of tranquility. Only the tranquil monk can achieve enlightenment. Are you such an individual? Time shall tell. Retrieve these items for me. Bring an aged nectar, a Writ or Decree of Quellious, and a Tear of Quellious. Then we shall assess your ability.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\t-- P99 Old Sky explicitly permits one old reward for its listed upgrade.\n\t-- No XP, cash, faction or despawn value for this exchange is documented.\n\tif(item_lib.check_turn_in(e.trade, {item1 = 11690})) then\n\t\te.other:SummonItem(27715);\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 20800, item2 = 20954, item3 = 20799})) then\n\t\te.other:SummonItem(1283); -- Ton Po's Shoulder Wraps\n\t\te.other:AddEXP(100000);\n\t\te.self:Say(\"You have moved closer to enlightenment.\");\n\t\teq.depop();\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 20803, item2 = 20801, item3 = 20802, item4 = 20960})) then\n\t\te.other:SummonItem(27715); -- Wu's Fist of Mastery\n\t\te.other:AddEXP(100000);\n\t\te.self:Say(\"You have moved closer to enlightenment.\");\n\t\teq.depop();\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 20967, item2 = 20804, item3 = 20805})) then\n\t\te.other:SummonItem(11698); -- Golden Sash of Tranquility\n\t\te.other:AddEXP(100000);\n\t\te.self:Say(\"You have moved closer to enlightenment.\");\n\t\teq.depop();\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\nfunction event_timer(e)\n\teq.stop_timer(\"depop\");\n\teq.depop();\nend\n\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/airplane/Ton_Po.lua",
+      "beforeSha256": "ff9a79aa3db8d4f0966f4e9ccf629c9f076778266ce1a90aced217a34ee0e5bc",
+      "proposedFile": "changes/p99-am-monk-sky-upgrades/airplane-Ton_Po.lua",
+      "afterSha256": "d8fe202e461135d3f180aa1a00d09947e0671e98ac1a067b6e3546a2f4b6acc2"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/airplane/Wu_the_Enlightened.lua",
+      "beforeSha256": "0d66073bd6fb391a22686aa7dffefc0aef7d4e6a9ff52132ab83765876216cd9",
+      "proposedFile": "changes/p99-am-monk-sky-upgrades/airplane-Wu_the_Enlightened.lua",
+      "afterSha256": "d860ae7e59d1258b42a92a53154ce82b847542a4176b1dafb52326b8e4b669e7"
+    }
+  ]
+}

@@ -1,0 +1,778 @@
+{
+  "scope": "Isolated normalized Lua with central strict fixture and actual public items.lua. Disabled sources are force-loaded only to verify preserved historical identity, not game dispatch. Baseline cases are explicitly not proposed changes. No private runtime or real settlement proof.",
+  "caseCount": 73,
+  "sourceCount": 25,
+  "bindings": [
+    {
+      "key": "rathemtn/Rambling_Sphinx_Spiritservant",
+      "proposedFile": "changes/p99-final-chain-closure/rathemtn--Rambling_Sphinx_Spiritservant.lua",
+      "sourceSha256": "74e655ed4838a21d3a8e754ca340908b6836bce280da27aa2c15e55aa7357973",
+      "baselineSourceSha256": "bda83cdba9f31ee24af85d4b97b5c75077acf6941d66200e8ea84badc51401a4",
+      "enabled": 0
+    },
+    {
+      "key": "cazicthule/#Avatar_of_Fear",
+      "proposedFile": "changes/p99-final-chain-closure/cazicthule--#Avatar_of_Fear.lua",
+      "sourceSha256": "e0681301e2081313b6d6c2308cbdb020419572d76c792eaeca83c04a550bf12a",
+      "baselineSourceSha256": "74920fd49d046246ffc52478321731546ce760e0d99e9214813e67aeffaf3bec",
+      "enabled": 0
+    },
+    {
+      "key": "warslikswood/Ferocious_Goblin",
+      "proposedFile": "changes/p99-final-chain-closure/warslikswood--Ferocious_Goblin.lua",
+      "sourceSha256": "a613cd969f1d269e9e88efed8b8ebb4ca2ae4f2f1b2529d0ac0d0b2f4df09072",
+      "baselineSourceSha256": "97df52fec6602a7e8d3f0278c1df8ae8844f0f464925a34cc8a1005c94f5d6af",
+      "enabled": 0
+    },
+    {
+      "key": "befallen/#a_skeletal_foreman",
+      "proposedFile": "changes/p99-final-chain-closure/befallen--#a_skeletal_foreman.lua",
+      "sourceSha256": "5b6cade8f2fea0856e057bf7f7ea7c379adcc807944668ebd935d25f1c734651",
+      "baselineSourceSha256": "4db814a55f0ddfc33183e81ece5b824d5c49bc602fcb82d493e5af01a3b3590f",
+      "enabled": 0
+    },
+    {
+      "key": "nro/a_lamented_knight",
+      "proposedFile": "changes/p99-final-chain-closure/nro--a_lamented_knight.lua",
+      "sourceSha256": "4f227ecae0a82a191b7a820cf856250c835cd66f8c836f3b5b13f295c7eae65d",
+      "baselineSourceSha256": "49196a5712d661748d22fbcc1edee7b4d0a6c2ac09497f523ead33d973f9119a",
+      "enabled": 0
+    },
+    {
+      "key": "befallen/a_skeletal_excavator",
+      "proposedFile": "changes/p99-final-chain-closure/befallen--a_skeletal_excavator.lua",
+      "sourceSha256": "62768bafba82c5508f31edb5e5c4e6ada1607814df7cbd36362dafa8241d7c19",
+      "baselineSourceSha256": "a36ffb91900f9b8d8f6b454173df61c6fde73321a43824d7261c30ae85d2e240",
+      "enabled": 0
+    },
+    {
+      "key": "nro/a_guardian_tormentor",
+      "proposedFile": "changes/p99-final-chain-closure/nro--a_guardian_tormentor.lua",
+      "sourceSha256": "05c2af54db1aa8074c524e55351bdddff7a5135c262e008d0617fee9094089ac",
+      "baselineSourceSha256": "b9e91a7485953b39f2ce1d5ef0e9efb5756bff8560be733cc133b925e34c5e8f",
+      "enabled": 0
+    },
+    {
+      "key": "timorous/Grandmaster_Rinmark",
+      "proposedFile": "changes/p99-final-chain-closure/timorous--Grandmaster_Rinmark.lua",
+      "sourceSha256": "db11ef260fc9edc800b67411167bb31c62341b3337a84760a940d2bd66e09fb6",
+      "baselineSourceSha256": "14d3f899be6cfd55231186a17a6dd5d58f9d1495613fc16695a78ff56c5f5f61",
+      "enabled": 0
+    },
+    {
+      "key": "kithicor/#Blackened_Treant",
+      "proposedFile": "changes/p99-final-chain-closure/kithicor--#Blackened_Treant.lua",
+      "sourceSha256": "de309872eb5a0ba99fe476d49651b40c811269416e6d7b319a38041e3114a41c",
+      "baselineSourceSha256": "a010d86ead65893b62582545afe563398b283fc8be6ae270b3c721d1d5e55cb3",
+      "enabled": 0
+    },
+    {
+      "key": "qey2hh1/12184",
+      "proposedFile": "changes/p99-final-chain-closure/qey2hh1--12184.lua",
+      "sourceSha256": "da3ddcb6a83c9582915a312b543a7a71e584b5ad09da22a0bd5fe006b1812963",
+      "baselineSourceSha256": "0b746b4227e657b98f6ef233d22fc683f47dd63e14ec6f8a8a3e9d7c4ac26359",
+      "enabled": 0
+    },
+    {
+      "key": "nro/a_haunt",
+      "proposedFile": "changes/p99-final-chain-closure/nro--a_haunt.lua",
+      "sourceSha256": "334d64bd5c7c18b8291b170c4539463d919d4ce0eca384940f773f9f9f27f9f0",
+      "baselineSourceSha256": "923a90dcfdf8f80c2a09a455264802c6fee5d4c1f17009437eb53681f8db46a3",
+      "enabled": 0
+    },
+    {
+      "key": "lakerathe/#Gnoll_Scavenger",
+      "proposedFile": "changes/p99-final-chain-closure/lakerathe--#Gnoll_Scavenger.lua",
+      "sourceSha256": "5fa8a2a97d8e877ff631f4b7722ebaac6e82f2fb773431598fea44f4c7fa91c7",
+      "baselineSourceSha256": "33fb7400f6c4a648da81390d06cec7fcc94c61992c5d972581b13fb7bb02f303",
+      "enabled": 0
+    },
+    {
+      "key": "frontiermtns/#a_goblin_whipcracker",
+      "proposedFile": "changes/p99-final-chain-closure/frontiermtns--#a_goblin_whipcracker.lua",
+      "sourceSha256": "ca9045cc2b1ea40a6c296ae5ffa0fbb7dc90bb23a45aa3a2a0bd1764aeb54d57",
+      "baselineSourceSha256": "d86cb2f02175a26e874c10d6fe35ab31ba53a04f4c3f4e91582b9a5b78fb7ed5",
+      "enabled": 0
+    },
+    {
+      "key": "timorous/Master_Rinmark",
+      "proposedFile": "changes/p99-final-chain-closure/timorous--Master_Rinmark.lua",
+      "sourceSha256": "40ab2be264226beed9619c7d043518740453d7dbdc3d02d4d2d08636fc137088",
+      "baselineSourceSha256": "d5f7eb3b9c6ea5d1cd8f1f75fb85c6432025d5ffcfcbdc4a0449655924f6e0c4",
+      "enabled": 0
+    },
+    {
+      "key": "lakeofillomen/Impervious_Bloodbeast",
+      "proposedFile": "changes/p99-final-chain-closure/lakeofillomen--Impervious_Bloodbeast.lua",
+      "sourceSha256": "0e773d10ecdb1aa356a460ead74d8801bc0c84ed305cd5e71abd882a040cfea7",
+      "baselineSourceSha256": "7b012247293a46a832790f68f231d4cc4600da1c97b8d973913bc4d969dcc6ee",
+      "enabled": 0
+    },
+    {
+      "key": "qey2hh1/12183",
+      "proposedFile": "changes/p99-final-chain-closure/qey2hh1--12183.lua",
+      "sourceSha256": "1cd3a02296313e4a97157c02f9ac3a48529a199a9839a4e1aee92b5814f09805",
+      "baselineSourceSha256": "4ea2d25fc6588caad51ad745c147a61927c985e1b0ef195cea4729383c4d649f",
+      "enabled": 0
+    },
+    {
+      "key": "timorous/Draz_Nurakk",
+      "proposedFile": "changes/p99-final-chain-closure/timorous--Draz_Nurakk.lua",
+      "sourceSha256": "1ca076018d7d8bbc56b0003476c50ea7aa3edc3340209dc1ea2f7478a6b82eb9",
+      "baselineSourceSha256": "8016936dda407c8498e2828c550349a94e5704895545509e8cd967c245327820",
+      "enabled": 0
+    },
+    {
+      "key": "rathemtn/Raving_Sphinx_Spiritservant",
+      "proposedFile": "changes/p99-final-chain-closure/rathemtn--Raving_Sphinx_Spiritservant.lua",
+      "sourceSha256": "31df1bc1c114ee3402757990befb0f8f0a3d731142d3149524efa74a48ce568a",
+      "baselineSourceSha256": "462ed67ef5d36287827ff91499358af170d347661c7f553389c090e9d3229735",
+      "enabled": 0
+    },
+    {
+      "key": "cazicthule/#a_Thul_Tae_Ew_High_Priest",
+      "proposedFile": "changes/p99-final-chain-closure/cazicthule--#a_Thul_Tae_Ew_High_Priest.lua",
+      "sourceSha256": "d25d8e4a66f052c7fa368b6ba23f606506b928d1ffd7e898268293d73bc2f721",
+      "baselineSourceSha256": "24d79ef7277e74971b472cfc48d383524bbd8bd67b4bf8dc9cd8603de2c4d647",
+      "enabled": 0
+    },
+    {
+      "key": "kithicor/#Blackened_Tree_Limb",
+      "proposedFile": "changes/p99-final-chain-closure/kithicor--#Blackened_Tree_Limb.lua",
+      "sourceSha256": "1ddb92ae442aea58d7ca07fd71fe4b1670601f0a9ee4c7ff39b1acefc7e953a9",
+      "baselineSourceSha256": "9d9a5c48b4e1074999e91da1382560ae72b6eeb25e53ba18d176e44ef48c0038",
+      "enabled": 0
+    },
+    {
+      "key": "warslikswood/a_frantic_goblin",
+      "proposedFile": "changes/p99-final-chain-closure/warslikswood--a_frantic_goblin.lua",
+      "sourceSha256": "c304b256593c7c762f79a2e52955babc5df339032b88586166940f09bd2874c5",
+      "baselineSourceSha256": "035157961f2d4322c4e2c247b16e7c8bd3b7ffeedc5f10a76e5aa015fb64fef3",
+      "enabled": 0
+    },
+    {
+      "key": "nro/a_spirit",
+      "proposedFile": "changes/p99-final-chain-closure/nro--a_spirit.lua",
+      "sourceSha256": "9a337b19bc1fab68c7fc9304f8eeae460066c44873cb18cdae78b1674936ae77",
+      "baselineSourceSha256": "c6553b7fde3cc043201ee081a6c7ef1d52e7a3e6d5f808da8403bfc884907128",
+      "enabled": 0
+    },
+    {
+      "key": "timorous/Rinmark",
+      "proposedFile": "changes/p99-final-chain-closure/timorous--Rinmark.lua",
+      "sourceSha256": "02a860d8e15a78ec8a53ac82d7904517a4191c23c85442b8070d7eed720c22e0",
+      "baselineSourceSha256": "3cb9ab414f947bf7cc01dc662f01f77b707971047880a4fbda0816e4f9702159",
+      "enabled": 0
+    },
+    {
+      "key": "timorous/an_Iksar_master",
+      "proposedFile": "changes/p99-final-chain-closure/timorous--an_Iksar_master.lua",
+      "sourceSha256": "16ceafc8465767a47b1f8e6602617e951874a170ef42e6513457e2f46d520568",
+      "baselineSourceSha256": "4b17cfed06c4d0320fa3f6cd2156c41ed0bfb3be22ef82bc5c5c75d77d584aa6",
+      "enabled": 1
+    },
+    {
+      "key": "befallen/#Sir_Ariam_Arcanum",
+      "proposedFile": "changes/p99-final-chain-closure/befallen--#Sir_Ariam_Arcanum.lua",
+      "sourceSha256": "bea36a1921acce284e87b34964a76754a88b9a3c18cb6ca7e1723f4f74cf1c5b",
+      "baselineSourceSha256": "bdffaf1403081d322ce431b3fe95329592f449cc43c7b50caf384eb64a44625a",
+      "enabled": 0
+    }
+  ],
+  "cases": [
+    {
+      "key": "rathemtn/Rambling_Sphinx_Spiritservant",
+      "name": "rathemtn/Rambling_Sphinx_Spiritservant archival source loads inert with preserved callbacks",
+      "assertions": "assert(type(event_spawn)==\"function\");assert(type(event_death_complete)==\"function\");equal(#spawns,0);equal(calls.depops,0);equal(next(calls.rewards),nil)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "74e655ed4838a21d3a8e754ca340908b6836bce280da27aa2c15e55aa7357973",
+      "proposedFile": "changes/p99-final-chain-closure/rathemtn--Rambling_Sphinx_Spiritservant.lua"
+    },
+    {
+      "key": "rathemtn/Rambling_Sphinx_Spiritservant",
+      "name": "rathemtn/Rambling_Sphinx_Spiritservant force-loaded historical chain identity (not disabled dispatch)",
+      "assertions": "event_spawn({self=npc});event_death_complete({self=npc});equal(spawns[1][1],50230);equal(#calls.speech,2)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "74e655ed4838a21d3a8e754ca340908b6836bce280da27aa2c15e55aa7357973",
+      "proposedFile": "changes/p99-final-chain-closure/rathemtn--Rambling_Sphinx_Spiritservant.lua"
+    },
+    {
+      "key": "cazicthule/#Avatar_of_Fear",
+      "name": "cazicthule/#Avatar_of_Fear archival source loads inert with preserved callbacks",
+      "assertions": "assert(type(event_spawn)==\"function\");assert(type(event_waypoint_arrive)==\"function\");assert(type(SpawnWave)==\"function\");assert(type(event_death_complete)==\"function\");equal(#spawns,0);equal(calls.depops,0);equal(next(calls.rewards),nil)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "e0681301e2081313b6d6c2308cbdb020419572d76c792eaeca83c04a550bf12a",
+      "proposedFile": "changes/p99-final-chain-closure/cazicthule--#Avatar_of_Fear.lua"
+    },
+    {
+      "key": "cazicthule/#Avatar_of_Fear",
+      "name": "cazicthule/#Avatar_of_Fear force-loaded historical chain identity (not disabled dispatch)",
+      "assertions": "event_death_complete({self=npc});equal(calls.signals[1][1],48030);equal(calls.depopAll,48253)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "e0681301e2081313b6d6c2308cbdb020419572d76c792eaeca83c04a550bf12a",
+      "proposedFile": "changes/p99-final-chain-closure/cazicthule--#Avatar_of_Fear.lua"
+    },
+    {
+      "key": "warslikswood/Ferocious_Goblin",
+      "name": "warslikswood/Ferocious_Goblin archival source loads inert with preserved callbacks",
+      "assertions": "assert(type(event_spawn)==\"function\");assert(type(event_timer)==\"function\");assert(type(event_death_complete)==\"function\");assert(type(event_signal)==\"function\");equal(#spawns,0);equal(calls.depops,0);equal(next(calls.rewards),nil)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "a613cd969f1d269e9e88efed8b8ebb4ca2ae4f2f1b2529d0ac0d0b2f4df09072",
+      "proposedFile": "changes/p99-final-chain-closure/warslikswood--Ferocious_Goblin.lua"
+    },
+    {
+      "key": "warslikswood/Ferocious_Goblin",
+      "name": "warslikswood/Ferocious_Goblin force-loaded historical chain identity (not disabled dispatch)",
+      "assertions": "event_spawn({self=npc});equal(timers.signal_master,60000);event_timer({self=npc,timer=\"other\"});equal(#calls.signals,0);event_timer({self=npc,timer=\"signal_master\"});equal(stops.signal_master,true);equal(calls.signals[1][1],79127);equal(calls.signals[1][2],1);event_death_complete({self=npc});equal(calls.signals[2][2],2);event_signal({self=npc});equal(calls.depops,1)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "a613cd969f1d269e9e88efed8b8ebb4ca2ae4f2f1b2529d0ac0d0b2f4df09072",
+      "proposedFile": "changes/p99-final-chain-closure/warslikswood--Ferocious_Goblin.lua"
+    },
+    {
+      "key": "befallen/#a_skeletal_foreman",
+      "name": "befallen/#a_skeletal_foreman archival source loads inert with preserved callbacks",
+      "assertions": "assert(type(event_spawn)==\"function\");assert(type(event_timer)==\"function\");assert(type(event_death_complete)==\"function\");equal(#spawns,0);equal(calls.depops,0);equal(next(calls.rewards),nil)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "5b6cade8f2fea0856e057bf7f7ea7c379adcc807944668ebd935d25f1c734651",
+      "proposedFile": "changes/p99-final-chain-closure/befallen--#a_skeletal_foreman.lua"
+    },
+    {
+      "key": "befallen/#a_skeletal_foreman",
+      "name": "befallen/#a_skeletal_foreman force-loaded historical chain identity (not disabled dispatch)",
+      "assertions": "event_spawn({self=npc});equal(timers.shout,300000);event_timer({self=npc,timer=\"shout\"});equal(#calls.speech,2);event_death_complete({self=npc});equal(spawns[1][1],36091)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "5b6cade8f2fea0856e057bf7f7ea7c379adcc807944668ebd935d25f1c734651",
+      "proposedFile": "changes/p99-final-chain-closure/befallen--#a_skeletal_foreman.lua"
+    },
+    {
+      "key": "nro/a_lamented_knight",
+      "name": "nro/a_lamented_knight archival source loads inert with preserved callbacks",
+      "assertions": "assert(type(event_death_complete)==\"function\");assert(type(event_spawn)==\"function\");equal(#spawns,0);equal(calls.depops,0);equal(next(calls.rewards),nil)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "4f227ecae0a82a191b7a820cf856250c835cd66f8c836f3b5b13f295c7eae65d",
+      "proposedFile": "changes/p99-final-chain-closure/nro--a_lamented_knight.lua"
+    },
+    {
+      "key": "nro/a_lamented_knight",
+      "name": "nro/a_lamented_knight force-loaded historical chain identity (not disabled dispatch)",
+      "assertions": "event_death_complete({self=npc});equal(calls.signals[1][1],392057);equal(calls.signals[1][2],0)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "4f227ecae0a82a191b7a820cf856250c835cd66f8c836f3b5b13f295c7eae65d",
+      "proposedFile": "changes/p99-final-chain-closure/nro--a_lamented_knight.lua"
+    },
+    {
+      "key": "befallen/a_skeletal_excavator",
+      "name": "befallen/a_skeletal_excavator archival source loads inert with preserved callbacks",
+      "assertions": "assert(type(event_death_complete)==\"function\");equal(#spawns,0);equal(calls.depops,0);equal(next(calls.rewards),nil)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "62768bafba82c5508f31edb5e5c4e6ada1607814df7cbd36362dafa8241d7c19",
+      "proposedFile": "changes/p99-final-chain-closure/befallen--a_skeletal_excavator.lua"
+    },
+    {
+      "key": "befallen/a_skeletal_excavator",
+      "name": "befallen/a_skeletal_excavator force-loaded historical chain identity (not disabled dispatch)",
+      "assertions": "math.random=function() return 21 end;event_death_complete({self=npc});equal(#spawns,0);math.random=function() return 20 end;event_death_complete({self=npc});equal(spawns[1][1],36092)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "62768bafba82c5508f31edb5e5c4e6ada1607814df7cbd36362dafa8241d7c19",
+      "proposedFile": "changes/p99-final-chain-closure/befallen--a_skeletal_excavator.lua"
+    },
+    {
+      "key": "nro/a_guardian_tormentor",
+      "name": "nro/a_guardian_tormentor archival source loads inert with preserved callbacks",
+      "assertions": "assert(type(event_death_complete)==\"function\");assert(type(event_spawn)==\"function\");equal(#spawns,0);equal(calls.depops,0);equal(next(calls.rewards),nil)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "05c2af54db1aa8074c524e55351bdddff7a5135c262e008d0617fee9094089ac",
+      "proposedFile": "changes/p99-final-chain-closure/nro--a_guardian_tormentor.lua"
+    },
+    {
+      "key": "nro/a_guardian_tormentor",
+      "name": "nro/a_guardian_tormentor force-loaded historical chain identity (not disabled dispatch)",
+      "assertions": "event_death_complete({self=npc});equal(spawns[1][1],392107);equal(spawns[1][4],10);equal(spawns[1][5],20);equal(spawns[1][6],30);equal(spawns[1][7],40)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "05c2af54db1aa8074c524e55351bdddff7a5135c262e008d0617fee9094089ac",
+      "proposedFile": "changes/p99-final-chain-closure/nro--a_guardian_tormentor.lua"
+    },
+    {
+      "key": "timorous/Grandmaster_Rinmark",
+      "name": "timorous/Grandmaster_Rinmark archival source loads inert with preserved callbacks",
+      "assertions": "assert(type(event_spawn)==\"function\");assert(type(event_timer)==\"function\");assert(type(event_combat)==\"function\");equal(#spawns,0);equal(calls.depops,0);equal(next(calls.rewards),nil)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "db11ef260fc9edc800b67411167bb31c62341b3337a84760a940d2bd66e09fb6",
+      "proposedFile": "changes/p99-final-chain-closure/timorous--Grandmaster_Rinmark.lua"
+    },
+    {
+      "key": "timorous/Grandmaster_Rinmark",
+      "name": "timorous/Grandmaster_Rinmark force-loaded historical chain identity (not disabled dispatch)",
+      "assertions": "event_spawn({self=npc});equal(timers.Depop1,90000);event_timer({self=npc,timer=\"unrelated\"});equal(#spawns,0);event_combat({self=npc,joined=true});equal(stops.Depop1,true);event_combat({self=npc,joined=false});equal(timers.Depop1,90000);event_timer({self=npc,timer=\"Depop1\"});equal(spawns[1][1],96319);equal(calls.depops,1)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "db11ef260fc9edc800b67411167bb31c62341b3337a84760a940d2bd66e09fb6",
+      "proposedFile": "changes/p99-final-chain-closure/timorous--Grandmaster_Rinmark.lua"
+    },
+    {
+      "key": "kithicor/#Blackened_Treant",
+      "name": "kithicor/#Blackened_Treant archival source loads inert with preserved callbacks",
+      "assertions": "assert(type(event_death_complete)==\"function\");equal(#spawns,0);equal(calls.depops,0);equal(next(calls.rewards),nil)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "de309872eb5a0ba99fe476d49651b40c811269416e6d7b319a38041e3114a41c",
+      "proposedFile": "changes/p99-final-chain-closure/kithicor--#Blackened_Treant.lua"
+    },
+    {
+      "key": "kithicor/#Blackened_Treant",
+      "name": "kithicor/#Blackened_Treant force-loaded historical chain identity (not disabled dispatch)",
+      "assertions": "event_death_complete({self=npc});equal(#spawns,10);for _,s in ipairs(spawns) do equal(s[1],20300) end",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "de309872eb5a0ba99fe476d49651b40c811269416e6d7b319a38041e3114a41c",
+      "proposedFile": "changes/p99-final-chain-closure/kithicor--#Blackened_Treant.lua"
+    },
+    {
+      "key": "qey2hh1/12184",
+      "name": "qey2hh1/12184 archival source loads inert with preserved callbacks",
+      "assertions": "assert(type(event_spawn)==\"function\");assert(type(event_death_complete)==\"function\");assert(type(event_timer)==\"function\");assert(type(event_combat)==\"function\");assert(type(event_hp)==\"function\");equal(#spawns,0);equal(calls.depops,0);equal(next(calls.rewards),nil)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "da3ddcb6a83c9582915a312b543a7a71e584b5ad09da22a0bd5fe006b1812963",
+      "proposedFile": "changes/p99-final-chain-closure/qey2hh1--12184.lua"
+    },
+    {
+      "key": "qey2hh1/12184",
+      "name": "qey2hh1/12184 force-loaded historical chain identity (not disabled dispatch)",
+      "assertions": "event_death_complete({self=npc});equal(spawns[1][1],12185)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "da3ddcb6a83c9582915a312b543a7a71e584b5ad09da22a0bd5fe006b1812963",
+      "proposedFile": "changes/p99-final-chain-closure/qey2hh1--12184.lua"
+    },
+    {
+      "key": "nro/a_haunt",
+      "name": "nro/a_haunt archival source loads inert with preserved callbacks",
+      "assertions": "assert(type(event_death_complete)==\"function\");assert(type(event_spawn)==\"function\");equal(#spawns,0);equal(calls.depops,0);equal(next(calls.rewards),nil)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "334d64bd5c7c18b8291b170c4539463d919d4ce0eca384940f773f9f9f27f9f0",
+      "proposedFile": "changes/p99-final-chain-closure/nro--a_haunt.lua"
+    },
+    {
+      "key": "nro/a_haunt",
+      "name": "nro/a_haunt force-loaded historical chain identity (not disabled dispatch)",
+      "assertions": "event_death_complete({self=npc});equal(spawns[1][1],392105);equal(spawns[1][4],10);equal(spawns[1][5],20);equal(spawns[1][6],30);equal(spawns[1][7],40)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "334d64bd5c7c18b8291b170c4539463d919d4ce0eca384940f773f9f9f27f9f0",
+      "proposedFile": "changes/p99-final-chain-closure/nro--a_haunt.lua"
+    },
+    {
+      "key": "lakerathe/#Gnoll_Scavenger",
+      "name": "lakerathe/#Gnoll_Scavenger archival source loads inert with preserved callbacks",
+      "assertions": "assert(type(event_death_complete)==\"function\");equal(#spawns,0);equal(calls.depops,0);equal(next(calls.rewards),nil)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "5fa8a2a97d8e877ff631f4b7722ebaac6e82f2fb773431598fea44f4c7fa91c7",
+      "proposedFile": "changes/p99-final-chain-closure/lakerathe--#Gnoll_Scavenger.lua"
+    },
+    {
+      "key": "lakerathe/#Gnoll_Scavenger",
+      "name": "lakerathe/#Gnoll_Scavenger force-loaded historical chain identity (not disabled dispatch)",
+      "assertions": "event_death_complete({self=npc});equal(calls.signals[1][1],51156);equal(calls.signals[1][2],0)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "5fa8a2a97d8e877ff631f4b7722ebaac6e82f2fb773431598fea44f4c7fa91c7",
+      "proposedFile": "changes/p99-final-chain-closure/lakerathe--#Gnoll_Scavenger.lua"
+    },
+    {
+      "key": "frontiermtns/#a_goblin_whipcracker",
+      "name": "frontiermtns/#a_goblin_whipcracker archival source loads inert with preserved callbacks",
+      "assertions": "assert(type(event_say)==\"function\");equal(#spawns,0);equal(calls.depops,0);equal(next(calls.rewards),nil)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "ca9045cc2b1ea40a6c296ae5ffa0fbb7dc90bb23a45aa3a2a0bd1764aeb54d57",
+      "proposedFile": "changes/p99-final-chain-closure/frontiermtns--#a_goblin_whipcracker.lua"
+    },
+    {
+      "key": "frontiermtns/#a_goblin_whipcracker",
+      "name": "frontiermtns/#a_goblin_whipcracker force-loaded historical chain identity (not disabled dispatch)",
+      "assertions": "event_say({self=npc,other=other,message=\"start the contest\",language=14});equal(#spawns,0);buff=true;event_say({self=npc,other=other,message=\"start the contest\",language=14});equal(#spawns,3);equal(spawns[1][1],92198);equal(spawns[2][1],92199);equal(spawns[3][1],92200)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\neq.get_zone_time=function() return {zone_hour=19} end;other.GetLanguageSkill=function() return 100 end;buff=false;other.FindBuff=function(_,id) equal(id,5574);return buff end;",
+      "sourceSha256": "ca9045cc2b1ea40a6c296ae5ffa0fbb7dc90bb23a45aa3a2a0bd1764aeb54d57",
+      "proposedFile": "changes/p99-final-chain-closure/frontiermtns--#a_goblin_whipcracker.lua"
+    },
+    {
+      "key": "timorous/Master_Rinmark",
+      "name": "timorous/Master_Rinmark archival source loads inert with preserved callbacks",
+      "assertions": "assert(type(event_spawn)==\"function\");assert(type(event_combat)==\"function\");assert(type(event_timer)==\"function\");equal(#spawns,0);equal(calls.depops,0);equal(next(calls.rewards),nil)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "40ab2be264226beed9619c7d043518740453d7dbdc3d02d4d2d08636fc137088",
+      "proposedFile": "changes/p99-final-chain-closure/timorous--Master_Rinmark.lua"
+    },
+    {
+      "key": "timorous/Master_Rinmark",
+      "name": "timorous/Master_Rinmark force-loaded historical chain identity (not disabled dispatch)",
+      "assertions": "event_spawn({self=npc});equal(timers.Depop2,90000);event_timer({self=npc,timer=\"unrelated\"});equal(#spawns,0);event_combat({self=npc,joined=true});equal(stops.Depop2,true);event_combat({self=npc,joined=false});equal(timers.Depop2,90000);event_timer({self=npc,timer=\"Depop2\"});equal(spawns[1][1],96320);equal(calls.depops,1)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "40ab2be264226beed9619c7d043518740453d7dbdc3d02d4d2d08636fc137088",
+      "proposedFile": "changes/p99-final-chain-closure/timorous--Master_Rinmark.lua"
+    },
+    {
+      "key": "lakeofillomen/Impervious_Bloodbeast",
+      "name": "lakeofillomen/Impervious_Bloodbeast archival source loads inert with preserved callbacks",
+      "assertions": "assert(type(event_death_complete)==\"function\");equal(#spawns,0);equal(calls.depops,0);equal(next(calls.rewards),nil)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "0e773d10ecdb1aa356a460ead74d8801bc0c84ed305cd5e71abd882a040cfea7",
+      "proposedFile": "changes/p99-final-chain-closure/lakeofillomen--Impervious_Bloodbeast.lua"
+    },
+    {
+      "key": "lakeofillomen/Impervious_Bloodbeast",
+      "name": "lakeofillomen/Impervious_Bloodbeast force-loaded historical chain identity (not disabled dispatch)",
+      "assertions": "event_death_complete({self=npc});equal(calls.signals[1][1],85091);equal(calls.signals[1][2],0)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "0e773d10ecdb1aa356a460ead74d8801bc0c84ed305cd5e71abd882a040cfea7",
+      "proposedFile": "changes/p99-final-chain-closure/lakeofillomen--Impervious_Bloodbeast.lua"
+    },
+    {
+      "key": "qey2hh1/12183",
+      "name": "qey2hh1/12183 archival source loads inert with preserved callbacks",
+      "assertions": "assert(type(event_spawn)==\"function\");assert(type(event_death_complete)==\"function\");assert(type(event_timer)==\"function\");assert(type(event_combat)==\"function\");equal(#spawns,0);equal(calls.depops,0);equal(next(calls.rewards),nil)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "1cd3a02296313e4a97157c02f9ac3a48529a199a9839a4e1aee92b5814f09805",
+      "proposedFile": "changes/p99-final-chain-closure/qey2hh1--12183.lua"
+    },
+    {
+      "key": "qey2hh1/12183",
+      "name": "qey2hh1/12183 force-loaded historical chain identity (not disabled dispatch)",
+      "assertions": "event_spawn({self=npc});equal(timers.Werewolf1Depop,1800000);for i=1,3 do event_death_complete({self=npc}) end;equal(#spawns,0);event_death_complete({self=npc});equal(spawns[1][1],12185)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "1cd3a02296313e4a97157c02f9ac3a48529a199a9839a4e1aee92b5814f09805",
+      "proposedFile": "changes/p99-final-chain-closure/qey2hh1--12183.lua"
+    },
+    {
+      "key": "timorous/Draz_Nurakk",
+      "name": "timorous/Draz_Nurakk archival source loads inert with preserved callbacks",
+      "assertions": "assert(type(event_death_complete)==\"function\");equal(#spawns,0);equal(calls.depops,0);equal(next(calls.rewards),nil)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "1ca076018d7d8bbc56b0003476c50ea7aa3edc3340209dc1ea2f7478a6b82eb9",
+      "proposedFile": "changes/p99-final-chain-closure/timorous--Draz_Nurakk.lua"
+    },
+    {
+      "key": "timorous/Draz_Nurakk",
+      "name": "timorous/Draz_Nurakk force-loaded historical chain identity (not disabled dispatch)",
+      "assertions": "event_death_complete({self=npc});equal(#spawns,6);for _,s in ipairs(spawns) do equal(s[1],96322) end",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "1ca076018d7d8bbc56b0003476c50ea7aa3edc3340209dc1ea2f7478a6b82eb9",
+      "proposedFile": "changes/p99-final-chain-closure/timorous--Draz_Nurakk.lua"
+    },
+    {
+      "key": "rathemtn/Raving_Sphinx_Spiritservant",
+      "name": "rathemtn/Raving_Sphinx_Spiritservant archival source loads inert with preserved callbacks",
+      "assertions": "assert(type(event_spawn)==\"function\");assert(type(event_death_complete)==\"function\");equal(#spawns,0);equal(calls.depops,0);equal(next(calls.rewards),nil)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "31df1bc1c114ee3402757990befb0f8f0a3d731142d3149524efa74a48ce568a",
+      "proposedFile": "changes/p99-final-chain-closure/rathemtn--Raving_Sphinx_Spiritservant.lua"
+    },
+    {
+      "key": "rathemtn/Raving_Sphinx_Spiritservant",
+      "name": "rathemtn/Raving_Sphinx_Spiritservant force-loaded historical chain identity (not disabled dispatch)",
+      "assertions": "event_spawn({self=npc});event_death_complete({self=npc});equal(spawns[1][1],50231);equal(#calls.speech,2)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "31df1bc1c114ee3402757990befb0f8f0a3d731142d3149524efa74a48ce568a",
+      "proposedFile": "changes/p99-final-chain-closure/rathemtn--Raving_Sphinx_Spiritservant.lua"
+    },
+    {
+      "key": "cazicthule/#a_Thul_Tae_Ew_High_Priest",
+      "name": "cazicthule/#a_Thul_Tae_Ew_High_Priest archival source loads inert with preserved callbacks",
+      "assertions": "assert(type(event_death_complete)==\"function\");assert(type(spawn_guards)==\"function\");assert(type(event_spawn)==\"function\");assert(type(event_combat)==\"function\");assert(type(event_timer)==\"function\");equal(#spawns,0);equal(calls.depops,0);equal(next(calls.rewards),nil)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "d25d8e4a66f052c7fa368b6ba23f606506b928d1ffd7e898268293d73bc2f721",
+      "proposedFile": "changes/p99-final-chain-closure/cazicthule--#a_Thul_Tae_Ew_High_Priest.lua"
+    },
+    {
+      "key": "cazicthule/#a_Thul_Tae_Ew_High_Priest",
+      "name": "cazicthule/#a_Thul_Tae_Ew_High_Priest force-loaded historical chain identity (not disabled dispatch)",
+      "assertions": "event_spawn({self=npc});equal(#spawns,9);equal(spawns[1][1],48057);for i=2,5 do equal(spawns[i][1],48029) end;event_death_complete({self=npc});equal(calls.signals[1][1],48057);equal(calls.signals[1][2],1);equal(calls.signals[1][3],5)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "d25d8e4a66f052c7fa368b6ba23f606506b928d1ffd7e898268293d73bc2f721",
+      "proposedFile": "changes/p99-final-chain-closure/cazicthule--#a_Thul_Tae_Ew_High_Priest.lua"
+    },
+    {
+      "key": "kithicor/#Blackened_Tree_Limb",
+      "name": "kithicor/#Blackened_Tree_Limb archival source loads inert with preserved callbacks",
+      "assertions": "assert(type(event_death_complete)==\"function\");equal(#spawns,0);equal(calls.depops,0);equal(next(calls.rewards),nil)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "1ddb92ae442aea58d7ca07fd71fe4b1670601f0a9ee4c7ff39b1acefc7e953a9",
+      "proposedFile": "changes/p99-final-chain-closure/kithicor--#Blackened_Tree_Limb.lua"
+    },
+    {
+      "key": "kithicor/#Blackened_Tree_Limb",
+      "name": "kithicor/#Blackened_Tree_Limb force-loaded historical chain identity (not disabled dispatch)",
+      "assertions": "event_death_complete({self=npc});equal(spawns[1][1],20301);equal(spawns[1][4],17);equal(spawns[1][5],27)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\neq.get_entity_list=function() return {GetNPCList=function() return {entries=function() return nil end} end} end;",
+      "sourceSha256": "1ddb92ae442aea58d7ca07fd71fe4b1670601f0a9ee4c7ff39b1acefc7e953a9",
+      "proposedFile": "changes/p99-final-chain-closure/kithicor--#Blackened_Tree_Limb.lua"
+    },
+    {
+      "key": "warslikswood/a_frantic_goblin",
+      "name": "warslikswood/a_frantic_goblin archival source loads inert with preserved callbacks",
+      "assertions": "assert(type(event_spawn)==\"function\");assert(type(event_timer)==\"function\");assert(type(event_death_complete)==\"function\");assert(type(event_signal)==\"function\");equal(#spawns,0);equal(calls.depops,0);equal(next(calls.rewards),nil)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "c304b256593c7c762f79a2e52955babc5df339032b88586166940f09bd2874c5",
+      "proposedFile": "changes/p99-final-chain-closure/warslikswood--a_frantic_goblin.lua"
+    },
+    {
+      "key": "warslikswood/a_frantic_goblin",
+      "name": "warslikswood/a_frantic_goblin force-loaded historical chain identity (not disabled dispatch)",
+      "assertions": "event_spawn({self=npc});equal(timers.signal_master,60000);event_timer({self=npc,timer=\"other\"});equal(#calls.signals,0);event_timer({self=npc,timer=\"signal_master\"});equal(stops.signal_master,true);equal(calls.signals[1][1],79127);equal(calls.signals[1][2],1);event_death_complete({self=npc});equal(calls.signals[2][2],2);event_signal({self=npc});equal(calls.depops,1)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "c304b256593c7c762f79a2e52955babc5df339032b88586166940f09bd2874c5",
+      "proposedFile": "changes/p99-final-chain-closure/warslikswood--a_frantic_goblin.lua"
+    },
+    {
+      "key": "nro/a_spirit",
+      "name": "nro/a_spirit archival source loads inert with preserved callbacks",
+      "assertions": "assert(type(event_death_complete)==\"function\");assert(type(event_spawn)==\"function\");equal(#spawns,0);equal(calls.depops,0);equal(next(calls.rewards),nil)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "9a337b19bc1fab68c7fc9304f8eeae460066c44873cb18cdae78b1674936ae77",
+      "proposedFile": "changes/p99-final-chain-closure/nro--a_spirit.lua"
+    },
+    {
+      "key": "nro/a_spirit",
+      "name": "nro/a_spirit force-loaded historical chain identity (not disabled dispatch)",
+      "assertions": "event_death_complete({self=npc});equal(spawns[1][1],392106);equal(spawns[1][4],10);equal(spawns[1][5],20);equal(spawns[1][6],30);equal(spawns[1][7],40)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "9a337b19bc1fab68c7fc9304f8eeae460066c44873cb18cdae78b1674936ae77",
+      "proposedFile": "changes/p99-final-chain-closure/nro--a_spirit.lua"
+    },
+    {
+      "key": "timorous/Rinmark",
+      "name": "timorous/Rinmark archival source loads inert with preserved callbacks",
+      "assertions": "assert(type(event_spawn)==\"function\");assert(type(event_combat)==\"function\");assert(type(event_timer)==\"function\");assert(type(event_death_complete)==\"function\");equal(#spawns,0);equal(calls.depops,0);equal(next(calls.rewards),nil)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "02a860d8e15a78ec8a53ac82d7904517a4191c23c85442b8070d7eed720c22e0",
+      "proposedFile": "changes/p99-final-chain-closure/timorous--Rinmark.lua"
+    },
+    {
+      "key": "timorous/Rinmark",
+      "name": "timorous/Rinmark force-loaded historical chain identity (not disabled dispatch)",
+      "assertions": "event_spawn({self=npc});equal(timers.Depop3,90000);event_combat({self=npc,joined=true});equal(stops.Depop3,true);event_timer({self=npc,timer=\"Depop3\"});equal(calls.depops,1);event_death_complete({self=npc});equal(#calls.speech,2)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "02a860d8e15a78ec8a53ac82d7904517a4191c23c85442b8070d7eed720c22e0",
+      "proposedFile": "changes/p99-final-chain-closure/timorous--Rinmark.lua"
+    },
+    {
+      "key": "timorous/an_Iksar_master",
+      "name": "timorous/an_Iksar_master baseline later entry reproduction",
+      "assertions": "say(\"test of patience\");equal(#spawns,1);equal(spawns[1][1],96318);equal(calls.depops,1)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "4b17cfed06c4d0320fa3f6cd2156c41ed0bfb3be22ef82bc5c5c75d77d584aa6",
+      "file": "maintained/lua/converted-perl/timorous/an_Iksar_master.lua",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "key": "timorous/an_Iksar_master",
+      "name": "timorous/an_Iksar_master later trial cannot be entered test of patience",
+      "assertions": "say(\"test of patience\");equal(#spawns,0);equal(calls.depops,0);equal(next(calls.rewards),nil);equal(#calls.speech,0)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "16ceafc8465767a47b1f8e6602617e951874a170ef42e6513457e2f46d520568",
+      "proposedFile": "changes/p99-final-chain-closure/timorous--an_Iksar_master.lua"
+    },
+    {
+      "key": "timorous/an_Iksar_master",
+      "name": "timorous/an_Iksar_master later trial cannot be entered I request the test of patience",
+      "assertions": "say(\"I request the test of patience\");equal(#spawns,0);equal(calls.depops,0);equal(next(calls.rewards),nil);equal(#calls.speech,0)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "16ceafc8465767a47b1f8e6602617e951874a170ef42e6513457e2f46d520568",
+      "proposedFile": "changes/p99-final-chain-closure/timorous--an_Iksar_master.lua"
+    },
+    {
+      "key": "timorous/an_Iksar_master",
+      "name": "timorous/an_Iksar_master later trial cannot be entered unrelated",
+      "assertions": "say(\"unrelated\");equal(#spawns,0);equal(calls.depops,0);equal(next(calls.rewards),nil);equal(#calls.speech,0)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "16ceafc8465767a47b1f8e6602617e951874a170ef42e6513457e2f46d520568",
+      "proposedFile": "changes/p99-final-chain-closure/timorous--an_Iksar_master.lua"
+    },
+    {
+      "key": "timorous/an_Iksar_master",
+      "name": "timorous/an_Iksar_master classic request return the hand to Cabilis",
+      "assertions": "say(\"return the hand to Cabilis\");reward(17036,1);equal(#spawns,0);equal(calls.depops,0)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "16ceafc8465767a47b1f8e6602617e951874a170ef42e6513457e2f46d520568",
+      "proposedFile": "changes/p99-final-chain-closure/timorous--an_Iksar_master.lua"
+    },
+    {
+      "key": "timorous/an_Iksar_master",
+      "name": "timorous/an_Iksar_master classic request assist old Rinmark in completing his rock garden",
+      "assertions": "say(\"assist old Rinmark in completing his rock garden\");reward(17039,1);equal(#spawns,0);equal(calls.depops,0)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "16ceafc8465767a47b1f8e6602617e951874a170ef42e6513457e2f46d520568",
+      "proposedFile": "changes/p99-final-chain-closure/timorous--an_Iksar_master.lua"
+    },
+    {
+      "key": "timorous/an_Iksar_master",
+      "name": "timorous/an_Iksar_master classic request student",
+      "assertions": "say(\"student\");reward(17040,1);equal(#spawns,0);equal(calls.depops,0)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "16ceafc8465767a47b1f8e6602617e951874a170ef42e6513457e2f46d520568",
+      "proposedFile": "changes/p99-final-chain-closure/timorous--an_Iksar_master.lua"
+    },
+    {
+      "key": "timorous/an_Iksar_master",
+      "name": "timorous/an_Iksar_master retained classic dialogue hail",
+      "assertions": "say(\"hail\");equal(#calls.speech,1);equal(#spawns,0)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "16ceafc8465767a47b1f8e6602617e951874a170ef42e6513457e2f46d520568",
+      "proposedFile": "changes/p99-final-chain-closure/timorous--an_Iksar_master.lua"
+    },
+    {
+      "key": "timorous/an_Iksar_master",
+      "name": "timorous/an_Iksar_master retained classic dialogue master rinmark",
+      "assertions": "say(\"master rinmark\");equal(#calls.speech,1);equal(#spawns,0)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "16ceafc8465767a47b1f8e6602617e951874a170ef42e6513457e2f46d520568",
+      "proposedFile": "changes/p99-final-chain-closure/timorous--an_Iksar_master.lua"
+    },
+    {
+      "key": "timorous/an_Iksar_master",
+      "name": "timorous/an_Iksar_master retained classic dialogue talon southpaw",
+      "assertions": "say(\"talon southpaw\");equal(#calls.speech,1);equal(#spawns,0)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "16ceafc8465767a47b1f8e6602617e951874a170ef42e6513457e2f46d520568",
+      "proposedFile": "changes/p99-final-chain-closure/timorous--an_Iksar_master.lua"
+    },
+    {
+      "key": "timorous/an_Iksar_master",
+      "name": "timorous/an_Iksar_master retained classic dialogue Gomoz",
+      "assertions": "say(\"Gomoz\");equal(#calls.speech,1);equal(#spawns,0)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "16ceafc8465767a47b1f8e6602617e951874a170ef42e6513457e2f46d520568",
+      "proposedFile": "changes/p99-final-chain-closure/timorous--an_Iksar_master.lua"
+    },
+    {
+      "key": "timorous/an_Iksar_master",
+      "name": "timorous/an_Iksar_master retained classic dialogue whistling fists",
+      "assertions": "say(\"whistling fists\");equal(#calls.speech,1);equal(#spawns,0)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "16ceafc8465767a47b1f8e6602617e951874a170ef42e6513457e2f46d520568",
+      "proposedFile": "changes/p99-final-chain-closure/timorous--an_Iksar_master.lua"
+    },
+    {
+      "key": "timorous/an_Iksar_master",
+      "name": "timorous/an_Iksar_master classic trade extra/refund/repeat 12815",
+      "assertions": "trade({12815,99999},{gold=10});equal(remaining[12815],0);equal(remaining[99999],1);equal(remaining.gold,10);equal(calls.exp,20000);faction(444,20);faction(441,10);equal(calls.returns,1);trade({12815});equal(calls.exp,40000);equal(calls.returns,2);reward(12797,2)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "16ceafc8465767a47b1f8e6602617e951874a170ef42e6513457e2f46d520568",
+      "proposedFile": "changes/p99-final-chain-closure/timorous--an_Iksar_master.lua"
+    },
+    {
+      "key": "timorous/an_Iksar_master",
+      "name": "timorous/an_Iksar_master classic trade extra/refund/repeat 12829",
+      "assertions": "trade({12829,99999},{gold=10});equal(remaining[12829],0);equal(remaining[99999],1);equal(remaining.gold,10);equal(calls.exp,30000);faction(444,20);faction(441,10);equal(calls.returns,1);trade({12829});equal(calls.exp,60000);equal(calls.returns,2);equal(next(calls.rewards),nil)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "16ceafc8465767a47b1f8e6602617e951874a170ef42e6513457e2f46d520568",
+      "proposedFile": "changes/p99-final-chain-closure/timorous--an_Iksar_master.lua"
+    },
+    {
+      "key": "timorous/an_Iksar_master",
+      "name": "timorous/an_Iksar_master classic trade extra/refund/repeat 12836",
+      "assertions": "trade({12836,99999},{gold=10});equal(remaining[12836],0);equal(remaining[99999],1);equal(remaining.gold,10);equal(calls.exp,30000);faction(444,20);faction(441,10);equal(calls.returns,1);trade({12836});equal(calls.exp,60000);equal(calls.returns,2);reward(4195,2)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "16ceafc8465767a47b1f8e6602617e951874a170ef42e6513457e2f46d520568",
+      "proposedFile": "changes/p99-final-chain-closure/timorous--an_Iksar_master.lua"
+    },
+    {
+      "key": "timorous/an_Iksar_master",
+      "name": "timorous/an_Iksar_master unmatched offer returned",
+      "assertions": "trade({99999},{gold=10});equal(remaining[99999],1);equal(remaining.gold,10);equal(calls.returns,1);equal(next(calls.rewards),nil);equal(calls.exp,0)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "16ceafc8465767a47b1f8e6602617e951874a170ef42e6513457e2f46d520568",
+      "proposedFile": "changes/p99-final-chain-closure/timorous--an_Iksar_master.lua"
+    },
+    {
+      "key": "befallen/#Sir_Ariam_Arcanum",
+      "name": "befallen/#Sir_Ariam_Arcanum archival source loads inert with preserved callbacks",
+      "assertions": "assert(type(spawn_event)==\"function\");assert(type(event_say)==\"function\");assert(type(event_trade)==\"function\");assert(type(event_timer)==\"function\");equal(#spawns,0);equal(calls.depops,0);equal(next(calls.rewards),nil)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "bea36a1921acce284e87b34964a76754a88b9a3c18cb6ca7e1723f4f74cf1c5b",
+      "proposedFile": "changes/p99-final-chain-closure/befallen--#Sir_Ariam_Arcanum.lua"
+    },
+    {
+      "key": "befallen/#Sir_Ariam_Arcanum",
+      "name": "befallen/#Sir_Ariam_Arcanum force-loaded historical chain identity (not disabled dispatch)",
+      "assertions": "say(\"truth\");reward(31492,1);reward(18474,1);say(\"dead\");reward(31492,2);reward(18474,2);say(\"travel to felwithe\");reward(31493,1);trade({99999},{gold=10});equal(remaining[99999],1);equal(remaining.gold,10);equal(calls.returns,1)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "bea36a1921acce284e87b34964a76754a88b9a3c18cb6ca7e1723f4f74cf1c5b",
+      "proposedFile": "changes/p99-final-chain-closure/befallen--#Sir_Ariam_Arcanum.lua"
+    },
+    {
+      "key": "neriakc/Xantis_Ixtax",
+      "name": "neriakc/Xantis_Ixtax retained ten-gold replacement plus extra and repeat",
+      "assertions": "trade({13394,99999},{gold=11});reward(13394,1);equal(remaining[13394],0);equal(remaining[99999],1);equal(remaining.gold,1);equal(calls.returns,1);trade({13394},{gold=10});reward(13394,2);equal(calls.returns,2)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "992100ee5b2dcaca62f8755105a2e78598e51a3931228765e64aeb06c945e861",
+      "file": "maintained/lua/converted-perl/neriakc/Xantis_Ixtax.lua",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "key": "neriakc/Xantis_Ixtax",
+      "name": "neriakc/Xantis_Ixtax underpaid or nonconfigured denomination gold=9",
+      "assertions": "trade({13394,99999},{gold=9});reward(13394,0);equal(remaining[13394],1);equal(remaining[99999],1);equal(calls.returns,1)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "992100ee5b2dcaca62f8755105a2e78598e51a3931228765e64aeb06c945e861",
+      "file": "maintained/lua/converted-perl/neriakc/Xantis_Ixtax.lua",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "key": "neriakc/Xantis_Ixtax",
+      "name": "neriakc/Xantis_Ixtax underpaid or nonconfigured denomination platinum=1",
+      "assertions": "trade({13394,99999},{platinum=1});reward(13394,0);equal(remaining[13394],1);equal(remaining[99999],1);equal(calls.returns,1)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "992100ee5b2dcaca62f8755105a2e78598e51a3931228765e64aeb06c945e861",
+      "file": "maintained/lua/converted-perl/neriakc/Xantis_Ixtax.lua",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "key": "neriakc/Xantis_Ixtax",
+      "name": "neriakc/Xantis_Ixtax missing ring retains gold",
+      "assertions": "trade({99999},{gold=10});reward(13394,0);equal(remaining.gold,10);equal(remaining[99999],1)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "992100ee5b2dcaca62f8755105a2e78598e51a3931228765e64aeb06c945e861",
+      "file": "maintained/lua/converted-perl/neriakc/Xantis_Ixtax.lua",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "key": "paineel/Librarian_Kesler",
+      "name": "paineel/Librarian_Kesler known missing grant the history of paineel",
+      "assertions": "say(\"tell me about the history of paineel\");equal(#calls.speech,1);equal(next(calls.rewards),nil)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "63582a2b553ac9b7cc4d57601b9a4f0779d9aca140b15a300110077e31e5296f",
+      "file": "maintained/lua/converted-perl/paineel/Librarian_Kesler.lua",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "key": "paineel/Librarian_Kesler",
+      "name": "paineel/Librarian_Kesler known missing grant the hole",
+      "assertions": "say(\"tell me about the hole\");equal(#calls.speech,1);equal(next(calls.rewards),nil)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "63582a2b553ac9b7cc4d57601b9a4f0779d9aca140b15a300110077e31e5296f",
+      "file": "maintained/lua/converted-perl/paineel/Librarian_Kesler.lua",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "key": "paineel/Librarian_Kesler",
+      "name": "paineel/Librarian_Kesler known missing grant the underfoot",
+      "assertions": "say(\"tell me about the underfoot\");equal(#calls.speech,1);equal(next(calls.rewards),nil)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "63582a2b553ac9b7cc4d57601b9a4f0779d9aca140b15a300110077e31e5296f",
+      "file": "maintained/lua/converted-perl/paineel/Librarian_Kesler.lua",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "key": "paineel/Librarian_Kesler",
+      "name": "paineel/Librarian_Kesler known missing grant the old paineel",
+      "assertions": "say(\"tell me about the old paineel\");equal(#calls.speech,1);equal(next(calls.rewards),nil)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "63582a2b553ac9b7cc4d57601b9a4f0779d9aca140b15a300110077e31e5296f",
+      "file": "maintained/lua/converted-perl/paineel/Librarian_Kesler.lua",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "key": "sebilis/#froglok_krup_knight",
+      "name": "sebilis/#froglok_krup_knight unresolved encounter retained exact random branch",
+      "assertions": "math.random=function() return 2 end;event_death_complete({self=npc});equal(#spawns,0);math.random=function() return 1 end;event_death_complete({self=npc});equal(spawns[1][1],89182)",
+      "setupExtra": "spawns={};timers={};stops={};npc.GetX=function() return 10 end;npc.GetY=function() return 20 end;npc.GetZ=function() return 30 end;npc.GetHeading=function() return 40 end\nnpc.Shout=npc.Say;eq.spawn2=function(...) table.insert(spawns,{...});return npc end;eq.unique_spawn=eq.spawn2;eq.depop=function() calls.depops=calls.depops+1 end;eq.set_timer=function(a,b) timers[a]=b end;eq.stop_timer=function(a) stops[a]=true end;eq.depop_all=function(id) calls.depopAll=id end\n",
+      "sourceSha256": "d1d40980941ef5b2f1f6fa6812f5066644c3a671efdaf012f009564553683fa8",
+      "file": "maintained/lua/converted-perl/sebilis/#froglok_krup_knight.lua",
+      "coverageKind": "baseline_verification"
+    }
+  ]
+}

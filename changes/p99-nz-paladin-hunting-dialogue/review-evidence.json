@@ -1,0 +1,26 @@
+{
+  "titles": [
+    "Paladin Hunting"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "partial",
+  "match_status": "partial",
+  "local_quest_keys": [
+    "qcat/Garuc_Anehm"
+  ],
+  "proposal": "changes/p99-nz-paladin-hunting-dialogue.json",
+  "notes": [
+    "Allow documented Where is Commander Kane on duty? to reach duty-location response instead of commander introduction.",
+    "13287Order->5013RustyShortSword;13296PrayerBeads->17001WristPouch;13908BustedBeads penalty exactly match all five cached faction deltas.13288DroscoOrder remains rejected. All rewards unchanged; only predicate specificity changed.500EXP not specified in cache. Threat dialogue does not prove an attack should be forced, so no attack added."
+  ],
+  "verification": {
+    "source": "Cached P99 and effective Lua reviewed; exact complete row preimages and source hashes recorded.",
+    "syntax": "pending",
+    "runtime": "Isolated mock regression pending; full game runtime unavailable.",
+    "ui": "not_run",
+    "connected_chain": "not_run"
+  },
+  "unresolved": [
+    "Ordinary source drops/spawns, recipe live behavior and rendered complete quest path not verified."
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "title": "Cursed Wafers Quest",
+  "evidence": {
+    "title": "Cursed Wafers Quest",
+    "url": "https://wiki.project1999.com/Cursed_Wafers_Quest?action=raw",
+    "fetchedAt": "2026-07-17T23:12:25.728Z",
+    "revision": null,
+    "sha256": "481acd8b8d1c2ae89ff9e89a720096b03706eb646ce975c946b1968a2e381bdd",
+    "bytes": 2618,
+    "source": "raw-pages/cursed-wafers-quest-71bc5f3cce.json",
+    "cachePath": "reference/p99-wiki/raw-pages/cursed-wafers-quest-71bc5f3cce.wiki"
+  },
+  "recipe": {
+    "id": 9770,
+    "name": "Full Component Mortar",
+    "tradeskill": 75,
+    "skillneeded": 0,
+    "trivial": 0,
+    "nofail": 1,
+    "replace_container": 1,
+    "notes": "Cursed Wafers Quest",
+    "must_learn": 0,
+    "learned_by_item_id": 0,
+    "quest": 1,
+    "enabled": 0,
+    "show_in_advanced": 1,
+    "min_expansion": -1,
+    "max_expansion": -1,
+    "content_flags": null,
+    "content_flags_disabled": null,
+    "category": "Quest"
+  },
+  "entries": [
+    {
+      "id": 85680,
+      "recipe_id": 9770,
+      "item_id": 12404,
+      "successcount": 0,
+      "failcount": 0,
+      "componentcount": 1,
+      "salvagecount": 1,
+      "iscontainer": 0
+    },
+    {
+      "id": 85682,
+      "recipe_id": 9770,
+      "item_id": 12403,
+      "successcount": 1,
+      "failcount": 0,
+      "componentcount": 0,
+      "salvagecount": 0,
+      "iscontainer": 0
+    },
+    {
+      "id": 85681,
+      "recipe_id": 9770,
+      "item_id": 13073,
+      "successcount": 0,
+      "failcount": 0,
+      "componentcount": 1,
+      "salvagecount": 1,
+      "iscontainer": 0
+    },
+    {
+      "id": 85683,
+      "recipe_id": 9770,
+      "item_id": 17020,
+      "successcount": 0,
+      "failcount": 0,
+      "componentcount": 0,
+      "salvagecount": 0,
+      "iscontainer": 1
+    },
+    {
+      "id": 85679,
+      "recipe_id": 9770,
+      "item_id": 12405,
+      "successcount": 0,
+      "failcount": 0,
+      "componentcount": 2,
+      "salvagecount": 2,
+      "iscontainer": 0
+    }
+  ],
+  "verified": "Container17020 four slots; two Small Mosquito Wing12405, one Mud Crabs12404, one Bone Chips13073 => FullComponentMortar12403. No-fail and replace-container metadata unchanged. Crafting engine not run."
+}

@@ -1,0 +1,48 @@
+-- Source: butcher/Kandin_Firepot.lua (ProjectEQ).
+-- P99 post-revamp route explicitly makes Note from Arantir optional. The
+-- sprocket and Green Oil exchange must not require its wizepicK flag.
+-- The documented legacy skin, powder, and bag exchanges are separate hand-ins.
+-- Their additional faction magnitudes remain unresolved; do not invent them.
+-- items: 14319, 18169, 14349, 14339, 18168, 14333, 14332, 14336
+function event_say(e)
+	local qglobals = eq.get_qglobals(e.self, e.other);
+
+	if e.message:findi("hail") then
+		e.self:Say("Hello, there! Don't have time to talk. I'm workin', workin', workin'! Careful! Don't slip in the oil!");
+	elseif e.message:findi("what oil") then
+			e.self:Say("Ah the oil! I recently sent a specially crafted golem to explore through a huge portal to another plane. It's instructions were to collect special oil that I suspect existed in the plane. What I think is the golem broke down. This looks like a good task for one like you. Go see what's wrong with the golem. Here is spare gears of mine incase it's broken. Be careful though, if you put it in wrong it could explode or worse!");
+			e.other:SummonItem(14319); -- Item: Golem Sprocket
+	end
+end
+
+function event_trade(e)
+	local qglobals = eq.get_qglobals(e.self, e.other);
+	local item_lib = require("items");
+
+	if item_lib.check_turn_in(e.trade, {item1 = 18169}) then
+		e.self:Say("Brother! I have one of those. He's great, but he's dead. His name was Gabstik and he was a really powerful wizard. I still have one of his greatest possesions! You look like you could use it. I've added another thing to my shopping list. I require a dry brittle skin that I can mold or a rare oil found in the planes that I can soak the fuse in. Get me one of these things and I'll trade it for my bother's stick.");
+		e.other:Ding();
+		e.other:Faction(404, 10); --Truespirit
+		eq.set_global("wizepicK","1",0,"F");
+	elseif item_lib.check_turn_in(e.trade, {item1 = 14349}) then
+			e.self:Say("Oh wow! You found the oil! Where is the golem? You didn't hurt him did you? I am very fond of him. Anyways, here is your reward a note and staff to give to that guy you were asking me about.");
+			e.other:QuestReward(e.self,{itemid = 14339});  -- Item: Staff of Gabstik
+			e.other:SummonItem(18168); -- Item: note
+			e.other:Faction(404, 30); --Truespirit
+			eq.delete_global("wizepicK");
+	elseif qglobals["wizepicK"] ~= nil then
+        if item_lib.check_turn_in(e.trade, {item1 = 14332}) then -- Cazic's Skin
+            e.self:Say("Great! This is? What is this for again? Oh yeah, the casing for my firework. I forgot I needed another part to my firework. I need some mistletoe powder. Hold on to my bag for me, please. You can give it back after you've given me what I want.");
+            e.other:SummonItem(14336); -- Kandin's Bag, lore Warning -- Explosive!
+        elseif item_lib.check_turn_in(e.trade, {item1 = 14333}) then -- Mistletoe Powder
+            e.other:QuestReward(e.self, {itemid = 14339}); -- Staff of Gabstik
+            e.other:Faction(404, 30); -- Preserve existing staff-step fallback, magnitude unverified.
+        elseif item_lib.check_turn_in(e.trade, {item1 = 14336}) then -- Kandin's Bag
+            e.self:Say("Great! Give this to Arantir so he knows you've helped me! Hey! Have you seen my lantern anywhere?");
+            e.other:SummonItem(18168); -- Note to Arantir
+            eq.delete_global("wizepicK");
+        end
+    end
+
+	item_lib.return_items(e.self, e.other, e.trade)
+end

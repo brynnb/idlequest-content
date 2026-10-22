@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-weleth-crate-dialogue",
+  "summary": "Prevent generic crate lore from shadowing the documented I will take the crate of arrows request. Preserve existing arrows keyword, reward and faction behavior.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/The_Crate_(good)?action=raw",
+      "note": "Cached 2026-07-17T23:36:12.981Z; revision unavailable; SHA256 d4b8ae2a3dbb222b4528f82329a160292e2fc01331f66cb62fb583bcc67f1ca8. Prevent generic crate lore from shadowing the documented I will take the crate of arrows request. Preserve existing arrows keyword, reward and faction behavior. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 16330,
+        "zone": "qeynos2",
+        "name": "Guard_Weleth",
+        "lua_content": "-- items: 13925, 18824\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(string.format(\"Hail, %s. My name is Weleth Nagoh. In addition to my patrol, I am in charge of keeping the guardhouse stocked with supplies. I must get back to my duties. Farewell.\",e.other:GetName()));\n\telseif(e.message:findi(\"crate\")) then\n\t\te.self:Say(\"Oh, we just received a shipment of arrows from [Nesiff] in South Qeynos. The arrows in this box are missing their fletchings and I can't leave my patrol to take them back.\");\n\telseif(e.message:findi(\"nesiff\")) then\n\t\te.self:Say(\"Nesiff Tallaherd owns the wooden weapons shop in Merchant's Square in South Qeynos.\");\n\telseif(e.message:findi(\"arrows\")) then\n\t\te.self:Say(\"Oh, thank you! Here is the crate. Make sure [Nesiff] sends me back a new invoice. [Lieutenant Dagarok] would have my head if he found out this happened again!\");\n\t\te.other:SummonItem(13925); -- Crate of Defective Arrows\n\telseif(e.message:findi(\"lieutenant dagarok\")) then\n\t\te.self:Say(\"Lieutenant Dagarok is the officer in charge of all of North Qeynos. He is difficult to get along with and I [do not trust] him.\");\n\telseif(e.message:findi(\"trust\")) then\n\t\te.self:Say(\"Late one night not long ago, after I was off duty, I witnessed Lieutenant Dagarok and a few others slay someone they claimed was a suspected necromancer. I had met their victim the day before and I know he was an innocent paladin from Freeport. What really shocked me was that Dagarok was bathed in an evil green glow as their victim crumpled to the ground. I don't know who to trust any more!\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 18824})) then -- Slip of Parchment\n\t\te.self:Say(\"Thank you so much for the favor. Please be careful here in Qeynos. I have come to suspect that even some of my fellow guards are not to be trusted - Lieutenant Dagarok, for one.\");\n\t\tlocal random_cp = math.random(8);\n\t\te.other:Ding();\n\t\te.other:Faction(262,10,0); -- Guards of Qeynos\n\t\te.other:Faction(219,10,0); -- Antonius Bayle\n\t\te.other:Faction(223,-20,0); -- Circle Of Unseen Hands\n\t\te.other:Faction(230,-20,0); -- Corrupt Qeynos Guards\n\t\te.other:Faction(291,10,0); -- Merchants of Qeynos\n\t\te.other:AddEXP(8000);\n\t\te.other:GiveCash(random_cp,0,0,0);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\nfunction event_waypoint_arrive(e)\n\tif(e.wp == 8) then\n\t\te.self:Say(\"Argh. Not again. This whole crate needs to be returned!\");\n\tend\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 16330,
+        "zone": "qeynos2",
+        "name": "Guard_Weleth",
+        "lua_content": "-- items: 13925, 18824\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(string.format(\"Hail, %s. My name is Weleth Nagoh. In addition to my patrol, I am in charge of keeping the guardhouse stocked with supplies. I must get back to my duties. Farewell.\",e.other:GetName()));\n\telseif(e.message:findi(\"crate\") and not e.message:findi(\"take the crate of arrows\")) then\n\t\te.self:Say(\"Oh, we just received a shipment of arrows from [Nesiff] in South Qeynos. The arrows in this box are missing their fletchings and I can't leave my patrol to take them back.\");\n\telseif(e.message:findi(\"nesiff\")) then\n\t\te.self:Say(\"Nesiff Tallaherd owns the wooden weapons shop in Merchant's Square in South Qeynos.\");\n\telseif(e.message:findi(\"arrows\")) then\n\t\te.self:Say(\"Oh, thank you! Here is the crate. Make sure [Nesiff] sends me back a new invoice. [Lieutenant Dagarok] would have my head if he found out this happened again!\");\n\t\te.other:SummonItem(13925); -- Crate of Defective Arrows\n\telseif(e.message:findi(\"lieutenant dagarok\")) then\n\t\te.self:Say(\"Lieutenant Dagarok is the officer in charge of all of North Qeynos. He is difficult to get along with and I [do not trust] him.\");\n\telseif(e.message:findi(\"trust\")) then\n\t\te.self:Say(\"Late one night not long ago, after I was off duty, I witnessed Lieutenant Dagarok and a few others slay someone they claimed was a suspected necromancer. I had met their victim the day before and I know he was an innocent paladin from Freeport. What really shocked me was that Dagarok was bathed in an evil green glow as their victim crumpled to the ground. I don't know who to trust any more!\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 18824})) then -- Slip of Parchment\n\t\te.self:Say(\"Thank you so much for the favor. Please be careful here in Qeynos. I have come to suspect that even some of my fellow guards are not to be trusted - Lieutenant Dagarok, for one.\");\n\t\tlocal random_cp = math.random(8);\n\t\te.other:Ding();\n\t\te.other:Faction(262,10,0); -- Guards of Qeynos\n\t\te.other:Faction(219,10,0); -- Antonius Bayle\n\t\te.other:Faction(223,-20,0); -- Circle Of Unseen Hands\n\t\te.other:Faction(230,-20,0); -- Corrupt Qeynos Guards\n\t\te.other:Faction(291,10,0); -- Merchants of Qeynos\n\t\te.other:AddEXP(8000);\n\t\te.other:GiveCash(random_cp,0,0,0);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\nfunction event_waypoint_arrive(e)\n\tif(e.wp == 8) then\n\t\te.self:Say(\"Argh. Not again. This whole crate needs to be returned!\");\n\tend\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/qeynos2/Guard_Weleth.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-tz-weleth-crate-dialogue/qeynos2--Guard_Weleth.lua",
+      "afterSha256": "8ebb255e1c69ac480b903cd139b174557f15c02de09f6854e77f98187a55a402"
+    }
+  ]
+}

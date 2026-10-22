@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-cordelia-factions",
+  "summary": "Use Alternative route explicit flute hand-in deltas: Bards+5 (admin edit after doing quest), Truth+1,Qeynos+1,Scale-1,Mistmoore-1. Preserve page-conflicting sheet naming, cash and XP fallback.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Winds_of_Karana?action=raw",
+      "note": "Cached 2026-07-17T23:41:20.851Z; revision unavailable; SHA256 6078913ded228c1160a47e69613c20b819440dc64cd0faff833f2c454396098c. Use Alternative route explicit flute hand-in deltas: Bards+5 (admin edit after doing quest), Truth+1,Qeynos+1,Scale-1,Mistmoore-1. Preserve page-conflicting sheet naming, cash and XP fallback. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 18246,
+        "zone": "northkarana",
+        "name": "Cordelia_Minster",
+        "lua_content": "-- Source: northkarana/Cordelia_Minster.lua\n-- P99 audit: Winds of Karana\n-- items: 13310, 13119\n\nfunction event_waypoint_arrive(e)\n\tif e.wp == 1 or e.wp == 3 or e.wp == 8 then\n\t\te.self:SetRunning(true)\n\telseif e.wp == 2 or e.wp == 6 or e.wp == 10 then\n\t\te.self:SetRunning(false)\n\tend\nend\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Greetings!  I am Cordelia, a traveling piper. I am afraid I cannot play a tune for you, however, as my [flute] is gone.\")\n\telseif e.message:findi(\"flute\") then\n\t\te.self:Say(\"I traded my flute to a hermit in the southern plains of Karana. I had a spare flute, but that was taken from me by some bandits. If you could find this hermit and ask him for my flute back, I would be most appreciative.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\n\tif item_lib.check_turn_in(e.trade, { item1 = 13310 }) then -- Cracked Flute\n\t\te.self:Say(\"Why thank you, kind adventurer! Here is a little something to keep food in your belly. Now back to practice. La la la..\")\n\t\te.other:SummonItem(13119) -- Winds of Karana sheet 2\n\t\te.other:Ding()\n\t\te.other:Faction(262, 2, 0) -- Guards of Qeynos\n\t\te.other:Faction(281, 2, 0) -- Knights of Truth\n\t\te.other:Faction(284, 2, 0) -- League of Antonican Bards\n\t\te.other:Faction(285, -5, 0) -- Mayong Mistmoore\n\t\te.other:Faction(304, -5, 0) -- Ring of Scale\n\t\te.other:AddEXP(1000)\n\t\te.other:GiveCash(0, 1, 0, 0) -- P99: 1 silver\n\tend\n\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 18246,
+        "zone": "northkarana",
+        "name": "Cordelia_Minster",
+        "lua_content": "-- Source: northkarana/Cordelia_Minster.lua\n-- P99 audit: Winds of Karana\n-- items: 13310, 13119\n\nfunction event_waypoint_arrive(e)\n\tif e.wp == 1 or e.wp == 3 or e.wp == 8 then\n\t\te.self:SetRunning(true)\n\telseif e.wp == 2 or e.wp == 6 or e.wp == 10 then\n\t\te.self:SetRunning(false)\n\tend\nend\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Greetings!  I am Cordelia, a traveling piper. I am afraid I cannot play a tune for you, however, as my [flute] is gone.\")\n\telseif e.message:findi(\"flute\") then\n\t\te.self:Say(\"I traded my flute to a hermit in the southern plains of Karana. I had a spare flute, but that was taken from me by some bandits. If you could find this hermit and ask him for my flute back, I would be most appreciative.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\n\tif item_lib.check_turn_in(e.trade, { item1 = 13310 }) then -- Cracked Flute\n\t\te.self:Say(\"Why thank you, kind adventurer! Here is a little something to keep food in your belly. Now back to practice. La la la..\")\n\t\te.other:SummonItem(13119) -- Winds of Karana sheet 2\n\t\te.other:Ding()\n\t\te.other:Faction(262, 1, 0) -- Guards of Qeynos\n\t\te.other:Faction(281, 1, 0) -- Knights of Truth\n\t\te.other:Faction(284, 5, 0) -- League of Antonican Bards\n\t\te.other:Faction(285, -1, 0) -- Mayong Mistmoore\n\t\te.other:Faction(304, -1, 0) -- Ring of Scale\n\t\te.other:AddEXP(1000)\n\t\te.other:GiveCash(0, 1, 0, 0) -- P99: 1 silver\n\tend\n\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/northkarana/Cordelia_Minster.lua",
+      "beforeSha256": "e1a17b37432ef2f2173395a1563111b23eadad0a69a360114dcd4fad6aa5f7bf",
+      "proposedFile": "changes/p99-tz-cordelia-factions/northkarana--Cordelia_Minster.lua",
+      "afterSha256": "289419b146edb673ddd619523e58bf75af369efef216a7c0c46b93b9600405a2"
+    }
+  ]
+}

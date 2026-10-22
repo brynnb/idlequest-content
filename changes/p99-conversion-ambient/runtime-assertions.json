@@ -1,0 +1,954 @@
+{
+  "kind": "isolated-script-logic-not-live-runtime",
+  "cases": [
+    {
+      "name": "gnomish_captive exact original proximity",
+      "proposedFile": "changes/p99-conversion-ambient/greatdivide/gnomish_captive.lua",
+      "sourceSha256": "8c0c07e98f60c60e0ec1ab11f38b491b245b117b0b841d36f8fd5613b3be7c01",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_spawn({self=npc});equal(#calls.proximities,1);equal(#calls.proximities[1],4);equal(calls.proximities[1][1],-10);equal(calls.proximities[1][2],30);equal(calls.proximities[1][3],0);equal(calls.proximities[1][4],40)"
+    },
+    {
+      "name": "gnomish_captive enter clears before depop with no player required",
+      "proposedFile": "changes/p99-conversion-ambient/greatdivide/gnomish_captive.lua",
+      "sourceSha256": "8c0c07e98f60c60e0ec1ab11f38b491b245b117b0b841d36f8fd5613b3be7c01",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "local order={};eq.clear_proximity=function() table.insert(order,\"clear\") end;eq.depop=function() table.insert(order,\"depop\") end;event_enter({self=npc});equal(#calls.speech,2);equal(order[1],\"clear\");equal(order[2],\"depop\");equal(next(calls.rewards),nil)"
+    },
+    {
+      "name": "Novyak_the_Lookout source seconds converted once to milliseconds",
+      "proposedFile": "changes/p99-conversion-ambient/iceclad/Novyak_the_Lookout.lua",
+      "sourceSha256": "065bc1a013dd632f5dc8c6fec073a6ef9fc6c0dc15f58a35d271bb8aff0cead7",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_spawn({self=npc});equal(#calls.timers,1);equal(calls.timers[1][1],\"1\");equal(calls.timers[1][2],2400000);"
+    },
+    {
+      "name": "Novyak_the_Lookout repeated timer 1 source effect capture only",
+      "proposedFile": "changes/p99-conversion-ambient/iceclad/Novyak_the_Lookout.lua",
+      "sourceSha256": "065bc1a013dd632f5dc8c6fec073a6ef9fc6c0dc15f58a35d271bb8aff0cead7",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_timer({self=npc,timer=\"1\"});event_timer({self=npc,timer=\"1\"});equal(#calls.speech,2);equal(calls.speech[1],calls.speech[2]);equal(#calls.timers,0)"
+    },
+    {
+      "name": "Brina_Snowfox mixed case hail",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadina/Brina_Snowfox.lua",
+      "sourceSha256": "68545ed5c00da556f2a39b7bee78224231890b41d773eac3947c04fa1027c73f",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "say('HaIl');equal(#calls.speech,1)"
+    },
+    {
+      "name": "Brina_Snowfox unrelated speech inert",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadina/Brina_Snowfox.lua",
+      "sourceSha256": "68545ed5c00da556f2a39b7bee78224231890b41d773eac3947c04fa1027c73f",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "say('unrelated');equal(#calls.speech,0);equal(#calls.moves,0)"
+    },
+    {
+      "name": "Brina_Snowfox one repaired race-aware greeting",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadina/Brina_Snowfox.lua",
+      "sourceSha256": "68545ed5c00da556f2a39b7bee78224231890b41d773eac3947c04fa1027c73f",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "say('hail');equal(#calls.speech,1);assert(string.find(calls.speech[1],'Gnome?',1,true));assert(not string.find(calls.speech[1],'Wood Elf',1,true));assert(not string.find(calls.speech[1],'%#1472',1,true))"
+    },
+    {
+      "name": "Initiate_Corrith source seconds converted once to milliseconds",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadina/Initiate_Corrith.lua",
+      "sourceSha256": "0446af563ef79a89f7c64cb97b72515b8e1fa2e51ee735811d27745318494b5e",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_spawn({self=npc});equal(#calls.timers,1);equal(calls.timers[1][1],\"2\");equal(calls.timers[1][2],30000);"
+    },
+    {
+      "name": "Initiate_Corrith repeated timer 2 source effect capture only",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadina/Initiate_Corrith.lua",
+      "sourceSha256": "0446af563ef79a89f7c64cb97b72515b8e1fa2e51ee735811d27745318494b5e",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_timer({self=npc,timer=\"2\"});event_timer({self=npc,timer=\"2\"});equal(#calls.animations,2);equal(calls.animations[1],2);equal(#calls.speech,0)"
+    },
+    {
+      "name": "Initiate_Kroskain source seconds converted once to milliseconds",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadina/Initiate_Kroskain.lua",
+      "sourceSha256": "ada227e2f347f44bcb49c5fda54fe771394ed65354cecd4cb666c08e3007d1ee",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_spawn({self=npc});equal(#calls.timers,1);equal(calls.timers[1][1],\"1\");equal(calls.timers[1][2],320000);"
+    },
+    {
+      "name": "Initiate_Kroskain repeated timer 1 source effect capture only",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadina/Initiate_Kroskain.lua",
+      "sourceSha256": "ada227e2f347f44bcb49c5fda54fe771394ed65354cecd4cb666c08e3007d1ee",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_timer({self=npc,timer=\"1\"});event_timer({self=npc,timer=\"1\"});equal(#calls.speech,2);equal(calls.speech[1],calls.speech[2]);equal(#calls.timers,0)"
+    },
+    {
+      "name": "Initiate_Sirchthain randomized timer boundary 0",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadina/Initiate_Sirchthain.lua",
+      "sourceSha256": "019739f5d1b1ccdaae15a345bc93d40298095f50026b8556a1bdbf37ef01d391",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "math.random=function() return 0 end;event_spawn({self=npc});event_timer({self=npc,timer=\"2\"});equal(#calls.timers,2);equal(calls.timers[1][2],10000);equal(calls.timers[2][2],10000);equal(calls.animations[1],2)"
+    },
+    {
+      "name": "Initiate_Sirchthain randomized timer boundary 0.5",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadina/Initiate_Sirchthain.lua",
+      "sourceSha256": "019739f5d1b1ccdaae15a345bc93d40298095f50026b8556a1bdbf37ef01d391",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "math.random=function() return 0.5 end;event_spawn({self=npc});event_timer({self=npc,timer=\"2\"});equal(#calls.timers,2);equal(calls.timers[1][2],30000);equal(calls.timers[2][2],30000);equal(calls.animations[1],2)"
+    },
+    {
+      "name": "Initiate_Sirchthain randomized timer boundary 0.999999",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadina/Initiate_Sirchthain.lua",
+      "sourceSha256": "019739f5d1b1ccdaae15a345bc93d40298095f50026b8556a1bdbf37ef01d391",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "math.random=function() return 0.999999 end;event_spawn({self=npc});event_timer({self=npc,timer=\"2\"});equal(#calls.timers,2);equal(calls.timers[1][2],49999);equal(calls.timers[2][2],49999);equal(calls.animations[1],2)"
+    },
+    {
+      "name": "Lieutenant_Ulfur mixed case hail",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadina/Lieutenant_Ulfur.lua",
+      "sourceSha256": "f1b8354b3fbac02ee4b2dad8d29f19e8c120184d28b8c6fc91b4048e3afdf531",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "say('HaIl');equal(#calls.speech,1)"
+    },
+    {
+      "name": "Lieutenant_Ulfur unrelated speech inert",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadina/Lieutenant_Ulfur.lua",
+      "sourceSha256": "f1b8354b3fbac02ee4b2dad8d29f19e8c120184d28b8c6fc91b4048e3afdf531",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "say('unrelated');equal(#calls.speech,0);equal(#calls.moves,0)"
+    },
+    {
+      "name": "Lieutenant_Ulfur existing exact grid bootstrap",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadina/Lieutenant_Ulfur.lua",
+      "sourceSha256": "f1b8354b3fbac02ee4b2dad8d29f19e8c120184d28b8c6fc91b4048e3afdf531",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_spawn({self=npc});equal(#calls.grids,1);equal(calls.grids[1],30);equal(#calls.moves,0)"
+    },
+    {
+      "name": "Lieutenant_Ulfur full dialogue regiment",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadina/Lieutenant_Ulfur.lua",
+      "sourceSha256": "f1b8354b3fbac02ee4b2dad8d29f19e8c120184d28b8c6fc91b4048e3afdf531",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "say('regiment');equal(#calls.speech,1)"
+    },
+    {
+      "name": "Lieutenant_Ulfur full dialogue yes",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadina/Lieutenant_Ulfur.lua",
+      "sourceSha256": "f1b8354b3fbac02ee4b2dad8d29f19e8c120184d28b8c6fc91b4048e3afdf531",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "say('yes');equal(#calls.speech,1)"
+    },
+    {
+      "name": "Lieutenant_Ulfur full dialogue no",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadina/Lieutenant_Ulfur.lua",
+      "sourceSha256": "f1b8354b3fbac02ee4b2dad8d29f19e8c120184d28b8c6fc91b4048e3afdf531",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "say('no');equal(#calls.speech,1)"
+    },
+    {
+      "name": "Lieutenant_Ulfur independent combined text branches in original order",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadina/Lieutenant_Ulfur.lua",
+      "sourceSha256": "f1b8354b3fbac02ee4b2dad8d29f19e8c120184d28b8c6fc91b4048e3afdf531",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "say('hail regiment yes no');equal(#calls.speech,4);assert(string.find(calls.speech[1],'Hail, there, Gnome',1,true));assert(string.find(calls.speech[2],'favor ranged',1,true))"
+    },
+    {
+      "name": "Lieutenant_Ulfur waypoint15 exact twelve immediate signal0 requests",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadina/Lieutenant_Ulfur.lua",
+      "sourceSha256": "f1b8354b3fbac02ee4b2dad8d29f19e8c120184d28b8c6fc91b4048e3afdf531",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_waypoint_arrive({self=npc,wp=15});equal(#calls.signals,12);equal(#calls.speech,1);equal(calls.signals[1][1],115104);equal(calls.signals[1][2],0);equal(calls.signals[2][1],115206);equal(calls.signals[2][2],0);equal(calls.signals[3][1],115105);equal(calls.signals[3][2],0);equal(calls.signals[4][1],115207);equal(calls.signals[4][2],0);equal(calls.signals[5][1],115107);equal(calls.signals[5][2],0);equal(calls.signals[6][1],115208);equal(calls.signals[6][2],0);equal(calls.signals[7][1],115109);equal(calls.signals[7][2],0);equal(calls.signals[8][1],115110);equal(calls.signals[8][2],0);equal(calls.signals[9][1],115209);equal(calls.signals[9][2],0);equal(calls.signals[10][1],115112);equal(calls.signals[10][2],0);equal(calls.signals[11][1],115113);equal(calls.signals[11][2],0);equal(calls.signals[12][1],115211);equal(calls.signals[12][2],0);"
+    },
+    {
+      "name": "Lieutenant_Ulfur unrelated waypoint 1 inert",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadina/Lieutenant_Ulfur.lua",
+      "sourceSha256": "f1b8354b3fbac02ee4b2dad8d29f19e8c120184d28b8c6fc91b4048e3afdf531",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_waypoint_arrive({self=npc,wp=1});equal(#calls.signals,0);equal(#calls.speech,0)"
+    },
+    {
+      "name": "Lieutenant_Ulfur unrelated waypoint 14 inert",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadina/Lieutenant_Ulfur.lua",
+      "sourceSha256": "f1b8354b3fbac02ee4b2dad8d29f19e8c120184d28b8c6fc91b4048e3afdf531",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_waypoint_arrive({self=npc,wp=14});equal(#calls.signals,0);equal(#calls.speech,0)"
+    },
+    {
+      "name": "Lieutenant_Ulfur unrelated waypoint 16 inert",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadina/Lieutenant_Ulfur.lua",
+      "sourceSha256": "f1b8354b3fbac02ee4b2dad8d29f19e8c120184d28b8c6fc91b4048e3afdf531",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_waypoint_arrive({self=npc,wp=16});equal(#calls.signals,0);equal(#calls.speech,0)"
+    },
+    {
+      "name": "Lieutenant_Ulfur unrelated waypoint 24 inert",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadina/Lieutenant_Ulfur.lua",
+      "sourceSha256": "f1b8354b3fbac02ee4b2dad8d29f19e8c120184d28b8c6fc91b4048e3afdf531",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_waypoint_arrive({self=npc,wp=24});equal(#calls.signals,0);equal(#calls.speech,0)"
+    },
+    {
+      "name": "Templar_Franchus source seconds converted once to milliseconds",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadina/Templar_Franchus.lua",
+      "sourceSha256": "3950971abb9a59638bf03d51f4c7d0467b0a2907d63291264926c35aa210f9c4",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_spawn({self=npc});equal(#calls.timers,1);equal(calls.timers[1][1],\"1\");equal(calls.timers[1][2],480000);"
+    },
+    {
+      "name": "Templar_Franchus repeated timer 1 source effect capture only",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadina/Templar_Franchus.lua",
+      "sourceSha256": "3950971abb9a59638bf03d51f4c7d0467b0a2907d63291264926c35aa210f9c4",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_timer({self=npc,timer=\"1\"});event_timer({self=npc,timer=\"1\"});equal(#calls.speech,2);equal(calls.speech[1],calls.speech[2]);equal(#calls.timers,0)"
+    },
+    {
+      "name": "Templar_Tingar source seconds converted once to milliseconds",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadina/Templar_Tingar.lua",
+      "sourceSha256": "b5d579492fed33335b3fc2641f6e7244987e60e6660d0a8ab09b4f23f84fb6e2",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_spawn({self=npc});equal(#calls.timers,2);equal(calls.timers[1][1],\"1\");equal(calls.timers[1][2],480000);equal(calls.timers[2][1],\"2\");equal(calls.timers[2][2],840000);"
+    },
+    {
+      "name": "Templar_Tingar repeated timer 1 source effect capture only",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadina/Templar_Tingar.lua",
+      "sourceSha256": "b5d579492fed33335b3fc2641f6e7244987e60e6660d0a8ab09b4f23f84fb6e2",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_timer({self=npc,timer=\"1\"});event_timer({self=npc,timer=\"1\"});equal(#calls.speech,2);equal(calls.speech[1],calls.speech[2]);equal(#calls.timers,0)"
+    },
+    {
+      "name": "Templar_Tingar repeated timer 2 source effect capture only",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadina/Templar_Tingar.lua",
+      "sourceSha256": "b5d579492fed33335b3fc2641f6e7244987e60e6660d0a8ab09b4f23f84fb6e2",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_timer({self=npc,timer=\"2\"});event_timer({self=npc,timer=\"2\"});equal(#calls.speech,4);equal(calls.speech[1],calls.speech[3]);equal(#calls.timers,0)"
+    },
+    {
+      "name": "Templar_Tingar unknown timer inert",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadina/Templar_Tingar.lua",
+      "sourceSha256": "b5d579492fed33335b3fc2641f6e7244987e60e6660d0a8ab09b4f23f84fb6e2",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_timer({self=npc,timer=\"other\"});equal(#calls.speech,0)"
+    },
+    {
+      "name": "Councilor_Amberfeld signal 1 exact original route and guard flag",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Amberfeld.lua",
+      "sourceSha256": "9f96b89afdad32905e2803e99680c56e8cd9b484c8c8c977e444988495aa159e",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=1});equal(#calls.moves,1);equal(calls.moves[1][1],108);equal(calls.moves[1][2],665);equal(calls.moves[1][3],38);equal(calls.moves[1][4],126);equal(calls.moves[1][5],true);equal(#calls.speech,0)"
+    },
+    {
+      "name": "Councilor_Amberfeld signal 2 exact original route and guard flag",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Amberfeld.lua",
+      "sourceSha256": "9f96b89afdad32905e2803e99680c56e8cd9b484c8c8c977e444988495aa159e",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=2});equal(#calls.moves,1);equal(calls.moves[1][1],25);equal(calls.moves[1][2],542);equal(calls.moves[1][3],65);equal(calls.moves[1][4],0);equal(calls.moves[1][5],true);equal(#calls.speech,0)"
+    },
+    {
+      "name": "Councilor_Amberfeld unknown signal inert",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Amberfeld.lua",
+      "sourceSha256": "9f96b89afdad32905e2803e99680c56e8cd9b484c8c8c977e444988495aa159e",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=999});equal(#calls.moves,0);equal(#calls.speech,0)"
+    },
+    {
+      "name": "Councilor_Amberfeld repeated independent signal movement",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Amberfeld.lua",
+      "sourceSha256": "9f96b89afdad32905e2803e99680c56e8cd9b484c8c8c977e444988495aa159e",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=1});event_signal({self=npc,signal=2});equal(#calls.moves,2);equal(calls.moves[2][5],true)"
+    },
+    {
+      "name": "Councilor_Amberfeld mixed case hail",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Amberfeld.lua",
+      "sourceSha256": "9f96b89afdad32905e2803e99680c56e8cd9b484c8c8c977e444988495aa159e",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "say('HaIl');equal(#calls.speech,1)"
+    },
+    {
+      "name": "Councilor_Amberfeld unrelated speech inert",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Amberfeld.lua",
+      "sourceSha256": "9f96b89afdad32905e2803e99680c56e8cd9b484c8c8c977e444988495aa159e",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "say('unrelated');equal(#calls.speech,0);equal(#calls.moves,0)"
+    },
+    {
+      "name": "Councilor_Coldember signal 1 exact original route and guard flag",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Coldember.lua",
+      "sourceSha256": "671172ac65b14221266c6814f76cbb3e9612cd7945b225ef74032b1092afb0ee",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=1});equal(#calls.moves,1);equal(calls.moves[1][1],93);equal(calls.moves[1][2],655);equal(calls.moves[1][3],39);equal(calls.moves[1][4],488);equal(calls.moves[1][5],true);equal(#calls.speech,0)"
+    },
+    {
+      "name": "Councilor_Coldember signal 2 exact original route and guard flag",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Coldember.lua",
+      "sourceSha256": "671172ac65b14221266c6814f76cbb3e9612cd7945b225ef74032b1092afb0ee",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=2});equal(#calls.moves,1);equal(calls.moves[1][1],15);equal(calls.moves[1][2],543);equal(calls.moves[1][3],66);equal(calls.moves[1][4],0);equal(calls.moves[1][5],true);equal(#calls.speech,0)"
+    },
+    {
+      "name": "Councilor_Coldember unknown signal inert",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Coldember.lua",
+      "sourceSha256": "671172ac65b14221266c6814f76cbb3e9612cd7945b225ef74032b1092afb0ee",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=999});equal(#calls.moves,0);equal(#calls.speech,0)"
+    },
+    {
+      "name": "Councilor_Coldember repeated independent signal movement",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Coldember.lua",
+      "sourceSha256": "671172ac65b14221266c6814f76cbb3e9612cd7945b225ef74032b1092afb0ee",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=1});event_signal({self=npc,signal=2});equal(#calls.moves,2);equal(calls.moves[2][5],true)"
+    },
+    {
+      "name": "Councilor_Coldember mixed case hail",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Coldember.lua",
+      "sourceSha256": "671172ac65b14221266c6814f76cbb3e9612cd7945b225ef74032b1092afb0ee",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "say('HaIl');equal(#calls.speech,1)"
+    },
+    {
+      "name": "Councilor_Coldember unrelated speech inert",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Coldember.lua",
+      "sourceSha256": "671172ac65b14221266c6814f76cbb3e9612cd7945b225ef74032b1092afb0ee",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "say('unrelated');equal(#calls.speech,0);equal(#calls.moves,0)"
+    },
+    {
+      "name": "Councilor_Darakor signal 1 exact original route and guard flag",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Darakor.lua",
+      "sourceSha256": "7a366d69f0d52c93b71a212f1f25eae659f91bea9990f3ba2728f3b28da62df8",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=1});equal(#calls.moves,1);equal(calls.moves[1][1],-79);equal(calls.moves[1][2],656);equal(calls.moves[1][3],39);equal(calls.moves[1][4],0);equal(calls.moves[1][5],true);equal(#calls.speech,0)"
+    },
+    {
+      "name": "Councilor_Darakor signal 2 exact original route and guard flag",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Darakor.lua",
+      "sourceSha256": "7a366d69f0d52c93b71a212f1f25eae659f91bea9990f3ba2728f3b28da62df8",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=2});equal(#calls.moves,1);equal(calls.moves[1][1],-15);equal(calls.moves[1][2],544);equal(calls.moves[1][3],66);equal(calls.moves[1][4],0);equal(calls.moves[1][5],true);equal(#calls.speech,0)"
+    },
+    {
+      "name": "Councilor_Darakor unknown signal inert",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Darakor.lua",
+      "sourceSha256": "7a366d69f0d52c93b71a212f1f25eae659f91bea9990f3ba2728f3b28da62df8",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=999});equal(#calls.moves,0);equal(#calls.speech,0)"
+    },
+    {
+      "name": "Councilor_Darakor repeated independent signal movement",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Darakor.lua",
+      "sourceSha256": "7a366d69f0d52c93b71a212f1f25eae659f91bea9990f3ba2728f3b28da62df8",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=1});event_signal({self=npc,signal=2});equal(#calls.moves,2);equal(calls.moves[2][5],true)"
+    },
+    {
+      "name": "Councilor_Darakor mixed case hail",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Darakor.lua",
+      "sourceSha256": "7a366d69f0d52c93b71a212f1f25eae659f91bea9990f3ba2728f3b28da62df8",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "say('HaIl');equal(#calls.speech,1)"
+    },
+    {
+      "name": "Councilor_Darakor unrelated speech inert",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Darakor.lua",
+      "sourceSha256": "7a366d69f0d52c93b71a212f1f25eae659f91bea9990f3ba2728f3b28da62df8",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "say('unrelated');equal(#calls.speech,0);equal(#calls.moves,0)"
+    },
+    {
+      "name": "Councilor_Darkfrost signal 1 exact original route and guard flag",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Darkfrost.lua",
+      "sourceSha256": "dda5545f36f4de679466a1844e2bf9008cabea5d6db9fac846a3965e41b46f86",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=1});equal(#calls.moves,1);equal(calls.moves[1][1],-4);equal(calls.moves[1][2],887);equal(calls.moves[1][3],-1);equal(calls.moves[1][4],81);equal(calls.moves[1][5],true);equal(#calls.speech,0)"
+    },
+    {
+      "name": "Councilor_Darkfrost signal 2 exact original route and guard flag",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Darkfrost.lua",
+      "sourceSha256": "dda5545f36f4de679466a1844e2bf9008cabea5d6db9fac846a3965e41b46f86",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=2});equal(#calls.moves,1);equal(calls.moves[1][1],-5);equal(calls.moves[1][2],543);equal(calls.moves[1][3],66);equal(calls.moves[1][4],0);equal(calls.moves[1][5],true);equal(#calls.speech,0)"
+    },
+    {
+      "name": "Councilor_Darkfrost unknown signal inert",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Darkfrost.lua",
+      "sourceSha256": "dda5545f36f4de679466a1844e2bf9008cabea5d6db9fac846a3965e41b46f86",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=999});equal(#calls.moves,0);equal(#calls.speech,0)"
+    },
+    {
+      "name": "Councilor_Darkfrost repeated independent signal movement",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Darkfrost.lua",
+      "sourceSha256": "dda5545f36f4de679466a1844e2bf9008cabea5d6db9fac846a3965e41b46f86",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=1});event_signal({self=npc,signal=2});equal(#calls.moves,2);equal(calls.moves[2][5],true)"
+    },
+    {
+      "name": "Councilor_Darkfrost mixed case hail",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Darkfrost.lua",
+      "sourceSha256": "dda5545f36f4de679466a1844e2bf9008cabea5d6db9fac846a3965e41b46f86",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "say('HaIl');equal(#calls.speech,1)"
+    },
+    {
+      "name": "Councilor_Darkfrost unrelated speech inert",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Darkfrost.lua",
+      "sourceSha256": "dda5545f36f4de679466a1844e2bf9008cabea5d6db9fac846a3965e41b46f86",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "say('unrelated');equal(#calls.speech,0);equal(#calls.moves,0)"
+    },
+    {
+      "name": "Councilor_Deynekn signal 1 exact original route and guard flag",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Deynekn.lua",
+      "sourceSha256": "0e155c8a04c7f489dc1dee5fa20e79a4ceee9bd4bccbee7947287f7503e295c3",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=1});equal(#calls.moves,1);equal(calls.moves[1][1],92);equal(calls.moves[1][2],703);equal(calls.moves[1][3],39);equal(calls.moves[1][4],262);equal(calls.moves[1][5],true);equal(#calls.speech,0)"
+    },
+    {
+      "name": "Councilor_Deynekn signal 2 exact original route and guard flag",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Deynekn.lua",
+      "sourceSha256": "0e155c8a04c7f489dc1dee5fa20e79a4ceee9bd4bccbee7947287f7503e295c3",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=2});equal(#calls.moves,1);equal(calls.moves[1][1],20);equal(calls.moves[1][2],534);equal(calls.moves[1][3],68);equal(calls.moves[1][4],0);equal(calls.moves[1][5],true);equal(#calls.speech,0)"
+    },
+    {
+      "name": "Councilor_Deynekn unknown signal inert",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Deynekn.lua",
+      "sourceSha256": "0e155c8a04c7f489dc1dee5fa20e79a4ceee9bd4bccbee7947287f7503e295c3",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=999});equal(#calls.moves,0);equal(#calls.speech,0)"
+    },
+    {
+      "name": "Councilor_Deynekn repeated independent signal movement",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Deynekn.lua",
+      "sourceSha256": "0e155c8a04c7f489dc1dee5fa20e79a4ceee9bd4bccbee7947287f7503e295c3",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=1});event_signal({self=npc,signal=2});equal(#calls.moves,2);equal(calls.moves[2][5],true)"
+    },
+    {
+      "name": "Councilor_Dirkins signal 1 exact original route and guard flag",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Dirkins.lua",
+      "sourceSha256": "aa03a07ec548b824b4cd2d9ed4e8d97e68806cd582d54a5af7bc119e2ac2499a",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=1});equal(#calls.moves,1);equal(calls.moves[1][1],-103);equal(calls.moves[1][2],703);equal(calls.moves[1][3],39);equal(calls.moves[1][4],264);equal(calls.moves[1][5],true);equal(#calls.speech,0)"
+    },
+    {
+      "name": "Councilor_Dirkins signal 2 exact original route and guard flag",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Dirkins.lua",
+      "sourceSha256": "aa03a07ec548b824b4cd2d9ed4e8d97e68806cd582d54a5af7bc119e2ac2499a",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=2});equal(#calls.moves,1);equal(calls.moves[1][1],0);equal(calls.moves[1][2],535);equal(calls.moves[1][3],68);equal(calls.moves[1][4],0);equal(calls.moves[1][5],true);equal(#calls.speech,0)"
+    },
+    {
+      "name": "Councilor_Dirkins unknown signal inert",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Dirkins.lua",
+      "sourceSha256": "aa03a07ec548b824b4cd2d9ed4e8d97e68806cd582d54a5af7bc119e2ac2499a",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=999});equal(#calls.moves,0);equal(#calls.speech,0)"
+    },
+    {
+      "name": "Councilor_Dirkins repeated independent signal movement",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Dirkins.lua",
+      "sourceSha256": "aa03a07ec548b824b4cd2d9ed4e8d97e68806cd582d54a5af7bc119e2ac2499a",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=1});event_signal({self=npc,signal=2});equal(#calls.moves,2);equal(calls.moves[2][5],true)"
+    },
+    {
+      "name": "Councilor_Dirkins mixed case hail",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Dirkins.lua",
+      "sourceSha256": "aa03a07ec548b824b4cd2d9ed4e8d97e68806cd582d54a5af7bc119e2ac2499a",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "say('HaIl');equal(#calls.speech,1)"
+    },
+    {
+      "name": "Councilor_Dirkins unrelated speech inert",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Dirkins.lua",
+      "sourceSha256": "aa03a07ec548b824b4cd2d9ed4e8d97e68806cd582d54a5af7bc119e2ac2499a",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "say('unrelated');equal(#calls.speech,0);equal(#calls.moves,0)"
+    },
+    {
+      "name": "Councilor_Glacierbane signal 1 exact original route and guard flag",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Glacierbane.lua",
+      "sourceSha256": "17318db5ca6145f7bd201a3c7f637267fc44802de08ebfaa7176acad7a30d0f1",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=1});equal(#calls.moves,1);equal(calls.moves[1][1],67);equal(calls.moves[1][2],654);equal(calls.moves[1][3],39);equal(calls.moves[1][4],510);equal(calls.moves[1][5],true);equal(#calls.speech,0)"
+    },
+    {
+      "name": "Councilor_Glacierbane signal 2 exact original route and guard flag",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Glacierbane.lua",
+      "sourceSha256": "17318db5ca6145f7bd201a3c7f637267fc44802de08ebfaa7176acad7a30d0f1",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=2});equal(#calls.moves,1);equal(calls.moves[1][1],5);equal(calls.moves[1][2],545);equal(calls.moves[1][3],66);equal(calls.moves[1][4],0);equal(calls.moves[1][5],true);equal(#calls.speech,0)"
+    },
+    {
+      "name": "Councilor_Glacierbane unknown signal inert",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Glacierbane.lua",
+      "sourceSha256": "17318db5ca6145f7bd201a3c7f637267fc44802de08ebfaa7176acad7a30d0f1",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=999});equal(#calls.moves,0);equal(#calls.speech,0)"
+    },
+    {
+      "name": "Councilor_Glacierbane repeated independent signal movement",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Glacierbane.lua",
+      "sourceSha256": "17318db5ca6145f7bd201a3c7f637267fc44802de08ebfaa7176acad7a30d0f1",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=1});event_signal({self=npc,signal=2});equal(#calls.moves,2);equal(calls.moves[2][5],true)"
+    },
+    {
+      "name": "Councilor_Glacierbane mixed case hail",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Glacierbane.lua",
+      "sourceSha256": "17318db5ca6145f7bd201a3c7f637267fc44802de08ebfaa7176acad7a30d0f1",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "say('HaIl');equal(#calls.speech,1)"
+    },
+    {
+      "name": "Councilor_Glacierbane unrelated speech inert",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Glacierbane.lua",
+      "sourceSha256": "17318db5ca6145f7bd201a3c7f637267fc44802de08ebfaa7176acad7a30d0f1",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "say('unrelated');equal(#calls.speech,0);equal(#calls.moves,0)"
+    },
+    {
+      "name": "Councilor_Icelok signal 1 exact original route and guard flag",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Icelok.lua",
+      "sourceSha256": "fd1c762bc0a9ccfe6ba5f30c63251d4dd5320910d758cca183c321fbb39ef1f3",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=1});equal(#calls.moves,1);equal(calls.moves[1][1],67);equal(calls.moves[1][2],703);equal(calls.moves[1][3],39);equal(calls.moves[1][4],270);equal(calls.moves[1][5],true);equal(#calls.speech,0)"
+    },
+    {
+      "name": "Councilor_Icelok signal 2 exact original route and guard flag",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Icelok.lua",
+      "sourceSha256": "fd1c762bc0a9ccfe6ba5f30c63251d4dd5320910d758cca183c321fbb39ef1f3",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=2});equal(#calls.moves,1);equal(calls.moves[1][1],10);equal(calls.moves[1][2],535);equal(calls.moves[1][3],68);equal(calls.moves[1][4],0);equal(calls.moves[1][5],true);equal(#calls.speech,0)"
+    },
+    {
+      "name": "Councilor_Icelok unknown signal inert",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Icelok.lua",
+      "sourceSha256": "fd1c762bc0a9ccfe6ba5f30c63251d4dd5320910d758cca183c321fbb39ef1f3",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=999});equal(#calls.moves,0);equal(#calls.speech,0)"
+    },
+    {
+      "name": "Councilor_Icelok repeated independent signal movement",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Icelok.lua",
+      "sourceSha256": "fd1c762bc0a9ccfe6ba5f30c63251d4dd5320910d758cca183c321fbb39ef1f3",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=1});event_signal({self=npc,signal=2});equal(#calls.moves,2);equal(calls.moves[2][5],true)"
+    },
+    {
+      "name": "Councilor_Icelok mixed case hail",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Icelok.lua",
+      "sourceSha256": "fd1c762bc0a9ccfe6ba5f30c63251d4dd5320910d758cca183c321fbb39ef1f3",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "say('HaIl');equal(#calls.speech,1)"
+    },
+    {
+      "name": "Councilor_Icelok unrelated speech inert",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Icelok.lua",
+      "sourceSha256": "fd1c762bc0a9ccfe6ba5f30c63251d4dd5320910d758cca183c321fbb39ef1f3",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "say('unrelated');equal(#calls.speech,0);equal(#calls.moves,0)"
+    },
+    {
+      "name": "Councilor_Icepike signal 1 exact original route and guard flag",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Icepike.lua",
+      "sourceSha256": "dd790626e28c3760e7e5d18d11d94ea87448788e2ea67c996c6e8b91a7759282",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=1});equal(#calls.moves,1);equal(calls.moves[1][1],117);equal(calls.moves[1][2],701);equal(calls.moves[1][3],39);equal(calls.moves[1][4],256);equal(calls.moves[1][5],true);equal(#calls.speech,0)"
+    },
+    {
+      "name": "Councilor_Icepike signal 2 exact original route and guard flag",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Icepike.lua",
+      "sourceSha256": "dd790626e28c3760e7e5d18d11d94ea87448788e2ea67c996c6e8b91a7759282",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=2});equal(#calls.moves,1);equal(calls.moves[1][1],30);equal(calls.moves[1][2],533);equal(calls.moves[1][3],68);equal(calls.moves[1][4],0);equal(calls.moves[1][5],true);equal(#calls.speech,0)"
+    },
+    {
+      "name": "Councilor_Icepike unknown signal inert",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Icepike.lua",
+      "sourceSha256": "dd790626e28c3760e7e5d18d11d94ea87448788e2ea67c996c6e8b91a7759282",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=999});equal(#calls.moves,0);equal(#calls.speech,0)"
+    },
+    {
+      "name": "Councilor_Icepike repeated independent signal movement",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Icepike.lua",
+      "sourceSha256": "dd790626e28c3760e7e5d18d11d94ea87448788e2ea67c996c6e8b91a7759282",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=1});event_signal({self=npc,signal=2});equal(#calls.moves,2);equal(calls.moves[2][5],true)"
+    },
+    {
+      "name": "Councilor_Icepike mixed case hail",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Icepike.lua",
+      "sourceSha256": "dd790626e28c3760e7e5d18d11d94ea87448788e2ea67c996c6e8b91a7759282",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "say('HaIl');equal(#calls.speech,1)"
+    },
+    {
+      "name": "Councilor_Icepike unrelated speech inert",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Icepike.lua",
+      "sourceSha256": "dd790626e28c3760e7e5d18d11d94ea87448788e2ea67c996c6e8b91a7759282",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "say('unrelated');equal(#calls.speech,0);equal(#calls.moves,0)"
+    },
+    {
+      "name": "Councilor_Thubins signal 1 exact original route and guard flag",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Thubins.lua",
+      "sourceSha256": "350c61c57139bbdaaa4a0ff4ba820836be6d122a607023cc1195d38413f562a7",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=1});equal(#calls.moves,1);equal(calls.moves[1][1],-53);equal(calls.moves[1][2],703);equal(calls.moves[1][3],39);equal(calls.moves[1][4],258);equal(calls.moves[1][5],true);equal(#calls.speech,0)"
+    },
+    {
+      "name": "Councilor_Thubins signal 2 exact original route and guard flag",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Thubins.lua",
+      "sourceSha256": "350c61c57139bbdaaa4a0ff4ba820836be6d122a607023cc1195d38413f562a7",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=2});equal(#calls.moves,1);equal(calls.moves[1][1],-20);equal(calls.moves[1][2],535);equal(calls.moves[1][3],68);equal(calls.moves[1][4],0);equal(calls.moves[1][5],true);equal(#calls.speech,0)"
+    },
+    {
+      "name": "Councilor_Thubins unknown signal inert",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Thubins.lua",
+      "sourceSha256": "350c61c57139bbdaaa4a0ff4ba820836be6d122a607023cc1195d38413f562a7",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=999});equal(#calls.moves,0);equal(#calls.speech,0)"
+    },
+    {
+      "name": "Councilor_Thubins repeated independent signal movement",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Thubins.lua",
+      "sourceSha256": "350c61c57139bbdaaa4a0ff4ba820836be6d122a607023cc1195d38413f562a7",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=1});event_signal({self=npc,signal=2});equal(#calls.moves,2);equal(calls.moves[2][5],true)"
+    },
+    {
+      "name": "Councilor_Thubins mixed case hail",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Thubins.lua",
+      "sourceSha256": "350c61c57139bbdaaa4a0ff4ba820836be6d122a607023cc1195d38413f562a7",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "say('HaIl');equal(#calls.speech,1)"
+    },
+    {
+      "name": "Councilor_Thubins unrelated speech inert",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Thubins.lua",
+      "sourceSha256": "350c61c57139bbdaaa4a0ff4ba820836be6d122a607023cc1195d38413f562a7",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "say('unrelated');equal(#calls.speech,0);equal(#calls.moves,0)"
+    },
+    {
+      "name": "Councilor_Wintershade signal 1 exact original route and guard flag",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Wintershade.lua",
+      "sourceSha256": "4c2d40a065e8404b90e229fcf9565164a7ddb3f0a1a770ce8f3a984a7f59519e",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=1});equal(#calls.moves,1);equal(calls.moves[1][1],6);equal(calls.moves[1][2],895);equal(calls.moves[1][3],-2);equal(calls.moves[1][4],256);equal(calls.moves[1][5],true);equal(#calls.speech,0)"
+    },
+    {
+      "name": "Councilor_Wintershade signal 2 exact original route and guard flag",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Wintershade.lua",
+      "sourceSha256": "4c2d40a065e8404b90e229fcf9565164a7ddb3f0a1a770ce8f3a984a7f59519e",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=2});equal(#calls.moves,1);equal(calls.moves[1][1],-10);equal(calls.moves[1][2],534);equal(calls.moves[1][3],67);equal(calls.moves[1][4],0);equal(calls.moves[1][5],true);equal(#calls.speech,0)"
+    },
+    {
+      "name": "Councilor_Wintershade unknown signal inert",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Wintershade.lua",
+      "sourceSha256": "4c2d40a065e8404b90e229fcf9565164a7ddb3f0a1a770ce8f3a984a7f59519e",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=999});equal(#calls.moves,0);equal(#calls.speech,0)"
+    },
+    {
+      "name": "Councilor_Wintershade repeated independent signal movement",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Wintershade.lua",
+      "sourceSha256": "4c2d40a065e8404b90e229fcf9565164a7ddb3f0a1a770ce8f3a984a7f59519e",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=1});event_signal({self=npc,signal=2});equal(#calls.moves,2);equal(calls.moves[2][5],true)"
+    },
+    {
+      "name": "Councilor_Wintershade mixed case hail",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Wintershade.lua",
+      "sourceSha256": "4c2d40a065e8404b90e229fcf9565164a7ddb3f0a1a770ce8f3a984a7f59519e",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "say('HaIl');equal(#calls.speech,1)"
+    },
+    {
+      "name": "Councilor_Wintershade unrelated speech inert",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Wintershade.lua",
+      "sourceSha256": "4c2d40a065e8404b90e229fcf9565164a7ddb3f0a1a770ce8f3a984a7f59519e",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "say('unrelated');equal(#calls.speech,0);equal(#calls.moves,0)"
+    },
+    {
+      "name": "Julius_Oresko aggro interpolates race only",
+      "proposedFile": "changes/p99-conversion-ambient/westwastes/Julius_Oresko.lua",
+      "sourceSha256": "859d7ae27cc78e6e6bc35be044e4c1ba0c4328db5cc4b229eaaf1960292743b2",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_aggro({self=npc,other=other});equal(#calls.speech,1);assert(string.find(calls.speech[1],\"A Gnome like you\",1,true));equal(next(calls.rewards),nil)"
+    },
+    {
+      "name": "Existing Guard_Bjorn receiver any-ID 0",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Bjorn.lua",
+      "sourceSha256": "15ef19aebf968698f772f2269a5fcdf3c6fced523dfb147623e9244ef46337e2",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=0});equal(#calls.speech,1);equal(#calls.signals,0)"
+    },
+    {
+      "name": "Existing Guard_Bjorn receiver any-ID 1",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Bjorn.lua",
+      "sourceSha256": "15ef19aebf968698f772f2269a5fcdf3c6fced523dfb147623e9244ef46337e2",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=1});equal(#calls.speech,1);equal(#calls.signals,0)"
+    },
+    {
+      "name": "Existing Guard_Bjorn receiver any-ID 999",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Bjorn.lua",
+      "sourceSha256": "15ef19aebf968698f772f2269a5fcdf3c6fced523dfb147623e9244ef46337e2",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=999});equal(#calls.speech,1);equal(#calls.signals,0)"
+    },
+    {
+      "name": "Existing Guard_Bjorn return-all remains intact",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Bjorn.lua",
+      "sourceSha256": "15ef19aebf968698f772f2269a5fcdf3c6fced523dfb147623e9244ef46337e2",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "trade({99999},{gold=7});equal(remaining[99999],1);equal(remaining.gold,7);equal(calls.returns,1);equal(next(calls.rewards),nil)"
+    },
+    {
+      "name": "Existing Guard_Clorn receiver any-ID 0",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Clorn.lua",
+      "sourceSha256": "134953e57c7ef04d58a09c16db5161af316bc47083c0852f4718239076925415",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=0});equal(#calls.speech,1);equal(#calls.signals,0)"
+    },
+    {
+      "name": "Existing Guard_Clorn receiver any-ID 1",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Clorn.lua",
+      "sourceSha256": "134953e57c7ef04d58a09c16db5161af316bc47083c0852f4718239076925415",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=1});equal(#calls.speech,1);equal(#calls.signals,0)"
+    },
+    {
+      "name": "Existing Guard_Clorn receiver any-ID 999",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Clorn.lua",
+      "sourceSha256": "134953e57c7ef04d58a09c16db5161af316bc47083c0852f4718239076925415",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=999});equal(#calls.speech,1);equal(#calls.signals,0)"
+    },
+    {
+      "name": "Existing Guard_Clorn return-all remains intact",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Clorn.lua",
+      "sourceSha256": "134953e57c7ef04d58a09c16db5161af316bc47083c0852f4718239076925415",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "trade({99999},{gold=7});equal(remaining[99999],1);equal(remaining.gold,7);equal(calls.returns,1);equal(next(calls.rewards),nil)"
+    },
+    {
+      "name": "Existing Guard_Dobbs receiver any-ID 0",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Dobbs.lua",
+      "sourceSha256": "a41e1716520ed53533f38bfc2ffab8010aa44a23ec493ae1900486e9f43824f2",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=0});equal(#calls.speech,1);equal(#calls.signals,0)"
+    },
+    {
+      "name": "Existing Guard_Dobbs receiver any-ID 1",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Dobbs.lua",
+      "sourceSha256": "a41e1716520ed53533f38bfc2ffab8010aa44a23ec493ae1900486e9f43824f2",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=1});equal(#calls.speech,1);equal(#calls.signals,0)"
+    },
+    {
+      "name": "Existing Guard_Dobbs receiver any-ID 999",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Dobbs.lua",
+      "sourceSha256": "a41e1716520ed53533f38bfc2ffab8010aa44a23ec493ae1900486e9f43824f2",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=999});equal(#calls.speech,1);equal(#calls.signals,0)"
+    },
+    {
+      "name": "Existing Guard_Dobbs return-all remains intact",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Dobbs.lua",
+      "sourceSha256": "a41e1716520ed53533f38bfc2ffab8010aa44a23ec493ae1900486e9f43824f2",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "trade({99999},{gold=7});equal(remaining[99999],1);equal(remaining.gold,7);equal(calls.returns,1);equal(next(calls.rewards),nil)"
+    },
+    {
+      "name": "Existing Guard_Enre receiver any-ID 0",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Enre.lua",
+      "sourceSha256": "c078776d2d9d984bfd6b3b88d51edf427bed51ace6de5006519c53736ca463c5",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=0});equal(#calls.speech,1);equal(#calls.signals,0)"
+    },
+    {
+      "name": "Existing Guard_Enre receiver any-ID 1",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Enre.lua",
+      "sourceSha256": "c078776d2d9d984bfd6b3b88d51edf427bed51ace6de5006519c53736ca463c5",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=1});equal(#calls.speech,1);equal(#calls.signals,0)"
+    },
+    {
+      "name": "Existing Guard_Enre receiver any-ID 999",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Enre.lua",
+      "sourceSha256": "c078776d2d9d984bfd6b3b88d51edf427bed51ace6de5006519c53736ca463c5",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=999});equal(#calls.speech,1);equal(#calls.signals,0)"
+    },
+    {
+      "name": "Existing Guard_Enre return-all remains intact",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Enre.lua",
+      "sourceSha256": "c078776d2d9d984bfd6b3b88d51edf427bed51ace6de5006519c53736ca463c5",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "trade({99999},{gold=7});equal(remaining[99999],1);equal(remaining.gold,7);equal(calls.returns,1);equal(next(calls.rewards),nil)"
+    },
+    {
+      "name": "Existing Guard_Gord receiver any-ID 0",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Gord.lua",
+      "sourceSha256": "29f325b98fbb79e5c73e13af2a727247ef2063b642a1216f02681718e4a98e37",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=0});equal(#calls.speech,1);equal(#calls.signals,0)"
+    },
+    {
+      "name": "Existing Guard_Gord receiver any-ID 1",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Gord.lua",
+      "sourceSha256": "29f325b98fbb79e5c73e13af2a727247ef2063b642a1216f02681718e4a98e37",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=1});equal(#calls.speech,1);equal(#calls.signals,0)"
+    },
+    {
+      "name": "Existing Guard_Gord receiver any-ID 999",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Gord.lua",
+      "sourceSha256": "29f325b98fbb79e5c73e13af2a727247ef2063b642a1216f02681718e4a98e37",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=999});equal(#calls.speech,1);equal(#calls.signals,0)"
+    },
+    {
+      "name": "Existing Guard_Gord return-all remains intact",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Gord.lua",
+      "sourceSha256": "29f325b98fbb79e5c73e13af2a727247ef2063b642a1216f02681718e4a98e37",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "trade({99999},{gold=7});equal(remaining[99999],1);equal(remaining.gold,7);equal(calls.returns,1);equal(next(calls.rewards),nil)"
+    },
+    {
+      "name": "Existing Guard_Mason receiver any-ID 0",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Mason.lua",
+      "sourceSha256": "64f2349b0d7290a947c9b14809d15ba49a2ddf558c61405328805db6a0c74c0b",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=0});equal(#calls.speech,1);equal(#calls.signals,0)"
+    },
+    {
+      "name": "Existing Guard_Mason receiver any-ID 1",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Mason.lua",
+      "sourceSha256": "64f2349b0d7290a947c9b14809d15ba49a2ddf558c61405328805db6a0c74c0b",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=1});equal(#calls.speech,1);equal(#calls.signals,0)"
+    },
+    {
+      "name": "Existing Guard_Mason receiver any-ID 999",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Mason.lua",
+      "sourceSha256": "64f2349b0d7290a947c9b14809d15ba49a2ddf558c61405328805db6a0c74c0b",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=999});equal(#calls.speech,1);equal(#calls.signals,0)"
+    },
+    {
+      "name": "Existing Guard_Mason return-all remains intact",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Mason.lua",
+      "sourceSha256": "64f2349b0d7290a947c9b14809d15ba49a2ddf558c61405328805db6a0c74c0b",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "trade({99999},{gold=7});equal(remaining[99999],1);equal(remaining.gold,7);equal(calls.returns,1);equal(next(calls.rewards),nil)"
+    },
+    {
+      "name": "Existing Guard_Pert receiver any-ID 0",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Pert.lua",
+      "sourceSha256": "23791cb99fd7edfc62b16fde58c24fe481c283cfc5a7817a93ba4b7d8939654e",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=0});equal(#calls.speech,1);equal(#calls.signals,0)"
+    },
+    {
+      "name": "Existing Guard_Pert receiver any-ID 1",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Pert.lua",
+      "sourceSha256": "23791cb99fd7edfc62b16fde58c24fe481c283cfc5a7817a93ba4b7d8939654e",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=1});equal(#calls.speech,1);equal(#calls.signals,0)"
+    },
+    {
+      "name": "Existing Guard_Pert receiver any-ID 999",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Pert.lua",
+      "sourceSha256": "23791cb99fd7edfc62b16fde58c24fe481c283cfc5a7817a93ba4b7d8939654e",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "event_signal({self=npc,signal=999});equal(#calls.speech,1);equal(#calls.signals,0)"
+    },
+    {
+      "name": "Existing Guard_Pert return-all remains intact",
+      "proposedFile": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Pert.lua",
+      "sourceSha256": "23791cb99fd7edfc62b16fde58c24fe481c283cfc5a7817a93ba4b7d8939654e",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n",
+      "assertions": "trade({99999},{gold=7});equal(remaining[99999],1);equal(remaining.gold,7);equal(calls.returns,1);equal(next(calls.rewards),nil)"
+    },
+    {
+      "name": "Ulfur composed receivers isolated distinct actors and source order",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadina/Lieutenant_Ulfur.lua",
+      "sourceSha256": "f1b8354b3fbac02ee4b2dad8d29f19e8c120184d28b8c6fc91b4048e3afdf531",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n\nlocal handlers={}; calls.received={}\ndo local env=setmetatable({}, {__index=_G}); local chunk=assert(loadstring(\"-- actors: world\\n-- Reviewed 2026-10-22: P99 NPC presence, ProjectEQ flavor provenance.\\n-- Source: sources/projecteq/thurgadina/Guard_Bjorn.pl\\n-- No new faction, class, level or epic gates; no rewards invented.\\n\\nfunction event_signal(e)\\n    e.self:Emote(\\\"chuckles saying, 'Have fun Lieutenant, bring me back an ale while yer at it why don't ye!'\\\")\\nend\\n\\nfunction event_trade(e)\\n    local item_lib = require(\\\"items\\\")\\n    item_lib.return_items(e.self, e.other, e.trade)\\nend\\n\")); setfenv(chunk,env);chunk();handlers[\"Bjorn\"]=env.event_signal end\ndo local env=setmetatable({}, {__index=_G}); local chunk=assert(loadstring(\"-- actors: world\\n-- Reviewed 2026-10-22: P99 NPC presence, ProjectEQ flavor provenance.\\n-- Source: sources/projecteq/thurgadina/Guard_Clorn.pl\\n-- No new faction, class, level or epic gates; no rewards invented.\\n\\nfunction event_signal(e)\\n    e.self:Emote(\\\"chuckles saying, 'Have fun Lieutenant, bring me back an ale while yer at it why don't ye!'\\\")\\nend\\n\\nfunction event_trade(e)\\n    local item_lib = require(\\\"items\\\")\\n    item_lib.return_items(e.self, e.other, e.trade)\\nend\\n\")); setfenv(chunk,env);chunk();handlers[\"Clorn\"]=env.event_signal end\ndo local env=setmetatable({}, {__index=_G}); local chunk=assert(loadstring(\"-- actors: world\\n-- Reviewed 2026-10-22: P99 NPC presence, ProjectEQ flavor provenance.\\n-- Source: sources/projecteq/thurgadina/Guard_Dobbs.pl\\n-- No new faction, class, level or epic gates; no rewards invented.\\n\\nfunction event_signal(e)\\n    e.self:Emote(\\\"chuckles saying, 'Have fun Lieutenant, bring me back an ale while yer at it why don't ye!'\\\")\\nend\\n\\nfunction event_trade(e)\\n    local item_lib = require(\\\"items\\\")\\n    item_lib.return_items(e.self, e.other, e.trade)\\nend\\n\")); setfenv(chunk,env);chunk();handlers[\"Dobbs\"]=env.event_signal end\ndo local env=setmetatable({}, {__index=_G}); local chunk=assert(loadstring(\"-- actors: world\\n-- Reviewed 2026-10-22: P99 NPC presence, ProjectEQ flavor provenance.\\n-- Source: sources/projecteq/thurgadina/Guard_Enre.pl\\n-- No new faction, class, level or epic gates; no rewards invented.\\n\\nfunction event_signal(e)\\n    e.self:Emote(\\\"chuckles saying, 'Have fun Lieutenant, bring me back an ale while yer at it why don't ye!'\\\")\\nend\\n\\nfunction event_trade(e)\\n    local item_lib = require(\\\"items\\\")\\n    item_lib.return_items(e.self, e.other, e.trade)\\nend\\n\")); setfenv(chunk,env);chunk();handlers[\"Enre\"]=env.event_signal end\ndo local env=setmetatable({}, {__index=_G}); local chunk=assert(loadstring(\"-- actors: world\\n-- Reviewed 2026-10-22: P99 NPC presence, ProjectEQ flavor provenance.\\n-- Source: sources/projecteq/thurgadina/Guard_Gord.pl\\n-- No new faction, class, level or epic gates; no rewards invented.\\n\\nfunction event_signal(e)\\n    e.self:Emote(\\\"chuckles saying, 'Have fun Lieutenant, bring me back an ale while yer at it why don't ye!'\\\")\\nend\\n\\nfunction event_trade(e)\\n    local item_lib = require(\\\"items\\\")\\n    item_lib.return_items(e.self, e.other, e.trade)\\nend\\n\")); setfenv(chunk,env);chunk();handlers[\"Gord\"]=env.event_signal end\ndo local env=setmetatable({}, {__index=_G}); local chunk=assert(loadstring(\"-- actors: world\\n-- Reviewed 2026-10-22: P99 NPC presence, ProjectEQ flavor provenance.\\n-- Source: sources/projecteq/thurgadina/Guard_Mason.pl\\n-- No new faction, class, level or epic gates; no rewards invented.\\n\\nfunction event_signal(e)\\n    e.self:Emote(\\\"chuckles saying, 'Have fun Lieutenant, bring me back an ale while yer at it why don't ye!'\\\")\\nend\\n\\nfunction event_trade(e)\\n    local item_lib = require(\\\"items\\\")\\n    item_lib.return_items(e.self, e.other, e.trade)\\nend\\n\")); setfenv(chunk,env);chunk();handlers[\"Mason\"]=env.event_signal end\ndo local env=setmetatable({}, {__index=_G}); local chunk=assert(loadstring(\"-- actors: world\\n-- Reviewed 2026-10-22: P99 NPC presence, ProjectEQ flavor provenance.\\n-- Source: sources/projecteq/thurgadina/Guard_Pert.pl\\n-- No new faction, class, level or epic gates; no rewards invented.\\n\\nfunction event_signal(e)\\n    e.self:Emote(\\\"chuckles saying, 'Have fun Lieutenant, bring me back an ale while yer at it why don't ye!'\\\")\\nend\\n\\nfunction event_trade(e)\\n    local item_lib = require(\\\"items\\\")\\n    item_lib.return_items(e.self, e.other, e.trade)\\nend\\n\")); setfenv(chunk,env);chunk();handlers[\"Pert\"]=env.event_signal end\nlocal receiverNames={[115104]=\"Dobbs\",[115206]=\"Dobbs\",[115105]=\"Enre\",[115207]=\"Enre\",[115107]=\"Mason\",[115208]=\"Mason\",[115109]=\"Pert\",[115110]=\"Gord\",[115209]=\"Gord\",[115112]=\"Bjorn\",[115113]=\"Clorn\",[115211]=\"Clorn\"}\neq.signal=function(id,sig,delay) table.insert(calls.signals,{id,sig,delay}); if false then return end; local actor={Emote=function(_,text) table.insert(calls.received,{id,text}) end}; handlers[receiverNames[id]]({self=actor,signal=sig}) end\n",
+      "assertions": "event_waypoint_arrive({self=npc,wp=15});equal(#calls.signals,12);equal(#calls.received,12);equal(calls.received[1][1],115104);equal(calls.received[2][1],115206);equal(calls.received[3][1],115105);equal(calls.received[4][1],115207);equal(calls.received[5][1],115107);equal(calls.received[6][1],115208);equal(calls.received[7][1],115109);equal(calls.received[8][1],115110);equal(calls.received[9][1],115209);equal(calls.received[10][1],115112);equal(calls.received[11][1],115113);equal(calls.received[12][1],115211);",
+      "dependencySources": [
+        {
+          "path": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Bjorn.lua",
+          "sha256": "15ef19aebf968698f772f2269a5fcdf3c6fced523dfb147623e9244ef46337e2"
+        },
+        {
+          "path": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Clorn.lua",
+          "sha256": "134953e57c7ef04d58a09c16db5161af316bc47083c0852f4718239076925415"
+        },
+        {
+          "path": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Dobbs.lua",
+          "sha256": "a41e1716520ed53533f38bfc2ffab8010aa44a23ec493ae1900486e9f43824f2"
+        },
+        {
+          "path": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Enre.lua",
+          "sha256": "c078776d2d9d984bfd6b3b88d51edf427bed51ace6de5006519c53736ca463c5"
+        },
+        {
+          "path": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Gord.lua",
+          "sha256": "29f325b98fbb79e5c73e13af2a727247ef2063b642a1216f02681718e4a98e37"
+        },
+        {
+          "path": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Mason.lua",
+          "sha256": "64f2349b0d7290a947c9b14809d15ba49a2ddf558c61405328805db6a0c74c0b"
+        },
+        {
+          "path": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Pert.lua",
+          "sha256": "23791cb99fd7edfc62b16fde58c24fe481c283cfc5a7817a93ba4b7d8939654e"
+        }
+      ]
+    },
+    {
+      "name": "Ulfur composed receivers isolated one absent target",
+      "proposedFile": "changes/p99-conversion-ambient/thurgadina/Lieutenant_Ulfur.lua",
+      "sourceSha256": "f1b8354b3fbac02ee4b2dad8d29f19e8c120184d28b8c6fc91b4048e3afdf531",
+      "setupExtra": "calls.moves = {}; calls.timers = {}; calls.animations = {}; calls.proximities = {}; calls.clears = 0; calls.grids = {}\nother.GetRaceName = function() return \"Gnome\" end\nnpc.MoveTo = function(_,...) table.insert(calls.moves,{...}) end\nnpc.DoAnim = function(_,id) table.insert(calls.animations,id) end\neq.start = function(grid) table.insert(calls.grids,grid) end\nnpc.GetX = function() return 10 end\nnpc.GetY = function() return 20 end\neq.set_timer = function(name,ms) table.insert(calls.timers,{name,ms}) end\neq.set_proximity = function(...) table.insert(calls.proximities,{...}) end\neq.clear_proximity = function() calls.clears=calls.clears+1 end\neq.depop = function() calls.depops=calls.depops+1 end\n\nlocal handlers={}; calls.received={}\ndo local env=setmetatable({}, {__index=_G}); local chunk=assert(loadstring(\"-- actors: world\\n-- Reviewed 2026-10-22: P99 NPC presence, ProjectEQ flavor provenance.\\n-- Source: sources/projecteq/thurgadina/Guard_Bjorn.pl\\n-- No new faction, class, level or epic gates; no rewards invented.\\n\\nfunction event_signal(e)\\n    e.self:Emote(\\\"chuckles saying, 'Have fun Lieutenant, bring me back an ale while yer at it why don't ye!'\\\")\\nend\\n\\nfunction event_trade(e)\\n    local item_lib = require(\\\"items\\\")\\n    item_lib.return_items(e.self, e.other, e.trade)\\nend\\n\")); setfenv(chunk,env);chunk();handlers[\"Bjorn\"]=env.event_signal end\ndo local env=setmetatable({}, {__index=_G}); local chunk=assert(loadstring(\"-- actors: world\\n-- Reviewed 2026-10-22: P99 NPC presence, ProjectEQ flavor provenance.\\n-- Source: sources/projecteq/thurgadina/Guard_Clorn.pl\\n-- No new faction, class, level or epic gates; no rewards invented.\\n\\nfunction event_signal(e)\\n    e.self:Emote(\\\"chuckles saying, 'Have fun Lieutenant, bring me back an ale while yer at it why don't ye!'\\\")\\nend\\n\\nfunction event_trade(e)\\n    local item_lib = require(\\\"items\\\")\\n    item_lib.return_items(e.self, e.other, e.trade)\\nend\\n\")); setfenv(chunk,env);chunk();handlers[\"Clorn\"]=env.event_signal end\ndo local env=setmetatable({}, {__index=_G}); local chunk=assert(loadstring(\"-- actors: world\\n-- Reviewed 2026-10-22: P99 NPC presence, ProjectEQ flavor provenance.\\n-- Source: sources/projecteq/thurgadina/Guard_Dobbs.pl\\n-- No new faction, class, level or epic gates; no rewards invented.\\n\\nfunction event_signal(e)\\n    e.self:Emote(\\\"chuckles saying, 'Have fun Lieutenant, bring me back an ale while yer at it why don't ye!'\\\")\\nend\\n\\nfunction event_trade(e)\\n    local item_lib = require(\\\"items\\\")\\n    item_lib.return_items(e.self, e.other, e.trade)\\nend\\n\")); setfenv(chunk,env);chunk();handlers[\"Dobbs\"]=env.event_signal end\ndo local env=setmetatable({}, {__index=_G}); local chunk=assert(loadstring(\"-- actors: world\\n-- Reviewed 2026-10-22: P99 NPC presence, ProjectEQ flavor provenance.\\n-- Source: sources/projecteq/thurgadina/Guard_Enre.pl\\n-- No new faction, class, level or epic gates; no rewards invented.\\n\\nfunction event_signal(e)\\n    e.self:Emote(\\\"chuckles saying, 'Have fun Lieutenant, bring me back an ale while yer at it why don't ye!'\\\")\\nend\\n\\nfunction event_trade(e)\\n    local item_lib = require(\\\"items\\\")\\n    item_lib.return_items(e.self, e.other, e.trade)\\nend\\n\")); setfenv(chunk,env);chunk();handlers[\"Enre\"]=env.event_signal end\ndo local env=setmetatable({}, {__index=_G}); local chunk=assert(loadstring(\"-- actors: world\\n-- Reviewed 2026-10-22: P99 NPC presence, ProjectEQ flavor provenance.\\n-- Source: sources/projecteq/thurgadina/Guard_Gord.pl\\n-- No new faction, class, level or epic gates; no rewards invented.\\n\\nfunction event_signal(e)\\n    e.self:Emote(\\\"chuckles saying, 'Have fun Lieutenant, bring me back an ale while yer at it why don't ye!'\\\")\\nend\\n\\nfunction event_trade(e)\\n    local item_lib = require(\\\"items\\\")\\n    item_lib.return_items(e.self, e.other, e.trade)\\nend\\n\")); setfenv(chunk,env);chunk();handlers[\"Gord\"]=env.event_signal end\ndo local env=setmetatable({}, {__index=_G}); local chunk=assert(loadstring(\"-- actors: world\\n-- Reviewed 2026-10-22: P99 NPC presence, ProjectEQ flavor provenance.\\n-- Source: sources/projecteq/thurgadina/Guard_Mason.pl\\n-- No new faction, class, level or epic gates; no rewards invented.\\n\\nfunction event_signal(e)\\n    e.self:Emote(\\\"chuckles saying, 'Have fun Lieutenant, bring me back an ale while yer at it why don't ye!'\\\")\\nend\\n\\nfunction event_trade(e)\\n    local item_lib = require(\\\"items\\\")\\n    item_lib.return_items(e.self, e.other, e.trade)\\nend\\n\")); setfenv(chunk,env);chunk();handlers[\"Mason\"]=env.event_signal end\ndo local env=setmetatable({}, {__index=_G}); local chunk=assert(loadstring(\"-- actors: world\\n-- Reviewed 2026-10-22: P99 NPC presence, ProjectEQ flavor provenance.\\n-- Source: sources/projecteq/thurgadina/Guard_Pert.pl\\n-- No new faction, class, level or epic gates; no rewards invented.\\n\\nfunction event_signal(e)\\n    e.self:Emote(\\\"chuckles saying, 'Have fun Lieutenant, bring me back an ale while yer at it why don't ye!'\\\")\\nend\\n\\nfunction event_trade(e)\\n    local item_lib = require(\\\"items\\\")\\n    item_lib.return_items(e.self, e.other, e.trade)\\nend\\n\")); setfenv(chunk,env);chunk();handlers[\"Pert\"]=env.event_signal end\nlocal receiverNames={[115104]=\"Dobbs\",[115206]=\"Dobbs\",[115105]=\"Enre\",[115207]=\"Enre\",[115107]=\"Mason\",[115208]=\"Mason\",[115109]=\"Pert\",[115110]=\"Gord\",[115209]=\"Gord\",[115112]=\"Bjorn\",[115113]=\"Clorn\",[115211]=\"Clorn\"}\neq.signal=function(id,sig,delay) table.insert(calls.signals,{id,sig,delay}); if id==115104 then return end; local actor={Emote=function(_,text) table.insert(calls.received,{id,text}) end}; handlers[receiverNames[id]]({self=actor,signal=sig}) end\n",
+      "assertions": "event_waypoint_arrive({self=npc,wp=15});equal(#calls.signals,12);equal(#calls.received,11);equal(calls.received[1][1],115206);equal(calls.received[2][1],115105);equal(calls.received[3][1],115207);equal(calls.received[4][1],115107);equal(calls.received[5][1],115208);equal(calls.received[6][1],115109);equal(calls.received[7][1],115110);equal(calls.received[8][1],115209);equal(calls.received[9][1],115112);equal(calls.received[10][1],115113);equal(calls.received[11][1],115211);",
+      "dependencySources": [
+        {
+          "path": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Bjorn.lua",
+          "sha256": "15ef19aebf968698f772f2269a5fcdf3c6fced523dfb147623e9244ef46337e2"
+        },
+        {
+          "path": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Clorn.lua",
+          "sha256": "134953e57c7ef04d58a09c16db5161af316bc47083c0852f4718239076925415"
+        },
+        {
+          "path": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Dobbs.lua",
+          "sha256": "a41e1716520ed53533f38bfc2ffab8010aa44a23ec493ae1900486e9f43824f2"
+        },
+        {
+          "path": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Enre.lua",
+          "sha256": "c078776d2d9d984bfd6b3b88d51edf427bed51ace6de5006519c53736ca463c5"
+        },
+        {
+          "path": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Gord.lua",
+          "sha256": "29f325b98fbb79e5c73e13af2a727247ef2063b642a1216f02681718e4a98e37"
+        },
+        {
+          "path": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Mason.lua",
+          "sha256": "64f2349b0d7290a947c9b14809d15ba49a2ddf558c61405328805db6a0c74c0b"
+        },
+        {
+          "path": "changes/p99-conversions-velious-flavor/thurgadina/Guard_Pert.lua",
+          "sha256": "23791cb99fd7edfc62b16fde58c24fe481c283cfc5a7817a93ba4b7d8939654e"
+        }
+      ]
+    }
+  ]
+}

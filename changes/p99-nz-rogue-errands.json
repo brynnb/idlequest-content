@@ -1,0 +1,66 @@
+{
+  "format": 1,
+  "id": "p99-nz-rogue-errands",
+  "summary": "Route exact Hanns-to-Prak acceptance before generic lore and check Jracol proof before consuming card.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Rogue_Errands?action=raw",
+      "note": "Cached 2026-07-17T23:30:54.452Z; revision unavailable; SHA256 593bd175d72070150734b25c32870e60755afc9fb5ae43f3473ef88f16b6e6ca. The documented Hanns wants you to send some of your men to Prak in Highpass was shadowed by generic Hanns lore. Jracol evaluated consuming check_turn_in before local proof; reorder retains rejected cards. Preserve local proof state: lua_bridge.go1668\u20131681 and1798\u20131840 explicitly apply/capture serializable closure upvalues, so fresh VM creation does NOT itself erase this state. Exact Jracol completion restored. All item/faction/cash/EXP values unchanged; full runtime state integration and NPC night schedule untested."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 13878,
+        "zone": "qeynos2",
+        "name": "Zannsin_Resdinet",
+        "lua_content": "-- items: 18795, 18028, 1048\nfunction event_waypoint_arrive(e)\n\tif(e.wp == 10) then\n\t\te.self:Say(\"Hey Hanns.. Have you gotten word from Prak about the spy in Carson's guards?\");\n\t\teq.signal(2074,1); -- NPC: Hanns_Krieghor Rogue Guildmaster\n\tend\nend\n\nfunction event_signal(e)\n\tif(e.signal == 1 and e.self:GetX() == 163 and e.self:GetY() == 144) then\n\t\te.self:Say(\"Yeah, whatever, Knarg. If I were you, I wouldn't mess around with [Renux]. She's in tight with [Hanns], and you know how he is.\");\n\telseif(e.signal == 2) then\n\t\te.self:Say(\"[Rujahn] Tahslek, huh? I've never heard of him, but those bandits seem to have a new leader every month or so.\");\n\telseif(e.signal == 3) then\n\t\te.self:Say(\"I'll send one of our best men to Highpass and eliminate [Rujahn]'s spy.\");\n\tend\nend\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Hey..  My name's Zannsin. but you can call me [Zan].\");\n\t-- P99 Rogue Epic Quest: these story responses are missing upstream.\n\telseif(e.message:findi(\"renux\")) then\n\t\te.self:Say(\"She is second in command around here. She and [Hanns] go way back, from what I hear.. Renux is probably the only person Hanns trusts.\");\n\telseif(e.message:findi(\"hanns\")) then\n\t\te.self:Say(\"Hanns, he runs things around here. Years ago, Hanns took over Ghil's old ring and started up the Circle of Unseen Hands. The Circle quickly took any market opposition out of Qeynos. We currently have connections in Erudin, Highpass and even Freeport.\");\n\telseif(e.message:findi(\"men to prak in highpass\")) then\n\t\te.self:Say(\"Hmm, I see. Maybe you can help us out with this, \"..e.other:GetName()..\", huh? I think it'd be a perfect opportunity for you to prove just how valuable you are to our little organization. Take this letter to Prak at Golden Rooster in Highpass, and see what you can do to help him out.\");\n\t\te.other:SummonItem(18795); -- Item: Letter for Prak\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 18028})) then\n\t\te.self:Say(\"You have proven yourself to be very valuable \"..e.other:GetName()..\". For helping us out please accept this Cloak of the Unseen Hands!\");\n\t\te.other:SummonItem(1048); -- Item: Black Leather Cloak\n\t\te.other:Ding();\n\t\te.other:AddEXP(500);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\n-- END of FILE Zone:qeynos2  ID:2077 -- Zannsin_Resdinet\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 13878,
+        "zone": "qeynos2",
+        "name": "Zannsin_Resdinet",
+        "lua_content": "-- items: 18795, 18028, 1048\nfunction event_waypoint_arrive(e)\n\tif(e.wp == 10) then\n\t\te.self:Say(\"Hey Hanns.. Have you gotten word from Prak about the spy in Carson's guards?\");\n\t\teq.signal(2074,1); -- NPC: Hanns_Krieghor Rogue Guildmaster\n\tend\nend\n\nfunction event_signal(e)\n\tif(e.signal == 1 and e.self:GetX() == 163 and e.self:GetY() == 144) then\n\t\te.self:Say(\"Yeah, whatever, Knarg. If I were you, I wouldn't mess around with [Renux]. She's in tight with [Hanns], and you know how he is.\");\n\telseif(e.signal == 2) then\n\t\te.self:Say(\"[Rujahn] Tahslek, huh? I've never heard of him, but those bandits seem to have a new leader every month or so.\");\n\telseif(e.signal == 3) then\n\t\te.self:Say(\"I'll send one of our best men to Highpass and eliminate [Rujahn]'s spy.\");\n\tend\nend\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Hey..  My name's Zannsin. but you can call me [Zan].\");\n\t-- P99 Rogue Epic Quest: these story responses are missing upstream.\n\telseif(e.message:findi(\"renux\")) then\n\t\te.self:Say(\"She is second in command around here. She and [Hanns] go way back, from what I hear.. Renux is probably the only person Hanns trusts.\");\n\telseif(e.message:findi(\"hanns\") and not e.message:findi(\"men to prak in highpass\")) then\n\t\te.self:Say(\"Hanns, he runs things around here. Years ago, Hanns took over Ghil's old ring and started up the Circle of Unseen Hands. The Circle quickly took any market opposition out of Qeynos. We currently have connections in Erudin, Highpass and even Freeport.\");\n\telseif(e.message:findi(\"men to prak in highpass\")) then\n\t\te.self:Say(\"Hmm, I see. Maybe you can help us out with this, \"..e.other:GetName()..\", huh? I think it'd be a perfect opportunity for you to prove just how valuable you are to our little organization. Take this letter to Prak at Golden Rooster in Highpass, and see what you can do to help him out.\");\n\t\te.other:SummonItem(18795); -- Item: Letter for Prak\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 18028})) then\n\t\te.self:Say(\"You have proven yourself to be very valuable \"..e.other:GetName()..\". For helping us out please accept this Cloak of the Unseen Hands!\");\n\t\te.other:SummonItem(1048); -- Item: Black Leather Cloak\n\t\te.other:Ding();\n\t\te.other:AddEXP(500);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\n-- END of FILE Zone:qeynos2  ID:2077 -- Zannsin_Resdinet\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 16313,
+        "zone": "qeynos2",
+        "name": "Jracol_Brestiage",
+        "lua_content": "-- Modified from ProjectEQ Lua.\n-- Source: qeynos2/Jracol_Brestiage.lua\n-- P99 audit: Rogue Errands\n-- items: 13903, 18722\n\nlocal proof = 0;\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"You'd better run along, if ya know what's best for ya!\");\n\telseif(e.message:findi(\"lovely night for a stroll\")) then\n\t\te.self:Say(\"Yes, it is a lovely night for a walk, especially with a good friend. Tell me, are you a [friend]?\");\n\t\tproof = 1;\n\telseif(e.message:findi(\"friend\") and proof == 1) then\n\t\te.self:Say(\"My memory is a bit fuzzy. If you are a friend, prove it to me.\");\n\t\tproof = 2;\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 13903}) and proof == 2) then -- Bent Playing Card\n\t\tproof = 0;\n\t\te.self:Say(\"Ah, good, it seems we have much in common. Take this to Knargon, and he will know you are a friend.\");\n\t\te.other:SummonItem(18722); -- Sealed Note For Knargon\n\t\te.other:Ding();\n\t\te.other:Faction(329,5,0); -- Carson McCabe\n\t\te.other:Faction(336,5,0); -- Coalition of Tradefolk Underground\n\t\te.other:Faction(304,-10,0); -- Ring of Scale\n\t\te.other:Faction(332,5,0); -- Highpass Guards\n\t\te.other:Faction(331,5,0); -- Merchants of Highpass\n\t\te.other:AddEXP(1000);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 16313,
+        "zone": "qeynos2",
+        "name": "Jracol_Brestiage",
+        "lua_content": "-- Modified from ProjectEQ Lua.\n-- Source: qeynos2/Jracol_Brestiage.lua\n-- P99 audit: Rogue Errands\n-- items: 13903, 18722\n\nlocal proof = 0;\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"You'd better run along, if ya know what's best for ya!\");\n\telseif(e.message:findi(\"lovely night for a stroll\")) then\n\t\te.self:Say(\"Yes, it is a lovely night for a walk, especially with a good friend. Tell me, are you a [friend]?\");\n\t\tproof = 1;\n\telseif(e.message:findi(\"friend\") and proof == 1) then\n\t\te.self:Say(\"My memory is a bit fuzzy. If you are a friend, prove it to me.\");\n\t\tproof = 2;\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(proof == 2 and item_lib.check_turn_in(e.trade, {item1 = 13903})) then -- Bent Playing Card\n\t\tproof = 0;\n\t\te.self:Say(\"Ah, good, it seems we have much in common after all. Take this back to the Circle, before the city guards come nosing around over here.\");\n\t\te.other:SummonItem(18722); -- Sealed Note For Knargon\n\t\te.other:Ding();\n\t\te.other:Faction(329,5,0); -- Carson McCabe\n\t\te.other:Faction(336,5,0); -- Coalition of Tradefolk Underground\n\t\te.other:Faction(304,-10,0); -- Ring of Scale\n\t\te.other:Faction(332,5,0); -- Highpass Guards\n\t\te.other:Faction(331,5,0); -- Merchants of Highpass\n\t\te.other:AddEXP(1000);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/qeynos2/Zannsin_Resdinet.lua",
+      "beforeSha256": "e67b243ffa7c4cb4441a703b8d932d3658925c648f6877408976fb2b2cbf3e2a",
+      "proposedFile": "changes/p99-nz-rogue-errands/qeynos2--Zannsin_Resdinet.lua",
+      "afterSha256": "e610a2835e67b1a8d9c7ae57dd9343d21bc8ed0fdde9e160188cbc28c52bbb50"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qeynos2/Jracol_Brestiage.lua",
+      "beforeSha256": "7ed3d426c47267d7eb7daded8b253603790240863f3f1aab4303431243e5ce2c",
+      "proposedFile": "changes/p99-nz-rogue-errands/qeynos2--Jracol_Brestiage.lua",
+      "afterSha256": "2c5d445e78c3f6c140cd47c3fab35e3c2b9f8b3175028e55d3c4bf8f80f43915"
+    }
+  ]
+}

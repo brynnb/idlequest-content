@@ -1,0 +1,11 @@
+file:///tmp/p99-validation-20261022T055845Z/tools/dataset.mjs:22
+    if ((await fs.lstat(file)).isSymbolicLink()) throw new Error(`Dataset symlink: ${relative}`);
+                                                       ^
+
+Error: Dataset symlink: data/books/0.ndjson
+    at safeFile (file:///tmp/p99-validation-20261022T055845Z/tools/dataset.mjs:22:56)
+    at async validateDataset (file:///tmp/p99-validation-20261022T055845Z/tools/dataset.mjs:61:43)
+    at async readProposal (file:///tmp/p99-validation-20261022T055845Z/tools/proposal.mjs:16:20)
+    at async file:///tmp/p99-validation-20261022T055845Z/tools/cli.mjs:20:18
+
+Node.js v24.19.0

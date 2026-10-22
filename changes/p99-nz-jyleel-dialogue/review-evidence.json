@@ -1,0 +1,26 @@
+{
+  "titles": [
+    "Orc Runner (Felwithe)"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "partial",
+  "match_status": "partial",
+  "local_quest_keys": [
+    "felwithea/General_Jyleel"
+  ],
+  "proposal": "changes/p99-nz-jyleel-dialogue.json",
+  "notes": [
+    "Accept documented I seek enlightenment alongside current linked seek-my-enlightenment alias.",
+    "Runner Pouch13226 reward pool13009/13005/13007/13006 and both pouch/letter18840cash1gold7silver6copper match P99. Three faction identities/directions match. Other spell-scroll/falchion branches unchanged. Faction gating policy preserved; no exact magnitude changes unsupported by P99."
+  ],
+  "verification": {
+    "source": "Cached P99 and effective Lua reviewed; exact complete row preimages and source hashes recorded.",
+    "syntax": "pending",
+    "runtime": "Isolated mock regression pending; full game runtime unavailable.",
+    "ui": "not_run",
+    "connected_chain": "not_run"
+  },
+  "unresolved": [
+    "Ordinary source drops/spawns, recipe live behavior and rendered complete quest path not verified."
+  ]
+}

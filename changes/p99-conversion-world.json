@@ -1,0 +1,620 @@
+{
+  "format": 1,
+  "id": "p99-conversion-world",
+  "summary": "Source-bound world and quest-helper Lua conversions; preserve classic lifecycle effects, distinguish superseded controllers, and retain all three disabled caller policies.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Coldain_Ring_Quests",
+      "note": "Cached evidence and complete49-row source/runtime reconciliation are bound in changes/p99-conversion-world/closure-review.json; source odds, choreography and XP are not silently claimed P99 exact."
+    },
+    {
+      "url": "https://github.com/brynnb/idlequest-content/blob/b717b8a5c5dc5bd779d160b534c10329c1ae04bc/docs/runtime-contract.md",
+      "note": "Public baseline contract plus read-only current implementation compatibility review. No private implementation source or documentation is redistributed."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 15553,
+        "zone": "eastwastes",
+        "name": "a_Ry-Gorr_messenger",
+        "lua_content": null,
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 15553,
+        "zone": "eastwastes",
+        "name": "a_Ry-Gorr_messenger",
+        "lua_content": "-- name: a_Ry-Gorr_messenger\n-- Source: sources/projecteq/eastwastes/a_Ry-Gorr_messenger.pl\n-- Source SHA256: 599dd580433a5716cb882ef9f3aaa7e94bcc1ff2372884a90a143827bd597a63\n-- P99 conversion review: changes/p99-conversion-world/closure-review.json\n-- Preserve departure19 plus60seconds and authored respawn. The shared patrol is\n-- represented by the existing owner-scoped grid executor, not fabricated arrivals.\n-- No loot or ring-five hand-in behavior is changed; grid233 is verified in data.\nfunction event_spawn(e)\n  -- Existing local placement 22501 uses this exact authored patrol.\n  -- Start an owner-scoped cursor so normal authenticated waypoint events run.\n  eq.start(233)\nend\nfunction event_waypoint_depart(e)\n  if e.wp == 19 then eq.set_timer(\"leave\", 60000) end\nend\nfunction event_timer(e)\n  if e.timer ~= \"leave\" then return end\n  eq.stop_timer(\"leave\")\n  eq.depop_with_timer()\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 15804,
+        "zone": "frozenshadow",
+        "name": "#an_enraged_vampire",
+        "lua_content": null,
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 15804,
+        "zone": "frozenshadow",
+        "name": "#an_enraged_vampire",
+        "lua_content": "-- name: #an_enraged_vampire\n-- Source: sources/projecteq/frozenshadow/#an_enraged_vampire.pl\n-- Source SHA256: 6e2b554ab7a9d0d72de10a73fdbcfc7db35776126fad4784b992a940f5ae1881\n-- P99 conversion review: changes/p99-conversion-world/closure-review.json\n-- Preserve the random cosmetic gender intent with the established Lua illusion API.\n-- Current IdleQuest SendIllusionPacket is a no-op: translated, NOT visually delivered.\n-- The hash and plain actor variants remain separate runtime keys.\nfunction event_spawn(e)\n  e.self:SendIllusionPacket({gender = eq.ChooseRandom(0, 1)})\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 17934,
+        "zone": "frozenshadow",
+        "name": "an_enraged_vampire",
+        "lua_content": null,
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 17934,
+        "zone": "frozenshadow",
+        "name": "an_enraged_vampire",
+        "lua_content": "-- name: an_enraged_vampire\n-- Source: sources/projecteq/frozenshadow/an_enraged_vampire.pl\n-- Source SHA256: 6e2b554ab7a9d0d72de10a73fdbcfc7db35776126fad4784b992a940f5ae1881\n-- P99 conversion review: changes/p99-conversion-world/closure-review.json\n-- Preserve the random cosmetic gender intent with the established Lua illusion API.\n-- Current IdleQuest SendIllusionPacket is a no-op: translated, NOT visually delivered.\n-- The hash and plain actor variants remain separate runtime keys.\nfunction event_spawn(e)\n  e.self:SendIllusionPacket({gender = eq.ChooseRandom(0, 1)})\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 15019,
+        "zone": "necropolis",
+        "name": "A_Guardian_of_the_Shrine",
+        "lua_content": null,
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 15019,
+        "zone": "necropolis",
+        "name": "A_Guardian_of_the_Shrine",
+        "lua_content": "-- name: A_Guardian_of_the_Shrine\n-- Source: sources/projecteq/necropolis/A_Guardian_of_the_Shrine.pl\n-- Source SHA256: 9f328b0917089fdad1b9840cf42e45c44552607adf2e7c8426d7d4b6e324d62b\n-- P99 conversion review: changes/p99-conversion-world/closure-review.json\n-- Zone-local invisible trigger123124 provokes Jaled Dar123011. Preserve hate,\n-- not a warning-only substitute. Same-name Skyshrine actor114508 is unrelated.\nfunction event_spawn(e)\n  local x, y = e.self:GetX(), e.self:GetY()\n  eq.set_proximity(x - 7, x + 7, y - 7, y + 7)\nend\nfunction event_enter(e)\n  local guardian = eq.get_entity_list():GetMobByNpcTypeID(123011)\n  if guardian.valid then guardian:AddToHateList(e.other, 1) end\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 12660,
+        "zone": "necropolis",
+        "name": "a_nest",
+        "lua_content": null,
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 12660,
+        "zone": "necropolis",
+        "name": "a_nest",
+        "lua_content": "-- name: a_nest\n-- Source: sources/projecteq/necropolis/a_nest.pl\n-- Source SHA256: 2304985dd59954a33b8ad6a1beeb2b971ca6987d2ed1ef0ffe23ed42b144d466\n-- P99 conversion review: changes/p99-conversion-world/closure-review.json\n-- P99 confirms triggered beetles. Six offsets and trap lifecycle are retained\n-- ProjectEQ details, not verified P99 counts. Duplicate aggro cannot duplicate a wave.\nlocal triggered = false\nfunction event_aggro(e)\n  if triggered then return end\n  triggered = true\n  local x, y, z, h = e.self:GetX(), e.self:GetY(), e.self:GetZ(), e.self:GetHeading()\n  eq.spawn2(123132, 0, 0, x, y, z, h)\n  eq.spawn2(123132, 0, 0, x - 2, y, z, h)\n  eq.spawn2(123132, 0, 0, x + 2, y, z, h)\n  eq.spawn2(123132, 0, 0, x, y - 2, z, h)\n  eq.spawn2(123132, 0, 0, x, y + 2, z, h)\n  eq.spawn2(123132, 0, 0, x + 1, y + 1, z, h)\n  eq.depop_with_timer()\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 17369,
+        "zone": "necropolis",
+        "name": "a_pile_of_bones",
+        "lua_content": null,
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 17369,
+        "zone": "necropolis",
+        "name": "a_pile_of_bones",
+        "lua_content": "-- name: a_pile_of_bones\n-- Source: sources/projecteq/necropolis/a_pile_of_bones.pl\n-- Source SHA256: 84496e17e9ca7bee3964ed834a8ed938a64381d3caf152612ba0831efd37006f\n-- P99 conversion review: changes/p99-conversion-world/closure-review.json\n-- Preserve the local triggered construct123097, corpse-position spawn and trap\n-- respawn. Trigger only on entry, not a second time on the ensuing combat release.\n-- No new probability is inferred from the P99 description that constructs sometimes appear.\nlocal triggered = false\nfunction event_combat(e)\n  if not e.joined or triggered then return end\n  triggered = true\n  local x, y, z, h = e.self:GetX(), e.self:GetY(), e.self:GetZ(), e.self:GetHeading()\n  eq.depop_with_timer()\n  eq.spawn2(123097, 0, 0, x, y, z, h)\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 12844,
+        "zone": "neriakb",
+        "name": "player",
+        "lua_content": null,
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 12844,
+        "zone": "neriakb",
+        "name": "player",
+        "lua_content": "-- name: player\n-- Source: sources/projecteq/neriakb/player.pl\n-- Source SHA256: 08a075501da270fd97ba4f43c0a92d2de942d57578efef49262f9b0e9b04d9c5\n-- P99 conversion review: changes/p99-conversion-world/closure-review.json\n-- Retain the classic three-leaf Commons gate. Omit only the explicit LDoN\n-- Wayfarer invitation, not the classic door handler. No invented key requirements.\nfunction event_click_door(e)\n  local door = e.door:GetDoorID()\n  if door == 1 then\n    eq.force_door_open(2); eq.force_door_open(49)\n  elseif door == 2 then\n    eq.force_door_open(1); eq.force_door_open(49)\n  elseif door == 49 then\n    eq.force_door_open(1); eq.force_door_open(2)\n  end\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 13043,
+        "zone": "skyshrine",
+        "name": "A_Guardian_of_the_Shrine",
+        "lua_content": null,
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 13043,
+        "zone": "skyshrine",
+        "name": "A_Guardian_of_the_Shrine",
+        "lua_content": "-- name: A_Guardian_of_the_Shrine\n-- Source: sources/projecteq/skyshrine/A_Guardian_of_the_Shrine.pl\n-- Source SHA256: 6b783a014b3967ef1e1d4835185a6a3cadfc2f94a02f957c72b33fc87698dd0f\n-- P99 conversion review: changes/p99-conversion-world/closure-review.json\n-- Complete local signal receiver only. Cross-zone Sleeper awakening remains\n-- blocked separately; this translation does not establish its global delivery.\nfunction event_signal(e)\n  if e.signal == 66 then\n    e.self:Shout(\"BEWARE! BEWARE! The Sleeper has been awakened! He means death for all who remain here! Time is short, flee the Skyshrine now if you value your life!\")\n  end\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 13640,
+        "zone": "sleeper",
+        "name": "#Hraashna_the_Warder",
+        "lua_content": null,
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 13640,
+        "zone": "sleeper",
+        "name": "#Hraashna_the_Warder",
+        "lua_content": "-- name: #Hraashna_the_Warder\n-- Source: sources/projecteq/sleeper/#Hraashna_the_Warder.pl\n-- Source SHA256: b53f968b18723252e05660ae11be973bb5cff3a9dfd2c22aff2d586d8f4e2f69\n-- P99 conversion review: changes/p99-conversion-world/closure-review.json\n-- Retain all three living-warder checks and signal66, without global-state shortcuts.\n-- This is a complete local callback, not a functioning cross-zone awakening event.\nfunction event_death_complete(e)\n  local list = eq.get_entity_list()\n  if not list:GetMobByNpcTypeID(128090).valid and not list:GetMobByNpcTypeID(128091).valid and not list:GetMobByNpcTypeID(128092).valid then eq.signal(128094, 66, 0) end\n  e.self:Shout(\"Warders, I have fallen. Prepare yourselves, these fools are determined to unleash doom!\")\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 19631,
+        "zone": "sleeper",
+        "name": "#Nanzata_the_Warder",
+        "lua_content": null,
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 19631,
+        "zone": "sleeper",
+        "name": "#Nanzata_the_Warder",
+        "lua_content": "-- name: #Nanzata_the_Warder\n-- Source: sources/projecteq/sleeper/#Nanzata_the_Warder.pl\n-- Source SHA256: 226d867c6326f9624b8aafaa654641ef1477ff9993e4bb9862697e0dc881e732\n-- P99 conversion review: changes/p99-conversion-world/closure-review.json\n-- Retain all three living-warder checks and signal66, without global-state shortcuts.\n-- This is a complete local callback, not a functioning cross-zone awakening event.\nfunction event_death_complete(e)\n  local list = eq.get_entity_list()\n  if not list:GetMobByNpcTypeID(128091).valid and not list:GetMobByNpcTypeID(128092).valid and not list:GetMobByNpcTypeID(128093).valid then eq.signal(128094, 66, 0) end\n  e.self:Shout(\"Warders, I have fallen. Prepare yourselves, these fools are determined to unleash doom!\")\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 18007,
+        "zone": "sleeper",
+        "name": "#The_Sleeper",
+        "lua_content": null,
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 18007,
+        "zone": "sleeper",
+        "name": "#The_Sleeper",
+        "lua_content": "-- name: #The_Sleeper\n-- Source: sources/projecteq/sleeper/#The_Sleeper.pl\n-- Source SHA256: 2f88272d98402dd802777c42ff57aab84c723adb8d919a024ac7db515cb097be\n-- P99 conversion review: changes/p99-conversion-world/closure-review.json\n-- Preserve the wake signal, exact actor/grid and appearance intent. SetAppearance\n-- is currently cosmetic no-op; successor Kerafyrm cross-zone lifecycle is still blocked.\n-- Do not claim the awakening family complete because this receiver is translated.\nfunction event_spawn(e)\n  eq.set_timer(\"sleep\", 1000)\nend\nfunction event_timer(e)\n  if e.timer ~= \"sleep\" then return end\n  e.self:SetAppearance(1)\n  eq.stop_timer(\"sleep\")\nend\nfunction event_signal(e)\n  if e.signal ~= 66 then return end\n  e.self:Shout(\"I AM FREE!\")\n  eq.depop_with_timer()\n  eq.spawn2(128089, 1, 0, -1499, -2344.8, -1052.8, 0)\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 16189,
+        "zone": "sleeper",
+        "name": "#Tukaarak_the_Warder",
+        "lua_content": null,
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 16189,
+        "zone": "sleeper",
+        "name": "#Tukaarak_the_Warder",
+        "lua_content": "-- name: #Tukaarak_the_Warder\n-- Source: sources/projecteq/sleeper/#Tukaarak_the_Warder.pl\n-- Source SHA256: a70163880e9d135d1e67d5e00d8618f46d901d13b1716ac98cef3cf907fe1649\n-- P99 conversion review: changes/p99-conversion-world/closure-review.json\n-- Retain all three living-warder checks and signal66, without global-state shortcuts.\n-- This is a complete local callback, not a functioning cross-zone awakening event.\nfunction event_death_complete(e)\n  local list = eq.get_entity_list()\n  if not list:GetMobByNpcTypeID(128090).valid and not list:GetMobByNpcTypeID(128091).valid and not list:GetMobByNpcTypeID(128093).valid then eq.signal(128094, 66, 0) end\n  e.self:Shout(\"Warders, I have fallen. Prepare yourselves, these fools are determined to unleash doom!\")\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 13547,
+        "zone": "sleeper",
+        "name": "#Ventani_the_Warder",
+        "lua_content": null,
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 13547,
+        "zone": "sleeper",
+        "name": "#Ventani_the_Warder",
+        "lua_content": "-- name: #Ventani_the_Warder\n-- Source: sources/projecteq/sleeper/#Ventani_the_Warder.pl\n-- Source SHA256: a38561e2e92896b1504544cb797ff56461ac80b54d4751e25f40734ffc409c36\n-- P99 conversion review: changes/p99-conversion-world/closure-review.json\n-- Retain all three living-warder checks and signal66, without global-state shortcuts.\n-- This is a complete local callback, not a functioning cross-zone awakening event.\nfunction event_death_complete(e)\n  local list = eq.get_entity_list()\n  if not list:GetMobByNpcTypeID(128090).valid and not list:GetMobByNpcTypeID(128092).valid and not list:GetMobByNpcTypeID(128093).valid then eq.signal(128094, 66, 0) end\n  e.self:Shout(\"Warders, I have fallen. Prepare yourselves, these fools are determined to unleash doom!\")\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 15977,
+        "zone": "wakening",
+        "name": "#Lieutenant_Krofer",
+        "lua_content": null,
+        "has_say_event": 0,
+        "enabled": 0
+      },
+      "after": {
+        "id": 15977,
+        "zone": "wakening",
+        "name": "#Lieutenant_Krofer",
+        "lua_content": "-- enabled: false\n-- name: #Lieutenant_Krofer\n-- Source: sources/projecteq/wakening/#Lieutenant_Krofer.pl\n-- Source SHA256: daf04ad67f5476bf583561dda0acd1ccf200cf0c926c82df1aff75829b27bb66\n-- P99 conversion review: changes/p99-conversion-world/closure-review.json\n-- Separately authorized exact receiver extension119173. Preserve25-minute\n-- lifetime, mission-report exchange,1000upstreamXP, and postreward depop.\n-- Actual enabled=0 quest policy is retained, not bypassed by this conversion.\nlocal item_lib = require(\"items\")\nfunction event_spawn(e) eq.set_timer(\"leave\", 1500000) end\nfunction event_trade(e)\n  if item_lib.check_turn_in(e.trade, {item1 = 1708}) then\n    e.self:Say(\"Failure! Incompetence! The whole squad anihilated! I knew this would happen if left in the hands of a worthless mercenary! Well, you can take this report back to Drioc then. Now get out of my sight, mercenary.\")\n    e.other:AddEXP(1000); e.other:Ding(); e.other:SummonItem(1709)\n    eq.depop()\n  end\n  item_lib.return_items(e.self, e.other, e.trade)\nend\nfunction event_timer(e)\n  if e.timer ~= \"leave\" then return end\n  eq.stop_timer(\"leave\")\n  eq.depop()\nend\n",
+        "has_say_event": 0,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 14435,
+        "zone": "wakening",
+        "name": "Berzerker_Dolvad",
+        "lua_content": null,
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 14435,
+        "zone": "wakening",
+        "name": "Berzerker_Dolvad",
+        "lua_content": "-- name: Berzerker_Dolvad\n-- Source: sources/projecteq/wakening/Berzerker_Dolvad.pl\n-- Source SHA256: f732488891edc8003baebab8a5141791c25b5f8785e1bfdf3d4032fc0c50b2e5\n-- P99 conversion review: changes/p99-conversion-world/closure-review.json\n-- Preserve source timed walk and authored one-way grid; no invented path.\n-- Dolvad onset/onset2 inconsistency is corrected to the timer actually scheduled.\n-- Perl timers use seconds; Lua timers use milliseconds. Movement heading-2 is retained.\nfunction event_spawn(e)\n  eq.set_timer(\"onset2\", 55000)\nend\nfunction event_timer(e)\n  if e.timer ~= \"onset2\" then return end\n  e.self:MoveTo(-4310, -741, -183, -2, true)\n  eq.stop_timer(\"onset2\")\nend\nfunction event_signal(e)\n  if e.signal == 1 then eq.start(25) end\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 12100,
+        "zone": "wakening",
+        "name": "Berzerker_Voldak",
+        "lua_content": null,
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 12100,
+        "zone": "wakening",
+        "name": "Berzerker_Voldak",
+        "lua_content": "-- name: Berzerker_Voldak\n-- Source: sources/projecteq/wakening/Berzerker_Voldak.pl\n-- Source SHA256: 0169c078ce10d546ab97b06d9412dc137b56e9f84b982592df503bb9b03ffbae\n-- P99 conversion review: changes/p99-conversion-world/closure-review.json\n-- Literal signal delays are milliseconds in BOTH Perl and Lua.\n-- Owner-scoped grid starts plus signals pass current structural preflight.\n-- No public-world actor header: these are player-owned quest spawns.\nfunction event_spawn(e)\n  eq.set_timer(\"onset1\", 58000)\nend\nfunction event_timer(e)\n  if e.timer ~= \"onset1\" then return end\n  e.self:MoveTo(-4311, -720, -183, -2, true)\n  eq.stop_timer(\"onset1\")\nend\nfunction event_signal(e)\n  if e.signal == 1 then\n    eq.start(24)\n    eq.signal(119168, 1, 300)\n  elseif e.signal == 2 then\n    e.self:Say(\"Woah! we're being ambushed!!\")\n    eq.signal(119168, 2, 300)\n  end\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 18022,
+        "zone": "wakening",
+        "name": "Bloodpriest_Ioukond",
+        "lua_content": null,
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 18022,
+        "zone": "wakening",
+        "name": "Bloodpriest_Ioukond",
+        "lua_content": "-- name: Bloodpriest_Ioukond\n-- Source: sources/projecteq/wakening/Bloodpriest_Ioukond.pl\n-- Source SHA256: 1c7d7fda1dab12df81c65272c56df0bd743fe1fdc91c4c1f5e61165495c4cae6\n-- P99 conversion review: changes/p99-conversion-world/closure-review.json\n-- Velium Focus cleanup receiver. Phenocryst signals these quest-spawned actors;\n-- retain unconditional signal cleanup and no synthetic rewards.\nfunction event_signal(e)\n  eq.depop()\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 19619,
+        "zone": "wakening",
+        "name": "Corporal_Hlash",
+        "lua_content": null,
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 19619,
+        "zone": "wakening",
+        "name": "Corporal_Hlash",
+        "lua_content": "-- name: Corporal_Hlash\n-- Source: sources/projecteq/wakening/Corporal_Hlash.pl\n-- Source SHA256: a338a17c66ecbdace57e5fc2868a508fd85a1d8d6167e5df1bbc921b6862ec87\n-- P99 conversion review: changes/p99-conversion-world/closure-review.json\n-- Retain authored route23, spatial speech gate, all four defenders and signals.\n-- Perl quest::signal(id,300) means Lua eq.signal(id,0,300), NOT signal ID300.\n-- P99 also describes phase pumas absent from Perl; no guessed extra actors are added.\nfunction event_spawn(e)\n  eq.set_timer(\"onset\", 60000)\n  eq.set_timer(\"readygo\", 150000)\nend\nfunction event_timer(e)\n  if e.timer == \"onset\" then\n    e.self:MoveTo(-4341, -748, -183, -2, true)\n    eq.stop_timer(\"onset\")\n  elseif e.timer == \"readygo\" and e.self:GetX() == -4341 and e.self:GetY() == -748 then\n    e.self:Say(\"Onward men, the eyes of Zek are upon us.\")\n    eq.stop_timer(\"readygo\")\n    eq.signal(119167, 1, 300)\n    eq.signal(119166, 1, 300)\n    eq.signal(119169, 1, 300)\n  end\nend\nfunction event_waypoint_arrive(e)\n  if e.wp == 5 then\n    e.self:Say(\"Hold here squad\")\n    eq.signal(119050, 0, 300)\n  end\nend\nfunction event_say(e)\n  if e.message:findi(\"troop attack\") and e.self:GetX() == -225 and e.self:GetY() == 1725 then\n    e.self:Shout(\"Destroy them!!\")\n    eq.message(10, \"Suddenly, all around the Sifaye village, several beings phase into reality.  Their eyes glow with the golden light of divinity, obviously sent from a higher plane of existence.  The Kromzek assault squad is surely doomed. You decided to withdraw and report what you have found, perhaps the Lieutenant will understand.\")\n    eq.signal(119167, 2, 300)\n  end\nend\nfunction event_signal(e)\n  if e.signal == 1 then\n    eq.start(23)\n  elseif e.signal == 2 then\n    e.self:Say(\"Grraaaggh! AMBUSH!! Die well!\")\n    eq.spawn2(119174, 0, 0, -146, 1703, -192, 374)\n    eq.spawn2(119174, 0, 0, -149, 1731, -192, 374)\n    eq.spawn2(119174, 0, 0, -162, 1738, -192, 374)\n    eq.spawn2(119174, 0, 0, -172, 1758, -192, 364)\n  end\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 18783,
+        "zone": "wakening",
+        "name": "Disciple_Atharm",
+        "lua_content": null,
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 18783,
+        "zone": "wakening",
+        "name": "Disciple_Atharm",
+        "lua_content": "-- name: Disciple_Atharm\n-- Source: sources/projecteq/wakening/Disciple_Atharm.pl\n-- Source SHA256: 0125444386bc26626d48de0e7e7f2633db8bd26bcd57dc9c6f5c7ba835225306\n-- P99 conversion review: changes/p99-conversion-world/closure-review.json\n-- Preserve source timed walk and authored one-way grid; no invented path.\n-- Dolvad onset/onset2 inconsistency is corrected to the timer actually scheduled.\n-- Perl timers use seconds; Lua timers use milliseconds. Movement heading-2 is retained.\nfunction event_spawn(e)\n  eq.set_timer(\"onset3\", 90000)\nend\nfunction event_timer(e)\n  if e.timer ~= \"onset3\" then return end\n  e.self:MoveTo(-4357, -715, -183, -2, true)\n  eq.stop_timer(\"onset3\")\nend\nfunction event_signal(e)\n  if e.signal == 1 then eq.start(26) end\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 14993,
+        "zone": "wakening",
+        "name": "Lieutenant_Krofer",
+        "lua_content": null,
+        "has_say_event": 1,
+        "enabled": 0
+      },
+      "after": {
+        "id": 14993,
+        "zone": "wakening",
+        "name": "Lieutenant_Krofer",
+        "lua_content": "-- enabled: false\n-- name: Lieutenant_Krofer\n-- Source: sources/projecteq/wakening/Lieutenant_Krofer.pl\n-- Source SHA256: 1a9060e3ca8990dd0d804c3590f59472a54f494fb86bfe5fddf1e4265845339a\n-- P99 conversion review: changes/p99-conversion-world/closure-review.json\n-- Authorized caller extension: preserve signed requisition, four distinct actors,\n-- mission report and signal-driven replacement. P99 says the meat/messenger parts\n-- are optional; prepared does not require the artificial tunarean_regiment global.\n-- Keep meat-assignment state, check it BEFORE consuming inputs, and return extras.\n-- P99 meat payment is10pp2gp1cp; other XP/cash/deltas remain explicitly upstream.\n-- Faction locks omitted per repository policy. The staged replacement preserves\n-- the walkthrough warning against an immediate mission-report turn-in.\nlocal item_lib = require(\"items\")\nlocal function faction_reward(e)\n  e.other:Faction(448, 10); e.other:Faction(419, 10)\n  e.other:Faction(429, 10); e.other:Faction(430, -30)\nend\nfunction event_say(e)\n  if e.message:findi(\"hail\") then e.self:Say(\"Unless you're the new mercenary reinforcements I suggest you remove yourself from my presence before I decorate the bottom of my boot with your intestines.\")\n  elseif e.message:findi(\"next assignment\") then e.self:Say(\"Well, ready or not, this must be done now. Out there in the forest are our enemies. For us to be successful, we must know what they are doing and how they are going about it. Our probing attacks have revealed little so we've decided to send you out to gather any info you can. There must be some sort of messenger out there, bring any info you might find.\")\n  elseif e.message:findi(\"prepared\") then\n    e.self:Say(\"Very well. We've decided to attack the small Sifaye village northeast of here and I want you to coordinate the attack. I will send you into Kael Drakkel with a request for troop assistance. After the squad is assembled you will lead them to the staging point where you will oversee the battle. Here is the request. Take it to Drioc in the city and return here with the troops.\")\n    e.other:SummonItem(1706)\n  end\nend\nfunction event_trade(e)\n  local qglobals = e.qglobals or {}\n  if item_lib.check_turn_in(e.trade, {item1 = 1702}) then\n    e.self:Say(\"Drioc sent you? I suppose one can't expect much from a mercenary. Well then, \" .. e.other:GetCleanName() .. \", your first assignment will be to clear out some of this forest's annoying populace. Bring me the meat of one of the raptors, the meat of two panthers, and the remains of one of those living puddles of black sludge found in the caves. You will then have your payment.\")\n    e.other:AddEXP(1000); e.other:Ding()\n    eq.set_global(\"krofer_assignment\", \"1\", 0, \"F\")\n  elseif qglobals.krofer_assignment and item_lib.check_turn_in(e.trade, {item1 = 22851, item2 = 22851, item3 = 22852, item4 = 1703}) then\n    e.self:Say(\"Well, I suppose you may be worth something more than fodder after all. Here is your payment. Speak to me again when you are ready for your next assignment. For now, get some rest, you will need it.\")\n    e.other:Ding(); faction_reward(e); e.other:AddEXP(1000)\n    e.other:GiveCash(1, 0, 2, 10)\n    eq.delete_global(\"krofer_assignment\")\n    eq.set_global(\"tunarean_regiment\", \"1\", 0, \"F\")\n  elseif item_lib.check_turn_in(e.trade, {item1 = 1704}) then\n    e.self:Say(\"Excellent, \" .. e.other:GetCleanName() .. \". With this we can plan an attack that might actually accomplish something. Here is your payment. You have also earned this cloak, it should help protect you from the clawing undergrowth of this savage land. Your next mission will be more complex and dangerous, however we may be able to spare a laborer or two to assist you. Rest now, and tell me when you are prepared.\")\n    e.other:Ding(); faction_reward(e); e.other:AddEXP(1000)\n    e.other:GiveCash(0, 5, 4, 11)\n    e.other:SummonItem(1705)\n  elseif item_lib.check_turn_in(e.trade, {item1 = 1707}) then\n    e.self:Emote(\"takes the note and looks it over, then sighs and says, 'This will have to be enough. The squad should be here shortly. When they arrive you will march with them to the staging area near the village of those insect Sifaye. When you are satisfied with the formation, give the corporal the order to attack and observe the battle. After the village is destroyed return this report to me and we'll plan our next move.'\")\n    e.other:AddEXP(1000); e.other:Ding(); e.other:SummonItem(1708)\n    eq.spawn2(119168, 0, 0, -4975, -699, -182, 126)\n    eq.spawn2(119166, 0, 0, -4954, -697, -182, 126)\n    eq.spawn2(119167, 0, 0, -4954, -671, -182, 126)\n    eq.spawn2(119169, 0, 0, -4976, -672, -182, 126)\n  end\n  item_lib.return_items(e.self, e.other, e.trade)\nend\nfunction event_signal(e)\n  eq.spawn2(119173, 0, 0, e.self:GetX(), e.self:GetY(), e.self:GetZ(), e.self:GetHeading())\n  eq.depop_with_timer()\nend\n",
+        "has_say_event": 1,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 12364,
+        "zone": "wakening",
+        "name": "Phenocryst",
+        "lua_content": null,
+        "has_say_event": 1,
+        "enabled": 0
+      },
+      "after": {
+        "id": 12364,
+        "zone": "wakening",
+        "name": "Phenocryst",
+        "lua_content": "-- enabled: false\n-- name: Phenocryst\n-- Source: sources/projecteq/wakening/Phenocryst.pl\n-- Source SHA256: 018a8f79de2179f4e86f1f74693251c0b28c8d97c50d4c91b442ae20ba3b8fc1\n-- P99 conversion review: changes/p99-conversion-world/closure-review.json\n-- Authorized caller extension: all four classic hand-ins, all three giant spawns,\n-- one-hour cleanup and faction deltas retained. P99 permits the amiable-faction\n-- shortcut; remove the artificial global gate under the repository faction policy.\n-- Fix veliumfcous typo and return nonmatching items. These are source-backed\n-- stationary giants: P99 approach/cave-depop and postreward geonid procession have\n-- no authored route here and are NOT claimed implemented by this proposal.\nlocal item_lib = require(\"items\")\nfunction event_say(e)\n  if e.message:findi(\"hail\") then e.self:Emote(\"speaks with a soundless voice, as if you are hearing your own thoughts. 'We sense you are attempting communication with us but do not understand what it is you are trying to convey. We are eager to know more. Perhaps there is one who knows the language of the stone and will speak with us\")\n  elseif e.message:findi(\"help you\") then e.self:Emote(\"speaks from within your mind as well as conveys a sense of joy empathically. It is said that the harbringer will find all of our people and unite them. When we join we will know all of our experiences and perhaps then be aware of how to proceed with the next step in our asscention. We implore you to find others like us and make them aware of us. You know the language of the stone and can tell them. We await your return with proof that you have spoken to them.\")\n  elseif e.message:findi(\"find what\") then e.self:Emote(\"says in the form of thoughts, We must call to it. We must make ourselves heard past these rocks though. A menhir must be constructed to amplify our voice. The stones we will need are not found in this area though. We hear whispers of stones far away that have the ability to channel and amplify our thoughts. We ask you to gather these stones for us harbinger.\")\n  elseif e.message:findi(\"gather these stones for you\") then\n    e.self:Emote(\"thoughts flood your mind, 'Thank you Harbinger. We need 3 crystals. One of Beryl, one of Stibnite, and one of the purest Iron. These minerals will only be found deep within the earth where the geology is relatively stable. This Focus will aid you in finding the right crystals. Return it to me with the 3 crystals and we will construct our Menhir. Please hurry Harbinger, our prophecy awaits.\")\n    e.other:Faction(458, 10)\n    e.other:SummonItem(1694)\n  end\nend\nfunction event_trade(e)\n  if item_lib.check_turn_in(e.trade, {item1 = 1692}) then\n    e.self:Emote(\"speaks to you from within your mind, You know the stone! This is wonderful! The fullfillment of the prophecy is now one step closer. The most ancient of the stone tells us that one not of stone will come forth and act as our harbringer of asscention. We believe you to be our harbringer. Please help us!\")\n    e.other:SummonItem(1701)\n    e.other:Faction(458, 15)\n  elseif item_lib.check_turn_in(e.trade, {item1 = 1693}) then\n    e.self:Emote(\"sends it's thoughts to you, a feeling of disappointment washes over you, It seems the others are not aware of themselves yet. We are alone..So many questions yet we can find no answers. We have been given a very special gift but without direction we are lost. We must find who has made us aware of ourselves and why it has done so.\")\n    e.other:Faction(458, 15)\n    eq.set_global(\"veliumfocus\", \"1\", 5, \"F\")\n  elseif item_lib.check_turn_in(e.trade, {item1 = 1694, item2 = 1695, item3 = 1697, item4 = 1696}) then\n    e.self:Emote(\"makes no sound but it's voice fills your mind. We have always held our memories within the earth and stone but only recently have we become aware of them. We do not know what happened or who gave us this wonderful gift but we can now access those memories and are aware of it's storage. With that knowledge has come questions and desires. When the prophecy comes to be then we will have our answers and fulfill our desires.\")\n    e.self:Emote(\"familiar thoughts flood into your mind again, You truly are the Harbinger, take this Focus as a mark of your friendship with us. Now we can construct the Menhir, we need .. the stones speak.. , There is a problem. Ones of flesh are coming, the large ones, 3 of them. They must not disturb us while we construct the Menhir! Please stop them Harbinger! bring us proof of their distruction along with your Focus and then we will begin the calling. Our asscention is at hand!\")\n    e.other:Faction(458, 15)\n    e.other:SummonItem(1698)\n    eq.spawn2(119158, 0, 0, 408.10, -690.21, -201.55, 374)\n    eq.spawn2(119158, 0, 0, -564.04, -985.80, -191.31, 374)\n    eq.spawn2(119164, 0, 0, 303.02, 254.44, -201.54, 374)\n    eq.set_timer(\"cleanup\", 3600000)\n  elseif item_lib.check_turn_in(e.trade, {item1 = 1698, item2 = 1699, item3 = 1699, item4 = 1699}) then\n    e.self:Emote(\"thoughts become your own, a feeling of joy overwhelms you, 'Because of you we can at last speak with our maker. We were once given a gift, and we ask that you accept this gift from us now so that we may come closer to that which we owe our sentience to. Now. ,we must construct the Menhir.\")\n    e.other:Faction(458, 10)\n    e.other:SummonItem(1700)\n  end\n  item_lib.return_items(e.self, e.other, e.trade)\nend\nfunction event_timer(e)\n  if e.timer ~= \"cleanup\" then return end\n  eq.stop_timer(\"cleanup\")\n  eq.signal(119158, 0, 0)\n  eq.signal(119164, 0, 0)\nend\n",
+        "has_say_event": 1,
+        "enabled": 0
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 12882,
+        "zone": "wakening",
+        "name": "a_sifaye_defender",
+        "lua_content": null,
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 12882,
+        "zone": "wakening",
+        "name": "a_sifaye_defender",
+        "lua_content": "-- name: a_sifaye_defender\n-- Source: sources/projecteq/wakening/a_sifaye_defender.pl\n-- Source SHA256: ff2b66f1c424dade3f12bd6c14323db5f744b894374eb1e8f4766be55cb29066\n-- P99 conversion review: changes/p99-conversion-world/closure-review.json\n-- Preserve randomized NPC-versus-NPC aggression and300-second lifetime.\n-- NPC spell list10 requires a version5-ready scene; no attack is replaced by flavor.\nfunction event_spawn(e)\n  eq.set_timer(\"leave\", 300000)\n  local target = eq.ChooseRandom(119166, 119167, 119168, 119169)\n  -- EQEmu does not attack an absent target. Avoid the current runtime's\n  -- unsupported deferred-empty-hate batch when a chosen giant has died.\n  if eq.get_entity_list():GetMobByNpcTypeID(target).valid then\n    eq.attack_npc_type(target)\n  else\n    e.self:Say(\"I am unable to locate NPC type \" .. target)\n  end\nend\nfunction event_timer(e)\n  if e.timer ~= \"leave\" then return end\n  eq.stop_timer(\"leave\")\n  eq.depop()\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 17230,
+        "zone": "wakening",
+        "name": "accolyte_of_Zek",
+        "lua_content": null,
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 17230,
+        "zone": "wakening",
+        "name": "accolyte_of_Zek",
+        "lua_content": "-- name: accolyte_of_Zek\n-- Source: sources/projecteq/wakening/accolyte_of_Zek.pl\n-- Source SHA256: 9c5f437671e4002b172cc30c8619161054ea7241a67c8209740e85a2c3ea1810\n-- P99 conversion review: changes/p99-conversion-world/closure-review.json\n-- Velium Focus cleanup receiver. Phenocryst signals these quest-spawned actors;\n-- retain unconditional signal cleanup and no synthetic rewards.\nfunction event_signal(e)\n  eq.depop()\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 18358,
+        "zone": "westwastes",
+        "name": "A_sentinel-s_voice",
+        "lua_content": null,
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 18358,
+        "zone": "westwastes",
+        "name": "A_sentinel-s_voice",
+        "lua_content": "-- name: A_sentinel-s_voice\n-- Source: sources/projecteq/westwastes/A_sentinel-s_voice.pl\n-- Source SHA256: ec28bc1fb9819214e68411006312641230776518c42d77cfb1b54872220f5b2a\n-- P99 conversion review: changes/p99-conversion-world/closure-review.json\n-- Exact invisible trigger120116 at placement26697; use its authored640s respawn.\n-- Preserve full30-unit XYZ bounds and source wording. No P99 timing claim.\nlocal warned = false\nfunction event_spawn(e)\n  local x, y, z = e.self:GetX(), e.self:GetY(), e.self:GetZ()\n  eq.set_proximity(x - 30, x + 30, y - 30, y + 30, z - 30, z + 30)\nend\nfunction event_enter(e)\n  if warned then return end\n  warned = true\n  e.self:Emote(\"invades your thoughts: 'Beware mortal!  This land is marked by Veeshan, and is sacred to her brood.  None but Dragonkin are welcome here.  Your life is forteit if you proceed.  Ignore this message at your peril!'\")\n  eq.depop_with_timer()\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/eastwastes/a_Ry-Gorr_messenger.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversion-world/eastwastes/a_Ry-Gorr_messenger.lua",
+      "afterSha256": "59f529e018a88f4ef8d6de8c22541a6ff2123a93a18280e99a9d5cada83651e8"
+    },
+    {
+      "target": "maintained/lua/converted-perl/frozenshadow/#an_enraged_vampire.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversion-world/frozenshadow/#an_enraged_vampire.lua",
+      "afterSha256": "eeecbaefae9dba81538f2fb06b348c2271515829a045785a3ffd619758b78dcf"
+    },
+    {
+      "target": "maintained/lua/converted-perl/frozenshadow/an_enraged_vampire.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversion-world/frozenshadow/an_enraged_vampire.lua",
+      "afterSha256": "bed47693c6392131c95ce529c2aa5568704d704db32f972871740d9e4b88929e"
+    },
+    {
+      "target": "maintained/lua/converted-perl/necropolis/A_Guardian_of_the_Shrine.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversion-world/necropolis/A_Guardian_of_the_Shrine.lua",
+      "afterSha256": "c3e5a932a95e681757fb3a416e732dd2ce272c95cd2e579f38b2ccfa52d6fb01"
+    },
+    {
+      "target": "maintained/lua/converted-perl/necropolis/a_nest.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversion-world/necropolis/a_nest.lua",
+      "afterSha256": "484a46e15e0ad90264b548ebd32c6b6f82d7226d4a6097753662618e5d70794e"
+    },
+    {
+      "target": "maintained/lua/converted-perl/necropolis/a_pile_of_bones.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversion-world/necropolis/a_pile_of_bones.lua",
+      "afterSha256": "956cb301fda6f76cb32ae4b4db9d1793e8cbebc01d7227a8e2ac79ea99b3d7db"
+    },
+    {
+      "target": "maintained/lua/converted-perl/neriakb/player.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversion-world/neriakb/player.lua",
+      "afterSha256": "1780efdea3b7d6d1efcf88d279dbb676ce7f9952ea02440dc7d8a96d69d50571"
+    },
+    {
+      "target": "maintained/lua/converted-perl/skyshrine/A_Guardian_of_the_Shrine.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversion-world/skyshrine/A_Guardian_of_the_Shrine.lua",
+      "afterSha256": "79c8b547092b39be0b5ffc6d213410031bd707748deba7c4b54fcf940eb55d92"
+    },
+    {
+      "target": "maintained/lua/converted-perl/sleeper/#Hraashna_the_Warder.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversion-world/sleeper/#Hraashna_the_Warder.lua",
+      "afterSha256": "f52cd422dfa1e77078999f0e95ff8d0a07fc99e4a40e5e24fcec7fc625dded73"
+    },
+    {
+      "target": "maintained/lua/converted-perl/sleeper/#Nanzata_the_Warder.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversion-world/sleeper/#Nanzata_the_Warder.lua",
+      "afterSha256": "77a5076cb164ffa86133c84b46de67f350aa9aac8753cebf0f087bce7eb41022"
+    },
+    {
+      "target": "maintained/lua/converted-perl/sleeper/#The_Sleeper.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversion-world/sleeper/#The_Sleeper.lua",
+      "afterSha256": "8cd34f96290f92573a29fff5019bf0828699e5f9f0658b9baac6347f705329be"
+    },
+    {
+      "target": "maintained/lua/converted-perl/sleeper/#Tukaarak_the_Warder.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversion-world/sleeper/#Tukaarak_the_Warder.lua",
+      "afterSha256": "aef2cef4dbf6e6f823af8c39a90c4a8b66e5ae365897652fb6a532260c45e5f7"
+    },
+    {
+      "target": "maintained/lua/converted-perl/sleeper/#Ventani_the_Warder.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversion-world/sleeper/#Ventani_the_Warder.lua",
+      "afterSha256": "994d3ac4f8bd67a8c0c576c46fe79021988cc94e37afc83577a01b28e9d3f64e"
+    },
+    {
+      "target": "maintained/lua/converted-perl/wakening/#Lieutenant_Krofer.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversion-world/wakening/#Lieutenant_Krofer.lua",
+      "afterSha256": "996166ba118c4cbbd41cffd5b8515d7f2dd1b0e3d929162113e339b13b31b89f"
+    },
+    {
+      "target": "maintained/lua/converted-perl/wakening/Berzerker_Dolvad.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversion-world/wakening/Berzerker_Dolvad.lua",
+      "afterSha256": "988e3f7ee08a2a52cf705113b3a84db172fc88c255033fff0ffeb601317cd91e"
+    },
+    {
+      "target": "maintained/lua/converted-perl/wakening/Berzerker_Voldak.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversion-world/wakening/Berzerker_Voldak.lua",
+      "afterSha256": "72f70146fe751bb0b1023cd2dc6e5fb83c9cfdedf7e9c4d9b6a01b706bcddca1"
+    },
+    {
+      "target": "maintained/lua/converted-perl/wakening/Bloodpriest_Ioukond.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversion-world/wakening/Bloodpriest_Ioukond.lua",
+      "afterSha256": "b399d934e413101d8c8a54b52c728a4fd788c1dbdda163df8387695c24fce078"
+    },
+    {
+      "target": "maintained/lua/converted-perl/wakening/Corporal_Hlash.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversion-world/wakening/Corporal_Hlash.lua",
+      "afterSha256": "2e840165f73854ab84e92f72b20a954151300c301f0ed2e160a446a472112156"
+    },
+    {
+      "target": "maintained/lua/converted-perl/wakening/Disciple_Atharm.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversion-world/wakening/Disciple_Atharm.lua",
+      "afterSha256": "62c199976a09e4a6a483e56d045155a104d3363b5842fe016516a2d3eefc7a38"
+    },
+    {
+      "target": "maintained/lua/converted-perl/wakening/Lieutenant_Krofer.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversion-world/wakening/Lieutenant_Krofer.lua",
+      "afterSha256": "7c8853111f35d9e97bbde925bdae5571945888525fe24f3de80c5432b86088e1"
+    },
+    {
+      "target": "maintained/lua/converted-perl/wakening/Phenocryst.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversion-world/wakening/Phenocryst.lua",
+      "afterSha256": "5064b8db8b53795f6494626797c9a441d3cf28caaf5afae405a2642b8513af17"
+    },
+    {
+      "target": "maintained/lua/converted-perl/wakening/a_sifaye_defender.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversion-world/wakening/a_sifaye_defender.lua",
+      "afterSha256": "f4ae38d9127f01bebcb6e8ff1fcfb25938011aa73050784e9161580504113f1a"
+    },
+    {
+      "target": "maintained/lua/converted-perl/wakening/accolyte_of_Zek.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversion-world/wakening/accolyte_of_Zek.lua",
+      "afterSha256": "4d40c5cbbbc341a324b6e1f5c7b7e84136757c073727a64b329c9c0c184e22b0"
+    },
+    {
+      "target": "maintained/lua/converted-perl/westwastes/A_sentinel-s_voice.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversion-world/westwastes/A_sentinel-s_voice.lua",
+      "afterSha256": "5ea1ad5b99c4ae9ed6f9991dcfd1ed9047ba8bff7d14e1afaa7e48384988d0e1"
+    }
+  ]
+}

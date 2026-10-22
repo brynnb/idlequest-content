@@ -1,0 +1,26 @@
+{
+  "titles": [
+    "Rogue Redemption"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "partial",
+  "match_status": "partial",
+  "local_quest_keys": [
+    "commons/Noresa_Sparkle"
+  ],
+  "proposal": "changes/p99-nz-noresa-key.json",
+  "notes": [
+    "Give Noresa\u2019s documented Gem Case Key 1 rather than Key 2, paired with the separate Toxdil correction.",
+    "Cached Rogue Redemption explicitly identifies Noresa purse reward as Gem Case Key 1 and Toxdil sapphire reward as Key 2. Exported items 12351/12352 are both named Tiny Key but their lore fields identify Key 1/Key 2 respectively. Preserve input17931 Sparkle,15000EXP and all dialogue. Paired Toxdil change is owned by p99-tz-toxdil-dialogue. Modern commonlands/Noresa_Sparkle has an empty Lua body and no source candidate; commonlands is absent from recovered P99 zone scope, so it is not converted or presumed a runtime alias."
+  ],
+  "verification": {
+    "source": "Cached P99 and effective Lua reviewed; exact complete row preimages and source hashes recorded.",
+    "syntax": "pending",
+    "runtime": "Isolated mock regression pending; full game runtime unavailable.",
+    "ui": "not_run",
+    "connected_chain": "not_run"
+  },
+  "unresolved": [
+    "Ordinary source drops/spawns, recipe live behavior and rendered complete quest path not verified."
+  ]
+}

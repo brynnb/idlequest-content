@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-nz-suuspa-dialogue",
+  "summary": "Restore the P99 Rat Shaped Ring completion line, preserving the separate Brother Trintle branch.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Rat_Shaped_Rings?action=raw",
+      "note": "Cached 2026-07-17T23:29:54.185Z; revision unavailable; SHA256 788b323a99e299a644f1323a79cda193319c5dde2d4f948086756bd074c5c1fc. 13301ring reward1gold3silver and fivefactiondirections match; only completion speech changes.13908PrayerBeads branch untouched."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 14348,
+        "zone": "qeynos2",
+        "name": "Suuspa_Clanim",
+        "lua_content": "-- Source: qeynos2/Suuspa_Clanim.lua\n-- P99 audit: Brother Trintle (Quest)\n-- items: 13301, 13908\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Welcome to the Temple of Life, \" .. e.other:GetName() .. \".  It is here that you may pay tribute to the Prime Healer. Does not your heart beat with the sound of life? It is He who makes it so. Do not let the hand of Bertoxxulous and his [new disease] lay upon your soul or, like so many, you shall meet your fate at the end of my sword!\");\n\telseif(e.message:findi(\"new disease\")) then\n\t\te.self:Say(\"The new disease I speak of is called the Bloodsabers. They are the loyal followers of Bertoxxulous and as such have been condemned by our temple. Do you wish to [join the fight]?\");\n\telseif(e.message:findi(\"join the fight\")) then\n\t\te.self:Say(\"Then seek out those who worship the Plaguebringer. End their threat!! Each member has upon them the mark of the Bloodsabers, a rat-shaped ring. I shall reward all those who return such rings to me.\");\n\telseif(e.message:findi(\"Brother Trintle attacked Brother Estle\")) then\n\t\te.self:Say(\"Impossible!! What madness do you speak of!!? If he did he must have had a reason. Maybe Trintle had been tainted by the words of Bertoxxulous..?\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 13301})) then\n\t\te.self:Say(\"Ah, one less of the Plaguebringer's followers to poison these lands. Take this as a reward for your service.\");\n\t\te.other:Ding();\n\t\te.other:Faction(219,5,0); -- Antonius Bayle\n\t\te.other:Faction(262,5,0); -- Guards of Qeynos\n\t\te.other:Faction(341,5,0); -- Priests of Life\n\t\te.other:Faction(280,5,0); -- Knights of Thunder\n\t\te.other:Faction(221,-5,0); -- Bloodsabers\n\t\te.other:AddEXP(1000);\n\t\te.other:GiveCash(0,3,1,0);\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 13908})) then\n\t\te.self:Say(\"This is not good. Hmph. It appears they are shattered. For the first time one of our members has been swayed. I reward you for your deed. Also, if you have found anything upon Trintle, let me know.\");\n\t\te.other:Ding();\n\t\te.other:Faction(341,5,0); -- Priests of Life\n\t\te.other:Faction(280,5,0); -- Knights of Thunder\n\t\te.other:Faction(262,5,0); -- Guards of Qeynos\n\t\te.other:Faction(221,-5,0); -- Bloodsabers\n\t\te.other:Faction(219,5,0); -- Antonius Bayle\n\t\te.other:AddEXP(1000);\n\t\te.other:GiveCash(7,0,0,0);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\n-- END of FILE Zone:qeynos2 ID:2048 -- Suuspa_Clanim\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 14348,
+        "zone": "qeynos2",
+        "name": "Suuspa_Clanim",
+        "lua_content": "-- Source: qeynos2/Suuspa_Clanim.lua\n-- P99 audit: Brother Trintle (Quest)\n-- items: 13301, 13908\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Welcome to the Temple of Life, \" .. e.other:GetName() .. \".  It is here that you may pay tribute to the Prime Healer. Does not your heart beat with the sound of life? It is He who makes it so. Do not let the hand of Bertoxxulous and his [new disease] lay upon your soul or, like so many, you shall meet your fate at the end of my sword!\");\n\telseif(e.message:findi(\"new disease\")) then\n\t\te.self:Say(\"The new disease I speak of is called the Bloodsabers. They are the loyal followers of Bertoxxulous and as such have been condemned by our temple. Do you wish to [join the fight]?\");\n\telseif(e.message:findi(\"join the fight\")) then\n\t\te.self:Say(\"Then seek out those who worship the Plaguebringer. End their threat!! Each member has upon them the mark of the Bloodsabers, a rat-shaped ring. I shall reward all those who return such rings to me.\");\n\telseif(e.message:findi(\"Brother Trintle attacked Brother Estle\")) then\n\t\te.self:Say(\"Impossible!! What madness do you speak of!!? If he did he must have had a reason. Maybe Trintle had been tainted by the words of Bertoxxulous..?\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 13301})) then\n\t\te.self:Say(\"You have cleansed Norrath of another follower of the Plaguebringer. You have done well. Take this reward and continue your search for others who wear this ring.\");\n\t\te.other:Ding();\n\t\te.other:Faction(219,5,0); -- Antonius Bayle\n\t\te.other:Faction(262,5,0); -- Guards of Qeynos\n\t\te.other:Faction(341,5,0); -- Priests of Life\n\t\te.other:Faction(280,5,0); -- Knights of Thunder\n\t\te.other:Faction(221,-5,0); -- Bloodsabers\n\t\te.other:AddEXP(1000);\n\t\te.other:GiveCash(0,3,1,0);\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 13908})) then\n\t\te.self:Say(\"This is not good. Hmph. It appears they are shattered. For the first time one of our members has been swayed. I reward you for your deed. Also, if you have found anything upon Trintle, let me know.\");\n\t\te.other:Ding();\n\t\te.other:Faction(341,5,0); -- Priests of Life\n\t\te.other:Faction(280,5,0); -- Knights of Thunder\n\t\te.other:Faction(262,5,0); -- Guards of Qeynos\n\t\te.other:Faction(221,-5,0); -- Bloodsabers\n\t\te.other:Faction(219,5,0); -- Antonius Bayle\n\t\te.other:AddEXP(1000);\n\t\te.other:GiveCash(7,0,0,0);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\n-- END of FILE Zone:qeynos2 ID:2048 -- Suuspa_Clanim\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/qeynos2/Suuspa_Clanim.lua",
+      "beforeSha256": "802ad14921413f4f0c16c89bafe91733638c6e80badbc1d077dc41928c150e9c",
+      "proposedFile": "changes/p99-nz-suuspa-dialogue/qeynos2--Suuspa_Clanim.lua",
+      "afterSha256": "6401879ea7584488480705e2e345eb63d9f32f5a82eee3726f459d71f534c6ea"
+    }
+  ]
+}

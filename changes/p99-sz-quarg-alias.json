@@ -1,0 +1,45 @@
+{
+  "format": 1,
+  "id": "p99-sz-quarg-alias",
+  "summary": "Accept advertised Crusader Quarg phrase, preserving old punctuation alias, and deliver both documented first-five-stage rewards through explicit SummonItem calls supported by the bridge. Retain existing100000XP without asserting its exact P99 magnitude.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Shaman_Skull_Quests?action=raw",
+      "note": "Cached 2026-07-17T23:32:43.944Z; revision unavailable; SHA256 58e529950f5736a98c7deac45fbf8897833cae17bfcf08706222406a34ab791c. Source-only correction; full runtime and UI not executed. Undocumented numerical values unchanged."
+    },
+    {
+      "url": "https://wiki.project1999.com/Shaman_Skull_Quests?action=raw",
+      "note": "Steps3\u20134 document the Mystic cudgel and C.O.R.N. chest for the next preserved stage. Pinned lua_bridge.go QuestReward reads scalar itemid, not items array; no numerical XP change. Cache reference/p99-wiki/raw-pages/shaman-skull-quests-b63ed30880.wiki; fetched 2026-07-17T23:32:43.944Z; SHA256 58e529950f5736a98c7deac45fbf8897833cae17bfcf08706222406a34ab791c; revision unavailable. Not a live wiki freshness claim."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 18192,
+        "zone": "fieldofbone",
+        "name": "Crusader_Quarg",
+        "lua_content": "--Quests covered in this file:\n--Shaman Skull Quest 3\n--Shaman Skull Quest 4\n-- items: 18054, 12735, 5142\nfunction event_say(e)\n\t--Shaman Skull Quest No.3 Event_Say\n\tif(e.message:findi(\"collect the Crusaders of Rok Nilok?\") and e.other:GetFaction(e.self) < 6) then\n\t\te.self:Say(\"Seek out Mystic Dovan in the swamp garrison, he will have information of the Crusaders.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\t--give Crusader Quarg the note that Hierphant Zand gave to you\n\tif(e.other:GetFaction(e.self) < 6 and item_lib.check_turn_in(e.trade, {item1 = 18054})) then\n\t\te.self:Say(\"Ah, i see you have proven yourself to Zand and he wishes to see more of your prowess.  go to the Tower of Kurn and bring him the Skulls of the Caste of Bone Brethren, a caste of powerful shamans who perished fighting undead in the Field of Bone several decades ago.\");\n\t\te.other:Faction(445, 10); --Scaled Mystics\n\t\te.other:Faction(441, 10); --Legion of Cabilis\n\t\te.other:QuestReward(e.self,0,0,0,0,17034,10000); --Give the player a six slot container to combine the 5 skulls with an \"X\" in\n\t--turn in the Full C.O.B.B. Chest and your Iron Cudgel of the Seer\n\telseif(e.other:GetFaction(e.self) < 6 and item_lib.check_turn_in(e.trade, {item1 = 12735, item2 = 5142})) then\n\t\te.self:Say(\"The temple shall be pleased. As instructed by the Hierophants, here is your Iron Cudgel of the Mystic. You have done well that I must ask you to [collect the Crusaders of Rok Nilok]. Take this chest. Inside you shall combine the skull of their leader and at least five of the caste members. You then will go to the Swamp Garrison and deliver the full chest and your Iron Cudgel of the Mystic to Mystic Dovan. Go to him now and inquire of the Crusaders of Rok Nolok.\");\n\t\te.other:Faction(445, 10); --Scaled Mystics\n\t\te.other:Faction(441, 10); --Legion of Cabilis\n\t\te.other:QuestReward(e.self,{items = {17035,5143},exp =100000}); --Give the player the Iron Cudgel of the Mystic and  A Skull Chest (C.O.R.N. Chest) to combine Tiny Glowing Skulls in\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade) --return items if not the ones required\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 18192,
+        "zone": "fieldofbone",
+        "name": "Crusader_Quarg",
+        "lua_content": "--Quests covered in this file:\n--Shaman Skull Quest 3\n--Shaman Skull Quest 4\n-- items: 18054, 12735, 5142\nfunction event_say(e)\n\t--Shaman Skull Quest No.3 Event_Say\n\tif(e.message:findi(\"collect the Crusaders of Rok Nilok\") and e.other:GetFaction(e.self) < 6) then\n\t\te.self:Say(\"Seek out Mystic Dovan in the swamp garrison, he will have information of the Crusaders.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\t--give Crusader Quarg the note that Hierphant Zand gave to you\n\tif(e.other:GetFaction(e.self) < 6 and item_lib.check_turn_in(e.trade, {item1 = 18054})) then\n\t\te.self:Say(\"Ah, i see you have proven yourself to Zand and he wishes to see more of your prowess.  go to the Tower of Kurn and bring him the Skulls of the Caste of Bone Brethren, a caste of powerful shamans who perished fighting undead in the Field of Bone several decades ago.\");\n\t\te.other:Faction(445, 10); --Scaled Mystics\n\t\te.other:Faction(441, 10); --Legion of Cabilis\n\t\te.other:QuestReward(e.self,0,0,0,0,17034,10000); --Give the player a six slot container to combine the 5 skulls with an \"X\" in\n\t--turn in the Full C.O.B.B. Chest and your Iron Cudgel of the Seer\n\telseif(e.other:GetFaction(e.self) < 6 and item_lib.check_turn_in(e.trade, {item1 = 12735, item2 = 5142})) then\n\t\te.self:Say(\"The temple shall be pleased. As instructed by the Hierophants, here is your Iron Cudgel of the Mystic. You have done well that I must ask you to [collect the Crusaders of Rok Nilok]. Take this chest. Inside you shall combine the skull of their leader and at least five of the caste members. You then will go to the Swamp Garrison and deliver the full chest and your Iron Cudgel of the Mystic to Mystic Dovan. Go to him now and inquire of the Crusaders of Rok Nolok.\");\n\t\te.other:Faction(445, 10); --Scaled Mystics\n\t\te.other:Faction(441, 10); --Legion of Cabilis\n\t\te.other:SummonItem(17035); -- Step4 C.O.R.N. chest is documented P99 content.\n\t\te.other:SummonItem(5143); -- Iron Cudgel of the Mystic; bridge does not support QuestReward items arrays.\n\t\te.other:AddEXP(100000); --Give the player the Iron Cudgel of the Mystic and  A Skull Chest (C.O.R.N. Chest) to combine Tiny Glowing Skulls in\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade) --return items if not the ones required\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/fieldofbone/Crusader_Quarg.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-sz-quarg-alias/fieldofbone--Crusader_Quarg.lua",
+      "afterSha256": "9833a30cb5a261096b24ce2d87aa1609b3a3226a8edea9fe0fa44af40b006671"
+    }
+  ]
+}

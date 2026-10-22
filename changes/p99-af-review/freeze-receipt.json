@@ -1,0 +1,30 @@
+{
+  "reviewed_at": "2026-10-22T05:29:07Z",
+  "status": "frozen for parent integration",
+  "page_records": 223,
+  "source_facet_reviews": 196,
+  "classification_records": 27,
+  "proposals": 32,
+  "proposed_scenarios_passed": 111,
+  "unchanged_normalization_diagnostics_passed": 4,
+  "failures": 0,
+  "recipe_baseline_ids": 64,
+  "recipe_baseline_rows": 555,
+  "limits": "Isolated normalized Lua and structural comparisons, not live engine, natural acquisition, screenshot or connected world proof. All per-page ledger records remain partial.",
+  "hashes": {
+    "changes/p99-af-review/ledger-records.json": "088eaa7db31ad531fcaeddde5391c0ec39ec69559dd31c77ee6fc458d1dfc1c3",
+    "changes/p99-af-review/findings.json": "9b8c488814cbb272dc1d6ac019d99754e266a078b8e31bb025a9a171f1c30e76",
+    "changes/p99-af-review/manual-notes.json": "d49e8f49acefc3ea5958453fa3b87ae7fc4bd22faed3e32f5de352af2c311f87",
+    "changes/p99-af-review/runtime-assertions.json": "4b8c211061bd55fdee12085bdfe6e886d2c20930d852b6199a5caca654031d25",
+    "changes/p99-af-review/runtime-diagnostic.log": "6ca49f105820a279102477b737a1a5f324ad57496c59dac5ddcccd5b3d9e60e3",
+    "changes/p99-af-review/fixture-override-audit.json": "20f642a0c63c537c4ede43e457c7da7226f0b350023b1c0721f6285187f4cb22",
+    "changes/p99-af-review/proposal-index.json": "77d12d3f330579e986ab9ad2213b1a31730ee96283b7bf9a5b60862d4a5d1bbc",
+    "changes/p99-af-review/recipe-row-evidence.json": "c0c85aa641f807fbd7ea32316f32779b0107f87f4ed304ec7bc9c6fcba85b52d",
+    "changes/p99-af-review/sky-legacy-pair-reconciliation.json": "186b83da0dba0a41144c14e1c5e2664af3ba2c0431e41d5048773ddf56610533"
+  },
+  "runtime_inputs": {
+    "tools/p99-test-fixture.lua": "256b1b239eee071c1e1f591649ada52e93845a769f8653691a4a79e9447fe56d",
+    "sources/projecteq/lua_modules/items.lua": "7bfcd2948fa69535a070333840e86875c4eb0755a047e77302ca336e7fce1f9a",
+    "reference/server/internal/questluasource/source.go": "e00525e302e71c79ce8a53e4ff62411505b032355887874440da5d13031530ed"
+  }
+}

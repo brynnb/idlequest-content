@@ -1,0 +1,105 @@
+{
+  "evidence": {
+    "title": "Cannibalize II (Good)",
+    "url": "https://wiki.project1999.com/Cannibalize_II_(Good)?action=raw",
+    "fetchedAt": "2026-07-17T23:09:48.933Z",
+    "revision": null,
+    "sha256": "484db8975602ec2d596f299d065b5b9520a1ee0c675954b7b4871d4cf10ad228",
+    "bytes": 4110,
+    "source": "raw-pages/cannibalize-ii-good-86f0e7b0dd.json",
+    "cachePath": "reference/p99-wiki/raw-pages/cannibalize-ii-good-86f0e7b0dd.wiki"
+  },
+  "recipe": {
+    "id": 1248,
+    "name": "Crushed Dread Diamond",
+    "tradeskill": 59,
+    "skillneeded": 0,
+    "trivial": 70,
+    "nofail": 0,
+    "replace_container": 0,
+    "notes": "Cannibalize II quest recipe",
+    "must_learn": 0,
+    "learned_by_item_id": 0,
+    "quest": 0,
+    "enabled": 0,
+    "show_in_advanced": 1,
+    "min_expansion": -1,
+    "max_expansion": -1,
+    "content_flags": null,
+    "content_flags_disabled": null,
+    "category": "Potions"
+  },
+  "entries": [
+    {
+      "id": 9651,
+      "recipe_id": 1248,
+      "item_id": 17770,
+      "successcount": 0,
+      "failcount": 0,
+      "componentcount": 0,
+      "salvagecount": 0,
+      "iscontainer": 1
+    },
+    {
+      "id": 9653,
+      "recipe_id": 1248,
+      "item_id": 17811,
+      "successcount": 0,
+      "failcount": 0,
+      "componentcount": 0,
+      "salvagecount": 0,
+      "iscontainer": 1
+    },
+    {
+      "id": 9648,
+      "recipe_id": 1248,
+      "item_id": 12946,
+      "successcount": 0,
+      "failcount": 1,
+      "componentcount": 1,
+      "salvagecount": 0,
+      "iscontainer": 0
+    },
+    {
+      "id": 9649,
+      "recipe_id": 1248,
+      "item_id": 12947,
+      "successcount": 0,
+      "failcount": 0,
+      "componentcount": 1,
+      "salvagecount": 1,
+      "iscontainer": 0
+    },
+    {
+      "id": 9652,
+      "recipe_id": 1248,
+      "item_id": 17771,
+      "successcount": 0,
+      "failcount": 0,
+      "componentcount": 0,
+      "salvagecount": 0,
+      "iscontainer": 1
+    },
+    {
+      "id": 9654,
+      "recipe_id": 1248,
+      "item_id": 17901,
+      "successcount": 0,
+      "failcount": 0,
+      "componentcount": 0,
+      "salvagecount": 0,
+      "iscontainer": 1
+    },
+    {
+      "id": 9650,
+      "recipe_id": 1248,
+      "item_id": 12945,
+      "successcount": 1,
+      "failcount": 0,
+      "componentcount": 0,
+      "salvagecount": 0,
+      "iscontainer": 0
+    }
+  ],
+  "scope": "Enabled-only proposal. Existing must_learn, nofail, replacement and component/success/failure policies preserved. Not a live crafting test."
+}

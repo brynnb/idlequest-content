@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-sky-neasin_leornic",
+  "summary": "Restrict depop to its named timer, preserving300000ms unverified duration and every hand-in. Restore documented welcome/test my powers dialogue. Starter direct-spawn adaptation documented in quest-audit-review-notes.md remains unchanged.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Wizard_Plane_of_Sky_Tests?action=raw",
+      "note": "Cached 2026-07-17T23:41:38.029Z; revision unavailable; SHA256 72c8a53a1d2376ea41b9d2fc726e76d07054941a2b45e1f500310ef728f518a3. Restrict depop to its named timer, preserving300000ms unverified duration and every hand-in. Restore documented welcome/test my powers dialogue. Starter direct-spawn adaptation documented in quest-audit-review-notes.md remains unchanged. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 14791,
+        "zone": "airplane",
+        "name": "Neasin_Leornic",
+        "lua_content": "-- items: 20930, 20741, 20742, 1272, 20937, 20743, 20744, 1271, 20944, 20745, 20746, 1273\nfunction event_spawn(e)\n\teq.set_timer(\"depop\",300000);\nend\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Great, let us waste no more time! Do you wish to begin your test of concentration, focus, or meditation?\");\n\telseif(e.message:findi(\"concentration\")) then \t--wizard test of concentration\n\t\te.self:Say(\"Concentration it is. Proceed upward through the sky and return to me an Azure Tessera, an Augmentors Gem, and a Grey Damask Cloak. This will prove your ability to concentrate and I will reward you with an Augmentors Mask.\");\n\telseif(e.message:findi(\"focus\")) then \t\t\t--wizard test of focus\n\t\te.self:Say(\"Focus is a must. Travel among the residents of the sky and bring to me an Iron Disc, an Ethereal Opal, and a Woven Skull Cap. This will prove your ability to focus and I will reward you with Al`Kabors Cap.\");\n\telseif(e.message:findi(\"meditation\")) then \t\t--wizard test of meditation\n\t\te.self:Say(\"Meditation, the fix for all. Fly to those above and return to me a Hyaline Globe, a Sky Topaz, and a High Quality Raiment. If you are successful, I will reward you with the Raiment of Thunder.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\tif(item_lib.check_turn_in(e.trade, {item1 = 20930, item2 = 20741, item3 = 20742})) then \t--wizard test of concentration using azure tessera, augmentor's gem, grey damask cloak\n\t\te.other:SummonItem(1272); --augmentor's mask\n\t\te.other:AddEXP(100000);\n\t\te.self:Say(\"Ah good. Take this as your reward.\");\n\t\teq.depop();\n\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 20937, item2 = 20743, item3 = 20744})) then --wizard test of focus using iron disc, ethereal opal, woven skull cap\n\t\te.other:SummonItem(1271); --Al`kabor's cap of binding\n\t\te.other:AddEXP(100000);\n\t\te.self:Say(\"Ah good. Take this as your reward.\");\n\t\teq.depop();\n\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 20944, item2 = 20745, item3 = 20746})) then --wizard test of meditation using hyaline globe, sky topaz, high quality raiment\n\t\te.other:SummonItem(1273); --raiment of thunder\n\t\te.other:AddEXP(100000);\n\t\te.self:Say(\"Ah good. Take this as your reward.\");\n\t\teq.depop();\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\nfunction event_timer(e)\n\teq.stop_timer(\"depop\");\n\teq.depop();\nend\n\n-------------------------------------------------------------------------------------------------\n-- Converted to .lua using MATLAB converter written by Stryd\n-- Find/replace data for .pl --> .lua conversions provided by Speedz, Stryd, Sorvani and Robregen\n-------------------------------------------------------------------------------------------------\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 14791,
+        "zone": "airplane",
+        "name": "Neasin_Leornic",
+        "lua_content": "-- items: 20930, 20741, 20742, 1272, 20937, 20743, 20744, 1271, 20944, 20745, 20746, 1273\nfunction event_spawn(e)\n\teq.set_timer(\"depop\",300000);\nend\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Welcome. I am apprentice Neasin. Do you wish to test your powers?\");\n\telseif(e.message:findi(\"test my powers\")) then\n\t\te.self:Say(\"Great, let us waste no more time! Do you wish to begin your test of concentration, focus, or meditation?\");\n\telseif(e.message:findi(\"concentration\")) then \t--wizard test of concentration\n\t\te.self:Say(\"Concentration it is. Proceed upward through the sky and return to me an Azure Tessera, an Augmentors Gem, and a Grey Damask Cloak. This will prove your ability to concentrate and I will reward you with an Augmentors Mask.\");\n\telseif(e.message:findi(\"focus\")) then \t\t\t--wizard test of focus\n\t\te.self:Say(\"Focus is a must. Travel among the residents of the sky and bring to me an Iron Disc, an Ethereal Opal, and a Woven Skull Cap. This will prove your ability to focus and I will reward you with Al`Kabors Cap.\");\n\telseif(e.message:findi(\"meditation\")) then \t\t--wizard test of meditation\n\t\te.self:Say(\"Meditation, the fix for all. Fly to those above and return to me a Hyaline Globe, a Sky Topaz, and a High Quality Raiment. If you are successful, I will reward you with the Raiment of Thunder.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\tif(item_lib.check_turn_in(e.trade, {item1 = 20930, item2 = 20741, item3 = 20742})) then \t--wizard test of concentration using azure tessera, augmentor's gem, grey damask cloak\n\t\te.other:SummonItem(1272); --augmentor's mask\n\t\te.other:AddEXP(100000);\n\t\te.self:Say(\"Ah good. Take this as your reward.\");\n\t\teq.depop();\n\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 20937, item2 = 20743, item3 = 20744})) then --wizard test of focus using iron disc, ethereal opal, woven skull cap\n\t\te.other:SummonItem(1271); --Al`kabor's cap of binding\n\t\te.other:AddEXP(100000);\n\t\te.self:Say(\"Ah good. Take this as your reward.\");\n\t\teq.depop();\n\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 20944, item2 = 20745, item3 = 20746})) then --wizard test of meditation using hyaline globe, sky topaz, high quality raiment\n\t\te.other:SummonItem(1273); --raiment of thunder\n\t\te.other:AddEXP(100000);\n\t\te.self:Say(\"Ah good. Take this as your reward.\");\n\t\teq.depop();\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\nfunction event_timer(e)\n\tif e.timer ~= \"depop\" then return end\n\teq.stop_timer(\"depop\");\n\teq.depop();\nend\n\n-------------------------------------------------------------------------------------------------\n-- Converted to .lua using MATLAB converter written by Stryd\n-- Find/replace data for .pl --> .lua conversions provided by Speedz, Stryd, Sorvani and Robregen\n-------------------------------------------------------------------------------------------------\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/airplane/Neasin_Leornic.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-tz-sky-neasin_leornic/airplane--Neasin_Leornic.lua",
+      "afterSha256": "e94c26c21ea9f5845f3ca6e27574e14f4da8b7cbeb7a85d0b9902c353bfb83e2"
+    }
+  ]
+}

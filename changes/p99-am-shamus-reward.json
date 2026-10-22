@@ -1,0 +1,45 @@
+{
+  "format": 1,
+  "id": "p99-am-shamus-reward",
+  "summary": "Restore Shamus advertised dialogue aliases and correct shattered-bead Coalition faction target only. Preserve class syntax, which the shared runtime normalizer correctly converts to class-name comparison; missing coin and unquantified numerical values remain unresolved.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Goblin_Caster_Necklace?action=raw",
+      "note": "Cached 2026-07-17T23:16:19.638Z; revision unavailable; SHA256 0ac67765cc4910418093db72c242ac83296379026af2a9e945aac100c392381b. Goblin Caster Necklace"
+    },
+    {
+      "url": "https://wiki.project1999.com/Goblin_Caster_Necklace?action=raw",
+      "note": "Retracted false raw-bridge diagnosis: reference/server/internal/questluasource/source.go Normalize rewrites direct Class()==string into GetClassName()==string before execution. Existing class gates are not broken and remain unchanged. Baseline normalized class10 reproduction is included in runtime assertions. Normalizer SHA256 e00525e302e71c79ce8a53e4ff62411505b032355887874440da5d13031530ed"
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 18939,
+        "zone": "halas",
+        "name": "Shamus_Felligan",
+        "lua_content": "-- Source: halas/Shamus_Felligan.lua\n-- P99 audit: Goblin Caster Necklace\n-- items: 13968, 15270, 15275, 15075, 15271, 15279, 15212, 15079, 13969, 6028\n\nlocal function has_required_faction(e)\n\treturn e.other:GetFaction(e.self) < 5\nend\n\nfunction event_say(e)\n\tif(e.message:findi(\"Hail\")) then\n\t\te.self:Say(\"Greetin's! Justice speaks through us. We're the followers o' the Tribunal. We act as judge. jury and executioner fer all misled Northmen. Sometimes we must also execute our swift justice upon evil races. such as th' [ice goblins].\");\n\telseif(e.message:findi(\"what ice goblins\")) then\n\t\te.self:Say(\"The ice goblins are a weak race. They pose no threat to our community. but lately we've heard rumors of ice goblins that can cast spells. They're said to be as weak as the goblin warriors. so I seek to employ the talents of our young shamans to [hunt the goblin casters].\");\n\telseif(e.message:findi(\"i will hunt the goblin casters\") and has_required_faction(e)) then\n\t\te.self:Say(\"Aye. ye'll serve justice.  I must find the source o' their recent spellcasting ability.  I hear reports o' glowing necklaces upon these wicked beasts' necks. Get me one o' these casters' necklaces. Return them in any condition at all. Go! Justice awaits yer return.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\tif has_required_faction(e) and item_lib.check_turn_in(e.trade, {item1 = 13968}) then -- Shattered Caster Beads\n\t\te.self:Say(\"These aren't be the beads I be lookin' for. Keep lookin' for the beads that be glowin o' bright. Take this for ye attempt o' justice.\");\n\t\te.other:AddEXP(1600);\n\t\te.other:Ding();\n\t\te.other:Faction(328,2); -- Merchants of Halas\n\t\te.other:Faction(327,2); -- Shamen of Justice\n\t\te.other:Faction(223,-3); -- Circle of Unseen Hands\n\t\te.other:Faction(336,-3); -- Coalition of Tradefolk Underground\n\t\te.other:Faction(5006,-3); -- Hall of the Ebon Mask\n\t\tif(e.other:Class() == \"Shaman\" or e.other:Class() == \"Beastlord\") then\n\t\t\te.other:SummonItem(eq.ChooseRandom(15270,15275,15075,15271,15279,15212,15079));\n\t\tend\n\telseif has_required_faction(e) and item_lib.check_turn_in(e.trade, {item1 = 13969}) then -- Caster Beads\n\t\te.self:Say(\"Yes thankyou. This was exactly what i was after, and in pristine condition ta boot, Take this for your efforts.\");\n\t\te.other:AddEXP(6400);\n\t\te.other:Ding();\n\t\te.other:Faction(328,6); -- Merchants of Halas\n\t\te.other:Faction(327,6); -- Shamen of Justice\n\t\te.other:Faction(223,-9); -- Circle of Unseen Hands\n\t\te.other:Faction(336,-9); -- Coalition of Tradefolk Underground\n\t\te.other:Faction(5006,-9); -- Hall of the Ebon Mask\n\t\tif(e.other:Class() == \"Shaman\" or e.other:Class() == \"Beastlord\") then\n\t\t\te.other:SummonItem(6028); -- Gavel of Justice\n\t\tend\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 18939,
+        "zone": "halas",
+        "name": "Shamus_Felligan",
+        "lua_content": "-- Source: halas/Shamus_Felligan.lua\n-- P99 audit: Goblin Caster Necklace\n-- items: 13968, 15270, 15275, 15075, 15271, 15279, 15212, 15079, 13969, 6028\n\nlocal function has_required_faction(e)\n\treturn e.other:GetFaction(e.self) < 5\nend\n\nfunction event_say(e)\n\tif(e.message:findi(\"Hail\")) then\n\t\te.self:Say(\"Greetin's! Justice speaks through us. We're the followers o' the Tribunal. We act as judge. jury and executioner fer all misled Northmen. Sometimes we must also execute our swift justice upon evil races. such as th' [ice goblins].\");\n\telseif(e.message:findi(\"ice goblins\")) then\n\t\te.self:Say(\"The ice goblins are a weak race. They pose no threat to our community. but lately we've heard rumors of ice goblins that can cast spells. They're said to be as weak as the goblin warriors. so I seek to employ the talents of our young shamans to [hunt the goblin casters].\");\n\telseif(e.message:findi(\"hunt the goblin casters\") and has_required_faction(e)) then\n\t\te.self:Say(\"Aye. ye'll serve justice.  I must find the source o' their recent spellcasting ability.  I hear reports o' glowing necklaces upon these wicked beasts' necks. Get me one o' these casters' necklaces. Return them in any condition at all. Go! Justice awaits yer return.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\tif has_required_faction(e) and item_lib.check_turn_in(e.trade, {item1 = 13968}) then -- Shattered Caster Beads\n\t\te.self:Say(\"These aren't be the beads I be lookin' for. Keep lookin' for the beads that be glowin o' bright. Take this for ye attempt o' justice.\");\n\t\te.other:AddEXP(1600);\n\t\te.other:Ding();\n\t\te.other:Faction(328,2); -- Merchants of Halas\n\t\te.other:Faction(327,2); -- Shamen of Justice\n\t\te.other:Faction(223,-3); -- Circle of Unseen Hands\n\t\te.other:Faction(229,-3); -- P99 shattered-bead branch: Coalition of Tradefolk\n\t\te.other:Faction(5006,-3); -- Hall of the Ebon Mask\n\t\tif(e.other:Class() == \"Shaman\" or e.other:Class() == \"Beastlord\") then\n\t\t\te.other:SummonItem(eq.ChooseRandom(15270,15275,15075,15271,15279,15212,15079));\n\t\tend\n\telseif has_required_faction(e) and item_lib.check_turn_in(e.trade, {item1 = 13969}) then -- Caster Beads\n\t\te.self:Say(\"Yes thankyou. This was exactly what i was after, and in pristine condition ta boot, Take this for your efforts.\");\n\t\te.other:AddEXP(6400);\n\t\te.other:Ding();\n\t\te.other:Faction(328,6); -- Merchants of Halas\n\t\te.other:Faction(327,6); -- Shamen of Justice\n\t\te.other:Faction(223,-9); -- Circle of Unseen Hands\n\t\te.other:Faction(336,-9); -- Coalition of Tradefolk Underground\n\t\te.other:Faction(5006,-9); -- Hall of the Ebon Mask\n\t\tif(e.other:Class() == \"Shaman\" or e.other:Class() == \"Beastlord\") then\n\t\t\te.other:SummonItem(6028); -- Gavel of Justice\n\t\tend\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/halas/Shamus_Felligan.lua",
+      "beforeSha256": "87284bda911ad973b25d0d820a5ddfb2e06b4b247cfed45b4d89f83303baf448",
+      "proposedFile": "changes/p99-am-shamus-reward/halas-Shamus_Felligan.lua",
+      "afterSha256": "668dd4f4ad5ec76202bbee2cd4e780f3ec4dcdbd8f95553b62d10242ac2560ce"
+    }
+  ]
+}

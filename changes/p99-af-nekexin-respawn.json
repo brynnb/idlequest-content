@@ -1,0 +1,60 @@
+{
+  "format": 1,
+  "id": "p99-af-nekexin-respawn",
+  "summary": "Set only the documented Nekexin two-hour respawn to7200 seconds. Verified group11394 contains only NPC93043; preserve placement, variance and unrelated encounter adaptations.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Druid_Epic_Quest?action=raw",
+      "note": "Cached reference/p99-wiki/raw-pages/druid-epic-quest-5c6300a3aa.wiki SHA256 2db1c51e34386f54d5e8d0c0f0f27518c4239872d7f7e5379f0a3ce709b6eb28."
+    }
+  ],
+  "rows": [
+    {
+      "table": "spawn2",
+      "before": {
+        "id": 17803,
+        "spawngroupID": 11394,
+        "zone": "overthere",
+        "version": 0,
+        "x": -794,
+        "y": 3670,
+        "z": -152.130005,
+        "heading": 434,
+        "respawntime": 640,
+        "variance": 0,
+        "pathgrid": 0,
+        "path_when_zone_idle": 0,
+        "_condition": 0,
+        "cond_value": 1,
+        "animation": 0,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null
+      },
+      "after": {
+        "id": 17803,
+        "spawngroupID": 11394,
+        "zone": "overthere",
+        "version": 0,
+        "x": -794,
+        "y": 3670,
+        "z": -152.130005,
+        "heading": 434,
+        "respawntime": 7200,
+        "variance": 0,
+        "pathgrid": 0,
+        "path_when_zone_idle": 0,
+        "_condition": 0,
+        "cond_value": 1,
+        "animation": 0,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null
+      }
+    }
+  ],
+  "sources": []
+}

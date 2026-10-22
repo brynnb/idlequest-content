@@ -1,0 +1,116 @@
+{
+  "format": 1,
+  "id": "p99-ranger-epic-dialogue",
+  "summary": "Restore documented Ranger epic Kinlo route prompts and Giz/Jaeil/Usbak dialogue while preserving all existing item, spawn, combat and depop mechanics.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Ranger_Epic_Quest?action=raw",
+      "note": "Cached reference/p99-wiki/raw-pages/ranger-epic-quest-2cc0a11312.wiki; fetched 2026-07-17T23:29:29.928Z; SHA256 bcbcf1b4d66a648a696eaaf1f4d114a5ab3201f2d7b1908987a903b56b1fc821. Full long walkthrough supports these prompts and responses. No guessed values or new runtime APIs."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 14418,
+        "zone": "kaladimb",
+        "name": "Kinlo_Strongarm",
+        "lua_content": "-- Source: kaladimb/Kinlo_Strongarm.pl\n-- Ranger Epic 1.0: Kinlo handles Enchanted Clay and Refined Mithril Blade steps.\n-- Converted from ProjectEQ Perl quest script.\n-- items: 5664, 20455, 20478, 20485, 20482, 20483\n\nfunction event_say(e)\n\tif e.message:findi(\"mud\") then\n\t\te.self:Say(\"If ye be one o' those pansy elves wantin' some mud then I can get it for ye.\")\n\telseif e.message:findi(\"do it for me\") then\n\t\te.self:Say(\"Go get me a good strong axe and I'll do it fer ye.\")\n\telseif e.message:findi(\"ancient longsword\") then\n\t\te.self:Say(\"The ancient smiths ain't been around fer a long time, laddy.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 5664}) then\n\t\te.self:Say(\"Here's yer block o' mud.\")\n\t\te.other:SummonItem(20455) -- Enchanted Clay\n\telseif item_lib.check_turn_in(e.trade, {item1 = 20478}) then\n\t\te.self:Emote(\"examines the hammer respectfully.\")\n\t\te.other:SummonItem(20478) -- Soulbound Hammer\n\telseif item_lib.check_turn_in(e.trade, {item1 = 20485}) then\n\t\te.self:Emote(\"shatters the hammer head.\")\n\t\te.other:SummonItem(20482) -- Small bit of Mithril Ore\n\t\teq.spawn2(67089, 0, 0, -189.5, 346.8, 1.8, 69) -- Usbak_the_Old\n\telseif item_lib.check_turn_in(e.trade, {item1 = 20482}) then\n\t\te.self:Say(\"Here's what I got for ya.\")\n\t\te.other:SummonItem(20483) -- Refined Mithril Blade\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 14418,
+        "zone": "kaladimb",
+        "name": "Kinlo_Strongarm",
+        "lua_content": "-- Source: kaladimb/Kinlo_Strongarm.pl\n-- Ranger Epic 1.0: Kinlo handles Enchanted Clay and Refined Mithril Blade steps.\n-- Converted from ProjectEQ Perl quest script.\n-- items: 5664, 20455, 20478, 20485, 20482, 20483\n\nfunction event_say(e)\n\tif e.message:findi(\"mud\") then\n\t\te.self:Say(\"Eh? Oh, the clay. Arrr. Lots o that mud round 'ere. Mostly, a good dwarf not be needin somethin so soft 'n squishy but the womenfolk, you know, the elves come lookin fer it. If ye be one o' those pansy elves wantin some mud fer workin into fairy statues, flashy trinkets, 'n pig sticker arrers then I can get it for ye. Course I'd be lowerin meself, a good dwarf, ta be diggin that kinda mush outta the ground, but I can do it fer ya.\")\n\telseif e.message:findi(\"do it for me\") then\n\t\te.self:Say(\"Arrr. Shaddap. I ain't doin it til ya bring me something. A fee, I guess yed call it, fer lowerin meself ta elf woman work. Go get me a good strong axe and I'll do it fer ye. Mebbe somethin with a good tinted polish on it. I got plenty o' axes but no tinted ones. Har har! Colored axe. Something to go with the color left on the blade after I be crackin open a gobbo head.\")\n\telseif e.message:findi(\"ancient\") then\n\t\te.self:Say(\"The ancient smiths, for what I think yer askin about, ain't been around fer a long time, laddy. Last anyone heard o' the ancients was 'fore my time even. There be more than a few tales about 'em.\")\n\telseif e.message:findi(\"few tales\") then\n\t\te.self:Say(\"There be some who talk about how the ancient smiths went down to work fer the duke o' below, sayin he be needin some fine dwarven smiths fer makin some castle or some such. There be tales that the ancients were so good at smithin that the duke took 'em down and made 'em head smiths over his minions. There's even tales that some o the smiths' souls were trapped in their hammers, stuck there by some necromancer or somethin, as punishment or retribution.\")\n\telseif e.message:findi(\"hammers\") then\n\t\te.self:Say(\"Aye. Some says their souls were bound into their hammers by an Erudite necromancer and enchanter. They say they used the power of the hammers ta profit by makin ships, boats, and houses better than any other merchants. Sad tale, if'n it be true.\")\n\telseif e.message:findi(\"erudite necromancer\") then\n\t\te.self:Say(\"I'm not knowin more about the story, lad. Everythin I know is already in what I said. Aye, Erudites. I suppose if yer wantin ta run after shortbeard tales ya can look over on that plague island they call Odus.\")\n\telseif e.message:findi(\"erudite enchanter\") then\n\t\te.self:Say(\"I'm not knowing more about the story, lad. Everything I know is already in what I said. Aye, Erudites. I suppose if yer wantin ta run after shortbeard tales you can look over on that plagued island they call Odus.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 5664}) then\n\t\te.self:Say(\"Arrrrr. Ooooo. Arrrrrr... Yah, now that's what I be callin a good lookin axe. I be crackin a few skulls with this one. Oh, here's yer block o' mud. Our priests o' Brell use the mud pit fer relievin themselves after really hard ale blessin ceremonies, so ya ain't got ta be enchantin it in holy water or anythin cause they already have. Har har!\")\n\t\te.other:SummonItem(20455) -- Enchanted Clay\n\telseif item_lib.check_turn_in(e.trade, {item1 = 20478}) then\n\t\te.self:Emote(\"examines the hammer respectfully, admiring its craftsmanship. He strikes it against his anvil and winces as a howl fills the air. 'This is one of the ancients' hammers? I can almost, well, almost hear it callin ta me. It's strong, that's fer sure, lad. I don't know how ye got it, but aye, a dwarf could make a mighty blade with this. It's lookin like this thing still has its owner inside it though. I'm not knowin how, and not wantin to know, but fer yer own good ye better find some way ta get 'im out.'\")\n\t\te.other:SummonItem(20478) -- Soulbound Hammer\n\telseif item_lib.check_turn_in(e.trade, {item1 = 20485}) then\n\t\te.self:Emote(\"looks at the hammer and nods once before slamming the head against his anvil, and shattering the head. In a cloud of dust, another dwarf appears from the cloud and tosses you a hunk of metal. Kinlo stares in awe.\")\n\t\te.other:SummonItem(20482) -- Small bit of Mithril Ore\n\t\teq.spawn2(67089, 0, 0, -189.5, 346.8, 1.8, 69) -- Usbak_the_Old\n\telseif item_lib.check_turn_in(e.trade, {item1 = 20482}) then\n\t\te.self:Say(\"Erm. Well, I aint never worked with this stuff but here's what I got for ya. It ain't bad, pretty much like the one ye got there. I suppose ye should take the one the ancient made and show it ta yer friend.\")\n\t\te.other:SummonItem(20483) -- Refined Mithril Blade\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 17999,
+        "zone": "kaladimb",
+        "name": "Usbak_the_Old",
+        "lua_content": "-- Source: kaladimb/Usbak_the_Old.pl\n-- Ranger Epic 1.0: Usbak refines the Ancient Longsword.\n-- Converted from ProjectEQ Perl quest script.\n-- items: 20477, 20481\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Took ya long enough! If ye had an ancient blade or somethin ta be smithin, lemme see it.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 20477}) then\n\t\te.self:Emote(\"admires the blade and starts to bang the edge with a hammer.\")\n\t\te.other:SummonItem(20481) -- Refined Ancient Sword\n\t\teq.depop()\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 17999,
+        "zone": "kaladimb",
+        "name": "Usbak_the_Old",
+        "lua_content": "-- Source: kaladimb/Usbak_the_Old.pl\n-- Ranger Epic 1.0: Usbak refines the Ancient Longsword.\n-- Converted from ProjectEQ Perl quest script.\n-- items: 20477, 20481\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Took ya long enough! Ye'd think ya had an Orc head on them shoulders there. I'm owin' ya for yer help though. Else I'd have been on that darn hammer for ages. Ye said ya had an ancient blade or somethin ta be smithin. If so lemme see it.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 20477}) then\n\t\te.self:Emote(\"admires the blade and then starts to bang the edge with a hammer. 'Hah, that was a good blade, no doubt. Ain't seen one I couldn't make better though. I'm knowin' yer cause and all I know is ye should take that ancient blade ta yer friend in the woods, he'll know what to do now. With that I'm gonna be takin muh leave. Debt paid and all. If'n yer wantin' another blade, which ye do, ye got enough ore left that Kinlo can do it for ye'\")\n\t\te.other:SummonItem(20481) -- Refined Ancient Sword\n\t\teq.depop()\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 12853,
+        "zone": "kithicor",
+        "name": "Giz_X-Tin",
+        "lua_content": "-- Source: kithicor/Giz_X-Tin.pl\n-- Ranger Epic 1.0: Giz X-Tin turns Faelin's Ring into Dark Metal Coin.\n-- Converted from ProjectEQ Perl quest script.\n-- items: 20446, 20447\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 20446}) then\n\t\te.self:Emote(\"flips you a coin after he recognizes the ring.\")\n\t\te.other:SummonItem(20447) -- Dark Metal Coin\n\t\t-- Preserve the original Perl's concrete spawned actor and numeric hate.\n\t\teq.spawn2(20190, 0, 0, e.self:GetX() + 20, e.self:GetY() + 20, e.self:GetZ(), e.self:GetHeading()):AddToHateList(e.other, 1)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 12853,
+        "zone": "kithicor",
+        "name": "Giz_X-Tin",
+        "lua_content": "-- Source: kithicor/Giz_X-Tin.pl\n-- Ranger Epic 1.0: Giz X-Tin turns Faelin's Ring into Dark Metal Coin.\n-- Converted from ProjectEQ Perl quest script.\n-- items: 20446, 20447\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 20446}) then\n\t\te.self:Emote(\"flips you a coin after he recognizes the ring. 'It seems we have a mutual acquaintance. The coin repays an old debt. You don't have to worry about what that is. Luckily, Lord Innoruuk has informed me of your coming and your desires. Fortunately, I have all the answers you require right here at the end of my friend's blade. I think I'll be paying my old friend a visit.'\")\n\t\te.other:SummonItem(20447) -- Dark Metal Coin\n\t\t-- Preserve the original Perl's concrete spawned actor and numeric hate.\n\t\teq.spawn2(20190, 0, 0, e.self:GetX() + 20, e.self:GetY() + 20, e.self:GetZ(), e.self:GetHeading()):AddToHateList(e.other, 1)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 18017,
+        "zone": "hole",
+        "name": "Jaeil_the_Wretched",
+        "lua_content": "-- Source: hole/Jaeil_the_Wretched.pl\n-- Ranger Epic 1.0: Jaeil the Wretched spawns Jaeil the Insane.\n-- Converted from ProjectEQ Perl quest script.\n-- items: 17860\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 17860}) then\n\t\te.self:Emote(\"howls in anger as he sees his reflection.\")\n\t\t-- Retain the original Perl's explicit attack against the hand-in player.\n\t\teq.spawn2(39154, 0, 0, e.self:GetX(), e.self:GetY(), e.self:GetZ(), e.self:GetHeading()):AddToHateList(e.other, 1)\n\t\teq.depop()\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 18017,
+        "zone": "hole",
+        "name": "Jaeil_the_Wretched",
+        "lua_content": "-- Source: hole/Jaeil_the_Wretched.pl\n-- Ranger Epic 1.0: Jaeil the Wretched spawns Jaeil the Insane.\n-- Converted from ProjectEQ Perl quest script.\n-- items: 17860\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Emote(\"whimpers pathetically as his reflection catches his eye. He turns and stares pitifully at the ceiling.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 17860}) then\n\t\te.self:Emote(\"howls in anger, his body seeming to suck energy from the walls around him as he sees his reflection. He pulls a hammer from the bundle in his arms and swings fiercely at your head.\")\n\t\t-- Retain the original Perl's explicit attack against the hand-in player.\n\t\teq.spawn2(39154, 0, 0, e.self:GetX(), e.self:GetY(), e.self:GetZ(), e.self:GetHeading()):AddToHateList(e.other, 1)\n\t\teq.depop()\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/kaladimb/Kinlo_Strongarm.lua",
+      "beforeSha256": "0ccfaa95eccb4e6a5b488dde253ed33e706ffbe3fa908593ae8a924a9a30d233",
+      "proposedFile": "changes/p99-ranger-epic-dialogue/kaladimb-Kinlo_Strongarm.lua",
+      "afterSha256": "55816ae113869c2a68d25ef95643b6dd2d621da58e19484f5511a4a8d48dd042"
+    },
+    {
+      "target": "maintained/lua/converted-perl/kaladimb/Usbak_the_Old.lua",
+      "beforeSha256": "69ca5290c162b41547d098d86ee54cb579fa3531cd3a7c2ea0b4a67661944d58",
+      "proposedFile": "changes/p99-ranger-epic-dialogue/kaladimb-Usbak_the_Old.lua",
+      "afterSha256": "c3c4602fdad7f12655393078f8132fc980c6394da8c4fe5f75853476d3a33507"
+    },
+    {
+      "target": "maintained/lua/converted-perl/kithicor/Giz_X-Tin.lua",
+      "beforeSha256": "a11a41e1e2a58b4a8bcd10af897344b7dd3eccd3bcef2eefc1c31e78b07e24ee",
+      "proposedFile": "changes/p99-ranger-epic-dialogue/kithicor-Giz_X-Tin.lua",
+      "afterSha256": "3ebcddda3e447c610fa70efba37ffc03ae6e05e8e8c3051a1b4556f1b0403ffc"
+    },
+    {
+      "target": "maintained/lua/converted-perl/hole/Jaeil_the_Wretched.lua",
+      "beforeSha256": "ce3145937301f9957ff5213532561a24913d334e96210dcb8df481b9a1767ab8",
+      "proposedFile": "changes/p99-ranger-epic-dialogue/hole-Jaeil_the_Wretched.lua",
+      "afterSha256": "c05d013a758abdf7cdc3134fc79f4c1690c10ae19e0fcef45abe81b4ff2f087b"
+    }
+  ]
+}

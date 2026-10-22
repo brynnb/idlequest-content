@@ -1,0 +1,16 @@
+{
+  "priorAttempt": "20261022T080657Z",
+  "differenceFiles": [
+    "changes/p99-conversion-era-identity/README.md",
+    "changes/p99-conversion-era-identity/behavior.test.mjs",
+    "changes/p99-conversion-era-identity/central-integration-test.log",
+    "changes/p99-conversion-era-identity/focused-test.log",
+    "changes/p99-conversion-era-identity/runtime-assertions.json",
+    "changes/p99-conversion-era-identity/runtime-cases.mjs",
+    "changes/p99-conversion-era-identity/test-receipt.json",
+    "tools/p99-content-behavior.test.mjs"
+  ],
+  "expectedDifference": "Bidils test registration, component receipts, and required-manifest loader assertion only; Lua/proposals unchanged",
+  "execution": "npm test -- --test-concurrency=1; heavyweight stages sequential",
+  "previousHeavyweightRunFinished": true
+}

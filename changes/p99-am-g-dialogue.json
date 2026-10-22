@@ -1,0 +1,153 @@
+{
+  "format": 1,
+  "id": "p99-am-g-dialogue",
+  "summary": "Restore documented/advertised Kilam, Bonlarg and Gearin dialogue reachability and Netuk mission description; preserve all trade values and eligibility. Hate Tail Guard remains an explicitly unsolved exchange.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Going_Postal_(Kaladim_to_Kelethin)?action=raw",
+      "note": "Cached 2026-07-17T23:16:27.503Z; revision unavailable; SHA256 c9db4692d2c74594443b7076c131cde26174d1c73c4b984912b9d2679e08fd7f. Going Postal (Kaladim to Kelethin)"
+    },
+    {
+      "url": "https://wiki.project1999.com/Greenblood_Shadowknight_Tunic?action=raw",
+      "note": "Cached 2026-07-17T23:16:32.187Z; revision unavailable; SHA256 3cc30350bc339717f4a63c15cb995231b3d76576482fabdd3789dc3367b5bf1a. Greenblood Shadowknight Tunic"
+    },
+    {
+      "url": "https://wiki.project1999.com/Guard_of_Ik_Quest?action=raw",
+      "note": "Cached 2026-07-17T23:16:45.225Z; revision unavailable; SHA256 91d6afbbff265c830178047515d5c0af7af74db29f155d74359f547fc61c702a. Guard of Ik Quest"
+    },
+    {
+      "url": "https://wiki.project1999.com/Groflah_Steadirt's_Death?action=raw",
+      "note": "Cached 2026-07-17T23:16:42.155Z; revision unavailable; SHA256 9a5eed670e4e471edcca97b743f8107c7e372905c7d3876b633512ce89a5d77c. Groflah Steadirt's Death"
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 14481,
+        "zone": "kaladima",
+        "name": "Kilam_Oresinger",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: kaladima/Kilam_Oresinger.pl\n-- items: 18162\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Hail. \" .. e.other:GetName() .. \" - Are you [interested] in helping the League of Antonican Bards by delivering some [mail]?\")\n\telseif e.message:findi(\"what mail\") then\n\t\te.self:Say(\"The League of Antonican Bards has a courier system made up of travelers and adventurers.  We pay good gold to anyone who will take messages from bards such as myself to one of our more central offices.  Are you [interested]?\")\n\telseif e.message:findi(\"i am interested\") then\n\t\te.self:Say(\"I have messages that need to go to - well. right now I have one that needs to go to Kelethin.  Will you [deliver] mail to [Kelethin] for me?\")\n\telseif e.message:findi(\"deliver to Kelethin\") then\n\t\te.self:Say(\"Take this letter to Jakum Webdancer in Kelethin.  You can find him at the bard guild hall.  I am sure he will compensate you for your troubles.\")\n\t\te.other:SummonItem(18162)\n\tend\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 14481,
+        "zone": "kaladima",
+        "name": "Kilam_Oresinger",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: kaladima/Kilam_Oresinger.pl\n-- items: 18162\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Hail. \" .. e.other:GetName() .. \" - Are you [interested] in helping the League of Antonican Bards by delivering some [mail]?\")\n\telseif e.message:findi(\"mail\") and not e.message:findi(\"deliver\") and not e.message:findi(\"kelethin\") then\n\t\te.self:Say(\"The League of Antonican Bards has a courier system made up of travelers and adventurers.  We pay good gold to anyone who will take messages from bards such as myself to one of our more central offices.  Are you [interested]?\")\n\telseif e.message:findi(\"interested\") then\n\t\te.self:Say(\"I have messages that need to go to - well. right now I have one that needs to go to Kelethin.  Will you [deliver] mail to [Kelethin] for me?\")\n\telseif e.message:findi(\"kelethin\") or e.message:findi(\"deliver\") then\n\t\te.self:Say(\"Take this letter to Jakum Webdancer in Kelethin.  You can find him at the bard guild hall.  I am sure he will compensate you for your troubles.\")\n\t\te.other:SummonItem(18162)\n\tend\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 19612,
+        "zone": "oggok",
+        "name": "Bonlarg",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: oggok/Bonlarg.pl\n-- items: 12198, 13527, 12199\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Shadowknight master me be!!  \" .. e.other:GetName() .. \" prove to me that \" .. e.other:GetName() .. \" be worthy to be one with Greenblood and me give \" .. e.other:GetName() .. \" black shadow tunic.  You [want black shadow tunic]?\")\n\telseif e.message:findi(\"i want black shadow tunic\") and e.other:GetFaction(e.self) < 5 then\n\t\te.self:Say(\"You hunt lizard scouts.  Them sometimes carry special fife to talk to other lizards far away.  Greenbloods stop them.  Bring Bonlarg three lizard scout fifes and green stained skin tunic you gots when you first talk to Soonog.  Give all to Bonlarg and get tunic.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif e.other:GetFaction(e.self) < 5 and item_lib.check_turn_in(e.trade, {item1 = 12198, item2 = 12198, item3 = 12198, item4 = 13527}) then\n\t\te.self:Say(\"Took you long time! It easy task, but me guess you still earn black shadow tunic. You wear to show all that you young shadowknight. It help you be smarter likes Bonlarg. It only for young Greenblood shadowknight. Maybe later green shadow tunic you earn or maybe dead you be!\")\n\t\te.other:SummonItem(12199)\n\t\te.other:AddEXP(231)\n\t\te.other:Ding()\n\t\te.other:Faction(228, 1, 0)\n\t\te.other:Faction(261, 1, 0)\n\t\te.other:Faction(308, -5, 0)\n\t\te.other:Faction(312, -2, 0)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 19612,
+        "zone": "oggok",
+        "name": "Bonlarg",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: oggok/Bonlarg.pl\n-- items: 12198, 13527, 12199\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Shadowknight master me be!!  \" .. e.other:GetName() .. \" prove to me that \" .. e.other:GetName() .. \" be worthy to be one with Greenblood and me give \" .. e.other:GetName() .. \" black shadow tunic.  You [want black shadow tunic]?\")\n\telseif e.message:findi(\"want black shadow tunic\") and e.other:GetFaction(e.self) < 5 then\n\t\te.self:Say(\"You hunt lizard scouts.  Them sometimes carry special fife to talk to other lizards far away.  Greenbloods stop them.  Bring Bonlarg three lizard scout fifes and green stained skin tunic you gots when you first talk to Soonog.  Give all to Bonlarg and get tunic.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif e.other:GetFaction(e.self) < 5 and item_lib.check_turn_in(e.trade, {item1 = 12198, item2 = 12198, item3 = 12198, item4 = 13527}) then\n\t\te.self:Say(\"Took you long time! It easy task, but me guess you still earn black shadow tunic. You wear to show all that you young shadowknight. It help you be smarter likes Bonlarg. It only for young Greenblood shadowknight. Maybe later green shadow tunic you earn or maybe dead you be!\")\n\t\te.other:SummonItem(12199)\n\t\te.other:AddEXP(231)\n\t\te.other:Ding()\n\t\te.other:Faction(228, 1, 0)\n\t\te.other:Faction(261, 1, 0)\n\t\te.other:Faction(308, -5, 0)\n\t\te.other:Faction(312, -2, 0)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 15777,
+        "zone": "firiona",
+        "name": "Gearin_Gaxx",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: firiona/Gearin_Gaxx.pl\n-- P99 audit: Guard of Ik Quest\n-- items: 12883, 12971, 12972\n\nlocal function firiona_vie_factions(e)\n\te.other:Faction(248, 1, 0) -- Inhabitants of Firiona Vie\n\te.other:Faction(326, 1, 0) -- Emerald Warriors\n\te.other:Faction(312, 1, 0) -- Storm Guard\n\te.other:Faction(441, -1, 0) -- Legion of Cabilis\n\te.other:Faction(313, -1, 0) -- Pirates of Gunthak\nend\n\nfunction event_say(e)\n\tif e.message:findi(\"Hail\") then\n\t\te.self:Say(\"Welcome. friend!  If armor is what you seek. let the house of Gaxx provide you with the finest.  Our metalwork is second to none.  Every now and again we may even create [rare armor] for the general public to purchase.\")\n\telseif e.message:findi(\"what rare armor?\") then\n\t\te.self:Say(\"I have found many exotic materials in Kunark with which I can create rare armor.  I currently am working on the [Guard of Ik] and the [Hate Tail Guard] shields.  I have no armor as of yet. but I am experimenting with new designs.\")\n\telseif e.message:findi(\"what is the Guard of Ik\") then\n\t\te.self:Say(\"The Guards of Ik are made from shields found in the jungles.  I would be selling them if it were not for the unfortunate fact that the shields are spectral and vanish overnight.  Another bit of bad news is that the formula I was working on to stabilize the essence of the metal was stolen by local pirates.  I need two more shields and my formula.  Bring these to me and I shall not charge you.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 12883, item2 = 12883, item3 = 12971}) then\n\t\te.self:Say(\"Gearin Gaxx places the formula in a box which appears to have similar copies in it. Thank you!! I can now reward you with this Guard of Ik shield I had lying around.\")\n\t\te.other:SummonItem(12972) -- Guard of Ik\n\t\tfiriona_vie_factions(e)\n\t\te.other:AddEXP(1000)\n\t\te.other:Ding()\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 15777,
+        "zone": "firiona",
+        "name": "Gearin_Gaxx",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: firiona/Gearin_Gaxx.pl\n-- P99 audit: Guard of Ik Quest\n-- items: 12883, 12971, 12972\n\nlocal function firiona_vie_factions(e)\n\te.other:Faction(248, 1, 0) -- Inhabitants of Firiona Vie\n\te.other:Faction(326, 1, 0) -- Emerald Warriors\n\te.other:Faction(312, 1, 0) -- Storm Guard\n\te.other:Faction(441, -1, 0) -- Legion of Cabilis\n\te.other:Faction(313, -1, 0) -- Pirates of Gunthak\nend\n\nfunction event_say(e)\n\tif e.message:findi(\"Hail\") then\n\t\te.self:Say(\"Welcome. friend!  If armor is what you seek. let the house of Gaxx provide you with the finest.  Our metalwork is second to none.  Every now and again we may even create [rare armor] for the general public to purchase.\")\n\telseif e.message:findi(\"rare armor\") then\n\t\te.self:Say(\"I have found many exotic materials in Kunark with which I can create rare armor.  I currently am working on the [Guard of Ik] and the [Hate Tail Guard] shields.  I have no armor as of yet. but I am experimenting with new designs.\")\n\telseif e.message:findi(\"Guard of Ik\") then\n\t\te.self:Say(\"The Guards of Ik are made from shields found in the jungles.  I would be selling them if it were not for the unfortunate fact that the shields are spectral and vanish overnight.  Another bit of bad news is that the formula I was working on to stabilize the essence of the metal was stolen by local pirates.  I need two more shields and my formula.  Bring these to me and I shall not charge you.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 12883, item2 = 12883, item3 = 12971}) then\n\t\te.self:Say(\"Gearin Gaxx places the formula in a box which appears to have similar copies in it. Thank you!! I can now reward you with this Guard of Ik shield I had lying around.\")\n\t\te.other:SummonItem(12972) -- Guard of Ik\n\t\tfiriona_vie_factions(e)\n\t\te.other:AddEXP(1000)\n\t\te.other:Ding()\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 18218,
+        "zone": "freporte",
+        "name": "Netuk_Phenzon",
+        "lua_content": "-- Source: freporte/Netuk_Phenzon.lua\n-- P99 audit: Groflah Steadirt's Death\n-- items: 18818, 15343\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Welcome \" .. e.other:GetName() .. \". Let us fill your heart with hate. May you carry that hate unto your fellow citizens. Innoruuk has need of your services. We have A [mission] for you.\");\n\telseif(e.message:findi(\"mission\")) then\n\t\te.self:Say(\"There is a man called Groflah Steadirt. He frequents a bar here in Freeport during the early evening hours. Our sources tell us he was given a piece of parchment taken from one of our allies. Who that is, is none of your business. We only require you to recover the parchment, which he no doubt has on him. End his life and return the note to me. Do not let me see your miserable face again until you have the parchment.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 18818})) then -- Tattered Flier\n\t\te.self:Say(\"It is about time you returned! Innoruuk would be proud of the red you have spread upon the land.\");\n\t\te.other:SummonItem(15343); -- Spell: Siphon Strength\n\t\te.other:Ding();\n\t\te.other:Faction(271,1,0); -- Dismal Rage\n\t\te.other:Faction(281,-5,0); -- Knights of Truth\n\t\te.other:Faction(296,1,0); -- Opal Dark Briar\n\t\te.other:AddEXP(500);\n\t\te.other:GiveCash(0,0,6,0);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade);\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 18218,
+        "zone": "freporte",
+        "name": "Netuk_Phenzon",
+        "lua_content": "-- Source: freporte/Netuk_Phenzon.lua\n-- P99 audit: Groflah Steadirt's Death\n-- items: 18818, 15343\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Welcome \" .. e.other:GetName() .. \". Let us fill your heart with hate. May you carry that hate unto your fellow citizens. Innoruuk has need of your services. We have A [mission] for you.\");\n\telseif(e.message:findi(\"mission\")) then\n\t\te.self:Say(\"There is a man called Groflah Steadirt. He runs a weapons shop here in Freeport. Our sources tell us he was given a piece of parchment taken from one of our allies. Who that is, is none of your business. We only require you to recover the parchment, which he no doubt has on him. End his life and return the note to me. Do not let me see your miserable face again until you have the parchment.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 18818})) then -- Tattered Flier\n\t\te.self:Say(\"It is about time you returned! Innoruuk would be proud of the red you have spread upon the land.\");\n\t\te.other:SummonItem(15343); -- Spell: Siphon Strength\n\t\te.other:Ding();\n\t\te.other:Faction(271,1,0); -- Dismal Rage\n\t\te.other:Faction(281,-5,0); -- Knights of Truth\n\t\te.other:Faction(296,1,0); -- Opal Dark Briar\n\t\te.other:AddEXP(500);\n\t\te.other:GiveCash(0,0,6,0);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade);\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 19042,
+        "zone": "freeporteast",
+        "name": "Netuk_Phenzon",
+        "lua_content": "-- Source: freeporteast/Netuk_Phenzon.lua\n-- P99 audit: Groflah Steadirt's Death\n-- items: 18818, 15343\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Welcome \" .. e.other:GetName() .. \". Let us fill your heart with hate. May you carry that hate unto your fellow citizens. Innoruuk has need of your services. We have A [mission] for you.\");\n\telseif(e.message:findi(\"mission\")) then\n\t\te.self:Say(\"There is a man called Groflah Steadirt. He frequents a bar here in Freeport during the early evening hours. Our sources tell us he was given a piece of parchment taken from one of our allies. Who that is, is none of your business. We only require you to recover the parchment, which he no doubt has on him. End his life and return the note to me. Do not let me see your miserable face again until you have the parchment.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 18818})) then -- Tattered Flier\n\t\te.self:Say(\"It is about time you returned! Innoruuk would be proud of the red you have spread upon the land.\");\n\t\te.other:SummonItem(15343); -- Spell: Siphon Strength\n\t\te.other:Ding();\n\t\te.other:Faction(271,1,0); -- Dismal Rage\n\t\te.other:Faction(281,-5,0); -- Knights of Truth\n\t\te.other:Faction(296,1,0); -- Opal Dark Briar\n\t\te.other:AddEXP(500);\n\t\te.other:GiveCash(0,0,6,0);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade);\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 19042,
+        "zone": "freeporteast",
+        "name": "Netuk_Phenzon",
+        "lua_content": "-- Source: freeporteast/Netuk_Phenzon.lua\n-- P99 audit: Groflah Steadirt's Death\n-- items: 18818, 15343\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Welcome \" .. e.other:GetName() .. \". Let us fill your heart with hate. May you carry that hate unto your fellow citizens. Innoruuk has need of your services. We have A [mission] for you.\");\n\telseif(e.message:findi(\"mission\")) then\n\t\te.self:Say(\"There is a man called Groflah Steadirt. He runs a weapons shop here in Freeport. Our sources tell us he was given a piece of parchment taken from one of our allies. Who that is, is none of your business. We only require you to recover the parchment, which he no doubt has on him. End his life and return the note to me. Do not let me see your miserable face again until you have the parchment.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 18818})) then -- Tattered Flier\n\t\te.self:Say(\"It is about time you returned! Innoruuk would be proud of the red you have spread upon the land.\");\n\t\te.other:SummonItem(15343); -- Spell: Siphon Strength\n\t\te.other:Ding();\n\t\te.other:Faction(271,1,0); -- Dismal Rage\n\t\te.other:Faction(281,-5,0); -- Knights of Truth\n\t\te.other:Faction(296,1,0); -- Opal Dark Briar\n\t\te.other:AddEXP(500);\n\t\te.other:GiveCash(0,0,6,0);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade);\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/kaladima/Kilam_Oresinger.lua",
+      "beforeSha256": "7545d7bff8f059e931525e90485b7a93df98a74f16940b3252e381b24bd56810",
+      "proposedFile": "changes/p99-am-g-dialogue/kaladima-Kilam_Oresinger.lua",
+      "afterSha256": "ddd57f29ce9e2984e25c2b64f42a64cb7615899897e5f327a44301ad40b12b6e"
+    },
+    {
+      "target": "maintained/lua/converted-perl/oggok/Bonlarg.lua",
+      "beforeSha256": "6ca41bd00d9f85c652ae7110b4b390e2dde82b12356a6a7ec9b6315d0400e9f7",
+      "proposedFile": "changes/p99-am-g-dialogue/oggok-Bonlarg.lua",
+      "afterSha256": "3a314a84af90e5e1b57bf0559afad8ccc032deb1613c307701904c97ad3a30e2"
+    },
+    {
+      "target": "maintained/lua/converted-perl/firiona/Gearin_Gaxx.lua",
+      "beforeSha256": "8df15582b57e595975497ecb47885fd1300d45b37ec7f5d3ec748bcbb560e883",
+      "proposedFile": "changes/p99-am-g-dialogue/firiona-Gearin_Gaxx.lua",
+      "afterSha256": "ded62a7809a7ed98e18c452542ca830e53d7e11bc330a91918d370220fe2098a"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freporte/Netuk_Phenzon.lua",
+      "beforeSha256": "050e3bb374c4f04c4e3a62885693186f2d4ea5296ea06d5a03204bc79d8318aa",
+      "proposedFile": "changes/p99-am-g-dialogue/freporte-Netuk_Phenzon.lua",
+      "afterSha256": "841981c7fda6382aaaf975aba84fc31f50231355999ee030b269d5f19672e3c0"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/freeporteast/Netuk_Phenzon.lua",
+      "beforeSha256": "b069e397743e61f4ac88b988d3db285bc7b9e83bc67c1b23b74c3f8d48327f85",
+      "proposedFile": "changes/p99-am-g-dialogue/freeporteast-Netuk_Phenzon.lua",
+      "afterSha256": "f51010d1b587b242c1119b1290a76424fa3c6e134e89663e65c16cbb0c6a9eb8"
+    }
+  ]
+}

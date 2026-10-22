@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-af-frostbite-tonic",
+  "summary": "Accept good tonic instead of explicitly bad tonic; preserve all other event handlers, leave unknown faction/XP gaps explicit.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Frostbite's_Fish?action=raw",
+      "note": "Cached reference/p99-wiki/raw-pages/frostbite-s-fish-41c0cefc5d.wiki SHA256 4a5085016b87bc5199493adc99abe6711bad7c19fa362a15250e51747eea688c."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 15955,
+        "zone": "qey2hh1",
+        "name": "Frostbite",
+        "lua_content": "-- items: 12140, 13383, 12226\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 12140})) then\n\t\te.other:SummonItem(13383); -- Item: Koalindl Fish\n\t\te.other:Ding();\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 12226})) then\n\t\te.self:Emote(\"takes a whiff of the sweaty shirt and barks.\");\n\t\te.other:Ding();\n\t\teq.set_timer(\"go\",15000);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\nfunction event_timer(e)\n\tlocal bad_thief = eq.ChooseRandom(12190,12190,12190,12190,12190,12191);\n\tlocal random_x = eq.ChooseRandom(-3461,-3902,-4011);\n\tlocal random_y = eq.ChooseRandom(-1457,-3240,-1362);\n\tentity_list = eq.get_entity_list();\n\t\n\tif(e.timer == \"go\") then\n\t\teq.stop_timer(\"go\");\n\t\teq.set_timer(\"depop\",1200000);\n\t\teq.unique_spawn(bad_thief,188,0,random_x,random_y,10,0);\n\t\te.self:SetRunning(true);\n\t\tlocal mobtypeID =  entity_list:GetMobByNpcTypeID(bad_thief);\n\t\tlocal follow_mob = mobtypeID:GetID();\n\t\teq.follow(follow_mob);\n\telseif(e.timer == \"depop\") then\n\t\teq.depop_with_timer();\n\tend\nend\n\nfunction event_signal(e)\n\teq.stop_follow();\n\te.self:SetRunning(false);\n\teq.move_to(-2236,-3532,34,110);\n\teq.stop_timer(\"depop\");\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 15955,
+        "zone": "qey2hh1",
+        "name": "Frostbite",
+        "lua_content": "-- P99 distinguishes good Regurgitonic (12139) from Bad Regurgitonic (12140).\n-- Unknown documented faction/XP magnitudes remain unresolved; bad tonic returns safely.\n-- items: 12139, 13383, 12226\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 12139})) then\n\t\te.other:SummonItem(13383); -- Item: Koalindl Fish\n\t\te.other:Ding();\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 12226})) then\n\t\te.self:Emote(\"takes a whiff of the sweaty shirt and barks.\");\n\t\te.other:Ding();\n\t\teq.set_timer(\"go\",15000);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\nfunction event_timer(e)\n\tlocal bad_thief = eq.ChooseRandom(12190,12190,12190,12190,12190,12191);\n\tlocal random_x = eq.ChooseRandom(-3461,-3902,-4011);\n\tlocal random_y = eq.ChooseRandom(-1457,-3240,-1362);\n\tentity_list = eq.get_entity_list();\n\t\n\tif(e.timer == \"go\") then\n\t\teq.stop_timer(\"go\");\n\t\teq.set_timer(\"depop\",1200000);\n\t\teq.unique_spawn(bad_thief,188,0,random_x,random_y,10,0);\n\t\te.self:SetRunning(true);\n\t\tlocal mobtypeID =  entity_list:GetMobByNpcTypeID(bad_thief);\n\t\tlocal follow_mob = mobtypeID:GetID();\n\t\teq.follow(follow_mob);\n\telseif(e.timer == \"depop\") then\n\t\teq.depop_with_timer();\n\tend\nend\n\nfunction event_signal(e)\n\teq.stop_follow();\n\te.self:SetRunning(false);\n\teq.move_to(-2236,-3532,34,110);\n\teq.stop_timer(\"depop\");\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/qey2hh1/Frostbite.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-af-frostbite-tonic/qey2hh1-Frostbite.lua",
+      "afterSha256": "980ac1248c7127946f50c4c053f0b265d1733dead43504c8cfc9c9f8d532a9db"
+    }
+  ]
+}

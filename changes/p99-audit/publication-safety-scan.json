@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "scope": "Authored P99 changes, P99 tools, and package configuration. Existing public baseline files are not rewritten.",
+  "filesScanned": 1922,
+  "bytesScanned": 85556877,
+  "findings": [],
+  "passed": true,
+  "limits": [
+    "Pattern checks are a publication guard, not proof that arbitrary confidential information is absent.",
+    "Embedded archives and symlinks fail closed; inspect and publish only ordinary sanitized files.",
+    "Run final tests and bind the publication manifest after any edits. Historical receipts are not evidence that changed publication bytes were tested."
+  ],
+  "privateComparison": {
+    "referencesCompared": 47,
+    "findings": [],
+    "passed": true,
+    "limits": "Detects normalized four-line private snapshot overlap that is not present in the existing public baseline; not arbitrary paraphrases."
+  },
+  "reviewedAt": "2026-10-22",
+  "receiptScope": "Post-sanitation support-artifact binding repair and public zone-scope provenance review. Re-run the public gate after any subsequent generated report, test receipt, or packaging edit."
+}

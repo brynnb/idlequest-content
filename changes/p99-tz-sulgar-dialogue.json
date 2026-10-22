@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-sulgar-dialogue",
+  "summary": "Add the documented reward and interested prompts to the existing rune and wheel branches; preserve all item issuance, turn-ins and uncertain XP. The reworded existing wheel path supplies the Tome separately from the case.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Tarton's_Wheel?action=raw",
+      "note": "Cached 2026-07-17T23:34:31.422Z; revision unavailable; SHA256 a2872f71b8d269432d3e4319c6588ce7ef365daebdd1a7add56393705750b54e. Add the documented reward and interested prompts to the existing rune and wheel branches; preserve all item issuance, turn-ins and uncertain XP. The reworded existing wheel path supplies the Tome separately from the case. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 13392,
+        "zone": "everfrost",
+        "name": "Sulgar",
+        "lua_content": "-- items: 17510, 18031, 14360, 14361, 11880, 11881\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Greetings. I am searching for the [wheel of Tarton]. If you will assist me I will provide you with [runes] to create a powerful spell.\");\n\telseif(e.message:findi(\"runes\")) then\n\t\te.self:Say(\"I have these runes, Rune of Frost and Rune of the Astral, which can be combined to produce a powerful spell that can call down destruction from the heavens. I will give them to you in exchange for the Staff of the Wheel and Star of Eyes\");\n\telseif(e.message:findi(\"case\")) then\n\t\te.self:Say(\"You can use this case to reassemble the wheel. It has been infused with energy to combine the spokes. You will need to work quickly though or it will consume itself.\");\n\t\te.other:SummonItem(17510); -- a glowing chest - quest combiner\n\telseif(e.message:findi(\"wheel\")) then\n\t\te.self:Say(\"The wheel was broken into several pieces and scattered throughout the world. This book will give you clues as to their whereabouts. Once you gather all the pieces, they can be reassembled in a special [case]\");\n\t\te.other:SummonItem(18031); -- Tome of the Wheel\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 14360,item2 = 14361})) then -- Staff of the Wheel / Star of Eyes\n\t\te.self:Say(\"Wonderful, you have brought me the Wheel. Here is the reward I promised you.\");\n\t\te.other:SummonItem(11880); -- Rune of Frost\n\t\te.other:SummonItem(11881); -- Rune of the Astral\n\t\te.other:Ding();\n\t\te.other:AddEXP(100000);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade);\nend\n\n-- EOF Sulgar",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 13392,
+        "zone": "everfrost",
+        "name": "Sulgar",
+        "lua_content": "-- items: 17510, 18031, 14360, 14361, 11880, 11881\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Greetings. I am searching for the [wheel of Tarton]. If you will assist me I will provide you with [runes] to create a powerful spell.\");\n\telseif(e.message:findi(\"runes\") or e.message:findi(\"reward\")) then\n\t\te.self:Say(\"I have these runes, Rune of Frost and Rune of the Astral, which can be combined to produce a powerful spell that can call down destruction from the heavens. I will give them to you in exchange for the Staff of the Wheel and Star of Eyes\");\n\telseif(e.message:findi(\"case\")) then\n\t\te.self:Say(\"You can use this case to reassemble the wheel. It has been infused with energy to combine the spokes. You will need to work quickly though or it will consume itself.\");\n\t\te.other:SummonItem(17510); -- a glowing chest - quest combiner\n\telseif(e.message:findi(\"wheel\") or e.message:findi(\"interested\")) then\n\t\te.self:Say(\"The wheel was broken into several pieces and scattered throughout the world. This book will give you clues as to their whereabouts. Once you gather all the pieces, they can be reassembled in a special [case]\");\n\t\te.other:SummonItem(18031); -- Tome of the Wheel\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 14360,item2 = 14361})) then -- Staff of the Wheel / Star of Eyes\n\t\te.self:Say(\"Wonderful, you have brought me the Wheel. Here is the reward I promised you.\");\n\t\te.other:SummonItem(11880); -- Rune of Frost\n\t\te.other:SummonItem(11881); -- Rune of the Astral\n\t\te.other:Ding();\n\t\te.other:AddEXP(100000);\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade);\nend\n\n-- EOF Sulgar",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/everfrost/Sulgar.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-tz-sulgar-dialogue/everfrost--Sulgar.lua",
+      "afterSha256": "123d293231284e6a8376903d41b6d42b0b538c42b51995100b31cd811139233f"
+    }
+  ]
+}

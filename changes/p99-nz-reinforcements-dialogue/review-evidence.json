@@ -1,0 +1,29 @@
+{
+  "titles": [
+    "Reinforcements for The Tunarean Regiment"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "partial",
+  "match_status": "partial",
+  "local_quest_keys": [
+    "kael/Staff_Sergeant_Drioc",
+    "kael/Noble_Helssen",
+    "kael/Kellek_Felhammer",
+    "iceclad/Corudoth"
+  ],
+  "proposal": "changes/p99-nz-reinforcements-dialogue.json",
+  "notes": [
+    "Restore documented Reinforcements phrases and Corudoth Petcas clue; keep blocked squad encounter disabled.",
+    "Drioc looking for work, Helssen plane of existence/how can I help you, Corudoth owe Helssen and Petcas were missing. Kellek voucher response restored. All existing item/reward branches unchanged. Both Krofer keys remain empty/disabled: squad movement/signal/combat lifecycle is unsupported or unverified; upstream has onset/onset2 mismatch and omits documented phase pumas. No free report shortcut. Kellek missing documented faction changes and Drioc missing XP have no exact numeric evidence. GENERATED: synchronize server/internal/quest/velious_backlog_quests.json and velious_simple_quests.json plus scripts/quests/velious-backlog.mjs and velious-simple.mjs for these exact keys before regeneration."
+  ],
+  "verification": {
+    "source": "Cached P99 and effective Lua reviewed; exact complete row preimages and source hashes recorded.",
+    "syntax": "pending",
+    "runtime": "Isolated mock regression pending; full game runtime unavailable.",
+    "ui": "not_run",
+    "connected_chain": "not_run"
+  },
+  "unresolved": [
+    "Ordinary source drops/spawns, recipe live behavior and rendered complete quest path not verified."
+  ]
+}

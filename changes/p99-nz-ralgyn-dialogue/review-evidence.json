@@ -1,0 +1,26 @@
+{
+  "titles": [
+    "Ralgyn's Promise"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "partial",
+  "match_status": "partial",
+  "local_quest_keys": [
+    "skyshrine/#Ralgyn"
+  ],
+  "proposal": "changes/p99-nz-ralgyn-dialogue.json",
+  "notes": [
+    "Prevent generic promise lore from shadowing the displayed broken-promise question.",
+    "Exact cached how was your promise broken currently repeats short promise line. Keep existing lore availability, do not add later GreatDivide/Kardakor prerequisites explicitly excluded byP99. Cache also notes Ralgyn may not respond to lore; this fixes internal existing-dialogue reachability, not proof of live speech availability. Generated source requires matching predicate change in server/internal/quest/velious_backlog_quests.json or scripts/quests/velious-backlog.mjs before regeneration. Rewards unchanged."
+  ],
+  "verification": {
+    "source": "Cached P99 and effective Lua reviewed; exact complete row preimages and source hashes recorded.",
+    "syntax": "pending",
+    "runtime": "Isolated mock regression pending; full game runtime unavailable.",
+    "ui": "not_run",
+    "connected_chain": "not_run"
+  },
+  "unresolved": [
+    "Ordinary source drops/spawns, recipe live behavior and rendered complete quest path not verified."
+  ]
+}

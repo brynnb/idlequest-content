@@ -1,0 +1,53 @@
+-- Source: airplane/Gregori_Lightbringer.lua
+-- P99 audit: Paladin Plane of Sky Tests
+-- items: 20725, 20964, 20726, 20727, 11682, 20950, 20721, 20722, 27708, 20957, 20723, 20724, 27709
+
+function event_spawn(e)
+	eq.set_timer("depop", 300000)
+end
+
+function event_say(e)
+	if e.message:findi("trade") or e.message:findi("interested") then
+		e.self:Say("Ah, you are interested in getting a new reward for what you have accomplished. Very well, bring me Senki or Zephywind and I will find a reward more fitting.");
+		return;
+	end
+	if e.message:findi("hail") then
+		e.self:Say("As I said before, the test of the heart is in three parts. Compassion, Sacrifice and Love. Choose one and we will begin. Or would you like to [trade]?")
+	elseif e.message:findi("compassion") then
+		e.self:Say("Compassion is of great importance to us. Without it, we do not feel empathy, and cannot truly follow the path we claim to travel. Return to me an Efreeti zweihander, dulcet nectar, a golden hilt, and a large sky diamond. If you present these to me, I will award you Truvinan, the divine wind.")
+	elseif e.message:findi("sacrifice") then
+		e.self:Say("You have sacrificed much to come so far Erudite. Sacrifice this one last time and the sword of ocean breeze shall be yours. Retrieve a griffon statuette, a spiroc peace totem, and a bixie sword blade.")
+	elseif e.message:findi("love") then
+		e.self:Say("Love is what makes us close to the gods we follow. Without it, we could not truly worship them, and would be lost. Prove yourself to me and return with a dark spiroc feather, ethereal topaz, and a sphinx claw. In return I will give you Thelvorn.")
+	end
+end
+
+function event_trade(e)
+	local item_lib = require("items")
+
+	if item_lib.check_turn_in(e.trade, {item1 = 20725, item2 = 20964, item3 = 20726, item4 = 20727}) then
+		e.other:SummonItem(11682) -- Truvinan
+		e.other:AddEXP(100000)
+		eq.depop()
+	elseif item_lib.check_turn_in(e.trade, {item1 = 20950, item2 = 20721, item3 = 20722}) then
+		e.other:SummonItem(27708) -- Aldryn, Blade of the Ocean
+		e.other:AddEXP(100000)
+		eq.depop()
+	elseif item_lib.check_turn_in(e.trade, {item1 = 20957, item2 = 20723, item3 = 20724}) then
+		e.other:SummonItem(27709) -- Thelvorn, Blade of Light
+		e.other:AddEXP(100000)
+		eq.depop()
+	elseif item_lib.check_turn_in(e.trade, {item1 = 11681}) then
+		e.other:SummonItem(27709); -- Documented old Sky reward upgrade.
+
+	end
+
+	item_lib.return_items(e.self, e.other, e.trade)
+end
+
+function event_timer(e)
+	if e.timer == "depop" then
+	eq.stop_timer("depop")
+	eq.depop()
+	end
+end

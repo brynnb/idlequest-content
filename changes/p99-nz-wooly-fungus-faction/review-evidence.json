@@ -1,0 +1,26 @@
+{
+  "titles": [
+    "Wooly Fungus Quest"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "partial",
+  "match_status": "partial",
+  "local_quest_keys": [
+    "halas/Waltor_Felligan"
+  ],
+  "proposal": "changes/p99-nz-wooly-fungus-faction.json",
+  "notes": [
+    "Apply Wooly Fungus standing loss to Coalition of Tradefolk Underground (336), not Coalition of Tradefolk (229).",
+    "P99 identifies Underground explicitly. Retain imported -30 magnitude because the cache does not establish an exact delta. Ebon Mask ID244 is retained: malformed Hall of Ebon Mask link does not prove modern faction5006. Disease/poison/healing branches and all other rewards remain unchanged."
+  ],
+  "verification": {
+    "source": "Cached P99 and effective Lua reviewed; exact complete row preimages and source hashes recorded.",
+    "syntax": "pending",
+    "runtime": "Isolated mock regression pending; full game runtime unavailable.",
+    "ui": "not_run",
+    "connected_chain": "not_run"
+  },
+  "unresolved": [
+    "Ordinary source drops/spawns, recipe live behavior and rendered complete quest path not verified."
+  ]
+}

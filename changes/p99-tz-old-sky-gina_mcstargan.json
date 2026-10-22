@@ -1,0 +1,45 @@
+{
+  "format": 1,
+  "id": "p99-tz-old-sky-gina_mcstargan",
+  "summary": "Restore only the documented legacy-to-current Sky item exchanges [(14566, 27726), (2713, 27727), (2712, 27728)]. Old Sky page names this original quest NPC for upgrades. No corresponding Perl file or existing upgrade branch supplies numeric fallback, so do not invent XP, faction, cash or depop side effects; these are unquantified. Preserve every current multi-item test and all other events.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Shaman_Plane_of_Sky_Tests?action=raw",
+      "note": "Cached 2026-07-17T23:32:41.562Z; revision unavailable; SHA256 d2cf8a9522bfba312b59886ff4968b2699824ca84526006ed5a5fe9b0a624d2a. Restore only the documented legacy-to-current Sky item exchanges [(14566, 27726), (2713, 27727), (2712, 27728)]. Old Sky page names this original quest NPC for upgrades. No corresponding Perl file or existing upgrade branch supplies numeric fallback, so do not invent XP, faction, cash or depop side effects; these are unquantified. Preserve every current multi-item test and all other events. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    },
+    {
+      "url": "https://wiki.project1999.com/Plane_of_Sky_Quests_(Old)",
+      "note": "Intro explicitly allows exchanging old rewards at the same NPC; Shadow Knight and Shaman tables map exact old/current named items. Cached SHA256 cdcadb1c440984f769321fa8ede419e777c0386d1a11fef5047aac29135e5ca1. Gina MacStargan spelling resolves to existing Shaman actor Gina_McStargan. Ooga Spiroc Warhammer identity remains unresolved; no inferred replacement ID."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 12246,
+        "zone": "airplane",
+        "name": "Gina_McStargan",
+        "lua_content": "-- Modified from ProjectEQ Lua.\n-- Source: airplane/Gina_McStargan.lua\n-- P99 audit: Shaman Plane of Sky Tests\n-- P99's post-2011 Plane of Sky page rewards Amulet of the Fang for the\n-- Shaman Test of Might; upstream still used the older Drake Fang Amulet.\n-- items: 20934, 20834, 20835, 27726, 20940, 20836, 20837, 20838, 27727, 20947, 20839, 20840, 27728\n\nfunction event_spawn(e)\n\teq.set_timer(\"depop\",300000);\nend\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Greetings, \" .. e.other:GetName() .. \". I will test you in the tests of might, health, and sight. Which will it be?\");\n\telseif(e.message:findi(\"might\")) then\n\t\te.self:Say(\"The test of might It Is. Go find an Auburn Tessera, a Drake Fang and a Leather Chord. Bring them to me when you have them all and I shall reward you.\");\n\telseif(e.message:findi(\"health\")) then\n\t\te.self:Say(\"The test of health Is difficult. I am sure that you will find It a challenge. Bring to me a Platinum Disc, some Ethereal Amber, a Shimmering Amber and finally a Ceremonial Belt. Return them all to me at once and you shall have your just reward.\");\n\telseif(e.message:findi(\"sight\")) then\n\t\te.self:Say(\"So you wish to take the test of sight do you? Get me a Phosphoric Globe, a Sphinx Hide and a Light Damask Mantle. Give them all to me at the same time and I shall reward you well.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\tif(item_lib.check_turn_in(e.trade, {item1 = 20934, item2 = 20834, item3 = 20835})) then\n\t\te.other:SummonItem(27726); -- Amulet of the Fang\n\t\te.other:AddEXP(100000);\n\t\te.self:Say(\"Excellent! Take this as your reward.\");\n\t\teq.depop();\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 20940, item2 = 20836, item3 = 20837, item4 = 20838})) then\n\t\te.other:SummonItem(27727); -- Bracelet of the Spirits\n\t\te.other:AddEXP(100000);\n\t\te.self:Say(\"Excellent! Take this as your reward.\");\n\t\teq.depop();\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 20947, item2 = 20839, item3 = 20840})) then\n\t\te.other:SummonItem(27728); -- Fairy-Hide Mantle\n\t\te.other:AddEXP(100000);\n\t\te.self:Say(\"Excellent! Take this as your reward.\");\n\t\teq.depop();\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\nfunction event_timer(e)\n\teq.stop_timer(\"depop\");\n\teq.depop();\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 12246,
+        "zone": "airplane",
+        "name": "Gina_McStargan",
+        "lua_content": "-- Modified from ProjectEQ Lua.\n-- Source: airplane/Gina_McStargan.lua\n-- P99 audit: Shaman Plane of Sky Tests\n-- P99's post-2011 Plane of Sky page rewards Amulet of the Fang for the\n-- Shaman Test of Might; upstream still used the older Drake Fang Amulet.\n-- items: 20934, 20834, 20835, 27726, 20940, 20836, 20837, 20838, 27727, 20947, 20839, 20840, 27728\n\nfunction event_spawn(e)\n\teq.set_timer(\"depop\",300000);\nend\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Greetings, \" .. e.other:GetName() .. \". I will test you in the tests of might, health, and sight. Which will it be?\");\n\telseif(e.message:findi(\"might\")) then\n\t\te.self:Say(\"The test of might It Is. Go find an Auburn Tessera, a Drake Fang and a Leather Chord. Bring them to me when you have them all and I shall reward you.\");\n\telseif(e.message:findi(\"health\")) then\n\t\te.self:Say(\"The test of health Is difficult. I am sure that you will find It a challenge. Bring to me a Platinum Disc, some Ethereal Amber, a Shimmering Amber and finally a Ceremonial Belt. Return them all to me at once and you shall have your just reward.\");\n\telseif(e.message:findi(\"sight\")) then\n\t\te.self:Say(\"So you wish to take the test of sight do you? Get me a Phosphoric Globe, a Sphinx Hide and a Light Damask Mantle. Give them all to me at the same time and I shall reward you well.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\tif(item_lib.check_turn_in(e.trade, {item1 = 20934, item2 = 20834, item3 = 20835})) then\n\t\te.other:SummonItem(27726); -- Amulet of the Fang\n\t\te.other:AddEXP(100000);\n\t\te.self:Say(\"Excellent! Take this as your reward.\");\n\t\teq.depop();\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 20940, item2 = 20836, item3 = 20837, item4 = 20838})) then\n\t\te.other:SummonItem(27727); -- Bracelet of the Spirits\n\t\te.other:AddEXP(100000);\n\t\te.self:Say(\"Excellent! Take this as your reward.\");\n\t\teq.depop();\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 20947, item2 = 20839, item3 = 20840})) then\n\t\te.other:SummonItem(27728); -- Fairy-Hide Mantle\n\t\te.other:AddEXP(100000);\n\t\te.self:Say(\"Excellent! Take this as your reward.\");\n\t\teq.depop();\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 14566})) then\n\t\te.other:SummonItem(27726); -- Documented Old Sky upgrade; no quantified extra rewards.\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 2713})) then\n\t\te.other:SummonItem(27727); -- Documented Old Sky upgrade; no quantified extra rewards.\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 2712})) then\n\t\te.other:SummonItem(27728); -- Documented Old Sky upgrade; no quantified extra rewards.\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\nfunction event_timer(e)\n\teq.stop_timer(\"depop\");\n\teq.depop();\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/airplane/Gina_McStargan.lua",
+      "beforeSha256": "4f9b74f65d24c0af3ac23f02bff39bc7f4ec5cab622245f7730a719b0f1b98ab",
+      "proposedFile": "changes/p99-tz-old-sky-gina_mcstargan/airplane--Gina_McStargan.lua",
+      "afterSha256": "afbc11fb70b079854146c483576cef9b635106b5247b254b4bc675eaee48d224"
+    }
+  ]
+}

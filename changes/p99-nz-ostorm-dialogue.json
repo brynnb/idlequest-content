@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-nz-ostorm-dialogue",
+  "summary": "Make displayed specialization-reset lore buttons reachable.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Respecialization?action=raw",
+      "note": "Cached 2026-07-17T23:30:41.489Z; revision unavailable; SHA256 5705a47be9cf14c10c175e3302e0558c52832b402dd227d84c1ef73fcfbe0d0f. Bare steal, memories and losing are advertised but existing handlers require full phrases. Retain full phrases and advanced-memory warning. Ruby10035 resets skills43\u201347 to49; separate50gold donation and all Lambent/magnetized-bar branches unchanged. Numeric XP is not documented, no adjustment."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 12750,
+        "zone": "soltemple",
+        "name": "Ostorm",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: soltemple/Ostorm.pl\n-- items: 10128, 19049\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"I am Ostorm of the Temple of Solusek Ro, guardian of the sacred crystal of Kintaz. Be wary and keep your distance, lest the proximity of the crystal [steal] your [memories].\")\n\telseif e.message:findi(\"steal my memories\") then\n\t\te.self:Say(\"It is the nature of the crystal of Kintaz to steal the memories of those around it. Only I am safe, and then only because of the strong wardings placed on me by Solusek Ro himself. Are you interested in [losing] any [memories]?\")\n\telseif e.message:findi(\"losing my memories\") then\n\t\te.self:Say(\"Recently, I have been experimenting with the crystal, and have found that those exposed to ruby light filtered through it tend to lose the memories of their most specialized arcane skills. Are you sure you want to [lose advanced memory] of specialization?\")\n\telseif e.message:findi(\"lose advanced memory\") then\n\t\te.self:Say(\"Be warned that once exposed to the crystal, I can not reverse the effects. If you desire exposure, fetch me a ruby.\")\n\telseif e.message:findi(\"fifty gold\") then\n\t\te.self:Say(\"You do not remember?  You promised me fifty gold coins for allowing you to be exposed to the sacred crystal of Kintaz.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 10035}) then\n\t\te.self:Say(\"..hear me? Ah, you seem to be coming out of your stupor. I think you have been exposed to the crystal long enough. By the time you leave the temple, your memories should have faded. Do you have the [fifty gold] coins that you owe me?\")\n\t\te.other:SetSkill(43, 49) -- Specialize Abjuration\n\t\te.other:SetSkill(44, 49) -- Specialize Alteration\n\t\te.other:SetSkill(45, 49) -- Specialize Conjuration\n\t\te.other:SetSkill(46, 49) -- Specialize Divination\n\t\te.other:SetSkill(47, 49) -- Specialize Evocation\n\t\te.other:Faction(415, 1, 0)\n\t\te.other:Faction(416, -1, 0)\n\t\teq.zone_emote(MT.Emote, \"Your specialize skills have all been set to 49.\")\n\t\te.other:AddEXP(1000)\n\telseif item_lib.check_turn_in(e.trade, {gold = 50}) then\n\t\te.self:Say(\"Thank you.\")\n\t\te.other:Faction(415, 1, 0)\n\t\te.other:Faction(416, -1, 0)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 10031, item2 = 10031, item3 = 10000}) then\n\t\te.self:Say(\"Ahh, Genni must have sent you to me. Very well, here is your Lambent Fire Opal.\")\n\t\te.other:SummonItem(10128)\n\t\te.other:Faction(415, 1, 0)\n\t\te.other:Faction(416, -1, 0)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 16507}) then\n\t\te.self:Say(\"I see that Gavel has sent you to me. Very well, I have magnetized your platinum bar - take it.\")\n\t\te.other:SummonItem(19049)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 12750,
+        "zone": "soltemple",
+        "name": "Ostorm",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: soltemple/Ostorm.pl\n-- items: 10128, 19049\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"I am Ostorm of the Temple of Solusek Ro, guardian of the sacred crystal of Kintaz. Be wary and keep your distance, lest the proximity of the crystal [steal] your [memories].\")\n\telseif e.message:findi(\"steal\") or e.message:lower() == \"memories\" then\n\t\te.self:Say(\"It is the nature of the crystal of Kintaz to steal the memories of those around it. Only I am safe, and then only because of the strong wardings placed on me by Solusek Ro himself. Are you interested in [losing] any [memories]?\")\n\telseif e.message:findi(\"losing\") then\n\t\te.self:Say(\"Recently, I have been experimenting with the crystal, and have found that those exposed to ruby light filtered through it tend to lose the memories of their most specialized arcane skills. Are you sure you want to [lose advanced memory] of specialization?\")\n\telseif e.message:findi(\"lose advanced memory\") then\n\t\te.self:Say(\"Be warned that once exposed to the crystal, I can not reverse the effects. If you desire exposure, fetch me a ruby.\")\n\telseif e.message:findi(\"fifty gold\") then\n\t\te.self:Say(\"You do not remember?  You promised me fifty gold coins for allowing you to be exposed to the sacred crystal of Kintaz.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 10035}) then\n\t\te.self:Say(\"..hear me? Ah, you seem to be coming out of your stupor. I think you have been exposed to the crystal long enough. By the time you leave the temple, your memories should have faded. Do you have the [fifty gold] coins that you owe me?\")\n\t\te.other:SetSkill(43, 49) -- Specialize Abjuration\n\t\te.other:SetSkill(44, 49) -- Specialize Alteration\n\t\te.other:SetSkill(45, 49) -- Specialize Conjuration\n\t\te.other:SetSkill(46, 49) -- Specialize Divination\n\t\te.other:SetSkill(47, 49) -- Specialize Evocation\n\t\te.other:Faction(415, 1, 0)\n\t\te.other:Faction(416, -1, 0)\n\t\teq.zone_emote(MT.Emote, \"Your specialize skills have all been set to 49.\")\n\t\te.other:AddEXP(1000)\n\telseif item_lib.check_turn_in(e.trade, {gold = 50}) then\n\t\te.self:Say(\"Thank you.\")\n\t\te.other:Faction(415, 1, 0)\n\t\te.other:Faction(416, -1, 0)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 10031, item2 = 10031, item3 = 10000}) then\n\t\te.self:Say(\"Ahh, Genni must have sent you to me. Very well, here is your Lambent Fire Opal.\")\n\t\te.other:SummonItem(10128)\n\t\te.other:Faction(415, 1, 0)\n\t\te.other:Faction(416, -1, 0)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 16507}) then\n\t\te.self:Say(\"I see that Gavel has sent you to me. Very well, I have magnetized your platinum bar - take it.\")\n\t\te.other:SummonItem(19049)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/soltemple/Ostorm.lua",
+      "beforeSha256": "0e5f738e342ab3a8d306c3bfba780c0fabc17c8d5e017b7d7dc19bd8a37f676e",
+      "proposedFile": "changes/p99-nz-ostorm-dialogue/soltemple--Ostorm.lua",
+      "afterSha256": "8245a63625e8f0c0e995d2503f7fc760b4dc9abcfab46b7e66f1abfd52733bf7"
+    }
+  ]
+}

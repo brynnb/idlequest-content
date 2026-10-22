@@ -1,0 +1,58 @@
+{
+  "format": 1,
+  "id": "p99-tz-recipe-9636",
+  "summary": "Enable existing P99 quest combine with exact documented components, container and output; preserve every other recipe field.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/The_Bones_of_Darak_Lightforge?action=raw",
+      "note": "Cached 2026-07-17T23:35:27.001Z; SHA256 24ae41e6399bf80c57053a4353db59fb91fa7865dbe39d4f9135df93520632ae. Full page read confirms {6700: 1, 6701: 1, 6702: 1, 6703: 1, 6704: 1, 6705: 1, 6706: 1, 6707: 1} in container 17080 creates one 6708. No probabilities/skill metadata changed. Actual inventory combine UI not tested."
+    }
+  ],
+  "rows": [
+    {
+      "table": "tradeskill_recipe",
+      "before": {
+        "id": 9636,
+        "name": "A Gem Encrusted Casket",
+        "tradeskill": 75,
+        "skillneeded": 0,
+        "trivial": 0,
+        "nofail": 1,
+        "replace_container": 1,
+        "notes": null,
+        "must_learn": 0,
+        "learned_by_item_id": 0,
+        "quest": 1,
+        "enabled": 0,
+        "show_in_advanced": 1,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null,
+        "category": "Quest"
+      },
+      "after": {
+        "id": 9636,
+        "name": "A Gem Encrusted Casket",
+        "tradeskill": 75,
+        "skillneeded": 0,
+        "trivial": 0,
+        "nofail": 1,
+        "replace_container": 1,
+        "notes": null,
+        "must_learn": 0,
+        "learned_by_item_id": 0,
+        "quest": 1,
+        "enabled": 1,
+        "show_in_advanced": 1,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null,
+        "category": "Quest"
+      }
+    }
+  ],
+  "sources": []
+}

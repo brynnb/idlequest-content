@@ -1,0 +1,28 @@
+{
+  "titles": [
+    "Odus Pearls",
+    "The Bridge"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "partial",
+  "match_status": "partial",
+  "local_quest_keys": [
+    "erudnext/Weligon_Steelherder"
+  ],
+  "proposal": "changes/p99-nz-odus-pearls.json",
+  "notes": [
+    "Add documented fourteen silver and missing named rewards to the Full Bag of Pearls exchange.",
+    "P99 known rewards Patchwork Sleeves2108 already exists; add Small Bag17003,Tattered Skullcap2101,Worn Great Staff6012 confirmed by exported names. Preserve existing other raw-hide/patchwork rewards because page says minor items, not exhaustive. Existing equal-choice mechanism retained; exact P99 weighting unavailable and not claimed. Other guild/diseased-shark/bridge branches unchanged. Four-pearl bag recipe and ground acquisition reviewed separately, not asserted live.",
+    "The Bridge documented harpoon is no more phrase now accepted alongside legacy harpoon no more. Preserve all bridge and pearl exchange branches."
+  ],
+  "verification": {
+    "source": "Cached P99 and effective Lua reviewed; exact complete row preimages and source hashes recorded.",
+    "syntax": "pending",
+    "runtime": "Isolated mock regression pending; full game runtime unavailable.",
+    "ui": "not_run",
+    "connected_chain": "not_run"
+  },
+  "unresolved": [
+    "Ordinary source drops/spawns, recipe live behavior and rendered complete quest path not verified."
+  ]
+}

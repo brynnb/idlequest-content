@@ -1,0 +1,49 @@
+{
+  "status": "diagnostic_complete_with_two_test_integration_failures",
+  "completedAt": "2026-10-22T08:01:17.302846+00:00",
+  "inputSetSha256": "0abb679690b3b02e5214d5bf8610b1911c147becc8484886b0bbbd734d3d950f",
+  "preparedInputSetSha256": "b19120f399adae219de065c64bb4d2cd640349eacc755c304ec3f0e9fa5ecf7d",
+  "postPreparationDrift": [
+    {
+      "file": "changes/p99-armor-review/runtime-receipt.json",
+      "before": "7df55525abe5d097f8cc7f1242118fef08ba7289a41d263c7cad745d9eb628f0",
+      "after": "6b71427551b04c25e321ddfddd77c32ececec5ae9b976789f3f7fc5ffe80b4e0"
+    }
+  ],
+  "rows": 896,
+  "sources": 817,
+  "proposedLuaSources": 816,
+  "npm": {
+    "passed": 83,
+    "failed": 2,
+    "skipped": 1
+  },
+  "mainBehavior": "Not executed: loader rejected unclassified unchanged uncertainty cases. No main receipt.",
+  "testFailures": [
+    "Classic triage depended on obsolete zone-array position.",
+    "Uncertainty manifest baseline cases lacked required classification."
+  ],
+  "laterFixes": "Both fixed after this capture; this receipt does not certify those later bytes.",
+  "actualCombinedCLI": "passed 896 rows and 817 sources",
+  "baseline": "passed immutable export validation; 36496 files, 53 tables",
+  "standaloneArmorCases": 368,
+  "standalonePaladinCases": 45,
+  "compile": {
+    "checked": 8885,
+    "passed": 8884,
+    "failed": 1,
+    "allProposedPassed": true,
+    "exception": "Unchanged disabled baseline Perl utility effective/quests/utility/comments-helper-generator.lua"
+  },
+  "references": {
+    "status": "qualified_pass",
+    "retainedDisabledHistoricalOccurrences": 33,
+    "affectedSourceKeys": 8,
+    "newOrActiveUnresolved": 0
+  },
+  "limits": [
+    "Not final-set certification.",
+    "Pinned isolated Lua tests are not live game, transaction, pickup, crafting, world activation or UI proof.",
+    "No raw private evidence included."
+  ]
+}

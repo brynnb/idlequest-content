@@ -1,0 +1,26 @@
+{
+  "titles": [
+    "The Emissary"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "partial",
+  "match_status": "partial",
+  "local_quest_keys": [
+    "oggok/Emissary_Glib"
+  ],
+  "proposal": "changes/p99-nz-emissary-currency.json",
+  "notes": [
+    "Correct Emissary Glib necklace cash to documented 7 silver for slayer necklace and 1 silver for captain necklace.",
+    "Retain experience and reward selection. Apply P99 ordinary necklace +1 and captain +2 to existing local faction374 Oggok Resident. Export also has143 Oggok Citizen, so identity ambiguity remains explicitly unresolved; no target replacement guessed. Marda level gate, spawn duration/path and complete reward pool remain open; this is not full quest parity."
+  ],
+  "verification": {
+    "source": "Cached P99 and effective Lua reviewed; exact complete row preimages and source hashes recorded.",
+    "syntax": "pending",
+    "runtime": "Isolated mock regression pending; full game runtime unavailable.",
+    "ui": "not_run",
+    "connected_chain": "not_run"
+  },
+  "unresolved": [
+    "Ordinary source drops/spawns, recipe live behavior and rendered complete quest path not verified."
+  ]
+}

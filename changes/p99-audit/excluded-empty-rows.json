@@ -1,0 +1,929 @@
+[
+  {
+    "key": "cauldron/#The_Fabled_Bilge_Farfathom",
+    "questId": 12604,
+    "classification": "explicit-npc-policy",
+    "questPolicy": null,
+    "npcPolicy": [],
+    "source": "sources/projecteq/cauldron/#The_Fabled_Bilge_Farfathom.pl",
+    "sha256": "4916e347d9524628eabcfde4ce17b7db4513fe76b4d8411fed59fdfc4243696a",
+    "decision": "Retain authoritative exclusion; never enable merely because an enabled export row has a null Lua body. This record reconciles inventory, not a fresh full encounter review.",
+    "policyEvidence": [
+      "reference/server/internal/quest/content_exclusions.json",
+      "reference/server/internal/contentscope/npc_exclusions.json",
+      "tools/p99-quest-inventory.mjs"
+    ]
+  },
+  {
+    "key": "eastwastes/#Translocator_Kurione",
+    "questId": 14302,
+    "classification": "explicit-npc-policy",
+    "questPolicy": null,
+    "npcPolicy": [],
+    "source": "sources/projecteq/eastwastes/#Translocator_Kurione.pl",
+    "sha256": "90763ffd4051648914f4899be569333640dc2a5a253b520f9d0a8f11c8dac7ad",
+    "decision": "Retain authoritative exclusion; never enable merely because an enabled export row has a null Lua body. This record reconciles inventory, not a fresh full encounter review.",
+    "policyEvidence": [
+      "reference/server/internal/quest/content_exclusions.json",
+      "reference/server/internal/contentscope/npc_exclusions.json",
+      "tools/p99-quest-inventory.mjs"
+    ]
+  },
+  {
+    "key": "eastwastes/Nelef_the_Trader",
+    "questId": 13999,
+    "classification": "explicit-quest-exclusion",
+    "questPolicy": {
+      "reason": "post_kunark_later_era",
+      "note": "Not documented as part of the P99 Essence Lens quest. Keep the alternate scale/reward-to-key exchange disabled; restore documented Melalafen only."
+    },
+    "npcPolicy": [],
+    "source": "sources/projecteq/eastwastes/Nelef_the_Trader.pl",
+    "sha256": "8cb8d31b7159e32b9b69fec2c2c4ed62f59e034303eeb852120c858b783bd44b",
+    "decision": "Retain authoritative exclusion; never enable merely because an enabled export row has a null Lua body. This record reconciles inventory, not a fresh full encounter review.",
+    "policyEvidence": [
+      "reference/server/internal/quest/content_exclusions.json",
+      "reference/server/internal/contentscope/npc_exclusions.json",
+      "tools/p99-quest-inventory.mjs"
+    ]
+  },
+  {
+    "key": "firiona/#Translocator_Drabilt",
+    "questId": 14330,
+    "classification": "explicit-npc-policy",
+    "questPolicy": null,
+    "npcPolicy": [],
+    "source": "sources/projecteq/firiona/#Translocator_Drabilt.pl",
+    "sha256": "0e14a585870b6627c944f3783015b56b45fee9a8260f76cd7d5079cf9af703dd",
+    "decision": "Retain authoritative exclusion; never enable merely because an enabled export row has a null Lua body. This record reconciles inventory, not a fresh full encounter review.",
+    "policyEvidence": [
+      "reference/server/internal/quest/content_exclusions.json",
+      "reference/server/internal/contentscope/npc_exclusions.json",
+      "tools/p99-quest-inventory.mjs"
+    ]
+  },
+  {
+    "key": "iceclad/#Translocator_Kurione",
+    "questId": 16057,
+    "classification": "explicit-npc-policy",
+    "questPolicy": null,
+    "npcPolicy": [],
+    "source": "sources/projecteq/iceclad/#Translocator_Kurione.pl",
+    "sha256": "b614848e578704a7f6b892d202b57e021d017acd4c71cd7e6e5267b69f8bef80",
+    "decision": "Retain authoritative exclusion; never enable merely because an enabled export row has a null Lua body. This record reconciles inventory, not a fresh full encounter review.",
+    "policyEvidence": [
+      "reference/server/internal/quest/content_exclusions.json",
+      "reference/server/internal/contentscope/npc_exclusions.json",
+      "tools/p99-quest-inventory.mjs"
+    ]
+  },
+  {
+    "key": "innothule/#Sugal_the_Fist",
+    "questId": 16175,
+    "classification": "explicit-npc-policy",
+    "questPolicy": null,
+    "npcPolicy": [
+      {
+        "id": 46052,
+        "name": "#Sugal_the_Fist",
+        "zone": "innothule",
+        "reason": "Later Guktan training/quest/guards/corpse population; most spawns min_expansion=5."
+      }
+    ],
+    "source": "sources/projecteq/innothule/#Sugal_the_Fist.pl",
+    "sha256": "eac04208e28f8a8ab2780e240654b1ad8f1929f0173219e042c9713d5c6bc339",
+    "decision": "Retain authoritative exclusion; never enable merely because an enabled export row has a null Lua body. This record reconciles inventory, not a fresh full encounter review.",
+    "policyEvidence": [
+      "reference/server/internal/quest/content_exclusions.json",
+      "reference/server/internal/contentscope/npc_exclusions.json",
+      "tools/p99-quest-inventory.mjs"
+    ]
+  },
+  {
+    "key": "innothule/Kor_Trainer_Galdok",
+    "questId": 17661,
+    "classification": "explicit-npc-policy",
+    "questPolicy": null,
+    "npcPolicy": [
+      {
+        "id": 46047,
+        "name": "Kor_Trainer_Galdok",
+        "zone": "innothule",
+        "reason": "Later Guktan training/quest/guards/corpse population; most spawns min_expansion=5."
+      }
+    ],
+    "source": "sources/projecteq/innothule/Kor_Trainer_Galdok.pl",
+    "sha256": "363c5d1fd07d3f310e3058dd739e8d36969e02352a01d7b26aa7be35c8ea39ae",
+    "decision": "Retain authoritative exclusion; never enable merely because an enabled export row has a null Lua body. This record reconciles inventory, not a fresh full encounter review.",
+    "policyEvidence": [
+      "reference/server/internal/quest/content_exclusions.json",
+      "reference/server/internal/contentscope/npc_exclusions.json",
+      "tools/p99-quest-inventory.mjs"
+    ]
+  },
+  {
+    "key": "lakerathe/#Guja_Master_Therik",
+    "questId": 11929,
+    "classification": "explicit-npc-policy",
+    "questPolicy": null,
+    "npcPolicy": [
+      {
+        "id": 51094,
+        "name": "#Guja_Master_Therik",
+        "zone": "lakerathe",
+        "reason": "Guja Master Therik: Sugal/Guktan amphibious training quest (S8); spawn min_expansion=5."
+      }
+    ],
+    "source": "sources/projecteq/lakerathe/#Guja_Master_Therik.pl",
+    "sha256": "a6c05305ff9242b4c24ad6e1df5f1cadbf2d272f8df55c33b620f5aeeb6bc804",
+    "decision": "Retain authoritative exclusion; never enable merely because an enabled export row has a null Lua body. This record reconciles inventory, not a fresh full encounter review.",
+    "policyEvidence": [
+      "reference/server/internal/quest/content_exclusions.json",
+      "reference/server/internal/contentscope/npc_exclusions.json",
+      "tools/p99-quest-inventory.mjs"
+    ]
+  },
+  {
+    "key": "nro/#Translocator_Ionie",
+    "questId": 16288,
+    "classification": "explicit-npc-policy",
+    "questPolicy": null,
+    "npcPolicy": [],
+    "source": "sources/projecteq/nro/#Translocator_Ionie.pl",
+    "sha256": "f9a19ea5acaaeff794c1cc6385bdee0fe796c400c0922fb10896688aa1c28edc",
+    "decision": "Retain authoritative exclusion; never enable merely because an enabled export row has a null Lua body. This record reconciles inventory, not a fresh full encounter review.",
+    "policyEvidence": [
+      "reference/server/internal/quest/content_exclusions.json",
+      "reference/server/internal/contentscope/npc_exclusions.json",
+      "tools/p99-quest-inventory.mjs"
+    ]
+  },
+  {
+    "key": "oasis/#Translocator_Tradil",
+    "questId": 14237,
+    "classification": "explicit-npc-policy",
+    "questPolicy": null,
+    "npcPolicy": [],
+    "source": "sources/projecteq/oasis/#Translocator_Tradil.pl",
+    "sha256": "4b736b79f98bbe6689b6c5f210d46e5eb5340170c3457804ebaecca110f30f79",
+    "decision": "Retain authoritative exclusion; never enable merely because an enabled export row has a null Lua body. This record reconciles inventory, not a fresh full encounter review.",
+    "policyEvidence": [
+      "reference/server/internal/quest/content_exclusions.json",
+      "reference/server/internal/contentscope/npc_exclusions.json",
+      "tools/p99-quest-inventory.mjs"
+    ]
+  },
+  {
+    "key": "oot/#Translocator_Narrik",
+    "questId": 12540,
+    "classification": "explicit-npc-policy",
+    "questPolicy": null,
+    "npcPolicy": [],
+    "source": "sources/projecteq/oot/#Translocator_Narrik.pl",
+    "sha256": "7f7afbc7a5224fcebba5a419f4625aa67a44840725e87c93f33fda5a72173d29",
+    "decision": "Retain authoritative exclusion; never enable merely because an enabled export row has a null Lua body. This record reconciles inventory, not a fresh full encounter review.",
+    "policyEvidence": [
+      "reference/server/internal/quest/content_exclusions.json",
+      "reference/server/internal/contentscope/npc_exclusions.json",
+      "tools/p99-quest-inventory.mjs"
+    ]
+  },
+  {
+    "key": "overthere/#Translocator_Breya",
+    "questId": 13581,
+    "classification": "explicit-npc-policy",
+    "questPolicy": null,
+    "npcPolicy": [],
+    "source": "sources/projecteq/overthere/#Translocator_Breya.pl",
+    "sha256": "0e14a585870b6627c944f3783015b56b45fee9a8260f76cd7d5079cf9af703dd",
+    "decision": "Retain authoritative exclusion; never enable merely because an enabled export row has a null Lua body. This record reconciles inventory, not a fresh full encounter review.",
+    "policyEvidence": [
+      "reference/server/internal/quest/content_exclusions.json",
+      "reference/server/internal/contentscope/npc_exclusions.json",
+      "tools/p99-quest-inventory.mjs"
+    ]
+  },
+  {
+    "key": "rathemtn/#a_pile_of_froglok_remains",
+    "questId": 18131,
+    "classification": "explicit-npc-policy",
+    "questPolicy": null,
+    "npcPolicy": [
+      {
+        "id": 50299,
+        "name": "#a_pile_of_froglok_remains",
+        "zone": "rathemtn",
+        "reason": "Later Master Scribe Uklo/Chalex quest remains. Local original quest script explicitly describes liberation of Gukta."
+      }
+    ],
+    "source": "sources/projecteq/rathemtn/#a_pile_of_froglok_remains.pl",
+    "sha256": "8ad6f9f2795c3ccc82e4e63c4262b698150e5174da5d3471ad1ec635475682f3",
+    "decision": "Retain authoritative exclusion; never enable merely because an enabled export row has a null Lua body. This record reconciles inventory, not a fresh full encounter review.",
+    "policyEvidence": [
+      "reference/server/internal/quest/content_exclusions.json",
+      "reference/server/internal/contentscope/npc_exclusions.json",
+      "tools/p99-quest-inventory.mjs"
+    ]
+  },
+  {
+    "key": "rathemtn/#Dar_Master_Griblok",
+    "questId": 19510,
+    "classification": "explicit-npc-policy",
+    "questPolicy": null,
+    "npcPolicy": [
+      {
+        "id": 50173,
+        "name": "#Dar_Master_Griblok",
+        "zone": "rathemtn",
+        "reason": "Later Gukta settlement / supporting Guktan population; not Classic-Velious. S3; original TAKP Rathe pool contains no frogloks."
+      }
+    ],
+    "source": "sources/projecteq/rathemtn/#Dar_Master_Griblok.pl",
+    "sha256": "aa4ae655170f6393e83a772c2f10ab846410cbc5ae983c4e00ce34c83e5f3082",
+    "decision": "Retain authoritative exclusion; never enable merely because an enabled export row has a null Lua body. This record reconciles inventory, not a fresh full encounter review.",
+    "policyEvidence": [
+      "reference/server/internal/quest/content_exclusions.json",
+      "reference/server/internal/contentscope/npc_exclusions.json",
+      "tools/p99-quest-inventory.mjs"
+    ]
+  },
+  {
+    "key": "rathemtn/#Jin_Master_Sergug",
+    "questId": 12109,
+    "classification": "explicit-npc-policy",
+    "questPolicy": null,
+    "npcPolicy": [
+      {
+        "id": 50169,
+        "name": "#Jin_Master_Sergug",
+        "zone": "rathemtn",
+        "reason": "Later Gukta settlement / supporting Guktan population; not Classic-Velious. S3; original TAKP Rathe pool contains no frogloks."
+      }
+    ],
+    "source": "sources/projecteq/rathemtn/#Jin_Master_Sergug.pl",
+    "sha256": "d555ffaa3f46afc9f1cbb507cd1894d1e6c7f681cf1bd23d26432155fbf1cc78",
+    "decision": "Retain authoritative exclusion; never enable merely because an enabled export row has a null Lua body. This record reconciles inventory, not a fresh full encounter review.",
+    "policyEvidence": [
+      "reference/server/internal/quest/content_exclusions.json",
+      "reference/server/internal/contentscope/npc_exclusions.json",
+      "tools/p99-quest-inventory.mjs"
+    ]
+  },
+  {
+    "key": "rathemtn/#Kor_Master_Gloorg",
+    "questId": 17683,
+    "classification": "explicit-npc-policy",
+    "questPolicy": null,
+    "npcPolicy": [
+      {
+        "id": 50172,
+        "name": "#Kor_Master_Gloorg",
+        "zone": "rathemtn",
+        "reason": "Later Gukta settlement / supporting Guktan population; not Classic-Velious. S3; original TAKP Rathe pool contains no frogloks."
+      }
+    ],
+    "source": "sources/projecteq/rathemtn/#Kor_Master_Gloorg.pl",
+    "sha256": "5c80de3c0462405f7287752f26d6aae1294703042edcfaf524791167313f7317",
+    "decision": "Retain authoritative exclusion; never enable merely because an enabled export row has a null Lua body. This record reconciles inventory, not a fresh full encounter review.",
+    "policyEvidence": [
+      "reference/server/internal/quest/content_exclusions.json",
+      "reference/server/internal/contentscope/npc_exclusions.json",
+      "tools/p99-quest-inventory.mjs"
+    ]
+  },
+  {
+    "key": "rathemtn/#Shin_Master_Grubbus",
+    "questId": 15950,
+    "classification": "explicit-npc-policy",
+    "questPolicy": null,
+    "npcPolicy": [
+      {
+        "id": 50171,
+        "name": "#Shin_Master_Grubbus",
+        "zone": "rathemtn",
+        "reason": "Later Gukta settlement / supporting Guktan population; not Classic-Velious. S3; original TAKP Rathe pool contains no frogloks."
+      }
+    ],
+    "source": "sources/projecteq/rathemtn/#Shin_Master_Grubbus.pl",
+    "sha256": "7b029d823eb7c015dc15a1452956126a025129134d3f21c7568f271a29f93048",
+    "decision": "Retain authoritative exclusion; never enable merely because an enabled export row has a null Lua body. This record reconciles inventory, not a fresh full encounter review.",
+    "policyEvidence": [
+      "reference/server/internal/quest/content_exclusions.json",
+      "reference/server/internal/contentscope/npc_exclusions.json",
+      "tools/p99-quest-inventory.mjs"
+    ]
+  },
+  {
+    "key": "rathemtn/#Yun_Master_Arglug",
+    "questId": 16746,
+    "classification": "explicit-npc-policy",
+    "questPolicy": null,
+    "npcPolicy": [
+      {
+        "id": 50170,
+        "name": "#Yun_Master_Arglug",
+        "zone": "rathemtn",
+        "reason": "Later Gukta settlement / supporting Guktan population; not Classic-Velious. S3; original TAKP Rathe pool contains no frogloks."
+      }
+    ],
+    "source": "sources/projecteq/rathemtn/#Yun_Master_Arglug.pl",
+    "sha256": "a65c1259718c5ed083f97ef4bb27bf5eecd1cad14e4dcf6580a8b23f773d7b88",
+    "decision": "Retain authoritative exclusion; never enable merely because an enabled export row has a null Lua body. This record reconciles inventory, not a fresh full encounter review.",
+    "policyEvidence": [
+      "reference/server/internal/quest/content_exclusions.json",
+      "reference/server/internal/contentscope/npc_exclusions.json",
+      "tools/p99-quest-inventory.mjs"
+    ]
+  },
+  {
+    "key": "rathemtn/Animal_Trainer_Visop",
+    "questId": 17819,
+    "classification": "explicit-npc-policy",
+    "questPolicy": null,
+    "npcPolicy": [
+      {
+        "id": 50110,
+        "name": "Animal_Trainer_Visop",
+        "zone": "rathemtn",
+        "reason": "Later Gukta settlement / supporting Guktan population; not Classic-Velious. S3; original TAKP Rathe pool contains no frogloks."
+      }
+    ],
+    "source": "sources/projecteq/rathemtn/Animal_Trainer_Visop.pl",
+    "sha256": "b3a61a4482cc36ef9a56509ed931cf61849e08a63f16bb0b870b0b2e8d5f6568",
+    "decision": "Retain authoritative exclusion; never enable merely because an enabled export row has a null Lua body. This record reconciles inventory, not a fresh full encounter review.",
+    "policyEvidence": [
+      "reference/server/internal/quest/content_exclusions.json",
+      "reference/server/internal/contentscope/npc_exclusions.json",
+      "tools/p99-quest-inventory.mjs"
+    ]
+  },
+  {
+    "key": "rathemtn/Bibsy_Gakdoo",
+    "questId": 14550,
+    "classification": "explicit-npc-policy",
+    "questPolicy": null,
+    "npcPolicy": [
+      {
+        "id": 50325,
+        "name": "Bibsy_Gakdoo",
+        "zone": "rathemtn",
+        "reason": "Later Gukta settlement / supporting Guktan population; not Classic-Velious. S3; original TAKP Rathe pool contains no frogloks."
+      }
+    ],
+    "source": "sources/projecteq/rathemtn/Bibsy_Gakdoo.pl",
+    "sha256": "de5df4e60b2b1715770042468aee7ccc05fa118cf9938ea13918406cbca35aa7",
+    "decision": "Retain authoritative exclusion; never enable merely because an enabled export row has a null Lua body. This record reconciles inventory, not a fresh full encounter review.",
+    "policyEvidence": [
+      "reference/server/internal/quest/content_exclusions.json",
+      "reference/server/internal/contentscope/npc_exclusions.json",
+      "tools/p99-quest-inventory.mjs"
+    ]
+  },
+  {
+    "key": "rathemtn/Bok_Master_Thragnog",
+    "questId": 12684,
+    "classification": "explicit-npc-policy",
+    "questPolicy": null,
+    "npcPolicy": [
+      {
+        "id": 50166,
+        "name": "Bok_Master_Thragnog",
+        "zone": "rathemtn",
+        "reason": "Later Gukta settlement / supporting Guktan population; not Classic-Velious. S3; original TAKP Rathe pool contains no frogloks."
+      }
+    ],
+    "source": "sources/projecteq/rathemtn/Bok_Master_Thragnog.pl",
+    "sha256": "5b22ad8923a5e407f55b1a1aa2dad7f81f96f86d2cf174e794747d70a2c9f1dc",
+    "decision": "Retain authoritative exclusion; never enable merely because an enabled export row has a null Lua body. This record reconciles inventory, not a fresh full encounter review.",
+    "policyEvidence": [
+      "reference/server/internal/quest/content_exclusions.json",
+      "reference/server/internal/contentscope/npc_exclusions.json",
+      "tools/p99-quest-inventory.mjs"
+    ]
+  },
+  {
+    "key": "rathemtn/Dar_Strategist_Guib",
+    "questId": 13266,
+    "classification": "explicit-npc-policy",
+    "questPolicy": null,
+    "npcPolicy": [
+      {
+        "id": 50116,
+        "name": "Dar_Strategist_Guib",
+        "zone": "rathemtn",
+        "reason": "Later Gukta settlement / supporting Guktan population; not Classic-Velious. S3; original TAKP Rathe pool contains no frogloks."
+      }
+    ],
+    "source": "sources/projecteq/rathemtn/Dar_Strategist_Guib.pl",
+    "sha256": "3686bab377f86d523022b11f7cde77b18424684f1528005ab1f1f71aa7562f00",
+    "decision": "Retain authoritative exclusion; never enable merely because an enabled export row has a null Lua body. This record reconciles inventory, not a fresh full encounter review.",
+    "policyEvidence": [
+      "reference/server/internal/quest/content_exclusions.json",
+      "reference/server/internal/contentscope/npc_exclusions.json",
+      "tools/p99-quest-inventory.mjs"
+    ]
+  },
+  {
+    "key": "rathemtn/Gaz_Master_Shargnol",
+    "questId": 12092,
+    "classification": "explicit-npc-policy",
+    "questPolicy": null,
+    "npcPolicy": [
+      {
+        "id": 50167,
+        "name": "Gaz_Master_Shargnol",
+        "zone": "rathemtn",
+        "reason": "Later Gukta settlement / supporting Guktan population; not Classic-Velious. S3; original TAKP Rathe pool contains no frogloks."
+      }
+    ],
+    "source": "sources/projecteq/rathemtn/Gaz_Master_Shargnol.pl",
+    "sha256": "8df13de460d324bdf6838894a961859ba32d75d24e2f5462577a314f986eaeb4",
+    "decision": "Retain authoritative exclusion; never enable merely because an enabled export row has a null Lua body. This record reconciles inventory, not a fresh full encounter review.",
+    "policyEvidence": [
+      "reference/server/internal/quest/content_exclusions.json",
+      "reference/server/internal/contentscope/npc_exclusions.json",
+      "tools/p99-quest-inventory.mjs"
+    ]
+  },
+  {
+    "key": "rathemtn/High_Seer_Flogk",
+    "questId": 14059,
+    "classification": "explicit-npc-policy",
+    "questPolicy": null,
+    "npcPolicy": [
+      {
+        "id": 50109,
+        "name": "High_Seer_Flogk",
+        "zone": "rathemtn",
+        "reason": "Later Gukta settlement / supporting Guktan population; not Classic-Velious. S3; original TAKP Rathe pool contains no frogloks."
+      }
+    ],
+    "source": "sources/projecteq/rathemtn/High_Seer_Flogk.pl",
+    "sha256": "a18455e9ceef5e55c292ccce866c16838e1932c60d6939b1b55a84cbdcef48c1",
+    "decision": "Retain authoritative exclusion; never enable merely because an enabled export row has a null Lua body. This record reconciles inventory, not a fresh full encounter review.",
+    "policyEvidence": [
+      "reference/server/internal/quest/content_exclusions.json",
+      "reference/server/internal/contentscope/npc_exclusions.json",
+      "tools/p99-quest-inventory.mjs"
+    ]
+  },
+  {
+    "key": "rathemtn/Master_Scribe_Uklo",
+    "questId": 18009,
+    "classification": "explicit-npc-policy",
+    "questPolicy": null,
+    "npcPolicy": [
+      {
+        "id": 50106,
+        "name": "Master_Scribe_Uklo",
+        "zone": "rathemtn",
+        "reason": "Later Gukta settlement / supporting Guktan population; not Classic-Velious. S3; original TAKP Rathe pool contains no frogloks."
+      }
+    ],
+    "source": "sources/projecteq/rathemtn/Master_Scribe_Uklo.pl",
+    "sha256": "cfd6c0e9df8f8042863aad6a6c223f1890a16782a26570275f7d98768b476297",
+    "decision": "Retain authoritative exclusion; never enable merely because an enabled export row has a null Lua body. This record reconciles inventory, not a fresh full encounter review.",
+    "policyEvidence": [
+      "reference/server/internal/quest/content_exclusions.json",
+      "reference/server/internal/contentscope/npc_exclusions.json",
+      "tools/p99-quest-inventory.mjs"
+    ]
+  },
+  {
+    "key": "rathemtn/Sugal_the_Fist",
+    "questId": 13691,
+    "classification": "explicit-npc-policy",
+    "questPolicy": null,
+    "npcPolicy": [
+      {
+        "id": 50098,
+        "name": "Sugal_the_Fist",
+        "zone": "rathemtn",
+        "reason": "Later Gukta settlement / supporting Guktan population; not Classic-Velious. S3; original TAKP Rathe pool contains no frogloks."
+      }
+    ],
+    "source": "sources/projecteq/rathemtn/Sugal_the_Fist.pl",
+    "sha256": "eac04208e28f8a8ab2780e240654b1ad8f1929f0173219e042c9713d5c6bc339",
+    "decision": "Retain authoritative exclusion; never enable merely because an enabled export row has a null Lua body. This record reconciles inventory, not a fresh full encounter review.",
+    "policyEvidence": [
+      "reference/server/internal/quest/content_exclusions.json",
+      "reference/server/internal/contentscope/npc_exclusions.json",
+      "tools/p99-quest-inventory.mjs"
+    ]
+  },
+  {
+    "key": "skyshrine/Iago_Sabuela",
+    "questId": 15526,
+    "classification": "explicit-quest-exclusion",
+    "questPolicy": {
+      "reason": "post_kunark_later_era",
+      "item_ids": [
+        12559,
+        17167,
+        28057
+      ],
+      "note": "Mask of Draconic Enhancement is a Skyshrine/Velious artifact quest and the P99 page says the quest giver is not currently in P99. Disable the stale local row if present."
+    },
+    "npcPolicy": [],
+    "source": "sources/projecteq/skyshrine/Iago_Sabuela.pl",
+    "sha256": "86311eb34212edde65afd1d98dcec2e8426691dc4acd9b9c5252c399fdc8ad52",
+    "decision": "Retain authoritative exclusion; never enable merely because an enabled export row has a null Lua body. This record reconciles inventory, not a fresh full encounter review.",
+    "policyEvidence": [
+      "reference/server/internal/quest/content_exclusions.json",
+      "reference/server/internal/contentscope/npc_exclusions.json",
+      "tools/p99-quest-inventory.mjs"
+    ]
+  },
+  {
+    "key": "sro/#Bratoq_Jiplup",
+    "questId": 11954,
+    "classification": "explicit-npc-policy",
+    "questPolicy": null,
+    "npcPolicy": [
+      {
+        "id": 35152,
+        "name": "#Bratoq_Jiplup",
+        "zone": "sro",
+        "reason": "Later LDoN camp/recruiters and later quest actors (S9)."
+      }
+    ],
+    "source": "sources/projecteq/sro/#Bratoq_Jiplup.pl",
+    "sha256": "0dd16043ba5d0d21e6f69cd1586a6aef0ca186ae83e320201076cdbb51e79e5a",
+    "decision": "Retain authoritative exclusion; never enable merely because an enabled export row has a null Lua body. This record reconciles inventory, not a fresh full encounter review.",
+    "policyEvidence": [
+      "reference/server/internal/quest/content_exclusions.json",
+      "reference/server/internal/contentscope/npc_exclusions.json",
+      "tools/p99-quest-inventory.mjs"
+    ]
+  },
+  {
+    "key": "sro/Selephra_Giztral",
+    "questId": 16569,
+    "classification": "explicit-npc-policy",
+    "questPolicy": null,
+    "npcPolicy": [
+      {
+        "id": 35065,
+        "name": "Selephra_Giztral",
+        "zone": "sro",
+        "reason": "Later LDoN camp/recruiters and later quest actors (S9)."
+      }
+    ],
+    "source": "sources/projecteq/sro/Selephra_Giztral.pl",
+    "sha256": "e05ade9abd82f5b376f1e2f7c43c6b7dc07d6e7034f59fd59fccca5c334fa718",
+    "decision": "Retain authoritative exclusion; never enable merely because an enabled export row has a null Lua body. This record reconciles inventory, not a fresh full encounter review.",
+    "policyEvidence": [
+      "reference/server/internal/quest/content_exclusions.json",
+      "reference/server/internal/contentscope/npc_exclusions.json",
+      "tools/p99-quest-inventory.mjs"
+    ]
+  },
+  {
+    "key": "steamfont/Inactive_Clockwork",
+    "questId": 19750,
+    "classification": "explicit-npc-policy",
+    "questPolicy": null,
+    "npcPolicy": [
+      {
+        "id": 56190,
+        "name": "Inactive_Clockwork",
+        "zone": "steamfont",
+        "reason": "All-version spawn audit October 2, 2026: Yama_Twerik wizard epic prequest uses wiz_epic_pre state and Electrical Charge 5596; post-P99 epic 1.5 content. See docs/velious-armor-quests.md."
+      }
+    ],
+    "source": "sources/projecteq/steamfont/Inactive_Clockwork.pl",
+    "sha256": "7de57904537e837f98e17eba308a123948dcf77daed2553b288a4fbad02bcfa8",
+    "decision": "Retain authoritative exclusion; never enable merely because an enabled export row has a null Lua body. This record reconciles inventory, not a fresh full encounter review.",
+    "policyEvidence": [
+      "reference/server/internal/quest/content_exclusions.json",
+      "reference/server/internal/contentscope/npc_exclusions.json",
+      "tools/p99-quest-inventory.mjs"
+    ]
+  },
+  {
+    "key": "stonebrunt/#Old_Ghostback",
+    "questId": 14770,
+    "classification": "explicit-quest-exclusion",
+    "questPolicy": {
+      "reason": "unsupported_quest_variant",
+      "note": "P99 Spirit Aid explicitly confirms Giang Yin and rejects Prowler/Ghostback. Retain the NPCs and loot; do not import unsupported alternate hammer hand-ins. https://wiki.project1999.com/Spirit_Aid"
+    },
+    "npcPolicy": [],
+    "source": "sources/projecteq/stonebrunt/#Old_Ghostback.pl",
+    "sha256": "e84754d65f9785a7b558abf6bf81876f4451c19e6ac5a7922ff721bff697010f",
+    "decision": "Retain authoritative exclusion; never enable merely because an enabled export row has a null Lua body. This record reconciles inventory, not a fresh full encounter review.",
+    "policyEvidence": [
+      "reference/server/internal/quest/content_exclusions.json",
+      "reference/server/internal/contentscope/npc_exclusions.json",
+      "tools/p99-quest-inventory.mjs"
+    ]
+  },
+  {
+    "key": "stonebrunt/#Prowler_of_the_Jungle",
+    "questId": 18468,
+    "classification": "explicit-quest-exclusion",
+    "questPolicy": {
+      "reason": "unsupported_quest_variant",
+      "note": "P99 Spirit Aid explicitly confirms Giang Yin and rejects Prowler/Ghostback. Retain the NPCs and loot; do not import unsupported alternate hammer hand-ins. https://wiki.project1999.com/Spirit_Aid"
+    },
+    "npcPolicy": [],
+    "source": "sources/projecteq/stonebrunt/#Prowler_of_the_Jungle.pl",
+    "sha256": "2e88d020195e84773d384923f0ef9fedf91495fc4af470b9624ff94bcf8acfb3",
+    "decision": "Retain authoritative exclusion; never enable merely because an enabled export row has a null Lua body. This record reconciles inventory, not a fresh full encounter review.",
+    "policyEvidence": [
+      "reference/server/internal/quest/content_exclusions.json",
+      "reference/server/internal/contentscope/npc_exclusions.json",
+      "tools/p99-quest-inventory.mjs"
+    ]
+  },
+  {
+    "key": "stonebrunt/#Slyder_the_Ancient",
+    "questId": 16127,
+    "classification": "explicit-quest-exclusion",
+    "questPolicy": {
+      "reason": "unsupported_quest_variant",
+      "note": "P99 Spirit Aid explicitly confirms Giang Yin and rejects Prowler/Ghostback. Retain the NPCs and loot; do not import unsupported alternate hammer hand-ins. https://wiki.project1999.com/Spirit_Aid"
+    },
+    "npcPolicy": [],
+    "source": "sources/projecteq/stonebrunt/#Slyder_the_Ancient.pl",
+    "sha256": "871a436499e2e606dc325acc27e9154fd0f8e7d5e2850c328095f1fdf9627373",
+    "decision": "Retain authoritative exclusion; never enable merely because an enabled export row has a null Lua body. This record reconciles inventory, not a fresh full encounter review.",
+    "policyEvidence": [
+      "reference/server/internal/quest/content_exclusions.json",
+      "reference/server/internal/contentscope/npc_exclusions.json",
+      "tools/p99-quest-inventory.mjs"
+    ]
+  },
+  {
+    "key": "stonebrunt/#Snowbeast",
+    "questId": 16808,
+    "classification": "explicit-quest-exclusion",
+    "questPolicy": {
+      "reason": "unsupported_quest_variant",
+      "note": "P99 Spirit Aid explicitly confirms Giang Yin and rejects Prowler/Ghostback. Retain the NPCs and loot; do not import unsupported alternate hammer hand-ins. https://wiki.project1999.com/Spirit_Aid"
+    },
+    "npcPolicy": [],
+    "source": "sources/projecteq/stonebrunt/#Snowbeast.pl",
+    "sha256": "eeab1e22e96d48189a548b357bce7b194d890f51355d20cd0e4d19db49af125a",
+    "decision": "Retain authoritative exclusion; never enable merely because an enabled export row has a null Lua body. This record reconciles inventory, not a fresh full encounter review.",
+    "policyEvidence": [
+      "reference/server/internal/quest/content_exclusions.json",
+      "reference/server/internal/contentscope/npc_exclusions.json",
+      "tools/p99-quest-inventory.mjs"
+    ]
+  },
+  {
+    "key": "stonebrunt/Cedric_Trallus",
+    "questId": 18021,
+    "classification": "explicit-quest-exclusion",
+    "questPolicy": {
+      "reason": "post_velious_content",
+      "note": "Source-backed LoY, Beastlord or epic 1.5 event. See docs/odus-p99-restoration.md."
+    },
+    "npcPolicy": [
+      {
+        "id": 100129,
+        "name": "Cedric_Trallus",
+        "zone": "stonebrunt",
+        "reason": "Legacy of Ykesha Brokenskull ship/quest population. Cedric source references Luggald organs and LoY spells."
+      }
+    ],
+    "source": "sources/projecteq/stonebrunt/Cedric_Trallus.pl",
+    "sha256": "a008762b71c1bd2b77a44a18595ba5b324fd59928ddb509c3f18950dd3f704f5",
+    "decision": "Retain authoritative exclusion; never enable merely because an enabled export row has a null Lua body. This record reconciles inventory, not a fresh full encounter review.",
+    "policyEvidence": [
+      "reference/server/internal/quest/content_exclusions.json",
+      "reference/server/internal/contentscope/npc_exclusions.json",
+      "tools/p99-quest-inventory.mjs"
+    ]
+  },
+  {
+    "key": "stonebrunt/Flighty_Orange_Wisp",
+    "questId": 15813,
+    "classification": "explicit-quest-exclusion",
+    "questPolicy": {
+      "reason": "post_velious_content",
+      "note": "Later Shakey scarecrow event from player.pl (items 52355/52358), not a P99 quest. See docs/odus-p99-restoration.md."
+    },
+    "npcPolicy": [
+      {
+        "id": 100218,
+        "name": "Flighty_Orange_Wisp",
+        "zone": "stonebrunt",
+        "reason": "Later Shakey scarecrow event; source player.pl uses items 52355/52358, absent from P99 content."
+      }
+    ],
+    "source": "sources/projecteq/stonebrunt/Flighty_Orange_Wisp.pl",
+    "sha256": "952e0ab69675903eb500e38a984bab96fb7dc3a6e59df31028a4d31304ba6b1c",
+    "decision": "Retain authoritative exclusion; never enable merely because an enabled export row has a null Lua body. This record reconciles inventory, not a fresh full encounter review.",
+    "policyEvidence": [
+      "reference/server/internal/quest/content_exclusions.json",
+      "reference/server/internal/contentscope/npc_exclusions.json",
+      "tools/p99-quest-inventory.mjs"
+    ]
+  },
+  {
+    "key": "stonebrunt/player",
+    "questId": 15058,
+    "classification": "explicit-quest-exclusion",
+    "questPolicy": {
+      "reason": "post_velious_content",
+      "note": "Source-backed LoY, Beastlord or epic 1.5 event. See docs/odus-p99-restoration.md."
+    },
+    "npcPolicy": [],
+    "source": "sources/projecteq/stonebrunt/player.pl",
+    "sha256": "463aaf92c22846e00c8643003e1d70258d89bfa542a6816bf1ad48b893c67b9a",
+    "decision": "Retain authoritative exclusion; never enable merely because an enabled export row has a null Lua body. This record reconciles inventory, not a fresh full encounter review.",
+    "policyEvidence": [
+      "reference/server/internal/quest/content_exclusions.json",
+      "reference/server/internal/contentscope/npc_exclusions.json",
+      "tools/p99-quest-inventory.mjs"
+    ]
+  },
+  {
+    "key": "stonebrunt/Scout_Malom",
+    "questId": 19519,
+    "classification": "explicit-quest-exclusion",
+    "questPolicy": {
+      "reason": "post_velious_content",
+      "note": "Source-backed LoY, Beastlord or epic 1.5 event. See docs/odus-p99-restoration.md."
+    },
+    "npcPolicy": [
+      {
+        "id": 100171,
+        "name": "Scout_Malom",
+        "zone": "stonebrunt",
+        "reason": "Luclin Beastlord epic scout and encounter."
+      }
+    ],
+    "source": "sources/projecteq/stonebrunt/Scout_Malom.pl",
+    "sha256": "df28c96f2f9371063d7b8e6585519451d11f3a6ca1cd5b066c46e7c0b7f444b5",
+    "decision": "Retain authoritative exclusion; never enable merely because an enabled export row has a null Lua body. This record reconciles inventory, not a fresh full encounter review.",
+    "policyEvidence": [
+      "reference/server/internal/quest/content_exclusions.json",
+      "reference/server/internal/contentscope/npc_exclusions.json",
+      "tools/p99-quest-inventory.mjs"
+    ]
+  },
+  {
+    "key": "templeveeshan/#Thylex_of_Veeshan",
+    "questId": 17115,
+    "classification": "explicit-quest-exclusion",
+    "questPolicy": {
+      "reason": "p99_replaced_spawn_cycle",
+      "note": "Migration 285 restores the public Vulak placement and persistent combat dependencies. The old Thylex spawn and guard-call scripts are superseded; do not introduce duplicate Vulaks. See docs/vulak-encounter.md."
+    },
+    "npcPolicy": [],
+    "source": "sources/projecteq/templeveeshan/#Thylex_of_Veeshan.pl",
+    "sha256": "6df4b15490c1676a66e4ecac275dbf4d1b48241c9acb0f83333a8d00c6464936",
+    "decision": "Retain authoritative exclusion; never enable merely because an enabled export row has a null Lua body. This record reconciles inventory, not a fresh full encounter review.",
+    "policyEvidence": [
+      "reference/server/internal/quest/content_exclusions.json",
+      "reference/server/internal/contentscope/npc_exclusions.json",
+      "tools/p99-quest-inventory.mjs"
+    ]
+  },
+  {
+    "key": "templeveeshan/#Vulak-Aerr",
+    "questId": 18330,
+    "classification": "explicit-quest-exclusion",
+    "questPolicy": {
+      "reason": "p99_replaced_spawn_cycle",
+      "note": "Migration 285 restores the public Vulak placement and persistent combat dependencies. The old Thylex spawn and guard-call scripts are superseded; do not introduce duplicate Vulaks. See docs/vulak-encounter.md."
+    },
+    "npcPolicy": [],
+    "source": "sources/projecteq/templeveeshan/#Vulak-Aerr.pl",
+    "sha256": "37baa9bd048db9934c9839cefa786b58a3928cb211351a2537e3b4c53bd2f07b",
+    "decision": "Retain authoritative exclusion; never enable merely because an enabled export row has a null Lua body. This record reconciles inventory, not a fresh full encounter review.",
+    "policyEvidence": [
+      "reference/server/internal/quest/content_exclusions.json",
+      "reference/server/internal/contentscope/npc_exclusions.json",
+      "tools/p99-quest-inventory.mjs"
+    ]
+  },
+  {
+    "key": "thurgadina/Erdarf_Restil",
+    "questId": 14812,
+    "classification": "explicit-quest-exclusion",
+    "questPolicy": {
+      "reason": "deferred_existing_runtime_boundary",
+      "item_ids": [
+        30269,
+        30270,
+        30271
+      ],
+      "note": "Broodmother escort mixes a player-proximity gate, grid waypoints, NPC-versus-NPC attack and Fergul flight/signals. The existing deferred API registry explicitly leaves mixed movement/attack encounters unverified; no custom encounter support added."
+    },
+    "npcPolicy": [],
+    "source": "sources/projecteq/thurgadina/Erdarf_Restil.pl",
+    "sha256": "00b41ae39823c3c7a3b3f807de38f978e939a07fa7ffe2e08bba2edef586206b",
+    "decision": "Retain authoritative exclusion; never enable merely because an enabled export row has a null Lua body. This record reconciles inventory, not a fresh full encounter review.",
+    "policyEvidence": [
+      "reference/server/internal/quest/content_exclusions.json",
+      "reference/server/internal/contentscope/npc_exclusions.json",
+      "tools/p99-quest-inventory.mjs"
+    ]
+  },
+  {
+    "key": "timorous/#Translocator_Deela",
+    "questId": 15860,
+    "classification": "explicit-npc-policy",
+    "questPolicy": null,
+    "npcPolicy": [],
+    "source": "sources/projecteq/timorous/#Translocator_Deela.pl",
+    "sha256": "3bf5c76da0c36c46079ad4f3f15e911456101908e7e48c6f9f52a91eed3d5127",
+    "decision": "Retain authoritative exclusion; never enable merely because an enabled export row has a null Lua body. This record reconciles inventory, not a fresh full encounter review.",
+    "policyEvidence": [
+      "reference/server/internal/quest/content_exclusions.json",
+      "reference/server/internal/contentscope/npc_exclusions.json",
+      "tools/p99-quest-inventory.mjs"
+    ]
+  },
+  {
+    "key": "wakening/#Lieutenant_Krofer",
+    "questId": 15977,
+    "classification": "explicit-quest-exclusion",
+    "questPolicy": {
+      "reason": "p99_deferred_encounter",
+      "note": "Requires the Corporal Hlash squad movement/attack and replacement-Krofer signal chain. The four additional soldier scripts are Perl-only. Do not silently replace the documented battle completion with a free report; defer this encounter outside the simple existing-framework batch. See docs/velious-perl-backlog.md."
+    },
+    "npcPolicy": [],
+    "source": "sources/projecteq/wakening/#Lieutenant_Krofer.pl",
+    "sha256": "daf04ad67f5476bf583561dda0acd1ccf200cf0c926c82df1aff75829b27bb66",
+    "decision": "Retain authoritative exclusion; never enable merely because an enabled export row has a null Lua body. This record reconciles inventory, not a fresh full encounter review.",
+    "policyEvidence": [
+      "reference/server/internal/quest/content_exclusions.json",
+      "reference/server/internal/contentscope/npc_exclusions.json",
+      "tools/p99-quest-inventory.mjs"
+    ]
+  },
+  {
+    "key": "wakening/#The_Fabled_Rapticor",
+    "questId": 15630,
+    "classification": "explicit-npc-policy",
+    "questPolicy": null,
+    "npcPolicy": [],
+    "source": "sources/projecteq/wakening/#The_Fabled_Rapticor.pl",
+    "sha256": "0c407544778f8acac8428b3163e55555263f524d13e4acf9a762e2ef333cee1c",
+    "decision": "Retain authoritative exclusion; never enable merely because an enabled export row has a null Lua body. This record reconciles inventory, not a fresh full encounter review.",
+    "policyEvidence": [
+      "reference/server/internal/quest/content_exclusions.json",
+      "reference/server/internal/contentscope/npc_exclusions.json",
+      "tools/p99-quest-inventory.mjs"
+    ]
+  },
+  {
+    "key": "wakening/Lieutenant_Krofer",
+    "questId": 14993,
+    "classification": "explicit-quest-exclusion",
+    "questPolicy": {
+      "reason": "p99_deferred_encounter",
+      "note": "Requires the Corporal Hlash squad movement/attack and replacement-Krofer signal chain. The four additional soldier scripts are Perl-only. Do not silently replace the documented battle completion with a free report; defer this encounter outside the simple existing-framework batch. See docs/velious-perl-backlog.md."
+    },
+    "npcPolicy": [],
+    "source": "sources/projecteq/wakening/Lieutenant_Krofer.pl",
+    "sha256": "1a9060e3ca8990dd0d804c3590f59472a54f494fb86bfe5fddf1e4265845339a",
+    "decision": "Retain authoritative exclusion; never enable merely because an enabled export row has a null Lua body. This record reconciles inventory, not a fresh full encounter review.",
+    "policyEvidence": [
+      "reference/server/internal/quest/content_exclusions.json",
+      "reference/server/internal/contentscope/npc_exclusions.json",
+      "tools/p99-quest-inventory.mjs"
+    ]
+  },
+  {
+    "key": "wakening/Phenocryst",
+    "questId": 12364,
+    "classification": "explicit-quest-exclusion",
+    "questPolicy": {
+      "reason": "p99_deferred_encounter",
+      "note": "The complete P99 event includes three approaching giants and a zone-wide geonid procession/despawn. Source only spawns stationary giants and omits the procession; defer rather than call that encounter equivalent. The earlier focus exchanges remain convertible, but do not enable a broken complete chain. See docs/velious-perl-backlog.md."
+    },
+    "npcPolicy": [],
+    "source": "sources/projecteq/wakening/Phenocryst.pl",
+    "sha256": "018a8f79de2179f4e86f1f74693251c0b28c8d97c50d4c91b442ae20ba3b8fc1",
+    "decision": "Retain authoritative exclusion; never enable merely because an enabled export row has a null Lua body. This record reconciles inventory, not a fresh full encounter review.",
+    "policyEvidence": [
+      "reference/server/internal/quest/content_exclusions.json",
+      "reference/server/internal/contentscope/npc_exclusions.json",
+      "tools/p99-quest-inventory.mjs"
+    ]
+  },
+  {
+    "key": "wakening/Shamus_Aghllsews",
+    "questId": 15932,
+    "classification": "explicit-quest-exclusion",
+    "questPolicy": {
+      "reason": "deferred_existing_runtime_boundary",
+      "note": "Fauns supply-bag explosion requires player-damaging Pillar of Fire via quest SelfCast, which is currently a no-op. The complete six-crest court chain depends on it; independent crest exchanges are enabled separately."
+    },
+    "npcPolicy": [],
+    "source": "sources/projecteq/wakening/Shamus_Aghllsews.pl",
+    "sha256": "b502e5f6ec91112cf3c76ec89733846097a239b2593b089578197ae7558a33b7",
+    "decision": "Retain authoritative exclusion; never enable merely because an enabled export row has a null Lua body. This record reconciles inventory, not a fresh full encounter review.",
+    "policyEvidence": [
+      "reference/server/internal/quest/content_exclusions.json",
+      "reference/server/internal/contentscope/npc_exclusions.json",
+      "tools/p99-quest-inventory.mjs"
+    ]
+  }
+]

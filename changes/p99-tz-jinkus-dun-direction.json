@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-jinkus-dun-direction",
+  "summary": "Correct documented poster recipient to Dun. Existing per-step faction discrepancies remain explicitly unresolved; no invented magnitude.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Tribunal_Initiate?action=raw",
+      "note": "Cached 2026-07-17T23:39:45.455Z; revision unavailable; SHA256 506d736bf87f3f9d8633e9a1dcedb295cebbef617a91642e82f2f13758857da5. Correct documented poster recipient to Dun. Existing per-step faction discrepancies remain explicitly unresolved; no invented magnitude. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 17487,
+        "zone": "halas",
+        "name": "Jinkus_Felligan",
+        "lua_content": "-- items: 12621, 12619, 12620, 12622, 1376\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Welcome! Welcome to the Church o' the Tribunal! Do ye require healing or are ye [new to the Shamans o' Justice], then, eh?\");\n\telseif(e.message:findi(\"new to the shamans\")) then\n\t\te.self:Say(\"Then I welcome ye into our noble order. Ye'll serve us well or spend an eternity in the dungeons o' the Tribunal. Are ye willing to [contribute to our church] or did ye just come to meditate within our walls?\");\n\telseif(e.message:findi(\"contribute\")) then\n\t\te.self:Say(\"Well then, ye best be off ta find Holana Oleary, she organises our monthly Karan Clover shipments, just tell her Jinkus sent you to assist her. Or, I can have you [make a delivery] for me.\"); --made up text\n\telseif(e.message:findi(\"make a delivery\")) then\n\t\te.self:Say(\"Excellent! First, visit Cindl and tell er ye need a Mammoth Hide Parchment. Then, I need ye to visit Greta and tell her you need some ink. Bring these back to me and we will continue from there.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\tif(item_lib.check_turn_in(e.trade, {item1 = 12621, item2 = 12619})) then \t\t--Mammoth Hide Parchment, Vial of Datura Ink\n\t\te.self:Say(\"Good, now you must take this wanted poster i made to Guard Eracon Krengon in Southern Qeynos. Bring me back the Most Wanted List...\");\n\t\te.other:SummonItem(12620);\t\t\t\t\t\t\t\t\t\t\t\t\t--Wanted Poster\n\t\te.other:Ding();\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 12622})) then\t--List of Qeynos Most Wanted\n\t\te.self:Say(\"Fantastic, Fantastic... Here you have more than proven your right to wear this. Use it wisely...\");\n\t\te.other:SummonItem(1376); \t\t\t\t\t\t\t\t\t\t\t\t\t--Initiate Symbol of the Tribunal\n\t\te.other:Faction(5002,2);  \t\t\t\t\t\t\t\t\t\t\t\t\t--Banker\n\t\te.other:Faction(328,2);  \t\t\t\t\t\t\t\t\t\t\t\t\t--Merchants of Halas\n\t\te.other:Faction(327,2);  \t\t\t\t\t\t\t\t\t\t\t\t\t--Shamen of Justice\n\t\te.other:Faction(223,-3);  \t\t\t\t\t\t\t\t\t\t\t\t\t--Circle of Unseen Hands\n\t\te.other:Faction(336,-3);  \t\t\t\t\t\t\t\t\t\t\t\t\t--Coalition of Tradefolk Underground\n\t\te.other:Faction(5006,-3); \t\t\t\t\t\t\t\t\t\t\t\t\t--Hall of the Ebon Mask\n\t\te.other:Ding();\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\n-- DEVELOPER: KOVOU\n-------------------------------------------------------------------------------------------------\n-- Converted to .lua using MATLAB converter written by Stryd and manual edits by Speedz\n-- Find/replace data for .pl --> .lua conversions provided by Speedz, Stryd, Sorvani and Robregen\n-------------------------------------------------------------------------------------------------\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 17487,
+        "zone": "halas",
+        "name": "Jinkus_Felligan",
+        "lua_content": "-- items: 12621, 12619, 12620, 12622, 1376\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Welcome! Welcome to the Church o' the Tribunal! Do ye require healing or are ye [new to the Shamans o' Justice], then, eh?\");\n\telseif(e.message:findi(\"new to the shamans\")) then\n\t\te.self:Say(\"Then I welcome ye into our noble order. Ye'll serve us well or spend an eternity in the dungeons o' the Tribunal. Are ye willing to [contribute to our church] or did ye just come to meditate within our walls?\");\n\telseif(e.message:findi(\"contribute\")) then\n\t\te.self:Say(\"Well then, ye best be off ta find Holana Oleary, she organises our monthly Karan Clover shipments, just tell her Jinkus sent you to assist her. Or, I can have you [make a delivery] for me.\"); --made up text\n\telseif(e.message:findi(\"make a delivery\")) then\n\t\te.self:Say(\"Excellent! First, visit Cindl and tell er ye need a Mammoth Hide Parchment. Then, I need ye to visit Greta and tell her you need some ink. Bring these back to me and we will continue from there.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\tif(item_lib.check_turn_in(e.trade, {item1 = 12621, item2 = 12619})) then \t\t--Mammoth Hide Parchment, Vial of Datura Ink\n\t\te.self:Say(\"This is what I needed, thank-you. Your next task is to take this wanted poster to Dun at the bank in Qeynos. Go quickly, this is important.\");\n\t\te.other:SummonItem(12620);\t\t\t\t\t\t\t\t\t\t\t\t\t--Wanted Poster\n\t\te.other:Ding();\n\telseif(item_lib.check_turn_in(e.trade, {item1 = 12622})) then\t--List of Qeynos Most Wanted\n\t\te.self:Say(\"Fantastic, Fantastic... Here you have more than proven your right to wear this. Use it wisely...\");\n\t\te.other:SummonItem(1376); \t\t\t\t\t\t\t\t\t\t\t\t\t--Initiate Symbol of the Tribunal\n\t\te.other:Faction(5002,2);  \t\t\t\t\t\t\t\t\t\t\t\t\t--Banker\n\t\te.other:Faction(328,2);  \t\t\t\t\t\t\t\t\t\t\t\t\t--Merchants of Halas\n\t\te.other:Faction(327,2);  \t\t\t\t\t\t\t\t\t\t\t\t\t--Shamen of Justice\n\t\te.other:Faction(223,-3);  \t\t\t\t\t\t\t\t\t\t\t\t\t--Circle of Unseen Hands\n\t\te.other:Faction(336,-3);  \t\t\t\t\t\t\t\t\t\t\t\t\t--Coalition of Tradefolk Underground\n\t\te.other:Faction(5006,-3); \t\t\t\t\t\t\t\t\t\t\t\t\t--Hall of the Ebon Mask\n\t\te.other:Ding();\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\n-- DEVELOPER: KOVOU\n-------------------------------------------------------------------------------------------------\n-- Converted to .lua using MATLAB converter written by Stryd and manual edits by Speedz\n-- Find/replace data for .pl --> .lua conversions provided by Speedz, Stryd, Sorvani and Robregen\n-------------------------------------------------------------------------------------------------\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/halas/Jinkus_Felligan.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-tz-jinkus-dun-direction/halas--Jinkus_Felligan.lua",
+      "afterSha256": "3d2bc8f51b4ce4729f7f6daa918957faca70eb4387009e26f2d1519d42a9bddb"
+    }
+  ]
+}

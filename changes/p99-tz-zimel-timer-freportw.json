@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-zimel-timer-freportw",
+  "summary": "Restrict the existing repeated prisoner chatter to its named goog timer. Preserve unquantified150000ms interval, all hand-ins, and both byte-identical legacy bodies.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Zimel's_Blades_(SoulFire)?action=raw",
+      "note": "Cached 2026-07-17T23:42:15.925Z; revision unavailable; SHA256 86a010babe4eab1dec92b5944bef007f3fe0fedc24c1143ca52bdd286d8034b3. Restrict the existing repeated prisoner chatter to its named goog timer. Preserve unquantified150000ms interval, all hand-ins, and both byte-identical legacy bodies. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 14290,
+        "zone": "freportw",
+        "name": "a_prisoner",
+        "lua_content": "-- items: 12196, 16581, 13498, 12143\nfunction event_spawn(e)\n\teq.set_timer(\"goog\",150000);\nend\n\nfunction event_timer(e)\n\te.self:Say(eq.ChooseRandom(\"unngh!!.. Biggle and boo.. Goggle froo..\",\"ahhhh!!.. Tiggle bumble coo.. Bog n' Goo..\"));\nend\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Aaaarghhh!!.. Buggl n gump.. Figgle and fump..\");\n\telseif(e.message:findi(\"ariska zimel\")) then\n\t\te.self:Emote(\"stares deeply into your eyes.. Very eerie!!\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 12196,item2 = 16581,item3 = 13498})) then -- Bunker Cell, Bog Juice, Edible Goo\n\t\te.self:Say(\"Bog n Goo.. Blanket too!!\");\n\t\te.self:Say(\"Bog n Goo.. Blanket too!!\");\n\t\te.self:Say(\"Hide, hide, safe, cee.. lerk has the clue.. Must travel.. Travel.. Travel.. Tunaria's corridor..\");\n\t\te.other:SummonItem(12143); -- H. K. 102\n\t\te.other:Ding();\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\n--END of FILE Zone:freportw -- a_prisoner",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 14290,
+        "zone": "freportw",
+        "name": "a_prisoner",
+        "lua_content": "-- items: 12196, 16581, 13498, 12143\nfunction event_spawn(e)\n\teq.set_timer(\"goog\",150000);\nend\n\nfunction event_timer(e)\n\tif e.timer ~= \"goog\" then return end\n\te.self:Say(eq.ChooseRandom(\"unngh!!.. Biggle and boo.. Goggle froo..\",\"ahhhh!!.. Tiggle bumble coo.. Bog n' Goo..\"));\nend\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Aaaarghhh!!.. Buggl n gump.. Figgle and fump..\");\n\telseif(e.message:findi(\"ariska zimel\")) then\n\t\te.self:Emote(\"stares deeply into your eyes.. Very eerie!!\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\n\tif(item_lib.check_turn_in(e.trade, {item1 = 12196,item2 = 16581,item3 = 13498})) then -- Bunker Cell, Bog Juice, Edible Goo\n\t\te.self:Say(\"Bog n Goo.. Blanket too!!\");\n\t\te.self:Say(\"Bog n Goo.. Blanket too!!\");\n\t\te.self:Say(\"Hide, hide, safe, cee.. lerk has the clue.. Must travel.. Travel.. Travel.. Tunaria's corridor..\");\n\t\te.other:SummonItem(12143); -- H. K. 102\n\t\te.other:Ding();\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\n--END of FILE Zone:freportw -- a_prisoner",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/freportw/a_prisoner.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-tz-zimel-timer-freportw/freportw--a_prisoner.lua",
+      "afterSha256": "3c8d2fa406a8170ff90bde2ea9e5ecb9614a28290094e85ba805a347482373a9"
+    }
+  ]
+}

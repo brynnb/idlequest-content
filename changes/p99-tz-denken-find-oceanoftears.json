@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-denken-find-oceanoftears",
+  "summary": "Support the page exact What did you find prompt while preserving one thing and all four-component trades, unquantified XP and no-min-level policy.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Warrior_Epic_Quest?action=raw",
+      "note": "Cached 2026-07-17T23:40:47.056Z; revision unavailable; SHA256 8402eb13d229a40c744fd11c0a39abc65807a22e92389da3260b6d30f1a48110. Support the page exact What did you find prompt while preserving one thing and all four-component trades, unquantified XP and no-min-level policy. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 13017,
+        "zone": "oceanoftears",
+        "name": "Denken_Strongpick",
+        "lua_content": "-- Source: oceanoftears/Denken_Strongpick.pl\n-- Warrior Epic 1.0: Denken Strongpick trades supplies for Ancient Sword Blade.\n-- Converted from ProjectEQ Perl quest script.\n-- items: 16889, 20665, 20664, 20667\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Hello, \" .. e.other:GetName() .. \". I am Denken Strongpick. I wish I could get off this rock, silly clan honor. My boss broke our rebreathers and we can not go back to the mainland before we gather some goblin relics.\")\n\telseif e.message:findi(\"goblin relics\") then\n\t\te.self:Say(\"There are supposedly goblin ruins around here somewhere. Fendlemend thinks we will find paydirt underwater. We did find one thing.\")\n\telseif e.message:findi(\"one thing\") then\n\t\te.self:Say(\"We found a very fine sword blade. I can't figure out what type of metal it is and I sure can't figure out what technique was used to forge it. Perhaps you would like to take it off my hands and buy it?\")\n\telseif e.message:findi(\"buy\") then\n\t\te.self:Say(\"Out here, money is fairly useless to me. I could sure use a few things from the mainland though.\")\n\telseif e.message:findi(\"use\") then\n\t\te.self:Say(\"I would be willing to part with this very fine blade for a keg of Vox tail ale, a block of permafrost to keep it cool and two new rebreathers to get this operation back underway.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 16889, item2 = 16889, item3 = 20665, item4 = 20664}) then\n\t\te.self:Say(\"Excellent! Here is your sword. I feel like I'm at home already!\")\n\t\te.other:SummonItem(20667) -- Ancient Sword Blade\n\t\te.other:AddEXP(50000)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 13017,
+        "zone": "oceanoftears",
+        "name": "Denken_Strongpick",
+        "lua_content": "-- Source: oceanoftears/Denken_Strongpick.pl\n-- Warrior Epic 1.0: Denken Strongpick trades supplies for Ancient Sword Blade.\n-- Converted from ProjectEQ Perl quest script.\n-- items: 16889, 20665, 20664, 20667\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Hello, \" .. e.other:GetName() .. \". I am Denken Strongpick. I wish I could get off this rock, silly clan honor. My boss broke our rebreathers and we can not go back to the mainland before we gather some goblin relics.\")\n\telseif e.message:findi(\"goblin relics\") then\n\t\te.self:Say(\"There are supposedly goblin ruins around here somewhere. Fendlemend thinks we will find paydirt underwater. We did find one thing.\")\n\telseif e.message:findi(\"one thing\") or e.message:findi(\"what did you find\") then\n\t\te.self:Say(\"We found a very fine sword blade. I can't figure out what type of metal it is and I sure can't figure out what technique was used to forge it. Perhaps you would like to take it off my hands and buy it?\")\n\telseif e.message:findi(\"buy\") then\n\t\te.self:Say(\"Out here, money is fairly useless to me. I could sure use a few things from the mainland though.\")\n\telseif e.message:findi(\"use\") then\n\t\te.self:Say(\"I would be willing to part with this very fine blade for a keg of Vox tail ale, a block of permafrost to keep it cool and two new rebreathers to get this operation back underway.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 16889, item2 = 16889, item3 = 20665, item4 = 20664}) then\n\t\te.self:Say(\"Excellent! Here is your sword. I feel like I'm at home already!\")\n\t\te.other:SummonItem(20667) -- Ancient Sword Blade\n\t\te.other:AddEXP(50000)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/oceanoftears/Denken_Strongpick.lua",
+      "beforeSha256": "2fed2d6c087fbcce5b2d9751ad8584c97b74b0ef774512456bb9e2c2ed3be438",
+      "proposedFile": "changes/p99-tz-denken-find-oceanoftears/oceanoftears--Denken_Strongpick.lua",
+      "afterSha256": "7a849532b755031022ab1894054821411d97206a16baf3326cfc6fe8872c9658"
+    }
+  ]
+}

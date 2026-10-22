@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-sky-abec_ianor",
+  "summary": "Restrict depop to its named timer, preserving300000ms unverified duration and every hand-in. Starter direct-spawn adaptation documented in quest-audit-review-notes.md remains unchanged.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Wizard_Plane_of_Sky_Tests?action=raw",
+      "note": "Cached 2026-07-17T23:41:38.029Z; revision unavailable; SHA256 72c8a53a1d2376ea41b9d2fc726e76d07054941a2b45e1f500310ef728f518a3. Restrict depop to its named timer, preserving300000ms unverified duration and every hand-in. Starter direct-spawn adaptation documented in quest-audit-review-notes.md remains unchanged. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 16955,
+        "zone": "airplane",
+        "name": "Abec_Ianor",
+        "lua_content": "-- Source: airplane/Abec_Ianor.lua\n-- P99 audit: Wizard Plane of Sky Tests\n-- items: 20951, 20747, 20748, 11686, 20958, 20749, 20750, 27710, 14556, 20753, 20965, 20751, 20752, 11685\n\nfunction event_spawn(e)\n\teq.set_timer(\"depop\", 300000)\nend\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Welcome. I am Apprentice Abec. Do you wish to test your powers? Or have you already finished all your tests?\")\n\telseif e.message:findi(\"test my powers\") then\n\t\te.self:Say(\"Great, let us waste no more time! Do you wish to begin your test of conception, visualization, or preparation?\")\n\telseif e.message:findi(\"already finished\") or e.message:findi(\"finished all\") then\n\t\te.self:Say(\"We recently gave out a batch of inferior Amulets of Planar Transference. If you bring me one of these I will gladly replace it with an upgraded version. After all, you earned it, right?\")\n\telseif e.message:findi(\"conception\") then\n\t\te.self:Say(\"Conception is vital. Travel beyond and bring forth an Efreeti Statuette, a Mithril Air Ring, and a Box of Winds. From these I will produce a ring that will protect you where ever you go.\")\n\telseif e.message:findi(\"visualization\") then\n\t\te.self:Say(\"Visualize and succeed. Proceed upward and bring to me a White-Tipped Spiroc Feather, a Pulsating Sapphire, and an Amethyst Amulet. With these items, I will be able to produce an amulet that will aid in your travels to our home.\")\n\telseif e.message:findi(\"preparation\") then\n\t\te.self:Say(\"Always be prepared. Adventure and return an Efreeti War Staff, some Lush Nectar, a Copper Air Band, and a large Sky Sapphire and you shall be rewarded with the Staff of Storms.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\n\tif item_lib.check_turn_in(e.trade, { item1 = 20951, item2 = 20747, item3 = 20748 }) then\n\t\te.other:SummonItem(11686) -- Solidate Mithril Ring\n\t\te.other:AddEXP(100000)\n\t\te.self:Say(\"Excellent! Take this.\")\n\t\teq.depop()\n\telseif item_lib.check_turn_in(e.trade, { item1 = 20958, item2 = 20749, item3 = 20750 }) then\n\t\te.other:SummonItem(27710) -- Amulet of the Void\n\t\te.other:AddEXP(100000)\n\t\te.self:Say(\"Excellent! Take this.\")\n\t\teq.depop()\n\telseif item_lib.check_turn_in(e.trade, { item1 = 14556 }) then\n\t\te.other:SummonItem(27710) -- Upgrade old Amulet of Planar Transference to Amulet of the Void\n\t\te.other:AddEXP(1000)\n\t\te.self:Say(\"Excellent! Take this.\")\n\t\teq.depop()\n\telseif item_lib.check_turn_in(e.trade, { item1 = 20753, item2 = 20965, item3 = 20751, item4 = 20752 }) then\n\t\te.other:SummonItem(11685) -- Nargon's Staff\n\t\te.other:AddEXP(100000)\n\t\te.self:Say(\"Excellent! Take this.\")\n\t\teq.depop()\n\tend\n\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\nfunction event_timer(e)\n\teq.stop_timer(\"depop\")\n\teq.depop()\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 16955,
+        "zone": "airplane",
+        "name": "Abec_Ianor",
+        "lua_content": "-- Source: airplane/Abec_Ianor.lua\n-- P99 audit: Wizard Plane of Sky Tests\n-- items: 20951, 20747, 20748, 11686, 20958, 20749, 20750, 27710, 14556, 20753, 20965, 20751, 20752, 11685\n\nfunction event_spawn(e)\n\teq.set_timer(\"depop\", 300000)\nend\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Welcome. I am Apprentice Abec. Do you wish to test your powers? Or have you already finished all your tests?\")\n\telseif e.message:findi(\"test my powers\") then\n\t\te.self:Say(\"Great, let us waste no more time! Do you wish to begin your test of conception, visualization, or preparation?\")\n\telseif e.message:findi(\"already finished\") or e.message:findi(\"finished all\") then\n\t\te.self:Say(\"We recently gave out a batch of inferior Amulets of Planar Transference. If you bring me one of these I will gladly replace it with an upgraded version. After all, you earned it, right?\")\n\telseif e.message:findi(\"conception\") then\n\t\te.self:Say(\"Conception is vital. Travel beyond and bring forth an Efreeti Statuette, a Mithril Air Ring, and a Box of Winds. From these I will produce a ring that will protect you where ever you go.\")\n\telseif e.message:findi(\"visualization\") then\n\t\te.self:Say(\"Visualize and succeed. Proceed upward and bring to me a White-Tipped Spiroc Feather, a Pulsating Sapphire, and an Amethyst Amulet. With these items, I will be able to produce an amulet that will aid in your travels to our home.\")\n\telseif e.message:findi(\"preparation\") then\n\t\te.self:Say(\"Always be prepared. Adventure and return an Efreeti War Staff, some Lush Nectar, a Copper Air Band, and a large Sky Sapphire and you shall be rewarded with the Staff of Storms.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\n\tif item_lib.check_turn_in(e.trade, { item1 = 20951, item2 = 20747, item3 = 20748 }) then\n\t\te.other:SummonItem(11686) -- Solidate Mithril Ring\n\t\te.other:AddEXP(100000)\n\t\te.self:Say(\"Excellent! Take this.\")\n\t\teq.depop()\n\telseif item_lib.check_turn_in(e.trade, { item1 = 20958, item2 = 20749, item3 = 20750 }) then\n\t\te.other:SummonItem(27710) -- Amulet of the Void\n\t\te.other:AddEXP(100000)\n\t\te.self:Say(\"Excellent! Take this.\")\n\t\teq.depop()\n\telseif item_lib.check_turn_in(e.trade, { item1 = 14556 }) then\n\t\te.other:SummonItem(27710) -- Upgrade old Amulet of Planar Transference to Amulet of the Void\n\t\te.other:AddEXP(1000)\n\t\te.self:Say(\"Excellent! Take this.\")\n\t\teq.depop()\n\telseif item_lib.check_turn_in(e.trade, { item1 = 20753, item2 = 20965, item3 = 20751, item4 = 20752 }) then\n\t\te.other:SummonItem(11685) -- Nargon's Staff\n\t\te.other:AddEXP(100000)\n\t\te.self:Say(\"Excellent! Take this.\")\n\t\teq.depop()\n\tend\n\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\nfunction event_timer(e)\n\tif e.timer ~= \"depop\" then return end\n\teq.stop_timer(\"depop\")\n\teq.depop()\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/airplane/Abec_Ianor.lua",
+      "beforeSha256": "c8a93d23a2ad4f2ea25fa62d4eb4e9e64db3aa4e055d88c41c516a983e9e37d8",
+      "proposedFile": "changes/p99-tz-sky-abec_ianor/airplane--Abec_Ianor.lua",
+      "afterSha256": "8b3231a454bd8c097effafb4af29299e8ff9f2246aa4e59cebd0662a675224ec"
+    }
+  ]
+}

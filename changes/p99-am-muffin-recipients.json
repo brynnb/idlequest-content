@@ -1,0 +1,190 @@
+{
+  "format": 1,
+  "id": "p99-am-muffin-recipients",
+  "summary": "Restore six documented final Full Muffin Crate recipient branches with exact cash/factions. Explicit partial restorations: raw XP unverified and omitted; no removed starter dialogue restored. Voleen also permits tax collection before Vicus, explicitly documented by Taxes, without changing Muffin behavior.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Muffin_Quests?action=raw",
+      "note": "Cached 2026-07-17T23:26:13.669Z; revision unavailable; SHA256 cb695617eae395e66523bd391ea6dc637e71142dadded1d037cbbebf2ad57493. Muffin Quests"
+    },
+    {
+      "url": "https://wiki.project1999.com/Muffin_Quests?action=raw",
+      "note": "Promote immutable upstream source sources/projecteq/qeynos/Voleen_Tassen.lua SHA256 01dd2f053340a5d8c6ad7148fcc860a9a687a3c355f6b36e9311cc99ddd85d88 to maintained modified-upstream override; baseline remains untouched."
+    },
+    {
+      "url": "https://wiki.project1999.com/Muffin_Quests?action=raw",
+      "note": "Promote immutable upstream source sources/projecteq/feerrott/Innkeep_Gub.lua SHA256 44ec6d2b609932369e0fb2176a0e8d6577366e60a9dd36f5d6c9f20b72e10d15 to maintained modified-upstream override; baseline remains untouched."
+    },
+    {
+      "url": "https://wiki.project1999.com/Muffin_Quests?action=raw",
+      "note": "Promote immutable upstream source sources/projecteq/halas/Hetie_McDonald.lua SHA256 214d58a7f7938b01f731bc44b29cd313325aa840185e37339c7a2ecc0d21bf86 to maintained modified-upstream override; baseline remains untouched."
+    },
+    {
+      "url": "https://wiki.project1999.com/Muffin_Quests?action=raw",
+      "note": "Promote immutable upstream source sources/projecteq/erudnext/Beth_Breadmaker.lua SHA256 a9feae1c19b822bf7d560eef60afe999893c833c6cf0344a50037669cbc7408a to maintained modified-upstream override; baseline remains untouched."
+    },
+    {
+      "url": "https://wiki.project1999.com/Muffin_Quests?action=raw",
+      "note": "Promote immutable upstream source sources/projecteq/qey2hh1/Innkeep_Rislarn.lua SHA256 e5b801f6cd4652ad6fc5688f5e276fdfbe899e30568c88f9df8ac5e29e79ef46 to maintained modified-upstream override; baseline remains untouched."
+    },
+    {
+      "url": "https://wiki.project1999.com/Taxes?action=raw",
+      "note": "Full cached page SHA256 6fc59af937f3b2dfa4313beac8b349112c500bdbff0c89109de222dc34860c9b explicitly allows tax collection before speaking to Vicus. Remove only Voleen tax_collection prerequisite, preserving all original tax effects and the proposed Muffin branch."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 15234,
+        "zone": "qeynos",
+        "name": "Voleen_Tassen",
+        "lua_content": "-- items: 13179\nfunction event_say(e)\n\n\tlocal qglobals = eq.get_qglobals(e.other);\n\t\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(string.format(\"Oh, it's so nice to see you again %s. Why don't you have a look around and buy something nice for yourself today?\",e.other:GetName()));\n\telseif(e.message:findi(\"tax collection\") and qglobals.tax_collection ~= nil) then\n\t\te.self:Say(string.format(\"Oh dear. We had forgotten about those pesky taxes. Here you go, %s. Sorry you had to come collect them. We will try to be on time from now on.\",e.other:GetName()));\n\t\te.other:SummonItem(13179); -- Item: Tassen's Tax Payment\n\t\te.other:Faction(291,-10,0); -- Faction: Merchants of Qeynos\n\tend\n\t\nend\n\nfunction event_trade(e)\n\n\tlocal item_lib =require(\"items\");\n\titem_lib.return_items(e.self, e.other, e.trade)\n\t\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 15234,
+        "zone": "qeynos",
+        "name": "Voleen_Tassen",
+        "lua_content": "-- items: 13179\nfunction event_say(e)\n\n\tlocal qglobals = eq.get_qglobals(e.other);\n\t\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(string.format(\"Oh, it's so nice to see you again %s. Why don't you have a look around and buy something nice for yourself today?\",e.other:GetName()));\n\telseif(e.message:findi(\"tax collection\") ) then\n\t\te.self:Say(string.format(\"Oh dear. We had forgotten about those pesky taxes. Here you go, %s. Sorry you had to come collect them. We will try to be on time from now on.\",e.other:GetName()));\n\t\te.other:SummonItem(13179); -- Item: Tassen's Tax Payment\n\t\te.other:Faction(291,-10,0); -- Faction: Merchants of Qeynos\n\tend\n\t\nend\n\nfunction event_trade(e)\n\n\tlocal item_lib =require(\"items\");\n\t-- P99 documented final crate hand-in; removed starter dialogue stays absent.\n\tif item_lib.check_turn_in(e.trade, {item1 = 1839}) then\n\t\te.self:Say(\"Oh my! Smell those muffins, fresh from the oven and ready to serve! They look delicious dear. Here is some money for your trouble.\")\n\t\te.other:GiveCash(0, 0, 6, 0)\n\t\te.other:Faction(291, 5, 0)\n\t\te.other:Faction(229, 1, 0)\n\t\te.other:Faction(219, 1, 0)\n\t\te.other:Faction(262, 1, 0)\n\t\te.other:Faction(223, -1, 0)\n\t\t-- Explicit partial restoration: raw XP remains unverified and omitted.\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\n\t\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 18742,
+        "zone": "feerrott",
+        "name": "Innkeep_Gub",
+        "lua_content": "function event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Huh? Oh hi \" .. e.other:GetName() .. \". Youse want to buy sumthin?\");\n\tend\nend\n\n-- END of FILE Zone:feerrott  ID:47144 -- Innkeep_Gub",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 18742,
+        "zone": "feerrott",
+        "name": "Innkeep_Gub",
+        "lua_content": "function event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Huh? Oh hi \" .. e.other:GetName() .. \". Youse want to buy sumthin?\");\n\tend\nend\n\n-- END of FILE Zone:feerrott  ID:47144 -- Innkeep_Gub\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\t-- P99 documented final crate hand-in; removed starter dialogue stays absent.\n\tif item_lib.check_turn_in(e.trade, {item1 = 1839}) then\n\t\te.self:Say(\"MMmmm... Deez look like gud muffins. Here's sum money. Tanks. Now meez all stocked again.\")\n\t\te.other:GiveCash(0, 0, 8, 0)\n\t\te.other:Faction(338, 2, 0)\n\t\te.other:Faction(228, 1, 0)\n\t\te.other:Faction(337, 1, 0)\n\t\t-- Explicit partial restoration: raw XP remains unverified and omitted.\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 19426,
+        "zone": "halas",
+        "name": "Hetie_McDonald",
+        "lua_content": "function event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Welcome back, \" .. e.other:GetName() .. \". Why don't you purchase a few things before you head out into the tundra again?\");\n\tend\nend\n\n-------------------------------------------------------------------------------------------------\n-- Converted to .lua using MATLAB converter written by Stryd and manual edits by Speedz\n-- Find/replace data for .pl --> .lua conversions provided by Speedz, Stryd, Sorvani and Robregen\n-------------------------------------------------------------------------------------------------\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 19426,
+        "zone": "halas",
+        "name": "Hetie_McDonald",
+        "lua_content": "function event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Welcome back, \" .. e.other:GetName() .. \". Why don't you purchase a few things before you head out into the tundra again?\");\n\tend\nend\n\n-------------------------------------------------------------------------------------------------\n-- Converted to .lua using MATLAB converter written by Stryd and manual edits by Speedz\n-- Find/replace data for .pl --> .lua conversions provided by Speedz, Stryd, Sorvani and Robregen\n-------------------------------------------------------------------------------------------------\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\t-- P99 documented final crate hand-in; removed starter dialogue stays absent.\n\tif item_lib.check_turn_in(e.trade, {item1 = 1839}) then\n\t\te.self:Say(\"Oh, yes, this is exactly what I needed. These muffins look very fresh too, good work! Here is your payment, as promised. It was a pleasure doing business with you.\")\n\t\te.other:GiveCash(0, 0, 7, 0)\n\t\te.other:Faction(328, 2, 0)\n\t\te.other:Faction(320, 1, 0)\n\t\te.other:Faction(327, 1, 0)\n\t\t-- Explicit partial restoration: raw XP remains unverified and omitted.\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 15040,
+        "zone": "neriaka",
+        "name": "Sal_Drana",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: neriaka/Sal_Drana.pl\n\nfunction event_say(e)\n\tif e.message:findi(\"Hail\") then\n\t\te.self:Say(\"Greetings. I am pleased to report that I am fully stocked. Please have a look at the goods I have for sale.\")\n\tend\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 15040,
+        "zone": "neriaka",
+        "name": "Sal_Drana",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: neriaka/Sal_Drana.pl\n\nfunction event_say(e)\n\tif e.message:findi(\"Hail\") then\n\t\te.self:Say(\"Greetings. I am pleased to report that I am fully stocked. Please have a look at the goods I have for sale.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\t-- P99 documented final crate hand-in; removed starter dialogue stays absent.\n\tif item_lib.check_turn_in(e.trade, {item1 = 1839}) then\n\t\te.self:Say(\"Very good work. I can see you are a talented baker and these muffins look suitable. You do Neriak a great service. Here is your payment. I look forward to conducting future business with you.\")\n\t\te.other:GiveCash(0, 0, 7, 0)\n\t\te.other:Faction(236, 2, 0)\n\t\te.other:Faction(334, 1, 0)\n\t\te.other:Faction(370, 1, 0)\n\t\t-- Explicit partial restoration: raw XP remains unverified and omitted.\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 14558,
+        "zone": "erudnext",
+        "name": "Beth_Breadmaker",
+        "lua_content": "function event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Hello there \" .. e.other:GetName() .. \"! You'll be happy to see that I am fully stocked with all my usual goods. Have a look around!\");\n\tend\nend\n\n-- END of FILE Zone:erudnext  ID:98057 -- Beth_Breadmaker \n\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 14558,
+        "zone": "erudnext",
+        "name": "Beth_Breadmaker",
+        "lua_content": "function event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Hello there \" .. e.other:GetName() .. \"! You'll be happy to see that I am fully stocked with all my usual goods. Have a look around!\");\n\tend\nend\n\n-- END of FILE Zone:erudnext  ID:98057 -- Beth_Breadmaker \n\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\t-- P99 documented final crate hand-in; removed starter dialogue stays absent.\n\tif item_lib.check_turn_in(e.trade, {item1 = 1839}) then\n\t\te.self:Say(\"Ah yes! This is exactly what I am looking for, dear. Let me put these on the shelf right away. Here is some coin for your trouble. Perhaps we can do business again sometime.\")\n\t\te.other:GiveCash(0, 0, 0, 1)\n\t\te.other:Faction(289, 2, 0)\n\t\te.other:Faction(266, 1, 0)\n\t\te.other:Faction(267, 1, 0)\n\t\t-- Explicit partial restoration: raw XP remains unverified and omitted.\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 14161,
+        "zone": "qey2hh1",
+        "name": "Innkeep_Rislarn",
+        "lua_content": "function event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(string.format(\"Welcome to my shop %s. You'll be happy to hear that I'm fully stocked. It's nice that things are back to normal now that the plague is over.\",e.other:GetName()));\n\tend\nend\n\n-- END of FILE Zone:qey2hh1  ID:2742 -- Innkeep_Rislarn",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 14161,
+        "zone": "qey2hh1",
+        "name": "Innkeep_Rislarn",
+        "lua_content": "function event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(string.format(\"Welcome to my shop %s. You'll be happy to hear that I'm fully stocked. It's nice that things are back to normal now that the plague is over.\",e.other:GetName()));\n\tend\nend\n\n-- END of FILE Zone:qey2hh1  ID:2742 -- Innkeep_Rislarn\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\t-- P99 documented final crate hand-in; removed starter dialogue stays absent.\n\tif item_lib.check_turn_in(e.trade, {item1 = 1839}) then\n\t\te.self:Say(\"Ah, praise Karana! These muffins look good enough to eat, har har har! Here is your payment and you have my deepest gratitude. We have to stick together in these times of turmoil you know.\")\n\t\te.other:GiveCash(0, 0, 8, 0)\n\t\te.other:Faction(291, 2, 0)\n\t\te.other:Faction(223, -1, 0)\n\t\te.other:Faction(219, 1, 0)\n\t\te.other:Faction(229, 1, 0)\n\t\te.other:Faction(262, 1, 0)\n\t\t-- Explicit partial restoration: raw XP remains unverified and omitted.\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/qeynos/Voleen_Tassen.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-am-muffin-recipients/qeynos-Voleen_Tassen.lua",
+      "afterSha256": "23a9e82bddd5c31178fe24c4b82622a0eca4113bec9ef139b9ec56a0dbcba80b"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/feerrott/Innkeep_Gub.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-am-muffin-recipients/feerrott-Innkeep_Gub.lua",
+      "afterSha256": "53bf6e590879cd23113cde103a36f4fd7161715ae24887f29efbcea7216949f7"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/halas/Hetie_McDonald.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-am-muffin-recipients/halas-Hetie_McDonald.lua",
+      "afterSha256": "9c2ff4dc0f23063edb6b8cba19bd0d08202950d81482f86749520cb39d08210a"
+    },
+    {
+      "target": "maintained/lua/converted-perl/neriaka/Sal_Drana.lua",
+      "beforeSha256": "60f4e3d86d3ae552237440eff0fbe5eccfd031d584f58c2d5515572d3ea31ab8",
+      "proposedFile": "changes/p99-am-muffin-recipients/neriaka-Sal_Drana.lua",
+      "afterSha256": "81a578b213287ed53d0b2967aa13bd9bcfece1fb1a773efdcf488ead16268f37"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/erudnext/Beth_Breadmaker.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-am-muffin-recipients/erudnext-Beth_Breadmaker.lua",
+      "afterSha256": "43b0661dd892b87e9e79f2f13657b85164222e5451bf180919cc44400163af31"
+    },
+    {
+      "target": "maintained/lua/modified-upstream/qey2hh1/Innkeep_Rislarn.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-am-muffin-recipients/qey2hh1-Innkeep_Rislarn.lua",
+      "afterSha256": "4147cd1a5f1fce3d227d2429b93c512900f486029399d5ffe9a80ff67ed867ee"
+    }
+  ]
+}

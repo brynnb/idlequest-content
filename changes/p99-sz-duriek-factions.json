@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-sz-duriek-factions",
+  "summary": "Match explicitly documented TrueSpirit+3 on letter, elixir and tome; preserve final Corrupted Ghoulbane branch+7 and allXP/gates.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Shadow_Knight_Epic_Quest?action=raw",
+      "note": "Cached 2026-07-17T23:32:15.536Z; revision unavailable; SHA256 c292187a82bfc78a0051c33c15a64b072225f3b6dedce48db2449c46b67dd3aa. Source-only correction; full runtime and UI not executed. Undocumented numerical values unchanged."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 19277,
+        "zone": "paineel",
+        "name": "Duriek_Bloodpool",
+        "lua_content": "-- Source: paineel/Duriek_Bloodpool.pl\n-- Shadow Knight Epic 1.0: Duriek Bloodpool Corrupted Ghoulbane chain.\n-- Converted from ProjectEQ Perl quest script.\n-- items: 18099, 14365, 14382, 5403, 11609, 5430, 14366, 14367\n-- P99 dialogue directions restored from the July 17, 2026 cached epic page.\n-- Condensed wording must retain the next objective, not just the greeting.\n\nfunction event_say(e)\n\tlocal faction = e.other:GetCharacterFactionLevel(404) -- True Spirit\n\tif e.message:findi(\"apprentice\") and faction >= 14 then\n\t\te.self:Say(\"As stubborn and foolish as he sometimes was, he was full of potential. I must now get to the task of replacing my associate.\")\n\telseif e.message:findi(\"replace him\") and faction >= 14 then\n\t\te.self:Say(\"Bring me back a bottle of cough elixir and, if you are still interested, I will instruct you further.\")\n\telseif e.message:findi(\"searching\") and faction >= 21 then\n\t\te.self:Say(\"I have a key to open a sealed tome hidden in the recently uncovered ruins. Bring that tome back to me so I can finish researching how to corrupt the Ghoulbane.\")\n\telseif e.message:findi(\"items\") and faction >= 28 then\n\t\te.self:Say(\"I will need the Ghoulbane, the Soul Leech, the Blade of Abrogation, and the Decrepit Sheath.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tlocal faction = e.other:GetCharacterFactionLevel(404) -- True Spirit\n\tif faction >= 7 and item_lib.check_turn_in(e.trade, {item1 = 18099}) then\n\t\te.self:Say(\"This is unfortunate news about my apprentice. I had already paid the Neriak rogues to settle his gambling debt, but he would not heed my warnings. I must find someone to replace him.\")\n\t\te.other:Faction(404, 7)\n\t\te.other:AddEXP(15000)\n\telseif faction >= 14 and item_lib.check_turn_in(e.trade, {item1 = 14365}) then\n\t\te.self:Say(\"Thank you. My time is short. I have nearly finished researching a corrupted Ghoulbane, but my apprentice died while searching for the final clue. You must continue his search.\")\n\t\te.other:Faction(404, 7)\n\telseif faction >= 21 and item_lib.check_turn_in(e.trade, {item1 = 14382}) then\n\t\te.self:Emote(\"opens the tome with his key and reads eagerly. At last, he has found the items required to corrupt the Ghoulbane.\")\n\t\te.other:Faction(404, 7)\n\telseif faction >= 35 and item_lib.check_turn_in(e.trade, {item1 = 5403, item2 = 11609, item3 = 5430, item4 = 14366}) then\n\t\te.self:Emote(\"takes the Ghoulbane and places the other swords on either side of it. With his last bit of energy, Duriek places the corrupted Ghoulbane in your hands.\")\n\t\te.self:Say(\"The tome revealed more than the creation of this blade. To continue, seek the powerful lich named Lhranc. Farewell.\")\n\t\te.other:Faction(404, 7)\n\t\te.other:SummonItem(14367) -- Corrupted Ghoulbane\n\t\te.self:SetAppearance(3)\n\t\teq.set_timer(\"depop\", 5000)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\nfunction event_timer(e)\n\teq.depop_with_timer()\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 19277,
+        "zone": "paineel",
+        "name": "Duriek_Bloodpool",
+        "lua_content": "-- Source: paineel/Duriek_Bloodpool.pl\n-- Shadow Knight Epic 1.0: Duriek Bloodpool Corrupted Ghoulbane chain.\n-- Converted from ProjectEQ Perl quest script.\n-- items: 18099, 14365, 14382, 5403, 11609, 5430, 14366, 14367\n-- P99 dialogue directions restored from the July 17, 2026 cached epic page.\n-- Condensed wording must retain the next objective, not just the greeting.\n\nfunction event_say(e)\n\tlocal faction = e.other:GetCharacterFactionLevel(404) -- True Spirit\n\tif e.message:findi(\"apprentice\") and faction >= 14 then\n\t\te.self:Say(\"As stubborn and foolish as he sometimes was, he was full of potential. I must now get to the task of replacing my associate.\")\n\telseif e.message:findi(\"replace him\") and faction >= 14 then\n\t\te.self:Say(\"Bring me back a bottle of cough elixir and, if you are still interested, I will instruct you further.\")\n\telseif e.message:findi(\"searching\") and faction >= 21 then\n\t\te.self:Say(\"I have a key to open a sealed tome hidden in the recently uncovered ruins. Bring that tome back to me so I can finish researching how to corrupt the Ghoulbane.\")\n\telseif e.message:findi(\"items\") and faction >= 28 then\n\t\te.self:Say(\"I will need the Ghoulbane, the Soul Leech, the Blade of Abrogation, and the Decrepit Sheath.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tlocal faction = e.other:GetCharacterFactionLevel(404) -- True Spirit\n\tif faction >= 7 and item_lib.check_turn_in(e.trade, {item1 = 18099}) then\n\t\te.self:Say(\"This is unfortunate news about my apprentice. I had already paid the Neriak rogues to settle his gambling debt, but he would not heed my warnings. I must find someone to replace him.\")\n\t\te.other:Faction(404, 3)\n\t\te.other:AddEXP(15000)\n\telseif faction >= 14 and item_lib.check_turn_in(e.trade, {item1 = 14365}) then\n\t\te.self:Say(\"Thank you. My time is short. I have nearly finished researching a corrupted Ghoulbane, but my apprentice died while searching for the final clue. You must continue his search.\")\n\t\te.other:Faction(404, 3)\n\telseif faction >= 21 and item_lib.check_turn_in(e.trade, {item1 = 14382}) then\n\t\te.self:Emote(\"opens the tome with his key and reads eagerly. At last, he has found the items required to corrupt the Ghoulbane.\")\n\t\te.other:Faction(404, 3)\n\telseif faction >= 35 and item_lib.check_turn_in(e.trade, {item1 = 5403, item2 = 11609, item3 = 5430, item4 = 14366}) then\n\t\te.self:Emote(\"takes the Ghoulbane and places the other swords on either side of it. With his last bit of energy, Duriek places the corrupted Ghoulbane in your hands.\")\n\t\te.self:Say(\"The tome revealed more than the creation of this blade. To continue, seek the powerful lich named Lhranc. Farewell.\")\n\t\te.other:Faction(404, 7)\n\t\te.other:SummonItem(14367) -- Corrupted Ghoulbane\n\t\te.self:SetAppearance(3)\n\t\teq.set_timer(\"depop\", 5000)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\nfunction event_timer(e)\n\teq.depop_with_timer()\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/paineel/Duriek_Bloodpool.lua",
+      "beforeSha256": "b6835baafae3968b231ba3b0ef45d693f9f61143d9b44d17c2d1203e578449db",
+      "proposedFile": "changes/p99-sz-duriek-factions/paineel--Duriek_Bloodpool.lua",
+      "afterSha256": "a2fd08775c45423ad322dbaa586fe37d4295b3976f1c8b00cdf048bf4c63fce9"
+    }
+  ]
+}

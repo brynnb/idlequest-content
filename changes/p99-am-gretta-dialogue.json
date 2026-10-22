@@ -1,0 +1,138 @@
+{
+  "format": 1,
+  "id": "p99-am-gretta-dialogue",
+  "summary": "Restore reachable Gretta baking dialogue and missing Muffin Crate grant. Full-crate reward remains unresolved; do not claim a completed quest. Enable existing no-fail ten-muffin filled-crate quest combine, replacing its empty container as in existing quest-container conventions. Correct baking yield and crate component to baked Muffin13487, not vendor Muffin13014; keep quantities six and ten.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Fresh_Baked_Muffins_(Kaladim)?action=raw",
+      "note": "Cached 2026-07-17T23:15:19.721Z; revision unavailable; SHA256 81a7439fbaa95c390ca888d04d996b299c3caa42bf9c52e01af5426f65431a63. Fresh Baked Muffins (Kaladim)"
+    },
+    {
+      "url": "https://eqtraders.com/items/show_item.php?item=3885&menustr=010000000000",
+      "note": "Retrieved2026-10-22: EQ item ID13487; dough+fruit+muffin tin, trivial135, yield6. Cross-identifies P99 baked-only requirement; not a P99 XP/cash source."
+    },
+    {
+      "url": "https://wiki.project1999.com/Muffin_Quests?action=raw",
+      "note": "Baked-only, ten-muffin combine requirement. Cached 2026-07-17T23:26:13.669Z; SHA256 cb695617eae395e66523bd391ea6dc637e71142dadded1d037cbbebf2ad57493. Overview gives Gretta8gold while dedicated page7gold; final reward not fabricated."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 19379,
+        "zone": "kaladima",
+        "name": "Gretta_Mottle",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: kaladima/Gretta_Mottle.pl\n\nfunction event_say(e)\n\tif e.message:findi(\"Hail\") then\n\t\te.self:Say(\"Greetings. \" .. e.other:GetName() .. \".  I'm Gretta Mottle.  Tumpy has been kind enough to let me to set up my bakery in his fine establishment here.  Unfortunately. with that nasty plague corruptin' the crops in the Plains of Karana. things are goin' a bit slow for me.  I keep runnin' out of bread and muffins to sell.  Because of flour bein' easily spoiled now. it takes longer to make 'em just right.  My assistant Buggle is still learnin' how to cook.  Hehe.. All he can make is Meat Pie.  If I don't get any [help to bake] soon I won't be able to keep the supply up with the demand.\")\n\telseif e.message:findi(\"what help to bake\") then\n\t\te.self:Say(\"Glad to hear it.  Are ye thinkin' of helpin' me to [bake muffins] or did ye want to [fetch some bread] for me?\")\n\telseif e.message:findi(\"what bake muffins\") then\n\t\te.self:Say(\"Ah. if ye want to help me with the bakin\")\n\telseif e.message:findi(\"what fetch some bread\") then\n\t\te.self:Say(\"The only one who can make bread almost as good as I can is Jarlen Meadowgreen.  He lives a long way off though.. in the southern Plains of Karana.  If ye travel there. tell him that you are there to pick up some bread loaves for me.\")\n\tend\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 19379,
+        "zone": "kaladima",
+        "name": "Gretta_Mottle",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: kaladima/Gretta_Mottle.pl\n\nfunction event_say(e)\n\tif e.message:findi(\"Hail\") then\n\t\te.self:Say(\"Greetings. \" .. e.other:GetName() .. \".  I'm Gretta Mottle.  Tumpy has been kind enough to let me to set up my bakery in his fine establishment here.  Unfortunately. with that nasty plague corruptin' the crops in the Plains of Karana. things are goin' a bit slow for me.  I keep runnin' out of bread and muffins to sell.  Because of flour bein' easily spoiled now. it takes longer to make 'em just right.  My assistant Buggle is still learnin' how to cook.  Hehe.. All he can make is Meat Pie.  If I don't get any [help to bake] soon I won't be able to keep the supply up with the demand.\")\n\telseif e.message:findi(\"help to bake\") then\n\t\te.self:Say(\"Glad to hear it.  Are ye thinkin' of helpin' me to [bake muffins] or did ye want to [fetch some bread] for me?\")\n\telseif e.message:findi(\"bake muffins\") then\n\t\te.self:Say(\"Ah, if ye want to help me with the bakin', take this Muffin Crate, fill it up with some of your freshly baked Muffins, then seal them in so they won't become stale. I sure hope you can make 'em good enough.\")\n\t\te.other:SummonItem(17881) -- Muffin Crate; full-crate reward remains unresolved.\n\telseif e.message:findi(\"fetch some bread\") then\n\t\te.self:Say(\"The only one who can make bread almost as good as I can is Jarlen Meadowgreen.  He lives a long way off though.. in the southern Plains of Karana.  If ye travel there. tell him that you are there to pick up some bread loaves for me.\")\n\tend\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "tradeskill_recipe",
+      "before": {
+        "id": 12811,
+        "name": "Full Muffin Crate",
+        "tradeskill": 75,
+        "skillneeded": 0,
+        "trivial": 0,
+        "nofail": 1,
+        "replace_container": 0,
+        "notes": "",
+        "must_learn": 0,
+        "learned_by_item_id": 0,
+        "quest": 0,
+        "enabled": 0,
+        "show_in_advanced": 1,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null,
+        "category": null
+      },
+      "after": {
+        "id": 12811,
+        "name": "Full Muffin Crate",
+        "tradeskill": 75,
+        "skillneeded": 0,
+        "trivial": 0,
+        "nofail": 1,
+        "replace_container": 1,
+        "notes": "",
+        "must_learn": 0,
+        "learned_by_item_id": 0,
+        "quest": 0,
+        "enabled": 1,
+        "show_in_advanced": 1,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null,
+        "category": null
+      }
+    },
+    {
+      "table": "tradeskill_recipe_entries",
+      "before": {
+        "id": 150280,
+        "recipe_id": 12811,
+        "item_id": 13014,
+        "successcount": 0,
+        "failcount": 0,
+        "componentcount": 10,
+        "salvagecount": 10,
+        "iscontainer": 0
+      },
+      "after": {
+        "id": 150280,
+        "recipe_id": 12811,
+        "item_id": 13487,
+        "successcount": 0,
+        "failcount": 0,
+        "componentcount": 10,
+        "salvagecount": 10,
+        "iscontainer": 0
+      }
+    },
+    {
+      "table": "tradeskill_recipe_entries",
+      "before": {
+        "id": 15666,
+        "recipe_id": 2088,
+        "item_id": 13014,
+        "successcount": 6,
+        "failcount": 0,
+        "componentcount": 0,
+        "salvagecount": 0,
+        "iscontainer": 0
+      },
+      "after": {
+        "id": 15666,
+        "recipe_id": 2088,
+        "item_id": 13487,
+        "successcount": 6,
+        "failcount": 0,
+        "componentcount": 0,
+        "salvagecount": 0,
+        "iscontainer": 0
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/kaladima/Gretta_Mottle.lua",
+      "beforeSha256": "e3395f451e3450ca4fdddb03292a22d8e87775a427c777f1027a4c964ef58b7f",
+      "proposedFile": "changes/p99-am-gretta-dialogue/kaladima-Gretta_Mottle.lua",
+      "afterSha256": "5d8611dfa98a44bff524a2a325a9d0bee2386e30851d849ef86e150243f01e80"
+    }
+  ]
+}

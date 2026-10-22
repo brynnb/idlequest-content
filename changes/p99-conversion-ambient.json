@@ -1,0 +1,693 @@
+{
+  "format": 1,
+  "id": "p99-conversion-ambient",
+  "summary": "Convert bounded Velious ambient timer, proximity, aggro and council movement sources; retain existing enabled state and exact identities. Cosmetic animation limitations and disconnected world dependencies remain explicit. No later eighth-Shawl rewards.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Coldain_Prayer_Shawl_Quests?action=raw",
+      "note": "Cached 2026-07-17T23:11:11.547Z; SHA256 1b96e22c683adcc22886266e556b2a0d74c7b68163edbea74b4b9e41d7bbd4c0; reference/p99-wiki/raw-pages/coldain-prayer-shawl-quests-0117371b90.wiki. NPC identity evidence is not independent verification of ProjectEQ ambient prose."
+    },
+    {
+      "url": "https://wiki.project1999.com/The_Lost_Map?action=raw",
+      "note": "Cached 2026-07-17T23:37:11.604Z; SHA256 8a72a665c7f7498420eccb1476b4e7524ad409c16f1fccda74b382af4d495cf8; reference/p99-wiki/raw-pages/the-lost-map-f1a18a6303.wiki. NPC identity evidence is not independent verification of ProjectEQ ambient prose."
+    },
+    {
+      "url": "https://wiki.project1999.com/The_Mighty_Snowfang_Hero?action=raw",
+      "note": "Cached 2026-07-17T23:37:21.828Z; SHA256 269d02a9a06604589d773e2064b2c10a49511a3eac435a02034690343e07264d; reference/p99-wiki/raw-pages/the-mighty-snowfang-hero-2c9528e916.wiki. NPC identity evidence is not independent verification of ProjectEQ ambient prose."
+    },
+    {
+      "url": "https://wiki.project1999.com/Avalanche_(NPC)?action=raw",
+      "note": "Cached 2026-08-12T17:51:31.690Z; SHA256 5b52cb69c72d53fda473c92df27cb2b7f1d46beae184f01d1a74e546c421e2be; reference/p99-wiki/npc-pages/avalanche-npc-b88db67749.wiki. NPC identity evidence is not independent verification of ProjectEQ ambient prose."
+    },
+    {
+      "url": "https://wiki.project1999.com/Brina_Snowfox?action=raw",
+      "note": "Cached 2026-08-12T18:03:24.085Z; SHA256 77c4f336081ec13932cbd6d825a7f9e2e1c49313700efc25ba44394a658788fd; reference/p99-wiki/npc-pages/brina-snowfox-03f2d8fbdb.wiki. NPC identity evidence is not independent verification of ProjectEQ ambient prose."
+    },
+    {
+      "url": "https://wiki.project1999.com/Councilor_Amberfeld?action=raw",
+      "note": "Cached 2026-08-12T18:18:51.150Z; SHA256 36378c497787ac4885cfd0375444e81071975d518940085459fb056770ae1b27; reference/p99-wiki/npc-pages/councilor-amberfeld-94d788d2bb.wiki. NPC identity evidence is not independent verification of ProjectEQ ambient prose."
+    },
+    {
+      "url": "https://wiki.project1999.com/Councilor_Coldember?action=raw",
+      "note": "Cached 2026-08-12T18:18:54.160Z; SHA256 aa64c7c87918cef8857a22b4d4b2aad7e3089a5be3a0b5ceb5ebdf3593e2677e; reference/p99-wiki/npc-pages/councilor-coldember-8622d7c3e0.wiki. NPC identity evidence is not independent verification of ProjectEQ ambient prose."
+    },
+    {
+      "url": "https://wiki.project1999.com/Councilor_Darakor?action=raw",
+      "note": "Cached 2026-08-12T18:18:57.409Z; SHA256 89af0c7971857157830940961e8243c7041312344577faeddf4168ce4f2dc61e; reference/p99-wiki/npc-pages/councilor-darakor-d25908111e.wiki. NPC identity evidence is not independent verification of ProjectEQ ambient prose."
+    },
+    {
+      "url": "https://wiki.project1999.com/Councilor_Darkfrost?action=raw",
+      "note": "Cached 2026-08-12T18:18:59.257Z; SHA256 526b2512f4553953f2dcbd3afc6deff67a141c536651e7b84be75d999d19d0b8; reference/p99-wiki/npc-pages/councilor-darkfrost-505f353e40.wiki. NPC identity evidence is not independent verification of ProjectEQ ambient prose."
+    },
+    {
+      "url": "https://wiki.project1999.com/Councilor_Deynekn?action=raw",
+      "note": "Cached 2026-08-12T18:19:02.519Z; SHA256 3c70e0d3a001159fad489551de8a18802cfb04792c40a4ca94dfef24b293a014; reference/p99-wiki/npc-pages/councilor-deynekn-bda68eb421.wiki. NPC identity evidence is not independent verification of ProjectEQ ambient prose."
+    },
+    {
+      "url": "https://wiki.project1999.com/Councilor_Dirkins?action=raw",
+      "note": "Cached 2026-08-12T18:19:05.237Z; SHA256 ed77d2cc63561ba56efde4b647da2f47cad60b9681581164231c76fc47f04b05; reference/p99-wiki/npc-pages/councilor-dirkins-738e9f8cac.wiki. NPC identity evidence is not independent verification of ProjectEQ ambient prose."
+    },
+    {
+      "url": "https://wiki.project1999.com/Councilor_Glacierbane?action=raw",
+      "note": "Cached 2026-08-12T18:19:06.778Z; SHA256 62c7893b4bfe2a6faafac6f4eb328ff50e5d9ea5c81765ee0fcb95c4a368682d; reference/p99-wiki/npc-pages/councilor-glacierbane-f3132ef424.wiki. NPC identity evidence is not independent verification of ProjectEQ ambient prose."
+    },
+    {
+      "url": "https://wiki.project1999.com/Councilor_Icelok?action=raw",
+      "note": "Cached 2026-08-12T18:19:09.906Z; SHA256 44e91e87a99b41a5a837c13b0f69d1be636ca24b53a0e630f681b6fd2da83e7c; reference/p99-wiki/npc-pages/councilor-icelok-1533bf3bee.wiki. NPC identity evidence is not independent verification of ProjectEQ ambient prose."
+    },
+    {
+      "url": "https://wiki.project1999.com/Councilor_Icepike?action=raw",
+      "note": "Cached 2026-08-12T18:19:11.371Z; SHA256 ccdc801ccd5971be631215b11f0df32b0bacec3eb3d4969aba712953e2d8aa0d; reference/p99-wiki/npc-pages/councilor-icepike-c78110539e.wiki. NPC identity evidence is not independent verification of ProjectEQ ambient prose."
+    },
+    {
+      "url": "https://wiki.project1999.com/Councilor_Thubins?action=raw",
+      "note": "Cached 2026-08-12T18:19:15.688Z; SHA256 24330d0646d22dcf9867b73565c0234a7ee07b47f04f7312531a10463567c338; reference/p99-wiki/npc-pages/councilor-thubins-fa3674a6a8.wiki. NPC identity evidence is not independent verification of ProjectEQ ambient prose."
+    },
+    {
+      "url": "https://wiki.project1999.com/Councilor_Wintershade?action=raw",
+      "note": "Cached 2026-08-12T18:19:17.401Z; SHA256 c5bec6e4eac0476b3f9323316d919ae5d86b9f92ed3cf391d6a48ba9688e4179; reference/p99-wiki/npc-pages/councilor-wintershade-ad9aec70d8.wiki. NPC identity evidence is not independent verification of ProjectEQ ambient prose."
+    },
+    {
+      "url": "https://wiki.project1999.com/Doriggan?action=raw",
+      "note": "Cached 2026-08-12T18:30:21.085Z; SHA256 947d87ceadd027f316a00a3e49df3191218d9b6e1008324952fb1a2aaf818604; reference/p99-wiki/npc-pages/doriggan-758b595e10.wiki. NPC identity evidence is not independent verification of ProjectEQ ambient prose."
+    },
+    {
+      "url": "https://wiki.project1999.com/Frostpaw?action=raw",
+      "note": "Cached 2026-08-12T18:48:17.399Z; SHA256 5e9d5766d40ee3e0048fa762cf6abc37a8fc351f392913106eaffed21e2ef916; reference/p99-wiki/npc-pages/frostpaw-dc01f78d9d.wiki. NPC identity evidence is not independent verification of ProjectEQ ambient prose."
+    },
+    {
+      "url": "https://wiki.project1999.com/Gnomish_captive?action=raw",
+      "note": "Cached 2026-08-12T18:55:05.124Z; SHA256 9a040f1f4ad6013538ec300197d7e0b1fd12957e6f847b072319a342494ea34b; reference/p99-wiki/npc-pages/gnomish-captive-95900698be.wiki. NPC identity evidence is not independent verification of ProjectEQ ambient prose."
+    },
+    {
+      "url": "https://wiki.project1999.com/Guard_Bjorn?action=raw",
+      "note": "Cached 2026-08-12T19:02:43.456Z; SHA256 b95dbbfe313b41356ec85d623d4049b31a7b75958c8d38d3c3a66a1a96f41094; reference/p99-wiki/npc-pages/guard-bjorn-bc4dea7e13.wiki. NPC identity evidence is not independent verification of ProjectEQ ambient prose."
+    },
+    {
+      "url": "https://wiki.project1999.com/Guard_Clorn?action=raw",
+      "note": "Cached 2026-08-12T19:03:50.969Z; SHA256 f1fd9ba600af2113f18206ff6c377ac7404693177c5944957b009429fe91ce65; reference/p99-wiki/npc-pages/guard-clorn-163ee18fef.wiki. NPC identity evidence is not independent verification of ProjectEQ ambient prose."
+    },
+    {
+      "url": "https://wiki.project1999.com/Guard_Dobbs?action=raw",
+      "note": "Cached 2026-08-12T19:04:57.723Z; SHA256 2ab91e6c599f2ae876c4c03002827e8d7dade6b3a756750fb044ae446c13a11c; reference/p99-wiki/npc-pages/guard-dobbs-7033b418ae.wiki. NPC identity evidence is not independent verification of ProjectEQ ambient prose."
+    },
+    {
+      "url": "https://wiki.project1999.com/Guard_Enre?action=raw",
+      "note": "Cached 2026-08-12T19:05:57.525Z; SHA256 f49349f940c891b50b7fee44f2aeca944915fd49677a69d606571770685d4c47; reference/p99-wiki/npc-pages/guard-enre-0578c60d2e.wiki. NPC identity evidence is not independent verification of ProjectEQ ambient prose."
+    },
+    {
+      "url": "https://wiki.project1999.com/Guard_Gord?action=raw",
+      "note": "Cached 2026-08-12T19:07:46.232Z; SHA256 4380d21f2c1b98bc4e723174737f377c937443f626d883741a472c884cd0f826; reference/p99-wiki/npc-pages/guard-gord-f74196b2ed.wiki. NPC identity evidence is not independent verification of ProjectEQ ambient prose."
+    },
+    {
+      "url": "https://wiki.project1999.com/Guard_Mason?action=raw",
+      "note": "Cached 2026-08-12T19:12:02.950Z; SHA256 7ff24545a0d09ee1de3fe64f749f4b286f7048423dd3e271cb1d14042dd25b55; reference/p99-wiki/npc-pages/guard-mason-4e289ff806.wiki. NPC identity evidence is not independent verification of ProjectEQ ambient prose."
+    },
+    {
+      "url": "https://wiki.project1999.com/Guard_Pert?action=raw",
+      "note": "Cached 2026-08-12T19:14:00.828Z; SHA256 84a5ba037b32e62cc41c95d62e26834b04385239778b303340566bc0f2e6a72c; reference/p99-wiki/npc-pages/guard-pert-d4f0844ebb.wiki. NPC identity evidence is not independent verification of ProjectEQ ambient prose."
+    },
+    {
+      "url": "https://wiki.project1999.com/Horasug?action=raw",
+      "note": "Cached 2026-08-12T19:26:44.336Z; SHA256 8e1535cf4fecc54f84f839ed30fbf515533d5fc3f14414bff5e61f3253327def; reference/p99-wiki/npc-pages/horasug-97f370b7a0.wiki. NPC identity evidence is not independent verification of ProjectEQ ambient prose."
+    },
+    {
+      "url": "https://wiki.project1999.com/Initiate_Corrith?action=raw",
+      "note": "Cached 2026-08-12T19:30:00.802Z; SHA256 ca9620b20e915d0b49ace1e1dde4952a3796fb2f102b6f63b65335defe5c7ae8; reference/p99-wiki/npc-pages/initiate-corrith-a444583e99.wiki. NPC identity evidence is not independent verification of ProjectEQ ambient prose."
+    },
+    {
+      "url": "https://wiki.project1999.com/Initiate_Kroskain?action=raw",
+      "note": "Cached 2026-08-12T19:30:14.952Z; SHA256 19b07023e28a4f24566aa333507a1239c9b1394685e568de525891a9e2fa07c8; reference/p99-wiki/npc-pages/initiate-kroskain-83e1a850a5.wiki. NPC identity evidence is not independent verification of ProjectEQ ambient prose."
+    },
+    {
+      "url": "https://wiki.project1999.com/Jorumin?action=raw",
+      "note": "Cached 2026-08-12T19:37:42.447Z; SHA256 7d2aa8f7b8aa3b9700d4c1dfc36c224213e152b4daa77d5c07aef91f10c8be39; reference/p99-wiki/npc-pages/jorumin-2fceb6b1f2.wiki. NPC identity evidence is not independent verification of ProjectEQ ambient prose."
+    },
+    {
+      "url": "https://wiki.project1999.com/Lieutenant_Ulfur?action=raw",
+      "note": "Cached 2026-08-12T19:56:55.918Z; SHA256 c442e97e1b036e965eda166a04e48e13148562ebbdc55ca307ff5a71035931c1; reference/p99-wiki/npc-pages/lieutenant-ulfur-546cecb02b.wiki. NPC identity evidence is not independent verification of ProjectEQ ambient prose."
+    },
+    {
+      "url": "https://wiki.project1999.com/Madan_Eflik?action=raw",
+      "note": "Cached 2026-08-12T20:02:36.938Z; SHA256 ad7055a45a7b53927f910cb164e9022e1d7b7347de80ac2d09ea9cf778a5cb04; reference/p99-wiki/npc-pages/madan-eflik-dcbce5c31f.wiki. NPC identity evidence is not independent verification of ProjectEQ ambient prose."
+    },
+    {
+      "url": "https://wiki.project1999.com/Ratop?action=raw",
+      "note": "Cached 2026-08-12T20:34:19.773Z; SHA256 e921089acd86aae9cb40b7b8ba232ef614603436f760b1e6cceea47df7e526bf; reference/p99-wiki/npc-pages/ratop-1e47033eb9.wiki. NPC identity evidence is not independent verification of ProjectEQ ambient prose."
+    },
+    {
+      "url": "https://wiki.project1999.com/Ronodun?action=raw",
+      "note": "Cached 2026-08-12T20:38:51.897Z; SHA256 a6d321cf040fae1a89b5e523c168128062b58d315838c50655f40f2758cdc89a; reference/p99-wiki/npc-pages/ronodun-1913ad4f8b.wiki. NPC identity evidence is not independent verification of ProjectEQ ambient prose."
+    },
+    {
+      "url": "https://wiki.project1999.com/Rumagur?action=raw",
+      "note": "Cached 2026-08-12T20:40:42.855Z; SHA256 6c7b0e1dfaed601e3c356ea963ec9c3af4c5da953dbdcfb0bca5f91233964af0; reference/p99-wiki/npc-pages/rumagur-714a57b1fb.wiki. NPC identity evidence is not independent verification of ProjectEQ ambient prose."
+    },
+    {
+      "url": "https://wiki.project1999.com/Saramor?action=raw",
+      "note": "Cached 2026-08-12T20:42:21.094Z; SHA256 a803ee54b2a554e8dcbb1543ed321dfc3623566d98fd38b47c4c705d07142499; reference/p99-wiki/npc-pages/saramor-44871364f4.wiki. NPC identity evidence is not independent verification of ProjectEQ ambient prose."
+    },
+    {
+      "url": "https://wiki.project1999.com/Templar_Franchus?action=raw",
+      "note": "Cached 2026-08-12T21:07:51.585Z; SHA256 9ea468914ccfe7ad8d55cb06ccc326e2b21b63474e6483dda9b81c8316b86f41; reference/p99-wiki/npc-pages/templar-franchus-0c758bb7b6.wiki. NPC identity evidence is not independent verification of ProjectEQ ambient prose."
+    },
+    {
+      "url": "https://wiki.project1999.com/Templar_Tingar?action=raw",
+      "note": "Cached 2026-08-12T21:07:54.974Z; SHA256 325f94708b44a8c665774f3fddd7d6d40ba7465ca25accf93104b56558d177ee; reference/p99-wiki/npc-pages/templar-tingar-9c56b9c12a.wiki. NPC identity evidence is not independent verification of ProjectEQ ambient prose."
+    },
+    {
+      "url": "https://github.com/EQEmu/EQEmu/blob/4aceae18b94ffaafc08e2b17bc41cd72c77f795d/zone/questmgr.cpp",
+      "note": "Official QuestManager source distinguishes millisecond signal delays from second-based settimer. See changes/p99-conversion-ambient/signal-units.json."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 13245,
+        "zone": "greatdivide",
+        "name": "gnomish_captive",
+        "lua_content": null,
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 13245,
+        "zone": "greatdivide",
+        "name": "gnomish_captive",
+        "lua_content": "-- name: gnomish_captive\n-- Keep IdleQuest owner-scoped proximity/depop semantics; no static spawn is added.\n-- Distinct from bloody_gnome_captive (118026), the existing Bloodmaw map recipient.\n-- P99 bounded conversion review: 2026-10-22; see closure-review.json.\n-- Original ProjectEQ flavor retained unless specifically documented; not a live-playability claim.\nfunction event_spawn(e)\n    local x, y = e.self:GetX(), e.self:GetY()\n    eq.set_proximity(x - 20, x + 20, y - 20, y + 20)\nend\n\nfunction event_enter(e)\n    e.self:Say(\"Please, somebody help me. This bear won't let me leave.\")\n    e.self:Emote(\"tries to hide from Bloodmaw deeper in the cave.\")\n    eq.clear_proximity()\n    eq.depop()\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 18491,
+        "zone": "iceclad",
+        "name": "Novyak_the_Lookout",
+        "lua_content": null,
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 18491,
+        "zone": "iceclad",
+        "name": "Novyak_the_Lookout",
+        "lua_content": "-- name: Novyak_the_Lookout\n-- timers: world\n-- P99 bounded conversion review: 2026-10-22; see closure-review.json.\n-- Original ProjectEQ flavor retained unless specifically documented; not a live-playability claim.\nfunction event_spawn(e)\n    eq.set_timer(\"1\", 2400000)\nend\n\nfunction event_timer(e)\n    e.self:Say(\"Guys, can I get down now please?\")\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 18154,
+        "zone": "thurgadina",
+        "name": "Brina_Snowfox",
+        "lua_content": null,
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 18154,
+        "zone": "thurgadina",
+        "name": "Brina_Snowfox",
+        "lua_content": "-- name: Brina_Snowfox\n-- Repair: duplicate hardcoded Wood Elf / corrupt %#1472 greetings collapse to one player-race greeting.\n-- Common prose is ProjectEQ, not independently verified P99 dialogue; race substitution is a documented template repair.\n-- P99 bounded conversion review: 2026-10-22; see closure-review.json.\n-- Original ProjectEQ flavor retained unless specifically documented; not a live-playability claim.\nfunction event_say(e)\n    if e.message:findi(\"hail\") then\n        e.self:Say(\"There doesn't seem to be much call for a sketch artist in Thurgadin these days. what with all the sculptures and such. but I get by. Care to purchase one of my sketches. \" .. e.other:GetRaceName() .. \"?\")\n    end\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 18599,
+        "zone": "thurgadina",
+        "name": "Initiate_Corrith",
+        "lua_content": null,
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 18599,
+        "zone": "thurgadina",
+        "name": "Initiate_Corrith",
+        "lua_content": "-- name: Initiate_Corrith\n-- timers: world\n-- Runtime limitation: DoAnim is currently a no-op; the original requested animation is retained.\n-- P99 bounded conversion review: 2026-10-22; see closure-review.json.\n-- Original ProjectEQ flavor retained unless specifically documented; not a live-playability claim.\nfunction event_spawn(e)\n    eq.set_timer(\"2\", 30000)\nend\n\nfunction event_timer(e)\n    e.self:DoAnim(2)\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 15312,
+        "zone": "thurgadina",
+        "name": "Initiate_Kroskain",
+        "lua_content": null,
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 15312,
+        "zone": "thurgadina",
+        "name": "Initiate_Kroskain",
+        "lua_content": "-- name: Initiate_Kroskain\n-- timers: world\n-- P99 bounded conversion review: 2026-10-22; see closure-review.json.\n-- Original ProjectEQ flavor retained unless specifically documented; not a live-playability claim.\nfunction event_spawn(e)\n    eq.set_timer(\"1\", 320000)\nend\n\nfunction event_timer(e)\n    e.self:Say(\"Sir, you said Royt face. Guard Royt is just on the other side of this wall!\")\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 16747,
+        "zone": "thurgadina",
+        "name": "Initiate_Sirchthain",
+        "lua_content": null,
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 16747,
+        "zone": "thurgadina",
+        "name": "Initiate_Sirchthain",
+        "lua_content": "-- name: Initiate_Sirchthain\n-- timers: world\n-- Runtime limitation: DoAnim is currently a no-op; original request retained.\n-- Identity limitation: this original script key has no exact NPC name match; no alias or NPC row is invented.\n-- P99 bounded conversion review: 2026-10-22; see closure-review.json.\n-- Original ProjectEQ flavor retained unless specifically documented; not a live-playability claim.\nlocal function reset_timer()\n    -- Perl rand(40)+10 is [10,50) seconds, despite the inaccurate 10-40 comment.\n    eq.set_timer(\"2\", math.floor((math.random() * 40 + 10) * 1000))\nend\n\nfunction event_spawn(e)\n    reset_timer()\nend\n\nfunction event_timer(e)\n    e.self:DoAnim(2)\n    reset_timer()\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 18913,
+        "zone": "thurgadina",
+        "name": "Lieutenant_Ulfur",
+        "lua_content": null,
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 18913,
+        "zone": "thurgadina",
+        "name": "Lieutenant_Ulfur",
+        "lua_content": "-- name: Lieutenant_Ulfur\n-- actors: world\n-- Engine adaptation: event_spawn starts existing grid30 (spawn25629), preserving all24 points and pauses.\n-- Player-scene bootstrap and live navigation are not independently validated here.\n-- P99 bounded conversion review: 2026-10-22; see closure-review.json.\n-- Original ProjectEQ flavor retained unless specifically documented; not a live-playability claim.\nfunction event_spawn(e)\n    -- Promote the existing exact native circular patrol to durable callback delivery.\n    -- Runtime admission rejects another active route for this actor lifetime.\n    eq.start(30)\nend\n\nfunction event_say(e)\n    if e.message:findi(\"hail\") then\n        e.self:Say(\"Hail, there, \" .. e.other:GetRaceName() .. \". How goes it? Much fairer than I, I'll wager. Me troops can't hit the broad side of a mammoth with their crossbows. Oh, by the way, I'm Lieutenant Ulfur, Commander of the 23rd Coldain crossbow regiment, if ye kin call it a regiment.\")\n    end\n    if e.message:findi(\"regiment\") then\n        e.self:Say(\"Yes. we assist our troops in military endeavors. Although we're almost more harm than good. All me troops have soldier envy. They want in the middle of the rumble, face ta face with their enemies stompin them into the ground. That's all well and good but a contingent of crossbowmen can be the difference in winning or losing. Do you favor ranged weapons, \" .. e.other:GetCleanName() .. \"?\")\n    end\n    if e.message:findi(\"yes\") then\n        e.self:Say(\"Ahh, well, maybe sometime I'll let ya try out one of our famed crossbows. Maybe even give ye one if ye prove yerself to the Coldain cause. Unfortunately. though. we can spare no crossbows now. Perhaps in the future we will be able to.\")\n    end\n    if e.message:findi(\"no\") then\n        e.self:Say(\"Heh, figures. Almost no one kin fully appreciate the warm feelin' ye get when a bolt ye fired splits the skull of yer adversary. They don't even see it comin'; kinda absolvers yer guilt fer killin' another bein'. Anonymous killin', heheheh.\")\n    end\nend\n\nfunction event_waypoint_arrive(e)\n    if e.wp == 15 then\n        e.self:Emote(\"yawns and says, 'Well, time fer me ta walk the floor again lads.'\")\n        eq.signal(115104, 0)\n        eq.signal(115206, 0)\n        eq.signal(115105, 0)\n        eq.signal(115207, 0)\n        eq.signal(115107, 0)\n        eq.signal(115208, 0)\n        eq.signal(115109, 0)\n        eq.signal(115110, 0)\n        eq.signal(115209, 0)\n        eq.signal(115112, 0)\n        eq.signal(115113, 0)\n        eq.signal(115211, 0)\n    end\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 12067,
+        "zone": "thurgadina",
+        "name": "Templar_Franchus",
+        "lua_content": null,
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 12067,
+        "zone": "thurgadina",
+        "name": "Templar_Franchus",
+        "lua_content": "-- name: Templar_Franchus\n-- timers: world\n-- P99 bounded conversion review: 2026-10-22; see closure-review.json.\n-- Original ProjectEQ flavor retained unless specifically documented; not a live-playability claim.\nfunction event_spawn(e)\n    eq.set_timer(\"1\", 480000)\nend\n\nfunction event_timer(e)\n    e.self:Say(\"Ok lads, remember what I taught you now. Thrust, block, slash...\")\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 18642,
+        "zone": "thurgadina",
+        "name": "Templar_Tingar",
+        "lua_content": null,
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 18642,
+        "zone": "thurgadina",
+        "name": "Templar_Tingar",
+        "lua_content": "-- name: Templar_Tingar\n-- timers: world\n-- P99 bounded conversion review: 2026-10-22; see closure-review.json.\n-- Original ProjectEQ flavor retained unless specifically documented; not a live-playability claim.\nfunction event_spawn(e)\n    eq.set_timer(\"1\", 480000)\n    eq.set_timer(\"2\", 840000)\nend\n\nfunction event_timer(e)\n    if e.timer == \"1\" then\n        e.self:Say(\"Oh Brell, what ever did I do to inspire your wrath?\")\n    elseif e.timer == \"2\" then\n        e.self:Say(\"Ok, let's try this again.\")\n        e.self:Say(\"ROYGHT FACE!\")\n    end\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 13607,
+        "zone": "thurgadinb",
+        "name": "Councilor_Amberfeld",
+        "lua_content": null,
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 13607,
+        "zone": "thurgadinb",
+        "name": "Councilor_Amberfeld",
+        "lua_content": "-- name: Councilor_Amberfeld\n-- actors: world\n-- P99 bounded conversion review: 2026-10-22; see closure-review.json.\n-- Original ProjectEQ flavor retained unless specifically documented; not a live-playability claim.\nfunction event_say(e)\n    if e.message:findi(\"hail\") then\n        e.self:Say(\"Hail there, \" .. e.other:GetCleanName() .. \". Amberfeld's the name and minin' is my trade. As the council representative of the Snowchippers, it be my duty ta make sure all these politicians and warmongers don't forget one thing. And that's that it's us miners that bring in the ore for weapons and the stones for their fancy houses.\")\n    end\nend\n\nfunction event_signal(e)\n    if e.signal == 1 then\n        e.self:MoveTo(108,665,38,126,true)\n    elseif e.signal == 2 then\n        e.self:MoveTo(25,542,65,0,true)\n    end\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 16734,
+        "zone": "thurgadinb",
+        "name": "Councilor_Coldember",
+        "lua_content": null,
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 16734,
+        "zone": "thurgadinb",
+        "name": "Councilor_Coldember",
+        "lua_content": "-- name: Councilor_Coldember\n-- actors: world\n-- P99 bounded conversion review: 2026-10-22; see closure-review.json.\n-- Original ProjectEQ flavor retained unless specifically documented; not a live-playability claim.\nfunction event_say(e)\n    if e.message:findi(\"hail\") then\n        e.self:Say(\"Watch yer step around the Icewell there, \" .. e.other:GetCleanName() .. \". I've heard that a giant beast lives down in the pit waiting to devour those who earn the punishment of being dropped down there. Might be just I rumor but I swear I've heard some sounds comin up from the well that don't resemble any of the creatures we put in there.\")\n    end\nend\n\nfunction event_signal(e)\n    if e.signal == 1 then\n        e.self:MoveTo(93,655,39,488,true)\n    elseif e.signal == 2 then\n        e.self:MoveTo(15,543,66,0,true)\n    end\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 15755,
+        "zone": "thurgadinb",
+        "name": "Councilor_Darakor",
+        "lua_content": null,
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 15755,
+        "zone": "thurgadinb",
+        "name": "Councilor_Darakor",
+        "lua_content": "-- name: Councilor_Darakor\n-- actors: world\n-- P99 bounded conversion review: 2026-10-22; see closure-review.json.\n-- Original ProjectEQ flavor retained unless specifically documented; not a live-playability claim.\nfunction event_say(e)\n    if e.message:findi(\"hail\") then\n        e.self:Say(\"Hmmph, if you've come here to actually get something accomplished yer wastin yer time. This lot'll babble on endlessly about politics and luxuries. Only the Dain and a few others like myself want to deal with the actual problems of the Coldain, that being the bloody Kromrif of course.\")\n    end\nend\n\nfunction event_signal(e)\n    if e.signal == 1 then\n        e.self:MoveTo(-79,656,39,0,true)\n    elseif e.signal == 2 then\n        e.self:MoveTo(-15,544,66,0,true)\n    end\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 18502,
+        "zone": "thurgadinb",
+        "name": "Councilor_Darkfrost",
+        "lua_content": null,
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 18502,
+        "zone": "thurgadinb",
+        "name": "Councilor_Darkfrost",
+        "lua_content": "-- name: Councilor_Darkfrost\n-- actors: world\n-- P99 bounded conversion review: 2026-10-22; see closure-review.json.\n-- Original ProjectEQ flavor retained unless specifically documented; not a live-playability claim.\nfunction event_say(e)\n    if e.message:findi(\"hail\") then\n        e.self:Say(\"It's that bastard Tormax whats the cause of all our trouble. What we need to do is send some specially trained assasins to take him out. Sure it's not the most honorable thing to do, but without him the giants wouldn't know what to do.\")\n    end\nend\n\nfunction event_signal(e)\n    if e.signal == 1 then\n        e.self:MoveTo(-4,887,-1,81,true)\n    elseif e.signal == 2 then\n        e.self:MoveTo(-5,543,66,0,true)\n    end\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 12167,
+        "zone": "thurgadinb",
+        "name": "Councilor_Deynekn",
+        "lua_content": null,
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 12167,
+        "zone": "thurgadinb",
+        "name": "Councilor_Deynekn",
+        "lua_content": "-- name: Councilor_Deynekn\n-- actors: world\n-- P99 bounded conversion review: 2026-10-22; see closure-review.json.\n-- Original ProjectEQ flavor retained unless specifically documented; not a live-playability claim.\nfunction event_signal(e)\n    if e.signal == 1 then\n        e.self:MoveTo(92,703,39,262,true)\n    elseif e.signal == 2 then\n        e.self:MoveTo(20,534,68,0,true)\n    end\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 18417,
+        "zone": "thurgadinb",
+        "name": "Councilor_Dirkins",
+        "lua_content": null,
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 18417,
+        "zone": "thurgadinb",
+        "name": "Councilor_Dirkins",
+        "lua_content": "-- name: Councilor_Dirkins\n-- actors: world\n-- P99 bounded conversion review: 2026-10-22; see closure-review.json.\n-- Original ProjectEQ flavor retained unless specifically documented; not a live-playability claim.\nfunction event_say(e)\n    if e.message:findi(\"hail\") then\n        e.self:Say(\"I'm sure if you've listened to my fellow councilors babble on for awhile you must surely think our nation is in chaos. Thats far from the truth however as we do not make the decisions for our people. It is the Dain's will alone that decides what course our people take, we simply offer our advice and opinions. Dain Frostreaver IV is a good and wise man, trust in him will take our people far I promise you.\")\n    end\nend\n\nfunction event_signal(e)\n    if e.signal == 1 then\n        e.self:MoveTo(-103,703,39,264,true)\n    elseif e.signal == 2 then\n        e.self:MoveTo(0,535,68,0,true)\n    end\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 18265,
+        "zone": "thurgadinb",
+        "name": "Councilor_Glacierbane",
+        "lua_content": null,
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 18265,
+        "zone": "thurgadinb",
+        "name": "Councilor_Glacierbane",
+        "lua_content": "-- name: Councilor_Glacierbane\n-- actors: world\n-- P99 bounded conversion review: 2026-10-22; see closure-review.json.\n-- Original ProjectEQ flavor retained unless specifically documented; not a live-playability claim.\nfunction event_say(e)\n    if e.message:findi(\"hail\") then\n        e.self:Say(\"The giants aren't our only problem ya know? Them Rygorr Orcs in the wastes are up ta no good as well. But I wouldn't worry too much about them if'n I were you. Me own son Garadain is out there takin care of them. I almost feel sorry for those orcs hehe.\")\n    end\nend\n\nfunction event_signal(e)\n    if e.signal == 1 then\n        e.self:MoveTo(67,654,39,510,true)\n    elseif e.signal == 2 then\n        e.self:MoveTo(5,545,66,0,true)\n    end\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 19520,
+        "zone": "thurgadinb",
+        "name": "Councilor_Icelok",
+        "lua_content": null,
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 19520,
+        "zone": "thurgadinb",
+        "name": "Councilor_Icelok",
+        "lua_content": "-- name: Councilor_Icelok\n-- actors: world\n-- P99 bounded conversion review: 2026-10-22; see closure-review.json.\n-- Original ProjectEQ flavor retained unless specifically documented; not a live-playability claim.\nfunction event_say(e)\n    if e.message:findi(\"hail\") then\n        e.self:Say(\"Isn't Icewell the most beautiful Keep ye have ever seen stranger? I do hope you've taken the time to visit some of our other attractions in Thurgadin. I often go to remembrance park just to stare at the sculptures. Our people may be cold and simple, but keep in mind there is an artistic side to us as well.\")\n    end\nend\n\nfunction event_signal(e)\n    if e.signal == 1 then\n        e.self:MoveTo(67,703,39,270,true)\n    elseif e.signal == 2 then\n        e.self:MoveTo(10,535,68,0,true)\n    end\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 13591,
+        "zone": "thurgadinb",
+        "name": "Councilor_Icepike",
+        "lua_content": null,
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 13591,
+        "zone": "thurgadinb",
+        "name": "Councilor_Icepike",
+        "lua_content": "-- name: Councilor_Icepike\n-- actors: world\n-- P99 bounded conversion review: 2026-10-22; see closure-review.json.\n-- Original ProjectEQ flavor retained unless specifically documented; not a live-playability claim.\nfunction event_say(e)\n    if e.message:findi(\"hail\") then\n        e.self:Say(\"King Tormax must be stopped, no matter what the cost.\")\n    end\nend\n\nfunction event_signal(e)\n    if e.signal == 1 then\n        e.self:MoveTo(117,701,39,256,true)\n    elseif e.signal == 2 then\n        e.self:MoveTo(30,533,68,0,true)\n    end\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 14382,
+        "zone": "thurgadinb",
+        "name": "Councilor_Thubins",
+        "lua_content": null,
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 14382,
+        "zone": "thurgadinb",
+        "name": "Councilor_Thubins",
+        "lua_content": "-- name: Councilor_Thubins\n-- actors: world\n-- P99 bounded conversion review: 2026-10-22; see closure-review.json.\n-- Original ProjectEQ flavor retained unless specifically documented; not a live-playability claim.\nfunction event_say(e)\n    if e.message:findi(\"hail\") then\n        e.self:Say(\"Come to see the excitement of the court have you friend? I'm just now working on my latest draft for a new waste disposal ordinance to present to the Dain, it's absolutely fascinating!\")\n    end\nend\n\nfunction event_signal(e)\n    if e.signal == 1 then\n        e.self:MoveTo(-53,703,39,258,true)\n    elseif e.signal == 2 then\n        e.self:MoveTo(-20,535,68,0,true)\n    end\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 15814,
+        "zone": "thurgadinb",
+        "name": "Councilor_Wintershade",
+        "lua_content": null,
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 15814,
+        "zone": "thurgadinb",
+        "name": "Councilor_Wintershade",
+        "lua_content": "-- name: Councilor_Wintershade\n-- actors: world\n-- P99 bounded conversion review: 2026-10-22; see closure-review.json.\n-- Original ProjectEQ flavor retained unless specifically documented; not a live-playability claim.\nfunction event_say(e)\n    if e.message:findi(\"hail\") then\n        e.self:Say(\"Councilor Darakor here would have you believe we should march every man, woman, and child in the city to Kael tommorow. He is a fool and so are those who support him. I for one would like to see greater steps in ending this senseless conflict. Oh sure the giants are unreasonable right now, but reason can be bought in time.\")\n    end\nend\n\nfunction event_signal(e)\n    if e.signal == 1 then\n        e.self:MoveTo(6,895,-2,256,true)\n    elseif e.signal == 2 then\n        e.self:MoveTo(-10,534,67,0,true)\n    end\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 18337,
+        "zone": "westwastes",
+        "name": "Julius_Oresko",
+        "lua_content": null,
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 18337,
+        "zone": "westwastes",
+        "name": "Julius_Oresko",
+        "lua_content": "-- name: Julius_Oresko\n-- NPC availability on P99 is unverified; exact exported key retained, no NPC row added.\n-- P99 bounded conversion review: 2026-10-22; see closure-review.json.\n-- Original ProjectEQ flavor retained unless specifically documented; not a live-playability claim.\nfunction event_aggro(e)\n    e.self:Say(\"My blades have slain dragons! A \" .. e.other:GetRaceName() .. \" like you does not have a chance of survival!\")\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/greatdivide/gnomish_captive.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversion-ambient/greatdivide/gnomish_captive.lua",
+      "afterSha256": "8c0c07e98f60c60e0ec1ab11f38b491b245b117b0b841d36f8fd5613b3be7c01"
+    },
+    {
+      "target": "maintained/lua/converted-perl/iceclad/Novyak_the_Lookout.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversion-ambient/iceclad/Novyak_the_Lookout.lua",
+      "afterSha256": "065bc1a013dd632f5dc8c6fec073a6ef9fc6c0dc15f58a35d271bb8aff0cead7"
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Brina_Snowfox.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversion-ambient/thurgadina/Brina_Snowfox.lua",
+      "afterSha256": "68545ed5c00da556f2a39b7bee78224231890b41d773eac3947c04fa1027c73f"
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Initiate_Corrith.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversion-ambient/thurgadina/Initiate_Corrith.lua",
+      "afterSha256": "0446af563ef79a89f7c64cb97b72515b8e1fa2e51ee735811d27745318494b5e"
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Initiate_Kroskain.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversion-ambient/thurgadina/Initiate_Kroskain.lua",
+      "afterSha256": "ada227e2f347f44bcb49c5fda54fe771394ed65354cecd4cb666c08e3007d1ee"
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Initiate_Sirchthain.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversion-ambient/thurgadina/Initiate_Sirchthain.lua",
+      "afterSha256": "019739f5d1b1ccdaae15a345bc93d40298095f50026b8556a1bdbf37ef01d391"
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Lieutenant_Ulfur.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversion-ambient/thurgadina/Lieutenant_Ulfur.lua",
+      "afterSha256": "f1b8354b3fbac02ee4b2dad8d29f19e8c120184d28b8c6fc91b4048e3afdf531"
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Templar_Franchus.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversion-ambient/thurgadina/Templar_Franchus.lua",
+      "afterSha256": "3950971abb9a59638bf03d51f4c7d0467b0a2907d63291264926c35aa210f9c4"
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Templar_Tingar.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversion-ambient/thurgadina/Templar_Tingar.lua",
+      "afterSha256": "b5d579492fed33335b3fc2641f6e7244987e60e6660d0a8ab09b4f23f84fb6e2"
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadinb/Councilor_Amberfeld.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Amberfeld.lua",
+      "afterSha256": "9f96b89afdad32905e2803e99680c56e8cd9b484c8c8c977e444988495aa159e"
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadinb/Councilor_Coldember.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Coldember.lua",
+      "afterSha256": "671172ac65b14221266c6814f76cbb3e9612cd7945b225ef74032b1092afb0ee"
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadinb/Councilor_Darakor.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Darakor.lua",
+      "afterSha256": "7a366d69f0d52c93b71a212f1f25eae659f91bea9990f3ba2728f3b28da62df8"
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadinb/Councilor_Darkfrost.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Darkfrost.lua",
+      "afterSha256": "dda5545f36f4de679466a1844e2bf9008cabea5d6db9fac846a3965e41b46f86"
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadinb/Councilor_Deynekn.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Deynekn.lua",
+      "afterSha256": "0e155c8a04c7f489dc1dee5fa20e79a4ceee9bd4bccbee7947287f7503e295c3"
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadinb/Councilor_Dirkins.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Dirkins.lua",
+      "afterSha256": "aa03a07ec548b824b4cd2d9ed4e8d97e68806cd582d54a5af7bc119e2ac2499a"
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadinb/Councilor_Glacierbane.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Glacierbane.lua",
+      "afterSha256": "17318db5ca6145f7bd201a3c7f637267fc44802de08ebfaa7176acad7a30d0f1"
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadinb/Councilor_Icelok.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Icelok.lua",
+      "afterSha256": "fd1c762bc0a9ccfe6ba5f30c63251d4dd5320910d758cca183c321fbb39ef1f3"
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadinb/Councilor_Icepike.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Icepike.lua",
+      "afterSha256": "dd790626e28c3760e7e5d18d11d94ea87448788e2ea67c996c6e8b91a7759282"
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadinb/Councilor_Thubins.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Thubins.lua",
+      "afterSha256": "350c61c57139bbdaaa4a0ff4ba820836be6d122a607023cc1195d38413f562a7"
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadinb/Councilor_Wintershade.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversion-ambient/thurgadinb/Councilor_Wintershade.lua",
+      "afterSha256": "4c2d40a065e8404b90e229fcf9565164a7ddb3f0a1a770ce8f3a984a7f59519e"
+    },
+    {
+      "target": "maintained/lua/converted-perl/westwastes/Julius_Oresko.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversion-ambient/westwastes/Julius_Oresko.lua",
+      "afterSha256": "859d7ae27cc78e6e6bc35be044e4c1ba0c4328db5cc4b229eaaf1960292743b2"
+    }
+  ]
+}

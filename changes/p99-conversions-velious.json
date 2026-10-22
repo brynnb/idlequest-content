@@ -1,0 +1,204 @@
+{
+  "format": 1,
+  "id": "p99-conversions-velious",
+  "summary": "Restore six missing Velious Lua scripts plus P99-authored Adia mug exchange: four documented mug exchanges, Errgriz fur exchange/dialogue, and two Tiny Savages kill-target flavor hails. Do not activate post-Velious Kardakor branch.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Souvenir_Mugs?action=raw",
+      "note": "Cached 2026-07-17T23:33:51.289Z; SHA256 9fa8a7d1454b893b0f957578491f4245204a320cc9ca4aaf0fce68a70578384a; reference/p99-wiki/raw-pages/souvenir-mugs-366e530108.json. No MediaWiki revision ID in metadata; snapshot hash is exact provenance."
+    },
+    {
+      "url": "https://wiki.project1999.com/Learn_the_Ways_of_Skinning_and_Tailoring?action=raw",
+      "note": "Cached 2026-07-17T23:23:16.091Z; SHA256 ab63cdd2851fa165dfe132ba28d798b8ea79e5c2caa4a070749e5e84c3f627e9; reference/p99-wiki/raw-pages/learn-the-ways-of-skinning-and-tailoring-2868fb301f.json. No MediaWiki revision ID in metadata; snapshot hash is exact provenance."
+    },
+    {
+      "url": "https://wiki.project1999.com/Tiny_Savages?action=raw",
+      "note": "Cached 2026-07-17T23:39:05.921Z; SHA256 732d6e1972f649192230ec7e10595e1aa3bb5682be9038cd22c44678929faa27; reference/p99-wiki/raw-pages/tiny-savages-dc5b0ab47b.json. No MediaWiki revision ID in metadata; snapshot hash is exact provenance."
+    },
+    {
+      "url": "https://wiki.project1999.com/Ralgyn's_Promise?action=raw",
+      "note": "Cached 2026-07-17T23:29:24.895Z; SHA256 6da6225ad91ba8ddaf487c65f37dc8640f7ef76e0d7edbd17f81426be196f0a8; reference/p99-wiki/raw-pages/ralgyn-s-promise-83eec9bd3b.json. No MediaWiki revision ID in metadata; snapshot hash is exact provenance."
+    },
+    {
+      "url": "https://wiki.project1999.com/Royal_Scribe_Kaavin?action=raw",
+      "note": "Cached 2026-08-12T20:40:29.617Z; SHA256 ad02e2c412dc52aa11e232cf83828d023f540fdda1d07844f632ff039fbbde69; reference/p99-wiki/npc-pages/royal-scribe-kaavin-90dfeb6ac8.json. No MediaWiki revision ID in metadata; snapshot hash is exact provenance."
+    },
+    {
+      "url": "https://wiki.project1999.com/Grand_Huntsman_Darral?action=raw",
+      "note": "Cached 2026-08-12T18:58:16.748Z; SHA256 702a78b56ee25fb93aa7fcb4325a5a8ea5ba36fad69a6656a4542810cfcfebea; reference/p99-wiki/npc-pages/grand-huntsman-darral-e81c09cfee.json. No MediaWiki revision ID in metadata; snapshot hash is exact provenance."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 12014,
+        "zone": "iceclad",
+        "name": "Errgriz",
+        "lua_content": null,
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 12014,
+        "zone": "iceclad",
+        "name": "Errgriz",
+        "lua_content": "-- P99 review: 2026-10-22; cached wiki evidence retained in review.json.\n-- Quest faction requirements intentionally bypassed; no new level gate.\n-- P99 Learn the Ways of Skinning and Tailoring.\n-- 30023 High Quality Dire Wolf Fur -> 30037 Wolf Fur Earcovers.\n-- The wiki lists no XP, cash, or faction reward; none is invented here.\nfunction event_say(e)\n    if e.message:findi(\"hail\") then\n        e.self:Say(\"Errrr. You come for master, [learning] like me?\")\n    elseif e.message:findi(\"learning\") then\n        e.self:Say(\"I am learning ways of skinning and tailoring. None left but the master so I must learn to help. For now I only [clean the furs].\")\n    elseif e.message:findi(\"clean\") then\n        e.self:Say(\"Yes. I clean the furs and then the master [makes things] from them.\")\n    elseif e.message:findi(\"things\") then\n        e.self:Say(\"I wish I could make things. Headcoverings, to keep cold from head is what I want to make. I think I ready but not able to make until I get furs. Master says to find skin of high quality, thick and strong, but I have no training in hunting.\")\n    end\nend\n\nfunction event_trade(e)\n    local item_lib = require(\"items\")\n    if item_lib.check_turn_in(e.trade, {item1 = 30023}) then\n        e.self:Emote(\"starts to cut and scrape the furs. He growls softly as he works and his master watches his progress.\")\n        e.self:Say(\"Grrr. Much too small. I fail. I not ready to work on my own. Sorry to waste your time. Here, take what I made. Maybe you can find use for it.\")\n        e.other:SummonItem(30037)\n    end\n    item_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 17403,
+        "zone": "thurgadina",
+        "name": "Doogle_McBanick",
+        "lua_content": null,
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 17403,
+        "zone": "thurgadina",
+        "name": "Doogle_McBanick",
+        "lua_content": "-- P99 review: 2026-10-22; cached wiki evidence retained in review.json.\n-- Quest faction requirements intentionally bypassed; no new level gate.\n-- P99 Souvenir Mugs: three gold buys Doogle's Signature Souvenir Mug (30147).\n-- Ambient signals retain ProjectEQ provenance; not independent P99 evidence.\nfunction event_say(e)\n    if e.message:findi(\"hail\") then\n        e.self:Say(\"Welcome ta me bar, I suggest ye sit down and have a drink cause if'n ye ain't drinkin ye've no business bein 'ere.\")\n    elseif e.message:findi(\"mug\") then\n        e.self:Say(\"Mug, yeah we got a lot of mugs here but what has that got to do with anything.\")\n    end\nend\n\nfunction event_trade(e)\n    local item_lib = require(\"items\")\n    if item_lib.check_turn_in(e.trade, {gold = 3}) then\n        e.other:SummonItem(30147)\n    end\n    item_lib.return_items(e.self, e.other, e.trade)\nend\n\nfunction event_signal(e)\n    if e.signal == 1 then\n        e.self:Say(\"Hello there Horasug! What brings ya here?\")\n        eq.signal(115013,3,8000)\n    elseif e.signal == 2 then\n        e.self:Say(\"A vision you say? What exactly was this a vision of?\")\n        eq.signal(115013,4)\n    elseif e.signal == 3 then\n        eq.signal(115013,5,7000)\n    elseif e.signal == 4 then\n        e.self:Say(\"Well, you came to the right place, Horasug. A few of these ales will fill you with all the visions you can handle.\")\n    end\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 12244,
+        "zone": "thurgadina",
+        "name": "Loremaster_Fronden",
+        "lua_content": null,
+        "has_say_event": 0,
+        "enabled": 1
+      },
+      "after": {
+        "id": 12244,
+        "zone": "thurgadina",
+        "name": "Loremaster_Fronden",
+        "lua_content": "-- P99 review: 2026-10-22; cached wiki evidence retained in review.json.\n-- Quest faction requirements intentionally bypassed; no new level gate.\n-- P99 explicitly documents the same Broken Glacier mug here despite tavern mismatch.\n-- No hail response is documented. Ambient signals retain ProjectEQ provenance.\n\nfunction event_trade(e)\n    local item_lib = require(\"items\")\n    if item_lib.check_turn_in(e.trade, {platinum = 1}) then\n        e.self:Say(\"Thank ye and enjoy it. All the bars here in Thurgadin have their own mugs, just ask the barkeep if'n yer interested.\")\n        e.other:SummonItem(30146)\n    end\n    item_lib.return_items(e.self, e.other, e.trade)\nend\n\nfunction event_signal(e)\n    if e.signal == 1 then\n        e.self:Emote(\"raises an eyebrow at Horasug.\")\n        eq.signal(115013,2,11000)\n    elseif e.signal == 2 then\n        e.self:Say(\"Saramor, please remind me to water down the spirits a bit.\")\n        eq.signal(115011,5,8000)\n        eq.signal(115187,5,8000)\n    elseif e.signal == 3 then\n        e.self:Say(\"So I was polishing up the bar the other day when in hops this piece of rope and says, 'I'll take a bottle of Frostreaver's Frozen Vodka.' I look at him and I says, 'We don't serve no ropes here, now beat it!' Hehe. . .\")\n        eq.signal(115011,6)\n        eq.signal(115187,6)\n    elseif e.signal == 4 then\n        e.self:Say(\"Not ten minutes later a piece of rope comes hoppin' in and says the same thing, only this one's tied up in the middle and one end is all messed up. So I says, 'Hey, ain't you the same piece o' rope I just kicked outta here?'\")\n        eq.signal(115011,7)\n        eq.signal(115187,7)\n    elseif e.signal == 5 then\n        e.self:Say(\"He looks me dead in the eyes and says, 'Nope, I'm afraid not.' <grin>\")\n        eq.signal(115011,8,8000)\n        eq.signal(115187,8,8000)\n    elseif e.signal == 6 then\n        e.self:Say(\"Hmm, let's see here, aah yes. This is a special bottle handed down to me by my father, and it's been in my family for ages. Not really sure what it's made of, but yer welcome to give it a try.\")\n        eq.signal(115011,9,8000)\n        eq.signal(115187,9,8000)\n    elseif e.signal == 7 then\n        e.self:Emote(\"watches as Rumagur pours the contents of the bottle into his mouth.\")\n        eq.signal(115011,10,8000)\n        eq.signal(115187,10,8000)\n    end\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 16339,
+        "zone": "thurgadina",
+        "name": "Tobart_Dirkins",
+        "lua_content": null,
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 16339,
+        "zone": "thurgadina",
+        "name": "Tobart_Dirkins",
+        "lua_content": "-- P99 review: 2026-10-22; cached wiki evidence retained in review.json.\n-- Quest faction requirements intentionally bypassed; no new level gate.\n-- P99 Souvenir Mugs: one platinum buys the Broken Glacier mug (30146).\nfunction event_say(e)\n    if e.message:findi(\"hail\") then\n        e.self:Say(\"Hail and welcome to the Broken Glacier, \" .. e.other:GetName() .. \". Ye'll find the bar downstairs and comfortable rooms up top. Can I interest you in one of our signature mugs? Only a platinum piece they are!\")\n    end\nend\n\nfunction event_trade(e)\n    local item_lib = require(\"items\")\n    if item_lib.check_turn_in(e.trade, {platinum = 1}) then\n        e.self:Say(\"Thank ye and enjoy it. All the bars here in Thurgadin have their own mugs, just ask the barkeep if'n yer interested.\")\n        e.other:SummonItem(30146)\n    end\n    item_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 17832,
+        "zone": "thurgadinb",
+        "name": "Grand_Huntsman_Darral",
+        "lua_content": null,
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 17832,
+        "zone": "thurgadinb",
+        "name": "Grand_Huntsman_Darral",
+        "lua_content": "-- P99 review: 2026-10-22; cached wiki evidence retained in review.json.\n-- Quest faction requirements intentionally bypassed; no new level gate.\n-- P99 confirms NPC/quest identity but no hail text; ProjectEQ flavor text retained.\n-- Tiny Savages kill target: no invented hand-in, reward, or scripted death loot.\nfunction event_say(e)\n    if e.message:findi(\"hail\") then\n        e.self:Say(\"Hail and welcome to the Dain's trophy room. Not many people realize that aside from bein' a great warrior and king. Frostreaver is also one of our nation's greatest hunters. Here you can see some examples of his handiwork including orcs, a frost giant, a snow griffin, and even a rare albino manticore! You can find many such rare critters in the Eastern Wastes. Good luck and happy huntin'.\")\n    end\nend\n\nfunction event_trade(e)\n    local item_lib = require(\"items\")\n    item_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": {
+        "id": 16743,
+        "zone": "thurgadinb",
+        "name": "Royal_Scribe_Kaavin",
+        "lua_content": null,
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 16743,
+        "zone": "thurgadinb",
+        "name": "Royal_Scribe_Kaavin",
+        "lua_content": "-- P99 review: 2026-10-22; cached wiki evidence retained in review.json.\n-- Quest faction requirements intentionally bypassed; no new level gate.\n-- P99 NPC page corroborates hail; punctuation retained from ProjectEQ.\n-- Tiny Savages kill target: no invented hand-in, reward, or scripted death loot.\nfunction event_say(e)\n    if e.message:findi(\"hail\") then\n        e.self:Say(\"Hello there, as the official Royal Scribe of Dain Frostreaver IV, it is my duty to pen, NO . . . WAIT. . . write. NO . . . I mean scribe, yes that's the word I'm looking for. I scribe the thoughts of the Dain for posterity. I currently have record books with a combined 11,982 pages of notes detailing the life and business of our present Dain. You see, I have a rather bad memory, so I write everything down. My latest entry is that on this day \" .. e.other:GetName() .. \" came and talked to me. Anyhow, I'm sure you have much better things to do than talk to me, so good luck in your ventures, \" .. e.other:GetName() .. \", and come visit me any time.\")\n    end\nend\n\nfunction event_trade(e)\n    local item_lib = require(\"items\")\n    item_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    },
+    {
+      "table": "quests",
+      "before": null,
+      "after": {
+        "id": 503524,
+        "zone": "thurgadina",
+        "name": "Adia_Coldbeard",
+        "lua_content": "-- P99 Souvenir Mugs, cached 2026-07-17; reviewed 2026-10-22.\n-- P99 documents no hail reply. Five gold yields The Icy Mug Souvenir Stein.\n-- New P99-authored source: no baseline Perl/Lua script exists for this NPC.\n-- No faction or level gate; retain IdleQuest quest-only faction bypass.\nfunction event_trade(e)\n    local item_lib = require(\"items\")\n    if item_lib.check_turn_in(e.trade, {gold = 5}) then\n        e.self:Say(\"Thank ye for yer Patronage. Enjoy yer mug and be sure ta visit us often.\")\n        e.other:SummonItem(30145)\n    end\n    item_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 0,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/iceclad/Errgriz.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversions-velious/iceclad/Errgriz.lua",
+      "afterSha256": "c6b1073a904c48e6efbfa2947e8d5fdd962ee0f6cc3cccfa5cd95c80761a7fcc"
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Doogle_McBanick.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversions-velious/thurgadina/Doogle_McBanick.lua",
+      "afterSha256": "9176f081595cd213c9c037b7a0bbacec6811fa2bdab3ac5d552826c750c6a359"
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Loremaster_Fronden.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversions-velious/thurgadina/Loremaster_Fronden.lua",
+      "afterSha256": "587748e834a593b0db2a218567df4ca6be3619b4745eb6f6e4a08bc3bb8cf6ee"
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadina/Tobart_Dirkins.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversions-velious/thurgadina/Tobart_Dirkins.lua",
+      "afterSha256": "7df24af26a5e756f579f4afae76e689c474f408e61af887272e208693c720dc8"
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadinb/Grand_Huntsman_Darral.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversions-velious/thurgadinb/Grand_Huntsman_Darral.lua",
+      "afterSha256": "a8d089bc04dd62bc1506f6e3693f73aca8f5bbe535d48e3637ade6780ae52f61"
+    },
+    {
+      "target": "maintained/lua/converted-perl/thurgadinb/Royal_Scribe_Kaavin.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversions-velious/thurgadinb/Royal_Scribe_Kaavin.lua",
+      "afterSha256": "bfa5872061d911e081b023fe50544b04def36fe22d3af70c3f93c53262e7a1f0"
+    },
+    {
+      "target": "maintained/lua/idlequest-authored/thurgadina/Adia_Coldbeard.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-conversions-velious/thurgadina/Adia_Coldbeard.lua",
+      "afterSha256": "f117031ef05ec5086e7407eae679098dfa814bfab4a7d9411c6d54459076caa3"
+    }
+  ]
+}

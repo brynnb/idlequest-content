@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-restraining-trooper_selbat",
+  "summary": "Support documented sign this restraining order phrase alongside existing sign the restraining order, only lore/requirements response. No new reward or itemgrant route; all sequential trade conditions unchanged.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/The_Restraining_Order?action=raw",
+      "note": "Cached 2026-07-17T23:37:55.399Z; revision unavailable; SHA256 e4a24f856e44c7cec752b6501686b06243a9be01bf578245f610362916c467e3. Support documented sign this restraining order phrase alongside existing sign the restraining order, only lore/requirements response. No new reward or itemgrant route; all sequential trade conditions unchanged. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 16793,
+        "zone": "lakeofillomen",
+        "name": "Trooper_Selbat",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: lakeofillomen/Trooper_Selbat.pl\n-- items: 18248, 18249\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Good evening, citizen! It is a fine night for a stroll, but not in the woods. No, no! That would be far too dangerous!\")\n\telseif e.message:findi(\"sign the restraining order\") then\n\t\te.self:Say(\"I knew this time would come. I will slay you for bringing this to me... No... I'd best not make the officers angry. <sigh> Hand me the order and I shall sign it.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 18248}) then\n\t\te.self:Emote(\"signs the note and hands back to you. 'Be off now. Before I do choose to slay the messenger.'\")\n\t\te.other:SummonItem(18249)\n\t\te.other:AddEXP(200)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 16793,
+        "zone": "lakeofillomen",
+        "name": "Trooper_Selbat",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: lakeofillomen/Trooper_Selbat.pl\n-- items: 18248, 18249\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Good evening, citizen! It is a fine night for a stroll, but not in the woods. No, no! That would be far too dangerous!\")\n\telseif e.message:findi(\"sign the restraining order\") or e.message:findi(\"sign this restraining order\") then\n\t\te.self:Say(\"I knew this time would come. I will slay you for bringing this to me... No... I'd best not make the officers angry. <sigh> Hand me the order and I shall sign it.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 18248}) then\n\t\te.self:Emote(\"signs the note and hands back to you. 'Be off now. Before I do choose to slay the messenger.'\")\n\t\te.other:SummonItem(18249)\n\t\te.other:AddEXP(200)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/lakeofillomen/Trooper_Selbat.lua",
+      "beforeSha256": "bae0aa13e75f5ca88a1b6af09dc80a709dced64cf3807d157715bb1a4822c2a4",
+      "proposedFile": "changes/p99-tz-restraining-trooper_selbat/lakeofillomen--Trooper_Selbat.lua",
+      "afterSha256": "41f14ce10589717aeb2f06b967a3926b01ee03850d91500262be81953bd0a585"
+    }
+  ]
+}

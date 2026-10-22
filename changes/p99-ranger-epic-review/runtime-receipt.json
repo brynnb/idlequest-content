@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-22",
+  "status": "passed",
+  "command": "/tmp/p99-ranger-lua-runner < /tmp/ranger_scenarios.json",
+  "runnerSource": "tools/p99-lua-runner.go",
+  "runnerSourceSha256": "a381643eb50c5891ebbf105e209bd5a1aad5073ce21d1f2b34361d6a3e5b7e58",
+  "normalizer": "validator/questluasource",
+  "fixture": "tools/p99-test-fixture.lua",
+  "fixtureSha256": "256b1b239eee071c1e1f591649ada52e93845a769f8653691a4a79e9447fe56d",
+  "assertionsSha256": "5dd213fa961b6d9c38af04e801dc2e19395f4f04b8df5e83b06d4716582efc86",
+  "diagnosticSha256": "d1abc6e6e50438b2832c2b4504c985e0c4569e7f0ac37f856b0f44e201ac5144",
+  "scenarios": 98,
+  "proposedFile": 42,
+  "baseline_verification": 56,
+  "baseline_reproduction": 0,
+  "limits": "Fresh isolated fixture capture tests only; no game bridge, inventory settlement, world acquisition, connected chain or rendered UI."
+}

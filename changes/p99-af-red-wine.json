@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-af-red-wine",
+  "summary": "Honor explicit P99 up-to-four red wine offerings with independent per-item faction andXP. Preserve70gold branch priority and return surplus/unrelated items. No unbounded stack conversion.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Bottle_of_Red_Wine?action=raw",
+      "note": "Cached 2026-07-17T23:08:50.530Z; revision unavailable; SHA256 8eafea39ac40d8b62d51119f9696e721480eecb5d72731a790c942b9d9b42081; Give him Red Wine (up to4 unstacked); faction+10/+1/+1."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 13151,
+        "zone": "neriakc",
+        "name": "Lokar_To-Biath",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: neriakc/Lokar_To-Biath.pl\n-- items: 18200\n\nlocal function lokar_faction(e, exp)\n\te.other:Ding()\n\te.other:Faction(236, 10, 0)\n\te.other:Faction(334, 1, 0)\n\te.other:Faction(370, 1, 0)\n\te.other:AddEXP(exp)\nend\n\nfunction event_combat(e)\n\tif e.joined then\n\t\te.self:Say(\"Come and feel the blade of the Dark Bargainers.\")\n\tend\nend\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"I am the Scribe of Innoruuk. If you do not have business with me, begone!\")\n\telseif e.message:findi(\"innoruuk\") then\n\t\te.self:Say(\"I am his scribe, and He is our god. There is nothing else to be said.\")\n\telseif e.message:findi(\"scribe of dal\") then\n\t\te.self:Say(\"The Scribes of Dal? All of them are long since [dead].. or at least most would say that.\")\n\telseif e.message:findi(\"dead\") then\n\t\te.self:Say(\"Perhaps, perhaps not. I cannot remember, but perhaps Innoruuk would help me remember should you tithe him a bottle of red wine from the Blind Fish.\")\n\telseif e.message:findi(\"vow\") then\n\t\te.self:Say(\"Break the vow? She might. Were you to tithe 70 gold to your god, Innoruuk, he might aid you.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {gold = 70}) then\n\t\te.self:Say(\"Take this note to the Scribe of Dal, and perhaps she will break her vow.\")\n\t\te.other:SummonItem(18200)\n\t\tlokar_faction(e, 100)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 13030}) then\n\t\te.self:Say(\"Ah, yes, let me pray to our god.. Yes, Innoruuk has given me wisdom. A Scribe of Dal still exists, disguised as a barkeep in the Blind Fish. This information will not help you though, for she has sworn a [vow] of silence and will not speak of the Dal.\")\n\t\tlokar_faction(e, 150)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\nfunction event_death_complete(e)\n\te.self:Say(\"The death of a Dark Bargainer never goes unnoticed!\")\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 13151,
+        "zone": "neriakc",
+        "name": "Lokar_To-Biath",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: neriakc/Lokar_To-Biath.pl\n-- items: 18200\n\nlocal function lokar_faction(e, exp)\n\te.other:Ding()\n\te.other:Faction(236, 10, 0)\n\te.other:Faction(334, 1, 0)\n\te.other:Faction(370, 1, 0)\n\te.other:AddEXP(exp)\nend\n\nfunction event_combat(e)\n\tif e.joined then\n\t\te.self:Say(\"Come and feel the blade of the Dark Bargainers.\")\n\tend\nend\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"I am the Scribe of Innoruuk. If you do not have business with me, begone!\")\n\telseif e.message:findi(\"innoruuk\") then\n\t\te.self:Say(\"I am his scribe, and He is our god. There is nothing else to be said.\")\n\telseif e.message:findi(\"scribe of dal\") then\n\t\te.self:Say(\"The Scribes of Dal? All of them are long since [dead].. or at least most would say that.\")\n\telseif e.message:findi(\"dead\") then\n\t\te.self:Say(\"Perhaps, perhaps not. I cannot remember, but perhaps Innoruuk would help me remember should you tithe him a bottle of red wine from the Blind Fish.\")\n\telseif e.message:findi(\"vow\") then\n\t\te.self:Say(\"Break the vow? She might. Were you to tithe 70 gold to your god, Innoruuk, he might aid you.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {gold = 70}) then\n\t\te.self:Say(\"Take this note to the Scribe of Dal, and perhaps she will break her vow.\")\n\t\te.other:SummonItem(18200)\n\t\tlokar_faction(e, 100)\n\telseif item_lib.check_turn_in(e.trade, {item1 = 13030}) then\n\t\tfor exchange = 1, 4 do\n\t\t\tif exchange > 1 and not item_lib.check_turn_in(e.trade, {item1 = 13030}) then break end\n\t\t\te.self:Say(\"Ah, yes, let me pray to our god.. Yes, Innoruuk has given me wisdom. A Scribe of Dal still exists, disguised as a barkeep in the Blind Fish. This information will not help you though, for she has sworn a [vow] of silence and will not speak of the Dal.\")\n\t\t\tlokar_faction(e, 150)\n\t\tend\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\nfunction event_death_complete(e)\n\te.self:Say(\"The death of a Dark Bargainer never goes unnoticed!\")\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/neriakc/Lokar_To-Biath.lua",
+      "beforeSha256": "52c321dea6eeb783ba9aac3c229953b88fbe35b4b0d640831306751d596924b5",
+      "proposedFile": "changes/p99-af-red-wine/neriakc-Lokar_To-Biath.lua",
+      "afterSha256": "eebb543a54d2b24d788994dcada43c1d6d1328ee727648a143b63c86d8fefbfb"
+    }
+  ]
+}

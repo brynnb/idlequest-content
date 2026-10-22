@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-dirkog_steelhand-timer",
+  "summary": "Limit depop to named timer, preserving documented five-minute300000ms duration and all trades. Full raid/spawn settlement unverified.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/The_Fiery_Avenger?action=raw",
+      "note": "Cached 2026-07-17T23:36:26.688Z; revision unavailable; SHA256 fbd53720ea426aed594745a7a648a8df898fe840990649f9cbdbdd31322f66b3. Limit depop to named timer, preserving documented five-minute300000ms duration and all trades. Full raid/spawn settlement unverified. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 14979,
+        "zone": "airplane",
+        "name": "Dirkog_Steelhand",
+        "lua_content": "-- items: 20943, 20869, 20868, 2716\nfunction event_spawn(e)\n\teq.set_timer(\"depop\",300000);\nend\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Leave me be, ye orc kissin' son o' Innoruuk!\");\n\telseif(e.message:findi(\"I am not a son of Innoruuk\")) then\n\t\te.self:Say(\"Eh? Ye say that ye ain't one o' the cursed dark elf dogs? Well then, laddie, are ye ready to get started or are ye here fer somethin' else??\");\n\telseif(e.message:findi(\"holy swords\")) then \t\t\t\t--paladin epic\n\t\te.self:Say(\"Eh, lad? What was that? Ye wish to hear o' holy swords? Well, lad, I ain't the one ye be needin' t' talk to!\");\n\telseif(e.message:findi(\"who do I need to talk to\")) then \t--paladin epic\n\t\te.self:Say(\"A follower o' the water god he be, an' one o' the most powerful holy knights e'er to walk Norrath. His name be Inte Akera, an' he kin tell ye what ye be wantin' t' know.\");\n\telseif(e.message:findi(\"where is inte akera\")) then  \t\t--paladin epic\n\t\te.self:Say(\"Ah, I see ye wish t' speak with him! Why didn't ye say that earlier, laddie? It would've saved ye some trouble! If ye wish to speak with him, ye must donate some spare change t' me ale.. er, t' me holy crusade fund! Well, lad, what d' ye say?\");\n\telseif(e.message:findi(\"donate\")) then  \t\t\t\t\t--paladin epic\n\t\te.self:Say(\"Eh? Oh, 500 platinum will be plenty, laddie!\");\n\telseif(e.message:findi(\"ready to get started\")) then  \t\t--paladin test of spirit\n\t\te.self:Say(\"Well then! You best go out an get me a silvery girdle, a diaphanous globe, an a ivory sky diamond! Come on back with them and you'll get a nice belt.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\tif(item_lib.check_turn_in(e.trade, {item1 = 20943, item2 = 20869, item3 = 20868})) then --paladin test of spirit using silvery girdle, diaphanous globe, ivory sky diamond \n\t\te.other:SummonItem(2716);  --girdle of faith\n\t\te.other:AddEXP(100000);\n\t\te.self:Say(\"There ya go laddie!\");\n\t\teq.depop();\n\telseif(item_lib.check_turn_in(e.trade, {platinum = 500})) then\n\t\te.self:Say(\"Thank ye, laddie! He's awaitin' ya up top!\");\n\t\teq.spawn2(71091,0,0,-586,767,176,128); -- NPC: Inte_Akera\n\t\teq.depop();\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\nfunction event_timer(e)\n\teq.stop_timer(\"depop\");\n\teq.depop();\nend\n\n-------------------------------------------------------------------------------------------------\n-- Converted to .lua using MATLAB converter written by Stryd\n-- Find/replace data for .pl --> .lua conversions provided by Speedz, Stryd, Sorvani and Robregen\n-------------------------------------------------------------------------------------------------\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 14979,
+        "zone": "airplane",
+        "name": "Dirkog_Steelhand",
+        "lua_content": "-- items: 20943, 20869, 20868, 2716\nfunction event_spawn(e)\n\teq.set_timer(\"depop\",300000);\nend\n\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Leave me be, ye orc kissin' son o' Innoruuk!\");\n\telseif(e.message:findi(\"I am not a son of Innoruuk\")) then\n\t\te.self:Say(\"Eh? Ye say that ye ain't one o' the cursed dark elf dogs? Well then, laddie, are ye ready to get started or are ye here fer somethin' else??\");\n\telseif(e.message:findi(\"holy swords\")) then \t\t\t\t--paladin epic\n\t\te.self:Say(\"Eh, lad? What was that? Ye wish to hear o' holy swords? Well, lad, I ain't the one ye be needin' t' talk to!\");\n\telseif(e.message:findi(\"who do I need to talk to\")) then \t--paladin epic\n\t\te.self:Say(\"A follower o' the water god he be, an' one o' the most powerful holy knights e'er to walk Norrath. His name be Inte Akera, an' he kin tell ye what ye be wantin' t' know.\");\n\telseif(e.message:findi(\"where is inte akera\")) then  \t\t--paladin epic\n\t\te.self:Say(\"Ah, I see ye wish t' speak with him! Why didn't ye say that earlier, laddie? It would've saved ye some trouble! If ye wish to speak with him, ye must donate some spare change t' me ale.. er, t' me holy crusade fund! Well, lad, what d' ye say?\");\n\telseif(e.message:findi(\"donate\")) then  \t\t\t\t\t--paladin epic\n\t\te.self:Say(\"Eh? Oh, 500 platinum will be plenty, laddie!\");\n\telseif(e.message:findi(\"ready to get started\")) then  \t\t--paladin test of spirit\n\t\te.self:Say(\"Well then! You best go out an get me a silvery girdle, a diaphanous globe, an a ivory sky diamond! Come on back with them and you'll get a nice belt.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\tif(item_lib.check_turn_in(e.trade, {item1 = 20943, item2 = 20869, item3 = 20868})) then --paladin test of spirit using silvery girdle, diaphanous globe, ivory sky diamond \n\t\te.other:SummonItem(2716);  --girdle of faith\n\t\te.other:AddEXP(100000);\n\t\te.self:Say(\"There ya go laddie!\");\n\t\teq.depop();\n\telseif(item_lib.check_turn_in(e.trade, {platinum = 500})) then\n\t\te.self:Say(\"Thank ye, laddie! He's awaitin' ya up top!\");\n\t\teq.spawn2(71091,0,0,-586,767,176,128); -- NPC: Inte_Akera\n\t\teq.depop();\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\nfunction event_timer(e)\n\tif e.timer ~= \"depop\" then return end\n\teq.stop_timer(\"depop\");\n\teq.depop();\nend\n\n-------------------------------------------------------------------------------------------------\n-- Converted to .lua using MATLAB converter written by Stryd\n-- Find/replace data for .pl --> .lua conversions provided by Speedz, Stryd, Sorvani and Robregen\n-------------------------------------------------------------------------------------------------\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/airplane/Dirkog_Steelhand.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-tz-dirkog_steelhand-timer/airplane--Dirkog_Steelhand.lua",
+      "afterSha256": "8b47ee5327fbcd1be48b8d1621e3bdc363bdf7793239a14f351115443833bb36"
+    }
+  ]
+}

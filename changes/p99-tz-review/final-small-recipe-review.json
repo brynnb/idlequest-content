@@ -1,0 +1,176 @@
+[
+  {
+    "recipe": {
+      "id": 9780,
+      "name": "Full Honeycomb Jar",
+      "tradeskill": 75,
+      "skillneeded": 0,
+      "trivial": 0,
+      "nofail": 1,
+      "replace_container": 1,
+      "notes": "Created by Jaekob",
+      "must_learn": 0,
+      "learned_by_item_id": 0,
+      "quest": 0,
+      "enabled": 1,
+      "show_in_advanced": 1,
+      "min_expansion": -1,
+      "max_expansion": -1,
+      "content_flags": null,
+      "content_flags_disabled": null,
+      "category": null
+    },
+    "entries": [
+      {
+        "id": 85736,
+        "recipe_id": 9780,
+        "item_id": 13953,
+        "successcount": 0,
+        "failcount": 0,
+        "componentcount": 6,
+        "salvagecount": 6,
+        "iscontainer": 0
+      },
+      {
+        "id": 85737,
+        "recipe_id": 9780,
+        "item_id": 12222,
+        "successcount": 1,
+        "failcount": 0,
+        "componentcount": 0,
+        "salvagecount": 0,
+        "iscontainer": 0
+      },
+      {
+        "id": 85738,
+        "recipe_id": 9780,
+        "item_id": 17958,
+        "successcount": 0,
+        "failcount": 0,
+        "componentcount": 0,
+        "salvagecount": 0,
+        "iscontainer": 1
+      }
+    ],
+    "names": {
+      "13953": {
+        "name": "Honeycomb",
+        "lore": "Honeycomb"
+      },
+      "12222": {
+        "name": "Full Honeycomb Jar",
+        "lore": "Full Honeycomb Jar"
+      },
+      "17958": {
+        "name": "Empty Jar",
+        "lore": "Empty Jar for Honeycombs"
+      }
+    },
+    "evidence": {
+      "title": "The Cigar",
+      "url": "https://wiki.project1999.com/The_Cigar?action=raw",
+      "fetchedAt": "2026-07-17T23:36:02.851Z",
+      "revision": null,
+      "sha256": "f86497808be9a094a320bd7cf473ac8e9734580d0a063b79155d8134af9eff49",
+      "bytes": 2100,
+      "source": "raw-pages/the-cigar-a47ca6ec79.json",
+      "cachePath": "reference/p99-wiki/raw-pages/the-cigar-a47ca6ec79.wiki"
+    },
+    "entriesSha256": "ae084ca1c85d99f3f40e70d05a1edbc481b6d8449ad3432259632c2e159f308c",
+    "review": "All entries and item names fully compared with cached page; exact component/container/output counts, enabled1 preserved. Live crafting not exercised."
+  },
+  {
+    "recipe": {
+      "id": 31171,
+      "name": "Bag Of Eyes n Bones",
+      "tradeskill": 75,
+      "skillneeded": 0,
+      "trivial": 0,
+      "nofail": 1,
+      "replace_container": 1,
+      "notes": "P99 Yegek's Test no-fail quest combine",
+      "must_learn": 0,
+      "learned_by_item_id": 0,
+      "quest": 1,
+      "enabled": 1,
+      "show_in_advanced": 1,
+      "min_expansion": -1,
+      "max_expansion": -1,
+      "content_flags": null,
+      "content_flags_disabled": null,
+      "category": "Quest"
+    },
+    "entries": [
+      {
+        "id": 321943,
+        "recipe_id": 31171,
+        "item_id": 17942,
+        "successcount": 0,
+        "failcount": 0,
+        "componentcount": 0,
+        "salvagecount": 0,
+        "iscontainer": 1
+      },
+      {
+        "id": 321944,
+        "recipe_id": 31171,
+        "item_id": 10307,
+        "successcount": 0,
+        "failcount": 0,
+        "componentcount": 3,
+        "salvagecount": 0,
+        "iscontainer": 0
+      },
+      {
+        "id": 321946,
+        "recipe_id": 31171,
+        "item_id": 13887,
+        "successcount": 1,
+        "failcount": 0,
+        "componentcount": 0,
+        "salvagecount": 0,
+        "iscontainer": 0
+      },
+      {
+        "id": 321945,
+        "recipe_id": 31171,
+        "item_id": 13073,
+        "successcount": 0,
+        "failcount": 0,
+        "componentcount": 3,
+        "salvagecount": 0,
+        "iscontainer": 0
+      }
+    ],
+    "names": {
+      "17942": {
+        "name": "Empty Bag",
+        "lore": "Bag for Beetle Eyes and Bones"
+      },
+      "10307": {
+        "name": "Fire Beetle Eye",
+        "lore": "Fire Beetle Eye"
+      },
+      "13887": {
+        "name": "Bag of Eyes n Bones",
+        "lore": "Bag of Fire Eyes and Bones"
+      },
+      "13073": {
+        "name": "Bone Chips",
+        "lore": "Bone Chips"
+      }
+    },
+    "evidence": {
+      "title": "Yegek's Test, Part 1",
+      "url": "https://wiki.project1999.com/Yegek's_Test%2C_Part_1?action=raw",
+      "fetchedAt": "2026-07-17T23:42:05.332Z",
+      "revision": null,
+      "sha256": "f25cade92aa231015ea859e19b2174082f380790b16461d8f613601f56fa306b",
+      "bytes": 2054,
+      "source": "raw-pages/yegek-s-test-part-1-32f91ff26b.json",
+      "cachePath": "reference/p99-wiki/raw-pages/yegek-s-test-part-1-32f91ff26b.wiki"
+    },
+    "entriesSha256": "6cd06f77028912cdc5b831670c88ca66f4282c8cb3c294418074e101fcd671ae",
+    "review": "All entries and item names fully compared with cached page; exact component/container/output counts, enabled1 preserved. Live crafting not exercised."
+  }
+]

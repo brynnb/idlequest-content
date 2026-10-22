@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-nz-necro-components-dialogue",
+  "summary": "Restore Keeper Bile\u2019s documented collect-components dialogue while retaining legacy interested alias.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Necro_Spells?action=raw",
+      "note": "Cached 2026-07-17T23:26:19.369Z; revision unavailable; SHA256 f92eacb8e9e69e16771fb4b1743660cb084b08af65303019cf621723cdef4fb1. Required components are unchanged. Cache documents coin but no amount and random low-level spell without exact probabilities; absent coin and reward distribution remain unresolved. Do not interpret this source dialogue correction as complete quest alignment."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 12728,
+        "zone": "cabwest",
+        "name": "Keeper_Bile",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: cabwest/Keeper_Bile.pl\n-- P99 audit: Necro Spells\n-- items: 12739, 12739, 12659, 12426\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Greetings \" .. e.other:GetName() .. \". Lately the creatures of Lake of Ill Omen have be causing problems for us. Are you [interested] in helping me reduce the threat from this creatures?\")\n\telseif e.message:findi(\"interested\") then\n\t\te.self:Say(\"Good. Bring me two Brittle Iksar Skulls, a Sabertooth Cub Canine, and a Large Scorpion Pincer. And i shall reward you with a spell.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 12739, item2 = 12739, item3 = 12659, item4 = 12426}) then\n\t\te.self:Say(\"Good Work \" .. e.other:GetName() .. \". This will surely hold back those vile creatures for some time. Here is your spell.\")\n\t\te.other:SummonItem(eq.ChooseRandom(15338, 15344, 15339, 15340, 15225, 15229, 15346, 15491, 15502, 15341, 15342, 15347, 15348, 15331, 15221, 15343))\n\t\te.other:Faction(443, 5, 0) -- Brood of Kotiz\n\t\te.other:Faction(441, 1, 0) -- Legion of Cabilis\n\t\te.other:AddEXP(10)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 12728,
+        "zone": "cabwest",
+        "name": "Keeper_Bile",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: cabwest/Keeper_Bile.pl\n-- P99 audit: Necro Spells\n-- items: 12739, 12739, 12659, 12426\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Greetings. I am Bile, Keeper of the Apprentice Ranks. My knowledge is that of the first circle of necromancy. I was once a great necromancer, but now I have a greater calling to protect the words of Kotiz. I also conduct many tests to ensure the spells are deciphered correctly. I am in need of an apprentice to [collect components].\")\n\telseif e.message:findi(\"collect components\") or e.message:findi(\"interested\") then\n\t\te.self:Say(\"Hmm. Yes. I will need the following; One large scorpion pincer, one sabertooth cub canine and two brittle skulls. Bring these to me and I shall pay you and if I have an overscribed spell, I shall give you that also.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 12739, item2 = 12739, item3 = 12659, item4 = 12426}) then\n\t\te.self:Say(\"Good Work \" .. e.other:GetName() .. \". This will surely hold back those vile creatures for some time. Here is your spell.\")\n\t\te.other:SummonItem(eq.ChooseRandom(15338, 15344, 15339, 15340, 15225, 15229, 15346, 15491, 15502, 15341, 15342, 15347, 15348, 15331, 15221, 15343))\n\t\te.other:Faction(443, 5, 0) -- Brood of Kotiz\n\t\te.other:Faction(441, 1, 0) -- Legion of Cabilis\n\t\te.other:AddEXP(10)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/cabwest/Keeper_Bile.lua",
+      "beforeSha256": "517ebae4a20a84541cbbfddead771bfb512043f1cc7023a1a40d30a9f8b07605",
+      "proposedFile": "changes/p99-nz-necro-components-dialogue/cabwest--Keeper_Bile.lua",
+      "afterSha256": "7cac28b644ffb9161f8a7dd6f3669487ddc6f48523c36b8a9134caa5ca8e511f"
+    }
+  ]
+}

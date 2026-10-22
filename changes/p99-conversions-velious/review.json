@@ -1,0 +1,306 @@
+{
+  "review_id": "p99-conversions-velious",
+  "scope_source": {
+    "path": "changes/p99-audit/p99_zones.json",
+    "sha256": "cc8ce6b34c10288428dce3882f1ea5fa813113d55069a8f9e43526a0fd94cefc",
+    "provenance": "Public audit scope file; baseline export provenance is recorded in manifest.json."
+  },
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Souvenir_Mugs?action=raw",
+      "note": "Cached 2026-07-17T23:33:51.289Z; SHA256 9fa8a7d1454b893b0f957578491f4245204a320cc9ca4aaf0fce68a70578384a; reference/p99-wiki/raw-pages/souvenir-mugs-366e530108.json. No MediaWiki revision ID in metadata; snapshot hash is exact provenance."
+    },
+    {
+      "url": "https://wiki.project1999.com/Learn_the_Ways_of_Skinning_and_Tailoring?action=raw",
+      "note": "Cached 2026-07-17T23:23:16.091Z; SHA256 ab63cdd2851fa165dfe132ba28d798b8ea79e5c2caa4a070749e5e84c3f627e9; reference/p99-wiki/raw-pages/learn-the-ways-of-skinning-and-tailoring-2868fb301f.json. No MediaWiki revision ID in metadata; snapshot hash is exact provenance."
+    },
+    {
+      "url": "https://wiki.project1999.com/Tiny_Savages?action=raw",
+      "note": "Cached 2026-07-17T23:39:05.921Z; SHA256 732d6e1972f649192230ec7e10595e1aa3bb5682be9038cd22c44678929faa27; reference/p99-wiki/raw-pages/tiny-savages-dc5b0ab47b.json. No MediaWiki revision ID in metadata; snapshot hash is exact provenance."
+    },
+    {
+      "url": "https://wiki.project1999.com/Ralgyn's_Promise?action=raw",
+      "note": "Cached 2026-07-17T23:29:24.895Z; SHA256 6da6225ad91ba8ddaf487c65f37dc8640f7ef76e0d7edbd17f81426be196f0a8; reference/p99-wiki/raw-pages/ralgyn-s-promise-83eec9bd3b.json. No MediaWiki revision ID in metadata; snapshot hash is exact provenance."
+    },
+    {
+      "url": "https://wiki.project1999.com/Royal_Scribe_Kaavin?action=raw",
+      "note": "Cached 2026-08-12T20:40:29.617Z; SHA256 ad02e2c412dc52aa11e232cf83828d023f540fdda1d07844f632ff039fbbde69; reference/p99-wiki/npc-pages/royal-scribe-kaavin-90dfeb6ac8.json. No MediaWiki revision ID in metadata; snapshot hash is exact provenance."
+    },
+    {
+      "url": "https://wiki.project1999.com/Grand_Huntsman_Darral?action=raw",
+      "note": "Cached 2026-08-12T18:58:16.748Z; SHA256 702a78b56ee25fb93aa7fcb4325a5a8ea5ba36fad69a6656a4542810cfcfebea; reference/p99-wiki/npc-pages/grand-huntsman-darral-e81c09cfee.json. No MediaWiki revision ID in metadata; snapshot hash is exact provenance."
+    }
+  ],
+  "reviewed_candidates": [
+    {
+      "key": "thurgadina/Tobart_Dirkins",
+      "npc_ids": [
+        115164
+      ],
+      "upstream_path": "sources/projecteq/thurgadina/Tobart_Dirkins.pl",
+      "upstream_sha256": "7ec95272292f08743dd4f08da8555bb1baa94360c58b73468dce71b89e107f1e",
+      "before": "Enabled quest row has null lua_content; effective .lua is empty; no existing maintained source.",
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "proposal": "changes/p99-conversions-velious.json",
+      "verification": {
+        "compiler": "pass",
+        "isolated_lua_simulation": "pass: runtime-test worker confirms exact/partial/excess/repeat payments, level1, return-only and signals",
+        "rendered_ui": "not_run",
+        "database_atomicity": "not_run",
+        "connected_chain": "not_run"
+      },
+      "page": "Souvenir Mugs",
+      "requirements": {
+        "platinum": 1
+      },
+      "rewards": [
+        30146
+      ],
+      "after": "One platinum yields one Broken Glacier Souvenir Mug; shared helper returns surplus and unrelated offerings; no invented faction/XP. Fronden tavern/mug mismatch intentionally follows wiki."
+    },
+    {
+      "key": "thurgadina/Loremaster_Fronden",
+      "npc_ids": [
+        115014
+      ],
+      "upstream_path": "sources/projecteq/thurgadina/Loremaster_Fronden.pl",
+      "upstream_sha256": "efc1cd1aed595f958cb60eac63738abd0fa514324d009b1558e0777948fe6a90",
+      "before": "Enabled quest row has null lua_content; effective .lua is empty; no existing maintained source.",
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "proposal": "changes/p99-conversions-velious.json",
+      "verification": {
+        "compiler": "pass",
+        "isolated_lua_simulation": "pass: runtime-test worker confirms exact/partial/excess/repeat payments, level1, return-only and signals",
+        "rendered_ui": "not_run",
+        "database_atomicity": "not_run",
+        "connected_chain": "not_run"
+      },
+      "page": "Souvenir Mugs",
+      "requirements": {
+        "platinum": 1
+      },
+      "rewards": [
+        30146
+      ],
+      "after": "One platinum yields one Broken Glacier Souvenir Mug; shared helper returns surplus and unrelated offerings; no invented faction/XP. Fronden tavern/mug mismatch intentionally follows wiki.",
+      "ambient_signals": "All original signal branches, target IDs, and millisecond delays converted faithfully. All target NPC IDs exist. Recipient Horasug/Rumagur scripts remain null Lua; no claim of complete ambient story lifecycle."
+    },
+    {
+      "key": "thurgadina/Doogle_McBanick",
+      "npc_ids": [
+        115142
+      ],
+      "upstream_path": "sources/projecteq/thurgadina/Doogle_McBanick.pl",
+      "upstream_sha256": "ee153a2ed6f8dfc518dc7ab8d1869e37444399b1b3d06bd9b3fd6fa0cd31ab82",
+      "before": "Enabled quest row has null lua_content; effective .lua is empty; no existing maintained source.",
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "proposal": "changes/p99-conversions-velious.json",
+      "verification": {
+        "compiler": "pass",
+        "isolated_lua_simulation": "pass: runtime-test worker confirms exact/partial/excess/repeat payments, level1, return-only and signals",
+        "rendered_ui": "not_run",
+        "database_atomicity": "not_run",
+        "connected_chain": "not_run"
+      },
+      "page": "Souvenir Mugs",
+      "requirements": {
+        "gold": 3
+      },
+      "rewards": [
+        30147
+      ],
+      "after": "Three gold yields one Doogle signature mug; hail/mug dialogue and shared return helper. No invented reward speech/faction/XP.",
+      "ambient_signals": "All original signal branches, target IDs, and millisecond delays converted faithfully. All target NPC IDs exist. Recipient Horasug/Rumagur scripts remain null Lua; no claim of complete ambient story lifecycle."
+    },
+    {
+      "key": "thurgadinb/Royal_Scribe_Kaavin",
+      "npc_ids": [
+        129021
+      ],
+      "upstream_path": "sources/projecteq/thurgadinb/Royal_Scribe_Kaavin.pl",
+      "upstream_sha256": "fa73fad4466579f95a8c4b2c3ad5d8bb9ba40bef5746aa34a46e92dd1ff03b4c",
+      "before": "Enabled quest row has null lua_content; effective .lua is empty; no existing maintained source.",
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "proposal": "changes/p99-conversions-velious.json",
+      "verification": {
+        "compiler": "pass",
+        "isolated_lua_simulation": "pass: runtime-test worker confirms exact/partial/excess/repeat payments, level1, return-only and signals",
+        "rendered_ui": "not_run",
+        "database_atomicity": "not_run",
+        "connected_chain": "not_run"
+      },
+      "page": "Tiny Savages",
+      "requirements": {},
+      "rewards": [],
+      "after": "Faithful flavor hail only, plus return all offerings. These are kill targets; Yetarr owns existing reward exchanges. No invented hand-in or death loot.",
+      "uncertainty": "Kaavin hail supported by cached P99 NPC page. Darral hail only ProjectEQ provenance; P99 NPC existence and quest participation confirmed, dialogue description missing."
+    },
+    {
+      "key": "thurgadinb/Grand_Huntsman_Darral",
+      "npc_ids": [
+        129022
+      ],
+      "upstream_path": "sources/projecteq/thurgadinb/Grand_Huntsman_Darral.pl",
+      "upstream_sha256": "f368a651d48d593647336475fb33619f36de661b4bf7908c10fc19ffd4b3d97c",
+      "before": "Enabled quest row has null lua_content; effective .lua is empty; no existing maintained source.",
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "proposal": "changes/p99-conversions-velious.json",
+      "verification": {
+        "compiler": "pass",
+        "isolated_lua_simulation": "pass: runtime-test worker confirms exact/partial/excess/repeat payments, level1, return-only and signals",
+        "rendered_ui": "not_run",
+        "database_atomicity": "not_run",
+        "connected_chain": "not_run"
+      },
+      "page": "Tiny Savages",
+      "requirements": {},
+      "rewards": [],
+      "after": "Faithful flavor hail only, plus return all offerings. These are kill targets; Yetarr owns existing reward exchanges. No invented hand-in or death loot.",
+      "uncertainty": "Kaavin hail supported by cached P99 NPC page. Darral hail only ProjectEQ provenance; P99 NPC existence and quest participation confirmed, dialogue description missing."
+    },
+    {
+      "key": "iceclad/Errgriz",
+      "npc_ids": [
+        110009,
+        110084
+      ],
+      "upstream_path": "sources/projecteq/iceclad/Errgriz.pl",
+      "upstream_sha256": "cb0bf77b3061dc9258a9591245c0ecc2f8d54bdcfd470822f84a07e9f9e1acff",
+      "before": "Enabled quest row has null lua_content; effective .lua is empty; no existing maintained source.",
+      "reviewed_at": "2026-10-22",
+      "outcome": "converted_proposal",
+      "proposal": "changes/p99-conversions-velious.json",
+      "verification": {
+        "compiler": "pass",
+        "isolated_lua_simulation": "pass: runtime-test worker confirms exact/partial/excess/repeat payments, level1, return-only and signals",
+        "rendered_ui": "not_run",
+        "database_atomicity": "not_run",
+        "connected_chain": "not_run"
+      },
+      "page": "Learn the Ways of Skinning and Tailoring",
+      "requirements": {
+        "30023": 1
+      },
+      "rewards": [
+        30037
+      ],
+      "after": "High Quality Dire Wolf Fur yields Wolf Fur Earcovers; full documented discovery dialogue with reachable bracket phrases; no invented reward cash/XP/faction."
+    },
+    {
+      "key": "greatdivide/Kardakor",
+      "npc_ids": [
+        118087
+      ],
+      "upstream_path": "sources/projecteq/greatdivide/Kardakor.pl",
+      "upstream_sha256": "3b2dfbefe9c74ab39686765feceb60f1ed3dac5faa4b322cee6f51778bbc0798",
+      "before": "Enabled quest row has null lua_content; effective .lua is empty; no existing maintained source.",
+      "reviewed_at": "2026-10-22",
+      "outcome": "excluded_post_velious_branch",
+      "proposal": null,
+      "verification": {
+        "static_review": "complete",
+        "isolated_lua_mock_behavior": "pending",
+        "compiler": "pending",
+        "database_transaction_rollback": "not_run",
+        "live_runtime": "not_run",
+        "rendered_ui": "not_run",
+        "connected_chain": "not_run"
+      },
+      "page": "Ralgyn's Promise",
+      "after": "No Lua created. Cached P99 checklist and Great Divide heading expressly exclude entire Kardakor prerequisite branch as post-Velious. Existing maintained Ralgyn/Rolandal implementation unchanged."
+    },
+    {
+      "key": "thurgadina/Adia_Coldbeard",
+      "npc_ids": [
+        115140
+      ],
+      "quest_row_id": 503524,
+      "row_id_selection": "max baseline quests.id 503523 + 1; reserved with parent, no other insertion proposed at selection time. Exact absence checked by proposal.",
+      "before": "No quest row or upstream/maintained script.",
+      "page": "Souvenir Mugs",
+      "requirements": {
+        "gold": 5
+      },
+      "rewards": [
+        30145
+      ],
+      "outcome": "p99_authored_proposal",
+      "after": "Documented five-gold exchange only; no hail response per P99; no invented XP/faction.",
+      "reviewed_at": "2026-10-22",
+      "verification": {
+        "static_review": "complete",
+        "isolated_lua_mock_behavior": "pending",
+        "compiler": "pending",
+        "database_transaction_rollback": "not_run",
+        "live_runtime": "not_run",
+        "rendered_ui": "not_run"
+      }
+    },
+    {
+      "key": "thurgadina/Horasug",
+      "outcome": "blocked_ambient_runtime_lifecycle",
+      "before": "Null Lua; ProjectEQ ambient waypoint/signal source exists.",
+      "upstream_path": "sources/projecteq/thurgadina/Horasug.pl",
+      "upstream_sha256": "d7054b9672ecb703a6bab4dada44a91eaba0e8faf4c548e5c8c80238718c59f7",
+      "reason": "Connected public waypoint/patrol story depends on SetRunning in signal context, eq.start grids6/7/8 and natural waypoint initiation. reference/server/internal/quest/deferred_runtime_apis.json explicitly does not support uncorrelated public timer/signal speed changes or general public-world respawn grids. No no-op or partial lifecycle invented.",
+      "verification": "Static dependency/API review only; actual supported route/lifecycle fixture needed.",
+      "reviewed_at": "2026-10-22"
+    },
+    {
+      "key": "thurgadina/Rumagur",
+      "outcome": "blocked_ambient_runtime_lifecycle",
+      "before": "Null Lua; ProjectEQ ambient waypoint/signal source exists.",
+      "upstream_path": "sources/projecteq/thurgadina/Rumagur.pl",
+      "upstream_sha256": "4101414207aca868cb63c1f4f530511ed1364046f5dc2aba9f43fa193dc2c221",
+      "reason": "Connected public waypoint/patrol story depends on SetRunning in signal context, eq.start grids6/7/8 and natural waypoint initiation. reference/server/internal/quest/deferred_runtime_apis.json explicitly does not support uncorrelated public timer/signal speed changes or general public-world respawn grids. No no-op or partial lifecycle invented.",
+      "verification": "Static dependency/API review only; actual supported route/lifecycle fixture needed.",
+      "reviewed_at": "2026-10-22"
+    },
+    {
+      "key": "thurgadina/Saramor",
+      "outcome": "blocked_ambient_runtime_lifecycle",
+      "before": "Null Lua; ProjectEQ ambient waypoint/signal source exists.",
+      "upstream_path": "sources/projecteq/thurgadina/Saramor.pl",
+      "upstream_sha256": "8c4636ca85cbc93886de8212cc695487c052d5aa77c09dd399df5d46c138b724",
+      "reason": "Connected public waypoint/patrol story depends on SetRunning in signal context, eq.start grids6/7/8 and natural waypoint initiation. reference/server/internal/quest/deferred_runtime_apis.json explicitly does not support uncorrelated public timer/signal speed changes or general public-world respawn grids. No no-op or partial lifecycle invented.",
+      "verification": "Static dependency/API review only; actual supported route/lifecycle fixture needed.",
+      "reviewed_at": "2026-10-22"
+    },
+    {
+      "key": "thurgadina/Jorumin",
+      "outcome": "blocked_ambient_runtime_lifecycle",
+      "before": "Null Lua; ProjectEQ ambient waypoint/signal source exists.",
+      "upstream_path": "sources/projecteq/thurgadina/Jorumin.pl",
+      "upstream_sha256": "222918f7bab887e11a82a15305585bcc2dc362da272cbc687ba0584bc22dbb38",
+      "reason": "Connected public waypoint/patrol story depends on SetRunning in signal context, eq.start grids6/7/8 and natural waypoint initiation. reference/server/internal/quest/deferred_runtime_apis.json explicitly does not support uncorrelated public timer/signal speed changes or general public-world respawn grids. No no-op or partial lifecycle invented.",
+      "verification": "Static dependency/API review only; actual supported route/lifecycle fixture needed.",
+      "reviewed_at": "2026-10-22"
+    }
+  ],
+  "intentional_policies": [
+    "Quest-only faction remains bypassed. No faction checks added; actual faction/world aggression code untouched.",
+    "None of these are epic 1.0 steps; epic no-minimum-level policy remains unchanged.",
+    "Wiki minimum-level infobox treated as recommendation, not unsupported turn-in predicate. No new class/race/level gate invented."
+  ],
+  "open_boundaries": [
+    "Souvenir Mugs remains unsolved beyond documented exchanges. No use, reward, or acquisition route invented for Velium Keg Collectors Mug.",
+    "No static spawn selection, full loot acquisition, DB settlement/rollback, real-client UI or continuous chain test claimed.",
+    "Tiny Savages and Ralgyn prior verified_local ledger evidence retained as historical; this proposal does not revalidate those entire chains."
+  ],
+  "tables_changed": [
+    "quests"
+  ],
+  "baseline_policy": "No baseline, maintained, source, effective or shared ledger files edited. Proposal only; no publish, commit or deployment.",
+  "validation": {
+    "proposal_and_lua_compiler": "pass:7rows/7sources, pinned Go/gopher-lua checker",
+    "isolated_behavior": "pass: all7 individual sources confirmed by runtime-test worker2026-10-22; exact/partial/excess/repeat payments, level1, return-only and signal arguments. tools/p99-content-behavior.test.mjs, shared mocked fixture, not game runtime.",
+    "live_game_runtime": "not_run",
+    "database_atomicity": "not_run",
+    "rendered_ui": "not_run"
+  }
+}

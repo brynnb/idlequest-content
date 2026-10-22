@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-af-vaurk-exclusion",
+  "summary": "Suppress only explicitly post-Velious knife exchange and its advertisement; preserve NPC activation and return every offer.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Explorer_Survival_Knives?action=raw",
+      "note": "Cached reference/p99-wiki/raw-pages/explorer-survival-knives-3128ac5664.wiki SHA256 b197729084239c29bc31997e7d1a9d0c38560f59013d32d24fe7e75c63ea0494."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 14363,
+        "zone": "lakeofillomen",
+        "name": "Trooper_Vaurk",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: lakeofillomen/Trooper_Vaurk.pl\n-- items: 8004\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Have you been sent by the War Baron to [assist]? The explorers from Firiona Vie draw closer.\")\n\telseif e.message:findi(\"assist\") then\n\t\te.self:Say(\"That is good, I will stay here to halt any advances. Head out near the lake and destroy the trespassers on our land! Bring me four of their knives that they carry for survival. Prove your allegiance to the Legion of Cabilis.\")\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 8004, item2 = 8004, item3 = 8004, item4 = 8004}) then\n\t\te.self:Say(\"Great work, the Legion of Cabilis will not soon forget your dedication. The trespassers shall all be dealt with.\")\n\t\te.other:Faction(441, 10, 0)\n\t\te.other:Faction(440, 10, 0)\n\t\te.other:Faction(445, 10, 0)\n\t\te.other:Faction(442, 10, 0)\n\t\te.other:Faction(444, 10, 0)\n\t\te.other:AddEXP(25)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 14363,
+        "zone": "lakeofillomen",
+        "name": "Trooper_Vaurk",
+        "lua_content": "-- Explorer Survival Knives is explicitly marked {{delete}}{{DNE}} on P99:\n-- \"Added in early Luclin\". Do not activate its knife exchange or advertising.\n-- All former dialogue concerned that excluded exchange. NPC spawn, combat,\n-- faction, inventory and other world data remain unchanged.\nfunction event_say(e)\nend\n\nfunction event_trade(e)\n    local item_lib = require(\"items\")\n    item_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/lakeofillomen/Trooper_Vaurk.lua",
+      "beforeSha256": "28aeeae38c4b94c651fc171fad46f54ac76acd28921104807393eda875ac0c2a",
+      "proposedFile": "changes/p99-af-vaurk-exclusion/lakeofillomen-Trooper_Vaurk.lua",
+      "afterSha256": "a5a74a502901eb44173e20b44eb4a6531a3ce1ae365b391728e58ba5b5387bbe"
+    }
+  ]
+}

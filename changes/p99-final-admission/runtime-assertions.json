@@ -1,0 +1,969 @@
+{
+  "scope": "Hash-bound normalized isolated Lua VM. Historical disabled bodies load deliberately and retained handler definitions are checked, NOT admission. Mixed sources execute focused behavior using actual pinned items helper and strict mocked APIs. No game bridge, world lifecycle, inventory settlement or UI proof.",
+  "cases": [
+    {
+      "name": "Historical disabled body loads with retained handlers: akanon/Derthix_Gibblix",
+      "sourceSha256": "dcb01d76eb4dce5d54df53a099c37de6cd3381bc575ff7c4b9236d14e5516314",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/akanon--Derthix_Gibblix.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: akanon/Garret_Zethkog",
+      "sourceSha256": "f1c65273c84fe40cc6dfcd56c77d407ab4c7bab18e3cd2658248ee2eabe6ea45",
+      "assertions": "equal(type(event_enter),\"function\",\"event_enter\");equal(type(event_say),\"function\",\"event_say\");equal(type(event_spawn),\"function\",\"event_spawn\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/akanon--Garret_Zethkog.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: akanon/Glerbella_Gibblix",
+      "sourceSha256": "fcb89758e5e5e21e5831d52b330158dda78601c7ce4e7b14a20854d7044a4f4e",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/akanon--Glerbella_Gibblix.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: akanon/Lewis_Reldnok",
+      "sourceSha256": "fc3d25462d3587ce0e967694e64ced0948bb8df31de93865889e1eb32039bb73",
+      "assertions": "equal(type(event_enter),\"function\",\"event_enter\");equal(type(event_spawn),\"function\",\"event_spawn\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/akanon--Lewis_Reldnok.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: akanon/Mimtia_Zethkog",
+      "sourceSha256": "63115e49ea973c5b41a3899623f6fe49945c84e9dc2ebab9d439d49870870d21",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/akanon--Mimtia_Zethkog.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: akanon/Morlan_Tanlonikan",
+      "sourceSha256": "d52e10ca9d721618e3cb28ecaf1ae1494a1d54e0cf43275bf1e00cd98c636a34",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/akanon--Morlan_Tanlonikan.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: akanon/Rebbie_Romblerum",
+      "sourceSha256": "2044fdc90c0e240b6fc3c11e8a1f174ba3704db4d4d7193890739ea25a664814",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/akanon--Rebbie_Romblerum.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: akanon/Reuben_Reldnok",
+      "sourceSha256": "62380fcb21068140c807743d298208fd0b52591919b4e9198b47afe9d40d8c34",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/akanon--Reuben_Reldnok.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: akanon/Windlebeck_Tobokog",
+      "sourceSha256": "98c1ebb9e532ac57909cdb5af0c7bcad30bf4f3d6442689c6bc589089dc0470d",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/akanon--Windlebeck_Tobokog.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: akanon/Xalirilan_Zarinokosalio",
+      "sourceSha256": "c5566b030914a259cebf4572dd124afe1c0a2f02e50d7999515d53d71298a265",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/akanon--Xalirilan_Zarinokosalio.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: cabeast/#Prime_Patriarch_Vuzx",
+      "sourceSha256": "e73e0695d8254fd17c723cf1e12d89e5c1530a1623a3f83ddd1f6fab223e3786",
+      "assertions": "equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/cabeast--%23Prime_Patriarch_Vuzx.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: cabeast/Elder_Patriarch_Ixthal",
+      "sourceSha256": "98468fdce9ee0638cb59514f1466cbfb6daad48d659c9ebad167ad1f8ac614cd",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/cabeast--Elder_Patriarch_Ixthal.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: cabeast/Zreezas",
+      "sourceSha256": "92eaf2d0ef68a242ec8e7024a2b9ddae5cac99512cb7cafd88660c11cc7ee475",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/cabeast--Zreezas.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: cobaltscar/Blumblum_Swigwater",
+      "sourceSha256": "32839749f7acdb93bdae65de1057dd74c81f5a27bf5ec5f103e5fd144e5d7fbd",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/cobaltscar--Blumblum_Swigwater.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: cobaltscar/High_Priest_Margle",
+      "sourceSha256": "72cf875a3ad559730e98a69d9276212b83bdce887b9b32587561f46fdc9e0141",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/cobaltscar--High_Priest_Margle.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: droga/Jeren_Manri",
+      "sourceSha256": "56b7cb50492b7b606f2db963cf33aa12410ed775ccc756b393f0e19a7ce173b0",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/droga--Jeren_Manri.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: feerrott/Annaelia_Wylassi",
+      "sourceSha256": "b6cbaed0e6b39956840b7267aa7a63309e6349d1aec28dedc8d19ce7239db6b2",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/feerrott--Annaelia_Wylassi.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: feerrott/Scout_Ahlikal",
+      "sourceSha256": "374cfd97d1bf4920cb8c29a38d1c31317c89e47c652df8f28e3653cbd59920e1",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/feerrott--Scout_Ahlikal.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: felwithea/Seria_Woodwind",
+      "sourceSha256": "3eede961de6255243153f060779bd3a5ef820bf32d84e5f60033ffd62322c6c0",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/felwithea--Seria_Woodwind.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: felwithea/Terren_Starwatcher",
+      "sourceSha256": "2628a26980ff1766a4250b3afd2b1a5f70c13ad4311d09d17f1fc527050c0773",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/felwithea--Terren_Starwatcher.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: felwitheb/Elishia_Leafrunner",
+      "sourceSha256": "e03f9485dba5c3852804c13cb1b828eac48aa8c1b7c4725d5a8a67fa6dc6e6b0",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/felwitheb--Elishia_Leafrunner.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: felwitheb/Yuin_Starchaser",
+      "sourceSha256": "61b26129407561d1a449321f44359f7e0c588df7be213f2119ebce2912db2778",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/felwitheb--Yuin_Starchaser.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: fieldofbone/Trooper_Drix",
+      "sourceSha256": "62ce00cb51213fbca021d263fc7d5fc0b4d02518c5fd3c99cc9eabfc4b515e75",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/fieldofbone--Trooper_Drix.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: freporte/10000",
+      "sourceSha256": "cfe329b0c129a2d29c0900c5546144b93f197b0f1bb21ff8f2fb6af7b9055da3",
+      "assertions": "equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/freporte--10000.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: freporte/Gunex_Eklar",
+      "sourceSha256": "8db5e27cb5a946053bf3cccf26156421173eb4554c391de7e9ad42a8c89fe9ab",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/freporte--Gunex_Eklar.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: freporte/Jerra_Renlock",
+      "sourceSha256": "9a0156b1290274fecce67714f8241d236195222f566a831aac3563d7b7c9b33b",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/freporte--Jerra_Renlock.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: freporte/Marv_Orilis",
+      "sourceSha256": "2abb827c0acbf6fb5a771ebf9b5a3378b02b72ac2af5afdb8973da765b371e7b",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/freporte--Marv_Orilis.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: freporte/Quan_Nektogo",
+      "sourceSha256": "1f869109dc0846613bd019eae91abfd2b05b35cd9fdb990b9dbddbefaa118038",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/freporte--Quan_Nektogo.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: freporte/Rigg_Nostra",
+      "sourceSha256": "98bf42eb41f06cccd596c0f25685634fa50454d0b318dcc33da14f8193f5fc9a",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/freporte--Rigg_Nostra.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: freporte/Rolfic_Gohar",
+      "sourceSha256": "d8a8dd36dada24398722a7e42d43bf62a39f7ff6d654e2417c52f58d2e42cd01",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/freporte--Rolfic_Gohar.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: freporte/Tovan_Tenlah",
+      "sourceSha256": "61a7005817f30fe340ace5e5e18c2e6c9aae8daa52515c09ca91eb8026f784fc",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/freporte--Tovan_Tenlah.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: freporte/Verona_Rankin",
+      "sourceSha256": "762f03e620a43e962cbd93344f9d79c4b31990bcacccad3785ec35a3569507f6",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/freporte--Verona_Rankin.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: freporte/Zhem_Xecia",
+      "sourceSha256": "9c85a1ae55e2a352ac2d7f3237a07304a5c6279d124e06905a271f25f2b362d3",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/freporte--Zhem_Xecia.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: freportn/Sten_Harnak",
+      "sourceSha256": "ef2fd36d491c0640b2007dbb37e0543c3ac358259fe24e7668dc31e133882be3",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/freportn--Sten_Harnak.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: freportw/Arinna_Trueblade",
+      "sourceSha256": "7d1a1eff9473c260b7c1c213170d298c7af7e67b8fb27afb1aea3bf8f8996e90",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/freportw--Arinna_Trueblade.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: freportw/Klom_Jysun",
+      "sourceSha256": "1b46f4ea7b924dcc6443c4533cafa04ae40f9d091cf8e278e9891e362b361144",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/freportw--Klom_Jysun.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: freportw/Lythe_Songbird",
+      "sourceSha256": "b6727f1fbfda97119d7ceffbc7f956b66dcc8542b72a30afd4256805e7b9011c",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_timer),\"function\",\"event_timer\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/freportw--Lythe_Songbird.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: freportw/Shana_Liskia",
+      "sourceSha256": "c352a891916d0f80f36d239ac2f20fd126e07bb68ed3a68b4e4b2601c6d5880b",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/freportw--Shana_Liskia.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: frozenshadow/#Advisor_Svartmane",
+      "sourceSha256": "e2773389dba9383e684a9485be92675025d8f66b12d47422c09c48f16292502b",
+      "assertions": "equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/frozenshadow--%23Advisor_Svartmane.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: gfaydark/Aliafya_Mistrunner",
+      "sourceSha256": "c3b3a55e66cb5670cb24964959f706dd675cb8b7859b10b13368e83e413a6aea",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/gfaydark--Aliafya_Mistrunner.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: gfaydark/Josylyn_Greenblade",
+      "sourceSha256": "f10c94cccacf20c1dfc88b2827270c520adc7cfa6818ae2ebcf15eeee9c76df1",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/gfaydark--Josylyn_Greenblade.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: gfaydark/Sarialiyn_Tranquilsong",
+      "sourceSha256": "0696e26f617b9e0e8aa92aed4d4b9b29163fc6ee95bf98f47bb2e81a06768f34",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/gfaydark--Sarialiyn_Tranquilsong.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: grobb/Daboo_Dogak",
+      "sourceSha256": "b5d491d2f52b3afe36231835c943b510c5421564ed6d1259b6777cdaab6bffe2",
+      "assertions": "equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/grobb--Daboo_Dogak.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: grobb/Gardunk",
+      "sourceSha256": "ee03da12003bbd8ef9239b2218ac4067d062d407fc2cf074f6b035e20911f19b",
+      "assertions": "equal(type(event_enter),\"function\",\"event_enter\");equal(type(event_spawn),\"function\",\"event_spawn\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/grobb--Gardunk.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: grobb/Gargh",
+      "sourceSha256": "a72c4d14cffc6cb7372661d249b675f7434df5fb740ae19b4d836187ada3973e",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/grobb--Gargh.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: halas/#Field_Priest_Keven",
+      "sourceSha256": "2f664baed5f2d3ff08271c9dd4733e54232daeba7af465fef243ea6c714ab5e6",
+      "assertions": "equal(type(event_enter),\"function\",\"event_enter\");equal(type(event_spawn),\"function\",\"event_spawn\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/halas--%23Field_Priest_Keven.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: halas/Hoyce_MacTaegan",
+      "sourceSha256": "d785dde18088f03c89508407e2bc8bcb52e9b962410022731b7464671338cb23",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/halas--Hoyce_MacTaegan.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: halas/Shanis_MacDarren",
+      "sourceSha256": "a17c1ae4d751eb885b46544d1c0cf02a761469688c3721df179751edbc09a8f5",
+      "assertions": "equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/halas--Shanis_MacDarren.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: highkeep/Dealer_Maeline",
+      "sourceSha256": "7d24043dd7d0f9d33bd96d3127327c60be8aa209808b99216ac2b62e64611809",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_spawn),\"function\",\"event_spawn\");equal(type(event_timer),\"function\",\"event_timer\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/highkeep--Dealer_Maeline.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: kaesora/a_tome_keeper",
+      "sourceSha256": "578a15c97926f81b88a03eb143e945c3fa6b154fd023219c92386f584a0383ba",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/kaesora--a_tome_keeper.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: kaladima/Dirjadak_Barbrawler",
+      "sourceSha256": "fc40213fbe2e90921c43a5fc9421becd0a27eab1d8aa67fb57a6ca17db89e7e3",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/kaladima--Dirjadak_Barbrawler.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: kaladimb/Brenthalion_Aleslammer",
+      "sourceSha256": "f4576741cb57ea34f77dbfea331833b32031b18f89971ad60e5008eebb176ade",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/kaladimb--Brenthalion_Aleslammer.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: kaladimb/Crovsar_Dirkbringer",
+      "sourceSha256": "e99822bee5c7490d716d5eba877b4f43a51d8de0a052e64d6bcb0531d5f371b9",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/kaladimb--Crovsar_Dirkbringer.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: kaladimb/Dravel_Axethrasher",
+      "sourceSha256": "e1d35c2a8803d968ff836e1e1b7b5a8d9554b7c260be72ad097a17244ae32fcf",
+      "assertions": "equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/kaladimb--Dravel_Axethrasher.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: kaladimb/Haldorak_Foamymugs",
+      "sourceSha256": "ff7f64aec7b92a0e300902af367134691f7b01c09163a3bb3bd720fa4a425f28",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/kaladimb--Haldorak_Foamymugs.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: lakerathe/#Egonis",
+      "sourceSha256": "f661b45a0541851ba3d7b56c350021a632fa5559c8f8bf56e53d89ceb6f9700d",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/lakerathe--%23Egonis.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: lakerathe/a_fallen_student",
+      "sourceSha256": "6060756020b52d517720bac727a142498cc450a34bbeb6d5c599986dd9542684",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/lakerathe--a_fallen_student.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: lfaydark/Scout_Rahjiq",
+      "sourceSha256": "659102da48fc987141b261ecd2dc6a9894b2da597ba8c194fbc00a8fb8922bde",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/lfaydark--Scout_Rahjiq.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: necropolis/#Hsagra-s_Shade",
+      "sourceSha256": "ee46ac59bb5b3ced0e4ad5f469de683b11faee427d740bec793555dbf0436c3b",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/necropolis--%23Hsagra-s_Shade.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: neriaka/Andara_C-Luzz",
+      "sourceSha256": "d56cc9a35d4cad177344f9a13dfc800890dbce871a4cf815146a1b15f7a03ef6",
+      "assertions": "equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/neriaka--Andara_C-Luzz.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: neriakb/Andara_C-Luzz",
+      "sourceSha256": "56d4e3c010261df5e8ca83a39c9209459d7394f146c8ff4da6e8670ef5b4b8ab",
+      "assertions": "equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/neriakb--Andara_C-Luzz.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: neriakb/Issva_H-Rugla",
+      "sourceSha256": "4d07c68529fe5e5c143eb41fd2d2767864d8e373aedf8b888d0e9ed7dd7b374b",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/neriakb--Issva_H-Rugla.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: neriakb/Jarrex_N-Ryt",
+      "sourceSha256": "aa320fdaf8e863cf06bec82254edc0a123bb22685b47c85e1651b7292cc9ad4d",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/neriakb--Jarrex_N-Ryt.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: neriakb/Krivn_S-Tai",
+      "sourceSha256": "d5f888bd0480b562b7b53ef211afde426019f875c4e593a8920af1b2ad06ae53",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/neriakb--Krivn_S-Tai.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: neriakb/Morgalanth_Tal-Raeloen",
+      "sourceSha256": "99badceff3747bf196f046957e20c4d97cf4969d074f38277a3275f4b383c905",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/neriakb--Morgalanth_Tal-Raeloen.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: neriakc/High_Priestess_Alexandria",
+      "sourceSha256": "36af6db388bccd2aa1d654b29bc2f78ef646b9d1b89b26d814d5892309b566f3",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/neriakc--High_Priestess_Alexandria.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: neriakc/Kanthu_M-Rekkor",
+      "sourceSha256": "f18d11a56042a12dabe5903dd117d9085d5031564052bbb7458c45de841d4ff7",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/neriakc--Kanthu_M-Rekkor.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: neriakc/Selzar_L-Crit",
+      "sourceSha256": "3dc884b467c10f9c92f9ec4c94c6e53fb66f2a72c5429ad6e113c727cef70a2a",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/neriakc--Selzar_L-Crit.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: neriakc/Talorial_D-Estalian",
+      "sourceSha256": "6ddc9598b20413b7999f07b1e13fcbda46cfe382a03e0aa73cd29c336ee7593d",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/neriakc--Talorial_D-Estalian.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: oggok/#Bordag",
+      "sourceSha256": "5c9f753f13a0fb3f94f1c414aeada7c02dfbeddabeb90c6d987d7128d42ce262",
+      "assertions": "equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/oggok--%23Bordag.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: oggok/Baddi_Waca",
+      "sourceSha256": "50e7f9a0294f235557402df1614a6cafdefbc9f286010ff30235cd6c3b93bb2d",
+      "assertions": "equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/oggok--Baddi_Waca.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: oggok/Grapok",
+      "sourceSha256": "047d82f497e2c50abfd1c8b4e1765ced9156719f438d880dd9376531a1818fa0",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/oggok--Grapok.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: paineel/Shwara_Volerno",
+      "sourceSha256": "cc23b9657fc8963d922c821df5e60b0ae920f7d8161e25238750b142f2793096",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/paineel--Shwara_Volerno.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: qcat/Illie_Roln",
+      "sourceSha256": "9b4851a2056ecf64d1448e3547ce87d48ee563da91ad1af9788ba0a5e4f0ebfa",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/qcat--Illie_Roln.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: qcat/Ranthor_Bekesna",
+      "sourceSha256": "1339db9076e188d9880d427c9fc408c4cf14b9dc925fd1c84e4ded8894d3a430",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/qcat--Ranthor_Bekesna.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: qcat/Torin_Krentar",
+      "sourceSha256": "4dda8295f81cfcda6fa0b44f4346a8106dba259cf65a15ad9921e548a927df40",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/qcat--Torin_Krentar.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: qcat/Unmuz_Tukore",
+      "sourceSha256": "af211eea1bbc51ec5dd4fac94e7617de769bd90944cf0eaca56934f16e900102",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/qcat--Unmuz_Tukore.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: qcat/Wellis_Pestule",
+      "sourceSha256": "5a543218c81db41b82000362a2b9253ac229abf17800e5f2014ef73bd0a612f4",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/qcat--Wellis_Pestule.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: qeynos/Lord_Mrallon",
+      "sourceSha256": "8e861b45d3531e484eb4ae37665da3654988a71a0e247928b12faf0012cd97c4",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/qeynos--Lord_Mrallon.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: qeynos/Miltiades_Tal-Azroth",
+      "sourceSha256": "28f0978cdc625bfd4b43e993ffb320131998127ba70a22022c99cbabfcdf44e8",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/qeynos--Miltiades_Tal-Azroth.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: qeynos/Sollari_Bekines",
+      "sourceSha256": "7ff94bc18c4afa1f76ab436089e0c9719935260228b1b466d818128d82cbaedf",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/qeynos--Sollari_Bekines.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: qeynos/Vansted_Rohenga",
+      "sourceSha256": "c317467bb11e26cebc89116327086f8f6187de298177ddb362f8adeea4a6a01f",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/qeynos--Vansted_Rohenga.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: qeynos2/Davloran_Girionlis",
+      "sourceSha256": "ba03f7991952a72a427b95cfa652168a2f393b0a63e533c49896b0bd1d4890e8",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/qeynos2--Davloran_Girionlis.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: qeynos2/Filian_Weagleross",
+      "sourceSha256": "dfcd5dd9ab8dd5d3863b91b5d3501cc701a1f9f20258f311f554a7a856a949f6",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/qeynos2--Filian_Weagleross.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: qeynos2/Reldin_Harkolis",
+      "sourceSha256": "fa3fd69f885dbd861eb772f10e1cdd0a48f1dd146b9c43e124cd288cb21ff6f3",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/qeynos2--Reldin_Harkolis.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: qeytoqrg/Rilca_Leafrunner",
+      "sourceSha256": "4b8444f0b60e953df6917241f91e0bc06a500048fea6a1b03dc7de9645142370",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_spawn),\"function\",\"event_spawn\");equal(type(event_timer),\"function\",\"event_timer\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/qeytoqrg--Rilca_Leafrunner.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: qrg/Errin_Pinewhisper",
+      "sourceSha256": "9a35f2a6676bc03721f1f23cc42fa000c30e269834b65cd74cefe39584f96500",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/qrg--Errin_Pinewhisper.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: qrg/Gurrin_Nitestorm",
+      "sourceSha256": "36b83b4551641e3226f18c5ad80b506cff1cd6f142b3a25b1fe1faa8729aa9ad",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/qrg--Gurrin_Nitestorm.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: qrg/Jhaya_Wyndrunner",
+      "sourceSha256": "77cb3ae5e9d46886b60a509adb01bcb94c34ba12353d5f834442b0f1431acae5",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/qrg--Jhaya_Wyndrunner.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: qrg/Lerian_Wyndrunner",
+      "sourceSha256": "cb5cc2237200eda73c66366237dbca3a1c818994c88f48d72404c7f88289b002",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/qrg--Lerian_Wyndrunner.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: qrg/Salmekia_Treherth",
+      "sourceSha256": "d6aef9408a092806313d1268acd489c40073c3b8b450d138b831a14cd3759453",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/qrg--Salmekia_Treherth.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: rivervale/Bartle_Barnick",
+      "sourceSha256": "8b897a431a90c6faf9922bf1afa671aba7e72cb104aeb54711e0c8f72425b443",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/rivervale--Bartle_Barnick.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: rivervale/Bipdo_Hargin",
+      "sourceSha256": "8ca0dc18d698d2e2bcd3173b49e456a495b116fcafb2d4bd3b5565a38da9b171",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/rivervale--Bipdo_Hargin.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: rivervale/Bodbin_Gimple",
+      "sourceSha256": "68235d8be175666e641ac45312c6571d0bfa12373d1b42711d47ca0c4e116350",
+      "assertions": "equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/rivervale--Bodbin_Gimple.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: rivervale/Dalorio_Blistbobble",
+      "sourceSha256": "96313a28d18710e96e0bb585f3d17ee8b8ca8da5ee0bf11fb7c16a01b70b3217",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/rivervale--Dalorio_Blistbobble.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: rivervale/Jimji_Bottletoe",
+      "sourceSha256": "50d5907f53dc648762f36caeea7440b6d66c20072b19f31eca4649383f47f0f0",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/rivervale--Jimji_Bottletoe.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: rivervale/Kaya_Cloudfoot",
+      "sourceSha256": "abfd74a4bf7bf0efa00f8e84b35dc2bf6c1a6bb1b534a19ca0af7a2d856e67cc",
+      "assertions": "equal(type(event_enter),\"function\",\"event_enter\");equal(type(event_say),\"function\",\"event_say\");equal(type(event_spawn),\"function\",\"event_spawn\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/rivervale--Kaya_Cloudfoot.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: rivervale/Megosh_Thistlethorn",
+      "sourceSha256": "51838e95d18251afb3d926287fc535867fc3bb1df05eca08c1ff7a97b3df52ea",
+      "assertions": "equal(type(event_enter),\"function\",\"event_enter\");equal(type(event_say),\"function\",\"event_say\");equal(type(event_spawn),\"function\",\"event_spawn\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/rivervale--Megosh_Thistlethorn.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: rivervale/Thekela_Meepup",
+      "sourceSha256": "3cd57ca37f84c246332a638d53f3400a95ade98c1dff601cf1a84b1c56ed6f07",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/rivervale--Thekela_Meepup.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: sirens/a_twitching_swordfish",
+      "sourceSha256": "8a29ce895f79e922223881f8b0c0643628a2039405be52aa25ddc34ba0ea4963",
+      "assertions": "equal(type(event_combat),\"function\",\"event_combat\");equal(type(event_death),\"function\",\"event_death\");equal(type(event_hp),\"function\",\"event_hp\");equal(type(event_timer),\"function\",\"event_timer\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/sirens--a_twitching_swordfish.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: steamfont/#Biddliss_Sperandu",
+      "sourceSha256": "e6de61e1d18f7d954056a030761bdbd8084560922e764ffb082c87e8c1072681",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/steamfont--%23Biddliss_Sperandu.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: swampofnohope/Scout_Eyru",
+      "sourceSha256": "0a1418d96ab10fae9d2753958ee7f1e4640edd19b81ff70aeb2c3dba49cf42e9",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/swampofnohope--Scout_Eyru.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: thurgadina/Dardek_Bladewright",
+      "sourceSha256": "ad8dadbb96d564c5f98314f1a3cd0bb8d73edd1917bf5030b97cd35ad34487af",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\");equal(type(event_waypoint_arrive),\"function\",\"event_waypoint_arrive\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/thurgadina--Dardek_Bladewright.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: timorous/Scout_Sihmoj",
+      "sourceSha256": "c8477dab12f8ce069a2f2537cb769b5c99beb37262693d73cb12695eb2b97b4b",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/timorous--Scout_Sihmoj.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: trakanon/Crusader_Vragor",
+      "sourceSha256": "418c0586956a4c06350ff8669a8d9234958253743132c8f68ec2969a5e1365be",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/trakanon--Crusader_Vragor.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: wakening/#Alaurin",
+      "sourceSha256": "f9d9e23ae5ad83d659fafa7d98e0897e682328a5742b1e744bab8a646446f0b1",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/wakening--%23Alaurin.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: wakening/#Lantaric-Dar",
+      "sourceSha256": "f7f846611b06ac9803df85af7b79d9feb8e40e6c28638ac227453fecfb4d3d43",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/wakening--%23Lantaric-Dar.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: warslikswood/#an_injured_traveller",
+      "sourceSha256": "497e9bd39d2dffa1acf91b23c08214e2b0a4cb6b7788c531110ce9b7eef53ef7",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/warslikswood--%23an_injured_traveller.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: westwastes/#Vohnkare",
+      "sourceSha256": "e1cfb15b491e9e9525e89f70ee817a99f6c1608d16e655fdb103ee646c14b312",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\");equal(type(event_trade),\"function\",\"event_trade\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/westwastes--%23Vohnkare.lua"
+    },
+    {
+      "name": "Historical disabled body loads with retained handlers: westwastes/a_Lost_Tomekeeper",
+      "sourceSha256": "0ac0b841fc6670638cdc9b409a31f058024b490c707619bd510f61defb74ec8e",
+      "assertions": "equal(type(event_say),\"function\",\"event_say\")",
+      "coverageKind": "disabled_historical_body_load_not_runtime_admission",
+      "proposedFile": "changes/p99-final-admission/westwastes--a_Lost_Tomekeeper.lua"
+    },
+    {
+      "name": "Preserved legacy note, extra, repeated and duplicate note: freportn/Edwardian_Holyblade",
+      "sourceSha256": "f6864e6f0cd4df79f8a47427c62897546725ba82911a15b7be2dff3e3b3a829c",
+      "assertions": "trade({18737,99999});reward(13554,1);equal(calls.exp,100);equal(remaining[99999],1);equal(remaining[18737],0);trade({18737,18737});reward(13554,2);equal(calls.exp,200);equal(remaining[18737],1);equal(calls.returns,2);equal(next(calls.factions),nil)",
+      "coverageKind": "isolated_mixed_source_logic",
+      "proposedFile": "changes/p99-final-admission/freportn--Edwardian_Holyblade.lua"
+    },
+    {
+      "name": "Wrong offer is returned: freportn/Edwardian_Holyblade",
+      "sourceSha256": "f6864e6f0cd4df79f8a47427c62897546725ba82911a15b7be2dff3e3b3a829c",
+      "assertions": "trade({99999});equal(remaining[99999],1);equal(next(calls.rewards),nil);equal(calls.exp,0);equal(calls.returns,1)",
+      "coverageKind": "isolated_mixed_source_logic",
+      "proposedFile": "changes/p99-final-admission/freportn--Edwardian_Holyblade.lua"
+    },
+    {
+      "name": "Greeting retains identity without a later training hook: freportn/Edwardian_Holyblade",
+      "sourceSha256": "f6864e6f0cd4df79f8a47427c62897546725ba82911a15b7be2dff3e3b3a829c",
+      "assertions": "say(\"hail\");equal(#calls.speech,1);equal(next(calls.rewards),nil);say(\"armor\");say(\"training\");say(\"ready to begin your tests\");equal(#calls.speech,1);equal(next(calls.rewards),nil)",
+      "coverageKind": "isolated_mixed_source_logic",
+      "proposedFile": "changes/p99-final-admission/freportn--Edwardian_Holyblade.lua"
+    },
+    {
+      "name": "Preserved legacy note, extra, repeated and duplicate note: neriakc/Ulraz_S-Lon",
+      "sourceSha256": "00a3f01d38653d1f2d0f2c3d617b5c22ff6434599910d3dce61780ad2d966d14",
+      "assertions": "trade({18757,99999});reward(13586,1);equal(calls.exp,100);equal(remaining[99999],1);equal(remaining[18757],0);trade({18757,18757});reward(13586,2);equal(calls.exp,200);equal(remaining[18757],1);equal(calls.returns,2);equal(next(calls.factions),nil)",
+      "coverageKind": "isolated_mixed_source_logic",
+      "proposedFile": "changes/p99-final-admission/neriakc--Ulraz_S-Lon.lua"
+    },
+    {
+      "name": "Wrong offer is returned: neriakc/Ulraz_S-Lon",
+      "sourceSha256": "00a3f01d38653d1f2d0f2c3d617b5c22ff6434599910d3dce61780ad2d966d14",
+      "assertions": "trade({99999});equal(remaining[99999],1);equal(next(calls.rewards),nil);equal(calls.exp,0);equal(calls.returns,1)",
+      "coverageKind": "isolated_mixed_source_logic",
+      "proposedFile": "changes/p99-final-admission/neriakc--Ulraz_S-Lon.lua"
+    },
+    {
+      "name": "Greeting retains identity without a later training hook: neriakc/Ulraz_S-Lon",
+      "sourceSha256": "00a3f01d38653d1f2d0f2c3d617b5c22ff6434599910d3dce61780ad2d966d14",
+      "assertions": "say(\"hail\");equal(#calls.speech,1);equal(next(calls.rewards),nil);say(\"armor\");say(\"training\");say(\"ready to begin your tests\");equal(#calls.speech,1);equal(next(calls.rewards),nil)",
+      "coverageKind": "isolated_mixed_source_logic",
+      "proposedFile": "changes/p99-final-admission/neriakc--Ulraz_S-Lon.lua"
+    },
+    {
+      "name": "Edwardian later bracers rejected: [9927, 9928, 9929, 9930]",
+      "sourceSha256": "f6864e6f0cd4df79f8a47427c62897546725ba82911a15b7be2dff3e3b3a829c",
+      "assertions": "trade({9927,9928,9929,9930});equal(next(calls.rewards),nil);equal(calls.exp,0);equal(calls.returns,1);equal(remaining[9928],1);equal(remaining[9929],1);equal(remaining[9930],1);equal(remaining[9927],1);",
+      "coverageKind": "isolated_mixed_source_logic",
+      "proposedFile": "changes/p99-final-admission/freportn--Edwardian_Holyblade.lua"
+    },
+    {
+      "name": "Edwardian later bracers rejected: [9927]",
+      "sourceSha256": "f6864e6f0cd4df79f8a47427c62897546725ba82911a15b7be2dff3e3b3a829c",
+      "assertions": "trade({9927});equal(next(calls.rewards),nil);equal(calls.exp,0);equal(calls.returns,1);equal(remaining[9927],1);",
+      "coverageKind": "isolated_mixed_source_logic",
+      "proposedFile": "changes/p99-final-admission/freportn--Edwardian_Holyblade.lua"
+    },
+    {
+      "name": "Edwardian later bracers rejected: [9928, 99999]",
+      "sourceSha256": "f6864e6f0cd4df79f8a47427c62897546725ba82911a15b7be2dff3e3b3a829c",
+      "assertions": "trade({9928,99999});equal(next(calls.rewards),nil);equal(calls.exp,0);equal(calls.returns,1);equal(remaining[9928],1);equal(remaining[99999],1);",
+      "coverageKind": "isolated_mixed_source_logic",
+      "proposedFile": "changes/p99-final-admission/freportn--Edwardian_Holyblade.lua"
+    },
+    {
+      "name": "Ulraz later weapon and shield rejected: [19574, 16197, 19554]",
+      "sourceSha256": "00a3f01d38653d1f2d0f2c3d617b5c22ff6434599910d3dce61780ad2d966d14",
+      "assertions": "trade({19574,16197,19554});equal(next(calls.rewards),nil);equal(calls.exp,0);equal(next(calls.factions),nil);equal(calls.returns,1);equal(remaining[19554],1);equal(remaining[16197],1);equal(remaining[19574],1);",
+      "coverageKind": "isolated_mixed_source_logic",
+      "proposedFile": "changes/p99-final-admission/neriakc--Ulraz_S-Lon.lua"
+    },
+    {
+      "name": "Ulraz later weapon and shield rejected: [19573]",
+      "sourceSha256": "00a3f01d38653d1f2d0f2c3d617b5c22ff6434599910d3dce61780ad2d966d14",
+      "assertions": "trade({19573});equal(next(calls.rewards),nil);equal(calls.exp,0);equal(next(calls.factions),nil);equal(calls.returns,1);equal(remaining[19573],1);",
+      "coverageKind": "isolated_mixed_source_logic",
+      "proposedFile": "changes/p99-final-admission/neriakc--Ulraz_S-Lon.lua"
+    },
+    {
+      "name": "Ulraz later weapon and shield rejected: [19570, 19570, 19570, 19570]",
+      "sourceSha256": "00a3f01d38653d1f2d0f2c3d617b5c22ff6434599910d3dce61780ad2d966d14",
+      "assertions": "trade({19570,19570,19570,19570});equal(next(calls.rewards),nil);equal(calls.exp,0);equal(next(calls.factions),nil);equal(calls.returns,1);equal(remaining[19570],4);",
+      "coverageKind": "isolated_mixed_source_logic",
+      "proposedFile": "changes/p99-final-admission/neriakc--Ulraz_S-Lon.lua"
+    },
+    {
+      "name": "Ulraz independent nonreward Ultricle lore retained",
+      "sourceSha256": "00a3f01d38653d1f2d0f2c3d617b5c22ff6434599910d3dce61780ad2d966d14",
+      "assertions": "say(\"ultricle\");equal(#calls.speech,1);assert(string.find(calls.speech[1],\"gray region barren of life\",1,true));equal(next(calls.rewards),nil)",
+      "coverageKind": "isolated_mixed_source_logic",
+      "proposedFile": "changes/p99-final-admission/neriakc--Ulraz_S-Lon.lua"
+    },
+    {
+      "name": "Removed later offer returned without state or rewards: kithicor/Innkeep_Min[21699, 99999]",
+      "sourceSha256": "fa0063f8152f0de88e09993eaf21aa5928ac9d1e89836d5825b47117bc30aff4",
+      "assertions": "trade({21699,99999});equal(next(calls.rewards),nil);equal(calls.exp,0);equal(next(calls.factions),nil);equal(calls.returns,1);equal(remaining[21699],1);equal(remaining[99999],1);",
+      "coverageKind": "isolated_mixed_source_logic",
+      "proposedFile": "changes/p99-final-admission/kithicor--Innkeep_Min.lua"
+    },
+    {
+      "name": "Removed later offer returned without state or rewards: lavastorm/Symbell_Sunara[13418, 99999]",
+      "sourceSha256": "b13a59d7b0dddcd8b749d1992ffe61d5642aa52b9d760d99f04d099e50821ea1",
+      "assertions": "trade({13418,99999});equal(next(calls.rewards),nil);equal(calls.exp,0);equal(next(calls.factions),nil);equal(calls.returns,1);equal(remaining[13418],1);equal(remaining[99999],1);",
+      "coverageKind": "isolated_mixed_source_logic",
+      "proposedFile": "changes/p99-final-admission/lavastorm--Symbell_Sunara.lua"
+    },
+    {
+      "name": "Removed later offer returned without state or rewards: nektulos/Kamidra_Voragone[13088, 13088, 13088, 13088]",
+      "sourceSha256": "2780deb57763621f45159db61d135556788609f839258657187576809a14cf7a",
+      "assertions": "trade({13088,13088,13088,13088});equal(next(calls.rewards),nil);equal(calls.exp,0);equal(next(calls.factions),nil);equal(calls.returns,1);equal(remaining[13088],4);",
+      "coverageKind": "isolated_mixed_source_logic",
+      "proposedFile": "changes/p99-final-admission/nektulos--Kamidra_Voragone.lua"
+    },
+    {
+      "name": "Removed later offer returned without state or rewards: cabwest/Marthor[8348, 8348, 8348, 8348]",
+      "sourceSha256": "eeb78e18d6ef5a1eca0bbfc10b8feb29feae957040fb804c17285c4a231dfe04",
+      "assertions": "trade({8348,8348,8348,8348});equal(next(calls.rewards),nil);equal(calls.exp,0);equal(next(calls.factions),nil);equal(calls.returns,1);equal(remaining[8348],4);",
+      "coverageKind": "isolated_mixed_source_logic",
+      "proposedFile": "changes/p99-final-admission/cabwest--Marthor.lua"
+    },
+    {
+      "name": "Removed later offer returned without state or rewards: cabwest/Marthor[4199, 99999]",
+      "sourceSha256": "eeb78e18d6ef5a1eca0bbfc10b8feb29feae957040fb804c17285c4a231dfe04",
+      "assertions": "trade({4199,99999});equal(next(calls.rewards),nil);equal(calls.exp,0);equal(next(calls.factions),nil);equal(calls.returns,1);equal(remaining[99999],1);equal(remaining[4199],1);",
+      "coverageKind": "isolated_mixed_source_logic",
+      "proposedFile": "changes/p99-final-admission/cabwest--Marthor.lua"
+    },
+    {
+      "name": "Removed later offer returned without state or rewards: neriakc/Medron_Y-Lask[19571, 16170, 16170, 99999]",
+      "sourceSha256": "0322de446e1435c12dc493686d827a7012b5470588253f9965f129c0dc0ff183",
+      "assertions": "trade({19571,16170,16170,99999});equal(next(calls.rewards),nil);equal(calls.exp,0);equal(next(calls.factions),nil);equal(calls.returns,1);equal(remaining[16170],2);equal(remaining[19571],1);equal(remaining[99999],1);",
+      "coverageKind": "isolated_mixed_source_logic",
+      "proposedFile": "changes/p99-final-admission/neriakc--Medron_Y-Lask.lua",
+      "setupExtra": "npc.DoAnim=function(_,n) calls.anim=n end"
+    },
+    {
+      "name": "Ambient hail and repeated unrelated offer preserved: kithicor/Innkeep_Min",
+      "sourceSha256": "fa0063f8152f0de88e09993eaf21aa5928ac9d1e89836d5825b47117bc30aff4",
+      "assertions": "say(\"hail\");equal(#calls.speech,1);say(\"I have returned\");say(\"help\");say(\"master tynn\");equal(#calls.speech,1);trade({99999});trade({99999});equal(remaining[99999],1);equal(calls.returns,2);equal(next(calls.rewards),nil);equal(calls.exp,0)",
+      "coverageKind": "isolated_mixed_source_logic",
+      "proposedFile": "changes/p99-final-admission/kithicor--Innkeep_Min.lua"
+    },
+    {
+      "name": "Ambient hail and repeated unrelated offer preserved: lavastorm/Symbell_Sunara",
+      "sourceSha256": "b13a59d7b0dddcd8b749d1992ffe61d5642aa52b9d760d99f04d099e50821ea1",
+      "assertions": "say(\"hail\");equal(#calls.speech,1);say(\"I have returned\");say(\"help\");say(\"master tynn\");equal(#calls.speech,1);trade({99999});trade({99999});equal(remaining[99999],1);equal(calls.returns,2);equal(next(calls.rewards),nil);equal(calls.exp,0)",
+      "coverageKind": "isolated_mixed_source_logic",
+      "proposedFile": "changes/p99-final-admission/lavastorm--Symbell_Sunara.lua"
+    },
+    {
+      "name": "Ambient hail and repeated unrelated offer preserved: nektulos/Kamidra_Voragone",
+      "sourceSha256": "2780deb57763621f45159db61d135556788609f839258657187576809a14cf7a",
+      "assertions": "say(\"hail\");equal(#calls.speech,1);say(\"I have returned\");say(\"help\");say(\"master tynn\");equal(#calls.speech,1);trade({99999});trade({99999});equal(remaining[99999],1);equal(calls.returns,2);equal(next(calls.rewards),nil);equal(calls.exp,0)",
+      "coverageKind": "isolated_mixed_source_logic",
+      "proposedFile": "changes/p99-final-admission/nektulos--Kamidra_Voragone.lua"
+    },
+    {
+      "name": "Ambient hail and repeated unrelated offer preserved: cabwest/Marthor",
+      "sourceSha256": "eeb78e18d6ef5a1eca0bbfc10b8feb29feae957040fb804c17285c4a231dfe04",
+      "assertions": "say(\"hail\");equal(#calls.speech,1);say(\"I have returned\");say(\"help\");say(\"master tynn\");equal(#calls.speech,1);trade({99999});trade({99999});equal(remaining[99999],1);equal(calls.returns,2);equal(next(calls.rewards),nil);equal(calls.exp,0)",
+      "coverageKind": "isolated_mixed_source_logic",
+      "proposedFile": "changes/p99-final-admission/cabwest--Marthor.lua"
+    },
+    {
+      "name": "Ambient hail and repeated unrelated offer preserved: neriakc/Medron_Y-Lask",
+      "sourceSha256": "0322de446e1435c12dc493686d827a7012b5470588253f9965f129c0dc0ff183",
+      "assertions": "say(\"hail\");equal(#calls.speech,1);say(\"I have returned\");say(\"help\");say(\"master tynn\");equal(#calls.speech,1);trade({99999});trade({99999});equal(remaining[99999],1);equal(calls.returns,2);equal(next(calls.rewards),nil);equal(calls.exp,0);equal(calls.anim,67)",
+      "coverageKind": "isolated_mixed_source_logic",
+      "proposedFile": "changes/p99-final-admission/neriakc--Medron_Y-Lask.lua",
+      "setupExtra": "npc.DoAnim=function(_,n) calls.anim=n end"
+    },
+    {
+      "name": "Bill no later cultural reward or task for Human",
+      "sourceSha256": "a730188865e65ec3889b278afec5e96bb79a650d75661b439bd4549f5580f7f3",
+      "assertions": "say(\"hail\");say(\"tasks\");say(\"armor patterns\");equal(#calls.speech,3);trade({12372,12373,13077,14019});equal(calls.returns,1);equal(next(calls.rewards),nil);equal(remaining[12372],1);equal(remaining[12373],1);equal(remaining[13077],1);equal(remaining[14019],1);equal(calls.exp,0);trade({99999});equal(remaining[99999],1);equal(calls.returns,2)",
+      "coverageKind": "isolated_mixed_source_logic",
+      "proposedFile": "changes/p99-final-admission/rivervale--Artisan_Bill_Whistletop.lua",
+      "setupExtra": "other.GetRaceName=function() return \"Human\" end"
+    },
+    {
+      "name": "Bill no later cultural reward or task for Halfling",
+      "sourceSha256": "a730188865e65ec3889b278afec5e96bb79a650d75661b439bd4549f5580f7f3",
+      "assertions": "say(\"hail\");say(\"tasks\");say(\"armor patterns\");equal(#calls.speech,0);trade({12372,12373,13077,14019});equal(calls.returns,1);equal(next(calls.rewards),nil);equal(remaining[12372],1);equal(remaining[12373],1);equal(remaining[13077],1);equal(remaining[14019],1);equal(calls.exp,0);trade({99999});equal(remaining[99999],1);equal(calls.returns,2)",
+      "coverageKind": "isolated_mixed_source_logic",
+      "proposedFile": "changes/p99-final-admission/rivervale--Artisan_Bill_Whistletop.lua",
+      "setupExtra": "other.GetRaceName=function() return \"Halfling\" end"
+    },
+    {
+      "name": "Unresolved Mazziana baseline consumes scalp without reward",
+      "sourceSha256": "311ef74d8e234d9b1ca7c4b07c98599c85d07a042dae644cf298b57078a51950",
+      "assertions": "trade({13791,99999});equal(remaining[13791],0);equal(remaining[99999],1);equal(calls.exp,0);equal(next(calls.rewards),nil);equal(next(calls.factions),nil);equal(calls.returns,1)",
+      "coverageKind": "baseline_verification",
+      "file": "effective/quests/gfaydark/Mazziana_Ridgerunner.lua",
+      "assertionScope": "Unchanged baseline behavior capture, not proof of P99 parity or admission."
+    }
+  ]
+}

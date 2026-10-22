@@ -1,0 +1,33 @@
+{
+  "titles": [
+    "Regal Band of Bathezid Quest"
+  ],
+  "reviewed_at": "2026-10-22",
+  "review_status": "partial",
+  "match_status": "partial",
+  "local_quest_keys": [
+    "droga/Warlord_Skargus"
+  ],
+  "proposal": "changes/p99-nz-skargus-dialogue.json",
+  "notes": [
+    "Restore Skargus\u2019s documented arrival line and limit his existing depop handler to its named timer.",
+    "Only canonical classic Droga actor81126 changed. Existing600000ms timeout retained as unverified imported duration, not invented P99 value. Other timer names now cannot trigger accidental depop; unsupported trades still returned. Entire six-actor chain read; all item identities, character-scoped global and final five-charge ring match local definitions. Prior October9 notes document actual grid/type4 and full-template-charge fixes; do not regress them or claim fresh connected tests. Modern Frontier Mountains copies left untouched."
+  ],
+  "verification": {
+    "source": "Cached P99 and effective Lua reviewed; exact complete row preimages and source hashes recorded.",
+    "syntax": "pending",
+    "runtime": "Isolated mock regression pending; full game runtime unavailable.",
+    "ui": "not_run",
+    "connected_chain": "not_run"
+  },
+  "unresolved": [
+    "Ordinary source drops/spawns, recipe live behavior and rendered complete quest path not verified."
+  ],
+  "sourceProvenance": {
+    "canonicalQuestRow": 207954,
+    "effectiveSourceStatus": "database-only",
+    "upstreamExactMatch": "sources/projecteq/droga/v0/Warlord_Skargus.lua",
+    "sha256": "64ebddc8555f81f4d7526e339eeb729ca9a66bf8e3551a5a14db8abe8bcb1cd2",
+    "assessment": "Verified byte-for-byte identical to effective/quests/droga/Warlord_Skargus.lua before copying. No baseline index was modified."
+  }
+}

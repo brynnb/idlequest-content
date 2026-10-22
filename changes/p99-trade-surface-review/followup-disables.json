@@ -1,0 +1,30 @@
+[
+  {
+    "key": "lakeofillomen/Bruiser_Noz",
+    "proposal": "changes/p99-trade-scope-disables.json",
+    "reason": "P99 Shaman Skull Quests explicitly excludes later stages; this complete source is exclusively labeled Skull Quest6.",
+    "activation": {
+      "before": 1,
+      "after": 0
+    },
+    "bodyPreservation": "Only two nonexecuting header lines prepended; all callbacks byte-preserved.",
+    "limits": [
+      "NPC data and runtime admission were not changed.",
+      "Source classification receipt remains an honest pre-correction snapshot."
+    ]
+  },
+  {
+    "key": "qey2hh1/Guard_Gregor",
+    "proposal": "changes/p99-trade-scope-disables.json",
+    "reason": "P99 Guard Gregor NPC page explicitly marks this June2002 actor DNE; its only quest surface is later task500143.",
+    "activation": {
+      "before": 1,
+      "after": 0
+    },
+    "bodyPreservation": "Only two nonexecuting header lines prepended; all callbacks byte-preserved.",
+    "limits": [
+      "NPC data and runtime admission were not changed.",
+      "Source classification receipt remains an honest pre-correction snapshot."
+    ]
+  }
+]

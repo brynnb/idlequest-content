@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-tz-thadres-diary-dialogue",
+  "summary": "Restore documented what about his diary prompt, preserving legacy wording and exact3page exchange.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/The_Vengeful_Musicians?action=raw",
+      "note": "Cached 2026-07-17T23:38:49.416Z; revision unavailable; SHA256 3230892899b3fa5dc7dccf62ce302b08df43cc83be112ee30eb477eaedc685d5. Restore documented what about his diary prompt, preserving legacy wording and exact3page exchange. All other behavior preserved. Static source comparison only; full runtime/UI not verified."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 12910,
+        "zone": "halas",
+        "name": "Thadres_Thyme",
+        "lua_content": "-- items: 18136, 18137, 18138, 18139\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Hello. \" .. e.other:GetName() .. \"!  It's hard to believe just how cold it gets here!  It really has been wearing me down. Especially after the [journey] from Qeynos.\");\n\telseif(e.message:findi(\"what journey\")) then\n\t\te.self:Say(\"I have been traveling the face of Norrath to unravel the mystery of why my beloved [brother] attacked a group of traveling bards.  He didn't survive the fight.  It's been so long. I can't really remember what he looked like!  I miss him so much...  Now all I have are his [diary] and some brewing recipes he sold before his death.\");\n\telseif(e.message:findi(\"brother\")) then\n\t\te.self:Say(\"My brother was Delius Thyme. I think he was a great man. \" .. e.other:GetName() .. \", have you ever lost someone close? I don't know if I can ever forgive myself for letting him travel on his own after his sanity began to fade. Oh, Delius, please forgive me!\");\n\telseif(e.message:findi(\"what diary\")) then\n\t\te.self:Say(\"The diary?  It's one of the two connections I still have to my brother.  Sadly. [pages] are missing from it.  I've been looking for them.\");\n\telseif(e.message:findi(\"what pages\")) then\n\t\te.self:Say(\"I believe the pages contain the events that drove my brother to insanity.  I have been searching for the remaining three missing pages.  There is some hope; I found a couple of pages over in Everfrost Mountains.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\tif(item_lib.check_turn_in(e.trade, {item1 = 18136, item2 = 18137, item3 = 18138})) then\n\t\te.self:Say(\"Thank you, thank you. Let me read them. Oh! How could I want these brewing recipes after they made my brother insane? Where are they? I think this is all of them. Take them away from me! Delius can smile upon me now.\");\n\t\te.other:SummonItem(18139); -- Item: Garsen's Brewing List\n\t\te.other:AddEXP(200);\n\t\te.other:Ding();\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\n-------------------------------------------------------------------------------------------------\n-- Converted to .lua using MATLAB converter written by Stryd\n-- Find/replace data for .pl --> .lua conversions provided by Speedz, Stryd, Sorvani and Robregen\n-------------------------------------------------------------------------------------------------\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 12910,
+        "zone": "halas",
+        "name": "Thadres_Thyme",
+        "lua_content": "-- items: 18136, 18137, 18138, 18139\nfunction event_say(e)\n\tif(e.message:findi(\"hail\")) then\n\t\te.self:Say(\"Hello. \" .. e.other:GetName() .. \"!  It's hard to believe just how cold it gets here!  It really has been wearing me down. Especially after the [journey] from Qeynos.\");\n\telseif(e.message:findi(\"what journey\")) then\n\t\te.self:Say(\"I have been traveling the face of Norrath to unravel the mystery of why my beloved [brother] attacked a group of traveling bards.  He didn't survive the fight.  It's been so long. I can't really remember what he looked like!  I miss him so much...  Now all I have are his [diary] and some brewing recipes he sold before his death.\");\n\telseif(e.message:findi(\"brother\")) then\n\t\te.self:Say(\"My brother was Delius Thyme. I think he was a great man. \" .. e.other:GetName() .. \", have you ever lost someone close? I don't know if I can ever forgive myself for letting him travel on his own after his sanity began to fade. Oh, Delius, please forgive me!\");\n\telseif(e.message:findi(\"what diary\") or e.message:findi(\"what about his diary\")) then\n\t\te.self:Say(\"The diary?  It's one of the two connections I still have to my brother.  Sadly. [pages] are missing from it.  I've been looking for them.\");\n\telseif(e.message:findi(\"what pages\")) then\n\t\te.self:Say(\"I believe the pages contain the events that drove my brother to insanity.  I have been searching for the remaining three missing pages.  There is some hope; I found a couple of pages over in Everfrost Mountains.\");\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\");\n\tif(item_lib.check_turn_in(e.trade, {item1 = 18136, item2 = 18137, item3 = 18138})) then\n\t\te.self:Say(\"Thank you, thank you. Let me read them. Oh! How could I want these brewing recipes after they made my brother insane? Where are they? I think this is all of them. Take them away from me! Delius can smile upon me now.\");\n\t\te.other:SummonItem(18139); -- Item: Garsen's Brewing List\n\t\te.other:AddEXP(200);\n\t\te.other:Ding();\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n\n-------------------------------------------------------------------------------------------------\n-- Converted to .lua using MATLAB converter written by Stryd\n-- Find/replace data for .pl --> .lua conversions provided by Speedz, Stryd, Sorvani and Robregen\n-------------------------------------------------------------------------------------------------\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/modified-upstream/halas/Thadres_Thyme.lua",
+      "beforeSha256": null,
+      "proposedFile": "changes/p99-tz-thadres-diary-dialogue/halas--Thadres_Thyme.lua",
+      "afterSha256": "0def033b07978d5d273a220b425c62cb7c945502e3eabed412884bb2d0a781dc"
+    }
+  ]
+}

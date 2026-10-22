@@ -1,0 +1,60 @@
+{
+  "format": 1,
+  "id": "p99-am-jarsath-respawn",
+  "summary": "Set documented Swamp of No Hope Jarsath medallion ground spawn eight-hour respawn; preserve coordinates and every other row field.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Medallion_of_the_Jarsath_Quest?action=raw",
+      "note": "Cached 2026-07-17T23:24:57.438Z SHA256 e5d1bae91edd124642d8034b5470ea7c64ee43248ae13b894fe97fcfa3ec41bb explicitly states all three pieces spawn every8hours. Only grounded row12changed; no inference for Kaesora."
+    }
+  ],
+  "rows": [
+    {
+      "table": "ground_spawns",
+      "before": {
+        "id": 12,
+        "zoneid": 83,
+        "version": 0,
+        "max_x": 2935,
+        "max_y": 50,
+        "max_z": 0,
+        "min_x": 2935,
+        "min_y": 50,
+        "heading": 0,
+        "name": "IT63_ACTORDEF",
+        "item": 19961,
+        "max_allowed": 1,
+        "comment": "Part of quest for Veeshans Peak key",
+        "respawn_timer": 300,
+        "fix_z": 1,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null
+      },
+      "after": {
+        "id": 12,
+        "zoneid": 83,
+        "version": 0,
+        "max_x": 2935,
+        "max_y": 50,
+        "max_z": 0,
+        "min_x": 2935,
+        "min_y": 50,
+        "heading": 0,
+        "name": "IT63_ACTORDEF",
+        "item": 19961,
+        "max_allowed": 1,
+        "comment": "Part of quest for Veeshans Peak key",
+        "respawn_timer": 28800,
+        "fix_z": 1,
+        "min_expansion": -1,
+        "max_expansion": -1,
+        "content_flags": null,
+        "content_flags_disabled": null
+      }
+    }
+  ],
+  "sources": []
+}

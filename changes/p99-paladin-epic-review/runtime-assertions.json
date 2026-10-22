@@ -1,0 +1,312 @@
+{
+  "scope": "Strict isolated current-source simulation; not inventory settlement, world lifecycle, UI, raid combat or a continuous chain. Mocked level 1 checks preserve no-minimum epic policy. Existing XP is checked as fallback, not a P99 amount.",
+  "cases": [
+    {
+      "name": "Jark baseline documented some prompt has no reply",
+      "file": "effective/quests/kaladimb/Jark.lua",
+      "sourceSha256": "d0604abbd42805c6bec7c34a30da1014ef1eac80f6332dc6b1f15d436a23307e",
+      "assertions": "say('some');equal(#calls.speech,0)",
+      "coverageKind": "baseline_reproduction"
+    },
+    {
+      "name": "Jark documented discovery some",
+      "proposedFile": "changes/p99-paladin-jark-some/kaladimb--Jark.lua",
+      "sourceSha256": "884580e59e8a6a892ae8d34d5343bb91aa7cf89c96c319e6f0e24d0668527aa3",
+      "assertions": "character.level=1;say(\"some\");equal(#calls.speech,1);assert(string.find(calls.speech[1],'get me my dinner',1,true))"
+    },
+    {
+      "name": "Jark documented discovery SoMe",
+      "proposedFile": "changes/p99-paladin-jark-some/kaladimb--Jark.lua",
+      "sourceSha256": "884580e59e8a6a892ae8d34d5343bb91aa7cf89c96c319e6f0e24d0668527aa3",
+      "assertions": "character.level=1;say(\"SoMe\");equal(#calls.speech,1);assert(string.find(calls.speech[1],'get me my dinner',1,true))"
+    },
+    {
+      "name": "Jark documented discovery Did you find something?",
+      "proposedFile": "changes/p99-paladin-jark-some/kaladimb--Jark.lua",
+      "sourceSha256": "884580e59e8a6a892ae8d34d5343bb91aa7cf89c96c319e6f0e24d0668527aa3",
+      "assertions": "character.level=1;say(\"Did you find something?\");equal(#calls.speech,1);assert(string.find(calls.speech[1],'get me my dinner',1,true))"
+    },
+    {
+      "name": "Jark dinner spawns exact Nella at retained coordinates",
+      "proposedFile": "changes/p99-paladin-jark-some/kaladimb--Jark.lua",
+      "sourceSha256": "884580e59e8a6a892ae8d34d5343bb91aa7cf89c96c319e6f0e24d0668527aa3",
+      "assertions": "character.level=1;say('I will get your dinner');equal(#spawns,1);for i,v in ipairs({67090,0,0,178.5,708.9,3.4,388.4})do equal(spawns[1][i],v)end;say('I will get you your dinner');equal(#spawns,2)",
+      "setupExtra": "spawns={};eq.spawn2=function(...)table.insert(spawns,{...})end"
+    },
+    {
+      "name": "Jark crystal exact reward and extra invalid repeat",
+      "proposedFile": "changes/p99-paladin-jark-some/kaladimb--Jark.lua",
+      "sourceSha256": "884580e59e8a6a892ae8d34d5343bb91aa7cf89c96c319e6f0e24d0668527aa3",
+      "assertions": "character.level=1;trade({29008,99999});reward(29006,0);equal(remaining[29008],1);equal(remaining[99999],1);trade({29007,99999});reward(29006,1);equal(remaining[29007],0);equal(remaining[99999],1);trade({29007});reward(29006,2);equal(calls.exp,0);equal(next(calls.factions),nil);equal(#calls.cash,0)"
+    },
+    {
+      "name": "Nella gives dinner dinner",
+      "file": "effective/quests/kaladimb/Nella_Stonebraids.lua",
+      "sourceSha256": "12d42fdaafdfac7dc3278191161b48e07ec08553fd9f01d64b10e04c634cd052",
+      "assertions": "character.level=1;say(\"dinner\");reward(29007,1);equal(calls.depops,1);trade({99999});equal(remaining[99999],1)",
+      "coverageKind": "baseline_verification",
+      "setupExtra": "eq.depop=function()calls.depops=calls.depops+1 end"
+    },
+    {
+      "name": "Nella gives dinner Do you have Jark's dinner?",
+      "file": "effective/quests/kaladimb/Nella_Stonebraids.lua",
+      "sourceSha256": "12d42fdaafdfac7dc3278191161b48e07ec08553fd9f01d64b10e04c634cd052",
+      "assertions": "character.level=1;say(\"Do you have Jark's dinner?\");reward(29007,1);equal(calls.depops,1);trade({99999});equal(remaining[99999],1)",
+      "coverageKind": "baseline_verification",
+      "setupExtra": "eq.depop=function()calls.depops=calls.depops+1 end"
+    },
+    {
+      "name": "freportw Paladin water delivery I will take it to him",
+      "file": "effective/quests/freportw/peasant_woman.lua",
+      "sourceSha256": "ec55a6fc1bd50390edbdc2595f35e2c86e9b1e850deb904a46ff768314d81a9d",
+      "assertions": "character.class=3;character.level=1;say(\"I will take it to him\");reward(29008,1);equal(#calls.speech,1)",
+      "coverageKind": "baseline_verification",
+      "setupExtra": "other.GetClassName=function()return character.class==3 and 'Paladin' or 'Warrior'end"
+    },
+    {
+      "name": "freportw Paladin water delivery I will take this water to him",
+      "file": "effective/quests/freportw/peasant_woman.lua",
+      "sourceSha256": "ec55a6fc1bd50390edbdc2595f35e2c86e9b1e850deb904a46ff768314d81a9d",
+      "assertions": "character.class=3;character.level=1;say(\"I will take this water to him\");reward(29008,1);equal(#calls.speech,1)",
+      "coverageKind": "baseline_verification",
+      "setupExtra": "other.GetClassName=function()return character.class==3 and 'Paladin' or 'Warrior'end"
+    },
+    {
+      "name": "freportw Paladin water delivery take this water to him",
+      "file": "effective/quests/freportw/peasant_woman.lua",
+      "sourceSha256": "ec55a6fc1bd50390edbdc2595f35e2c86e9b1e850deb904a46ff768314d81a9d",
+      "assertions": "character.class=3;character.level=1;say(\"take this water to him\");reward(29008,1);equal(#calls.speech,1)",
+      "coverageKind": "baseline_verification",
+      "setupExtra": "other.GetClassName=function()return character.class==3 and 'Paladin' or 'Warrior'end"
+    },
+    {
+      "name": "freportw water prompt and non-Paladin gate",
+      "file": "effective/quests/freportw/peasant_woman.lua",
+      "sourceSha256": "ec55a6fc1bd50390edbdc2595f35e2c86e9b1e850deb904a46ff768314d81a9d",
+      "assertions": "character.class=3;character.level=1;say('What water?');reward(29008,0);assert(string.find(calls.speech[1],'[take this water to him]',1,true));character.class=1;say('I will take it to him');say('What water?');reward(29008,0);equal(#calls.speech,1)",
+      "coverageKind": "baseline_verification",
+      "setupExtra": "other.GetClassName=function()return character.class==3 and 'Paladin' or 'Warrior'end"
+    },
+    {
+      "name": "freportw Joshua water purification extra invalid repeat",
+      "file": "effective/quests/freportw/Joshua.lua",
+      "sourceSha256": "916828d6bbb57ba584da136159eab195acd3831f11c03b3d43e081b8a1d15271",
+      "assertions": "character.level=1;trade({29007,99999});reward(29009,0);equal(remaining[29007],1);trade({29008,99999});reward(29009,1);equal(remaining[29008],0);equal(remaining[99999],1);equal(calls.exp,500);trade({29008});reward(29009,2);equal(calls.exp,1000);equal(next(calls.factions),nil);equal(#calls.cash,0)",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "freeporteast Paladin water delivery I will take it to him",
+      "file": "effective/quests/freeporteast/peasant_woman.lua",
+      "sourceSha256": "ec55a6fc1bd50390edbdc2595f35e2c86e9b1e850deb904a46ff768314d81a9d",
+      "assertions": "character.class=3;character.level=1;say(\"I will take it to him\");reward(29008,1);equal(#calls.speech,1)",
+      "coverageKind": "baseline_verification",
+      "setupExtra": "other.GetClassName=function()return character.class==3 and 'Paladin' or 'Warrior'end"
+    },
+    {
+      "name": "freeporteast Paladin water delivery I will take this water to him",
+      "file": "effective/quests/freeporteast/peasant_woman.lua",
+      "sourceSha256": "ec55a6fc1bd50390edbdc2595f35e2c86e9b1e850deb904a46ff768314d81a9d",
+      "assertions": "character.class=3;character.level=1;say(\"I will take this water to him\");reward(29008,1);equal(#calls.speech,1)",
+      "coverageKind": "baseline_verification",
+      "setupExtra": "other.GetClassName=function()return character.class==3 and 'Paladin' or 'Warrior'end"
+    },
+    {
+      "name": "freeporteast Paladin water delivery take this water to him",
+      "file": "effective/quests/freeporteast/peasant_woman.lua",
+      "sourceSha256": "ec55a6fc1bd50390edbdc2595f35e2c86e9b1e850deb904a46ff768314d81a9d",
+      "assertions": "character.class=3;character.level=1;say(\"take this water to him\");reward(29008,1);equal(#calls.speech,1)",
+      "coverageKind": "baseline_verification",
+      "setupExtra": "other.GetClassName=function()return character.class==3 and 'Paladin' or 'Warrior'end"
+    },
+    {
+      "name": "freeporteast water prompt and non-Paladin gate",
+      "file": "effective/quests/freeporteast/peasant_woman.lua",
+      "sourceSha256": "ec55a6fc1bd50390edbdc2595f35e2c86e9b1e850deb904a46ff768314d81a9d",
+      "assertions": "character.class=3;character.level=1;say('What water?');reward(29008,0);assert(string.find(calls.speech[1],'[take this water to him]',1,true));character.class=1;say('I will take it to him');say('What water?');reward(29008,0);equal(#calls.speech,1)",
+      "coverageKind": "baseline_verification",
+      "setupExtra": "other.GetClassName=function()return character.class==3 and 'Paladin' or 'Warrior'end"
+    },
+    {
+      "name": "freeporteast Joshua water purification extra invalid repeat",
+      "file": "effective/quests/freeporteast/Joshua.lua",
+      "sourceSha256": "916828d6bbb57ba584da136159eab195acd3831f11c03b3d43e081b8a1d15271",
+      "assertions": "character.level=1;trade({29007,99999});reward(29009,0);equal(remaining[29007],1);trade({29008,99999});reward(29009,1);equal(remaining[29008],0);equal(remaining[99999],1);equal(calls.exp,500);trade({29008});reward(29009,2);equal(calls.exp,1000);equal(next(calls.factions),nil);equal(#calls.cash,0)",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "Elia dialogue Hail",
+      "file": "effective/quests/felwithea/Elia_the_Pure.lua",
+      "sourceSha256": "8d6c991fe184b98cd7de52302c5f30adc3de474a26eca22ef8674bc3007f7d57",
+      "assertions": "say(\"Hail\");equal(#calls.speech,1);assert(string.find(calls.speech[1],\"require assistance\",1,true))",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "Elia dialogue What tasks?",
+      "file": "effective/quests/felwithea/Elia_the_Pure.lua",
+      "sourceSha256": "8d6c991fe184b98cd7de52302c5f30adc3de474a26eca22ef8674bc3007f7d57",
+      "assertions": "say(\"What tasks?\");equal(#calls.speech,1);assert(string.find(calls.speech[1],\"scrolls of luminescence\",1,true))",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "Elia dialogue What purity?",
+      "file": "effective/quests/felwithea/Elia_the_Pure.lua",
+      "sourceSha256": "8d6c991fe184b98cd7de52302c5f30adc3de474a26eca22ef8674bc3007f7d57",
+      "assertions": "say(\"What purity?\");equal(#calls.speech,1);assert(string.find(calls.speech[1],\"examine the item\",1,true))",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "Elia shield cleansing exact invalid extra repeat",
+      "file": "effective/quests/felwithea/Elia_the_Pure.lua",
+      "sourceSha256": "8d6c991fe184b98cd7de52302c5f30adc3de474a26eca22ef8674bc3007f7d57",
+      "assertions": "character.level=1;trade({29001,99999});reward(29005,0);equal(remaining[29001],1);trade({29002,99999});reward(29005,1);equal(remaining[29002],0);equal(remaining[99999],1);trade({29002});reward(29005,2);equal(calls.exp,0);equal(next(calls.factions),nil)",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "Reklon dialogue Hail",
+      "proposedFile": "changes/p99-paladin-reklon-dialogue/erudnext--Reklon_Gnallen.lua",
+      "sourceSha256": "30b32cad7765322e555669c17c43c875722b1829ec66f5a1f3f5b027cfe57d0f",
+      "assertions": "say(\"Hail\");equal(#calls.speech,1);assert(string.find(calls.speech[1],\"atonement\",1,true))"
+    },
+    {
+      "name": "Reklon dialogue I seek atonement",
+      "proposedFile": "changes/p99-paladin-reklon-dialogue/erudnext--Reklon_Gnallen.lua",
+      "sourceSha256": "30b32cad7765322e555669c17c43c875722b1829ec66f5a1f3f5b027cfe57d0f",
+      "assertions": "say(\"I seek atonement\");equal(#calls.speech,1);assert(string.find(calls.speech[1],\"forgiveness\",1,true))"
+    },
+    {
+      "name": "Reklon dialogue What temple of peace?",
+      "proposedFile": "changes/p99-paladin-reklon-dialogue/erudnext--Reklon_Gnallen.lua",
+      "sourceSha256": "30b32cad7765322e555669c17c43c875722b1829ec66f5a1f3f5b027cfe57d0f",
+      "assertions": "say(\"What temple of peace?\");equal(#calls.speech,1);assert(string.find(calls.speech[1],\"Quellious\",1,true))"
+    },
+    {
+      "name": "Reklon dialogue What paladins?",
+      "proposedFile": "changes/p99-paladin-reklon-dialogue/erudnext--Reklon_Gnallen.lua",
+      "sourceSha256": "30b32cad7765322e555669c17c43c875722b1829ec66f5a1f3f5b027cfe57d0f",
+      "assertions": "say(\"What paladins?\");equal(#calls.speech,1);assert(string.find(calls.speech[1],\"stalwart shield\",1,true))"
+    },
+    {
+      "name": "Reklon dialogue I wish to remain vigilant",
+      "proposedFile": "changes/p99-paladin-reklon-dialogue/erudnext--Reklon_Gnallen.lua",
+      "sourceSha256": "30b32cad7765322e555669c17c43c875722b1829ec66f5a1f3f5b027cfe57d0f",
+      "assertions": "say(\"I wish to remain vigilant\");equal(#calls.speech,1);assert(string.find(calls.speech[1],\"great disgrace\",1,true))"
+    },
+    {
+      "name": "Reklon dialogue What outcast?",
+      "proposedFile": "changes/p99-paladin-reklon-dialogue/erudnext--Reklon_Gnallen.lua",
+      "sourceSha256": "30b32cad7765322e555669c17c43c875722b1829ec66f5a1f3f5b027cfe57d0f",
+      "assertions": "say(\"What outcast?\");equal(#calls.speech,1);assert(string.find(calls.speech[1],\"fallen from grace\",1,true))"
+    },
+    {
+      "name": "Reklon dialogue Who has fallen from grace?",
+      "proposedFile": "changes/p99-paladin-reklon-dialogue/erudnext--Reklon_Gnallen.lua",
+      "sourceSha256": "30b32cad7765322e555669c17c43c875722b1829ec66f5a1f3f5b027cfe57d0f",
+      "assertions": "say(\"Who has fallen from grace?\");equal(#calls.speech,1);assert(string.find(calls.speech[1],\"There are a few\",1,true))"
+    },
+    {
+      "name": "Reklon dialogue What stories?",
+      "proposedFile": "changes/p99-paladin-reklon-dialogue/erudnext--Reklon_Gnallen.lua",
+      "sourceSha256": "30b32cad7765322e555669c17c43c875722b1829ec66f5a1f3f5b027cfe57d0f",
+      "assertions": "say(\"What stories?\");equal(#calls.speech,1);assert(string.find(calls.speech[1],\"seduced\",1,true))"
+    },
+    {
+      "name": "Reklon dialogue what peasant woman?",
+      "proposedFile": "changes/p99-paladin-reklon-dialogue/erudnext--Reklon_Gnallen.lua",
+      "sourceSha256": "30b32cad7765322e555669c17c43c875722b1829ec66f5a1f3f5b027cfe57d0f",
+      "assertions": "say(\"what peasant woman?\");equal(#calls.speech,1);assert(string.find(calls.speech[1],\"Many hundreds of years\",1,true))"
+    },
+    {
+      "name": "Reklon dialogue What sacrifice?",
+      "proposedFile": "changes/p99-paladin-reklon-dialogue/erudnext--Reklon_Gnallen.lua",
+      "sourceSha256": "30b32cad7765322e555669c17c43c875722b1829ec66f5a1f3f5b027cfe57d0f",
+      "assertions": "say(\"What sacrifice?\");equal(#calls.speech,1);assert(string.find(calls.speech[1],\"strength and purity\",1,true))"
+    },
+    {
+      "name": "Reklon exact 29004 partial extra repeat",
+      "proposedFile": "changes/p99-paladin-reklon-dialogue/erudnext--Reklon_Gnallen.lua",
+      "sourceSha256": "30b32cad7765322e555669c17c43c875722b1829ec66f5a1f3f5b027cfe57d0f",
+      "assertions": "character.level=1;trade({29001,99999});reward(29004,0);equal(remaining[29001],1);trade({29006,99999});reward(29004,0);equal(remaining[29006],1);trade({29001,29006,99999});reward(29004,1);equal(remaining[99999],1);equal(remaining[29001],0);equal(remaining[29006],0);trade({29001,29006});reward(29004,2);trade({99999});equal(remaining[99999],1);equal(calls.exp,0);equal(next(calls.factions),nil);equal(#calls.cash,0)"
+    },
+    {
+      "name": "Reklon exact 29003 partial extra repeat",
+      "proposedFile": "changes/p99-paladin-reklon-dialogue/erudnext--Reklon_Gnallen.lua",
+      "sourceSha256": "30b32cad7765322e555669c17c43c875722b1829ec66f5a1f3f5b027cfe57d0f",
+      "assertions": "character.level=1;trade({29000,99999});reward(29003,0);equal(remaining[29000],1);trade({29009,99999});reward(29003,0);equal(remaining[29009],1);trade({29000,29009,99999});reward(29003,1);equal(remaining[99999],1);equal(remaining[29000],0);equal(remaining[29009],0);trade({29000,29009});reward(29003,2);trade({99999});equal(remaining[99999],1);equal(calls.exp,0);equal(next(calls.factions),nil);equal(#calls.cash,0)"
+    },
+    {
+      "name": "Reklon exact 29010 partial extra repeat",
+      "proposedFile": "changes/p99-paladin-reklon-dialogue/erudnext--Reklon_Gnallen.lua",
+      "sourceSha256": "30b32cad7765322e555669c17c43c875722b1829ec66f5a1f3f5b027cfe57d0f",
+      "assertions": "character.level=1;trade({29003,99999});reward(29010,0);equal(remaining[29003],1);trade({29004,99999});reward(29010,0);equal(remaining[29004],1);trade({29005,99999});reward(29010,0);equal(remaining[29005],1);trade({29003,29004,29005,99999});reward(29010,1);equal(remaining[99999],1);equal(remaining[29003],0);equal(remaining[29004],0);equal(remaining[29005],0);trade({29003,29004,29005});reward(29010,2);trade({99999});equal(remaining[99999],1);equal(calls.exp,0);equal(next(calls.factions),nil);equal(#calls.cash,0)"
+    },
+    {
+      "name": "Reklon missing one of three purified relics stays intact",
+      "proposedFile": "changes/p99-paladin-reklon-dialogue/erudnext--Reklon_Gnallen.lua",
+      "sourceSha256": "30b32cad7765322e555669c17c43c875722b1829ec66f5a1f3f5b027cfe57d0f",
+      "assertions": "for _,ids in ipairs({{29003,29004},{29003,29005},{29004,29005}})do trade(ids);reward(29010,0);for _,id in ipairs(ids)do equal(remaining[id],1)end end"
+    },
+    {
+      "name": "Irak documented dialogue Hail",
+      "file": "effective/quests/fearplane/Irak_Altil.lua",
+      "sourceSha256": "6446cfd238956f6b05a5ca39f83bd86012b66332730be1f2fea0661a69c2621a",
+      "assertions": "say(\"Hail\");equal(#calls.speech,1);assert(string.find(calls.speech[1],\"rictus grin\",1,true))",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "Irak documented dialogue what are you mumbling about",
+      "file": "effective/quests/fearplane/Irak_Altil.lua",
+      "sourceSha256": "6446cfd238956f6b05a5ca39f83bd86012b66332730be1f2fea0661a69c2621a",
+      "assertions": "say(\"what are you mumbling about\");equal(#calls.speech,1);assert(string.find(calls.speech[1],\"Fallen light\",1,true))",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "Irak documented dialogue Why are you disgraced?",
+      "file": "effective/quests/fearplane/Irak_Altil.lua",
+      "sourceSha256": "6446cfd238956f6b05a5ca39f83bd86012b66332730be1f2fea0661a69c2621a",
+      "assertions": "say(\"Why are you disgraced?\");equal(#calls.speech,1);assert(string.find(calls.speech[1],\"failing in my duties\",1,true))",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "Irak documented dialogue What duties?",
+      "file": "effective/quests/fearplane/Irak_Altil.lua",
+      "sourceSha256": "6446cfd238956f6b05a5ca39f83bd86012b66332730be1f2fea0661a69c2621a",
+      "assertions": "say(\"What duties?\");equal(#calls.speech,1);assert(string.find(calls.speech[1],\"Sword, shield, breastplate\",1,true))",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "Irak documented dialogue What sword?",
+      "file": "effective/quests/fearplane/Irak_Altil.lua",
+      "sourceSha256": "6446cfd238956f6b05a5ca39f83bd86012b66332730be1f2fea0661a69c2621a",
+      "assertions": "say(\"What sword?\");equal(#calls.speech,1);assert(string.find(calls.speech[1],\"twisted brother\",1,true))",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "Irak documented dialogue What shield?",
+      "file": "effective/quests/fearplane/Irak_Altil.lua",
+      "sourceSha256": "6446cfd238956f6b05a5ca39f83bd86012b66332730be1f2fea0661a69c2621a",
+      "assertions": "say(\"What shield?\");equal(#calls.speech,1);assert(string.find(calls.speech[1],\"god of hate\",1,true))",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "Irak documented dialogue What breastplate?",
+      "file": "effective/quests/fearplane/Irak_Altil.lua",
+      "sourceSha256": "6446cfd238956f6b05a5ca39f83bd86012b66332730be1f2fea0661a69c2621a",
+      "assertions": "say(\"What breastplate?\");equal(#calls.speech,1);assert(string.find(calls.speech[1],\"lured me\",1,true))",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "Irak documented dialogue How can they be cleansed?",
+      "file": "effective/quests/fearplane/Irak_Altil.lua",
+      "sourceSha256": "6446cfd238956f6b05a5ca39f83bd86012b66332730be1f2fea0661a69c2621a",
+      "assertions": "say(\"How can they be cleansed?\");equal(#calls.speech,1);assert(string.find(calls.speech[1],\"sets of two\",1,true))",
+      "coverageKind": "baseline_verification"
+    },
+    {
+      "name": "Irak final exact reward partial extra repeat at level one",
+      "file": "effective/quests/fearplane/Irak_Altil.lua",
+      "sourceSha256": "6446cfd238956f6b05a5ca39f83bd86012b66332730be1f2fea0661a69c2621a",
+      "assertions": "character.level=1;trade({29010,99999});reward(10099,0);equal(remaining[29010],1);trade({11050});reward(10099,0);equal(remaining[11050],1);trade({29010,11050,99999});reward(10099,1);equal(remaining[29010],0);equal(remaining[11050],0);equal(remaining[99999],1);trade({29010,11050});reward(10099,2);trade({99999});equal(remaining[99999],1);equal(calls.exp,0);equal(#calls.cash,0);equal(next(calls.factions),nil);equal(calls.depops,0)",
+      "coverageKind": "baseline_verification"
+    }
+  ]
+}

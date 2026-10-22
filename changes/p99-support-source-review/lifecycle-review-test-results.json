@@ -1,0 +1,22 @@
+{
+  "scope": "Isolated pinned GopherLua VM with mocked quest APIs; NOT game bridge/playthrough/settlement.",
+  "cases": 36,
+  "passed": 36,
+  "exitCode": 0,
+  "stdout": "PASS preserved-body syntax qeynos2/a_gruff_voice\nPASS preserved-body syntax southkarana/#Finnelzi_Springworthy\nPASS preserved-body syntax southkarana/#Glenfire_Telzir\nPASS preserved-body syntax southkarana/#Rendolf_Deathbringer\nPASS preserved-body syntax southkarana/#Tehana_Elsent\nPASS preserved-body syntax steamfont/a_decomposing_body\nPASS preserved-body syntax burningwood/player\nPASS preserved-body syntax westwastes/disciple_of_moon_trap\nPASS preserved-body syntax fearplane/Enraged_Imp\nPASS preserved-body syntax fearplane/Ireblind_Imp\nPASS preserved-body syntax frontiermtns/script_init\nPASS preserved-body syntax frozenshadow/You_\nPASS preserved-body syntax kithicor/script_init\nPASS preserved-body syntax lfaydark/#a_Wayfarer\nPASS preserved-body syntax lfaydark/#Taskmaster_Mirot\nPASS preserved-body syntax misty/script_init\nPASS preserved-body syntax necropolis/#Excavator_Quellin\nPASS preserved-body syntax necropolis/123167\nPASS preserved-body syntax necropolis/script_init\nPASS preserved-body syntax northkarana/a_dire_griffon\nPASS preserved-body syntax oasis/script_init\nPASS preserved-body syntax swampofnohope/a_dire_leech\nPASS croc last-death timer branch 1\nPASS croc last-death timer branch 45\nPASS croc last-death timer branch 46\nPASS croc last-death timer branch 75\nPASS croc last-death timer branch 76\nPASS croc last-death timer branch 90\nPASS croc last-death timer branch 91\nPASS croc last-death timer branch 95\nPASS croc last-death timer branch 96\nPASS croc last-death timer branch 98\nPASS croc last-death timer branch 99\nPASS croc last-death timer branch 100\nPASS moldmaster exactly three sporelings and guard preservation\nPASS tar goo exactly two children with unchanged positions and no random chance\n",
+  "stderr": "",
+  "reviewSha256": "54b0ab7128011faf81bbe7151a8f2aec68c175e16dc60214bea5ab2ab9ad6e6e",
+  "proposalSha256": {
+    "p99-support-lifecycle-scope": "208309fdd284b61cf922ed9445abd5b0fd907960c8b806602760b58d36f0f7c2",
+    "p99-support-lifecycle-values": "d64ee7526d5547fc0b5a67a7f178c3b2fc06f8a20576c6ec068561b4ad1125b4"
+  },
+  "staticAssertions": [
+    "216 unique keys exactly match assignment/order/source SHA256.",
+    "22 scope rows differ only in enabled and two-line prefix; original complete bodies retained exactly.",
+    "Three value rows preserve all other row columns and matching proposed-source hashes.",
+    "Ten exact prior review artifacts and source hashes verified.",
+    "Croc twelve probability-boundary cases preserve original spawning outcomes and schedule990000 only after last death.",
+    "Moldmaster emits exactlythree11164 and preserves SaveGuardSpot behavior.",
+    "Tar goo emits exactlytwo119122 without RNG."
+  ]
+}

@@ -1,0 +1,744 @@
+[
+  {
+    "name": "Ranger burningwood/Telin_Darkforest exchange 20447 level1 surplus",
+    "sourceSha256": "ea43ff6efe7e49646b9277af42743ec7a936713e33a1373348de1df61f80bf1a",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "character.level=1; trade({20447,99999});reward(20448,1);equal(remaining[20447],0);equal(remaining[99999],1);equal(calls.returns,1);",
+    "file": "effective/quests/burningwood/Telin_Darkforest.lua",
+    "coverageKind": "baseline_verification"
+  },
+  {
+    "name": "Ranger burningwood/Telin_Darkforest exchange 20468 level1 surplus",
+    "sourceSha256": "ea43ff6efe7e49646b9277af42743ec7a936713e33a1373348de1df61f80bf1a",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "character.level=1; trade({20468,99999});reward(20477,1);equal(remaining[20468],0);equal(remaining[99999],1);equal(calls.returns,1);",
+    "file": "effective/quests/burningwood/Telin_Darkforest.lua",
+    "coverageKind": "baseline_verification"
+  },
+  {
+    "name": "Ranger burningwood/Telin_Darkforest exchange 20481 level1 surplus",
+    "sourceSha256": "ea43ff6efe7e49646b9277af42743ec7a936713e33a1373348de1df61f80bf1a",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "character.level=1; trade({20481,99999});reward(20481,1);equal(remaining[20481],0);equal(remaining[99999],1);equal(calls.returns,1);",
+    "file": "effective/quests/burningwood/Telin_Darkforest.lua",
+    "coverageKind": "baseline_verification"
+  },
+  {
+    "name": "Ranger gfaydark/Faelin_Bloodbriar exchange 20472 level1 surplus",
+    "sourceSha256": "b42cd041e858c1c11596ba53d59627f958378430f383967d47a1c42c4367ebf3",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "character.level=1; trade({20472,99999});reward(20446,1);equal(remaining[20472],0);equal(remaining[99999],1);equal(calls.returns,1);",
+    "file": "effective/quests/gfaydark/Faelin_Bloodbriar.lua",
+    "coverageKind": "baseline_verification"
+  },
+  {
+    "name": "Ranger kithicor/Giz_X-Tin exchange 20446 level1 surplus",
+    "sourceSha256": "3ebcddda3e447c610fa70efba37ffc03ae6e05e8e8c3051a1b4556f1b0403ffc",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "character.level=1; trade({20446,99999});reward(20447,1);equal(remaining[20446],0);equal(remaining[99999],1);equal(calls.returns,1);equal(calls.spawns[1][1],20190);equal(calls.hate[1],1);assert(calls.speech[1]:find(\"mutual acquaintance\",1,true));",
+    "proposedFile": "changes/p99-ranger-epic-dialogue/kithicor-Giz_X-Tin.lua"
+  },
+  {
+    "name": "Ranger eastkarana/Althele exchange 20448 level1 surplus",
+    "sourceSha256": "7c31f25284a06601c10bc1bcaa0836ce3dd58c440eecc2c5037b38b80b6c901d",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "character.level=1; trade({20448,99999});reward(20450,1);equal(remaining[20448],0);equal(remaining[99999],1);equal(calls.returns,1);",
+    "file": "effective/quests/eastkarana/Althele.lua",
+    "coverageKind": "baseline_verification"
+  },
+  {
+    "name": "Ranger eastkarana/Althele exchange 20452 level1 surplus",
+    "sourceSha256": "7c31f25284a06601c10bc1bcaa0836ce3dd58c440eecc2c5037b38b80b6c901d",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "character.level=1; trade({20452,99999});reward(18959,1);equal(remaining[20452],0);equal(remaining[99999],1);equal(calls.returns,1);",
+    "file": "effective/quests/eastkarana/Althele.lua",
+    "coverageKind": "baseline_verification"
+  },
+  {
+    "name": "Ranger eastkarana/Sionae exchange 20450 level1 surplus",
+    "sourceSha256": "04c085b94812618bd423857197ae2ddae790acdf8940ca3df2181b3256500406",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "character.level=1; trade({20450,99999});reward(20451,1);equal(remaining[20450],0);equal(remaining[99999],1);equal(calls.returns,1);",
+    "file": "effective/quests/eastkarana/Sionae.lua",
+    "coverageKind": "baseline_verification"
+  },
+  {
+    "name": "Ranger eastkarana/Nuien exchange 20451 level1 surplus",
+    "sourceSha256": "62f5fb727c4cc6093791615c583b91a9a7719cd2cdb95d38d2d98eebf728ca1d",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "character.level=1; trade({20451,99999});reward(20451,1);equal(remaining[20451],0);equal(remaining[99999],1);equal(calls.returns,1);",
+    "file": "effective/quests/eastkarana/Nuien.lua",
+    "coverageKind": "baseline_verification"
+  },
+  {
+    "name": "Ranger eastkarana/Teloa exchange 20451 level1 surplus",
+    "sourceSha256": "97d360b14bedd6cd6500fbf411cf6774805b7494d2445fb5e50548c293b17467",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "character.level=1; trade({20451,99999});equal(remaining[20451],0);equal(remaining[99999],1);equal(calls.returns,1);equal(next(calls.rewards),nil);",
+    "file": "effective/quests/eastkarana/Teloa.lua",
+    "coverageKind": "baseline_verification"
+  },
+  {
+    "name": "Ranger misty/Ella_Foodcrafter exchange 18959 level1 surplus",
+    "sourceSha256": "8e5ab9e78ea7b14cb105f10277b122eb2b6e215339f2278498d490d91d94cd49",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "character.level=1; trade({18959,99999});equal(remaining[18959],0);equal(remaining[99999],1);equal(calls.returns,1);equal(next(calls.rewards),nil);",
+    "proposedFile": "changes/p99-af-druid-progression-dialogue/misty-Ella_Foodcrafter.lua"
+  },
+  {
+    "name": "Ranger mistythicket/Ella_Foodcrafter exchange 18959 level1 surplus",
+    "sourceSha256": "dfa95747eeae4e4bc81b13ef6a96972eea09d0883ff2acb2a576a33d3fa8e2a5",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "character.level=1; trade({18959,99999});equal(remaining[18959],0);equal(remaining[99999],1);equal(calls.returns,1);equal(next(calls.rewards),nil);",
+    "proposedFile": "changes/p99-af-druid-progression-dialogue/mistythicket-Ella_Foodcrafter.lua"
+  },
+  {
+    "name": "Ranger misty/Ella_Foodcrafter exchange 20473,20460 level1 surplus",
+    "sourceSha256": "8e5ab9e78ea7b14cb105f10277b122eb2b6e215339f2278498d490d91d94cd49",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "character.level=1; trade({20473,20460,99999});reward(20462,1);equal(remaining[20473],0);equal(remaining[20460],0);equal(remaining[99999],1);equal(calls.returns,1);",
+    "proposedFile": "changes/p99-af-druid-progression-dialogue/misty-Ella_Foodcrafter.lua"
+  },
+  {
+    "name": "Ranger mistythicket/Ella_Foodcrafter exchange 20473,20460 level1 surplus",
+    "sourceSha256": "dfa95747eeae4e4bc81b13ef6a96972eea09d0883ff2acb2a576a33d3fa8e2a5",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "character.level=1; trade({20473,20460,99999});reward(20462,1);equal(remaining[20473],0);equal(remaining[20460],0);equal(remaining[99999],1);equal(calls.returns,1);",
+    "proposedFile": "changes/p99-af-druid-progression-dialogue/mistythicket-Ella_Foodcrafter.lua"
+  },
+  {
+    "name": "Ranger timorous/Alrik_Farsight exchange 20474 level1 surplus",
+    "sourceSha256": "365704dbc93ad8408d189ebfb6a47532ecb6bb4d80dea135858a003ff4fd82bc",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "character.level=1; trade({20474,99999});reward(18960,1);equal(remaining[20474],0);equal(remaining[99999],1);equal(calls.returns,1);",
+    "proposedFile": "changes/p99-af-druid-progression-dialogue/timorous-Alrik_Farsight.lua"
+  },
+  {
+    "name": "Ranger felwitheb/Farios_Elianos exchange 20457 level1 surplus",
+    "sourceSha256": "0a0f9f9f95cc9eb82a60f8e8de90cbd255668d69026337954f40165661f1b68e",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "character.level=1; trade({20457,99999});reward(20458,1);equal(remaining[20457],0);equal(remaining[99999],1);equal(calls.returns,1);",
+    "file": "effective/quests/felwitheb/Farios_Elianos.lua",
+    "coverageKind": "baseline_verification"
+  },
+  {
+    "name": "Ranger felwitheb/Farios_Elianos exchange 20459 level1 surplus",
+    "sourceSha256": "0a0f9f9f95cc9eb82a60f8e8de90cbd255668d69026337954f40165661f1b68e",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "character.level=1; trade({20459,99999});reward(20474,1);equal(remaining[20459],0);equal(remaining[99999],1);equal(calls.returns,1);",
+    "file": "effective/quests/felwitheb/Farios_Elianos.lua",
+    "coverageKind": "baseline_verification"
+  },
+  {
+    "name": "Ranger felwithea/Merchant_Nora exchange 20458 level1 surplus",
+    "sourceSha256": "754d16308cd2a0ef043f1142993f6f63093d4f32c733142b306275a90b707ad9",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "character.level=1; trade({20458,99999});reward(20459,1);equal(remaining[20458],0);equal(remaining[99999],1);equal(calls.returns,1);",
+    "file": "effective/quests/felwithea/Merchant_Nora.lua",
+    "coverageKind": "baseline_verification"
+  },
+  {
+    "name": "Ranger qrg/Merdan_Fleetfoot exchange 12774 level1 surplus",
+    "sourceSha256": "89d8f3abc735473238c4f12b5c9b93346bcb706fa703278f4c8601e4c27e88ee",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "character.level=1; trade({12774,99999});reward(20475,1);equal(remaining[12774],0);equal(remaining[99999],1);equal(calls.returns,1);",
+    "file": "effective/quests/qrg/Merdan_Fleetfoot.lua",
+    "coverageKind": "baseline_verification"
+  },
+  {
+    "name": "Ranger frontiermtns/a_human_skeleton exchange 20475 level1 surplus",
+    "sourceSha256": "dd5907fc2a8a9b7d938c762920c9b9b94ceffb2495d3744ba765d72d5e0d4a64",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "character.level=1; trade({20475,99999});reward(20476,1);equal(remaining[20475],0);equal(remaining[99999],1);equal(calls.returns,1);",
+    "file": "effective/quests/frontiermtns/a_human_skeleton.lua",
+    "coverageKind": "baseline_verification"
+  },
+  {
+    "name": "Ranger qrg/Niera_Farbreeze exchange 20476 level1 surplus",
+    "sourceSha256": "538203f6ffde2df9ac1c1cb16670668c5db2109baa396af19d469e234330b629",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "character.level=1; trade({20476,99999});reward(20456,1);equal(remaining[20476],0);equal(remaining[99999],1);equal(calls.returns,1);",
+    "file": "effective/quests/qrg/Niera_Farbreeze.lua",
+    "coverageKind": "baseline_verification"
+  },
+  {
+    "name": "Ranger kaladimb/Kinlo_Strongarm exchange 5664 level1 surplus",
+    "sourceSha256": "55816ae113869c2a68d25ef95643b6dd2d621da58e19484f5511a4a8d48dd042",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "character.level=1; trade({5664,99999});reward(20455,1);equal(remaining[5664],0);equal(remaining[99999],1);equal(calls.returns,1);",
+    "proposedFile": "changes/p99-ranger-epic-dialogue/kaladimb-Kinlo_Strongarm.lua"
+  },
+  {
+    "name": "Ranger kaladimb/Kinlo_Strongarm exchange 20478 level1 surplus",
+    "sourceSha256": "55816ae113869c2a68d25ef95643b6dd2d621da58e19484f5511a4a8d48dd042",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "character.level=1; trade({20478,99999});reward(20478,1);equal(remaining[20478],0);equal(remaining[99999],1);equal(calls.returns,1);",
+    "proposedFile": "changes/p99-ranger-epic-dialogue/kaladimb-Kinlo_Strongarm.lua"
+  },
+  {
+    "name": "Ranger kaladimb/Kinlo_Strongarm exchange 20485 level1 surplus",
+    "sourceSha256": "55816ae113869c2a68d25ef95643b6dd2d621da58e19484f5511a4a8d48dd042",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "character.level=1; trade({20485,99999});reward(20482,1);equal(remaining[20485],0);equal(remaining[99999],1);equal(calls.returns,1);equal(calls.spawns[1][1],67089);",
+    "proposedFile": "changes/p99-ranger-epic-dialogue/kaladimb-Kinlo_Strongarm.lua"
+  },
+  {
+    "name": "Ranger kaladimb/Kinlo_Strongarm exchange 20482 level1 surplus",
+    "sourceSha256": "55816ae113869c2a68d25ef95643b6dd2d621da58e19484f5511a4a8d48dd042",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "character.level=1; trade({20482,99999});reward(20483,1);equal(remaining[20482],0);equal(remaining[99999],1);equal(calls.returns,1);",
+    "proposedFile": "changes/p99-ranger-epic-dialogue/kaladimb-Kinlo_Strongarm.lua"
+  },
+  {
+    "name": "Ranger karnor/Venril_Sathirs_remains exchange 10295 level1 surplus",
+    "sourceSha256": "51b0bd89a6197b91cf90c9dd86d5693d208466a4c7710a4017eb32923522954d",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "character.level=1; trade({10295,99999});equal(remaining[10295],0);equal(remaining[99999],1);equal(calls.returns,1);equal(next(calls.rewards),nil);equal(calls.spawns[1][1],102123);equal(calls.depops,1);",
+    "file": "effective/quests/karnor/Venril_Sathirs_remains.lua",
+    "coverageKind": "baseline_verification"
+  },
+  {
+    "name": "Ranger karnor/Spirit_of_Venril_Sathir exchange 15392 level1 surplus",
+    "sourceSha256": "73f0e480fd23060d69a28938a29859aa60a943956f12e2007456e0aab35a030a",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "character.level=1; trade({15392,99999});equal(remaining[15392],0);equal(remaining[99999],1);equal(calls.returns,1);equal(next(calls.rewards),nil);equal(calls.spawns[1][1],102126);equal(calls.hate[1],1);equal(calls.depops,1);",
+    "file": "effective/quests/karnor/Spirit_of_Venril_Sathir.lua",
+    "coverageKind": "baseline_verification"
+  },
+  {
+    "name": "Ranger firiona/Foloal_Stormforest exchange 20462,20461 level1 surplus",
+    "sourceSha256": "25bc081a44724ac83b2dbf36a77f3dd7ca52f0918263403bc4f8183737314c8e",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "character.level=1; trade({20462,20461,99999});reward(20468,1);equal(remaining[20462],0);equal(remaining[20461],0);equal(remaining[99999],1);equal(calls.returns,1);",
+    "proposedFile": "changes/p99-af-druid-progression-dialogue/firiona-Foloal_Stormforest.lua"
+  },
+  {
+    "name": "Ranger hole/Jaeil_the_Wretched exchange 17860 level1 surplus",
+    "sourceSha256": "c05d013a758abdf7cdc3134fc79f4c1690c10ae19e0fcef45abe81b4ff2f087b",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "character.level=1; trade({17860,99999});equal(remaining[17860],0);equal(remaining[99999],1);equal(calls.returns,1);equal(next(calls.rewards),nil);equal(calls.spawns[1][1],39154);equal(calls.hate[1],1);equal(calls.depops,1);",
+    "proposedFile": "changes/p99-ranger-epic-dialogue/hole-Jaeil_the_Wretched.lua"
+  },
+  {
+    "name": "Ranger erudnint/Mairee_Silentone exchange 20478 level1 surplus",
+    "sourceSha256": "75cf5e8d7abe0a920732ae662a7834eb41396bcedc91200eb7e255e244d92186",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "character.level=1; trade({20478,99999});reward(20479,1);equal(remaining[20478],0);equal(remaining[99999],1);equal(calls.returns,1);",
+    "file": "effective/quests/erudnint/Mairee_Silentone.lua",
+    "coverageKind": "baseline_verification"
+  },
+  {
+    "name": "Ranger erudnint/Mairee_Silentone exchange 20479,20494 level1 surplus",
+    "sourceSha256": "75cf5e8d7abe0a920732ae662a7834eb41396bcedc91200eb7e255e244d92186",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "character.level=1; trade({20479,20494,99999});reward(20485,1);equal(remaining[20479],0);equal(remaining[20494],0);equal(remaining[99999],1);equal(calls.returns,1);",
+    "file": "effective/quests/erudnint/Mairee_Silentone.lua",
+    "coverageKind": "baseline_verification"
+  },
+  {
+    "name": "Ranger kaladimb/Usbak_the_Old exchange 20477 level1 surplus",
+    "sourceSha256": "c3c4602fdad7f12655393078f8132fc980c6394da8c4fe5f75853476d3a33507",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "character.level=1; trade({20477,99999});reward(20481,1);equal(remaining[20477],0);equal(remaining[99999],1);equal(calls.returns,1);equal(calls.depops,1);assert(calls.speech[1]:find(\"Kinlo can do it\",1,true));",
+    "proposedFile": "changes/p99-ranger-epic-dialogue/kaladimb-Usbak_the_Old.lua"
+  },
+  {
+    "name": "Ranger burningwood/Faelin_Bloodbriar exchange 20481 level1 surplus",
+    "sourceSha256": "d23aebf7e0938a6bee522f6090e81749facc8287dfcdeeea39f9c45b9546120e",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "character.level=1; trade({20481,99999});reward(20487,1);equal(remaining[20481],0);equal(remaining[99999],1);equal(calls.returns,1);",
+    "file": "effective/quests/burningwood/Faelin_Bloodbriar.lua",
+    "coverageKind": "baseline_verification"
+  },
+  {
+    "name": "Ranger northkarana/Xanuusus exchange 20483,20484 level1 surplus",
+    "sourceSha256": "9fa9dc815119c7fae59b945d7ba764900931bc83015ee38a9e71429120d1caa0",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "character.level=1; trade({20483,20484,99999});reward(20488,1);equal(remaining[20483],0);equal(remaining[20484],0);equal(remaining[99999],1);equal(calls.returns,1);equal(calls.exp,2500000);",
+    "file": "effective/quests/northkarana/Xanuusus.lua",
+    "coverageKind": "baseline_verification"
+  },
+  {
+    "name": "Ranger burningwood/Faelin_Bloodbriar wrong offer returns without reward",
+    "sourceSha256": "d23aebf7e0938a6bee522f6090e81749facc8287dfcdeeea39f9c45b9546120e",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "trade({99999});equal(remaining[99999],1);equal(calls.returns,1);equal(next(calls.rewards),nil);equal(#calls.spawns,0);equal(calls.depops,0)",
+    "file": "effective/quests/burningwood/Faelin_Bloodbriar.lua",
+    "coverageKind": "baseline_verification"
+  },
+  {
+    "name": "Ranger burningwood/Telin_Darkforest wrong offer returns without reward",
+    "sourceSha256": "ea43ff6efe7e49646b9277af42743ec7a936713e33a1373348de1df61f80bf1a",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "trade({99999});equal(remaining[99999],1);equal(calls.returns,1);equal(next(calls.rewards),nil);equal(#calls.spawns,0);equal(calls.depops,0)",
+    "file": "effective/quests/burningwood/Telin_Darkforest.lua",
+    "coverageKind": "baseline_verification"
+  },
+  {
+    "name": "Ranger eastkarana/Althele wrong offer returns without reward",
+    "sourceSha256": "7c31f25284a06601c10bc1bcaa0836ce3dd58c440eecc2c5037b38b80b6c901d",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "trade({99999});equal(remaining[99999],1);equal(calls.returns,1);equal(next(calls.rewards),nil);equal(#calls.spawns,0);equal(calls.depops,0)",
+    "file": "effective/quests/eastkarana/Althele.lua",
+    "coverageKind": "baseline_verification"
+  },
+  {
+    "name": "Ranger eastkarana/Nuien wrong offer returns without reward",
+    "sourceSha256": "62f5fb727c4cc6093791615c583b91a9a7719cd2cdb95d38d2d98eebf728ca1d",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "trade({99999});equal(remaining[99999],1);equal(calls.returns,1);equal(next(calls.rewards),nil);equal(#calls.spawns,0);equal(calls.depops,0)",
+    "file": "effective/quests/eastkarana/Nuien.lua",
+    "coverageKind": "baseline_verification"
+  },
+  {
+    "name": "Ranger eastkarana/Sionae wrong offer returns without reward",
+    "sourceSha256": "04c085b94812618bd423857197ae2ddae790acdf8940ca3df2181b3256500406",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "trade({99999});equal(remaining[99999],1);equal(calls.returns,1);equal(next(calls.rewards),nil);equal(#calls.spawns,0);equal(calls.depops,0)",
+    "file": "effective/quests/eastkarana/Sionae.lua",
+    "coverageKind": "baseline_verification"
+  },
+  {
+    "name": "Ranger eastkarana/Teloa wrong offer returns without reward",
+    "sourceSha256": "97d360b14bedd6cd6500fbf411cf6774805b7494d2445fb5e50548c293b17467",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "trade({99999});equal(remaining[99999],1);equal(calls.returns,1);equal(next(calls.rewards),nil);equal(#calls.spawns,0);equal(calls.depops,0)",
+    "file": "effective/quests/eastkarana/Teloa.lua",
+    "coverageKind": "baseline_verification"
+  },
+  {
+    "name": "Ranger erudnint/Mairee_Silentone wrong offer returns without reward",
+    "sourceSha256": "75cf5e8d7abe0a920732ae662a7834eb41396bcedc91200eb7e255e244d92186",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "trade({99999});equal(remaining[99999],1);equal(calls.returns,1);equal(next(calls.rewards),nil);equal(#calls.spawns,0);equal(calls.depops,0)",
+    "file": "effective/quests/erudnint/Mairee_Silentone.lua",
+    "coverageKind": "baseline_verification"
+  },
+  {
+    "name": "Ranger felwithea/Merchant_Nora wrong offer returns without reward",
+    "sourceSha256": "754d16308cd2a0ef043f1142993f6f63093d4f32c733142b306275a90b707ad9",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "trade({99999});equal(remaining[99999],1);equal(calls.returns,1);equal(next(calls.rewards),nil);equal(#calls.spawns,0);equal(calls.depops,0)",
+    "file": "effective/quests/felwithea/Merchant_Nora.lua",
+    "coverageKind": "baseline_verification"
+  },
+  {
+    "name": "Ranger felwitheb/Farios_Elianos wrong offer returns without reward",
+    "sourceSha256": "0a0f9f9f95cc9eb82a60f8e8de90cbd255668d69026337954f40165661f1b68e",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "trade({99999});equal(remaining[99999],1);equal(calls.returns,1);equal(next(calls.rewards),nil);equal(#calls.spawns,0);equal(calls.depops,0)",
+    "file": "effective/quests/felwitheb/Farios_Elianos.lua",
+    "coverageKind": "baseline_verification"
+  },
+  {
+    "name": "Ranger firiona/Foloal_Stormforest wrong offer returns without reward",
+    "sourceSha256": "25bc081a44724ac83b2dbf36a77f3dd7ca52f0918263403bc4f8183737314c8e",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "trade({99999});equal(remaining[99999],1);equal(calls.returns,1);equal(next(calls.rewards),nil);equal(#calls.spawns,0);equal(calls.depops,0)",
+    "proposedFile": "changes/p99-af-druid-progression-dialogue/firiona-Foloal_Stormforest.lua"
+  },
+  {
+    "name": "Ranger frontiermtns/a_human_skeleton wrong offer returns without reward",
+    "sourceSha256": "dd5907fc2a8a9b7d938c762920c9b9b94ceffb2495d3744ba765d72d5e0d4a64",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "trade({99999});equal(remaining[99999],1);equal(calls.returns,1);equal(next(calls.rewards),nil);equal(#calls.spawns,0);equal(calls.depops,0)",
+    "file": "effective/quests/frontiermtns/a_human_skeleton.lua",
+    "coverageKind": "baseline_verification"
+  },
+  {
+    "name": "Ranger gfaydark/Faelin_Bloodbriar wrong offer returns without reward",
+    "sourceSha256": "b42cd041e858c1c11596ba53d59627f958378430f383967d47a1c42c4367ebf3",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "trade({99999});equal(remaining[99999],1);equal(calls.returns,1);equal(next(calls.rewards),nil);equal(#calls.spawns,0);equal(calls.depops,0)",
+    "file": "effective/quests/gfaydark/Faelin_Bloodbriar.lua",
+    "coverageKind": "baseline_verification"
+  },
+  {
+    "name": "Ranger hole/Jaeil_the_Wretched wrong offer returns without reward",
+    "sourceSha256": "c05d013a758abdf7cdc3134fc79f4c1690c10ae19e0fcef45abe81b4ff2f087b",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "trade({99999});equal(remaining[99999],1);equal(calls.returns,1);equal(next(calls.rewards),nil);equal(#calls.spawns,0);equal(calls.depops,0)",
+    "proposedFile": "changes/p99-ranger-epic-dialogue/hole-Jaeil_the_Wretched.lua"
+  },
+  {
+    "name": "Ranger kaladimb/Kinlo_Strongarm wrong offer returns without reward",
+    "sourceSha256": "55816ae113869c2a68d25ef95643b6dd2d621da58e19484f5511a4a8d48dd042",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "trade({99999});equal(remaining[99999],1);equal(calls.returns,1);equal(next(calls.rewards),nil);equal(#calls.spawns,0);equal(calls.depops,0)",
+    "proposedFile": "changes/p99-ranger-epic-dialogue/kaladimb-Kinlo_Strongarm.lua"
+  },
+  {
+    "name": "Ranger kaladimb/Usbak_the_Old wrong offer returns without reward",
+    "sourceSha256": "c3c4602fdad7f12655393078f8132fc980c6394da8c4fe5f75853476d3a33507",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "trade({99999});equal(remaining[99999],1);equal(calls.returns,1);equal(next(calls.rewards),nil);equal(#calls.spawns,0);equal(calls.depops,0)",
+    "proposedFile": "changes/p99-ranger-epic-dialogue/kaladimb-Usbak_the_Old.lua"
+  },
+  {
+    "name": "Ranger karnor/Spirit_of_Venril_Sathir wrong offer returns without reward",
+    "sourceSha256": "73f0e480fd23060d69a28938a29859aa60a943956f12e2007456e0aab35a030a",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "trade({99999});equal(remaining[99999],1);equal(calls.returns,1);equal(next(calls.rewards),nil);equal(#calls.spawns,0);equal(calls.depops,0)",
+    "file": "effective/quests/karnor/Spirit_of_Venril_Sathir.lua",
+    "coverageKind": "baseline_verification"
+  },
+  {
+    "name": "Ranger karnor/Venril_Sathirs_remains wrong offer returns without reward",
+    "sourceSha256": "51b0bd89a6197b91cf90c9dd86d5693d208466a4c7710a4017eb32923522954d",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "trade({99999});equal(remaining[99999],1);equal(calls.returns,1);equal(next(calls.rewards),nil);equal(#calls.spawns,0);equal(calls.depops,0)",
+    "file": "effective/quests/karnor/Venril_Sathirs_remains.lua",
+    "coverageKind": "baseline_verification"
+  },
+  {
+    "name": "Ranger kithicor/Giz_X-Tin wrong offer returns without reward",
+    "sourceSha256": "3ebcddda3e447c610fa70efba37ffc03ae6e05e8e8c3051a1b4556f1b0403ffc",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "trade({99999});equal(remaining[99999],1);equal(calls.returns,1);equal(next(calls.rewards),nil);equal(#calls.spawns,0);equal(calls.depops,0)",
+    "proposedFile": "changes/p99-ranger-epic-dialogue/kithicor-Giz_X-Tin.lua"
+  },
+  {
+    "name": "Ranger misty/Ella_Foodcrafter wrong offer returns without reward",
+    "sourceSha256": "8e5ab9e78ea7b14cb105f10277b122eb2b6e215339f2278498d490d91d94cd49",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "trade({99999});equal(remaining[99999],1);equal(calls.returns,1);equal(next(calls.rewards),nil);equal(#calls.spawns,0);equal(calls.depops,0)",
+    "proposedFile": "changes/p99-af-druid-progression-dialogue/misty-Ella_Foodcrafter.lua"
+  },
+  {
+    "name": "Ranger mistythicket/Ella_Foodcrafter wrong offer returns without reward",
+    "sourceSha256": "dfa95747eeae4e4bc81b13ef6a96972eea09d0883ff2acb2a576a33d3fa8e2a5",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "trade({99999});equal(remaining[99999],1);equal(calls.returns,1);equal(next(calls.rewards),nil);equal(#calls.spawns,0);equal(calls.depops,0)",
+    "proposedFile": "changes/p99-af-druid-progression-dialogue/mistythicket-Ella_Foodcrafter.lua"
+  },
+  {
+    "name": "Ranger northkarana/Xanuusus wrong offer returns without reward",
+    "sourceSha256": "9fa9dc815119c7fae59b945d7ba764900931bc83015ee38a9e71429120d1caa0",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "trade({99999});equal(remaining[99999],1);equal(calls.returns,1);equal(next(calls.rewards),nil);equal(#calls.spawns,0);equal(calls.depops,0)",
+    "file": "effective/quests/northkarana/Xanuusus.lua",
+    "coverageKind": "baseline_verification"
+  },
+  {
+    "name": "Ranger qrg/Merdan_Fleetfoot wrong offer returns without reward",
+    "sourceSha256": "89d8f3abc735473238c4f12b5c9b93346bcb706fa703278f4c8601e4c27e88ee",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "trade({99999});equal(remaining[99999],1);equal(calls.returns,1);equal(next(calls.rewards),nil);equal(#calls.spawns,0);equal(calls.depops,0)",
+    "file": "effective/quests/qrg/Merdan_Fleetfoot.lua",
+    "coverageKind": "baseline_verification"
+  },
+  {
+    "name": "Ranger qrg/Niera_Farbreeze wrong offer returns without reward",
+    "sourceSha256": "538203f6ffde2df9ac1c1cb16670668c5db2109baa396af19d469e234330b629",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "trade({99999});equal(remaining[99999],1);equal(calls.returns,1);equal(next(calls.rewards),nil);equal(#calls.spawns,0);equal(calls.depops,0)",
+    "file": "effective/quests/qrg/Niera_Farbreeze.lua",
+    "coverageKind": "baseline_verification"
+  },
+  {
+    "name": "Ranger timorous/Alrik_Farsight wrong offer returns without reward",
+    "sourceSha256": "365704dbc93ad8408d189ebfb6a47532ecb6bb4d80dea135858a003ff4fd82bc",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "trade({99999});equal(remaining[99999],1);equal(calls.returns,1);equal(next(calls.rewards),nil);equal(#calls.spawns,0);equal(calls.depops,0)",
+    "proposedFile": "changes/p99-af-druid-progression-dialogue/timorous-Alrik_Farsight.lua"
+  },
+  {
+    "name": "Ranger misty/Ella_Foodcrafter partial 20473",
+    "sourceSha256": "8e5ab9e78ea7b14cb105f10277b122eb2b6e215339f2278498d490d91d94cd49",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "trade({20473,99999});equal(remaining[20473],1);equal(remaining[99999],1);equal(next(calls.rewards),nil);equal(calls.returns,1)",
+    "proposedFile": "changes/p99-af-druid-progression-dialogue/misty-Ella_Foodcrafter.lua"
+  },
+  {
+    "name": "Ranger misty/Ella_Foodcrafter partial 20460",
+    "sourceSha256": "8e5ab9e78ea7b14cb105f10277b122eb2b6e215339f2278498d490d91d94cd49",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "trade({20460,99999});equal(remaining[20460],1);equal(remaining[99999],1);equal(next(calls.rewards),nil);equal(calls.returns,1)",
+    "proposedFile": "changes/p99-af-druid-progression-dialogue/misty-Ella_Foodcrafter.lua"
+  },
+  {
+    "name": "Ranger mistythicket/Ella_Foodcrafter partial 20473",
+    "sourceSha256": "dfa95747eeae4e4bc81b13ef6a96972eea09d0883ff2acb2a576a33d3fa8e2a5",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "trade({20473,99999});equal(remaining[20473],1);equal(remaining[99999],1);equal(next(calls.rewards),nil);equal(calls.returns,1)",
+    "proposedFile": "changes/p99-af-druid-progression-dialogue/mistythicket-Ella_Foodcrafter.lua"
+  },
+  {
+    "name": "Ranger mistythicket/Ella_Foodcrafter partial 20460",
+    "sourceSha256": "dfa95747eeae4e4bc81b13ef6a96972eea09d0883ff2acb2a576a33d3fa8e2a5",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "trade({20460,99999});equal(remaining[20460],1);equal(remaining[99999],1);equal(next(calls.rewards),nil);equal(calls.returns,1)",
+    "proposedFile": "changes/p99-af-druid-progression-dialogue/mistythicket-Ella_Foodcrafter.lua"
+  },
+  {
+    "name": "Ranger firiona/Foloal_Stormforest partial 20462",
+    "sourceSha256": "25bc081a44724ac83b2dbf36a77f3dd7ca52f0918263403bc4f8183737314c8e",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "trade({20462,99999});equal(remaining[20462],1);equal(remaining[99999],1);equal(next(calls.rewards),nil);equal(calls.returns,1)",
+    "proposedFile": "changes/p99-af-druid-progression-dialogue/firiona-Foloal_Stormforest.lua"
+  },
+  {
+    "name": "Ranger firiona/Foloal_Stormforest partial 20461",
+    "sourceSha256": "25bc081a44724ac83b2dbf36a77f3dd7ca52f0918263403bc4f8183737314c8e",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "trade({20461,99999});equal(remaining[20461],1);equal(remaining[99999],1);equal(next(calls.rewards),nil);equal(calls.returns,1)",
+    "proposedFile": "changes/p99-af-druid-progression-dialogue/firiona-Foloal_Stormforest.lua"
+  },
+  {
+    "name": "Ranger erudnint/Mairee_Silentone partial 20479",
+    "sourceSha256": "75cf5e8d7abe0a920732ae662a7834eb41396bcedc91200eb7e255e244d92186",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "trade({20479,99999});equal(remaining[20479],1);equal(remaining[99999],1);equal(next(calls.rewards),nil);equal(calls.returns,1)",
+    "file": "effective/quests/erudnint/Mairee_Silentone.lua",
+    "coverageKind": "baseline_verification"
+  },
+  {
+    "name": "Ranger erudnint/Mairee_Silentone partial 20494",
+    "sourceSha256": "75cf5e8d7abe0a920732ae662a7834eb41396bcedc91200eb7e255e244d92186",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "trade({20494,99999});equal(remaining[20494],1);equal(remaining[99999],1);equal(next(calls.rewards),nil);equal(calls.returns,1)",
+    "file": "effective/quests/erudnint/Mairee_Silentone.lua",
+    "coverageKind": "baseline_verification"
+  },
+  {
+    "name": "Ranger northkarana/Xanuusus partial 20483",
+    "sourceSha256": "9fa9dc815119c7fae59b945d7ba764900931bc83015ee38a9e71429120d1caa0",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "trade({20483,99999});equal(remaining[20483],1);equal(remaining[99999],1);equal(next(calls.rewards),nil);equal(calls.returns,1)",
+    "file": "effective/quests/northkarana/Xanuusus.lua",
+    "coverageKind": "baseline_verification"
+  },
+  {
+    "name": "Ranger northkarana/Xanuusus partial 20484",
+    "sourceSha256": "9fa9dc815119c7fae59b945d7ba764900931bc83015ee38a9e71429120d1caa0",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "trade({20484,99999});equal(remaining[20484],1);equal(remaining[99999],1);equal(next(calls.rewards),nil);equal(calls.returns,1)",
+    "file": "effective/quests/northkarana/Xanuusus.lua",
+    "coverageKind": "baseline_verification"
+  },
+  {
+    "name": "Ranger Kinlo documented prompt what mud",
+    "sourceSha256": "55816ae113869c2a68d25ef95643b6dd2d621da58e19484f5511a4a8d48dd042",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "say(\"what mud\");assert(calls.speech[1]:find(\"clay\",1,true));equal(next(calls.rewards),nil)",
+    "proposedFile": "changes/p99-ranger-epic-dialogue/kaladimb-Kinlo_Strongarm.lua"
+  },
+  {
+    "name": "Ranger Kinlo documented prompt do it for me",
+    "sourceSha256": "55816ae113869c2a68d25ef95643b6dd2d621da58e19484f5511a4a8d48dd042",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "say(\"do it for me\");assert(calls.speech[1]:find(\"tinted polish\",1,true));equal(next(calls.rewards),nil)",
+    "proposedFile": "changes/p99-ranger-epic-dialogue/kaladimb-Kinlo_Strongarm.lua"
+  },
+  {
+    "name": "Ranger Kinlo documented prompt what ancient",
+    "sourceSha256": "55816ae113869c2a68d25ef95643b6dd2d621da58e19484f5511a4a8d48dd042",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "say(\"what ancient\");assert(calls.speech[1]:find(\"few tales\",1,true));equal(next(calls.rewards),nil)",
+    "proposedFile": "changes/p99-ranger-epic-dialogue/kaladimb-Kinlo_Strongarm.lua"
+  },
+  {
+    "name": "Ranger Kinlo documented prompt ancient longsword",
+    "sourceSha256": "55816ae113869c2a68d25ef95643b6dd2d621da58e19484f5511a4a8d48dd042",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "say(\"ancient longsword\");assert(calls.speech[1]:find(\"few tales\",1,true));equal(next(calls.rewards),nil)",
+    "proposedFile": "changes/p99-ranger-epic-dialogue/kaladimb-Kinlo_Strongarm.lua"
+  },
+  {
+    "name": "Ranger Kinlo documented prompt what few tales",
+    "sourceSha256": "55816ae113869c2a68d25ef95643b6dd2d621da58e19484f5511a4a8d48dd042",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "say(\"what few tales\");assert(calls.speech[1]:find(\"trapped in their hammers\",1,true));equal(next(calls.rewards),nil)",
+    "proposedFile": "changes/p99-ranger-epic-dialogue/kaladimb-Kinlo_Strongarm.lua"
+  },
+  {
+    "name": "Ranger Kinlo documented prompt what hammers",
+    "sourceSha256": "55816ae113869c2a68d25ef95643b6dd2d621da58e19484f5511a4a8d48dd042",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "say(\"what hammers\");assert(calls.speech[1]:find(\"Erudite necromancer and enchanter\",1,true));equal(next(calls.rewards),nil)",
+    "proposedFile": "changes/p99-ranger-epic-dialogue/kaladimb-Kinlo_Strongarm.lua"
+  },
+  {
+    "name": "Ranger Kinlo documented prompt what Erudite necromancer",
+    "sourceSha256": "55816ae113869c2a68d25ef95643b6dd2d621da58e19484f5511a4a8d48dd042",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "say(\"what Erudite necromancer\");assert(calls.speech[1]:find(\"Odus\",1,true));equal(next(calls.rewards),nil)",
+    "proposedFile": "changes/p99-ranger-epic-dialogue/kaladimb-Kinlo_Strongarm.lua"
+  },
+  {
+    "name": "Ranger Kinlo documented prompt what Erudite Enchanter",
+    "sourceSha256": "55816ae113869c2a68d25ef95643b6dd2d621da58e19484f5511a4a8d48dd042",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "say(\"what Erudite Enchanter\");assert(calls.speech[1]:find(\"Odus\",1,true));equal(next(calls.rewards),nil)",
+    "proposedFile": "changes/p99-ranger-epic-dialogue/kaladimb-Kinlo_Strongarm.lua"
+  },
+  {
+    "name": "Ranger Jaeil documented hail",
+    "sourceSha256": "c05d013a758abdf7cdc3134fc79f4c1690c10ae19e0fcef45abe81b4ff2f087b",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "say(\"hail\");assert(calls.speech[1]:find(\"reflection catches his eye\",1,true));equal(#calls.spawns,0)",
+    "proposedFile": "changes/p99-ranger-epic-dialogue/hole-Jaeil_the_Wretched.lua"
+  },
+  {
+    "name": "Ranger Usbak documented hail",
+    "sourceSha256": "c3c4602fdad7f12655393078f8132fc980c6394da8c4fe5f75853476d3a33507",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "say(\"hail\");assert(calls.speech[1]:find(\"ancient blade\",1,true));equal(next(calls.rewards),nil)",
+    "proposedFile": "changes/p99-ranger-epic-dialogue/kaladimb-Usbak_the_Old.lua"
+  },
+  {
+    "name": "Ranger Alrik exact bowl alias I seek an ancient type of bowl made by the elves of old.",
+    "sourceSha256": "365704dbc93ad8408d189ebfb6a47532ecb6bb4d80dea135858a003ff4fd82bc",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "say(\"I seek an ancient type of bowl made by the elves of old.\");assert(calls.speech[1]:find(\"take the artifact\",1,true));equal(next(calls.rewards),nil)",
+    "proposedFile": "changes/p99-af-druid-progression-dialogue/timorous-Alrik_Farsight.lua"
+  },
+  {
+    "name": "Ranger Alrik exact bowl alias How do you make an ancient bowl?",
+    "sourceSha256": "365704dbc93ad8408d189ebfb6a47532ecb6bb4d80dea135858a003ff4fd82bc",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "say(\"How do you make an ancient bowl?\");assert(calls.speech[1]:find(\"take the artifact\",1,true));equal(next(calls.rewards),nil)",
+    "proposedFile": "changes/p99-af-druid-progression-dialogue/timorous-Alrik_Farsight.lua"
+  },
+  {
+    "name": "Ranger Alrik artifact issue level1",
+    "sourceSha256": "365704dbc93ad8408d189ebfb6a47532ecb6bb4d80dea135858a003ff4fd82bc",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "character.level=1;say(\"I will take the artifact\");reward(20457,1)",
+    "proposedFile": "changes/p99-af-druid-progression-dialogue/timorous-Alrik_Farsight.lua"
+  },
+  {
+    "name": "Ranger misty/Ella_Foodcrafter supplies reusable bowl",
+    "sourceSha256": "8e5ab9e78ea7b14cb105f10277b122eb2b6e215339f2278498d490d91d94cd49",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "say(\"what two tasks\");reward(17860,1);say(\"second task\");assert(calls.speech[2]:find(\"ancient type of bowl\",1,true))",
+    "proposedFile": "changes/p99-af-druid-progression-dialogue/misty-Ella_Foodcrafter.lua"
+  },
+  {
+    "name": "Ranger mistythicket/Ella_Foodcrafter supplies reusable bowl",
+    "sourceSha256": "dfa95747eeae4e4bc81b13ef6a96972eea09d0883ff2acb2a576a33d3fa8e2a5",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "say(\"what two tasks\");reward(17860,1);say(\"second task\");assert(calls.speech[2]:find(\"ancient type of bowl\",1,true))",
+    "proposedFile": "changes/p99-af-druid-progression-dialogue/mistythicket-Ella_Foodcrafter.lua"
+  },
+  {
+    "name": "Ranger Telin no-minimum-level entry",
+    "sourceSha256": "ea43ff6efe7e49646b9277af42743ec7a936713e33a1373348de1df61f80bf1a",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "character.level=1;say(\"what action\");reward(20472,1)",
+    "file": "effective/quests/burningwood/Telin_Darkforest.lua",
+    "coverageKind": "baseline_verification"
+  },
+  {
+    "name": "Ranger ceremony delays attackers cleanup captured",
+    "sourceSha256": "7c31f25284a06601c10bc1bcaa0836ce3dd58c440eecc2c5037b38b80b6c901d",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "event_signal({self=npc,signal=1});equal(calls.timers.prep,90000);equal(calls.timers.attack,120000);equal(calls.timers.depop,600000);event_timer({self=npc,timer=\"attack\"});equal(#calls.spawns,3);equal(calls.spawns[1][1],15153);equal(calls.spawns[2][1],15150);equal(calls.spawns[3][1],15150);event_timer({self=npc,timer=\"depop\"});equal(calls.depops,3)",
+    "file": "effective/quests/eastkarana/Althele.lua",
+    "coverageKind": "baseline_verification"
+  },
+  {
+    "name": "Ranger preserved five-minute encounter window",
+    "sourceSha256": "ec92b4b36fcae711404ade467e10dec6e883c03671b4450ee6683ad071df07f1",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "event_spawn({self=npc});equal(calls.timers.despawn,300000);event_combat({self=npc,joined=true});equal(calls.stopped.despawn,true);event_combat({self=npc,joined=false});equal(calls.timers.despawn,300000);event_death_complete({self=npc});equal(calls.stopped.despawn,true)",
+    "file": "effective/quests/eastkarana/Dark_Elf_Corruptor.lua",
+    "coverageKind": "baseline_verification"
+  },
+  {
+    "name": "Ranger preserved ten-minute companion window",
+    "sourceSha256": "98469d039e84a19db67f34b3be29686bcbcbbbf0d97331147767dc795aaf57e6",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "event_spawn({self=npc});equal(calls.timers.despawn,600000);event_death_complete({self=npc});equal(calls.stopped.despawn,true)",
+    "file": "effective/quests/eastkarana/Dark_Elf_Reaver.lua",
+    "coverageKind": "baseline_verification"
+  },
+  {
+    "name": "Ranger triggered boss twenty-minute lifetime",
+    "sourceSha256": "c9835fc120108335bd3f28f2f067d74f28a26730a66ffd16a3c5f017bbf6cf13",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "event_spawn({self=npc});equal(calls.timers.despawn,1200000);event_timer({self=npc,timer=\"despawn\"});equal(calls.depops,1)",
+    "file": "effective/quests/karnor/Venril_Sathir.lua",
+    "coverageKind": "baseline_verification"
+  },
+  {
+    "name": "Ranger soul carrier two essence carriers",
+    "sourceSha256": "82e095d20a8b6a9d132506853a5161a3f56982d318fe18b8bb0c791ab8b7e8f5",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "event_death_complete({self=npc,other=other});equal(#calls.spawns,2);equal(calls.spawns[1][1],71070);equal(calls.spawns[2][1],71070);equal(#calls.hate,2)",
+    "file": "effective/quests/airplane/a_soul_carrier.lua",
+    "coverageKind": "baseline_verification"
+  },
+  {
+    "name": "Ranger essence carrier tamer trigger",
+    "sourceSha256": "37be382cb0a4336a63f04a31190b59a7d187f7af09de50c3d3ae01c74b707856",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\n",
+    "assertions": "event_death_complete({self=npc,other=other});equal(#calls.spawns,1);equal(calls.spawns[1][1],71071);equal(calls.hate[1],1)",
+    "file": "effective/quests/airplane/an_essence_carrier.lua",
+    "coverageKind": "baseline_verification"
+  },
+  {
+    "name": "Ranger version0 reaver 90000 roll 80",
+    "sourceSha256": "aa3ca974b15b5207158186bb31da64bcf5dd71161ff8403b0c59752f8dc13ddb",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\nmath.random=function(n) return 80 end\n",
+    "assertions": "event_death_complete({self=npc,other=other});equal(#calls.spawns,1);equal(calls.spawns[1][1],90000)",
+    "file": "effective/quests/citymist/90000.lua",
+    "coverageKind": "baseline_verification"
+  },
+  {
+    "name": "Ranger version0 reaver 90000 roll 81",
+    "sourceSha256": "aa3ca974b15b5207158186bb31da64bcf5dd71161ff8403b0c59752f8dc13ddb",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\nmath.random=function(n) return 81 end\n",
+    "assertions": "event_death_complete({self=npc,other=other});equal(#calls.spawns,1);equal(calls.spawns[1][1],90184)",
+    "file": "effective/quests/citymist/90000.lua",
+    "coverageKind": "baseline_verification"
+  },
+  {
+    "name": "Ranger version0 reaver 90010 roll 80",
+    "sourceSha256": "2fc08ccae5f8103a2c0915e7b2996e39dc317b21eeea0dc2c115f07d5365d5f8",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\nmath.random=function(n) return 80 end\n",
+    "assertions": "event_death_complete({self=npc,other=other});equal(#calls.spawns,1);equal(calls.spawns[1][1],90010)",
+    "file": "effective/quests/citymist/90010.lua",
+    "coverageKind": "baseline_verification"
+  },
+  {
+    "name": "Ranger version0 reaver 90010 roll 81",
+    "sourceSha256": "2fc08ccae5f8103a2c0915e7b2996e39dc317b21eeea0dc2c115f07d5365d5f8",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\nmath.random=function(n) return 81 end\n",
+    "assertions": "event_death_complete({self=npc,other=other});equal(#calls.spawns,1);equal(calls.spawns[1][1],90174)",
+    "file": "effective/quests/citymist/90010.lua",
+    "coverageKind": "baseline_verification"
+  },
+  {
+    "name": "Ranger version0 reaver 90012 roll 80",
+    "sourceSha256": "5d48288a260388606fb254e73d574d9312283bf1a836fc0769e5ca9c3ad49b0c",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\nmath.random=function(n) return 80 end\n",
+    "assertions": "event_death_complete({self=npc,other=other});equal(#calls.spawns,1);equal(calls.spawns[1][1],90012)",
+    "file": "effective/quests/citymist/90012.lua",
+    "coverageKind": "baseline_verification"
+  },
+  {
+    "name": "Ranger version0 reaver 90012 roll 81",
+    "sourceSha256": "5d48288a260388606fb254e73d574d9312283bf1a836fc0769e5ca9c3ad49b0c",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\nmath.random=function(n) return 81 end\n",
+    "assertions": "event_death_complete({self=npc,other=other});equal(#calls.spawns,1);equal(calls.spawns[1][1],90180)",
+    "file": "effective/quests/citymist/90012.lua",
+    "coverageKind": "baseline_verification"
+  },
+  {
+    "name": "Ranger version0 reaver 90199 roll 80",
+    "sourceSha256": "3bfa800e61e6af8aa4a87561437a44e26cc0ead854f67d64a5816ad5a9a6fe9d",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\nmath.random=function(n) return 80 end\n",
+    "assertions": "event_death_complete({self=npc,other=other});equal(#calls.spawns,1);equal(calls.spawns[1][1],90199)",
+    "file": "effective/quests/citymist/90199.lua",
+    "coverageKind": "baseline_verification"
+  },
+  {
+    "name": "Ranger version0 reaver 90199 roll 81",
+    "sourceSha256": "3bfa800e61e6af8aa4a87561437a44e26cc0ead854f67d64a5816ad5a9a6fe9d",
+    "setupExtra": "calls.spawns={};calls.hate={};calls.timers={};calls.stopped={};calls.moves={}\nnpc.GetX=function() return 10 end; npc.GetY=function() return 20 end; npc.GetZ=function() return 30 end; npc.GetHeading=function() return 40 end\nnpc.MoveTo=function(_,...) table.insert(calls.moves,{...}) end\neq.spawn2=function(...) table.insert(calls.spawns,{...}); return setmetatable({AddToHateList=function(_,target,hate) equal(target,other); table.insert(calls.hate,hate) end},{__index=function(_,k) error('Unmocked spawned NPC API: '..k) end}) end\neq.unique_spawn=eq.spawn2\neq.depop=function(id) calls.depops=calls.depops+1 end\neq.set_timer=function(name,ms) calls.timers[name]=ms end\neq.stop_timer=function(name) calls.stopped[name]=true end\nmath.random=function(n) return 81 end\n",
+    "assertions": "event_death_complete({self=npc,other=other});equal(#calls.spawns,1);equal(calls.spawns[1][1],90210)",
+    "file": "effective/quests/citymist/90199.lua",
+    "coverageKind": "baseline_verification"
+  }
+]

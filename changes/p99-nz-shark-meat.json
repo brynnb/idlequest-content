@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "id": "p99-nz-shark-meat",
+  "summary": "Make displayed hunt-for-meat choice and P99 acceptance phrase award the shark pack; correct reward currency from 23 platinum/7 silver to documented 7 gold/23 copper.",
+  "baseManifestSha256": "8bd2b042870b4e7e46141b811ed12e1a9dee453dcf03f2e07f06fccd4cc3e205",
+  "evidence": [
+    {
+      "url": "https://wiki.project1999.com/Shark_Meat_Quest?action=raw",
+      "note": "Cached 2026-07-17T23:33:03.756Z; revision unavailable; SHA256 6780439baf23516946c5437038b0254aba444b00575e7f52cb9edc25d3d6d72d. Pack17953 and hand-in12121 to Cast-Iron Rapier7032 preserved. Only documented cash denomination and matching trigger changed; experience/faction magnitudes remain implementation values, not newly asserted P99 values."
+    }
+  ],
+  "rows": [
+    {
+      "table": "quests",
+      "before": {
+        "id": 16271,
+        "zone": "gfaydark",
+        "name": "Gallin_Woodwind",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: gfaydark/Gallin_Woodwind.pl\n-- P99 audit: Shark Meat Quest\n-- items: 17953, 12121, 7032\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Greetings. friend! I am Gallin Woodwind of the Emerald Warriors. It is my charge to send forth Fier'Dal to [hunt for meat]. Kelethin's citizens must be nourished and this requires meat. Such is the circle of life.\")\n\telseif e.message:findi(\"i want to hunt for meat\") then\n\t\te.self:Say(\"Good!!  We have enough young warriors hunting in our woods. Your duty shall be to take this pack to the ocean and seek out sharks. Fill the bag with shark meat and combine it. I shall reward you with a fine piercing weapon.\")\n\t\te.other:SummonItem(17953)\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 12121}) then\n\t\te.self:Say(\"Very good. This meat will supply our warriors with much strength. We have found the meat from sharks to be quite nourishing. Here, then, are your wages and your weapon. All of Kelethin appreciates your great deed.\")\n\t\te.other:SummonItem(7032) -- Cast-Iron Rapier\n\t\te.other:Faction(326, 10, 0)\n\t\te.other:Faction(270, -10, 0)\n\t\te.other:Faction(325, 10, 0)\n\t\te.other:Faction(276, 10, 0)\n\t\te.other:AddEXP(150)\n\t\te.other:GiveCash(0, 7, 0, 23)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      },
+      "after": {
+        "id": 16271,
+        "zone": "gfaydark",
+        "name": "Gallin_Woodwind",
+        "lua_content": "-- Converted from ProjectEQ Perl quest script.\n-- Source: gfaydark/Gallin_Woodwind.pl\n-- P99 audit: Shark Meat Quest\n-- items: 17953, 12121, 7032\n\nfunction event_say(e)\n\tif e.message:findi(\"hail\") then\n\t\te.self:Say(\"Greetings. friend! I am Gallin Woodwind of the Emerald Warriors. It is my charge to send forth Fier'Dal to [hunt for meat]. Kelethin's citizens must be nourished and this requires meat. Such is the circle of life.\")\n\telseif e.message:findi(\"hunt for meat\") then\n\t\te.self:Say(\"Good!!  We have enough young warriors hunting in our woods. Your duty shall be to take this pack to the ocean and seek out sharks. Fill the bag with shark meat and combine it. I shall reward you with a fine piercing weapon.\")\n\t\te.other:SummonItem(17953)\n\tend\nend\n\nfunction event_trade(e)\n\tlocal item_lib = require(\"items\")\n\tif item_lib.check_turn_in(e.trade, {item1 = 12121}) then\n\t\te.self:Say(\"Very good. This meat will supply our warriors with much strength. We have found the meat from sharks to be quite nourishing. Here, then, are your wages and your weapon. All of Kelethin appreciates your great deed.\")\n\t\te.other:SummonItem(7032) -- Cast-Iron Rapier\n\t\te.other:Faction(326, 10, 0)\n\t\te.other:Faction(270, -10, 0)\n\t\te.other:Faction(325, 10, 0)\n\t\te.other:Faction(276, 10, 0)\n\t\te.other:AddEXP(150)\n\t\te.other:GiveCash(23, 0, 7, 0)\n\tend\n\titem_lib.return_items(e.self, e.other, e.trade)\nend\n",
+        "has_say_event": 1,
+        "enabled": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "target": "maintained/lua/converted-perl/gfaydark/Gallin_Woodwind.lua",
+      "beforeSha256": "ce0caba175e936c0e8afa4db07e4fc4cc7b9d1ecce51d53b6efa26e659fd158d",
+      "proposedFile": "changes/p99-nz-shark-meat/gfaydark--Gallin_Woodwind.lua",
+      "afterSha256": "30c66f38fa8bb772a25ebdadd86e662b7de716cedfffed0a4213e6266fbecf99"
+    }
+  ]
+}
